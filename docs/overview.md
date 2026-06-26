@@ -36,7 +36,7 @@ anything further.
 
 ## Building on Laura's work
 
-Laura explored a similar approach earlier this year in a pilot repository
+Laura explored a similar approach in a [pilot repository](https://github.com/GMD-hub/GMD-KnowledgeBase-Pilot)
 that examined how to structure GMD variable knowledge for AI consumption.
 Her pilot introduced several ideas that are now core to this design:
 separating decision rules from variable definitions, using structured
