@@ -34,6 +34,12 @@ class DocumentationSiteTests(unittest.TestCase):
         }
         self.assertEqual(source_pages, flatten_nav(self.config.nav))
 
+    def test_homepage_has_no_case_variant_aliases(self) -> None:
+        wiki_entries = {path.name for path in WIKI.iterdir()}
+        self.assertIn("index.md", wiki_entries)
+        self.assertNotIn("Home.md", wiki_entries)
+        self.assertNotIn("Index.md", wiki_entries)
+
     def test_concept_guides_include_examples(self) -> None:
         concept_guides = {
             "index.md",
