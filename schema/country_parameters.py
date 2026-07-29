@@ -46,6 +46,7 @@ class CountryParameterFile(BaseModel):
     country_id: str
     country_name: str
     iso3: str
+    focal_point: str | None = None
     schema_version: str
     status: Literal["draft"]
     parameters: list[CountryParameterRecord]

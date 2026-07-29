@@ -21,6 +21,8 @@ from schema.country_exceptions import CountryExceptionFile, CountryExceptionReco
 from schema.country_parameters import CountryParameterFile, CountryParameterRecord
 from schema.frontmatter import load_markdown
 from schema.parameter import ParameterDefinition
+from schema.rule import RuleDefinition
+from schema.variable import VariableDefinition, validate_acyclic_derivation_graph
 
 
 class UniversalArtifact(RootModel[dict[str, Any]]):
@@ -34,21 +36,73 @@ def in_window(record: CountryParameterRecord | CountryExceptionRecord, year: int
     )
 
 
-def load_universal_artifacts(
-    folder: Path,
-    registry: dict[str, ParameterDefinition],
+def load_generic_artifacts(folder: Path) -> list[dict[str, Any]]:
+    artifacts: list[dict[str, Any]] = []
+    for path in sorted(folder.rglob("*.md")):
+        data, body = load_markdown(path)
+        structured = UniversalArtifact.model_validate(data).root
+        artifacts.append({**structured, "body": body})
+    return artifacts
+
+
+def load_parameter_artifacts(
+    folder: Path, registry: dict[str, ParameterDefinition]
 ) -> list[dict[str, Any]]:
     artifacts: list[dict[str, Any]] = []
     for path in sorted(folder.rglob("*.md")):
         data, body = load_markdown(path)
-        if folder.name == "parameters":
-            parameter = ParameterDefinition.model_validate(data)
-            registry[parameter.parameter_id] = parameter
-            structured = parameter.model_dump(mode="json")
-        else:
-            structured = UniversalArtifact.model_validate(data).root
-        artifacts.append({**structured, "body": body})
+        parameter = ParameterDefinition.model_validate(data)
+        if parameter.parameter_id in registry:
+            raise ValueError(f"duplicate parameter_id {parameter.parameter_id}")
+        registry[parameter.parameter_id] = parameter
+        artifacts.append({**parameter.model_dump(mode="json"), "body": body})
     return artifacts
+
+
+def load_rule_artifacts(folder: Path) -> tuple[list[dict[str, Any]], set[str]]:
+    artifacts: list[dict[str, Any]] = []
+    rule_ids: set[str] = set()
+    for path in sorted(folder.rglob("*.md")):
+        data, body = load_markdown(path)
+        rule = RuleDefinition.model_validate(data)
+        if rule.rule_id in rule_ids:
+            raise ValueError(f"duplicate rule_id {rule.rule_id}")
+        rule_ids.add(rule.rule_id)
+        artifacts.append({**rule.model_dump(mode="json"), "body": body})
+    return artifacts, rule_ids
+
+
+def load_variable_artifacts(
+    folder: Path,
+    parameter_ids: set[str],
+    rule_ids: set[str],
+) -> tuple[list[dict[str, Any]], set[str]]:
+    raw_artifacts: list[tuple[dict[str, Any], str]] = []
+    variable_ids: set[str] = set()
+    for path in sorted(folder.rglob("*.md")):
+        data, body = load_markdown(path)
+        variable_id = data["variable_id"]
+        if variable_id in variable_ids:
+            raise ValueError(f"duplicate variable_id {variable_id}")
+        variable_ids.add(variable_id)
+        raw_artifacts.append((data, body))
+
+    context = {
+        "variable_ids": variable_ids,
+        "parameter_ids": parameter_ids,
+        "rule_ids": rule_ids,
+        "allow_unresolved_draft": True,
+    }
+    variables = [
+        VariableDefinition.model_validate(data, context=context)
+        for data, _ in raw_artifacts
+    ]
+    validate_acyclic_derivation_graph(variables)
+    artifacts = [
+        {**variable.model_dump(mode="json"), "body": body}
+        for variable, (_, body) in zip(variables, raw_artifacts, strict=True)
+    ]
+    return artifacts, variable_ids
 
 
 def parse_args() -> argparse.Namespace:
@@ -66,22 +120,14 @@ def main() -> int:
     registry: dict[str, ParameterDefinition] = {}
 
     try:
-        parameters = load_universal_artifacts(
+        parameters = load_parameter_artifacts(
             ROOT / "knowledge" / "parameters", registry
         )
-        variables = load_universal_artifacts(
-            ROOT / "knowledge" / "variables", registry
+        rules, rule_ids = load_rule_artifacts(ROOT / "knowledge" / "rules")
+        variables, variable_ids = load_variable_artifacts(
+            ROOT / "knowledge" / "variables", set(registry), rule_ids
         )
-        rules = load_universal_artifacts(ROOT / "knowledge" / "rules", registry)
-        modules = load_universal_artifacts(ROOT / "knowledge" / "modules", registry)
-
-        variable_ids = {item["variable_id"] for item in variables}
-        for variable in variables:
-            for parameter_id in variable.get("country_parameters", []):
-                if parameter_id not in registry:
-                    raise ValueError(
-                        f"{variable['variable_id']} declares unknown parameter {parameter_id}"
-                    )
+        modules = load_generic_artifacts(ROOT / "knowledge" / "modules")
 
         country_folder = ROOT / "country-parameters" / "countries" / args.iso3
         parameter_data, parameter_body = load_markdown(country_folder / "parameters.md")

@@ -13,10 +13,16 @@ from pydantic import ValidationError
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from schema.country_exceptions import CountryExceptionFile
+from schema.country_exceptions import CountryExceptionFile, CountryExceptionRecord
 from schema.country_parameters import CountryParameterFile, CountryParameterRecord
 from schema.frontmatter import load_markdown
 from schema.parameter import ParameterDefinition
+from schema.rule import RuleDefinition
+from schema.variable import (
+    VariableDefinition,
+    unresolved_variable_references,
+    validate_acyclic_derivation_graph,
+)
 
 
 def markdown_table(headers: list[str], rows: list[list[Any]]) -> None:
@@ -41,7 +47,10 @@ def scalar_strings(value: Any):
         yield value
 
 
-def windows_overlap(left: CountryParameterRecord, right: CountryParameterRecord) -> bool:
+EffectiveDatedRecord = CountryParameterRecord | CountryExceptionRecord
+
+
+def windows_overlap(left: EffectiveDatedRecord, right: EffectiveDatedRecord) -> bool:
     left_start = float("-inf") if left.effective_from is None else left.effective_from
     left_end = float("inf") if left.effective_to is None else left.effective_to
     right_start = float("-inf") if right.effective_from is None else right.effective_from
@@ -49,37 +58,75 @@ def windows_overlap(left: CountryParameterRecord, right: CountryParameterRecord)
     return left_start <= right_end and right_start <= left_end
 
 
-def main() -> int:
+def validate_repository(root: Path = ROOT) -> int:
     errors: list[tuple[str, str]] = []
     registry: dict[str, ParameterDefinition] = {}
     variable_ids: set[str] = set()
-    declarations: list[tuple[str, str]] = []
+    rule_ids: set[str] = set()
     country_files: dict[str, CountryParameterFile] = {}
+    exception_files: dict[str, CountryExceptionFile] = {}
+    exception_locations: dict[str, str] = {}
+    exception_overlap_rows: list[list[str]] = []
+    unresolved_reference_rows: list[list[str]] = []
 
-    for path in sorted((ROOT / "knowledge" / "parameters").glob("*.md")):
+    for path in sorted((root / "knowledge" / "parameters").glob("*.md")):
         try:
             definition = ParameterDefinition.model_validate(load_markdown(path)[0])
             if definition.parameter_id in registry:
-                errors.append((str(path.relative_to(ROOT)), "duplicate parameter_id"))
+                errors.append((str(path.relative_to(root)), "duplicate parameter_id"))
             registry[definition.parameter_id] = definition
         except (ValueError, ValidationError) as exc:
-            errors.append((str(path.relative_to(ROOT)), str(exc)))
+            errors.append((str(path.relative_to(root)), str(exc)))
 
-    for path in sorted((ROOT / "knowledge" / "variables").rglob("*.md")):
+    raw_rules: list[tuple[Path, dict[str, Any]]] = []
+    for path in sorted((root / "knowledge" / "rules").rglob("*.md")):
         try:
             data, _ = load_markdown(path)
-            variable_id = data["variable_id"]
-            variable_ids.add(variable_id)
-            for parameter_id in data.get("country_parameters", []):
-                declarations.append((variable_id, parameter_id))
+            rule_ids.add(data["rule_id"])
+            raw_rules.append((path, data))
         except (KeyError, ValueError) as exc:
-            errors.append((str(path.relative_to(ROOT)), str(exc)))
+            errors.append((str(path.relative_to(root)), str(exc)))
 
-    for variable_id, parameter_id in declarations:
-        if parameter_id not in registry:
-            errors.append((variable_id, f"unknown country parameter {parameter_id}"))
+    for path, data in raw_rules:
+        try:
+            RuleDefinition.model_validate(data)
+        except ValidationError as exc:
+            errors.append((str(path.relative_to(root)), str(exc)))
 
-    countries_root = ROOT / "country-parameters" / "countries"
+    raw_variables: list[tuple[Path, dict[str, Any]]] = []
+    for path in sorted((root / "knowledge" / "variables").rglob("*.md")):
+        try:
+            data, _ = load_markdown(path)
+            variable_ids.add(data["variable_id"])
+            raw_variables.append((path, data))
+        except (KeyError, ValueError) as exc:
+            errors.append((str(path.relative_to(root)), str(exc)))
+
+    variables: list[VariableDefinition] = []
+    reference_context = {
+        "variable_ids": variable_ids,
+        "parameter_ids": set(registry),
+        "rule_ids": rule_ids,
+        "allow_unresolved_draft": True,
+    }
+    for path, data in raw_variables:
+        try:
+            variable = VariableDefinition.model_validate(data, context=reference_context)
+            variables.append(variable)
+            unresolved = unresolved_variable_references(variable, variable_ids)
+            if unresolved:
+                unresolved_reference_rows.append(
+                    [variable.variable_id, ", ".join(sorted(unresolved))]
+                )
+        except ValidationError as exc:
+            errors.append((str(path.relative_to(root)), str(exc)))
+
+    try:
+        validate_acyclic_derivation_graph(variables)
+    except ValueError as exc:
+        errors.append(("knowledge/variables", str(exc)))
+
+    countries_root = root / "country-parameters" / "countries"
     folders = sorted(path for path in countries_root.iterdir() if path.is_dir())
     country_codes = {path.name for path in folders}
 
@@ -91,19 +138,44 @@ def main() -> int:
                 load_markdown(parameter_path)[0], context={"registry": registry}
             )
             if parameters.iso3 != folder.name:
-                errors.append((str(parameter_path.relative_to(ROOT)), "iso3 differs from folder name"))
+                errors.append((str(parameter_path.relative_to(root)), "iso3 differs from folder name"))
             country_files[folder.name] = parameters
         except (ValueError, ValidationError) as exc:
-            errors.append((str(parameter_path.relative_to(ROOT)), str(exc)))
+            errors.append((str(parameter_path.relative_to(root)), str(exc)))
 
         try:
+            exception_data, _ = load_markdown(exception_path)
+            seen_in_file: set[str] = set()
+            for raw_exception in exception_data.get("exceptions", []):
+                if not isinstance(raw_exception, dict):
+                    continue
+                exception_id = raw_exception.get("exception_id")
+                if not isinstance(exception_id, str):
+                    continue
+                if exception_id in seen_in_file:
+                    errors.append(
+                        (str(exception_path.relative_to(root)), f"duplicate exception_id {exception_id}")
+                    )
+                seen_in_file.add(exception_id)
+                previous_location = exception_locations.get(exception_id)
+                if previous_location is not None:
+                    errors.append(
+                        (
+                            str(exception_path.relative_to(root)),
+                            f"duplicate exception_id {exception_id}; first found in {previous_location}",
+                        )
+                    )
+                else:
+                    exception_locations[exception_id] = str(exception_path.relative_to(root))
+
             exceptions = CountryExceptionFile.model_validate(
-                load_markdown(exception_path)[0], context={"variable_ids": variable_ids}
+                exception_data, context={"variable_ids": variable_ids}
             )
             if exceptions.iso3 != folder.name:
-                errors.append((str(exception_path.relative_to(ROOT)), "iso3 differs from folder name"))
+                errors.append((str(exception_path.relative_to(root)), "iso3 differs from folder name"))
+            exception_files[folder.name] = exceptions
         except (ValueError, ValidationError) as exc:
-            errors.append((str(exception_path.relative_to(ROOT)), str(exc)))
+            errors.append((str(exception_path.relative_to(root)), str(exc)))
 
     for iso3, country_file in country_files.items():
         grouped: dict[str, list[CountryParameterRecord]] = defaultdict(list)
@@ -120,20 +192,35 @@ def main() -> int:
                             )
                         )
 
-    for path in sorted((ROOT / "knowledge").rglob("*.md")):
+    for iso3, exception_file in exception_files.items():
+        for index, left in enumerate(exception_file.exceptions):
+            for right in exception_file.exceptions[index + 1 :]:
+                shared_variables = sorted(
+                    set(left.applies_to_variables).intersection(right.applies_to_variables)
+                )
+                if not shared_variables or not windows_overlap(left, right):
+                    continue
+                # Ordering is a governance decision, so overlap is informational until
+                # the GPID Team defines exception precedence.
+                for variable_id in shared_variables:
+                    exception_overlap_rows.append(
+                        [iso3, variable_id, left.exception_id, right.exception_id]
+                    )
+
+    for path in sorted((root / "knowledge").rglob("*.md")):
         text = path.read_text(encoding="utf-8")
         if not text.startswith("---\n"):
             continue
         try:
             data, _ = load_markdown(path)
         except ValueError as exc:
-            errors.append((str(path.relative_to(ROOT)), str(exc)))
+            errors.append((str(path.relative_to(root)), str(exc)))
             continue
         leaked = sorted(country_codes.intersection(scalar_strings(data)))
         if leaked:
             errors.append(
                 (
-                    str(path.relative_to(ROOT)),
+                    str(path.relative_to(root)),
                     f"country ISO3 value found under knowledge: {', '.join(leaked)}",
                 )
             )
@@ -147,6 +234,10 @@ def main() -> int:
             if item.fallback_policy == "undecided"
         ],
     )
+    if unresolved_reference_rows:
+        print()
+        print("Draft variable reference warnings:")
+        markdown_table(["Variable", "Unresolved variable IDs"], unresolved_reference_rows)
     print()
 
     print("## Coverage gap report")
@@ -160,8 +251,15 @@ def main() -> int:
                 for record in country_files.get(iso3, CountryParameterFile.model_construct(parameters=[])).parameters
             )
         ]
-        coverage_rows.append([parameter_id, ", ".join(missing) or "None"])
-    markdown_table(["Parameter", "Countries with no record"], coverage_rows)
+        focal_points = [
+            f"{iso3}: {country_files.get(iso3).focal_point or 'None'}"
+            for iso3 in missing
+            if country_files.get(iso3) is not None
+        ]
+        coverage_rows.append(
+            [parameter_id, ", ".join(missing) or "None", ", ".join(focal_points) or "None"]
+        )
+    markdown_table(["Parameter", "Countries with no record", "Focal points"], coverage_rows)
     print()
 
     print("## Unverified values report")
@@ -177,11 +275,22 @@ def main() -> int:
         unverified_rows,
     )
 
+    print()
+    print("## Overlapping exception report")
+    markdown_table(
+        ["Country", "Variable", "First exception", "Second exception"],
+        exception_overlap_rows,
+    )
+
     if errors:
         print("\n## Structural failures")
         markdown_table(["Location", "Failure"], [[location, message] for location, message in errors])
         return 1
     return 0
+
+
+def main() -> int:
+    return validate_repository()
 
 
 if __name__ == "__main__":
