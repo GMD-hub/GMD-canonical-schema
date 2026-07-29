@@ -1,5 +1,10 @@
 # GMD CVS Wiki
 
+> **Purpose:** `docs/` holds narrative background explaining why the design is
+> what it is, written to be read once. `wiki/` holds operational reference
+> documentation describing how the system currently behaves and is maintained
+> continuously.
+
 <p class="gmd-lede">Learn how governed harmonization guidance moves from
 source evidence to canonical knowledge, country-specific inputs, and a
 traceable runtime bundle.</p>
@@ -57,6 +62,10 @@ parts relate, and where human judgment remains mandatory.
 
 For a complete sequence or a task-specific route, use the
 [learning paths](Learning-Paths.md).
+
+Questions that require GPID Team authority are tracked in the independent
+`governance/decisions/` record area. Project audits are kept in
+`governance/audits/`; neither folder is part of the official wiki.
 
 ## A first worked example
 
@@ -142,3 +151,14 @@ the conflict in provenance notes and escalate it to the GPID Team.
 - **Looking for a specific task?** Use the
    [Learning Paths](Learning-Paths.md).
 - **Need a term quickly?** Open the [Glossary](Glossary.md).
+
+## All wiki pages
+
+[Home](index.md) | [Learning Paths](Learning-Paths.md) |
+[Architecture](Architecture.md) | [Repository Map](Repository-Map.md) |
+[Artifact Model](Artifact-Model.md) |
+[Country Parameter Layer](Country-Parameter-Layer.md) |
+[Artifact Lifecycle](Artifact-Lifecycle.md) |
+[Validation and Builds](Validation-and-Builds.md) |
+[Governance and Contributing](Governance-and-Contributing.md) |
+[Glossary](Glossary.md)

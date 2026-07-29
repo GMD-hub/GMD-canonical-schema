@@ -22,20 +22,26 @@ The command loads the universal parameter registry, variable IDs, and every
 country folder. It checks:
 
 - parameter definition schemas and duplicate parameter IDs;
-- variable references to known parameters;
+- strict variable and rule schemas with unknown fields forbidden;
+- variable, rule, parameter, and prerequisite reference formats;
+- variable derivation cycles and governed reference resolution;
+- rule priorities as integers from 0 through 100;
 - country file identity and strict field schemas;
 - country values against registered integer or mapping shapes;
 - country exceptions against known variable IDs and ID naming rules;
+- duplicate exception IDs within one country and across the repository;
 - invalid or overlapping parameter validity windows;
+- reversed exception validity windows;
 - country ISO3 values leaked into universal YAML front matter.
 
-It also prints three governance reports:
+It also prints four governance reports:
 
 | Report | Meaning |
 |---|---|
 | Undecided fallback | Parameter definitions that do not yet define behavior when coverage is absent |
-| Coverage gap | Countries with no record for each registered parameter |
+| Coverage gap | Countries with no record for each registered parameter and their optional focal points |
 | Unverified values | Country records whose provenance is not human reviewed |
+| Overlapping exception | Exception pairs that share a variable and an overlapping validity window |
 
 These reports can contain rows while validation exits successfully. The
 script exits with status 1 when the `Structural failures` section is nonempty.
@@ -110,13 +116,21 @@ review path, then regenerate the bundle.
 
 ## What is validated today
 
-Parameter definitions and country files have dedicated strict Pydantic models.
-The compiler also verifies variable-to-parameter references and country
-exception variable references. Other universal variables, rules, and modules
-are currently loaded as generic YAML mappings rather than validated against
-dedicated artifact models. A successful bundle therefore proves that the
-implemented structural checks pass; it does not prove semantic correctness or
-human approval of every artifact.
+Parameter definitions, variables, rules, and country files have dedicated
+strict Pydantic models. Variable validation checks governed references and the
+derivation graph. Rule priorities use the documented integer range from 0
+through 100. Modules remain generic YAML mappings because no module artifacts
+or dedicated module model exist yet. A successful bundle therefore proves that
+the implemented structural checks pass; it does not prove semantic correctness
+or human approval of every artifact.
+
+The current draft variables reference `VAR-educat7`, `VAR-educat5`,
+`VAR-mineducatage`, and `VAR-school`, whose artifacts have not been promoted to
+`knowledge/`. Strict validation reports those unresolved references as draft
+governance warnings within the existing report output. Malformed reference IDs,
+unknown parameter or rule IDs, and derivation cycles remain structural
+failures. The GPID Team must supply the governed variable artifacts or approve
+a relationship change before approval.
 
 ## Interpreting failures
 
@@ -136,3 +150,14 @@ one representative bundle for each affected country and boundary year.
   [Country Parameter Layer](Country-Parameter-Layer.md).
 - **To interpret technical success within the approval process:** continue to
   [Governance and Contributing](Governance-and-Contributing.md).
+
+## All wiki pages
+
+[Home](index.md) | [Learning Paths](Learning-Paths.md) |
+[Architecture](Architecture.md) | [Repository Map](Repository-Map.md) |
+[Artifact Model](Artifact-Model.md) |
+[Country Parameter Layer](Country-Parameter-Layer.md) |
+[Artifact Lifecycle](Artifact-Lifecycle.md) |
+[Validation and Builds](Validation-and-Builds.md) |
+[Governance and Contributing](Governance-and-Contributing.md) |
+[Glossary](Glossary.md)

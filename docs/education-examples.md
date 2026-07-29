@@ -1,5 +1,10 @@
 # Education examples: `educat4` and `educy`
 
+> **Purpose:** `docs/` holds narrative background explaining why the design is
+> what it is, written to be read once. `wiki/` holds operational reference
+> documentation describing how the system currently behaves and is maintained
+> continuously.
+
 These two variables illustrate the more complex cases in the schema.
 
 ## `educat4`: a variable with a derivation hierarchy
@@ -70,16 +75,18 @@ escalate when no valid country record exists.
 raw survey data
       │
       ▼
-educat7  (atomic) ──────────────────────────────────┐
-      │                                               │
-      ├──► educat5  (derived_preferred) ─────────────┤
-      │         │                                     │
-      │         └──► educat4  (derived_preferred)     │
-      │               educat5  (derived_preferred)    │
-      │               primarycomp                     │
-      │                                               ▼
-      └──────────────────────────────────────►  educy (derived_preferred)
-                                               + country parameter
+educat7 (referenced source) ───────┬──────────────► educy
+      │                           │
+      ├──► educat4 ───────────────┘
+      │
+      └──► educat5 (referenced source) ───────────► educat4 and educy
+
+educat4 and educy also depend on documented prerequisites.
+Country construction paths for educy require the declared country parameter.
 ```
 
-`educat7` is the root. Everything else in the education module flows from it.
+The current repository does not yet contain artifacts for `educat7`,
+`educat5`, `mineducatage`, or `school`, even though the available variable
+specifications reference them. Strict validation therefore reports those
+references until the GPID Team supplies and promotes the governed artifacts or
+approves a relationship change.

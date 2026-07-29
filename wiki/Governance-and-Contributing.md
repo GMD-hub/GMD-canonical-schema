@@ -42,6 +42,40 @@ artifacts or rule logic.
 Approval is semantic, not merely technical. Passing Pydantic validation does
 not authorize a rule or establish that a country value is true.
 
+## Enforcing approval in GitHub
+
+`CODEOWNERS` tells GitHub which team should be requested to review changes to
+governed paths. The repository file currently uses
+`@GMD-hub/gpid-team` as a placeholder. A repository administrator must replace
+it with the real GitHub team name.
+
+Branch protection is the GitHub setting that can require pull requests,
+successful status checks, and approval from a code owner before a change is
+merged into the default branch. Adding `CODEOWNERS` does not enable those
+requirements by itself. A repository administrator must turn on branch
+protection for the default branch and require code-owner review and the
+validation workflow.
+
+The validation workflow checks structural models, country-layer scope and
+windows, representative bundle compilation, and automated tests. It uploads
+the governance reports for reviewers. Report rows are informational, so an
+undecided fallback, coverage gap, unverified value, or overlapping exception
+does not fail CI by itself. Structural failures, failed smoke builds, and failed
+tests do fail CI.
+
+Until an administrator enables branch protection and required code-owner
+review, the approval requirements on this page are a convention rather than a
+technical control.
+
+## Governance records
+
+Project-level audits, open questions, and decision records live outside the
+official wiki under `governance/`. The `governance/audits/` folder records
+evidence and findings. The `governance/decisions/` folder records options,
+recommendations, authorized outcomes, and links to implementation and
+validation evidence. These records provide project provenance without becoming
+canonical CVS artifacts.
+
 | Hypothetical request | Correct route | Why |
 |---|---|---|
 | Clarify an explanatory paragraph without changing policy | Documentation review | Presentation changes, canon does not |
@@ -104,3 +138,14 @@ Python validation behavior, not manual edits to generated JSON.
 	[Artifact Model](Artifact-Model.md).
 - **To separate technical checks from approval:** read
 	[Validation and Runtime Bundles](Validation-and-Builds.md).
+
+## All wiki pages
+
+[Home](index.md) | [Learning Paths](Learning-Paths.md) |
+[Architecture](Architecture.md) | [Repository Map](Repository-Map.md) |
+[Artifact Model](Artifact-Model.md) |
+[Country Parameter Layer](Country-Parameter-Layer.md) |
+[Artifact Lifecycle](Artifact-Lifecycle.md) |
+[Validation and Builds](Validation-and-Builds.md) |
+[Governance and Contributing](Governance-and-Contributing.md) |
+[Glossary](Glossary.md)

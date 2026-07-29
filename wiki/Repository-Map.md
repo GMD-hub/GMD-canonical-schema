@@ -12,6 +12,7 @@
 | `validation/` | Repository-wide country-layer checks and reports | `knowledge/`, `country-parameters/`, `schema/` | Structural failures and governance reports |
 | `build/` | Runtime bundle compiler | Universal and country layers plus `schema/` | `build/output/bundle_<ISO3>_<year>.json` |
 | `extraction/` | Governed staging workflow | Guidelines and contextual sources | Candidate CVS artifacts for human approval |
+| `governance/` | Project-level audits and decision records | Repository evidence, review findings, and authorized outcomes | Traceable open questions, decisions, and follow-up audits |
 | `docs/` | Explanatory guides and worked examples | Current CVS design | Human-readable background |
 | `wiki/` | Complete project operating documentation | Current repository behavior | Architecture, workflows, and navigation |
 | `requirements.txt` | Python dependencies | None | Pydantic 2 and PyYAML environment |
@@ -61,19 +62,29 @@ structural error even if the contained record values happen to validate.
 ## `schema/`, `validation/`, and `build/`
 
 `schema/frontmatter.py` splits each artifact into a YAML mapping and Markdown
-body. Parameter and country files have strict Pydantic models with unknown
-fields forbidden. The current compiler treats non-parameter universal
-artifacts as generic mappings; their full field contracts are documented in
-the artifacts but are not yet represented by dedicated Pydantic models.
+body. Parameters, variables, rules, and country files have strict Pydantic
+models with unknown fields forbidden. Variables also receive reference and
+derivation-cycle checks. Modules remain generic mappings because the repository
+does not yet contain module artifacts or a dedicated module model.
 
 `validation/validate_country_layer.py` validates all registered parameter
-definitions and country files, checks references and overlapping parameter
-windows, detects ISO3 values leaked into universal front matter, and prints
+definitions, variables, rules, and country files. It checks references,
+derivation cycles, parameter-window overlap, exception identity and windows,
+detects ISO3 values leaked into universal front matter, and prints four
 governance reports.
 
 `build/compile_bundle.py` validates the same modeled inputs for one requested
 country, filters records by year when supplied, and combines them with every
 universal Markdown artifact in the recognized folders.
+
+## `governance/`
+
+This independent record area is not part of the official wiki and does not
+contain canonical CVS artifacts. `governance/audits/` stores repository gap
+audits and follow-up verification. `governance/decisions/` stores open
+questions, options, recommendations, authorized outcomes, implementation
+references, and validation references. Each record should link to its source,
+related records, affected files, and follow-up evidence.
 
 ## `extraction/`
 
@@ -105,3 +116,14 @@ applicable, completes the lifecycle.
 	[Artifact Lifecycle](Artifact-Lifecycle.md).
 - **To run the scripts described here:** use
 	[Validation and Runtime Bundles](Validation-and-Builds.md).
+
+## All wiki pages
+
+[Home](index.md) | [Learning Paths](Learning-Paths.md) |
+[Architecture](Architecture.md) | [Repository Map](Repository-Map.md) |
+[Artifact Model](Artifact-Model.md) |
+[Country Parameter Layer](Country-Parameter-Layer.md) |
+[Artifact Lifecycle](Artifact-Lifecycle.md) |
+[Validation and Builds](Validation-and-Builds.md) |
+[Governance and Contributing](Governance-and-Contributing.md) |
+[Glossary](Glossary.md)

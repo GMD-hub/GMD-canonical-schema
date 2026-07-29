@@ -56,7 +56,7 @@ path.
 
 ### Hypothetical country exception
 
-!!! warning "Hypothetical only — not a real country rule"
+!!! warning "Hypothetical only: not a real country rule"
       The following record is invented solely to demonstrate structure and
       decision flow. `ZZZ` is used as a fictional teaching code. The condition,
       action, and dates are **not facts about any country or survey**, are not
@@ -80,7 +80,7 @@ exceptions:
       rationale: >-
          Hypothetical illustration of questionnaire-specific conditional logic.
       provenance:
-         source: "HYPOTHETICAL TEACHING EXAMPLE — NOT EVIDENCE"
+         source: "HYPOTHETICAL TEACHING EXAMPLE: NOT EVIDENCE"
          approved_by: null
          approved_on: null
          human_reviewed: false
@@ -126,6 +126,12 @@ remaining country folders are empty drafts. The validator's coverage and
 unverified-value reports are therefore operational review inputs, not noise to
 be suppressed.
 
+Each country parameter file may include an optional top-level `focal_point`.
+The field defaults to null and identifies the person to consult when the
+coverage report finds a missing record. It does not supply a country value,
+change fallback behavior, or affect effective-date selection. All current
+country focal points remain null.
+
 ## Adding country content
 
 Country files are human-owned governed artifacts. Before adding a value or
@@ -141,3 +147,14 @@ record provenance, obtain human review, and run repository validation.
    [Architecture and Data Flow](Architecture.md#effective-canon-resolution).
 - **To validate windows, references, and value shapes:** continue to
    [Validation and Runtime Bundles](Validation-and-Builds.md).
+
+## All wiki pages
+
+[Home](index.md) | [Learning Paths](Learning-Paths.md) |
+[Architecture](Architecture.md) | [Repository Map](Repository-Map.md) |
+[Artifact Model](Artifact-Model.md) |
+[Country Parameter Layer](Country-Parameter-Layer.md) |
+[Artifact Lifecycle](Artifact-Lifecycle.md) |
+[Validation and Builds](Validation-and-Builds.md) |
+[Governance and Contributing](Governance-and-Contributing.md) |
+[Glossary](Glossary.md)

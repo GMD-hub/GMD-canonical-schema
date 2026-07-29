@@ -41,6 +41,7 @@ more specific, but they never override universal structure.
 | `validation/` | Cross-repository structural and governance checks. |
 | `build/` | Compiler that produces one runtime JSON bundle for a country and optional survey year. |
 | `extraction/` | Staging workflow for turning source guidelines into reviewed CVS artifacts. |
+| `governance/` | Project audits, open questions, decision records, and implementation traceability. |
 | `docs/` | Existing explanatory examples and schema notes. |
 | `wiki/` | Detailed project documentation and operating guidance. |
 | `AGENTS.md` | Mandatory operating and write-access rules for AI agents. |
@@ -94,6 +95,9 @@ approval, and promotion into `knowledge/` and `country-parameters/`. Never
 invent a rule or parameter value; use `null` where the source is insufficient
 and document the missing evidence in provenance.
 
+Project-level audits and decision records live under `governance/`. They are
+review records, not canonical CVS artifacts and not official wiki pages.
+
 Read `AGENTS.md` before making any change. Before a harmonization run, read
 `knowledge/index.md`, the relevant variable and rule files, and
 `country-parameters/README.md` plus both files for the survey country.
@@ -112,5 +116,6 @@ The wiki provides the detailed operating guide:
 - [Validation and runtime bundles](wiki/Validation-and-Builds.md)
 - [Governance and contribution workflow](wiki/Governance-and-Contributing.md)
 - [Glossary](wiki/Glossary.md)
+- [Governance records](governance/README.md)
 
 The authoritative artifact inventory remains `knowledge/index.md`.
