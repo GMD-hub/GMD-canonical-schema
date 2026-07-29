@@ -1,0 +1,46 @@
+name: Validate canonical schema
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: python3 -m pip install --requirement requirements.txt
+
+      - name: Validate schema and capture governance reports
+        run: |
+          mkdir -p governance-reports
+          python3 validation/validate_country_layer.py | tee governance-reports/country-layer-validation.md
+
+      - name: Compile PER smoke-test bundles
+        run: |
+          python3 build/compile_bundle.py PER 2019
+          python3 build/compile_bundle.py PER 1995
+
+      - name: Run tests
+        run: python3 -m pytest tests/ -v
+
+      - name: Upload governance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: governance-reports
+          path: governance-reports/
+          if-no-files-found: warn
