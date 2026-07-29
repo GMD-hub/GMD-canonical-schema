@@ -19,8 +19,9 @@ the relevant country folder.
 | `country-parameters/` | Humans only |
 | `schema/` | Humans, or agents under supervision |
 
-An instruction to research or draft content does not permit an agent to bypass
-these paths. Agent-generated proposals remain in `20_drafts/` until reviewed.
+Agent-generated canonical artifacts remain in `20_drafts/` until reviewed.
+Documentation changes do not authorize changes to governed canonical
+artifacts or rule logic.
 
 ## Changes requiring human approval
 

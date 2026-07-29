@@ -13,6 +13,7 @@
 | `build/` | Runtime bundle compiler | Universal and country layers plus `schema/` | `build/output/bundle_<ISO3>_<year>.json` |
 | `extraction/` | Governed staging workflow | Guidelines and contextual sources | Candidate CVS artifacts for human approval |
 | `docs/` | Explanatory guides and worked examples | Current CVS design | Human-readable background |
+| `wiki/` | Complete project operating documentation | Current repository behavior | Architecture, workflows, and navigation |
 | `requirements.txt` | Python dependencies | None | Pydantic 2 and PyYAML environment |
 
 ## `knowledge/`

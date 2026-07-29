@@ -1,37 +1,115 @@
 # GMD Canonical Variable Schema
 
-This repository contains the Canonical Variable Schema (CVS) for the GMD
-AI-Assisted Harmonization project. The CVS is the authoritative,
-machine-readable representation of the rules governing how each GMD variable
-must be harmonized across all household surveys processed by the GPID Team.
+The GMD Canonical Variable Schema (CVS) is the governed knowledge base for
+AI-assisted household survey harmonization. It translates the GMD
+harmonization guidelines into versioned records that are readable by people,
+validated by software, and consumable by harmonization agents.
 
-## What is in this repository
+The CVS answers one question consistently: **given the evidence available in
+a survey, what rules must be followed to construct a specific GMD variable?**
+It does not inspect raw surveys, generate final harmonization code, or replace
+human approval.
 
-The `knowledge/` folder contains one Markdown file per GMD variable, one
-Markdown file per decision rule, and one Markdown file per GMD module. Each
-file has YAML front matter (structured, machine-readable metadata) and a
-Markdown body (human-readable guidance). These files are the rulebook that
-the AI harmonization agent reads before drafting a Harmonization Specification
-for any new survey.
+## How the system fits together
 
-The `extraction/` folder contains the staged pipeline used to produce CVS
-artifacts from the GMD harmonization guidelines. The `country-parameters/`
-folder contains country-specific parameter values and exceptions. The
-`knowledge/parameters/` registry defines those parameters universally. The
-`schema/` folder contains Pydantic models that validate these artifacts.
+The wider harmonization workflow uses three schemas:
 
-For a harmonization run, the effective canon is the universal CVS plus the
-country records selected by ISO3 code and survey ID year. Markdown with YAML
-front matter is the governed authoring format. The build process produces a
-validated JSON bundle for runtime use.
+| Stage | Schema | Responsibility |
+|---|---|---|
+| 1 | Survey Profile | Describes variables and evidence found in a raw survey. |
+| 2 | Canonical Variable Schema (this repository) | Defines the universal GMD rules and governed country-specific inputs. |
+| 3 | Harmonization Specification | Records the proposed mapping for one survey and variable. |
 
-See `knowledge/index.md` for a complete list of all artifacts and their paths.
-See `AGENTS.md` for the operating rules that govern any agent working here.
+For each harmonization run, this repository supplies an **effective canon**:
 
-## This repository is part of a three-schema pipeline
+```text
+effective canon = universal CVS + applicable country records
+```
 
-| Schema | Repo | Purpose |
-|--------|------|---------|
-| Schema 1: Survey Profile | GMD-hub/survey-scribe | Captures what is in a raw household survey |
-| Schema 2: Canonical Variable Schema | This repo | Defines the GMD harmonization rules |
-| Schema 3: Harmonization Specification | GMD-hub/harmonization-specs | Maps survey to GMD standard for one variable/survey pair |
+The universal layer defines structure, value codes, derivation relationships,
+and decision rules. The country layer supplies parameter values and permitted
+exceptions for an ISO3 country code and survey ID year. Country records may be
+more specific, but they never override universal structure.
+
+## Repository map
+
+| Path | Purpose |
+|---|---|
+| `knowledge/` | Universal variable, rule, parameter, module, rubric, and exception artifacts. `knowledge/index.md` is the registry. |
+| `country-parameters/` | Country parameter values and exceptions, organized by uppercase ISO3 code. |
+| `schema/` | Pydantic models and Markdown front-matter loader used for validation. |
+| `validation/` | Cross-repository structural and governance checks. |
+| `build/` | Compiler that produces one runtime JSON bundle for a country and optional survey year. |
+| `extraction/` | Staging workflow for turning source guidelines into reviewed CVS artifacts. |
+| `docs/` | Existing explanatory examples and schema notes. |
+| `wiki/` | Detailed project documentation and operating guidance. |
+| `AGENTS.md` | Mandatory operating and write-access rules for AI agents. |
+
+Markdown with YAML front matter is the governed source format. Files under
+`build/output/` are generated runtime artifacts and must not be hand edited.
+
+## Quick start
+
+Requirements: Python 3.10 or later, Git, and a checkout with an available
+`HEAD` commit.
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+python3 validation/validate_country_layer.py
+python3 build/compile_bundle.py PER 2019
+```
+
+The validator prints reports for undecided fallbacks, country coverage gaps,
+unverified values, and structural failures. It exits with status 1 only when
+structural failures are found; governance reports can contain open items while
+the command still succeeds.
+
+The compiler writes `build/output/bundle_PER_2019.json`. It validates the
+universal parameter registry, country records, references, and ISO3 identity;
+selects records whose inclusive validity window contains 2019; and embeds the
+current Git commit hash. Omit the year to include every country record and its
+validity window:
+
+```sh
+python3 build/compile_bundle.py PER
+```
+
+## Authoring and governance
+
+The authoritative source for CVS rules is
+`GMD_household_survey_harmonization.md` in the
+`GMD-hub/GMD-guidelines` repository. When a CVS artifact conflicts with that
+source, the source wins and the conflict must be escalated to the GPID Team.
+
+New artifacts follow this lifecycle:
+
+```text
+source/context -> agent draft -> human review -> approved staging -> knowledge
+```
+
+AI agents write drafts to `extraction/20_drafts/`. Humans own review,
+approval, and promotion into `knowledge/` and `country-parameters/`. Never
+invent a rule or parameter value; use `null` where the source is insufficient
+and document the missing evidence in provenance.
+
+Read `AGENTS.md` before making any change. Before a harmonization run, read
+`knowledge/index.md`, the relevant variable and rule files, and
+`country-parameters/README.md` plus both files for the survey country.
+
+## Documentation
+
+The wiki provides the detailed operating guide:
+
+- [System overview](wiki/Home.md)
+- [Architecture and data flow](wiki/Architecture.md)
+- [Repository map](wiki/Repository-Map.md)
+- [Artifact model](wiki/Artifact-Model.md)
+- [Artifact lifecycle](wiki/Artifact-Lifecycle.md)
+- [Country parameter layer](wiki/Country-Parameter-Layer.md)
+- [Validation and runtime bundles](wiki/Validation-and-Builds.md)
+- [Governance and contribution workflow](wiki/Governance-and-Contributing.md)
+- [Glossary](wiki/Glossary.md)
+
+The authoritative artifact inventory remains `knowledge/index.md`.
