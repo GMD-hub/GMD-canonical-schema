@@ -1,5 +1,30 @@
 # CVS Knowledge Base Change Log
 
+## v0.1 - 2026-07-29
+
+Repository governance and structural validation strengthened without changing
+canonical rule logic, derivation relationships, fallback policies, or country
+values.
+
+**Added:**
+- Pull request and push validation workflow with governance report artifacts
+- CODEOWNERS placeholder for GPID Team review of governed paths
+- Strict Pydantic models for variable and rule front matter
+- Exception identity, window, and informational overlap checks
+- Effective-dating, scope, overlap, exception, and bundle integrity tests
+- `governance/audits/Gap-Audit-2026-07.md` and
+  `governance/decisions/Open-Decisions.md`
+
+**Changed:**
+- Coverage reports now show the optional country focal point
+- Operational documentation now distinguishes narrative background from the
+  continuously maintained wiki
+- The wiki now points to the independent governance record area by repository
+  path rather than treating audits and decisions as official wiki pages
+
+Authority: GPID Team
+Status: draft
+
 ## v0.1 - 2026-07-28
 
 Country Parameter Layer added as a draft governed extension to the universal

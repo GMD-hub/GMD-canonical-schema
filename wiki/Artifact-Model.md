@@ -104,6 +104,11 @@ records. Each record references a registered parameter ID, supplies inclusive
 `effective_from` and `effective_to` bounds, provides a value matching the
 universal type contract, and records provenance. A null bound is open ended.
 
+The file may also declare an optional `focal_point` for the person who should
+be consulted about coverage gaps for that country. It defaults to null and is
+governance metadata, not a country value or runtime selection input. The
+coverage gap report displays it so reviewers know whom to consult.
+
 Overlapping windows for the same parameter and country are invalid because
 they could select more than one value for the same survey year.
 
@@ -153,3 +158,14 @@ the canonical dependency graph.
   [Country Parameter Layer](Country-Parameter-Layer.md).
 - **To propose a new or changed record:** follow the
   [Artifact Lifecycle](Artifact-Lifecycle.md).
+
+## All wiki pages
+
+[Home](index.md) | [Learning Paths](Learning-Paths.md) |
+[Architecture](Architecture.md) | [Repository Map](Repository-Map.md) |
+[Artifact Model](Artifact-Model.md) |
+[Country Parameter Layer](Country-Parameter-Layer.md) |
+[Artifact Lifecycle](Artifact-Lifecycle.md) |
+[Validation and Builds](Validation-and-Builds.md) |
+[Governance and Contributing](Governance-and-Contributing.md) |
+[Glossary](Glossary.md)

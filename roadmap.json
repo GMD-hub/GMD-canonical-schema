@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "compound-gpid-roadmap-v1",
+  "milestones": [
+    {
+      "id": "we-are-building-the-framework",
+      "title": "We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.",
+      "objective": "We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.",
+      "status": "in-progress",
+      "features": [
+        {
+          "id": "initial-focus",
+          "title": "We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.",
+          "status": "in-progress",
+          "plan": null
+        }
+      ]
+    }
+  ]
+}

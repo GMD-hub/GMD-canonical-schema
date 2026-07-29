@@ -1,0 +1,6 @@
+# Replace @GMD-hub/gpid-team with the real GitHub team name. CODEOWNERS has no effect until a repository administrator enables branch protection on the default branch.
+# Canonical layers require GPID Team approval
+/knowledge/              @GMD-hub/gpid-team
+/country-parameters/     @GMD-hub/gpid-team
+/AGENTS.md               @GMD-hub/gpid-team
+/schema/                 @GMD-hub/gpid-team

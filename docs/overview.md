@@ -1,5 +1,10 @@
 # What we are building and why
 
+> **Purpose:** `docs/` holds narrative background explaining why the design is
+> what it is, written to be read once. `wiki/` holds operational reference
+> documentation describing how the system currently behaves and is maintained
+> continuously.
+
 ## The problem
 
 The GMD harmonization guidelines are written for human consultants. Every

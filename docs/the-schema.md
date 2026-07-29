@@ -1,12 +1,20 @@
 # The schema: fields and a first example
 
+> **Purpose:** `docs/` holds narrative background explaining why the design is
+> what it is, written to be read once. `wiki/` holds operational reference
+> documentation describing how the system currently behaves and is maintained
+> continuously.
+
 ## Structure of every variable record
 
 Each variable record has two parts in the same file.
 
 **Structured fields** (top of the file): discrete facts about the variable
-that the AI agent reads. These are validated automatically. A record with
-a missing required field or an invalid value cannot be approved.
+that the AI agent reads. Variable front matter is validated by a strict
+Pydantic model. Missing required fields, invalid values, unknown fields,
+malformed references, and derivation cycles are structural failures. Unresolved
+variable references in draft artifacts are reported as governance warnings
+until the referenced artifacts are promoted.
 
 **Prose sections** (bottom of the file): nuanced guidance that the AI and
 human reviewers both read. Includes the definition, step-by-step construction
