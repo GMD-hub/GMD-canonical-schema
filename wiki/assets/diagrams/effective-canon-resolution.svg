@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-labelledby="title desc">
+  <title id="title">Effective-canon resolution</title>
+  <desc id="desc">Load country records and select by survey year. If a required record exists, use it. Otherwise follow the registered fallback policy, which may use a default, skip a validation check, or stop and escalate.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#385267"/></marker><style>.box{fill:#fff;stroke:#007a78;stroke-width:3}.decision{fill:#fff6e2;stroke:#d49b21;stroke-width:3}.stop{fill:#fcece8;stroke:#c94f3d;stroke-width:3}.text{fill:#183044;font:700 21px sans-serif;text-anchor:middle}.sub{fill:#385267;font:17px sans-serif;text-anchor:middle}.line{fill:none;stroke:#385267;stroke-width:3;marker-end:url(#arrow)}</style></defs>
+  <path class="line" d="M230 90H340"/><path class="line" d="M570 90H690"/><path class="line" d="M920 90V170"/>
+  <path class="line" d="M920 290V390H220V430"/><path class="line" d="M920 290V350H500V430"/><path class="line" d="M920 290V390H780V430"/><path class="line" d="M920 290V350H1060V430"/>
+  <rect class="box" x="20" y="35" width="210" height="110" rx="8"/><text class="text" x="125" y="80">Variable</text><text class="sub" x="125" y="112">and dependencies</text>
+  <rect class="box" x="340" y="35" width="230" height="110" rx="8"/><text class="text" x="455" y="80">Load both files</text><text class="sub" x="455" y="112">for survey ISO3</text>
+  <rect class="box" x="690" y="35" width="230" height="110" rx="8"/><text class="text" x="805" y="80">Select records</text><text class="sub" x="805" y="112">by fieldwork start year</text>
+  <rect class="decision" x="790" y="170" width="260" height="120" rx="8"/><text class="text" x="920" y="215">Required country</text><text class="text" x="920" y="245">record found?</text>
+  <text class="sub" x="755" y="370">Yes</text><text class="sub" x="1060" y="370">No: read fallback</text>
+  <rect class="box" x="90" y="430" width="260" height="120" rx="8"/><text class="text" x="220" y="478">Use country value</text><text class="sub" x="220" y="515">record source and window</text>
+  <rect class="box" x="370" y="430" width="260" height="120" rx="8"/><text class="text" x="500" y="478">Use global default</text><text class="sub" x="500" y="515">identify as fallback</text>
+  <rect class="box" x="650" y="430" width="260" height="120" rx="8"/><text class="text" x="780" y="478">Skip check</text><text class="sub" x="780" y="515">validation only</text>
+  <rect class="stop" x="930" y="430" width="260" height="120" rx="8"/><text class="text" x="1060" y="478">Stop and escalate</text><text class="sub" x="1060" y="515">blocked or undecided</text>
+</svg>

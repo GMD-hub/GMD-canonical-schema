@@ -54,6 +54,48 @@ Neither mechanism may redefine value codes, missing codes, data types, or
 derivation relationships. Such a proposal belongs in the universal CVS review
 path.
 
+### Hypothetical country exception
+
+!!! warning "Hypothetical only — not a real country rule"
+      The following record is invented solely to demonstrate structure and
+      decision flow. `ZZZ` is used as a fictional teaching code. The condition,
+      action, and dates are **not facts about any country or survey**, are not
+      registered artifacts, and must not be copied into production.
+
+```yaml
+country_id: CTY-ZZZ
+iso3: ZZZ
+exceptions:
+   - exception_id: EXC-ZZZ-001
+      applies_to_variables:
+         - VAR-educy
+      effective_from: 1995
+      effective_to: 2004
+      condition: >-
+         If the documented legacy questionnaire uses code 98 for a named
+         completed education category.
+      action: >-
+         Apply the reviewed interpretation for that code before following the
+         universal VAR-educy construction rule.
+      rationale: >-
+         Hypothetical illustration of questionnaire-specific conditional logic.
+      provenance:
+         source: "HYPOTHETICAL TEACHING EXAMPLE — NOT EVIDENCE"
+         approved_by: null
+         approved_on: null
+         human_reviewed: false
+```
+
+This is an exception rather than a parameter because the trigger is a
+condition in one questionnaire design, not a reusable country value with a
+universal shape. At runtime it would be selected only if the survey ID year
+fell within 1995–2004. It still could not change `VAR-educy`'s type, missing
+codes, or derivation graph.
+
+By contrast, a reviewed mapping of education-cycle durations belongs in a
+`PARAM-EDU-YEARS-BY-LEVEL` country record because the universal registry
+already defines the mapping's meaning and keys.
+
 ## Fallback behavior
 
 When no selected record exists, read the parameter definition under
@@ -67,6 +109,14 @@ When no selected record exists, read the parameter definition under
 
 Never infer a country value from nearby countries, an outdated record, or
 general knowledge.
+
+!!! example "Hypothetical fallback outcomes"
+   Suppose a 2012 survey requires a construction parameter but its country
+   file has no record valid in 2012. With `use_global_default`, the registered
+   default is used and identified in provenance. With
+   `block_and_escalate`, construction stops. With `undecided`, it also stops
+   because governance has not chosen a policy. None of these outcomes permits
+   the consumer to invent a 2012 value.
 
 ## Current coverage warning
 
@@ -83,12 +133,11 @@ exception, establish an authoritative source, use the correct ISO3 folder,
 match an existing parameter or variable ID, define non-overlapping validity,
 record provenance, obtain human review, and run repository validation.
 
-## Related documents
+## Suggested reading
 
-- [Artifact Model](Artifact-Model.md) defines parameter and exception records.
-- [Architecture and Data Flow](Architecture.md) shows effective-canon resolution.
-- [Validation and Runtime Bundles](Validation-and-Builds.md) documents layer checks.
-
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **To compare the record contracts:** revisit the
+   [Artifact Model](Artifact-Model.md).
+- **To see when country records enter the effective canon:** read
+   [Architecture and Data Flow](Architecture.md#effective-canon-resolution).
+- **To validate windows, references, and value shapes:** continue to
+   [Validation and Runtime Bundles](Validation-and-Builds.md).

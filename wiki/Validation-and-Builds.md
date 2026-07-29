@@ -40,6 +40,14 @@ It also prints three governance reports:
 These reports can contain rows while validation exits successfully. The
 script exits with status 1 when the `Structural failures` section is nonempty.
 
+!!! example "Structural failure versus governance report"
+  A country record whose mapping omits the required `primary` key is a
+  structural failure: software cannot trust its shape, so validation exits
+  unsuccessfully. A well-shaped record with `human_reviewed: false` appears
+  in the unverified-values report: the structure is usable for review, but
+  the value is not approved evidence. A zero exit code never upgrades its
+  governance status.
+
 ## Compile a runtime bundle
 
 ```sh
@@ -60,6 +68,12 @@ Output names follow:
 ```text
 build/output/bundle_<ISO3>_<year-or-all>.json
 ```
+
+!!! example "Hypothetical boundary-year selection"
+  Assume one parameter record ends in 1999 and its non-overlapping successor
+  begins in 2000. Compiling for survey year 1999 selects the first; compiling
+  for 2000 selects the second. Compiling without a year retains both records
+  and their windows so a downstream consumer can see the complete layer.
 
 ## Bundle contents
 
@@ -89,6 +103,11 @@ outputs to identify the exact repository snapshot used.
 Generated JSON is a runtime derivative. Do not hand edit it or treat it as the
 source for future canonical changes.
 
+For example, correcting a typo directly in
+`build/output/bundle_PER_2019.json` would be lost on the next compilation and
+would break traceability. Correct the governed Markdown through its required
+review path, then regenerate the bundle.
+
 ## What is validated today
 
 Parameter definitions and country files have dedicated strict Pydantic models.
@@ -109,12 +128,11 @@ identity fields. Fix source Markdown and regenerate; never patch the JSON.
 After any canonical change, run the repository validator and compile at least
 one representative bundle for each affected country and boundary year.
 
-## Related documents
+## Suggested reading
 
-- [Repository Map](Repository-Map.md) identifies validation and build inputs.
-- [Country Parameter Layer](Country-Parameter-Layer.md) explains selected records.
-- [Governance and Contributing](Governance-and-Contributing.md) covers review gates.
-
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **To locate every input and output:** revisit the
+  [Repository Map](Repository-Map.md).
+- **To understand the selection algorithm being tested:** read the
+  [Country Parameter Layer](Country-Parameter-Layer.md).
+- **To interpret technical success within the approval process:** continue to
+  [Governance and Contributing](Governance-and-Contributing.md).

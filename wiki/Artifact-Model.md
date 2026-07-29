@@ -47,6 +47,13 @@ Mapping roles currently illustrated in the repository are:
 | `derived` | Compute from other canonical variables. |
 | `derived_preferred` | Prefer canonical derivation, with direct raw mapping as a documented fallback when allowed. |
 
+!!! example "Example: reading a variable specification"
+  The current draft `VAR-educy` is `derived_preferred`. That label alone is
+  not an algorithm. Its `derived_from`, prerequisites, rules, and country
+  parameter declarations must be read together to understand the permitted
+  paths and required evidence. This is why a variable file is a contract
+  with references, not a standalone recipe.
+
 ## Decision rules
 
 Rules separate reusable logic from variable descriptions. A rule identifies
@@ -56,6 +63,12 @@ prohibitions, rationale, test examples, and history.
 
 Variable files reference rules by ID. This avoids copying the same rule into
 multiple variables and lets a reviewer inspect the controlling decision once.
+
+!!! example "Example: one rule, multiple consumers"
+  If an age restriction applies to several education outputs, those variable
+  files can reference one registered rule such as `RULE-EDU-001`. A later
+  proposal to change the condition is reviewed once in the rule; copying the
+  IF/THEN text into every variable would create competing versions.
 
 ## Parameter definitions
 
@@ -77,6 +90,13 @@ Supported fallback policies are:
 | `block_and_escalate` | Stop the affected construction and request a decision. |
 | `undecided` | Stop and escalate because governance has not selected a policy. |
 
+!!! example "Example: a missing construction input"
+  `PARAM-EDU-YEARS-BY-LEVEL` is a construction parameter whose current draft
+  fallback is `undecided`. In a hypothetical run with no valid country
+  record, the consumer stops the affected construction path and escalates.
+  It must not average neighboring countries or silently reuse an expired
+  value.
+
 ## Country parameter records
 
 A country parameter file identifies its country and contains zero or more
@@ -86,6 +106,9 @@ universal type contract, and records provenance. A null bound is open ended.
 
 Overlapping windows for the same parameter and country are invalid because
 they could select more than one value for the same survey year.
+
+For example, windows `1990–2000` and `2000–2010` overlap in 2000 because both
+bounds are inclusive. A non-overlapping successor would begin in 2001.
 
 ## Country exception records
 
@@ -98,6 +121,14 @@ Each exception uses an `EXC-<ISO3>-<NNN>` ID and contains:
 
 Exceptions are for country-specific conditional behavior that cannot be
 expressed as a parameter value. They are not structural overrides.
+
+!!! example "Parameter or exception?"
+  A mapping such as `{primary: 6, lower_secondary: 3,
+  upper_secondary: 3}` has a stable universal shape and belongs in a
+  parameter record. A sourced instruction that applies only when a specific
+  legacy questionnaire code is present is conditional behavior and may
+  require an exception. The [Country Parameter Layer](Country-Parameter-Layer.md#parameters-versus-exceptions)
+  shows a fully hypothetical exception record.
 
 ## IDs and references
 
@@ -114,12 +145,11 @@ References must resolve to existing registered artifacts. Changes to
 `derived_from` or `derives_to` always require human approval because they alter
 the canonical dependency graph.
 
-## Related documents
+## Suggested reading
 
-- [Architecture and Data Flow](Architecture.md) shows artifacts in the system.
-- [Country Parameter Layer](Country-Parameter-Layer.md) applies parameter contracts.
-- [Artifact Lifecycle](Artifact-Lifecycle.md) explains drafting and approval.
-
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **To see how these records combine at runtime:** return to
+  [Architecture and Data Flow](Architecture.md).
+- **To resolve effective-dated values and exceptions:** continue to the
+  [Country Parameter Layer](Country-Parameter-Layer.md).
+- **To propose a new or changed record:** follow the
+  [Artifact Lifecycle](Artifact-Lifecycle.md).

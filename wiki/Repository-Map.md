@@ -33,6 +33,15 @@
 The directory tree can contain placeholders for future artifact types. The
 index, not directory existence, determines the current registered inventory.
 
+!!! example "Example: finding the source of a bundle value"
+	Suppose a generated bundle contains a selected education-duration mapping.
+	Start with the bundle metadata in `build/output/`, then follow its country
+	code and survey year to `country-parameters/countries/<ISO3>/parameters.md`.
+	The record's `parameter_id` leads to its universal contract under
+	`knowledge/parameters/`, and the bundle's commit hash identifies the exact
+	repository snapshot. The JSON is the end of the trail, not the place to
+	edit the value.
+
 ## `country-parameters/`
 
 Every `countries/<ISO3>/` folder contains exactly two governed Markdown files:
@@ -44,6 +53,10 @@ Every `countries/<ISO3>/` folder contains exactly two governed Markdown files:
 
 The folder name, file `iso3`, and `country_id` must agree. ISO3 codes use
 three uppercase letters and `country_id` is `CTY-<ISO3>`.
+
+For example, a `COL/` folder must declare `iso3: COL` and
+`country_id: CTY-COL` in both files. A mismatch such as `iso3: PER` is a
+structural error even if the contained record values happen to validate.
 
 ## `schema/`, `validation/`, and `build/`
 
@@ -77,12 +90,18 @@ Approval staging does not itself make an artifact canonical. Human promotion
 into `knowledge/` or `country-parameters/`, plus index maintenance where
 applicable, completes the lifecycle.
 
-## Related documents
+!!! example "Hypothetical path: a proposed parameter"
+	An agent drafts one parameter definition in `20_drafts/`. A human records
+	review findings in `30_review/`; if approved, a human places the candidate
+	in `40_approved/` and later promotes it to `knowledge/parameters/` while
+	updating `knowledge/index.md`. The compiler ignores all three staging
+	folders, so a draft cannot leak into a runtime bundle.
 
-- [Architecture and Data Flow](Architecture.md) explains how these folders interact.
-- [Artifact Lifecycle](Artifact-Lifecycle.md) follows content across the folders.
-- [Validation and Runtime Bundles](Validation-and-Builds.md) documents the scripts.
+## Suggested reading
 
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **To understand how these paths exchange information:** read
+	[Architecture and Data Flow](Architecture.md).
+- **To follow content through the staging folders:** continue to the
+	[Artifact Lifecycle](Artifact-Lifecycle.md).
+- **To run the scripts described here:** use
+	[Validation and Runtime Bundles](Validation-and-Builds.md).

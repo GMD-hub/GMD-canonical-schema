@@ -21,6 +21,21 @@
 | Universal CVS | Country-neutral structure and rules stored under `knowledge/`. |
 | Validity window | Inclusive `effective_from` and `effective_to` years; null means open ended. |
 
+## Terms in one scenario
+
+!!! example "Hypothetical example: from evidence to a reviewed proposal"
+	A **Survey Profile** records that a fictional survey contains grade-level
+	evidence. The **Universal CVS** supplies the `VAR-educy` contract and its
+	referenced rules. The **Country Parameter Layer** supplies any reviewed
+	records whose **validity window** contains the **Survey ID year**. Their
+	union is the **effective canon**. A downstream agent uses that canon and
+	the survey evidence to draft a **Harmonization Specification**, preserving
+	**provenance** throughout. A human reviews the proposal before any
+	implementation.
+
+	This scenario explains how the terms relate; it does not describe a real
+	survey or country value.
+
 ## Artifact prefixes
 
 | Prefix | Artifact |
@@ -32,12 +47,11 @@
 | `CTY-` | Country layer identity |
 | `EXC-` | Exception |
 
-## Related documents
+## Suggested reading
 
-- [Wiki Index](Index.md) organizes all documentation by task.
-- [Home](Home.md) introduces the project concepts summarized here.
-- [Artifact Model](Artifact-Model.md) gives detailed field and ID definitions.
-
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **To choose a route through the documentation:** use the
+	[Wiki Index](Learning-Paths.md).
+- **To see these terms as a system:** read
+	[Architecture and Data Flow](Architecture.md).
+- **To inspect record fields and IDs:** continue to the
+	[Artifact Model](Artifact-Model.md).

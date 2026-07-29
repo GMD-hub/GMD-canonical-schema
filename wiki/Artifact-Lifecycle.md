@@ -2,21 +2,23 @@
 
 ## From guidelines to canon
 
-```mermaid
-flowchart LR
-    A[00_context] --> B[10_source]
-    B --> C[20_drafts]
-    C --> D[30_review]
-    D -->|changes requested| C
-    D -->|approved| E[40_approved]
-    E --> F[knowledge or country-parameters]
-    F --> G[validation]
-    G --> H[runtime bundle]
-```
+<figure class="gmd-diagram" markdown>
+![Artifact lifecycle from context and source through drafting, review, promotion, validation, and runtime](assets/diagrams/artifact-lifecycle.svg)
+<figcaption>Review can return a candidate to drafting; only approved and promoted content reaches validation and runtime.</figcaption>
+</figure>
 
 The staging folders preserve the distinction between extraction, review, and
 canonical publication. Content must not jump directly from source material to
 `knowledge/`.
+
+!!! example "Hypothetical journey: clarifying one decision rule"
+    This process example is invented; it does not propose a real rule change.
+    An authoritative guideline passage appears ambiguous when applied to one
+    education variable. The source excerpt and context are collected first,
+    then an agent drafts a single candidate rule in `20_drafts/` with the
+    ambiguity noted in provenance. A human reviewer either requests revision
+    or records approval. Only a human can move the approved artifact through
+    `40_approved/` into `knowledge/` and update the index.
 
 ## Stage responsibilities
 
@@ -49,6 +51,10 @@ fallback consequences, provenance, and test examples.
 Requested changes return to the draft stage. Agents do not write review
 decisions or approve their own output.
 
+For example, valid YAML with a perfectly formed IF/THEN block still returns to
+drafting if the reviewer finds that its condition broadens the source
+guideline. Structural validity cannot substitute for semantic fidelity.
+
 ### 4. Approval and promotion
 
 Humans place approved candidates in `40_approved/`, then promote them to the
@@ -62,6 +68,12 @@ correct canonical folder. Promotion includes:
 
 `40_approved/` is a staging checkpoint, not a runtime input. The compiler reads
 from `knowledge/` and `country-parameters/` only.
+
+!!! example "What promotion changes"
+    Before promotion, compiling a bundle cannot include the candidate because
+    it exists only in staging. After human promotion, index maintenance, and a
+    successful commit, a newly compiled bundle can include it and records the
+    new commit hash. This makes the publication event observable downstream.
 
 ## Changes to existing artifacts
 
@@ -85,12 +97,11 @@ human approval is recorded, the artifact is promoted to the owning folder,
 the index is current, structural validation succeeds, governance reports have
 been reviewed, and representative runtime bundles compile as expected.
 
-## Related documents
+## Suggested reading
 
-- [Governance and Contributing](Governance-and-Contributing.md) defines ownership.
-- [Artifact Model](Artifact-Model.md) describes the records moving through stages.
-- [Validation and Runtime Bundles](Validation-and-Builds.md) covers final checks.
-
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **To identify the fields under review:** revisit the
+    [Artifact Model](Artifact-Model.md).
+- **To understand who may act at each stage:** read
+    [Governance and Contributing](Governance-and-Contributing.md).
+- **To run the final technical checks:** continue to
+    [Validation and Runtime Bundles](Validation-and-Builds.md).

@@ -1,24 +1,90 @@
 # GMD CVS Wiki
 
-This wiki explains how the GMD Canonical Variable Schema (CVS) works, how its
-folders relate to one another, and how governed Markdown becomes a runtime
-bundle for AI-assisted harmonization.
+<p class="gmd-lede">Learn how governed harmonization guidance moves from
+source evidence to canonical knowledge, country-specific inputs, and a
+traceable runtime bundle.</p>
+
+The GMD Canonical Variable Schema (CVS) is the policy layer for AI-assisted
+household survey harmonization. This site explains what the CVS owns, how its
+parts relate, and where human judgment remains mandatory.
+
+!!! info "The central idea"
+   A **Survey Profile** says what evidence a survey contains. The
+   **effective canon** says which universal rules and governed country inputs
+   apply. Together they support a draft **Harmonization Specification** that
+   a human reviews before implementation.
 
 ## Start here
 
-1. Read [Architecture and data flow](Architecture.md) for the system model.
-2. Use [Repository map](Repository-Map.md) to find the owning folder.
-3. Read [Artifact model](Artifact-Model.md) before editing structured records.
-4. Follow [Artifact lifecycle](Artifact-Lifecycle.md) for drafting and review.
-5. Read [Country parameter layer](Country-Parameter-Layer.md) before using any
-   country-specific content.
-6. Use [Validation and runtime bundles](Validation-and-Builds.md) to check and
-   compile the repository.
-7. Follow [Governance and contributing](Governance-and-Contributing.md) for
-   write permissions and approval requirements.
+<div class="grid cards" markdown>
 
-The [glossary](Glossary.md) defines project-specific terms. The root
-[README](../README.md) is the shorter entry point.
+-   :material-map-outline:{ .lg .middle } **Understand the system**
+
+    ---
+
+    Follow evidence through the three-schema workflow and see how the
+    effective canon is resolved.
+
+    [Open architecture :material-arrow-right:](Architecture.md)
+
+-   :material-file-tree-outline:{ .lg .middle } **Find the owning folder**
+
+    ---
+
+    Connect each repository path to its responsibility, input, and output.
+
+    [Explore the repository map :material-arrow-right:](Repository-Map.md)
+
+-   :material-shape-outline:{ .lg .middle } **Learn the artifacts**
+
+    ---
+
+    Compare variables, rules, parameters, and country exceptions before
+    editing structured records.
+
+    [Study the artifact model :material-arrow-right:](Artifact-Model.md)
+
+-   :material-account-check-outline:{ .lg .middle } **Make a governed change**
+
+    ---
+
+    Move a sourced proposal through drafting, review, approval, validation,
+    and promotion.
+
+    [Follow the lifecycle :material-arrow-right:](Artifact-Lifecycle.md)
+
+</div>
+
+For a complete sequence or a task-specific route, use the
+[learning paths](Index.md).
+
+## A first worked example
+
+!!! example "Hypothetical walkthrough: constructing years of education"
+    This scenario is invented to explain the workflow. It is **not evidence
+    about any real survey or country** and must not be used as a governed
+    parameter or exception.
+
+    1. A fictional Survey Profile reports a respondent's highest completed
+       education category, but not explicit years of schooling.
+    2. `VAR-educy` says categorical education may be used as a fallback path
+       and declares `PARAM-EDU-YEARS-BY-LEVEL` as a dependency.
+    3. The consumer loads the survey country's parameter and exception files
+       and selects records using the fieldwork start year.
+    4. If a valid, reviewed duration mapping exists, the universal rule uses
+       it to translate the category into years. If none exists, the
+       parameter's fallback policy decides whether to continue or escalate.
+    5. The proposed mapping, selected record, validity window, source, and CVS
+       commit are recorded in a Harmonization Specification for human review.
+
+    The example connects the [architecture](Architecture.md),
+    [artifact model](Artifact-Model.md), and
+    [country resolution algorithm](Country-Parameter-Layer.md) without
+    claiming that a particular value is correct.
+
+The [glossary](Glossary.md) defines project-specific terms. The repository
+[README](https://github.com/GMD-hub/GMD-canonical-schema/blob/main/README.md)
+is the shorter entry point.
 
 ## Current implementation status
 
@@ -71,10 +137,8 @@ the conflict in provenance notes and escalate it to the GPID Team.
 
 ## Related documents
 
-- [Wiki Index](Index.md) organizes every guide by reading order and task.
-- [Architecture and Data Flow](Architecture.md) expands the system model.
-- [Repository Map](Repository-Map.md) connects system responsibilities to paths.
-
-## All wiki pages
-
-[Index](Index.md) | [Home](Home.md) | [Architecture](Architecture.md) | [Repository Map](Repository-Map.md) | [Artifact Model](Artifact-Model.md) | [Artifact Lifecycle](Artifact-Lifecycle.md) | [Country Parameter Layer](Country-Parameter-Layer.md) | [Validation and Builds](Validation-and-Builds.md) | [Governance and Contributing](Governance-and-Contributing.md) | [Glossary](Glossary.md)
+- **New to the CVS?** Continue with
+   [Architecture and Data Flow](Architecture.md).
+- **Looking for a specific task?** Use the
+   [Learning Paths](Index.md).
+- **Need a term quickly?** Open the [Glossary](Glossary.md).

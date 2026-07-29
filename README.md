@@ -102,8 +102,8 @@ Read `AGENTS.md` before making any change. Before a harmonization run, read
 
 The wiki provides the detailed operating guide:
 
-- [Complete wiki index](wiki/Index.md)
-- [System overview](wiki/Home.md)
+- [Complete wiki index](wiki/Learning-Paths.md)
+- [System overview](wiki/index.md)
 - [Architecture and data flow](wiki/Architecture.md)
 - [Repository map](wiki/Repository-Map.md)
 - [Artifact model](wiki/Artifact-Model.md)
