@@ -24,15 +24,17 @@ The system works in three steps:
    household survey questionnaire (PDF) and produces a structured survey profile.
 
 2. **Apply the GMD rules (this is the CVS).** The system reads the CVS to
-   understand what each GMD variable requires and how to construct it.
+   understand what each GMD variable requires and how to construct it. It
+   always combines the universal CVS with records from the survey country's
+   parameter layer selected for the survey ID year.
 
 3. **Draft a harmonization decision.** The system combines steps 1 and 2 to
    propose how to map the raw survey variable to the GMD standard. A GPID
    economist reviews and approves this proposal before any code runs.
 
-The CVS is the fixed anchor. If the rules it contains are correct, the AI
-drafts will be correct. This is why we need your review before building
-anything further.
+The universal CVS defines structure. Country parameter records provide values
+and permitted country exceptions. Together they form the effective canon for
+a harmonization run. This is why both layers require review and governance.
 
 ## Building on Laura's work
 

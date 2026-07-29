@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Three-schema workflow</title>
+  <desc id="desc">Raw survey evidence becomes a Survey Profile. Guidelines and country records form the effective canon. Both feed a Harmonization Specification, followed by human review and implementation.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#385267"/></marker>
+    <style>.box{fill:#fff;stroke:#007a78;stroke-width:3}.policy{fill:#fff6e2;stroke:#d49b21}.review{fill:#fcece8;stroke:#c94f3d}.label{fill:#183044;font:700 22px sans-serif;text-anchor:middle}.small{fill:#385267;font:18px sans-serif;text-anchor:middle}.line{fill:none;stroke:#385267;stroke-width:3;marker-end:url(#arrow)}</style>
+  </defs>
+  <path class="line" d="M250 105 H390"/><path class="line" d="M250 260 H390"/><path class="line" d="M250 415 H390"/>
+  <path class="line" d="M620 105 C700 105 690 260 760 260"/><path class="line" d="M620 260 H760"/><path class="line" d="M620 415 C700 415 690 260 760 260"/>
+  <path class="line" d="M990 260 H1040"/>
+  <rect class="box" x="30" y="50" width="220" height="110" rx="8"/><text class="label" x="140" y="94">Raw survey</text><text class="small" x="140" y="125">and questionnaire</text>
+  <rect class="policy" x="30" y="205" width="220" height="110" rx="8"/><text class="label" x="140" y="250">GMD guidelines</text><text class="small" x="140" y="281">rule authority</text>
+  <rect class="policy" x="30" y="360" width="220" height="110" rx="8"/><text class="label" x="140" y="405">Country records</text><text class="small" x="140" y="436">effective dated</text>
+  <rect class="box" x="390" y="50" width="230" height="110" rx="8"/><text class="label" x="505" y="105">Survey Profile</text><text class="small" x="505" y="136">available evidence</text>
+  <rect class="policy" x="390" y="205" width="230" height="110" rx="8"/><text class="label" x="505" y="250">Universal CVS</text><text class="small" x="505" y="281">stable structure</text>
+  <rect class="policy" x="390" y="360" width="230" height="110" rx="8"/><text class="label" x="505" y="405">Effective canon</text><text class="small" x="505" y="436">applicable policy</text>
+  <rect class="box" x="760" y="205" width="230" height="110" rx="8"/><text class="label" x="875" y="250">Harmonization</text><text class="label" x="875" y="280">Specification</text>
+  <rect class="review" x="1040" y="205" width="130" height="110" rx="8"/><text class="label" x="1105" y="246">Human</text><text class="label" x="1105" y="276">review</text><text class="small" x="1105" y="302">then implement</text>
+</svg>

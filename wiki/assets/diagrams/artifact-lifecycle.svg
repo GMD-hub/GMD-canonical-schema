@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Artifact lifecycle</title><desc id="desc">Context and source lead to agent drafting and human review. Requested changes return to drafting. Approval leads to approved staging, human promotion, validation, and runtime bundles.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#385267"/></marker><style>.box{fill:#fff;stroke:#007a78;stroke-width:3}.human{fill:#fff6e2;stroke:#d49b21;stroke-width:3}.final{fill:#fcece8;stroke:#c94f3d;stroke-width:3}.text{fill:#183044;font:700 20px sans-serif;text-anchor:middle}.sub{fill:#385267;font:16px sans-serif;text-anchor:middle}.line{fill:none;stroke:#385267;stroke-width:3;marker-end:url(#arrow)}.return{fill:none;stroke:#c94f3d;stroke-width:3;stroke-dasharray:8 6;marker-end:url(#arrow)}</style></defs>
+  <path class="line" d="M180 110H220"/><path class="line" d="M380 110H420"/><path class="line" d="M580 110H620"/><path class="line" d="M780 110H820"/>
+  <path class="return" d="M700 170V250H500V170"/><text class="sub" x="600" y="280">changes requested</text>
+  <path class="line" d="M900 170V345H180"/><path class="line" d="M340 400H390"/><path class="line" d="M600 400H650"/><path class="line" d="M860 400H910"/>
+  <rect class="box" x="20" y="55" width="160" height="110" rx="8"/><text class="text" x="100" y="100">00_context</text><text class="sub" x="100" y="132">interpretation</text>
+  <rect class="box" x="220" y="55" width="160" height="110" rx="8"/><text class="text" x="300" y="100">10_source</text><text class="sub" x="300" y="132">evidence</text>
+  <rect class="box" x="420" y="55" width="160" height="110" rx="8"/><text class="text" x="500" y="100">20_drafts</text><text class="sub" x="500" y="132">agent candidate</text>
+  <rect class="human" x="620" y="55" width="160" height="110" rx="8"/><text class="text" x="700" y="100">30_review</text><text class="sub" x="700" y="132">human decision</text>
+  <rect class="human" x="820" y="55" width="160" height="110" rx="8"/><text class="text" x="900" y="100">40_approved</text><text class="sub" x="900" y="132">staging</text>
+  <rect class="human" x="90" y="345" width="250" height="110" rx="8"/><text class="text" x="215" y="390">Human promotion</text><text class="sub" x="215" y="422">to canonical layer</text>
+  <rect class="box" x="390" y="345" width="210" height="110" rx="8"/><text class="text" x="495" y="390">Validation</text><text class="sub" x="495" y="422">structure and reports</text>
+  <rect class="box" x="650" y="345" width="210" height="110" rx="8"/><text class="text" x="755" y="390">Compilation</text><text class="sub" x="755" y="422">country and year</text>
+  <rect class="final" x="910" y="345" width="250" height="110" rx="8"/><text class="text" x="1035" y="390">Runtime bundle</text><text class="sub" x="1035" y="422">derived JSON</text>
+</svg>

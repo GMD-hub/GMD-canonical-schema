@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Authoring to runtime</title><desc id="desc">Markdown and YAML front matter combine into a governed artifact, which is validated, selected for country and year, and compiled into a JSON runtime bundle.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#385267"/></marker><style>.box{fill:#fff;stroke:#007a78;stroke-width:3}.policy{fill:#fff6e2;stroke:#d49b21;stroke-width:3}.final{fill:#fcece8;stroke:#c94f3d;stroke-width:3}.text{fill:#183044;font:700 21px sans-serif;text-anchor:middle}.sub{fill:#385267;font:17px sans-serif;text-anchor:middle}.line{fill:none;stroke:#385267;stroke-width:3;marker-end:url(#arrow)}</style></defs>
+  <path class="line" d="M230 90C290 90 270 180 340 180"/><path class="line" d="M230 270C290 270 270 180 340 180"/><path class="line" d="M570 180H650"/><path class="line" d="M880 180H960"/>
+  <rect class="box" x="20" y="35" width="210" height="110" rx="8"/><text class="text" x="125" y="80">Markdown body</text><text class="sub" x="125" y="112">human guidance</text>
+  <rect class="box" x="20" y="215" width="210" height="110" rx="8"/><text class="text" x="125" y="260">YAML front matter</text><text class="sub" x="125" y="292">validated fields</text>
+  <rect class="policy" x="340" y="125" width="230" height="110" rx="8"/><text class="text" x="455" y="170">Governed artifact</text><text class="sub" x="455" y="202">one source record</text>
+  <rect class="box" x="650" y="125" width="230" height="110" rx="8"/><text class="text" x="765" y="170">Validate and select</text><text class="sub" x="765" y="202">country and year</text>
+  <rect class="final" x="960" y="125" width="220" height="110" rx="8"/><text class="text" x="1070" y="170">JSON bundle</text><text class="sub" x="1070" y="202">traceable runtime</text>
+</svg>
