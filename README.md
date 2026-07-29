@@ -15,9 +15,15 @@ the AI harmonization agent reads before drafting a Harmonization Specification
 for any new survey.
 
 The `extraction/` folder contains the staged pipeline used to produce CVS
-artifacts from the GMD harmonization guidelines. The `lookup-tables/` folder
-contains country-specific parameter tables referenced by CVS records. The
-`schema/` folder contains Pydantic models that validate every CVS artifact.
+artifacts from the GMD harmonization guidelines. The `country-parameters/`
+folder contains country-specific parameter values and exceptions. The
+`knowledge/parameters/` registry defines those parameters universally. The
+`schema/` folder contains Pydantic models that validate these artifacts.
+
+For a harmonization run, the effective canon is the universal CVS plus the
+country records selected by ISO3 code and survey ID year. Markdown with YAML
+front matter is the governed authoring format. The build process produces a
+validated JSON bundle for runtime use.
 
 See `knowledge/index.md` for a complete list of all artifacts and their paths.
 See `AGENTS.md` for the operating rules that govern any agent working here.

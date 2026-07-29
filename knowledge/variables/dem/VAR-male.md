@@ -1,6 +1,6 @@
 ---
 # ================================================================
-# VARIABLE SPECIFICATION — GMD Canonical Variable Schema v0.1
+# VARIABLE SPECIFICATION - GMD Canonical Variable Schema v0.1
 # ================================================================
 
 # --- Identity ---
@@ -31,9 +31,9 @@ missing_codes:
   - code: ".a"
     label: "Variable not harmonized"
   - code: ".b"
-    label: "Cannot be harmonized — data does not meet harmonization definition"
+    label: "Cannot be harmonized because data does not meet harmonization definition"
   - code: ".c"
-    label: "Information not available — sex not collected in this survey"
+    label: "Information not available because sex was not collected in this survey"
   - code: ".o"
     label: "Other sex category not covered by harmonized codes"
 
@@ -41,9 +41,9 @@ missing_codes:
 derived_from: []
 derives_to: []
 
-# --- Country-specific requirements ---
-requires_country_lookup: false
-country_lookup_table: null
+# --- Country parameter declarations ---
+# Not a routing instruction. The agent always loads the country layer.
+country_parameters: []
 
 # --- Prerequisites ---
 prerequisites: []
@@ -70,7 +70,7 @@ source_hints:
 # --- Provenance ---
 provenance:
   source_document: "GMD_household_survey_harmonization.md"
-  source_section: "Demography (DEM) — Mapping and Description of Variables — male"
+  source_section: "Demography (DEM), Mapping and Description of Variables, male"
   extraction_method: manual
   extracted_on: "2026-06-25"
   human_reviewed: false
@@ -96,11 +96,11 @@ required for virtually every analytical output the GMD produces.
 Map the raw sex variable directly to the GMD binary codes. No imputation or
 estimation of sex from other variables is permitted under any circumstances.
 
-Numeric placeholder values that appear in the raw data — such as 98, 99,
-or 9 — are not valid sex codes. They must be excluded and coded as `.a`.
+Numeric placeholder values that appear in the raw data, such as 98, 99,
+or 9, are not valid sex codes. They must be excluded and coded as `.a`.
 
-When the raw survey contains categories beyond male and female — for example
-"other," "non-binary," or "prefer not to say" — do not assign 1 or 0 to
+When the raw survey contains categories beyond male and female, for example
+"other," "non-binary," or "prefer not to say", do not assign 1 or 0 to
 those responses. Code them as `.o` and document the label, the raw code,
 and its frequency in the do-file notes.
 

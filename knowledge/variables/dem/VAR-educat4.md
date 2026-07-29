@@ -1,11 +1,11 @@
 ---
 # ================================================================
-# VARIABLE SPECIFICATION — GMD Canonical Variable Schema v0.1
+# VARIABLE SPECIFICATION - GMD Canonical Variable Schema v0.1
 # ================================================================
 
 # --- Identity ---
 variable_id: VAR-educat4
-canonical_label: "Highest education level completed — 4 categories"
+canonical_label: "Highest education level completed, 4 categories"
 variable_name: educat4
 module_id: MOD-DEM
 gmd_version: "3.0"
@@ -33,11 +33,11 @@ allowed_range: null
 # --- Missing value codes ---
 missing_codes:
   - code: ".c"
-    label: "Education section not applied — individual is below mineducatage"
+    label: "Education section not applied because the individual is below mineducatage"
   - code: ".a"
     label: "Variable not harmonized"
   - code: ".b"
-    label: "Cannot be harmonized — data does not meet harmonization definition"
+    label: "Cannot be harmonized because data does not meet harmonization definition"
 
 # --- Derivation graph ---
 # Listed in order of preference. educat7 must be attempted before educat5.
@@ -48,9 +48,9 @@ derived_from:
   - VAR-educat5
 derives_to: []
 
-# --- Country-specific requirements ---
-requires_country_lookup: false
-country_lookup_table: null
+# --- Country parameter declarations ---
+# Not a routing instruction. The agent always loads the country layer.
+country_parameters: []
 
 # --- Prerequisites ---
 prerequisites:
@@ -81,13 +81,13 @@ source_hints:
 # --- Provenance ---
 provenance:
   source_document: "GMD_household_survey_harmonization.md"
-  source_section: "Demography (DEM) — Mapping and Description of Variables — educat4"
+  source_section: "Demography (DEM), Mapping and Description of Variables, educat4"
   extraction_method: manual
   extracted_on: "2026-06-25"
   human_reviewed: false
   reviewer: null
   notes: "Guidelines state: at the bare minimum, this variable must be generated.
-          CSV shows basic=0 for educat4 — likely means it is in a separate output
+          CSV shows basic=0 for educat4, which likely means it is in a separate output
           file rather than the basic file. Tier=1 retained per guidelines language.
           Needs team clarification."
 ---
@@ -103,7 +103,7 @@ must contain it.
 
 `educat4` provides the broadest and most internationally comparable education
 grouping in the GMD. Its four categories are designed to be achievable even in
-surveys where finer distinctions — such as primary complete versus incomplete —
+surveys where finer distinctions, such as primary complete versus incomplete,
 cannot be reliably drawn. It is the fallback anchor for all education analysis.
 
 ## Construction notes

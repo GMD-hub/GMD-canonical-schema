@@ -1,6 +1,25 @@
 # CVS Knowledge Base Change Log
 
-## v0.1 — 2026-06-25
+## v0.1 - 2026-07-28
+
+Country Parameter Layer added as a draft governed extension to the universal
+CVS.
+
+**Added:**
+- Universal parameter registry with construction and validation examples
+- Country folders for 12 ISO3 codes, with an illustrative unverified PER example
+- Strict Pydantic models, structural validation, and coverage reports
+- Runtime JSON bundle compiler with source Markdown bodies and commit hash
+
+**Changed:**
+- Replaced variable lookup routing fields with `country_parameters`
+- Moved country exceptions out of `knowledge/` into the country layer
+- Defined survey ID year as the calendar year in which fieldwork began
+
+Authority: GPID Team
+Status: draft
+
+## v0.1 - 2026-06-25
 
 Initial schema design and three example records seeded.
 
@@ -17,6 +36,6 @@ Initial schema design and three example records seeded.
 
 **Open items:**
 - Tier vs basic flag distinction for education categorical variables
-- Country lookup table education_years_by_country_v1 does not yet exist
+- Country parameter coverage and fallback policies remain incomplete
 - Pydantic validation models not yet written (schema/ folder)
 - Extraction pipeline agents not yet written (extraction/agents/ folder)

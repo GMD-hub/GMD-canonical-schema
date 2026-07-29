@@ -1,10 +1,10 @@
 ---
 # ================================================================
-# DECISION RULE — GMD Canonical Variable Schema v0.1
+# DECISION RULE - GMD Canonical Variable Schema v0.1
 # ================================================================
 
 rule_id: RULE-EDU-003
-rule_name: "educy construction — path selection, enrollment adjustment,
+rule_name: "educy construction: path selection, enrollment adjustment,
             tertiary assumptions, and no-guestimation constraint"
 scope: module
 module_id: MOD-DEM
@@ -37,19 +37,23 @@ THEN set educy = reported years
 ELSE IF   survey contains current or highest grade level
           AND individual is currently enrolled (school = 1)
 THEN      educy = years_for(current_grade - 1)
-          using education_years_by_country_v1
+          using PARAM-EDU-YEARS-BY-LEVEL resolved from the country layer
+          for the survey ISO3 code and survey ID year
 
 ELSE IF   survey contains current or highest grade level
           AND individual is not currently enrolled (school = 0)
 THEN      educy = years_for(highest_completed_grade)
-          using education_years_by_country_v1
+          using PARAM-EDU-YEARS-BY-LEVEL resolved from the country layer
+          for the survey ISO3 code and survey ID year
 
 ELSE IF   survey contains only categorical education levels
 THEN      use highest available categorical variable as source:
             IF   educat7 is defined  -> use educat7 categories
             ELSE IF educat5 defined  -> use educat5 categories
             ELSE IF educat4 defined  -> use educat4 categories
-          convert categories to years using education_years_by_country_v1
+          convert categories to years using PARAM-EDU-YEARS-BY-LEVEL
+          resolved from the country layer for the survey ISO3 code
+          and survey ID year
           document source variable in do-file notes
 
 ELSE      set educy = .b
@@ -81,7 +85,10 @@ Repetition of a grade does not increase educy.
   Use `.b` instead.
 - Do not apply tertiary year assumptions without confirming the degree type.
   If degree type is unknown, use the "not completed" assumptions.
-- Do not use a lookup table from the wrong country. Verify the country code.
+- Do not use a parameter record selected for the wrong ISO3 code or survey ID
+  year.
+- Do not continue when no valid country record exists and the registry
+  fallback policy is `undecided`. Stop and escalate.
 
 ## Rationale
 

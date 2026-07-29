@@ -1,6 +1,6 @@
 ---
 # ================================================================
-# VARIABLE SPECIFICATION — GMD Canonical Variable Schema v0.1
+# VARIABLE SPECIFICATION - GMD Canonical Variable Schema v0.1
 # ================================================================
 
 # --- Identity ---
@@ -27,11 +27,11 @@ allowed_range:
 # --- Missing value codes ---
 missing_codes:
   - code: ".c"
-    label: "Education section not applied — individual is below mineducatage"
+    label: "Education section not applied because the individual is below mineducatage"
   - code: ".a"
     label: "Variable not harmonized"
   - code: ".b"
-    label: "Cannot be harmonized — grade level not listed and cannot be
+    label: "Cannot be harmonized because grade level is not listed and cannot be
             derived from available information"
 
 # --- Derivation graph ---
@@ -42,9 +42,12 @@ derived_from:
   - VAR-educat4
 derives_to: []
 
-# --- Country-specific requirements ---
-requires_country_lookup: true
-country_lookup_table: "education_years_by_country_v1"
+# --- Country parameter declarations ---
+# Not a routing instruction. The agent always loads the country layer.
+# This block exists so that missing country records can be detected and
+# the parameter's fallback policy applied.
+country_parameters:
+  - PARAM-EDU-YEARS-BY-LEVEL
 
 # --- Prerequisites ---
 prerequisites:
@@ -81,14 +84,14 @@ source_hints:
 # --- Provenance ---
 provenance:
   source_document: "GMD_household_survey_harmonization.md"
-  source_section: "Demography (DEM) — Mapping and Description of Variables — educy"
+  source_section: "Demography (DEM), Mapping and Description of Variables, educy"
   extraction_method: manual
   extracted_on: "2026-06-25"
   human_reviewed: false
   reviewer: null
-  notes: "Country lookup table (education_years_by_country_v1) does not yet
-          exist. CSV confirms basic=1 and categorical=0. The derived path
-          (path 3) cannot be reliably used until the lookup table is built."
+  notes: "PARAM-EDU-YEARS-BY-LEVEL replaces the former country lookup table.
+      Its fallback policy is undecided, so derived construction must stop
+      and escalate when no valid country record exists."
 ---
 
 ## Definition
@@ -120,8 +123,9 @@ grade reference point to use.
 Map that value directly to `educy`. Cross-check against age and education
 level for plausibility before accepting it.
 
-**Path 2: survey provides grade level — use country lookup table.**
-Use `education_years_by_country_v1` to translate grades to years.
+**Path 2: survey provides grade level, using the country parameter.**
+Resolve `PARAM-EDU-YEARS-BY-LEVEL` from the country layer matching the
+survey's ISO3 code and survey ID year, then translate grades to years.
 
 For individuals currently enrolled (`school = 1`):
   educy = years corresponding to (current grade - 1)
@@ -130,11 +134,12 @@ For individuals not currently enrolled (`school = 0`):
   educy = years corresponding to highest completed grade
 
 **Path 3 (fallback): survey provides only categorical education levels.**
-Use the highest available categorical variable plus the country lookup table.
-Preference: educat7 first, then educat5, then educat4.
+Use the highest available categorical variable plus the selected
+`PARAM-EDU-YEARS-BY-LEVEL` record. Preference: educat7 first, then educat5,
+then educat4.
 Document which variable was used in the do-file notes.
 
-**Tertiary education — when grade or year is not explicitly recorded.**
+**Tertiary education when grade or year is not explicitly recorded.**
 Add the following years to completed secondary education:
 
 | Degree | Completed | Not completed or status unclear |
@@ -154,16 +159,18 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 
 - An individual with `educat7 = 1` (no education) must have `educy = 0`.
 - An individual with `educat7 = 3` (primary complete) should have `educy`
-  equal to the country's expected primary duration per the lookup table.
+  equal to the primary duration in the selected
+  `PARAM-EDU-YEARS-BY-LEVEL` record.
 - No individual below `mineducatage` should have a non-missing `educy`.
 - `educy` must be non-negative for all non-missing observations.
-- Cross-check the distribution against country-specific expected school
-  durations. Sharp departures may mean the wrong country table was applied.
+- Cross-check the distribution against the selected country parameter values.
+  Sharp departures may mean the wrong ISO3 code or survey ID year was used.
 
 ## Escalation triggers
 
-- Country-specific years-per-grade information is not in the lookup table
-  and cannot be determined from survey documentation or UNESCO ISCED mappings.
+- No `PARAM-EDU-YEARS-BY-LEVEL` record is valid for the survey's ISO3 code and
+  survey ID year. Apply its registry fallback policy. While that policy is
+  `undecided`, stop and escalate without constructing the affected path.
 - The survey's grade categories do not correspond to any known educational
   structure for that country.
 - The tertiary degree type is not recorded and cannot be inferred.
@@ -177,7 +184,7 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 - Using the current grade directly for enrolled individuals instead of
   subtracting one year.
 - Counting repeated grades as additional years.
-- Applying the wrong country lookup table — verify the country code first.
+- Applying a record for the wrong ISO3 code or survey ID year.
 - Constructing `educy` via path 3 without documenting the source variable.
 - Setting `educy = 0` for individuals with missing categorical education
   instead of `.b`.
