@@ -73,6 +73,18 @@ class DocumentationSiteTests(unittest.TestCase):
         diagram_assets = SITE / "assets" / "diagrams"
         self.assertEqual(len(list(diagram_assets.glob("*.svg"))), 4)
 
+    def test_card_icons_render_without_leaking_shortcodes(self) -> None:
+        card_pages = {
+            "home": SITE / "index.html",
+            "learning paths": SITE / "Learning-Paths" / "index.html",
+        }
+        for page_name, page_path in card_pages.items():
+            with self.subTest(page=page_name):
+                content = page_path.read_text(encoding="utf-8")
+                self.assertNotIn(":material-", content)
+                self.assertNotIn("{ .lg .middle }", content)
+                self.assertIn('class="twemoji', content)
+
 
 if __name__ == "__main__":
     unittest.main()
