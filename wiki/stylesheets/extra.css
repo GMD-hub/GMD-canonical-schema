@@ -16,6 +16,10 @@
   --md-typeset-a-color: var(--gmd-teal-dark);
 }
 
+html {
+  font-size: 131.25%;
+}
+
 * {
   letter-spacing: 0;
 }
