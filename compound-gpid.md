@@ -2,7 +2,7 @@
 project-name: "GMD Canonical Variable Schema"
 team: "DECDG / GPID -- World Bank"
 created: "2026-07-29"
-last-reviewed: "2026-07-29"
+last-reviewed: "2026-07-30"
 ---
 
 # GMD Canonical Variable Schema
@@ -30,4 +30,4 @@ The GMD Canonical Variable Schema (CVS) is the governed knowledge base for AI-as
 
 ## Current Focus
 
-We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.
+Extract all non-welfare content from the GMD harmonization guidelines through a deterministic pipeline of Python orchestration, specialized agents, skills, and validators. In parallel, build a private Shiny review app on Posit Connect so authorized reviewers can enrich the human-readable Markdown before approved changes are reconciled into YAML front matter.
