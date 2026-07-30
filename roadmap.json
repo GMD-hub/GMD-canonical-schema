@@ -2,15 +2,315 @@
   "schemaVersion": "compound-gpid-roadmap-v1",
   "milestones": [
     {
-      "id": "we-are-building-the-framework",
-      "title": "We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.",
-      "objective": "We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.",
+      "id": "universal-non-welfare-schema",
+      "title": "Extract the Universal Non-Welfare Schema",
+      "objective": "Convert all non-welfare content in the GMD guidelines into structured variable drafts through deterministic Python orchestration, validators, and specialized agents and skills; welfare variables are out of scope, and remaining inexpensive governance questions such as basic versus tier and MOD-LBR are resolved through short interviews and documentation.",
       "status": "in-progress",
       "features": [
         {
-          "id": "initial-focus",
-          "title": "We are building the framework for the CVS and developing tools to restructure rules for GMD harmonization and country-specific conditions and exceptions.",
-          "status": "in-progress",
+          "id": "document-schema-approval",
+          "title": "Document the schema approval from the 2026-07-29 GPID meeting",
+          "status": "done",
+          "plan": null
+        },
+        {
+          "id": "inventory-non-welfare-variables",
+          "title": "Inventory all non-welfare variables and classify structural fields",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "define-extraction-contract",
+          "title": "Define the deterministic extraction contract and source-citation requirements",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "build-extraction-system",
+          "title": "Build extraction agents, skills, and Python orchestration",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "extract-non-welfare-variables",
+          "title": "Extract all non-welfare variables into extraction/20_drafts/",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "validate-every-extraction",
+          "title": "Run structural validation after every extraction",
+          "status": "idea",
+          "plan": null
+        }
+      ]
+    },
+    {
+      "id": "human-review-application",
+      "title": "Build the Human Review Application",
+      "objective": "Provide a safe, simple Shiny interface deployed privately to Posit Connect before asking humans to review extracted content, in parallel with bulk extraction; GPID team approval is sufficient and authoritative through GitHub pull requests.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "define-review-state-manifest",
+          "title": "Define the versioned review states and manifest",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "build-shiny-review-app",
+          "title": "Build a private Shiny app for Posit Connect",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "show-yaml-guideline-evidence",
+          "title": "Show extracted YAML and guideline evidence as read-only context",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "edit-human-markdown-only",
+          "title": "Allow editing only of the human Markdown section",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "save-submit-review",
+          "title": "Add save-draft and submit-for-GPID-review actions",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "record-review-metadata",
+          "title": "Record reviewer identity, review round, timestamps, and content hashes",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "automate-review-pull-requests",
+          "title": "Create review branches and pull requests through a narrowly scoped GitHub App",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "configure-codeowners-protection",
+          "title": "Configure the real GPID CODEOWNERS team and branch protection",
+          "status": "idea",
+          "plan": null
+        }
+      ]
+    },
+    {
+      "id": "independent-agent-review",
+      "title": "Establish Independent Agent Review",
+      "objective": "Review every extraction independently before relying on its content.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "build-source-grounding-review",
+          "title": "Build a source-grounding review agent and skill",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "build-schema-compliance-review",
+          "title": "Build a schema-compliance review agent and skill",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "build-rules-caveats-review",
+          "title": "Build a rules and caveats completeness agent and skill",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "build-consistency-derivation-review",
+          "title": "Build a cross-variable consistency and derivation review agent",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "add-review-routing-audit",
+          "title": "Add deterministic routing, failure states, and audit records",
+          "status": "idea",
+          "plan": null
+        }
+      ]
+    },
+    {
+      "id": "calibrate-human-review",
+      "title": "Calibrate Human Review",
+      "objective": "Test the complete workflow on a representative sample before scaling it.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "select-calibration-sample",
+          "title": "Select five to ten variables across complexity levels",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "review-calibration-sample",
+          "title": "Review and enrich their Markdown through the Shiny app",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "measure-review-errors",
+          "title": "Measure extraction and agent-review errors",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "simplify-review-interface",
+          "title": "Simplify the interface based on reviewer experience",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "finalize-review-rubric",
+          "title": "Finalize the review rubric and acceptance criteria",
+          "status": "idea",
+          "plan": null
+        }
+      ]
+    },
+    {
+      "id": "complete-universal-records",
+      "title": "Reconcile and Complete Universal Records",
+      "objective": "Convert GPID-approved human documentation into validated structured records.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "build-markdown-yaml-reconciliation",
+          "title": "Build the Markdown-to-YAML reconciliation agent and skill",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "process-approved-markdown",
+          "title": "Process only approved Markdown revisions",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "propose-yaml-review-changes",
+          "title": "Generate proposed YAML changes on review branches",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "validate-provenance-derivations",
+          "title": "Validate references, provenance, and derivation graphs",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "review-remaining-variables",
+          "title": "Human-review all remaining variables through the calibrated workflow",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "promote-universal-records",
+          "title": "Promote approved universal records through the governed lifecycle",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "complete-global-rules-modules",
+          "title": "Complete global rules and module specifications",
+          "status": "idea",
+          "plan": null
+        }
+      ]
+    },
+    {
+      "id": "country-parameter-layer",
+      "title": "Populate the Country Parameter Layer",
+      "objective": "Add governed country-specific values and exceptions after the universal schema is stable, using Country Parameter Layer and country-parameters terminology throughout.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "resolve-fallback-authority",
+          "title": "Resolve fallback authority and escalation behavior",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "populate-education-parameters",
+          "title": "Populate education parameters from authoritative sources",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "add-labor-parameters",
+          "title": "Add labor parameters where confirmed by universal extraction",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "cross-check-legacy-code",
+          "title": "Cross-check against legacy harmonization code",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "gather-regional-exceptions",
+          "title": "Establish recurring regional exception gathering",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "defer-urban-rural-parameters",
+          "title": "Keep urban/rural parameters deferred unless evidence makes them necessary",
+          "status": "idea",
+          "plan": null
+        }
+      ]
+    },
+    {
+      "id": "validate-freeze-v1",
+      "title": "Validate and Freeze Version 1.0",
+      "objective": "Demonstrate that the schema is complete, governed, and operational.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "validate-registry-derivations",
+          "title": "Run registry and derivation-graph validation",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "stress-test-legacy-decisions",
+          "title": "Stress-test against legacy do-files and historical decisions",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "resolve-reviewed-exceptions",
+          "title": "Resolve guideline-versus-practice differences through reviewed exceptions",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "confirm-non-welfare-completion",
+          "title": "Confirm completion criteria for all non-welfare variables",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "freeze-version-1",
+          "title": "Freeze schema and country bundles as Version 1.0",
+          "status": "idea",
+          "plan": null
+        },
+        {
+          "id": "present-version-1",
+          "title": "Present the completed artifact and revisit institutional infrastructure needs",
+          "status": "idea",
           "plan": null
         }
       ]
