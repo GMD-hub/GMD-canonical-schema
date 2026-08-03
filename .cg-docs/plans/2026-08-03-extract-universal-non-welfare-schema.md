@@ -1,13 +1,16 @@
 ---
 date: 2026-08-03
 title: "Extract the Universal Non-Welfare Schema"
-status: active
+status: completed
+completed-date: 2026-08-03
 scope: "Deep"
 brainstorm: "../brainstorms/2026-08-03-extract-universal-non-welfare-schema.md"
 language: "Python"
 estimated-effort: "large"
 deviation-policy: "ask"
 phases: 6
+completed-phases: [1, 2, 3, 4, 5, 6]
+current-phase: null
 tags: [extraction, non-welfare, provenance, validation, agents, python]
 ---
 
