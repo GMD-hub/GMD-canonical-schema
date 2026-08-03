@@ -1,0 +1,1 @@
+"""Extraction-specific schema models."""

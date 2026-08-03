@@ -1,0 +1,58 @@
+# Source Manifest v1
+# Generated: 2026-08-03
+# Authority: governance/decisions/Extraction-Preflight-2026-08.md
+#
+# Locks the exact GMD guideline revision for deterministic extraction.
+# Must be regenerated when a new guideline revision is approved for extraction.
+# Do not edit file hashes manually — they are set by the manifest resolver.
+
+manifest_version: "1.0"
+repository:
+  url: "https://github.com/GMD-hub/GMD-guidelines"
+  commit_sha: null  # TODO: set by human after resolving the approved revision
+  # The brainstorm pinned commit d46dc03d253764ad7bdef53f625d54fd2a0a9ea1
+  # but Phase 1 requires fresh resolution and approval.
+
+source_files:
+  - path: "chapter2-IDN.qmd"
+    scope: "included"
+    sha256: null
+  - path: "chapter3-GEO.qmd"
+    scope: "included"
+    sha256: null
+  - path: "chapter4-DEM.qmd"
+    scope: "included"
+    sha256: null
+  - path: "chapter5-LMR.qmd"
+    scope: "included"
+    sha256: null
+  - path: "chapter6-UTL.qmd"
+    scope: "included"
+    sha256: null
+  - path: "chapter7-DWL.qmd"
+    scope: "included"
+    sha256: null
+  - path: "chapter8-CONS.qmd"
+    scope: "welfare-excluded"
+    sha256: null
+
+supporting_files: []
+
+governance:
+  module_registry_version: "v1"
+  field_classification_version: "v1"
+  schema_version: "0.1"
+  gmd_version: "1.0"
+
+parser_contract:
+  tool: "pandoc"
+  version: null  # TODO: set by human after approving exact version and installation method
+  reader: "markdown+pipe_tables+grid_tables+footnotes"
+  writer: "json"
+  normalization_version: "1.0"  # deterministic AST normalization rules
+
+output:
+  root: "extraction/20_drafts/"
+  allowlist:
+    - "extraction/20_drafts/runs/"
+    - "extraction/20_drafts/project-documentation/"
