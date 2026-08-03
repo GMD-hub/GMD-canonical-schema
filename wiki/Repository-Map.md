@@ -12,6 +12,7 @@
 | `validation/` | Repository-wide country-layer checks and reports | `knowledge/`, `country-parameters/`, `schema/` | Structural failures and governance reports |
 | `build/` | Runtime bundle compiler | Universal and country layers plus `schema/` | `build/output/bundle_<ISO3>_<year>.json` |
 | `extraction/` | Governed staging workflow | Guidelines and contextual sources | Candidate CVS artifacts for human approval |
+| `extraction_pipeline/` | Deterministic extraction pipeline | `extraction/config/`, `schema/extraction/` | Preflight, source resolution, AST parsing, gates, agents, orchestrator |
 | `governance/` | Project-level audits and decision records | Repository evidence, review findings, and authorized outcomes | Traceable open questions, decisions, and follow-up audits |
 | `docs/` | Explanatory guides and worked examples | Current CVS design | Human-readable background |
 | `wiki/` | Complete project operating documentation | Current repository behavior | Architecture, workflows, and navigation |

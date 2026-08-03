@@ -41,6 +41,7 @@ more specific, but they never override universal structure.
 | `validation/` | Cross-repository structural and governance checks. |
 | `build/` | Compiler that produces one runtime JSON bundle for a country and optional survey year. |
 | `extraction/` | Staging workflow for turning source guidelines into reviewed CVS artifacts. |
+| `extraction_pipeline/` | Deterministic guideline extraction pipeline (preflight, source resolution, AST parsing, gates, agents, orchestrator). |
 | `governance/` | Project audits, open questions, decision records, and implementation traceability. |
 | `docs/` | Existing explanatory examples and schema notes. |
 | `wiki/` | Detailed project documentation and operating guidance. |
