@@ -1,0 +1,35 @@
+Package: reviewapp
+Title: GMD Human Review Application
+Version: 0.1.0
+Authors@R: person("GPID", "Team", role = c("aut", "cre"),
+    email = "gpid@example.org")
+Description: A private, Git-backed Shiny for R application that lets GPID
+    reviewers browse CVS drafts, inspect read-only YAML and guideline evidence,
+    edit only the human Markdown body, and drive the governed review state
+    machine (draft -> in-review -> approved, with a needs-revision loop)
+    through role-gated actions. Review state, versions, and audit events are
+    stored on a dedicated protected review branch via a GitHub App identity.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.0
+Depends:
+    R (>= 3.6.0)
+Imports:
+    bslib,
+    commonmark,
+    digest,
+    jsonlite,
+    openssl,
+    shiny,
+    uuid,
+    yaml
+Suggests:
+    gh,
+    gert,
+    httr2,
+    renv,
+    shinytest2,
+    testthat (>= 3.0.0),
+    withr
+Config/testthat/edition: 3
