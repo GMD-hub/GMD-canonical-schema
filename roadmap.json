@@ -5,7 +5,7 @@
       "id": "universal-non-welfare-schema",
       "title": "Extract the Universal Non-Welfare Schema",
       "objective": "Convert all non-welfare content in the GMD guidelines into structured variable drafts through deterministic Python orchestration, validators, and specialized agents and skills; welfare variables are out of scope, and remaining inexpensive governance questions such as basic versus tier and MOD-LBR are resolved through short interviews and documentation.",
-      "status": "in-progress",
+      "status": "done",
       "features": [
         {
           "id": "document-schema-approval",
@@ -16,32 +16,32 @@
         {
           "id": "inventory-non-welfare-variables",
           "title": "Inventory all non-welfare variables and classify structural fields",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md"
         },
         {
           "id": "define-extraction-contract",
           "title": "Define the deterministic extraction contract and source-citation requirements",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md"
         },
         {
           "id": "build-extraction-system",
           "title": "Build extraction agents, skills, and Python orchestration",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md"
         },
         {
           "id": "extract-non-welfare-variables",
           "title": "Extract all non-welfare variables into extraction/20_drafts/",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md"
         },
         {
           "id": "validate-every-extraction",
           "title": "Run structural validation after every extraction",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md"
         }
       ]
     },

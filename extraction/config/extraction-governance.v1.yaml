@@ -1,0 +1,111 @@
+# Extraction Governance Configuration v1
+# Generated: 2026-08-03
+# Authority: governance/decisions/Extraction-Preflight-2026-08.md
+# Do not edit manually — changes must go through the governance decision record.
+
+schema_version: "0.1"
+gmd_version: "1.0"
+
+modules:
+  - code: "IDN"
+    name: "Identification"
+    source_chapter: "chapter2-IDN.qmd"
+    tier: "canonical"
+    scope: "non-welfare-extraction"
+    disambiguation: "Module code MOD-IDN (Identification). Not ISO 3166 country code for Indonesia (CTY-IDN)."
+
+  - code: "GEO"
+    name: "Geography"
+    source_chapter: "chapter3-GEO.qmd"
+    tier: "canonical"
+    scope: "non-welfare-extraction"
+    disambiguation: "Module code MOD-GEO (Geography). Not ISO 3166 country code for Georgia (CTY-GEO)."
+
+  - code: "DEM"
+    name: "Demographics"
+    source_chapter: "chapter4-DEM.qmd"
+    tier: "canonical"
+    scope: "non-welfare-extraction"
+    note: "Includes Education and Disability subdomains"
+
+  - code: "LBR"
+    name: "Labor"
+    source_chapter: "chapter5-LMR.qmd"
+    source_alias: "LMR"
+    tier: "canonical"
+    scope: "non-welfare-extraction"
+
+  - code: "UTL"
+    name: "Utilities / Access"
+    source_chapter: "chapter6-UTL.qmd"
+    tier: "canonical"
+    scope: "non-welfare-extraction"
+
+  - code: "DWL"
+    name: "Durable Welfare"
+    source_chapter: "chapter7-DWL.qmd"
+    tier: "canonical"
+    scope: "non-welfare-extraction"
+
+tier_policy:
+  basic: "inventory-only"
+
+rule_priority:
+  default: 0  # unranked until GPID Team review
+  ownership: "governed-constant"
+
+effective_dates:
+  baseline: "2000-01-01"
+  policy: "governed-constant"
+
+provenance:
+  extracted_on_semantics: "ISO-8601 timestamp of extraction run; generated metadata"
+
+welfare_boundary:
+  rule: >
+    Chapter 8 (CONS) outputs are welfare and excluded.
+    Chapter 7 (DWL) outputs are non-welfare and included.
+    Chapter 6 (UTL) expenditure variables are non-welfare and included.
+    Cross-references to chapter 8 from chapters 2-7 are welfare references recorded in the exclusion ledger.
+    Aggregate consumption/expenditure references are welfare unless explicitly DWL durable.
+  examples:
+    - description: "Food expenditure in chapter 8"
+      classification: "welfare"
+      disposition: "excluded"
+    - description: "Access to electricity in chapter 6"
+      classification: "non-welfare"
+      disposition: "UTL, included"
+    - description: "Durable assets count in chapter 7"
+      classification: "non-welfare"
+      disposition: "DWL, included"
+    - description: "Cross-reference to consumption aggregate in chapter 4"
+      classification: "welfare-reference"
+      disposition: "exclusion-ledger"
+
+weight_invariant:
+  rule: "Harmonization variables requiring survey weights must document the non-null weight constraint."
+  citation: "GMD household survey harmonization guidelines, weight handling section"
+  scope: "All weight-bearing harmonization variables"
+
+body_sections:
+  variable:
+    - "## Summary"
+    - "## Value codes"
+    - "## Derivation"
+    - "## Source note"
+    - "## Prerequisites"
+    - "## Country parameters"
+    - "## External standards"
+    - "## Provenance"
+  rule:
+    - "## Condition"
+    - "## Action"
+    - "## Examples"
+    - "## Notes"
+    - "## Provenance"
+  parameter:
+    - "## Description"
+    - "## Values"
+    - "## Applies to"
+    - "## Fallback"
+    - "## Provenance"
