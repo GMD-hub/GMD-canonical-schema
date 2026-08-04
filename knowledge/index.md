@@ -4,8 +4,8 @@ This file is the master registry of all artifacts in the knowledge base.
 Every artifact must be listed here. The index is the agent's entry point
 to the knowledge base.
 
-Last updated: 2026-07-28
-Schema version: 0.1
+Last updated: 2026-08-03
+Schema version: 0.0.1
 
 ## Variable specifications
 
