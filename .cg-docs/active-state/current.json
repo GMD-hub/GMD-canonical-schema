@@ -1,11 +1,27 @@
 {
-  "refs": {
-    "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
-    "report": ".cg-docs/work-reports/2026-08-03-extract-universal-non-welfare-schema.md"
-  },
-  "phase": 1,
-  "status": "in-progress",
-  "nextCommand": "/cg-work phase1",
-  "decisions": [],
-  "evidence": {"verification_surface": {}}
+  "schemaVersion": "compound-gpid-active-state-v1",
+  "updatedAt": "2026-08-04T14:40:00Z",
+  "workflow": "/cg-work",
+  "status": "active",
+  "branch": "feat/human-review-application",
+  "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md",
+  "executionReport": ".cg-docs/work-reports/2026-08-04-build-human-review-application.md",
+  "currentPhase": 2,
+  "evidenceStatus": [
+    {
+      "id": "V1",
+      "status": "passed"
+    },
+    {
+      "id": "V2",
+      "status": "passed"
+    },
+    {
+      "id": "C6",
+      "status": "passed"
+    }
+  ],
+  "unresolvedDecisions": [],
+  "artifactRefs": [],
+  "nextCommand": "/cg-work phase2"
 }
