@@ -1,0 +1,20 @@
+# Repository-managed role map for the Human Review Application (R3, Step 8).
+#
+# One entry per authenticated Connect identity. `identity` is the exact string
+# returned by Connect's session user field (documented in the operator guide).
+# `role` is one of reviewer / approver / administrator.
+#
+# An identity absent from this file resolves to "no role" / no write
+# privileges -- never a default role.
+#
+# MVP update procedure (no in-app role-management UI): administrators update
+# this file only via a direct repository edit (commit or PR) to the branch the
+# app reads it from, then refresh/deploy. There is no in-app role UI in this
+# iteration.
+roles:
+  - identity: reviewer@example.org
+    role: reviewer
+  - identity: approver@example.org
+    role: approver
+  - identity: admin@example.org
+    role: administrator
