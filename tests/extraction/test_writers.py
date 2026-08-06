@@ -1,6 +1,7 @@
 """Tests for transactional writers — Phase 4 Step 9."""
 
-from pathlib import Path
+import sys
+from pathlib import Path, PurePosixPath
 
 import pytest
 
@@ -25,6 +26,10 @@ class TestPathContainment:
                 Path("/etc/passwd"), Path("/a/b")
             )
 
+    @pytest.mark.skipif(
+        sys.platform == "win32",
+        reason="Windows requires elevated privileges for symlink creation",
+    )
     def test_symlink_escape(self, tmp_path: Path) -> None:
         root = tmp_path / "safe"
         root.mkdir()
@@ -70,10 +75,12 @@ class TestAtomicWrites:
             "inventory",
             "inventory.json",
         )
-        expected = Path(
-            "/workspace/extraction/20_drafts/runs/exec-abc123/inventory/inventory.json"
+        expected_parts = (
+            "workspace", "extraction", "20_drafts", "runs",
+            "exec-abc123", "inventory", "inventory.json",
         )
-        assert path == expected
+        # On Windows, resolve() prepends drive letter; compare only path parts
+        assert path.parts[-len(expected_parts):] == expected_parts
 
     def test_resolve_output_path_empty_filename(self) -> None:
         """An empty filename must yield a directory path with no trailing file component."""
@@ -83,7 +90,9 @@ class TestAtomicWrites:
             "inventory",
             "",
         )
-        expected = Path(
-            "/workspace/extraction/20_drafts/runs/exec-abc123/inventory"
+        expected_parts = (
+            "workspace", "extraction", "20_drafts", "runs",
+            "exec-abc123", "inventory",
         )
-        assert path == expected
+        # On Windows, resolve() prepends drive letter; compare only path parts
+        assert path.parts[-len(expected_parts):] == expected_parts
