@@ -1,0 +1,7 @@
+This is the GMD review-app hash fixture.
+
+Its exact bytes (including this trailing newline) are hashed by both the R
+app and the Python extraction_pipeline to prove digest-format parity.
+The intended content includes a markdown heading below.
+
+# A heading inside the fixture

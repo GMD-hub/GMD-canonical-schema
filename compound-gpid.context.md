@@ -25,6 +25,12 @@ this file is committed to git and shared with the team.
 - **Run `/cg-review mode:verify` after fix-triage**: The verify pass catches
   cross-file breakage introduced by fixes, which the original review cannot
   see because the code didn't exist yet.
+- **Cross-platform test conventions**: When writing Python tests that depend
+  on exact byte content (excerpt matching, hash verification), use
+  `write_bytes` instead of `write_text` to avoid Windows line ending
+  translation (`\n` → `\r\n`). Skip symlink tests on Windows with
+  `@pytest.mark.skipif(sys.platform == "win32")`. Compare path components
+  (`path.parts[-N:]`) instead of full paths to handle Windows drive letters.
 
 ## Work in Progress
 <!-- Modules, features, or migrations currently underway -->

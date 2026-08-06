@@ -61,8 +61,8 @@ class TestValidateCitation:
 
     def test_multiline_excerpt_bounds(self, tmp_path: Path) -> None:
         """A multi-line excerpt must yield line_start < line_end."""
-        source = "line 1\nline 2\nline 3\nline 4\n"
-        (tmp_path / "ch.qmd").write_text(source, encoding="utf-8")
+        source = b"line 1\nline 2\nline 3\nline 4\n"
+        (tmp_path / "ch.qmd").write_bytes(source)
         excerpt = "line 2\nline 3"
         result = validate_citation(tmp_path, "ch.qmd", excerpt)
         assert result.valid

@@ -1,6 +1,20 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-03 · 6 artifacts (newest first) + 43 roadmap features_
+_Generated 2026-08-06 · 10 artifacts (newest first) + 43 roadmap features_
+
+## 2026-08-06
+
+- **[2026-08-03-extract-universal-non-welfare-schema-verify-review](.cg-docs/reviews/2026-08-03-extract-universal-non-welfare-schema-verify-review.md)** · `review` · _—_ · `2026-08-06`
+  > **Review mode**: light (verify pass) **Prior review**: `.cg-docs/reviews/2026-08-03-extract-universal-non-welfare-sch…
+- **[Windows Platform Test Failures: Line Endings, Symlinks, and Path Resolution](.cg-docs/solutions/testing-patterns/2026-08-06-windows-platform-test-fixes.md)** · `solution` · _—_ · `2026-08-06`
+  > Three test failures occurred on Windows that passed on Linux/macOS: 1. `test_multiline_excerpt_bounds` — Excerpt "lin…
+
+## 2026-08-04
+
+- **[Build the Human Review Application](.cg-docs/brainstorms/2026-08-04-build-human-review-application.md)** · `brainstorm` · _decided_ · `2026-08-04`
+  > <!-- Valid status values: decided, in-progress, abandoned -->
+- **[Build the Human Review Application](.cg-docs/plans/2026-08-04-build-human-review-application.md)** · `plan` · _completed_ · `2026-08-04`
+  > Deliver a private, Git-backed **Shiny for R** application, deployed to Posit Connect, that lets GPID reviewers browse…
 
 ## 2026-08-03
 
@@ -94,7 +108,7 @@ _Generated 2026-08-03 · 6 artifacts (newest first) + 43 roadmap features_
   > Human-review all remaining variables through the calibrated workflow
 - **[Add save-draft and submit-for-GPID-review actions](roadmap.json#save-submit-review)** · `feature` · _idea_ · `—`
   > Add save-draft and submit-for-GPID-review actions
-- **[Select five to ten variables across complexity levels](roadmap.json#select-calibration-sample)** · `feature` · _idea_ · `—`
+- **[Select five to ten variables across complexity levels](roadmap.json#select-calibration-sample)** · `feature` · _done_ · `—`
   > Select five to ten variables across complexity levels
 - **[Show extracted YAML and guideline evidence as read-only context](roadmap.json#show-yaml-guideline-evidence)** · `feature` · _idea_ · `—`
   > Show extracted YAML and guideline evidence as read-only context
