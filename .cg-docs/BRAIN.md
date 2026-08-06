@@ -1,6 +1,6 @@
 # 🧠 Project Brain
 
-_Generated 2026-08-03 · 49 entities · 3 topics · 2 edges_
+_Generated 2026-08-06 · 53 entities · 3 topics · 5 edges_
 
 ## How to Use
 
@@ -21,18 +21,20 @@ _Generated 2026-08-03 · 49 entities · 3 topics · 2 edges_
 
 | Type | Count |
 |------|-------|
-| brainstorm | 1 |
+| brainstorm | 2 |
 | feature | 43 |
-| plan | 1 |
-| review | 1 |
-| solution | 2 |
+| plan | 2 |
+| review | 2 |
+| solution | 3 |
 | strategy | 1 |
 
-_6 entities not assigned to any topic_
+_10 entities not assigned to any topic_
 
 ## Relationship Summary
 
 | Edge Type | Count |
 |-----------|-------|
-| references | 1 |
+| decided_from | 1 |
+| references | 2 |
 | reviews | 1 |
+| verifies | 1 |

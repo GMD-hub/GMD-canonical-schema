@@ -1,4 +1,4 @@
-docs/.DS_Store
+﻿docs/.DS_Store
 build/output/
 __pycache__/
 .venv/
@@ -9,6 +9,16 @@ site/
 # Compound GPID local config (user-specific, never commit)
 compound-gpid.local.md
 
+
+# R session artifacts (review-app)
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron
+
+# Generated test RSA key (defense-in-depth; tests write to tempdir)
+review-app/tests/testthat/pubkey
+
 # Compound GPID managed items (junctions + copied file - do not commit)
 .agents/AGENTS.md
 .agents/commands
@@ -16,8 +26,8 @@ compound-gpid.local.md
 .agents/shared
 .agents/skills
 .agents/subagents
-.claude/CLAUDE.md
 .claude/agents
+.claude/CLAUDE.md
 .claude/commands
 .claude/instructions
 .claude/shared
@@ -29,26 +39,18 @@ compound-gpid.local.md
 .github/prompts
 .github/shared
 .github/skills
-.kilo/AGENTS.md
 .kilo/agents
+.kilo/AGENTS.md
 .kilo/commands
 .kilo/instructions
 .kilo/kilo.json
 .kilo/shared
 .kilo/skills
-.opencode/AGENTS.md
 .opencode/agents
+.opencode/AGENTS.md
 .opencode/commands
 .opencode/instructions
 .opencode/opencode.json
 .opencode/shared
 .opencode/skills
 
-# R session artifacts (review-app)
-.Rhistory
-.RData
-.Rproj.user/
-.Renviron
-
-# Generated test RSA key (defense-in-depth; tests write to tempdir)
-review-app/tests/testthat/pubkey

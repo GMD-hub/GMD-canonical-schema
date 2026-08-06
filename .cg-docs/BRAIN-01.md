@@ -1,6 +1,6 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-03_
+_Generated 2026-08-06_
 
 ## Human Review Application Objective / Posit Connect / Complete Universal Records Objective
 
@@ -34,7 +34,7 @@ objective`_ · 25 entities
   > Build a cross-variable consistency and derivation review agent
 - **[Add deterministic routing, failure states, and audit records](roadmap.json#add-review-routing-audit)** · `feature` · _idea_ · `—`
   > Add deterministic routing, failure states, and audit records
-- **[Select five to ten variables across complexity levels](roadmap.json#select-calibration-sample)** · `feature` · _idea_ · `—`
+- **[Select five to ten variables across complexity levels](roadmap.json#select-calibration-sample)** · `feature` · _done_ · `—`
   > Select five to ten variables across complexity levels
 - **[Review and enrich their Markdown through the Shiny app](roadmap.json#review-calibration-sample)** · `feature` · _idea_ · `—`
   > Review and enrich their Markdown through the Shiny app
