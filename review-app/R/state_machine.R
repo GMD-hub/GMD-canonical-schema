@@ -20,7 +20,7 @@ TRANSITIONS <- list(
 #' @param actor Connect identity string
 #' @param role current actor role (reviewer / approver / administrator)
 #' @return a NEW record with the transition applied and one event appended
-transition <- function(rec, action, actor, role) {
+transition <- function(rec, action, actor, role, note = NULL) {
   validate_review_record(rec)
   from_state <- rec$state
 
@@ -28,7 +28,8 @@ transition <- function(rec, action, actor, role) {
   if (is.null(valid)) {
     stop(sprintf(
       "illegal transition: action '%s' not allowed from state '%s'",
-      action, from_state
+      action,
+      from_state
     ))
   }
   required_role <- valid[[1L]]
@@ -36,7 +37,10 @@ transition <- function(rec, action, actor, role) {
   if (!identical(role, required_role)) {
     stop(sprintf(
       "unauthorized: action '%s' from state '%s' requires role '%s', got '%s'",
-      action, from_state, required_role, role
+      action,
+      from_state,
+      required_role,
+      role
     ))
   }
 
@@ -49,13 +53,18 @@ transition <- function(rec, action, actor, role) {
     actor_role = role,
     sequence = sequence,
     source_blob_sha = rec$source_commit,
-    body_sha256 = rec$current_content_sha256
+    body_sha256 = rec$current_content_sha256,
+    note = note
   )
 
   new_rec <- rec
   new_rec$state <- to_state
   new_rec$events <- c(rec$events, list(ev))
-  if (from_state == "needs-revision" && to_state == "in-review" && action == "submitted") {
+  if (
+    from_state == "needs-revision" &&
+      to_state == "in-review" &&
+      action == "submitted"
+  ) {
     new_rec$review_round <- as.integer(rec$review_round + 1L)
   }
   validate_review_record(new_rec)
@@ -65,7 +74,9 @@ transition <- function(rec, action, actor, role) {
 #' A record-replacement event for assignments / saves that are not transitions.
 record_action <- function(rec, action, actor, role, note = NULL) {
   stopifnot(action %in% c("assigned", "saved"))
-  if (!is.null(role) && !role %in% ROLES) stop("invalid role")
+  if (!is.null(role) && !role %in% ROLES) {
+    stop("invalid role")
+  }
   sequence <- length(rec$events)
   ev <- new_event(
     action = action,
