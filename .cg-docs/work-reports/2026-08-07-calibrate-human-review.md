@@ -130,3 +130,78 @@ Command args: `ALL phases review:auto` with explicit plan path.
 - Resume: `/cg-work phase4` with the run script/report present;
   `.cg-docs/active-state/current.json` points to this report.
 - Phases 1–3 complete and committed; Phase 5 depends on Phase 4 live-run logs.
+
+## Run 2 — 2026-08-07 (resume)
+
+Resumed via `/cg-work` with args `ALL phases review:auto`, explicit plan path
+`.cg-docs/plans/2026-08-07-calibrate-human-review.md`, at Phase 4 (Steps 10–11),
+intending to continue to Phase 5.
+
+### Active Deviation Policy
+
+- Stored: `ask`. Runtime override: none (no `deviate:` token in args).
+
+### Preflight
+
+- Artifact validation preflight passed:
+  `cg-render-artifact --validate-only .cg-docs/plans/2026-08-07-calibrate-human-review.md` → exit 0 ("Validated").
+- Artifact-schema-version embed: 1 (plan frontmatter). No view/body reads done.
+
+### Phase 4 Step 10 — Provision and deploy (attempted, blocked)
+
+Checklist review against `review-app/docs/operator-guide.md` §10:
+
+| Sub-step | Requirement | Status in this environment |
+|----------|-------------|----------------------------|
+| 1 | Disposable GitHub repo + narrowly scoped GitHub App + Connect secrets | **Blocked.** `gh` token scopes are `gist, read:org, repo, workflow` — no org-owner/admin scope to create a GitHub App; GitHub App creation requires org-owner permission or an interactive app-manifest redirect. No Posit Connect instance: `rsconnect` package not installed; no `CONNECT_SERVER`/`CONNECT_API_KEY` in env or `.Renviron`; no Connect server URL anywhere in the workspace. |
+| 2 | Protected `review` branch (block force-push/deletion; default untouched) | Blocked (requires the disposable repo above). |
+| 3 | Stage 6 drafts on default branch `extraction/20_drafts/<module>/<id>.md` | Sources exist locally (6 files verified), but staging "on the default branch" of the disposable repo is blocked by sub-step 1. |
+| 4 | `review-app/config/roles.yml` with 2 test Connect identities | **Ready** — already contains `reviewer@example.org` → reviewer and `approver@example.org` → approver (plus `admin@example.org`). No change needed. |
+| 5 | `rsconnect::deployApp(review-app/)`, private group, Connect auth only | **Blocked.** No `rsconnect` package, no Connect server/API key. |
+| 6 | Verify app boots + queue shows 6 artifacts, modules dem + geo | Blocked (no deployment exists). |
+| 7 | Run live-operator protocol (Step 11) | Blocked (no deployed app; no human reviewers). |
+
+**Blocked-stop condition (plan):** "The disposable repo / Connect staging cannot
+be provisioned for the live run." No POSIT Connect, no GitHub App creation path,
+no human reviewers. This is the same blocked boundary as Run 1; it has not been
+resolved by this environment.
+
+### Phase 4 Step 11 — Execute the live operator run (blocked)
+
+Cannot execute: requires the deployed private app from Step 10 and two live
+human operators (reviewer + approver). No live-run data exists, so neither the
+run log (`live-run-2026-08-07.md`) nor the populated `defect-log.yaml` /
+`friction-log.yaml` / live-run `content-error-log.yaml` entries may be
+fabricated. V10 remains an accepted exception pending a genuine Connect run.
+
+### Phase 5 Steps 12–14 (not started)
+
+Per Iteration Policy rule 1 ("do not start a later phase with pending `yes`
+evidence from an earlier phase"), Phase 5 aggregation (V11), interface
+simplification (V12), and rubric finalization (V13) all depend on Phase 4
+live-run logs. They cannot be completed against fabricated or missing logs.
+
+### Roadmap
+
+No roadmap feature has `plan` set to this plan path; the
+`calibrate-human-review` milestone features (`review-calibration-sample`,
+`measure-review-errors`, `simplify-review-interface`, `finalize-review-rubric`)
+have `plan: null` with status `idea`. Per Step 1.5, no roadmap active-status
+dispatch applies (no matching planned feature). No roadmap write performed
+(`roadmap.json` never modified directly).
+
+### Remaining Uncertainty
+
+- Identical to Run 1: Posit Connect instance + disposable GitHub App/repo must
+  be provisioned on a Connect-capable computer; two live reviewers required.
+
+### Accepted Exceptions (carried forward)
+
+- **V10 (accepted, user-approved 2026-08-07)**: live operator run deferred to a
+  Connect-provisioned computer; remains an accepted exception until executed.
+
+### Final Status
+
+- blocked (Phase 4 Steps 10–11 cannot execute without Posit Connect + GitHub App
+  + human reviewers). Phases 1–3 remain complete. V10 stays accepted-exception.
+- Resume command unchanged: `/cg-work phase4` on a Connect-provisioned machine.
