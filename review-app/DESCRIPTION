@@ -19,15 +19,17 @@ Imports:
     bslib,
     commonmark,
     digest,
+    DT,
+    httr2,
     jsonlite,
     openssl,
     shiny,
     uuid,
+    xml2,
     yaml
 Suggests:
     gh,
     gert,
-    httr2,
     renv,
     shinytest2,
     testthat (>= 3.0.0),

@@ -20,6 +20,7 @@ export(set_assigned_to)
 export(verify_body_hash)
 export(app_ui)
 export(app_server)
+export(shiny_review_app)
 export(run_review_app)
 
 # Phase 2 -- GitHub adapter
@@ -32,6 +33,7 @@ export(gh_http_post)
 
 # Phase 2 -- GitHub adapter
 export(new_github_adapter)
+export(review_app_adapter)
 export(adapter_read_draft)
 export(adapter_read_review)
 export(adapter_read_approved)

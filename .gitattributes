@@ -1,0 +1,3 @@
+# Keep the byte-sensitive cross-language hash fixture transformation-free
+# (R checks the exact bytes; git core.autocrlf would convert LF -> CRLF).
+review-app/tests/fixtures/hash_fixture.txt -text

@@ -16,6 +16,117 @@
   )
 }
 
+# --- Step 1 (Phase 1): production write transport + Connect entry point ------
+
+test_that("gh_adapter_http sends a JSON request body on POST/PATCH (R1)", {
+  # Inject a mock of httr2 so no network is touched. The transport must attach
+  # the body via req_body_json before performing the request.
+  captured <- NULL
+  mock_req <- structure(list(), class = "httr2_request")
+  local_mocked_bindings(
+    request = function(url, ...) mock_req,
+    req_method = function(req, method, ...) req,
+    req_headers = function(req, ...) req,
+    req_body_json = function(req, data, ...) {
+      captured <<- list(url = url_hold, data = data)
+      req
+    },
+    req_perform = function(req, ...) structure(list(), class = "httr2_response"),
+    resp_body_string = function(resp, ...) "{}",
+    .package = "httr2"
+  )
+  url_hold <- "https://api.github.com/repos/o/r/git/blobs"
+  reviewapp::gh_adapter_http("POST", url_hold, "ghu_token", body = list(content = "x"))
+  expect_false(is.null(captured))
+  expect_identical(captured$url, url_hold)
+  expect_identical(captured$data$content, "x")
+})
+
+test_that("gh_adapter_http accepts a NULL body for GET without a request body", {
+  mock_req <- structure(list(), class = "httr2_request")
+  body_attached <- FALSE
+  local_mocked_bindings(
+    request = function(url, ...) mock_req,
+    req_method = function(req, method, ...) req,
+    req_headers = function(req, ...) req,
+    req_body_json = function(req, data, ...) {
+      body_attached <<- TRUE
+      req
+    },
+    req_perform = function(req, ...) structure(list(), class = "httr2_response"),
+    resp_body_string = function(resp, ...) "{}",
+    .package = "httr2"
+  )
+  url_hold <- "https://api.github.com/repos/o/r/git/ref/heads/main"
+  reviewapp::gh_adapter_http("GET", url_hold, "ghu_token")
+  expect_false(body_attached)
+})
+
+test_that("Connect entry point resolves an exported shiny_review_app (R2)", {
+  # app.R:9 calls reviewapp::shiny_review_app(); it must be in the NAMESPACE
+  expect_true(
+    "shiny_review_app" %in% getNamespaceExports("reviewapp"),
+    info = "shiny_review_app must be exported (app.R:9 calls it with ::)"
+  )
+  entry <- getFromNamespace("shiny_review_app", "reviewapp")
+  expect_type(entry, "closure")
+  # the exported run_review_app is also present and both produce a shinyApp
+  run <- getFromNamespace("run_review_app", "reviewapp")
+  expect_type(run, "closure")
+})
+
+# --- Step 1/2 (Phase 1): adapter factory (R3) ---------------------------------
+
+test_that("review_app_adapter() returns NULL in REVIEW_APP_OFFLINE mode", {
+  withr::local_envvar(REVIEW_APP_OFFLINE = "1")
+  expect_null(reviewapp::review_app_adapter())
+})
+
+test_that("review_app_adapter() uses an injected adapter via options", {
+  fake <- structure(list(), class = "reviewapp_github_adapter")
+  op <- getOption("reviewapp.adapter")
+  options(reviewapp.adapter = fake)
+  on.exit(options(reviewapp.adapter = op), add = TRUE)
+  expect_identical(reviewapp::review_app_adapter(), fake)
+})
+
+test_that("review_app_adapter() fails loudly when required secrets are missing", {
+  withr::local_envvar(
+    REVIEW_APP_OFFLINE = "",
+    REVIEW_APP_GH_OWNER = "",
+    REVIEW_APP_GH_REPO = "",
+    REVIEW_APP_GH_DEFAULT_BRANCH = "",
+    REVIEW_APP_GH_REVIEW_BRANCH = "",
+    GITHUB_APP_ID = "",
+    GITHUB_APP_INSTALLATION_ID = "",
+    GITHUB_APP_PRIVATE_KEY = ""
+  )
+  op <- getOption("reviewapp.adapter")
+  options(reviewapp.adapter = NULL)
+  on.exit(options(reviewapp.adapter = op), add = TRUE)
+  expect_error(reviewapp::review_app_adapter(), "adapter not configured")
+})
+
+test_that("review_app_adapter() builds a live adapter when secrets are present", {
+  withr::local_envvar(
+    REVIEW_APP_OFFLINE = "",
+    REVIEW_APP_GH_OWNER = "GMD-hub",
+    REVIEW_APP_GH_REPO = "fixture-repo",
+    REVIEW_APP_GH_DEFAULT_BRANCH = "main",
+    REVIEW_APP_GH_REVIEW_BRANCH = "review",
+    GITHUB_APP_ID = "123",
+    GITHUB_APP_INSTALLATION_ID = "999",
+    GITHUB_APP_PRIVATE_KEY = "not-a-real-key"
+  )
+  op <- getOption("reviewapp.adapter")
+  options(reviewapp.adapter = NULL)
+  on.exit(options(reviewapp.adapter = op), add = TRUE)
+  ad <- reviewapp::review_app_adapter()
+  expect_s3_class(ad, "reviewapp_github_adapter")
+  expect_identical(ad$owner, "GMD-hub")
+  expect_identical(ad$review_branch, "review")
+})
+
 # --- Step 5: reads + hash verification --------------------------------------
 
 test_that("adapter_read_draft returns content and blob SHA from the default branch", {

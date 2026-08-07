@@ -74,8 +74,82 @@ new_github_adapter <- function(owner, repo, default_branch, review_branch,
 
 `%||%` <- function(a, b) if (is.null(a)) b else a
 
+#' Build the production GitHub adapter from Connect secrets.
+#'
+#' Reads the Connect environment variables/secrets required to authenticate as
+#' the GitHub App and construct a live adapter:
+#'
+#' - `REVIEW_APP_GH_OWNER`, `REVIEW_APP_GH_REPO`,
+#'   `REVIEW_APP_GH_DEFAULT_BRANCH`, `REVIEW_APP_GH_REVIEW_BRANCH`
+#' - `GITHUB_APP_ID`, `GITHUB_APP_INSTALLATION_ID`, `GITHUB_APP_PRIVATE_KEY`
+#'
+#' Returns `NULL` in offline/local mode (when `REVIEW_APP_OFFLINE=1` is set or
+#' when an adapter is injected via `options(reviewapp.adapter)`), which is what
+#' the local/dev smoke tests rely on. If the app is not in offline mode and no
+#' injected adapter is present but the required secrets are missing, this fails
+#' loudly instead of silently running with an empty queue (R3).
+#'
+#' @return a `reviewapp_github_adapter`, or NULL in offline/injected mode.
+#' @export
+review_app_adapter <- function() {
+  offline <- Sys.getenv("REVIEW_APP_OFFLINE", unset = "")
+  if (identical(tolower(offline), "1") || identical(tolower(offline), "true")) {
+    return(NULL)
+  }
+  injected <- getOption("reviewapp.adapter")
+  if (!is.null(injected)) {
+    return(injected)
+  }
+  owner <- Sys.getenv("REVIEW_APP_GH_OWNER", unset = "")
+  repo <- Sys.getenv("REVIEW_APP_GH_REPO", unset = "")
+  default_branch <- Sys.getenv("REVIEW_APP_GH_DEFAULT_BRANCH", unset = "")
+  review_branch <- Sys.getenv("REVIEW_APP_GH_REVIEW_BRANCH", unset = "")
+  app_id <- .gh_app_env("GITHUB_APP_ID")
+  installation_id <- .gh_app_env("GITHUB_APP_INSTALLATION_ID")
+  private_key <- .gh_app_env("GITHUB_APP_PRIVATE_KEY")
+
+  missing <- c(
+    owner = !nzchar(owner), repo = !nzchar(repo),
+    default_branch = !nzchar(default_branch), review_branch = !nzchar(review_branch),
+    app_id = is.null(app_id), installation_id = is.null(installation_id),
+    private_key = is.null(private_key)
+  )
+  if (any(missing)) {
+    stop(
+      "review app adapter not configured: set REVIEW_APP_GH_OWNER, ",
+      "REVIEW_APP_GH_REPO, REVIEW_APP_GH_DEFAULT_BRANCH, ",
+      "REVIEW_APP_GH_REVIEW_BRANCH, GITHUB_APP_ID, ",
+      "GITHUB_APP_INSTALLATION_ID, GITHUB_APP_PRIVATE_KEY ",
+      "(or set REVIEW_APP_OFFLINE=1 for local/offline mode, or inject ",
+      "`options(reviewapp.adapter = ...)` for dev/tests)"
+    )
+  }
+
+  new_github_adapter(
+    owner = owner,
+    repo = repo,
+    default_branch = default_branch,
+    review_branch = review_branch,
+    get_token = function() {
+      installation_token(
+        get_token = function() gh_exchange_installation_token(
+          app_id = app_id,
+          private_key_pem = private_key,
+          installation_id = installation_id
+        ),
+        cache = new_token_cache()
+      )
+    }
+  )
+}
+
 #' Real HTTP transport for the adapter (httr2 over token auth).
-gh_adapter_http <- function(method, url, token) {
+#' @param method HTTP method (GET/POST/PATCH).
+#' @param url request URL.
+#' @param token GitHub installation token.
+#' @param body optional (named) list sent as a JSON request body via
+#'   `httr2::req_body_json` when not NULL (e.g. blob/tree/commit/ref writes).
+gh_adapter_http <- function(method, url, token, body = NULL) {
   req <- httr2::request(url) |>
     httr2::req_method(method) |>
     httr2::req_headers(
@@ -83,6 +157,9 @@ gh_adapter_http <- function(method, url, token) {
       Accept = "application/vnd.github+json",
       "X-GitHub-Api-Version" = "2022-11-28"
     )
+  if (!is.null(body)) {
+    req <- httr2::req_body_json(req, body)
+  }
   resp <- httr2::req_perform(req)
   jsonlite::fromJSON(httr2::resp_body_string(resp))
 }
