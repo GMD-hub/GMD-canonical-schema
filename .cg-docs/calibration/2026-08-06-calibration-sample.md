@@ -29,11 +29,18 @@
 | # | artifact_id | module | source_artifact_path (draft) | complexity | origin |
 |---|-------------|--------|------------------------------|------------|--------|
 | 1 | `VAR-male` | `dem` | `extraction/20_drafts/dem/VAR-male.md` | simple | real (knowledge/variables/dem/VAR-male.md) |
-| 2 | `VAR-educat4` | `edu` | `extraction/20_drafts/edu/VAR-educat4.md` | simple | real (knowledge/variables/edu/VAR-educat4.md) |
-| 3 | `VAR-educy` | `edu` | `extraction/20_drafts/edu/VAR-educy.md` | standard | real (knowledge/variables/edu/VAR-educy.md) |
-| 4 | `VAR-educat7` | `edu` | `extraction/20_drafts/edu/VAR-educat7.md` | standard | fixture (in-review queue fixture) |
+| 2 | `VAR-educat4` | `dem` | `extraction/20_drafts/dem/VAR-educat4.md` | simple | real (knowledge/variables/dem/VAR-educat4.md) |
+| 3 | `VAR-educy` | `dem` | `extraction/20_drafts/dem/VAR-educy.md` | standard | real (knowledge/variables/dem/VAR-educy.md) |
+| 4 | `VAR-educat7` | `dem` | `extraction/20_drafts/dem/VAR-educat7.md` | standard | fixture (in-review queue fixture) |
 | 5 | `VAR-urban` | `geo` | `extraction/20_drafts/geo/VAR-urban.md` | complex | fixture (needs-revision queue fixture) |
 | 6 | `VAR-marital` | `dem` | `extraction/20_drafts/dem/VAR-marital.md` | complex | fixture (approved-reopen path) |
+
+> **P1.3 path correction (2026-08-07)**: per the Q3 decision (`module_id`
+> authoritative), `VAR-educat4`, `VAR-educy`, and `VAR-educat7` use `module = "dem"`
+> (their front-matter `module_id: MOD-DEM` and their real
+> `knowledge/variables/dem/` location), not `edu`. `knowledge/variables/edu/` is
+> empty. This discrepancy is logged as a `consistency-derivation` extraction
+> error in the content-error log.
 
 ## State-machine paths exercised (Step 13 test scenarios)
 

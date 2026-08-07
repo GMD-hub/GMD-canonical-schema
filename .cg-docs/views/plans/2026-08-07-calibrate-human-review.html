@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; frame-src 'none'; media-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="artifact-source" content=".cg-docs/plans/2026-08-07-calibrate-human-review.md">
+<meta name="artifact-source-sha256" content="421011f9d2fa03424f208aa9ab71b0e989b42333f0f3286b233e8039dfc9c1ef">
+<meta name="publication-provenance-schema" content="2">
+<meta name="publication-output" content=".cg-docs/views/plans/2026-08-07-calibrate-human-review.html">
+<meta name="publication-theme" content="reference">
+<meta name="artifact-renderer-version" content="0.1.0">
+<title>Calibrate Human Review · Compound GPID</title>
+<style>:root {
+  color-scheme: light;
+  --paper: #f6f5f0;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #59636d;
+  --line: #c8cdd1;
+  --accent: #006b5f;
+  --accent-strong: #004d45;
+  --signal: #a63d21;
+  --code: #eef1f3;
+  --focus: #d43f00;
+  --measure: 78rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); color: var(--ink); scroll-behavior: smooth; }
+body { margin: 0; min-width: 20rem; }
+a { color: var(--accent-strong); text-underline-offset: .18em; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.skip-link { position: absolute; left: .75rem; top: -5rem; z-index: 10; background: var(--ink); color: white; padding: .6rem .8rem; }
+.skip-link:focus { top: .75rem; }
+.masthead { border-bottom: 1px solid var(--line); background: var(--surface); }
+.masthead-inner { max-width: var(--measure); margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 3rem); }
+.eyebrow { margin: 0 0 .45rem; color: var(--accent-strong); font-size: .78rem; font-weight: 750; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { font-family: "Iowan Old Style", "Palatino Linotype", serif; line-height: 1.16; margin: 1.5em 0 .55em; overflow-wrap: anywhere; }
+h1 { margin: 0; font-size: 3.4rem; }
+.deck { max-width: 58rem; margin: .75rem 0 0; color: var(--muted); }
+.layout { max-width: var(--measure); margin: 0 auto; display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); padding: 2rem clamp(1rem, 4vw, 3rem) 4rem; }
+.sidebar { align-self: start; position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow: auto; border-left: 4px solid var(--accent); padding-left: 1rem; }
+.sidebar h2 { font-family: inherit; font-size: .82rem; text-transform: uppercase; margin: 0 0 .7rem; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.sidebar li + li { margin-top: .45rem; }
+main { min-width: 0; }
+.derived-panel { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1rem 0; margin: 0 0 1.5rem; }
+.derived-panel h2 { font-size: 1.3rem; margin: 0 0 .65rem; }
+.phase-list, .coverage-list { display: grid; gap: .55rem; padding-left: 1.25rem; }
+.source-block { min-width: 0; }
+.source-block > :first-child { margin-top: 0; }
+.source-heading { scroll-margin-top: 1rem; }
+p, li, td, th, code { overflow-wrap: anywhere; }
+pre { max-width: 100%; overflow: auto; padding: 1rem; background: var(--code); border-left: 4px solid var(--accent); white-space: pre; }
+code { font-family: "SFMono-Regular", Consolas, monospace; font-size: .88em; }
+:not(pre) > code { background: var(--code); padding: .08em .3em; }
+table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; margin: 1rem 0 1.5rem; }
+th, td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; vertical-align: top; min-width: 8rem; }
+th { background: #e6ece9; }
+blockquote { margin: 1rem 0; padding: .2rem 0 .2rem 1rem; border-left: 4px solid var(--signal); color: var(--muted); }
+.raw-source { border: 1px solid var(--line); margin: 1rem 0; }
+.raw-source figcaption { padding: .45rem .7rem; background: #f0e9e5; font-weight: 700; }
+.raw-source pre { margin: 0; border: 0; }
+.provenance { border-top: 1px solid var(--line); background: var(--surface); }
+.provenance-inner { max-width: var(--measure); margin: 0 auto; padding: 1.5rem clamp(1rem, 4vw, 3rem); }
+.provenance dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .35rem 1rem; }
+.provenance dt { font-weight: 700; }
+.provenance dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 48rem) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; max-height: none; border-left: 0; border-bottom: 1px solid var(--line); padding: 0 0 1rem; }
+  h1 { font-size: 2.15rem; }
+  .provenance dl { grid-template-columns: 1fr; }
+  .provenance dd + dt { margin-top: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  :root { --paper: #fff; --surface: #fff; --ink: #000; --muted: #222; }
+  @page { margin: 15mm; }
+  .skip-link, .sidebar { display: none; }
+  .layout { display: block; max-width: none; padding: 0; }
+  .masthead-inner, .provenance-inner { max-width: none; padding: 0; }
+  .masthead { border: 0; margin-bottom: 1rem; }
+  a { color: #000; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: .8em; }
+  pre, table, blockquote, .raw-source { break-inside: avoid; }
+  thead { display: table-header-group; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  .provenance { margin-top: 1rem; }
+}</style>
+<script id="artifact-provenance" type="application/json">{"documentType":"plan","generatedAt":"2026-08-07T12:44:28Z","outputPath":".cg-docs/views/plans/2026-08-07-calibrate-human-review.html","provenanceSchemaVersion":2,"rendererVersion":"0.1.0","sourcePath":".cg-docs/plans/2026-08-07-calibrate-human-review.md","sourceSha256":"421011f9d2fa03424f208aa9ab71b0e989b42333f0f3286b233e8039dfc9c1ef","themeName":"reference","themeVersion":1}</script>
+</head>
+<body data-artifact-kind="plan">
+<a class="skip-link" href="#main-content">Skip to artifact content</a>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Execution contract</p>
+    <h1>Calibrate Human Review</h1>
+    <p class="deck">A complete human view of the canonical Plan, including phases, requirements, verification, risks, and boundaries. <a href="../../plans/2026-08-07-calibrate-human-review.md">Open canonical Markdown</a>.</p>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="Artifact sections" data-derived="navigation">
+    <h2>On this page</h2>
+    <ul><li><a href="#objective">Outcome</a></li><li><a href="#phase-map">Phase map</a></li><li><a href="#implementation-steps">Steps</a></li><li><a href="#requirement-coverage">Requirement coverage</a></li><li><a href="#verification-surface">Verification</a></li><li><a href="#risks-mitigations">Risks</a></li><li><a href="#out-of-scope">Boundaries</a></li><li><a href="#provenance-heading">Provenance</a></li></ul>
+  </nav>
+  <main id="main-content" tabindex="-1">
+    <section class="derived-panel" data-derived="phase-map" aria-labelledby="phase-map"><h2 id="phase-map">Phase map</h2><ol class="phase-list"><li><strong>Phase 1</strong> · Live-capable subset</li><li><strong>Phase 2</strong> · Instrumentation specification</li><li><strong>Phase 3</strong> · Materialize calibration drafts</li><li><strong>Phase 4</strong> · Live operator run</li><li><strong>Phase 5</strong> · Measure, simplify, finalize</li></ol></section><section class="derived-panel" data-derived="requirement-coverage" aria-labelledby="requirement-coverage"><h2 id="requirement-coverage">Requirement coverage</h2><ul class="coverage-list"><li><strong>R1</strong> → steps 1</li><li><strong>R2</strong> → steps 1</li><li><strong>R3</strong> → steps 2</li><li><strong>R4</strong> → steps 2</li><li><strong>R5</strong> → steps 2</li><li><strong>R6</strong> → steps 3</li><li><strong>R7</strong> → steps 3</li><li><strong>R8</strong> → steps 4</li><li><strong>R9</strong> → steps 4</li><li><strong>R10</strong> → steps 4</li><li><strong>R11</strong> → steps 5</li><li><strong>R12</strong> → steps 1, 5</li><li><strong>R13</strong> → steps 6</li><li><strong>R14</strong> → steps 6</li><li><strong>R15</strong> → steps 7</li><li><strong>R16</strong> → steps 8</li><li><strong>R17</strong> → steps 9</li><li><strong>R18</strong> → steps 9</li><li><strong>R19</strong> → steps 9</li><li><strong>R20</strong> → steps 10</li><li><strong>R21</strong> → steps 11</li><li><strong>R22</strong> → steps 11</li><li><strong>R23</strong> → steps 12</li><li><strong>R24</strong> → steps 13</li><li><strong>R25</strong> → steps 14</li></ul></section>
+    <article aria-label="Canonical artifact content">
+      <div class="source-block source-heading" id="render-owner-0002" data-source-block="block-0002" data-source-lines="15-15"><h1 id="plan-calibrate-human-review">Plan: Calibrate Human Review</h1></div>
+<div class="source-block source-heading" id="render-owner-0004" data-source-block="block-0004" data-source-lines="17-17"><h2 id="objective">Objective</h2></div>
+<div class="source-block" id="render-owner-0006" data-source-block="block-0006" data-source-lines="19-24"><p>Make the Shiny review app live-capable, materialize a 6-variable calibration sample with full front matter (3 real + 3 fixtures carrying seeded known defects), execute a structured live-operator run that populates content-error, defect, and friction logs, simplify the interface based on measured friction, and finalize a two-layer review rubric with acceptance criteria that gates promotion from <code>extraction/30_review/</code> to <code>extraction/40_approved/</code> at scale.</p></div>
+<div class="source-block source-heading" id="render-owner-0008" data-source-block="block-0008" data-source-lines="26-26"><h2 id="context">Context</h2></div>
+<div class="source-block" id="render-owner-0010" data-source-block="block-0010" data-source-lines="28-36"><p>The predecessor plan (<code>.cg-docs/plans/2026-08-04-build-human-review-application.md</code>) delivered the Shiny review app with all 5 phases &quot;completed,&quot; but its own Phase 5 full-mode review (execution report Run 5, Step 3.9) found unresolved P0/P1 defects that block a real live operator run: the adapter is never wired into the server, the production write transport cannot send payloads, the Connect entry point calls a non-exported function, C1 front-matter immutability is a no-op, audit/content-hash binding is broken, <code>authorize()</code> fails open, the preview has an XSS vector, a real RSA private key leaks into the test tree, and <code>DT</code> is undeclared. Tests pass only against an in-memory GitHub double.</p></div>
+<div class="source-block" id="render-owner-0012" data-source-block="block-0012" data-source-lines="38-42"><p>This plan pays down the <strong>live-capable subset</strong> of those defects (Phase 1) before any live run. The remaining P0/P1 set (exhaustive <code>validate_review_record</code>, NAMESPACE/roxygen drift, <code>review-app/README.md</code>) is deferred to a tracked separate effort. See the brainstorm&#x27;s &quot;Next Steps&quot; governance escalations and the Out of Scope section below.</p></div>
+<div class="source-block" id="render-owner-0014" data-source-block="block-0014" data-source-lines="44-50"><p>The calibration sample is defined in <code>.cg-docs/calibration/2026-08-06-calibration-sample.md</code> (6 variables: 3 real from <code>knowledge/variables/dem/</code>, 3 fixtures). <code>extraction/20_drafts/</code> is currently empty. The chosen approach (brainstorm Approach 1) is instrument-first: define the measurement framework, rubric, and protocol up front so materialized drafts conform to the rubric template and errors log in the right schema from the first write.</p></div>
+<div class="source-block source-heading" id="render-owner-0016" data-source-block="block-0016" data-source-lines="52-52"><h3 id="key-code-findings-from-source-inspection">Key code findings (from source inspection)</h3></div>
+<div class="source-block" id="render-owner-0018" data-source-block="block-0018" data-source-lines="54-75"><ul><li><code>app.R:8</code> calls <code>reviewapp::shiny_review_app()</code> but NAMESPACE exports <code>run_review_app</code> (line 23), not <code>shiny_review_app</code> (defined in <code>run.R:4</code>).</li><li><code>app_server.R:30</code> creates <code>adapter &lt;- reactiveValues()</code> but never assigns <code>adapter$handle</code>; detail view (<code>:119-126</code>) fabricates placeholder front/body; <code>save_draft</code> (<code>:246</code>) is a no-write stub.</li><li><code>gh_adapter_http</code> (<code>github_adapter.R:78</code>) signature is <code>function(method, url, token)</code> — no <code>body</code> formal. <code>adapter_write_atomic</code> (<code>recovery.R:67,80,89,98</code>) passes <code>body = ...</code>, which raises &quot;unused argument&quot; in production.</li><li><code>transition</code> (<code>state_machine.R:55-56</code>) sets <code>source_blob_sha = rec$source_commit</code> and <code>body_sha256 = rec$current_content_sha256</code>; the <code>body_sha256</code> parameter in <code>perform_action</code> (<code>actions.R:54-65</code>) is never passed through.</li><li><code>authorize</code> (<code>authorization.R:19-21</code>) returns <code>!is.null(role)</code> for unknown actions (fail-open).</li><li><code>render_markdown_preview</code> (<code>frontmatter.R:67</code>) calls <code>commonmark::markdown_html(markdown, extensions = TRUE)</code>; <code>extensions = TRUE</code> enables raw-HTML passthrough, and the output is rendered via <code>shiny::HTML()</code> (<code>app_server.R:149</code>) — stored XSS once persistence lands.</li><li><code>app_ui.R:37</code> hard-codes module filter choices `c(&quot;All&quot;=&quot;&quot;, &quot;dem&quot;, &quot;edu&quot;, &quot;welfare&quot;)<code>; </code>index.R:26<code> derives </code>module` from the path directory name.</li><li><code>test-github-auth.R:44</code> writes a real RSA private key via <code>openssl::write_pem(key, &quot;pubkey&quot;)</code> into the test dir.</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0020" data-source-block="block-0020" data-source-lines="77-77"><h2 id="requirements">Requirements</h2></div>
+<div class="source-block" id="render-owner-0022" data-source-block="block-0022" data-source-lines="79-105"><div class="table-scroll" role="region" aria-label="Source table" tabindex="0"><table><thead><tr><th scope="col">ID</th><th scope="col">Requirement</th><th scope="col">Source</th></tr></thead><tbody><tr><td>R1</td><td><code>gh_adapter_http</code> accepts and sends a JSON <code>body</code> via <code>httr2::req_body_json</code></td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R2</td><td>Connect entry point boots: <code>shiny_review_app</code> is exported or <code>app.R</code> calls an exported function</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R3</td><td>Adapter is wired into the Shiny server from Connect secrets (<code>adapter$handle</code>)</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R4</td><td>Detail view loads real draft + review record via the adapter, not placeholder data</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R5</td><td><code>save_draft</code> persists the edited body via the adapter and records a <code>saved</code> event</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R6</td><td><code>split_frontmatter</code> handles CRLF; <code>frontmatter_unchanged</code> is a meaningful byte-comparison; approved-path verifies front matter</td><td>Brainstorm Q2; execution report P0</td></tr><tr><td>R7</td><td><code>transition</code> accepts <code>body_sha256</code>; the event&#x27;s <code>body_sha256</code> and the record&#x27;s <code>current_content_sha256</code> are updated; <code>source_blob_sha</code> uses the review-record blob SHA at action time</td><td>Brainstorm Q1; execution report P0</td></tr><tr><td>R8</td><td><code>authorize()</code> returns <code>FALSE</code> for unknown/unlisted actions (fail-closed)</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R9</td><td><code>render_markdown_preview</code> blocks raw HTML / XSS (disable raw-HTML extension)</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R10</td><td>Dashboard module filter choices are derived from unique modules in the index, not hard-coded</td><td>Brainstorm Q3/Q6</td></tr><tr><td>R11</td><td>Leaked RSA private key is removed; <code>test-github-auth.R</code> uses <code>tempfile()</code>; <code>pubkey</code> is gitignored</td><td>Brainstorm Q1; execution report P0</td></tr><tr><td>R12</td><td><code>DT</code> declared in DESCRIPTION Imports; <code>httr2</code> moved to Imports; <code>renv.lock</code> updated to restore runtime/test env</td><td>Brainstorm Q1; execution report P1</td></tr><tr><td>R13</td><td>Content-error taxonomy defined: 4 future agent-review dimensions + human-review content categories, with <code>stage</code> + severity</td><td>Brainstorm Q4</td></tr><tr><td>R14</td><td>Content-error log format + separate app-defect log format defined as structured records</td><td>Brainstorm Q4</td></tr><tr><td>R15</td><td>Two-layer rubric defined: Layer 1 automated structural (YAML schema + front-matter unchanged + required sections present &amp; non-stub); Layer 2 human per-section content quality</td><td>Brainstorm Q5</td></tr><tr><td>R16</td><td>Live-operator protocol + friction-log format defined (paths, time-on-task, errors, 1–5 rating, free-text, severity block/slow/cosmetic)</td><td>Brainstorm Q6</td></tr><tr><td>R17</td><td>3 real drafts copied from <code>knowledge/variables/dem/</code> to <code>extraction/20_drafts/dem/</code> with full front matter</td><td>Brainstorm Q2/Q3</td></tr><tr><td>R18</td><td>3 fixture drafts authored with full front matter matching <code>knowledge/</code> structure + seeded known defects; directories match <code>module_id</code></td><td>Brainstorm Q2/Q3/Q8</td></tr><tr><td>R19</td><td>Known-answer key kept separate under <code>.cg-docs/calibration/</code>; materialization/extraction errors logged in the content-error log</td><td>Brainstorm Q8</td></tr><tr><td>R20</td><td>Disposable GitHub repo + narrowly scoped GitHub App + Connect staging + <code>roles.yml</code> (reviewer + approver) provisioned; app deployed</td><td>Brainstorm Q7; execution report checklist</td></tr><tr><td>R21</td><td>Live operator run executed: reviewer + approver walk all state-machine paths; structured friction captured per step</td><td>Brainstorm Q6/Q7</td></tr><tr><td>R22</td><td>Friction, content-error, and defect logs populated; both rubric layers exercised; 30→40 promotion gate tested</td><td>Brainstorm Q5</td></tr><tr><td>R23</td><td>Logs aggregated: error/defect rates, catch rate vs known-answer key, friction-by-step</td><td>Brainstorm Q4/Q8</td></tr><tr><td>R24</td><td>Interface simplified per friction decision rule (block / ≥4 by ≥2 reviewers → fix before scaling)</td><td>Brainstorm Q6</td></tr><tr><td>R25</td><td>Rubric acceptance criteria finalized from run evidence; ready to gate promotion at scale</td><td>Brainstorm Q5</td></tr></tbody></table></div></div>
+<div class="source-block source-heading" id="render-owner-0024" data-source-block="block-0024" data-source-lines="107-107"><h2 id="implementation-steps">Implementation Steps</h2></div>
+<div class="source-block source-heading" id="render-owner-0026" data-source-block="block-0026" data-source-lines="109-109"><h2 id="phase-1-live-capable-subset">Phase 1: Live-capable subset</h2></div>
+<div class="source-block source-heading" id="render-owner-0028" data-source-block="block-0028" data-source-lines="111-111"><h3 id="1-fix-production-write-transport-and-connect-entry-point">1. Fix production write transport and Connect entry point</h3></div>
+<div class="source-block" id="render-owner-0030" data-source-block="block-0030" data-source-lines="113-140"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 113–140</figcaption><pre><code>- **Requirements**: R1, R2, R12
+- **Files**: `review-app/R/github_adapter.R`, `review-app/R/run.R`,
+  `review-app/NAMESPACE`, `review-app/app.R`, `review-app/DESCRIPTION`,
+  `review-app/tests/testthat/test-github-adapter.R`
+- **Details**:
+  - **`gh_adapter_http`**: Add a `body = NULL` parameter to the function
+    signature. When `body` is not NULL, call
+    `httr2::req_body_json(req, body)` before `httr2::req_perform(req)`. This
+    fixes the &quot;unused argument (body = ...)&quot; error raised by every production
+    POST/PATCH in `adapter_write_atomic` (`recovery.R:67,80,89,98`).
+  - **Entry point**: Either (a) add `export(shiny_review_app)` to NAMESPACE
+    alongside the existing `export(run_review_app)`, or (b) change `app.R:8`
+    to call `reviewapp::run_review_app()`. Option (a) is preferred (adds one
+    line; `run_review_app` already delegates to `shiny_review_app`). Ensure
+    `shiny_review_app` has an `@export` roxygen tag or a manual NAMESPACE
+    entry (see Out of Scope re: full roxygen drift).
+  - **DESCRIPTION**: Move `httr2` from `Suggests` to `Imports` (it is on the
+    production code path, not optional). Add `httr2` to the `Imports` list.
+- **Test Scenarios**: production transport sends a JSON body on POST/PATCH
+  (verified with a test double that captures the `body` argument and asserts
+  it is non-NULL and well-formed); `app.R` loads without &quot;object not found&quot;
+  error.
+- **Tests**: `test-github-adapter.R` — add a test that `gh_adapter_http` (or
+  a thin wrapper) passes `body` through to `req_body_json` by injecting a
+  mock that records the request body; verify the exported entry point
+  resolves via `getFromNamespace`.
+- **Acceptance criteria**: `gh_adapter_http` accepts `body`; `app.R` calls
+  an exported function; `httr2` in DESCRIPTION Imports.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0032" data-source-block="block-0032" data-source-lines="142-142"><h3 id="2-wire-adapter-into-server-and-detail-view">2. Wire adapter into server and detail view</h3></div>
+<div class="source-block" id="render-owner-0034" data-source-block="block-0034" data-source-lines="144-187"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 144–187</figcaption><pre><code>- **Requirements**: R3, R4, R5
+- **Files**: `review-app/R/app_server.R`, `review-app/R/actions.R`,
+  `review-app/R/state_machine.R`, `review-app/tests/testthat/test-app-smoke.R`,
+  `review-app/tests/testthat/test-actions.R`
+- **Details**:
+  - **Adapter wiring**: In `app_server.R`, build the adapter from Connect
+    secrets / environment variables: `REVIEW_APP_GH_OWNER`,
+    `REVIEW_APP_GH_REPO`, `REVIEW_APP_GH_DEFAULT_BRANCH`,
+    `REVIEW_APP_GH_REVIEW_BRANCH`, `GITHUB_APP_ID`,
+    `GITHUB_APP_INSTALLATION_ID`, `GITHUB_APP_PRIVATE_KEY`. Use
+    `new_github_adapter(owner, repo, default_branch, review_branch,
+    get_token, http)` where `get_token` calls `installation_token()` (Phase 3
+    auth). Assign the result to `adapter$handle` at session start (replace
+    the empty `reactiveValues()` at `:30`). If the env vars are absent, fail
+    loudly with a clear &quot;adapter not configured&quot; error (not an empty queue).
+    For local/dev, support an injectable adapter via a package option or env
+    override (preserves the R20 storage-interface abstraction and the
+    existing offline tests).
+  - **Detail view**: Replace the fabricated placeholder at `:119-126` with
+    real adapter reads: `adapter_read_draft(adapter$handle, path)` for the
+    draft (default branch) and `adapter_read_review(adapter$handle,
+    record_path)` for the review record (review branch). Use
+    `split_frontmatter` to separate front and body for display. Store
+    `blob_sha`, `branch_head_sha`, and `body_sha256` in `detail_state` for
+    optimistic locking.
+  - **save_draft**: Replace the no-write stub at `:234-247` with a real
+    write: verify front matter is unchanged (Step 3 fix), then call
+    `perform_action(adapter$handle, rec, body_sha256=..., blob_sha=...,
+    branch_head_sha=..., action=&quot;saved&quot;, ...)`. Fix `perform_action`
+    (`actions.R:75`) to route `saved`/`assigned` through `record_action`
+    (`state_machine.R:75`) instead of `transition` (which rejects them as
+    illegal transitions). The `saved` action writes the review record (with
+    the `saved` event) to the review branch; the working-copy body is
+    persisted as part of the same atomic commit (e.g. write the body into the
+    review record or a companion file under `extraction/30_review/`).
+- **Test Scenarios**: adapter is built from env vars and `adapter$handle` is
+  non-NULL; detail view loads real front + body from the adapter; save_draft
+  persists and appends a `saved` event without a state transition; `saved`
+  and `assigned` actions no longer raise &quot;illegal transition.&quot;
+- **Tests**: `test-app-smoke.R` — inject a test-double adapter and verify the
+  queue populates and detail view loads real data; `test-actions.R` — add
+  `saved`/`assigned` path tests through `perform_action`.
+- **Acceptance criteria**: queue loads from real adapter; detail view shows
+  real front matter + body; save_draft writes and records a `saved` event.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0036" data-source-block="block-0036" data-source-lines="189-189"><h3 id="3-fix-front-matter-immutability-and-audit-binding">3. Fix front-matter immutability and audit binding</h3></div>
+<div class="source-block" id="render-owner-0038" data-source-block="block-0038" data-source-lines="191-235"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 191–235</figcaption><pre><code>- **Requirements**: R6, R7
+- **Files**: `review-app/R/frontmatter.R`, `review-app/R/state_machine.R`,
+  `review-app/R/actions.R`, `review-app/tests/testthat/test-frontmatter.R`,
+  `review-app/tests/testthat/test-state-machine.R`
+- **Details**:
+  - **`split_frontmatter` CRLF**: Normalize line splitting to handle both
+    `\n` and `\r\n` (e.g. split on `\r?\n` or normalize `\r\n` → `\n` before
+    splitting). Currently CRLF artifacts cause `split_frontmatter` to return
+    `front = NULL`, which makes `frontmatter_unchanged` return `TRUE`
+    (frontmatter.R:54), silently disabling C1.
+  - **`frontmatter_unchanged` meaningful check**: The current implementation
+    (`frontmatter.R:55`) compares `split_frontmatter(proposed)$front` to
+    `original_front`. When called as
+    `frontmatter_unchanged(front, join_body(front, body))` the comparison is
+    always TRUE because `join_body` just re-pastes `front`. Fix: compare the
+    front matter extracted from the *user&#x27;s edited full artifact* against the
+    *originally loaded front matter*, not a re-joined copy. The server must
+    pass the actual editor output (front + body as the user sees it) — if the
+    user tampered with YAML, the extracted front will differ.
+  - **Approved-path verification**: On the `approved` action, verify that the
+    `approved_content` front matter is byte-identical to the loaded draft&#x27;s
+    front matter before writing to `extraction/40_approved/`. Currently the
+    approved path does no front-matter/hash verification (execution report P0).
+  - **`transition` body_sha256**: Add a `body_sha256` parameter to
+    `transition()` (`state_machine.R:23`). Use it for the event&#x27;s `body_sha256`
+    field (currently `rec$current_content_sha256` at `:56`). Update
+    `new_rec$current_content_sha256` to the passed-in `body_sha256` (currently
+    unchanged). Pass `body_sha256` from `perform_action` (`actions.R:75`) to
+    `transition`.
+  - **`source_blob_sha`**: Change the event&#x27;s `source_blob_sha` from
+    `rec$source_commit` (`state_machine.R:55`) to the review-record blob SHA
+    at action time (passed from `perform_action`&#x27;s `blob_sha` parameter).
+  - Apply the same fixes to `record_action` (`state_machine.R:75-96`) for the
+    `saved`/`assigned` event path.
+- **Test Scenarios**: CRLF artifact front matter is correctly extracted and
+  preserved; a YAML-tampering edit is rejected; approved-path front matter
+  is verified; `transition` event carries the passed-in `body_sha256` and the
+  record&#x27;s `current_content_sha256` is updated; `source_blob_sha` is the
+  review-record blob SHA, not `source_commit`.
+- **Tests**: `test-frontmatter.R` — CRLF fixture, tamper-reject, approved-path
+  verification; `test-state-machine.R` — body_sha256 flows through; event
+  `source_blob_sha` equals the passed blob SHA.
+- **Acceptance criteria**: C1 immutability is a real check (rejects tampering
+  on CRLF and normal artifacts); audit events carry the correct body hash and
+  blob SHA; record&#x27;s `current_content_sha256` is updated on every action.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0040" data-source-block="block-0040" data-source-lines="237-237"><h3 id="4-fix-security-preview-and-dashboard-filter">4. Fix security, preview, and dashboard filter</h3></div>
+<div class="source-block" id="render-owner-0042" data-source-block="block-0042" data-source-lines="239-268"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 239–268</figcaption><pre><code>- **Requirements**: R8, R9, R10
+- **Files**: `review-app/R/authorization.R`, `review-app/R/frontmatter.R`,
+  `review-app/R/app_ui.R`, `review-app/R/app_server.R`,
+  `review-app/tests/testthat/test-authorization.R`,
+  `review-app/tests/testthat/test-frontmatter.R`,
+  `review-app/tests/testthat/test-index.R`
+- **Details**:
+  - **`authorize` fail-closed**: Change `authorization.R:19-21` to return
+    `FALSE` (not `!is.null(role)`) when `required` is NULL (unknown/unlisted
+    action). Unknown actions must be denied for all roles.
+  - **Preview XSS**: In `render_markdown_preview` (`frontmatter.R:67`), do not
+    pass `extensions = TRUE` (which enables raw-HTML passthrough). Either omit
+    `extensions` (use the default safe rendering) or explicitly disable
+    `raw_html` if extensions are needed for other features. Verify that
+    `&lt;img onerror&gt;`, `&lt;svg onload&gt;`, and `javascript:` hrefs are stripped.
+  - **Dashboard module filter**: In `app_ui.R:37`, replace the hard-coded
+    `choices = c(&quot;All&quot;=&quot;&quot;, &quot;dem&quot;, &quot;edu&quot;, &quot;welfare&quot;)` with a
+    `renderUI`/`uiOutput` that derives choices from `unique(queue_index()$module)`
+    at render time. This makes `geo` appear (for `VAR-urban`) and drops dead
+    `edu`/`welfare` when absent. The `module` column is already derived from
+    the source-artifact-path directory name (`index.R:26`), which is correct
+    given `module_id`-authoritative directories (Step 9).
+- **Test Scenarios**: unknown action denied for all roles; XSS payloads are
+  stripped from preview HTML; module filter shows only modules present in the
+  index (including `geo`); no dead `edu`/`welfare` when absent.
+- **Tests**: `test-authorization.R` — unknown-action fail-closed test;
+  `test-frontmatter.R` — XSS payload test on `render_markdown_preview`;
+  `test-index.R` — module filter choices derive from index.
+- **Acceptance criteria**: `authorize` returns FALSE for unknown actions;
+  preview strips raw HTML; module filter is data-driven.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0044" data-source-block="block-0044" data-source-lines="270-270"><h3 id="5-remove-leaked-key-and-fix-dependencies">5. Remove leaked key and fix dependencies</h3></div>
+<div class="source-block" id="render-owner-0046" data-source-block="block-0046" data-source-lines="272-294"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 272–294</figcaption><pre><code>- **Requirements**: R11, R12
+- **Files**: `review-app/tests/testthat/test-github-auth.R`,
+  `review-app/.gitignore`, `review-app/DESCRIPTION`, `review-app/renv.lock`,
+  `review-app/tests/testthat/pubkey` (delete)
+- **Details**:
+  - **Leaked private key**: In `test-github-auth.R:44`, replace
+    `openssl::write_pem(key, &quot;pubkey&quot;)` with
+    `openssl::write_pem(key, tmp &lt;- tempfile(fileext = &quot;.pem&quot;))` and clean up
+    with `on.exit(unlink(tmp))`. Delete the existing `pubkey` file from the
+    test tree. Add `tests/testthat/pubkey` and `*.pem` to
+    `review-app/.gitignore` as a backstop.
+  - **DT**: Add `DT` to DESCRIPTION `Imports` (it is used in `app_server.R:52`
+    and `app_ui.R:54` but not declared).
+  - **renv.lock**: Run `renv::snapshot()` to update `renv.lock` so it includes
+    `DT`, `httr2` (now in Imports), and any other runtime/test dependencies
+    that were missing. Verify `renv::restore()` reproduces the environment.
+- **Test Scenarios**: no `pubkey` file exists in the test tree after the test
+  run; `renv::restore()` succeeds; `R CMD check` does not report `DT` as an
+  undeclared dependency.
+- **Tests**: filesystem check (no `pubkey` in `tests/testthat/`); `renv`
+  restore smoke; `test-github-auth.R` passes with tempfile.
+- **Acceptance criteria**: `pubkey` deleted and gitignored; `DT` in
+  DESCRIPTION; `renv.lock` restores cleanly.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0048" data-source-block="block-0048" data-source-lines="296-296"><h2 id="phase-2-instrumentation-specification">Phase 2: Instrumentation specification</h2></div>
+<div class="source-block source-heading" id="render-owner-0050" data-source-block="block-0050" data-source-lines="298-298"><h3 id="6-define-the-measurement-framework">6. Define the measurement framework</h3></div>
+<div class="source-block" id="render-owner-0052" data-source-block="block-0052" data-source-lines="300-304"><ul><li><strong>Requirements</strong>: R13, R14</li><li><strong>Files</strong>: <code>.cg-docs/calibration/measurement-framework.md</code> (new)</li><li><strong>Details</strong>: Define a unified content-error taxonomy aligned to the 4 future <code>independent-agent-review</code> dimensions plus human-review content categories:</li></ul></div>
+<div class="source-block" id="render-owner-0054" data-source-block="block-0054" data-source-lines="306-311"><div class="table-scroll" role="region" aria-label="Source table" tabindex="0"><table><thead><tr><th scope="col">Dimension</th><th scope="col">Agent-Review Category</th><th scope="col">Human-Review Category</th></tr></thead><tbody><tr><td>Source-grounding</td><td><code>source-grounding</code></td><td><code>content-accuracy</code></td></tr><tr><td>Schema-compliance</td><td><code>schema-compliance</code></td><td><code>formatting</code></td></tr><tr><td>Rules-caveats</td><td><code>rules-caveats</code></td><td><code>completeness</code></td></tr><tr><td>Consistency-derivation</td><td><code>consistency-derivation</code></td><td><code>clarity</code></td></tr></tbody></table></div></div>
+<div class="source-block" id="render-owner-0056" data-source-block="block-0056" data-source-lines="313-319"><p>Each content-error record has: <code>error_id</code>, <code>artifact_id</code>, <code>stage</code>   (extraction / human-review / agent-review), <code>category</code> (one of the above),   <code>severity</code> (block / major / minor / info), <code>description</code>, <code>detected_by</code>   (reviewer identity, rubric layer, or automated check name), <code>detected_at</code>   (RFC 3339 UTC), <code>section</code> (which Markdown section), <code>status</code> (open /   resolved / escalated). The calibration populates extraction + human-review;   agent-review categories are reserved, tagged-but-not-populated.</p></div>
+<div class="source-block" id="render-owner-0058" data-source-block="block-0058" data-source-lines="321-326"><p>Define a <strong>separate app-defect log</strong> with: <code>defect_id</code>, <code>component</code>   (e.g. <code>github_adapter</code>, <code>frontmatter</code>, <code>preview</code>), <code>severity</code> (P0/P1/P2/P3),   <code>description</code>, <code>source</code> (execution-report review or live-run observation),   <code>status</code> (open / fixed / deferred), <code>fix_reference</code> (step or commit).   App defects do NOT share the content-error severity scale and do NOT dilute   content error rates (C13).</p></div>
+<div class="source-block" id="render-owner-0059" data-source-block="block-0059" data-source-lines="327-333"><ul><li><strong>Test Scenarios</strong>: taxonomy covers all 4 agent dimensions + 5 human categories; stage and severity fields are defined; log and defect formats are self-describing with examples.</li><li><strong>Tests</strong>: spec review (no automated test; the rubric in Step 7 references these categories).</li><li><strong>Acceptance criteria</strong>: <code>measurement-framework.md</code> exists with the taxonomy table, content-error record schema, and defect-log schema.</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0061" data-source-block="block-0061" data-source-lines="335-335"><h3 id="7-define-the-two-layer-review-rubric">7. Define the two-layer review rubric</h3></div>
+<div class="source-block" id="render-owner-0063" data-source-block="block-0063" data-source-lines="337-339"><ul><li><strong>Requirements</strong>: R15</li><li><strong>Files</strong>: <code>.cg-docs/calibration/review-rubric.md</code> (new, draft)</li><li><strong>Details</strong>: Define a rubric with two layers:</li></ul></div>
+<div class="source-block" id="render-owner-0065" data-source-block="block-0065" data-source-lines="341-341"><p><strong>Layer 1 — automated structural gate (blocks submission)</strong>:</p></div>
+<div class="source-block" id="render-owner-0066" data-source-block="block-0066" data-source-lines="342-351"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 342–351</figcaption><pre><code>  - YAML front matter parses as valid YAML (schema-valid per the Pydantic
+    variable-spec model).
+  - Front matter is byte-unchanged from the loaded draft (C1).
+  - All required Markdown sections are present: `## Definition`, `##
+    Conceptual intent`, `## Construction notes`, `## Consistency checks`, `##
+    Escalation triggers`, `## Common mistakes`, `## Change log` (matching the
+    structure of the 3 real `knowledge/variables/` artifacts).
+  - No section is a stub: each section has non-trivial content (e.g. &gt; 1
+    sentence or &gt; 50 characters; a precise threshold is set from the
+    calibration run in Step 14).</code></pre></figure></div>
+<div class="source-block" id="render-owner-0068" data-source-block="block-0068" data-source-lines="353-353"><p><strong>Layer 2 — human content-quality gate (blocks approval)</strong>:</p></div>
+<div class="source-block" id="render-owner-0069" data-source-block="block-0069" data-source-lines="354-365"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 354–365</figcaption><pre><code>  - **Definition accuracy**: the definition matches the guideline source
+    evidence panel.
+  - **Construction-notes path coverage**: all derivation paths are
+    documented (e.g. educat4&#x27;s three paths: derive from educat7, educat5,
+    direct mapping).
+  - **Consistency-check actionability**: checks are specific and actionable
+    (not vague).
+  - **Escalation-trigger presence**: triggers are present and relevant to the
+    variable&#x27;s risk profile.
+  - **Common-mistakes relevance**: mistakes are real, instructive, and
+    non-redundant.
+  - Each section rated: `pass` / `revise` / `fail`.</code></pre></figure></div>
+<div class="source-block" id="render-owner-0071" data-source-block="block-0071" data-source-lines="367-370"><p><strong>Promotion gate</strong> (30 → 40): Layer 1 passes AND Layer 2 is all-<code>pass</code> or   <code>revise-with-notes</code> AND no open <code>block</code>/<code>major</code> extraction errors on the   artifact. Agent-review dimensions are reserved as future gates (not active   in this calibration).</p></div>
+<div class="source-block" id="render-owner-0073" data-source-block="block-0073" data-source-lines="372-373"><p>Include a section-template reference (the 7 required sections from the real   artifacts) so Step 9 can conform drafts to the rubric.</p></div>
+<div class="source-block" id="render-owner-0074" data-source-block="block-0074" data-source-lines="374-378"><ul><li><strong>Test Scenarios</strong>: rubric defines both layers with pass/revise/fail; promotion gate is explicit; section template is documented.</li><li><strong>Tests</strong>: spec review.</li><li><strong>Acceptance criteria</strong>: <code>review-rubric.md</code> exists with Layer 1, Layer 2, promotion gate, and section template.</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0076" data-source-block="block-0076" data-source-lines="380-380"><h3 id="8-define-the-live-operator-protocol-and-friction-log">8. Define the live-operator protocol and friction log</h3></div>
+<div class="source-block" id="render-owner-0078" data-source-block="block-0078" data-source-lines="382-384"><ul><li><strong>Requirements</strong>: R16</li><li><strong>Files</strong>: <code>.cg-docs/calibration/live-operator-protocol.md</code> (new)</li><li><strong>Details</strong>: Define the structured protocol for the live run:</li></ul></div>
+<div class="source-block" id="render-owner-0080" data-source-block="block-0080" data-source-lines="386-388"><p><strong>Roles</strong>: reviewer (edits Markdown, saves, submits) + approver (reviews,   requests revision or approves). Administrator reopen is covered by   <code>test-integration.R</code> only (Q7 decision).</p></div>
+<div class="source-block" id="render-owner-0082" data-source-block="block-0082" data-source-lines="390-390"><p><strong>Per-artifact steps</strong> (recorded for each):</p></div>
+<div class="source-block" id="render-owner-0083" data-source-block="block-0083" data-source-lines="391-402"><figure class="raw-source"><figcaption>Raw source · ordered_list · lines 391–402</figcaption><pre><code>  1. Browse: open dashboard, filter by module/state, locate the artifact.
+  2. Load detail: click the row; verify YAML/evidence panels and Markdown body
+     load from the adapter.
+  3. Read: review the read-only YAML front matter and guideline evidence.
+  4. Edit: enrich/fix the Markdown body.
+  5. Preview: check the rendered preview.
+  6. Save draft: save; verify persistence.
+  7. Submit: submit for review; verify state → `in-review`.
+  8. (Approver) Review: load the artifact; read the enriched Markdown.
+  9. (Approver) Request revision OR Approve.
+  10. If revision: reviewer revises, re-submits; approver approves.
+  11. Verify approved artifact in `extraction/40_approved/`.</code></pre></figure></div>
+<div class="source-block" id="render-owner-0085" data-source-block="block-0085" data-source-lines="404-408"><p><strong>Friction-log record</strong> per step: <code>session_id</code>, <code>reviewer_identity</code>, <code>role</code>,   <code>artifact_id</code>, <code>step</code> (browse/load/read/edit/preview/save/submit/review/   request-revision/approve), <code>time_on_task_seconds</code>, <code>error_count</code>,   <code>friction_rating</code> (1–5), <code>severity</code> (block / slow / cosmetic), <code>free_text</code>,   <code>timestamp</code>.</p></div>
+<div class="source-block" id="render-owner-0087" data-source-block="block-0087" data-source-lines="410-412"><p><strong>Decision rule</strong>: a friction item that blocks a required path, or is   rated ≥4 by ≥2 reviewers, triggers a simplification change before scaling.   Cosmetic items batch for later.</p></div>
+<div class="source-block" id="render-owner-0089" data-source-block="block-0089" data-source-lines="414-417"><p><strong>Known-defect detection</strong>: reviewers note which seeded defects they   identified during review; the rubric&#x27;s Layer 1 (automated) is also run   against each draft to measure automated catch rate. The known-answer key   (Step 9) is the scoring reference.</p></div>
+<div class="source-block" id="render-owner-0090" data-source-block="block-0090" data-source-lines="418-422"><ul><li><strong>Test Scenarios</strong>: protocol covers all paths (approve-direct, needs-revision loop); friction log has all fields; decision rule is stated.</li><li><strong>Tests</strong>: spec review.</li><li><strong>Acceptance criteria</strong>: <code>live-operator-protocol.md</code> exists with steps, friction-log schema, and decision rule.</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0092" data-source-block="block-0092" data-source-lines="424-424"><h2 id="phase-3-materialize-calibration-drafts">Phase 3: Materialize calibration drafts</h2></div>
+<div class="source-block source-heading" id="render-owner-0094" data-source-block="block-0094" data-source-lines="426-426"><h3 id="9-materialize-the-6-calibration-drafts">9. Materialize the 6 calibration drafts</h3></div>
+<div class="source-block" id="render-owner-0096" data-source-block="block-0096" data-source-lines="428-478"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 428–478</figcaption><pre><code>- **Requirements**: R17, R18, R19
+- **Files**: `extraction/20_drafts/dem/VAR-male.md`,
+  `extraction/20_drafts/dem/VAR-educat4.md`,
+  `extraction/20_drafts/dem/VAR-educy.md`,
+  `extraction/20_drafts/dem/VAR-educat7.md` (fixture),
+  `extraction/20_drafts/geo/VAR-urban.md` (fixture),
+  `extraction/20_drafts/dem/VAR-marital.md` (fixture),
+  `.cg-docs/calibration/known-answer-key.md` (separate)
+- **Details**:
+  - **3 real members** (R17): Copy `VAR-male.md`, `VAR-educat4.md`,
+    `VAR-educy.md` from `knowledge/variables/dem/` to
+    `extraction/20_drafts/dem/`. These already carry full front matter and
+    full Markdown bodies with the 7 required sections. Set `status: draft`
+    and `human_reviewed: false` in provenance (they already are). These are
+    the likely-clean baseline.
+  - **3 fixtures** (R18): Author `VAR-educat7`, `VAR-urban`, `VAR-marital`
+    with full front matter mirroring the real artifacts&#x27; structure (identity,
+    value_codes/allowed_range, missing_codes, derivation graph,
+    country_parameters, prerequisites, rules, source_hints, provenance) and
+    full Markdown bodies with all 7 required sections. Directories match
+    `module_id`: `educat7` and `marital` → `dem/` (MOD-DEM), `urban` → `geo/`
+    (MOD-GEO). Each fixture carries **seeded known defects** (R18/Q8):
+    - `VAR-educat7`: a hallucinated rule reference (e.g. `RULE-EDU-999` that
+      does not exist in `knowledge/index.md`) in the `rules` field; a missing
+      escalation trigger section entry.
+    - `VAR-urban`: a `module_id`/directory mismatch in front matter (e.g.
+      `module_id: MOD-DEM` while the file is under `geo/`); a derivation-graph
+      break (`derived_from` references a non-existent variable).
+    - `VAR-marital`: a stub `Construction notes` section (&lt; 50 chars); a
+      `value_codes` entry with an invalid label.
+  - **Known-answer key** (R19): Write `.cg-docs/calibration/known-answer-key.md`
+    listing each seeded defect, its location, category (per the Step 6
+    taxonomy), and expected severity. This file is kept separate from the
+    drafts and used only for scoring in Step 12.
+  - **Materialization errors** (R19): Log any real extraction/consistency
+    errors discovered during materialization into the content-error log
+    format from Step 6. Key finding to log: the calibration sample assigns
+    `edu` to `educat4`/`educy`/`educat7`, but the real artifacts carry
+    `module_id: MOD-DEM` and live under `knowledge/variables/dem/`;
+    `knowledge/variables/edu/` is empty. Record as a `consistency-derivation`
+    error, stage `extraction`, severity `major`.
+- **Test Scenarios**: all 6 drafts exist with full front matter; schema
+  validation passes on the 3 real members; the 3 fixtures have the 7 required
+  sections; known-answer key lists all seeded defects; materialization error
+  logged.
+- **Tests**: Pydantic schema validation (`python3 -m schema.validate` or
+  equivalent) on each draft; file-existence check; known-answer key content
+  check.
+- **Acceptance criteria**: 6 drafts in `extraction/20_drafts/` with full
+  front matter and `module_id`-authoritative directories; known-answer key
+  separate; materialization error logged.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0098" data-source-block="block-0098" data-source-lines="480-480"><h2 id="phase-4-live-operator-run">Phase 4: Live operator run</h2></div>
+<div class="source-block source-heading" id="render-owner-0100" data-source-block="block-0100" data-source-lines="482-482"><h3 id="10-provision-and-deploy">10. Provision and deploy</h3></div>
+<div class="source-block" id="render-owner-0102" data-source-block="block-0102" data-source-lines="484-507"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 484–507</figcaption><pre><code>- **Requirements**: R20
+- **Files**: disposable GitHub repo (external); `review-app/config/roles.yml`
+  (update with 2 test identities); Connect content item (external)
+- **Details**: Follow the execution report&#x27;s deployment checklist (Run 5):
+  1. Provision a disposable GitHub repo + narrowly scoped GitHub App
+     (contents read/write on default + `review` branches only); register
+     Connect secrets `GITHUB_APP_ID`, `GITHUB_APP_INSTALLATION_ID`,
+     `GITHUB_APP_PRIVATE_KEY`, `REVIEW_APP_GH_OWNER`, `REVIEW_APP_GH_REPO`,
+     `REVIEW_APP_GH_DEFAULT_BRANCH`, `REVIEW_APP_GH_REVIEW_BRANCH`.
+  2. Create the protected `review` branch; block force-push/deletion; confirm
+     default-branch protection is untouched.
+  3. Stage the 6 calibration drafts from Step 9 as drafts under
+     `extraction/20_drafts/&lt;module&gt;/&lt;id&gt;.md` on the default branch.
+  4. Configure `review-app/config/roles.yml` with 2 test Connect identities
+     (reviewer + approver).
+  5. Deploy the content item (`rsconnect::deployApp` on `review-app/`),
+     private group access, Connect auth confirmed as the only login (C7).
+  6. Verify the app boots (Phase 1 Step 1 entry-point fix) and the queue
+     populates from the adapter (Phase 1 Step 2 wiring fix).
+- **Test Scenarios**: app boots on Connect; queue shows 6 artifacts; module
+  filter includes `dem` and `geo`.
+- **Tests**: manual deployment verification.
+- **Acceptance criteria**: deployed app is reachable, private, and shows the
+  6-artifact queue with correct modules.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0104" data-source-block="block-0104" data-source-lines="509-509"><h3 id="11-execute-the-live-operator-run">11. Execute the live operator run</h3></div>
+<div class="source-block" id="render-owner-0106" data-source-block="block-0106" data-source-lines="511-541"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 511–541</figcaption><pre><code>- **Requirements**: R21, R22
+- **Files**: `.cg-docs/calibration/live-run-2026-08-07.md` (run log),
+  `.cg-docs/calibration/content-error-log.yaml` (populated),
+  `.cg-docs/calibration/defect-log.yaml` (populated),
+  `.cg-docs/calibration/friction-log.yaml` (populated)
+- **Details**: The reviewer and approver each walk the protocol from Step 8
+  against the deployed app:
+  - **Reviewer** walks: browse → load → read → edit → preview → save → submit
+    for each artifact they are assigned.
+  - **Approver** walks: browse → load → review → request-revision or approve.
+  - At least one artifact exercises each state-machine path: approve-direct
+    (VAR-male or VAR-educat4), needs-revision loop (VAR-educy or VAR-educat7),
+    (admin reopen is covered by `test-integration.R` only).
+  - Each reviewer records a friction-log entry per step (time-on-task,
+    errors, 1–5 rating, severity, free-text).
+  - Reviewers note which seeded defects they identified (for catch-rate
+    scoring in Step 12).
+  - The rubric&#x27;s Layer 1 (automated structural) is run against each draft at
+    submission; results recorded.
+  - The rubric&#x27;s Layer 2 (human content) is applied by the approver at the
+    review step; results recorded.
+  - The 30→40 promotion gate is exercised: at least one artifact is promoted
+    to `extraction/40_approved/` and verified on the review branch.
+  - Any app defects encountered during the run are logged in the defect log.
+  - Any content errors found are logged in the content-error log.
+- **Test Scenarios**: all state-machine paths complete; logs are populated
+  with all required fields; promotion gate exercised; at least one artifact
+  reaches `extraction/40_approved/`.
+- **Tests**: manual run + log completeness check.
+- **Acceptance criteria**: run log + all 3 logs populated; both rubric layers
+  exercised; 30→40 gate tested; all paths completed.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0108" data-source-block="block-0108" data-source-lines="543-543"><h2 id="phase-5-measure-simplify-finalize">Phase 5: Measure, simplify, finalize</h2></div>
+<div class="source-block source-heading" id="render-owner-0110" data-source-block="block-0110" data-source-lines="545-545"><h3 id="12-aggregate-logs-and-measure">12. Aggregate logs and measure</h3></div>
+<div class="source-block" id="render-owner-0112" data-source-block="block-0112" data-source-lines="547-565"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 547–565</figcaption><pre><code>- **Requirements**: R23
+- **Files**: `.cg-docs/calibration/calibration-report.md` (new)
+- **Details**: Aggregate the live-run logs:
+  - **Content-error rate**: count of content errors by category and severity,
+    per artifact. Compare reviewer-detected errors against the known-answer
+    key to compute **catch rate** (detected / total seeded) and **false
+    negatives** (missed defects). Also compute Layer 1 (automated) catch rate
+    separately.
+  - **Defect rate**: count of app defects by severity; note which were Phase 1
+    fixes vs. newly discovered during the live run.
+  - **Friction-by-step**: average friction rating and time-on-task per step;
+    identify steps with block-severity friction or ≥4 rating by ≥2 reviewers.
+  - Surface the `edu`/`MOD-DEM` materialization finding and any other
+    extraction errors discovered.
+- **Test Scenarios**: report includes catch rate, false negatives, error
+  rates, defect counts, friction-by-step.
+- **Tests**: report completeness check.
+- **Acceptance criteria**: `calibration-report.md` exists with catch rate,
+  false negatives, error/defect rates, and friction analysis.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0114" data-source-block="block-0114" data-source-lines="567-567"><h3 id="13-simplify-the-interface">13. Simplify the interface</h3></div>
+<div class="source-block" id="render-owner-0116" data-source-block="block-0116" data-source-lines="569-589"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 569–589</figcaption><pre><code>- **Requirements**: R24
+- **Files**: `review-app/R/app_ui.R`, `review-app/R/app_server.R`,
+  `.cg-docs/calibration/calibration-report.md` (updated with simplification
+  decisions)
+- **Details**: Apply the friction decision rule from Step 8:
+  - For each friction item with `block` severity OR rated ≥4 by ≥2 reviewers:
+    implement a simplification change (reduce steps per path, remove
+    dead/ambiguous controls, clarify labels, surface guideline evidence
+    beside the editor).
+  - For `cosmetic` items: batch for a later iteration (record in the report).
+  - Known-issue fixes already in Phase 1 (module filter derivation) are
+    confirmed; any additional simplification discovered during the live run
+    is applied here.
+  - Re-test the simplified interface against the in-memory double and a
+    short smoke check on Connect staging.
+- **Test Scenarios**: simplified interface passes the existing test suite;
+  friction items triggering the rule are resolved; cosmetic items are
+  batched.
+- **Tests**: full `testthat` suite + `shinytest2` smoke.
+- **Acceptance criteria**: all block/≥4-by-≥2 friction items resolved;
+  existing tests pass; changes documented in the calibration report.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0118" data-source-block="block-0118" data-source-lines="591-591"><h3 id="14-finalize-the-rubric">14. Finalize the rubric</h3></div>
+<div class="source-block" id="render-owner-0120" data-source-block="block-0120" data-source-lines="593-613"><figure class="raw-source"><figcaption>Raw source · unordered_list · lines 593–613</figcaption><pre><code>- **Requirements**: R25
+- **Files**: `.cg-docs/calibration/review-rubric.md` (finalized)
+- **Details**: Finalize the rubric from the live-run evidence:
+  - Set the stub-detection threshold from the calibration data (e.g. if the
+    run shows the 50-char threshold is too lenient or strict, adjust).
+  - Confirm or adjust the promotion gate criteria based on whether any
+    artifact was incorrectly promoted or incorrectly blocked.
+  - Add a &quot;calibration evidence&quot; section referencing the catch rate, false
+    negatives, and friction analysis from Step 12.
+  - Document the known limitations (N=6 artifacts, 2 reviewers, no agent
+    review) and the conditions under which the rubric should be re-calibrated
+    (e.g. when the `independent-agent-review` milestone adds agent-review
+    gates, or when the sample grows beyond the calibration scale).
+  - Note that promotion to `knowledge/rubrics/` is a human step (per AGENTS.md,
+    agents may not write to `knowledge/`); the finalized rubric draft in
+    `.cg-docs/calibration/` is the handoff for human promotion.
+- **Test Scenarios**: rubric acceptance criteria are concrete, evidence-
+  backed, and ready to gate promotion at scale.
+- **Tests**: rubric review.
+- **Acceptance criteria**: `review-rubric.md` finalized with evidence-backed
+  thresholds, promotion gate, calibration evidence, and known limitations.</code></pre></figure></div>
+<div class="source-block source-heading" id="render-owner-0122" data-source-block="block-0122" data-source-lines="615-615"><h2 id="testing-strategy">Testing Strategy</h2></div>
+<div class="source-block" id="render-owner-0124" data-source-block="block-0124" data-source-lines="617-632"><ul><li><strong>Phase 1</strong>: <code>testthat</code> unit tests for each fix (adapter wiring, transport, front-matter immutability, audit binding, authorize fail-closed, XSS, module filter). The existing 224 tests must still pass (C5). The full suite is re-run after each step.</li><li><strong>Phase 1→3</strong>: <code>shinytest2</code> app smoke tests with an injected adapter double verify the server loads real data and actions persist. The live Connect run (Phase 4) is the production verification.</li><li><strong>Phase 3</strong>: Pydantic schema validation on each materialized draft (Python); the 3 real members must validate identically to their <code>knowledge/</code> originals.</li><li><strong>Phase 2/3/4</strong>: instrumentation specs and logs are reviewed manually (no automated test); the rubric is validated by exercising it in the live run.</li><li><strong>Cross-language</strong>: the SHA-256 parity test (<code>test-hashing.R</code>) must continue to pass after Phase 1 changes (C6).</li><li>**No test may claim a successful state transition unless the underlying Git write actually completed** (mirrors R18 / production behavior).</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0126" data-source-block="block-0126" data-source-lines="634-634"><h2 id="documentation-checklist">Documentation Checklist</h2></div>
+<div class="source-block" id="render-owner-0128" data-source-block="block-0128" data-source-lines="636-644"><ul><li><input type="checkbox" disabled> <code>.cg-docs/calibration/measurement-framework.md</code> (Step 6)</li><li><input type="checkbox" disabled> <code>.cg-docs/calibration/review-rubric.md</code> (Step 7 draft → Step 14 finalized)</li><li><input type="checkbox" disabled> <code>.cg-docs/calibration/live-operator-protocol.md</code> (Step 8)</li><li><input type="checkbox" disabled> <code>.cg-docs/calibration/known-answer-key.md</code> (Step 9)</li><li><input type="checkbox" disabled> <code>.cg-docs/calibration/live-run-2026-08-07.md</code> (Step 11)</li><li><input type="checkbox" disabled> <code>.cg-docs/calibration/calibration-report.md</code> (Step 12 → updated Step 13)</li><li><input type="checkbox" disabled> <code>review-app/docs/operator-guide.md</code> updated with Connect secret names (REVIEW<em>APP</em>GH_*) and the disposable-repo deployment checklist (Step 10)</li><li><input type="checkbox" disabled> Phase 1 fix summary in the execution report</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0130" data-source-block="block-0130" data-source-lines="646-646"><h2 id="risks-mitigations">Risks &amp; Mitigations</h2></div>
+<div class="source-block" id="render-owner-0132" data-source-block="block-0132" data-source-lines="648-656"><div class="table-scroll" role="region" aria-label="Source table" tabindex="0"><table><thead><tr><th scope="col">Risk</th><th scope="col">Mitigation</th></tr></thead><tbody><tr><td>Phase 1 scope creeps into deferred hardening (exhaustive validate<em>review</em>record, NAMESPACE/roxygen, README)</td><td>C4 boundary; deviation policy <code>ask</code> pauses for approval; deferred items tracked as a separate roadmap effort</td></tr><tr><td>Existing 224 tests break during Phase 1 fixes</td><td>C5; re-run full suite after each step; fix tests that asserted the old (buggy) behavior</td></tr><tr><td>No Posit Connect instance or disposable GitHub repo available for the live run</td><td>Blocked-stop condition; Phase 4 cannot execute without provisioning; the in-memory double + structured walkthrough is a fallback (but does not satisfy V10)</td></tr><tr><td>Seeded defects in fixtures are too obvious or too subtle, making catch rate uninformative</td><td>Step 12 reports catch rate AND false negatives; if all/none are caught, the report notes the calibration is uninformative and recommends a re-run with adjusted defects</td></tr><tr><td>The <code>edu</code>/<code>MOD-DEM</code> module ambiguity blocks materialization</td><td>Q3 decision: <code>module_id</code> is authoritative; the discrepancy is logged as a governance finding, not a blocker; escalate to <code>/cg-strategy</code> for the MOD-EDU question</td></tr><tr><td><code>save_draft</code> working-copy persistence design is underspecified</td><td>Step 2 specifies writing the body to the review branch in the same atomic commit as the review record; the exact companion-file path is finalized during implementation</td></tr><tr><td>Reviewer availability (2 reviewers, specific roles) delays the live run</td><td>Step 10 provisioning is done first; the run can be scheduled when reviewers are available; the instrumentation (Phase 2) and materialization (Phase 3) proceed independently</td></tr></tbody></table></div></div>
+<div class="source-block source-heading" id="render-owner-0134" data-source-block="block-0134" data-source-lines="658-658"><h2 id="out-of-scope">Out of Scope</h2></div>
+<div class="source-block" id="render-owner-0136" data-source-block="block-0136" data-source-lines="660-678"><ul><li><strong>Deferred P0/P1</strong> (tracked as a separate roadmap effort under <code>human-review-application</code>): exhaustive <code>validate_review_record</code> (event schema, <code>artifact_id</code>/<code>source_artifact_path</code>/<code>source_commit</code> validation, path-poisoning prevention); NAMESPACE/roxygen <code>@export</code> drift (54/55 exports lack <code>@export</code> tags); <code>review-app/README.md</code> missing; <code>rprojroot</code> in wrong DESCRIPTION section; <code>assigned_to</code> NULL normalization; <code>sub()</code> module extraction silent pass-through; <code>new_event</code> unknown-action/sequence bounds.</li><li>PR automation, CODEOWNERS/branch-protection enforcement (roadmap features <code>automate-review-pull-requests</code>, <code>configure-codeowners-protection</code> remain tracked, deferred).</li><li>The <code>independent-agent-review</code> milestone&#x27;s agent-review implementation (content-error taxonomy reserves agent-review categories only).</li><li>Automatic YAML reconciliation from approved Markdown (separate milestone <code>complete-universal-records</code>).</li><li>Automatic promotion to <code>knowledge/</code> (human step).</li><li>Real-time multi-user collaborative editing.</li><li>Database provisioning / PostgreSQL migration.</li><li>Rewording <code>roadmap.json</code>&#x27;s stale milestone <code>objective</code> text (flagged as a <code>/cg-strategy</code> follow-up).</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0138" data-source-block="block-0138" data-source-lines="680-680"><h2 id="completion-contract">Completion Contract</h2></div>
+<div class="source-block source-heading" id="render-owner-0140" data-source-block="block-0140" data-source-lines="682-682"><h3 id="outcome">Outcome</h3></div>
+<div class="source-block" id="render-owner-0142" data-source-block="block-0142" data-source-lines="684-692"><p>The Shiny review app is live-capable (boots on Connect, browses/edits/persists real data with correct front-matter immutability and audit binding); 6 calibration drafts are materialized with full front matter (3 real + 3 fixtures with seeded known defects and a separate known-answer key); a reviewer and approver complete a structured live-operator run that populates content-error, defect, and friction logs; the interface is simplified based on measured friction; and a two-layer review rubric with evidence-backed acceptance criteria is finalized to gate promotion from <code>extraction/30_review/</code> to <code>extraction/40_approved/</code> at scale.</p></div>
+<div class="source-block source-heading" id="render-owner-0144" data-source-block="block-0144" data-source-lines="694-694"><h3 id="verification-surface">Verification Surface</h3></div>
+<div class="source-block" id="render-owner-0146" data-source-block="block-0146" data-source-lines="696-710"><div class="table-scroll" role="region" aria-label="Source table" tabindex="0"><table><thead><tr><th scope="col">ID</th><th scope="col">Phase</th><th scope="col">Evidence Required</th><th scope="col">Command/Artifact</th><th scope="col">Required</th></tr></thead><tbody><tr><td>V1</td><td>1</td><td>Production write transport sends JSON payloads; Connect entry point boots</td><td><code>test-github-adapter.R</code> transport test; <code>app.R</code> loads on Connect</td><td>yes</td></tr><tr><td>V2</td><td>1</td><td>Adapter wired into server; detail view loads real draft + review record; save_draft persists</td><td><code>shinytest2</code> with injected adapter + <code>test-actions.R</code> save path</td><td>yes</td></tr><tr><td>V3</td><td>1</td><td>C1 front-matter immutability meaningful (CRLF + tamper reject); body_sha256 flows through transition to event + record</td><td><code>test-frontmatter.R</code> + <code>test-state-machine.R</code> audit-binding</td><td>yes</td></tr><tr><td>V4</td><td>1</td><td>authorize() fail-closed for unknown actions; preview blocks XSS; module filter derived from index</td><td><code>test-authorization.R</code> + XSS test + <code>test-index.R</code> filter</td><td>yes</td></tr><tr><td>V5</td><td>1</td><td>Leaked private key removed + gitignored; DT declared; httr2 in Imports; renv.lock restores</td><td>filesystem check + <code>R CMD check</code> / <code>renv::restore()</code></td><td>yes</td></tr><tr><td>V6</td><td>2</td><td>Content-error taxonomy (4 agent dimensions + human-review categories + stage + severity) + log/defect formats defined</td><td><code>.cg-docs/calibration/measurement-framework.md</code></td><td>yes</td></tr><tr><td>V7</td><td>2</td><td>Two-layer rubric (Layer 1 structural template + Layer 2 per-section content) defined</td><td><code>.cg-docs/calibration/review-rubric.md</code> (draft)</td><td>yes</td></tr><tr><td>V8</td><td>2</td><td>Live-operator protocol (paths, time-on-task, errors, friction rating, free-text) + friction-log format defined</td><td><code>.cg-docs/calibration/live-operator-protocol.md</code></td><td>yes</td></tr><tr><td>V9</td><td>3</td><td>6 drafts materialized in extraction/20<em>drafts/ with full front matter, module</em>id-authoritative dirs; 3 fixtures carry seeded defects; known-answer key separate</td><td>schema validation + file existence + known-answer key check</td><td>yes</td></tr><tr><td>V10</td><td>4</td><td>Live operator run completed (reviewer + approver, all paths); friction, content-error, defect logs populated; rubric layers + 30→40 gate exercised</td><td><code>.cg-docs/calibration/live-run-2026-08-07.md</code> + populated logs</td><td>yes</td></tr><tr><td>V11</td><td>5</td><td>Logs aggregated; catch rate measured vs known-answer key; friction-by-step analyzed</td><td><code>.cg-docs/calibration/calibration-report.md</code></td><td>yes</td></tr><tr><td>V12</td><td>5</td><td>Interface simplified per friction decision rule (block/≥4-by-≥2-reviewer items resolved)</td><td><code>app_ui.R</code> diff + re-test</td><td>yes</td></tr><tr><td>V13</td><td>5</td><td>Rubric acceptance criteria finalized from run evidence; ready to gate promotion at scale</td><td><code>.cg-docs/calibration/review-rubric.md</code> (finalized)</td><td>yes</td></tr></tbody></table></div></div>
+<div class="source-block source-heading" id="render-owner-0148" data-source-block="block-0148" data-source-lines="712-712"><h3 id="constraints">Constraints</h3></div>
+<div class="source-block" id="render-owner-0150" data-source-block="block-0150" data-source-lines="714-728"><div class="table-scroll" role="region" aria-label="Source table" tabindex="0"><table><thead><tr><th scope="col">ID</th><th scope="col">Phase</th><th scope="col">Constraint</th><th scope="col">Check</th></tr></thead><tbody><tr><td>C1</td><td>1</td><td>YAML front matter preserved byte-exactly; structural alterations rejected</td><td><code>test-frontmatter.R</code> meaningful immutability (CRLF + tamper + approved-path)</td></tr><tr><td>C2</td><td>1</td><td>Writes only on the protected review branch; default branch remains canonical source</td><td>adapter target-branch assertions</td></tr><tr><td>C3</td><td>1</td><td><code>extraction/30_review/</code> and <code>extraction/40_approved/</code> human-owned; app writes only on authenticated human action</td><td>authorization/audit tests</td></tr><tr><td>C4</td><td>1</td><td>Phase 1 scope is the live-capable subset only; remaining P0/P1 deferred to a tracked separate effort</td><td>scope review against the fix-triage boundary</td></tr><tr><td>C5</td><td>1</td><td>Existing 224 passing tests are not broken by Phase 1 fixes</td><td>full <code>testthat</code> suite re-run</td></tr><tr><td>C6</td><td>1</td><td>R-native SHA-256 parity with Python pipeline maintained</td><td><code>test-hashing.R</code></td></tr><tr><td>C7</td><td>1</td><td>Connect auth is the only login; no second auth layer</td><td>app wiring test</td></tr><tr><td>C8</td><td>3</td><td>Agents write only to <code>extraction/20_drafts/</code>; known-answer key and logs go to <code>.cg-docs/calibration/</code></td><td>path audit</td></tr><tr><td>C9</td><td>3</td><td>All 6 drafts carry full variable-spec front matter mirroring <code>knowledge/</code> structure</td><td>schema validation</td></tr><tr><td>C10</td><td>3</td><td>Draft directories match front-matter <code>module_id</code>; dashboard filter derived from indexed modules</td><td>file-path + index test</td></tr><tr><td>C11</td><td>3</td><td>Known-answer key kept separate from fixtures; used only for scoring</td><td>file separation check</td></tr><tr><td>C12</td><td>4</td><td>Live run uses a disposable repo + Connect staging, never the production CVS repository</td><td>deployment config audit</td></tr><tr><td>C13</td><td>4</td><td>App defects logged separately from content errors; do not dilute content error rates</td><td>log schema check</td></tr></tbody></table></div></div>
+<div class="source-block source-heading" id="render-owner-0152" data-source-block="block-0152" data-source-lines="730-730"><h3 id="boundaries">Boundaries</h3></div>
+<div class="source-block" id="render-owner-0154" data-source-block="block-0154" data-source-lines="732-745"><ul><li><strong>Allowed</strong>: Phase 1 fixes (adapter wiring, production transport, entry point, front-matter immutability, audit binding, authorize fail-closed, preview XSS, module filter, leaked key removal, dependency fixes); instrumentation specs under <code>.cg-docs/calibration/</code>; 6 draft files under <code>extraction/20_drafts/</code>; known-answer key under <code>.cg-docs/calibration/</code>; live run against a disposable repo + Connect staging; interface simplification based on measured friction; rubric finalization.</li><li><strong>Out of scope</strong>: exhaustive <code>validate_review_record</code> + path-poisoning hardening; NAMESPACE/roxygen <code>@export</code> drift; <code>review-app/README.md</code>; remaining P0/P1 from the predecessor review (deferred to a tracked separate effort); PR automation, CODEOWNERS/branch-protection enforcement; the <code>independent-agent-review</code> milestone&#x27;s agent-review implementation (categories reserved only); automatic YAML reconciliation; automatic promotion to <code>knowledge/</code>; real-time collaboration; database provisioning.</li></ul></div>
+<div class="source-block source-heading" id="render-owner-0156" data-source-block="block-0156" data-source-lines="747-747"><h3 id="iteration-policy">Iteration Policy</h3></div>
+<div class="source-block" id="render-owner-0158" data-source-block="block-0158" data-source-lines="749-757"><ol><li>Work front-to-back in phases; do not start a later phase with pending <code>yes</code> evidence from an earlier phase.</li><li>A deviation under policy <code>ask</code> pauses for approval; under <code>autonomous</code> is justified and recorded; under <code>strict</code> is a blocked-stop.</li><li>Phase 1 fixes must not break the existing 224 passing tests; re-run the full suite after each fix.</li><li>The live run uses a disposable repo + Connect staging; never the production CVS repository&#x27;s protected review branch.</li><li>Any new public function added gets at least one <code>testthat</code> test.</li></ol></div>
+<div class="source-block source-heading" id="render-owner-0160" data-source-block="block-0160" data-source-lines="759-759"><h3 id="blocked-stop-conditions">Blocked-Stop Conditions</h3></div>
+<div class="source-block" id="render-owner-0162" data-source-block="block-0162" data-source-lines="761-771"><ul><li>Required verification cannot be executed (no Connect instance or disposable repo available).</li><li>Any required evidence fails after allowed recovery attempts.</li><li>A protected boundary (write to <code>knowledge/</code>, the default branch) must be crossed.</li><li>Front-matter immutability or optimistic-locking guarantees cannot be demonstrated after Phase 1.</li><li>The disposable repo / Connect staging cannot be provisioned for the live run.</li><li>Phase 1 scope creeps beyond the live-capable subset into deferred hardening without approval.</li></ul></div>
+    </article>
+  </main>
+</div>
+<footer class="provenance" aria-labelledby="provenance-heading">
+  <div class="provenance-inner">
+    <h2 id="provenance-heading">Derived view provenance</h2>
+    <p>This HTML is regenerable. Canonical Markdown remains authoritative.</p>
+    <dl>
+      <dt>Source</dt><dd>.cg-docs/plans/2026-08-07-calibrate-human-review.md</dd>
+      <dt>Source SHA-256</dt><dd><code>421011f9d2fa03424f208aa9ab71b0e989b42333f0f3286b233e8039dfc9c1ef</code></dd>
+      <dt>Output</dt><dd>.cg-docs/views/plans/2026-08-07-calibrate-human-review.html</dd>
+      <dt>Document type</dt><dd>plan</dd>
+      <dt>Renderer</dt><dd>0.1.0</dd>
+      <dt>Theme</dt><dd>reference v1</dd>
+      <dt>Generated UTC</dt><dd>2026-08-07T12:44:28Z</dd>
+    </dl>
+  </div>
+</footer>
+</body>
+</html>

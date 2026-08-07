@@ -36,11 +36,13 @@ library(testthat)
 }
 
 .calibration_sample <- function() {
+  # module_id is authoritative (Q3): educat4/educy/educat7 carry MOD-DEM and
+  # live under dem/ (P1.3). knowledge/variables/edu/ is empty.
   list(
     .artifact("VAR-male",    "dem", "simple",   "draft"),
-    .artifact("VAR-educat4", "edu", "simple",   "draft"),
-    .artifact("VAR-educy",   "edu", "standard", "draft"),
-    .artifact("VAR-educat7", "edu", "standard", "draft"),
+    .artifact("VAR-educat4", "dem", "simple",   "draft"),
+    .artifact("VAR-educy",   "dem", "standard", "draft"),
+    .artifact("VAR-educat7", "dem", "standard", "draft"),
     .artifact("VAR-urban",   "geo", "complex",  "needs-revision"),
     .artifact("VAR-marital", "dem", "complex",  "approved")
   )
@@ -461,10 +463,12 @@ test_that("dashboard index reflects durable review-branch state after a lifecycl
   expect_identical(idx$state[idx$artifact_id == "VAR-male"], "approved")
   # seeded states remain visible: VAR-urban (needs-revision), VAR-marital (approved)
   expect_identical(idx$state[idx$artifact_id == "VAR-urban"], "needs-revision")
-  # filters narrow correctly
+  # filters narrow correctly; after P1.3 all dem/ artifacts carry MOD-DEM (5),
+  # geo/ carries VAR-urban only
   expect_equal(nrow(reviewapp::filter_review_index(idx, state = "approved")), 2L)
   expect_equal(nrow(reviewapp::filter_review_index(idx, state = "needs-revision")), 1L)
-  expect_equal(nrow(reviewapp::filter_review_index(idx, module = "dem")), 2L)
+  expect_equal(nrow(reviewapp::filter_review_index(idx, module = "dem")), 5L)
+  expect_equal(nrow(reviewapp::filter_review_index(idx, module = "geo")), 1L)
   # the approved artifact is on the review branch tree
   expect_true(reviewapp::approved_path_for(art$path) %in% names(out$blobs))
 })

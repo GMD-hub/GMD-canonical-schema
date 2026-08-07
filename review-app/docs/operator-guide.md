@@ -375,3 +375,54 @@ state and the review-branch history are the cross-checks.
 - Phase 5 calibration (V9): validate the workflow against the planned sample of
   5–10 variables using a disposable test branch/repo if production protection
   is not yet configured.
+
+## 10. Calibration live-run deployment checklist (plan `2026-08-07-calibrate-human-review.md`, Step 10)
+
+This is the operator checklist for provisioning the disposable environment the
+calibration live operator run (Step 11) executes against. The Shiny server
+builds its GitHub adapter at session start via `review_app_adapter()` in
+`review-app/R/github_adapter.R`, which reads these exact Connect
+variables/secrets:
+
+| Variable | Purpose |
+|---|---|
+| `REVIEW_APP_GH_OWNER` | Disposable repo owner |
+| `REVIEW_APP_GH_REPO` | Disposable repo name |
+| `REVIEW_APP_GH_DEFAULT_BRANCH` | Source branch (e.g. `main`) |
+| `REVIEW_APP_GH_REVIEW_BRANCH` | Protected review branch (e.g. `review`) |
+| `GITHUB_APP_ID` | GitHub App ID |
+| `GITHUB_APP_INSTALLATION_ID` | GitHub App installation ID for the repo |
+| `GITHUB_APP_PRIVATE_KEY` | GitHub App private key (Connect secret) |
+| `REVIEW_APP_ROLES` | (optional) absolute path to a role-map YAML override |
+
+> Naming note: the adapter factory in this plan reads `GITHUB_APP_ID`,
+> `GITHUB_APP_INSTALLATION_ID`, and `GITHUB_APP_PRIVATE_KEY` for the App
+> identity (matching `github_auth.R`'s `.gh_app_env` helper). Earlier drafts of
+> the operator guide proposed a `REVIEW_APP_GH_*` variant for the App fields;
+> the connected secrets must use the names the deployed code reads.
+
+Sequence:
+
+1. **Provision a disposable GitHub repo** (e.g. `gmd-calibration-<date>`), plus
+   a **narrowly scoped GitHub App** with contents read/write on the default and
+   review branches only. Register Connect secrets: `GITHUB_APP_ID`,
+   `GITHUB_APP_INSTALLATION_ID`, `GITHUB_APP_PRIVATE_KEY`,
+   `REVIEW_APP_GH_OWNER`, `REVIEW_APP_GH_REPO`,
+   `REVIEW_APP_GH_DEFAULT_BRANCH`, `REVIEW_APP_GH_REVIEW_BRANCH`.
+2. **Create the protected `review` branch**; block force-push and deletion;
+   leave default-branch protection untouched.
+3. **Stage the 6 calibration drafts** (Step 9) as drafts under
+   `extraction/20_drafts/<module>/<id>.md` on the default branch:
+   `dem/VAR-male`, `dem/VAR-educat4`, `dem/VAR-educy`, `dem/VAR-educat7`,
+   `geo/VAR-urban`, `dem/VAR-marital`.
+4. **Configure `review-app/config/roles.yml`** with 2 test Connect identities
+   (one reviewer, one approver).
+5. **Deploy** the content item (`rsconnect::deployApp` on `review-app/`), private
+   group access, Connect auth confirmed as the only login (C7).
+6. **Verify** the app boots (Phase 1 Step 1 entry-point fix) and the queue
+   populates from the adapter (Phase 1 Step 2 wiring fix): 6 artifacts, module
+   filter includes `dem` and `geo`.
+7. Run the live operator protocol from
+   `.cg-docs/calibration/live-operator-protocol.md` (Step 11), populating
+   `content-error-log.yaml`, `defect-log.yaml`, and `friction-log.yaml`, then
+   aggregate in Step 12 (`calibration-report.md`).

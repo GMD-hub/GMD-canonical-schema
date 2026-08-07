@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; object-src 'none'; frame-src 'none'; media-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="artifact-source" content=".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md">
+<meta name="artifact-source-sha256" content="b89342abc95462985144761c8ac5553501b8c4b21db70e8243d5731135ce22e1">
+<meta name="publication-provenance-schema" content="2">
+<meta name="publication-output" content=".cg-docs/views/brainstorms/2026-08-07-calibrate-human-review.html">
+<meta name="publication-theme" content="reference">
+<meta name="artifact-renderer-version" content="0.1.0">
+<title>Calibrate Human Review · Compound GPID</title>
+<style>:root {
+  color-scheme: light;
+  --paper: #f6f5f0;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #59636d;
+  --line: #c8cdd1;
+  --accent: #006b5f;
+  --accent-strong: #004d45;
+  --signal: #a63d21;
+  --code: #eef1f3;
+  --focus: #d43f00;
+  --measure: 78rem;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); color: var(--ink); scroll-behavior: smooth; }
+body { margin: 0; min-width: 20rem; }
+a { color: var(--accent-strong); text-underline-offset: .18em; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.skip-link { position: absolute; left: .75rem; top: -5rem; z-index: 10; background: var(--ink); color: white; padding: .6rem .8rem; }
+.skip-link:focus { top: .75rem; }
+.masthead { border-bottom: 1px solid var(--line); background: var(--surface); }
+.masthead-inner { max-width: var(--measure); margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 3rem); }
+.eyebrow { margin: 0 0 .45rem; color: var(--accent-strong); font-size: .78rem; font-weight: 750; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { font-family: "Iowan Old Style", "Palatino Linotype", serif; line-height: 1.16; margin: 1.5em 0 .55em; overflow-wrap: anywhere; }
+h1 { margin: 0; font-size: 3.4rem; }
+.deck { max-width: 58rem; margin: .75rem 0 0; color: var(--muted); }
+.layout { max-width: var(--measure); margin: 0 auto; display: grid; grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); padding: 2rem clamp(1rem, 4vw, 3rem) 4rem; }
+.sidebar { align-self: start; position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow: auto; border-left: 4px solid var(--accent); padding-left: 1rem; }
+.sidebar h2 { font-family: inherit; font-size: .82rem; text-transform: uppercase; margin: 0 0 .7rem; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.sidebar li + li { margin-top: .45rem; }
+main { min-width: 0; }
+.derived-panel { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1rem 0; margin: 0 0 1.5rem; }
+.derived-panel h2 { font-size: 1.3rem; margin: 0 0 .65rem; }
+.phase-list, .coverage-list { display: grid; gap: .55rem; padding-left: 1.25rem; }
+.source-block { min-width: 0; }
+.source-block > :first-child { margin-top: 0; }
+.source-heading { scroll-margin-top: 1rem; }
+p, li, td, th, code { overflow-wrap: anywhere; }
+pre { max-width: 100%; overflow: auto; padding: 1rem; background: var(--code); border-left: 4px solid var(--accent); white-space: pre; }
+code { font-family: "SFMono-Regular", Consolas, monospace; font-size: .88em; }
+:not(pre) > code { background: var(--code); padding: .08em .3em; }
+table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; margin: 1rem 0 1.5rem; }
+th, td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; vertical-align: top; min-width: 8rem; }
+th { background: #e6ece9; }
+blockquote { margin: 1rem 0; padding: .2rem 0 .2rem 1rem; border-left: 4px solid var(--signal); color: var(--muted); }
+.raw-source { border: 1px solid var(--line); margin: 1rem 0; }
+.raw-source figcaption { padding: .45rem .7rem; background: #f0e9e5; font-weight: 700; }
+.raw-source pre { margin: 0; border: 0; }
+.provenance { border-top: 1px solid var(--line); background: var(--surface); }
+.provenance-inner { max-width: var(--measure); margin: 0 auto; padding: 1.5rem clamp(1rem, 4vw, 3rem); }
+.provenance dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .35rem 1rem; }
+.provenance dt { font-weight: 700; }
+.provenance dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 48rem) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; max-height: none; border-left: 0; border-bottom: 1px solid var(--line); padding: 0 0 1rem; }
+  h1 { font-size: 2.15rem; }
+  .provenance dl { grid-template-columns: 1fr; }
+  .provenance dd + dt { margin-top: .5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  :root { --paper: #fff; --surface: #fff; --ink: #000; --muted: #222; }
+  @page { margin: 15mm; }
+  .skip-link, .sidebar { display: none; }
+  .layout { display: block; max-width: none; padding: 0; }
+  .masthead-inner, .provenance-inner { max-width: none; padding: 0; }
+  .masthead { border: 0; margin-bottom: 1rem; }
+  a { color: #000; text-decoration: underline; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: .8em; }
+  pre, table, blockquote, .raw-source { break-inside: avoid; }
+  thead { display: table-header-group; }
+  h1, h2, h3, h4 { break-after: avoid; }
+  .provenance { margin-top: 1rem; }
+}</style>
+<script id="artifact-provenance" type="application/json">{"documentType":"brainstorm","generatedAt":"2026-08-07T11:56:41Z","outputPath":".cg-docs/views/brainstorms/2026-08-07-calibrate-human-review.html","provenanceSchemaVersion":2,"rendererVersion":"0.1.0","sourcePath":".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md","sourceSha256":"b89342abc95462985144761c8ac5553501b8c4b21db70e8243d5731135ce22e1","themeName":"reference","themeVersion":1}</script>
+</head>
+<body data-artifact-kind="brainstorm">
+<a class="skip-link" href="#main-content">Skip to artifact content</a>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Decision record</p>
+    <h1>Calibrate Human Review</h1>
+    <p class="deck">A complete human view of the canonical Brainstorm, organized around alternatives and the chosen direction. <a href="../../brainstorms/2026-08-07-calibrate-human-review.md">Open canonical Markdown</a>.</p>
+  </div>
+</header>
+<div class="layout">
+  <nav class="sidebar" aria-label="Artifact sections" data-derived="navigation">
+    <h2>On this page</h2>
+    <ul><li><a href="#context">Context</a></li><li><a href="#requirements">Requirements</a></li><li><a href="#approaches-considered">Approaches</a></li><li><a href="#decision">Decision</a></li><li><a href="#next-steps">Next steps</a></li><li><a href="#provenance-heading">Provenance</a></li></ul>
+  </nav>
+  <main id="main-content" tabindex="-1">
+    <section class="derived-panel" data-derived="approach-index" aria-labelledby="approach-index"><h2 id="approach-index">Approach index</h2><ol><li>Approach 1: Instrument-first, run-once, finalize</li><li>Approach 2: Materialize-first, instrument-as-you-go</li><li>Approach 3: Two-run calibration (pilot then formal)</li></ol></section>
+    <article aria-label="Canonical artifact content">
+      <div class="source-block source-heading" id="render-owner-0004" data-source-block="block-0004" data-source-lines="12-12"><h1 id="calibrate-human-review">Calibrate Human Review</h1></div>
+<div class="source-block source-heading" id="render-owner-0006" data-source-block="block-0006" data-source-lines="14-14"><h2 id="context">Context</h2></div>
+<div class="source-block" id="render-owner-0008" data-source-block="block-0008" data-source-lines="16-28"><p>The Shiny review app (<code>review-app/</code>) is built and all unit/integration tests pass against an in-memory GitHub double (<code>test-integration.R</code>). The calibration sample is defined in <code>.cg-docs/calibration/2026-08-06-calibration-sample.md</code> (6 variables: real <code>VAR-male</code>, <code>VAR-educat4</code>, <code>VAR-educy</code> from <code>knowledge/</code>; fixtures <code>VAR-educat7</code>, <code>VAR-urban</code>, <code>VAR-marital</code>). <code>extraction/20_drafts/</code> is empty and needs the sample materialized. Roadmap milestone <code>calibrate-human-review</code> is <code>in-progress</code> with <code>select-calibration-sample</code> done; remaining features are <code>review-calibration-sample</code>, <code>measure-review-errors</code>, <code>simplify-review-interface</code>, <code>finalize-review-rubric</code>. The <code>independent-agent-review</code> milestone is planned, not started; this calibration focuses on the human-review-only workflow, treating agent review as a future layer.</p></div>
+<div class="source-block" id="render-owner-0010" data-source-block="block-0010" data-source-lines="30-39"><p>The predecessor plan&#x27;s R21/V9 requires validating the MVP against a calibration sample before scaling. Its own Phase 5 review (execution report, Run 5, Step 3.9, full mode) found unresolved P0/P1 defects that block a real live operator run: a leaked RSA private key in <code>tests/testthat/pubkey</code>; C1 front-matter immutability is a no-op; audit/content-hash binding broken; production write transport cannot send payloads (<code>gh_adapter_http</code> has no <code>body</code>); the adapter is never wired into the server; <code>app.R</code> calls a non-exported entry point (won&#x27;t boot on Connect); preview XSS; <code>authorize()</code> fails open; and more. The review&#x27;s recommendation: do not commit until <code>/cg-fix-triage</code> resolves the P0 set.</p></div>
+<div class="source-block" id="render-owner-0012" data-source-block="block-0012" data-source-lines="41-48"><p>Two further findings shape the plan: (1) a draft front-matter discrepancy — the real <code>knowledge/</code> artifacts carry full front matter, while the integration test materializes minimal <code>artifact_id</code> + <code>module</code> stubs; (2) a module inconsistency — <code>educat4</code>/<code>educy</code> carry <code>module_id: MOD-DEM</code> and live under <code>knowledge/variables/dem/</code> (guidelines source section &quot;Demography (DEM)&quot;), yet the calibration sample assigns them <code>edu</code>, the <code>knowledge/variables/edu/</code> directory is empty, and the dashboard filter is hard-coded to <code>dem</code>/<code>edu</code>/<code>welfare</code> (no <code>geo</code>).</p></div>
+<div class="source-block source-heading" id="render-owner-0014" data-source-block="block-0014" data-source-lines="50-50"><h2 id="requirements">Requirements</h2></div>
+<div class="source-block" id="render-owner-0016" data-source-block="block-0016" data-source-lines="52-53"><p>Decisions from clarification (one per question area, plus the seeded-defects decision from the devil&#x27;s-advocate exchange):</p></div>
+<div class="source-block" id="render-owner-0018" data-source-block="block-0018" data-source-lines="55-111"><ol><li><strong>Live-run vs fixes (Q1): live-capable subset first.</strong> Phase 0 fixes only the defects that block a safe, evidence-trustworthy live run; the live calibration runs against a disposable repo + Posit Connect staging; the remaining P0/P1 set is deferred to a tracked separate fix effort.</li><li><strong>Draft front matter (Q2): full front matter, mirror `knowledge/`.</strong> All 6 drafts carry the full variable-spec front matter and Markdown body. The 3 real members copy from <code>knowledge/variables/</code>; the 3 fixtures are authored to match that structure. The C1 front-matter-immutability fix joins Phase 0.</li><li><strong>Module convention (Q3): `module_id` authoritative.</strong> Drafts land under the directory matching their front-matter <code>module_id</code> (male/educat4/educy/ educat7/marital -&gt; <code>dem</code>; urban -&gt; <code>geo</code>; <code>educat7</code> authored <code>MOD-DEM</code> to match <code>educat4</code>). The dashboard module filter is derived from indexed <code>module_id</code>s (<code>geo</code> appears; dead <code>edu</code>/<code>welfare</code> drop). The empty <code>knowledge/variables/edu/</code> and the sample&#x27;s <code>edu</code> assignment are recorded as a governance/consistency finding for the measurement framework.</li><li><strong>Error taxonomy (Q4): unified content taxonomy + separate defect log.</strong> Define the full content-error taxonomy now, aligned to the 4 future agent-review dimensions (source-grounding, schema-compliance, rules-caveats, consistency-derivation) plus human-review content categories, with a <code>stage</code> field (extraction / human-review / agent-review), severity, and a structured log format. The calibration populates extraction + human-review errors; agent-review categories are reserved, tagged-but-not-populated. App/tooling defects go in a separate defect log so they do not dilute content error rates.</li><li><strong>Rubric (Q5): two-layer, gating 30 -&gt; 40.</strong> Layer 1 (automated, blocks submission): YAML schema-valid + front matter byte-unchanged + all required Markdown sections present and non-stub. Layer 2 (human, blocks approval): per-section content quality (Definition accuracy, Construction-notes path coverage, Consistency-check actionability, Escalation-triggers presence, Common-mistakes relevance) judged against the read-only guideline-evidence panel. Promotion from <code>extraction/30_review/</code> to <code>extraction/40_approved/</code> requires both layers plus no open block/major extraction errors. Agent-review dimensions are reserved as future gates.</li><li>**Interface simplification (Q6): friction-driven + fix known issues in Phase 0.** Phase 0 derives the dashboard filter from <code>module_id</code>s and drops dead <code>edu</code>/<code>welfare</code>. The live-operator protocol captures structured friction (per-task time-on-task, error count, 1-5 friction rating per step, free-text) in a friction log with severity (block/slow/cosmetic). Decision rule: a friction item that blocks a required path, or is rated &gt;=4 by &gt;=2 reviewers, triggers a simplification change before scaling; cosmetic items batch for later. Criteria: reduce steps per path, remove dead/ambiguous controls, clarify labels, surface guideline evidence beside the editor.</li><li><strong>Reviewer panel (Q7): 2 reviewers (reviewer + approver).</strong> The administrator reopen path is covered by <code>test-integration.R</code> against the double only; admin friction goes unmeasured in the live run (acknowledged trade-off). The &gt;=2-reviewer friction threshold is satisfied for reviewer + approver.</li><li><strong>Seeded defects (devil&#x27;s advocate): known-answer calibration.</strong> The 3 fixture drafts deliberately contain planted known defects (e.g. a hallucinated rule, a <code>module_id</code>/directory mismatch, a missing escalation trigger, a derivation-graph break). The known-answer key is kept separate and used only for scoring. Reviewer and rubric detection are measured (catch rate, false negatives). The 3 real members are pre-approved and treated as the (likely clean) baseline.</li></ol></div>
+<div class="source-block source-heading" id="render-owner-0020" data-source-block="block-0020" data-source-lines="113-113"><h2 id="approaches-considered">Approaches Considered</h2></div>
+<div class="source-block" id="render-owner-0022" data-source-block="block-0022" data-source-lines="115-124"><p>All three share <strong>Phase 0 (live-capable subset)</strong>: wire the adapter into the server; fix the production-write transport (<code>req_body_json</code>); fix the Connect entry point; remove the leaked private key + gitignore + tempfile PEM; fix preview XSS; fix C1 front-matter immutability; derive the dashboard module filter from <code>module_id</code>s. The precise P0/P1 boundary (e.g. <code>authorize()</code> fail-closed, audit/content-hash binding) is set at plan time via <code>/cg-fix-triage</code>, with the principle that anything making the live run unsafe or its audit evidence untrustworthy is in Phase 0; pure cleanliness/hardening (exhaustive <code>validate_review_record</code>, NAMESPACE/roxygen, <code>renv.lock</code>, <code>DT</code> declaration) is deferred.</p></div>
+<div class="source-block source-heading" id="render-owner-0024" data-source-block="block-0024" data-source-lines="126-126"><h3 id="approach-1-instrument-first-run-once-finalize">Approach 1: Instrument-first, run-once, finalize</h3></div>
+<div class="source-block" id="render-owner-0026" data-source-block="block-0026" data-source-lines="128-132"><p>Define the shared instrumentation (measurement taxonomy + log/defect format, two-layer rubric + section template, live-operator protocol, friction log) up front as one coherent spec; materialize the 6 drafts conforming to the template; execute one live run that populates all logs and exercises the rubric; then measure, simplify, and finalize the rubric from run evidence.</p></div>
+<div class="source-block" id="render-owner-0028" data-source-block="block-0028" data-source-lines="134-140"><p><strong>Pros:</strong> most coherent single source of truth; drafts conform to the rubric from the start; errors log in the right schema with no retrofit; single live run; the rubric is <em>finalized</em> (not merely defined) from real evidence; matches the &quot;coherent sequence, each step feeds the next&quot; requirement. <strong>Cons:</strong> heavier upfront design; if the run reveals the instrumentation is wrong, specs are refactored. <strong>Effort:</strong> Large. <strong>Recommended:</strong> Yes.</p></div>
+<div class="source-block source-heading" id="render-owner-0030" data-source-block="block-0030" data-source-lines="142-142"><h3 id="approach-2-materialize-first-instrument-as-you-go">Approach 2: Materialize-first, instrument-as-you-go</h3></div>
+<div class="source-block" id="render-owner-0032" data-source-block="block-0032" data-source-lines="144-146"><p>Materialize the 6 drafts and complete Phase 0 fixes first; derive the measurement/rubric/protocol from the drafts and a dry-run; back-fill ad-hoc errors into the taxonomy; run live; simplify/finalize.</p></div>
+<div class="source-block" id="render-owner-0034" data-source-block="block-0034" data-source-lines="148-154"><p><strong>Pros:</strong> specs grounded in real drafts; lower risk of designing the wrong section template. <strong>Cons:</strong> materialization errors are logged ad-hoc then retrofitted (rework); the rubric template is derived from 3 real + 3 synthetic drafts which may not be canonical; less coherent. <strong>Effort:</strong> Large. <strong>Recommended:</strong> No — retrofit and template-canonicity risks undercut the coherent-sequence requirement.</p></div>
+<div class="source-block source-heading" id="render-owner-0036" data-source-block="block-0036" data-source-lines="156-156"><h3 id="approach-3-two-run-calibration-pilot-then-formal">Approach 3: Two-run calibration (pilot then formal)</h3></div>
+<div class="source-block" id="render-owner-0038" data-source-block="block-0038" data-source-lines="158-160"><p>Instrumentation spec + Phase 0; a pilot run on 2 drafts (1 simple, 1 complex) to shake out the protocol/instrumentation and app fixes; a formal run on all 6 with finalized instrumentation; measure/simplify/finalize.</p></div>
+<div class="source-block" id="render-owner-0040" data-source-block="block-0040" data-source-lines="162-167"><p><strong>Pros:</strong> catches instrumentation/protocol/app-fix flaws before the full run; highest-quality measurement. <strong>Cons:</strong> two live runs = more reviewer time and scheduling; slower; arguably over-engineered for a 6-artifact sample. <strong>Effort:</strong> Large. <strong>Recommended:</strong> No (for a 6-artifact sample); becomes attractive if the sample grows or Phase 0 proves unusually shaky.</p></div>
+<div class="source-block source-heading" id="render-owner-0042" data-source-block="block-0042" data-source-lines="169-169"><h2 id="decision">Decision</h2></div>
+<div class="source-block" id="render-owner-0044" data-source-block="block-0044" data-source-lines="171-171"><p><strong>Approach 1: Instrument-first, run-once, finalize.</strong></p></div>
+<div class="source-block" id="render-owner-0046" data-source-block="block-0046" data-source-lines="173-181"><p>It is the most coherent: the instrumentation (measurement taxonomy, two-layer rubric, protocol, friction log) is defined once up front so the materialized drafts conform to the rubric&#x27;s section template and extraction errors log in the right schema from the first write. A single live run populates all logs and exercises both rubric layers, and the rubric is <em>finalized</em> from real run evidence rather than asserted. This best satisfies the requirement that the five deliverables form a coherent sequence where each step&#x27;s output feeds the next. Seeded known defects in the 3 fixtures make extraction-error detection measurable on the small sample.</p></div>
+<div class="source-block source-heading" id="render-owner-0048" data-source-block="block-0048" data-source-lines="183-183"><h2 id="next-steps">Next Steps</h2></div>
+<div class="source-block" id="render-owner-0050" data-source-block="block-0050" data-source-lines="185-185"><p>Handoff to <code>/cg-plan</code>, which will detail a phased implementation:</p></div>
+<div class="source-block" id="render-owner-0052" data-source-block="block-0052" data-source-lines="187-214"><ul><li><strong>Phase 0 — Live-capable subset (app fixes):</strong> run <code>/cg-fix-triage</code> to set the exact P0/P1 boundary; wire the adapter into the server; fix the production-write transport; fix the Connect entry point; remove the leaked private key; fix preview XSS; fix C1 front-matter immutability; derive the dashboard module filter from <code>module_id</code>s. Defer the remaining P0/P1 set to a tracked separate effort (add a roadmap idea or a <code>/cg-fix-triage</code> follow-up).</li><li><strong>Phase 1 — Instrumentation spec:</strong> content-error taxonomy (aligned to the 4 future agent-review dimensions + human-review content), <code>stage</code> + severity + structured log; separate app-defect log; two-layer rubric (Layer 1 structural template = the variable-spec Markdown section set + YAML schema gate; Layer 2 per-section content criteria); live-operator protocol (paths, time-on-task, error count, 1-5 friction rating, free-text) and friction-log format.</li><li><strong>Phase 2 — Materialize the 6 drafts:</strong> full front matter mirroring <code>knowledge/</code>, <code>module_id</code>-authoritative directories; copy the 3 real members from <code>knowledge/variables/</code>; author the 3 fixtures to match the structure <em>with seeded known defects</em>; keep the known-answer key separate; log materialization/extraction errors (e.g. the <code>edu</code>/<code>MOD-DEM</code> discrepancy) into the content-error log.</li><li><strong>Phase 3 — Live operator run:</strong> reviewer + approver against a disposable repo + Connect staging; execute the protocol; populate friction, content error, and defect logs; exercise both rubric layers and the 30 -&gt; 40 promotion gate.</li><li><strong>Phase 4 — Measure, simplify, finalize:</strong> aggregate logs (error/defect rates, catch rate vs. the known-answer key, friction-by-step); apply the friction decision rule to simplify; finalize the rubric acceptance criteria from run evidence.</li></ul></div>
+<div class="source-block" id="render-owner-0054" data-source-block="block-0054" data-source-lines="216-216"><p>Governance escalations (do not block the plan; raise in parallel):</p></div>
+<div class="source-block" id="render-owner-0056" data-source-block="block-0056" data-source-lines="218-237"><ul><li><strong>Roadmap inconsistency:</strong> <code>roadmap.json</code> marks <code>extract-non-welfare-variables</code> (&quot;Extract all non-welfare variables into <code>extraction/20_drafts/</code>&quot;) as <code>done</code>, but <code>extraction/20_drafts/</code> is empty and the calibration doc says the extraction milestone has not produced drafts. Reconcile the status and determine where extracted drafts went.</li><li><strong>Module question (`/cg-strategy`):</strong> is there a <code>MOD-EDU</code>, or do education variables belong to <code>MOD-DEM</code> per the guidelines&#x27; Demography section? The empty <code>knowledge/variables/edu/</code> and the dashboard&#x27;s <code>edu</code> filter suggest an intended <code>MOD-EDU</code> that the approved artifacts (all <code>MOD-DEM</code>) contradict. Resolve before scaling; until then <code>module_id</code> is authoritative.</li><li><strong>Milestone boundary:</strong> Phase 0 app fixes arguably belong to the <code>human-review-application</code> milestone (marked <code>done</code> but not live-capable), not <code>calibrate-human-review</code>. Record that calibration is paying down the predecessor&#x27;s unfinished debt. The <code>human-review-application</code> milestone objective wording (asserts PRs are already authoritative) was already flagged by the predecessor for <code>/cg-strategy</code>.</li><li><strong>Lifecycle note:</strong> copying approved <code>knowledge/</code> content back into <code>extraction/20_drafts/</code> as calibration &quot;drafts&quot; is a pragmatic workaround, not the normal <code>source -&gt; draft -&gt; review -&gt; approved -&gt; knowledge</code> flow; document it as such so it is not mistaken for real agent extraction output.</li></ul></div>
+    </article>
+  </main>
+</div>
+<footer class="provenance" aria-labelledby="provenance-heading">
+  <div class="provenance-inner">
+    <h2 id="provenance-heading">Derived view provenance</h2>
+    <p>This HTML is regenerable. Canonical Markdown remains authoritative.</p>
+    <dl>
+      <dt>Source</dt><dd>.cg-docs/brainstorms/2026-08-07-calibrate-human-review.md</dd>
+      <dt>Source SHA-256</dt><dd><code>b89342abc95462985144761c8ac5553501b8c4b21db70e8243d5731135ce22e1</code></dd>
+      <dt>Output</dt><dd>.cg-docs/views/brainstorms/2026-08-07-calibrate-human-review.html</dd>
+      <dt>Document type</dt><dd>brainstorm</dd>
+      <dt>Renderer</dt><dd>0.1.0</dd>
+      <dt>Theme</dt><dd>reference v1</dd>
+      <dt>Generated UTC</dt><dd>2026-08-07T11:56:41Z</dd>
+    </dl>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# Content-error log (calibration run 2026-08-07)
+#
+# Schema: .cg-docs/calibration/measurement-framework.md (Step 6).
+# Populated during materialization (Step 9) and the live run (Step 11).
+# Seeded known defects are listed in known-answer-key.md; reviewers log their
+# findings here during the live run.
+
+- error_id: ERR-EDU-MOD-001
+  artifact_id: VAR-educat4
+  stage: extraction
+  category: consistency-derivation
+  severity: major
+  description: "Calibration manifest and test-integration.R originally assigned module 'edu' to educat4, but the artifact carries module_id MOD-DEM and lives under knowledge/variables/dem/; knowledge/variables/edu/ is empty."
+  detected_by: materialization (P1.3)
+  detected_at: 2026-08-07T14:40:00Z
+  section: "frontmatter (module/directory)"
+  status: resolved
+
+- error_id: ERR-EDU-MOD-002
+  artifact_id: VAR-educy
+  stage: extraction
+  category: consistency-derivation
+  severity: major
+  description: "Calibration manifest and test-integration.R originally assigned module 'edu' to educy, but the artifact carries module_id MOD-DEM and lives under knowledge/variables/dem/; knowledge/variables/edu/ is empty."
+  detected_by: materialization (P1.3)
+  detected_at: 2026-08-07T14:40:00Z
+  section: "frontmatter (module/directory)"
+  status: resolved
+
+- error_id: ERR-EDU-MOD-003
+  artifact_id: VAR-educat7
+  stage: extraction
+  category: consistency-derivation
+  severity: major
+  description: "Calibration manifest and test-integration.R originally assigned module 'edu' to educat7, but the artifact carries module_id MOD-DEM and lives under knowledge/variables/dem/; knowledge/variables/edu/ is empty."
+  detected_by: materialization (P1.3)
+  detected_at: 2026-08-07T14:40:00Z
+  section: "frontmatter (module/directory)"
+  status: resolved
