@@ -49,43 +49,43 @@
       "id": "human-review-application",
       "title": "Build the Human Review Application",
       "objective": "Provide a safe, simple Shiny interface deployed privately to Posit Connect before asking humans to review extracted content, in parallel with bulk extraction; GPID team approval is sufficient and authoritative through GitHub pull requests.",
-      "status": "planned",
+      "status": "done",
       "features": [
         {
           "id": "define-review-state-manifest",
           "title": "Define the versioned review states and manifest",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md"
         },
         {
           "id": "build-shiny-review-app",
           "title": "Build a private Shiny app for Posit Connect",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md"
         },
         {
           "id": "show-yaml-guideline-evidence",
           "title": "Show extracted YAML and guideline evidence as read-only context",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md"
         },
         {
           "id": "edit-human-markdown-only",
           "title": "Allow editing only of the human Markdown section",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md"
         },
         {
           "id": "save-submit-review",
           "title": "Add save-draft and submit-for-GPID-review actions",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md"
         },
         {
           "id": "record-review-metadata",
           "title": "Record reviewer identity, review round, timestamps, and content hashes",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-04-build-human-review-application.md"
         },
         {
           "id": "automate-review-pull-requests",
