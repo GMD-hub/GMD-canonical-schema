@@ -131,3 +131,21 @@ action_required <- function(state) {
     NA_character_
   )
 }
+
+#' Derive the dashboard module-filter choices from the indexed modules (R10).
+#'
+#' Returns a vector (named, so the first element is the label under the "All"
+#' value) with values being the unique modules present in the index, prefixed
+#' by an "All" wildcard. The dashboard filter is data-driven: dead modules not
+#' present in the index (e.g. empty `edu`/`welfare`) never appear, and a module
+#' that is present (e.g. `geo` for VAR-urban) always does.
+#'
+#' @param index data.frame from `index_review_records()`.
+#' @return character vector of module values, names being the display labels.
+module_filter_choices <- function(index) {
+  modules <- unique(index$module[!is.na(index$module)])
+  modules <- modules[nzchar(modules)]
+  # Shiny selectInput convention: labels are names, values are elements.
+  # "All"" maps to the empty-string wildcard; each module maps to its own value.
+  setNames(c("", modules), c("All", modules))
+}

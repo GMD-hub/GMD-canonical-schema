@@ -101,3 +101,48 @@ test_that("illegal actions from each state are rejected", {
 test_that("transition never silently no-ops", {
   expect_error(reviewapp::transition(mk("draft"), "approved", "approver@example.org", "approver"))
 })
+
+# ---- Phase 1 Step 3 (R7/P2.1, P2.3): body_sha256 + blob_sha flow ------------
+
+test_that("transition carries the passed-in body_sha256 and updates the record hash", {
+  rec <- reviewapp::transition(
+    mk("draft"),
+    "submitted", "reviewer@example.org", "reviewer",
+    body_sha256 = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    blob_sha = "blob-xyz"
+  )
+  expect_identical(rec$events[[1L]]$body_sha256, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+  expect_identical(rec$current_content_sha256, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+})
+
+test_that("transition uses the review-record blob SHA for source_blob_sha (P2.3)", {
+  rec <- reviewapp::transition(
+    mk("draft"),
+    "submitted", "reviewer@example.org", "reviewer",
+    body_sha256 = .sample_hash,
+    blob_sha = "blob-review-record"
+  )
+  # event's source_blob_sha is the passed blob SHA, not source_commit
+  expect_identical(rec$events[[1L]]$source_blob_sha, "blob-review-record")
+})
+
+test_that("transition defaults preserve backward compatibility (C5)", {
+  # no body_sha256/blob_sha args -> old defaults apply
+  rec <- reviewapp::transition(mk("draft"), "submitted", "reviewer@example.org", "reviewer")
+  expect_identical(rec$events[[1L]]$body_sha256, .sample_hash)
+  expect_identical(rec$events[[1L]]$source_blob_sha, "abc123")
+})
+
+test_that("record_action carries body_sha256 and blob_sha on the saved event path", {
+  record_action <- getFromNamespace("record_action", "reviewapp")
+  rec <- record_action(
+    mk("draft"),
+    "saved", "reviewer@example.org", "reviewer",
+    body_sha256 = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    blob_sha = "blob-saved"
+  )
+  expect_identical(rec$events[[1L]]$action, "saved")
+  expect_identical(rec$events[[1L]]$body_sha256, "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+  expect_identical(rec$events[[1L]]$source_blob_sha, "blob-saved")
+  expect_identical(rec$current_content_sha256, "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+})

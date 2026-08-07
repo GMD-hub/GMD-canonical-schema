@@ -31,12 +31,7 @@ app_ui <- function() {
           ),
           bslib::layout_columns(
             col_widths = c(6, 6, 6),
-            selectInput(
-              "filter_module",
-              "Module",
-              choices = c("All" = "", "dem", "edu", "welfare"),
-              selected = ""
-            ),
+            uiOutput("filter_module_ui"),
             selectInput(
               "filter_state",
               "State",

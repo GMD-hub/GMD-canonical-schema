@@ -160,3 +160,33 @@ test_that("action_required maps states to their next-action label", {
   expect_identical(action_required("approved"), "Approved")
   expect_identical(action_required("ERROR"), "Repair")
 })
+
+test_that("module filter choices derive from unique modules in the index (R10)", {
+  mixed <- index_review_records(list(
+    list(id = "VAR-male", yaml_string = .draft_record_yaml(
+      "VAR-male", "draft", path = "extraction/20_drafts/dem/VAR-male.md")),
+    list(id = "VAR-educy", yaml_string = .draft_record_yaml(
+      "VAR-educy", "draft", path = "extraction/20_drafts/edu/VAR-educy.md"))
+  ))
+  ch <- module_filter_choices(mixed)
+  # "All" wildcard (value "") plus the unique modules present in the index
+  expect_true("" %in% ch)
+  expect_identical(names(ch)[ch == ""], "All")
+  expect_true("dem" %in% ch)
+  expect_true("edu" %in% ch)
+  # a geo-only index yields dem/edu absent and geo present
+  geo_rec <- list(list(id = "VAR-urban", yaml_string = .draft_record_yaml(
+    "VAR-urban", "draft",
+    path = "extraction/20_drafts/geo/VAR-urban.md"
+  )))
+  ch2 <- module_filter_choices(index_review_records(geo_rec))
+  expect_true("geo" %in% ch2)
+  expect_false("edu" %in% ch2)
+  expect_false("dem" %in% ch2)
+})
+
+test_that("module filter choices handle an empty index", {
+  ch <- module_filter_choices(index_review_records(list()))
+  expect_true("" %in% ch)
+  expect_length(ch, 1L)
+})

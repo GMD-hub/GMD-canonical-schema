@@ -165,3 +165,77 @@ test_that("reopen is administrator-only and emits an explicit event", {
   expect_identical(record_state(res$record), "needs-revision")
   expect_identical(res$record$events[[1L]]$action, "reopened")
 })
+
+test_that("saved maps to reviewer in the action-role map (P1.1)", {
+  # Step 2 adds saved = "reviewer" so Step 4's fail-closed change does not
+  # reject save_draft for the reviewer who performs it.
+  expect_identical(action_requires_role[["saved"]], "reviewer")
+  expect_true(authorize("reviewer", "saved"))
+  expect_false(authorize("approver", "saved"))
+  expect_false(authorize(NULL, "saved"))
+})
+
+test_that("perform_action('saved') persists a companion body file and appends a saved event (P1.2)", {
+  ad <- .happy_write_adapter()
+  rec <- .build_rec()  # draft
+  # a happy adapter whose blob map seeds the review record path
+  state <- new.env(parent = emptyenv())
+  state$commit <- "commit-1"
+  state$blobs <- list(
+    "extraction/30_review/VAR-male.review.yml" = "blob-rec"
+  )
+  counter <- 0L
+  http_fun <- function(method, url, token, body = NULL) {
+    if (grepl("git/ref/heads/review", url) && method == "GET") {
+      return(list(object = list(sha = state$commit)))
+    }
+    if (grepl("git/trees/", url) && method == "GET") {
+      entries <- lapply(names(state$blobs), function(p) list(path = p, type = "blob", sha = state$blobs[[p]]))
+      return(list(tree = entries, truncated = FALSE))
+    }
+    if (grepl("git/blobs$", url) && method == "POST") {
+      counter <<- counter + 1L
+      return(list(sha = paste0("blob-new-", counter)))
+    }
+    if (grepl("git/trees$", url) && method == "POST") return(list(sha = "new-tree"))
+    if (grepl("git/commits$", url) && method == "POST") return(list(sha = "new-commit"))
+    if (grepl("git/refs/heads/review", url) && method == "PATCH") {
+      state$commit <- "new-commit"
+      return(list(object = list(sha = "new-commit")))
+    }
+    list(object = list())
+  }
+  ad2 <- reviewapp::new_github_adapter(
+    owner = "GMD-hub", repo = "fixture-repo",
+    default_branch = "main", review_branch = "review",
+    get_token = function() "tok", http = http_fun
+  )
+
+  res <- perform_action(
+    ad2, rec,
+    body_sha256 = hash_body("edited body"),
+    blob_sha = "blob-rec", branch_head_sha = "commit-1",
+    action = "saved", actor = "r@example.org", role = "reviewer",
+    body = "edited body"
+  )
+  expect_true(res$report$ok)
+  expect_true(res$report$transition_applied)
+  # no state transition occurs
+  expect_identical(record_state(res$record), "draft")
+  # a saved event is appended
+  expect_identical(res$record$events[[1L]]$action, "saved")
+})
+
+test_that("perform_action('assigned') appends an assigned event without a transition", {
+  ad <- .happy_write_adapter()
+  rec <- .build_rec()
+  res <- perform_action(
+    ad, rec,
+    body_sha256 = rec$current_content_sha256,
+    blob_sha = "blob-rec", branch_head_sha = "commit-1",
+    action = "assigned", actor = "admin@example.org", role = "administrator"
+  )
+  expect_true(res$report$transition_applied)
+  expect_identical(record_state(res$record), "draft")
+  expect_identical(res$record$events[[1L]]$action, "assigned")
+})

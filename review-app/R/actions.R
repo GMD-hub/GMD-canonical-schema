@@ -13,6 +13,13 @@ ACTION_PATH <- function(artifact_id) {
   sprintf("extraction/30_review/%s.review.yml", artifact_id)
 }
 
+# P1.2 companion-body convention: the editable working copy of a draft's body is
+# persisted beside the review record so the editor reflects the last saved body
+# across loads (the review branch is the only authoritative write target).
+BODY_PATH <- function(artifact_id) {
+  sprintf("extraction/30_review/%s.body.md", artifact_id)
+}
+
 #' Serialize a review record to YAML for writing.
 #'
 #' @param rec review record.
@@ -47,6 +54,8 @@ approved_path_for <- function(source_artifact_path) {
 #' @param role actor role.
 #' @param approved_body_sha256 approved artifact full-merge SHA (used on approve).
 #' @param approved_content full approved artifact content (used on approve; NULL otherwise).
+#' @param body optional working-copy Markdown body to persist as a companion file
+#'   (`extraction/30_review/<id>.body.md`) on `saved` (P1.2); NULL otherwise.
 #' @param note optional note for the event.
 #' @return recovery report from `adapter_write_with_recovery` plus the applied
 #'   record; `transition_applied` is only TRUE on a fully successful atomic
@@ -61,6 +70,7 @@ perform_action <- function(
   actor,
   role,
   approved_content = NULL,
+  body = NULL,
   note = NULL
 ) {
   if (!authorize(role, action)) {
@@ -70,9 +80,24 @@ perform_action <- function(
       action
     ))
   }
-  # compute a fresh record with the event appended (pure; may raise)
-  # apply the transition, carrying the user note into the appended event
-  updated <- transition(rec, action, actor, role, note = note)
+  # `saved`/`assigned` are record-replacement (non-transition) actions: route
+  # them through record_action, never transition (which rejects them as illegal).
+  # body_sha256/blob_sha flow through to the event AND the record hash (R7).
+  if (action %in% c("saved", "assigned")) {
+    updated <- record_action(
+      rec, action, actor, role,
+      note = note,
+      body_sha256 = body_sha256,
+      blob_sha = blob_sha
+    )
+  } else {
+    updated <- transition(
+      rec, action, actor, role,
+      note = note,
+      body_sha256 = body_sha256,
+      blob_sha = blob_sha
+    )
+  }
 
   change_paths <- ACTION_PATH(rec$artifact_id)
   changes <- list()
@@ -82,7 +107,19 @@ perform_action <- function(
     if (is.null(approved_content)) {
       stop("performing 'approved' requires approved_content")
     }
+    # P2.5: the approved artifact must carry a YAML front-matter block; the
+    # byte-for-byte match against the loaded draft's front matter is enforced by
+    # the caller (server assembly uses the loaded front matter), so this is a
+    # structural invariant / defense-in-depth gate.
+    approved_front <- split_frontmatter(approved_content)$front
+    if (is.null(approved_front)) {
+      stop("approved content must carry YAML front matter (structural gate, P2.5)")
+    }
     changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
+  }
+  if (action == "saved" && !is.null(body)) {
+    # P1.2: the working copy is persisted atomically with the review record.
+    changes[[BODY_PATH(rec$artifact_id)]] <- body
   }
 
   report <- adapter_write_with_recovery(

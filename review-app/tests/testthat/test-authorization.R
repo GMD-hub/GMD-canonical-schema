@@ -30,8 +30,20 @@ test_that("authorize() denies unmapped (NULL) roles for all gated actions", {
   }
 })
 
-test_that("authorize() allows saved for a mapped role", {
+test_that("authorize() allows saved for the mapped reviewer role (P1.1)", {
+  # Step 2 maps saved = "reviewer"; after Step 4's fail-closed change unknown
+  # actions are denied, so only the mapped role may save.
   expect_true(reviewapp::authorize("reviewer", "saved"))
-  expect_true(reviewapp::authorize("approver", "saved"))
+  expect_false(reviewapp::authorize("approver", "saved"))
   expect_false(reviewapp::authorize(NULL, "saved"))
+})
+
+test_that("authorize() fails closed for unknown/unlisted actions (R8)", {
+  # unknown action: denied for every role, including mapped roles
+  expect_false(reviewapp::authorize("reviewer", "totally-unknown"))
+  expect_false(reviewapp::authorize("approver", "totally-unknown"))
+  expect_false(reviewapp::authorize("administrator", "totally-unknown"))
+  expect_false(reviewapp::authorize(NULL, "totally-unknown"))
+  # NULL action name also fails closed
+  expect_false(reviewapp::authorize("reviewer", NULL))
 })

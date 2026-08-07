@@ -24,29 +24,40 @@ app_server <- function(input, output, session) {
   output$auth_status <- renderText(auth_text(auth()))
 
   # ---- adapter --------------------------------------------------------------
-  # In a real deployment this is built from Connect secrets; for local/dev it
-  # is injected. The UI layer talks only through `perform_action` and the
-  # index functions, so the storage interface (R20) can be swapped.
-  adapter <- reactiveValues()
-  # adapter is supplied via a package option / environment in production; the
-  # placeholder value here is replaced at deploy time.
+  # Built from Connect secrets at session start (R3); in local/dev an adapter
+  # is injected via `options(reviewapp.adapter)` or `REVIEW_APP_OFFLINE=1`.
+  # The UI layer talks only through `perform_action` and the index functions,
+  # so the storage interface (R20) can be swapped. Absent env vars fail loudly.
+  adapter <- reactiveValues(handle = review_app_adapter())
 
   # ---- dashboard / work queue (Step 9) -------------------------------------
   queue_index <- reactiveVal(data.frame())
 
   load_queue <- function() {
-    # TODO(phase3-deploy): wire adapter_index_review to the injected adapter.
-    # For local/offline dev (no network) the queue is left empty; the Deployed
-    # integration path populates it. See operator guide.
     if (!is.null(adapter$handle)) {
       queue_index(adapter_index_review(adapter$handle)$index)
     } else {
+      # Offline/injected mode (REVIEW_APP_OFFLINE=1 or injected adapter absent):
+      # queue stays empty. Preserves the local/dev smoke test; production always
+      # provides a handle (review_app_adapter() fails loudly otherwise).
       queue_index(data.frame())
     }
   }
 
   observeEvent(input$refresh_queue, {
     load_queue()
+  })
+
+  # R10: the module filter is data-driven -- derived from the indexed modules,
+  # so dead modules (e.g. empty edu/welfare) never appear and module_id dirs
+  # like geo do.
+  output$filter_module_ui <- renderUI({
+    selectInput(
+      "filter_module",
+      "Module",
+      choices = module_filter_choices(queue_index()),
+      selected = ""
+    )
   })
 
   output$queue_table <- DT::renderDT({
@@ -113,17 +124,43 @@ app_server <- function(input, output, session) {
     row <- idx[sel, , drop = FALSE]
     artifact_id <- row$artifact_id
     detail_state$artifact_id <- artifact_id
-    # In production, the detail is loaded via the adapter (read-only draft +
-    # review record). For local/offline dev the body is a placeholder; the
-    # deployed integration populates it. See operator guide.
-    detail_state$front <- "---\nartifact_id: " %+%
-      artifact_id %+%
-      "\nstate: " %+%
-      row$state %+%
-      "\n---"
-    detail_state$body <- "# " %+%
-      artifact_id %+%
-      "\n\n(Reviewer body -- loaded from the review branch in deployment.)"
+    # Load via the adapter (R4): draft from the default branch (canonical read-only
+    # context), review record + companion body from the review branch.
+    if (is.null(adapter$handle)) {
+      stop("no adapter configured; cannot load artifact detail")
+    }
+    draft <- adapter_read_draft(adapter$handle, row$source_artifact_path)
+    sp <- split_frontmatter(draft$content)
+
+    record_path <- ACTION_PATH(artifact_id)
+    record_blob <- adapter_read_review(adapter$handle, record_path)
+    rec <- parse_review_record(record_blob$content)
+
+    # P1.2: the editable body is loaded from the companion file on the review
+    # branch when one exists (after a save); otherwise from the source draft.
+    body_text <- sp$body
+    companion_path <- BODY_PATH(artifact_id)
+    companion <- tryCatch(
+      adapter_read_review(adapter$handle, companion_path),
+      error = function(e) NULL
+    )
+    if (!is.null(companion)) {
+      body_text <- companion$content
+    }
+
+    head_sha <- adapter_branch_head(
+      adapter$handle$owner, adapter$handle$repo, adapter$handle$review_branch,
+      adapter$handle$get_token(), adapter$handle$http
+    )
+
+    detail_state$front <- sp$front
+    detail_state$body <- body_text
+    detail_state$record <- rec
+    detail_state$blob_sha <- record_blob$sha
+    detail_state$branch_head_sha <- head_sha
+    detail_state$body_sha256 <- hash_body(body_text %||% "")
+    input_ok <- !is.null(input$editor_body)
+    editor_value <- if (input_ok) input$editor_body else body_text
 
     bslib::layout_columns(
       col_widths = c(7, 5),
@@ -132,7 +169,7 @@ app_server <- function(input, output, session) {
         textAreaInput(
           "editor_body",
           "Markdown body",
-          value = detail_state$body,
+          value = editor_value,
           height = "320px"
         ),
         actionButton("save_draft", "Save Draft"),
@@ -194,14 +231,18 @@ app_server <- function(input, output, session) {
     div(tags)
   })
 
-  run_action <- function(action, note = NULL) {
+  run_action <- function(action, note = NULL, body = NULL) {
     req(detail_state$record)
     tryCatch(
       {
         res <- perform_action(
           adapter$handle,
           detail_state$record,
-          body_sha256 = detail_state$body_sha256,
+          body_sha256 = if (action == "saved") {
+            hash_body(body %||% "")
+          } else {
+            detail_state$body_sha256
+          },
           blob_sha = detail_state$blob_sha,
           branch_head_sha = detail_state$branch_head_sha,
           action = action,
@@ -212,9 +253,11 @@ app_server <- function(input, output, session) {
           } else {
             NULL
           },
+          body = if (action == "saved") body else NULL,
           note = note
         )
         detail_state$record <- res$record
+        detail_state$body_sha256 <- hash_body(body %||% detail_state$body %||% "")
         shiny::showNotification(
           recovery_report_text(res$report),
           type = if (res$report$ok) "message" else "error"
@@ -233,8 +276,8 @@ app_server <- function(input, output, session) {
   observeEvent(input$act_reopen, run_action("reopened"))
   observeEvent(input$save_draft, {
     # save-draft is a bookkeeping action (non-transition): reject YAML tampering,
-    # then persist the body SHA via the review record.
-    full <- join_body(detail_state$front, input$editor_body)
+    # then persist the edited body as a companion file + record a `saved` event.
+    full <- join_body(detail_state$front %||% "", input$editor_body %||% "")
     if (!frontmatter_unchanged(detail_state$front, full)) {
       shiny::showNotification(
         "YAML front matter must be preserved exactly -- edit rejected.",
@@ -242,7 +285,6 @@ app_server <- function(input, output, session) {
       )
       return()
     }
-    # In deployment this writes the body via the adapter; local/dev logs only.
-    shiny::showNotification("Draft saved (local/dev mode: no write performed).")
+    run_action("saved", body = input$editor_body %||% "")
   })
 }

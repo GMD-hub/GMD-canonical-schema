@@ -66,3 +66,53 @@ test_that("markdown preview does not pass through raw HTML/scripts", {
   # commonmark's default safe mode does not emit a live script tag
   expect_false(grepl("<script", html, fixed = TRUE))
 })
+
+test_that("preview escapes event-handler/SVG/javascript: XSS vectors (R9/P2.2)", {
+  html <- render_markdown_preview(
+    "Hello\n\n<img src=x onerror=alert(1)>\n\n<svg onload=alert(2)></svg>\n\n[click](javascript:alert(3))"
+  )
+  # raw HTML tags with event handlers are escaped, not passed through
+  expect_false(grepl("<img[^>]*onerror", html))
+  expect_false(grepl("<svg[^>]*onload", html))
+  # javascript: hrefs must not survive as live links
+  expect_false(grepl("href=[\"']javascript:", html))
+  # benign markdown still renders
+  expect_match(html, "Hello")
+})
+
+# --- Phase 1 Step 3 (R6/C1): CRLF + meaningful immutability -----------------
+
+test_that("split_frontmatter handles CRLF line endings (R6)", {
+  doc_crlf <- "---\r\nartifact_id: VAR-male\r\nstate: draft\r\n---\r\nBody line\r\nSecond line"
+  sp <- split_frontmatter(doc_crlf)
+  expect_false(is.null(sp$front))
+  expect_match(sp$front, "artifact_id: VAR-male", fixed = TRUE)
+  expect_match(sp$body, "Body line", fixed = TRUE)
+})
+
+test_that("frontmatter_unchanged detects YAML tampering in an edited artifact (R6)", {
+  original_front <- "---\nartifact_id: VAR-male\nstate: draft\n---"
+  # tampering with the front matter inside the user's full artifact must be caught
+  tampered_full <- "---\nartifact_id: VAR-male\nstate: approved\n---\nBody."
+  expect_false(frontmatter_unchanged(original_front, tampered_full))
+  # an unchanged (round-tripped) artifact is preserved
+  ok_full <- paste0(original_front, "\nBody.")
+  expect_true(frontmatter_unchanged(original_front, ok_full))
+})
+
+test_that("frontmatter_unchanged on a CRLF artifact is meaningful (R6)", {
+  original_front <- "---\r\nartifact_id: VAR-male\r\nstate: draft\r\n---"
+  ok_full <- "---\r\nartifact_id: VAR-male\r\nstate: draft\r\n---\r\nBody."
+  tampered_full <- "---\r\nartifact_id: VAR-male\r\nstate: approved\r\n---\r\nBody."
+  expect_true(frontmatter_unchanged(original_front, ok_full))
+  expect_false(frontmatter_unchanged(original_front, tampered_full))
+})
+
+test_that("approved-path front matter is verified against the loaded draft (R6)", {
+  original_front <- "---\nartifact_id: VAR-male\nstate: draft\n---"
+  # the approved content must carry the byte-identical front matter
+  ok_approved <- paste0(original_front, "\nApproved body.")
+  expect_true(frontmatter_unchanged(original_front, ok_approved))
+  altered_approved <- "---\nartifact_id: VAR-male\nstate: approved\n---\nApproved body."
+  expect_false(frontmatter_unchanged(original_front, altered_approved))
+})

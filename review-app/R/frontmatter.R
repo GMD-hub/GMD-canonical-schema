@@ -16,8 +16,11 @@
 #' @return list(front = raw frontmatter string incl. delimiters or NULL,
 #'   body = remaining Markdown body).
 split_frontmatter <- function(text) {
+  # Normalize CRLF -> LF up front so artifacts checked out on Windows (git
+  # core.autocrlf) are handled identically; delimiters `---` are matched on LF.
+  norm <- gsub("\r\n", "\n", text, fixed = TRUE)
   # front matter delimited by a leading --- line and a closing --- line
-  lines <- strsplit(text, "\n", fixed = TRUE)[[1L]]
+  lines <- strsplit(norm, "\n", fixed = TRUE)[[1L]]
   if (length(lines) >= 3L && identical(lines[[1L]], "---")) {
     close <- which(lines[-1L] == "---")[1L]
     if (!is.na(close)) {
@@ -44,26 +47,68 @@ join_body <- function(front, body) {
 #' Check that a proposed full artifact preserves the front matter byte-exactly.
 #'
 #' A "structural alteration" (front matter changed at all) must be rejected
-#' (R6 / C1). Returns TRUE if the reassembled front matter is byte-identical to
-#' the reference; otherwise FALSE.
+#' (R6 / C1). Returns TRUE if the front matter extracted from the *proposed*
+#' (user-edited full artifact) is byte-identical to the reference front matter.
+#' The caller must pass the actual editor output (front + body as the user sees
+#' it); if the user tampered with YAML the extracted front will differ.
 #'
 #' @param original_front raw front-matter of the loaded artifact.
 #' @param proposed full proposed artifact text.
 #' @return logical(1).
 frontmatter_unchanged <- function(original_front, proposed) {
   if (is.null(original_front)) return(TRUE)
-  split_frontmatter(proposed)$front == original_front
+  original_norm <- gsub("\r\n", "\n", original_front, fixed = TRUE)
+  # A leading/trailing newline quirk in the reference delimiter is not a
+  # structural change; normalize both sides so CRLF/LF checkouts compare fairly.
+  proposed_front <- split_frontmatter(proposed)$front
+  if (is.null(proposed_front)) return(FALSE)
+  identical(proposed_front, original_norm)
+}
+
+#' Strip executable/dangerous HTML before the preview is rendered (R9/P2.2).
+#'
+#' commonmark's `tagfilter` extension only escapes a small tag list (script,
+#' style, iframe, etc.) and leaves `<img onerror>`, `<svg onload>`, and
+#' `javascript:` URLs intact in the rendered HTML. This post-render pass removes
+#' executable elements and event-handler/javascript: attributes so stored XSS in
+#' a Markdown body cannot run in the reviewer's preview.
+#'
+#' @param markdown_html character(1) HTML emitted by commonmark.
+#' @return character(1) sanitized HTML (inner content of the markdown body).
+sanitize_preview_html <- function(markdown_html) {
+  wrapped <- paste0('<div class="markdown-body">', markdown_html, "</div>")
+  doc <- xml2::read_html(wrapped)
+  xml2::xml_remove(xml2::xml_find_all(
+    doc,
+    '//script | //style | //iframe | //object | //embed | //svg | //img'
+  ))
+  for (n in xml2::xml_find_all(doc, "//*")) {
+    attrs <- xml2::xml_attrs(n)
+    if (length(attrs) == 0L) next
+    drop <- names(attrs)[
+      grepl("^on", names(attrs), ignore.case = TRUE) |
+        (names(attrs) %in% c("href", "src", "xlink:href") &
+          grepl("^\\s*javascript:", attrs, ignore.case = TRUE))
+    ]
+    for (a in drop) xml2::xml_set_attr(n, a, NULL)
+  }
+  div <- xml2::xml_find_first(doc, '//div[contains(@class,"markdown-body")]')
+  inner <- as.character(xml2::xml_contents(div))
+  paste(inner, collapse = "")
 }
 
 #' Render the Markdown body as HTML for preview (commonmark, safe default).
 #'
-#' Uses `commonmark::markdown_html(text, extensions = TRUE)` with its default
-#' safe rendering so raw HTML/script tags in the source Markdown are not passed
-#' through. No smart/raw-HTML-passthrough option is enabled.
+#' Uses a specific extension list that enables useful formatting (tables,
+#' strikethrough, autolinks) while excluding `raw_html` passthrough, then
+#' sanitizes the output so raw HTML tags cannot execute (P2.2 / R9).
 #'
 #' @param markdown character(1) Markdown body text.
 #' @return character(1) HTML string.
 render_markdown_preview <- function(markdown) {
-  out <- commonmark::markdown_html(markdown, extensions = TRUE)
-  paste0('<div class="markdown-body">', out, "</div>")
+  out <- commonmark::markdown_html(
+    markdown,
+    extensions = c("table", "strikethrough", "autolink", "tagfilter")
+  )
+  paste0('<div class="markdown-body">', sanitize_preview_html(out), "</div>")
 }

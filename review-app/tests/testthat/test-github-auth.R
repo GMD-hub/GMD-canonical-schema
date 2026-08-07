@@ -41,7 +41,12 @@ test_that("JWT signature verifies with the corresponding public key", {
   pad_needed <- (4 - nchar(sig_b64url) %% 4) %% 4
   sig_b64 <- gsub("-", "+", gsub("_", "/", paste0(sig_b64url, strrep("=", pad_needed))))
   sig <- base64enc::base64decode(sig_b64)
-  expect_true(openssl::signature_verify(charToRaw(signing_input), sig, hash = openssl::sha256, pubkey = openssl::read_pubkey(openssl::write_pem(key, file.path(tempdir(), "reviewapp-test-pubkey.pem")))))
+  # P2.4: write the temporary public key to a unique tempfile (not tempdir()) so
+  # parallel test runs never collide, and clean it up even on failure.
+  tmp_pem <- tempfile(fileext = ".pem")
+  on.exit(unlink(tmp_pem), add = TRUE)
+  openssl::write_pem(key, tmp_pem)
+  expect_true(openssl::signature_verify(charToRaw(signing_input), sig, hash = openssl::sha256, pubkey = openssl::read_pubkey(openssl::write_pem(key, tmp_pem))))
 })
 
 test_that("JWT signing fails loudly on an invalid private key", {
