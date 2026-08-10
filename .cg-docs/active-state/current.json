@@ -1,6 +1,6 @@
 {
   "schemaVersion": "compound-gpid-active-state-v1",
-  "updatedAt": "2026-08-07T16:10:00Z",
+  "updatedAt": "2026-08-10T23:07:05Z",
   "workflow": "/cg-work",
   "status": "blocked",
   "branch": "feat/calibrate-human-review",
@@ -8,7 +8,7 @@
   "executionReport": ".cg-docs/work-reports/2026-08-07-calibrate-human-review.md",
   "currentPhase": 4,
   "evidenceStatus": [
-    {"id": "V1", "status": "passed", "artifact": "review-app/tests/testthat/test-github-adapter.R"},
+    {"id": "V1", "status": "passed", "artifact": "review-app/tests/testthat/ (371 tests; golem baseline green; Connect boot unverified)"},
     {"id": "V2", "status": "passed", "artifact": "review-app/tests/testthat/test-app-smoke.R"},
     {"id": "V3", "status": "passed", "artifact": "review-app/tests/testthat/test-frontmatter.R"},
     {"id": "V4", "status": "passed", "artifact": "review-app/tests/testthat/test-authorization.R"},
@@ -17,10 +17,13 @@
     {"id": "V7", "status": "passed", "artifact": ".cg-docs/calibration/review-rubric.md"},
     {"id": "V8", "status": "passed", "artifact": ".cg-docs/calibration/live-operator-protocol.md"},
     {"id": "V9", "status": "passed", "artifact": "extraction/20_drafts/* + known-answer-key.md"},
-    {"id": "V10", "status": "accepted-exception", "artifact": "review-app/docs/operator-guide.md#10"}
+    {"id": "V10", "status": "accepted-exception", "artifact": "live run (needs Connect+GitHub App+human reviewers)"},
+    {"id": "V11", "status": "pending", "artifact": ".cg-docs/calibration/calibration-report.md"},
+    {"id": "V12", "status": "pending", "artifact": "review-app/R/ (interface simplification)"},
+    {"id": "V13", "status": "pending", "artifact": ".cg-docs/calibration/review-rubric.md (finalized)"}
   ],
   "unresolvedDecisions": [
-    {"id": "D1", "summary": "Resume 2026-08-07 re-confirmed blocked-stop: no Posit Connect (rsconnect not installed, no CONNECT_SERVER/KEY), gh token cannot create GitHub App, no human reviewers. Provide Connect credentials/hosted environment or provision externally before /cg-work phase4 can run Step 10-11.", "blocking": true}
+    {"id": "D1", "summary": "V10 live run blocked: no GitHub App backend, no human reviewers; golem bundle 88147 deployed (DEF-001 fixed), Connect boot smoke pending; Phase 5 depends on V10.", "blocking": true}
   ],
   "artifactRefs": [
     {"kind": "plan", "path": ".cg-docs/plans/2026-08-07-calibrate-human-review.md", "status": "active"},
@@ -28,7 +31,8 @@
     {"kind": "checklist", "path": "review-app/docs/operator-guide.md", "status": "ready"},
     {"kind": "protocol", "path": ".cg-docs/calibration/live-operator-protocol.md", "status": "written"},
     {"kind": "known-answer-key", "path": ".cg-docs/calibration/known-answer-key.md", "status": "written"},
-    {"kind": "preflight", "path": ".cg-docs/plans/2026-08-07-calibrate-human-review.md", "status": "validated"}
+    {"kind": "defect-log", "path": ".cg-docs/calibration/defect-log.yaml", "status": "fixed (DEF-001 via bundle 88147 re-deploy; boot smoke pending)"},
+    {"kind": "publish-config", "path": "review-app/.posit/publish/review-app-9KP9.toml", "status": "fixed (golem bundle; deployed as bundle 88147; boot verification pending)"}
   ],
-  "nextCommand": "/cg-work phase4"
+  "nextCommand": "/cg-work phase4-5"
 }

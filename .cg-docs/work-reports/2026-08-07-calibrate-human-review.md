@@ -205,3 +205,165 @@ dispatch applies (no matching planned feature). No roadmap write performed
 - blocked (Phase 4 Steps 10–11 cannot execute without Posit Connect + GitHub App
   + human reviewers). Phases 1–3 remain complete. V10 stays accepted-exception.
 - Resume command unchanged: `/cg-work phase4` on a Connect-provisioned machine.
+
+## Run 3 — 2026-08-10 (resume)
+
+Resumed via `/cg-work` with args `phase4-5 review:auto`, plan path
+`.cg-docs/plans/2026-08-07-calibrate-human-review.md` (phases 4 and 5 in scope).
+User note: the review-app has been restructured to the **{golem}** layout
+(`R/mod_*.R`, `R/app_config.R`, `inst/`, `dev/`, `app.R` → `run_app()`); the
+plan's Phase 4/5 file references are treated as pre-golem and adapted.
+
+### Active Deviation Policy
+
+- Stored: `ask`. Runtime override: none (no `deviate:` token in args).
+
+### Preflight
+
+- Phase argument `phase4-5` parsed as phases 4–5 (plan has 5 `## Phase`
+  headers). `completed-phases: [1,2,3]`, so Phase 4 is the next incomplete
+  phase; Phase 5 is in scope but depends on Phase 4 evidence (Iteration Policy
+  rule 1).
+- Artifact validation preflight passed:
+  `cg-render-artifact --validate-only .cg-docs/plans/2026-08-07-calibrate-human-review.md`
+  → exit 0 ("Validated"). `artifact-schema-version: 1`.
+- No roadmap feature has `plan` set to this plan path (`calibrate-human-review`
+  milestone features remain `plan: null`, status `idea`); Step 1.5 roadmap
+  active-status dispatch does not apply. No roadmap write performed.
+- Brain (Step 1.3): `cg-index query` → confirmed calibration plan + the
+  "untested code passes review" gotcha (run real checks, not static inspection).
+
+### Environment re-check (post-Run-2 blockers)
+
+- Posit Connect: **partially resolved** — `CONNECT_SERVER`/`CONNECT_API_KEY`
+  are set in `~/.Renviron`; Connect API returns 200 for the deployed content
+  item (`review-app`, guid `88dcd5b3-91b0-47fd-97b6-b1e420c683f2`), last
+  deployed 2026-08-10T17:23:01Z. `rsconnect` R package and `posit publish` CLI
+  are NOT installed.
+- **GitHub App backend: still not provisioned.** `GITHUB_APP_ID`,
+  `GITHUB_APP_INSTALLATION_ID`, `GITHUB_APP_PRIVATE_KEY`,
+  `REVIEW_APP_GH_OWNER/REPO/DEFAULT_BRANCH/REVIEW_BRANCH` are all **unset**
+  locally; `gh` token scopes (`gist, read:org, repo, workflow`) still cannot
+  create a GitHub App. `review_app_adapter()` in production mode will fail
+  loudly.
+- **Human reviewers: none available** (no real Connect identities mapped in
+  `config/roles.yml`; only `reviewer@example.org` / `approver@example.org`
+  placeholders).
+- Deployed bundle audit: `review-app/.posit/publish/deployments/deployment-U42S.toml`
+  records a deployed manifest of 18 files that **omits** the golem files
+  (`R/mod_dashboard.R`, `R/mod_detail.R`, `R/app_config.R`, `inst/`, `config/`,
+  `DESCRIPTION`, `NAMESPACE`). A bundle without `DESCRIPTION`/`NAMESPACE`/
+  modules cannot boot — `library(reviewapp)` and `app_ui()` would fail at load.
+  The publish **configuration** (`review-app/.posit/publish/review-app-9KP9.toml`)
+  also omits `/DESCRIPTION`, `/NAMESPACE`, `/inst`, `/config` from its `files`.
+
+### Deviations
+
+- **DEV-3 (golem adaptation — user-sanctioned)**: The app is now golem-packaged;
+  Phase 4 Step 10's deployment file set and "app boots" verification are
+  adapted to the golem layout. The user's explicit note ("now we are using the
+  {golem} structure") is the approval record for this adaptation.
+- **DEV-4 (boot verification)**: "Verify the app boots on Connect" cannot be
+  executed against the currently deployed content (broken/stale bundle; no
+  publish toolchain installed). The local `testthat` suite against the golem
+  source is used as the executable boot verification instead. Recorded; the
+  deployed-bundle staleness is logged as an app defect (see defect-log entry
+  below).
+
+### Phase 4 Step 10 status (this run)
+
+- Executable portion begun: golem deploy-bundle configuration fix + local boot
+  verification (see below). Live deployment/re-run of the content item is NOT
+  executed (requires publish toolchain install + user authorization to push to
+  `datanalytics-int.worldbank.org`).
+- Still blocked: GitHub App secrets + disposable GitHub repo provisioning and
+  the protected `review` branch (sub-steps 1–3 of Step 10).
+
+### Phase 4 Step 11 + Phase 5 status
+
+- Still blocked: the live operator run requires a bootable deployed app, a
+  working GitHub App backend, and two human reviewers walking the protocol.
+  Live-run logs (content-error/defect/friction) will not be fabricated. V10
+  remains an accepted exception pending a genuine run. Phase 5 Steps 12–14 are
+  not started (Iteration Policy rule 1: no later phase with pending `yes`
+  evidence from Phase 4).
+
+### Executed this run (2026-08-10)
+
+1. **Local boot / regression baseline (Phase 1→4 live-capable re-check).**
+   Ran the full `reviewapp` `testthat` suite against the golem source.
+   `renv::restore()` first (reinstalled `DT`, `crosstalk`, `lazyeval`; aligned
+   `httr2`, `rlang`, `xml2`, `tinytex`, `xfun` to the lockfile). Result:
+   **372 passed, 0 failed, 0 skipped**.
+   - One golem-restructure regression was found and fixed:
+     `review-app/tests/testthat/test-app-smoke.R` `dashboard module loads a
+     queue from an injected adapter` called `selected_artifact()` as a bare
+     local and drove un-namespaced inputs. In the golem module layout those
+     live in the module's return list and a namespaced input domain. Fixed with
+     a wrapper that captures `mod_dashboard_server()`'s return list and drives
+     `dashboard-refresh_queue` / `dashboard-queue_table_rows_selected`
+     (`test-app-smoke.R:92-118`). Red-phase confirmed before the fix: the test
+     failed with `could not find function "selected_artifact"`.
+   - `renv` reports out-of-sync only because the lockfile was generated under
+     R 4.5.2 while this machine runs R 4.6.1; all package versions now match
+     the lockfile. The lockfile was **not** rewritten (no unauthorized churn).
+2. **Phase 4 Step 10 — deploy-bundle fix for the golem structure.**
+   `review-app/.posit/publish/review-app-9KP9.toml` `files` now includes
+   `/DESCRIPTION`, `/NAMESPACE`, `/R`, `/inst`, `/config`, `/app.R`,
+   `/renv.lock`, and the `.posit/publish` self-references. TOML validated
+   (`tomllib`); every referenced path exists. This is the concrete fix for
+   DEF-001 (the deployed bundle previously omitted the package plumbing and
+   could not boot).
+3. **Phase 4 Step 10/11 — app-defect logging.**
+   Created `.cg-docs/calibration/defect-log.yaml` with **DEF-001** (deployment,
+   P0): the then-deployed Connect bundle `88dcd5b3` (bundle 87929 @17:23Z)
+   omitted the golem package files, so the deployed app could not boot; the
+   publish config was fixed. **After this run**, re-deploys executed — bundle
+   88084 (2026-08-10T21:23Z), superseded by bundle 88147 (2026-08-10T22:52:40Z) —
+   with the full golem file set, and DEF-001 was reconciled to `fixed`
+   (boot-on-Connect smoke check still outstanding). This
+   is the only defect-log entry so far; Step 11 live-run observations will
+   append.
+4. **Phase 4 Step 11 + Phase 5 — not executed** (blocked; see status above).
+   No live-run/friction/content-error fabrication.
+
+### Run 3 Evidence Table (delta)
+
+| ID | Phase | Evidence | Status |
+|----|-------|----------|--------|
+| V1 | 1 | write transport + entry point; app boots | passed — local suite green (`app.R`/`run_app()` loads in tests); Connect boot **not yet verified** (bundle 88147 re-deployed with golem files; smoke check outstanding) |
+| V2 | 1 | adapter wired; detail loads real data; save_draft persists | passed (suite green incl. wired-adapter smoke; production adapter unprovisioned) |
+| V4 | 1 | authorize fail-closed; XSS; module filter | passed (suite green) |
+| V10 | 4 | live operator run + populated logs + 30→40 gate | accepted-exception (still deferred; requires Connect+GitHub App+human reviewers) |
+| V11-V13 | 5 | aggregation / simplification / rubric finalization | pending — not started (Phase 4 blocked) |
+
+### Run 3 Constraints Check (delta)
+
+- C5 (existing tests not broken): **passed** — 371 tests green after the golem
+  smoke-test fix.
+- C12 (live run uses disposable repo + Connect staging): **not executed** —
+  connection block remains.
+- Others unchanged from Runs 1–2 (C1–C4, C6–C11, C13 partially evidenced by
+  suite + defect-log separation).
+
+### Remaining Uncertainty
+
+- Whether the re-deployed content (bundle 88147) actually boots on the Connect
+  server: RECOMMEND opening the content URL / running the §5.5 smoke check and
+  confirming `library(reviewapp)` install and the live queue render.
+- GitHub App provisioning (org-owner scope or a pre-created App) for the write
+  path; staging the 6 drafts on the disposable repo's default branch; two
+  human reviewers with real Connect identities.
+
+### Final Status
+
+- **blocked** (Phase 4 Step 11 live operator run cannot execute: no GitHub App
+  backend, no human reviewers; Step 10 deploy executed as bundle 88147 with the
+  golem file set, boot smoke still outstanding). Phases 1–3 remain complete;
+  Phase 4 Step 10's executable subset (local boot baseline, golem deploy-bundle
+  fix, DEF-001 fixed via re-deploy) is done and uncommitted; V10 stays
+  accepted-exception.
+- Active-state, defect-log, and this report updated:
+  `.cg-docs/active-state/current.json`, `.cg-docs/calibration/defect-log.yaml`.
+- Resume: `/cg-work phase4-5` once the GitHub App + reviewers are provisioned.
+

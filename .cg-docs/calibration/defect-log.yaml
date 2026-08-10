@@ -1,0 +1,27 @@
+# App-defect log -- calibrate-human-review (measurement-framework.md section 3).
+#
+# App defects are defects in the review application, recorded separately from
+# content errors (C13). Severity scale: P0 | P1 | P2 | P3.
+#
+# Populated during Phase 4 Step 10 verification. Live-run observations (Step 11)
+# will append to this file when the genuine operator run executes.
+defects:
+  - defect_id: DEF-001
+    component: deployment
+    severity: P0
+    description: >-
+      The review-app content item (guid 88dcd5b3-91b0-47fd-97b6-b1e420c683f2)
+      was first deployed 2026-08-10T17:23Z (bundle 87929) without the golem
+      package files (DESCRIPTION, NAMESPACE, R/mod_dashboard.R, R/mod_detail.R,
+      R/app_config.R, inst/, config/), so `library(reviewapp)` and `app_ui()`
+      could not load from that bundle and the deployed app could not boot. The
+      publish configuration (review-app-9KP9.toml) was corrected to ship the
+      full package source, and re-deploys (bundle 88084 @2026-08-10T21:23Z,
+      superseded by bundle 88147 @2026-08-10T22:52:40Z) now include all golem
+      files. Runtime boot on Connect still awaits a smoke check against the
+      deployed content.
+    source: execution-report-review
+    status: fixed
+    fix_reference: >-
+      bundle 88147 (deployment-U42S.toml; deployed 2026-08-10T22:52:40Z) +
+      publish-config fix in review-app-9KP9.toml
