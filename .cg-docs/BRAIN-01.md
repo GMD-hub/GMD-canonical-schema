@@ -1,6 +1,6 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-06_
+_Generated 2026-08-10_
 
 ## Human Review Application Objective / Posit Connect / Complete Universal Records Objective
 
@@ -8,17 +8,17 @@ _Keywords: `human review application
 objective` · `posit connect` · `complete universal records
 objective`_ · 25 entities
 
-- **[Define the versioned review states and manifest](roadmap.json#define-review-state-manifest)** · `feature` · _idea_ · `—`
+- **[Define the versioned review states and manifest](roadmap.json#define-review-state-manifest)** · `feature` · _done_ · `—`
   > Define the versioned review states and manifest
-- **[Build a private Shiny app for Posit Connect](roadmap.json#build-shiny-review-app)** · `feature` · _idea_ · `—`
+- **[Build a private Shiny app for Posit Connect](roadmap.json#build-shiny-review-app)** · `feature` · _done_ · `—`
   > Build a private Shiny app for Posit Connect
-- **[Show extracted YAML and guideline evidence as read-only context](roadmap.json#show-yaml-guideline-evidence)** · `feature` · _idea_ · `—`
+- **[Show extracted YAML and guideline evidence as read-only context](roadmap.json#show-yaml-guideline-evidence)** · `feature` · _done_ · `—`
   > Show extracted YAML and guideline evidence as read-only context
-- **[Allow editing only of the human Markdown section](roadmap.json#edit-human-markdown-only)** · `feature` · _idea_ · `—`
+- **[Allow editing only of the human Markdown section](roadmap.json#edit-human-markdown-only)** · `feature` · _done_ · `—`
   > Allow editing only of the human Markdown section
-- **[Add save-draft and submit-for-GPID-review actions](roadmap.json#save-submit-review)** · `feature` · _idea_ · `—`
+- **[Add save-draft and submit-for-GPID-review actions](roadmap.json#save-submit-review)** · `feature` · _done_ · `—`
   > Add save-draft and submit-for-GPID-review actions
-- **[Record reviewer identity, review round, timestamps, and content hashes](roadmap.json#record-review-metadata)** · `feature` · _idea_ · `—`
+- **[Record reviewer identity, review round, timestamps, and content hashes](roadmap.json#record-review-metadata)** · `feature` · _done_ · `—`
   > Record reviewer identity, review round, timestamps, and content hashes
 - **[Create review branches and pull requests through a narrowly scoped GitHub App](roadmap.json#automate-review-pull-requests)** · `feature` · _idea_ · `—`
   > Create review branches and pull requests through a narrowly scoped GitHub App

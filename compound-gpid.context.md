@@ -38,6 +38,15 @@ this file is committed to git and shared with the team.
 ## Workspace Notes
 <!-- Related folders, dependencies on other projects in the VS Code workspace -->
 
+- `review-app/` is a `{golem}` Shiny R package. Golem module tests must capture
+  `moduleServer()` return lists and drive namespaced inputs; unexported helpers
+  break under R CMD check. See
+  `.cg-docs/solutions/testing-patterns/2026-08-10-golem-module-testserver-capture.md`.
+- Deployed bundle IDs: the Posit Publisher record
+  `review-app/.posit/publish/deployments/deployment-U42S.toml` is the
+  authoritative source; hand-maintained audit refs (defect-log, active-state,
+  work-report) must be re-reconciled after each deploy (latest: bundle 88147 @
+  2026-08-10T22:52:40Z; DEF-001 fixed, boot smoke pending).
 ## Wiki Configuration
 <!-- folder: wiki -->
 <!-- audience: developers | researchers | end-users -->

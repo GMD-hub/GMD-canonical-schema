@@ -104,3 +104,4 @@ a P0 testing gap, regardless of how thin the function is.
 - `extraction_pipeline/orchestrator.py` — the fixed orchestrator
 - `extraction_pipeline/state.py` — `ItemState.issue_ids` field definition
 - `schema/extraction/candidate.py` — `ExtractionCandidate.blocking_issue_ids` field definition
+- `.cg-docs/solutions/testing-patterns/2026-08-10-golem-module-testserver-capture.md` — tests that don't exercise real behavior (same theme, R/golem)

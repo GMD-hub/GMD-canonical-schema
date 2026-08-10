@@ -1,10 +1,16 @@
 {
-  "edge_count": 5,
+  "edge_count": 9,
   "edges": [
     {
       "edge_type": "decided_from",
       "source": ".cg-docs/plans/2026-08-04-build-human-review-application.md",
       "target": ".cg-docs/brainstorms/2026-08-04-build-human-review-application.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "decided_from",
+      "source": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
+      "target": ".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md",
       "target_missing": false
     },
     {
@@ -20,6 +26,18 @@
       "target_missing": false
     },
     {
+      "edge_type": "reviews",
+      "source": ".cg-docs/reviews/2026-08-07-calibrate-human-review-review.md",
+      "target": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "verifies",
+      "source": ".cg-docs/reviews/2026-08-07-calibrate-human-review-verify-review.md",
+      "target": ".cg-docs/reviews/2026-08-07-calibrate-human-review-review.md",
+      "target_missing": false
+    },
+    {
       "edge_type": "references",
       "source": ".cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md",
       "target": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
@@ -29,6 +47,12 @@
       "edge_type": "references",
       "source": ".cg-docs/brainstorms/2026-08-04-build-human-review-application.md",
       "target": ".cg-docs/plans/2026-08-04-build-human-review-application.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "references",
+      "source": ".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md",
+      "target": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
       "target_missing": false
     }
   ],
@@ -93,6 +117,36 @@
       ]
     },
     {
+      "date": "2026-08-07",
+      "entity_type": "brainstorm",
+      "path": ".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md",
+      "slug": "2026-08-07-calibrate-human-review",
+      "status": "decided",
+      "summary": "<!-- Valid status values: decided, in-progress, abandoned -->",
+      "tags": [
+        "human-review",
+        "calibration",
+        "shiny",
+        "review-rubric",
+        "measurement",
+        "interface",
+        "governance"
+      ],
+      "title": "Calibrate Human Review",
+      "top_keywords": [
+        "module_id",
+        "edu",
+        "knowledge/",
+        "mod-dem",
+        "extraction/20_drafts/",
+        "/cg-fix-triage",
+        "test-integration.r",
+        "approach",
+        "welfare",
+        "geo"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "plan",
       "path": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
@@ -153,6 +207,38 @@
       ]
     },
     {
+      "date": "2026-08-07",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
+      "slug": "2026-08-07-calibrate-human-review",
+      "status": "active",
+      "summary": "Make the Shiny review app live-capable, materialize a 6-variable calibration sample with full front matter (3 real + 3 fixtures carrying seeded known defects), execute a structured live-operator run that populates content-error, defect, and friction logs, simplify the interface based on measured friction, and finalize a two-layer review rubric with acceptance criteria that gates promotion from `extraction/30_review/` to `extraction/40_approved/` at scale.",
+      "tags": [
+        "human-review",
+        "calibration",
+        "shiny",
+        "review-rubric",
+        "measurement",
+        "interface",
+        "governance",
+        "r",
+        "python"
+      ],
+      "title": "Calibrate Human Review",
+      "top_keywords": [
+        "saved",
+        "test scenarios",
+        "body_sha256",
+        "app.r",
+        "test-github-auth.r",
+        "module_id",
+        "test-frontmatter.r",
+        "assigned",
+        "extraction/40_approved/",
+        "knowledge/"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-03-extract-universal-non-welfare-schema-review.md",
@@ -194,6 +280,50 @@
         "test",
         "review",
         "report"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-07-calibrate-human-review-review.md",
+      "slug": "2026-08-07-calibrate-human-review-review",
+      "status": "",
+      "summary": "**Review mode**: standard (explicit user request; publishing/deployment config kept in focus as a high-risk signal) **Files reviewed**: 6 changed files **Findings**: 15 (P0: 1, P1: 4, P2: 7, P3: 2)",
+      "tags": [],
+      "title": "2026-08-07-calibrate-human-review-review",
+      "top_keywords": [
+        "test-app-smoke.r",
+        ".cg-docs/calibration/defect-log.yaml",
+        "2026-08-07-calibrate-human-review.md",
+        "current.json",
+        "cg-architecture",
+        "/cg-work phase4-5",
+        "review-app/.posit/publish/deployments/deployment-u42s.toml",
+        ".cg-docs/work-reports/2026-08-07-calibrate-human-review.md",
+        ".cg-docs/active-state/current.json",
+        "r cmd check"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-07-calibrate-human-review-verify-review.md",
+      "slug": "2026-08-07-calibrate-human-review-verify-review",
+      "status": "",
+      "summary": "**Review mode**: light (mode:verify) **Prior review**: `.cg-docs/reviews/2026-08-07-calibrate-human-review-review.md` **Files reviewed**: fix-triage change set (test-app-smoke.R, .Rbuildignore, defect-log.yaml, active-state/current.json, work-report Run 3, .posit/publish configs + auto-generated deployment record) **Findings**: 2 (P1: 1, P3: 1)",
+      "tags": [],
+      "title": "2026-08-07-calibrate-human-review-verify-review",
+      "top_keywords": [
+        "current.json",
+        "test-app-smoke.r",
+        "review",
+        "%+%",
+        ".rbuildignore",
+        "measurement-framework.md",
+        "2026-08-07-calibrate-human-review-review.md",
+        "defect-log.yaml",
+        "fixed",
+        "verify"
       ]
     },
     {
@@ -281,6 +411,38 @@
         "symlink",
         "parts",
         "works"
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/testing-patterns/2026-08-10-golem-module-testserver-capture.md",
+      "slug": "2026-08-10-golem-module-testserver-capture",
+      "status": "",
+      "summary": "When the review-app was restructured into the `{golem}` layout (`R/mod_dashboard.R`, `R/mod_detail.R`, `app_ui.R` → `run_app()`), the existing dashboard smoke test regressed: - It called a module-server local (`selected_artifact()`) as a bare function. In golem that value lives in the **list returned by `moduleServer()`**, which `shiny::testServer(module, ...)` does NOT bind into the test expression's environment (verified empirically: `exists(\"selected_artifact\")` is `FALSE` inside the test block). - It drove un-namespaced inputs (`queue_table_rows_selected`). Golem modules namespace their inputs (`dashboard-queue_table_rows_selected`), so the selection never registered. - The fixture used a bare `%+%` operator that is an **unexported** package helper. It only worked under `devtools::test()` because `load_all()`...",
+      "tags": [
+        "golem",
+        "shiny",
+        "testthat",
+        "testServer",
+        "module",
+        "namespacing",
+        "R CMD check",
+        "Rbuildignore",
+        "shinytest2"
+      ],
+      "title": "Golem module tests: capture moduleServer returns, drive namespaced inputs, keep fixtures R CMD check-safe",
+      "top_keywords": [
+        "r cmd check",
+        "module",
+        "golem",
+        "shiny::testserver()",
+        "devtools::test()",
+        "review-app/tests/testthat/test-app-smoke.r",
+        ".rbuildignore",
+        "tests",
+        "testserver",
+        "moduleserver"
       ]
     },
     {
@@ -442,7 +604,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#define-review-state-manifest",
       "slug": "define-review-state-manifest",
-      "status": "idea",
+      "status": "done",
       "summary": "Define the versioned review states and manifest",
       "tags": [],
       "title": "Define the versioned review states and manifest",
@@ -464,7 +626,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#build-shiny-review-app",
       "slug": "build-shiny-review-app",
-      "status": "idea",
+      "status": "done",
       "summary": "Build a private Shiny app for Posit Connect",
       "tags": [],
       "title": "Build a private Shiny app for Posit Connect",
@@ -486,7 +648,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#show-yaml-guideline-evidence",
       "slug": "show-yaml-guideline-evidence",
-      "status": "idea",
+      "status": "done",
       "summary": "Show extracted YAML and guideline evidence as read-only context",
       "tags": [],
       "title": "Show extracted YAML and guideline evidence as read-only context",
@@ -508,7 +670,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#edit-human-markdown-only",
       "slug": "edit-human-markdown-only",
-      "status": "idea",
+      "status": "done",
       "summary": "Allow editing only of the human Markdown section",
       "tags": [],
       "title": "Allow editing only of the human Markdown section",
@@ -530,7 +692,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#save-submit-review",
       "slug": "save-submit-review",
-      "status": "idea",
+      "status": "done",
       "summary": "Add save-draft and submit-for-GPID-review actions",
       "tags": [],
       "title": "Add save-draft and submit-for-GPID-review actions",
@@ -552,7 +714,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#record-review-metadata",
       "slug": "record-review-metadata",
-      "status": "idea",
+      "status": "done",
       "summary": "Record reviewer identity, review round, timestamps, and content hashes",
       "tags": [],
       "title": "Record reviewer identity, review round, timestamps, and content hashes",
@@ -1252,8 +1414,8 @@
       ]
     }
   ],
-  "entity_count": 53,
-  "generated": "2026-08-06",
+  "entity_count": 58,
+  "generated": "2026-08-10",
   "schema_version": "0.2.0",
   "topic_count": 3,
   "topics": [
