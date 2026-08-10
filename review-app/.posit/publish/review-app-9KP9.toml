@@ -5,12 +5,20 @@
 type = "r-shiny"
 entrypoint = "app.R"
 title = "review-app"
+# Golem package app: the bundle must carry the full package source so the
+# deployed content can load reviewapp (DESCRIPTION/NAMESPACE/R/inst), the
+# runtime role map (config/), and the renv lockfile. The previous published
+# bundle omitted DESCRIPTION, NAMESPACE, inst/, and config/ and could not boot.
 files = [
+    "/DESCRIPTION",
+    "/NAMESPACE",
+    "/R",
+    "/inst",
+    "/config",
     "/app.R",
     "/renv.lock",
     "/.posit/publish/review-app-9KP9.toml",
     "/.posit/publish/deployments/deployment-U42S.toml",
-    "/R",
 ]
 validate = true
 product_type = "connect"

@@ -10,13 +10,16 @@ id = "88dcd5b3-91b0-47fd-97b6-b1e420c683f2"
 dashboard_url = "https://datanalytics-int.worldbank.org/connect/#/apps/88dcd5b3-91b0-47fd-97b6-b1e420c683f2"
 direct_url = "https://datanalytics-int.worldbank.org/content/88dcd5b3-91b0-47fd-97b6-b1e420c683f2/"
 logs_url = "https://datanalytics-int.worldbank.org/connect/#/apps/88dcd5b3-91b0-47fd-97b6-b1e420c683f2/logs"
-deployed_at = "2026-08-10T17:23:02.463Z"
-bundle_id = "87929"
-bundle_url = "https://datanalytics-int.worldbank.org/__api__/v1/content/88dcd5b3-91b0-47fd-97b6-b1e420c683f2/bundles/87929/download"
+deployed_at = "2026-08-10T22:52:40.150Z"
+bundle_id = "88147"
+bundle_url = "https://datanalytics-int.worldbank.org/__api__/v1/content/88dcd5b3-91b0-47fd-97b6-b1e420c683f2/bundles/88147/download"
 files = [
     ".posit/publish/deployments/deployment-U42S.toml",
     ".posit/publish/review-app-9KP9.toml",
+    "DESCRIPTION",
+    "NAMESPACE",
     "R/actions.R",
+    "R/app_config.R",
     "R/app_server.R",
     "R/app_ui.R",
     "R/authorization.R",
@@ -26,11 +29,16 @@ files = [
     "R/hashing.R",
     "R/identity.R",
     "R/index.R",
+    "R/mod_dashboard.R",
+    "R/mod_detail.R",
     "R/models.R",
     "R/recovery.R",
     "R/run.R",
     "R/state_machine.R",
     "app.R",
+    "config/roles.yml",
+    "inst/app/www/custom.css",
+    "inst/golem-config.yml",
     "renv.lock",
 ]
 
@@ -40,11 +48,15 @@ type = "r-shiny"
 entrypoint = "app.R"
 title = "review-app"
 files = [
+    "/DESCRIPTION",
+    "/NAMESPACE",
+    "/R",
+    "/inst",
+    "/config",
     "/app.R",
     "/renv.lock",
     "/.posit/publish/review-app-9KP9.toml",
     "/.posit/publish/deployments/deployment-U42S.toml",
-    "/R",
 ]
 validate = true
 product_type = "connect"
