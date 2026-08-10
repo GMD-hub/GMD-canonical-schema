@@ -7,21 +7,29 @@
 
 library(testthat)
 
+# Resolve the role-map YAML without hard-failing on missing/installed-package
+# layouts: use the package helper first, then the source-tree candidate, and
+# return NULL (tests skip) rather than erroring via normalizePath(mustWork).
+.smoke_roles_path <- function() {
+  roles <- reviewapp::reviewapp_role_map_path()
+  if (!is.null(roles)) return(roles)
+  cand <- testthat::test_path("..", "..", "config", "roles.yml")
+  if (file.exists(cand)) return(cand)
+  NULL
+}
+
 test_that("dashboard UI renders and the server boots without error", {
   skip_if_not_installed("shinytest2")
   requireNamespace("shinytest2", quietly = TRUE)
 
-  roles <- reviewapp::reviewapp_role_map_path()
+  roles <- .smoke_roles_path()
   if (is.null(roles)) {
-    roles <- normalizePath(
-      file.path(testthat::test_path("..", "..", "config", "roles.yml"))
-    )
+    skip("role map not found; smoke tests require config/roles.yml")
   }
-  expect_true(file.exists(roles))
-  Sys.setenv(REVIEW_APP_ROLES = roles)
-  Sys.setenv(REVIEW_APP_OFFLINE = "1")
-  on.exit(Sys.unsetenv("REVIEW_APP_ROLES"), add = TRUE)
-  on.exit(Sys.unsetenv("REVIEW_APP_OFFLINE"), add = TRUE)
+  withr::local_envvar(
+    REVIEW_APP_ROLES = roles,
+    REVIEW_APP_OFFLINE = "1"
+  )
 
   app <- shinytest2::AppDriver$new(reviewapp::run_app(), name = "dashboard-smoke")
   app$wait_for_idle()
@@ -57,14 +65,14 @@ test_that("dashboard UI renders and the server boots without error", {
       return(list(object = list(sha = head)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
-      entries <- lapply(names(blobs), function(p) list(path = p, type = "blob", sha = "blob-" %+% basename(p)))
+      entries <- lapply(names(blobs), function(p) list(path = p, type = "blob", sha = paste0("blob-", basename(p))))
       return(list(tree = entries, truncated = FALSE))
     }
     if (grepl("/contents/", url) && method == "GET") {
       path <- sub(".*/contents/(.*)\\?ref=.*", "\\1", url)
       return(list(
         content = base64enc::base64encode(charToRaw(enc2utf8(blobs[[path]]))),
-        sha = "blob-" %+% basename(path)
+        sha = paste0("blob-", basename(path))
       ))
     }
     if (grepl("git/blobs$", url) && method == "POST") return(list(sha = "new-blob"))
@@ -85,25 +93,40 @@ test_that("dashboard module loads a queue from an injected adapter", {
   skip_if_not_installed("bslib")
 
   fake <- .in_mem_adapter_for_smoke()
-  roles <- normalizePath(testthat::test_path("..", "..", "config", "roles.yml"))
-  Sys.setenv(REVIEW_APP_ROLES = roles)
-  on.exit(Sys.unsetenv("REVIEW_APP_ROLES"), add = TRUE)
+  roles <- .smoke_roles_path()
+  if (is.null(roles)) {
+    skip("role map not found; smoke tests require config/roles.yml")
+  }
+  withr::local_envvar(REVIEW_APP_ROLES = roles)
 
   adapter_reactive <- shiny::reactiveVal(fake)
   refresh_counter <- shiny::reactiveVal(0L)
 
+  # Golem modules return their observable state (queue_index, selected_artifact)
+  # in a list; testServer does not bind module return values into the test
+  # environment, so wrap the module to capture the return list and drive
+  # namespaced inputs deterministically.
+  dashboard_out <- NULL
+  wrapped_dashboard <- function(id, adapter, refresh_counter) {
+    shiny::moduleServer(id, function(input, output, session) {
+      dashboard_out <<- reviewapp::mod_dashboard_server(
+        "dashboard", adapter, refresh_counter
+      )
+    })
+  }
+
   shiny::testServer(
-    reviewapp::mod_dashboard_server,
+    wrapped_dashboard,
     args = list(adapter = adapter_reactive, refresh_counter = refresh_counter),
     {
-      session$setInputs(refresh_queue = 1L)
-      q <- queue_index()
+      session$setInputs("dashboard-refresh_queue" = 1L)
+      q <- dashboard_out$queue_index()
       expect_true("VAR-male" %in% q$artifact_id)
       expect_identical(q$state[q$artifact_id == "VAR-male"], "draft")
 
       # Select the row and verify selected_artifact returns it
-      session$setInputs(queue_table_rows_selected = 1L)
-      sel <- selected_artifact()
+      session$setInputs("dashboard-queue_table_rows_selected" = 1L)
+      sel <- dashboard_out$selected_artifact()
       expect_false(is.null(sel))
       expect_identical(sel$artifact_id, "VAR-male")
     }
