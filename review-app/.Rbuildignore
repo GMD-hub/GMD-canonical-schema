@@ -5,3 +5,6 @@
 ^README\.Rmd$
 ^docs$
 ^config$
+^dev$
+^\.posit$
+^inst/app$

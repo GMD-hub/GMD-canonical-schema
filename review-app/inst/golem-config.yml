@@ -1,0 +1,10 @@
+default:
+  golem_name: reviewapp
+  golem_version: 0.1.0
+  app_prod: false
+
+production:
+  app_prod: true
+
+dev:
+  app_prod: false

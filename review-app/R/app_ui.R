@@ -1,55 +1,35 @@
-# Shiny UI definitions for the Human Review Application.
+# Shiny UI for the Human Review Application (Golem structure).
 #
-# Phase 1+3 provide the dashboard/work queue (Step 9) and the artifact detail
-# view with read-only YAML/evidence panels and a Markdown editor (Step 10),
-# plus role-gated action wiring and the audit timeline (Step 11).
+# The top-level page layout composes module UIs.  Navigation and authentication
+# status remain at the app level; the dashboard and detail views are provided by
+# mod_dashboard and mod_detail respectively.
 
 #' Top-level UI for the review application.
+#'
+#' @return A bslib page with sidebar navigation and module panels.
+#' @export
 app_ui <- function() {
-  bslib::page_sidebar(
-    title = "GMD Human Review Application",
-    sidebar = bslib::sidebar(
-      title = "Navigation",
-      div(id = "auth_panel", uiOutput("auth_status")),
-      hr(),
-      actionButton("nav_dashboard", "Dashboard / Work Queue", width = "100%"),
-      br(),
-      br(),
-      conditionalPanel(
-        condition = "output.show_detail",
-        actionButton("nav_detail", "Back to Dashboard", width = "100%")
-      )
-    ),
-    bslib::navset_hidden(
-      id = "main_nav",
-      bslib::nav_panel(
-        "dashboard",
-        bslib::card(
-          bslib::card_header(
-            "Work Queue",
-            actionButton("refresh_queue", "Refresh", class = "btn-sm")
-          ),
-          bslib::layout_columns(
-            col_widths = c(6, 6, 6),
-            uiOutput("filter_module_ui"),
-            selectInput(
-              "filter_state",
-              "State",
-              choices = c(
-                "All" = "",
-                "draft",
-                "in-review",
-                "needs-revision",
-                "approved"
-              ),
-              selected = ""
-            ),
-            textInput("filter_assigned", "Assigned to (identity contains)")
-          ),
-          DT::DTOutput("queue_table")
+  shiny::tagList(
+    golem_add_external_resources(),
+    bslib::page_sidebar(
+      title = "GMD Human Review Application",
+      sidebar = bslib::sidebar(
+        title = "Navigation",
+        shiny::div(id = "auth_panel", shiny::uiOutput("auth_status")),
+        shiny::hr(),
+        shiny::actionButton("nav_dashboard", "Dashboard / Work Queue", width = "100%"),
+        shiny::br(),
+        shiny::br(),
+        shiny::conditionalPanel(
+          condition = "output.show_detail",
+          shiny::actionButton("nav_detail", "Back to Dashboard", width = "100%")
         )
       ),
-      bslib::nav_panel("detail", uiOutput("detail_dynamic"))
+      bslib::navset_hidden(
+        id = "main_nav",
+        bslib::nav_panel("dashboard", mod_dashboard_ui("dashboard")),
+        bslib::nav_panel("detail", mod_detail_ui("detail"))
+      )
     )
   )
 }

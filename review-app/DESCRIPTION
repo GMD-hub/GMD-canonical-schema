@@ -9,6 +9,7 @@ Description: A private, Git-backed Shiny for R application that lets GPID
     machine (draft -> in-review -> approved, with a needs-revision loop)
     through role-gated actions. Review state, versions, and audit events are
     stored on a dedicated protected review branch via a GitHub App identity.
+    Built with the Golem framework for production-grade Shiny applications.
 License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -30,7 +31,9 @@ Imports:
 Suggests:
     gh,
     gert,
+    golem (>= 0.4.0),
     renv,
+    rprojroot,
     shinytest2,
     testthat (>= 3.0.0),
     withr
