@@ -45,7 +45,7 @@ review-app/tests/testthat/pubkey
 .kilo/instructions
 .kilo/kilo.json
 .kilo/shared
-.kilo/skills/cg*
+.kilo/skills
 .opencode/AGENTS.md
 .opencode/agents
 .opencode/commands
