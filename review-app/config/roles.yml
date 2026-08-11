@@ -12,9 +12,45 @@
 # app reads it from, then refresh/deploy. There is no in-app role UI in this
 # iteration.
 roles:
-  - identity: reviewer@example.org
-    role: reviewer
-  - identity: approver@example.org
-    role: approver
-  - identity: admin@example.org
+  - identity: acastanedaa
     role: administrator
+  - identity: bbrunckhorst
+    role: reviewer
+  - identity: clakner
+    role: reviewer
+  - identity: dgarciarojas
+    role: reviewer
+  - identity: djolliffe
+    role: reviewer
+  - identity: dmahler
+    role: reviewer
+  - identity: dsanchezcastro
+    role: reviewer
+  - identity: hwu4
+    role: reviewer
+  - identity: jfernandezromero
+    role: reviewer
+  - identity: jloenborg
+    role: reviewer
+  - identity: jxie4
+    role: reviewer
+  - identity: lmorenoherrera
+    role: reviewer
+  - identity: mnguyen3
+    role: reviewer
+  - identity: nyonzan
+    role: reviewer
+  - identity: rmungai
+    role: reviewer
+  - identity: rtatulli
+    role: reviewer
+  - identity: stettehbaah
+    role: reviewer
+  - identity: tdegefu
+    role: reviewer
+  - identity: ykimura1
+    role: reviewer
+  - identity: zprinsloo
+    role: reviewer
+  - identity: zsajaia
+    role: reviewer
