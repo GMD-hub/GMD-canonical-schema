@@ -24,6 +24,7 @@ Imports:
     httr2,
     jsonlite,
     openssl,
+    pkgload,
     shiny,
     uuid,
     xml2,

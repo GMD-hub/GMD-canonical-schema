@@ -223,6 +223,16 @@ From `review-app/`:
 4. Go live and open the app to confirm the dashboard loads for an authorized
    identity.
 
+> **Entry point note:** `app.R` loads the package from the bundled source with
+> `pkgload::load_all(".")` rather than `library(reviewapp)`. Posit Connect
+> installs only the packages recorded in `renv.lock`, and the project-local
+> `reviewapp` package cannot be installed from the bundle — so `app.R` must
+> keep using `load_all` and `renv.lock` must keep `pkgload` in `Imports`
+> (`renv::record("pkgload", lockfile = "renv.lock")` if it drifts out). Keep
+> the empty `R/_disable_autoload.R` guard in place: it stops Shiny from
+> auto-sourcing `R/` before `app.R` (which would duplicate the `load_all`
+> definitions and log the "appears to contain an R package" warning).
+
 ### 5.3 Configure Connect secrets / environment variables
 
 Set the variables from §3.2 as **Connect environment variables or Vault
