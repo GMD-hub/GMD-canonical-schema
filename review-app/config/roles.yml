@@ -17,13 +17,11 @@ roles:
   - identity: bbrunckhorst
     role: reviewer
   - identity: clakner
-    role: reviewer
+    role: approver
   - identity: dgarciarojas
     role: reviewer
-  - identity: djolliffe
-    role: reviewer
   - identity: dmahler
-    role: reviewer
+    role: approver
   - identity: dsanchezcastro
     role: reviewer
   - identity: hwu4
@@ -37,7 +35,7 @@ roles:
   - identity: lmorenoherrera
     role: reviewer
   - identity: mnguyen3
-    role: reviewer
+    role: approver
   - identity: nyonzan
     role: reviewer
   - identity: rmungai
@@ -45,8 +43,6 @@ roles:
   - identity: rtatulli
     role: reviewer
   - identity: stettehbaah
-    role: reviewer
-  - identity: tdegefu
     role: reviewer
   - identity: ykimura1
     role: reviewer
