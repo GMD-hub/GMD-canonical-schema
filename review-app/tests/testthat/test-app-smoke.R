@@ -35,8 +35,9 @@ test_that("dashboard UI renders and the server boots without error", {
   app$wait_for_idle()
 
   page_html <- app$get_html("body")
-  expect_true(grepl("GMD Human Review Application", page_html, fixed = TRUE))
-  expect_true(grepl("Work Queue", page_html, fixed = TRUE))
+  expect_true(grepl("Human Review", page_html, fixed = TRUE))
+  expect_true(grepl("Review work queue", page_html, fixed = TRUE))
+  expect_true(grepl("How to Use", page_html, fixed = TRUE))
 
   queue_html <- app$get_html("#dashboard-queue_table")
   expect_true(grepl("queue_table", queue_html, fixed = TRUE) ||
@@ -124,7 +125,7 @@ test_that("dashboard module loads a queue from an injected adapter", {
       expect_true("VAR-male" %in% q$artifact_id)
       expect_identical(q$state[q$artifact_id == "VAR-male"], "draft")
 
-      # Select the row and verify selected_artifact returns it
+      # Select the row and verify selected_artifact returns it.
       session$setInputs("dashboard-queue_table_rows_selected" = 1L)
       sel <- dashboard_out$selected_artifact()
       expect_false(is.null(sel))

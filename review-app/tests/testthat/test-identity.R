@@ -87,9 +87,10 @@ test_that("auth_text reflects the three identity states", {
 
 test_that("committed roles.yml resolves its three identities", {
   path <- testthat::test_path("../..", "config", "roles.yml")
+  skip_if_not(file.exists(path), "source-tree role map is not included in the package tarball")
   role_map <- load_role_map(path)
-  expect_identical(resolve_role(role_map, "reviewer@example.org"), "reviewer")
-  expect_identical(resolve_role(role_map, "approver@example.org"), "approver")
-  expect_identical(resolve_role(role_map, "admin@example.org"), "administrator")
+  expect_identical(resolve_role(role_map, "bbrunckhorst"), "reviewer")
+  expect_identical(resolve_role(role_map, "clakner"), "approver")
+  expect_identical(resolve_role(role_map, "acastanedaa"), "administrator")
   expect_null(resolve_role(role_map, "outsider@example.org"))
 })

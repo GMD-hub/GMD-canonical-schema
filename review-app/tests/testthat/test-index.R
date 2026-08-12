@@ -87,6 +87,35 @@ test_that("filters narrow results correctly by module, state, and assignment", {
   expect_equal(nrow(none), 0L)
 })
 
+test_that("filters narrow by artifact ID and next step", {
+  idx <- index_review_records(.fixture_records())
+  by_id <- filter_review_index(idx, artifact_id = "EDUCAT")
+  expect_identical(by_id$artifact_id, "VAR-educat7")
+  by_step <- filter_review_index(idx, next_step = "Revise")
+  expect_identical(by_step$artifact_id, "VAR-urban")
+})
+
+test_that("selection resolves against the exact displayed index", {
+  idx <- index_review_records(.fixture_records())
+  displayed <- filter_review_index(idx, state = "needs-revision")
+  selected <- selected_review_artifact(displayed, 1L)
+  expect_identical(selected$artifact_id, "VAR-urban")
+  expect_null(selected_review_artifact(displayed, 2L))
+})
+
+test_that("queue pagination keeps queues above ten records reachable", {
+  options <- queue_table_options()
+  expect_identical(options$pageLength, 25)
+  expect_match(options$dom, "i", fixed = TRUE)
+  expect_match(options$dom, "p", fixed = TRUE)
+
+  records <- lapply(seq_len(30L), function(i) {
+    id <- sprintf("VAR-fixture-%02d", i)
+    list(id = id, yaml_string = .draft_record_yaml(id))
+  })
+  expect_equal(nrow(index_review_records(records)), 30L)
+})
+
 test_that("empty index returns an empty data.frame with correct columns", {
   idx <- index_review_records(list())
   expect_equal(nrow(idx), 0L)

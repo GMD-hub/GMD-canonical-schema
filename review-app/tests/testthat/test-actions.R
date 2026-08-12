@@ -166,6 +166,20 @@ test_that("reopen is administrator-only and emits an explicit event", {
   expect_identical(res$record$events[[1L]]$action, "reopened")
 })
 
+test_that("reopen persists the administrator reason", {
+  ad <- .happy_write_adapter()
+  rec <- .build_rec(state = "approved")
+  res <- perform_action(
+    ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
+    action = "reopened", actor = "admin@example.org", role = "administrator",
+    note = "The approved artifact needs a source correction."
+  )
+  expect_identical(
+    res$record$events[[1L]]$note,
+    "The approved artifact needs a source correction."
+  )
+})
+
 test_that("saved maps to reviewer in the action-role map (P1.1)", {
   # Step 2 adds saved = "reviewer" so Step 4's fail-closed change does not
   # reject save_draft for the reviewer who performs it.
