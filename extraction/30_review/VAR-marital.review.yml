@@ -1,0 +1,8 @@
+artifact_id: VAR-marital
+source_artifact_path: extraction/20_drafts/dem/VAR-marital.md
+state: draft
+review_round: 1
+assigned_to: []
+current_content_sha256: bc3965f697f32947d8040ad31cbe36246dcd7507a7d15471f69ba146b7848619
+source_commit: d9e9c946812a773799cadc6c5cb37b62309ff633
+events: []
