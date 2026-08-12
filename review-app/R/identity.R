@@ -79,6 +79,23 @@ auth_text <- function(auth) {
   sprintf("Authenticated as %s (role: %s).", auth$identity, auth$role)
 }
 
+#' Semantic identity treatment for the application header.
+#'
+#' @param auth list() as returned by `session_auth()`.
+#' @return HTML tags describing the current identity and role.
+auth_identity_ui <- function(auth) {
+  identity <- auth$identity %||% "No Connect identity"
+  shiny::div(
+    class = "identity-block",
+    role_badge(auth$role),
+    shiny::div(
+      class = "identity-copy",
+      shiny::span(class = "identity-label", "Signed in as"),
+      shiny::span(class = "identity-name", identity)
+    )
+  )
+}
+
 
 #' Resolve the path to the role-map YAML file independently of the working dir.
 #'

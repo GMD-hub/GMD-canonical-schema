@@ -27,7 +27,12 @@ app_server <- function(input, output, session) {
   ))
   role <- shiny::reactive(auth()$role)
 
-  output$auth_status <- shiny::renderText(auth_text(auth()))
+  output$auth_status <- shiny::renderUI(auth_identity_ui(auth()))
+
+  shiny::observeEvent(input$show_help, {
+    shiny::showModal(how_to_use_modal(auth()))
+    session$sendCustomMessage("review-focus-help", list())
+  })
 
   # ---- GitHub adapter ------------------------------------------------------
   adapter <- shiny::reactiveVal(review_app_adapter())
@@ -39,22 +44,22 @@ app_server <- function(input, output, session) {
   dashboard <- mod_dashboard_server("dashboard", adapter, refresh_counter)
 
   # ---- detail module -------------------------------------------------------
-  mod_detail_server("detail", adapter, auth, role,
-                    dashboard$selected_artifact, refresh_counter)
+  detail <- mod_detail_server(
+    "detail",
+    adapter,
+    auth,
+    role,
+    dashboard$selected_artifact,
+    refresh_counter
+  )
 
   # ---- navigation (app-level, controls navset_hidden) ----------------------
-  output$show_detail <- shiny::reactive({
-    !is.null(dashboard$selected_artifact()) &&
-      nrow(dashboard$queue_index()) > 0L
-  })
-  shiny::outputOptions(output, "show_detail", suspendWhenHidden = FALSE)
-
   shiny::observeEvent(dashboard$selected_artifact(), {
     if (!is.null(dashboard$selected_artifact())) {
       shiny::updateTabsetPanel(session, "main_nav", selected = "detail")
     }
   })
-  shiny::observeEvent(input$nav_detail, {
+  shiny::observeEvent(detail$back_requested(), {
     shiny::updateTabsetPanel(session, "main_nav", selected = "dashboard")
   })
 }

@@ -32,7 +32,7 @@ get_golem_config <- function(value,
 #' Attach external resources (CSS, JS) to the application UI.
 #'
 #' Called once from [app_ui()] to register the `inst/app/www` asset path and
-#' inject the custom stylesheet into the page head.
+#' inject the custom stylesheet and local interaction script into the page head.
 #'
 #' @return An HTML tag list for inclusion in the UI head section.
 #' @keywords internal
@@ -43,6 +43,34 @@ golem_add_external_resources <- function() {
       rel = "stylesheet",
       type = "text/css",
       href = "www/custom.css"
+    ),
+    shiny::tags$script(
+      type = "text/javascript",
+      src = "www/review-ui.js"
     )
+  )
+}
+
+#' Bootstrap theme for the review workspace.
+#'
+#' @return A Bootstrap 5 bslib theme.
+review_app_theme <- function() {
+  bslib::bs_theme(
+    version = 5,
+    bg = "#F4F7FA",
+    fg = "#172B3A",
+    primary = "#0067B1",
+    secondary = "#526675",
+    success = "#1F7A4D",
+    warning = "#8A5A00",
+    danger = "#B42318",
+    base_font = bslib::font_collection(
+      "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"
+    ),
+    code_font = bslib::font_collection(
+      "ui-monospace", "SFMono-Regular", "Consolas", "monospace"
+    ),
+    `border-radius` = "0.5rem",
+    `border-color` = "#CCD8E1"
   )
 }

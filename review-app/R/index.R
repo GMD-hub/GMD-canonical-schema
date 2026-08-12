@@ -72,15 +72,26 @@ index_review_records <- function(records) {
   do.call(rbind, rows)
 }
 
-#' Filter an index by module, state, assignment, and action-required.
+#' Filter an index by artifact, module, state, assignment, and next step.
 #'
 #' @param index data.frame from `index_review_records()`.
+#' @param artifact_id character(1) or NULL artifact-ID substring filter.
 #' @param module character(1) or NULL exact module substring filter.
 #' @param state character(1) or NULL state to keep.
 #' @param assigned_to character(1) or NULL identity substring filter.
+#' @param next_step character(1) or NULL next-step label to keep.
 #' @return filtered data.frame.
-filter_review_index <- function(index, module = NULL, state = NULL, assigned_to = NULL) {
+filter_review_index <- function(index, artifact_id = NULL, module = NULL,
+                                state = NULL, assigned_to = NULL,
+                                next_step = NULL) {
   out <- index
+  if (!is.null(artifact_id) && nzchar(artifact_id)) {
+    out <- out[
+      grepl(tolower(artifact_id), tolower(out$artifact_id), fixed = TRUE),
+      ,
+      drop = FALSE
+    ]
+  }
   if (!is.null(module) && nzchar(module)) {
     out <- out[grepl(module, out$module, fixed = TRUE), , drop = FALSE]
   }
@@ -88,7 +99,17 @@ filter_review_index <- function(index, module = NULL, state = NULL, assigned_to 
     out <- out[out$state == state, , drop = FALSE]
   }
   if (!is.null(assigned_to) && nzchar(assigned_to)) {
-    out <- out[grepl(assigned_to, out$assigned_to, fixed = TRUE), , drop = FALSE]
+    assigned <- out$assigned_to
+    assigned[is.na(assigned)] <- ""
+    out <- out[
+      grepl(tolower(assigned_to), tolower(assigned), fixed = TRUE),
+      ,
+      drop = FALSE
+    ]
+  }
+  if (!is.null(next_step) && nzchar(next_step)) {
+    steps <- vapply(out$state, action_required, character(1))
+    out <- out[steps == next_step, , drop = FALSE]
   }
   row.names(out) <- NULL
   out
@@ -132,6 +153,43 @@ action_required <- function(state) {
   )
 }
 
+#' Resolve a queue selection against the exact displayed data.
+#'
+#' @param displayed_index filtered data.frame used to render the queue.
+#' @param selected_row integer row selected by DT.
+#' @return one-row data.frame, or NULL for an invalid selection.
+selected_review_artifact <- function(displayed_index, selected_row) {
+  if (is.null(selected_row) || length(selected_row) != 1L ||
+      nrow(displayed_index) == 0L || selected_row < 1L ||
+      selected_row > nrow(displayed_index)) {
+    return(NULL)
+  }
+  displayed_index[selected_row, , drop = FALSE]
+}
+
+#' DT options for the review queue.
+#'
+#' @return list of client-side table options.
+queue_table_options <- function() {
+  list(
+    pageLength = 25,
+    lengthChange = FALSE,
+    dom = "tip",
+    responsive = list(details = list(type = "column", target = 0)),
+    columnDefs = list(
+      list(className = "control", orderable = FALSE, targets = 0),
+      list(responsivePriority = 1, targets = 1),
+      list(responsivePriority = 2, targets = 2),
+      list(responsivePriority = 3, targets = 5)
+    ),
+    language = list(
+      info = "Showing _START_ to _END_ of _TOTAL_ items",
+      infoEmpty = "No items",
+      paginate = list(previous = "Previous", `next` = "Next")
+    )
+  )
+}
+
 #' Derive the dashboard module-filter choices from the indexed modules (R10).
 #'
 #' Returns a vector (named, so the first element is the label under the "All"
@@ -147,5 +205,5 @@ module_filter_choices <- function(index) {
   modules <- modules[nzchar(modules)]
   # Shiny selectInput convention: labels are names, values are elements.
   # "All"" maps to the empty-string wildcard; each module maps to its own value.
-  setNames(c("", modules), c("All", modules))
+  stats::setNames(c("", modules), c("All", modules))
 }
