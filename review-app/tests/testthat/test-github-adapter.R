@@ -27,6 +27,9 @@ test_that("gh_adapter_http sends a JSON request body on POST/PATCH (R1)", {
     request = function(url, ...) mock_req,
     req_method = function(req, method, ...) req,
     req_headers = function(req, ...) req,
+    req_timeout = function(req, ...) req,
+    req_retry = function(req, ...) req,
+    req_error = function(req, ...) req,
     req_body_json = function(req, data, ...) {
       captured <<- list(url = url_hold, data = data)
       req
@@ -49,6 +52,9 @@ test_that("gh_adapter_http accepts a NULL body for GET without a request body", 
     request = function(url, ...) mock_req,
     req_method = function(req, method, ...) req,
     req_headers = function(req, ...) req,
+    req_timeout = function(req, ...) req,
+    req_retry = function(req, ...) req,
+    req_error = function(req, ...) req,
     req_body_json = function(req, data, ...) {
       body_attached <<- TRUE
       req

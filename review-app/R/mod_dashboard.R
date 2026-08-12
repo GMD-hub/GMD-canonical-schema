@@ -54,19 +54,50 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
 
     queue_index <- shiny::reactiveVal(data.frame())
 
+    # Load the work queue. GitHub I/O failures are isolated here so they surface
+    # as a notification instead of an uncaught error that terminates the Shiny
+    # session (observed on Posit Connect as "Disconnected from server" when the
+    # GitHub App token exchange fails with HTTP 401).
     load_queue <- function() {
-      ad <- adapter()
-      if (!is.null(ad)) {
-        queue_index(adapter_index_review(ad)$index)
-      } else {
+      # isolate the adapter read: load_queue() is called from onFlushed (which
+      # runs OUTSIDE a reactive context) as well as from observers, and reading
+      # a reactiveVal outside a reactive context throws.
+      ad <- shiny::isolate(adapter())
+      if (is.null(ad)) {
         queue_index(data.frame())
+        return(invisible(NULL))
       }
+      tryCatch(
+        {
+          queue_index(adapter_index_review(ad)$index)
+        },
+        error = function(e) {
+          shiny::showNotification(
+            sprintf("Failed to load work queue: %s", conditionMessage(e)),
+            type = "error",
+            duration = 10
+          )
+          # Keep the last successfully loaded queue (or the empty initial state)
+          # so the dashboard stays usable; the user can retry via Refresh.
+          invisible(NULL)
+        }
+      )
     }
 
-    # Refresh on button click or when another module increments the counter
+    # Load the queue shortly after the first flush so the first paint is not an
+    # empty queue, WITHOUT blocking session setup (Connect serves all sessions
+    # from one R process; blocking GitHub I/O here would stall them). The scan
+    # runs on the event loop after the initial render and its failures are
+    # isolated inside load_queue(). Later reloads are driven by Refresh and the
+    # shared counter below.
+    session$onFlushed(function() load_queue(), once = TRUE)
+
+    # Refresh on button click or when another module increments the counter.
+    # ignoreInit = TRUE: the startup load comes solely from onFlushed above, so
+    # the Refresh observer must not auto-fire a second scan at session start.
     shiny::observeEvent(input$refresh_queue, {
       load_queue()
-    })
+    }, ignoreInit = TRUE)
     shiny::observeEvent(refresh_counter(), {
       load_queue()
     }, ignoreInit = TRUE)

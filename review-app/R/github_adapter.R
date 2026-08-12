@@ -143,7 +143,44 @@ review_app_adapter <- function() {
   )
 }
 
+#' Test whether a GitHub API response indicates a transient error eligible for
+#' retry (429 rate-limit, 500/502/503/504 server errors).
+#'
+#' Used as the `is_transient` handler for [httr2::req_retry()] in both
+#' [gh_adapter_http] and [gh_http_post] so the transient-status set is defined
+#' once.
+#'
+#' @param resp an `httr2_response`.
+#' @return logical(1).
+.is_transient_github_response <- function(resp) {
+  httr2::resp_status(resp) %in% c(429L, 500L, 502L, 503L, 504L)
+}
+
+#' Extract the GitHub-provided reason from an HTTP error response.
+#'
+#' Used as the `body` handler for [httr2::req_error()] so a 401/403/404 surfaces
+#' GitHub's own message (e.g. "Bad credentials") instead of a bare HTTP status.
+#' Falls back to the raw response body, then to NULL (default httr2 message)
+#' when nothing usable is present.
+#' @param resp an `httr2_response`.
+#' @return character(1) error detail or NULL.
+.github_api_error_body <- function(resp) {
+  raw_body <- tryCatch(httr2::resp_body_string(resp), error = function(e) "")
+  parsed <- tryCatch(jsonlite::fromJSON(raw_body), error = function(e) NULL)
+  if (!is.null(parsed) && !is.null(parsed$message) && nzchar(parsed$message)) {
+    return(parsed$message)
+  }
+  if (nzchar(raw_body)) raw_body else NULL
+}
+
 #' Real HTTP transport for the adapter (httr2 over token auth).
+#'
+#' Every request carries an explicit timeout and bounded retries so a slow or
+#' transient GitHub response can never block the Shiny event loop indefinitely,
+#' and `req_error` augments failures with GitHub's message. 4xx responses that
+#' are not transient (notably 401 during the token exchange) fail fast with a
+#' descriptive error.
+#'
 #' @param method HTTP method (GET/POST/PATCH).
 #' @param url request URL.
 #' @param token GitHub installation token.
@@ -156,6 +193,14 @@ gh_adapter_http <- function(method, url, token, body = NULL) {
       Authorization = paste0("Bearer ", token),
       Accept = "application/vnd.github+json",
       "X-GitHub-Api-Version" = "2022-11-28"
+    ) |>
+    httr2::req_timeout(seconds = 10) |>
+    httr2::req_retry(
+      is_transient = .is_transient_github_response
+    ) |>
+    httr2::req_error(
+      is_error = function(resp) httr2::resp_status(resp) >= 400L,
+      body = .github_api_error_body
     )
   if (!is.null(body)) {
     req <- httr2::req_body_json(req, body)

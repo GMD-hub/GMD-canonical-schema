@@ -37,11 +37,24 @@ sign_github_app_jwt <- function(app_id, private_key_pem, now_sec = Sys.time()) {
 }
 
 #' Default HTTP POST used by the token exchange (injectable for tests).
+#'
+#' Carries an explicit timeout, bounded retries for transient responses, and
+#' `req_error` details that surface the GitHub-provided message (e.g. the
+#' "Bad credentials" reason behind a 401) so auth failures self-diagnose in the
+#' Connect logs.
 gh_http_post <- function(url, body, headers) {
   resp <- httr2::request(url) |>
     httr2::req_method("POST") |>
     httr2::req_body_json(body) |>
     httr2::req_headers(!!!headers) |>
+    httr2::req_timeout(seconds = 10) |>
+    httr2::req_retry(
+      is_transient = .is_transient_github_response
+    ) |>
+    httr2::req_error(
+      is_error = function(resp) httr2::resp_status(resp) >= 400L,
+      body = .github_api_error_body
+    ) |>
     httr2::req_perform()
   jsonlite::fromJSON(httr2::resp_body_string(resp))
 }
