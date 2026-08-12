@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GMD Human Review App — How It Works</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1f2328;
+    --muted: #57606a;
+    --accent: #0969da;
+    --accent-bg: #ddf4ff;
+    --border: #d0d7de;
+    --code-bg: #f6f8fa;
+    --ok: #1a7f37;
+    --ok-bg: #dafbe1;
+    --warn: #9a6700;
+    --warn-bg: #fff8c5;
+    --danger: #d1242f;
+    --danger-bg: #ffebe9;
+    --admin: #8250df;
+    --approver: #0969da;
+    --reviewer: #1a7f37;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+  h1 { font-size: 2.2em; border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-top: 0.4em; }
+  h2 { font-size: 1.6em; border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-top: 2em; }
+  h3 { font-size: 1.2em; margin-top: 1.6em; }
+  p { margin: 0.6em 0; }
+  code { background: var(--code-bg); padding: 2px 6px; border-radius: 4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92em; }
+  pre { background: var(--code-bg); padding: 14px 18px; border-radius: 8px; overflow-x: auto; border: 1px solid var(--border); font-size: 0.9em; }
+  pre code { background: transparent; padding: 0; }
+  blockquote { border-left: 4px solid var(--accent); background: var(--accent-bg); margin: 1em 0; padding: 10px 16px; border-radius: 0 6px 6px 0; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+  th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 0.3em 0; }
+  .lead { font-size: 1.1em; color: var(--muted); margin-top: 0; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.85em; font-weight: 600; }
+  .pill-admin { background: #fbefff; color: var(--admin); border: 1px solid #d8b9fe; }
+  .pill-approver { background: var(--accent-bg); color: var(--accent); border: 1px solid #b6e3ff; }
+  .pill-reviewer { background: var(--ok-bg); color: var(--ok); border: 1px solid #aceebb; }
+  .step { background: var(--code-bg); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 10px 0; border-radius: 0 6px 6px 0; }
+  .step-num { display: inline-block; width: 24px; height: 24px; background: var(--accent); color: white; border-radius: 50%; text-align: center; line-height: 24px; font-weight: 700; margin-right: 8px; }
+  .diagram { display: block; margin: 24px auto; max-width: 100%; }
+  .diagram-caption { text-align: center; color: var(--muted); font-size: 0.9em; margin-top: -12px; margin-bottom: 24px; font-style: italic; }
+  .ok-box { background: var(--ok-bg); border: 1px solid #2da44e; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .warn-box { background: var(--warn-bg); border: 1px solid #d4a72c; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .danger-box { background: var(--danger-bg); border: 1px solid #ff8182; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 1em 0; }
+  .card { border: 1px solid var(--border); border-radius: 8px; padding: 14px; background: #fff; }
+  .card h4 { margin: 0 0 6px 0; font-size: 1em; color: var(--accent); }
+  .card p { margin: 0; font-size: 0.92em; color: var(--muted); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+  .toc { background: var(--code-bg); padding: 14px 20px; border-radius: 8px; margin: 1em 0; }
+  .toc ol { margin: 0; }
+  .footer { color: var(--muted); font-size: 0.85em; text-align: center; margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<h1>GMD Human Review App — How It Works</h1>
+
+<p class="lead">A plain-language guide for whoever picks this up next. No R, no jargon. By the end you should know what each piece does, who can do what, and how to push a change to the live app.</p>
+
+<div class="toc">
+<strong>What's in here</strong>
+<ol>
+  <li><a href="#big-picture">The big picture</a></li>
+  <li><a href="#pieces">The four moving parts</a></li>
+  <li><a href="#workflow">What happens when someone reviews a variable</a></li>
+  <li><a href="#roles">Who is allowed to do what</a></li>
+  <li><a href="#deploy">How to push a change to the live app</a></li>
+  <li><a href="#common-tasks">Common tasks &amp; recipes</a></li>
+  <li><a href="#troubleshoot">Troubleshooting quick-reference</a></li>
+  <li><a href="#glossary">Glossary</a></li>
+</ol>
+</div>
+
+<h2 id="big-picture">1. The big picture</h2>
+
+<p>The GMD team writes <strong>canonical variable rules</strong> — the official guidance for how household survey variables should be harmonized across countries. A computer (an AI-assisted draft) proposes how a new survey's variables map to those rules. A human needs to look at each proposal and either accept it, send it back for revision, or block it.</p>
+
+<p>The <strong>Human Review App</strong> is the website where humans do that. It's a small Shiny web app running on the World Bank's Posit Connect server. Reviewers open it in a browser, see a queue of items to review, and click through to approve, request changes, or reopen previously approved items.</p>
+
+<svg class="diagram" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+  <!-- Boxes -->
+  <rect x="20" y="60" width="180" height="100" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="110" y="100" text-anchor="middle" font-weight="700" font-size="16" fill="#1f2328">Survey data</text>
+  <text x="110" y="125" text-anchor="middle" font-size="12" fill="#57606a">(raw country file)</text>
+
+  <rect x="310" y="60" width="180" height="100" rx="10" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+  <text x="400" y="95" text-anchor="middle" font-weight="700" font-size="16" fill="#1f2328">Draft proposals</text>
+  <text x="400" y="120" text-anchor="middle" font-size="12" fill="#57606a">(AI-assisted)</text>
+
+  <rect x="600" y="20" width="180" height="80" rx="10" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text x="690" y="55" text-anchor="middle" font-weight="700" font-size="16" fill="#1f2328">Canonical rules</text>
+  <text x="690" y="78" text-anchor="middle" font-size="12" fill="#57606a">(governed)</text>
+
+  <rect x="600" y="120" width="180" height="80" rx="10" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+  <text x="690" y="155" text-anchor="middle" font-weight="700" font-size="16" fill="#1f2328">Reviewer verdict</text>
+  <text x="690" y="178" text-anchor="middle" font-size="12" fill="#57606a">(approve / revise / reopen)</text>
+
+  <!-- Arrows -->
+  <path d="M 200 110 L 310 110" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 490 110 L 600 60" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 490 110 L 600 160" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 690 100 L 690 120" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="200" text-anchor="middle" font-size="13" fill="#57606a" font-style="italic">Drafts are checked against rules; humans give the final verdict.</text>
+</svg>
+<p class="diagram-caption">Figure 1. Where the app fits: it sits between the drafts and the canonical rules.</p>
+
+<hr>
+
+<h2 id="pieces">2. The four moving parts</h2>
+
+<p>Think of the system as four boxes that talk to each other. You can keep the whole thing running just by understanding what each one does.</p>
+
+<svg class="diagram" viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg">
+  <!-- Boxes -->
+  <rect x="30" y="40" width="220" height="120" rx="10" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="140" y="75" text-anchor="middle" font-weight="700" font-size="16">GitHub repo</text>
+  <text x="140" y="100" text-anchor="middle" font-size="12" fill="#57606a">Stores:</text>
+  <text x="140" y="118" text-anchor="middle" font-size="12" fill="#57606a">• app source code</text>
+  <text x="140" y="134" text-anchor="middle" font-size="12" fill="#57606a">• variable drafts</text>
+  <text x="140" y="150" text-anchor="middle" font-size="12" fill="#57606a">• review records</text>
+
+  <rect x="300" y="40" width="220" height="120" rx="10" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+  <text x="410" y="75" text-anchor="middle" font-weight="700" font-size="16">Posit Connect</text>
+  <text x="410" y="100" text-anchor="middle" font-size="12" fill="#57606a">Hosts:</text>
+  <text x="410" y="118" text-anchor="middle" font-size="12" fill="#57606a">• the live web app</text>
+  <text x="410" y="134" text-anchor="middle" font-size="12" fill="#57606a">• secrets (env vars)</text>
+  <text x="410" y="150" text-anchor="middle" font-size="12" fill="#57606a">• user identity</text>
+
+  <rect x="570" y="40" width="220" height="120" rx="10" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text x="680" y="75" text-anchor="middle" font-weight="700" font-size="16">Shiny app</text>
+  <text x="680" y="100" text-anchor="middle" font-size="12" fill="#57606a">• the dashboard</text>
+  <text x="680" y="118" text-anchor="middle" font-size="12" fill="#57606a">• reads/writes via</text>
+  <text x="680" y="134" text-anchor="middle" font-size="12" fill="#57606a">  GitHub API</text>
+  <text x="680" y="150" text-anchor="middle" font-size="12" fill="#57606a">• enforces roles</text>
+
+  <rect x="190" y="220" width="440" height="120" rx="10" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+  <text x="410" y="255" text-anchor="middle" font-weight="700" font-size="16">Browser</text>
+  <text x="410" y="280" text-anchor="middle" font-size="12" fill="#57606a">Reviewer / approver / admin opens the URL,</text>
+  <text x="410" y="298" text-anchor="middle" font-size="12" fill="#57606a">sees queue, makes a decision.</text>
+  <text x="410" y="320" text-anchor="middle" font-size="12" fill="#57606a">Connect tells the app who they are (their role follows).</text>
+
+  <!-- Arrows -->
+  <path d="M 250 100 L 300 100" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
+  <path d="M 520 100 L 570 100" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
+  <path d="M 680 160 L 680 220 L 410 220 L 410 220" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
+  <path d="M 410 340 L 680 340 L 680 160" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
+
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+</svg>
+<p class="diagram-caption">Figure 2. The four boxes and the path data takes when a reviewer opens the app.</p>
+
+<div class="grid">
+  <div class="card">
+    <h4>1. GitHub repo</h4>
+    <p>Holds all the source code, the variable drafts being reviewed, and the review records themselves. Branches matter: <code>main</code> holds drafts; the protected <code>review</code> branch holds review records.</p>
+  </div>
+  <div class="card">
+    <h4>2. Posit Connect</h4>
+    <p>The internal server that hosts the live web app. It also holds the secret credentials the app needs (e.g. the GitHub App key). Click <em>Deploy</em> on a content item to re-run the existing code — but to push new code you must use <code>rsconnect::deployApp()</code>.</p>
+  </div>
+  <div class="card">
+    <h4>3. Shiny app</h4>
+    <p>The web UI itself. Reads drafts from <code>main</code>, writes review records to <code>review</code>, enforces who can approve what. Talks to GitHub over the API using a GitHub App installation.</p>
+  </div>
+  <div class="card">
+    <h4>4. Browser / human</h4>
+    <p>Whoever is reviewing. Connect tells the app their username; the app looks up their role in <code>config/roles.yml</code> and shows or hides the buttons they are allowed to click.</p>
+  </div>
+</div>
+
+<div class="warn-box">
+<strong>Important mental model:</strong> the GitHub repo is the source of truth for both the code <em>and</em> the data being reviewed. A deployment is just "send the latest code to the server and run it". A change to who-can-do-what is just "edit <code>config/roles.yml</code>, commit, redeploy".
+</div>
+
+<hr>
+
+<h2 id="workflow">3. What happens when someone reviews a variable</h2>
+
+<p>The app enforces a small state machine. A variable moves through these states; only certain roles can move it forward.</p>
+
+<svg class="diagram" viewBox="0 0 820 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nodes -->
+  <rect x="20" y="90" width="120" height="60" rx="8" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+  <text x="80" y="115" text-anchor="middle" font-weight="700" font-size="14">draft</text>
+  <text x="80" y="135" text-anchor="middle" font-size="11" fill="#57606a">(in main branch)</text>
+
+  <rect x="200" y="90" width="120" height="60" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="260" y="115" text-anchor="middle" font-weight="700" font-size="14">in-review</text>
+
+  <rect x="380" y="20" width="140" height="60" rx="8" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+  <text x="450" y="45" text-anchor="middle" font-weight="700" font-size="14">needs-revision</text>
+
+  <rect x="380" y="160" width="140" height="60" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text x="450" y="185" text-anchor="middle" font-weight="700" font-size="14">approved</text>
+
+  <rect x="580" y="90" width="220" height="60" rx="8" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+  <text x="690" y="115" text-anchor="middle" font-weight="700" font-size="14">→ review record written</text>
+  <text x="690" y="135" text-anchor="middle" font-size="11" fill="#57606a">(to the review branch)</text>
+
+  <!-- Arrows with labels -->
+  <path d="M 140 120 L 200 120" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr3)"/>
+  <text x="170" y="112" text-anchor="middle" font-size="11" fill="#1a7f37" font-weight="600">submit (reviewer)</text>
+
+  <path d="M 320 110 L 380 50" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr3)"/>
+  <text x="345" y="65" text-anchor="middle" font-size="11" fill="#0969da" font-weight="600">request-revision (approver)</text>
+
+  <path d="M 320 130 L 380 190" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr3)"/>
+  <text x="345" y="170" text-anchor="middle" font-size="11" fill="#0969da" font-weight="600">approve (approver)</text>
+
+  <path d="M 450 80 L 450 160" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr3)" stroke-dasharray="4 3"/>
+  <text x="460" y="125" font-size="11" fill="#1a7f37" font-weight="600">submit (reviewer)</text>
+
+  <path d="M 520 190 L 580 130" stroke="#57606a" stroke-width="2" fill="none" marker-end="url(#arr3)" stroke-dasharray="4 3"/>
+  <text x="545" y="170" text-anchor="middle" font-size="11" fill="#8250df" font-weight="600">reopen (admin)</text>
+
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+
+  <text x="410" y="220" text-anchor="middle" font-size="12" fill="#57606a" font-style="italic">Every state change is appended to an immutable audit trail.</text>
+</svg>
+<p class="diagram-caption">Figure 3. The lifecycle of a single review item, with the role allowed for each transition.</p>
+
+<p>Plain-English version of the same flow:</p>
+<ol>
+  <li>A draft appears in the queue.</li>
+  <li>A <strong>reviewer</strong> reads it and clicks <em>Submit</em> when they think it's ready.</li>
+  <li>An <strong>approver</strong> either clicks <em>Approve</em> (it goes to the canonical output) or <em>Request revision</em> (it goes back).</li>
+  <li>If it's been approved, only an <strong>administrator</strong> can reopen it.</li>
+  <li>If it was sent back for revision, a reviewer can submit again (the review round counter increments).</li>
+</ol>
+
+<hr>
+
+<h2 id="roles">4. Who is allowed to do what</h2>
+
+<p>There are exactly three roles, defined in <code>review-app/config/roles.yml</code>. Each person is mapped to exactly one role (their username must match what Connect returns in <code>session$user</code>).</p>
+
+<table>
+  <thead>
+    <tr><th>Role</th><th>Can do</th><th>Cannot do</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="pill pill-reviewer">reviewer</span></td>
+      <td>Save / edit a draft body. Submit a draft into review.</td>
+      <td>Approve or send back. Reopen anything.</td>
+    </tr>
+    <tr>
+      <td><span class="pill pill-approver">approver</span></td>
+      <td>Approve an item under review. Send it back for revision.</td>
+      <td>Edit the body. Reopen approved items.</td>
+    </tr>
+    <tr>
+      <td><span class="pill pill-admin">administrator</span></td>
+      <td>Reopen an already-approved item. Assign work. (Implicitly: everything the others can do if they were also mapped.)</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Current map:</strong> 1 administrator (acastanedaa), 3 approvers (clakner, dmahler, mnguyen3), 15 reviewers. Edit <code>review-app/config/roles.yml</code>, commit, push, and redeploy to change it. There is no in-app way to edit roles — that's a deliberate safety choice.</p>
+
+<div class="ok-box">
+<strong>How the role is picked at runtime.</strong> When a reviewer opens the URL, Connect tells the app their username. The app reads <code>config/roles.yml</code> from its own bundle and looks that username up. If the username is missing, the app treats the visitor as having no role — they can browse but can't take any action. Never a default role.
+</div>
+
+<hr>
+
+<h2 id="deploy">5. How to push a change to the live app</h2>
+
+<p>This is the most important section for whoever takes over. Two facts that often surprise people:</p>
+
+<ol>
+  <li><strong>The "Deploy" button in the Connect UI does NOT pull new code from GitHub.</strong> It just re-runs the bundle that's already uploaded. To get new code live, you must push a fresh bundle from your machine.</li>
+  <li><strong>Pushing to <code>main</code> does NOT auto-deploy.</strong> GitHub is the source of truth, but Connect doesn't watch it. You still have to run the deploy command below.</li>
+</ol>
+
+<div class="warn-box">
+<strong>Mental model:</strong> "git push" saves your work. "deployApp()" ships it. Two steps.
+</div>
+
+<h3>The deploy command (run from the repo root)</h3>
+
+<p>Every code or role change goes out with this recipe. It works on macOS or Linux, from any terminal that has R installed.</p>
+
+<pre><code># 1. Make sure your working copy is clean and on main
+cd /path/to/GMD-canonical-schema
+git checkout main
+git pull
+
+# 2. Make your changes (edit code, edit roles.yml, etc.)
+
+# 3. Commit and push
+git add .
+git commit -m "describe what you changed"
+git push origin main
+
+# 4. Ship to Connect (this is the magic command)
+RENV_CONFIG_AUTOLOADER_ENABLED=FALSE Rscript -e '
+rsconnect::deployApp(
+  appDir      = "review-app",
+  appFiles    = c("DESCRIPTION", "NAMESPACE", "app.R", "renv.lock",
+                  "R/", "inst/", "config/"),
+  appName     = "review-app",
+  appTitle    = "review-app",
+  appId       = "88dcd5b3-91b0-47fd-97b6-b1e420c683f2",
+  account     = "acastanedaa",
+  server      = "wbconnect",
+  lint        = FALSE,
+  dependencyResolution = "library"
+)'
+</code></pre>
+
+<h3>What those flags mean</h3>
+
+<ul>
+  <li><code>RENV_CONFIG_AUTOLOADER_ENABLED=FALSE</code> — skips the project-level renv autoloader so the <code>rsconnect</code> package is found in your user library.</li>
+  <li><code>appId</code> — the existing content item's GUID on Connect. Re-using this updates the existing item in place rather than creating a new one.</li>
+  <li><code>server = "wbconnect"</code> — the nickname of the Connect server, registered in your <code>~/.Rprofile</code> or <code>.Renviron</code> with an API key.</li>
+  <li><code>appFiles</code> — exact list of files to include in the bundle. Keep this in sync with the project structure.</li>
+  <li><code>dependencyResolution = "library"</code> — tells rsconnect to trust the existing <code>renv.lock</code> instead of re-checking it against the local R library.</li>
+</ul>
+
+<h3>Pre-requisites (one-time setup)</h3>
+
+<div class="danger-box">
+<strong>Treat this section like a secret.</strong> The API key is a credential. Never commit it; never paste it in chat; never email it unencrypted.
+</div>
+
+<p>Before any of the above works, the machine you're deploying from needs three things in <code>~/.Renviron</code>:</p>
+
+<pre><code>CONNECT_SERVER=https://datanalytics-int.worldbank.org
+CONNECT_API_KEY=your-personal-key-here
+</code></pre>
+
+<p>The API key comes from the Connect UI (your name → <em>API Keys</em> → <em>Add</em>). The first deploy also requires the <code>rsconnect</code> R package, installed once with:</p>
+
+<pre><code>Rscript -e 'install.packages("rsconnect")'
+</code></pre>
+
+<p>On macOS this writes to <code>~/Library/R/&lt;arch&gt;/&lt;R-version&gt;/library</code> and works for every subsequent deploy.</p>
+
+<hr>
+
+<h2 id="common-tasks">6. Common tasks &amp; recipes</h2>
+
+<h3>Add or remove a reviewer</h3>
+<ol>
+  <li>Edit <code>review-app/config/roles.yml</code> — add or remove the <code>- identity:</code> entry.</li>
+  <li>Commit, push, redeploy (see section 5).</li>
+</ol>
+
+<h3>Promote someone from reviewer to approver</h3>
+<p>Same as above — change their <code>role:</code> line from <code>reviewer</code> to <code>approver</code>, commit, push, redeploy.</p>
+
+<h3>Change a code bug or feature</h3>
+<ol>
+  <li>Edit the relevant <code>R/&lt;file&gt;.R</code>.</li>
+  <li>Commit, push, redeploy.</li>
+</ol>
+
+<h3>Rotate the GitHub App private key (compromise / annual rotation)</h3>
+<ol>
+  <li>Generate a new private key in GitHub → your GitHub App → <em>Private keys</em> → <em>Generate</em>.</li>
+  <li>Save the new <code>.pem</code> to a secure location.</li>
+  <li>Set the new key on the content item. From the repo root:
+<pre><code>Rscript -e '
+suppressMessages(library(httr))
+pem <- paste(readLines("/secure/path/new-key.pem"), collapse = "\n")
+httr::PUT(paste0(Sys.getenv("CONNECT_SERVER"),
+                 "/__api__/v1/content/88dcd5b3-91b0-47fd-97b6-b1e420c683f2/environment"),
+  httr::add_headers(Authorization = paste0("Key ", Sys.getenv("CONNECT_API_KEY")),
+                    "Content-Type" = "application/json"),
+  body = jsonlite::toJSON(list(list(name="GITHUB_APP_PRIVATE_KEY", value=pem)),
+                          auto_unbox=TRUE))
+'</code></pre>
+  </li>
+  <li>The next deploy picks up the new secret automatically (env vars are read at app startup).</li>
+</ol>
+
+<h3>Add a new env var (e.g. another GitHub App)</h3>
+<p>Same PUT shape as above; send an array of <code>{name, value}</code> objects.</p>
+
+<h3>Roll back a bad deploy</h3>
+<ol>
+  <li>In Connect, find the previous content version (or previous bundle ID) and redeploy from the UI.</li>
+  <li>OR: <code>git revert</code> the offending commit, push, and run the deploy command again.</li>
+</ol>
+
+<hr>
+
+<h2 id="troubleshoot">7. Troubleshooting quick-reference</h2>
+
+<table>
+  <thead>
+    <tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>App shows "no package called 'reviewapp'"</td>
+      <td>Old deployment still using <code>library(reviewapp)</code> instead of <code>pkgload::load_all()</code>.</td>
+      <td>Re-run the deploy command. The current <code>app.R</code> uses <code>pkgload::load_all(".")</code> + <code>run_app()</code>.</td>
+    </tr>
+    <tr>
+      <td>App shows "review app adapter not configured"</td>
+      <td>One or more of the 7 GitHub env vars are missing.</td>
+      <td>Use the PUT to <code>/environment</code> above to set <code>REVIEW_APP_GH_*</code> and <code>GITHUB_APP_*</code> on the content item, then redeploy.</td>
+    </tr>
+    <tr>
+      <td>Visitor sees "Authenticated as ... not authorized"</td>
+      <td>Their Connect username is not in <code>config/roles.yml</code>.</td>
+      <td>Add them to <code>roles.yml</code> with the right role, commit, push, redeploy.</td>
+    </tr>
+    <tr>
+      <td>Connect UI "Deploy" does nothing visible</td>
+      <td>That's by design — it re-runs the same bundle, so nothing changes.</td>
+      <td>Use the <code>rsconnect::deployApp()</code> command to push a new bundle.</td>
+    </tr>
+    <tr>
+      <td>Deploy command fails with "Library and lockfile out of sync"</td>
+      <td>rsconnect wants to verify <code>renv.lock</code> against a local library we don't use.</td>
+      <td>The command already passes <code>dependencyResolution = "library"</code> — that flag must be present.</td>
+    </tr>
+    <tr>
+      <td>Deploy command fails with "packages installed from unknown source: reviewapp"</td>
+      <td>An old <code>reviewapp</code> installation sits in your user library.</td>
+      <td>Run <code>Rscript -e 'remove.packages("reviewapp")'</code> once, then retry.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="glossary">8. Glossary</h2>
+
+<table>
+  <thead>
+    <tr><th>Term</th><th>Plain meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Bundle</strong></td><td>A <code>.tar.gz</code> the server unpacks to run the app. Contains code + config.</td></tr>
+    <tr><td><strong>Connect</strong></td><td>The internal server that hosts the web app.</td></tr>
+    <tr><td><strong>Deploy</strong></td><td>Send a fresh bundle to the server and (re)start the app.</td></tr>
+    <tr><td><strong>GitHub App</strong></td><td>A "bot identity" the app uses to read drafts and write review records to GitHub without using anyone's personal token.</td></tr>
+    <tr><td><strong>Golem</strong></td><td>An R package framework for building Shiny apps as proper R packages. The review-app is a Golem app.</td></tr>
+    <tr><td><strong>pkgload::load_all</strong></td><td>An R function that loads an R package straight from source code without installing it. The app uses this so Connect doesn't need to install the local package.</td></tr>
+    <tr><td><strong>renv.lock</strong></td><td>A snapshot of every R package version the app needs. Connect reads this to install the right versions server-side.</td></tr>
+    <tr><td><strong>rsconnect</strong></td><td>The R package that talks to Posit Connect — registers servers, authenticates, uploads bundles.</td></tr>
+    <tr><td><strong>Shiny</strong></td><td>An R framework for interactive web apps.</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<p class="footer">Last updated: August 2026. Generated as part of the Connect deployment fix (commit <code>cddb0d5</code>). If something has changed since then, update this doc as part of the change.</p>
+
+</body>
+</html>
