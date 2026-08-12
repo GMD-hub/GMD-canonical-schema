@@ -26,7 +26,7 @@ sign_github_app_jwt <- function(app_id, private_key_pem, now_sec = Sys.time()) {
   key <- tryCatch(openssl::read_key(private_key_pem), error = function(e) {
     stop(sprintf("failed to parse GitHub App private key: %s", conditionMessage(e)))
   })
-  now <- as.numeric(now_sec)
+  now <- floor(as.numeric(now_sec))
   header <- jsonlite::toJSON(list(alg = "RS256", typ = "JWT"), auto_unbox = TRUE)
   payload <- jsonlite::toJSON(list(iat = now, exp = now + 600L, iss = as.character(app_id)), auto_unbox = TRUE)
   h <- b64url_encode(charToRaw(header))

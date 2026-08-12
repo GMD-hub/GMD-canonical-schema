@@ -32,9 +32,16 @@ adapter_fetch_tree <- function(owner, repo, branch, token, http = NULL) {
   resp <- http("GET", url, token)
   entries <- resp$tree
   out <- list()
-  for (e in entries) {
-    if (identical(e$type, "blob")) {
-      out[[e$path]] <- e$sha
+  if (is.data.frame(entries)) {
+    blobs <- entries[entries$type == "blob", , drop = FALSE]
+    for (i in seq_len(nrow(blobs))) {
+      out[[blobs$path[i]]] <- blobs$sha[i]
+    }
+  } else {
+    for (e in entries) {
+      if (identical(e$type, "blob")) {
+        out[[e$path]] <- e$sha
+      }
     }
   }
   list(commit = head_sha, blobs = out)
