@@ -13,6 +13,25 @@
   val
 }
 
+#' Normalize a PEM string that may have lost newlines (e.g. pasted into an env var).
+#'
+#' PEM files require newlines between header, base64 lines, and footer.
+#' When copy-pasted into a single-line field, newlines collapse into spaces.
+#' This restores them by re-inserting newlines at the correct positions.
+.normalize_pem <- function(pem) {
+  pem <- trimws(pem)
+  pem <- gsub("\\r\\n", "\n", pem)
+  pem <- gsub("\\r", "\n", pem)
+  has_newlines <- grepl("\n", pem, fixed = TRUE)
+  if (has_newlines) return(pem)
+  pem <- gsub("\\n", "\n", pem, fixed = TRUE)
+  has_newlines <- grepl("\n", pem, fixed = TRUE)
+  if (has_newlines) return(pem)
+  pem <- gsub(" ", "\n", pem, fixed = TRUE)
+  pem <- gsub("\n{3,}", "\n\n", pem)
+  pem
+}
+
 #' URL-safe (base64url) encode without padding.
 b64url_encode <- function(x) {
   b64 <- base64enc::base64encode(x)
@@ -23,6 +42,7 @@ b64url_encode <- function(x) {
 
 #' Build a GitHub App JWT (RS256).
 sign_github_app_jwt <- function(app_id, private_key_pem, now_sec = Sys.time()) {
+  private_key_pem <- .normalize_pem(private_key_pem)
   key <- tryCatch(openssl::read_key(private_key_pem), error = function(e) {
     stop(sprintf("failed to parse GitHub App private key: %s", conditionMessage(e)))
   })

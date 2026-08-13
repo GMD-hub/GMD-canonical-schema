@@ -53,6 +53,26 @@ test_that("JWT signing fails loudly on an invalid private key", {
   expect_error(reviewapp::sign_github_app_jwt("1", "not a pem"), "failed to parse GitHub App private key")
 })
 
+# --- PEM normalization ---
+
+test_that(".normalize_pem restores newlines in collapsed PEM strings", {
+  key <- openssl::rsa_keygen(2048)
+  pem_with_newlines <- openssl::write_pem(key)
+  pem_collapsed <- gsub("\n", " ", pem_with_newlines)
+  restored <- reviewapp:::.normalize_pem(pem_collapsed)
+  expect_true(grepl("\n", restored, fixed = TRUE))
+  # Should round-trip: normalize a collapsed PEM and verify openssl can parse it
+  jwt <- reviewapp::sign_github_app_jwt("1", pem_collapsed, now_sec = as.POSIXct("2030-01-01 00:00:00", tz = "UTC"))
+  parts <- strsplit(jwt, ".", fixed = TRUE)[[1L]]
+  expect_length(parts, 3L)
+})
+
+test_that(".normalize_pem is a no-op on already-correct PEM strings", {
+  key <- openssl::rsa_keygen(2048)
+  pem <- openssl::write_pem(key)
+  expect_identical(reviewapp:::.normalize_pem(pem), pem)
+})
+
 # --- Token exchange ---
 
 test_that("gh_exchange_installation_token returns a token and sends the Bearer JWT", {
