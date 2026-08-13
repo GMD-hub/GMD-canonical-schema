@@ -17,19 +17,29 @@
 #'
 #' PEM files require newlines between header, base64 lines, and footer.
 #' When copy-pasted into a single-line field, newlines collapse into spaces.
-#' This restores them by re-inserting newlines at the correct positions.
+#' This restores them without splitting spaces in the PEM header.
 .normalize_pem <- function(pem) {
-  pem <- trimws(pem)
-  pem <- gsub("\\r\\n", "\n", pem)
-  pem <- gsub("\\r", "\n", pem)
-  has_newlines <- grepl("\n", pem, fixed = TRUE)
-  if (has_newlines) return(pem)
+  if (!is.character(pem) || length(pem) != 1L || is.na(pem)) {
+    stop("GitHub App private key must be one PEM character string")
+  }
+  pem <- sub("^[ \\t]+", "", pem)
+  pem <- sub("[ \\t]+$", "", pem)
+  pem <- gsub("\\r\\n?", "\n", pem)
+  pem <- gsub("\\\\+n", "\n", pem, perl = TRUE)
   pem <- gsub("\\n", "\n", pem, fixed = TRUE)
-  has_newlines <- grepl("\n", pem, fixed = TRUE)
-  if (has_newlines) return(pem)
-  pem <- gsub(" ", "\n", pem, fixed = TRUE)
-  pem <- gsub("\n{3,}", "\n\n", pem)
-  pem
+  if (grepl("\n", pem, fixed = TRUE)) return(pem)
+
+  header_match <- regexpr("-----BEGIN [^-]+-----", pem, perl = TRUE)
+  footer_match <- regexpr("-----END [^-]+-----", pem, perl = TRUE)
+  if (header_match < 1L || footer_match < 1L) return(pem)
+
+  header <- regmatches(pem, header_match)
+  footer <- regmatches(pem, footer_match)
+  header_end <- header_match + attr(header_match, "match.length") - 1L
+  body <- substr(pem, header_end + 1L, footer_match - 1L)
+  body <- gsub("[^A-Za-z0-9+/=]", "", body, perl = TRUE)
+  body_lines <- strwrap(body, width = 64L, simplify = TRUE)
+  paste(c(header, body_lines, footer), collapse = "\n")
 }
 
 #' URL-safe (base64url) encode without padding.
@@ -43,10 +53,6 @@ b64url_encode <- function(x) {
 #' Build a GitHub App JWT (RS256).
 sign_github_app_jwt <- function(app_id, private_key_pem, now_sec = Sys.time()) {
   private_key_pem <- .normalize_pem(private_key_pem)
-  nlines <- lengths(regmatches(private_key_pem, gregmanager("\n", private_key_pem, fixed = TRUE)))
-  message(sprintf("[github_auth] PEM after normalize: %d chars, %d lines, starts with: %s",
-                  nchar(private_key_pem), nlines,
-                  substr(private_key_pem, 1, 40)))
   key <- tryCatch(openssl::read_key(private_key_pem), error = function(e) {
     stop(sprintf("failed to parse GitHub App private key: %s", conditionMessage(e)))
   })

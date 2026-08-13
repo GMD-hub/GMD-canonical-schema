@@ -61,10 +61,24 @@ test_that(".normalize_pem restores newlines in collapsed PEM strings", {
   pem_collapsed <- gsub("\n", " ", pem_with_newlines)
   restored <- reviewapp:::.normalize_pem(pem_collapsed)
   expect_true(grepl("\n", restored, fixed = TRUE))
+  expect_match(restored, "^-----BEGIN [A-Z ]+-----\n")
+  expect_match(restored, "\n-----END [A-Z ]+-----$")
   # Should round-trip: normalize a collapsed PEM and verify openssl can parse it
   jwt <- reviewapp::sign_github_app_jwt("1", pem_collapsed, now_sec = as.POSIXct("2030-01-01 00:00:00", tz = "UTC"))
   parts <- strsplit(jwt, ".", fixed = TRUE)[[1L]]
   expect_length(parts, 3L)
+})
+
+test_that("signing accepts PEM strings with escaped newlines", {
+  key <- openssl::rsa_keygen(2048)
+  pem <- openssl::write_pem(key)
+  escaped <- gsub("\n", "\\\\n", pem, fixed = TRUE)
+  jwt <- reviewapp::sign_github_app_jwt(
+    "1",
+    escaped,
+    now_sec = as.POSIXct("2030-01-01 00:00:00", tz = "UTC")
+  )
+  expect_length(strsplit(jwt, ".", fixed = TRUE)[[1L]], 3L)
 })
 
 test_that(".normalize_pem is a no-op on already-correct PEM strings", {

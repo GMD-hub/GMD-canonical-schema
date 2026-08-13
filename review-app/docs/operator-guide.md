@@ -123,19 +123,17 @@ caches the token per session with refresh before expiry
 4. **Store the credentials only in Connect**, as environment variables or
    Connect secrets (see deployment, §5.3). Never commit them to the repository.
 
-### 3.2 Environment variables (recommended naming)
+### 3.2 Environment variables
 
-The app reads GitHub App credential values through a small env/config helper
-(`.gh_app_env` in `github_auth.R`) that checks an optional injected `cfg` list
-first and then `Sys.getenv()`. Production should set these Connect
-variables/secrets (the exact names below are the recommended convention; wire
-them to the adapter factory at deploy time):
+The app reads GitHub App credential values through `.gh_app_env` in
+`github_auth.R` and then `Sys.getenv()`. Production must set the exact Connect
+variables/secrets below:
 
 | Variable | Purpose |
 |---|---|
-| `REVIEW_APP_GH_APP_ID` | GitHub App ID |
-| `REVIEW_APP_GH_PRIVATE_KEY` | PEM private key (connect secret) |
-| `REVIEW_APP_GH_INSTALLATION_ID` | App installation ID for this repo |
+| `GITHUB_APP_ID` | Numeric GitHub App ID, not the `Iv...` Client ID |
+| `GITHUB_APP_PRIVATE_KEY` | Full PEM contents, preferably a Connect secret |
+| `GITHUB_APP_INSTALLATION_ID` | App installation ID for this repo |
 | `REVIEW_APP_GH_OWNER` | Repository owner (e.g. `WorldBank-...`) |
 | `REVIEW_APP_GH_REPO` | Repository name |
 | `REVIEW_APP_GH_DEFAULT_BRANCH` | Default branch (e.g. `main`) — source context |
@@ -145,11 +143,11 @@ them to the adapter factory at deploy time):
 ### 3.3 Rotation
 
 1. **Private key rotation**: generate a new private key in the GitHub App
-   settings, replace the `REVIEW_APP_GH_PRIVATE_KEY` Connect secret, and
+   settings, replace the `GITHUB_APP_PRIVATE_KEY` Connect secret, and
    republish/restart the content. Keep the old App private key removed once the
    new one is verified (the App permits one active private key).
 2. **Installation reinstalls**: if the App's installation is removed from the
-   repo, reinstall it and update `REVIEW_APP_GH_INSTALLATION_ID`.
+   repo, reinstall it and update `GITHUB_APP_INSTALLATION_ID`.
 3. **Token expiry**: installation tokens are short-lived and refreshed
    automatically by the per-session token cache (refresh lead time 60s). No
    operator action is needed for routine token expiry.
@@ -161,8 +159,12 @@ them to the adapter factory at deploy time):
 - The App writes only to the **review branch** (R13). The default branch's
   protection is untouched.
 - The App's installation token must have the **minimum** repository permission
-  set above. Prefer Connect secret storage over env (avoid secrets landing in
-  content logs).
+   set above. Prefer Connect secret storage over env (avoid secrets landing in
+   content logs).
+- `GITHUB_APP_PRIVATE_KEY` must contain the complete `.pem` file contents,
+  including the `-----BEGIN ... PRIVATE KEY-----` and `-----END ... PRIVATE
+  KEY-----` lines. Do not enter the filename, a path, the `Iv...` Client ID,
+  or a base64-encoded copy of the file.
 
 ---
 
@@ -236,13 +238,15 @@ From `review-app/`:
 ### 5.3 Configure Connect secrets / environment variables
 
 Set the variables from §3.2 as **Connect environment variables or Vault
-secrets** (prefer secrets for `REVIEW_APP_GH_PRIVATE_KEY`). The app reads them
+secrets** (prefer secrets for `GITHUB_APP_PRIVATE_KEY`). The app reads them
 at session start; after any change, republish or restart the content.
 
-### 5.4 Deploy-time wiring of the GitHub adapter
+### 5.4 Troubleshooting credential mapping
 
-The Shiny server expects an injected GitHub adapter handle (the storage
-interface, R20). At deploy time, construct it from the Connect secrets, e.g.:
+The Shiny server constructs the GitHub adapter automatically from the Connect
+variables at session start. No adapter code needs to be injected at deploy
+time. The following is an equivalent credential mapping for troubleshooting;
+do not add separate adapter injection to the app:
 
 ```r
 adapter <- reviewapp::new_github_adapter(
@@ -253,15 +257,15 @@ adapter <- reviewapp::new_github_adapter(
   get_token      = function() {
     reviewapp::installation_token(
       get_token = function() reviewapp::gh_exchange_installation_token(
-        app_id          = Sys.getenv("REVIEW_APP_GH_APP_ID"),
-        private_key_pem = Sys.getenv("REVIEW_APP_GH_PRIVATE_KEY"),
-        installation_id = Sys.getenv("REVIEW_APP_GH_INSTALLATION_ID")
+        app_id          = Sys.getenv("GITHUB_APP_ID"),
+        private_key_pem = Sys.getenv("GITHUB_APP_PRIVATE_KEY"),
+        installation_id = Sys.getenv("GITHUB_APP_INSTALLATION_ID")
       ),
       cache = reviewapp::new_token_cache()
     )
   }
 )
-# then inject `adapter` into the app server (replaces the local/dev handle)
+# The production app already performs this construction automatically.
 ```
 
 This wiring is what Phase 5 calibration (V9) exercises end-to-end against a

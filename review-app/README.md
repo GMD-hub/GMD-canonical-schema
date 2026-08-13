@@ -152,9 +152,9 @@ targets R 4.5.2 with CRAN as the sole repository.
 | `REVIEW_APP_GH_REPO` | Yes | GitHub repository name |
 | `REVIEW_APP_GH_DEFAULT_BRANCH` | Yes | Source branch (e.g. `main`) |
 | `REVIEW_APP_GH_REVIEW_BRANCH` | Yes | Protected review branch (e.g. `review`) |
-| `GITHUB_APP_ID` | Yes | GitHub App ID |
+| `GITHUB_APP_ID` | Yes | Numeric GitHub App ID (not the `Iv...` Client ID) |
 | `GITHUB_APP_INSTALLATION_ID` | Yes | GitHub App installation ID |
-| `GITHUB_APP_PRIVATE_KEY` | Yes | GitHub App PEM private key (Connect secret) |
+| `GITHUB_APP_PRIVATE_KEY` | Yes | Full GitHub App PEM private-key contents (Connect secret) |
 | `REVIEW_APP_ROLES` | No | Absolute path to role-map YAML override |
 | `REVIEW_APP_USER` | No | Identity override for local dev (no Connect) |
 | `REVIEW_APP_OFFLINE` | No | Set to `1` to run without GitHub adapter |
