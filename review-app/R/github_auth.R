@@ -43,6 +43,10 @@ b64url_encode <- function(x) {
 #' Build a GitHub App JWT (RS256).
 sign_github_app_jwt <- function(app_id, private_key_pem, now_sec = Sys.time()) {
   private_key_pem <- .normalize_pem(private_key_pem)
+  nlines <- lengths(regmatches(private_key_pem, gregmanager("\n", private_key_pem, fixed = TRUE)))
+  message(sprintf("[github_auth] PEM after normalize: %d chars, %d lines, starts with: %s",
+                  nchar(private_key_pem), nlines,
+                  substr(private_key_pem, 1, 40)))
   key <- tryCatch(openssl::read_key(private_key_pem), error = function(e) {
     stop(sprintf("failed to parse GitHub App private key: %s", conditionMessage(e)))
   })
