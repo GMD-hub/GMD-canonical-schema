@@ -3,7 +3,7 @@ source_artifact_path: extraction/20_drafts/dem/VAR-educat4.md
 state: needs-revision
 review_round: 1
 assigned_to: []
-current_content_sha256: 2bbc0a2a9ba26cfccb6ec688f4461e7f4020b34e58d0fdc8ab85a103a181cb1e
+current_content_sha256: 185dbbe28112389366c9be8a1dcc2d40316e068efcbce6321bfdb53f6243c5f6
 source_commit: d9e9c946812a773799cadc6c5cb37b62309ff633
 events:
 - event_id: 4b749d0e-8c88-4509-8422-96e907115b70
@@ -39,3 +39,14 @@ events:
   source_blob_sha: 58160e3800a0bdc0627bdfefa71342f9680d28f0
   body_sha256: 2bbc0a2a9ba26cfccb6ec688f4461e7f4020b34e58d0fdc8ab85a103a181cb1e
   note: This is note very clear, please change
+- event_id: 19701d6b-628e-47ca-aeb0-d75f8a912c77
+  sequence: 3
+  action: saved
+  from_state: ~
+  to_state: ~
+  actor: acastanedaa
+  actor_role: administrator
+  occurred_at: 2026-08-14T17:16:24Z UTC
+  source_blob_sha: 1d60e06fac9a366bad46b160448dd3e1068cfd68
+  body_sha256: 185dbbe28112389366c9be8a1dcc2d40316e068efcbce6321bfdb53f6243c5f6
+  note: ~

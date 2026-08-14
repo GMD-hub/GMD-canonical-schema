@@ -84,7 +84,7 @@ Do not guestimate education levels for these individuals under any circumstances
   compulsory schooling age cutoff.
 - Using standard Stata missing (`.`) for the age restriction instead of `.c`.
 
-This is just a test. 
+This is just a test. This has more explanation.
 
 ## Change log
 
