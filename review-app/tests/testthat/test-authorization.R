@@ -16,10 +16,10 @@ test_that("authorize() enforces role gates for every action", {
   expect_false(reviewapp::authorize("approver", "reopened"))
   expect_false(reviewapp::authorize("approver", "assigned"))
 
-  # administrator
-  expect_false(reviewapp::authorize("administrator", "submitted"))
-  expect_false(reviewapp::authorize("administrator", "approved"))
-  expect_false(reviewapp::authorize("administrator", "request-revision"))
+  # administrator (solo-calibration: temporarily allowed all actions)
+  expect_true(reviewapp::authorize("administrator", "submitted"))
+  expect_true(reviewapp::authorize("administrator", "approved"))
+  expect_true(reviewapp::authorize("administrator", "request-revision"))
   expect_true(reviewapp::authorize("administrator", "reopened"))
   expect_true(reviewapp::authorize("administrator", "assigned"))
 })
@@ -36,6 +36,8 @@ test_that("authorize() allows saved for the mapped reviewer role (P1.1)", {
   expect_true(reviewapp::authorize("reviewer", "saved"))
   expect_false(reviewapp::authorize("approver", "saved"))
   expect_false(reviewapp::authorize(NULL, "saved"))
+  # solo-calibration: administrator temporarily allowed to save
+  expect_true(reviewapp::authorize("administrator", "saved"))
 })
 
 test_that("authorize() fails closed for unknown/unlisted actions (R8)", {
