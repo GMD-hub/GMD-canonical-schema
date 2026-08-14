@@ -1,0 +1,23 @@
+agent: schema-compliance
+artifact_id: VAR-marital
+checked_at: '2026-08-14T20:27:08.673873+00:00'
+findings:
+- field: frontmatter
+  severity: error
+  message: "Pydantic validation failed: 1 validation error for VariableDefinition\n\
+    \  Value error, unknown parameter IDs: ['PARAM-DEM-MIN-MARRIAGE-AGE'] [type=value_error,\
+    \ input_value={'variable_id': 'VAR-mari... known-answer-key.md.'}}, input_type=dict]\n\
+    \    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  line: null
+- field: section:Construction notes
+  severity: warning
+  message: Section '## Construction notes' may be a stub (5 chars < 50 threshold)
+  line: null
+- field: section:Construction notes
+  severity: warning
+  message: 'Section ''## Construction notes'' contains placeholder text: ''TODO'''
+  line: null
+summary:
+  errors: 1
+  warnings: 2
+  passed: false
