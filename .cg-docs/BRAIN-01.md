@@ -1,6 +1,6 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-10_
+_Generated 2026-08-14_
 
 ## Human Review Application Objective / Posit Connect / Complete Universal Records Objective
 
@@ -59,10 +59,10 @@ objective`_ · 25 entities
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
 
-## Freeze Version / Universal Non / Welfare Schema Objective
+## Universal Non / Welfare Schema Objective / Freeze Version
 
-_Keywords: `freeze version` · `universal non` · `welfare schema
-objective`_ · 12 entities
+_Keywords: `universal non` · `welfare schema
+objective` · `freeze version`_ · 15 entities
 
 - **[Document the schema approval from the 2026-07-29 GPID meeting](roadmap.json#document-schema-approval)** · `feature` · _done_ · `—`
   > Document the schema approval from the 2026-07-29 GPID meeting
@@ -76,6 +76,12 @@ objective`_ · 12 entities
   > Extract all non-welfare variables into extraction/20_drafts/
 - **[Run structural validation after every extraction](roadmap.json#validate-every-extraction)** · `feature` · _done_ · `—`
   > Run structural validation after every extraction
+- **[Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without breaking strict validation](roadmap.json#register-weight-invariant-rule)** · `feature` · _idea_ · `—`
+  > Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without…
+- **[Classify mineducatage as a variable to draft or a country parameter to register \(currently an unregistered prerequisite reference in VAR-educat7\)](roadmap.json#classify-mineducatage)** · `feature` · _idea_ · `—`
+  > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
+- **[Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id \(no underscores, per ^VAR-\[a-z\]\[a-z0-9\]*$\) and record each mapping in the inventory before drafting](roadmap.json#standardize-variable-naming-convention)** · `feature` · _idea_ · `—`
+  > Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no und…
 - **[Run registry and derivation-graph validation](roadmap.json#validate-registry-derivations)** · `feature` · _idea_ · `—`
   > Run registry and derivation-graph validation
 - **[Stress-test against legacy do-files and historical decisions](roadmap.json#stress-test-legacy-decisions)** · `feature` · _idea_ · `—`

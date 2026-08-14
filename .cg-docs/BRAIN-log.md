@@ -1,6 +1,20 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-10 · 15 artifacts (newest first) + 43 roadmap features_
+_Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
+
+## 2026-08-14
+
+- **[2026-08-13-complete-non-welfare-extraction-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md)** · `review` · _—_ · `2026-08-14`
+  > **Review mode**: data-risk (auto-routed from /cg-work review:auto) **Files reviewed**: 267 variable drafts + 3 run re…
+- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-14`
+  > **Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare…
+- **[Hand-drafting GMD CVS variable specs at scale and validating them](.cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md)** · `solution` · _—_ · `2026-08-14`
+  > The GMD Canonical Variable Schema (CVS) needed `VariableDefinition`-valid draft specs for every non-welfare variable …
+
+## 2026-08-13
+
+- **[Complete Non-Welfare Variable Extraction Across All Modules](.cg-docs/plans/2026-08-13-complete-non-welfare-extraction.md)** · `plan` · _completed_ · `2026-08-13`
+  > Produce schema-valid, source-grounded draft specifications for **every** non-welfare variable defined in the GMD harm…
 
 ## 2026-08-10
 
@@ -72,6 +86,8 @@ _Generated 2026-08-10 · 15 artifacts (newest first) + 43 roadmap features_
   > Build a private Shiny app for Posit Connect
 - **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _idea_ · `—`
   > Build a source-grounding review agent and skill
+- **[Classify mineducatage as a variable to draft or a country parameter to register \(currently an unregistered prerequisite reference in VAR-educat7\)](roadmap.json#classify-mineducatage)** · `feature` · _idea_ · `—`
+  > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
 - **[Configure the real GPID CODEOWNERS team and branch protection](roadmap.json#configure-codeowners-protection)** · `feature` · _idea_ · `—`
@@ -114,6 +130,10 @@ _Generated 2026-08-10 · 15 artifacts (newest first) + 43 roadmap features_
   > Generate proposed YAML changes on review branches
 - **[Record reviewer identity, review round, timestamps, and content hashes](roadmap.json#record-review-metadata)** · `feature` · _done_ · `—`
   > Record reviewer identity, review round, timestamps, and content hashes
+- **[Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without breaking strict validation](roadmap.json#register-weight-invariant-rule)** · `feature` · _idea_ · `—`
+  > Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without…
+- **[Resolve the 7-vs-8 body-section contract at the governance level: reconcile the existing 7-section draft format \(Definition, Conceptual intent, Construction notes, Consistency checks, Escalation triggers, Common mistakes, Change log\) against the authoritative 8-section contract in universal-extraction.md and extraction-governance.v1.yaml](roadmap.json#resolve-body-section-contract)** · `feature` · _idea_ · `—`
+  > Resolve the 7-vs-8 body-section contract at the governance level: reconcile the existing 7-section draft format (Defi…
 - **[Resolve fallback authority and escalation behavior](roadmap.json#resolve-fallback-authority)** · `feature` · _idea_ · `—`
   > Resolve fallback authority and escalation behavior
 - **[Resolve guideline-versus-practice differences through reviewed exceptions](roadmap.json#resolve-reviewed-exceptions)** · `feature` · _idea_ · `—`
@@ -130,6 +150,8 @@ _Generated 2026-08-10 · 15 artifacts (newest first) + 43 roadmap features_
   > Show extracted YAML and guideline evidence as read-only context
 - **[Simplify the interface based on reviewer experience](roadmap.json#simplify-review-interface)** · `feature` · _idea_ · `—`
   > Simplify the interface based on reviewer experience
+- **[Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id \(no underscores, per ^VAR-\[a-z\]\[a-z0-9\]*$\) and record each mapping in the inventory before drafting](roadmap.json#standardize-variable-naming-convention)** · `feature` · _idea_ · `—`
+  > Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no und…
 - **[Stress-test against legacy do-files and historical decisions](roadmap.json#stress-test-legacy-decisions)** · `feature` · _idea_ · `—`
   > Stress-test against legacy do-files and historical decisions
 - **[Run structural validation after every extraction](roadmap.json#validate-every-extraction)** · `feature` · _done_ · `—`
