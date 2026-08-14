@@ -154,8 +154,8 @@
         {
           "id": "review-calibration-sample",
           "title": "Review and enrich their Markdown through the Shiny app",
-          "status": "active",
-          "plan": ".cg-docs/plans/2026-08-07-calibrate-human-review.md"
+          "status": "idea",
+          "plan": null
         },
         {
           "id": "measure-review-errors",

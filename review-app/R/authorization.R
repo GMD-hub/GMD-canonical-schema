@@ -15,10 +15,6 @@ action_requires_role <- list(
 #' @param role character(1) or NULL -- one of reviewer/approver/administrator.
 #' @param action character(1) -- an action name from the action set.
 #' @return logical(1)
-# NOTE (solo-calibration): administrator temporarily allowed to perform all
-# actions so a single operator can walk the full state machine (reviewer +
-# approver paths). Revert to strict exact-match after the calibration run:
-#   identical(role, required)
 authorize <- function(role, action) {
   if (is.null(action) || length(action) != 1L || is.na(action)) {
     # no/invalid action: fail closed (R8)
@@ -30,5 +26,5 @@ authorize <- function(role, action) {
     # (including saved/assigned, added in Step 2/P1.1) must be in the map.
     return(FALSE)
   }
-  !is.null(role) && (identical(role, "administrator") || identical(role, required))
+  !is.null(role) && identical(role, required)
 }
