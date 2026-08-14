@@ -1,7 +1,7 @@
 artifact_id: VAR-educat4
 source_artifact_path: extraction/20_drafts/dem/VAR-educat4.md
-state: needs-revision
-review_round: 1
+state: in-review
+review_round: 2
 assigned_to: []
 current_content_sha256: 185dbbe28112389366c9be8a1dcc2d40316e068efcbce6321bfdb53f6243c5f6
 source_commit: d9e9c946812a773799cadc6c5cb37b62309ff633
@@ -48,5 +48,16 @@ events:
   actor_role: administrator
   occurred_at: 2026-08-14T17:16:24Z UTC
   source_blob_sha: 1d60e06fac9a366bad46b160448dd3e1068cfd68
+  body_sha256: 185dbbe28112389366c9be8a1dcc2d40316e068efcbce6321bfdb53f6243c5f6
+  note: ~
+- event_id: b0a7f200-9b68-4487-bee9-2e75ed9eca46
+  sequence: 4
+  action: submitted
+  from_state: needs-revision
+  to_state: in-review
+  actor: acastanedaa
+  actor_role: administrator
+  occurred_at: 2026-08-14T17:16:35Z UTC
+  source_blob_sha: eb5e651130cc9e00de15c5b5a294a7b3bb393433
   body_sha256: 185dbbe28112389366c9be8a1dcc2d40316e068efcbce6321bfdb53f6243c5f6
   note: ~
