@@ -105,7 +105,7 @@
       "id": "independent-agent-review",
       "title": "Establish Independent Agent Review",
       "objective": "Review every extraction independently before relying on its content.",
-      "status": "in-progress",
+      "status": "planned",
       "features": [
         {
           "id": "build-source-grounding-review",
