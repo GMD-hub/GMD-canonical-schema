@@ -161,7 +161,7 @@
       "id": "calibrate-human-review",
       "title": "Calibrate Human Review",
       "objective": "Test the complete workflow on a representative sample before scaling it.",
-      "status": "in-progress",
+      "status": "done",
       "features": [
         {
           "id": "select-calibration-sample",
@@ -172,26 +172,26 @@
         {
           "id": "review-calibration-sample",
           "title": "Review and enrich their Markdown through the Shiny app",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/calibration/calibration-report.md"
         },
         {
           "id": "measure-review-errors",
           "title": "Measure extraction and agent-review errors",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/calibration/calibration-report.md"
         },
         {
           "id": "simplify-review-interface",
           "title": "Simplify the interface based on reviewer experience",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/calibration/calibration-report.md"
         },
         {
           "id": "finalize-review-rubric",
           "title": "Finalize the review rubric and acceptance criteria",
-          "status": "idea",
-          "plan": null
+          "status": "done",
+          "plan": ".cg-docs/calibration/review-rubric.md"
         }
       ]
     },
