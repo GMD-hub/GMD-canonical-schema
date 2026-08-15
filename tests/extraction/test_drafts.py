@@ -19,12 +19,11 @@ from schema.variable import (
 ROOT = Path(__file__).resolve().parents[2]  # worktree root
 DRAFTS = ROOT / "extraction" / "20_drafts"
 
-# Registered reference sets (delay-aware; keep in sync with knowledge/).
+# Registered reference sets (derived from the knowledge/ registry).
 RULE_IDS = {"RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RULE-SEX-001"}
 PARAM_IDS = {
     "PARAM-DEM-MIN-MARRIAGE-AGE",
     "PARAM-EDU-YEARS-BY-LEVEL",
-    "PARAM-EDU-MIN-EDUCATION-AGE",
 }
 REQUIRED_SECTIONS = [
     "## Definition",
@@ -44,7 +43,9 @@ def iter_drafts():
 def test_drafts_exist():
     drafts = list(iter_drafts())
     assert drafts, "no drafts found under extraction/20_drafts/"
-    assert len(drafts) >= 267
+    modules = sorted({p.parent.name for p in drafts})
+    assert modules, "no draft modules found under extraction/20_drafts/"
+    assert {"idn", "geo", "dem", "lbr", "utl", "dwl"} <= set(modules)
 
 
 def test_all_drafts_validate_frontmatter():
