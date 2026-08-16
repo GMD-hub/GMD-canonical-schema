@@ -128,32 +128,32 @@
         {
           "id": "build-source-grounding-review",
           "title": "Build a source-grounding review agent and skill",
-          "status": "idea",
-          "plan": null
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-14-build-agent-review.md"
         },
         {
           "id": "build-schema-compliance-review",
           "title": "Build a schema-compliance review agent and skill",
-          "status": "idea",
-          "plan": null
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-14-build-agent-review.md"
         },
         {
           "id": "build-rules-caveats-review",
           "title": "Build a rules and caveats completeness agent and skill",
-          "status": "idea",
-          "plan": null
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-14-build-agent-review.md"
         },
         {
           "id": "build-consistency-derivation-review",
           "title": "Build a cross-variable consistency and derivation review agent",
-          "status": "idea",
-          "plan": null
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-14-build-agent-review.md"
         },
         {
           "id": "add-review-routing-audit",
           "title": "Add deterministic routing, failure states, and audit records",
-          "status": "idea",
-          "plan": null
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-14-build-agent-review.md"
         }
       ]
     },
