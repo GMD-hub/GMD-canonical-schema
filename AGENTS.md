@@ -28,8 +28,10 @@ explicit human instruction from the GPID Team.
 | `knowledge/` | Approved, finalized CVS artifacts | Human only |
 | `country-parameters/` | Country parameter values and exceptions | Human only |
 | `schema/` | Pydantic validation models | Human or agent under supervision |
+| `extraction/25_agent_review/` | Agent review findings (YAML) | Agent |
+| `extraction_pipeline/review_agents/` | Review agent code and runner | Agent |
 
-Agents write only to `extraction/20_drafts/`.
+Agents write only to `extraction/20_drafts/` and `extraction/25_agent_review/`.
 Never write directly to `knowledge/`.
 
 ## What always requires human approval
