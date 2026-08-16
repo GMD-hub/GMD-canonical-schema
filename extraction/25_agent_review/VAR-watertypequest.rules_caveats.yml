@@ -1,0 +1,18 @@
+agent: rules_caveats
+artifact_id: VAR-watertypequest
+checked_at: '2026-08-16T04:07:33.928962+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
+    that `water_source` and related water variable'''
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bvalid\b'' in ''- Every household
+    should receive a valid category or an exte'''
+  line: null
+summary:
+  errors: 0
+  warnings: 2
+  passed: 0

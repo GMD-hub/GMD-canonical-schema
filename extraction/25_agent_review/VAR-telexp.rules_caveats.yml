@@ -1,0 +1,13 @@
+agent: rules_caveats
+artifact_id: VAR-telexp
+checked_at: '2026-08-16T04:07:33.896962+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
+    that `commexp` and `tvintphexp` include `telex'''
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

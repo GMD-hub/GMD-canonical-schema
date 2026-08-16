@@ -1,0 +1,18 @@
+agent: rules_caveats
+artifact_id: VAR-landownti
+checked_at: '2026-08-16T04:07:33.381890+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- The value must
+    be a valid category code (or explicitly mis'''
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bvalid\b'' in ''- The value must
+    be a valid category code (or explicitly mis'''
+  line: null
+summary:
+  errors: 0
+  warnings: 2
+  passed: 0

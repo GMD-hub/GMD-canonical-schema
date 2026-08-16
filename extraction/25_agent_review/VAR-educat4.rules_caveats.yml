@@ -1,0 +1,13 @@
+agent: rules_caveats
+artifact_id: VAR-educat4
+checked_at: '2026-08-16T04:07:33.227227+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcorrect\b'' in ''- In ECA region
+    surveys, it is expected and correct for indi'''
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

@@ -1,0 +1,47 @@
+agent: source_grounding
+artifact_id: VAR-laborincome
+checked_at: '2026-08-16T04:07:33.607058+00:00'
+findings:
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-lincnc not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-wagetotal not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-wagetotal2 not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagencotal not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagetotal not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-wagetotalyear not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-wagetotal2year not mentioned in Construction
+    notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagencototalyear not mentioned in Construction
+    notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagetotalyear not mentioned in Construction
+    notes
+  line: null
+summary:
+  errors: 0
+  warnings: 9
+  passed: 0

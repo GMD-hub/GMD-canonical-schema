@@ -1,0 +1,23 @@
+agent: consistency_derivation
+artifact_id: VAR-tvintphexp
+checked_at: '2026-08-16T04:07:34.165575+00:00'
+findings:
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-tvintphexp derives_from VAR-tvexp, but VAR-tvexp derives_to
+    [] (missing VAR-tvintphexp)'
+  line: null
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-tvintphexp derives_from VAR-internetexp, but VAR-internetexp
+    derives_to [] (missing VAR-tvintphexp)'
+  line: null
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-tvintphexp derives_from VAR-telexp, but VAR-telexp derives_to
+    [] (missing VAR-tvintphexp)'
+  line: null
+summary:
+  errors: 3
+  warnings: 0
+  passed: 0

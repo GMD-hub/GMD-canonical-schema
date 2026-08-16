@@ -1,0 +1,12 @@
+agent: schema_compliance
+artifact_id: VAR-wagetotalyear
+checked_at: '2026-08-16T04:07:33.754419+00:00'
+findings:
+- field: body
+  severity: warning
+  message: 'Section ## Common mistakes has no content after heading'
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

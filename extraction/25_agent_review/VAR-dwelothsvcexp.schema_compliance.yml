@@ -1,0 +1,8 @@
+agent: schema_compliance
+artifact_id: VAR-dwelothsvcexp
+checked_at: '2026-08-16T04:07:33.799720+00:00'
+findings: []
+summary:
+  errors: 0
+  warnings: 0
+  passed: 1

@@ -1,0 +1,16 @@
+agent: schema_compliance
+artifact_id: VAR-areapurchagriland
+checked_at: '2026-08-16T04:07:33.303821+00:00'
+findings:
+- field: body
+  severity: warning
+  message: 'Section ## Escalation triggers has no content after heading'
+  line: null
+- field: body
+  severity: warning
+  message: 'Section ## Common mistakes has no content after heading'
+  line: null
+summary:
+  errors: 0
+  warnings: 2
+  passed: 0

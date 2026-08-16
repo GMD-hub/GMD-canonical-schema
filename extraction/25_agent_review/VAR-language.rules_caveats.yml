@@ -1,0 +1,18 @@
+agent: rules_caveats
+artifact_id: VAR-language
+checked_at: '2026-08-16T04:07:33.248570+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- Verify the language
+    string is recorded consistently and is'''
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
+    that the record for children who cannot yet sp'''
+  line: null
+summary:
+  errors: 0
+  warnings: 2
+  passed: 0

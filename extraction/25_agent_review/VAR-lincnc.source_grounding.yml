@@ -1,0 +1,35 @@
+agent: source_grounding
+artifact_id: VAR-lincnc
+checked_at: '2026-08-16T04:07:33.609541+00:00'
+findings:
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twageothers not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagetotal not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagencotal not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twageothersyear not mentioned in Construction
+    notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagetotalyear not mentioned in Construction
+    notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-twagencototalyear not mentioned in Construction
+    notes
+  line: null
+summary:
+  errors: 0
+  warnings: 6
+  passed: 0

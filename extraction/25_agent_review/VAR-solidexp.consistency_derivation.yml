@@ -1,0 +1,28 @@
+agent: consistency_derivation
+artifact_id: VAR-solidexp
+checked_at: '2026-08-16T04:07:34.165558+00:00'
+findings:
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-solidexp derives_from VAR-coalexp, but VAR-coalexp derives_to
+    [] (missing VAR-solidexp)'
+  line: null
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-solidexp derives_from VAR-peatexp, but VAR-peatexp derives_to
+    [] (missing VAR-solidexp)'
+  line: null
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-solidexp derives_from VAR-woodexp, but VAR-woodexp derives_to
+    [] (missing VAR-solidexp)'
+  line: null
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-solidexp derives_from VAR-othsolexp, but VAR-othsolexp
+    derives_to [] (missing VAR-solidexp)'
+  line: null
+summary:
+  errors: 4
+  warnings: 0
+  passed: 0
