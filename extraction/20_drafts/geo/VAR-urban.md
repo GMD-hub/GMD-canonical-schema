@@ -7,7 +7,7 @@
 variable_id: VAR-urban
 canonical_label: "Urban / rural residence"
 variable_name: urban
-module_id: MOD-DEM
+module_id: MOD-GEO
 gmd_version: "3.0"
 schema_version: "0.1"
 status: draft
@@ -64,7 +64,7 @@ source_hints:
 # --- Provenance ---
 provenance:
   source_document: "GMD_household_survey_harmonization.md"
-  source_section: "Geography (GEO), Mapping and Description of Variables, urban (calibration fixture)"
+  source_section: "Geography (GEO) [Chapter 3], Mapping and Description of Variables, urban"
   extraction_method: manual
   extracted_on: "2026-08-07"
   human_reviewed: false

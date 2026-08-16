@@ -1,5 +1,5 @@
 {
-  "edge_count": 9,
+  "edge_count": 11,
   "edges": [
     {
       "edge_type": "decided_from",
@@ -35,6 +35,18 @@
       "edge_type": "verifies",
       "source": ".cg-docs/reviews/2026-08-07-calibrate-human-review-verify-review.md",
       "target": ".cg-docs/reviews/2026-08-07-calibrate-human-review-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "reviews",
+      "source": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
+      "target": ".cg-docs/plans/2026-08-13-complete-non-welfare-extraction.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "verifies",
+      "source": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+      "target": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
       "target_missing": false
     },
     {
@@ -239,6 +251,40 @@
       ]
     },
     {
+      "date": "2026-08-13",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-13-complete-non-welfare-extraction.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction",
+      "status": "completed",
+      "summary": "Produce schema-valid, source-grounded draft specifications for **every** non-welfare variable defined in the GMD harmonization guidelines chapters 2-7, across the six non-welfare modules (IDN, GEO, DEM, LBR, UTL, DWL). The extraction infrastructure (pipeline, agents, skills, validators, manifest contract) was built by the completed predecessor plan (`2026-08-03-extract-universal-non-welfare-schema.md`). This follow-up **hand-drafts** the remaining variables directly (the pipeline orchestrator is a thin sequencer that accepts caller-provided candidates; it does not draft; and preflight is blocked by the supervised manifest lock). The plan therefore reads the source chapters, builds an authoritative per-module inventory from each chapter's summary table, drafts every missing variable by hand, validates...",
+      "tags": [
+        "extraction",
+        "non-welfare",
+        "variables",
+        "validation",
+        "provenance",
+        "idn",
+        "geo",
+        "dem",
+        "lbr",
+        "utl",
+        "dwl"
+      ],
+      "title": "Complete Non-Welfare Variable Extraction Across All Modules",
+      "top_keywords": [
+        "var-marital",
+        "variabledefinition",
+        "variable_id",
+        "test scenarios",
+        "d46dc03",
+        "marital_status",
+        "draft",
+        "relationship_to_head",
+        "extraction/20_drafts/",
+        "variables"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-03-extract-universal-non-welfare-schema-review.md",
@@ -327,6 +373,50 @@
       ]
     },
     {
+      "date": "2026-08-14",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction-review",
+      "status": "",
+      "summary": "**Review mode**: data-risk (auto-routed from /cg-work review:auto) **Files reviewed**: 267 variable drafts + 3 run reports + plan/active-state **Findings**: 18 (P0: 0, P1: 3, P2: 7, P3: 8)",
+      "tags": [],
+      "title": "2026-08-13-complete-non-welfare-extraction-review",
+      "top_keywords": [
+        "current.json",
+        "fix",
+        ".o",
+        "data_type",
+        "categorical",
+        "report",
+        "review",
+        "categorical_ordered",
+        "passed",
+        "literal"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "status": "",
+      "summary": "**Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare-extraction-review.md`) has **no `fixed` findings** (fix-triage has not run yet). Per Step 1.7 of the review contract, verify mode self-disables when no prior fixed review exists and falls back to normal routing. This is a light confirm pass, not a full verify-mode activation.",
+      "tags": [],
+      "title": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "top_keywords": [
+        "2026-08-13-complete-non-welfare-extraction-review.md",
+        "review",
+        "verify",
+        "fixed",
+        "confirm",
+        "variabledefinition",
+        "/cg-review mode:verify",
+        "##",
+        "pytest tests/extraction/",
+        "/cg-fix-triage"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "solution",
       "path": ".cg-docs/solutions/bugs/2026-08-03-orchestrator-cross-file-attribute-mismatch.md",
@@ -353,6 +443,39 @@
         "extraction_pipeline/orchestrator.py",
         "item.blocking_issue_ids",
         "extraction_pipeline/state.py"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md",
+      "slug": "2026-08-14-hand-draft-cvs-variable-specs",
+      "status": "",
+      "summary": "The GMD Canonical Variable Schema (CVS) needed `VariableDefinition`-valid draft specs for every non-welfare variable across six modules (IDN, GEO, DEM, LBR, UTL, DWL) grounded in `GMD-guidelines` (commit `d46dc03`). Naive drafting produced schema failures, duplicate IDs, and unverifiable claims. The pipeline orchestrator is a thin sequencer that does not draft, and preflight is blocked by the supervised source-manifest lock.",
+      "tags": [
+        "gmd",
+        "cvs",
+        "extraction",
+        "variable-drafts",
+        "pydantic",
+        "validation",
+        "pydantic-v2",
+        "corpus-gate",
+        "naming-normalization",
+        "module-inventory"
+      ],
+      "title": "Hand-drafting GMD CVS variable specs at scale and validating them",
+      "top_keywords": [
+        "variable_id",
+        "gmd",
+        "cvs",
+        "context",
+        "d46dc03",
+        "relationship_to_head",
+        "extra=\"forbid\"",
+        "variable",
+        "specs",
+        "hand-drafting"
       ]
     },
     {
@@ -597,6 +720,72 @@
         "milestone",
         "extract",
         "universal"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#register-weight-invariant-rule",
+      "slug": "register-weight-invariant-rule",
+      "status": "idea",
+      "summary": "Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without breaking strict validation",
+      "tags": [],
+      "title": "Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without breaking strict validation",
+      "top_keywords": [
+        "weight",
+        "null weight invariant",
+        "universal non",
+        "welfare schema\nobjective",
+        "variables",
+        "register",
+        "non-null",
+        "invariant",
+        "rule-wgt-",
+        "rule"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#classify-mineducatage",
+      "slug": "classify-mineducatage",
+      "status": "idea",
+      "summary": "Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisite reference in VAR-educat7)",
+      "tags": [],
+      "title": "Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisite reference in VAR-educat7)",
+      "top_keywords": [
+        "universal non",
+        "welfare schema\nobjective",
+        "variable",
+        "classify",
+        "mineducatage",
+        "draft",
+        "country",
+        "parameter",
+        "register",
+        "currently"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#standardize-variable-naming-convention",
+      "slug": "standardize-variable-naming-convention",
+      "status": "idea",
+      "summary": "Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no underscores, per ^VAR-[a-z][a-z0-9]*$) and record each mapping in the inventory before drafting",
+      "tags": [],
+      "title": "Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no underscores, per ^VAR-[a-z][a-z0-9]*$) and record each mapping in the inventory before drafting",
+      "top_keywords": [
+        "mapping",
+        "universal non",
+        "welfare schema\nobjective",
+        "variable",
+        "gmd",
+        "standardize",
+        "naming",
+        "convention",
+        "document",
+        "snake_case"
       ]
     },
     {
@@ -1152,6 +1341,28 @@
     {
       "date": "",
       "entity_type": "feature",
+      "path": "roadmap.json#resolve-body-section-contract",
+      "slug": "resolve-body-section-contract",
+      "status": "idea",
+      "summary": "Resolve the 7-vs-8 body-section contract at the governance level: reconcile the existing 7-section draft format (Definition, Conceptual intent, Construction notes, Consistency checks, Escalation triggers, Common mistakes, Change log) against the authoritative 8-section contract in universal-extraction.md and extraction-governance.v1.yaml",
+      "tags": [],
+      "title": "Resolve the 7-vs-8 body-section contract at the governance level: reconcile the existing 7-section draft format (Definition, Conceptual intent, Construction notes, Consistency checks, Escalation triggers, Common mistakes, Change log) against the authoritative 8-section contract in universal-extraction.md and extraction-governance.v1.yaml",
+      "top_keywords": [
+        "contract",
+        "section",
+        "complete universal records\nobjective",
+        "reconcile",
+        "resolve",
+        "vs-8",
+        "body-section",
+        "governance",
+        "level",
+        "existing"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
       "path": "roadmap.json#resolve-fallback-authority",
       "slug": "resolve-fallback-authority",
       "status": "idea",
@@ -1414,8 +1625,8 @@
       ]
     }
   ],
-  "entity_count": 58,
-  "generated": "2026-08-10",
+  "entity_count": 66,
+  "generated": "2026-08-14",
   "schema_version": "0.2.0",
   "topic_count": 3,
   "topics": [
@@ -1457,7 +1668,7 @@
       "slug": "human-review-application-objective-posit-connect-complete-universal-records-objective"
     },
     {
-      "entity_count": 12,
+      "entity_count": 15,
       "entity_paths": [
         "roadmap.json#document-schema-approval",
         "roadmap.json#inventory-non-welfare-variables",
@@ -1465,6 +1676,9 @@
         "roadmap.json#build-extraction-system",
         "roadmap.json#extract-non-welfare-variables",
         "roadmap.json#validate-every-extraction",
+        "roadmap.json#register-weight-invariant-rule",
+        "roadmap.json#classify-mineducatage",
+        "roadmap.json#standardize-variable-naming-convention",
         "roadmap.json#validate-registry-derivations",
         "roadmap.json#stress-test-legacy-decisions",
         "roadmap.json#resolve-reviewed-exceptions",
@@ -1473,12 +1687,12 @@
         "roadmap.json#present-version-1"
       ],
       "keywords": [
-        "freeze version",
         "universal non",
-        "welfare schema\nobjective"
+        "welfare schema\nobjective",
+        "freeze version"
       ],
-      "label": "Freeze Version / Universal Non / Welfare Schema\nObjective",
-      "slug": "freeze-version-universal-non-welfare-schema-objective"
+      "label": "Universal Non / Welfare Schema\nObjective / Freeze Version",
+      "slug": "universal-non-welfare-schema-objective-freeze-version"
     },
     {
       "entity_count": 6,

@@ -62,8 +62,7 @@ prerequisites:
                 individuals where age is below mineducatage."
 
 # --- Cross-references ---
-rules:
-  - RULE-EDU-999
+rules: []
 exceptions: []
 external_standards: []
 
@@ -87,7 +86,10 @@ provenance:
   human_reviewed: false
   reviewer: null
   notes: "Calibration fixture (not from the extraction pipeline). Carries seeded
-          known defects for the calibration run; see known-answer-key.md."
+          known defects for the calibration run; see known-answer-key.md.
+          FIX: original rules list referenced RULE-EDU-999, which is unregistered and
+          fails strict validation. The reference was dropped (rules: []). Remains a
+          blocking issue until RULE-EDU-999 is registered or confirmed obsolete."
 ---
 
 ## Definition

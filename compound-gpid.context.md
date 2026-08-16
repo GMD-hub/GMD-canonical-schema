@@ -31,6 +31,25 @@ this file is committed to git and shared with the team.
   translation (`\n` → `\r\n`). Skip symlink tests on Windows with
   `@pytest.mark.skipif(sys.platform == "win32")`. Compare path components
   (`path.parts[-N:]`) instead of full paths to handle Windows drive letters.
+- **Variable-name normalization**: GMD snake_case names map to CVS
+  `variable_id` by dropping underscores and prefixing `VAR-` (e.g.
+  `relationship_to_head`→`VAR-relationshiptohead`), with one grandfathered
+  exception (`VAR-marital`, never `VAR-maritalstatus`). Keep the original
+  snake_case as `variable_name`.
+- **Module ownership**: DEM owns core person demographics (male, age,
+  marital, relationshiptohead); IDN owns household identifiers and weights.
+  Each `variable_id` belongs to exactly one module (no cross-module dupes).
+- **Registered-reference discipline**: reference only registered RULE/PARAM
+  ids (RULE-EDU-001/002/003, RULE-SEX-001; PARAM-DEM-MIN-MARRIAGE-AGE,
+  PARAM-EDU-YEARS-BY-LEVEL) or leave `rules: []`. Governance concepts (e.g.
+  Non-Null Weight Invariant) go in `provenance.notes`, never in `rules:`.
+- **Pydantic v2 context validation**: validate drafts with
+  `VariableDefinition.model_validate(data, context={...})`, NOT
+  `VariableDefinition(**data, context=...)` — under `extra="forbid"` the
+  constructor rejects `context` as an extra kwarg.
+- **Corpus gate is committed**: `tests/extraction/test_drafts.py` globs the
+  real drafts and enforces frontmatter validation, 7 body sections, no
+  duplicate ids, acyclic derivation, and welfare-leakage scan under `pytest`.
 
 ## Work in Progress
 <!-- Modules, features, or migrations currently underway -->

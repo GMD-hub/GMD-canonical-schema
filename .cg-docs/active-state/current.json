@@ -1,37 +1,34 @@
 {
   "schemaVersion": "compound-gpid-active-state-v1",
-  "updatedAt": "2026-08-14T16:30:00Z",
+  "updatedAt": "2026-08-14T21:10:00Z",
   "workflow": "/cg-work",
-  "status": "active",
-  "branch": "main",
-  "plan": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
-  "executionReport": ".cg-docs/work-reports/2026-08-07-calibrate-human-review.md",
-  "currentPhase": 5,
+  "status": "in-progress",
+  "branch": "complete-the-extraction",
+  "plan": ".cg-docs/plans/2026-08-13-complete-non-welfare-extraction.md",
+  "executionReport": ".cg-docs/work-reports/2026-08-13-complete-non-welfare-extraction.md",
+  "currentPhase": null,
   "evidenceStatus": [
-    {"id": "V1", "status": "passed", "artifact": "review-app/tests/testthat/ (371 tests; golem baseline green)"},
-    {"id": "V2", "status": "passed", "artifact": "review-app/tests/testthat/test-app-smoke.R"},
-    {"id": "V3", "status": "passed", "artifact": "review-app/tests/testthat/test-frontmatter.R"},
-    {"id": "V4", "status": "passed", "artifact": "review-app/tests/testthat/test-authorization.R"},
-    {"id": "V5", "status": "passed", "artifact": "review-app/renv.lock"},
-    {"id": "V6", "status": "passed", "artifact": ".cg-docs/calibration/measurement-framework.md"},
-    {"id": "V7", "status": "passed", "artifact": ".cg-docs/calibration/review-rubric.md"},
-    {"id": "V8", "status": "passed", "artifact": ".cg-docs/calibration/live-operator-protocol.md"},
-    {"id": "V9", "status": "passed", "artifact": "extraction/20_drafts/* + known-answer-key.md"},
-    {"id": "V10", "status": "passed", "artifact": "Solo calibration run completed 2026-08-14"},
-    {"id": "V11", "status": "passed", "artifact": ".cg-docs/calibration/calibration-report.md"},
-    {"id": "V12", "status": "passed", "artifact": "No simplifications needed (app worked cleanly)"},
-    {"id": "V13", "status": "passed", "artifact": ".cg-docs/calibration/review-rubric.md (finalized)"}
+    {"id": "V0", "status": "passed", "artifact": "extraction/20_drafts/runs/source-acquisition via sibling repo d46dc03"},
+    {"id": "V1", "status": "passed", "artifact": "extraction/20_drafts/runs/source-lock-2026-08-13.md (sha256 proposed; supervised manifest lock pending human)"},
+    {"id": "V2", "status": "passed", "artifact": "extraction/20_drafts/runs/inventory-2026-08-13.md"},
+    {"id": "V3", "status": "passed", "artifact": "267 variable drafts across 6 modules (>= inventory)"},
+    {"id": "V4", "status": "passed", "artifact": "no unregistered RULE/PARAM refs in structured fields; VAR-educat7 fixed; VAR-marital not renamed"},
+    {"id": "V5", "status": "passed", "artifact": "267/267 VariableDefinition frontmatter validation OK"},
+    {"id": "V5b", "status": "passed", "artifact": "all drafts have 7 required ## sections"},
+    {"id": "V6", "status": "passed", "artifact": "extraction/20_drafts/runs/completeness-2026-08-13.md; welfare grep clean on variable drafts (human sign-off pending)"}
   ],
-  "unresolvedDecisions": [],
+  "unresolvedDecisions": [
+    {"id": "B1", "summary": "Supervised source-manifest lock values proposed (commit + sha256) - human must apply to extraction/config/source-manifest.v1.yaml", "blocking": false},
+    {"id": "B2", "summary": "Welfare-leakage grep-based scan is a substitute for pipeline detector; requires human sign-off", "blocking": false},
+    {"id": "B3", "summary": "mineducatage classified as variable-to-draft; PARAM-EDU-MIN-EDUCATION-AGE registration is a blocking issue (roadmap classify-mineducatage)", "blocking": false},
+    {"id": "B4", "summary": "RULE-EDU-999 reference dropped from VAR-educat7 (unregistered); blocking until registered or confirmed obsolete", "blocking": false}
+  ],
   "artifactRefs": [
-    {"kind": "plan", "path": ".cg-docs/plans/2026-08-07-calibrate-human-review.md", "status": "complete"},
-    {"kind": "report", "path": ".cg-docs/work-reports/2026-08-07-calibrate-human-review.md", "status": "complete"},
-    {"kind": "checklist", "path": "review-app/docs/operator-guide.md", "status": "ready"},
-    {"kind": "protocol", "path": ".cg-docs/calibration/live-operator-protocol.md", "status": "validated"},
-    {"kind": "known-answer-key", "path": ".cg-docs/calibration/known-answer-key.md", "status": "written"},
-    {"kind": "defect-log", "path": ".cg-docs/calibration/defect-log.yaml", "status": "fixed (DEF-001, DEF-002)"},
-    {"kind": "calibration-report", "path": ".cg-docs/calibration/calibration-report.md", "status": "written"},
-    {"kind": "rubric", "path": ".cg-docs/calibration/review-rubric.md", "status": "finalized"}
+    {"kind": "plan", "path": ".cg-docs/plans/2026-08-13-complete-non-welfare-extraction.md", "status": "completed"},
+    {"kind": "report", "path": ".cg-docs/work-reports/2026-08-13-complete-non-welfare-extraction.md", "status": "complete"},
+    {"kind": "inventory", "path": "extraction/20_drafts/runs/inventory-2026-08-13.md", "status": "ready"},
+    {"kind": "source-lock", "path": "extraction/20_drafts/runs/source-lock-2026-08-13.md", "status": "proposed (supervised)"},
+    {"kind": "completeness", "path": "extraction/20_drafts/runs/completeness-2026-08-13.md", "status": "ready"}
   ],
-  "nextCommand": "/cg-work independent-agent-review"
+  "nextCommand": "/cg-review mode:verify"
 }
