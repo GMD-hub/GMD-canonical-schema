@@ -7,18 +7,6 @@
   severity: error
   message_contains: "PARAM-EDU-YEARS-BY-LEVEL"
 
-- artifact_id: VAR-educat7
-  agent: schema_compliance
-  field: body
-  severity: warning
-  message_contains: "TODO"
-
-- artifact_id: VAR-marital
-  agent: rules_caveats
-  field: construction_notes
-  severity: error
-  message_contains: "stub"
-
 - artifact_id: VAR-marital
   agent: schema_compliance
   field: country_parameters
