@@ -38,7 +38,8 @@ derived_from:
   - VAR-woodexp
   - VAR-peatexp
   - VAR-othsolexp
-derives_to: []
+derives_to:
+  - VAR-utlexp
 # --- Country parameter declarations ---
 country_parameters: []
 

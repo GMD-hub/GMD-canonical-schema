@@ -50,6 +50,8 @@ derived_from: []
 derives_to:
   - VAR-educat4
   - VAR-educy
+  - VAR-educat5
+  - VAR-primarycomp
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.

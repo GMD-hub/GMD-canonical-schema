@@ -36,7 +36,8 @@ missing_codes:
 derived_from:
   - VAR-garbageexp
   - VAR-sewageexp
-derives_to: []
+derives_to:
+  - VAR-utlexp
 # --- Country parameter declarations ---
 country_parameters: []
 

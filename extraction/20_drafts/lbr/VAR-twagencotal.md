@@ -29,6 +29,7 @@ derived_from:
 derives_to:
 - VAR-lincnc
 - VAR-laborincome
+- VAR-twagetotal
 country_parameters: []
 prerequisites: []
 rules: []

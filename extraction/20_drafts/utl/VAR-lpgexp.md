@@ -35,7 +35,8 @@ missing_codes:
 # --- Derivation graph ---
 derived_from:
   []
-derives_to: []
+derives_to:
+  - VAR-gasexp
 # --- Country parameter declarations ---
 country_parameters: []
 

@@ -26,6 +26,7 @@ derived_from: []
 derives_to:
 - VAR-twagencototalyear
 - VAR-lincnc
+- VAR-twageothersyear
 country_parameters: []
 prerequisites: []
 rules: []
