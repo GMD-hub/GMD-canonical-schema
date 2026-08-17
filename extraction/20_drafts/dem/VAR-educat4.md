@@ -46,7 +46,8 @@ missing_codes:
 derived_from:
   - VAR-educat7
   - VAR-educat5
-derives_to: []
+derives_to:
+  - VAR-educy
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.

@@ -36,7 +36,9 @@ missing_codes:
 derived_from:
   - VAR-landphoneexp
   - VAR-cellphoneexp
-derives_to: []
+derives_to:
+  - VAR-commexp
+  - VAR-tvintphexp
 # --- Country parameter declarations ---
 country_parameters: []
 

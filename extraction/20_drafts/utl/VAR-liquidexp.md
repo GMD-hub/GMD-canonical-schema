@@ -38,7 +38,8 @@ derived_from:
   - VAR-dieselexp
   - VAR-kerosenexp
   - VAR-othliqexp
-derives_to: []
+derives_to:
+  - VAR-utlexp
 # --- Country parameter declarations ---
 country_parameters: []
 

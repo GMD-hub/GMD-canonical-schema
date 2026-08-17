@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: source-acquisition-2026-08-13
-checked_at: '2026-08-16T04:07:33.778516+00:00'
+checked_at: '2026-08-17T21:04:27.897734+00:00'
 findings:
 - field: provenance.source_document
   severity: error

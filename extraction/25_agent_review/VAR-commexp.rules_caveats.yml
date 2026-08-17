@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-commexp
-checked_at: '2026-08-16T04:07:33.791092+00:00'
+checked_at: '2026-08-17T21:04:27.911722+00:00'
 findings:
 - field: consistency_checks
   severity: warning

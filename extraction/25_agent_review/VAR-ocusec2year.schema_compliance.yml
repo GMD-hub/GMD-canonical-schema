@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-ocusec2year
-checked_at: '2026-08-16T04:07:33.663326+00:00'
+checked_at: '2026-08-17T21:04:27.772091+00:00'
 findings:
 - field: body
   severity: warning

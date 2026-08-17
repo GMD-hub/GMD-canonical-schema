@@ -28,6 +28,7 @@ derived_from: []
 derives_to:
 - VAR-wagetotal2
 - VAR-thourstotal
+- VAR-thoursannual
 country_parameters: []
 prerequisites:
 - variable_id: VAR-lstatus

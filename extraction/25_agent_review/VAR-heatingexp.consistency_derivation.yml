@@ -1,18 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-heatingexp
-checked_at: '2026-08-16T04:07:34.165495+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-heatingexp derives_from VAR-centralexp, but VAR-centralexp
-    derives_to [] (missing VAR-heatingexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-heatingexp derives_from VAR-hwaterexp, but VAR-hwaterexp
-    derives_to [] (missing VAR-heatingexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305346+00:00'
+findings: []
 summary:
-  errors: 2
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

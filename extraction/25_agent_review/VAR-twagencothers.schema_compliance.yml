@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-twagencothers
-checked_at: '2026-08-16T04:07:33.688900+00:00'
+checked_at: '2026-08-17T21:04:27.800416+00:00'
 findings:
 - field: body
   severity: warning

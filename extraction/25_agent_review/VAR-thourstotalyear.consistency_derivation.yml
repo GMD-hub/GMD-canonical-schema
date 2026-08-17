@@ -1,18 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-thourstotalyear
-checked_at: '2026-08-16T04:07:34.165339+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-thourstotalyear derives_from VAR-whours2year, but VAR-whours2year
-    derives_to [''VAR-wagetotal2year''] (missing VAR-thourstotalyear)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-thourstotalyear derives_from VAR-whoursyear, but VAR-whoursyear
-    derives_to [''VAR-wagetotalyear''] (missing VAR-thourstotalyear)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305194+00:00'
+findings: []
 summary:
-  errors: 2
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-fan
-checked_at: '2026-08-16T04:07:33.351775+00:00'
+checked_at: '2026-08-17T21:04:27.432629+00:00'
 findings: []
 summary:
   errors: 0

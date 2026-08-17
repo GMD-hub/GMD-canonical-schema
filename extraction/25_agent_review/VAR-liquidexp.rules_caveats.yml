@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-liquidexp
-checked_at: '2026-08-16T04:07:33.852087+00:00'
+checked_at: '2026-08-17T21:04:27.981429+00:00'
 findings: []
 summary:
   errors: 0

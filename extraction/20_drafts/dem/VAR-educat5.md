@@ -44,7 +44,10 @@ missing_codes:
 # --- Derivation graph ---
 derived_from:
   - VAR-educat7
-derives_to: []
+derives_to:
+  - VAR-educat4
+  - VAR-educy
+  - VAR-primarycomp
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.

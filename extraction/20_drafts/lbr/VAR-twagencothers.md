@@ -26,6 +26,7 @@ derived_from: []
 derives_to:
 - VAR-twagencotal
 - VAR-lincnc
+- VAR-twageothers
 country_parameters: []
 prerequisites: []
 rules: []

@@ -27,6 +27,8 @@ missing_codes:
 derived_from: []
 derives_to:
 - VAR-wagetotal2year
+- VAR-thoursannual
+- VAR-thourstotalyear
 country_parameters: []
 prerequisites:
 - variable_id: VAR-lstatusyear

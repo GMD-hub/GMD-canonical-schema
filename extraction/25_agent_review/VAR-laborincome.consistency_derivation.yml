@@ -1,20 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-laborincome
-checked_at: '2026-08-16T04:07:34.165176+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-laborincome derives_from VAR-wagetotal2year, but VAR-wagetotal2year
-    derives_to [''VAR-twagetotalyear'', ''VAR-twageothersyear'', ''VAR-lincnc'', ''VAR-twagencototalyear'']
-    (missing VAR-laborincome)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-laborincome derives_from VAR-wagetotal2, but VAR-wagetotal2
-    derives_to [''VAR-twagencotal'', ''VAR-twagetotal'', ''VAR-twageothers'', ''VAR-lincnc'']
-    (missing VAR-laborincome)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305114+00:00'
+findings: []
 summary:
-  errors: 2
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

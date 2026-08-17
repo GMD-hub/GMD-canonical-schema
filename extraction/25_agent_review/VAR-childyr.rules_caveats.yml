@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-childyr
-checked_at: '2026-08-16T04:07:33.217982+00:00'
+checked_at: '2026-08-17T21:04:27.287986+00:00'
 findings: []
 summary:
   errors: 0

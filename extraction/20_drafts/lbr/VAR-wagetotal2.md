@@ -32,6 +32,7 @@ derives_to:
 - VAR-twagencotal
 - VAR-twagetotal
 - VAR-lincnc
+- VAR-laborincome
 country_parameters: []
 prerequisites:
 - variable_id: VAR-lstatus

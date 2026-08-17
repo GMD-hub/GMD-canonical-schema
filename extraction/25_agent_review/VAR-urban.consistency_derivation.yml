@@ -1,6 +1,6 @@
 agent: consistency_derivation
 artifact_id: VAR-urban
-checked_at: '2026-08-16T04:07:34.165065+00:00'
+checked_at: '2026-08-17T21:04:28.305005+00:00'
 findings:
 - field: derived_from
   severity: warning

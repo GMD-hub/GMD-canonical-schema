@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: VAR-laborincome
-checked_at: '2026-08-16T04:07:33.607058+00:00'
+checked_at: '2026-08-17T21:04:27.708389+00:00'
 findings:
 - field: construction_notes
   severity: warning

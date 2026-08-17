@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-minlaborage
-checked_at: '2026-08-16T04:07:33.620364+00:00'
+checked_at: '2026-08-17T21:04:27.722265+00:00'
 findings:
 - field: escalation_triggers
   severity: warning
