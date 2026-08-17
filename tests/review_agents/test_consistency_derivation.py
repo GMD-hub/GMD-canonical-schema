@@ -17,14 +17,16 @@ class TestConsistencyDerivation:
         assert "VAR-educy" in by_id
         assert "VAR-male" in by_id
 
-    def test_educy_asymmetry_error(self):
+    def test_educy_no_asymmetry_error(self):
         draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
         results = check_drafts(draft_paths)
         by_id = {r.artifact_id: r for r in results}
         educy = by_id["VAR-educy"]
-        asymmetry = [f for f in educy.findings if "asymmetry" in f.message.lower() or "Asymmetry" in f.message]
-        assert len(asymmetry) >= 1
-        assert asymmetry[0].severity == "error"
+        asymmetry = [f for f in educy.findings if "Asymmetry" in f.message]
+        assert asymmetry == [], (
+            "VAR-educy should have no asymmetry errors after the derivation "
+            f"graph repair; found: {[f.message for f in asymmetry]}"
+        )
 
     def test_male_no_derivation_issues(self):
         draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
