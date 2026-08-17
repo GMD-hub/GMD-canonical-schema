@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-empstatyear
-checked_at: '2026-08-17T21:52:59.130155+00:00'
+checked_at: '2026-08-17T22:17:43.861377+00:00'
 findings:
 - field: body
   severity: warning

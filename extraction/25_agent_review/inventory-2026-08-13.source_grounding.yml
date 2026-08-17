@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: inventory-2026-08-13
-checked_at: '2026-08-17T21:52:59.360257+00:00'
+checked_at: '2026-08-17T22:17:44.095677+00:00'
 findings:
 - field: provenance.source_document
   severity: error

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-contract
-checked_at: '2026-08-17T21:52:59.115845+00:00'
+checked_at: '2026-08-17T22:17:43.847098+00:00'
 findings: []
 summary:
   errors: 0

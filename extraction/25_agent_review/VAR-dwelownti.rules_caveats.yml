@@ -1,11 +1,7 @@
 agent: rules_caveats
 artifact_id: VAR-dwelownti
-checked_at: '2026-08-17T21:52:58.930522+00:00'
+checked_at: '2026-08-17T22:17:43.663186+00:00'
 findings:
-- field: construction_notes
-  severity: error
-  message: 'Section ## Construction notes is a stub (44 chars < 50 minimum)'
-  line: null
 - field: consistency_checks
   severity: warning
   message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- The value must
@@ -17,6 +13,6 @@ findings:
     be a valid category code (or explicitly mis'''
   line: null
 summary:
-  errors: 1
+  errors: 0
   warnings: 2
   passed: 0

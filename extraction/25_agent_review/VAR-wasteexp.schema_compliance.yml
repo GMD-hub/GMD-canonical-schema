@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-wasteexp
-checked_at: '2026-08-17T21:52:59.498524+00:00'
+checked_at: '2026-08-17T22:17:44.235544+00:00'
 findings: []
 summary:
   errors: 0

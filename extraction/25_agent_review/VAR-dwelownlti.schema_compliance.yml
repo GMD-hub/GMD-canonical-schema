@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-dwelownlti
-checked_at: '2026-08-17T21:52:58.925841+00:00'
+checked_at: '2026-08-17T22:17:43.658448+00:00'
 findings:
 - field: body
   severity: warning

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-industrycat42year
-checked_at: '2026-08-17T21:52:59.178105+00:00'
+checked_at: '2026-08-17T22:17:43.910371+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

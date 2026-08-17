@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: inventory-2026-08-13
-checked_at: '2026-08-17T21:52:59.360584+00:00'
+checked_at: '2026-08-17T22:17:44.095996+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,16 +1,12 @@
 agent: rules_caveats
 artifact_id: VAR-union
-checked_at: '2026-08-17T21:52:59.301494+00:00'
+checked_at: '2026-08-17T22:17:44.035955+00:00'
 findings:
-- field: escalation_triggers
-  severity: error
-  message: 'Section ## Escalation triggers is a stub (49 chars < 50 minimum)'
-  line: null
 - field: escalation_triggers
   severity: warning
   message: Escalation triggers lack concrete IF/WHEN conditions
   line: null
 summary:
-  errors: 1
+  errors: 0
   warnings: 1
   passed: 0

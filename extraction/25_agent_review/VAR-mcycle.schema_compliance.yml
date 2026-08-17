@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-mcycle
-checked_at: '2026-08-17T21:52:58.974983+00:00'
+checked_at: '2026-08-17T22:17:43.707422+00:00'
 findings: []
 summary:
   errors: 0

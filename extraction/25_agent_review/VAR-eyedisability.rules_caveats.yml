@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-eyedisability
-checked_at: '2026-08-17T21:52:58.832715+00:00'
+checked_at: '2026-08-17T22:17:43.565306+00:00'
 findings:
 - field: consistency_checks
   severity: warning

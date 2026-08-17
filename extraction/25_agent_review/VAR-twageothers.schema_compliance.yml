@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-twageothers
-checked_at: '2026-08-17T21:52:59.280366+00:00'
+checked_at: '2026-08-17T22:17:44.014734+00:00'
 findings:
 - field: body
   severity: warning
