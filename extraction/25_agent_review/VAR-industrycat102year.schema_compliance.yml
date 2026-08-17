@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-industrycat102year
-checked_at: '2026-08-17T21:04:27.676833+00:00'
+checked_at: '2026-08-17T21:52:59.164086+00:00'
 findings:
 - field: body
   severity: warning

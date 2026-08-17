@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-year
-checked_at: '2026-08-17T21:04:27.621778+00:00'
+checked_at: '2026-08-17T21:52:59.113369+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-subnatidsurvey
-checked_at: '2026-08-17T21:04:27.592807+00:00'
+checked_at: '2026-08-17T21:52:59.086384+00:00'
 findings: []
 summary:
   errors: 0

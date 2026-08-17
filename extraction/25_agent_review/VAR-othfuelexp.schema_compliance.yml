@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-othfuelexp
-checked_at: '2026-08-17T21:04:27.990496+00:00'
+checked_at: '2026-08-17T21:52:59.442532+00:00'
 findings: []
 summary:
   errors: 0

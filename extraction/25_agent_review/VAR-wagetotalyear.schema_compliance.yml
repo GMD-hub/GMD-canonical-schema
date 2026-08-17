@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-wagetotalyear
-checked_at: '2026-08-17T21:04:27.871238+00:00'
+checked_at: '2026-08-17T21:52:59.337295+00:00'
 findings:
 - field: body
   severity: warning

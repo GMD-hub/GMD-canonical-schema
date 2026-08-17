@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: source-lock-2026-08-13
-checked_at: '2026-08-17T21:04:27.898170+00:00'
+checked_at: '2026-08-17T21:52:59.361170+00:00'
 findings:
 - field: provenance.source_document
   severity: error

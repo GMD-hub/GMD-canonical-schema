@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-thoursannual
-checked_at: '2026-08-17T21:04:27.784365+00:00'
+checked_at: '2026-08-17T21:52:59.258311+00:00'
 findings:
 - field: body
   severity: warning

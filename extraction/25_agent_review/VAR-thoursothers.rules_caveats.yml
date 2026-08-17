@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-thoursothers
-checked_at: '2026-08-17T21:04:27.788715+00:00'
+checked_at: '2026-08-17T21:52:59.262329+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

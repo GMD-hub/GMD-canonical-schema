@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-roofcs
-checked_at: '2026-08-17T21:04:27.509392+00:00'
+checked_at: '2026-08-17T21:52:59.010095+00:00'
 findings:
 - field: consistency_checks
   severity: warning

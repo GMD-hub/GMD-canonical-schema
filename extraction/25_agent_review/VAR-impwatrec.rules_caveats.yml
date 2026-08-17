@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-impwatrec
-checked_at: '2026-08-17T21:04:27.966790+00:00'
+checked_at: '2026-08-17T21:52:59.421979+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-heardisability
-checked_at: '2026-08-17T21:04:27.316801+00:00'
+checked_at: '2026-08-17T21:52:58.833707+00:00'
 findings: []
 summary:
   errors: 0

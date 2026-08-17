@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-ocusec
-checked_at: '2026-08-17T21:04:27.763409+00:00'
+checked_at: '2026-08-17T21:52:59.242161+00:00'
 findings: []
 summary:
   errors: 0

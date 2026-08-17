@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-lpgexp
-checked_at: '2026-08-17T21:04:27.984299+00:00'
+checked_at: '2026-08-17T21:52:59.436850+00:00'
 findings:
 - field: common_mistakes
   severity: error

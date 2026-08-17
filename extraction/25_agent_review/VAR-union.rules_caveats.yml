@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-union
-checked_at: '2026-08-17T21:04:27.832049+00:00'
+checked_at: '2026-08-17T21:52:59.301494+00:00'
 findings:
 - field: escalation_triggers
   severity: error

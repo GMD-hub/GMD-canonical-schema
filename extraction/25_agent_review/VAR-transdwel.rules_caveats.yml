@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-transdwel
-checked_at: '2026-08-17T21:04:27.532282+00:00'
+checked_at: '2026-08-17T21:52:59.031219+00:00'
 findings:
 - field: construction_notes
   severity: error

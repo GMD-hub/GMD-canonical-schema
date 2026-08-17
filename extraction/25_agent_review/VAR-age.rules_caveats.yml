@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-age
-checked_at: '2026-08-17T21:04:27.278695+00:00'
+checked_at: '2026-08-17T21:52:58.799290+00:00'
 findings: []
 summary:
   errors: 0

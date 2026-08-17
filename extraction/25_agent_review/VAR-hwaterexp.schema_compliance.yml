@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-hwaterexp
-checked_at: '2026-08-17T21:04:27.958956+00:00'
+checked_at: '2026-08-17T21:52:59.415191+00:00'
 findings: []
 summary:
   errors: 0
