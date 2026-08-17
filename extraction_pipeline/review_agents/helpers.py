@@ -42,8 +42,15 @@ def write_findings(findings: AgentFindings, output_dir: Path) -> Path:
 
 
 def list_drafts(drafts_dir: Path) -> list[Path]:
-    """Yield all .md files recursively from the drafts directory."""
-    return sorted(drafts_dir.rglob("*.md"))
+    """Yield all .md files recursively from the drafts directory.
+
+    Skips files inside the ``project-documentation/`` subdirectory
+    (process docs, not variable definitions).
+    """
+    return sorted(
+        p for p in drafts_dir.rglob("*.md")
+        if "project-documentation" not in p.parts
+    )
 
 
 def make_findings(
