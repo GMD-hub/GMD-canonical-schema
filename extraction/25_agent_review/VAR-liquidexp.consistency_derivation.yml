@@ -1,28 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-liquidexp
-checked_at: '2026-08-16T04:07:34.165520+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-liquidexp derives_from VAR-gasolineexp, but VAR-gasolineexp
-    derives_to [] (missing VAR-liquidexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-liquidexp derives_from VAR-dieselexp, but VAR-dieselexp
-    derives_to [] (missing VAR-liquidexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-liquidexp derives_from VAR-othliqexp, but VAR-othliqexp
-    derives_to [] (missing VAR-liquidexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-liquidexp derives_from VAR-kerosenexp, but VAR-kerosenexp
-    derives_to [] (missing VAR-liquidexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305369+00:00'
+findings: []
 summary:
-  errors: 4
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

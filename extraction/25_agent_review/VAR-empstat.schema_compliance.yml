@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-empstat
-checked_at: '2026-08-16T04:07:33.533243+00:00'
+checked_at: '2026-08-17T21:04:27.630179+00:00'
 findings: []
 summary:
   errors: 0

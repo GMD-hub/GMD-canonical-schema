@@ -1,17 +1,7 @@
 agent: consistency_derivation
 artifact_id: VAR-primarycomp
-checked_at: '2026-08-16T04:07:34.164784+00:00'
+checked_at: '2026-08-17T21:04:28.304752+00:00'
 findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-primarycomp derives_from VAR-educat5, but VAR-educat5 derives_to
-    [] (missing VAR-primarycomp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-primarycomp derives_from VAR-educat7, but VAR-educat7 derives_to
-    [''VAR-educat4'', ''VAR-educy''] (missing VAR-primarycomp)'
-  line: null
 - field: value_codes
   severity: warning
   message: Value codes of VAR-primarycomp include [0] not present in source VAR-educat7
@@ -21,6 +11,6 @@ findings:
   message: Value codes of VAR-primarycomp include [0] not present in source VAR-educat5
   line: null
 summary:
-  errors: 2
+  errors: 0
   warnings: 2
   passed: 0

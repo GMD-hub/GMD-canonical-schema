@@ -1,48 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-utlexp
-checked_at: '2026-08-16T04:07:34.165579+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-wasteexp, but VAR-wasteexp derives_to
-    [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-elecxp, but VAR-elecxp derives_to
-    [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-centralexp, but VAR-centralexp
-    derives_to [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-gasexp, but VAR-gasexp derives_to
-    [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-waterexp, but VAR-waterexp derives_to
-    [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-liquidexp, but VAR-liquidexp derives_to
-    [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-othfuelexp, but VAR-othfuelexp
-    derives_to [] (missing VAR-utlexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-utlexp derives_from VAR-solidexp, but VAR-solidexp derives_to
-    [] (missing VAR-utlexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305493+00:00'
+findings: []
 summary:
-  errors: 8
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

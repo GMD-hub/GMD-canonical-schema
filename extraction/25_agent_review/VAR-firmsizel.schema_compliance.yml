@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-firmsizel
-checked_at: '2026-08-16T04:07:33.545106+00:00'
+checked_at: '2026-08-17T21:04:27.643336+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,23 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-commexp
-checked_at: '2026-08-16T04:07:34.165453+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-commexp derives_from VAR-telefaxexp, but VAR-telefaxexp
-    derives_to [] (missing VAR-commexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-commexp derives_from VAR-internetexp, but VAR-internetexp
-    derives_to [] (missing VAR-commexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-commexp derives_from VAR-telexp, but VAR-telexp derives_to
-    [] (missing VAR-commexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305306+00:00'
+findings: []
 summary:
-  errors: 3
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

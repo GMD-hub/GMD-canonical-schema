@@ -1,18 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-gasexp
-checked_at: '2026-08-16T04:07:34.165489+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-gasexp derives_from VAR-lpgexp, but VAR-lpgexp derives_to
-    [] (missing VAR-gasexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-gasexp derives_from VAR-ngasexp, but VAR-ngasexp derives_to
-    [] (missing VAR-gasexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305340+00:00'
+findings: []
 summary:
-  errors: 2
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

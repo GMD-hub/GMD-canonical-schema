@@ -1,18 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-telexp
-checked_at: '2026-08-16T04:07:34.165564+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-telexp derives_from VAR-landphoneexp, but VAR-landphoneexp
-    derives_to [] (missing VAR-telexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-telexp derives_from VAR-cellphoneexp, but VAR-cellphoneexp
-    derives_to [] (missing VAR-telexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305480+00:00'
+findings: []
 summary:
-  errors: 2
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

@@ -1,18 +1,8 @@
 agent: consistency_derivation
 artifact_id: VAR-othhousingexp
-checked_at: '2026-08-16T04:07:34.165532+00:00'
-findings:
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-othhousingexp derives_from VAR-dwelsvcexp, but VAR-dwelsvcexp
-    derives_to [] (missing VAR-othhousingexp)'
-  line: null
-- field: derived_from
-  severity: error
-  message: 'Asymmetry: VAR-othhousingexp derives_from VAR-dwelmatexp, but VAR-dwelmatexp
-    derives_to [] (missing VAR-othhousingexp)'
-  line: null
+checked_at: '2026-08-17T21:04:28.305382+00:00'
+findings: []
 summary:
-  errors: 2
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

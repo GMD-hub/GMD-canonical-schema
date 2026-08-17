@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: VAR-educy
-checked_at: '2026-08-16T04:07:33.236428+00:00'
+checked_at: '2026-08-17T21:04:27.308511+00:00'
 findings:
 - field: rules
   severity: warning

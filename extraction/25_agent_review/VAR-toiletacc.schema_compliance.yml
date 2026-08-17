@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-toiletacc
-checked_at: '2026-08-16T04:07:33.897880+00:00'
+checked_at: '2026-08-17T21:04:28.032070+00:00'
 findings: []
 summary:
   errors: 0

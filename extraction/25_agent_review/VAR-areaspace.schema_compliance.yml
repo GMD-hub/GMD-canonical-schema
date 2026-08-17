@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-areaspace
-checked_at: '2026-08-16T04:07:33.311455+00:00'
+checked_at: '2026-08-17T21:04:27.388943+00:00'
 findings:
 - field: body
   severity: warning

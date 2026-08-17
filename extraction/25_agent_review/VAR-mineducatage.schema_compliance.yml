@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-mineducatage
-checked_at: '2026-08-16T04:07:33.257992+00:00'
+checked_at: '2026-08-17T21:04:27.331686+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-unemplduru
-checked_at: '2026-08-16T04:07:33.712854+00:00'
+checked_at: '2026-08-17T21:04:27.826586+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

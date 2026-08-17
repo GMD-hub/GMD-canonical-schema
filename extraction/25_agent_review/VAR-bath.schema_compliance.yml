@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-bath
-checked_at: '2026-08-16T04:07:33.313880+00:00'
+checked_at: '2026-08-17T21:04:27.391631+00:00'
 findings:
 - field: body
   severity: warning

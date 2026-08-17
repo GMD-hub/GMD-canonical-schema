@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-watertypequest
-checked_at: '2026-08-16T04:07:33.927177+00:00'
+checked_at: '2026-08-17T21:04:28.062254+00:00'
 findings: []
 summary:
   errors: 0

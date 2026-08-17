@@ -1,8 +1,8 @@
 # Agent Review Summary
 
-Generated: 2026-08-16T04:07:34.899861+00:00
+Generated: 2026-08-17T21:04:29.149539+00:00
 
-**Total errors:** 128 | **Total warnings:** 501
+**Total errors:** 77 | **Total warnings:** 501
 
 ## Results Table
 
@@ -827,10 +827,10 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-childyr | consistency_derivation | 0 | 0 | yes |
 | VAR-communicationdisability | consistency_derivation | 0 | 0 | yes |
 | VAR-concentrationdisorder | consistency_derivation | 0 | 0 | yes |
-| VAR-educat4 | consistency_derivation | 1 | 0 | no |
-| VAR-educat5 | consistency_derivation | 1 | 0 | no |
+| VAR-educat4 | consistency_derivation | 0 | 0 | yes |
+| VAR-educat5 | consistency_derivation | 0 | 0 | yes |
 | VAR-educat7 | consistency_derivation | 0 | 0 | yes |
-| VAR-educy | consistency_derivation | 2 | 0 | no |
+| VAR-educy | consistency_derivation | 0 | 0 | yes |
 | VAR-everattend | consistency_derivation | 0 | 0 | yes |
 | VAR-eyedisability | consistency_derivation | 0 | 0 | yes |
 | VAR-heardisability | consistency_derivation | 0 | 0 | yes |
@@ -839,7 +839,7 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-male | consistency_derivation | 0 | 0 | yes |
 | VAR-marital | consistency_derivation | 0 | 0 | yes |
 | VAR-mineducatage | consistency_derivation | 0 | 0 | yes |
-| VAR-primarycomp | consistency_derivation | 2 | 2 | no |
+| VAR-primarycomp | consistency_derivation | 0 | 2 | no |
 | VAR-relationcs | consistency_derivation | 0 | 0 | yes |
 | VAR-relationharm | consistency_derivation | 0 | 0 | yes |
 | VAR-school | consistency_derivation | 0 | 0 | yes |
@@ -965,7 +965,7 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-industryorig2 | consistency_derivation | 0 | 0 | yes |
 | VAR-industryorig2year | consistency_derivation | 0 | 0 | yes |
 | VAR-industryorigyear | consistency_derivation | 0 | 0 | yes |
-| VAR-laborincome | consistency_derivation | 2 | 0 | no |
+| VAR-laborincome | consistency_derivation | 0 | 0 | yes |
 | VAR-lincnc | consistency_derivation | 0 | 0 | yes |
 | VAR-lstatus | consistency_derivation | 0 | 0 | yes |
 | VAR-lstatusyear | consistency_derivation | 0 | 0 | yes |
@@ -988,19 +988,19 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-ocusecyear | consistency_derivation | 0 | 0 | yes |
 | VAR-socialsec | consistency_derivation | 0 | 0 | yes |
 | VAR-socialsecyear | consistency_derivation | 0 | 0 | yes |
-| VAR-thoursannual | consistency_derivation | 3 | 0 | no |
+| VAR-thoursannual | consistency_derivation | 0 | 0 | yes |
 | VAR-thoursothers | consistency_derivation | 0 | 0 | yes |
 | VAR-thoursothersyear | consistency_derivation | 0 | 0 | yes |
 | VAR-thourstotal | consistency_derivation | 0 | 0 | yes |
-| VAR-thourstotalyear | consistency_derivation | 2 | 0 | no |
+| VAR-thourstotalyear | consistency_derivation | 0 | 0 | yes |
 | VAR-twagencotal | consistency_derivation | 0 | 0 | yes |
 | VAR-twagencothers | consistency_derivation | 0 | 0 | yes |
 | VAR-twagencothersyear | consistency_derivation | 0 | 0 | yes |
 | VAR-twagencototalyear | consistency_derivation | 0 | 0 | yes |
-| VAR-twageothers | consistency_derivation | 1 | 0 | no |
-| VAR-twageothersyear | consistency_derivation | 1 | 0 | no |
-| VAR-twagetotal | consistency_derivation | 1 | 0 | no |
-| VAR-twagetotalyear | consistency_derivation | 1 | 0 | no |
+| VAR-twageothers | consistency_derivation | 0 | 0 | yes |
+| VAR-twageothersyear | consistency_derivation | 0 | 0 | yes |
+| VAR-twagetotal | consistency_derivation | 0 | 0 | yes |
+| VAR-twagetotalyear | consistency_derivation | 0 | 0 | yes |
 | VAR-unempldurl | consistency_derivation | 0 | 0 | yes |
 | VAR-unempldurlyear | consistency_derivation | 0 | 0 | yes |
 | VAR-unemplduru | consistency_derivation | 0 | 0 | yes |
@@ -1035,7 +1035,7 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-centralacc | consistency_derivation | 0 | 0 | yes |
 | VAR-centralexp | consistency_derivation | 0 | 0 | yes |
 | VAR-coalexp | consistency_derivation | 0 | 0 | yes |
-| VAR-commexp | consistency_derivation | 3 | 0 | no |
+| VAR-commexp | consistency_derivation | 0 | 0 | yes |
 | VAR-cooksource | consistency_derivation | 0 | 0 | yes |
 | VAR-dieselexp | consistency_derivation | 0 | 0 | yes |
 | VAR-dwelmatexp | consistency_derivation | 0 | 0 | yes |
@@ -1048,9 +1048,9 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-elecxp | consistency_derivation | 0 | 0 | yes |
 | VAR-garbageexp | consistency_derivation | 0 | 0 | yes |
 | VAR-gas | consistency_derivation | 0 | 0 | yes |
-| VAR-gasexp | consistency_derivation | 2 | 0 | no |
+| VAR-gasexp | consistency_derivation | 0 | 0 | yes |
 | VAR-gasolineexp | consistency_derivation | 0 | 0 | yes |
-| VAR-heatingexp | consistency_derivation | 2 | 0 | no |
+| VAR-heatingexp | consistency_derivation | 0 | 0 | yes |
 | VAR-heatsource | consistency_derivation | 0 | 0 | yes |
 | VAR-hwaterexp | consistency_derivation | 0 | 0 | yes |
 | VAR-impsanrec | consistency_derivation | 0 | 0 | yes |
@@ -1059,12 +1059,12 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-kerosenexp | consistency_derivation | 0 | 0 | yes |
 | VAR-landphoneexp | consistency_derivation | 0 | 0 | yes |
 | VAR-lightsource | consistency_derivation | 0 | 0 | yes |
-| VAR-liquidexp | consistency_derivation | 4 | 0 | no |
+| VAR-liquidexp | consistency_derivation | 0 | 0 | yes |
 | VAR-lpgexp | consistency_derivation | 0 | 0 | yes |
 | VAR-ngasexp | consistency_derivation | 0 | 0 | yes |
 | VAR-opendef | consistency_derivation | 0 | 0 | yes |
 | VAR-othfuelexp | consistency_derivation | 0 | 0 | yes |
-| VAR-othhousingexp | consistency_derivation | 2 | 0 | no |
+| VAR-othhousingexp | consistency_derivation | 0 | 0 | yes |
 | VAR-othliqexp | consistency_derivation | 0 | 0 | yes |
 | VAR-othsolexp | consistency_derivation | 0 | 0 | yes |
 | VAR-peatexp | consistency_derivation | 0 | 0 | yes |
@@ -1075,18 +1075,18 @@ Generated: 2026-08-16T04:07:34.899861+00:00
 | VAR-sanitationsource | consistency_derivation | 0 | 0 | yes |
 | VAR-sewageexp | consistency_derivation | 0 | 0 | yes |
 | VAR-sewer | consistency_derivation | 0 | 0 | yes |
-| VAR-solidexp | consistency_derivation | 4 | 0 | no |
+| VAR-solidexp | consistency_derivation | 0 | 0 | yes |
 | VAR-telefaxexp | consistency_derivation | 0 | 0 | yes |
-| VAR-telexp | consistency_derivation | 2 | 0 | no |
+| VAR-telexp | consistency_derivation | 0 | 0 | yes |
 | VAR-toiletacc | consistency_derivation | 0 | 0 | yes |
 | VAR-transfuelexp | consistency_derivation | 0 | 0 | yes |
 | VAR-tvexp | consistency_derivation | 0 | 0 | yes |
-| VAR-tvintphexp | consistency_derivation | 3 | 0 | no |
-| VAR-utlexp | consistency_derivation | 8 | 0 | no |
+| VAR-tvintphexp | consistency_derivation | 0 | 0 | yes |
+| VAR-utlexp | consistency_derivation | 0 | 0 | yes |
 | VAR-w30m | consistency_derivation | 0 | 0 | yes |
 | VAR-waste | consistency_derivation | 0 | 0 | yes |
-| VAR-wasteexp | consistency_derivation | 2 | 0 | no |
-| VAR-waterexp | consistency_derivation | 2 | 0 | no |
+| VAR-wasteexp | consistency_derivation | 0 | 0 | yes |
+| VAR-waterexp | consistency_derivation | 0 | 0 | yes |
 | VAR-wateroriginal | consistency_derivation | 0 | 0 | yes |
 | VAR-watersource | consistency_derivation | 0 | 0 | yes |
 | VAR-watertypequest | consistency_derivation | 0 | 0 | yes |
@@ -2979,125 +2979,11 @@ source-commit
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `solidexp` includes `woodexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
-### VAR-educat4 (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-educat4 derives_from VAR-educat5, but VAR-educat5 derives_to [] (missing VAR-educat4)
-
-### VAR-educat5 (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-educat5 derives_from VAR-educat7, but VAR-educat7 derives_to ['VAR-educat4', 'VAR-educy'] (missing VAR-educat5)
-
-### VAR-educy (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-educy derives_from VAR-educat4, but VAR-educat4 derives_to [] (missing VAR-educy)
-- **error** [derived_from]: Asymmetry: VAR-educy derives_from VAR-educat5, but VAR-educat5 derives_to [] (missing VAR-educy)
-
 ### VAR-primarycomp (consistency_derivation)
 
-- **error** [derived_from]: Asymmetry: VAR-primarycomp derives_from VAR-educat5, but VAR-educat5 derives_to [] (missing VAR-primarycomp)
-- **error** [derived_from]: Asymmetry: VAR-primarycomp derives_from VAR-educat7, but VAR-educat7 derives_to ['VAR-educat4', 'VAR-educy'] (missing VAR-primarycomp)
 - **warning** [value_codes]: Value codes of VAR-primarycomp include [0] not present in source VAR-educat7
 - **warning** [value_codes]: Value codes of VAR-primarycomp include [0] not present in source VAR-educat5
 
 ### VAR-urban (consistency_derivation)
 
 - **warning** [derived_from]: Unresolved derivation reference: VAR-rurality not found in extracted drafts
-
-### VAR-laborincome (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-laborincome derives_from VAR-wagetotal2year, but VAR-wagetotal2year derives_to ['VAR-twagetotalyear', 'VAR-twageothersyear', 'VAR-lincnc', 'VAR-twagencototalyear'] (missing VAR-laborincome)
-- **error** [derived_from]: Asymmetry: VAR-laborincome derives_from VAR-wagetotal2, but VAR-wagetotal2 derives_to ['VAR-twagencotal', 'VAR-twagetotal', 'VAR-twageothers', 'VAR-lincnc'] (missing VAR-laborincome)
-
-### VAR-thoursannual (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-thoursannual derives_from VAR-whours2, but VAR-whours2 derives_to ['VAR-thourstotal', 'VAR-wagetotal2'] (missing VAR-thoursannual)
-- **error** [derived_from]: Asymmetry: VAR-thoursannual derives_from VAR-whours2year, but VAR-whours2year derives_to ['VAR-wagetotal2year'] (missing VAR-thoursannual)
-- **error** [derived_from]: Asymmetry: VAR-thoursannual derives_from VAR-whoursyear, but VAR-whoursyear derives_to ['VAR-wagetotalyear'] (missing VAR-thoursannual)
-
-### VAR-thourstotalyear (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-thourstotalyear derives_from VAR-whours2year, but VAR-whours2year derives_to ['VAR-wagetotal2year'] (missing VAR-thourstotalyear)
-- **error** [derived_from]: Asymmetry: VAR-thourstotalyear derives_from VAR-whoursyear, but VAR-whoursyear derives_to ['VAR-wagetotalyear'] (missing VAR-thourstotalyear)
-
-### VAR-twageothers (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-twageothers derives_from VAR-twagencothers, but VAR-twagencothers derives_to ['VAR-twagencotal', 'VAR-lincnc'] (missing VAR-twageothers)
-
-### VAR-twageothersyear (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-twageothersyear derives_from VAR-twagencothersyear, but VAR-twagencothersyear derives_to ['VAR-lincnc', 'VAR-twagencototalyear'] (missing VAR-twageothersyear)
-
-### VAR-twagetotal (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-twagetotal derives_from VAR-twagencotal, but VAR-twagencotal derives_to ['VAR-laborincome', 'VAR-lincnc'] (missing VAR-twagetotal)
-
-### VAR-twagetotalyear (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-twagetotalyear derives_from VAR-twagencototalyear, but VAR-twagencototalyear derives_to ['VAR-laborincome', 'VAR-lincnc'] (missing VAR-twagetotalyear)
-
-### VAR-commexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-commexp derives_from VAR-telefaxexp, but VAR-telefaxexp derives_to [] (missing VAR-commexp)
-- **error** [derived_from]: Asymmetry: VAR-commexp derives_from VAR-internetexp, but VAR-internetexp derives_to [] (missing VAR-commexp)
-- **error** [derived_from]: Asymmetry: VAR-commexp derives_from VAR-telexp, but VAR-telexp derives_to [] (missing VAR-commexp)
-
-### VAR-gasexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-gasexp derives_from VAR-lpgexp, but VAR-lpgexp derives_to [] (missing VAR-gasexp)
-- **error** [derived_from]: Asymmetry: VAR-gasexp derives_from VAR-ngasexp, but VAR-ngasexp derives_to [] (missing VAR-gasexp)
-
-### VAR-heatingexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-heatingexp derives_from VAR-centralexp, but VAR-centralexp derives_to [] (missing VAR-heatingexp)
-- **error** [derived_from]: Asymmetry: VAR-heatingexp derives_from VAR-hwaterexp, but VAR-hwaterexp derives_to [] (missing VAR-heatingexp)
-
-### VAR-liquidexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-liquidexp derives_from VAR-gasolineexp, but VAR-gasolineexp derives_to [] (missing VAR-liquidexp)
-- **error** [derived_from]: Asymmetry: VAR-liquidexp derives_from VAR-dieselexp, but VAR-dieselexp derives_to [] (missing VAR-liquidexp)
-- **error** [derived_from]: Asymmetry: VAR-liquidexp derives_from VAR-othliqexp, but VAR-othliqexp derives_to [] (missing VAR-liquidexp)
-- **error** [derived_from]: Asymmetry: VAR-liquidexp derives_from VAR-kerosenexp, but VAR-kerosenexp derives_to [] (missing VAR-liquidexp)
-
-### VAR-othhousingexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-othhousingexp derives_from VAR-dwelsvcexp, but VAR-dwelsvcexp derives_to [] (missing VAR-othhousingexp)
-- **error** [derived_from]: Asymmetry: VAR-othhousingexp derives_from VAR-dwelmatexp, but VAR-dwelmatexp derives_to [] (missing VAR-othhousingexp)
-
-### VAR-solidexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-solidexp derives_from VAR-coalexp, but VAR-coalexp derives_to [] (missing VAR-solidexp)
-- **error** [derived_from]: Asymmetry: VAR-solidexp derives_from VAR-peatexp, but VAR-peatexp derives_to [] (missing VAR-solidexp)
-- **error** [derived_from]: Asymmetry: VAR-solidexp derives_from VAR-woodexp, but VAR-woodexp derives_to [] (missing VAR-solidexp)
-- **error** [derived_from]: Asymmetry: VAR-solidexp derives_from VAR-othsolexp, but VAR-othsolexp derives_to [] (missing VAR-solidexp)
-
-### VAR-telexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-telexp derives_from VAR-landphoneexp, but VAR-landphoneexp derives_to [] (missing VAR-telexp)
-- **error** [derived_from]: Asymmetry: VAR-telexp derives_from VAR-cellphoneexp, but VAR-cellphoneexp derives_to [] (missing VAR-telexp)
-
-### VAR-tvintphexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-tvintphexp derives_from VAR-tvexp, but VAR-tvexp derives_to [] (missing VAR-tvintphexp)
-- **error** [derived_from]: Asymmetry: VAR-tvintphexp derives_from VAR-internetexp, but VAR-internetexp derives_to [] (missing VAR-tvintphexp)
-- **error** [derived_from]: Asymmetry: VAR-tvintphexp derives_from VAR-telexp, but VAR-telexp derives_to [] (missing VAR-tvintphexp)
-
-### VAR-utlexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-wasteexp, but VAR-wasteexp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-elecxp, but VAR-elecxp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-centralexp, but VAR-centralexp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-gasexp, but VAR-gasexp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-waterexp, but VAR-waterexp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-liquidexp, but VAR-liquidexp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-othfuelexp, but VAR-othfuelexp derives_to [] (missing VAR-utlexp)
-- **error** [derived_from]: Asymmetry: VAR-utlexp derives_from VAR-solidexp, but VAR-solidexp derives_to [] (missing VAR-utlexp)
-
-### VAR-wasteexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-wasteexp derives_from VAR-sewageexp, but VAR-sewageexp derives_to [] (missing VAR-wasteexp)
-- **error** [derived_from]: Asymmetry: VAR-wasteexp derives_from VAR-garbageexp, but VAR-garbageexp derives_to [] (missing VAR-wasteexp)
-
-### VAR-waterexp (consistency_derivation)
-
-- **error** [derived_from]: Asymmetry: VAR-waterexp derives_from VAR-pwaterexp, but VAR-pwaterexp derives_to [] (missing VAR-waterexp)
-- **error** [derived_from]: Asymmetry: VAR-waterexp derives_from VAR-hwaterexp, but VAR-hwaterexp derives_to [] (missing VAR-waterexp)
