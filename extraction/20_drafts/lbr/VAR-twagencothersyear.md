@@ -69,6 +69,7 @@ Use gross wages when available. Annualization depends on available data; see wag
 ## Consistency checks
 
 - t_wage_nc_others_year must be non-negative.
+- Cross-check against the sum of primary and secondary wages.
 
 ## Escalation triggers
 

@@ -89,6 +89,7 @@ Record total annual household expenditure on diesel or gasoil.
 ## Common mistakes
 
 - Conflating diesel with gasoline expenditure.
+- Including kerosene or lubricants in diesel expenditure.
 
 ## Change log
 

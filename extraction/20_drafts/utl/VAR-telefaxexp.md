@@ -85,6 +85,7 @@ Include telegraphy, telex, and telefax services, as well as radiotelephony, radi
 ## Escalation triggers
 
 - Including telefax equipment purchases.
+- Telefax services are bundled with telephone or internet in the survey data.
 
 ## Common mistakes
 

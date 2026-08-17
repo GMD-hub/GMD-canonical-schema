@@ -86,7 +86,7 @@ A tenure-rights indicator capturing the ability to transfer (bequeath) the dwell
 
 ## Construction notes
 
-Map the bequest/transfer-rights question to 0/1.
+Map the bequest/transfer-rights question to 0/1. Document how ambiguous or conditional transfer-rights responses are handled in the do-file notes.
 
 ## Consistency checks
 

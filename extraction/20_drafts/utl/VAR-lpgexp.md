@@ -89,6 +89,7 @@ Record total annual household expenditure on LPG, including butane, propane, and
 ## Common mistakes
 
 - Double counting when gas types are combined.
+- Including network gas in LPG expenditure.
 
 ## Change log
 

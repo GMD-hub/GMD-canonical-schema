@@ -80,7 +80,7 @@ provenance:
 
 ## Conceptual intent
 
-A low-cost mobility asset used in asset indices.
+A low-cost mobility asset used in asset indices. Bicycle ownership signals household access to non-motorized transport.
 
 ## Construction notes
 

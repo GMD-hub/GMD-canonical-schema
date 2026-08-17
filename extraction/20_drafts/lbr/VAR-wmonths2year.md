@@ -71,6 +71,7 @@ Record the number of months; do not assume full-year work.
 ## Consistency checks
 
 - wmonths_2_year must lie in [0,12].
+- Should be non-missing only where lstatus_year == 1.
 
 ## Escalation triggers
 

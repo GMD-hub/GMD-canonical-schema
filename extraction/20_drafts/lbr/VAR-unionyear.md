@@ -72,6 +72,7 @@ Only constructed if there is an explicit trade-union question. Missing otherwise
 ## Consistency checks
 
 - union_year must be in {0,1} where non-missing.
+- Should be non-missing only where lstatus_year == 1.
 
 ## Escalation triggers
 

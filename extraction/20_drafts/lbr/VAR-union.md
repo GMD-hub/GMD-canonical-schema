@@ -76,6 +76,7 @@ This variable is only constructed if there is an explicit question about trade u
 ## Escalation triggers
 
 - The survey does not ask about union membership.
+- The question wording conflates union membership with worker representation or collective bargaining.
 
 ## Common mistakes
 

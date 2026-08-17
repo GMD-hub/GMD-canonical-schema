@@ -92,7 +92,7 @@ as a control in welfare analysis and to identify household heads and partners.
 
 ## Construction notes
 
-TODO.
+Map the raw marital-status categories to the five GMD codes. Document the mapping of any survey-specific categories (e.g. "consensual union") in the do-file notes.
 
 ## Consistency checks
 

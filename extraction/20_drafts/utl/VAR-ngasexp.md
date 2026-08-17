@@ -89,6 +89,7 @@ Record total annual household expenditure on town gas and natural gas (network g
 ## Common mistakes
 
 - Double counting when gas types are combined.
+- Including bottled LPG in network gas expenditure.
 
 ## Change log
 
