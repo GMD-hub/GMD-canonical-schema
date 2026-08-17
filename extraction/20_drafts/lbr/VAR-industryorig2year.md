@@ -72,6 +72,7 @@ Translate labels if not ISIC; apply ISIC/NACE labeling dofiles when applicable.
 ## Consistency checks
 
 - Labels must be full words; no truncated labels.
+- Should be non-missing only where lstatus_year == 1.
 
 ## Escalation triggers
 

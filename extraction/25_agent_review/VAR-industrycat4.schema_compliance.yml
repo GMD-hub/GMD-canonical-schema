@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-industrycat4
-checked_at: '2026-08-17T21:52:59.170860+00:00'
+checked_at: '2026-08-17T22:17:43.902983+00:00'
 findings: []
 summary:
   errors: 0

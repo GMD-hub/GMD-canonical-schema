@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-occuporig2
-checked_at: '2026-08-17T21:52:59.230636+00:00'
+checked_at: '2026-08-17T22:17:43.964204+00:00'
 findings:
 - field: body
   severity: warning

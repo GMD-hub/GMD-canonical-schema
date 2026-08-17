@@ -85,6 +85,7 @@ Include installation, subscription, and service usage fees. Exclude expenditure 
 ## Escalation triggers
 
 - Including mobile phone equipment purchases.
+- Cellphone and landline expenses cannot be separated in the survey data.
 
 ## Common mistakes
 

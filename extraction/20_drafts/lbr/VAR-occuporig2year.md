@@ -71,6 +71,7 @@ Translate labels if not ISCO; apply ISCO labeling dofiles when applicable.
 ## Consistency checks
 
 - Labels must not be truncated.
+- Should be non-missing only where lstatus_year == 1.
 
 ## Escalation triggers
 

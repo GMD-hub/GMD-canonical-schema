@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-marital
-checked_at: '2026-08-17T21:52:58.844730+00:00'
+checked_at: '2026-08-17T22:17:43.577286+00:00'
 findings:
 - field: frontmatter
   severity: error
@@ -9,15 +9,11 @@ findings:
     \ input_value={'variable_id': 'VAR-mari... known-answer-key.md.'}}, input_type=dict]\n\
     \    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
   line: null
-- field: body
-  severity: warning
-  message: 'Placeholder text detected: \bTODO\b on line 13'
-  line: 13
 - field: country_parameters
   severity: error
   message: 'Parameter reference not in registry: PARAM-DEM-MIN-MARRIAGE-AGE'
   line: null
 summary:
   errors: 2
-  warnings: 1
+  warnings: 0
   passed: 0

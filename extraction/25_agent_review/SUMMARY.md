@@ -1,8 +1,8 @@
 # Agent Review Summary
 
-Generated: 2026-08-17T21:53:00.631574+00:00
+Generated: 2026-08-17T22:17:45.170552+00:00
 
-**Total errors:** 77 | **Total warnings:** 501
+**Total errors:** 44 | **Total warnings:** 497
 
 ## Results Table
 
@@ -32,9 +32,9 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-educat5 | schema_compliance | 0 | 0 | yes |
 | VAR-educat5 | source_grounding | 0 | 0 | yes |
 | VAR-educat5 | rules_caveats | 0 | 0 | yes |
-| VAR-educat7 | schema_compliance | 0 | 1 | no |
+| VAR-educat7 | schema_compliance | 0 | 0 | yes |
 | VAR-educat7 | source_grounding | 0 | 0 | yes |
-| VAR-educat7 | rules_caveats | 1 | 1 | no |
+| VAR-educat7 | rules_caveats | 0 | 0 | yes |
 | VAR-educy | schema_compliance | 2 | 0 | no |
 | VAR-educy | source_grounding | 0 | 2 | no |
 | VAR-educy | rules_caveats | 0 | 0 | yes |
@@ -56,9 +56,9 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-male | schema_compliance | 0 | 0 | yes |
 | VAR-male | source_grounding | 0 | 1 | no |
 | VAR-male | rules_caveats | 0 | 0 | yes |
-| VAR-marital | schema_compliance | 2 | 1 | no |
+| VAR-marital | schema_compliance | 2 | 0 | no |
 | VAR-marital | source_grounding | 0 | 0 | yes |
-| VAR-marital | rules_caveats | 1 | 0 | no |
+| VAR-marital | rules_caveats | 0 | 0 | yes |
 | VAR-mineducatage | schema_compliance | 0 | 0 | yes |
 | VAR-mineducatage | source_grounding | 0 | 0 | yes |
 | VAR-mineducatage | rules_caveats | 0 | 1 | no |
@@ -121,10 +121,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-areaspace | rules_caveats | 0 | 1 | no |
 | VAR-bath | schema_compliance | 0 | 2 | no |
 | VAR-bath | source_grounding | 0 | 0 | yes |
-| VAR-bath | rules_caveats | 1 | 1 | no |
+| VAR-bath | rules_caveats | 0 | 1 | no |
 | VAR-bcycle | schema_compliance | 0 | 0 | yes |
 | VAR-bcycle | source_grounding | 0 | 0 | yes |
-| VAR-bcycle | rules_caveats | 1 | 1 | no |
+| VAR-bcycle | rules_caveats | 0 | 1 | no |
 | VAR-boat | schema_compliance | 0 | 0 | yes |
 | VAR-boat | source_grounding | 0 | 0 | yes |
 | VAR-boat | rules_caveats | 0 | 1 | no |
@@ -151,7 +151,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-dwelownlti | rules_caveats | 0 | 1 | no |
 | VAR-dwelownti | schema_compliance | 0 | 2 | no |
 | VAR-dwelownti | source_grounding | 0 | 0 | yes |
-| VAR-dwelownti | rules_caveats | 1 | 2 | no |
+| VAR-dwelownti | rules_caveats | 0 | 2 | no |
 | VAR-dweltyp | schema_compliance | 0 | 2 | no |
 | VAR-dweltyp | source_grounding | 0 | 0 | yes |
 | VAR-dweltyp | rules_caveats | 0 | 2 | no |
@@ -244,7 +244,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-sellagriland | rules_caveats | 0 | 1 | no |
 | VAR-selldwel | schema_compliance | 0 | 2 | no |
 | VAR-selldwel | source_grounding | 0 | 0 | yes |
-| VAR-selldwel | rules_caveats | 1 | 1 | no |
+| VAR-selldwel | rules_caveats | 0 | 1 | no |
 | VAR-sellland | schema_compliance | 0 | 2 | no |
 | VAR-sellland | source_grounding | 0 | 0 | yes |
 | VAR-sellland | rules_caveats | 0 | 1 | no |
@@ -253,13 +253,13 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-sewmach | rules_caveats | 0 | 1 | no |
 | VAR-stove | schema_compliance | 0 | 0 | yes |
 | VAR-stove | source_grounding | 0 | 0 | yes |
-| VAR-stove | rules_caveats | 1 | 1 | no |
+| VAR-stove | rules_caveats | 0 | 1 | no |
 | VAR-transagriland | schema_compliance | 0 | 2 | no |
 | VAR-transagriland | source_grounding | 0 | 0 | yes |
 | VAR-transagriland | rules_caveats | 0 | 1 | no |
 | VAR-transdwel | schema_compliance | 0 | 2 | no |
 | VAR-transdwel | source_grounding | 0 | 0 | yes |
-| VAR-transdwel | rules_caveats | 1 | 1 | no |
+| VAR-transdwel | rules_caveats | 0 | 1 | no |
 | VAR-transland | schema_compliance | 0 | 2 | no |
 | VAR-transland | source_grounding | 0 | 0 | yes |
 | VAR-transland | rules_caveats | 0 | 1 | no |
@@ -436,10 +436,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-industryorig2 | rules_caveats | 0 | 0 | yes |
 | VAR-industryorig2year | schema_compliance | 0 | 2 | no |
 | VAR-industryorig2year | source_grounding | 0 | 0 | yes |
-| VAR-industryorig2year | rules_caveats | 1 | 0 | no |
+| VAR-industryorig2year | rules_caveats | 0 | 0 | yes |
 | VAR-industryorigyear | schema_compliance | 0 | 2 | no |
 | VAR-industryorigyear | source_grounding | 0 | 0 | yes |
-| VAR-industryorigyear | rules_caveats | 1 | 0 | no |
+| VAR-industryorigyear | rules_caveats | 0 | 0 | yes |
 | VAR-laborincome | schema_compliance | 0 | 2 | no |
 | VAR-laborincome | source_grounding | 0 | 9 | no |
 | VAR-laborincome | rules_caveats | 0 | 0 | yes |
@@ -481,13 +481,13 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-occuporig | rules_caveats | 0 | 0 | yes |
 | VAR-occuporig2 | schema_compliance | 0 | 1 | no |
 | VAR-occuporig2 | source_grounding | 0 | 0 | yes |
-| VAR-occuporig2 | rules_caveats | 1 | 0 | no |
+| VAR-occuporig2 | rules_caveats | 0 | 0 | yes |
 | VAR-occuporig2year | schema_compliance | 0 | 2 | no |
 | VAR-occuporig2year | source_grounding | 0 | 0 | yes |
-| VAR-occuporig2year | rules_caveats | 1 | 0 | no |
+| VAR-occuporig2year | rules_caveats | 0 | 0 | yes |
 | VAR-occuporigyear | schema_compliance | 0 | 2 | no |
 | VAR-occuporigyear | source_grounding | 0 | 0 | yes |
-| VAR-occuporigyear | rules_caveats | 1 | 0 | no |
+| VAR-occuporigyear | rules_caveats | 0 | 0 | yes |
 | VAR-occupyear | schema_compliance | 0 | 2 | no |
 | VAR-occupyear | source_grounding | 0 | 0 | yes |
 | VAR-occupyear | rules_caveats | 0 | 0 | yes |
@@ -517,25 +517,25 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-thoursothers | rules_caveats | 0 | 1 | no |
 | VAR-thoursothersyear | schema_compliance | 0 | 2 | no |
 | VAR-thoursothersyear | source_grounding | 0 | 0 | yes |
-| VAR-thoursothersyear | rules_caveats | 1 | 0 | no |
+| VAR-thoursothersyear | rules_caveats | 0 | 0 | yes |
 | VAR-thourstotal | schema_compliance | 0 | 2 | no |
 | VAR-thourstotal | source_grounding | 0 | 3 | no |
 | VAR-thourstotal | rules_caveats | 0 | 0 | yes |
 | VAR-thourstotalyear | schema_compliance | 0 | 2 | no |
 | VAR-thourstotalyear | source_grounding | 0 | 3 | no |
-| VAR-thourstotalyear | rules_caveats | 1 | 0 | no |
+| VAR-thourstotalyear | rules_caveats | 0 | 0 | yes |
 | VAR-twagencotal | schema_compliance | 0 | 2 | no |
 | VAR-twagencotal | source_grounding | 0 | 3 | no |
 | VAR-twagencotal | rules_caveats | 0 | 0 | yes |
 | VAR-twagencothers | schema_compliance | 0 | 1 | no |
 | VAR-twagencothers | source_grounding | 0 | 0 | yes |
-| VAR-twagencothers | rules_caveats | 1 | 1 | no |
+| VAR-twagencothers | rules_caveats | 0 | 2 | no |
 | VAR-twagencothersyear | schema_compliance | 0 | 2 | no |
 | VAR-twagencothersyear | source_grounding | 0 | 0 | yes |
-| VAR-twagencothersyear | rules_caveats | 1 | 0 | no |
+| VAR-twagencothersyear | rules_caveats | 0 | 0 | yes |
 | VAR-twagencototalyear | schema_compliance | 0 | 2 | no |
 | VAR-twagencototalyear | source_grounding | 0 | 3 | no |
-| VAR-twagencototalyear | rules_caveats | 1 | 0 | no |
+| VAR-twagencototalyear | rules_caveats | 0 | 0 | yes |
 | VAR-twageothers | schema_compliance | 0 | 1 | no |
 | VAR-twageothers | source_grounding | 0 | 1 | no |
 | VAR-twageothers | rules_caveats | 0 | 1 | no |
@@ -562,10 +562,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-unemplduruyear | rules_caveats | 0 | 0 | yes |
 | VAR-union | schema_compliance | 0 | 0 | yes |
 | VAR-union | source_grounding | 0 | 0 | yes |
-| VAR-union | rules_caveats | 1 | 1 | no |
+| VAR-union | rules_caveats | 0 | 1 | no |
 | VAR-unionyear | schema_compliance | 0 | 2 | no |
 | VAR-unionyear | source_grounding | 0 | 0 | yes |
-| VAR-unionyear | rules_caveats | 1 | 0 | no |
+| VAR-unionyear | rules_caveats | 0 | 0 | yes |
 | VAR-unitwage | schema_compliance | 0 | 0 | yes |
 | VAR-unitwage | source_grounding | 0 | 0 | yes |
 | VAR-unitwage | rules_caveats | 0 | 1 | no |
@@ -607,10 +607,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-whours | rules_caveats | 0 | 2 | no |
 | VAR-whours2 | schema_compliance | 0 | 1 | no |
 | VAR-whours2 | source_grounding | 0 | 0 | yes |
-| VAR-whours2 | rules_caveats | 1 | 2 | no |
+| VAR-whours2 | rules_caveats | 0 | 2 | no |
 | VAR-whours2year | schema_compliance | 0 | 2 | no |
 | VAR-whours2year | source_grounding | 0 | 0 | yes |
-| VAR-whours2year | rules_caveats | 1 | 0 | no |
+| VAR-whours2year | rules_caveats | 0 | 0 | yes |
 | VAR-whoursyear | schema_compliance | 0 | 2 | no |
 | VAR-whoursyear | source_grounding | 0 | 0 | yes |
 | VAR-whoursyear | rules_caveats | 0 | 0 | yes |
@@ -622,7 +622,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-wmonths2 | rules_caveats | 0 | 0 | yes |
 | VAR-wmonths2year | schema_compliance | 0 | 2 | no |
 | VAR-wmonths2year | source_grounding | 0 | 0 | yes |
-| VAR-wmonths2year | rules_caveats | 1 | 0 | no |
+| VAR-wmonths2year | rules_caveats | 0 | 0 | yes |
 | VAR-wmonthsyear | schema_compliance | 0 | 2 | no |
 | VAR-wmonthsyear | source_grounding | 0 | 0 | yes |
 | VAR-wmonthsyear | rules_caveats | 0 | 0 | yes |
@@ -640,7 +640,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | source-lock-2026-08-13 | rules_caveats | 0 | 0 | yes |
 | VAR-cellphoneexp | schema_compliance | 0 | 0 | yes |
 | VAR-cellphoneexp | source_grounding | 0 | 0 | yes |
-| VAR-cellphoneexp | rules_caveats | 1 | 2 | no |
+| VAR-cellphoneexp | rules_caveats | 0 | 1 | no |
 | VAR-centralacc | schema_compliance | 0 | 0 | yes |
 | VAR-centralacc | source_grounding | 0 | 0 | yes |
 | VAR-centralacc | rules_caveats | 0 | 1 | no |
@@ -649,7 +649,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-centralexp | rules_caveats | 0 | 2 | no |
 | VAR-coalexp | schema_compliance | 0 | 0 | yes |
 | VAR-coalexp | source_grounding | 0 | 0 | yes |
-| VAR-coalexp | rules_caveats | 1 | 2 | no |
+| VAR-coalexp | rules_caveats | 0 | 2 | no |
 | VAR-commexp | schema_compliance | 0 | 0 | yes |
 | VAR-commexp | source_grounding | 0 | 0 | yes |
 | VAR-commexp | rules_caveats | 0 | 1 | no |
@@ -658,7 +658,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-cooksource | rules_caveats | 0 | 1 | no |
 | VAR-dieselexp | schema_compliance | 0 | 0 | yes |
 | VAR-dieselexp | source_grounding | 0 | 0 | yes |
-| VAR-dieselexp | rules_caveats | 1 | 2 | no |
+| VAR-dieselexp | rules_caveats | 0 | 2 | no |
 | VAR-dwelmatexp | schema_compliance | 0 | 0 | yes |
 | VAR-dwelmatexp | source_grounding | 0 | 0 | yes |
 | VAR-dwelmatexp | rules_caveats | 0 | 2 | no |
@@ -694,7 +694,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-gasexp | rules_caveats | 0 | 0 | yes |
 | VAR-gasolineexp | schema_compliance | 0 | 0 | yes |
 | VAR-gasolineexp | source_grounding | 0 | 0 | yes |
-| VAR-gasolineexp | rules_caveats | 1 | 2 | no |
+| VAR-gasolineexp | rules_caveats | 0 | 2 | no |
 | VAR-heatingexp | schema_compliance | 0 | 0 | yes |
 | VAR-heatingexp | source_grounding | 0 | 0 | yes |
 | VAR-heatingexp | rules_caveats | 0 | 1 | no |
@@ -715,10 +715,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-internetexp | rules_caveats | 0 | 2 | no |
 | VAR-kerosenexp | schema_compliance | 0 | 0 | yes |
 | VAR-kerosenexp | source_grounding | 0 | 0 | yes |
-| VAR-kerosenexp | rules_caveats | 1 | 2 | no |
+| VAR-kerosenexp | rules_caveats | 0 | 2 | no |
 | VAR-landphoneexp | schema_compliance | 0 | 0 | yes |
 | VAR-landphoneexp | source_grounding | 0 | 0 | yes |
-| VAR-landphoneexp | rules_caveats | 1 | 2 | no |
+| VAR-landphoneexp | rules_caveats | 0 | 1 | no |
 | VAR-lightsource | schema_compliance | 0 | 0 | yes |
 | VAR-lightsource | source_grounding | 0 | 0 | yes |
 | VAR-lightsource | rules_caveats | 0 | 1 | no |
@@ -727,10 +727,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-liquidexp | rules_caveats | 0 | 0 | yes |
 | VAR-lpgexp | schema_compliance | 0 | 0 | yes |
 | VAR-lpgexp | source_grounding | 0 | 0 | yes |
-| VAR-lpgexp | rules_caveats | 1 | 2 | no |
+| VAR-lpgexp | rules_caveats | 0 | 2 | no |
 | VAR-ngasexp | schema_compliance | 0 | 0 | yes |
 | VAR-ngasexp | source_grounding | 0 | 0 | yes |
-| VAR-ngasexp | rules_caveats | 1 | 2 | no |
+| VAR-ngasexp | rules_caveats | 0 | 2 | no |
 | VAR-opendef | schema_compliance | 0 | 0 | yes |
 | VAR-opendef | source_grounding | 0 | 0 | yes |
 | VAR-opendef | rules_caveats | 0 | 1 | no |
@@ -748,7 +748,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-othsolexp | rules_caveats | 0 | 2 | no |
 | VAR-peatexp | schema_compliance | 0 | 0 | yes |
 | VAR-peatexp | source_grounding | 0 | 0 | yes |
-| VAR-peatexp | rules_caveats | 1 | 2 | no |
+| VAR-peatexp | rules_caveats | 0 | 2 | no |
 | VAR-piped | schema_compliance | 0 | 0 | yes |
 | VAR-piped | source_grounding | 0 | 0 | yes |
 | VAR-piped | rules_caveats | 0 | 1 | no |
@@ -775,7 +775,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 | VAR-solidexp | rules_caveats | 0 | 0 | yes |
 | VAR-telefaxexp | schema_compliance | 0 | 0 | yes |
 | VAR-telefaxexp | source_grounding | 0 | 0 | yes |
-| VAR-telefaxexp | rules_caveats | 1 | 2 | no |
+| VAR-telefaxexp | rules_caveats | 0 | 2 | no |
 | VAR-telexp | schema_compliance | 0 | 0 | yes |
 | VAR-telexp | source_grounding | 0 | 0 | yes |
 | VAR-telexp | rules_caveats | 0 | 1 | no |
@@ -1123,15 +1123,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcorrect\b' in '- In ECA region surveys, it is expected and correct for indi'
 
-### VAR-educat7 (schema_compliance)
-
-- **warning** [body] (line 35): Placeholder text detected: \bTODO\b on line 35
-
-### VAR-educat7 (rules_caveats)
-
-- **error** [escalation_triggers]: Section ## Escalation triggers is a stub (43 chars < 50 minimum)
-- **warning** [escalation_triggers]: Escalation triggers contain TODO placeholder
-
 ### VAR-educy (schema_compliance)
 
 - **error** [frontmatter]: Pydantic validation failed: 1 validation error for VariableDefinition
@@ -1178,12 +1169,7 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 - **error** [frontmatter]: Pydantic validation failed: 1 validation error for VariableDefinition
   Value error, unknown parameter IDs: ['PARAM-DEM-MIN-MARRIAGE-AGE'] [type=value_error, input_value={'variable_id': 'VAR-mari... known-answer-key.md.'}}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.13/v/value_error
-- **warning** [body] (line 13): Placeholder text detected: \bTODO\b on line 13
 - **error** [country_parameters]: Parameter reference not in registry: PARAM-DEM-MIN-MARRIAGE-AGE
-
-### VAR-marital (rules_caveats)
-
-- **error** [construction_notes]: Section ## Construction notes is a stub (5 chars < 50 minimum)
 
 ### VAR-mineducatage (rules_caveats)
 
@@ -1337,12 +1323,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-bath (rules_caveats)
 
-- **error** [conceptual_intent]: Section ## Conceptual intent is a stub (44 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bverify\b' in '- Values must be 0 or 1 (or explicitly missing); every house'
 
 ### VAR-bcycle (rules_caveats)
 
-- **error** [conceptual_intent]: Section ## Conceptual intent is a stub (48 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bverify\b' in '- Values must be 0 or 1 (or explicitly missing); every house'
 
 ### VAR-boat (rules_caveats)
@@ -1399,7 +1383,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-dwelownti (rules_caveats)
 
-- **error** [construction_notes]: Section ## Construction notes is a stub (44 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bverify\b' in '- The value must be a valid category code (or explicitly mis'
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bvalid\b' in '- The value must be a valid category code (or explicitly mis'
 
@@ -1631,7 +1614,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-selldwel (rules_caveats)
 
-- **error** [construction_notes]: Section ## Construction notes is a stub (42 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bverify\b' in '- Values must be 0 or 1 (or explicitly missing); every house'
 
 ### VAR-sellland (schema_compliance)
@@ -1649,7 +1631,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-stove (rules_caveats)
 
-- **error** [conceptual_intent]: Section ## Conceptual intent is a stub (46 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bverify\b' in '- Values must be 0 or 1 (or explicitly missing); every house'
 
 ### VAR-transagriland (schema_compliance)
@@ -1668,7 +1649,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-transdwel (rules_caveats)
 
-- **error** [construction_notes]: Section ## Construction notes is a stub (48 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bverify\b' in '- Values must be 0 or 1 (or explicitly missing); every house'
 
 ### VAR-transland (schema_compliance)
@@ -1906,18 +1886,10 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
 
-### VAR-industryorig2year (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (49 chars < 50 minimum)
-
 ### VAR-industryorigyear (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
-
-### VAR-industryorigyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (49 chars < 50 minimum)
 
 ### VAR-laborincome (schema_compliance)
 
@@ -1995,27 +1967,15 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 - **warning** [body]: Section ## Common mistakes has no content after heading
 
-### VAR-occuporig2 (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (31 chars < 50 minimum)
-
 ### VAR-occuporig2year (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
 
-### VAR-occuporig2year (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (31 chars < 50 minimum)
-
 ### VAR-occuporigyear (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
-
-### VAR-occuporigyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (31 chars < 50 minimum)
 
 ### VAR-occupyear (schema_compliance)
 
@@ -2070,10 +2030,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
 
-### VAR-thoursothersyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (43 chars < 50 minimum)
-
 ### VAR-thourstotal (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
@@ -2096,10 +2052,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 - **warning** [construction_notes]: Derivation dependency VAR-whours2year not mentioned in Construction notes
 - **warning** [construction_notes]: Derivation dependency VAR-thoursothersyear not mentioned in Construction notes
 
-### VAR-thourstotalyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (42 chars < 50 minimum)
-
 ### VAR-twagencotal (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
@@ -2117,17 +2069,13 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-twagencothers (rules_caveats)
 
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (40 chars < 50 minimum)
+- **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that the sum of primary, secondary, and other '
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
 ### VAR-twagencothersyear (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
-
-### VAR-twagencothersyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (45 chars < 50 minimum)
 
 ### VAR-twagencototalyear (schema_compliance)
 
@@ -2139,10 +2087,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 - **warning** [construction_notes]: Derivation dependency VAR-wagencyear not mentioned in Construction notes
 - **warning** [construction_notes]: Derivation dependency VAR-wagenc2year not mentioned in Construction notes
 - **warning** [construction_notes]: Derivation dependency VAR-twagencothersyear not mentioned in Construction notes
-
-### VAR-twagencototalyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (44 chars < 50 minimum)
 
 ### VAR-twageothers (schema_compliance)
 
@@ -2199,17 +2143,12 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-union (rules_caveats)
 
-- **error** [escalation_triggers]: Section ## Escalation triggers is a stub (49 chars < 50 minimum)
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
 ### VAR-unionyear (schema_compliance)
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
-
-### VAR-unionyear (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (48 chars < 50 minimum)
 
 ### VAR-unitwage (rules_caveats)
 
@@ -2304,7 +2243,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 ### VAR-whours2 (rules_caveats)
 
-- **error** [escalation_triggers]: Section ## Escalation triggers is a stub (40 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\breasonable\b' in '- whours_2 must be non-negative and reasonable for one week '
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
@@ -2312,10 +2250,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
-
-### VAR-whours2year (rules_caveats)
-
-- **error** [construction_notes]: Section ## Construction notes is a stub (43 chars < 50 minimum)
 
 ### VAR-whoursyear (schema_compliance)
 
@@ -2335,10 +2269,6 @@ Generated: 2026-08-17T21:53:00.631574+00:00
 
 - **warning** [body]: Section ## Escalation triggers has no content after heading
 - **warning** [body]: Section ## Common mistakes has no content after heading
-
-### VAR-wmonths2year (rules_caveats)
-
-- **error** [consistency_checks]: Section ## Consistency checks is a stub (36 chars < 50 minimum)
 
 ### VAR-wmonthsyear (schema_compliance)
 
@@ -2726,9 +2656,7 @@ source-commit
 
 ### VAR-cellphoneexp (rules_caveats)
 
-- **error** [escalation_triggers]: Section ## Escalation triggers is a stub (45 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `telexp` equals `landphoneexp` plus `cell'
-- **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
 ### VAR-centralacc (rules_caveats)
 
@@ -2741,7 +2669,6 @@ source-commit
 
 ### VAR-coalexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (48 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `solidexp` includes `coalexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
@@ -2755,7 +2682,6 @@ source-commit
 
 ### VAR-dieselexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (46 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `liquidexp` includes `dieselexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
@@ -2804,7 +2730,6 @@ source-commit
 
 ### VAR-gasolineexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (46 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `liquidexp` includes `gasolineexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
@@ -2828,15 +2753,12 @@ source-commit
 
 ### VAR-kerosenexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (46 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `liquidexp` includes `kerosenexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
 ### VAR-landphoneexp (rules_caveats)
 
-- **error** [escalation_triggers]: Section ## Escalation triggers is a stub (42 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `telexp` equals `landphoneexp` plus `cell'
-- **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
 ### VAR-lightsource (rules_caveats)
 
@@ -2844,13 +2766,11 @@ source-commit
 
 ### VAR-lpgexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (46 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `gasexp` equals `ngasexp` plus `lpgexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
 ### VAR-ngasexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (46 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `gasexp` equals `ngasexp` plus `lpgexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
@@ -2879,7 +2799,6 @@ source-commit
 
 ### VAR-peatexp (rules_caveats)
 
-- **error** [common_mistakes]: Section ## Common mistakes is a stub (48 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `solidexp` includes `peatexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 
@@ -2914,7 +2833,6 @@ source-commit
 
 ### VAR-telefaxexp (rules_caveats)
 
-- **error** [escalation_triggers]: Section ## Escalation triggers is a stub (40 chars < 50 minimum)
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcheck that\b' in '- Cross-check that `commexp` includes `telefaxexp`.'
 - **warning** [escalation_triggers]: Escalation triggers lack concrete IF/WHEN conditions
 

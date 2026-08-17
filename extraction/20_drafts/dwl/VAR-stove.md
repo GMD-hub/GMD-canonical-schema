@@ -82,7 +82,7 @@ provenance:
 
 ## Conceptual intent
 
-A basic cooking durable and welfare indicator.
+A basic cooking durable and welfare indicator. Stove ownership reflects household access to modern cooking facilities.
 
 ## Construction notes
 

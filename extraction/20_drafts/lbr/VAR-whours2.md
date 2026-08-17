@@ -76,6 +76,7 @@ Apply the same conventions as whours: record actual hours if absent; multiply da
 ## Escalation triggers
 
 - Hours are reported only categorically.
+- The survey uses a reference period other than 7 days for hours worked.
 
 ## Common mistakes
 

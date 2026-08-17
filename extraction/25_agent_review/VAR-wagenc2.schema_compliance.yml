@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-wagenc2
-checked_at: '2026-08-17T21:52:59.321375+00:00'
+checked_at: '2026-08-17T22:17:44.056047+00:00'
 findings: []
 summary:
   errors: 0

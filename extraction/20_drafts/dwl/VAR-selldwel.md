@@ -86,7 +86,7 @@ A tenure-rights indicator capturing the ability to alienate (sell) the dwelling.
 
 ## Construction notes
 
-Map the alienation-rights question to 0/1.
+Map the alienation-rights question to 0/1. Document how "don't know" and "not applicable" responses are handled in the do-file notes.
 
 ## Consistency checks
 

@@ -89,6 +89,7 @@ Record total annual household expenditure on peat.
 ## Common mistakes
 
 - Double counting when solid fuels are combined.
+- Including peat in coal or other solid fuels without documentation.
 
 ## Change log
 

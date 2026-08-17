@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-acquihouse
-checked_at: '2026-08-17T21:52:58.870386+00:00'
+checked_at: '2026-08-17T22:17:43.602699+00:00'
 findings:
 - field: body
   severity: warning

@@ -21,13 +21,12 @@ class TestRulesCaveats:
         errors = [f for f in findings if f.severity == "error"]
         assert errors == [], f"Unexpected errors: {[f.message for f in errors]}"
 
-    def test_var_marital_stub_construction_notes(self):
-        findings = self._findings_for("VAR-marital")
-        stub_errors = [f for f in findings if "stub" in f.message.lower() and "construction_notes" in f.field]
-        assert len(stub_errors) >= 1
-        assert stub_errors[0].severity == "error"
-
-    def test_var_educat7_todo_in_escalation(self):
+    def test_var_educat7_no_stub_errors(self):
         findings = self._findings_for("VAR-educat7")
-        todo_warnings = [f for f in findings if "TODO" in f.message]
-        assert len(todo_warnings) >= 1
+        errors = [f for f in findings if f.severity == "error"]
+        assert errors == [], f"Unexpected errors: {[f.message for f in errors]}"
+
+    def test_var_marital_no_stub_errors(self):
+        findings = self._findings_for("VAR-marital")
+        stub_errors = [f for f in findings if "stub" in f.message.lower()]
+        assert len(stub_errors) == 0, f"Unexpected stub errors: {[f.message for f in stub_errors]}"

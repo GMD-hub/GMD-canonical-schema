@@ -94,7 +94,7 @@ Describes the nature of the legal documentation underpinning dwelling tenure sec
 
 ## Construction notes
 
-Map the type of legal document to codes 1-6.
+Map the type of legal document to codes 1-6. Document any survey-specific categories that do not map cleanly to the six GMD codes in the do-file notes.
 
 ## Consistency checks
 

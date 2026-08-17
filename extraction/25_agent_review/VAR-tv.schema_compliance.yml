@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-tv
-checked_at: '2026-08-17T21:52:59.034824+00:00'
+checked_at: '2026-08-17T22:17:43.766587+00:00'
 findings: []
 summary:
   errors: 0

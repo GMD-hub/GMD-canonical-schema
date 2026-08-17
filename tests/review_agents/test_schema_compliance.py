@@ -36,11 +36,10 @@ class TestSchemaCompliance:
         assert len(param_errors) >= 1
         assert param_errors[0].severity == "error"
 
-    def test_var_educat7_placeholder_warning(self):
+    def test_var_educat7_no_placeholder_warnings(self):
         findings = self._findings_for("VAR-educat7")
         placeholder_warnings = [f for f in findings if "TODO" in f.message]
-        assert len(placeholder_warnings) >= 1
-        assert placeholder_warnings[0].severity == "warning"
+        assert len(placeholder_warnings) == 0, f"Unexpected TODO warnings: {[f.message for f in placeholder_warnings]}"
 
     def test_required_sections_present(self):
         for vid in _VARIABLE_IDS:

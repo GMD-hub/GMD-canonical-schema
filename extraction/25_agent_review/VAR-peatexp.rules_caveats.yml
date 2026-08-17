@@ -1,11 +1,7 @@
 agent: rules_caveats
 artifact_id: VAR-peatexp
-checked_at: '2026-08-17T21:52:59.453730+00:00'
+checked_at: '2026-08-17T22:17:44.189770+00:00'
 findings:
-- field: common_mistakes
-  severity: error
-  message: 'Section ## Common mistakes is a stub (48 chars < 50 minimum)'
-  line: null
 - field: consistency_checks
   severity: warning
   message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
@@ -16,6 +12,6 @@ findings:
   message: Escalation triggers lack concrete IF/WHEN conditions
   line: null
 summary:
-  errors: 1
+  errors: 0
   warnings: 2
   passed: 0
