@@ -1,0 +1,24 @@
+agent: source_grounding
+artifact_id: VAR-wagetotalyear
+checked_at: '2026-08-16T04:07:33.755317+00:00'
+findings:
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-wagencyear not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-unitwageyear not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-wmonthsyear not mentioned in Construction notes
+  line: null
+- field: construction_notes
+  severity: warning
+  message: Derivation dependency VAR-whoursyear not mentioned in Construction notes
+  line: null
+summary:
+  errors: 0
+  warnings: 4
+  passed: 0

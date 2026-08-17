@@ -1,0 +1,8 @@
+agent: rules_caveats
+artifact_id: VAR-gauladm2code
+checked_at: '2026-08-16T04:07:33.473384+00:00'
+findings: []
+summary:
+  errors: 0
+  warnings: 0
+  passed: 1

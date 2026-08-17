@@ -1,0 +1,19 @@
+agent: schema_compliance
+artifact_id: VAR-educy
+checked_at: '2026-08-16T04:07:33.235370+00:00'
+findings:
+- field: frontmatter
+  severity: error
+  message: "Pydantic validation failed: 1 validation error for VariableDefinition\n\
+    \  Value error, unknown parameter IDs: ['PARAM-EDU-YEARS-BY-LEVEL'] [type=value_error,\
+    \ input_value={'variable_id': 'VAR-educ...ountry record exists.'}}, input_type=dict]\n\
+    \    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  line: null
+- field: country_parameters
+  severity: error
+  message: 'Parameter reference not in registry: PARAM-EDU-YEARS-BY-LEVEL'
+  line: null
+summary:
+  errors: 2
+  warnings: 0
+  passed: 0

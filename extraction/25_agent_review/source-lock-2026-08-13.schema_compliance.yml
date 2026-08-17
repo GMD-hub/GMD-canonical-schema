@@ -1,0 +1,92 @@
+agent: schema_compliance
+artifact_id: source-lock-2026-08-13
+checked_at: '2026-08-16T04:07:33.778784+00:00'
+findings:
+- field: frontmatter
+  severity: error
+  message: "Pydantic validation failed: 26 validation errors for VariableDefinition\n\
+    variable_id\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    canonical_label\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    variable_name\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    module_id\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    gmd_version\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    schema_version\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    status\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    tier\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    unit_of_analysis\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    mapping_role\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    data_type\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    value_codes\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    allowed_range\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    missing_codes\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    derived_from\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    derives_to\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    country_parameters\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    prerequisites\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    rules\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    exceptions\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    external_standards\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    source_hints\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    provenance\n  Field required [type=missing, input_value={'date': datetime.date(20...def53f625d54fd2a0a9ea1'},\
+    \ input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\n\
+    date\n  Extra inputs are not permitted [type=extra_forbidden, input_value=datetime.date(2026,\
+    \ 8, 14), input_type=date]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden\n\
+    plan\n  Extra inputs are not permitted [type=extra_forbidden, input_value='2026-08-13-complete-non-welfare-extraction',\
+    \ input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden\n\
+    source-commit\n  Extra inputs are not permitted [type=extra_forbidden, input_value='d46dc03d253764ad7bdef53f625d54fd2a0a9ea1',\
+    \ input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Definition'
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Conceptual intent'
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Construction notes'
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Consistency checks'
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Escalation triggers'
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Common mistakes'
+  line: null
+- field: body
+  severity: error
+  message: 'Required section missing: ## Change log'
+  line: null
+summary:
+  errors: 8
+  warnings: 0
+  passed: 0

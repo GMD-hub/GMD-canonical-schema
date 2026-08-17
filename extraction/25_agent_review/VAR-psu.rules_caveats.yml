@@ -1,0 +1,13 @@
+agent: rules_caveats
+artifact_id: VAR-psu
+checked_at: '2026-08-16T04:07:33.475734+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- `psu` must be
+    numeric (integer); verify no string or non-i'''
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

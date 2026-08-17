@@ -1,0 +1,17 @@
+agent: rules_caveats
+artifact_id: VAR-walkdisability
+checked_at: '2026-08-16T04:07:33.277699+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bvalid\b'' in ''- No standard missing
+    (`.`) should remain where a valid code'''
+  line: null
+- field: escalation_triggers
+  severity: warning
+  message: Escalation triggers lack concrete IF/WHEN conditions
+  line: null
+summary:
+  errors: 0
+  warnings: 2
+  passed: 0

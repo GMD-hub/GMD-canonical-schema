@@ -1,0 +1,21 @@
+agent: rules_caveats
+artifact_id: VAR-lpgexp
+checked_at: '2026-08-16T04:07:33.854456+00:00'
+findings:
+- field: common_mistakes
+  severity: error
+  message: 'Section ## Common mistakes is a stub (46 chars < 50 minimum)'
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
+    that `gasexp` equals `ngasexp` plus `lpgexp`.'''
+  line: null
+- field: escalation_triggers
+  severity: warning
+  message: Escalation triggers lack concrete IF/WHEN conditions
+  line: null
+summary:
+  errors: 1
+  warnings: 2
+  passed: 0

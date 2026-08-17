@@ -1,0 +1,12 @@
+agent: rules_caveats
+artifact_id: VAR-primarycomp
+checked_at: '2026-08-16T04:07:33.262883+00:00'
+findings:
+- field: escalation_triggers
+  severity: warning
+  message: Escalation triggers lack concrete IF/WHEN conditions
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

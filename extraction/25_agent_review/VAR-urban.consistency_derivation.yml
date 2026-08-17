@@ -1,0 +1,12 @@
+agent: consistency_derivation
+artifact_id: VAR-urban
+checked_at: '2026-08-16T04:07:34.165065+00:00'
+findings:
+- field: derived_from
+  severity: warning
+  message: 'Unresolved derivation reference: VAR-rurality not found in extracted drafts'
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

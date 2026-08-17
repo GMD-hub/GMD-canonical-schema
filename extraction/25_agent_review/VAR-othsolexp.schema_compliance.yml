@@ -1,0 +1,8 @@
+agent: schema_compliance
+artifact_id: VAR-othsolexp
+checked_at: '2026-08-16T04:07:33.867335+00:00'
+findings: []
+summary:
+  errors: 0
+  warnings: 0
+  passed: 1

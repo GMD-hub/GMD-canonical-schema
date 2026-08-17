@@ -1,0 +1,13 @@
+agent: consistency_derivation
+artifact_id: VAR-twageothers
+checked_at: '2026-08-16T04:07:34.165352+00:00'
+findings:
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-twageothers derives_from VAR-twagencothers, but VAR-twagencothers
+    derives_to [''VAR-twagencotal'', ''VAR-lincnc''] (missing VAR-twageothers)'
+  line: null
+summary:
+  errors: 1
+  warnings: 0
+  passed: 0

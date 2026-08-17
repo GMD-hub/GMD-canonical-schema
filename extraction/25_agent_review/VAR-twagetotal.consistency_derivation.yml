@@ -1,0 +1,13 @@
+agent: consistency_derivation
+artifact_id: VAR-twagetotal
+checked_at: '2026-08-16T04:07:34.165358+00:00'
+findings:
+- field: derived_from
+  severity: error
+  message: 'Asymmetry: VAR-twagetotal derives_from VAR-twagencotal, but VAR-twagencotal
+    derives_to [''VAR-laborincome'', ''VAR-lincnc''] (missing VAR-twagetotal)'
+  line: null
+summary:
+  errors: 1
+  warnings: 0
+  passed: 0

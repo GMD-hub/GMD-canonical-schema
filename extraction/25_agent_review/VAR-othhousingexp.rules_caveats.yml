@@ -1,0 +1,13 @@
+agent: rules_caveats
+artifact_id: VAR-othhousingexp
+checked_at: '2026-08-16T04:07:33.864157+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- Verify exclusion
+    from `utlexp`.'''
+  line: null
+summary:
+  errors: 0
+  warnings: 1
+  passed: 0

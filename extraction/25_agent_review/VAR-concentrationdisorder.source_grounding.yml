@@ -1,0 +1,8 @@
+agent: source_grounding
+artifact_id: VAR-concentrationdisorder
+checked_at: '2026-08-16T04:07:33.222766+00:00'
+findings: []
+summary:
+  errors: 0
+  warnings: 0
+  passed: 1

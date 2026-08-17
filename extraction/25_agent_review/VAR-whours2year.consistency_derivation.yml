@@ -1,0 +1,8 @@
+agent: consistency_derivation
+artifact_id: VAR-whours2year
+checked_at: '2026-08-16T04:07:34.165418+00:00'
+findings: []
+summary:
+  errors: 0
+  warnings: 0
+  passed: 1

@@ -1,0 +1,21 @@
+agent: rules_caveats
+artifact_id: VAR-peatexp
+checked_at: '2026-08-16T04:07:33.871166+00:00'
+findings:
+- field: common_mistakes
+  severity: error
+  message: 'Section ## Common mistakes is a stub (48 chars < 50 minimum)'
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
+    that `solidexp` includes `peatexp`.'''
+  line: null
+- field: escalation_triggers
+  severity: warning
+  message: Escalation triggers lack concrete IF/WHEN conditions
+  line: null
+summary:
+  errors: 1
+  warnings: 2
+  passed: 0

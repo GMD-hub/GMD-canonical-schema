@@ -1,0 +1,22 @@
+agent: rules_caveats
+artifact_id: VAR-literacy
+checked_at: '2026-08-16T04:07:33.251200+00:00'
+findings:
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- Verify no individual
+    has a standard missing value (`.`) wh'''
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bvalid\b'' in ''- Verify no individual
+    has a standard missing value (`.`) wh'''
+  line: null
+- field: escalation_triggers
+  severity: warning
+  message: Escalation triggers lack concrete IF/WHEN conditions
+  line: null
+summary:
+  errors: 0
+  warnings: 3
+  passed: 0

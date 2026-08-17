@@ -1,0 +1,12 @@
+agent: rules_caveats
+artifact_id: VAR-thourstotalyear
+checked_at: '2026-08-16T04:07:33.685626+00:00'
+findings:
+- field: consistency_checks
+  severity: error
+  message: 'Section ## Consistency checks is a stub (42 chars < 50 minimum)'
+  line: null
+summary:
+  errors: 1
+  warnings: 0
+  passed: 0

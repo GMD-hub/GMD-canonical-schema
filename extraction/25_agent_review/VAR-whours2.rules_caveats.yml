@@ -1,0 +1,21 @@
+agent: rules_caveats
+artifact_id: VAR-whours2
+checked_at: '2026-08-16T04:07:33.761306+00:00'
+findings:
+- field: escalation_triggers
+  severity: error
+  message: 'Section ## Escalation triggers is a stub (40 chars < 50 minimum)'
+  line: null
+- field: consistency_checks
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\breasonable\b'' in ''- whours_2 must
+    be non-negative and reasonable for one week '''
+  line: null
+- field: escalation_triggers
+  severity: warning
+  message: Escalation triggers lack concrete IF/WHEN conditions
+  line: null
+summary:
+  errors: 1
+  warnings: 2
+  passed: 0
