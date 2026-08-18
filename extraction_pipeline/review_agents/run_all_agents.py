@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .consistency_derivation import check_drafts as consistency_check
-from .helpers import list_drafts, write_findings
+from .helpers import list_drafts, list_parameter_ids, load_draft, write_findings
 from .models import AgentFindings
 from .rules_caveats import check_draft as rules_check
 from .schema_compliance import check_draft as schema_check
@@ -77,19 +77,35 @@ def run(
 
     variable_ids = set()
     rule_ids = set()
+    has_any_country_params = False
     for path in draft_paths:
-        from .helpers import load_draft
         data, _ = load_draft(path)
         vid = data.get("variable_id", "")
         if vid:
             variable_ids.add(vid)
         for rule_id in data.get("rules", []):
             rule_ids.add(rule_id)
+        if data.get("country_parameters"):
+            has_any_country_params = True
+
+    registry_dir = Path(__file__).resolve().parents[2] / "knowledge" / "parameters"
+    parameter_ids, skipped_params = list_parameter_ids(registry_dir)
+
+    if skipped_params:
+        print(f"Skipped parameter files: {skipped_params}", file=sys.stderr)
+
+    if not parameter_ids and has_any_country_params:
+        print(
+            "ERROR: parameter registry is empty or missing, but drafts declare "
+            "country_parameters references. Aborting to prevent false positives.",
+            file=sys.stderr,
+        )
+        return [], 1
 
     all_findings: list[AgentFindings] = []
 
     for path in draft_paths:
-        all_findings.append(schema_check(path, variable_ids, rule_ids=rule_ids))
+        all_findings.append(schema_check(path, variable_ids, parameter_ids=parameter_ids, rule_ids=rule_ids))
         all_findings.append(source_check(path))
         all_findings.append(rules_check(path))
 

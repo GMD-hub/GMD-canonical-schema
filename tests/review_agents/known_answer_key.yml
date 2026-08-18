@@ -1,12 +1,6 @@
 # Known answer key for integration tests against the calibration drafts.
 # Each entry specifies an expected finding that must appear in agent output.
 
-- artifact_id: VAR-educy
-  agent: schema_compliance
-  field: country_parameters
-  severity: error
-  message_contains: "PARAM-EDU-YEARS-BY-LEVEL"
-
 - artifact_id: VAR-educat7
   agent: schema_compliance
   field: body
@@ -18,9 +12,3 @@
   field: construction_notes
   severity: error
   message_contains: "stub"
-
-- artifact_id: VAR-marital
-  agent: schema_compliance
-  field: country_parameters
-  severity: error
-  message_contains: "PARAM-DEM-MIN-MARRIAGE-AGE"

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-industryorigyear
-checked_at: '2026-08-17T21:52:59.191100+00:00'
+checked_at: '2026-08-18T01:31:06.215478+00:00'
 findings:
 - field: consistency_checks
   severity: error

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-gasolineexp
-checked_at: '2026-08-17T21:52:59.408707+00:00'
+checked_at: '2026-08-18T01:31:06.475660+00:00'
 findings:
 - field: common_mistakes
   severity: error

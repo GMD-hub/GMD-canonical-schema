@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-eyedisability
-checked_at: '2026-08-17T21:52:58.830859+00:00'
+checked_at: '2026-08-18T01:31:05.792802+00:00'
 findings: []
 summary:
   errors: 0

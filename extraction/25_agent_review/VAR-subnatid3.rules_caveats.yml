@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-subnatid3
-checked_at: '2026-08-17T21:52:59.078227+00:00'
+checked_at: '2026-08-18T01:31:06.079239+00:00'
 findings:
 - field: consistency_checks
   severity: warning

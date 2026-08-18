@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-etablet
-checked_at: '2026-08-17T21:52:58.934709+00:00'
+checked_at: '2026-08-18T01:31:05.912116+00:00'
 findings: []
 summary:
   errors: 0

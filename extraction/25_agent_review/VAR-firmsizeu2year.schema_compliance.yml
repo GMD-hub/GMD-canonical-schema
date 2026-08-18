@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-firmsizeu2year
-checked_at: '2026-08-17T21:52:59.147235+00:00'
+checked_at: '2026-08-18T01:31:06.162754+00:00'
 findings:
 - field: body
   severity: warning

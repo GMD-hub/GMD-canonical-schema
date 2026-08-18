@@ -1,6 +1,6 @@
 agent: consistency_derivation
 artifact_id: VAR-primarycomp
-checked_at: '2026-08-17T21:52:59.742886+00:00'
+checked_at: '2026-08-18T01:31:06.891567+00:00'
 findings:
 - field: value_codes
   severity: warning

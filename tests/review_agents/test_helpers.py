@@ -7,6 +7,7 @@ from extraction_pipeline.review_agents.helpers import (
     REQUIRED_SECTIONS,
     load_draft,
     list_drafts,
+    list_parameter_ids,
     write_findings,
     make_findings,
 )
@@ -90,3 +91,39 @@ class TestRequiredSections:
         assert len(REQUIRED_SECTIONS) == 7
         assert "Definition" in REQUIRED_SECTIONS
         assert "Change log" in REQUIRED_SECTIONS
+
+
+class TestListParameterIds:
+    def test_nonexistent_dir(self, tmp_path):
+        ids, skipped = list_parameter_ids(tmp_path / "nonexistent")
+        assert ids == set()
+        assert skipped == []
+
+    def test_empty_dir(self, tmp_path):
+        ids, skipped = list_parameter_ids(tmp_path)
+        assert ids == set()
+        assert skipped == []
+
+    def test_valid_registry(self, tmp_path):
+        (tmp_path / "PARAM-X-TEST.md").write_text(
+            "---\nparameter_id: PARAM-X-TEST\n---\n\nBody\n"
+        )
+        ids, skipped = list_parameter_ids(tmp_path)
+        assert "PARAM-X-TEST" in ids
+        assert skipped == []
+
+    def test_file_without_parameter_id(self, tmp_path):
+        (tmp_path / "bad.md").write_text(
+            "---\nvariable_id: VAR-x\n---\n\nBody\n"
+        )
+        ids, skipped = list_parameter_ids(tmp_path)
+        assert ids == set()
+        assert len(skipped) == 1
+        assert "bad.md" in skipped[0]
+
+    def test_malformed_yaml(self, tmp_path):
+        (tmp_path / "broken.md").write_text("not valid yaml\n---\n")
+        ids, skipped = list_parameter_ids(tmp_path)
+        assert ids == set()
+        assert len(skipped) == 1
+        assert "broken.md" in skipped[0]

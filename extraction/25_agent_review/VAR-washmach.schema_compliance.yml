@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-washmach
-checked_at: '2026-08-17T21:52:59.052334+00:00'
+checked_at: '2026-08-18T01:31:06.049266+00:00'
 findings: []
 summary:
   errors: 0
