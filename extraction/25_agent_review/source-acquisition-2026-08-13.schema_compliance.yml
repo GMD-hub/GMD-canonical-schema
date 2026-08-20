@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: source-acquisition-2026-08-13
-checked_at: '2026-08-17T22:17:44.096144+00:00'
+checked_at: '2026-08-20T14:52:57.128122+00:00'
 findings:
 - field: frontmatter
   severity: error

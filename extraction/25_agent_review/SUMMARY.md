@@ -1,8 +1,8 @@
 # Agent Review Summary
 
-Generated: 2026-08-17T22:17:45.170552+00:00
+Generated: 2026-08-20T14:52:58.041964+00:00
 
-**Total errors:** 44 | **Total warnings:** 497
+**Total errors:** 40 | **Total warnings:** 497
 
 ## Results Table
 
@@ -35,7 +35,7 @@ Generated: 2026-08-17T22:17:45.170552+00:00
 | VAR-educat7 | schema_compliance | 0 | 0 | yes |
 | VAR-educat7 | source_grounding | 0 | 0 | yes |
 | VAR-educat7 | rules_caveats | 0 | 0 | yes |
-| VAR-educy | schema_compliance | 2 | 0 | no |
+| VAR-educy | schema_compliance | 0 | 0 | yes |
 | VAR-educy | source_grounding | 0 | 2 | no |
 | VAR-educy | rules_caveats | 0 | 0 | yes |
 | VAR-everattend | schema_compliance | 0 | 0 | yes |
@@ -56,7 +56,7 @@ Generated: 2026-08-17T22:17:45.170552+00:00
 | VAR-male | schema_compliance | 0 | 0 | yes |
 | VAR-male | source_grounding | 0 | 1 | no |
 | VAR-male | rules_caveats | 0 | 0 | yes |
-| VAR-marital | schema_compliance | 2 | 0 | no |
+| VAR-marital | schema_compliance | 0 | 0 | yes |
 | VAR-marital | source_grounding | 0 | 0 | yes |
 | VAR-marital | rules_caveats | 0 | 0 | yes |
 | VAR-mineducatage | schema_compliance | 0 | 0 | yes |
@@ -1123,13 +1123,6 @@ Generated: 2026-08-17T22:17:45.170552+00:00
 
 - **warning** [consistency_checks]: Vague text in Consistency checks: '\bcorrect\b' in '- In ECA region surveys, it is expected and correct for indi'
 
-### VAR-educy (schema_compliance)
-
-- **error** [frontmatter]: Pydantic validation failed: 1 validation error for VariableDefinition
-  Value error, unknown parameter IDs: ['PARAM-EDU-YEARS-BY-LEVEL'] [type=value_error, input_value={'variable_id': 'VAR-educ...ountry record exists.'}}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.13/v/value_error
-- **error** [country_parameters]: Parameter reference not in registry: PARAM-EDU-YEARS-BY-LEVEL
-
 ### VAR-educy (source_grounding)
 
 - **warning** [rules]: Rule RULE-EDU-001 declared in frontmatter but not referenced in body
@@ -1163,13 +1156,6 @@ Generated: 2026-08-17T22:17:45.170552+00:00
 ### VAR-male (source_grounding)
 
 - **warning** [rules]: Rule RULE-SEX-001 declared in frontmatter but not referenced in body
-
-### VAR-marital (schema_compliance)
-
-- **error** [frontmatter]: Pydantic validation failed: 1 validation error for VariableDefinition
-  Value error, unknown parameter IDs: ['PARAM-DEM-MIN-MARRIAGE-AGE'] [type=value_error, input_value={'variable_id': 'VAR-mari... known-answer-key.md.'}}, input_type=dict]
-    For further information visit https://errors.pydantic.dev/2.13/v/value_error
-- **error** [country_parameters]: Parameter reference not in registry: PARAM-DEM-MIN-MARRIAGE-AGE
 
 ### VAR-mineducatage (rules_caveats)
 

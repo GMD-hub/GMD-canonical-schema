@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-othliqexp
-checked_at: '2026-08-17T22:17:44.183083+00:00'
+checked_at: '2026-08-20T14:52:57.228891+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-doculand
-checked_at: '2026-08-17T22:17:43.655821+00:00'
+checked_at: '2026-08-20T14:52:56.583232+00:00'
 findings:
 - field: body
   severity: warning

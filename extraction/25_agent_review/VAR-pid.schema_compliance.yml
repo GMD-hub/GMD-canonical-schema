@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-pid
-checked_at: '2026-08-17T22:17:43.837125+00:00'
+checked_at: '2026-08-20T14:52:56.827817+00:00'
 findings: []
 summary:
   errors: 0

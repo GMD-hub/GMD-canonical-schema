@@ -9,7 +9,7 @@ from pathlib import Path
 import yaml
 
 from extraction_pipeline.review_agents.consistency_derivation import check_drafts
-from extraction_pipeline.review_agents.helpers import list_drafts, write_findings
+from extraction_pipeline.review_agents.helpers import list_drafts, list_parameter_ids, write_findings
 from extraction_pipeline.review_agents.models import AgentFindings
 from extraction_pipeline.review_agents.rules_caveats import check_draft as rules_check
 from extraction_pipeline.review_agents.run_all_agents import run
@@ -17,13 +17,14 @@ from extraction_pipeline.review_agents.schema_compliance import check_draft as s
 from extraction_pipeline.review_agents.source_grounding import check_draft as source_check
 
 DRAFTS_DIR = Path("extraction/20_drafts")
+REGISTRY_DIR = Path("knowledge/parameters")
 ANSWER_KEY_PATH = Path(__file__).parent / "known_answer_key.yml"
 
 
 @pytest.fixture
 def answer_key():
     data = yaml.safe_load(ANSWER_KEY_PATH.read_text())
-    return data
+    return data or []
 
 
 @pytest.fixture
@@ -37,10 +38,11 @@ def all_findings():
 
     variable_ids = {d.get("variable_id", "") for _, d in all_data if d.get("variable_id")}
     rule_ids = {r for _, d in all_data for r in d.get("rules", [])}
+    parameter_ids, _ = list_parameter_ids(REGISTRY_DIR)
 
     findings: list[AgentFindings] = []
     for path, _ in all_data:
-        findings.append(schema_check(path, variable_ids, rule_ids=rule_ids))
+        findings.append(schema_check(path, variable_ids, parameter_ids=parameter_ids, rule_ids=rule_ids))
         findings.append(source_check(path))
         findings.append(rules_check(path))
     findings.extend(check_drafts(draft_paths))
@@ -88,4 +90,4 @@ class TestFullPipeline:
 
     def test_runner_exit_code(self, tmp_path):
         _, exit_code = run(DRAFTS_DIR, tmp_path)
-        assert exit_code == 1, "Expected exit code 1 due to known errors in calibration drafts"
+        assert exit_code == 1, "Expected exit code 1 due to known errors in non-variable calibration files"

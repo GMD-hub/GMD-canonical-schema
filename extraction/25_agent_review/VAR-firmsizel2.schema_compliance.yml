@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-firmsizel2
-checked_at: '2026-08-17T22:17:43.866673+00:00'
+checked_at: '2026-08-20T14:52:56.862849+00:00'
 findings:
 - field: body
   severity: warning

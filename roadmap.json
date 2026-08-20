@@ -154,6 +154,18 @@
           "title": "Add deterministic routing, failure states, and audit records",
           "status": "planned",
           "plan": ".cg-docs/plans/2026-08-14-build-agent-review.md"
+        },
+        {
+          "id": "fix-schema-compliance-parameter-loading",
+          "title": "Fix parameter-registry loading in the schema-compliance review runner",
+          "status": "done",
+          "plan": ".cg-docs/plans/2026-08-17-fix-parameter-registry-loading-review-runner.md"
+        },
+        {
+          "id": "refresh-review-agent-test-and-doc-conventions",
+          "title": "Refresh review-agent test conventions and stale solution note after the parameter-registry fix",
+          "status": "idea",
+          "plan": null
         }
       ]
     },

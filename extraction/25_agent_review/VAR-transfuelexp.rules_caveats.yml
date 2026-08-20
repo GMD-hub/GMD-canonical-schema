@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-transfuelexp
-checked_at: '2026-08-17T22:17:44.221271+00:00'
+checked_at: '2026-08-20T14:52:57.272083+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

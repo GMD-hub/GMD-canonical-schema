@@ -53,6 +53,29 @@ def list_drafts(drafts_dir: Path) -> list[Path]:
     )
 
 
+def list_parameter_ids(registry_dir: Path) -> tuple[set[str], list[str]]:
+    """Load parameter IDs from knowledge/parameters/*.md.
+
+    Returns (parameter_ids, skipped_files) where skipped_files lists
+    filenames that failed to parse or lacked a parameter_id field.
+    """
+    parameter_ids: set[str] = set()
+    skipped: list[str] = []
+    if not registry_dir.is_dir():
+        return parameter_ids, skipped
+    for path in sorted(registry_dir.glob("*.md")):
+        try:
+            data, _ = load_markdown(path)
+            pid = data.get("parameter_id", "")
+            if pid:
+                parameter_ids.add(pid)
+            else:
+                skipped.append(path.name)
+        except Exception as exc:
+            skipped.append(f"{path.name}: {exc}")
+    return parameter_ids, skipped
+
+
 def make_findings(
     agent: str,
     artifact_id: str,

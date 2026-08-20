@@ -3,19 +3,24 @@
 import pytest
 from pathlib import Path
 
+from extraction_pipeline.review_agents.helpers import list_parameter_ids
 from extraction_pipeline.review_agents.schema_compliance import check_draft
 
 
 DRAFTS_DIR = Path("extraction/20_drafts")
+REGISTRY_DIR = Path("knowledge/parameters")
 
 _VARIABLE_IDS = {"VAR-male", "VAR-educat7", "VAR-educat4", "VAR-educy", "VAR-marital", "VAR-urban"}
 _RULE_IDS = {"RULE-SEX-001", "RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RULE-EDU-999"}
 
 
 class TestSchemaCompliance:
-    def _findings_for(self, artifact_id: str) -> list:
+    def _findings_for(self, artifact_id: str, parameter_ids: set[str] | None = None) -> list:
         path = list(DRAFTS_DIR.rglob(f"{artifact_id}.md"))[0]
-        result = check_draft(path, _VARIABLE_IDS, rule_ids=_RULE_IDS)
+        kwargs = {"variable_ids": _VARIABLE_IDS, "rule_ids": _RULE_IDS}
+        if parameter_ids is not None:
+            kwargs["parameter_ids"] = parameter_ids
+        result = check_draft(path, **kwargs)
         assert result.artifact_id == artifact_id
         return result.findings
 
@@ -24,17 +29,37 @@ class TestSchemaCompliance:
         errors = [f for f in findings if f.severity == "error"]
         assert errors == [], f"Unexpected errors: {[f.message for f in errors]}"
 
-    def test_var_educy_parameter_error(self):
+    def test_var_educy_parameter_error_when_registry_unloaded(self):
         findings = self._findings_for("VAR-educy")
         param_errors = [f for f in findings if "PARAM-EDU-YEARS-BY-LEVEL" in f.message]
         assert len(param_errors) >= 1
         assert param_errors[0].severity == "error"
 
-    def test_var_marital_parameter_error(self):
+    def test_var_marital_parameter_error_when_registry_unloaded(self):
         findings = self._findings_for("VAR-marital")
         param_errors = [f for f in findings if "PARAM-DEM-MIN-MARRIAGE-AGE" in f.message]
         assert len(param_errors) >= 1
         assert param_errors[0].severity == "error"
+
+    def test_var_educy_no_parameter_error_when_registry_loaded(self):
+        parameter_ids, skipped = list_parameter_ids(REGISTRY_DIR)
+        assert len(parameter_ids) >= 1, (
+            f"Registry loaded 0 parameters from {REGISTRY_DIR}; "
+            f"Skipped: {skipped}"
+        )
+        findings = self._findings_for("VAR-educy", parameter_ids=parameter_ids)
+        param_errors = [f for f in findings if "PARAM-EDU-YEARS-BY-LEVEL" in f.message]
+        assert param_errors == [], f"Expected no parameter errors when registry loaded: {[f.message for f in param_errors]}"
+
+    def test_var_marital_no_parameter_error_when_registry_loaded(self):
+        parameter_ids, skipped = list_parameter_ids(REGISTRY_DIR)
+        assert len(parameter_ids) >= 1, (
+            f"Registry loaded 0 parameters from {REGISTRY_DIR}; "
+            f"Skipped: {skipped}"
+        )
+        findings = self._findings_for("VAR-marital", parameter_ids=parameter_ids)
+        param_errors = [f for f in findings if "PARAM-DEM-MIN-MARRIAGE-AGE" in f.message]
+        assert param_errors == [], f"Expected no parameter errors when registry loaded: {[f.message for f in param_errors]}"
 
     def test_var_educat7_no_placeholder_warnings(self):
         findings = self._findings_for("VAR-educat7")

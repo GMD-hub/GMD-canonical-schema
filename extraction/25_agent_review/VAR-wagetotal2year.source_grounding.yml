@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: VAR-wagetotal2year
-checked_at: '2026-08-17T22:17:44.070261+00:00'
+checked_at: '2026-08-20T14:52:57.098267+00:00'
 findings:
 - field: construction_notes
   severity: warning

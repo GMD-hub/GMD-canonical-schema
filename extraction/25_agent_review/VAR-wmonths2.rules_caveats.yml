@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-wmonths2
-checked_at: '2026-08-17T22:17:44.089235+00:00'
+checked_at: '2026-08-20T14:52:57.120373+00:00'
 findings: []
 summary:
   errors: 0
