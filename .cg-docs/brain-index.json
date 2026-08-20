@@ -1,5 +1,5 @@
 {
-  "edge_count": 11,
+  "edge_count": 15,
   "edges": [
     {
       "edge_type": "decided_from",
@@ -11,6 +11,12 @@
       "edge_type": "decided_from",
       "source": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
       "target": ".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "decided_from",
+      "source": ".cg-docs/plans/2026-08-14-build-agent-review.md",
+      "target": ".cg-docs/brainstorms/2026-08-14-agent-review-lessons.md",
       "target_missing": false
     },
     {
@@ -51,6 +57,18 @@
     },
     {
       "edge_type": "references",
+      "source": ".cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md",
+      "target": ".cg-docs/plans/2026-08-14-build-agent-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "references",
+      "source": ".cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md",
+      "target": ".cg-docs/plans/2026-08-14-build-agent-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "references",
       "source": ".cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md",
       "target": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
       "target_missing": false
@@ -65,6 +83,12 @@
       "edge_type": "references",
       "source": ".cg-docs/brainstorms/2026-08-07-calibrate-human-review.md",
       "target": ".cg-docs/plans/2026-08-07-calibrate-human-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "references",
+      "source": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
+      "target": ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
       "target_missing": false
     }
   ],
@@ -156,6 +180,28 @@
         "approach",
         "welfare",
         "geo"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "brainstorm",
+      "path": ".cg-docs/brainstorms/2026-08-14-agent-review-lessons.md",
+      "slug": "2026-08-14-agent-review-lessons",
+      "status": "",
+      "summary": "A prototype of all 4 review agents was built and run against the 6 calibration drafts. The prototype was reverted because it was built in Ask mode (read-only) without using the Compound GPID workflow. These lessons should inform the proper implementation via `/cg-plan` + `/cg-work`.",
+      "tags": [],
+      "title": "2026-08-14-agent-review-lessons",
+      "top_keywords": [
+        "agent",
+        "run_all_agents.py",
+        "---",
+        "allow_unresolved_draft=true",
+        "summary.md",
+        "cg-plan",
+        "extraction/20_drafts/",
+        "variable.py",
+        "agents",
+        "prototype"
       ]
     },
     {
@@ -285,6 +331,91 @@
       ]
     },
     {
+      "date": "2026-08-15",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-14-build-agent-review.md",
+      "slug": "2026-08-14-build-agent-review",
+      "status": "active",
+      "summary": "Build four deterministic Python review agents and a runner that validate every extraction draft in `extraction/20_drafts/` against schema compliance, source grounding, rules/caveats completeness, and cross-variable consistency. Each agent writes structured YAML findings to `extraction/25_agent_review/`. A runner script executes all agents and generates an aggregated `SUMMARY.md`.",
+      "tags": [
+        "extraction",
+        "agents",
+        "review",
+        "validation",
+        "python"
+      ],
+      "title": "Build Independent Agent Review System",
+      "top_keywords": [
+        "agents.md",
+        "extraction/25_agent_review/",
+        "summary.md",
+        "known_answer_key.yml",
+        "test scenarios",
+        "agent",
+        "build",
+        "extraction/20_drafts/",
+        "allow_unresolved_draft=true",
+        "review"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-17-fix-parameter-registry-loading-review-runner.md",
+      "slug": "2026-08-17-fix-parameter-registry-loading-review-runner",
+      "status": "done",
+      "summary": "Make `extraction_pipeline.review_agents.run_all_agents` load the universal parameter registry from `knowledge/parameters/`, hard-stop if the registry is missing or yields zero parameter IDs while drafts reference them, and pass the known parameter IDs into the schema-compliance agent — so drafts declaring `country_parameters` are validated against the real registry instead of an always-empty set. This resolves the 4 `schema_compliance` errors currently reported against `VAR-educy` and `VAR-marital`. It also reconciles the existing test suite and answer key to the fixed behavior, and audits the two existing parameter stubs for stale metadata (agents may not edit `knowledge/`).",
+      "tags": [
+        "agent-review",
+        "schema-compliance",
+        "parameter-registry",
+        "review-runner",
+        "bugfix"
+      ],
+      "title": "Fix parameter-registry loading in the schema-compliance review runner",
+      "top_keywords": [
+        "parameter_ids",
+        "knowledge/",
+        "country_parameters",
+        "knowledge/parameters/",
+        "var-marital",
+        "parameter_id",
+        "summary.md",
+        "country-parameters/",
+        "schema_compliance",
+        "var-educy"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
+      "slug": "2026-08-20-exclude-runs-from-review-runner",
+      "status": "completed",
+      "summary": "Drive the agent review error count from **40 -> 0** by aligning `extraction_pipeline/review_agents/helpers.py::list_drafts` with the `EXCLUDE_DIRS` convention already used by `fix_derivation_asymmetry.py`. The four `extraction/20_drafts/runs/` files are run-tracking metadata (frontmatter = `date`/`plan`/`source-commit`, no `variable_id`), not `VariableDefinition`s; misvalidating them produced all 40 review errors. Zero variable drafts (267 `VAR-*`) have errors. After the fix the runner reports `Errors: 0`, exit code 0, and the 16 stale `runs/` findings are removed without reappearing.",
+      "tags": [
+        "agent-review",
+        "review-runner",
+        "list-drafts",
+        "bugfix",
+        "false-positive",
+        "exclude-dirs"
+      ],
+      "title": "Exclude runs/ from the review runner to eliminate 40 false-positive errors",
+      "top_keywords": [
+        "runs/",
+        "fix_derivation_asymmetry.py",
+        "summary.md",
+        "list_drafts",
+        "exclude_dirs",
+        "test scenarios",
+        "var-*",
+        "project-documentation/",
+        "test_runner_exit_code",
+        "helpers.py"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-03-extract-universal-non-welfare-schema-review.md",
@@ -395,25 +526,25 @@
       ]
     },
     {
-      "date": "2026-08-14",
+      "date": "2026-08-20",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
       "slug": "2026-08-13-complete-non-welfare-extraction-verify-review",
       "status": "",
-      "summary": "**Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare-extraction-review.md`) has **no `fixed` findings** (fix-triage has not run yet). Per Step 1.7 of the review contract, verify mode self-disables when no prior fixed review exists and falls back to normal routing. This is a light confirm pass, not a full verify-mode activation.",
+      "summary": "**Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents/test_helpers.py, tests/review_agents/test_integration.py, extraction/25_agent_review/ (regenerated), roadmap.json **Findings**: 5 (P0: 0, P1: 0, P2: 2, P3: 3)",
       "tags": [],
       "title": "2026-08-13-complete-non-welfare-extraction-verify-review",
       "top_keywords": [
-        "2026-08-13-complete-non-welfare-extraction-review.md",
-        "review",
-        "verify",
-        "fixed",
-        "confirm",
-        "variabledefinition",
-        "/cg-review mode:verify",
-        "##",
-        "pytest tests/extraction/",
-        "/cg-fix-triage"
+        "runs/",
+        "list_drafts",
+        "exclude_dirs",
+        "exit_code == 0",
+        "@cg-code-quality",
+        "helpers.py",
+        "test_helpers.py",
+        "test_integration.py",
+        "fix_derivation_asymmetry.py",
+        "fix"
       ]
     },
     {
@@ -566,6 +697,119 @@
         "tests",
         "testserver",
         "moduleserver"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md",
+      "slug": "2026-08-15-pydantic-rule-ids-context",
+      "status": "",
+      "summary": "When validating extraction drafts against `VariableDefinition` with `allow_unresolved_draft=True`, Pydantic raised `unknown rule IDs: ['RULE-SEX-001']` even though the flag was set. The flag only bypasses `unknown_variables`, not `unknown_rules` or `unknown_parameters`.",
+      "tags": [
+        "pydantic",
+        "validation",
+        "context",
+        "rule-ids",
+        "extraction"
+      ],
+      "title": "Pydantic allow_unresolved_draft does not bypass rule_ids/parameter_ids validation",
+      "top_keywords": [
+        "allow_unresolved_draft",
+        "rule_ids",
+        "pydantic",
+        "validation",
+        "bypassed",
+        "bypass",
+        "variable_ids",
+        "model_validator",
+        "unknown_variables",
+        "unknown_rules"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md",
+      "slug": "2026-08-15-unresolved-derivation-ref",
+      "status": "",
+      "summary": "VAR-urban declares `derived_from: [VAR-rurality]` but VAR-rurality is not in the draft set. The expected test for an asymmetry warning on VAR-urban failed because the symmetry check only fires when `source_id in all_variables`.",
+      "tags": [
+        "graph-validation",
+        "asymmetry",
+        "derivation",
+        "cross-variable"
+      ],
+      "title": "Derivation asymmetry check requires both variables in draft set",
+      "top_keywords": [
+        "asymmetry",
+        "derivation",
+        "draft",
+        "variables",
+        "requires",
+        "derived_from",
+        "derives_to",
+        "problem",
+        "root",
+        "cause"
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/testing-patterns/2026-08-17-parameter-registry-loading.md",
+      "slug": "2026-08-17-parameter-registry-loading",
+      "status": "",
+      "summary": "Review agents that validate `country_parameters` references need access to the parameter ID registry (`knowledge/parameters/*.md`). Without it, every `country_parameters` reference is flagged as \"not in registry\" — a false positive when the registry simply wasn't loaded.",
+      "tags": [
+        "parameter-registry",
+        "schema-compliance",
+        "testing-pattern",
+        "regression-guard"
+      ],
+      "title": "Parameter registry loading pattern for review agents",
+      "top_keywords": [
+        "country_parameters",
+        "helpers.py",
+        "load_markdown",
+        "parameter_ids",
+        "registry",
+        "parameter",
+        "pattern",
+        "loading",
+        "list_parameter_ids",
+        "parameter_id"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
+      "slug": "2026-08-20-exclude-runs-from-review-runner",
+      "status": "",
+      "summary": "The agent review runner reported **40 errors / 497 warnings** across 271 drafts (`extraction/25_agent_review/`). All 40 errors traced to the 4 files in `extraction/20_drafts/runs/` (`completeness-2026-08-13.md`, `inventory-2026-08-13.md`, `source-acquisition-2026-08-13.md`, `source-lock-2026-08-13.md`) — run-tracking metadata, not variable definitions. Zero actual `VAR-*` drafts had errors. The runner exited 1, blocking CI and drowning real findings in noise.",
+      "tags": [
+        "agent-review",
+        "review-runner",
+        "list_drafts",
+        "exclude-dirs",
+        "false-positive",
+        "regression-guard",
+        "stale-findings",
+        "EXCLUDE_DIRS"
+      ],
+      "title": "Exclude non-variable dirs from the review runner to eliminate false-positive errors",
+      "top_keywords": [
+        "runs/",
+        "fix_derivation_asymmetry.py",
+        "exclude_dirs",
+        "false-positive",
+        "helpers.py",
+        "variable_id",
+        "project-documentation/",
+        "runner",
+        "errors",
+        "exclude"
       ]
     },
     {
@@ -969,7 +1213,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#build-source-grounding-review",
       "slug": "build-source-grounding-review",
-      "status": "idea",
+      "status": "planned",
       "summary": "Build a source-grounding review agent and skill",
       "tags": [],
       "title": "Build a source-grounding review agent and skill",
@@ -991,7 +1235,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#build-schema-compliance-review",
       "slug": "build-schema-compliance-review",
-      "status": "idea",
+      "status": "planned",
       "summary": "Build a schema-compliance review agent and skill",
       "tags": [],
       "title": "Build a schema-compliance review agent and skill",
@@ -1013,7 +1257,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#build-rules-caveats-review",
       "slug": "build-rules-caveats-review",
-      "status": "idea",
+      "status": "planned",
       "summary": "Build a rules and caveats completeness agent and skill",
       "tags": [],
       "title": "Build a rules and caveats completeness agent and skill",
@@ -1035,7 +1279,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#build-consistency-derivation-review",
       "slug": "build-consistency-derivation-review",
-      "status": "idea",
+      "status": "planned",
       "summary": "Build a cross-variable consistency and derivation review agent",
       "tags": [],
       "title": "Build a cross-variable consistency and derivation review agent",
@@ -1057,7 +1301,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#add-review-routing-audit",
       "slug": "add-review-routing-audit",
-      "status": "idea",
+      "status": "planned",
       "summary": "Add deterministic routing, failure states, and audit records",
       "tags": [],
       "title": "Add deterministic routing, failure states, and audit records",
@@ -1072,6 +1316,116 @@
         "review",
         "feature",
         "milestone"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#fix-schema-compliance-parameter-loading",
+      "slug": "fix-schema-compliance-parameter-loading",
+      "status": "done",
+      "summary": "Fix parameter-registry loading in the schema-compliance review runner",
+      "tags": [],
+      "title": "Fix parameter-registry loading in the schema-compliance review runner",
+      "top_keywords": [
+        "establish independent agent review\nobjective",
+        "review",
+        "fix",
+        "parameter-registry",
+        "loading",
+        "schema-compliance",
+        "runner",
+        "feature",
+        "milestone",
+        "establish"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#refresh-review-agent-test-and-doc-conventions",
+      "slug": "refresh-review-agent-test-and-doc-conventions",
+      "status": "idea",
+      "summary": "Refresh review-agent test conventions and stale solution note after the parameter-registry fix",
+      "tags": [],
+      "title": "Refresh review-agent test conventions and stale solution note after the parameter-registry fix",
+      "top_keywords": [
+        "establish independent agent review\nobjective",
+        "refresh",
+        "review-agent",
+        "test",
+        "conventions",
+        "stale",
+        "solution",
+        "parameter-registry",
+        "fix",
+        "review"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#fix-review-runner-runs-exclusion",
+      "slug": "fix-review-runner-runs-exclusion",
+      "status": "done",
+      "summary": "Exclude runs/ from the review runner to eliminate 40 false-positive errors",
+      "tags": [],
+      "title": "Exclude runs/ from the review runner to eliminate 40 false-positive errors",
+      "top_keywords": [
+        "establish independent agent review\nobjective",
+        "review",
+        "exclude",
+        "runner",
+        "eliminate",
+        "false-positive",
+        "errors",
+        "feature",
+        "milestone",
+        "establish"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#unify-exclude-dirs",
+      "slug": "unify-exclude-dirs",
+      "status": "idea",
+      "summary": "Unify EXCLUDE_DIRS across helpers.py and fix_derivation_asymmetry.py to prevent future drift",
+      "tags": [],
+      "title": "Unify EXCLUDE_DIRS across helpers.py and fix_derivation_asymmetry.py to prevent future drift",
+      "top_keywords": [
+        "establish independent agent review\nobjective",
+        "unify",
+        "exclude_dirs",
+        "across",
+        "helpers",
+        "fix_derivation_asymmetry",
+        "prevent",
+        "future",
+        "drift",
+        "helpers.py"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#tune-vague-text-escalation-heuristic",
+      "slug": "tune-vague-text-escalation-heuristic",
+      "status": "idea",
+      "summary": "Tune the rules_caveats vague-text regex and escalation IF/WHEN heuristic to drop ~150 false-positive warnings",
+      "tags": [],
+      "title": "Tune the rules_caveats vague-text regex and escalation IF/WHEN heuristic to drop ~150 false-positive warnings",
+      "top_keywords": [
+        "establish independent agent review\nobjective",
+        "tune",
+        "rules_caveats",
+        "vague-text",
+        "regex",
+        "escalation",
+        "heuristic",
+        "drop",
+        "false-positive",
+        "warnings"
       ]
     },
     {
@@ -1101,7 +1455,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#review-calibration-sample",
       "slug": "review-calibration-sample",
-      "status": "idea",
+      "status": "done",
       "summary": "Review and enrich their Markdown through the Shiny app",
       "tags": [],
       "title": "Review and enrich their Markdown through the Shiny app",
@@ -1123,7 +1477,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#measure-review-errors",
       "slug": "measure-review-errors",
-      "status": "idea",
+      "status": "done",
       "summary": "Measure extraction and agent-review errors",
       "tags": [],
       "title": "Measure extraction and agent-review errors",
@@ -1145,7 +1499,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#simplify-review-interface",
       "slug": "simplify-review-interface",
-      "status": "idea",
+      "status": "done",
       "summary": "Simplify the interface based on reviewer experience",
       "tags": [],
       "title": "Simplify the interface based on reviewer experience",
@@ -1167,7 +1521,7 @@
       "entity_type": "feature",
       "path": "roadmap.json#finalize-review-rubric",
       "slug": "finalize-review-rubric",
-      "status": "idea",
+      "status": "done",
       "summary": "Finalize the review rubric and acceptance criteria",
       "tags": [],
       "title": "Finalize the review rubric and acceptance criteria",
@@ -1625,13 +1979,13 @@
       ]
     }
   ],
-  "entity_count": 66,
-  "generated": "2026-08-14",
+  "entity_count": 79,
+  "generated": "2026-08-20",
   "schema_version": "0.2.0",
-  "topic_count": 3,
+  "topic_count": 5,
   "topics": [
     {
-      "entity_count": 25,
+      "entity_count": 30,
       "entity_paths": [
         "roadmap.json#define-review-state-manifest",
         "roadmap.json#build-shiny-review-app",
@@ -1646,6 +2000,11 @@
         "roadmap.json#build-rules-caveats-review",
         "roadmap.json#build-consistency-derivation-review",
         "roadmap.json#add-review-routing-audit",
+        "roadmap.json#fix-schema-compliance-parameter-loading",
+        "roadmap.json#refresh-review-agent-test-and-doc-conventions",
+        "roadmap.json#fix-review-runner-runs-exclusion",
+        "roadmap.json#unify-exclude-dirs",
+        "roadmap.json#tune-vague-text-escalation-heuristic",
         "roadmap.json#select-calibration-sample",
         "roadmap.json#review-calibration-sample",
         "roadmap.json#measure-review-errors",
@@ -1660,12 +2019,12 @@
         "roadmap.json#complete-global-rules-modules"
       ],
       "keywords": [
-        "human review application\nobjective",
-        "posit connect",
-        "complete universal records\nobjective"
+        "establish independent agent review\nobjective",
+        "review",
+        "human review application\nobjective"
       ],
-      "label": "Human Review Application\nObjective / Posit Connect / Complete Universal Records\nObjective",
-      "slug": "human-review-application-objective-posit-connect-complete-universal-records-objective"
+      "label": "Establish Independent Agent Review\nObjective / Review / Human Review Application\nObjective",
+      "slug": "establish-independent-agent-review-objective-review-human-review-application-objective"
     },
     {
       "entity_count": 15,
@@ -1695,6 +2054,25 @@
       "slug": "universal-non-welfare-schema-objective-freeze-version"
     },
     {
+      "entity_count": 7,
+      "entity_paths": [
+        ".cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md",
+        ".cg-docs/brainstorms/2026-08-14-agent-review-lessons.md",
+        ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
+        ".cg-docs/plans/2026-08-14-build-agent-review.md",
+        ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
+        ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+        ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md"
+      ],
+      "keywords": [
+        "runs/",
+        "test scenarios",
+        "agents.md"
+      ],
+      "label": "Runs/ / Test Scenarios / Agents.Md",
+      "slug": "runs-test-scenarios-agents-md"
+    },
+    {
       "entity_count": 6,
       "entity_paths": [
         "roadmap.json#resolve-fallback-authority",
@@ -1711,6 +2089,21 @@
       ],
       "label": "Country Parameter Layer / Country Parameter Layer\nObjective / Parameters",
       "slug": "country-parameter-layer-country-parameter-layer-objective-parameters"
+    },
+    {
+      "entity_count": 3,
+      "entity_paths": [
+        ".cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md",
+        ".cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md",
+        ".cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md"
+      ],
+      "keywords": [
+        "allow_unresolved_draft",
+        "pydantic",
+        "cause"
+      ],
+      "label": "Allow_Unresolved_Draft / Pydantic / Cause",
+      "slug": "allow-unresolved-draft-pydantic-cause"
     }
   ]
 }

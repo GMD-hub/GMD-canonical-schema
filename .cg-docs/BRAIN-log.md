@@ -1,13 +1,41 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
+_Generated 2026-08-20 · 27 artifacts (newest first) + 52 roadmap features_
+
+## undated
+
+- **[2026-08-14-agent-review-lessons](.cg-docs/brainstorms/2026-08-14-agent-review-lessons.md)** · `brainstorm` · _—_ · `—`
+  > A prototype of all 4 review agents was built and run against the 6 calibration drafts. The prototype was reverted bec…
+
+## 2026-08-20
+
+- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-20`
+  > **Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents…
+- **[Exclude non-variable dirs from the review runner to eliminate false-positive errors](.cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md)** · `solution` · _—_ · `2026-08-20`
+  > The agent review runner reported **40 errors / 497 warnings** across 271 drafts (`extraction/25_agent_review/`). All …
+- **[Exclude runs/ from the review runner to eliminate 40 false-positive errors](.cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md)** · `plan` · _completed_ · `2026-08-20`
+  > Drive the agent review error count from **40 -> 0** by aligning `extraction_pipeline/review_agents/helpers.py::list_d…
+
+## 2026-08-17
+
+- **[Fix parameter-registry loading in the schema-compliance review runner](.cg-docs/plans/2026-08-17-fix-parameter-registry-loading-review-runner.md)** · `plan` · _done_ · `2026-08-17`
+  > Make `extraction_pipeline.review_agents.run_all_agents` load the universal parameter registry from `knowledge/paramet…
+- **[Parameter registry loading pattern for review agents](.cg-docs/solutions/testing-patterns/2026-08-17-parameter-registry-loading.md)** · `solution` · _—_ · `2026-08-17`
+  > Review agents that validate `country_parameters` references need access to the parameter ID registry (`knowledge/para…
+
+## 2026-08-15
+
+- **[Build Independent Agent Review System](.cg-docs/plans/2026-08-14-build-agent-review.md)** · `plan` · _active_ · `2026-08-15`
+  > Build four deterministic Python review agents and a runner that validate every extraction draft in `extraction/20_dra…
+- **[Derivation asymmetry check requires both variables in draft set](.cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md)** · `solution` · _—_ · `2026-08-15`
+  > VAR-urban declares `derived_from: [VAR-rurality]` but VAR-rurality is not in the draft set. The expected test for an …
+- **[Pydantic allow_unresolved_draft does not bypass rule_ids/parameter_ids validation](.cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md)** · `solution` · _—_ · `2026-08-15`
+  > When validating extraction drafts against `VariableDefinition` with `allow_unresolved_draft=True`, Pydantic raised `u…
 
 ## 2026-08-14
 
 - **[2026-08-13-complete-non-welfare-extraction-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md)** · `review` · _—_ · `2026-08-14`
   > **Review mode**: data-risk (auto-routed from /cg-work review:auto) **Files reviewed**: 267 variable drafts + 3 run re…
-- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-14`
-  > **Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare…
 - **[Hand-drafting GMD CVS variable specs at scale and validating them](.cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md)** · `solution` · _—_ · `2026-08-14`
   > The GMD Canonical Variable Schema (CVS) needed `VariableDefinition`-valid draft specs for every non-welfare variable …
 
@@ -68,23 +96,23 @@ _Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
 
 - **[Add labor parameters where confirmed by universal extraction](roadmap.json#add-labor-parameters)** · `feature` · _idea_ · `—`
   > Add labor parameters where confirmed by universal extraction
-- **[Add deterministic routing, failure states, and audit records](roadmap.json#add-review-routing-audit)** · `feature` · _idea_ · `—`
+- **[Add deterministic routing, failure states, and audit records](roadmap.json#add-review-routing-audit)** · `feature` · _planned_ · `—`
   > Add deterministic routing, failure states, and audit records
 - **[Create review branches and pull requests through a narrowly scoped GitHub App](roadmap.json#automate-review-pull-requests)** · `feature` · _idea_ · `—`
   > Create review branches and pull requests through a narrowly scoped GitHub App
-- **[Build a cross-variable consistency and derivation review agent](roadmap.json#build-consistency-derivation-review)** · `feature` · _idea_ · `—`
+- **[Build a cross-variable consistency and derivation review agent](roadmap.json#build-consistency-derivation-review)** · `feature` · _planned_ · `—`
   > Build a cross-variable consistency and derivation review agent
 - **[Build extraction agents, skills, and Python orchestration](roadmap.json#build-extraction-system)** · `feature` · _done_ · `—`
   > Build extraction agents, skills, and Python orchestration
 - **[Build the Markdown-to-YAML reconciliation agent and skill](roadmap.json#build-markdown-yaml-reconciliation)** · `feature` · _idea_ · `—`
   > Build the Markdown-to-YAML reconciliation agent and skill
-- **[Build a rules and caveats completeness agent and skill](roadmap.json#build-rules-caveats-review)** · `feature` · _idea_ · `—`
+- **[Build a rules and caveats completeness agent and skill](roadmap.json#build-rules-caveats-review)** · `feature` · _planned_ · `—`
   > Build a rules and caveats completeness agent and skill
-- **[Build a schema-compliance review agent and skill](roadmap.json#build-schema-compliance-review)** · `feature` · _idea_ · `—`
+- **[Build a schema-compliance review agent and skill](roadmap.json#build-schema-compliance-review)** · `feature` · _planned_ · `—`
   > Build a schema-compliance review agent and skill
 - **[Build a private Shiny app for Posit Connect](roadmap.json#build-shiny-review-app)** · `feature` · _done_ · `—`
   > Build a private Shiny app for Posit Connect
-- **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _idea_ · `—`
+- **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _planned_ · `—`
   > Build a source-grounding review agent and skill
 - **[Classify mineducatage as a variable to draft or a country parameter to register \(currently an unregistered prerequisite reference in VAR-educat7\)](roadmap.json#classify-mineducatage)** · `feature` · _idea_ · `—`
   > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
@@ -108,15 +136,19 @@ _Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
   > Allow editing only of the human Markdown section
 - **[Extract all non-welfare variables into extraction/20_drafts/](roadmap.json#extract-non-welfare-variables)** · `feature` · _done_ · `—`
   > Extract all non-welfare variables into extraction/20_drafts/
-- **[Finalize the review rubric and acceptance criteria](roadmap.json#finalize-review-rubric)** · `feature` · _idea_ · `—`
+- **[Finalize the review rubric and acceptance criteria](roadmap.json#finalize-review-rubric)** · `feature` · _done_ · `—`
   > Finalize the review rubric and acceptance criteria
+- **[Exclude runs/ from the review runner to eliminate 40 false-positive errors](roadmap.json#fix-review-runner-runs-exclusion)** · `feature` · _done_ · `—`
+  > Exclude runs/ from the review runner to eliminate 40 false-positive errors
+- **[Fix parameter-registry loading in the schema-compliance review runner](roadmap.json#fix-schema-compliance-parameter-loading)** · `feature` · _done_ · `—`
+  > Fix parameter-registry loading in the schema-compliance review runner
 - **[Freeze schema and country bundles as Version 1.0](roadmap.json#freeze-version-1)** · `feature` · _idea_ · `—`
   > Freeze schema and country bundles as Version 1.0
 - **[Establish recurring regional exception gathering](roadmap.json#gather-regional-exceptions)** · `feature` · _idea_ · `—`
   > Establish recurring regional exception gathering
 - **[Inventory all non-welfare variables and classify structural fields](roadmap.json#inventory-non-welfare-variables)** · `feature` · _done_ · `—`
   > Inventory all non-welfare variables and classify structural fields
-- **[Measure extraction and agent-review errors](roadmap.json#measure-review-errors)** · `feature` · _idea_ · `—`
+- **[Measure extraction and agent-review errors](roadmap.json#measure-review-errors)** · `feature` · _done_ · `—`
   > Measure extraction and agent-review errors
 - **[Populate education parameters from authoritative sources](roadmap.json#populate-education-parameters)** · `feature` · _idea_ · `—`
   > Populate education parameters from authoritative sources
@@ -130,6 +162,8 @@ _Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
   > Generate proposed YAML changes on review branches
 - **[Record reviewer identity, review round, timestamps, and content hashes](roadmap.json#record-review-metadata)** · `feature` · _done_ · `—`
   > Record reviewer identity, review round, timestamps, and content hashes
+- **[Refresh review-agent test conventions and stale solution note after the parameter-registry fix](roadmap.json#refresh-review-agent-test-and-doc-conventions)** · `feature` · _idea_ · `—`
+  > Refresh review-agent test conventions and stale solution note after the parameter-registry fix
 - **[Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without breaking strict validation](roadmap.json#register-weight-invariant-rule)** · `feature` · _idea_ · `—`
   > Register the Non-Null Weight Invariant as a RULE-WGT-* rule artifact so IDN weight variables can reference it without…
 - **[Resolve the 7-vs-8 body-section contract at the governance level: reconcile the existing 7-section draft format \(Definition, Conceptual intent, Construction notes, Consistency checks, Escalation triggers, Common mistakes, Change log\) against the authoritative 8-section contract in universal-extraction.md and extraction-governance.v1.yaml](roadmap.json#resolve-body-section-contract)** · `feature` · _idea_ · `—`
@@ -138,7 +172,7 @@ _Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
   > Resolve fallback authority and escalation behavior
 - **[Resolve guideline-versus-practice differences through reviewed exceptions](roadmap.json#resolve-reviewed-exceptions)** · `feature` · _idea_ · `—`
   > Resolve guideline-versus-practice differences through reviewed exceptions
-- **[Review and enrich their Markdown through the Shiny app](roadmap.json#review-calibration-sample)** · `feature` · _idea_ · `—`
+- **[Review and enrich their Markdown through the Shiny app](roadmap.json#review-calibration-sample)** · `feature` · _done_ · `—`
   > Review and enrich their Markdown through the Shiny app
 - **[Human-review all remaining variables through the calibrated workflow](roadmap.json#review-remaining-variables)** · `feature` · _idea_ · `—`
   > Human-review all remaining variables through the calibrated workflow
@@ -148,12 +182,16 @@ _Generated 2026-08-14 · 19 artifacts (newest first) + 47 roadmap features_
   > Select five to ten variables across complexity levels
 - **[Show extracted YAML and guideline evidence as read-only context](roadmap.json#show-yaml-guideline-evidence)** · `feature` · _done_ · `—`
   > Show extracted YAML and guideline evidence as read-only context
-- **[Simplify the interface based on reviewer experience](roadmap.json#simplify-review-interface)** · `feature` · _idea_ · `—`
+- **[Simplify the interface based on reviewer experience](roadmap.json#simplify-review-interface)** · `feature` · _done_ · `—`
   > Simplify the interface based on reviewer experience
 - **[Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id \(no underscores, per ^VAR-\[a-z\]\[a-z0-9\]*$\) and record each mapping in the inventory before drafting](roadmap.json#standardize-variable-naming-convention)** · `feature` · _idea_ · `—`
   > Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no und…
 - **[Stress-test against legacy do-files and historical decisions](roadmap.json#stress-test-legacy-decisions)** · `feature` · _idea_ · `—`
   > Stress-test against legacy do-files and historical decisions
+- **[Tune the rules_caveats vague-text regex and escalation IF/WHEN heuristic to drop ~150 false-positive warnings](roadmap.json#tune-vague-text-escalation-heuristic)** · `feature` · _idea_ · `—`
+  > Tune the rules_caveats vague-text regex and escalation IF/WHEN heuristic to drop ~150 false-positive warnings
+- **[Unify EXCLUDE_DIRS across helpers.py and fix_derivation_asymmetry.py to prevent future drift](roadmap.json#unify-exclude-dirs)** · `feature` · _idea_ · `—`
+  > Unify EXCLUDE_DIRS across helpers.py and fix_derivation_asymmetry.py to prevent future drift
 - **[Run structural validation after every extraction](roadmap.json#validate-every-extraction)** · `feature` · _done_ · `—`
   > Run structural validation after every extraction
 - **[Validate references, provenance, and derivation graphs](roadmap.json#validate-provenance-derivations)** · `feature` · _idea_ · `—`

@@ -1,12 +1,12 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-14_
+_Generated 2026-08-20_
 
-## Human Review Application Objective / Posit Connect / Complete Universal Records Objective
+## Establish Independent Agent Review Objective / Review / Human Review Application Objective
 
-_Keywords: `human review application
-objective` · `posit connect` · `complete universal records
-objective`_ · 25 entities
+_Keywords: `establish independent agent review
+objective` · `review` · `human review application
+objective`_ · 30 entities
 
 - **[Define the versioned review states and manifest](roadmap.json#define-review-state-manifest)** · `feature` · _done_ · `—`
   > Define the versioned review states and manifest
@@ -24,25 +24,35 @@ objective`_ · 25 entities
   > Create review branches and pull requests through a narrowly scoped GitHub App
 - **[Configure the real GPID CODEOWNERS team and branch protection](roadmap.json#configure-codeowners-protection)** · `feature` · _idea_ · `—`
   > Configure the real GPID CODEOWNERS team and branch protection
-- **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _idea_ · `—`
+- **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _planned_ · `—`
   > Build a source-grounding review agent and skill
-- **[Build a schema-compliance review agent and skill](roadmap.json#build-schema-compliance-review)** · `feature` · _idea_ · `—`
+- **[Build a schema-compliance review agent and skill](roadmap.json#build-schema-compliance-review)** · `feature` · _planned_ · `—`
   > Build a schema-compliance review agent and skill
-- **[Build a rules and caveats completeness agent and skill](roadmap.json#build-rules-caveats-review)** · `feature` · _idea_ · `—`
+- **[Build a rules and caveats completeness agent and skill](roadmap.json#build-rules-caveats-review)** · `feature` · _planned_ · `—`
   > Build a rules and caveats completeness agent and skill
-- **[Build a cross-variable consistency and derivation review agent](roadmap.json#build-consistency-derivation-review)** · `feature` · _idea_ · `—`
+- **[Build a cross-variable consistency and derivation review agent](roadmap.json#build-consistency-derivation-review)** · `feature` · _planned_ · `—`
   > Build a cross-variable consistency and derivation review agent
-- **[Add deterministic routing, failure states, and audit records](roadmap.json#add-review-routing-audit)** · `feature` · _idea_ · `—`
+- **[Add deterministic routing, failure states, and audit records](roadmap.json#add-review-routing-audit)** · `feature` · _planned_ · `—`
   > Add deterministic routing, failure states, and audit records
+- **[Fix parameter-registry loading in the schema-compliance review runner](roadmap.json#fix-schema-compliance-parameter-loading)** · `feature` · _done_ · `—`
+  > Fix parameter-registry loading in the schema-compliance review runner
+- **[Refresh review-agent test conventions and stale solution note after the parameter-registry fix](roadmap.json#refresh-review-agent-test-and-doc-conventions)** · `feature` · _idea_ · `—`
+  > Refresh review-agent test conventions and stale solution note after the parameter-registry fix
+- **[Exclude runs/ from the review runner to eliminate 40 false-positive errors](roadmap.json#fix-review-runner-runs-exclusion)** · `feature` · _done_ · `—`
+  > Exclude runs/ from the review runner to eliminate 40 false-positive errors
+- **[Unify EXCLUDE_DIRS across helpers.py and fix_derivation_asymmetry.py to prevent future drift](roadmap.json#unify-exclude-dirs)** · `feature` · _idea_ · `—`
+  > Unify EXCLUDE_DIRS across helpers.py and fix_derivation_asymmetry.py to prevent future drift
+- **[Tune the rules_caveats vague-text regex and escalation IF/WHEN heuristic to drop ~150 false-positive warnings](roadmap.json#tune-vague-text-escalation-heuristic)** · `feature` · _idea_ · `—`
+  > Tune the rules_caveats vague-text regex and escalation IF/WHEN heuristic to drop ~150 false-positive warnings
 - **[Select five to ten variables across complexity levels](roadmap.json#select-calibration-sample)** · `feature` · _done_ · `—`
   > Select five to ten variables across complexity levels
-- **[Review and enrich their Markdown through the Shiny app](roadmap.json#review-calibration-sample)** · `feature` · _idea_ · `—`
+- **[Review and enrich their Markdown through the Shiny app](roadmap.json#review-calibration-sample)** · `feature` · _done_ · `—`
   > Review and enrich their Markdown through the Shiny app
-- **[Measure extraction and agent-review errors](roadmap.json#measure-review-errors)** · `feature` · _idea_ · `—`
+- **[Measure extraction and agent-review errors](roadmap.json#measure-review-errors)** · `feature` · _done_ · `—`
   > Measure extraction and agent-review errors
-- **[Simplify the interface based on reviewer experience](roadmap.json#simplify-review-interface)** · `feature` · _idea_ · `—`
+- **[Simplify the interface based on reviewer experience](roadmap.json#simplify-review-interface)** · `feature` · _done_ · `—`
   > Simplify the interface based on reviewer experience
-- **[Finalize the review rubric and acceptance criteria](roadmap.json#finalize-review-rubric)** · `feature` · _idea_ · `—`
+- **[Finalize the review rubric and acceptance criteria](roadmap.json#finalize-review-rubric)** · `feature` · _done_ · `—`
   > Finalize the review rubric and acceptance criteria
 - **[Build the Markdown-to-YAML reconciliation agent and skill](roadmap.json#build-markdown-yaml-reconciliation)** · `feature` · _idea_ · `—`
   > Build the Markdown-to-YAML reconciliation agent and skill
@@ -95,6 +105,25 @@ objective` · `freeze version`_ · 15 entities
 - **[Present the completed artifact and revisit institutional infrastructure needs](roadmap.json#present-version-1)** · `feature` · _idea_ · `—`
   > Present the completed artifact and revisit institutional infrastructure needs
 
+## Runs/ / Test Scenarios / Agents.Md
+
+_Keywords: `runs/` · `test scenarios` · `agents.md`_ · 7 entities
+
+- **[Extract the Universal Non-Welfare Schema](.cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md)** · `brainstorm` · _decided_ · `2026-08-03`
+  > <!-- Valid status values: decided, in-progress, abandoned -->
+- **[2026-08-14-agent-review-lessons](.cg-docs/brainstorms/2026-08-14-agent-review-lessons.md)** · `brainstorm` · _—_ · `—`
+  > A prototype of all 4 review agents was built and run against the 6 calibration drafts. The prototype was reverted bec…
+- **[Extract the Universal Non-Welfare Schema](.cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md)** · `plan` · _completed_ · `2026-08-03`
+  > Build an evidence-first corpus compiler that locks the authoritative GMD guideline revision, inventories every non-we…
+- **[Build Independent Agent Review System](.cg-docs/plans/2026-08-14-build-agent-review.md)** · `plan` · _active_ · `2026-08-15`
+  > Build four deterministic Python review agents and a runner that validate every extraction draft in `extraction/20_dra…
+- **[Exclude runs/ from the review runner to eliminate 40 false-positive errors](.cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md)** · `plan` · _completed_ · `2026-08-20`
+  > Drive the agent review error count from **40 -> 0** by aligning `extraction_pipeline/review_agents/helpers.py::list_d…
+- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-20`
+  > **Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents…
+- **[Exclude non-variable dirs from the review runner to eliminate false-positive errors](.cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md)** · `solution` · _—_ · `2026-08-20`
+  > The agent review runner reported **40 errors / 497 warnings** across 271 drafts (`extraction/25_agent_review/`). All …
+
 ## Country Parameter Layer / Country Parameter Layer Objective / Parameters
 
 _Keywords: `country parameter layer` · `country parameter layer
@@ -112,3 +141,14 @@ objective` · `parameters`_ · 6 entities
   > Establish recurring regional exception gathering
 - **[Keep urban/rural parameters deferred unless evidence makes them necessary](roadmap.json#defer-urban-rural-parameters)** · `feature` · _idea_ · `—`
   > Keep urban/rural parameters deferred unless evidence makes them necessary
+
+## Allow_Unresolved_Draft / Pydantic / Cause
+
+_Keywords: `allow_unresolved_draft` · `pydantic` · `cause`_ · 3 entities
+
+- **[Hand-drafting GMD CVS variable specs at scale and validating them](.cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md)** · `solution` · _—_ · `2026-08-14`
+  > The GMD Canonical Variable Schema (CVS) needed `VariableDefinition`-valid draft specs for every non-welfare variable …
+- **[Pydantic allow_unresolved_draft does not bypass rule_ids/parameter_ids validation](.cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md)** · `solution` · _—_ · `2026-08-15`
+  > When validating extraction drafts against `VariableDefinition` with `allow_unresolved_draft=True`, Pydantic raised `u…
+- **[Derivation asymmetry check requires both variables in draft set](.cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md)** · `solution` · _—_ · `2026-08-15`
+  > VAR-urban declares `derived_from: [VAR-rurality]` but VAR-rurality is not in the draft set. The expected test for an …

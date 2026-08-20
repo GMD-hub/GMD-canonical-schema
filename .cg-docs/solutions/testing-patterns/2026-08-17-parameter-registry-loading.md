@@ -42,5 +42,14 @@ positive when the registry simply wasn't loaded.
   glob+`load_markdown`+read pattern in `helpers.py` instead (C7).
 - Resolve registry dir relative to `__file__`, not CWD, for portability.
 - Include exception messages in skipped files for debugging.
-- Keep the `test_runner_exit_code` assertion at `exit_code == 1` even after
-  removing parameter errors — it's sustained by an unrelated stub defect.
+- The `test_runner_exit_code` integration assertion was `==1` for a long time,
+  sustained by unrelated defects. The last such defect (misvalidating
+  `runs/` tracking files) was resolved 2026-08-20 and the assertion is now
+  `==0` (see
+  `testing-patterns/2026-08-20-exclude-runs-from-review-runner.md`).
+
+## Related
+
+- `testing-patterns/2026-08-20-exclude-runs-from-review-runner.md` — second,
+  distinct false-positive source in the same runner (`runs/` metadata files
+  misvalidated as variables) + stale-findings purge.

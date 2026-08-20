@@ -50,6 +50,15 @@ this file is committed to git and shared with the team.
 - **Corpus gate is committed**: `tests/extraction/test_drafts.py` globs the
   real drafts and enforces frontmatter validation, 7 body sections, no
   duplicate ids, acyclic derivation, and welfare-leakage scan under `pytest`.
+- **Draft enumerators must use `EXCLUDE_DIRS`**:
+  `extraction_pipeline/review_agents/helpers.py` defines
+  `EXCLUDE_DIRS = {"project-documentation", "runs"}`. The `runs/` and
+  `project-documentation/` dirs under `extraction/20_drafts/` hold run-tracking
+  metadata and process docs (not variable definitions). Any code that
+  enumerates `20_drafts/` should reuse this constant/set; matching is
+  case-sensitive exact, lowercase convention. The review runner also purges
+  stale findings yml for artifacts no longer in the corpus
+  (`_purge_stale_findings` in `run_all_agents.py`).
 
 ## Work in Progress
 <!-- Modules, features, or migrations currently underway -->
