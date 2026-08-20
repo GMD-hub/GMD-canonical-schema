@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-gauladm1code
-checked_at: '2026-08-18T01:31:06.054998+00:00'
+checked_at: '2026-08-20T14:52:56.770125+00:00'
 findings: []
 summary:
   errors: 0

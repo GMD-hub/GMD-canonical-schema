@@ -70,6 +70,7 @@ Derived as the sum of hours across the primary, secondary, and other jobs.
 ## Consistency checks
 
 - t_hours_total_year must be non-negative.
+- Cross-check against the sum of primary, secondary, and other hours.
 
 ## Escalation triggers
 

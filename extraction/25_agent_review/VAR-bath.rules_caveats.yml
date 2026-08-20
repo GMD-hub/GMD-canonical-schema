@@ -1,17 +1,13 @@
 agent: rules_caveats
 artifact_id: VAR-bath
-checked_at: '2026-08-18T01:31:05.877359+00:00'
+checked_at: '2026-08-20T14:52:56.559797+00:00'
 findings:
-- field: conceptual_intent
-  severity: error
-  message: 'Section ## Conceptual intent is a stub (44 chars < 50 minimum)'
-  line: null
 - field: consistency_checks
   severity: warning
   message: 'Vague text in Consistency checks: ''\bverify\b'' in ''- Values must be
     0 or 1 (or explicitly missing); every house'''
   line: null
 summary:
-  errors: 1
+  errors: 0
   warnings: 1
   passed: 0

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-elecacc
-checked_at: '2026-08-18T01:31:06.452138+00:00'
+checked_at: '2026-08-20T14:52:57.160914+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

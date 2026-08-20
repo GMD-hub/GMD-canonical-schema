@@ -1,12 +1,8 @@
 agent: rules_caveats
 artifact_id: VAR-twagencototalyear
-checked_at: '2026-08-18T01:31:06.318877+00:00'
-findings:
-- field: consistency_checks
-  severity: error
-  message: 'Section ## Consistency checks is a stub (44 chars < 50 minimum)'
-  line: null
+checked_at: '2026-08-20T14:52:57.032806+00:00'
+findings: []
 summary:
-  errors: 1
+  errors: 0
   warnings: 0
-  passed: 0
+  passed: 1

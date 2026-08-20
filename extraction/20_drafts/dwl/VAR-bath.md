@@ -82,7 +82,7 @@ provenance:
 
 ## Conceptual intent
 
-A housing-facility and sanitation indicator.
+A housing-facility and sanitation indicator. It captures whether the household has a dedicated bathing space, a basic element of dwelling quality.
 
 ## Construction notes
 

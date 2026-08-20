@@ -1,21 +1,13 @@
 agent: rules_caveats
 artifact_id: VAR-landphoneexp
-checked_at: '2026-08-18T01:31:06.499231+00:00'
+checked_at: '2026-08-20T14:52:57.207776+00:00'
 findings:
-- field: escalation_triggers
-  severity: error
-  message: 'Section ## Escalation triggers is a stub (42 chars < 50 minimum)'
-  line: null
 - field: consistency_checks
   severity: warning
   message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
     that `telexp` equals `landphoneexp` plus `cell'''
   line: null
-- field: escalation_triggers
-  severity: warning
-  message: Escalation triggers lack concrete IF/WHEN conditions
-  line: null
 summary:
-  errors: 1
-  warnings: 2
+  errors: 0
+  warnings: 1
   passed: 0

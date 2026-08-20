@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: source-lock-2026-08-13
-checked_at: '2026-08-18T01:31:06.418686+00:00'
+checked_at: '2026-08-20T14:52:57.128546+00:00'
 findings:
 - field: frontmatter
   severity: error

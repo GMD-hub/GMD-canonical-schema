@@ -128,7 +128,8 @@ Apply the age restriction (`mineducatage`) before coding, setting `educat7` to
 
 ## Escalation triggers
 
-(TODO: escalate when mapping is ambiguous.)
+- When the raw survey does not distinguish all seven education levels, making the mapping to `educat7` categories ambiguous.
+- When the survey uses a different age cutoff for the education section than `mineducatage`.
 
 ## Common mistakes
 

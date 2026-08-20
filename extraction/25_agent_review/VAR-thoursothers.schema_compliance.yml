@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-thoursothers
-checked_at: '2026-08-18T01:31:06.297752+00:00'
+checked_at: '2026-08-20T14:52:57.011059+00:00'
 findings:
 - field: body
   severity: warning

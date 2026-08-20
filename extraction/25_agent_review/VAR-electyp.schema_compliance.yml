@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-electyp
-checked_at: '2026-08-18T01:31:06.458885+00:00'
+checked_at: '2026-08-20T14:52:57.167555+00:00'
 findings: []
 summary:
   errors: 0

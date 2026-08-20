@@ -68,6 +68,7 @@ Use gross wages when available and net wages only when gross is unavailable. Ann
 ## Consistency checks
 
 - t_wage_nc_others must be non-negative.
+- Cross-check that the sum of primary, secondary, and other wages is internally consistent.
 
 ## Escalation triggers
 

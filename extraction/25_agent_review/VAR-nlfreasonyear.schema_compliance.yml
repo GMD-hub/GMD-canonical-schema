@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-nlfreasonyear
-checked_at: '2026-08-18T01:31:06.243252+00:00'
+checked_at: '2026-08-20T14:52:56.956914+00:00'
 findings:
 - field: body
   severity: warning

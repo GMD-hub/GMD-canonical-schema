@@ -1,16 +1,17 @@
 agent: rules_caveats
 artifact_id: VAR-twagencothers
-checked_at: '2026-08-18T01:31:06.313244+00:00'
+checked_at: '2026-08-20T14:52:57.027060+00:00'
 findings:
 - field: consistency_checks
-  severity: error
-  message: 'Section ## Consistency checks is a stub (40 chars < 50 minimum)'
+  severity: warning
+  message: 'Vague text in Consistency checks: ''\bcheck that\b'' in ''- Cross-check
+    that the sum of primary, secondary, and other '''
   line: null
 - field: escalation_triggers
   severity: warning
   message: Escalation triggers lack concrete IF/WHEN conditions
   line: null
 summary:
-  errors: 1
-  warnings: 1
+  errors: 0
+  warnings: 2
   passed: 0

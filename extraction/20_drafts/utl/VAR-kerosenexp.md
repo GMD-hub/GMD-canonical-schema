@@ -89,6 +89,7 @@ Record total annual household expenditure on kerosene.
 ## Common mistakes
 
 - Conflating kerosene with other liquid fuels.
+- Including kerosene used for lighting in a separate category without documentation.
 
 ## Change log
 

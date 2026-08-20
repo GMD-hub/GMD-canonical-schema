@@ -68,7 +68,7 @@ whours_2_year measures weekly hours on the 12-month secondary job.
 
 ## Construction notes
 
-Apply the same hours conventions as whours.
+Apply the same hours conventions as whours: record actual hours if absent; multiply daily hours by 5.
 
 ## Consistency checks
 

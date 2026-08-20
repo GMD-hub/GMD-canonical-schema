@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-oxcart
-checked_at: '2026-08-18T01:31:05.972270+00:00'
+checked_at: '2026-08-20T14:52:56.667040+00:00'
 findings:
 - field: consistency_checks
   severity: warning

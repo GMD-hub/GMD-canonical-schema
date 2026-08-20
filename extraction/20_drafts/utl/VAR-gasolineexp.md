@@ -89,6 +89,7 @@ Record total annual household expenditure on gasoline.
 ## Common mistakes
 
 - Conflating gasoline with diesel expenditure.
+- Including lubricants in gasoline expenditure (excluded per COICOP 7.2.2).
 
 ## Change log
 

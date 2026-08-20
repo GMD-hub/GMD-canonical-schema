@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-roof
-checked_at: '2026-08-18T01:31:05.993490+00:00'
+checked_at: '2026-08-20T14:52:56.691398+00:00'
 findings:
 - field: body
   severity: warning

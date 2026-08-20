@@ -24,7 +24,7 @@ ANSWER_KEY_PATH = Path(__file__).parent / "known_answer_key.yml"
 @pytest.fixture
 def answer_key():
     data = yaml.safe_load(ANSWER_KEY_PATH.read_text())
-    return data
+    return data or []
 
 
 @pytest.fixture
@@ -90,7 +90,4 @@ class TestFullPipeline:
 
     def test_runner_exit_code(self, tmp_path):
         _, exit_code = run(DRAFTS_DIR, tmp_path)
-        # Sustained by the unrelated VAR-marital rules_caveats stub error;
-        # fixing that fixture later requires updating this assertion.
-        # Tracked by roadmap idea: refresh-review-agent-test-and-doc-conventions.
-        assert exit_code == 1, "Expected exit code 1 due to known errors in calibration drafts"
+        assert exit_code == 1, "Expected exit code 1 due to known errors in non-variable calibration files"

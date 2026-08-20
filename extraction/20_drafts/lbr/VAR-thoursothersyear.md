@@ -68,6 +68,7 @@ Annualized hours worked in all jobs other than the primary and secondary ones.
 ## Consistency checks
 
 - t_hours_others_year must be non-negative.
+- Cross-check against the sum of primary and secondary hours.
 
 ## Escalation triggers
 

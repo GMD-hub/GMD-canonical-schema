@@ -89,6 +89,7 @@ Record total annual household expenditure on coal.
 ## Common mistakes
 
 - Double counting when solid fuels are combined.
+- Including charcoal or lignite in coal expenditure without documentation.
 
 ## Change log
 

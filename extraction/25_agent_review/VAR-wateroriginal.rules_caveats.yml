@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-wateroriginal
-checked_at: '2026-08-18T01:31:06.606895+00:00'
+checked_at: '2026-08-20T14:52:57.295838+00:00'
 findings:
 - field: consistency_checks
   severity: warning

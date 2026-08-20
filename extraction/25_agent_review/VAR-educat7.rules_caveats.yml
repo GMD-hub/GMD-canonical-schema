@@ -1,16 +1,8 @@
 agent: rules_caveats
 artifact_id: VAR-educat7
-checked_at: '2026-08-18T01:31:05.783106+00:00'
-findings:
-- field: escalation_triggers
-  severity: error
-  message: 'Section ## Escalation triggers is a stub (43 chars < 50 minimum)'
-  line: null
-- field: escalation_triggers
-  severity: warning
-  message: Escalation triggers contain TODO placeholder
-  line: null
+checked_at: '2026-08-20T14:52:56.462255+00:00'
+findings: []
 summary:
-  errors: 1
-  warnings: 1
-  passed: 0
+  errors: 0
+  warnings: 0
+  passed: 1

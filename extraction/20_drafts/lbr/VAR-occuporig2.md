@@ -69,6 +69,7 @@ Labels should be full words with spaces around hyphens. See occup_orig for how t
 ## Consistency checks
 
 - Labels must not be truncated.
+- Should be non-missing only where lstatus == 1.
 
 ## Escalation triggers
 

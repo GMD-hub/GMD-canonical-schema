@@ -1,14 +1,4 @@
 # Known answer key for integration tests against the calibration drafts.
 # Each entry specifies an expected finding that must appear in agent output.
-
-- artifact_id: VAR-educat7
-  agent: schema_compliance
-  field: body
-  severity: warning
-  message_contains: "TODO"
-
-- artifact_id: VAR-marital
-  agent: rules_caveats
-  field: construction_notes
-  severity: error
-  message_contains: "stub"
+# All previous entries resolved: parameter-registry fix (PR #13) and
+# stub-section expansion (PR #12) eliminated all known calibration errors.

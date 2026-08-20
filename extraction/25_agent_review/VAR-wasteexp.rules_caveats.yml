@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-wasteexp
-checked_at: '2026-08-18T01:31:06.601190+00:00'
+checked_at: '2026-08-20T14:52:57.290284+00:00'
 findings: []
 summary:
   errors: 0

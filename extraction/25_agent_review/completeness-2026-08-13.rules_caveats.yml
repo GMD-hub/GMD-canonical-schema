@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: completeness-2026-08-13
-checked_at: '2026-08-18T01:31:06.417297+00:00'
+checked_at: '2026-08-20T14:52:57.127109+00:00'
 findings: []
 summary:
   errors: 0
