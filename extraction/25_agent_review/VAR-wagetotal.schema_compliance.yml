@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-wagetotal
-checked_at: '2026-08-20T14:52:57.090950+00:00'
+checked_at: '2026-08-20T15:13:20.458116+00:00'
 findings: []
 summary:
   errors: 0

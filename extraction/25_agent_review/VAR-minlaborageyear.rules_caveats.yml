@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-minlaborageyear
-checked_at: '2026-08-20T14:52:56.949238+00:00'
+checked_at: '2026-08-20T15:13:20.338858+00:00'
 findings: []
 summary:
   errors: 0

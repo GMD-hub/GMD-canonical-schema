@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-cooksource
-checked_at: '2026-08-20T14:52:57.144255+00:00'
+checked_at: '2026-08-20T15:13:20.501694+00:00'
 findings: []
 summary:
   errors: 0

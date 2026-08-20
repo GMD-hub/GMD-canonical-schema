@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-whoursyear
-checked_at: '2026-08-20T14:52:57.112477+00:00'
+checked_at: '2026-08-20T15:13:20.475563+00:00'
 findings:
 - field: body
   severity: warning

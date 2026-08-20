@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: completeness-2026-08-13
-checked_at: '2026-08-20T14:52:57.126931+00:00'
+checked_at: '2026-08-20T15:13:20.487568+00:00'
 findings:
 - field: provenance.source_document
   severity: error

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-healthins
-checked_at: '2026-08-20T14:52:56.882489+00:00'
+checked_at: '2026-08-20T15:13:20.282813+00:00'
 findings: []
 summary:
   errors: 0

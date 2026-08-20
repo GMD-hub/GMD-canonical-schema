@@ -1,6 +1,6 @@
 agent: source_grounding
 artifact_id: VAR-waterexp
-checked_at: '2026-08-20T14:52:57.292262+00:00'
+checked_at: '2026-08-20T15:13:20.624458+00:00'
 findings:
 - field: construction_notes
   severity: warning

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-impsanrec
-checked_at: '2026-08-20T14:52:57.196268+00:00'
+checked_at: '2026-08-20T15:13:20.544820+00:00'
 findings: []
 summary:
   errors: 0

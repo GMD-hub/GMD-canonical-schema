@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-electricity
-checked_at: '2026-08-20T14:52:57.166431+00:00'
+checked_at: '2026-08-20T15:13:20.519798+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

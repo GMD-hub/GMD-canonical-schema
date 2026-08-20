@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-liquidexp
-checked_at: '2026-08-20T14:52:57.212055+00:00'
+checked_at: '2026-08-20T15:13:20.558228+00:00'
 findings: []
 summary:
   errors: 0

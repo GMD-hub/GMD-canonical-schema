@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-transagriland
-checked_at: '2026-08-20T14:52:56.722880+00:00'
+checked_at: '2026-08-20T15:13:20.160878+00:00'
 findings:
 - field: body
   severity: warning
