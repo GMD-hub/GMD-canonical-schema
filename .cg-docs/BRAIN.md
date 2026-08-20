@@ -1,6 +1,6 @@
 # 🧠 Project Brain
 
-_Generated 2026-08-14 · 66 entities · 3 topics · 11 edges_
+_Generated 2026-08-20 · 79 entities · 5 topics · 15 edges_
 
 ## How to Use
 
@@ -13,28 +13,30 @@ _Generated 2026-08-14 · 66 entities · 3 topics · 11 edges_
 
 | # | Topic | Entities | File |
 |---|-------|----------|------|
-| 1 | [Human Review Application Objective / Posit Connect / Complete Universal Records Objective](BRAIN-01.md#human-review-application-objective-posit-connect-complete-universal-records-objective) | 25 | BRAIN-01.md |
+| 1 | [Establish Independent Agent Review Objective / Review / Human Review Application Objective](BRAIN-01.md#establish-independent-agent-review-objective-review-human-review-application-objective) | 30 | BRAIN-01.md |
 | 2 | [Universal Non / Welfare Schema Objective / Freeze Version](BRAIN-01.md#universal-non-welfare-schema-objective-freeze-version) | 15 | BRAIN-01.md |
-| 3 | [Country Parameter Layer / Country Parameter Layer Objective / Parameters](BRAIN-01.md#country-parameter-layer-country-parameter-layer-objective-parameters) | 6 | BRAIN-01.md |
+| 3 | [Runs/ / Test Scenarios / Agents.Md](BRAIN-01.md#runs-test-scenarios-agents-md) | 7 | BRAIN-01.md |
+| 4 | [Country Parameter Layer / Country Parameter Layer Objective / Parameters](BRAIN-01.md#country-parameter-layer-country-parameter-layer-objective-parameters) | 6 | BRAIN-01.md |
+| 5 | [Allow_Unresolved_Draft / Pydantic / Cause](BRAIN-01.md#allow-unresolved-draft-pydantic-cause) | 3 | BRAIN-01.md |
 
 ## Entity Summary
 
 | Type | Count |
 |------|-------|
-| brainstorm | 3 |
-| feature | 47 |
-| plan | 4 |
+| brainstorm | 4 |
+| feature | 52 |
+| plan | 7 |
 | review | 6 |
-| solution | 5 |
+| solution | 9 |
 | strategy | 1 |
 
-_20 entities not assigned to any topic_
+_18 entities not assigned to any topic_
 
 ## Relationship Summary
 
 | Edge Type | Count |
 |-----------|-------|
-| decided_from | 2 |
-| references | 3 |
+| decided_from | 3 |
+| references | 6 |
 | reviews | 3 |
 | verifies | 3 |

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-cellphoneexp
-checked_at: '2026-08-20T15:13:20.490023+00:00'
+checked_at: '2026-08-20T16:52:21.581677+00:00'
 findings: []
 summary:
   errors: 0

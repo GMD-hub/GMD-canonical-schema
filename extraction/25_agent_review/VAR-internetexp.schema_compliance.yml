@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-internetexp
-checked_at: '2026-08-20T15:13:20.548267+00:00'
+checked_at: '2026-08-20T16:52:21.642284+00:00'
 findings: []
 summary:
   errors: 0

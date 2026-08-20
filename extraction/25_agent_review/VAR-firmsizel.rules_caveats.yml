@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-firmsizel
-checked_at: '2026-08-20T15:13:20.264147+00:00'
+checked_at: '2026-08-20T16:52:21.352260+00:00'
 findings:
 - field: escalation_triggers
   severity: warning

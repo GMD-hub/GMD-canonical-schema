@@ -4,6 +4,7 @@ import pytest
 from pathlib import Path
 
 from extraction_pipeline.review_agents.helpers import (
+    EXCLUDE_DIRS,
     REQUIRED_SECTIONS,
     load_draft,
     list_drafts,
@@ -54,6 +55,49 @@ class TestListDrafts:
 
     def test_empty_dir(self, tmp_path):
         assert list_drafts(tmp_path) == []
+
+    def test_excludes_runs_and_project_documentation(self, tmp_path):
+        (tmp_path / "VAR-x.md").write_text("x")
+        runs_dir = tmp_path / "runs"
+        runs_dir.mkdir()
+        (runs_dir / "inventory.md").write_text("inv")
+        proj_dir = tmp_path / "project-documentation"
+        proj_dir.mkdir()
+        (proj_dir / "wiki.md").write_text("wiki")
+        results = list_drafts(tmp_path)
+        assert [p.name for p in results] == ["VAR-x.md"]
+
+    def test_excludes_nested_excluded_dirs(self, tmp_path):
+        (tmp_path / "VAR-x.md").write_text("x")
+        nested = tmp_path / "dem" / "runs"
+        nested.mkdir(parents=True)
+        (nested / "tracking.md").write_text("tracking")
+        (tmp_path / "dem" / "VAR-y.md").write_text("y")
+        results = list_drafts(tmp_path)
+        assert sorted(p.name for p in results) == ["VAR-x.md", "VAR-y.md"]
+
+    def test_excludes_nested_project_documentation(self, tmp_path):
+        (tmp_path / "VAR-x.md").write_text("x")
+        nested = tmp_path / "dem" / "project-documentation"
+        nested.mkdir(parents=True)
+        (nested / "process.md").write_text("process")
+        (tmp_path / "dem" / "VAR-y.md").write_text("y")
+        results = list_drafts(tmp_path)
+        assert sorted(p.name for p in results) == ["VAR-x.md", "VAR-y.md"]
+
+    def test_case_variant_not_excluded_is_documented_behavior(self, tmp_path):
+        (tmp_path / "VAR-x.md").write_text("x")
+        case_dir = tmp_path / "Runs"
+        case_dir.mkdir()
+        (case_dir / "tracking.md").write_text("tracking")
+        results = list_drafts(tmp_path)
+        assert sorted(p.name for p in results) == ["VAR-x.md", "tracking.md"], (
+            "EXCLUDE_DIRS matching is case-sensitive exact; a case variant "
+            "(e.g. Runs/) is retained by documented convention"
+        )
+
+    def test_exclude_set_matches_asymmetry_tool(self):
+        assert EXCLUDE_DIRS == {"project-documentation", "runs"}
 
 
 class TestWriteFindings:

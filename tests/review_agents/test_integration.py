@@ -3,13 +3,15 @@
 Validates agent output against known_answer_key.yml.
 """
 
+import shutil
+
 import pytest
 from pathlib import Path
 
 import yaml
 
 from extraction_pipeline.review_agents.consistency_derivation import check_drafts
-from extraction_pipeline.review_agents.helpers import list_drafts, list_parameter_ids, write_findings
+from extraction_pipeline.review_agents.helpers import EXCLUDE_DIRS, list_drafts, list_parameter_ids, write_findings
 from extraction_pipeline.review_agents.models import AgentFindings
 from extraction_pipeline.review_agents.rules_caveats import check_draft as rules_check
 from extraction_pipeline.review_agents.run_all_agents import run
@@ -90,4 +92,29 @@ class TestFullPipeline:
 
     def test_runner_exit_code(self, tmp_path):
         _, exit_code = run(DRAFTS_DIR, tmp_path)
-        assert exit_code == 1, "Expected exit code 1 due to known errors in non-variable calibration files"
+        assert exit_code == 0, "Expected exit code 0: runs/ and project-documentation/ are excluded; no variable draft has errors"
+
+    def test_runner_excludes_runs_fixture(self, tmp_path):
+        corpus = tmp_path / "corpus"
+        (corpus / "runs").mkdir(parents=True)
+        (corpus / "runs" / "broken.md").write_text(
+            "no frontmatter here\n"
+        )
+        shutil.copy(DRAFTS_DIR / "dem" / "VAR-male.md", corpus / "VAR-male.md")
+        findings, exit_code = run(corpus, tmp_path / "out")
+        assert exit_code == 0, (
+            "Expected exit 0: broken runs/ file is excluded by list_drafts, "
+            "so a corpus with runs/ + one clean VAR draft has zero errors"
+        )
+        for af in findings:
+            assert not af.artifact_id.startswith(
+                tuple(sorted(EXCLUDE_DIRS))
+            ), f"finding for excluded artifact {af.artifact_id}"
+
+    def test_runner_prunes_stale_findings(self, tmp_path):
+        out = tmp_path / "out"
+        out.mkdir()
+        stale = out / "STALE-2026-08-13.schema_compliance.yml"
+        stale.write_text("stale")
+        run(DRAFTS_DIR, out)
+        assert not stale.exists(), "runner should purge findings for artifacts no longer in the corpus"

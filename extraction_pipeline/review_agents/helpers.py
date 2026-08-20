@@ -22,6 +22,11 @@ REQUIRED_SECTIONS: list[str] = [
     "Change log",
 ]
 
+# Convention: lowercase dir names under extraction/20_drafts/ that hold
+# process/metadata documents rather than variable definitions. Matching is
+# case-sensitive exact (see list_drafts); keep names lowercase.
+EXCLUDE_DIRS: set[str] = {"project-documentation", "runs"}
+
 
 def load_draft(path: Path) -> tuple[dict[str, Any], str]:
     """Load a draft YAML frontmatter + Markdown body via the shared parser."""
@@ -44,12 +49,18 @@ def write_findings(findings: AgentFindings, output_dir: Path) -> Path:
 def list_drafts(drafts_dir: Path) -> list[Path]:
     """Yield all .md files recursively from the drafts directory.
 
-    Skips files inside the ``project-documentation/`` subdirectory
-    (process docs, not variable definitions).
+    Skips files inside any directory whose name is in EXCLUDE_DIRS
+    (``project-documentation/`` — process docs; ``runs/`` — run-tracking
+    metadata), at any depth. These are not variable definitions.
+    EXCLUDE_DIRS matches the exclude *set* used by
+    ``fix_derivation_asymmetry.py`` (same two names); that tool matches only
+    the top-level component, this function matches any component. The
+    divergence is documented in the plan (Risk R4) and unification is out of
+    scope.
     """
     return sorted(
         p for p in drafts_dir.rglob("*.md")
-        if "project-documentation" not in p.parts
+        if not (EXCLUDE_DIRS & set(p.parts))
     )
 
 
