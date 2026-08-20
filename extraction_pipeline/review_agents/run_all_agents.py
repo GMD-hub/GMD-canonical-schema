@@ -20,6 +20,24 @@ from .schema_compliance import check_draft as schema_check
 from .source_grounding import check_draft as source_check
 
 
+def _purge_stale_findings(
+    all_findings: list[AgentFindings], output_dir: Path
+) -> None:
+    """Delete output_dir/*.yml findings whose artifact_id is no longer in the
+    current corpus.
+
+    The runner only ever writes findings via write_findings; without this,
+    entries for drafts that were removed or excluded from the corpus would
+    persist as stale yml files and drift from SUMMARY.md.
+    """
+    if not output_dir.is_dir():
+        return
+    expected = {f.artifact_id for f in all_findings}
+    for path in output_dir.glob("*.yml"):
+        if path.name.endswith(".yml") and path.stem.split(".")[0] not in expected:
+            path.unlink()
+
+
 def _write_summary(all_findings: list[AgentFindings], output_dir: Path) -> Path:
     """Generate SUMMARY.md with aggregated results table."""
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -110,6 +128,8 @@ def run(
         all_findings.append(rules_check(path))
 
     all_findings.extend(consistency_check(draft_paths))
+
+    _purge_stale_findings(all_findings, output_dir)
 
     for findings in all_findings:
         write_findings(findings, output_dir)

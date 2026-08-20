@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-wallcs
-checked_at: '2026-08-20T15:13:20.182865+00:00'
+checked_at: '2026-08-20T16:52:21.268548+00:00'
 findings:
 - field: body
   severity: warning

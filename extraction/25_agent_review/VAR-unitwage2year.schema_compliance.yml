@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-unitwage2year
-checked_at: '2026-08-20T15:13:20.441620+00:00'
+checked_at: '2026-08-20T16:52:21.533343+00:00'
 findings:
 - field: body
   severity: warning

@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-wmonths2
-checked_at: '2026-08-20T15:13:20.480389+00:00'
+checked_at: '2026-08-20T16:52:21.574103+00:00'
 findings:
 - field: body
   severity: warning

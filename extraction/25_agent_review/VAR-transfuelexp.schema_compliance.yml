@@ -1,6 +1,6 @@
 agent: schema_compliance
 artifact_id: VAR-transfuelexp
-checked_at: '2026-08-20T15:13:20.606261+00:00'
+checked_at: '2026-08-20T16:52:21.703476+00:00'
 findings: []
 summary:
   errors: 0

@@ -1,6 +1,6 @@
 agent: rules_caveats
 artifact_id: VAR-healthins
-checked_at: '2026-08-20T15:13:20.284474+00:00'
+checked_at: '2026-08-20T16:52:21.371624+00:00'
 findings:
 - field: escalation_triggers
   severity: warning
