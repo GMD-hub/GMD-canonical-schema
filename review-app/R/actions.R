@@ -1,78 +1,217 @@
-# Role-gated actions (Step 11 / R8, R9, R10, R14).
-#
-# Combines the Phase 1 state machine + authorization with the Phase 2 adapter.
-# Each action is a pure orchestration function: it authorizes the actor via
-# `authorize()`, applies the transition via `transition()` (pure), serializes
-# the resulting record, and writes it (plus the approved artifact on approval)
-# through `adapter_write_with_recovery` so a partial failure never claims a
-# transition (R18). The recoverable report is returned so the UI can render
-# success/failure accurately and never claim a transition that did not
-# complete.
+# Role-gated actions and production queue writes.
 
 ACTION_PATH <- function(artifact_id) {
+  if (!is_safe_artifact_id(artifact_id)) {
+    stop("invalid artifact ID")
+  }
   sprintf("extraction/30_review/%s.review.yml", artifact_id)
 }
 
-# P1.2 companion-body convention: the editable working copy of a draft's body is
-# persisted beside the review record so the editor reflects the last saved body
-# across loads (the review branch is the only authoritative write target).
 BODY_PATH <- function(artifact_id) {
+  if (!is_safe_artifact_id(artifact_id)) {
+    stop("invalid artifact ID")
+  }
   sprintf("extraction/30_review/%s.body.md", artifact_id)
 }
 
-#' Serialize a review record to YAML for writing.
-#'
-#' @param rec review record.
-#' @return character(1) YAML string.
 record_to_yaml <- function(rec) {
-  yaml::as.yaml(rec, indent = 2)
+  validate_review_record(rec)
+  canonical_yaml(rec)
 }
 
-#' Path of the approved artifact on the review branch for an artifact.
-#'
-#' Mirrors R14: a draft at `extraction/20_drafts/dem/VAR-male.md` is written to
-#' `extraction/40_approved/dem/VAR-male.md`.
-#'
-#' @param source_artifact_path draft path under extraction/20_drafts/.
-#' @return review-branch approved path.
 approved_path_for <- function(source_artifact_path) {
-  sub("^extraction/20_drafts/", "extraction/40_approved/", source_artifact_path)
+  if (!is_valid_source_artifact_path(source_artifact_path)) {
+    stop("invalid source artifact path")
+  }
+  sub(
+    "^extraction/20_drafts/",
+    "extraction/40_approved/",
+    source_artifact_path
+  )
 }
 
-#' Perform a role-gated state-transition action and persist it (with recovery).
-#'
-#' This is the single entry point the UI server calls for state-changing
-#' actions (submitted, request-revision, approved, reopened, saved, assigned).
-#'
-#' @param adapter github adapter.
-#' @param rec the loaded (current) review record.
-#' @param body_sha256 SHA-256 of the current Markdown body (for the event).
-#' @param blob_sha review-record blob SHA loaded at read time (optimistic lock).
-#' @param branch_head_sha the review-branch commit SHA loaded at read time.
-#' @param action one of the state-changing actions.
-#' @param actor Connect identity.
-#' @param role actor role.
-#' @param approved_body_sha256 approved artifact full-merge SHA (used on approve).
-#' @param approved_content full approved artifact content (used on approve; NULL otherwise).
-#' @param body optional working-copy Markdown body to persist as a companion file
-#'   (`extraction/30_review/<id>.body.md`) on `saved` (P1.2); NULL otherwise.
-#' @param note optional note for the event.
-#' @return recovery report from `adapter_write_with_recovery` plus the applied
-#'   record; `transition_applied` is only TRUE on a fully successful atomic
-#'   write.
-perform_action <- function(
-  adapter,
-  rec,
-  body_sha256,
-  blob_sha,
-  branch_head_sha,
-  action,
-  actor,
-  role,
-  approved_content = NULL,
-  body = NULL,
-  note = NULL
+adapter_read_queue_manifest <- function(adapter) {
+  adapter_read_review(adapter, QUEUE_MANIFEST_PATH)
+}
+
+adapter_read_queue_index <- function(adapter) {
+  adapter_read_review(adapter, QUEUE_INDEX_PATH)
+}
+
+.queue_row_for <- function(index, artifact_id) {
+  rows <- index$rows %||% index
+  matches <- which(vapply(rows, function(row) {
+    identical(row$artifact_id, artifact_id)
+  }, logical(1)))
+  if (length(matches) != 1L) {
+    stop(sprintf("queue index must contain exactly one row for '%s'", artifact_id))
+  }
+  rows[[matches[[1L]]]]
+}
+
+.replace_queue_row <- function(index, row) {
+  rows <- index$rows %||% index
+  matches <- which(vapply(rows, function(candidate) {
+    identical(candidate$artifact_id, row$artifact_id)
+  }, logical(1)))
+  if (length(matches) != 1L) {
+    stop(sprintf("queue index must contain exactly one row for '%s'", row$artifact_id))
+  }
+  rows[[matches[[1L]]]] <- row
+  if (!is.null(index$rows)) {
+    index$rows <- rows
+    return(index)
+  }
+  rows
+}
+
+.index_row_with_update <- function(index, artifact_id, updated, blob_sha, manifest) {
+  rows <- index$rows
+  hit <- which(vapply(rows, function(candidate) {
+    identical(candidate$artifact_id, artifact_id)
+  }, logical(1)))
+  if (length(hit) != 1L) stop("queue index selected row is missing or duplicated")
+  current <- rows[[hit[[1L]]]]
+  current$state <- updated$state
+  current$review_round <- as.integer(updated$review_round)
+  current$assigned_to <- updated$assigned_to
+  current$record_blob_sha <- blob_sha
+  current$governance_blocked <- length(queue_open_blockers(manifest, artifact_id)) > 0L
+  current$source_drift <- FALSE
+  validate_queue_index_row(current)
+  rows[[hit[[1L]]]] <- current
+  index$rows <- rows
+  index
+}
+
+.read_v2_controls <- function(
+  adapter, rec, record_blob_sha, expected_manifest_blob_sha = NULL,
+  expected_index_blob_sha = NULL
 ) {
+  manifest_blob <- adapter_read_queue_manifest(adapter)
+  if (!is.null(expected_manifest_blob_sha) &&
+      !identical(manifest_blob$sha, expected_manifest_blob_sha)) {
+    stop(stale_write_error(
+      "queue manifest changed since load; reload before applying the action"
+    ))
+  }
+  manifest <- parse_queue_manifest(manifest_blob$content)
+  if (!identical(manifest$queue_id, rec$queue_id)) {
+    stop(.queue_error("review record queue_id does not match the current queue manifest"))
+  }
+  index_blob <- adapter_read_queue_index(adapter)
+  index_changed_since_load <- !is.null(expected_index_blob_sha) &&
+    !identical(index_blob$sha, expected_index_blob_sha)
+  index <- parse_queue_index_blob(index_blob$content, manifest)
+  row <- .queue_row_for(index, rec$artifact_id)
+  if (!identical(row$record_blob_sha, record_blob_sha) ||
+      !identical(row$source_artifact_path, rec$source_artifact_path)) {
+    stop(stale_write_error(
+      "queue row changed since load; reload before applying the action"
+    ))
+  }
+  current_record <- adapter_read_review(adapter, ACTION_PATH(rec$artifact_id))
+  if (!identical(current_record$sha, record_blob_sha)) {
+    stop(stale_write_error(
+      "review record changed since load; reload before applying the action"
+    ))
+  }
+  list(
+    manifest = manifest,
+    manifest_blob_sha = manifest_blob$sha,
+    index = index,
+    index_blob_sha = index_blob$sha,
+    row = row,
+    index_changed_since_load = index_changed_since_load,
+    record = parse_review_record(current_record$content),
+    record_blob_sha = current_record$sha
+  )
+}
+
+.read_v2_review_body <- function(adapter, record, enrolled_content) {
+  body_blob <- tryCatch(
+    adapter_read_review(adapter, BODY_PATH(record$artifact_id)),
+    error = function(error) {
+      if (grepl("404|not found|blob not found", conditionMessage(error), ignore.case = TRUE)) {
+        return(list(
+          content = split_frontmatter_exact(enrolled_content)$body,
+          sha = NA_character_
+        ))
+      }
+      stop(error)
+    }
+  )
+  body <- body_blob$content
+  if (!identical(hash_body(body), record$current_content_sha256)) {
+    stop(stale_write_error(
+      "persisted review body hash does not match the loaded record"
+    ))
+  }
+  list(content = body, sha = body_blob$sha %||% NA_character_)
+}
+
+.optional_review_blob <- function(adapter, path) {
+  tryCatch(
+    adapter_read_review(adapter, path),
+    error = function(error) {
+      if (grepl("404|not found|blob not found", conditionMessage(error), ignore.case = TRUE)) {
+        return(list(content = NULL, sha = NA_character_))
+      }
+      stop(error)
+    }
+  )
+}
+
+.updated_v2_queue_row <- function(
+  row, updated, new_record_blob_sha, manifest
+) {
+  row$state <- updated$state
+  row$review_round <- as.integer(updated$review_round)
+  row$assigned_to <- updated$assigned_to
+  row$record_blob_sha <- new_record_blob_sha
+  row$governance_blocked <- length(queue_open_blockers(
+    manifest,
+    updated$artifact_id
+  )) > 0L
+  row$source_drift <- FALSE
+  validate_queue_index_row(row)
+  row
+}
+
+.v2_approval_check <- function(manifest, record, binding) {
+  if (!queue_approval_eligible(manifest, record)) {
+    blockers <- queue_open_blockers(manifest, record$artifact_id)
+    reasons <- c(
+      if (!identical(manifest$approval_mode, "enabled")) {
+        "approval_mode is disabled"
+      },
+      if (length(blockers)) {
+        paste0("open blockers: ", paste(
+          vapply(blockers, function(blocker) blocker$id, character(1)),
+          collapse = ", "
+        ))
+      },
+      if (!assessment_approval_complete(record$assessment)) {
+        "assessment is incomplete"
+      }
+    )
+    stop(sprintf("approval denied: %s", paste(reasons, collapse = "; ")))
+  }
+  if (isTRUE(binding$drift)) {
+    stop(source_drift_error("approval denied because the source has drifted"))
+  }
+  invisible(TRUE)
+}
+
+.perform_v2_action <- function(
+  adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
+  approved_content, body, note, assigned_identities = NULL,
+  expected_manifest_blob_sha = NULL, expected_index_blob_sha = NULL,
+  max_retries = 1L
+) {
+  validate_review_record_v2(rec)
+  if (!is_valid_artifact_id(rec$artifact_id)) stop("invalid artifact ID")
+  if (!.is_sha1(blob_sha)) stop("v2 actions require a Git SHA-1 record blob")
   if (!authorize(role, action)) {
     stop(sprintf(
       "unauthorized: role '%s' cannot perform action '%s'",
@@ -80,60 +219,262 @@ perform_action <- function(
       action
     ))
   }
-  # `saved`/`assigned` are record-replacement (non-transition) actions: route
-  # them through record_action, never transition (which rejects them as illegal).
-  # body_sha256/blob_sha flow through to the event AND the record hash (R7).
-  if (action %in% c("saved", "assigned")) {
-    updated <- record_action(
-      rec, action, actor, role,
+  if (action == "approved" && is.null(approved_content)) {
+    stop("performing 'approved' requires approved_content")
+  }
+  if (!is.null(body) && !identical(hash_body(body), body_sha256)) {
+    stop("body_sha256 does not match the body supplied for the action")
+  }
+
+  expected_manifest <- expected_manifest_blob_sha
+  expected_index <- expected_index_blob_sha
+  updated <- NULL
+  updated_yaml <- NULL
+  controls <- NULL
+  binding <- NULL
+  persisted_body <- NULL
+  approved_blob <- NULL
+  for (attempt in seq_len(as.integer(max_retries) + 1L)) {
+    binding <- assert_source_binding_current(adapter, rec)
+    controls <- .read_v2_controls(
+      adapter,
+      rec,
+      blob_sha,
+      expected_manifest_blob_sha = expected_manifest,
+      expected_index_blob_sha = expected_index
+    )
+    if (isTRUE(controls$index_changed_since_load) && attempt > 1L) {
+      stop(stale_write_error(
+        "queue index changed during the action; reload before applying the action"
+      ))
+    }
+    if (is.null(updated)) {
+      persisted_body <- .read_v2_review_body(
+        adapter,
+        rec,
+        binding$enrolled$content
+      )
+      if (action != "saved" &&
+          !identical(hash_body(persisted_body$content), body_sha256)) {
+        stop(stale_write_error(
+          "the supplied body hash does not match the persisted reviewed body"
+        ))
+      }
+      if (action == "approved") {
+        .v2_approval_check(controls$manifest, rec, binding)
+        approved_blob <- .optional_review_blob(
+          adapter,
+          approved_path_for(rec$source_artifact_path)
+        )
+      }
+      updated <- if (action %in% c("saved", "assigned")) {
+        replaced <- record_action(
+          rec,
+          action,
+          actor,
+          role,
+          note = note,
+          body_sha256 = body_sha256,
+          blob_sha = blob_sha
+        )
+        if (action == "assigned" && !is.null(assigned_identities)) {
+          set_assigned_to(replaced, assigned_identities)
+        } else {
+          replaced
+        }
+      } else {
+        transition(
+          rec,
+          action,
+          actor,
+          role,
+          note = note,
+          body_sha256 = body_sha256,
+          blob_sha = blob_sha
+        )
+      }
+      updated_yaml <- record_to_yaml(updated)
+    } else if (!identical(controls$record_blob_sha, blob_sha)) {
+      stop(stale_write_error(
+        "review record changed during a concurrent retry; no transition applied"
+      ))
+    }
+    new_record_sha <- tryCatch(
+      git_blob_sha(updated_yaml),
+      error = function(error) stop(sprintf(
+        "could not compute the updated record identity: %s",
+        conditionMessage(error)
+      ))
+    )
+    updated_index <- .index_row_with_update(
+      controls$index,
+      rec$artifact_id,
+      updated,
+      new_record_sha,
+      controls$manifest
+    )
+    changes <- list()
+    changes[[ACTION_PATH(rec$artifact_id)]] <- updated_yaml
+    changes[[QUEUE_INDEX_PATH]] <- serialize_queue_index(updated_index)
+    if (action == "approved") {
+      enrolled_split <- split_frontmatter_exact(binding$enrolled$content)
+      enrolled_front <- enrolled_split$front
+      if (is.null(enrolled_front) ||
+          !frontmatter_unchanged(enrolled_front, approved_content)) {
+        stop("approved content must preserve the enrolled YAML front matter")
+      }
+      approved_content <- join_enrolled_body(
+        enrolled_front,
+        persisted_body$content,
+        separator = enrolled_split$line_ending
+      )
+      changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
+    }
+    if (action == "saved" && !is.null(body)) {
+      changes[[BODY_PATH(rec$artifact_id)]] <- body
+    }
+    expected_blobs <- c(
+      setNames(list(blob_sha), ACTION_PATH(rec$artifact_id)),
+      setNames(list(controls$index_blob_sha), QUEUE_INDEX_PATH),
+      setNames(list(controls$manifest_blob_sha), QUEUE_MANIFEST_PATH),
+      setNames(list(persisted_body$sha), BODY_PATH(rec$artifact_id))
+    )
+    if (action == "approved") {
+      expected_blobs <- c(
+        expected_blobs,
+        setNames(
+          list(approved_blob$sha),
+          approved_path_for(rec$source_artifact_path)
+        )
+      )
+    }
+    report <- adapter_write_with_recovery(
+      adapter,
+      changes = changes,
+      expected_ref_sha = branch_head_sha,
+      expected_blob_shas = expected_blobs,
+      message = sprintf(
+        "review action '%s' by %s on %s",
+        action,
+        actor,
+        rec$artifact_id
+      )
+    )
+    if (report$ok ||
+        !report$error$kind %in% c("stale", "ref-race") ||
+        attempt > as.integer(max_retries)) {
+      return(list(report = report, record = updated, binding = binding))
+    }
+    # A retry is safe only when the selected record and selected index row did
+    # not change. The next iteration re-reads all controls and source binding.
+    latest <- .read_v2_controls(adapter, rec, blob_sha)
+    same_row <- identical(latest$row, controls$row)
+    same_manifest <- identical(latest$manifest_blob_sha, controls$manifest_blob_sha)
+    if (!same_row || !same_manifest) {
+      return(list(report = report, record = updated, binding = binding))
+    }
+    expected_manifest <- latest$manifest_blob_sha
+    expected_index <- latest$index_blob_sha
+    branch_head_sha <- adapter_branch_head(
+      adapter$owner,
+      adapter$repo,
+      adapter$review_branch,
+      adapter$get_token(),
+      adapter$http
+    )
+  }
+  stop("action retry loop exhausted")
+}
+
+#' Serialize a review record to YAML and persist a role-gated action.
+perform_action <- function(
+  adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
+  approved_content = NULL, body = NULL, note = NULL,
+  assigned_identities = NULL, expected_manifest_blob_sha = NULL,
+  expected_index_blob_sha = NULL, legacy_read_only = FALSE
+) {
+  if (is_v2_review_record(rec)) {
+    return(.perform_v2_action(
+      adapter,
+      rec,
+      body_sha256,
+      blob_sha,
+      branch_head_sha,
+      action,
+      actor,
+      role,
+      approved_content,
+      body,
+      note,
+      assigned_identities = assigned_identities,
+      expected_manifest_blob_sha = expected_manifest_blob_sha,
+      expected_index_blob_sha = expected_index_blob_sha
+    ))
+  }
+  if (isTRUE(legacy_read_only)) {
+    stop("legacy calibration records are read-only")
+  }
+  # Legacy records are only served from the preserved calibration branch. A
+  # caller must explicitly opt into the old write API for test fixtures or an
+  # operator-owned non-production branch.
+  if (!authorize(role, action)) {
+    stop(sprintf(
+      "unauthorized: role '%s' cannot perform action '%s'",
+      role %||% "(none)",
+      action
+    ))
+  }
+  updated <- if (action %in% c("saved", "assigned")) {
+    record_action(
+      rec,
+      action,
+      actor,
+      role,
       note = note,
       body_sha256 = body_sha256,
       blob_sha = blob_sha
     )
   } else {
-    updated <- transition(
-      rec, action, actor, role,
+    transition(
+      rec,
+      action,
+      actor,
+      role,
       note = note,
       body_sha256 = body_sha256,
       blob_sha = blob_sha
     )
   }
-
-  change_paths <- ACTION_PATH(rec$artifact_id)
+  if (action == "assigned" && !is.null(assigned_identities)) {
+    updated <- set_assigned_to(updated, assigned_identities)
+  }
   changes <- list()
-  changes[[change_paths]] <- record_to_yaml(updated)
-
+  record_path <- ACTION_PATH(rec$artifact_id)
+  changes[[record_path]] <- record_to_yaml(updated)
   if (action == "approved") {
     if (is.null(approved_content)) {
       stop("performing 'approved' requires approved_content")
     }
-    # P2.5: the approved artifact must carry a YAML front-matter block; the
-    # byte-for-byte match against the loaded draft's front matter is enforced by
-    # the caller (server assembly uses the loaded front matter), so this is a
-    # structural invariant / defense-in-depth gate.
-    approved_front <- split_frontmatter(approved_content)$front
-    if (is.null(approved_front)) {
+    if (is.null(split_frontmatter(approved_content)$front)) {
       stop("approved content must carry YAML front matter (structural gate, P2.5)")
     }
     changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
   }
   if (action == "saved" && !is.null(body)) {
-    # P1.2: the working copy is persisted atomically with the review record.
     changes[[BODY_PATH(rec$artifact_id)]] <- body
   }
-
   report <- adapter_write_with_recovery(
     adapter,
     changes = changes,
     expected_ref_sha = branch_head_sha,
-    expected_blob_shas = stats::setNames(list(blob_sha), change_paths),
+    expected_blob_shas = setNames(list(blob_sha), record_path),
     message = sprintf(
       "review action '%s' by %s on %s",
       action,
       actor,
       rec$artifact_id
-    )
+    ),
+    reject_unrelated_head = TRUE
   )
-
   list(report = report, record = updated)
 }

@@ -51,17 +51,31 @@ transition <- function(rec, action, actor, role, note = NULL,
   }
 
   sequence <- length(rec$events)
-  ev <- new_event(
-    action = action,
-    from_state = from_state,
-    to_state = to_state,
-    actor = actor,
-    actor_role = role,
-    sequence = sequence,
-    source_blob_sha = blob_sha,
-    body_sha256 = body_sha256,
-    note = note
-  )
+  ev <- if (is_v2_review_record(rec)) {
+    new_event_v2(
+      action = action,
+      from_state = from_state,
+      to_state = to_state,
+      actor = actor,
+      actor_role = role,
+      sequence = sequence,
+      review_record_blob_sha_before = blob_sha,
+      body_sha256 = body_sha256,
+      note = note
+    )
+  } else {
+    new_event(
+      action = action,
+      from_state = from_state,
+      to_state = to_state,
+      actor = actor,
+      actor_role = role,
+      sequence = sequence,
+      source_blob_sha = blob_sha,
+      body_sha256 = body_sha256,
+      note = note
+    )
+  }
 
   new_rec <- rec
   new_rec$state <- to_state
@@ -87,17 +101,31 @@ record_action <- function(rec, action, actor, role, note = NULL,
     stop("invalid role")
   }
   sequence <- length(rec$events)
-  ev <- new_event(
-    action = action,
-    from_state = NULL,
-    to_state = NULL,
-    actor = actor,
-    actor_role = role,
-    sequence = sequence,
-    source_blob_sha = blob_sha,
-    body_sha256 = body_sha256,
-    note = note
-  )
+  ev <- if (is_v2_review_record(rec)) {
+    new_event_v2(
+      action = action,
+      from_state = NULL,
+      to_state = NULL,
+      actor = actor,
+      actor_role = role,
+      sequence = sequence,
+      review_record_blob_sha_before = blob_sha,
+      body_sha256 = body_sha256,
+      note = note
+    )
+  } else {
+    new_event(
+      action = action,
+      from_state = NULL,
+      to_state = NULL,
+      actor = actor,
+      actor_role = role,
+      sequence = sequence,
+      source_blob_sha = blob_sha,
+      body_sha256 = body_sha256,
+      note = note
+    )
+  }
   new_rec <- rec
   new_rec$events <- c(rec$events, list(ev))
   new_rec$current_content_sha256 <- body_sha256

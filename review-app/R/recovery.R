@@ -1,159 +1,356 @@
-# Atomic multi-file commit writes with optimistic locking (Step 6 / R11, R14,
-# R18) and partial-failure detection / operator recovery (Step 7 / R18).
-#
-# A multi-file logical operation becomes ONE commit, and the review branch ref
-# is updated atomically from the caller's perspective. Before writing, the
-# branch ref SHA and each touched path's blob SHA are re-fetched and compared
-# against what was loaded; any mismatch rejects the write (no force-push, no
-# overwrite). On a partial/API/network failure the write surface reports
-# exactly which steps succeeded/failed and never claims a transition that did
-# not fully complete.
+# Atomic multi-file commit writes with scoped optimistic locking.
 
 `%+%` <- function(a, b) paste0(a, b)
 
-#' Condition raised when the remote state moved since load (R11).
 stale_write_error <- function(msg) {
-  structure(list(message = msg, call = NULL),
-            class = c("stale_write", "error", "condition"))
+  structure(
+    list(message = msg, call = NULL),
+    class = c("stale_write", "error", "condition")
+  )
 }
 
-#' Condition raised when a multi-step git write fails partway (R18).
 partial_failure_error <- function(detail) {
-  structure(list(message = "partial git write failure", detail = detail,
-                 call = NULL),
-            class = c("partial_failure", "error", "condition"))
+  structure(
+    list(message = "partial git write failure", detail = detail, call = NULL),
+    class = c("partial_failure", "error", "condition")
+  )
 }
 
-# --- staleness pre-check -------------------------------------------------------
+.partial_failure_with_steps <- function(detail, steps) {
+  error <- partial_failure_error(detail)
+  error$steps_completed <- steps
+  error
+}
 
-#' Confirm the branch ref SHA and each touched path's blob SHA match what was
-#' loaded. Returns the fetched tree on success; raises stale_write_error.
-adapter_check_stale <- function(adapter, expected_ref_sha, expected_blob_shas) {
-  o <- adapter$owner; repo <- adapter$repo; branch <- adapter$review_branch
+ref_race_error <- function(msg) {
+  structure(
+    list(message = msg, call = NULL),
+    class = c("ref_race", "error", "condition")
+  )
+}
+
+.expected_blob_matches <- function(actual, expected) {
+  if (length(expected) == 1L && is.na(expected)) return(is.null(actual))
+  if (is.null(expected)) return(is.null(actual))
+  identical(actual, expected)
+}
+
+.recoverable_partial <- function(error, steps) {
+  if (!inherits(error, "partial_failure")) return(error)
+  error$steps_completed <- steps
+  error
+}
+
+adapter_check_stale <- function(
+  adapter, expected_ref_sha = NULL, expected_blob_shas = list(),
+  expected_tree = NULL, reject_unrelated_head = FALSE
+) {
+  owner <- adapter$owner
+  repo <- adapter$repo
+  branch <- adapter$review_branch
   token <- adapter$get_token()
-  current <- adapter_branch_head(o, repo, branch, token, adapter$http)
-  if (!identical(current, expected_ref_sha)) {
-    stop(stale_write_error("stale, please reload: the review branch HEAD moved since load"))
+  current <- adapter_branch_head(owner, repo, branch, token, adapter$http)
+  if (!is.null(expected_ref_sha) && !identical(current, expected_ref_sha) &&
+      isTRUE(reject_unrelated_head)) {
+    stop(stale_write_error(
+      "stale, please reload: the review branch HEAD moved since load"
+    ))
   }
-  tree <- adapter_fetch_tree(o, repo, branch, token, adapter$http)
-  for (path in names(expected_blob_shas)) {
-    actual <- tree$blobs[[path]]
-    if (is.null(actual) || !identical(actual, expected_blob_shas[[path]])) {
+  tree <- adapter_fetch_tree_at(owner, repo, current, token, adapter$http)
+  dependencies <- expected_blob_shas
+  if (!is.null(expected_tree)) dependencies <- c(dependencies, expected_tree)
+  for (path in names(dependencies)) {
+    actual <- tree$blobs[[path]] %||% NULL
+    expected <- dependencies[[path]]
+    if (!.expected_blob_matches(actual, expected)) {
       stop(stale_write_error(sprintf(
-        "stale, please reload: blob SHA for '%s' changed since load", path)))
+        "stale, please reload: blob SHA for '%s' changed since load",
+        path
+      )))
     }
   }
   tree
 }
 
-# --- atomic write ---------------------------------------------------------------
-
-#' One logical atomic write with optimistic locking.
-adapter_write_atomic <- function(adapter, changes, expected_ref_sha,
-                                 expected_blob_shas, message) {
-  o <- adapter$owner; repo <- adapter$repo; branch <- adapter$review_branch
-  token <- adapter$get_token()
-
-  # 1. staleness check (raises stale_write_error; never writes)
-  tree <- adapter_check_stale(adapter, expected_ref_sha, expected_blob_shas)
-
-  # 2. create a blob per changed file
-  blob_shas <- list()
-  for (path in names(changes)) {
-    content <- changes[[path]]
-    url <- sprintf("https://api.github.com/repos/%s/%s/git/blobs", o, repo)
-    body <- list(content = base64enc::base64encode(charToRaw(enc2utf8(content))),
-                 encoding = "base64")
-    resp <- adapter$http("POST", url, token, body = body)
-    if (is.null(resp$sha)) {
-      stop(partial_failure_error("blob creation failed partway at path: " %+% path))
-    }
-    blob_shas[[path]] <- resp$sha
+.write_blob <- function(adapter, path, content, token) {
+  response <- adapter$http(
+    "POST",
+    sprintf("https://api.github.com/repos/%s/%s/git/blobs", adapter$owner, adapter$repo),
+    token,
+    body = list(
+      content = base64enc::base64encode(charToRaw(enc2utf8(content))),
+      encoding = "base64"
+    )
+  )
+  if (!.is_scalar_character(response$sha %||% NULL)) {
+      stop(partial_failure_error("blob creation returned no valid SHA at path: " %+% path))
   }
-
-  # 3. create a tree rooted at the current HEAD
-  entries <- lapply(names(changes), function(path) {
-    list(path = path, mode = "100644", type = "blob", sha = blob_shas[[path]])
-  })
-  resp <- adapter$http("POST",
-    sprintf("https://api.github.com/repos/%s/%s/git/trees", o, repo), token,
-    body = list(base_tree = tree$commit, tree = entries))
-  if (is.null(resp$sha)) {
-    stop(partial_failure_error("tree creation failed partway"))
-  }
-  new_tree <- resp$sha
-
-  # 4. create the commit
-  resp <- adapter$http("POST",
-    sprintf("https://api.github.com/repos/%s/%s/git/commits", o, repo), token,
-    body = list(message = message, tree = new_tree, parents = list(tree$commit)))
-  if (is.null(resp$sha)) {
-    stop(partial_failure_error("commit creation failed partway"))
-  }
-  new_commit <- resp$sha
-
-  # 5. update the review branch ref (force = FALSE: never overwrite a moved ref)
-  resp <- adapter$http("PATCH",
-    sprintf("https://api.github.com/repos/%s/%s/git/refs/heads/%s", o, repo, branch),
-    token, body = list(sha = new_commit, force = FALSE))
-  if (is.null(resp$object$sha)) {
-    stop(partial_failure_error(
-      "ref update failed partway (commit was created but the branch ref did not move)"))
-  }
-
-  list(ok = TRUE, commit_sha = new_commit)
+  response$sha
 }
 
-# --- partial-failure detection / recovery (Step 7) -----------------------------
+adapter_write_atomic <- function(
+  adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(),
+  message, inline_changes = NULL, max_payload_bytes = 900000L,
+  reject_unrelated_head = NULL, preflight_tree = NULL
+) {
+  if (!is.list(changes) || !length(changes)) stop("atomic write requires changes")
+  paths <- names(changes)
+  if (is.null(paths) || any(!nzchar(paths)) || anyDuplicated(paths)) {
+    stop("atomic write paths must be non-empty and unique")
+  }
+  if (any(!vapply(changes, function(content) {
+    is.character(content) && length(content) == 1L && !is.na(content)
+  }, logical(1)))) {
+    stop("atomic write contents must be scalar character values")
+  }
+  owner <- adapter$owner
+  repo <- adapter$repo
+  branch <- adapter$review_branch
+  token <- adapter$get_token()
+  if (is.null(reject_unrelated_head)) {
+    control_paths <- c(QUEUE_MANIFEST_PATH, QUEUE_INDEX_PATH)
+    reject_unrelated_head <- !any(names(expected_blob_shas) %in% control_paths)
+  }
+  if (is.null(preflight_tree)) {
+    tree <- adapter_check_stale(
+      adapter,
+      expected_ref_sha = expected_ref_sha,
+      expected_blob_shas = expected_blob_shas,
+      reject_unrelated_head = reject_unrelated_head
+    )
+  } else {
+    current <- adapter_branch_head(owner, repo, branch, token, adapter$http)
+    if (isTRUE(reject_unrelated_head) &&
+        !is.null(expected_ref_sha) && !identical(current, expected_ref_sha)) {
+      stop(stale_write_error(
+        "stale, please reload: the review branch HEAD moved since load"
+      ))
+    }
+    if (!identical(preflight_tree$commit %||% NULL, current)) {
+      stop(stale_write_error(
+        "stale, please reload: the preflight review tree is no longer current"
+      ))
+    }
+    tree <- preflight_tree
+  }
+  payload_changes <- inline_changes %||% NULL
+  if (!is.null(payload_changes) &&
+      (!is.list(payload_changes) ||
+       !identical(sort(names(payload_changes)), sort(paths)))) {
+    stop("inline changes must have the same named paths as changes")
+  }
+  if (is.null(payload_changes)) {
+    blob_shas <- list()
+    blob_created <- FALSE
+    for (path in names(changes)) {
+      blob_shas[[path]] <- tryCatch(
+        .write_blob(adapter, path, changes[[path]], token),
+        error = function(error) {
+          if (inherits(error, "partial_failure")) {
+            stop(.recoverable_partial(
+              error,
+              if (blob_created) c("staleness-check", "blob-creation") else "staleness-check"
+            ))
+          }
+          stop(.partial_failure_with_steps(
+            conditionMessage(error),
+            if (blob_created) {
+              c("staleness-check", "blob-creation")
+            } else {
+              "staleness-check"
+            }
+          ))
+        }
+      )
+      blob_created <- TRUE
+    }
+    entries <- lapply(names(changes), function(path) {
+      list(path = path, mode = "100644", type = "blob", sha = blob_shas[[path]])
+    })
+    completed <- c("staleness-check", "blob-creation")
+  } else {
+    entries <- lapply(names(payload_changes), function(path) {
+      list(
+        path = path,
+        mode = "100644",
+        type = "blob",
+        content = enc2utf8(payload_changes[[path]])
+      )
+    })
+    completed <- "staleness-check"
+  }
+  body <- list(base_tree = tree$tree_sha %||% tree$commit, tree = entries)
+  encoded_size <- nchar(jsonlite::toJSON(body, auto_unbox = TRUE), type = "bytes")
+  if (encoded_size > max_payload_bytes) {
+    stop(stale_write_error(sprintf(
+      "atomic write payload exceeds configured limit of %d bytes",
+      max_payload_bytes
+    )))
+  }
+  response <- tryCatch(
+    adapter$http(
+      "POST",
+      sprintf("https://api.github.com/repos/%s/%s/git/trees", owner, repo),
+      token,
+      body = body
+    ),
+    error = function(error) {
+      if (inherits(error, "partial_failure")) stop(error)
+      stop(.partial_failure_with_steps(conditionMessage(error), completed))
+    }
+  )
+  if (!.is_scalar_character(response$sha %||% NULL)) {
+    stop(.partial_failure_with_steps("tree creation failed partway", completed))
+  }
+  new_tree <- response$sha
+  completed <- c(completed, "tree-creation")
+  response <- tryCatch(
+    adapter$http(
+      "POST",
+      sprintf("https://api.github.com/repos/%s/%s/git/commits", owner, repo),
+      token,
+      body = list(
+        message = message,
+        tree = new_tree,
+        parents = list(tree$commit)
+      )
+    ),
+    error = function(error) {
+      if (inherits(error, "partial_failure")) stop(error)
+      stop(.partial_failure_with_steps(conditionMessage(error), completed))
+    }
+  )
+  if (!.is_scalar_character(response$sha %||% NULL)) {
+    stop(.partial_failure_with_steps("commit creation failed partway", completed))
+  }
+  new_commit <- response$sha
+  completed <- c(completed, "commit-creation")
+  response <- tryCatch(
+    adapter$http(
+      "PATCH",
+      sprintf(
+        "https://api.github.com/repos/%s/%s/git/refs/heads/%s",
+        owner,
+        repo,
+        utils::URLencode(branch, reserved = FALSE)
+      ),
+      token,
+      body = list(sha = new_commit, force = FALSE)
+    ),
+    error = function(error) {
+      if (inherits(error, "ref_race") ||
+          grepl(
+            "409|422|non-fast-forward|fast.?forward|reference.*match|not a fast forward",
+            conditionMessage(error),
+            ignore.case = TRUE
+          )) {
+        stop(ref_race_error(conditionMessage(error)))
+      }
+      stop(partial_failure_error(conditionMessage(error)))
+    }
+  )
+  if (!.is_scalar_character(response$object$sha %||% NULL)) {
+    error <- ref_race_error(
+      "review branch ref moved before publication; no transition was applied"
+    )
+    error$steps_completed <- completed
+    stop(error)
+  }
+  completed <- c(completed, "ref-update")
+  list(ok = TRUE, commit_sha = new_commit, steps_completed = completed)
+}
 
-#' Wrap a write so a partial failure surfaces affected paths/commit status and
-#' never claims the transition applied. Returns a recovery report; the
-#' transition is only ever `transition_applied = TRUE` when the full atomic
-#' write succeeded.
-adapter_write_with_recovery <- function(adapter, changes, expected_ref_sha,
-                                        expected_blob_shas, message) {
+adapter_write_with_recovery <- function(
+  adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(), message,
+  inline_changes = NULL, max_payload_bytes = 900000L,
+  reject_unrelated_head = NULL, preflight_tree = NULL
+) {
   tryCatch(
     {
-      result <- adapter_write_atomic(adapter, changes, expected_ref_sha,
-                                     expected_blob_shas, message)
-      list(ok = TRUE, transition_applied = TRUE, commit_sha = result$commit_sha,
-           steps_completed = c("staleness-check", "blob-creation", "tree-creation",
-                               "commit-creation", "ref-update"),
-           error = NULL)
+      result <- adapter_write_atomic(
+        adapter,
+        changes,
+        expected_ref_sha,
+        expected_blob_shas,
+        message,
+        inline_changes = inline_changes,
+        max_payload_bytes = max_payload_bytes,
+        reject_unrelated_head = reject_unrelated_head,
+        preflight_tree = preflight_tree
+      )
+      list(
+        ok = TRUE,
+        transition_applied = TRUE,
+        commit_sha = result$commit_sha,
+        steps_completed = result$steps_completed,
+        error = NULL
+      )
     },
-    stale_write = function(e) {
-      list(ok = FALSE, transition_applied = FALSE, commit_sha = NULL,
-           steps_completed = character(0),
-           error = list(kind = "stale", message = conditionMessage(e), detail = NULL))
+    stale_write = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = FALSE,
+        commit_sha = NULL,
+        steps_completed = character(0),
+        error = list(kind = "stale", message = conditionMessage(error), detail = NULL)
+      )
     },
-    partial_failure = function(e) {
-      list(ok = FALSE, transition_applied = FALSE, commit_sha = NULL,
-           steps_completed = c("staleness-check", "blob-creation", "tree-creation",
-                               "commit-creation"),
-           error = list(kind = "partial", message = conditionMessage(e),
-                        detail = if (!is.null(e$detail)) e$detail else NULL))
+    ref_race = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = FALSE,
+        commit_sha = NULL,
+        steps_completed = error$steps_completed %||% c(
+          "staleness-check", "blob-creation", "tree-creation", "commit-creation"
+        ),
+        error = list(kind = "ref-race", message = conditionMessage(error), detail = NULL)
+      )
     },
-    error = function(e) {
-      list(ok = FALSE, transition_applied = FALSE, commit_sha = NULL,
-           steps_completed = character(0),
-           error = list(kind = "other", message = conditionMessage(e), detail = NULL))
+    partial_failure = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = FALSE,
+        commit_sha = NULL,
+        steps_completed = error$steps_completed %||% character(0),
+        error = list(
+          kind = "partial",
+          message = conditionMessage(error),
+          detail = error$detail %||% NULL
+        )
+      )
+    },
+    error = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = FALSE,
+        commit_sha = NULL,
+        steps_completed = character(0),
+        error = list(kind = "other", message = conditionMessage(error), detail = NULL)
+      )
     }
   )
 }
 
-#' Operator-facing one-line description of a recovery report.
 recovery_report_text <- function(report) {
-  if (report$ok) {
-    return(sprintf("Write succeeded (commit %s).", report$commit_sha))
-  }
+  if (report$ok) return(sprintf("Write succeeded (commit %s).", report$commit_sha))
   if (report$error$kind == "stale") {
-    return(paste("Stale write rejected -- no transition applied. Reload and reapply.",
-                 report$error$message))
+    return(paste(
+      "Stale write rejected -- no transition applied. Reload and reapply.",
+      report$error$message
+    ))
+  }
+  if (report$error$kind == "ref-race") {
+    return(paste(
+      "Concurrent publication rejected -- no transition applied.",
+      report$error$message
+    ))
   }
   if (report$error$kind == "partial") {
-    return(paste0("PARTIAL FAILURE: transition NOT applied. Completed steps: [",
-                  paste(report$steps_completed, collapse = ", "), "]. ",
-                  report$error$message))
+    return(paste0(
+      "PARTIAL FAILURE: transition NOT applied. Completed steps: [",
+      paste(report$steps_completed, collapse = ", "), "]. ",
+      report$error$message
+    ))
   }
   paste("Write failed:", report$error$message)
 }

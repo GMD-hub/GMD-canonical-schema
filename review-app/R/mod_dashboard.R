@@ -32,6 +32,7 @@ mod_dashboard_ui <- function(id) {
       )
     ),
     shiny::uiOutput(ns("queue_alert")),
+    shiny::uiOutput(ns("bootstrap_panel")),
     shiny::uiOutput(ns("status_chips")),
     shiny::div(
       class = "filter-toolbar",
@@ -92,13 +93,32 @@ mod_dashboard_ui <- function(id) {
 #' @param refresh_counter shared [shiny::reactiveVal] used after writes.
 #' @return Selected artifact, full queue index, and displayed filtered index.
 #' @export
-mod_dashboard_server <- function(id, adapter, refresh_counter) {
+#' @param role reactive role used to guard bootstrap.
+#' @param actor_identity reactive authenticated identity.
+mod_dashboard_server <- function(
+  id,
+  adapter,
+  refresh_counter,
+  role = shiny::reactive(NULL),
+  actor_identity = shiny::reactive(NULL)
+) {
   shiny::moduleServer(id, function(input, output, session) {
+    role_value <- if (is.function(role)) role else shiny::reactive(role)
+    actor_value <- if (is.function(actor_identity)) {
+      actor_identity
+    } else {
+      shiny::reactive(actor_identity)
+    }
     queue_index <- shiny::reactiveVal(data.frame())
     queue_phase <- shiny::reactiveVal("loading")
     queue_error <- shiny::reactiveVal(NULL)
+    queue_mode <- shiny::reactiveVal(NULL)
+    queue_manifest <- shiny::reactiveVal(NULL)
+    queue_manifest_blob_sha <- shiny::reactiveVal(NULL)
+    queue_index_blob_sha <- shiny::reactiveVal(NULL)
     last_refreshed_at <- shiny::reactiveVal(NULL)
     filter_generation <- shiny::reactiveVal(0L)
+    queue_startup <- shiny::reactiveVal(NULL)
 
     clear_selection <- function() {
       proxy <- DT::dataTableProxy("queue_table", session = session)
@@ -130,6 +150,10 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
       if (is.null(ad)) {
         queue_index(data.frame())
         queue_error(NULL)
+        queue_mode("offline")
+        queue_manifest(NULL)
+        queue_manifest_blob_sha(NULL)
+        queue_index_blob_sha(NULL)
         queue_phase("loaded")
         last_refreshed_at(Sys.time())
         return(invisible(NULL))
@@ -137,9 +161,15 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
 
       tryCatch(
         {
-          queue_index(adapter_index_review(ad)$index)
-          queue_error(NULL)
-          queue_phase("loaded")
+          loaded <- adapter_index_review(ad)
+          queue_index(loaded$index)
+          queue_error(loaded$error %||% NULL)
+          queue_mode(loaded$mode %||% NULL)
+          queue_startup(loaded)
+          queue_manifest(loaded$manifest %||% NULL)
+          queue_manifest_blob_sha(loaded$manifest_blob_sha %||% NULL)
+          queue_index_blob_sha(loaded$index_blob_sha %||% NULL)
+          queue_phase(if (is.null(loaded$error)) "loaded" else "error")
           last_refreshed_at(Sys.time())
           clear_selection()
         },
@@ -186,6 +216,21 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
           )
         ))
       }
+      if (identical(queue_mode(), "bootstrap_required")) {
+        return(shiny::div(
+          class = "app-alert alert-warning",
+          role = "status",
+          shiny::icon("person-circle-exclamation", `aria-hidden` = "true"),
+          shiny::div(
+            shiny::strong("Production queue bootstrap required"),
+            shiny::span("An authenticated administrator must enroll the reviewed source set before the queue can be used."),
+            shiny::tags$details(
+              shiny::tags$summary("Technical details"),
+              shiny::code(queue_error())
+            )
+          )
+        ))
+      }
       if (!is.null(queue_error())) {
         stale_text <- if (nrow(queue_index()) > 0L) {
           "The last successful queue remains available and may be out of date."
@@ -213,6 +258,104 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
       }
       NULL
     })
+
+    output$bootstrap_panel <- shiny::renderUI({
+      if (!identical(queue_mode(), "bootstrap_required") ||
+          !identical(role_value() %||% NULL, "administrator")) {
+        return(NULL)
+      }
+      shiny::div(
+        class = "bootstrap-panel app-alert alert-warning",
+        shiny::strong("Administrator bootstrap"),
+        shiny::p(
+          sprintf(
+            "Enroll the exact Release A source set: %d artifacts (%s).",
+            QUEUE_EXPECTED_TOTAL,
+            paste(
+              sprintf("%s/%d", names(QUEUE_EXPECTED_MODULE_COUNTS),
+                      as.integer(QUEUE_EXPECTED_MODULE_COUNTS)),
+              collapse = ", "
+            )
+          )
+        ),
+        shiny::actionButton(
+          session$ns("bootstrap_queue"),
+          "Bootstrap production queue",
+          class = "btn btn-warning"
+        )
+      )
+    })
+
+    shiny::observeEvent(input$bootstrap_queue, {
+      if (!identical(role_value() %||% NULL, "administrator")) return()
+      shiny::showModal(shiny::modalDialog(
+        title = "Bootstrap production queue",
+        shiny::p(
+          sprintf(
+            "This creates %d unassigned v2 review records on %s.",
+            QUEUE_EXPECTED_TOTAL,
+            adapter()$review_branch
+          )
+        ),
+        shiny::p(
+          sprintf(
+            "Module counts: %s.",
+            paste(
+              sprintf("%s=%d", names(QUEUE_EXPECTED_MODULE_COUNTS),
+                      as.integer(QUEUE_EXPECTED_MODULE_COUNTS)),
+              collapse = ", "
+            )
+          )
+        ),
+        shiny::p("The operation is one atomic commit and cannot be replayed after the manifest exists."),
+        footer = shiny::tagList(
+          shiny::modalButton("Cancel"),
+          shiny::actionButton(
+            session$ns("confirm_bootstrap_queue"),
+            "Confirm bootstrap",
+            class = "btn btn-warning"
+          )
+        ),
+        easyClose = TRUE
+      ))
+    }, ignoreInit = TRUE)
+
+    shiny::observeEvent(input$confirm_bootstrap_queue, {
+      shiny::removeModal()
+      ad <- adapter()
+      if (is.null(ad)) return()
+      tryCatch(
+        {
+          shiny::withProgress(
+            message = "Generating production queue",
+            value = 0,
+            {
+              result <- bootstrap_production_queue(
+                ad,
+                actor = actor_value() %||% "administrator",
+                role = role_value(),
+                progress = function(done, total) {
+                  shiny::setProgress(value = done / total)
+                }
+              )
+            }
+          )
+          shiny::showNotification(
+            sprintf("Production queue bootstrapped in commit %s.", result$commit_sha),
+            type = "message",
+            duration = 8
+          )
+          load_queue()
+        },
+        error = function(error) {
+          shiny::showNotification(
+            paste("Production bootstrap was not applied:", conditionMessage(error)),
+            type = "error",
+            duration = 10
+          )
+        }
+      )
+    }, ignoreInit = TRUE)
 
     output$filter_module_ui <- shiny::renderUI({
       shiny::selectInput(
@@ -382,6 +525,16 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
         ),
         Module = escape_html_text(filtered$module),
         `Assigned to` = escape_html_text(assignments),
+        Flags = vapply(seq_len(nrow(filtered)), function(i) {
+          flags <- character(0)
+          if (isTRUE(filtered$governance_blocked[[i]])) {
+            flags <- c(flags, "Governance blocked")
+          }
+          if (isTRUE(filtered$source_drift[[i]])) {
+            flags <- c(flags, "Source drift")
+          }
+          escape_html_text(if (length(flags)) paste(flags, collapse = "; ") else "None")
+        }, character(1)),
         `Next step` = sprintf(
           '<span class="next-step-label">%s</span>',
           steps
@@ -409,7 +562,12 @@ mod_dashboard_server <- function(id, adapter, refresh_counter) {
         selected_review_artifact(filtered_index(), row)
       }),
       queue_index = queue_index,
-      filtered_index = filtered_index
+      filtered_index = filtered_index,
+      queue_mode = queue_mode,
+      queue_manifest = queue_manifest,
+      queue_manifest_blob_sha = queue_manifest_blob_sha,
+      queue_index_blob_sha = queue_index_blob_sha,
+      queue_startup = queue_startup
     )
   })
 }

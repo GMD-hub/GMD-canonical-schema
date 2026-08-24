@@ -20,38 +20,200 @@
 adapter_branch_head <- function(owner, repo, branch, token, http = NULL) {
   # http is a function(url, headers, method) returning parsed JSON; provided by
   # the adapter factory in production, injected in tests.
-  url <- sprintf("https://api.github.com/repos/%s/%s/git/ref/heads/%s", owner, repo, branch)
+  url <- sprintf(
+    "https://api.github.com/repos/%s/%s/git/ref/heads/%s",
+    owner,
+    repo,
+    utils::URLencode(branch, reserved = FALSE)
+  )
   resp <- http("GET", url, token)
-  resp$object$sha
+  sha <- resp$object$sha %||% NULL
+  if (!.is_scalar_character(sha)) {
+    stop(sprintf("GitHub branch response did not contain a head SHA for '%s'", branch))
+  }
+  sha
 }
 
 #' Fetch the full recursive tree for a branch and return a name->blob map.
-adapter_fetch_tree <- function(owner, repo, branch, token, http = NULL) {
-  head_sha <- adapter_branch_head(owner, repo, branch, token, http)
-  url <- sprintf("https://api.github.com/repos/%s/%s/git/trees/%s?recursive=1", owner, repo, head_sha)
+adapter_fetch_tree_at <- function(owner, repo, commit_sha, token, http = NULL) {
+  if (!.is_scalar_character(commit_sha)) {
+    stop("a commit SHA is required to read a Git tree")
+  }
+  url <- sprintf(
+    "https://api.github.com/repos/%s/%s/git/trees/%s?recursive=1",
+    owner,
+    repo,
+    commit_sha
+  )
   resp <- http("GET", url, token)
+  if (isTRUE(resp$truncated)) {
+    stop("GitHub returned a truncated recursive tree; refusing an incomplete queue")
+  }
   entries <- resp$tree
   out <- list()
   if (is.data.frame(entries)) {
     blobs <- entries[entries$type == "blob", , drop = FALSE]
     for (i in seq_len(nrow(blobs))) {
+      if (!.is_scalar_character(blobs$path[i]) ||
+          !.is_scalar_character(blobs$sha[i])) {
+        stop("GitHub tree contained an invalid blob entry")
+      }
       out[[blobs$path[i]]] <- blobs$sha[i]
     }
-  } else {
-    for (e in entries) {
-      if (identical(e$type, "blob")) {
-        out[[e$path]] <- e$sha
+  } else if (is.list(entries)) {
+    for (entry in entries) {
+      if (identical(entry$type, "blob")) {
+        if (!.is_scalar_character(entry$path) ||
+            !.is_scalar_character(entry$sha)) {
+          stop("GitHub tree contained an invalid blob entry")
+        }
+        out[[entry$path]] <- entry$sha
       }
     }
+  } else {
+    stop("GitHub tree response did not contain a tree list")
   }
-  list(commit = head_sha, blobs = out)
+  list(
+    commit = commit_sha,
+    tree_sha = resp$sha %||% commit_sha,
+    blobs = out
+  )
+}
+
+adapter_fetch_tree <- function(owner, repo, branch, token, http = NULL) {
+  head_sha <- adapter_branch_head(owner, repo, branch, token, http)
+  adapter_fetch_tree_at(owner, repo, head_sha, token, http)
 }
 
 #' Fetch a file's content (as text) and its blob SHA.
 adapter_fetch_blob <- function(owner, repo, path, ref, token, http = NULL) {
-  url <- sprintf("https://api.github.com/repos/%s/%s/contents/%s?ref=%s", owner, repo, path, ref)
+  url <- sprintf(
+    "https://api.github.com/repos/%s/%s/contents/%s?ref=%s",
+    owner,
+    repo,
+    utils::URLencode(path, reserved = FALSE),
+    utils::URLencode(ref, reserved = FALSE)
+  )
   resp <- http("GET", url, token)
-  list(content = rawToChar(base64enc::base64decode(resp$content)), sha = resp$sha)
+  if (!.is_scalar_character(resp$content) || !.is_scalar_character(resp$sha)) {
+    stop(sprintf("GitHub contents response for '%s' was incomplete", path))
+  }
+  raw <- tryCatch(
+    base64enc::base64decode(resp$content),
+    error = function(e) stop(sprintf("failed to decode GitHub blob '%s': %s", path, conditionMessage(e)))
+  )
+  list(content = rawToChar(raw), sha = resp$sha, raw = raw)
+}
+
+adapter_fetch_blob_by_sha <- function(owner, repo, blob_sha, token, http = NULL) {
+  if (!.is_sha1(blob_sha)) {
+    stop("immutable blob reads require a lowercase Git SHA-1")
+  }
+  url <- sprintf(
+    "https://api.github.com/repos/%s/%s/git/blobs/%s",
+    owner,
+    repo,
+    blob_sha
+  )
+  resp <- http("GET", url, token)
+  if (!identical(resp$sha, blob_sha)) {
+    stop(sprintf("immutable blob response SHA did not match '%s'", blob_sha))
+  }
+  if (!identical(resp$encoding, "base64") ||
+      !.is_scalar_character(resp$content)) {
+    stop(sprintf("immutable blob '%s' was not a verified base64 response", blob_sha))
+  }
+  raw <- tryCatch(
+    base64enc::base64decode(resp$content),
+    error = function(e) stop(sprintf("failed to decode immutable blob '%s': %s", blob_sha, conditionMessage(e)))
+  )
+  if (!identical(git_blob_sha_raw(raw), blob_sha)) {
+    stop(sprintf("immutable blob '%s' content did not verify against its SHA", blob_sha))
+  }
+  list(content = rawToChar(raw), sha = resp$sha, raw = raw)
+}
+
+adapter_graphql <- function(owner, repo, query, variables, token, http = NULL) {
+  if (!.is_scalar_character(query) || !is.list(variables)) {
+    stop("GraphQL requests require a query and variables mapping")
+  }
+  resp <- http(
+    "POST",
+    "https://api.github.com/graphql",
+    token,
+    body = list(query = query, variables = variables)
+  )
+  if (!is.null(resp$errors) && length(resp$errors) > 0L) {
+    messages <- vapply(resp$errors, function(error) {
+      error$message %||% "unknown GraphQL error"
+    }, character(1))
+    stop(sprintf("GitHub GraphQL request failed: %s", paste(messages, collapse = "; ")))
+  }
+  if (is.null(resp$data)) stop("GitHub GraphQL response did not contain data")
+  resp$data
+}
+
+adapter_fetch_blobs_graphql <- function(
+  adapter, commit_sha, paths, batch_size = 50L, progress = NULL
+) {
+  if (!.is_scalar_character(commit_sha) || !length(paths)) return(list())
+  if (!is.numeric(batch_size) || length(batch_size) != 1L || batch_size < 1L ||
+      batch_size > 50L) {
+    stop("GraphQL batch_size must be between 1 and 50")
+  }
+  paths <- as.character(paths)
+  if (any(!grepl(
+    "^extraction/20_drafts/(idn|geo|dem|lbr|utl|dwl)/VAR-[a-z0-9]+[.]md$",
+    paths
+  ))) {
+    stop("GraphQL source blob batches contain an unsafe path")
+  }
+  if (anyDuplicated(paths)) stop("GraphQL blob paths must be unique")
+  batches <- split(paths, ceiling(seq_along(paths) / as.integer(batch_size)))
+  result <- list()
+  for (i in seq_along(batches)) {
+    batch <- batches[[i]]
+    aliases <- sprintf("b%03d", seq_along(batch))
+    fields <- vapply(seq_along(batch), function(j) {
+      expression <- paste0(commit_sha, ":", batch[[j]])
+      expression <- gsub("\\\\", "\\\\\\\\", expression)
+      expression <- gsub('"', '\\\\"', expression, fixed = TRUE)
+      sprintf(
+        "%s: object(expression: \"%s\") { ... on Blob { oid text } }",
+        aliases[[j]],
+        expression
+      )
+    }, character(1))
+    query <- paste0(
+      "query { repository(owner: \"", adapter$owner,
+      "\", name: \"", adapter$repo, "\") { ",
+      paste(fields, collapse = " "), " } }"
+    )
+    data <- adapter_graphql(
+      adapter$owner,
+      adapter$repo,
+      query,
+      list(),
+      adapter$get_token(),
+      adapter$http
+    )
+    repository <- data$repository %||% NULL
+    if (is.null(repository)) stop("GitHub GraphQL response omitted repository")
+    for (j in seq_along(batch)) {
+      blob <- repository[[aliases[[j]]]] %||% NULL
+      if (is.null(blob) || !.is_scalar_character(blob$oid) ||
+          is.null(blob$text)) {
+        stop(sprintf("GitHub GraphQL response omitted source blob '%s'", batch[[j]]))
+      }
+      result[[batch[[j]]]] <- list(
+        content = blob$text,
+        sha = blob$oid,
+        raw = charToRaw(enc2utf8(blob$text))
+      )
+    }
+    if (!is.null(progress)) progress(min(i * as.integer(batch_size), length(paths)), length(paths))
+  }
+  result
 }
 
 # ---------------------------------------------------------------------------
@@ -132,6 +294,7 @@ review_app_adapter <- function() {
     )
   }
 
+  token_cache <- new_token_cache()
   new_github_adapter(
     owner = owner,
     repo = repo,
@@ -144,7 +307,7 @@ review_app_adapter <- function() {
           private_key_pem = private_key,
           installation_id = installation_id
         ),
-        cache = new_token_cache()
+         cache = token_cache
       )
     }
   )

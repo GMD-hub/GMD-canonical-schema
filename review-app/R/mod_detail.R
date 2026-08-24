@@ -103,10 +103,20 @@ mod_detail_ui <- function(id) {
 #' @param role reactive returning the current role string.
 #' @param selected_artifact reactive returning the selected queue row.
 #' @param refresh_counter shared [shiny::reactiveVal] incremented after writes.
+#' @param queue_mode reactive queue routing mode.
+#' @param queue_manifest reactive current queue manifest.
+#' @param queue_manifest_blob_sha reactive manifest blob SHA.
+#' @param queue_index_blob_sha reactive queue-index blob SHA.
+#' @param queue_startup reactive full queue load result.
 #' @return A list containing the back-navigation event reactive.
 #' @export
 mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
-                              refresh_counter) {
+                              refresh_counter,
+                              queue_mode = shiny::reactive("legacy_read_only"),
+                              queue_manifest = shiny::reactive(NULL),
+                              queue_manifest_blob_sha = shiny::reactive(NULL),
+                              queue_index_blob_sha = shiny::reactive(NULL),
+                              queue_startup = shiny::reactive(NULL)) {
   shiny::moduleServer(id, function(input, output, session) {
     detail_state <- shiny::reactiveValues(
       phase = "idle",
@@ -122,7 +132,13 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       blob_sha = NULL,
       branch_head_sha = NULL,
       body_sha256 = NULL,
-      record = NULL
+      record = NULL,
+      source_binding = NULL,
+      source_drift = FALSE,
+      source_drift_reason = NULL,
+      enrolled_source = NULL,
+      manifest_blob_sha = NULL,
+      index_blob_sha = NULL
     )
 
     load_detail <- function(row = detail_state$selected_row) {
@@ -139,19 +155,27 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           if (is.null(ad)) {
             stop("No repository adapter is configured.")
           }
-          artifact_id <- row$artifact_id[[1L]]
-          draft <- adapter_read_draft(ad, row$source_artifact_path[[1L]])
-          split <- split_frontmatter(draft$content)
-          record_path <- ACTION_PATH(artifact_id)
+           artifact_id <- row$artifact_id[[1L]]
+            record_path <- row$record_path[[1L]] %||% ACTION_PATH(artifact_id)
           record_blob <- adapter_read_review(ad, record_path)
-          record <- parse_review_record(record_blob$content)
-          body_text <- split$body
-          companion <- tryCatch(
+           record <- parse_review_record(record_blob$content)
+           source_binding <- NULL
+           if (is_v2_review_record(record)) {
+             source_binding <- check_source_binding(ad, record)
+             snapshot <- source_binding$enrolled$content
+             split <- split_frontmatter_exact(snapshot)
+             body_text <- split$body
+           } else {
+             draft <- adapter_read_draft(ad, row$source_artifact_path[[1L]])
+             split <- split_frontmatter(draft$content)
+             body_text <- split$body
+           }
+           companion <- tryCatch(
             adapter_read_review(ad, BODY_PATH(artifact_id)),
             error = function(e) NULL
           )
           if (!is.null(companion)) body_text <- companion$content
-          head_sha <- adapter_branch_head(
+           head_sha <- adapter_branch_head(
             ad$owner,
             ad$repo,
             ad$review_branch,
@@ -166,8 +190,22 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           detail_state$record <- record
           detail_state$blob_sha <- record_blob$sha
           detail_state$branch_head_sha <- head_sha
-          detail_state$body_sha256 <- hash_body(body_text %||% "")
-          detail_state$phase <- "loaded"
+           detail_state$body_sha256 <- hash_body(body_text %||% "")
+           detail_state$source_binding <- source_binding
+           detail_state$source_drift <- isTRUE(source_binding$drift)
+           detail_state$source_drift_reason <- source_binding$reason %||% NULL
+           detail_state$enrolled_source <- source_binding$enrolled %||% NULL
+           detail_state$manifest_blob_sha <- queue_manifest_blob_sha() %||% NULL
+           detail_state$index_blob_sha <- queue_index_blob_sha() %||% NULL
+           if (is_v2_review_record(record) &&
+               (is.null(detail_state$manifest_blob_sha) ||
+                is.null(detail_state$index_blob_sha))) {
+             manifest_blob <- adapter_read_queue_manifest(ad)
+             index_blob <- adapter_read_queue_index(ad)
+             detail_state$manifest_blob_sha <- manifest_blob$sha
+             detail_state$index_blob_sha <- index_blob$sha
+           }
+           detail_state$phase <- "loaded"
         },
         error = function(e) {
           detail_state$error <- conditionMessage(e)
@@ -189,7 +227,9 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       if (is.null(detail_state$record)) "draft" else detail_state$record$state
     })
     editable <- shiny::reactive({
-      detail_is_editable(role(), current_state())
+      detail_is_editable(role(), current_state()) &&
+        !identical(queue_mode(), "legacy_read_only") &&
+        !isTRUE(detail_state$source_drift)
     })
     dirty <- shiny::reactive({
       if (!editable() || !identical(detail_state$phase, "loaded")) {
@@ -233,6 +273,22 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
             session$ns("retry_detail"),
             "Retry",
             class = "btn btn-outline-danger btn-sm"
+          )
+        ))
+      }
+      if (identical(detail_state$phase, "loaded") &&
+          isTRUE(detail_state$source_drift)) {
+        return(shiny::div(
+          class = "app-alert alert-warning detail-error",
+          role = "alert",
+          shiny::icon("triangle-exclamation", `aria-hidden` = "true"),
+          shiny::div(
+            shiny::strong("Source drift detected"),
+            shiny::span("This view shows the enrolled source snapshot. All writes are disabled until the source binding is reconciled."),
+            shiny::tags$details(
+              shiny::tags$summary("Technical details"),
+              shiny::code(detail_state$source_drift_reason %||% "source changed or could not be verified")
+            )
           )
         ))
       }
@@ -385,18 +441,27 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
         ad,
         ACTION_PATH(detail_state$artifact_id)
       )
-      detail_state$record <- parse_review_record(record_blob$content)
+         detail_state$record <- parse_review_record(record_blob$content)
       detail_state$blob_sha <- record_blob$sha
-      detail_state$branch_head_sha <- adapter_branch_head(
+         detail_state$branch_head_sha <- adapter_branch_head(
         ad$owner,
         ad$repo,
         ad$review_branch,
         ad$get_token(),
         ad$http
-      )
+         )
+          if (is_v2_review_record(detail_state$record)) {
+            detail_state$source_binding <- check_source_binding(ad, detail_state$record)
+            detail_state$source_drift <- isTRUE(detail_state$source_binding$drift)
+            detail_state$source_drift_reason <- detail_state$source_binding$reason %||% NULL
+            manifest_blob <- adapter_read_queue_manifest(ad)
+            index_blob <- adapter_read_queue_index(ad)
+            detail_state$manifest_blob_sha <- manifest_blob$sha
+            detail_state$index_blob_sha <- index_blob$sha
+          }
     }
 
-    run_action <- function(action, note = NULL, body = NULL) {
+      run_action <- function(action, note = NULL, body = NULL) {
       shiny::req(detail_state$record)
       detail_state$action_error <- NULL
       detail_state$action_success <- NULL
@@ -427,7 +492,10 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
             role = role(),
             approved_content = approved_content,
             body = if (identical(action, "saved")) body else NULL,
-            note = note
+             note = note,
+             expected_manifest_blob_sha = detail_state$manifest_blob_sha,
+             expected_index_blob_sha = detail_state$index_blob_sha,
+             legacy_read_only = identical(queue_mode(), "legacy_read_only")
           )
           detail_state$report <- result$report
           if (!result$report$ok) {
@@ -521,8 +589,10 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       if (!identical(detail_state$phase, "loaded")) return(NULL)
       state <- current_state()
       current_role <- role()
-      actions <- list()
-      if (detail_is_editable(current_role, state)) {
+       actions <- list()
+       if (detail_is_editable(current_role, state) &&
+           !isTRUE(detail_state$source_drift) &&
+           !identical(queue_mode(), "legacy_read_only")) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("save_draft"),
           "Save Draft",
@@ -537,21 +607,36 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           title = if (dirty()) "Save draft before submitting." else NULL
         )
       }
-      if (authorize(current_role, "request-revision") && state == "in-review") {
+       if (authorize(current_role, "request-revision") && state == "in-review" &&
+           !isTRUE(detail_state$source_drift) &&
+           !identical(queue_mode(), "legacy_read_only")) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("act_reqrev"),
           "Request revision",
           class = "btn btn-outline-secondary"
         )
       }
-      if (authorize(current_role, "approved") && state == "in-review") {
+       approval_eligible <- if (is.null(queue_manifest())) {
+         FALSE
+       } else {
+         isTRUE(tryCatch(
+           queue_approval_eligible(queue_manifest(), detail_state$record),
+           error = function(error) FALSE
+         ))
+       }
+       if (authorize(current_role, "approved") && state == "in-review" &&
+           !isTRUE(detail_state$source_drift) &&
+           !identical(queue_mode(), "legacy_read_only") &&
+           approval_eligible) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("act_approve"),
           "Approve",
           class = "btn btn-success"
         )
       }
-      if (authorize(current_role, "reopened") && state == "approved") {
+       if (authorize(current_role, "reopened") && state == "approved" &&
+           !isTRUE(detail_state$source_drift) &&
+           !identical(queue_mode(), "legacy_read_only")) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("act_reopen"),
           "Reopen artifact",

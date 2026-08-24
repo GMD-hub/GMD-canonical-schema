@@ -41,7 +41,13 @@ app_server <- function(input, output, session) {
   refresh_counter <- shiny::reactiveVal(0L)
 
   # ---- dashboard module ----------------------------------------------------
-  dashboard <- mod_dashboard_server("dashboard", adapter, refresh_counter)
+  dashboard <- mod_dashboard_server(
+    "dashboard",
+    adapter,
+    refresh_counter,
+    role = role,
+    actor_identity = shiny::reactive(auth()$identity)
+  )
 
   # ---- detail module -------------------------------------------------------
   detail <- mod_detail_server(
@@ -50,7 +56,12 @@ app_server <- function(input, output, session) {
     auth,
     role,
     dashboard$selected_artifact,
-    refresh_counter
+    refresh_counter,
+    queue_mode = dashboard$queue_mode,
+    queue_manifest = dashboard$queue_manifest,
+    queue_manifest_blob_sha = dashboard$queue_manifest_blob_sha,
+    queue_index_blob_sha = dashboard$queue_index_blob_sha,
+    queue_startup = dashboard$queue_startup
   )
 
   # ---- navigation (app-level, controls navset_hidden) ----------------------
