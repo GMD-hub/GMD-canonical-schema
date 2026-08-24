@@ -33,6 +33,64 @@ split_frontmatter <- function(text) {
   list(front = NULL, body = text)
 }
 
+#' Split a source artifact without normalizing its bytes.
+#'
+#' Enrollment uses this variant because the source snapshot and its body digest
+#' are bound to the exact bytes returned by GitHub. The regular UI helper keeps
+#' its historical CRLF normalization behavior for editing.
+split_frontmatter_exact <- function(text) {
+  if (!is.character(text) || length(text) != 1L || is.na(text)) {
+    stop("split_frontmatter_exact() requires one non-NA text value")
+  }
+  delimiters <- gregexpr("(?m)^---(?:\\r?\\n|$)", text, perl = TRUE)[[1L]]
+  lengths <- attr(delimiters, "match.length")
+  if (length(delimiters) >= 2L && delimiters[[1L]] == 1L) {
+    close_start <- delimiters[[2L]]
+    close_length <- lengths[[2L]]
+    front_end <- close_start + 2L
+    front <- substr(text, 1L, front_end)
+    body_start <- close_start + close_length
+    body <- if (body_start <= nchar(text, type = "bytes")) {
+      substr(text, body_start, nchar(text, type = "bytes"))
+    } else {
+      ""
+    }
+    line_ending <- if (close_length > 3L &&
+                       identical(
+                         substr(
+                           text,
+                           close_start + 3L,
+                           close_start + close_length - 1L
+                         ),
+                         "\r\n"
+                       )) {
+      "\r\n"
+    } else if (close_length > 3L) {
+      "\n"
+    } else {
+      ""
+    }
+    return(list(
+      front = front,
+      body = body,
+      front_raw = charToRaw(enc2utf8(front)),
+      body_raw = charToRaw(enc2utf8(body)),
+      line_ending = line_ending
+    ))
+  }
+  list(front = NULL, body = text)
+}
+
+join_enrolled_body <- function(front, body, separator = NULL) {
+  if (is.null(front)) return(body)
+  separator <- separator %||% if (grepl("\r\n", front, fixed = TRUE)) {
+    "\r\n"
+  } else {
+    "\n"
+  }
+  paste0(front, separator, body %||% "")
+}
+
 #' Reassemble an artifact from a (possibly edited) body and the ORIGINAL front
 #' matter, preserving the front matter byte-exactly.
 #'

@@ -18,3 +18,25 @@ hash_body <- function(text) {
 verify_body_hash <- function(text, expected_sha256) {
   identical(hash_body(text), expected_sha256)
 }
+
+#' Compute the Git SHA-1 object ID for a blob's exact bytes.
+#'
+#' Git hashes the object header and payload, not the payload alone. This helper
+#' is used for optimistic-lock identities of generated review records and keeps
+#' those identities distinct from their SHA-256 content digests.
+git_blob_sha_raw <- function(payload) {
+  if (!is.raw(payload)) {
+    stop("git_blob_sha_raw() requires a raw vector")
+  }
+  header <- c(charToRaw(paste0("blob ", length(payload))), as.raw(0L))
+  sha <- as.character(openssl::sha1(c(header, payload)))
+  attributes(sha) <- NULL
+  sha
+}
+
+git_blob_sha <- function(text) {
+  if (!is.character(text) || length(text) != 1L || is.na(text)) {
+    stop("git_blob_sha() requires a single non-NA character string")
+  }
+  git_blob_sha_raw(charToRaw(enc2utf8(text)))
+}
