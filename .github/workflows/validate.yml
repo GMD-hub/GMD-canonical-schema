@@ -8,7 +8,8 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  python_validation:
+    name: Python validation
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -44,3 +45,60 @@ jobs:
           name: governance-reports
           path: governance-reports/
           if-no-files-found: warn
+
+  review_app_r_validation:
+    name: Review-app R validation
+    runs-on: ubuntu-latest
+    env:
+      REVIEW_APP_OFFLINE: "1"
+      REVIEW_APP_ROLES: ${{ github.workspace }}/review-app/config/roles.yml
+      NOT_CRAN: "true"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: "4.5.2"
+          use-public-rspm: true
+
+      - name: Restore renv environment
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          working-directory: review-app
+
+      - name: Install R test tooling
+        working-directory: review-app
+        run: |
+          Rscript -e 'renv::install(c("devtools", "golem", "rprojroot", "shinytest2", "testthat"), prompt = FALSE)'
+
+      - name: Run focused review-app tests
+        working-directory: review-app
+        run: |
+          Rscript -e '
+            pkgload::load_all(".")
+            focused <- c(
+              "tests/testthat/test-index.R",
+              "tests/testthat/test-github-adapter.R",
+              "tests/testthat/test-actions.R",
+              "tests/testthat/test-detail.R",
+              "tests/testthat/test-recovery.R",
+              "tests/testthat/test-app-smoke.R",
+              "tests/testthat/test-queue-manifest.R",
+              "tests/testthat/test-source-binding.R",
+              "tests/testthat/test-enrollment.R"
+            )
+            focused <- focused[file.exists(focused)]
+            if (!length(focused)) stop("no focused review-app tests found")
+            for (path in focused) testthat::test_file(path)
+          '
+
+      - name: Run full review-app tests
+        working-directory: review-app
+        run: Rscript -e 'devtools::test(reporter = "summary")'
+
+      - name: Run R CMD check
+        run: |
+          R CMD build review-app
+          _R_CHECK_FORCE_SUGGESTS_=false R CMD check --no-manual reviewapp_0.1.0.tar.gz
