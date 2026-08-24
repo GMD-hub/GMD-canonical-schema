@@ -7,3 +7,4 @@
 ^config$
 ^dev$
 ^\.posit$
+^\.\.Rcheck$

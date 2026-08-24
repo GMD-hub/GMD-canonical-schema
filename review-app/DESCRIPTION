@@ -3,6 +3,8 @@ Title: GMD Human Review Application
 Version: 0.1.0
 Authors@R: person("GPID", "Team", role = c("aut", "cre"),
     email = "gpid@example.org")
+Author: GPID Team [aut, cre]
+Maintainer: GPID Team <gpid@example.org>
 Description: A private, Git-backed Shiny for R application that lets GPID
     reviewers browse CVS drafts, inspect read-only YAML and guideline evidence,
     edit only the human Markdown body, and drive the governed review state
@@ -14,17 +16,16 @@ License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 Depends:
-    R (>= 3.6.0)
+    R (>= 4.1.0)
 Imports:
     base64enc,
     bslib,
     commonmark,
-    digest,
     DT,
     httr2,
     jsonlite,
     openssl,
-    pkgload,
+    rprojroot,
     shiny,
     uuid,
     xml2,
@@ -34,7 +35,6 @@ Suggests:
     gert,
     golem (>= 0.4.0),
     renv,
-    rprojroot,
     shinytest2,
     testthat (>= 3.0.0),
     withr
