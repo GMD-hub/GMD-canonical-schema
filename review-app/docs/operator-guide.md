@@ -17,7 +17,7 @@ already exists.
 
 ## Operating modes
 
-- **Production:** `review/production` is the new protected production data
+- **Production:** `review-production` is the new protected production data
   branch. It uses the strict versioned queue manifest, queue index, and v2
   review records. The Git-backed Connect content item itself tracks the
   application source on `main`.
@@ -40,7 +40,7 @@ It explicitly documents two design decisions from the plan:
 - **R19 — PR automation and CODEOWNERS are deferred.** Pull-request automation
   and CODEOWNERS integration remain **out of scope** for this iteration. The
   production queue plan nevertheless requires protection of
-  `review/production`, including its exact required checks and governed direct
+  `review-production`, including its exact required checks and governed direct
   writers. Only the deferred automation/CODEOWNERS features remain outside
   scope; do not treat their absence as a defect.
 
@@ -162,7 +162,8 @@ variables/secrets below:
 | `REVIEW_APP_GH_OWNER` | Repository owner (e.g. `WorldBank-...`) |
 | `REVIEW_APP_GH_REPO` | Repository name |
 | `REVIEW_APP_GH_DEFAULT_BRANCH` | Default branch (e.g. `main`) — source context |
-| `REVIEW_APP_GH_REVIEW_BRANCH` | Dedicated protected production branch: `review/production` |
+| `REVIEW_APP_GH_REVIEW_BRANCH` | Dedicated protected production branch: `review-production` |
+| `REVIEW_APP_EXPECTED_SOURCE_COMMIT` | Qualified lowercase 40-character `main` commit; bootstrap fails closed if absent, malformed, or changed |
 | `REVIEW_APP_ROLES` | (optional) absolute path to a role-map YAML override |
 | `GOLEM_CONFIG_ACTIVE` | Production profile: `production` |
 | `REVIEW_APP_USER` | Must be unset in Connect; local-development identity override only |
@@ -212,7 +213,7 @@ GitHub or Connect.
 
 The app reads source drafts from `main` and never modifies that branch. It
 writes queue controls, review records, and approved artifacts only to the
-dedicated protected **data branch `review/production`**. The Connect content
+dedicated protected **data branch `review-production`**. The Connect content
 item itself remains Git-backed from the application source branch; do not
 confuse that source branch with `REVIEW_APP_GH_REVIEW_BRANCH`.
 
@@ -227,9 +228,9 @@ confuse that source branch with `REVIEW_APP_GH_REVIEW_BRANCH`.
 
    The expected calibration SHA is
    `983d7d9503fbf5c2c911ac9d85a37b88accfe4ac`. Stop if it differs.
-2. Create `review/production` from the tested app `main` commit. Never merge
+2. Create `review-production` from the tested app `main` commit. Never merge
    production queue state back into `main`.
-3. Protect `review/production` by blocking force pushes and deletion. Permit
+3. Protect `review-production` by blocking force pushes and deletion. Permit
    governed direct writes only for the installed GitHub App and named
    administrators. Humans otherwise act through the application.
 4. Require these exact successful checks for human pull requests:
@@ -266,7 +267,7 @@ read-only.
 - R version supported by `review-app/renv.lock` (renv-managed).
 - Posit Connect with authentication enabled and the reviewer group configured.
 - A GitHub App installed on the CVS repository (see §3).
-- The protected `review/production` data branch created (see §4).
+- The protected `review-production` data branch created (see §4).
 - A Git-backed Connect content item configured for this repository, the
   application source branch, and the `review-app/` subdirectory.
 
@@ -303,7 +304,7 @@ The server constructs the GitHub adapter automatically at session start. Do
 not inject a second adapter or a reviewer personal access token.
 
 `REVIEW_APP_GH_DEFAULT_BRANCH=main` identifies the immutable source context.
-`REVIEW_APP_GH_REVIEW_BRANCH=review/production` identifies the production data
+`REVIEW_APP_GH_REVIEW_BRANCH=review-production` identifies the production data
 branch. `REVIEW_APP_USER` and `REVIEW_APP_OFFLINE` are local/CI controls and
 must be unset in Connect.
 
@@ -330,7 +331,8 @@ value.
 REVIEW_APP_GH_OWNER=GMD-hub
 REVIEW_APP_GH_REPO=GMD-canonical-schema
 REVIEW_APP_GH_DEFAULT_BRANCH=main
-REVIEW_APP_GH_REVIEW_BRANCH=review/production
+REVIEW_APP_GH_REVIEW_BRANCH=review-production
+REVIEW_APP_EXPECTED_SOURCE_COMMIT=<qualified-main-sha>
 GOLEM_CONFIG_ACTIVE=production
 REVIEW_APP_USER=unset
 REVIEW_APP_OFFLINE=unset
@@ -403,7 +405,7 @@ dependency.
 ### 6.3 Administrator bootstrap
 
 Bootstrap is available only when the configured branch is exactly
-`review/production` and the branch has no queue manifest. It requires an
+`review-production` and the branch has no queue manifest. It requires an
 authenticated Connect identity mapped to `administrator` and explicit
 confirmation of the source commit, total `267`, and module counts:
 
@@ -434,6 +436,42 @@ leave the branch unchanged if any pre-publication step fails. The 267-record
 fixture target is no more than 15 GitHub requests, with the payload-size limit
 checked before publication. The human administrator, not an implementation
 agent, performs this production action.
+
+After bootstrap, check out the production queue commit and validate it against
+the exact pinned source commit:
+
+```sh
+Rscript review-app/tools/validate-production-queue.R \
+  --repo "$PWD" --expected-source "$REVIEW_APP_EXPECTED_SOURCE_COMMIT" \
+  --expect-bootstrap-state
+```
+
+The queue checkout and pinned source are normally different commits. The
+validator reads queue controls from the checkout and resolves source artifact
+bytes directly from `--expected-source`.
+
+Capture redacted Connect evidence with the API key supplied only through the
+environment:
+
+```sh
+Rscript review-app/tools/attest-connect.R \
+  --server "$CONNECT_SERVER" --guid "$CONNECT_CONTENT_GUID" \
+  --expected-repository "$REVIEW_APP_EXPECTED_REPOSITORY" \
+  --expected-branch main --expected-directory review-app \
+  --expected-commit "$REVIEW_APP_EXPECTED_SOURCE_COMMIT" \
+  > connect-attestation.json
+```
+
+The attestor fails closed unless the content GUID, deployment health, active
+bundle, repository URL, branch, directory, and both repository and bundle
+commits exactly match these expectations. It accepts the API key only through
+`CONNECT_API_KEY`, follows pagination only on its four allowed content
+endpoints, and emits deterministic redacted JSON.
+
+The queue validator independently requires the manifest source and all record
+source commits to match `--expected-source`, plus the canonical path-set digest,
+canonical filenames and queue IDs, pinned source blob/full/body hashes, record
+blob SHAs, and every regenerated index field to agree exactly.
 
 ### 6.4 Source drift and fail-closed behavior
 
@@ -487,7 +525,7 @@ If the production queue or production branch must be taken out of service:
 1. Change the configured review branch back to `review` and restart the
    Git-backed Connect content item.
 2. Confirm that the legacy calibration queue is visible read-only.
-3. Leave `review/production` intact for diagnosis and preserve its history.
+3. Leave `review-production` intact for diagnosis and preserve its history.
 4. Never force-push, rewrite, delete, or merge either review branch as part of
    the rollback.
 
@@ -508,7 +546,7 @@ change only the review branch and call that an app rollback.
     requires the incident-recovery procedure (§8).
   - GitHub API 4xx/5xx errors - check App permissions (§3.4) and that the
     token exchange is current.
-- **Branch health**: periodically confirm `review/production` protection is
+- **Branch health**: periodically confirm `review-production` protection is
   still active and that only App/administrator pushes appear in its history.
 - **Role map**: after role changes, confirm the expected identities resolve
    (see §2.1).
@@ -588,16 +626,16 @@ state and the review-branch history are the cross-checks.
   only for the session and is lost when the session ends.
 - **R19 — Deferred and separately tracked.** Pull-request automation and
   CODEOWNERS integration are tracked roadmap items, **not features of this
-  MVP**. Protection of `review/production` and its required checks are part of
+  MVP**. Protection of `review-production` and its required checks are part of
   the Release A operator setup. Release A commits governed queue state directly
-  to `review/production` (R13) and drives review through the in-app state
+  to `review-production` (R13) and drives review through the in-app state
   machine.
 
 ---
 
 ## 10. Related documentation
 
-- Production queue plan: `.kilo/plans/1787366447127-production-review-queue-plan.md`.
+- Production queue plan: `.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md`.
 - Historical app plan: `.cg-docs/plans/2026-08-04-build-human-review-application.md`
   (Data Schemas, state-transition table, Verification Surface V1–V9).
 - Role map format/procedure: `review-app/config/roles.yml`.
