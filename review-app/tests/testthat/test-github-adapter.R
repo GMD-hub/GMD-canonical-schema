@@ -103,6 +103,7 @@ test_that("review_app_adapter() fails loudly when required secrets are missing",
     REVIEW_APP_GH_REPO = "",
     REVIEW_APP_GH_DEFAULT_BRANCH = "",
     REVIEW_APP_GH_REVIEW_BRANCH = "",
+    REVIEW_APP_EXPECTED_SOURCE_COMMIT = paste(rep("a", 40L), collapse = ""),
     GITHUB_APP_ID = "",
     GITHUB_APP_INSTALLATION_ID = "",
     GITHUB_APP_PRIVATE_KEY = ""
@@ -120,6 +121,7 @@ test_that("review_app_adapter() builds a live adapter when secrets are present",
     REVIEW_APP_GH_REPO = "fixture-repo",
     REVIEW_APP_GH_DEFAULT_BRANCH = "main",
     REVIEW_APP_GH_REVIEW_BRANCH = "review",
+    REVIEW_APP_EXPECTED_SOURCE_COMMIT = paste(rep("a", 40L), collapse = ""),
     GITHUB_APP_ID = "123",
     GITHUB_APP_INSTALLATION_ID = "999",
     GITHUB_APP_PRIVATE_KEY = "not-a-real-key"
@@ -131,6 +133,10 @@ test_that("review_app_adapter() builds a live adapter when secrets are present",
   expect_s3_class(ad, "reviewapp_github_adapter")
   expect_identical(ad$owner, "GMD-hub")
   expect_identical(ad$review_branch, "review")
+  expect_identical(
+    ad$expected_source_commit,
+    paste(rep("a", 40L), collapse = "")
+  )
 })
 
 # --- Step 5: reads + hash verification --------------------------------------

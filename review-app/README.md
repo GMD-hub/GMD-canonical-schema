@@ -6,11 +6,11 @@ for production-grade Shiny applications and deployed on Posit Connect.
 
 ## Queue Modes and Release A
 
-The intended production review queue uses `review/production`. The preserved
+The intended production review queue uses `review-production`. The preserved
 `review` branch is the legacy calibration queue and remains historical,
 read-only review data. These branches have different contracts:
 
-- `review/production` requires the strict production queue manifest, queue
+- `review-production` requires the strict production queue manifest, queue
   index, and versioned review records.
 - `review` supports legacy calibration records only as read-only content. It
   must not be used as the production queue or as a source for a bootstrap.
@@ -37,6 +37,12 @@ The manifest, index, and production review records are operator-produced Git
 state; they are not generated or asserted by this README. Until bootstrap and
 the A9 smoke checks are complete, production commit, blob, bundle, and Connect
 GUID values are intentionally not recorded here.
+
+Production operators must run the fail-closed queue validator and redacted
+Connect attestor documented in
+[`docs/operator-guide.md`](docs/operator-guide.md#63-production-bootstrap).
+The tools are `tools/validate-production-queue.R` and
+`tools/attest-connect.R`; neither changes repository or remote state.
 
 ## Project Structure
 
@@ -188,7 +194,8 @@ targets R 4.5.2 with CRAN as the sole repository.
 | `REVIEW_APP_GH_OWNER` | Yes | GitHub repository owner |
 | `REVIEW_APP_GH_REPO` | Yes | GitHub repository name |
 | `REVIEW_APP_GH_DEFAULT_BRANCH` | Yes | Source branch (e.g. `main`) |
-| `REVIEW_APP_GH_REVIEW_BRANCH` | Yes | Protected production data branch (`review/production`) |
+| `REVIEW_APP_GH_REVIEW_BRANCH` | Yes | Protected production data branch (`review-production`) |
+| `REVIEW_APP_EXPECTED_SOURCE_COMMIT` | Yes | Qualified lowercase 40-character `main` commit required for bootstrap |
 | `GITHUB_APP_ID` | Yes | Numeric GitHub App ID (not the `Iv...` Client ID) |
 | `GITHUB_APP_INSTALLATION_ID` | Yes | GitHub App installation ID |
 | `GITHUB_APP_PRIVATE_KEY` | Yes | Full GitHub App PEM private-key contents (Connect secret) |
@@ -223,7 +230,7 @@ metadata for an earlier manual deployment and are retained without editing:
 - R version matching `renv.lock` (currently 4.5.2)
 - Posit Connect with authentication enabled
 - A GitHub App installed on the CVS repository
-- A protected `review/production` branch created from the tested app commit
+- A protected `review-production` branch created from the tested app commit
 - Git-backed Connect content configured to the repository's `main` branch and
   the `review-app/` subdirectory
 
@@ -261,7 +268,7 @@ with the expected branch configuration.
 ## Queue Bootstrap and Recovery
 
 An administrator starts bootstrap from the application only after
-`review/production` exists and has no queue manifest. The app must show the
+`review-production` exists and has no queue manifest. The app must show the
 source commit and the expected 267 total before confirmation. Bootstrap
 enumerates only `extraction/20_drafts/<module>/VAR-*.md`, validates the exact
 Release A path set and counts (`9/14/24/90/61/69`), creates 267 unassigned
@@ -300,7 +307,7 @@ enrolled immutable front matter and persisted reviewed body only.
 
 For a data-cutover rollback, set the configured review branch back to `review`
 and restart the Git-backed Connect item. Legacy calibration records remain
-read-only. Leave `review/production` intact for diagnosis and never rewrite
+read-only. Leave `review-production` intact for diagnosis and never rewrite
 either branch. This is separate from an application-code rollback.
 
 ## A9 Redacted Attestation
@@ -313,7 +320,8 @@ installation IDs, private keys, or role-map contents in the attestation.
 REVIEW_APP_GH_OWNER=GMD-hub
 REVIEW_APP_GH_REPO=GMD-canonical-schema
 REVIEW_APP_GH_DEFAULT_BRANCH=main
-REVIEW_APP_GH_REVIEW_BRANCH=review/production
+REVIEW_APP_GH_REVIEW_BRANCH=review-production
+REVIEW_APP_EXPECTED_SOURCE_COMMIT=<qualified-main-sha>
 GOLEM_CONFIG_ACTIVE=production
 REVIEW_APP_USER=unset
 REVIEW_APP_OFFLINE=unset

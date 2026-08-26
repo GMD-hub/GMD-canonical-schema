@@ -45,7 +45,8 @@ test_that("dashboard UI renders and the server boots without error", {
 
   auth_html <- app$get_html("#auth_status")
   expect_true(
-    grepl("Not authenticated", auth_html, fixed = TRUE) ||
+    grepl("No Connect identity", auth_html, fixed = TRUE) ||
+      grepl("Not authenticated", auth_html, fixed = TRUE) ||
       grepl("not authorized", auth_html, fixed = TRUE)
   )
   app$stop()

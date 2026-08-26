@@ -1,5 +1,5 @@
 {
-  "edge_count": 15,
+  "edge_count": 22,
   "edges": [
     {
       "edge_type": "decided_from",
@@ -17,6 +17,12 @@
       "edge_type": "decided_from",
       "source": ".cg-docs/plans/2026-08-14-build-agent-review.md",
       "target": ".cg-docs/brainstorms/2026-08-14-agent-review-lessons.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "decided_from",
+      "source": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
+      "target": ".cg-docs/brainstorms/2026-08-04-build-human-review-application.md",
       "target_missing": false
     },
     {
@@ -51,8 +57,32 @@
     },
     {
       "edge_type": "verifies",
+      "source": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md",
+      "target": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "verifies",
       "source": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
       "target": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "reviews",
+      "source": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md",
+      "target": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "reviews",
+      "source": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md",
+      "target": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "verifies",
+      "source": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md",
+      "target": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md",
       "target_missing": false
     },
     {
@@ -65,6 +95,12 @@
       "edge_type": "references",
       "source": ".cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md",
       "target": ".cg-docs/plans/2026-08-14-build-agent-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "references",
+      "source": ".cg-docs/solutions/testing-patterns/2026-08-26-release-queue-validator-bindings.md",
+      "target": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
       "target_missing": false
     },
     {
@@ -89,6 +125,12 @@
       "edge_type": "references",
       "source": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
       "target": ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "implements",
+      "source": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
+      "target": "roadmap.json#complete-release-a-production-queue-cutover",
       "target_missing": false
     }
   ],
@@ -416,6 +458,35 @@
       ]
     },
     {
+      "date": "2026-08-25",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
+      "slug": "2026-08-25-complete-release-a-production-queue-cutover",
+      "status": "active",
+      "summary": "Correct the release-blocking branch, source-binding, CI, and verification gaps; qualify the resulting application in an isolated checkout and live staging; then cut the production review application over to a protected `review-production` data branch and bootstrap all 267 non-welfare records while approval remains disabled. Preserve the six-record `review` calibration branch and keep production queue state out of `main`.",
+      "tags": [
+        "release-a",
+        "review-app",
+        "production-queue",
+        "posit-connect",
+        "github",
+        "cutover"
+      ],
+      "title": "Enable and Complete Release A Production Queue Cutover",
+      "top_keywords": [
+        "review-production",
+        "review",
+        "test scenarios",
+        "review/production",
+        ".gitkeep",
+        "production",
+        "phase",
+        "release-a-production-hold",
+        "in-review",
+        "release-a-staging-code"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-03-extract-universal-non-welfare-schema-review.md",
@@ -528,12 +599,12 @@
     {
       "date": "2026-08-20",
       "entity_type": "review",
-      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
-      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review-2",
       "status": "",
       "summary": "**Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents/test_helpers.py, tests/review_agents/test_integration.py, extraction/25_agent_review/ (regenerated), roadmap.json **Findings**: 5 (P0: 0, P1: 0, P2: 2, P3: 3)",
       "tags": [],
-      "title": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "title": "2026-08-13-complete-non-welfare-extraction-verify-review-2",
       "top_keywords": [
         "runs/",
         "list_drafts",
@@ -545,6 +616,94 @@
         "test_integration.py",
         "fix_derivation_asymmetry.py",
         "fix"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "status": "",
+      "summary": "**Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare-extraction-review.md`) has **no `fixed` findings** (fix-triage has not run yet). Per Step 1.7 of the review contract, verify mode self-disables when no prior fixed review exists and falls back to normal routing. This is a light confirm pass, not a full verify-mode activation.",
+      "tags": [],
+      "title": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "top_keywords": [
+        "2026-08-13-complete-non-welfare-extraction-review.md",
+        "review",
+        "verify",
+        "fixed",
+        "confirm",
+        "variabledefinition",
+        "/cg-review mode:verify",
+        "##",
+        "pytest tests/extraction/",
+        "/cg-fix-triage"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md",
+      "slug": "2026-08-25-complete-release-a-production-queue-cutover-review-2",
+      "status": "",
+      "summary": "`mode:verify` found no prior fixed finding and therefore fell back to a normal full review.",
+      "tags": [],
+      "title": "2026-08-25-complete-release-a-production-queue-cutover-review-2",
+      "top_keywords": [
+        "review-app/r/index.r:375",
+        "validate-production-queue.r",
+        "github_adapter.r",
+        "index.r",
+        "attest-connect.r",
+        "review",
+        "release",
+        "queue_error",
+        "phase",
+        "fallback"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md",
+      "slug": "2026-08-25-complete-release-a-production-queue-cutover-review",
+      "status": "",
+      "summary": "**Review mode**: full (`review:auto`, release/security risk) **Findings**: 12 (P0: 3, P1: 5, P2: 4)",
+      "tags": [],
+      "title": "2026-08-25-complete-release-a-production-queue-cutover-review",
+      "top_keywords": [
+        "review",
+        "validate-production-queue.r",
+        "github_adapter.r",
+        "release",
+        "queue_expected_path_set_sha256",
+        "queue_error",
+        "ubuntu-latest",
+        "review-production",
+        "phase",
+        "blocking"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md",
+      "slug": "2026-08-25-complete-release-a-production-queue-cutover-verify-review",
+      "status": "",
+      "summary": "**Review mode**: light verification **Findings**: 1 (P0: 1)",
+      "tags": [],
+      "title": "2026-08-25-complete-release-a-production-queue-cutover-verify-review",
+      "top_keywords": [
+        "verification",
+        "review",
+        "passed",
+        "head",
+        "review-production",
+        "shinytest2",
+        "release",
+        "phase",
+        "blocking",
+        "review-app/tools/validate-production-queue.r:52"
       ]
     },
     {
@@ -773,12 +932,12 @@
         "helpers.py",
         "load_markdown",
         "parameter_ids",
+        "runs/",
+        "testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
         "registry",
         "parameter",
         "pattern",
-        "loading",
-        "list_parameter_ids",
-        "parameter_id"
+        "loading"
       ]
     },
     {
@@ -810,6 +969,34 @@
         "runner",
         "errors",
         "exclude"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/testing-patterns/2026-08-26-release-queue-validator-bindings.md",
+      "slug": "2026-08-26-release-queue-validator-bindings",
+      "status": "",
+      "summary": "A production queue validator initially treated checkout `HEAD` as the pinned source commit. That fails after bootstrap because the queue branch necessarily points to a later commit containing generated queue state. Other checks compared counts, ID sets, or manifest-provided hashes, allowing a substituted but self-consistent population or stale index fields to pass.",
+      "tags": [
+        "release-validator",
+        "git-commits",
+        "canonical-inventory",
+        "hash-binding",
+        "index-reconciliation"
+      ],
+      "title": "Testing release queues with distinct commits and exact regeneration",
+      "top_keywords": [
+        "commits",
+        "source",
+        "expected_source",
+        "row",
+        "2026-08-26-validate-canonical-queue-identity.md",
+        "distinct",
+        "testing",
+        "exact",
+        "regeneration",
+        "release"
       ]
     },
     {
@@ -1717,6 +1904,28 @@
     {
       "date": "",
       "entity_type": "feature",
+      "path": "roadmap.json#complete-release-a-production-queue-cutover",
+      "slug": "complete-release-a-production-queue-cutover",
+      "status": "active",
+      "summary": "Complete Release A production queue cutover",
+      "tags": [],
+      "title": "Complete Release A production queue cutover",
+      "top_keywords": [
+        "complete release",
+        "complete universal records\nobjective",
+        "complete",
+        "release",
+        "production",
+        "queue",
+        "cutover",
+        "records",
+        "feature",
+        "milestone"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
       "path": "roadmap.json#resolve-fallback-authority",
       "slug": "resolve-fallback-authority",
       "status": "idea",
@@ -1979,13 +2188,13 @@
       ]
     }
   ],
-  "entity_count": 79,
-  "generated": "2026-08-20",
+  "entity_count": 86,
+  "generated": "2026-08-26",
   "schema_version": "0.2.0",
-  "topic_count": 5,
+  "topic_count": 6,
   "topics": [
     {
-      "entity_count": 30,
+      "entity_count": 31,
       "entity_paths": [
         "roadmap.json#define-review-state-manifest",
         "roadmap.json#build-shiny-review-app",
@@ -2016,15 +2225,16 @@
         "roadmap.json#validate-provenance-derivations",
         "roadmap.json#review-remaining-variables",
         "roadmap.json#promote-universal-records",
-        "roadmap.json#complete-global-rules-modules"
+        "roadmap.json#complete-global-rules-modules",
+        "roadmap.json#complete-release-a-production-queue-cutover"
       ],
       "keywords": [
         "establish independent agent review\nobjective",
         "review",
-        "human review application\nobjective"
+        "complete universal records\nobjective"
       ],
-      "label": "Establish Independent Agent Review\nObjective / Review / Human Review Application\nObjective",
-      "slug": "establish-independent-agent-review-objective-review-human-review-application-objective"
+      "label": "Establish Independent Agent Review\nObjective / Review / Complete Universal Records\nObjective",
+      "slug": "establish-independent-agent-review-objective-review-complete-universal-records-objective"
     },
     {
       "entity_count": 15,
@@ -2054,14 +2264,15 @@
       "slug": "universal-non-welfare-schema-objective-freeze-version"
     },
     {
-      "entity_count": 7,
+      "entity_count": 8,
       "entity_paths": [
         ".cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md",
         ".cg-docs/brainstorms/2026-08-14-agent-review-lessons.md",
         ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
         ".cg-docs/plans/2026-08-14-build-agent-review.md",
         ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
-        ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+        ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md",
+        ".cg-docs/solutions/testing-patterns/2026-08-17-parameter-registry-loading.md",
         ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md"
       ],
       "keywords": [
@@ -2104,6 +2315,21 @@
       ],
       "label": "Allow_Unresolved_Draft / Pydantic / Cause",
       "slug": "allow-unresolved-draft-pydantic-cause"
+    },
+    {
+      "entity_count": 3,
+      "entity_paths": [
+        ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md",
+        ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md",
+        ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md"
+      ],
+      "keywords": [
+        "validate-production-queue.r",
+        "review",
+        "github_adapter.r"
+      ],
+      "label": "Validate-Production-Queue.R / Review / Github_Adapter.R",
+      "slug": "validate-production-queue-r-review-github-adapter-r"
     }
   ]
 }

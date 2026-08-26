@@ -110,9 +110,16 @@ test_that("approval stays denied while Release A controls are pending", {
 })
 
 test_that("Release A draft enumeration rejects incomplete or malformed sets", {
+  repo_root <- tryCatch(
+    rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),
+    error = function(error) NULL
+  )
+  if (is.null(repo_root)) {
+    skip("repository draft inventory is unavailable in the built package")
+  }
   paths <- list.files(
     file.path(
-      rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),
+      repo_root,
       "extraction",
       "20_drafts"
     ),
@@ -127,4 +134,48 @@ test_that("Release A draft enumeration rejects incomplete or malformed sets", {
   extra <- tree
   extra[["extraction/20_drafts/dem/VAR-evil.md.bak"]] <- "blob"
   expect_error(release_a_draft_paths(extra), "malformed")
+})
+
+test_that("production queue validation resolves source from a distinct commit", {
+  root <- tryCatch(
+    rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),
+    error = function(error) NULL
+  )
+  if (is.null(root)) skip("repository tool is unavailable in the built package")
+  repo <- withr::local_tempdir()
+  dir.create(file.path(repo, "extraction", "20_drafts", "dem"), recursive = TRUE)
+  source_path <- "extraction/20_drafts/dem/VAR-male.md"
+  writeLines("source artifact", file.path(repo, source_path))
+  git <- function(...) {
+    result <- system2("git", c("-C", repo, ...), stdout = TRUE, stderr = TRUE)
+    expect_null(attr(result, "status"), info = paste(result, collapse = "\n"))
+    result
+  }
+  git("init", "--quiet")
+  git("add", source_path)
+  git(
+    "-c", "user.name=Queue-Test", "-c", "user.email=queue@example.org",
+    "commit", "--quiet", "-m", "source"
+  )
+  source_commit <- git("rev-parse", "HEAD")
+  writeLines("queue state", file.path(repo, "queue.txt"))
+  git("add", "queue.txt")
+  git(
+    "-c", "user.name=Queue-Test", "-c", "user.email=queue@example.org",
+    "commit", "--quiet", "-m", "queue"
+  )
+  queue_commit <- git("rev-parse", "HEAD")
+  expect_false(identical(queue_commit, source_commit))
+
+  withr::local_envvar(REVIEWAPP_TOOL_TESTING = "1")
+  environment <- new.env(parent = globalenv())
+  sys.source(
+    file.path(root, "review-app", "tools", "validate-production-queue.R"),
+    envir = environment
+  )
+
+  expect_identical(
+    rawToChar(environment$git_blob_raw(repo, source_commit, source_path)),
+    "source artifact\n"
+  )
 })
