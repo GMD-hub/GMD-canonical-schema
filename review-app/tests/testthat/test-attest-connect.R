@@ -42,3 +42,70 @@ test_that("Connect attestor rejects unsafe endpoints before requests", {
     "HTTPS origin"
   )
 })
+
+test_that("Connect attestor collects arrays without pagination", {
+  if (!attestor_available) skip("repository tool is unavailable in the built package")
+  base <- paste0(
+    "https://connect.example.org/__api__/v1/content/",
+    "content-1234"
+  )
+  calls <- character()
+  request <- function(url, api_key) {
+    calls <<- c(calls, url)
+    expect_identical(api_key, "environment-secret")
+    list(list(id = "2"), list(id = "1"))
+  }
+
+  result <- attestor$collect_pages(
+    paste0(base, "/bundles"), base, "environment-secret", request
+  )
+
+  expect_identical(vapply(result, `[[`, character(1), "id"), c("2", "1"))
+  expect_length(calls, 1L)
+})
+
+test_that("Connect attestor preserves enveloped pagination", {
+  if (!attestor_available) skip("repository tool is unavailable in the built package")
+  base <- paste0(
+    "https://connect.example.org/__api__/v1/content/",
+    "content-1234"
+  )
+  page_two <- paste0(base, "/jobs?page=2")
+  request <- function(url, api_key) {
+    expect_identical(api_key, "environment-secret")
+    if (identical(url, page_two)) {
+      return(list(results = list(list(id = "2"))))
+    }
+    list(results = list(list(id = "1")), `next` = page_two)
+  }
+
+  result <- attestor$collect_pages(
+    paste0(base, "/jobs"), base, "environment-secret", request
+  )
+
+  expect_identical(vapply(result, `[[`, character(1), "id"), c("1", "2"))
+})
+
+test_that("Connect attestor rejects malformed collection objects", {
+  if (!attestor_available) skip("repository tool is unavailable in the built package")
+  base <- paste0(
+    "https://connect.example.org/__api__/v1/content/",
+    "content-1234"
+  )
+
+  expect_error(
+    attestor$collect_pages(
+      paste0(base, "/jobs"), base, "environment-secret",
+      function(...) list(unexpected = list())
+    ),
+    "malformed"
+  )
+  empty_object <- structure(list(), names = character())
+  expect_error(
+    attestor$collect_pages(
+      paste0(base, "/jobs"), base, "environment-secret",
+      function(...) list(results = empty_object)
+    ),
+    "malformed"
+  )
+})
