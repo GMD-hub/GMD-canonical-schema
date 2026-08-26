@@ -81,3 +81,5 @@ by the supervised source-manifest lock.
   `.cg-docs/solutions/testing-patterns/2026-08-03-welfare-boundary-content-based-detection.md`.
 - Orchestrator cross-file attribute mismatch:
   `.cg-docs/solutions/bugs/2026-08-03-orchestrator-cross-file-attribute-mismatch.md`.
+- Fail-closed promotion from immutable evidence:
+  `.cg-docs/solutions/data-quality/2026-08-26-fail-closed-deterministic-promotion.md`.
