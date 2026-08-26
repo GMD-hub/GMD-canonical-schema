@@ -277,7 +277,7 @@ parse_queue_index_blob <- function(yaml_string, manifest = NULL) {
   parse_queue_index(yaml_string, manifest = manifest)
 }
 
-adapter_index_review <- function(adapter) {
+.adapter_index_review <- function(adapter) {
   token <- adapter$get_token()
   if (identical(adapter$review_branch, "review")) {
     tree <- adapter_fetch_tree(
@@ -320,7 +320,7 @@ adapter_index_review <- function(adapter) {
       error = NULL
     ))
   }
-  if (!identical(adapter$review_branch, "review/production")) {
+  if (!identical(adapter$review_branch, PRODUCTION_REVIEW_BRANCH)) {
     return(list(
       mode = "queue_error",
       queue_mode = "queue_error",
@@ -330,7 +330,10 @@ adapter_index_review <- function(adapter) {
       manifest = NULL,
       manifest_blob_sha = NULL,
       index_blob_sha = NULL,
-      error = "unsupported production review branch; expected review/production"
+      error = sprintf(
+        "unsupported production review branch; expected %s",
+        PRODUCTION_REVIEW_BRANCH
+      )
     ))
   }
   head <- adapter_branch_head(
@@ -369,6 +372,12 @@ adapter_index_review <- function(adapter) {
     adapter$http
   )
   manifest <- parse_queue_manifest(manifest_blob$content)
+  if (!.is_sha1(adapter$expected_source_commit) ||
+      !identical(manifest$source_commit, adapter$expected_source_commit)) {
+    stop(.queue_error(
+      "production manifest source does not match the expected source commit"
+    ))
+  }
   index_sha <- tree$blobs[[QUEUE_INDEX_PATH]] %||% NULL
   if (is.null(index_sha)) {
     return(list(
@@ -391,7 +400,7 @@ adapter_index_review <- function(adapter) {
     adapter$http
   )
   queue_index <- parse_queue_index_blob(index_blob$content, manifest)
-  list(
+  result <- list(
     mode = "production",
     queue_mode = "production",
     index = queue_index_to_data_frame(queue_index, manifest),
@@ -403,6 +412,29 @@ adapter_index_review <- function(adapter) {
     queue_index = queue_index,
     error = NULL
   )
+  result
+}
+
+adapter_index_review <- function(adapter) {
+  telemetry <- repository_telemetry_operation(adapter)
+  result <- tryCatch(.adapter_index_review(telemetry$adapter), error = function(error) {
+    list(
+      mode = "queue_error",
+      queue_mode = "queue_error",
+      index = empty_review_index(),
+      blobs = list(),
+      branch_head_sha = NULL,
+      manifest = NULL,
+      manifest_blob_sha = NULL,
+      index_blob_sha = NULL,
+      error = sprintf(
+        "production queue is invalid: %s",
+        conditionMessage(error)
+      )
+    )
+  })
+  result$request_telemetry <- telemetry$snapshot()
+  result
 }
 
 filter_review_index <- function(index, artifact_id = NULL, module = NULL,

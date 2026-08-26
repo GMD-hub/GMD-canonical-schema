@@ -15,6 +15,64 @@
 # Storage interface (default implementations hit the GitHub API over HTTP)
 # ---------------------------------------------------------------------------
 
+PRODUCTION_REVIEW_BRANCH <- "review-production"
+
+expected_source_commit <- function(value = Sys.getenv(
+  "REVIEW_APP_EXPECTED_SOURCE_COMMIT", unset = ""
+)) {
+  if (!.is_sha1(value)) {
+    stop("REVIEW_APP_EXPECTED_SOURCE_COMMIT must be a lowercase Git SHA-1")
+  }
+  value
+}
+
+new_repository_read_telemetry <- function() {
+  list(
+    begin = function(http) {
+      logical_reads <- 0L
+      actual_attempts <- 0L
+      per_record_reads <- 0L
+      started <- proc.time()[["elapsed"]]
+      list(
+        http = function(method, url, token, body = NULL) {
+          if (identical(method, "GET")) {
+            logical_reads <<- logical_reads + 1L
+            if (grepl("/contents/extraction/30_review/[^?]+[.]review[.]yml", url)) {
+              per_record_reads <<- per_record_reads + 1L
+            }
+          }
+          if (identical(http, gh_adapter_http)) {
+            http(method, url, token, body = body, attempt_hook = function() {
+              actual_attempts <<- actual_attempts + 1L
+            })
+          } else {
+            actual_attempts <<- actual_attempts + 1L
+            http(method, url, token, body = body)
+          }
+        },
+        snapshot = function() list(
+          logical_reads = logical_reads,
+          actual_attempts = actual_attempts,
+          per_record_reads = per_record_reads,
+          duration_ms = as.integer(round(
+            (proc.time()[["elapsed"]] - started) * 1000
+          ))
+        )
+      )
+    }
+  )
+}
+
+repository_telemetry_operation <- function(adapter) {
+  if (is.null(adapter$telemetry)) {
+    return(list(adapter = adapter, snapshot = function() NULL))
+  }
+  operation <- adapter$telemetry$begin(adapter$http)
+  scoped <- adapter
+  scoped$http <- operation$http
+  list(adapter = scoped, snapshot = operation$snapshot)
+}
+
 #' Fetch the current commit SHA that a branch ref points to.
 #' @param get function() -> character(1) commit sha (injectable for tests).
 adapter_branch_head <- function(owner, repo, branch, token, http = NULL) {
@@ -227,17 +285,26 @@ adapter_fetch_blobs_graphql <- function(
 #' @param default_branch character(1) e.g. "main".
 #' @param review_branch character(1) dedicated protected review branch (R13).
 #' @param get_token function() returning an installation token.
-#' @param http function(method, url, token) returning parsed JSON (injectable;
-#'   defaults to a real httr2 implementation wired in `gh_adapter_http()`).
+#' @param http function(method, url, token, body) returning parsed JSON
+#'   (injectable; defaults to `gh_adapter_http()`).
+#' @param expected_source_commit optional pinned lowercase Git SHA-1 required
+#'   for production queue manifest validation.
+#' @param telemetry optional operation telemetry factory created by
+#'   `new_repository_read_telemetry()`.
 new_github_adapter <- function(owner, repo, default_branch, review_branch,
-                               get_token, http = NULL) {
+                               get_token, http = NULL,
+                               expected_source_commit = NULL,
+                               telemetry = NULL) {
+  transport <- http %||% gh_adapter_http
   structure(list(
     owner = owner,
     repo = repo,
     default_branch = default_branch,
     review_branch = review_branch,
+    expected_source_commit = expected_source_commit,
+    telemetry = telemetry,
     get_token = get_token,
-    http = http %||% gh_adapter_http
+    http = transport
   ), class = "reviewapp_github_adapter")
 }
 
@@ -261,13 +328,13 @@ new_github_adapter <- function(owner, repo, default_branch, review_branch,
 #' @return a `reviewapp_github_adapter`, or NULL in offline/injected mode.
 #' @export
 review_app_adapter <- function() {
-  offline <- Sys.getenv("REVIEW_APP_OFFLINE", unset = "")
-  if (identical(tolower(offline), "1") || identical(tolower(offline), "true")) {
-    return(NULL)
-  }
   injected <- getOption("reviewapp.adapter")
   if (!is.null(injected)) {
     return(injected)
+  }
+  offline <- Sys.getenv("REVIEW_APP_OFFLINE", unset = "")
+  if (identical(tolower(offline), "1") || identical(tolower(offline), "true")) {
+    return(NULL)
   }
   owner <- Sys.getenv("REVIEW_APP_GH_OWNER", unset = "")
   repo <- Sys.getenv("REVIEW_APP_GH_REPO", unset = "")
@@ -276,6 +343,7 @@ review_app_adapter <- function() {
   app_id <- .gh_app_env("GITHUB_APP_ID")
   installation_id <- .gh_app_env("GITHUB_APP_INSTALLATION_ID")
   private_key <- .gh_app_env("GITHUB_APP_PRIVATE_KEY")
+  source_commit <- expected_source_commit()
 
   missing <- c(
     owner = !nzchar(owner), repo = !nzchar(repo),
@@ -300,6 +368,8 @@ review_app_adapter <- function() {
     repo = repo,
     default_branch = default_branch,
     review_branch = review_branch,
+    expected_source_commit = source_commit,
+    telemetry = new_repository_read_telemetry(),
     get_token = function() {
       installation_token(
         get_token = function() gh_exchange_installation_token(
@@ -356,7 +426,7 @@ review_app_adapter <- function() {
 #' @param token GitHub installation token.
 #' @param body optional (named) list sent as a JSON request body via
 #'   `httr2::req_body_json` when not NULL (e.g. blob/tree/commit/ref writes).
-gh_adapter_http <- function(method, url, token, body = NULL) {
+gh_adapter_http <- function(method, url, token, body = NULL, attempt_hook = NULL) {
   req <- httr2::request(url) |>
     httr2::req_method(method) |>
     httr2::req_headers(
@@ -366,7 +436,11 @@ gh_adapter_http <- function(method, url, token, body = NULL) {
     ) |>
     httr2::req_timeout(seconds = 10) |>
     httr2::req_retry(
-      is_transient = .is_transient_github_response
+      is_transient = function(resp) {
+        transient <- .is_transient_github_response(resp)
+        if (transient && !is.null(attempt_hook)) attempt_hook()
+        transient
+      }
     ) |>
     httr2::req_error(
       is_error = function(resp) httr2::resp_status(resp) >= 400L,
@@ -375,6 +449,7 @@ gh_adapter_http <- function(method, url, token, body = NULL) {
   if (!is.null(body)) {
     req <- httr2::req_body_json(req, body)
   }
+  if (!is.null(attempt_hook)) attempt_hook()
   resp <- httr2::req_perform(req)
   jsonlite::fromJSON(httr2::resp_body_string(resp))
 }

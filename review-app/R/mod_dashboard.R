@@ -33,6 +33,7 @@ mod_dashboard_ui <- function(id) {
     ),
     shiny::uiOutput(ns("queue_alert")),
     shiny::uiOutput(ns("bootstrap_panel")),
+    shiny::uiOutput(ns("queue_telemetry")),
     shiny::uiOutput(ns("status_chips")),
     shiny::div(
       class = "filter-toolbar",
@@ -158,7 +159,6 @@ mod_dashboard_server <- function(
         last_refreshed_at(Sys.time())
         return(invisible(NULL))
       }
-
       tryCatch(
         {
           loaded <- adapter_index_review(ad)
@@ -169,6 +169,12 @@ mod_dashboard_server <- function(
           queue_manifest(loaded$manifest %||% NULL)
           queue_manifest_blob_sha(loaded$manifest_blob_sha %||% NULL)
           queue_index_blob_sha(loaded$index_blob_sha %||% NULL)
+          if (!is.null(loaded$request_telemetry)) {
+            message(
+              "review queue request telemetry: ",
+              jsonlite::toJSON(loaded$request_telemetry, auto_unbox = TRUE)
+            )
+          }
           queue_phase(if (is.null(loaded$error)) "loaded" else "error")
           last_refreshed_at(Sys.time())
           clear_selection()
@@ -200,6 +206,26 @@ mod_dashboard_server <- function(
         class = "refresh-time",
         datetime = format(refreshed, "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
         paste("Last refreshed", format(refreshed, "%H:%M"))
+      )
+    })
+
+    output$queue_telemetry <- shiny::renderUI({
+      if (!identical(role_value() %||% NULL, "administrator")) return(NULL)
+      telemetry <- queue_startup()$request_telemetry %||% NULL
+      if (is.null(telemetry)) return(NULL)
+      shiny::tags$details(
+        class = "queue-telemetry",
+        shiny::tags$summary("Queue refresh evidence"),
+        shiny::code(sprintf(
+          paste(
+            "logical_reads=%d actual_attempts=%d",
+            "per_record_reads=%d duration_ms=%d"
+          ),
+          telemetry$logical_reads,
+          telemetry$actual_attempts,
+          telemetry$per_record_reads,
+          telemetry$duration_ms
+        ))
       )
     })
 
@@ -307,6 +333,10 @@ mod_dashboard_server <- function(
             )
           )
         ),
+        shiny::p(sprintf(
+          "Expected source commit: %s.",
+          adapter()$expected_source_commit %||% "not configured"
+        )),
         shiny::p("The operation is one atomic commit and cannot be replayed after the manifest exists."),
         footer = shiny::tagList(
           shiny::modalButton("Cancel"),
@@ -334,6 +364,7 @@ mod_dashboard_server <- function(
                 ad,
                 actor = actor_value() %||% "administrator",
                 role = role_value(),
+                expected_source_commit = ad$expected_source_commit,
                 progress = function(done, total) {
                   shiny::setProgress(value = done / total)
                 }

@@ -3,7 +3,7 @@
 bootstrap_authorized <- function(role) identical(role, "administrator")
 
 production_branch_name <- function(adapter) {
-  identical(adapter$review_branch, "review/production")
+  identical(adapter$review_branch, PRODUCTION_REVIEW_BRANCH)
 }
 
 release_a_draft_paths <- function(tree_blobs) {
@@ -181,17 +181,24 @@ bootstrap_production_queue <- function(
   adapter,
   actor,
   role = NULL,
+  expected_source_commit,
   queue_id = QUEUE_ID,
   progress = NULL,
   max_payload_bytes = QUEUE_BOOTSTRAP_MAX_PAYLOAD_BYTES
 ) {
   if (!production_branch_name(adapter)) {
-    stop("production bootstrap is only allowed on review/production")
+    stop(sprintf(
+      "production bootstrap is only allowed on %s",
+      PRODUCTION_REVIEW_BRANCH
+    ))
   }
   if (!bootstrap_authorized(role)) {
     stop("only an authenticated administrator may bootstrap the production queue")
   }
   if (!.is_scalar_character(actor)) stop("bootstrap requires an authenticated actor")
+  if (!.is_sha1(expected_source_commit)) {
+    stop("bootstrap expected source commit must be a lowercase Git SHA-1")
+  }
   token <- adapter$get_token()
   review_head <- adapter_branch_head(
     adapter$owner,
@@ -220,6 +227,9 @@ bootstrap_production_queue <- function(
     token,
     adapter$http
   )
+  if (!identical(source_head, expected_source_commit)) {
+    stop("default source branch does not match the configured expected source commit")
+  }
   source_tree <- adapter_fetch_tree_at(
     adapter$owner,
     adapter$repo,
@@ -259,8 +269,8 @@ bootstrap_production_queue <- function(
     token,
     adapter$http
   )
-  if (!identical(source_head_after, source_head)) {
-    stop("default source branch moved during production bootstrap")
+  if (!identical(source_head_after, expected_source_commit)) {
+    stop("default source branch moved or no longer matches the expected source commit")
   }
   result <- adapter_write_with_recovery(
     adapter,
