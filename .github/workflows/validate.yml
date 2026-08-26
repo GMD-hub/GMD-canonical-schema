@@ -108,6 +108,7 @@ jobs:
         run: Rscript -e 'devtools::test(reporter = "summary")'
 
       - name: Run R CMD check
+        working-directory: review-app
         run: |
-          R CMD build review-app
+          R CMD build .
           _R_CHECK_FORCE_SUGGESTS_=false R CMD check --no-manual reviewapp_0.1.0.tar.gz
