@@ -1,12 +1,12 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-20_
+_Generated 2026-08-26_
 
-## Establish Independent Agent Review Objective / Review / Human Review Application Objective
+## Establish Independent Agent Review Objective / Review / Complete Universal Records Objective
 
 _Keywords: `establish independent agent review
-objective` · `review` · `human review application
-objective`_ · 30 entities
+objective` · `review` · `complete universal records
+objective`_ · 31 entities
 
 - **[Define the versioned review states and manifest](roadmap.json#define-review-state-manifest)** · `feature` · _done_ · `—`
   > Define the versioned review states and manifest
@@ -68,6 +68,8 @@ objective`_ · 30 entities
   > Promote approved universal records through the governed lifecycle
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
+- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _active_ · `—`
+  > Complete Release A production queue cutover
 
 ## Universal Non / Welfare Schema Objective / Freeze Version
 
@@ -107,7 +109,7 @@ objective` · `freeze version`_ · 15 entities
 
 ## Runs/ / Test Scenarios / Agents.Md
 
-_Keywords: `runs/` · `test scenarios` · `agents.md`_ · 7 entities
+_Keywords: `runs/` · `test scenarios` · `agents.md`_ · 8 entities
 
 - **[Extract the Universal Non-Welfare Schema](.cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md)** · `brainstorm` · _decided_ · `2026-08-03`
   > <!-- Valid status values: decided, in-progress, abandoned -->
@@ -119,8 +121,10 @@ _Keywords: `runs/` · `test scenarios` · `agents.md`_ · 7 entities
   > Build four deterministic Python review agents and a runner that validate every extraction draft in `extraction/20_dra…
 - **[Exclude runs/ from the review runner to eliminate 40 false-positive errors](.cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md)** · `plan` · _completed_ · `2026-08-20`
   > Drive the agent review error count from **40 -> 0** by aligning `extraction_pipeline/review_agents/helpers.py::list_d…
-- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-20`
+- **[2026-08-13-complete-non-welfare-extraction-verify-review-2](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md)** · `review` · _—_ · `2026-08-20`
   > **Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents…
+- **[Parameter registry loading pattern for review agents](.cg-docs/solutions/testing-patterns/2026-08-17-parameter-registry-loading.md)** · `solution` · _—_ · `2026-08-17`
+  > Review agents that validate `country_parameters` references need access to the parameter ID registry (`knowledge/para…
 - **[Exclude non-variable dirs from the review runner to eliminate false-positive errors](.cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md)** · `solution` · _—_ · `2026-08-20`
   > The agent review runner reported **40 errors / 497 warnings** across 271 drafts (`extraction/25_agent_review/`). All …
 
@@ -152,3 +156,14 @@ _Keywords: `allow_unresolved_draft` · `pydantic` · `cause`_ · 3 entities
   > When validating extraction drafts against `VariableDefinition` with `allow_unresolved_draft=True`, Pydantic raised `u…
 - **[Derivation asymmetry check requires both variables in draft set](.cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md)** · `solution` · _—_ · `2026-08-15`
   > VAR-urban declares `derived_from: [VAR-rurality]` but VAR-rurality is not in the draft set. The expected test for an …
+
+## Validate-Production-Queue.R / Review / Github_Adapter.R
+
+_Keywords: `validate-production-queue.r` · `review` · `github_adapter.r`_ · 3 entities
+
+- **[2026-08-25-complete-release-a-production-queue-cutover-review-2](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md)** · `review` · _—_ · `2026-08-26`
+  > `mode:verify` found no prior fixed finding and therefore fell back to a normal full review.
+- **[2026-08-25-complete-release-a-production-queue-cutover-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md)** · `review` · _—_ · `2026-08-26`
+  > **Review mode**: full (`review:auto`, release/security risk) **Findings**: 12 (P0: 3, P1: 5, P2: 4)
+- **[2026-08-25-complete-release-a-production-queue-cutover-verify-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md)** · `review` · _—_ · `2026-08-26`
+  > **Review mode**: light verification **Findings**: 1 (P0: 1)

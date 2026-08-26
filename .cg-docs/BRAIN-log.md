@@ -1,15 +1,31 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-20 · 27 artifacts (newest first) + 52 roadmap features_
+_Generated 2026-08-26 · 33 artifacts (newest first) + 53 roadmap features_
 
 ## undated
 
 - **[2026-08-14-agent-review-lessons](.cg-docs/brainstorms/2026-08-14-agent-review-lessons.md)** · `brainstorm` · _—_ · `—`
   > A prototype of all 4 review agents was built and run against the 6 calibration drafts. The prototype was reverted bec…
 
+## 2026-08-26
+
+- **[2026-08-25-complete-release-a-production-queue-cutover-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md)** · `review` · _—_ · `2026-08-26`
+  > **Review mode**: full (`review:auto`, release/security risk) **Findings**: 12 (P0: 3, P1: 5, P2: 4)
+- **[2026-08-25-complete-release-a-production-queue-cutover-review-2](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md)** · `review` · _—_ · `2026-08-26`
+  > `mode:verify` found no prior fixed finding and therefore fell back to a normal full review.
+- **[2026-08-25-complete-release-a-production-queue-cutover-verify-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md)** · `review` · _—_ · `2026-08-26`
+  > **Review mode**: light verification **Findings**: 1 (P0: 1)
+- **[Testing release queues with distinct commits and exact regeneration](.cg-docs/solutions/testing-patterns/2026-08-26-release-queue-validator-bindings.md)** · `solution` · _—_ · `2026-08-26`
+  > A production queue validator initially treated checkout `HEAD` as the pinned source commit. That fails after bootstra…
+
+## 2026-08-25
+
+- **[Enable and Complete Release A Production Queue Cutover](.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md)** · `plan` · _active_ · `2026-08-25`
+  > Correct the release-blocking branch, source-binding, CI, and verification gaps; qualify the resulting application in …
+
 ## 2026-08-20
 
-- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-20`
+- **[2026-08-13-complete-non-welfare-extraction-verify-review-2](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md)** · `review` · _—_ · `2026-08-20`
   > **Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents…
 - **[Exclude non-variable dirs from the review runner to eliminate false-positive errors](.cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md)** · `solution` · _—_ · `2026-08-20`
   > The agent review runner reported **40 errors / 497 warnings** across 271 drafts (`extraction/25_agent_review/`). All …
@@ -36,6 +52,8 @@ _Generated 2026-08-20 · 27 artifacts (newest first) + 52 roadmap features_
 
 - **[2026-08-13-complete-non-welfare-extraction-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md)** · `review` · _—_ · `2026-08-14`
   > **Review mode**: data-risk (auto-routed from /cg-work review:auto) **Files reviewed**: 267 variable drafts + 3 run re…
+- **[2026-08-13-complete-non-welfare-extraction-verify-review](.cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md)** · `review` · _—_ · `2026-08-14`
+  > **Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare…
 - **[Hand-drafting GMD CVS variable specs at scale and validating them](.cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md)** · `solution` · _—_ · `2026-08-14`
   > The GMD Canonical Variable Schema (CVS) needed `VariableDefinition`-valid draft specs for every non-welfare variable …
 
@@ -118,6 +136,8 @@ _Generated 2026-08-20 · 27 artifacts (newest first) + 52 roadmap features_
   > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
+- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _active_ · `—`
+  > Complete Release A production queue cutover
 - **[Configure the real GPID CODEOWNERS team and branch protection](roadmap.json#configure-codeowners-protection)** · `feature` · _idea_ · `—`
   > Configure the real GPID CODEOWNERS team and branch protection
 - **[Confirm completion criteria for all non-welfare variables](roadmap.json#confirm-non-welfare-completion)** · `feature` · _idea_ · `—`
