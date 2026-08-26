@@ -1,26 +1,35 @@
 {
   "schemaVersion": "compound-gpid-active-state-v1",
-  "updatedAt": "2026-08-20T16:45:00Z",
+  "updatedAt": "2026-08-26T17:10:00Z",
   "workflow": "/cg-work",
   "status": "completed",
-  "branch": "fix/exclude-runs-from-list-drafts",
-  "plan": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
-  "executionReport": ".cg-docs/work-reports/2026-08-20-exclude-runs-from-review-runner.md",
+  "branch": "task-c-canonical-non-welfare-inventory-ledger",
+  "plan": ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md",
+  "executionReport": ".cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md",
   "currentPhase": null,
   "evidenceStatus": [
-    {"id": "V1", "status": "passed", "artifact": "pytest tests/review_agents/test_helpers.py::TestListDrafts::test_excludes_runs_and_project_documentation -v"},
-    {"id": "V2", "status": "passed", "artifact": "pytest tests/review_agents/test_integration.py::TestFullPipeline::test_runner_exit_code -v (asserts exit 0)"},
-    {"id": "V3", "status": "passed", "artifact": ".venv/bin/python -m extraction_pipeline.review_agents.run_all_agents (Errors: 0, exit 0)"},
-    {"id": "V4", "status": "passed", "artifact": "extraction/25_agent_review/SUMMARY.md (Total errors: 0, warnings: 497)"},
-    {"id": "V5", "status": "passed", "artifact": "extraction/25_agent_review/ (no runs/ yml)"},
-    {"id": "V6", "status": "passed", "artifact": ".venv/bin/python -m pytest tests/ -q (281 passed, 2 skipped)"}
+    {
+      "id": "V1",
+      "status": "passed",
+      "artifact": ".cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md"
+    },
+    {"id": "V2", "status": "passed", "artifact": "tests/extraction/test_inventory.py"},
+    {"id": "V3", "status": "passed", "artifact": "extraction/20_drafts/runs/non-welfare-inventory-source-map.v1.yaml"},
+    {"id": "V4", "status": "passed", "artifact": "tests/extraction/test_inventory.py"},
+    {"id": "V5", "status": "passed", "artifact": "extraction/20_drafts/runs/non-welfare-inventory.v1.yaml"},
+    {"id": "V6", "status": "passed", "artifact": ".cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md"},
+    {"id": "V7", "status": "passed", "artifact": "tests/extraction/test_inventory.py"},
+    {"id": "V8", "status": "passed", "artifact": "tests/extraction/test_completeness.py"},
+    {"id": "V9", "status": "passed", "artifact": ".cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md"},
+    {"id": "V10", "status": "passed", "artifact": ".cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md"}
   ],
   "unresolvedDecisions": [],
   "artifactRefs": [
-    {"kind": "plan", "path": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md", "status": "completed"},
-    {"kind": "report", "path": ".cg-docs/work-reports/2026-08-20-exclude-runs-from-review-runner.md", "status": "complete"},
-    {"kind": "review-findings", "path": "extraction/25_agent_review/SUMMARY.md", "status": "regenerated 0 errors"},
-    {"kind": "roadmap", "path": "roadmap.json#fix-review-runner-runs-exclusion", "status": "done"}
+    {
+      "kind": "work-report",
+      "path": ".cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md",
+      "status": "completed"
+    }
   ],
-  "nextCommand": "/cg-review mode:verify"
+  "nextCommand": "/cg-compound"
 }

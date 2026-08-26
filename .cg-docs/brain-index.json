@@ -1,5 +1,5 @@
 {
-  "edge_count": 15,
+  "edge_count": 17,
   "edges": [
     {
       "edge_type": "decided_from",
@@ -51,6 +51,12 @@
     },
     {
       "edge_type": "verifies",
+      "source": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md",
+      "target": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "verifies",
       "source": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
       "target": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-review.md",
       "target_missing": false
@@ -89,6 +95,12 @@
       "edge_type": "references",
       "source": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
       "target": ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "implements",
+      "source": ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md",
+      "target": "roadmap.json#canonical-non-welfare-inventory-ledger",
       "target_missing": false
     }
   ],
@@ -416,6 +428,35 @@
       ]
     },
     {
+      "date": "2026-08-25",
+      "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md",
+      "slug": "2026-08-25-canonical-non-welfare-inventory-ledger",
+      "status": "completed",
+      "summary": "Replace the contradictory prose inventory with one deterministic, row-level, machine-readable ledger that proves the authoritative non-welfare denominator is 267 and records every repeated, excluded, helper, inventory-only, and disputed source occurrence needed to explain the denominator.",
+      "tags": [
+        "extraction",
+        "inventory",
+        "ledger",
+        "provenance",
+        "validation",
+        "reproducibility"
+      ],
+      "title": "Canonical Non-Welfare Inventory Ledger",
+      "top_keywords": [
+        "test_inventory.py",
+        "approval record",
+        "inventory_only",
+        "tests/extraction/test_inventory.py",
+        "uv",
+        "inventory.py",
+        "denominator decision",
+        "test scenarios",
+        "requirements.txt",
+        "ledger"
+      ]
+    },
+    {
       "date": "2026-08-03",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-03-extract-universal-non-welfare-schema-review.md",
@@ -528,12 +569,12 @@
     {
       "date": "2026-08-20",
       "entity_type": "review",
-      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
-      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review-2",
       "status": "",
       "summary": "**Review mode**: verify (light) **Files reviewed**: extraction_pipeline/review_agents/helpers.py, tests/review_agents/test_helpers.py, tests/review_agents/test_integration.py, extraction/25_agent_review/ (regenerated), roadmap.json **Findings**: 5 (P0: 0, P1: 0, P2: 2, P3: 3)",
       "tags": [],
-      "title": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "title": "2026-08-13-complete-non-welfare-extraction-verify-review-2",
       "top_keywords": [
         "runs/",
         "list_drafts",
@@ -545,6 +586,50 @@
         "test_integration.py",
         "fix_derivation_asymmetry.py",
         "fix"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+      "slug": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "status": "",
+      "summary": "**Note**: Verify mode was invoked as `/cg-review mode:verify`, but the prior review (`2026-08-13-complete-non-welfare-extraction-review.md`) has **no `fixed` findings** (fix-triage has not run yet). Per Step 1.7 of the review contract, verify mode self-disables when no prior fixed review exists and falls back to normal routing. This is a light confirm pass, not a full verify-mode activation.",
+      "tags": [],
+      "title": "2026-08-13-complete-non-welfare-extraction-verify-review",
+      "top_keywords": [
+        "2026-08-13-complete-non-welfare-extraction-review.md",
+        "review",
+        "verify",
+        "fixed",
+        "confirm",
+        "variabledefinition",
+        "/cg-review mode:verify",
+        "##",
+        "pytest tests/extraction/",
+        "/cg-fix-triage"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-25-canonical-non-welfare-inventory-ledger-review.md",
+      "slug": "2026-08-25-canonical-non-welfare-inventory-ledger-review",
+      "status": "",
+      "summary": "**Review mode**: verify, mandated fallback to normal full review because no prior fixed review existed **Files reviewed**: `schema/extraction/inventory.py`, `extraction_pipeline/inventory.py`, `tests/extraction/test_inventory.py`, `tests/extraction/test_completeness.py`, `extraction/20_drafts/runs/non-welfare-inventory-source-map.v1.yaml`, `extraction/20_drafts/runs/non-welfare-inventory.v1.yaml`, `.cg-docs/active-state/current.json`, `.cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md`, `.cg-docs/work-reports/2026-08-25-canonical-non-welfare-inventory-ledger.md`, and `roadmap.json` **Findings**: 9 (P0: 2, P1: 5, P2: 2; fixed: 3, open: 6)",
+      "tags": [],
+      "title": "2026-08-25-canonical-non-welfare-inventory-ledger-review",
+      "top_keywords": [
+        "inventory.py",
+        "fix",
+        "source_commit",
+        "source_repository",
+        ".cg-docs/active-state/current.json",
+        "test_completeness.py",
+        "current.json",
+        "roadmap.json",
+        "test_inventory.py",
+        "2026-08-25-canonical-non-welfare-inventory-ledger.md"
       ]
     },
     {
@@ -607,6 +692,34 @@
         "variable",
         "specs",
         "hand-drafting"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/data-quality/2026-08-26-fail-closed-deterministic-promotion.md",
+      "slug": "2026-08-26-fail-closed-deterministic-promotion",
+      "status": "",
+      "summary": "A promotion command could accept a hand-authored candidate that passed schema and fixed-total checks but was never reproduced from the governed source map, draft corpus, approval evidence, or immutable guideline bytes. Provenance tied to mutable `HEAD`, and aggregate totals not derived from rows, created similar ways for internally consistent metadata to contradict its evidence.",
+      "tags": [
+        "promotion",
+        "reproducibility",
+        "git-objects",
+        "provenance",
+        "trust-boundaries"
+      ],
+      "title": "Fail-Closed Deterministic Promotion from Immutable Evidence",
+      "top_keywords": [
+        "promotion",
+        "head",
+        "closed deterministic promotion",
+        "immutable evidence",
+        "evidence",
+        "immutable",
+        "deterministic",
+        "fail-closed",
+        "2026-08-25-canonical-non-welfare-inventory-ledger-review.md",
+        "2026-08-06-windows-platform-test-fixes.md"
       ]
     },
     {
@@ -773,12 +886,12 @@
         "helpers.py",
         "load_markdown",
         "parameter_ids",
+        "runs/",
+        "testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
         "registry",
         "parameter",
         "pattern",
-        "loading",
-        "list_parameter_ids",
-        "parameter_id"
+        "loading"
       ]
     },
     {
@@ -1030,6 +1143,28 @@
         "convention",
         "document",
         "snake_case"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#canonical-non-welfare-inventory-ledger",
+      "slug": "canonical-non-welfare-inventory-ledger",
+      "status": "planned",
+      "summary": "Create the canonical non-welfare inventory ledger",
+      "tags": [],
+      "title": "Create the canonical non-welfare inventory ledger",
+      "top_keywords": [
+        "universal non",
+        "welfare schema\nobjective",
+        "non-welfare",
+        "canonical",
+        "inventory",
+        "ledger",
+        "feature",
+        "milestone",
+        "extract",
+        "universal"
       ]
     },
     {
@@ -1979,10 +2114,10 @@
       ]
     }
   ],
-  "entity_count": 79,
-  "generated": "2026-08-20",
+  "entity_count": 84,
+  "generated": "2026-08-26",
   "schema_version": "0.2.0",
-  "topic_count": 5,
+  "topic_count": 4,
   "topics": [
     {
       "entity_count": 30,
@@ -2027,7 +2162,7 @@
       "slug": "establish-independent-agent-review-objective-review-human-review-application-objective"
     },
     {
-      "entity_count": 15,
+      "entity_count": 16,
       "entity_paths": [
         "roadmap.json#document-schema-approval",
         "roadmap.json#inventory-non-welfare-variables",
@@ -2038,6 +2173,7 @@
         "roadmap.json#register-weight-invariant-rule",
         "roadmap.json#classify-mineducatage",
         "roadmap.json#standardize-variable-naming-convention",
+        "roadmap.json#canonical-non-welfare-inventory-ledger",
         "roadmap.json#validate-registry-derivations",
         "roadmap.json#stress-test-legacy-decisions",
         "roadmap.json#resolve-reviewed-exceptions",
@@ -2054,14 +2190,15 @@
       "slug": "universal-non-welfare-schema-objective-freeze-version"
     },
     {
-      "entity_count": 7,
+      "entity_count": 8,
       "entity_paths": [
         ".cg-docs/brainstorms/2026-08-03-extract-universal-non-welfare-schema.md",
         ".cg-docs/brainstorms/2026-08-14-agent-review-lessons.md",
         ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md",
         ".cg-docs/plans/2026-08-14-build-agent-review.md",
         ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
-        ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review.md",
+        ".cg-docs/reviews/2026-08-13-complete-non-welfare-extraction-verify-review-2.md",
+        ".cg-docs/solutions/testing-patterns/2026-08-17-parameter-registry-loading.md",
         ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md"
       ],
       "keywords": [
@@ -2089,21 +2226,6 @@
       ],
       "label": "Country Parameter Layer / Country Parameter Layer\nObjective / Parameters",
       "slug": "country-parameter-layer-country-parameter-layer-objective-parameters"
-    },
-    {
-      "entity_count": 3,
-      "entity_paths": [
-        ".cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md",
-        ".cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md",
-        ".cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md"
-      ],
-      "keywords": [
-        "allow_unresolved_draft",
-        "pydantic",
-        "cause"
-      ],
-      "label": "Allow_Unresolved_Draft / Pydantic / Cause",
-      "slug": "allow-unresolved-draft-pydantic-cause"
     }
   ]
 }

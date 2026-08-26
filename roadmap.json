@@ -60,6 +60,12 @@
           "title": "Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no underscores, per ^VAR-[a-z][a-z0-9]*$) and record each mapping in the inventory before drafting",
           "status": "idea",
           "plan": null
+        },
+        {
+          "id": "canonical-non-welfare-inventory-ledger",
+          "title": "Create the canonical non-welfare inventory ledger",
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md"
         }
       ]
     },
