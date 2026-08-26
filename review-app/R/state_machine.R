@@ -96,7 +96,7 @@ transition <- function(rec, action, actor, role, note = NULL,
 record_action <- function(rec, action, actor, role, note = NULL,
                           body_sha256 = rec$current_content_sha256,
                           blob_sha = rec$source_commit) {
-  stopifnot(action %in% c("assigned", "saved"))
+  stopifnot(action %in% c("assigned", "saved", "assessed"))
   if (!is.null(role) && !role %in% ROLES) {
     stop("invalid role")
   }

@@ -61,11 +61,18 @@ read_enrolled_source <- function(adapter, record) {
   )
 }
 
-check_source_binding <- function(adapter, record) {
+check_source_binding <- function(adapter, record, current_commit = NULL) {
   validate_review_record_v2(record)
   enrolled <- read_enrolled_source(adapter, record)
   current <- tryCatch(
-    adapter_read_draft(adapter, record$source_artifact_path),
+    if (is.null(current_commit)) {
+      adapter_read_draft(adapter, record$source_artifact_path)
+    } else {
+      adapter_fetch_blob(
+        adapter$owner, adapter$repo, record$source_artifact_path,
+        current_commit, adapter$get_token(), adapter$http
+      )
+    },
     error = function(error) {
       list(
         error = conditionMessage(error),
@@ -119,8 +126,8 @@ check_source_binding <- function(adapter, record) {
   )
 }
 
-assert_source_binding_current <- function(adapter, record) {
-  binding <- check_source_binding(adapter, record)
+assert_source_binding_current <- function(adapter, record, current_commit = NULL) {
+  binding <- check_source_binding(adapter, record, current_commit)
   if (isTRUE(binding$drift)) {
     stop(source_drift_error(sprintf(
       "source drift detected for %s: %s",

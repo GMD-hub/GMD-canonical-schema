@@ -8,7 +8,8 @@ action_requires_role <- list(
   approved = "approver",
   reopened = "administrator",
   assigned = "administrator",
-  saved = "reviewer"
+  saved = "reviewer",
+  assessed = "approver"
 )
 
 #' Return TRUE if the given role may perform the given action.

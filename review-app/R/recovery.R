@@ -91,7 +91,8 @@ adapter_check_stale <- function(
 adapter_write_atomic <- function(
   adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(),
   message, inline_changes = NULL, max_payload_bytes = 900000L,
-  reject_unrelated_head = NULL, preflight_tree = NULL
+  reject_unrelated_head = NULL, preflight_tree = NULL,
+  pre_publish_check = NULL
 ) {
   if (!is.list(changes) || !length(changes)) stop("atomic write requires changes")
   paths <- names(changes)
@@ -225,6 +226,16 @@ adapter_write_atomic <- function(
   }
   new_commit <- response$sha
   completed <- c(completed, "commit-creation")
+  if (!is.null(pre_publish_check)) {
+    tryCatch(
+      pre_publish_check(),
+      error = function(error) {
+        if (inherits(error, "source_drift")) stop(error)
+        stop(stale_write_error(conditionMessage(error)))
+      }
+    )
+    completed <- c(completed, "pre-publish-check")
+  }
   response <- tryCatch(
     adapter$http(
       "PATCH",
@@ -263,7 +274,8 @@ adapter_write_atomic <- function(
 adapter_write_with_recovery <- function(
   adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(), message,
   inline_changes = NULL, max_payload_bytes = 900000L,
-  reject_unrelated_head = NULL, preflight_tree = NULL
+  reject_unrelated_head = NULL, preflight_tree = NULL,
+  pre_publish_check = NULL
 ) {
   tryCatch(
     {
@@ -276,7 +288,8 @@ adapter_write_with_recovery <- function(
         inline_changes = inline_changes,
         max_payload_bytes = max_payload_bytes,
         reject_unrelated_head = reject_unrelated_head,
-        preflight_tree = preflight_tree
+        preflight_tree = preflight_tree,
+        pre_publish_check = pre_publish_check
       )
       list(
         ok = TRUE,
@@ -304,6 +317,15 @@ adapter_write_with_recovery <- function(
           "staleness-check", "blob-creation", "tree-creation", "commit-creation"
         ),
         error = list(kind = "ref-race", message = conditionMessage(error), detail = NULL)
+      )
+    },
+    source_drift = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = FALSE,
+        commit_sha = NULL,
+        steps_completed = character(0),
+        error = list(kind = "source-drift", message = conditionMessage(error), detail = NULL)
       )
     },
     partial_failure = function(error) {

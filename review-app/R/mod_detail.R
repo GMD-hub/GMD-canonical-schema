@@ -89,6 +89,7 @@ mod_detail_ui <- function(id) {
           )
         ),
         shiny::uiOutput(ns("action_feedback")),
+        shiny::uiOutput(ns("assessment_workspace")),
         shiny::uiOutput(ns("action_bar"))
       )
     )
@@ -238,6 +239,25 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       !identical(input$editor_body %||% "", detail_state$body %||% "")
     })
     dirty_debounced <- shiny::debounce(dirty, 500)
+    assessment_dirty <- shiny::reactive({
+      if (!authorize(role(), "assessed") || is.null(detail_state$record) ||
+          !is_v2_review_record(detail_state$record)) return(FALSE)
+      assessment <- detail_state$record$assessment
+      rating_dirty <- any(vapply(seq_along(ASSESSMENT_SECTIONS), function(i) {
+        key <- gsub("[^a-z0-9]+", "_", tolower(ASSESSMENT_SECTIONS[[i]]))
+        rating <- input[[paste0("assessment_rating_", key)]]
+        note <- input[[paste0("assessment_note_", key)]]
+        (!is.null(rating) && !identical(rating, assessment$layer2[[i]]$rating %||% "")) ||
+          (!is.null(note) && !identical(trimws(note), assessment$layer2[[i]]$note %||% ""))
+      }, logical(1)))
+      persisted_errors <- yaml::as.yaml(
+        assessment$content_errors$items %||% list(),
+        indent.mapping.sequence = TRUE
+      )
+      error_dirty <- !is.null(input$assessment_content_errors) &&
+        !identical(trimws(input$assessment_content_errors), trimws(persisted_errors))
+      rating_dirty || error_dirty
+    })
 
     shiny::observe({
       session$sendCustomMessage(
@@ -461,7 +481,8 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           }
     }
 
-      run_action <- function(action, note = NULL, body = NULL) {
+      run_action <- function(action, note = NULL, body = NULL,
+                             assessment_payload = NULL) {
       shiny::req(detail_state$record)
       detail_state$action_error <- NULL
       detail_state$action_success <- NULL
@@ -495,7 +516,7 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
              note = note,
              expected_manifest_blob_sha = detail_state$manifest_blob_sha,
              expected_index_blob_sha = detail_state$index_blob_sha,
-             legacy_read_only = identical(queue_mode(), "legacy_read_only")
+             assessment_payload = assessment_payload
           )
           detail_state$report <- result$report
           if (!result$report$ok) {
@@ -518,8 +539,9 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
             submitted = "Artifact submitted for approval.",
             `request-revision` = "Revision requested and reason recorded.",
             approved = "Artifact approved from the persisted reviewed content.",
-            reopened = "Artifact reopened and returned for revision.",
-            "Change recorded."
+             reopened = "Artifact reopened and returned for revision.",
+             assessed = "Assessment saved without changing workflow state.",
+             "Change recorded."
           )
           session$sendCustomMessage("review-dirty-state", list(dirty = FALSE))
           refresh_counter(refresh_counter() + 1L)
@@ -585,6 +607,109 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       NULL
     })
 
+    output$assessment_workspace <- shiny::renderUI({
+      if (!identical(detail_state$phase, "loaded") ||
+          !is_v2_review_record(detail_state$record)) return(NULL)
+      assessment <- detail_state$record$assessment
+      can_assess <- authorize(role(), "assessed") &&
+        !identical(queue_mode(), "legacy_read_only") &&
+        !isTRUE(detail_state$source_drift) && current_state() == "in-review"
+      section_ui <- lapply(seq_along(ASSESSMENT_SECTIONS), function(i) {
+        item <- assessment$layer2[[i]]
+        key <- gsub("[^a-z0-9]+", "_", tolower(item$section))
+        shiny::tags$fieldset(
+          class = "assessment-section",
+          shiny::tags$legend(item$section),
+          if (can_assess) shiny::selectInput(
+            session$ns(paste0("assessment_rating_", key)), "Rating",
+            choices = c("Select" = "", "Pass" = "pass", "Revise" = "revise", "Fail" = "fail"),
+            selected = item$rating %||% ""
+          ) else shiny::p(shiny::strong("Rating: "), item$rating %||% "Pending"),
+          if (can_assess) shiny::textAreaInput(
+            session$ns(paste0("assessment_note_", key)), "Note",
+            value = item$note %||% "", rows = 2
+          ) else shiny::p(shiny::strong("Note: "), item$note %||% "None")
+        )
+      })
+      shiny::tags$section(
+        class = "assessment-workspace",
+        shiny::h2("Human assessment"),
+        shiny::p("Automated evidence and bindings are read only. Agent review is informational in this release."),
+        shiny::tags$dl(
+          class = "metadata-list",
+          metadata_item("Layer 1", assessment$layer1$result),
+          metadata_item("Validator", assessment$layer1$validator_id),
+          metadata_item("Evidence timestamp", assessment$layer1$evidence_generated_at),
+          metadata_item("Binding", if (assessment_binding_matches(assessment, detail_state$record)) "Current" else "Pending or stale"),
+          metadata_item("Agent review", assessment$agent_review$disposition),
+          metadata_item("Assessed by", assessment$assessed_by)
+        ),
+        section_ui,
+        if (can_assess) shiny::tags$fieldset(
+          class = "assessment-section content-error-editor",
+          shiny::tags$legend("Content error attestation"),
+          shiny::p(paste(
+            "Edit the complete YAML list below. Use [] to sign an explicit",
+            "no-errors snapshot. Each item requires id, severity, status, and evidence_ref."
+          )),
+          shiny::textAreaInput(
+            session$ns("assessment_content_errors"),
+            "Content error items",
+            value = yaml::as.yaml(
+              assessment$content_errors$items %||% list(),
+              indent.mapping.sequence = TRUE
+            ),
+            rows = max(4L, 2L + 5L * length(assessment$content_errors$items %||% list()))
+          )
+        ) else if (!is.null(assessment$content_errors)) shiny::tags$fieldset(
+          class = "assessment-section content-error-readonly",
+          shiny::tags$legend("Content error attestation"),
+          if (!length(assessment$content_errors$items)) {
+            shiny::p("No content errors attested.")
+          } else {
+            shiny::tags$ul(lapply(assessment$content_errors$items, function(item) {
+              shiny::tags$li(sprintf(
+                "%s -- %s / %s -- %s", item$id, item$severity,
+                item$status, item$evidence_ref
+              ))
+            }))
+          }
+        ),
+        if (can_assess) shiny::actionButton(
+          session$ns("save_assessment"), "Save assessment",
+          class = "btn btn-primary"
+        )
+      )
+    })
+
+    shiny::observeEvent(input$save_assessment, {
+      ratings <- lapply(ASSESSMENT_SECTIONS, function(section) {
+        key <- gsub("[^a-z0-9]+", "_", tolower(section))
+        list(
+          section = section,
+          rating = input[[paste0("assessment_rating_", key)]] %||% "",
+          note = {
+            value <- trimws(input[[paste0("assessment_note_", key)]] %||% "")
+            if (nzchar(value)) value else NULL
+          }
+        )
+      })
+      tryCatch(
+        {
+          errors <- yaml::read_yaml(
+            text = input$assessment_content_errors %||% "[]"
+          )
+          if (is.null(errors)) errors <- list()
+          run_action("assessed", assessment_payload = list(
+            layer2 = ratings, content_errors = errors
+          ))
+        },
+        error = function(error) {
+          detail_state$action_error <- conditionMessage(error)
+        }
+      )
+    }, ignoreInit = TRUE)
+
     output$action_bar <- shiny::renderUI({
       if (!identical(detail_state$phase, "loaded")) return(NULL)
       state <- current_state()
@@ -626,8 +751,8 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
        }
        if (authorize(current_role, "approved") && state == "in-review" &&
            !isTRUE(detail_state$source_drift) &&
-           !identical(queue_mode(), "legacy_read_only") &&
-           approval_eligible) {
+            !identical(queue_mode(), "legacy_read_only") &&
+            approval_eligible && !assessment_dirty()) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("act_approve"),
           "Approve",
@@ -830,7 +955,11 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
     }, ignoreInit = TRUE)
 
     list(
-      back_requested = shiny::reactive(input$back_queue)
+      back_requested = shiny::reactive(input$back_queue),
+      assessment_dirty = assessment_dirty,
+      phase = shiny::reactive(detail_state$phase),
+      action_error = shiny::reactive(detail_state$action_error),
+      current_record = shiny::reactive(detail_state$record)
     )
   })
 }

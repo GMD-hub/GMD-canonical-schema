@@ -3,7 +3,7 @@
 STATES <- c("draft", "in-review", "needs-revision", "approved")
 ACTIONS <- c(
   "submitted", "request-revision", "approved", "assigned", "reopened",
-  "saved"
+  "saved", "assessed"
 )
 ROLES <- c("reviewer", "approver", "administrator")
 REVIEW_RECORD_SCHEMA_VERSION <- "2.0"
@@ -59,16 +59,15 @@ is_valid_source_artifact_path <- function(path, artifact_id = NULL) {
 }
 
 new_empty_assessment <- function() {
-  list(
-    layer1 = list(status = "pending", evidence_ref = NULL),
-    layer2 = list(),
-    content_errors = list(),
-    agent_review = list(status = "pending", evidence_ref = NULL)
-  )
+  new_pending_assessment()
 }
 
 validate_assessment <- function(assessment) {
-  required <- c("layer1", "layer2", "content_errors", "agent_review")
+  assessment <- normalize_assessment(assessment)
+  required <- c(
+    "assessment_schema_version", "binding", "layer1", "layer2",
+    "content_errors", "agent_review", "assessed_by", "assessed_at"
+  )
   if (!is.list(assessment)) stop("assessment must be a mapping")
   missing <- required[!required %in% names(assessment)]
   extra <- setdiff(names(assessment), required)
@@ -78,53 +77,103 @@ validate_assessment <- function(assessment) {
   if (length(extra)) {
     stop(sprintf("assessment contains unsupported fields: %s", paste(extra, collapse = ", ")))
   }
-  for (field in c("layer1", "agent_review")) {
-    value <- assessment[[field]]
-    if (!is.list(value) || any(!c("status", "evidence_ref") %in% names(value)) ||
-        length(setdiff(names(value), c("status", "evidence_ref"))) > 0L ||
-        !(value$status %in% c("pending", "pass", "fail"))) {
-      stop(sprintf("assessment.%s is invalid", field))
-    }
-    if (value$status == "pending" && !is.null(value$evidence_ref)) {
-      stop(sprintf("pending assessment.%s must not contain evidence", field))
-    }
-    if (value$status != "pending" &&
-        !.is_scalar_character(value$evidence_ref %||% NULL)) {
-      stop(sprintf("assessment.%s evidence_ref is required once assessed", field))
+  if (!identical(as.character(assessment$assessment_schema_version), ASSESSMENT_SCHEMA_VERSION)) {
+    stop("assessment schema version is invalid")
+  }
+  if (!is.null(assessment$binding)) {
+    fields <- c(
+      "source_commit", "source_artifact_blob_sha", "source_content_sha256",
+      "body_sha256", "evidence_commit", "attestation_blob_sha",
+      "attestation_content_sha256", "context_manifest_sha256"
+    )
+    if (!is.list(assessment$binding) || !identical(names(assessment$binding), fields) ||
+        !.is_sha1(assessment$binding$source_commit) ||
+        !.is_sha1(assessment$binding$source_artifact_blob_sha) ||
+        !.is_sha256(assessment$binding$source_content_sha256) ||
+        !.is_sha256(assessment$binding$body_sha256) ||
+        !.is_sha1(assessment$binding$evidence_commit) ||
+        !.is_sha1(assessment$binding$attestation_blob_sha) ||
+        any(!vapply(assessment$binding[c("attestation_content_sha256", "context_manifest_sha256")], .is_sha256, logical(1)))) {
+      stop("assessment binding is invalid")
     }
   }
-  if (!is.list(assessment$layer2) || !is.list(assessment$content_errors)) {
-    stop("assessment.layer2 and assessment.content_errors must be lists")
+  layer1_fields <- c("result", "validator_id", "evidence_generated_at", "checked_at")
+  if (!is.list(assessment$layer1) || !identical(names(assessment$layer1), layer1_fields) ||
+      !(assessment$layer1$result %in% c("pending", "pass", "fail"))) {
+    stop("assessment.layer1 is invalid")
+  }
+  if (assessment$layer1$result == "pending") {
+    if (!is.null(assessment$binding) || any(!vapply(assessment$layer1[-1L], is.null, logical(1)))) {
+      stop("pending Layer 1 must not contain evidence")
+    }
+  } else if (!.is_scalar_character(assessment$layer1$validator_id) ||
+             !.is_evidence_timestamp(assessment$layer1$evidence_generated_at) ||
+             !.is_timestamp(assessment$layer1$checked_at) || is.null(assessment$binding)) {
+    stop("assessed Layer 1 requires complete evidence")
+  }
+  if (!is.list(assessment$layer2) || length(assessment$layer2) != 7L) {
+    stop("assessment.layer2 requires exactly seven entries")
   }
   for (rating in assessment$layer2) {
     if (!is.list(rating) ||
-        any(!c("section", "rating", "notes") %in% names(rating)) ||
-        length(setdiff(names(rating), c("section", "rating", "notes"))) > 0L ||
+        !identical(names(rating), c("section", "rating", "note")) ||
         !.is_scalar_character(rating$section) ||
         !(rating$section %in% ASSESSMENT_SECTIONS) ||
-        !(rating$rating %in% c("pass", "revise", "fail"))) {
+        (!is.null(rating$rating) && !(rating$rating %in% c("pass", "revise", "fail")))) {
       stop("each assessment.layer2 entry is invalid")
     }
-    if (!is.null(rating$notes) && !is.character(rating$notes)) {
-      stop("assessment.layer2 notes must be a string or null")
+    if (!is.null(rating$note) && !is.character(rating$note)) {
+      stop("assessment.layer2 note must be a string or null")
     }
-    if (rating$rating == "revise" && !.is_scalar_character(rating$notes %||% NULL)) {
-      stop("assessment notes are required for every revise rating")
+    if (!is.null(rating$rating) && rating$rating %in% c("revise", "fail") &&
+        !.is_scalar_character(rating$note %||% NULL)) {
+      stop("assessment notes are required for every revise and fail rating")
     }
   }
   if (length(assessment$layer2)) {
     sections <- vapply(assessment$layer2, function(rating) rating$section, character(1))
-    if (anyDuplicated(sections)) stop("assessment.layer2 sections must be unique")
+    if (!identical(sections, ASSESSMENT_SECTIONS)) stop("assessment.layer2 must use canonical section order")
   }
-  for (error in assessment$content_errors) {
+  if (!is.null(assessment$content_errors)) {
+    snapshot <- assessment$content_errors
+    if (!is.list(snapshot) || !identical(names(snapshot), c("items", "captured_by", "captured_at", "snapshot_sha256")) ||
+        !is.list(snapshot$items) || !.is_scalar_character(snapshot$captured_by) ||
+        !.is_timestamp(snapshot$captured_at) || !.is_sha256(snapshot$snapshot_sha256)) {
+      stop("assessment.content_errors snapshot is invalid")
+    }
+    unsigned <- snapshot[c("items", "captured_by", "captured_at")]
+    if (!identical(hash_body(canonical_yaml(unsigned)), snapshot$snapshot_sha256)) {
+      stop("assessment.content_errors snapshot digest is invalid")
+    }
+  }
+  for (error in assessment$content_errors$items %||% list()) {
     if (!is.list(error) ||
-        any(!c("id", "severity", "status") %in% names(error)) ||
-        length(setdiff(names(error), c("id", "severity", "status", "notes", "evidence_ref"))) > 0L ||
+        !identical(names(error), c("id", "severity", "status", "evidence_ref")) ||
         !.is_scalar_character(error$id) ||
-        !(error$severity %in% c("block", "major", "minor")) ||
-        !(error$status %in% c("open", "closed"))) {
+        !(error$severity %in% c("block", "major", "minor", "info")) ||
+        !(error$status %in% c("open", "resolved", "escalated")) ||
+        !.is_scalar_character(error$evidence_ref)) {
       stop("each assessment.content_errors entry is invalid")
     }
+  }
+  agent_fields <- c(
+    "disposition", "snapshot_sha256", "manifest_identity", "manifest_digest"
+  )
+  if (!is.list(assessment$agent_review) ||
+      !identical(names(assessment$agent_review), agent_fields) ||
+      !(assessment$agent_review$disposition %in% c("clear", "findings-present", "unavailable")) ||
+      (!is.null(assessment$agent_review$snapshot_sha256) &&
+       !.is_sha256(assessment$agent_review$snapshot_sha256)) ||
+      (!is.null(assessment$agent_review$manifest_identity) &&
+       !.is_scalar_character(assessment$agent_review$manifest_identity)) ||
+      (!is.null(assessment$agent_review$manifest_digest) &&
+       !.is_sha256(assessment$agent_review$manifest_digest))) {
+    stop("assessment.agent_review is invalid")
+  }
+  if (xor(is.null(assessment$assessed_by), is.null(assessment$assessed_at)) ||
+      (!is.null(assessment$assessed_by) &&
+       (!.is_scalar_character(assessment$assessed_by) || !.is_timestamp(assessment$assessed_at)))) {
+    stop("assessment attestation actor/time is inconsistent")
   }
   invisible(assessment)
 }
@@ -172,7 +221,7 @@ new_event <- function(action, from_state = NULL, to_state = NULL, actor,
   if (!(action %in% ACTIONS)) stop(sprintf("invalid action '%s'", action))
   if (!(actor_role %in% ROLES)) stop(sprintf("invalid actor_role '%s'", actor_role))
   occurred_at <- occurred_at %||% format(
-    Sys.time(), tz = "UTC", usetz = TRUE, format = "%Y-%m-%dT%H:%M:%SZ"
+    Sys.time(), tz = "UTC", format = "%Y-%m-%dT%H:%M:%SZ"
   )
   structure(list(
     event_id = as.character(uuid::UUIDgenerate()),
@@ -193,7 +242,7 @@ new_event_v2 <- function(action, from_state = NULL, to_state = NULL, actor,
                          actor_role, sequence, review_record_blob_sha_before,
                          body_sha256, note = NULL, occurred_at = NULL) {
   occurred_at <- occurred_at %||% format(
-    Sys.time(), tz = "UTC", usetz = TRUE, format = "%Y-%m-%dT%H:%M:%SZ"
+    Sys.time(), tz = "UTC", format = "%Y-%m-%dT%H:%M:%SZ"
   )
   event <- structure(list(
     event_id = as.character(uuid::UUIDgenerate()),
@@ -388,6 +437,7 @@ parse_review_record <- function(yaml_string) {
       ))
     }
     record$review_round <- as.integer(record$review_round)
+    record$assessment <- normalize_assessment(record$assessment)
     record$assigned_to <- .normalize_assignments(record$assigned_to)
     record$blocker_refs <- as.character(unlist(record$blocker_refs %||% list()))
     record$events <- lapply(record$events, function(event) {

@@ -20,6 +20,10 @@ library(testthat)
 
 test_that("dashboard UI renders and the server boots without error", {
   skip_if_not_installed("shinytest2")
+  skip_if_not_installed("reviewapp")
+  if (!nzchar(Sys.getenv("_R_CHECK_PACKAGE_NAME_"))) {
+    skip("AppDriver child process requires installed-package check context")
+  }
   requireNamespace("shinytest2", quietly = TRUE)
 
   roles <- .smoke_roles_path()

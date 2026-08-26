@@ -87,8 +87,7 @@ test_that("legacy calibration records are explicitly read-only", {
       branch_head_sha = "legacy-head",
       action = "saved",
       actor = "reviewer@example.org",
-      role = "reviewer",
-      legacy_read_only = TRUE
+      role = "reviewer"
     ),
     "read-only"
   )
@@ -106,7 +105,7 @@ test_that("approval stays denied while Release A controls are pending", {
     readiness_command = "readiness",
     audit_event_id = "event-1"
   )
-  expect_error(queue_approval_eligible(enabled, record), "global blockers")
+  expect_false(queue_approval_eligible(enabled, record))
 })
 
 test_that("Release A draft enumeration rejects incomplete or malformed sets", {

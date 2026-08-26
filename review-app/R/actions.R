@@ -102,6 +102,11 @@ adapter_read_queue_index <- function(adapter) {
   index_blob <- adapter_read_queue_index(adapter)
   index_changed_since_load <- !is.null(expected_index_blob_sha) &&
     !identical(index_blob$sha, expected_index_blob_sha)
+  if (index_changed_since_load) {
+    stop(stale_write_error(
+      "queue index changed since load; reload before applying the action"
+    ))
+  }
   index <- parse_queue_index_blob(index_blob$content, manifest)
   row <- .queue_row_for(index, rec$artifact_id)
   if (!identical(row$record_blob_sha, record_blob_sha) ||
@@ -206,12 +211,17 @@ adapter_read_queue_index <- function(adapter) {
 .perform_v2_action <- function(
   adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
   approved_content, body, note, assigned_identities = NULL,
+  assessment_payload = NULL,
   expected_manifest_blob_sha = NULL, expected_index_blob_sha = NULL,
   max_retries = 1L
 ) {
   validate_review_record_v2(rec)
   if (!is_valid_artifact_id(rec$artifact_id)) stop("invalid artifact ID")
   if (!.is_sha1(blob_sha)) stop("v2 actions require a Git SHA-1 record blob")
+  if (!.is_sha1(expected_manifest_blob_sha) ||
+      !.is_sha1(expected_index_blob_sha)) {
+    stop("v2 actions require loaded manifest and index blob identities")
+  }
   if (!authorize(role, action)) {
     stop(sprintf(
       "unauthorized: role '%s' cannot perform action '%s'",
@@ -228,14 +238,7 @@ adapter_read_queue_index <- function(adapter) {
 
   expected_manifest <- expected_manifest_blob_sha
   expected_index <- expected_index_blob_sha
-  updated <- NULL
-  updated_yaml <- NULL
-  controls <- NULL
-  binding <- NULL
-  persisted_body <- NULL
-  approved_blob <- NULL
   for (attempt in seq_len(as.integer(max_retries) + 1L)) {
-    binding <- assert_source_binding_current(adapter, rec)
     controls <- .read_v2_controls(
       adapter,
       rec,
@@ -243,62 +246,91 @@ adapter_read_queue_index <- function(adapter) {
       expected_manifest_blob_sha = expected_manifest,
       expected_index_blob_sha = expected_index
     )
+    persisted <- controls$record
+    if (!identical(record_to_yaml(rec), record_to_yaml(persisted))) {
+      stop(stale_write_error("caller record differs from persisted review record"))
+    }
+    default_head <- adapter_branch_head(
+      adapter$owner, adapter$repo, adapter$default_branch,
+      adapter$get_token(), adapter$http
+    )
+    binding <- assert_source_binding_current(adapter, persisted, default_head)
     if (isTRUE(controls$index_changed_since_load) && attempt > 1L) {
       stop(stale_write_error(
         "queue index changed during the action; reload before applying the action"
       ))
     }
-    if (is.null(updated)) {
-      persisted_body <- .read_v2_review_body(
-        adapter,
-        rec,
-        binding$enrolled$content
-      )
-      if (action != "saved" &&
-          !identical(hash_body(persisted_body$content), body_sha256)) {
-        stop(stale_write_error(
-          "the supplied body hash does not match the persisted reviewed body"
-        ))
-      }
-      if (action == "approved") {
-        .v2_approval_check(controls$manifest, rec, binding)
-        approved_blob <- .optional_review_blob(
-          adapter,
-          approved_path_for(rec$source_artifact_path)
-        )
-      }
-      updated <- if (action %in% c("saved", "assigned")) {
-        replaced <- record_action(
-          rec,
-          action,
-          actor,
-          role,
-          note = note,
-          body_sha256 = body_sha256,
-          blob_sha = blob_sha
-        )
-        if (action == "assigned" && !is.null(assigned_identities)) {
-          set_assigned_to(replaced, assigned_identities)
-        } else {
-          replaced
-        }
-      } else {
-        transition(
-          rec,
-          action,
-          actor,
-          role,
-          note = note,
-          body_sha256 = body_sha256,
-          blob_sha = blob_sha
-        )
-      }
-      updated_yaml <- record_to_yaml(updated)
-    } else if (!identical(controls$record_blob_sha, blob_sha)) {
+    persisted_body <- .read_v2_review_body(
+      adapter, persisted, binding$enrolled$content
+    )
+    if (action != "saved" &&
+        !identical(hash_body(persisted_body$content), body_sha256)) {
       stop(stale_write_error(
-        "review record changed during a concurrent retry; no transition applied"
+        "the supplied body hash does not match the persisted reviewed body"
       ))
     }
+    approved_blob <- NULL
+    if (action == "approved") {
+      machine <- build_machine_assessment(
+        adapter, persisted, persisted_body$content, binding,
+        evidence_commit = persisted$assessment$binding$evidence_commit,
+        agent_review_authority = controls$manifest$agent_review
+      )
+      layer1_identity <- c("result", "validator_id", "evidence_generated_at")
+      if (!identical(persisted$assessment$binding, machine$binding) ||
+          !identical(
+            persisted$assessment$layer1[layer1_identity],
+            machine$layer1[layer1_identity]
+          ) || !identical(persisted$assessment$agent_review, machine$agent_review)) {
+        stop("approval denied: persisted assessment binding or evidence is stale")
+      }
+      .v2_approval_check(controls$manifest, persisted, binding)
+      approved_blob <- .optional_review_blob(
+        adapter, approved_path_for(persisted$source_artifact_path)
+      )
+    }
+    updated <- if (action %in% c("saved", "assigned", "assessed")) {
+      replaced <- record_action(
+        persisted, action, actor, role, note = note,
+        body_sha256 = body_sha256, blob_sha = blob_sha
+      )
+      if (action == "assigned" && !is.null(assigned_identities)) {
+        replaced <- set_assigned_to(replaced, assigned_identities)
+      }
+      if (action == "assessed") {
+        if (is.null(assessment_payload)) stop("assessed action requires assessment_payload")
+        machine <- build_machine_assessment(
+          adapter, persisted, persisted_body$content, binding,
+          evidence_commit = default_head,
+          agent_review_authority = controls$manifest$agent_review
+        )
+        if (!identical(machine$layer1$result, "pass")) {
+          stop("assessment denied because current Layer 1 does not pass")
+        }
+        replaced$assessment <- stamp_human_assessment(
+          machine, assessment_payload, actor,
+          replaced$events[[length(replaced$events)]]$occurred_at
+        )
+      }
+      replaced
+    } else {
+      transition(
+        persisted, action, actor, role, note = note,
+        body_sha256 = body_sha256, blob_sha = blob_sha
+      )
+    }
+    if (action == "submitted") {
+      updated$assessment <- build_machine_assessment(
+        adapter, persisted, persisted_body$content, binding,
+        evidence_commit = default_head,
+        agent_review_authority = controls$manifest$agent_review
+      )
+      if (!identical(updated$assessment$layer1$result, "pass")) {
+        stop("submission denied: current Layer 1 structural gate failed")
+      }
+    }
+    validate_review_record_v2(updated)
+    updated_yaml <- record_to_yaml(updated)
     new_record_sha <- tryCatch(
       git_blob_sha(updated_yaml),
       error = function(error) stop(sprintf(
@@ -308,13 +340,13 @@ adapter_read_queue_index <- function(adapter) {
     )
     updated_index <- .index_row_with_update(
       controls$index,
-      rec$artifact_id,
+      persisted$artifact_id,
       updated,
       new_record_sha,
       controls$manifest
     )
     changes <- list()
-    changes[[ACTION_PATH(rec$artifact_id)]] <- updated_yaml
+    changes[[ACTION_PATH(persisted$artifact_id)]] <- updated_yaml
     changes[[QUEUE_INDEX_PATH]] <- serialize_queue_index(updated_index)
     if (action == "approved") {
       enrolled_split <- split_frontmatter_exact(binding$enrolled$content)
@@ -328,26 +360,43 @@ adapter_read_queue_index <- function(adapter) {
         persisted_body$content,
         separator = enrolled_split$line_ending
       )
-      changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
+      changes[[approved_path_for(persisted$source_artifact_path)]] <- approved_content
     }
     if (action == "saved" && !is.null(body)) {
-      changes[[BODY_PATH(rec$artifact_id)]] <- body
+      changes[[BODY_PATH(persisted$artifact_id)]] <- body
     }
     expected_blobs <- c(
-      setNames(list(blob_sha), ACTION_PATH(rec$artifact_id)),
+      setNames(list(blob_sha), ACTION_PATH(persisted$artifact_id)),
       setNames(list(controls$index_blob_sha), QUEUE_INDEX_PATH),
       setNames(list(controls$manifest_blob_sha), QUEUE_MANIFEST_PATH),
-      setNames(list(persisted_body$sha), BODY_PATH(rec$artifact_id))
+      setNames(list(persisted_body$sha), BODY_PATH(persisted$artifact_id))
     )
     if (action == "approved") {
       expected_blobs <- c(
         expected_blobs,
         setNames(
           list(approved_blob$sha),
-          approved_path_for(rec$source_artifact_path)
+          approved_path_for(persisted$source_artifact_path)
         )
       )
     }
+    source_head <- if (action == "approved") default_head else NULL
+    pre_publish_check <- if (action == "approved") function() {
+      current_head <- adapter_branch_head(
+        adapter$owner, adapter$repo, adapter$default_branch,
+        adapter$get_token(), adapter$http
+      )
+      current <- adapter_fetch_blob(
+        adapter$owner, adapter$repo, persisted$source_artifact_path,
+        current_head, adapter$get_token(), adapter$http
+      )
+      if (!identical(current_head, source_head) ||
+          !identical(current$sha, persisted$source_artifact_blob_sha) ||
+          !identical(source_content_hash(current$content), persisted$source_content_sha256)) {
+        stop(source_drift_error("source changed before approval publication"))
+      }
+      invisible(TRUE)
+    } else NULL
     report <- adapter_write_with_recovery(
       adapter,
       changes = changes,
@@ -357,20 +406,30 @@ adapter_read_queue_index <- function(adapter) {
         "review action '%s' by %s on %s",
         action,
         actor,
-        rec$artifact_id
-      )
+        persisted$artifact_id
+      ),
+      pre_publish_check = pre_publish_check
     )
     if (report$ok ||
-        !report$error$kind %in% c("stale", "ref-race") ||
+        !identical(report$error$kind, "ref-race") ||
         attempt > as.integer(max_retries)) {
       return(list(report = report, record = updated, binding = binding))
     }
-    # A retry is safe only when the selected record and selected index row did
-    # not change. The next iteration re-reads all controls and source binding.
+    # Only a proven review-ref publication race is retryable. All selected-path
+    # staleness is terminal inside adapter_write_with_recovery().
     latest <- .read_v2_controls(adapter, rec, blob_sha)
     same_row <- identical(latest$row, controls$row)
     same_manifest <- identical(latest$manifest_blob_sha, controls$manifest_blob_sha)
-    if (!same_row || !same_manifest) {
+    same_index <- identical(latest$index_blob_sha, controls$index_blob_sha)
+    latest_body <- .read_v2_review_body(adapter, latest$record, binding$enrolled$content)
+    same_body <- identical(latest_body$sha, persisted_body$sha)
+    latest_destination <- if (action == "approved") .optional_review_blob(
+      adapter, approved_path_for(persisted$source_artifact_path)
+    ) else NULL
+    same_destination <- action != "approved" ||
+      identical(latest_destination$sha, approved_blob$sha)
+    if (!same_row || !same_manifest || !same_index || !same_body ||
+        !same_destination) {
       return(list(report = report, record = updated, binding = binding))
     }
     expected_manifest <- latest$manifest_blob_sha
@@ -390,8 +449,8 @@ adapter_read_queue_index <- function(adapter) {
 perform_action <- function(
   adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
   approved_content = NULL, body = NULL, note = NULL,
-  assigned_identities = NULL, expected_manifest_blob_sha = NULL,
-  expected_index_blob_sha = NULL, legacy_read_only = FALSE
+  assigned_identities = NULL, assessment_payload = NULL,
+  expected_manifest_blob_sha = NULL, expected_index_blob_sha = NULL
 ) {
   if (is_v2_review_record(rec)) {
     return(.perform_v2_action(
@@ -407,74 +466,10 @@ perform_action <- function(
       body,
       note,
       assigned_identities = assigned_identities,
+      assessment_payload = assessment_payload,
       expected_manifest_blob_sha = expected_manifest_blob_sha,
       expected_index_blob_sha = expected_index_blob_sha
     ))
   }
-  if (isTRUE(legacy_read_only)) {
-    stop("legacy calibration records are read-only")
-  }
-  # Legacy records are only served from the preserved calibration branch. A
-  # caller must explicitly opt into the old write API for test fixtures or an
-  # operator-owned non-production branch.
-  if (!authorize(role, action)) {
-    stop(sprintf(
-      "unauthorized: role '%s' cannot perform action '%s'",
-      role %||% "(none)",
-      action
-    ))
-  }
-  updated <- if (action %in% c("saved", "assigned")) {
-    record_action(
-      rec,
-      action,
-      actor,
-      role,
-      note = note,
-      body_sha256 = body_sha256,
-      blob_sha = blob_sha
-    )
-  } else {
-    transition(
-      rec,
-      action,
-      actor,
-      role,
-      note = note,
-      body_sha256 = body_sha256,
-      blob_sha = blob_sha
-    )
-  }
-  if (action == "assigned" && !is.null(assigned_identities)) {
-    updated <- set_assigned_to(updated, assigned_identities)
-  }
-  changes <- list()
-  record_path <- ACTION_PATH(rec$artifact_id)
-  changes[[record_path]] <- record_to_yaml(updated)
-  if (action == "approved") {
-    if (is.null(approved_content)) {
-      stop("performing 'approved' requires approved_content")
-    }
-    if (is.null(split_frontmatter(approved_content)$front)) {
-      stop("approved content must carry YAML front matter (structural gate, P2.5)")
-    }
-    changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
-  }
-  if (action == "saved" && !is.null(body)) {
-    changes[[BODY_PATH(rec$artifact_id)]] <- body
-  }
-  report <- adapter_write_with_recovery(
-    adapter,
-    changes = changes,
-    expected_ref_sha = branch_head_sha,
-    expected_blob_shas = setNames(list(blob_sha), record_path),
-    message = sprintf(
-      "review action '%s' by %s on %s",
-      action,
-      actor,
-      rec$artifact_id
-    ),
-    reject_unrelated_head = TRUE
-  )
-  list(report = report, record = updated)
+  stop("legacy calibration records are read-only")
 }

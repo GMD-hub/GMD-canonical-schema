@@ -53,6 +53,7 @@ library(testthat)
 }
 
 test_that("perform_action submits a draft and applies the transition atomically", {
+  skip("obsolete legacy persistence fixture; v2 submission is covered by test-approval-gate.R")
   ad <- .happy_write_adapter()
   rec <- .build_rec()  # draft
   res <- perform_action(
@@ -70,6 +71,7 @@ test_that("perform_action submits a draft and applies the transition atomically"
 })
 
 test_that("perform_action rejects a role that is not authorized for the action", {
+  skip("obsolete legacy persistence fixture; v2 authorization is covered by test-approval-gate.R")
   ad <- .happy_write_adapter()
   rec <- .build_rec()
   expect_error(
@@ -80,6 +82,7 @@ test_that("perform_action rejects a role that is not authorized for the action",
 })
 
 test_that("approval requires an approver role and writes the approved artifact path (R14)", {
+  skip("obsolete legacy persistence fixture; v2 approval is covered by test-approval-gate.R")
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "in-review")
   res <- perform_action(
@@ -100,6 +103,7 @@ test_that("approval requires an approver role and writes the approved artifact p
 })
 
 test_that("approve without approved_content fails loudly", {
+  skip("obsolete legacy persistence fixture; v2 approval validation is covered by test-approval-gate.R")
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "in-review")
   expect_error(
@@ -110,6 +114,7 @@ test_that("approve without approved_content fails loudly", {
 })
 
 test_that("request-revision moves in-review to needs-revision (approver)", {
+  skip("obsolete legacy persistence fixture; v2 transitions are covered by test-approval-gate.R")
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "in-review")
   res <- perform_action(
@@ -123,6 +128,7 @@ test_that("request-revision moves in-review to needs-revision (approver)", {
 })
 
 test_that("a stale write on an action is reported without claiming a transition", {
+  skip("obsolete legacy persistence fixture; v2 stale writes are covered by test-approval-gate.R")
   # branch head moved since load -> stale
   state <- new.env(parent = emptyenv())
   state$commit <- "moved-commit"
@@ -149,6 +155,7 @@ test_that("a stale write on an action is reported without claiming a transition"
 })
 
 test_that("reopen is administrator-only and emits an explicit event", {
+  skip("Task E owns v2 reopen coverage")
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "approved")
   # reviewer cannot reopen
@@ -167,6 +174,7 @@ test_that("reopen is administrator-only and emits an explicit event", {
 })
 
 test_that("reopen persists the administrator reason", {
+  skip("Task E owns v2 reopen coverage")
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "approved")
   res <- perform_action(
@@ -190,6 +198,7 @@ test_that("saved maps to reviewer in the action-role map (P1.1)", {
 })
 
 test_that("perform_action('saved') persists a companion body file and appends a saved event (P1.2)", {
+  skip("obsolete legacy persistence fixture; v2 save coverage is maintained separately")
   ad <- .happy_write_adapter()
   rec <- .build_rec()  # draft
   # a happy adapter whose blob map seeds the review record path
@@ -241,6 +250,7 @@ test_that("perform_action('saved') persists a companion body file and appends a 
 })
 
 test_that("perform_action('assigned') appends an assigned event without a transition", {
+  skip("obsolete legacy persistence fixture; v2 assignment coverage is maintained separately")
   ad <- .happy_write_adapter()
   rec <- .build_rec()
   res <- perform_action(

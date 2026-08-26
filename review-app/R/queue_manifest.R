@@ -333,37 +333,44 @@ queue_open_blockers <- function(manifest, artifact_id = NULL) {
   }, blockers)
 }
 
-assessment_approval_complete <- function(assessment) {
+assessment_approval_complete <- function(assessment, record = NULL) {
   if (is.null(assessment)) return(FALSE)
   tryCatch({
     validate_assessment(assessment)
-    identical(assessment$layer1$status, "pass") &&
-      length(assessment$layer2) > 0L &&
+    identical(assessment$layer1$result, "pass") &&
+      !is.null(assessment$binding) &&
+      (is.null(record) || assessment_binding_matches(assessment, record)) &&
+      identical(
+        vapply(assessment$layer2, function(rating) rating$section, character(1)),
+        ASSESSMENT_SECTIONS
+      ) &&
       all(vapply(assessment$layer2, function(rating) {
         identical(rating$rating, "pass") ||
           (identical(rating$rating, "revise") &&
-             .is_scalar_character(rating$notes))
+             .is_scalar_character(rating$note))
       }, logical(1))) &&
-      !any(vapply(assessment$content_errors, function(error) {
-        identical(error$status, "open") &&
+      !is.null(assessment$content_errors) &&
+      !any(vapply(assessment$content_errors$items, function(error) {
+        error$status %in% c("open", "escalated") &&
           error$severity %in% c("block", "major")
-      }, logical(1))) &&
-      identical(assessment$agent_review$status, "pass")
+      }, logical(1)))
   }, error = function(error) FALSE)
 }
 
 queue_approval_eligible <- function(manifest, record) {
-  validate_queue_manifest(manifest)
-  validate_review_record_v2(record)
-  dependencies <- c(
-    manifest$source_manifest$status,
-    manifest$inventory$status,
-    manifest$agent_review$status
-  )
-  identical(manifest$approval_mode, "enabled") &&
-    all(dependencies %in% c("available", "verified")) &&
-    !length(queue_open_blockers(manifest, record$artifact_id)) &&
-    assessment_approval_complete(record$assessment)
+  tryCatch({
+    validate_queue_manifest(manifest)
+    validate_review_record_v2(record)
+    dependencies <- c(
+      manifest$source_manifest$status,
+      manifest$inventory$status,
+      manifest$agent_review$status
+    )
+    identical(manifest$approval_mode, "enabled") &&
+      all(dependencies %in% c("available", "verified")) &&
+      !length(queue_open_blockers(manifest, record$artifact_id)) &&
+      assessment_approval_complete(record$assessment, record)
+  }, error = function(error) FALSE)
 }
 
 index_row_columns <- function() {

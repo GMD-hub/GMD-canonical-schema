@@ -368,6 +368,20 @@
           "plan": null
         }
       ]
+    },
+    {
+      "id": "release-b-review-queue",
+      "title": "Enable Release B Review Queue",
+      "objective": "Deliver fail-closed Release B review-queue controls and evidence gates without enabling production approvals until all governed blockers are resolved.",
+      "status": "planned",
+      "features": [
+        {
+          "id": "implement-human-review-rubric-gate",
+          "title": "Implement structured human assessment and the server-side approval rubric gate",
+          "status": "planned",
+          "plan": ".cg-docs/plans/2026-08-25-human-review-rubric-approval-gate.md"
+        }
+      ]
     }
   ]
 }
