@@ -1,7 +1,6 @@
 """Tests for the extraction orchestrator — Phase 4 Step 9."""
 
 from pathlib import Path
-
 import pytest
 
 from extraction_pipeline.orchestrator import initialize_run, run_item_pipeline

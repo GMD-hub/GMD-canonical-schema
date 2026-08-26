@@ -26,6 +26,12 @@
           "plan": ".cg-docs/plans/2026-08-03-extract-universal-non-welfare-schema.md"
         },
         {
+          "id": "lock-extraction-source-resolution",
+          "title": "Lock extraction source resolution and manifest identity",
+          "status": "active",
+          "plan": ".cg-docs/plans/2026-08-25-lock-extraction-source-resolution.md"
+        },
+        {
           "id": "build-extraction-system",
           "title": "Build extraction agents, skills, and Python orchestration",
           "status": "done",

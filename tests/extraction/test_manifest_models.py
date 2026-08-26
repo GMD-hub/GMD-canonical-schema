@@ -1,232 +1,121 @@
-"""Tests for manifest models — Phase 2 Step 3."""
+"""Tests for fail-closed extraction manifest models."""
+
+import copy
 
 import pytest
+from pydantic import ValidationError
 
 from schema.extraction.manifest import (
     GovernanceRefs,
-    OutputConfig,
     ParserContract,
     RepositoryIdentity,
     ResolvedSource,
     SourceFileEntry,
     SourceManifest,
 )
-from schema.extraction.run import ContentRunManifest, RunLedgerEvent
 
 
-class TestRepositoryIdentity:
-    def test_valid_https_url(self) -> None:
-        repo = RepositoryIdentity(
-            url="https://github.com/GMD-hub/GMD-guidelines",
-            commit_sha="d46dc03d253764ad7bdef53f625d54fd2a0a9ea1",
-        )
-        assert repo.url == "https://github.com/GMD-hub/GMD-guidelines"
-
-    def test_rejects_non_https_url(self) -> None:
-        with pytest.raises(ValueError, match="HTTPS"):
-            RepositoryIdentity(
-                url="http://github.com/GMD-hub/repo",
-                commit_sha="d46dc03d253764ad7bdef53f625d54fd2a0a9ea1",
-            )
-
-    def test_rejects_non_40_char_sha(self) -> None:
-        with pytest.raises(ValueError, match="40-character"):
-            RepositoryIdentity(
-                url="https://github.com/GMD-hub/repo",
-                commit_sha="abc123",
-            )
-
-    def test_normalizes_sha_to_lowercase(self) -> None:
-        repo = RepositoryIdentity(
-            url="https://github.com/GMD-hub/repo",
-            commit_sha="D46DC03D253764AD7BDEF53F625D54FD2A0A9EA1",
-        )
-        assert repo.commit_sha == "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1"
+DIGEST = "a" * 64
+COMMIT = "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1"
+URL = "https://github.com/GMD-hub/GMD-guidelines"
 
 
-class TestSourceFileEntry:
-    def test_valid_entry(self) -> None:
-        entry = SourceFileEntry(
-            path="chapter2-IDN.qmd",
-            scope="included",
-            sha256=None,
-        )
-        assert entry.path == "chapter2-IDN.qmd"
-        assert entry.scope == "included"
-
-    def test_rejects_extra_fields(self) -> None:
-        with pytest.raises(ValueError):
-            SourceFileEntry(
-                path="x.qmd",
-                scope="included",
-                bonus_field="nope",
-            )
-
-    def test_valid_scopes(self) -> None:
-        for scope in ("included", "supporting", "welfare-excluded"):
-            entry = SourceFileEntry(path="x.qmd", scope=scope)
-            assert entry.scope == scope
-
-    def test_rejects_invalid_scope(self) -> None:
-        with pytest.raises(ValueError):
-            SourceFileEntry(path="x.qmd", scope="invalid")
+def manifest_data() -> dict:
+    return {
+        "manifest_version": "1.0",
+        "repository": {"url": URL, "commit_sha": COMMIT},
+        "source_files": [{"path": "chapters/chapter2-IDN.qmd", "scope": "included", "sha256": DIGEST}],
+        "supporting_files": [{"path": "docs/GMD_household_survey_harmonization.md", "scope": "supporting", "sha256": "b" * 64}],
+        "governance": {
+            "module_registry_version": "v1",
+            "field_classification_version": "v1",
+            "schema_version": "0.1",
+            "gmd_version": "3.0",
+        },
+        "parser_contract": {
+            "tool": "pandoc",
+            "version": "3.1.12",
+            "installation_method": "pandoc/actions/setup@commit",
+            "reader": "markdown",
+            "writer": "json",
+            "normalization_version": "1.0",
+        },
+        "output": {"root": "extraction/20_drafts/", "allowlist": ["extraction/20_drafts/runs/"]},
+    }
 
 
-class TestParserContract:
-    def test_valid_contract(self) -> None:
-        contract = ParserContract(
-            tool="pandoc",
-            version="3.1.12",
-            reader="markdown+pipe_tables",
-            writer="json",
-            normalization_version="1.0",
-        )
-        assert contract.tool == "pandoc"
-
-    def test_rejects_extra_fields(self) -> None:
-        with pytest.raises(ValueError):
-            ParserContract(
-                tool="pandoc",
-                version="3.1",
-                reader="markdown",
-                writer="json",
-                normalization_version="1.0",
-                extra=42,
-            )
+@pytest.mark.parametrize("url", ["http://github.com/GMD-hub/GMD-guidelines", URL + "/", URL + ".git", "https://example.com/repo"])
+def test_repository_rejects_url_variants(url: str) -> None:
+    with pytest.raises(ValidationError, match="governed GMD-guidelines URL"):
+        RepositoryIdentity(url=url, commit_sha=COMMIT)
 
 
-class TestOutputConfig:
-    def test_valid_config(self) -> None:
-        config = OutputConfig(
-            root="extraction/20_drafts/runs/",
-            allowlist=["extraction/20_drafts/runs/"],
-        )
-        assert config.root.startswith("extraction/20_drafts/")
+@pytest.mark.parametrize("commit", [None, "a" * 39, "a" * 41, "g" * 40, "A" * 40, "main"])
+def test_repository_rejects_malformed_commit(commit: object) -> None:
+    with pytest.raises(ValidationError, match="commit_sha"):
+        RepositoryIdentity(url=URL, commit_sha=commit)
 
 
-class TestGovernanceRefs:
-    def test_valid_refs(self) -> None:
-        refs = GovernanceRefs(
-            module_registry_version="v1",
-            field_classification_version="v1",
-            schema_version="0.1",
-            gmd_version="1.0",
-        )
-        assert refs.schema_version == "0.1"
+@pytest.mark.parametrize("digest", [None, "a" * 63, "a" * 65, "g" * 64, "A" * 64])
+def test_source_entry_rejects_unpinned_or_malformed_hash(digest: object) -> None:
+    with pytest.raises(ValidationError, match="sha256"):
+        SourceFileEntry(path="chapters/chapter2-IDN.qmd", scope="included", sha256=digest)
 
 
-class TestSourceManifest:
-    def test_build_from_yaml(self) -> None:
-        data = {
-            "manifest_version": "1.0",
-            "repository": {
-                "url": "https://github.com/GMD-hub/GMD-guidelines",
-                "commit_sha": "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1",
-            },
-            "source_files": [
-                {"path": "chapter2-IDN.qmd", "scope": "included"},
-            ],
-            "supporting_files": [],
-            "governance": {
-                "module_registry_version": "v1",
-                "field_classification_version": "v1",
-                "schema_version": "0.1",
-                "gmd_version": "1.0",
-            },
-            "parser_contract": {
-                "tool": "pandoc",
-                "version": "3.1.12",
-                "reader": "markdown+pipe_tables+grid_tables+footnotes",
-                "writer": "json",
-                "normalization_version": "1.0",
-            },
-            "output": {
-                "root": "extraction/20_drafts/runs/",
-                "allowlist": ["extraction/20_drafts/runs/"],
-            },
-        }
-        manifest = SourceManifest(**data)
-        assert manifest.manifest_version == "1.0"
-        assert manifest.repository.commit_sha == "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1"
-
-    def test_forbids_extra_keys(self) -> None:
-        data = {
-            "manifest_version": "1.0",
-            "repository": {
-                "url": "https://github.com/GMD-hub/repo",
-                "commit_sha": "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1",
-            },
-            "source_files": [],
-            "supporting_files": [],
-            "governance": {
-                "module_registry_version": "v1",
-                "field_classification_version": "v1",
-                "schema_version": "0.1",
-                "gmd_version": "1.0",
-            },
-            "parser_contract": {
-                "tool": "pandoc",
-                "version": "3.1",
-                "reader": "markdown",
-                "writer": "json",
-                "normalization_version": "1.0",
-            },
-            "output": {"root": "e/", "allowlist": ["e/"]},
-            "extra_key": "should be forbidden",
-        }
-        with pytest.raises(ValueError):
-            SourceManifest(**data)
+def test_source_entry_requires_hash() -> None:
+    with pytest.raises(ValidationError, match="sha256"):
+        SourceFileEntry(path="x", scope="included")
 
 
-class TestResolvedSource:
-    def _base_data(self) -> dict:
-        return {
-            "manifest_version": "1.0",
-            "repository": {
-                "url": "https://github.com/GMD-hub/repo",
-                "commit_sha": "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1",
-            },
-            "resolved_at": "2026-08-03T00:00:00Z",
-            "source_files": [
-                {"path": "chapter2-IDN.qmd", "scope": "included"},
-            ],
-            "verified_sha256": True,
-        }
-
-    def test_valid_resolved_source(self) -> None:
-        rs = ResolvedSource(**self._base_data())
-        assert rs.verified_sha256 is True
-        assert rs.manifest_version == "1.0"
-
-    def test_forbids_extra(self) -> None:
-        data = self._base_data()
-        data["extra"] = "no"
-        with pytest.raises(ValueError):
-            ResolvedSource(**data)
+@pytest.mark.parametrize("field", ["version", "installation_method"])
+@pytest.mark.parametrize("value", ["", "  "])
+def test_parser_rejects_blank_identity(field: str, value: str) -> None:
+    data = manifest_data()["parser_contract"]
+    data[field] = value
+    with pytest.raises(ValidationError, match="nonblank"):
+        ParserContract.model_validate(data)
 
 
-class TestRunModels:
-    def test_content_run_manifest_forbids_extra(self) -> None:
-        with pytest.raises(ValueError):
-            ContentRunManifest(
-                execution_id="exec-1",
-                content_run_id="run-1",
-                manifest_version="1.0",
-                source_commit_sha="d46dc03d253764ad7bdef53f625d54fd2a0a9ea1",
-                parser_version="3.1.12",
-                normalization_version="1.0",
-                governance_versions={},
-                agent_response_hashes=[],
-                finalized_at="2026-08-03T00:00:00Z",
-                extra="no",
-            )
+def test_parser_rejects_alternate_tool() -> None:
+    data = manifest_data()["parser_contract"]
+    data["tool"] = "quarto"
+    with pytest.raises(ValidationError) as caught:
+        ParserContract.model_validate(data)
+    assert caught.value.errors()[0]["loc"] == ("tool",)
 
-    def test_run_ledger_event_forbids_extra(self) -> None:
-        with pytest.raises(ValueError):
-            RunLedgerEvent(
-                execution_id="exec-1",
-                timestamp="2026-08-03T00:00:00Z",
-                event_type="start",
-                details="run started",
-                extra="no",
-            )
+
+def test_parser_requires_installation_method() -> None:
+    data = manifest_data()["parser_contract"]
+    data.pop("installation_method")
+    with pytest.raises(ValidationError) as caught:
+        ParserContract.model_validate(data)
+    assert caught.value.errors()[0]["loc"] == ("installation_method",)
+
+
+@pytest.mark.parametrize("field", ["module_registry_version", "field_classification_version", "schema_version", "gmd_version"])
+def test_governance_refs_reject_blank_values(field: str) -> None:
+    data = manifest_data()["governance"]
+    data[field] = " "
+    with pytest.raises(ValidationError, match="nonblank"):
+        GovernanceRefs.model_validate(data)
+
+
+def test_complete_manifest_and_resolved_source_round_trip() -> None:
+    manifest = SourceManifest.model_validate(manifest_data())
+    resolved = ResolvedSource(
+        manifest_version=manifest.manifest_version,
+        repository=manifest.repository,
+        resolved_at="2026-08-26T12:00:00Z",
+        source_files=manifest.source_files,
+        supporting_files=manifest.supporting_files,
+        verified_sha256=True,
+    )
+    assert resolved.source_files[0].scope == "included"
+    assert resolved.supporting_files[0].sha256 == "b" * 64
+
+
+def test_manifest_forbids_extra_fields() -> None:
+    data = copy.deepcopy(manifest_data())
+    data["extra"] = True
+    with pytest.raises(ValidationError, match="extra"):
+        SourceManifest.model_validate(data)

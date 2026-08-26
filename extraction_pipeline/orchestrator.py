@@ -39,6 +39,9 @@ def run_item_pipeline(
 ) -> ItemState:
     """Drive a single inventory item through the extraction state machine.
 
+    Operational callers must pass the supported ``source_gate`` command before
+    invoking item orchestration; direct helper calls are library/test APIs only.
+
     This is a thin sequencer — it transitions state, runs gates, and writes
     output. Domain logic (evidence collection, candidate drafting, critic
     review) is performed by the caller and passed in as inputs.
@@ -56,7 +59,7 @@ def run_item_pipeline(
     Returns:
         Updated ItemState with terminal state (CANONICAL or BLOCKED).
     """
-    # Phase: source already verified by caller
+    # Phase: source already verified by the mandatory source gate.
     item.state = transition(item.state, ExtractionState.SOURCE_VERIFIED)
 
     # Phase: evidence collected
