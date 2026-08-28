@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-washmach
+source_artifact_path: extraction/20_drafts/dwl/VAR-washmach.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: b6aa2babda8d23b5a506c60970af9de63336989c
+source_content_sha256: e5e60d82c8e4d4423bef3c0cac686cdb318c8c9c6988539f485dc77ae996417d
+enrolled_body_sha256: 8083cd34304aba1f6c9b5d61365b012893975e567003051be25cdbc779ea02fb
+current_content_sha256: 8083cd34304aba1f6c9b5d61365b012893975e567003051be25cdbc779ea02fb
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

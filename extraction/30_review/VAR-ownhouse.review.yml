@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-ownhouse
+source_artifact_path: extraction/20_drafts/dwl/VAR-ownhouse.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 362dc339d09be5e4e9be36ad646f466bdb622b46
+source_content_sha256: a825890cf230d68660d9163fb7bd0cafb0eb3231f798418f8a4d923c3916687a
+enrolled_body_sha256: 340e2453b41f7b02c90a6bc18c60503885aafe24ab602acb1c3f73e6a46c6b3a
+current_content_sha256: 340e2453b41f7b02c90a6bc18c60503885aafe24ab602acb1c3f73e6a46c6b3a
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

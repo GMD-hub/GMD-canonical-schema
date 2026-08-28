@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-school
+source_artifact_path: extraction/20_drafts/dem/VAR-school.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: f11afbf0a56121f3c1c7f1e819b3f57ac659b334
+source_content_sha256: 5f39358eee73339b8e714b9d191ea133e5d5b18fa9b6186022819529f41d6d5b
+enrolled_body_sha256: 5617f217a6dd9236a86cdf81e329712247432344355404d943f47903835e5c19
+current_content_sha256: 5617f217a6dd9236a86cdf81e329712247432344355404d943f47903835e5c19
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

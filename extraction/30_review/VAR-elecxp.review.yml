@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-elecxp
+source_artifact_path: extraction/20_drafts/utl/VAR-elecxp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3fa8ebc4d42cbbbcc5731a6ec3b7938dfa9e6341
+source_content_sha256: 3328872a0069e4d4a81ba3c2883c103f7fe6645ee124d83845b1c78df013344f
+enrolled_body_sha256: b45351143dfbc70a65e626ad7bf5c6d65dac9029fd70283cc626bc4c2107f148
+current_content_sha256: b45351143dfbc70a65e626ad7bf5c6d65dac9029fd70283cc626bc4c2107f148
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

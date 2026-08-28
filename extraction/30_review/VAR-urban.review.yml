@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-urban
+source_artifact_path: extraction/20_drafts/geo/VAR-urban.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c48f2f6a9626dcdbd76be269f5e4ecb67857fcd7
+source_content_sha256: 0a43593e19ac9819499506c65a5981c392f1039bfb6bbb9bc7d97e36a1034825
+enrolled_body_sha256: 901a5e1f9bcf2c87722464679f63d5f77f2f4461a8b5e9117ce066d5cd2cc4fa
+current_content_sha256: 901a5e1f9bcf2c87722464679f63d5f77f2f4461a8b5e9117ce066d5cd2cc4fa
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

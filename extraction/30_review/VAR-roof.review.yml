@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-roof
+source_artifact_path: extraction/20_drafts/dwl/VAR-roof.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: be3385f5e2d670142d77863e1d4b63aea48173ae
+source_content_sha256: 646ae688598b83a4fa95ff027119061b6a963e484a62129f90dbe8682be2e510
+enrolled_body_sha256: 14465fa8c99f00619cb54dd35ea5ccadd070210bfbb7d162ad95dfb301a6fc08
+current_content_sha256: 14465fa8c99f00619cb54dd35ea5ccadd070210bfbb7d162ad95dfb301a6fc08
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

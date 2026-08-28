@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-gasolineexp
+source_artifact_path: extraction/20_drafts/utl/VAR-gasolineexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 714bea034f4b158fc308f4650e519f89494d3476
+source_content_sha256: 04edb8e2011c8bef3e0a7faf40ccd8170fed34024b3e33f8b0f6dfa76ff79e4c
+enrolled_body_sha256: aa34ae4bb32fd30d1e18a6e275833af1ff6eccd2113df87a5e2fa5544f0eb8a5
+current_content_sha256: aa34ae4bb32fd30d1e18a6e275833af1ff6eccd2113df87a5e2fa5544f0eb8a5
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-industrycat4year
+source_artifact_path: extraction/20_drafts/lbr/VAR-industrycat4year.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 4c96945cd8ac28e56d0e36910ac9b1c3412abf6b
+source_content_sha256: d8a059a82371d0261b1e16c32547025759eab0c433101a4b5fc77369f99c84e3
+enrolled_body_sha256: 8c715524fe0ba86560d3c1e284b8f1e33784905524f123a0bf504c9b309e1c90
+current_content_sha256: 8c715524fe0ba86560d3c1e284b8f1e33784905524f123a0bf504c9b309e1c90
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

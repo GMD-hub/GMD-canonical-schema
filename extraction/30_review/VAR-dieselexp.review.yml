@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-dieselexp
+source_artifact_path: extraction/20_drafts/utl/VAR-dieselexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: bcb04fc119945f15fab28681fb5e0f953934f98d
+source_content_sha256: ab5ae9aa539b0897a88e71e37ce91d2e8e18b4a1bb7bad1d8d7387706fdae08b
+enrolled_body_sha256: 8f00e490858181cb49aded7b7083cfc37a2e653abaf6fd586ff57e97b38185bb
+current_content_sha256: 8f00e490858181cb49aded7b7083cfc37a2e653abaf6fd586ff57e97b38185bb
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

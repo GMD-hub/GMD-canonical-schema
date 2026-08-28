@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-firmsizeu2year
+source_artifact_path: extraction/20_drafts/lbr/VAR-firmsizeu2year.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 459c2231928f78ac030996fa14782383526fa110
+source_content_sha256: e3af0d213fd482ff8abe2420f8c77c5596f007a42866694c1fd632d7b9d7246f
+enrolled_body_sha256: fe67f71c82e02d812ee0c53dabe1aee00d9c19cc8024b2519b0973b367e1b0c2
+current_content_sha256: fe67f71c82e02d812ee0c53dabe1aee00d9c19cc8024b2519b0973b367e1b0c2
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

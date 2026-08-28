@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-healthins
+source_artifact_path: extraction/20_drafts/lbr/VAR-healthins.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c7f1cfae0dca7fc15944b9241f896e72e5921b05
+source_content_sha256: 379576e40c89603232dfe9184171211e0920567b89bcb4f4cbbcc5d08e719edb
+enrolled_body_sha256: 0c55a60feec383b5c32600d2369b3423dd58448fdc7af726645e71a49bf44b1f
+current_content_sha256: 0c55a60feec383b5c32600d2369b3423dd58448fdc7af726645e71a49bf44b1f
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

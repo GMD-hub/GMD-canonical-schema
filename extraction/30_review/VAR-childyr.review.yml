@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-childyr
+source_artifact_path: extraction/20_drafts/dem/VAR-childyr.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 2bc41273b030e1b903502f40cfdfb950cf8b639d
+source_content_sha256: 175ac0604011b921f85e66887dd7574a4b5ecc5bb33464dc30efb81eb8f4e5e8
+enrolled_body_sha256: 455effba7172f9a57e586c651dded22b662373549f1ea89ae07f7576ebd5e961
+current_content_sha256: 455effba7172f9a57e586c651dded22b662373549f1ea89ae07f7576ebd5e961
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

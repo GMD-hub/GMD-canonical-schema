@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-unemplduruyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-unemplduruyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 9985d797399d3dd5bb9662543d264cc5b713d126
+source_content_sha256: 4eac46b5d6a68116771f0def59e473c7938b9d8178b667e68ca8059850da55f1
+enrolled_body_sha256: 01d49f7609c5cda5520d5c05dd0b7ad65024803c699c3ba9dc25ac55953a9cd7
+current_content_sha256: 01d49f7609c5cda5520d5c05dd0b7ad65024803c699c3ba9dc25ac55953a9cd7
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

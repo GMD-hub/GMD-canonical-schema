@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-everattend
+source_artifact_path: extraction/20_drafts/dem/VAR-everattend.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 81346e2ac9f82fa5184ed94d04b783d80165aa8f
+source_content_sha256: 98d8959703f452c51e9c6c9c72866227860dc2018fe1d12354b95d12b6ad9a9b
+enrolled_body_sha256: e1fa77b215814c53eb3a4bcca67fc00c8d7b55c136ad970d5189227f0baddee5
+current_content_sha256: e1fa77b215814c53eb3a4bcca67fc00c8d7b55c136ad970d5189227f0baddee5
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

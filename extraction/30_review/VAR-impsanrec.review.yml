@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-impsanrec
+source_artifact_path: extraction/20_drafts/utl/VAR-impsanrec.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 019aaac3cbebd3e8d69541072101324acedc023c
+source_content_sha256: 4b2759d59110589039d2c54274e4cfdd1ce11f11ce3a66f8e94569efba91c4bc
+enrolled_body_sha256: 80d0722da5ed27a65ca88b1bb92957ee761e9a7e4dd303f7765b8d7076eed730
+current_content_sha256: 80d0722da5ed27a65ca88b1bb92957ee761e9a7e4dd303f7765b8d7076eed730
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

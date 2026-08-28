@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-utlexp
+source_artifact_path: extraction/20_drafts/utl/VAR-utlexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3a2b4ad977a7abd6d61b87e26e497c1cfade9ea4
+source_content_sha256: b98a096087d5cc40f11b2241d3aa3aa24ddff69c8216a6aba37fcf330ee4a8ab
+enrolled_body_sha256: 6a392c685a64ee5c4c84c832980ac83f9bcfe68e415a740f43d58c9e59842b25
+current_content_sha256: 6a392c685a64ee5c4c84c832980ac83f9bcfe68e415a740f43d58c9e59842b25
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

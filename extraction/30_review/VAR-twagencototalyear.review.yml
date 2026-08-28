@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-twagencototalyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-twagencototalyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 44dc2eefc3dee4df7a330c97d9094f204d62f4ae
+source_content_sha256: 5ecae9616a47a04588aa14f0d7017aee1057ebe4531c76c8870c2ca2714bccad
+enrolled_body_sha256: e971af7fc5913357bd792666ee40ae5d6ba357ac57e27e93874a975e9c39be59
+current_content_sha256: e971af7fc5913357bd792666ee40ae5d6ba357ac57e27e93874a975e9c39be59
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

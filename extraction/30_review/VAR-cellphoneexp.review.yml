@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-cellphoneexp
+source_artifact_path: extraction/20_drafts/utl/VAR-cellphoneexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 577b53e3c49437a3e78a71d5706525da43d987a3
+source_content_sha256: 1b4aff442a9c4c00c91fee88d0a57c2557a5b68bbd76f13ee26b80a2b2dc768f
+enrolled_body_sha256: 01979d51ac0e1934bb67d3e11d854ec1741ff6683f47efd9d5250fbed5a7d221
+current_content_sha256: 01979d51ac0e1934bb67d3e11d854ec1741ff6683f47efd9d5250fbed5a7d221
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

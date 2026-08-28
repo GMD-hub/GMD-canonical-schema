@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-internet
+source_artifact_path: extraction/20_drafts/dwl/VAR-internet.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 8c7c6e8493cb753a4fe903325731c9b4f2cd2cd5
+source_content_sha256: f58e42d86a6786b538af11d36395efb9f51bc733336d941ddbaad8cf1197a54e
+enrolled_body_sha256: 247a9dc5a4395bb37e6c4a1809a276bd72ee987d6ccd55da5b08b8f0374ffd2c
+current_content_sha256: 247a9dc5a4395bb37e6c4a1809a276bd72ee987d6ccd55da5b08b8f0374ffd2c
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-purchagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-purchagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 67bb6e008bfe01e9ecd11170ad0ec76b91af3f5f
+source_content_sha256: e61aa465f5f907d736d42422a6ed174629c91cf8aad65d9eb3de30fbbdd0a3a6
+enrolled_body_sha256: b1c6d77afb1ded016748c057d4b49706cc9a1a697764d04ccbfe96bde5544a0c
+current_content_sha256: b1c6d77afb1ded016748c057d4b49706cc9a1a697764d04ccbfe96bde5544a0c
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

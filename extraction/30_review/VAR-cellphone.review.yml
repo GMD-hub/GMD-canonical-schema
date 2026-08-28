@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-cellphone
+source_artifact_path: extraction/20_drafts/dwl/VAR-cellphone.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 67379ead625b0b73bba017209629e579c6cdc911
+source_content_sha256: e95799929b9fa521ae1495480f38d006c401ad0e37173faf4f293b9140635cd9
+enrolled_body_sha256: be46e9f3bfa6e36f8e65ea587c88ab08b61ab1227c92335252bd7b05cbc05275
+current_content_sha256: be46e9f3bfa6e36f8e65ea587c88ab08b61ab1227c92335252bd7b05cbc05275
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

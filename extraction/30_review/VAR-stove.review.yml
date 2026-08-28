@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-stove
+source_artifact_path: extraction/20_drafts/dwl/VAR-stove.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 310cc0f58844dead4ce4f645a3780cc40ce93eb8
+source_content_sha256: 8e7edcef77693f2fe79dc61285d6b066d61ea0a0071856a5b8b6591d9df7f5d9
+enrolled_body_sha256: bb79ea4bd7f982b315b43d245f3c8a10ba18a3b70555a88b0d82d87d72a3dfd3
+current_content_sha256: bb79ea4bd7f982b315b43d245f3c8a10ba18a3b70555a88b0d82d87d72a3dfd3
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

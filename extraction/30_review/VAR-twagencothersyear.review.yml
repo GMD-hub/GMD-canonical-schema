@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-twagencothersyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-twagencothersyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: edce8d559c30afd9ddafefddb23118ea15a18994
+source_content_sha256: d0adc2d5947096c9d5054616e4ab89585216a584a90a0bfee3e6527919c7d613
+enrolled_body_sha256: 00c96fce8d221ea7f59bcc78937340ce2ff34992fa36ab55ca619c5fcf973997
+current_content_sha256: 00c96fce8d221ea7f59bcc78937340ce2ff34992fa36ab55ca619c5fcf973997
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

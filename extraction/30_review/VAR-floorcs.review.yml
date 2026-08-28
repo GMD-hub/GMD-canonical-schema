@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-floorcs
+source_artifact_path: extraction/20_drafts/dwl/VAR-floorcs.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: abfafe3454c03e24c325acbc39520bc4fbfc6358
+source_content_sha256: 24501e7b050a162300f9ca09f9ccdc37675f78b06f7d206f0765817ccf3e66e1
+enrolled_body_sha256: 69b3ba6e971454bbffedf490866ef5287c00be7f49e55dc7f835ee436ad8238b
+current_content_sha256: 69b3ba6e971454bbffedf490866ef5287c00be7f49e55dc7f835ee436ad8238b
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

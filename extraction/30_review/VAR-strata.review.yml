@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-strata
+source_artifact_path: extraction/20_drafts/geo/VAR-strata.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 894388381b7114baf6ddcc1cf11dfc99f948038d
+source_content_sha256: 295b78712c7190e98cad7c725831e7ab64304cee9202e6fab2a622634aad6865
+enrolled_body_sha256: 4bd9ecc7f7ace211e72a1685beb233646f39f07304d9cc74f8ec0db333f4da82
+current_content_sha256: 4bd9ecc7f7ace211e72a1685beb233646f39f07304d9cc74f8ec0db333f4da82
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

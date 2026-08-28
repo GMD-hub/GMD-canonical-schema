@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-unitwage
+source_artifact_path: extraction/20_drafts/lbr/VAR-unitwage.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: eb6a75df3dcb875021c9a00172505f3f5adc2979
+source_content_sha256: 2862272c8f494973cef7e2811d3dc28784024f005f96b2b615b86f93c9af1525
+enrolled_body_sha256: 6455d0e9a06b1a5ebe98f2597f15ca5d2c0e11d2319a3e38851f738cb75c1d0b
+current_content_sha256: 6455d0e9a06b1a5ebe98f2597f15ca5d2c0e11d2319a3e38851f738cb75c1d0b
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

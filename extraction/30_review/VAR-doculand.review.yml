@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-doculand
+source_artifact_path: extraction/20_drafts/dwl/VAR-doculand.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: bf2f37dbefe72ccd04389441e6952afe64e1b078
+source_content_sha256: 161016eb292c0b630c577255c023d9b389bd0604f6cbc16f2033d92e905a19ae
+enrolled_body_sha256: 88e267beb53d43994b08c67fa9907795ca91f8c38156bc40ea36c065c7b0e0b0
+current_content_sha256: 88e267beb53d43994b08c67fa9907795ca91f8c38156bc40ea36c065c7b0e0b0
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

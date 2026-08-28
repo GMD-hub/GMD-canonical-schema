@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-marital
+source_artifact_path: extraction/20_drafts/dem/VAR-marital.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 147f42f088b4e73e1b5afecbfdc0f04f5242319b
+source_content_sha256: b3a4e629fc50f7263207a86e853d1472625bfb0054f89200380ba5547719fd9c
+enrolled_body_sha256: e89e001c953ba9251f3af5d40ec2caab0b4c6aa19e425d4df7e5a9432648c0d3
+current_content_sha256: e89e001c953ba9251f3af5d40ec2caab0b4c6aa19e425d4df7e5a9432648c0d3
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

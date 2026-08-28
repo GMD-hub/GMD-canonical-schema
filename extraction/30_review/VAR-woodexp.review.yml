@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-woodexp
+source_artifact_path: extraction/20_drafts/utl/VAR-woodexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: deaf2092753dc9d02f954eb2ea090dd5dd043ed5
+source_content_sha256: 1db7b343b2b2fa8b3c6578027f06e7ffbb8b6ff1bf6d090f8293a1a175019008
+enrolled_body_sha256: 37c81107e2dec96aa122f20db12960c2ea6f4483d248bc73ac561f2040226340
+current_content_sha256: 37c81107e2dec96aa122f20db12960c2ea6f4483d248bc73ac561f2040226340
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

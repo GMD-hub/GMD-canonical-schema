@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-hhid
+source_artifact_path: extraction/20_drafts/idn/VAR-hhid.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 6ff37467d857cb3f84398af4359138e06a0ac135
+source_content_sha256: 59a00ac56be19390ba290337bbe2c34eab5d24f8f46c966ed0e9caebed1ee8c8
+enrolled_body_sha256: 09f03f2764cd37fe96373011de914d0e9a98aed8aaa985b200c729c2ef38a758
+current_content_sha256: 09f03f2764cd37fe96373011de914d0e9a98aed8aaa985b200c729c2ef38a758
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

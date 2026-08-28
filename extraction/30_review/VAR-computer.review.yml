@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-computer
+source_artifact_path: extraction/20_drafts/dwl/VAR-computer.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: bf5366d86c491438ac0daa858c766d802209b3ae
+source_content_sha256: 6f95376cad3c8aa4989bad72ec181ffdd1df108450f0d5e4454eefec00bae23f
+enrolled_body_sha256: 5c4a32e374aa08095e14eb6121ec35650aae5d43e9a3b2929bb15287d42f636a
+current_content_sha256: 5c4a32e374aa08095e14eb6121ec35650aae5d43e9a3b2929bb15287d42f636a
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

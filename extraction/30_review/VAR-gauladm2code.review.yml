@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-gauladm2code
+source_artifact_path: extraction/20_drafts/geo/VAR-gauladm2code.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ccff07e584084fc9ad54e3a19a93a9fe98a4ef9a
+source_content_sha256: 157b09ccca08a3154358ecc96b33c1218eb7adf6540a2b305f54c74e76ce0e65
+enrolled_body_sha256: 014f3cb8a5af213094d31efdc27d363a14a1736eb5e696afa1da501a8f4f193f
+current_content_sha256: 014f3cb8a5af213094d31efdc27d363a14a1736eb5e696afa1da501a8f4f193f
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

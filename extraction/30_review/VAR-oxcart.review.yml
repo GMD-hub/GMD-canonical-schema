@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-oxcart
+source_artifact_path: extraction/20_drafts/dwl/VAR-oxcart.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: b1440ea345927666f615add4c92f52d207bb2c47
+source_content_sha256: 0c536083bd11f42b5d11afcd3caac5b6d0d5fe27afd625a7bbdd6e5a325b5e4a
+enrolled_body_sha256: ffe46ef073e9adbe06cb44734d410923bed4746e69ac15bb582f787b9da5a7bf
+current_content_sha256: ffe46ef073e9adbe06cb44734d410923bed4746e69ac15bb582f787b9da5a7bf
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

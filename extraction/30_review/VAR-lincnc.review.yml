@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-lincnc
+source_artifact_path: extraction/20_drafts/lbr/VAR-lincnc.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ca5c0fc7ce8090c9a6ec034f0e374b1ad5741177
+source_content_sha256: f0d9d87199b9299d408cc43148aa787958fab47072f94d0e00fd96362b418ba8
+enrolled_body_sha256: c893acbc63ce85d3d9f149af92a067da406aec235ab10a0dd666f989ce67a667
+current_content_sha256: c893acbc63ce85d3d9f149af92a067da406aec235ab10a0dd666f989ce67a667
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-occuporigyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-occuporigyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ad2aa6c6448beda47115ec4bb14da96f335070c4
+source_content_sha256: 4079a6db31cd281f1d612694952e31e8e5d748a5793c7d4e831f6911cc950253
+enrolled_body_sha256: 848ebf5c7f5c4fffa093d79d005b171f878d0a1948ec24c237b0452131397066
+current_content_sha256: 848ebf5c7f5c4fffa093d79d005b171f878d0a1948ec24c237b0452131397066
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

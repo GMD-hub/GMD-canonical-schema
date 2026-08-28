@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-union
+source_artifact_path: extraction/20_drafts/lbr/VAR-union.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: f025c3de2ed0196793cfc906455169fb5649d5a5
+source_content_sha256: 006f51d2d0aea66b88b9d380c752840578ce029394e4b8d5490553efd501d97b
+enrolled_body_sha256: 7c23552ee53e2d1136559f0310a630fe654794ffffd2635b8b676701bf62e306
+current_content_sha256: 7c23552ee53e2d1136559f0310a630fe654794ffffd2635b8b676701bf62e306
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

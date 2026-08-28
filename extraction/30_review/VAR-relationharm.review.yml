@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-relationharm
+source_artifact_path: extraction/20_drafts/dem/VAR-relationharm.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 77f81c0966b936c77647528d7b92e71ffdcc208a
+source_content_sha256: 7e51739dd60a439064fbbb2fb893767b9da24485e8310ff3d879ee57d2efcea3
+enrolled_body_sha256: cd367193d75fc4bd1028a059f6685adab6213f4e64aff48fc660d73e6725c2cd
+current_content_sha256: cd367193d75fc4bd1028a059f6685adab6213f4e64aff48fc660d73e6725c2cd
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

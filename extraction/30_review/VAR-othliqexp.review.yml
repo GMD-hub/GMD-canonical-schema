@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-othliqexp
+source_artifact_path: extraction/20_drafts/utl/VAR-othliqexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: d1393a720a4884507bf5f664e26ce61373ba30a0
+source_content_sha256: 38de32cd8986a7ed38e1caaef88729ad367afe2b849d9f6fa5353270fea3a565
+enrolled_body_sha256: 6cf9fa56a97967cfaf81d6d06bb0b745a333edb5770c2de70418da2c3a47cda0
+current_content_sha256: 6cf9fa56a97967cfaf81d6d06bb0b745a333edb5770c2de70418da2c3a47cda0
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

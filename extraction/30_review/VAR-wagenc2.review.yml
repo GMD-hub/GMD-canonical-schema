@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-wagenc2
+source_artifact_path: extraction/20_drafts/lbr/VAR-wagenc2.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 826c9ad57bf883ea5974e9419bbee96841dffb81
+source_content_sha256: f15f6f337bfd8fb010a8c77f41f99ce2a320f1858028111931b411a548aaf9fa
+enrolled_body_sha256: e28500fc7aa92df0bc33d4df64643a36bb6c3b8dd8533cd26b7e80fdd20efdbc
+current_content_sha256: e28500fc7aa92df0bc33d4df64643a36bb6c3b8dd8533cd26b7e80fdd20efdbc
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

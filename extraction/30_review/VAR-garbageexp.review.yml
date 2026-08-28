@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-garbageexp
+source_artifact_path: extraction/20_drafts/utl/VAR-garbageexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: e4d6ff398ce8153efc1ecd7244f14a062f7dd0b9
+source_content_sha256: 60d1d19e5aca95398f3ddee2398e7d6ccebeae2c267bf94cca6dd8244b31c12c
+enrolled_body_sha256: c0d14801ec03447b7a934f0aa821cae118e8de3f699bf70f1ff9b513efa24e25
+current_content_sha256: c0d14801ec03447b7a934f0aa821cae118e8de3f699bf70f1ff9b513efa24e25
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

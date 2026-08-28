@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-kitchen
+source_artifact_path: extraction/20_drafts/dwl/VAR-kitchen.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 52cc8190e5306333c43df1a81e5e12f11f1c7b17
+source_content_sha256: bd73f8886b5723469f9f929251a72f8be63422dd6ce6e5e095e82f760c9dba91
+enrolled_body_sha256: 4af1da04d654a87be4f2f704918024b175fd4cbb65102f8aacbabac8831a2ed7
+current_content_sha256: 4af1da04d654a87be4f2f704918024b175fd4cbb65102f8aacbabac8831a2ed7
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

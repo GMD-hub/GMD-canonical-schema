@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-docuagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-docuagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 0f4d819172640de69ee26617d980f0eb0a623184
+source_content_sha256: 2ab65e2d704e03290326843cbc9853c862f30bedac22ce3d9deed472b56b622b
+enrolled_body_sha256: 09168a40de7bf305aeff457fe82fc85e7bc7849fca2487eab4da1fc5faa7d248
+current_content_sha256: 09168a40de7bf305aeff457fe82fc85e7bc7849fca2487eab4da1fc5faa7d248
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-ewpump
+source_artifact_path: extraction/20_drafts/dwl/VAR-ewpump.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ae84325dcd4cff462b8fba2adbebc55a8778b76a
+source_content_sha256: 86e8f2e7057d8dd699e941c45465d9aabae6e8191c8530b5365300aaede59897
+enrolled_body_sha256: ff7fbd7b3b012fd6ab4ca2c3e09549d9d0747c178e2c7fabc21b76fc3fcd051d
+current_content_sha256: ff7fbd7b3b012fd6ab4ca2c3e09549d9d0747c178e2c7fabc21b76fc3fcd051d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

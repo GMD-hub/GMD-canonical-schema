@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-waste
+source_artifact_path: extraction/20_drafts/utl/VAR-waste.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 89371853e0786bcfc3d284cda86fe09ed4a328fa
+source_content_sha256: 8d05d7c000a2ffd4c9a2e63496404716e7e523f36c871fda2b7c7552e8d3cde9
+enrolled_body_sha256: 6b4ac3fa229e000ebdbbc99e082063d6f73df1bbe4dd4c813f1116be4730f9f2
+current_content_sha256: 6b4ac3fa229e000ebdbbc99e082063d6f73df1bbe4dd4c813f1116be4730f9f2
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

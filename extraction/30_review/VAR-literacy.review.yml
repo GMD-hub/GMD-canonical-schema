@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-literacy
+source_artifact_path: extraction/20_drafts/dem/VAR-literacy.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 1ae0a448fa6bfc3ab0b69eb82783525e1e7d6e72
+source_content_sha256: 4728ef2f4cb5a5d5e962ea400237772a7025ec5550bdcf48874b3bf3407af966
+enrolled_body_sha256: 0c9ba14f00a437e2ac22b9601ea7f164eebb9cb42203db45db0bfafbce735f03
+current_content_sha256: 0c9ba14f00a437e2ac22b9601ea7f164eebb9cb42203db45db0bfafbce735f03
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

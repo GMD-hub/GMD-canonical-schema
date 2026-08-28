@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-agecat
+source_artifact_path: extraction/20_drafts/dem/VAR-agecat.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 47a6260995c0ecca04222d42477f9fbe4369e45c
+source_content_sha256: 080d4acbca525b3bb3c1e6b80e925c754352874e19e89bfdc6f0956d52ede899
+enrolled_body_sha256: 4842b4dd19ff63a5881a8dccd6c115b1d2f10754f8f917228cacede54fcfb774
+current_content_sha256: 4842b4dd19ff63a5881a8dccd6c115b1d2f10754f8f917228cacede54fcfb774
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

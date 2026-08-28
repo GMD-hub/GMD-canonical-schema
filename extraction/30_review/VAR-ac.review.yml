@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-ac
+source_artifact_path: extraction/20_drafts/dwl/VAR-ac.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c6faccd43101f7ec84b08ae618550ab2e954ab5e
+source_content_sha256: ed318f041a19ea18b57abeeca285a68c23bc873d432430dd4a05f249ece04c45
+enrolled_body_sha256: 55bc1d3bf876c09f02cb91959934f75cd0f61d8004b3b9f6c82fcfbdf04efb66
+current_content_sha256: 55bc1d3bf876c09f02cb91959934f75cd0f61d8004b3b9f6c82fcfbdf04efb66
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

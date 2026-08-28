@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-occup
+source_artifact_path: extraction/20_drafts/lbr/VAR-occup.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: e0420f72ee675199b7230a9684da3bff8073c1bb
+source_content_sha256: 5732be8378f82ad4d3e1e55d41d44a53936abac545c080b48197ac5486e104fb
+enrolled_body_sha256: 6f045c25d25b3a656c82e10cc302f5ee3f21eaef101a7605efa601bec6750f42
+current_content_sha256: 6f045c25d25b3a656c82e10cc302f5ee3f21eaef101a7605efa601bec6750f42
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

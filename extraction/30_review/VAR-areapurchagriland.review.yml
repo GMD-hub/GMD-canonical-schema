@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-areapurchagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-areapurchagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: a8199cd5f2a5cadf4f4dc1464b41a8bebcc58d0d
+source_content_sha256: de9aba6a942374124bbc36e9a1a72314fd1dd08ad5e951e95f8145885b37b96c
+enrolled_body_sha256: 4b3b42445422ad52242a5616e5d20a18a7bcf8b2da8908f9110f583e890265b3
+current_content_sha256: 4b3b42445422ad52242a5616e5d20a18a7bcf8b2da8908f9110f583e890265b3
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

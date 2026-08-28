@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-femdoculand
+source_artifact_path: extraction/20_drafts/dwl/VAR-femdoculand.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: d9a983dc4ddfeae144f0f4bb89b97b1b3d07c996
+source_content_sha256: d4a0b931fca072924033ed55c2ae0e4d206709b5260acf0a89a36fad986504be
+enrolled_body_sha256: e95ae441d0b1ed9c82af05e8c7dda0659094a4d57484659417cd521e7ed4d0ea
+current_content_sha256: e95ae441d0b1ed9c82af05e8c7dda0659094a4d57484659417cd521e7ed4d0ea
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

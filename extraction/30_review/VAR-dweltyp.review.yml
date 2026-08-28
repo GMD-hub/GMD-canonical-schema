@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-dweltyp
+source_artifact_path: extraction/20_drafts/dwl/VAR-dweltyp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 92b86c218f18142f1313946dffc5c13eb4e8ee10
+source_content_sha256: 1e3b034c6681397628e5ee939ac0618844536f56670b00489d71fd81921f989d
+enrolled_body_sha256: 51923af36abfd7228644557478b425b40c5d63d3f0f243fa080e08421549c04f
+current_content_sha256: 51923af36abfd7228644557478b425b40c5d63d3f0f243fa080e08421549c04f
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

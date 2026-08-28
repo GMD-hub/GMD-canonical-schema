@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-sanitationsource
+source_artifact_path: extraction/20_drafts/utl/VAR-sanitationsource.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 2b7f2c4efde6f110fe80cd01ada75f96edb185aa
+source_content_sha256: a39d44928505649f48cde14a3dfbeb0417cfa5b6c6a9e1ebe268d40c8a6aa557
+enrolled_body_sha256: 251ce95c21f7f4c6160d96262a6509f7bf67035c4ff3e479a701d5b86c790ced
+current_content_sha256: 251ce95c21f7f4c6160d96262a6509f7bf67035c4ff3e479a701d5b86c790ced
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

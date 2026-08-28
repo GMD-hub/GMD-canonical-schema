@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-transagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-transagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 30ca720429fbaa92f8f3031e47e668228c90b4bf
+source_content_sha256: 4d26c2c5ced766c4492359acb580b1f94f344c36c6fae5db5cfea14c316312bb
+enrolled_body_sha256: e3ec527f6ac58e8f3fa4e6ff59e2727d5269cb48c71b8c1316e518a487d1041b
+current_content_sha256: e3ec527f6ac58e8f3fa4e6ff59e2727d5269cb48c71b8c1316e518a487d1041b
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

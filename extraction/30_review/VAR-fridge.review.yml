@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-fridge
+source_artifact_path: extraction/20_drafts/dwl/VAR-fridge.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: d271e9c39e22539d9dd9bf4c56d28db22c9d6831
+source_content_sha256: 7e1a7312cca324a117c00b5bc2e203ba0a2c908228b07e1d0ca8c66af0190b14
+enrolled_body_sha256: 442f46560dbf048e4783e49cf8252532256a801d1db031e97093da8bd1199f7e
+current_content_sha256: 442f46560dbf048e4783e49cf8252532256a801d1db031e97093da8bd1199f7e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

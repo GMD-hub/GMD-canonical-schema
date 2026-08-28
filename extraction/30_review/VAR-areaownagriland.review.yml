@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-areaownagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-areaownagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 688471072f7382f21bf3ab5539243c0caa008d14
+source_content_sha256: 54b77fbc830ce2880999824fb10bb1be46a3f02b0e3db1ee6b7ee511a45cf6f0
+enrolled_body_sha256: e84c2c4b77b9eef9a5642765a8fa3c4654bd990f12f792cb9288488bf8be6fc8
+current_content_sha256: e84c2c4b77b9eef9a5642765a8fa3c4654bd990f12f792cb9288488bf8be6fc8
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

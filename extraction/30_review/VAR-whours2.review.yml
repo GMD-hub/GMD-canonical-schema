@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-whours2
+source_artifact_path: extraction/20_drafts/lbr/VAR-whours2.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ec1384bb335ceddce945672b905f43c796c2ad6d
+source_content_sha256: 4b051d61fda7d0f7e1f7e95fcdbe99d3698a72574576b323944c19040713c871
+enrolled_body_sha256: baca63bd34ee5efe084d7979b794809176e2a98cfc009eea0fbbcec7c46ba376
+current_content_sha256: baca63bd34ee5efe084d7979b794809176e2a98cfc009eea0fbbcec7c46ba376
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

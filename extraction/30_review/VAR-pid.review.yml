@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-pid
+source_artifact_path: extraction/20_drafts/idn/VAR-pid.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 31456a2207bc3371ef864edb4eb86d20a2a3f32f
+source_content_sha256: 8e2635b253a09c9f9cbdcc52de819accece3b660777e32828718ac07c3659903
+enrolled_body_sha256: 08055a6b1801956b96a91ad433aeefc6b153a99b12f940a8a6411cefd195cd08
+current_content_sha256: 08055a6b1801956b96a91ad433aeefc6b153a99b12f940a8a6411cefd195cd08
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

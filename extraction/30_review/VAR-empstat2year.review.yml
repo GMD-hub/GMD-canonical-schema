@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-empstat2year
+source_artifact_path: extraction/20_drafts/lbr/VAR-empstat2year.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c10112eb7410dacc19d874169be142f1a44a0a5d
+source_content_sha256: bd91f07a866bd4ba4fe8e27c44e7712d7a3cd1dfe616e9a8cc13cc461e7ebc33
+enrolled_body_sha256: 07603de631fb11192d68f474c15b551bc928b77813a1e7a39e96fcd45717c998
+current_content_sha256: 07603de631fb11192d68f474c15b551bc928b77813a1e7a39e96fcd45717c998
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-sellland
+source_artifact_path: extraction/20_drafts/dwl/VAR-sellland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: f874b92df9ee6f168405d8e03ac12b153c793695
+source_content_sha256: 7fd65f0e042a2898836a52c83bf93dcf90c51af6c161886021ca80dd5997a42b
+enrolled_body_sha256: 637cf54aa4b439617996b3cf2895363bed4cdf7cfb9dea245f1cf6d657523bf0
+current_content_sha256: 637cf54aa4b439617996b3cf2895363bed4cdf7cfb9dea245f1cf6d657523bf0
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

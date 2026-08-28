@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-typlivqrt
+source_artifact_path: extraction/20_drafts/dwl/VAR-typlivqrt.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 02e4af9671d25ca2c93cabb2d28e66b5a42649c1
+source_content_sha256: 75d87ef1e8ec4d0b812765103009f3235627ce9dac2f3b7b670199f9481034f7
+enrolled_body_sha256: 70cc27bc96f02f73093bf1d45b4386c2778b57e1ed417ca53de8207e9bfce75a
+current_content_sha256: 70cc27bc96f02f73093bf1d45b4386c2778b57e1ed417ca53de8207e9bfce75a
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

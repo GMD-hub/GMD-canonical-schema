@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-dwelmatexp
+source_artifact_path: extraction/20_drafts/utl/VAR-dwelmatexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 093db1ac53257132607443bd6a8af97368ddf41e
+source_content_sha256: a1304a7313886fdaea988ce171effb859bf13b4fe6132c73e16a8d6788c56825
+enrolled_body_sha256: e9abae6fed0897628ee959f861ac49d62b1dfcf5983825a7b629c16afc0ddbdc
+current_content_sha256: e9abae6fed0897628ee959f861ac49d62b1dfcf5983825a7b629c16afc0ddbdc
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

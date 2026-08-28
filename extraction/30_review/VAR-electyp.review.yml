@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-electyp
+source_artifact_path: extraction/20_drafts/utl/VAR-electyp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 524f89264dc10f5ac0f6769d96e7614ff48a4127
+source_content_sha256: bb6db610c48a512ebfa4ff123c4cc535f84b85b170316debc08c5a480f34fc90
+enrolled_body_sha256: 52f1ca8eb41d9893825616bd0c2d78210c85079ed01cfdfeb36e18675515f43d
+current_content_sha256: 52f1ca8eb41d9893825616bd0c2d78210c85079ed01cfdfeb36e18675515f43d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

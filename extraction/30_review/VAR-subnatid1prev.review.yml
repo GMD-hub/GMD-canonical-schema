@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-subnatid1prev
+source_artifact_path: extraction/20_drafts/geo/VAR-subnatid1prev.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c3db9466aa11549e773a26ec5102805c07c22cba
+source_content_sha256: acc3ed49e4d03b6ebc8330c35678d692ae961212a665e7086511e29d86fa5ab8
+enrolled_body_sha256: 3b0544d57cd1df6a90f08fbe8a1d8acfd94a479b6e942a33dc05937951f8ba42
+current_content_sha256: 3b0544d57cd1df6a90f08fbe8a1d8acfd94a479b6e942a33dc05937951f8ba42
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

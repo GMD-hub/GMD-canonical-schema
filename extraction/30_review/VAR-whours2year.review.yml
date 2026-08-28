@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-whours2year
+source_artifact_path: extraction/20_drafts/lbr/VAR-whours2year.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 707509c41d2be3142c317ee787d3f2bc96725165
+source_content_sha256: b3a3975f1eedd4e908e19194ef593d1df189c8565ee411b193083cca9b17c946
+enrolled_body_sha256: 17efdd1a24ce552afd848ea050b0cc5b2528f5083bae6d0b33eff3247181cecc
+current_content_sha256: 17efdd1a24ce552afd848ea050b0cc5b2528f5083bae6d0b33eff3247181cecc
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

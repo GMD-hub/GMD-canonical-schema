@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-age
+source_artifact_path: extraction/20_drafts/dem/VAR-age.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c4b986d996a18e4b918bad2f08abaa81133f6487
+source_content_sha256: aa8a160af75f82690b6bf2612ae532c98aef825b30d109454b5d3e6336852ad1
+enrolled_body_sha256: eb24232f1291c2f315de48a7d0e381cecf1b05c0d588b576aaefd2aeaa781088
+current_content_sha256: eb24232f1291c2f315de48a7d0e381cecf1b05c0d588b576aaefd2aeaa781088
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

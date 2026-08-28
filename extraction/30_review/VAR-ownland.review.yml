@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-ownland
+source_artifact_path: extraction/20_drafts/dwl/VAR-ownland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 05a4c31d7e6a1090d9e45111b2d4175a644d8cde
+source_content_sha256: fb68b2ebda442ca0cb2183d79aeed08bb3f99ae7cbe238af9d4d0512682c0372
+enrolled_body_sha256: 0bc3de0dd886b8a63c1a955ab2333f24ebf1e17f78b0d0c486fdc93fc9014a23
+current_content_sha256: 0bc3de0dd886b8a63c1a955ab2333f24ebf1e17f78b0d0c486fdc93fc9014a23
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

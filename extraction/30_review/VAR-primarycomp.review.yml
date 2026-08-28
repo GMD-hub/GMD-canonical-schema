@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-primarycomp
+source_artifact_path: extraction/20_drafts/dem/VAR-primarycomp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 8c522b5d853d073171f3b798a2cfb23a6e1367ae
+source_content_sha256: 10875753d75edaab7a5315b9901843d1c584c475fcfc3047620cdcb176c1f498
+enrolled_body_sha256: 8d5f53a71cf6164bc48c6c82efa83431b3ded4d7462b3a19b49aba62eeb6ea64
+current_content_sha256: 8d5f53a71cf6164bc48c6c82efa83431b3ded4d7462b3a19b49aba62eeb6ea64
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

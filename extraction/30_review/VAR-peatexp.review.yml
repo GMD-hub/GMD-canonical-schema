@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-peatexp
+source_artifact_path: extraction/20_drafts/utl/VAR-peatexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: b42df6b94ba70aefc8e323b67e781eb1f9468132
+source_content_sha256: 4b499512816a56972d32bb24649a6e918cad59e61229e7caa930be19991ddd24
+enrolled_body_sha256: 3760fe94a6d19d7c580429e1eeb546a6605c4f71f72fa99cff20fd0c216b048e
+current_content_sha256: 3760fe94a6d19d7c580429e1eeb546a6605c4f71f72fa99cff20fd0c216b048e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-elechracc
+source_artifact_path: extraction/20_drafts/utl/VAR-elechracc.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: d2a75829df6d85cbc35ff1990747167e17efcfdd
+source_content_sha256: 7ff5d96ade39d64d3f4629eb043a523877b8d61d49fec949d96cc7f177d2126a
+enrolled_body_sha256: a8849dd92659dc4dd62fde7189bc51f6d6d9b382bc44dcc24749bc82b7bd8f95
+current_content_sha256: a8849dd92659dc4dd62fde7189bc51f6d6d9b382bc44dcc24749bc82b7bd8f95
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

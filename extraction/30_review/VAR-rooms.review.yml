@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-rooms
+source_artifact_path: extraction/20_drafts/dwl/VAR-rooms.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3a31622815c2a30c8fb948dc1c1285c86e14271c
+source_content_sha256: 3b62c089e7dad6e75d84349b27c18ad9430df5b2e99f42d935412940889ad482
+enrolled_body_sha256: 0f89758dc8c75e15fcd3a124260dd926c24aaf3e23440a7f999b9dd2aa5dec21
+current_content_sha256: 0f89758dc8c75e15fcd3a124260dd926c24aaf3e23440a7f999b9dd2aa5dec21
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

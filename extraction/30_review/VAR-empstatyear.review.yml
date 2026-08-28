@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-empstatyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-empstatyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: bae719307cfac07db7728c1bcfb52927d3297c3c
+source_content_sha256: 572a08706cb188def45a4bde4179887bccb9507fbfa93d0d4749b96f86ee3a27
+enrolled_body_sha256: c4cf40d840426e5de7569031e973b0c24b37b908333978dad8226be0e2276082
+current_content_sha256: c4cf40d840426e5de7569031e973b0c24b37b908333978dad8226be0e2276082
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

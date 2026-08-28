@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-rentinagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-rentinagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: b8827bff9338576566ad8cab58cba423056e92cf
+source_content_sha256: 3bce25220707722e0022119499cae273ed1af5c89b4884443a7b1d201a3f423b
+enrolled_body_sha256: d1191d76385c96a7c38376f14d4d85580a8bd318fb98f4dd77bdf85d2a3482ee
+current_content_sha256: d1191d76385c96a7c38376f14d4d85580a8bd318fb98f4dd77bdf85d2a3482ee
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

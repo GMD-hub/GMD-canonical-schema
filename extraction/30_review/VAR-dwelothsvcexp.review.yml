@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-dwelothsvcexp
+source_artifact_path: extraction/20_drafts/utl/VAR-dwelothsvcexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 02964450688671d24a9ccd0ec2d4ca6dd7acb8a5
+source_content_sha256: 18c131b7fe22bedf4283d55ac4ff58ba6ab5aab2421f086452ac4c9d7e6a503c
+enrolled_body_sha256: ef29c638b5e323a8ca524c43d81fa3f443a7844a873e65f1a413532ab7909e9d
+current_content_sha256: ef29c638b5e323a8ca524c43d81fa3f443a7844a873e65f1a413532ab7909e9d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

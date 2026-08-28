@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-njobs
+source_artifact_path: extraction/20_drafts/lbr/VAR-njobs.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ef67fc9764184760acb848dd0f75b3464284515e
+source_content_sha256: 949a152be49df4009dfe68a9b475ad29b332e0e54eb867aeccbb30798697d6b7
+enrolled_body_sha256: 17865f7a3dccb522928f5ca0ce2a7e0a4ef130b15785b9be87c706ede1cc4d42
+current_content_sha256: 17865f7a3dccb522928f5ca0ce2a7e0a4ef130b15785b9be87c706ede1cc4d42
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

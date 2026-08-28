@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-thoursothers
+source_artifact_path: extraction/20_drafts/lbr/VAR-thoursothers.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: a0bd1515b41c7fb8b3bcfb16cbdefb0103857caa
+source_content_sha256: 53e761ebf25490d8bff3aeed894613821d27dd1cd7b564b64c8fad97d67b47de
+enrolled_body_sha256: 7a5c6a88f48c93baf18aec400983ff562d2560dbf8c85ad6369e744ea918c72e
+current_content_sha256: 7a5c6a88f48c93baf18aec400983ff562d2560dbf8c85ad6369e744ea918c72e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

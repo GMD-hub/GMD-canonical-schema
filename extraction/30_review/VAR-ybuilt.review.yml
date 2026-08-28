@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-ybuilt
+source_artifact_path: extraction/20_drafts/dwl/VAR-ybuilt.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: f23d032d9fba8ebc9b15b5bffee2651070cedd1e
+source_content_sha256: 80746006ffd2e587da20681495e8e0805ce149db6f96a8b8a89b6069d2648eb0
+enrolled_body_sha256: 4e5f033bd8420bd5a06874243a6bafd8ddeed3b5bdf21b3581c00f0df313a9a8
+current_content_sha256: 4e5f033bd8420bd5a06874243a6bafd8ddeed3b5bdf21b3581c00f0df313a9a8
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []
