@@ -37,6 +37,30 @@ git_blob_raw <- function(repo, commit, path) {
   readBin(destination, "raw", n = file.info(destination)$size)
 }
 
+record_matches_source_bytes <- function(record, source_raw) {
+  if (!is.raw(source_raw)) stop("source content must be raw bytes")
+  source_text <- rawToChar(source_raw)
+  split <- reviewapp:::split_frontmatter_exact(source_text)
+  body_raw <- if (is.null(split$body_raw)) {
+    charToRaw(enc2utf8(split$body %||% ""))
+  } else {
+    split$body_raw
+  }
+  identical(
+    reviewapp:::git_blob_sha_raw(source_raw),
+    record$source_artifact_blob_sha
+  ) && identical(
+    reviewapp:::hash_raw(source_raw),
+    record$source_content_sha256
+  ) && identical(
+    reviewapp:::hash_raw(body_raw),
+    record$enrolled_body_sha256
+  ) && identical(
+    record$current_content_sha256,
+    record$enrolled_body_sha256
+  )
+}
+
 main <- function(args = commandArgs(trailingOnly = TRUE)) {
   opts <- parse_args(args)
   pkgload::load_all(file.path(opts$repo, "review-app"), quiet = TRUE)
@@ -77,13 +101,7 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
       stop("review record queue or source identity is invalid")
     }
     source_raw <- git_blob_raw(opts$repo, opts$expected_source, record$source_artifact_path)
-    source_text <- rawToChar(source_raw)
-    source_blob <- reviewapp:::git_blob_sha_raw(source_raw)
-    body <- reviewapp:::split_frontmatter(source_text)$body
-    if (!identical(source_blob, record$source_artifact_blob_sha) ||
-        !identical(reviewapp:::hash_body(source_text), record$source_content_sha256) ||
-        !identical(reviewapp:::hash_body(body), record$enrolled_body_sha256) ||
-        !identical(record$current_content_sha256, record$enrolled_body_sha256)) {
+    if (!record_matches_source_bytes(record, source_raw)) {
       stop(sprintf("record '%s' does not match pinned source bytes", record$artifact_id))
     }
     list(record = record, blob_sha = reviewapp:::git_blob_sha_raw(raw))
