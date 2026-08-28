@@ -179,3 +179,41 @@ test_that("production queue validation resolves source from a distinct commit", 
     "source artifact\n"
   )
 })
+
+test_that("production queue validation preserves exact source and body bytes", {
+  root <- tryCatch(
+    rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),
+    error = function(error) NULL
+  )
+  if (is.null(root)) skip("repository tool is unavailable in the built package")
+  withr::local_envvar(REVIEWAPP_TOOL_TESTING = "1")
+  environment <- new.env(parent = globalenv())
+  sys.source(
+    file.path(root, "review-app", "tools", "validate-production-queue.R"),
+    envir = environment
+  )
+
+  source_raw <- charToRaw("---\r\na: b\r\n---\r\nbody\r\n")
+  source_text <- rawToChar(source_raw)
+  exact_body <- split_frontmatter_exact(source_text)$body_raw
+  record <- new_review_record_v2(
+    artifact_id = "VAR-male",
+    queue_id = QUEUE_ID,
+    source_artifact_path = "extraction/20_drafts/dem/VAR-male.md",
+    source_commit = .sha1_fixture,
+    source_artifact_blob_sha = git_blob_sha_raw(source_raw),
+    source_content_sha256 = hash_raw(source_raw),
+    enrolled_body_sha256 = hash_raw(exact_body),
+    current_content_sha256 = hash_raw(exact_body),
+    enrolled_at = "2026-08-24T13:25:07Z",
+    enrolled_by = "admin@example.org"
+  )
+
+  legacy_body <- split_frontmatter(source_text)$body
+  expect_false(identical(hash_body(legacy_body), record$enrolled_body_sha256))
+  expect_true(environment$record_matches_source_bytes(record, source_raw))
+  expect_false(environment$record_matches_source_bytes(
+    record,
+    c(source_raw, charToRaw("changed"))
+  ))
+})
