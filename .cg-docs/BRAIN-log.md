@@ -1,11 +1,16 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-26 · 33 artifacts (newest first) + 53 roadmap features_
+_Generated 2026-08-30 · 36 artifacts (newest first) + 54 roadmap features_
 
 ## undated
 
 - **[2026-08-14-agent-review-lessons](.cg-docs/brainstorms/2026-08-14-agent-review-lessons.md)** · `brainstorm` · _—_ · `—`
   > A prototype of all 4 review agents was built and run against the 6 calibration drafts. The prototype was reverted bec…
+
+## 2026-08-30
+
+- **[2026-08-25-canonical-non-welfare-inventory-ledger-review](.cg-docs/reviews/2026-08-25-canonical-non-welfare-inventory-ledger-review.md)** · `review` · _—_ · `2026-08-30`
+  > This report verifies the repaired Task C implementation on PR #18 after merging `origin/main` commit `90eddb33425a051…
 
 ## 2026-08-26
 
@@ -15,11 +20,15 @@ _Generated 2026-08-26 · 33 artifacts (newest first) + 53 roadmap features_
   > `mode:verify` found no prior fixed finding and therefore fell back to a normal full review.
 - **[2026-08-25-complete-release-a-production-queue-cutover-verify-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md)** · `review` · _—_ · `2026-08-26`
   > **Review mode**: light verification **Findings**: 1 (P0: 1)
+- **[Fail-Closed Deterministic Promotion from Immutable Evidence](.cg-docs/solutions/data-quality/2026-08-26-fail-closed-deterministic-promotion.md)** · `solution` · _—_ · `2026-08-26`
+  > A promotion command could accept a hand-authored candidate that passed schema and fixed-total checks but was never re…
 - **[Testing release queues with distinct commits and exact regeneration](.cg-docs/solutions/testing-patterns/2026-08-26-release-queue-validator-bindings.md)** · `solution` · _—_ · `2026-08-26`
   > A production queue validator initially treated checkout `HEAD` as the pinned source commit. That fails after bootstra…
 
 ## 2026-08-25
 
+- **[Canonical Non-Welfare Inventory Ledger](.cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md)** · `plan` · _completed_ · `2026-08-25`
+  > Replace the contradictory prose inventory with one deterministic, row-level, machine-readable ledger that proves the …
 - **[Enable and Complete Release A Production Queue Cutover](.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md)** · `plan` · _active_ · `2026-08-25`
   > Correct the release-blocking branch, source-binding, CI, and verification gaps; qualify the resulting application in …
 
@@ -132,6 +141,8 @@ _Generated 2026-08-26 · 33 artifacts (newest first) + 53 roadmap features_
   > Build a private Shiny app for Posit Connect
 - **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _planned_ · `—`
   > Build a source-grounding review agent and skill
+- **[Create the canonical non-welfare inventory ledger](roadmap.json#canonical-non-welfare-inventory-ledger)** · `feature` · _planned_ · `—`
+  > Create the canonical non-welfare inventory ledger
 - **[Classify mineducatage as a variable to draft or a country parameter to register \(currently an unregistered prerequisite reference in VAR-educat7\)](roadmap.json#classify-mineducatage)** · `feature` · _idea_ · `—`
   > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`

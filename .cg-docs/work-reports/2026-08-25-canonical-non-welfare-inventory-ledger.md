@@ -1,174 +1,110 @@
 # Work Report: Canonical Non-Welfare Inventory Ledger
 
-- **Plan reference**: `.cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md`
-- **Run date**: 2026-08-26
-- **Active deviation policy**: `ask` (no runtime override)
-- **Review mode requested**: `auto`
-- **Final status**: `completed`
+- **Plan**: `.cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md`
+- **PR**: `https://github.com/GMD-hub/GMD-canonical-schema/pull/18`
+- **Repair date**: 2026-08-30
+- **Status**: completed; human inventory review pending
 
-## Completed Steps And Phases
+## Synchronization
 
-No implementation step or phase completed. Plan artifact validation passed, required skills and contracts were loaded, the project Brain was queried, and the Step 1 environment preflight began.
+- Verified a clean existing PR #18 worktree and branch.
+- PR head before synchronization:
+  `4af0345a1e1eacd81bdcac409a77ff2dfd14bec4`.
+- Fetched and pinned `origin/main`:
+  `90eddb33425a051a287fdd48ba391f3aef69a057`.
+- Merged normally without rebase, reset, force-push, or commit rewriting.
+- Merge commit: `a140cd011f0fbdafc648938a0c6e4438d5137e0b`.
+- Retained current main's active-state and generated Brain files during conflict
+  resolution.
+- Reconciled `roadmap.json` by preserving current main and adding only the Task
+  C feature.
 
-## Environment And Baseline Evidence
+## Corrections
 
-- `cg-render-artifact --validate-only .cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md`: passed.
-- `uv`: found at `/Users/acastanedaa/.local/bin/uv`.
-- Python environment creation: `.venv` created with CPython 3.11.15.
-- Dependency installation: failed before imports, freeze, HEAD capture, or content-sensitive baseline capture could complete.
-- Pre-existing worktree changes observed before execution: modified `roadmap.json`; untracked supplied plan.
-- No implementation files were edited.
+- Removed Task B workflow status from the Task C schema, compiler, generated
+  evidence, tests, and plan.
+- Derived and validated source-row, non-counting, denominator, module, and
+  discrepancy cardinalities from row-level records.
+- Required unique discrepancy IDs and the exact v1 discrepancy identity.
+- Resolved output paths from the canonical repository root.
+- Rejected external, symlinked, and governed-input overwrite targets.
+- Added real temporary-Git end-to-end compile, validate, double-serialize, and
+  promote coverage without mocking compiler trust boundaries.
+- Added independent source-byte drift, hash mismatch, missing-row, ownership,
+  ordering, candidate-tamper, aggregate-tamper, discrepancy, and path failures.
+- Corrected the documented `promote` command to include all immutable compile
+  inputs.
+- Regenerated the source map and ledger deterministically.
 
-Exact failing command stage:
+## Correct Promotion Command
 
-```text
-uv pip install --python .venv/bin/python -r requirements.txt
+```bash
+.venv/bin/python -m extraction_pipeline.inventory promote \
+  --source-repo "$GMD_GUIDELINES_REPO" \
+  --source-commit "$SOURCE_SHA" \
+  --source-map "$SOURCE_MAP" \
+  --draft-root extraction/20_drafts \
+  --candidate "$CANDIDATE_A" \
+  --output "$LEDGER"
 ```
 
-Exact error:
+Promotion recompiles from immutable evidence and requires byte equality. It
+does not trust candidate structure or totals alone.
 
-```text
-error: Request failed after 3 retries in 4.0s
-  Caused by: Failed to fetch: `https://r.andres/pydantic/`
-  Caused by: error sending request for url (https://r.andres/pydantic/)
-  Caused by: client error (Connect)
-  Caused by: dns error
-  Caused by: failed to lookup address information: nodename nor servname provided, or not known
-```
+## Generated Evidence
 
-## Deviations
+| Artifact | SHA-256 |
+|---|---|
+| `extraction/20_drafts/runs/non-welfare-inventory-source-map.v1.yaml` | `99c0ace8851f8916ab38d24e0273532cb48b4031d9fc887ca93485e7c912533b` |
+| `extraction/20_drafts/runs/non-welfare-inventory.v1.yaml` | `a3da56f7c298233fea516b20b8418d5eb9cd45b6a5ec87870ee76d08bee1a35c` |
 
-None. Execution stopped under the plan's explicit Step 1 and Blocked-Stop Conditions rather than bypassing dependency installation or changing dependency configuration.
+The ledger contains exactly:
 
-## Accepted Exceptions
+- 318 source occurrences;
+- 267 canonical IDs;
+- 51 non-counting occurrences;
+- one non-source retired UTL discrepancy;
+- module totals `MOD-IDN 9`, `MOD-GEO 14`, `MOD-DEM 24`, `MOD-LBR 90`,
+  `MOD-UTL 61`, and `MOD-DWL 69`.
 
-None.
+Two independent candidate compilations were byte-identical. The corrected
+validation and promotion sequence reproduced the committed ledger bytes.
 
-## Evidence Table
+## Verification Evidence
 
-| ID | Status | Evidence |
-|----|--------|----------|
-| V1 | failed | Python 3.11.15 environment was created, but required dependency installation failed; imports, freeze, tests, and complete baseline capture did not run. |
-| V2 | not run | Blocked before implementation. |
-| V3 | not run | Blocked before implementation. |
-| V4 | not run | Blocked before implementation. |
-| V5 | not run | Blocked before implementation. |
-| V6 | not run | Blocked before implementation. |
-| V7 | not run | Blocked before implementation. |
-| V8 | not run | Blocked before implementation. |
-| V9 | not run | Blocked before implementation. |
-| V10 | not run | Baseline command chain stopped at dependency installation before durable baseline files were captured. |
+| Check | Result |
+|---|---|
+| `git diff --check` | passed |
+| Focused inventory tests | `52 passed, 1 skipped` |
+| Candidate-directed inventory tests | `53 passed` |
+| Candidate-directed completeness tests | `19 passed` |
+| Full Python test suite | `337 passed, 4 skipped` |
+| Country-layer validation | passed; existing unresolved-governance reports emitted |
+| PER 2019 and PER 1995 bundle smoke tests | passed |
+| Review-app focused tests | passed |
+| Review-app full tests | passed |
+| `R CMD check --no-manual` | completed; 0 errors, 1 existing documentation warning, 2 existing notes |
+| Deterministic candidate comparison | byte-identical |
+| Final immutable validation and promotion | passed |
+| Final adversarial containment review | no P0/P1 findings |
 
-## Constraints Check
+The first local focused R attempt could not start the shinytest2 child process
+because `reviewapp` was not installed in the new local renv library. Installing
+the unchanged package with `R CMD INSTALL .` resolved the environment setup;
+the rerun and all later R checks passed. No review-app source or runtime behavior
+was changed.
 
-| ID | Status | Result |
-|----|--------|--------|
-| C1 | passed | No implementation path was touched; only workflow-managed plan/report/active-state records were written. |
-| C2 | passed | No governed, review, approval, manifest, knowledge, or country-parameter artifact changed. |
-| C3-C9 | not run | Blocked before implementation and verification. |
+## Scope And Remaining Gate
 
-## Remaining Uncertainty
+The ledger is offline corpus authority for the Task C non-welfare denominator.
+It is not runtime review-app queue state, a queue initializer, an enrollment
+contract, or a production deployment artifact.
 
-- Whether the configured package index host is temporarily unavailable or requires local environment configuration outside this plan.
-- All compiler, source-map, ledger, candidate, test, path-audit, completion, roadmap-done, and review-dispatch work remains pending.
+There is no effective PR diff for `.cg-docs/active-state/current.json`,
+`review-app/**`, or `.github/workflows/validate.yml`. The production `review`
+and `review-production` branches, Posit Connect, and deployed behavior were not
+modified.
 
-## Blocked Stop
-
-Step 1 requires stopping when `uv` installation fails, and the Completion Contract separately blocks when the Python environment cannot be created from the existing `requirements.txt`. Resume only after the existing dependency source is reachable, using:
-
-```text
-/cg-work review:auto .cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md
-```
-
-## Resume: 2026-08-26
-
-The dependency source was restored by the human operator using
-`UV_INDEX=https://pypi.org/simple`. Step 1 resumed without changing
-`requirements.txt`.
-
-- Python: 3.11.15
-- pydantic: 2.13.4
-- PyYAML: 6.0.3
-- pytest: 8.4.2
-- loguru: 0.7.3
-- HEAD baseline: `8e16ee967816344e7977a0d6f00455f25cb21b47`
-- Import smoke test: passed
-- Pytest smoke test: passed
-- Freeze: `${TMPDIR}/task-c-python.freeze`
-- Full porcelain baseline: `${TMPDIR}/task-c-status.before`
-- Non-allowlisted worktree binary baseline: `${TMPDIR}/task-c-worktree.before.diff`
-- Non-allowlisted index binary baseline: `${TMPDIR}/task-c-index.before.diff`
-- Non-allowlisted untracked hashes: `${TMPDIR}/task-c-untracked.before.hashes`
-
-Evidence V1 is now passed. Implementation resumed at Phase 1 Step 2.
-
-## Completion: 2026-08-26
-
-### Completed Steps And Phases
-
-- Phase 1, Steps 1-4: completed.
-- Phase 2, Steps 5-6: completed.
-- Plan completion fields: `completed-phases: [1, 2]`, `status: completed`, `completed-date: 2026-08-26`.
-
-### Outputs
-
-- `schema/extraction/inventory.py`: strict occurrence, source-reference, discrepancy, module-count, and ledger contracts.
-- `extraction_pipeline/inventory.py`: bounded parser, immutable Git-object reader, closed source-map builder/validator, deterministic compiler, CLI validation, and lock-protected atomic promotion.
-- `extraction/20_drafts/runs/non-welfare-inventory-source-map.v1.yaml`: 28 captions, 27 inventory tables, 318 classified source rows, seven chapter hashes, closed aliases/annotations, toolchain, approval hashes, and disambiguations.
-- `extraction/20_drafts/runs/non-welfare-inventory.v1.yaml`: review-ready deterministic ledger with 267 canonical rows, 51 non-counting rows, nine shared IDN-owned occurrences, 28 Chapter 8 exclusions, and one retired UTL discrepancy.
-- `tests/extraction/test_inventory.py`: 19 model, parser, immutable-source, corpus, adversarial, determinism, containment, and writer tests.
-- `tests/extraction/test_completeness.py`: candidate-ledger completeness integration.
-
-### Test And Verification Evidence
-
-- Red phase: `ModuleNotFoundError: schema.extraction.inventory`, then `ModuleNotFoundError: extraction_pipeline.inventory`.
-- Contract filter: 4 passed, 15 deselected after final additions remained covered by the complete run.
-- Source-map filter: 1 passed.
-- Compiler/Git-object/alias filter: 6 passed.
-- Totals/writer/lock filter: 2 passed.
-- Final candidate-directed inventory suite: 19 passed.
-- Final candidate-directed completeness suite: 19 passed.
-- Final candidate-directed repository suite: 305 passed, 2 skipped.
-- Candidate A and B: byte-identical.
-- Candidate validation: passed.
-- Promoted ledger vs candidate A: byte-identical.
-- Final ledger assertions: passed for statuses, 267 denominator, module counts, 318 rows, 51 non-counting rows, nine shared rows, one discrepancy, and zero Chapter 8 canonical rows.
-- `git diff --check`: passed.
-- Python bytecode compilation: passed.
-- Candidate/lock/temp cleanup: passed; no matching artifacts remain.
-- Content-sensitive audit: HEAD unchanged; non-allowlisted worktree diff, index diff, and untracked hashes byte-identical to baseline.
-
-### Review Auto
-
-- Resolved route: `full` due to schema changes and atomic filesystem behavior (`security-risk`).
-- Named subagent process runtime: unavailable (`kilo` CLI not present), so the exact ten full-route agent specifications were applied in-process.
-- Findings: 2 substantive fail-closed findings, both fixed before completion.
-- Fix 1: compiler now regenerates and compares the closed source-map baseline, preventing chapter/row/classification tampering.
-- Fix 2: obsolete UTL claim now resolves from canonical-schema `HEAD`, verifies exact line content, and records repository commit plus blob SHA-256.
-- Additional hardening: CLI compile/promote outputs must remain inside `extraction/20_drafts/runs/`.
-- Remaining P0/P1 findings: none.
-
-### Mechanical Self-Review
-
-No debug statements, broken imports, new TODO/FIXME/HACK markers, or credential patterns were found. Statistical and logical correctness was checked through fixed-set, immutable-source, candidate-directed, and repository-wide tests; human inventory review remains required by artifact status.
-
-### Roadmap
-
-The matching feature remains workflow-pending because no `@cg-roadmap` dispatcher is available in this session. `roadmap.json` was not directly edited by this operation; its pre-existing modification was preserved byte-for-byte outside the implementation audit.
-
-### Final Evidence Status
-
-| ID | Status | Evidence |
-|----|--------|----------|
-| V1 | passed | Environment, imports, exact freeze, HEAD/status, and content-sensitive baseline captured. |
-| V2 | passed | Strict model/citation/counting tests. |
-| V3 | passed | Exhaustive source map and source-map test. |
-| V4 | passed | Immutable compiler/Git-object/alias tests and successful exact compilation. |
-| V5 | passed | Promoted ledger fixed-set assertions. |
-| V6 | passed | Exact two-candidate validation/test/promotion sequence. |
-| V7 | passed | Inventory suite and fail-closed review hardening. |
-| V8 | passed | 19 completeness tests against candidate A. |
-| V9 | passed | 305 passed, 2 skipped against candidate A. |
-| V10 | passed | Unchanged HEAD and byte-identical non-allowlisted worktree/index/untracked baselines. |
-
-No accepted exceptions or unresolved implementation uncertainties remain. Human inventory review and Task B source-identity approval remain explicitly pending.
+Human inventory review remains unresolved. The ledger remains
+`draft_pending_human_inventory_review`; this work does not fabricate approval,
+approve a Task B source lock, or clear any global blocker.

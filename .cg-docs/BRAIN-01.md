@@ -1,6 +1,6 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-26_
+_Generated 2026-08-30_
 
 ## Establish Independent Agent Review Objective / Review / Complete Universal Records Objective
 
@@ -74,7 +74,7 @@ objective`_ · 31 entities
 ## Universal Non / Welfare Schema Objective / Freeze Version
 
 _Keywords: `universal non` · `welfare schema
-objective` · `freeze version`_ · 15 entities
+objective` · `freeze version`_ · 16 entities
 
 - **[Document the schema approval from the 2026-07-29 GPID meeting](roadmap.json#document-schema-approval)** · `feature` · _done_ · `—`
   > Document the schema approval from the 2026-07-29 GPID meeting
@@ -94,6 +94,8 @@ objective` · `freeze version`_ · 15 entities
   > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
 - **[Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id \(no underscores, per ^VAR-\[a-z\]\[a-z0-9\]*$\) and record each mapping in the inventory before drafting](roadmap.json#standardize-variable-naming-convention)** · `feature` · _idea_ · `—`
   > Standardize the variable naming convention: document the mapping from GMD snake_case names to CVS variable_id (no und…
+- **[Create the canonical non-welfare inventory ledger](roadmap.json#canonical-non-welfare-inventory-ledger)** · `feature` · _planned_ · `—`
+  > Create the canonical non-welfare inventory ledger
 - **[Run registry and derivation-graph validation](roadmap.json#validate-registry-derivations)** · `feature` · _idea_ · `—`
   > Run registry and derivation-graph validation
 - **[Stress-test against legacy do-files and historical decisions](roadmap.json#stress-test-legacy-decisions)** · `feature` · _idea_ · `—`
@@ -145,17 +147,6 @@ objective` · `parameters`_ · 6 entities
   > Establish recurring regional exception gathering
 - **[Keep urban/rural parameters deferred unless evidence makes them necessary](roadmap.json#defer-urban-rural-parameters)** · `feature` · _idea_ · `—`
   > Keep urban/rural parameters deferred unless evidence makes them necessary
-
-## Allow_Unresolved_Draft / Pydantic / Cause
-
-_Keywords: `allow_unresolved_draft` · `pydantic` · `cause`_ · 3 entities
-
-- **[Hand-drafting GMD CVS variable specs at scale and validating them](.cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md)** · `solution` · _—_ · `2026-08-14`
-  > The GMD Canonical Variable Schema (CVS) needed `VariableDefinition`-valid draft specs for every non-welfare variable …
-- **[Pydantic allow_unresolved_draft does not bypass rule_ids/parameter_ids validation](.cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md)** · `solution` · _—_ · `2026-08-15`
-  > When validating extraction drafts against `VariableDefinition` with `allow_unresolved_draft=True`, Pydantic raised `u…
-- **[Derivation asymmetry check requires both variables in draft set](.cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md)** · `solution` · _—_ · `2026-08-15`
-  > VAR-urban declares `derived_from: [VAR-rurality]` but VAR-rurality is not in the draft set. The expected test for an …
 
 ## Validate-Production-Queue.R / Review / Github_Adapter.R
 

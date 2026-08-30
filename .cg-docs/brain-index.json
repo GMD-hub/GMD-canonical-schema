@@ -1,5 +1,5 @@
 {
-  "edge_count": 22,
+  "edge_count": 23,
   "edges": [
     {
       "edge_type": "decided_from",
@@ -125,6 +125,12 @@
       "edge_type": "references",
       "source": ".cg-docs/plans/2026-08-20-exclude-runs-from-review-runner.md",
       "target": ".cg-docs/solutions/testing-patterns/2026-08-20-exclude-runs-from-review-runner.md",
+      "target_missing": false
+    },
+    {
+      "edge_type": "implements",
+      "source": ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md",
+      "target": "roadmap.json#canonical-non-welfare-inventory-ledger",
       "target_missing": false
     },
     {
@@ -460,6 +466,35 @@
     {
       "date": "2026-08-25",
       "entity_type": "plan",
+      "path": ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md",
+      "slug": "2026-08-25-canonical-non-welfare-inventory-ledger",
+      "status": "completed",
+      "summary": "Replace the contradictory prose inventory with one deterministic, row-level, machine-readable ledger that proves the authoritative non-welfare denominator is 267 and records every repeated, excluded, helper, inventory-only, and disputed source occurrence needed to explain the denominator.",
+      "tags": [
+        "extraction",
+        "inventory",
+        "ledger",
+        "provenance",
+        "validation",
+        "reproducibility"
+      ],
+      "title": "Canonical Non-Welfare Inventory Ledger",
+      "top_keywords": [
+        "test_inventory.py",
+        "approval record",
+        "inventory_only",
+        "tests/extraction/test_inventory.py",
+        "uv",
+        "inventory.py",
+        "denominator decision",
+        "test scenarios",
+        "requirements.txt",
+        "ledger"
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "entity_type": "plan",
       "path": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
       "slug": "2026-08-25-complete-release-a-production-queue-cutover",
       "status": "active",
@@ -641,6 +676,28 @@
       ]
     },
     {
+      "date": "2026-08-30",
+      "entity_type": "review",
+      "path": ".cg-docs/reviews/2026-08-25-canonical-non-welfare-inventory-ledger-review.md",
+      "slug": "2026-08-25-canonical-non-welfare-inventory-ledger-review",
+      "status": "",
+      "summary": "This report verifies the repaired Task C implementation on PR #18 after merging `origin/main` commit `90eddb33425a051a287fdd48ba391f3aef69a057` into the PR branch. The review covered the schema, compiler, generated source map and ledger, tests, plan commands, work report, and effective PR diff.",
+      "tags": [],
+      "title": "2026-08-25-canonical-non-welfare-inventory-ledger-review",
+      "top_keywords": [
+        "ledger",
+        "inventory",
+        "review",
+        "canonical",
+        "report",
+        "findings",
+        "verification",
+        "promote",
+        "de5d6dbcc918261036073c83b46bacdba53da6e0",
+        "a3da56f7c298233fea516b20b8418d5eb9cd45b6a5ec87870ee76d08bee1a35c"
+      ]
+    },
+    {
       "date": "2026-08-26",
       "entity_type": "review",
       "path": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md",
@@ -766,6 +823,34 @@
         "variable",
         "specs",
         "hand-drafting"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "entity_type": "solution",
+      "path": ".cg-docs/solutions/data-quality/2026-08-26-fail-closed-deterministic-promotion.md",
+      "slug": "2026-08-26-fail-closed-deterministic-promotion",
+      "status": "",
+      "summary": "A promotion command could accept a hand-authored candidate that passed schema and fixed-total checks but was never reproduced from the governed source map, draft corpus, approval evidence, or immutable guideline bytes. Provenance tied to mutable `HEAD`, and aggregate totals not derived from rows, created similar ways for internally consistent metadata to contradict its evidence.",
+      "tags": [
+        "promotion",
+        "reproducibility",
+        "git-objects",
+        "provenance",
+        "trust-boundaries"
+      ],
+      "title": "Fail-Closed Deterministic Promotion from Immutable Evidence",
+      "top_keywords": [
+        "promotion",
+        "head",
+        "closed deterministic promotion",
+        "immutable evidence",
+        "evidence",
+        "immutable",
+        "deterministic",
+        "fail-closed",
+        "2026-08-25-canonical-non-welfare-inventory-ledger-review.md",
+        "2026-08-06-windows-platform-test-fixes.md"
       ]
     },
     {
@@ -1217,6 +1302,28 @@
         "convention",
         "document",
         "snake_case"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
+      "path": "roadmap.json#canonical-non-welfare-inventory-ledger",
+      "slug": "canonical-non-welfare-inventory-ledger",
+      "status": "planned",
+      "summary": "Create the canonical non-welfare inventory ledger",
+      "tags": [],
+      "title": "Create the canonical non-welfare inventory ledger",
+      "top_keywords": [
+        "universal non",
+        "welfare schema\nobjective",
+        "non-welfare",
+        "canonical",
+        "inventory",
+        "ledger",
+        "feature",
+        "milestone",
+        "extract",
+        "universal"
       ]
     },
     {
@@ -2188,10 +2295,10 @@
       ]
     }
   ],
-  "entity_count": 86,
-  "generated": "2026-08-26",
+  "entity_count": 90,
+  "generated": "2026-08-30",
   "schema_version": "0.2.0",
-  "topic_count": 6,
+  "topic_count": 5,
   "topics": [
     {
       "entity_count": 31,
@@ -2237,7 +2344,7 @@
       "slug": "establish-independent-agent-review-objective-review-complete-universal-records-objective"
     },
     {
-      "entity_count": 15,
+      "entity_count": 16,
       "entity_paths": [
         "roadmap.json#document-schema-approval",
         "roadmap.json#inventory-non-welfare-variables",
@@ -2248,6 +2355,7 @@
         "roadmap.json#register-weight-invariant-rule",
         "roadmap.json#classify-mineducatage",
         "roadmap.json#standardize-variable-naming-convention",
+        "roadmap.json#canonical-non-welfare-inventory-ledger",
         "roadmap.json#validate-registry-derivations",
         "roadmap.json#stress-test-legacy-decisions",
         "roadmap.json#resolve-reviewed-exceptions",
@@ -2300,21 +2408,6 @@
       ],
       "label": "Country Parameter Layer / Country Parameter Layer\nObjective / Parameters",
       "slug": "country-parameter-layer-country-parameter-layer-objective-parameters"
-    },
-    {
-      "entity_count": 3,
-      "entity_paths": [
-        ".cg-docs/solutions/data-quality/2026-08-14-hand-draft-cvs-variable-specs.md",
-        ".cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md",
-        ".cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md"
-      ],
-      "keywords": [
-        "allow_unresolved_draft",
-        "pydantic",
-        "cause"
-      ],
-      "label": "Allow_Unresolved_Draft / Pydantic / Cause",
-      "slug": "allow-unresolved-draft-pydantic-cause"
     },
     {
       "entity_count": 3,
