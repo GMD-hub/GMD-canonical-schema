@@ -65,10 +65,23 @@ class TestEvidencePacket:
 
 
 class TestExtractionCandidate:
+    def test_candidate_rejects_invalid_source_proof_identity(self) -> None:
+        with pytest.raises(ValueError, match="source_proof_sha256"):
+            ExtractionCandidate(
+                inventory_id="INV-IDN-001",
+                source_proof_sha256="not-a-digest",
+                module_code="IDN",
+                variable_name="age",
+                field_classifications={},
+                evidence_ids={},
+                blocking_issue_ids=["ISSUE-MISSING-FIELDS"],
+            )
+
     def test_minimal_candidate(self) -> None:
         """A candidate with null required fields must have blocking issues."""
         candidate = ExtractionCandidate(
             inventory_id="INV-IDN-001",
+            source_proof_sha256="a" * 64,
             module_code="IDN",
             variable_name="age",
             field_classifications={},
@@ -87,6 +100,7 @@ class TestExtractionCandidate:
         """A candidate with all required source-explicit fields present needs no blocking issues."""
         candidate = ExtractionCandidate(
             inventory_id="INV-IDN-001",
+            source_proof_sha256="a" * 64,
             module_code="IDN",
             variable_name="age",
             canonical_label="Age",
@@ -106,6 +120,7 @@ class TestExtractionCandidate:
         with pytest.raises(ValueError, match="blocking_issue_ids is empty"):
             ExtractionCandidate(
                 inventory_id="INV-IDN-001",
+                source_proof_sha256="a" * 64,
                 module_code="IDN",
                 variable_name="age",
                 field_classifications={},
@@ -116,6 +131,7 @@ class TestExtractionCandidate:
     def test_candidate_with_missing_evidence(self) -> None:
         candidate = ExtractionCandidate(
             inventory_id="INV-IDN-002",
+            source_proof_sha256="a" * 64,
             module_code="IDN",
             variable_name="relationship",
             canonical_label=None,
@@ -131,6 +147,7 @@ class TestExtractionCandidate:
         with pytest.raises(ValueError, match="out of range"):
             ExtractionCandidate(
                 inventory_id="INV-IDN-001",
+                source_proof_sha256="a" * 64,
                 module_code="IDN",
                 variable_name="age",
                 field_classifications={},
@@ -144,6 +161,7 @@ class TestExtractionCandidate:
         with pytest.raises(ValueError, match="out of range"):
             ExtractionCandidate(
                 inventory_id="INV-IDN-001",
+                source_proof_sha256="a" * 64,
                 module_code="IDN",
                 variable_name="age",
                 field_classifications={},
@@ -156,6 +174,7 @@ class TestExtractionCandidate:
         """confidence_scores of exactly 0.0 and 1.0 must be accepted."""
         candidate = ExtractionCandidate(
             inventory_id="INV-IDN-001",
+            source_proof_sha256="a" * 64,
             module_code="IDN",
             variable_name="age",
             field_classifications={},

@@ -4,6 +4,7 @@ Nullable candidate model for items with missing evidence.
 Blocking issue model for items that cannot be canonicalized.
 """
 
+import re
 from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, field_validator, model_validator
@@ -19,6 +20,7 @@ REQUIRED_SOURCE_EXPLICIT_FIELDS = (
     "allowed_range",
     "missing_codes",
 )
+_SHA256_PATTERN = re.compile(r"[0-9a-f]{64}")
 
 
 class ExtractionCandidate(BaseModel):
@@ -27,6 +29,7 @@ class ExtractionCandidate(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     inventory_id: str
+    source_proof_sha256: str
     module_code: str
     variable_name: str
     canonical_label: str | None = None
@@ -50,6 +53,15 @@ class ExtractionCandidate(BaseModel):
     confidence_scores: dict[str, float] | None = None  # field -> 0.0-1.0
     critic_disposition: Literal["accepted", "challenged", "rejected"] | None = None  # from evidence critic
     blocking_issue_ids: list[str]  # issues that block canonicalization
+
+    @field_validator("source_proof_sha256")
+    @classmethod
+    def _validate_source_proof_sha256(cls, value: str) -> str:
+        if _SHA256_PATTERN.fullmatch(value) is None:
+            raise ValueError(
+                "source_proof_sha256 must be a lowercase 64-character identity"
+            )
+        return value
 
     @field_validator("confidence_scores")
     @classmethod
