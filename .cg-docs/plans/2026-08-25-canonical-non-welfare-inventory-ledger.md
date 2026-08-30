@@ -48,11 +48,10 @@ evidence references must be retained in the ledger.
 
 This task is independent of Task B. The compiler records and verifies the
 Task C baseline commit and chapter hashes supplied for generation, but it must
-record `source_identity_status: pending_task_b_approval`, must not edit
-`extraction/config/source-manifest.v1.yaml`, claim that the source-lock gate is
-cleared, or modify `SOURCE_INVENTORY_FREEZE_PENDING`. Existing strict Pydantic,
-PyYAML, pytest, loguru, path-containment, and deterministic-output patterns are
-reused; no new dependency is needed.
+not edit `extraction/config/source-manifest.v1.yaml`, claim that the source-lock
+gate is cleared, or modify `SOURCE_INVENTORY_FREEZE_PENDING`. Existing strict
+Pydantic, PyYAML, pytest, loguru, path-containment, and deterministic-output
+patterns are reused; no new dependency is needed.
 
 On 2026-08-25, after `/cg-plan-review` identified the repository write-policy
 ambiguity, the human project operator explicitly answered **Approve explicitly**
@@ -208,7 +207,7 @@ Relevant project lessons:
 | R6 | Record source-grounded helper/metadata, inventory-only, and Chapter 8 welfare exclusions with byte-verifiable inline citations; no Chapter 8 row may enter the canonical set. | Governing facts; invocation requirement 8; welfare-boundary lesson; P2.2 review |
 | R7 | Serialize a versioned, deterministic YAML ledger at `extraction/20_drafts/runs/non-welfare-inventory.v1.yaml` with stable row order, stable key order, no volatile fields, and byte-identical output for identical inputs. | Invocation requirements 3-4; validation and acceptance criteria |
 | R8 | Add fixed-set and failure-mode tests covering duplicate normalized IDs, missing/extra/renamed drafts, wrong ownership, both directions of the counting invariant, welfare leakage, missing/tampered citations, dirty source files, hash mismatch, wrong counts, source-map coverage, locator semantics, lock contention, nondeterministic row order, and nondeterministic bytes. | Invocation requirement 9; failure modes; plan review |
-| R9 | Keep Task B and all protected artifacts unchanged; completion produces a review-ready ledger with source identity explicitly pending and does not clear global blockers or fabricate human inventory approval. | AGENTS.md; merge dependency; protected-path acceptance criterion |
+| R9 | Keep Task B and all protected artifacts unchanged; completion produces a review-ready ledger without implementing Task B, clearing global blockers, or fabricating human inventory approval. | AGENTS.md; merge dependency; protected-path acceptance criterion |
 | R10 | Add a versioned source-map draft at `extraction/20_drafts/runs/non-welfare-inventory-source-map.v1.yaml` that exhaustively enumerates the closed 28-caption/27-table/318-row baseline, expected occurrence keys/counts/classifications, all explicit aliases/annotations, ownership rules, chapter hashes, exact toolchain versions, and phantom claim/resolution references. | P1.6/P2.1/P2.8/P3.1 review |
 | R11 | Make `/cg-work` verification executable by defining environment setup, exact candidate compiler/validation/promotion commands, immutable-source integration checks, the named work report, and a content-sensitive baseline allowlist audit. | P1.7/P2.6/P2.7 review |
 
@@ -311,13 +310,13 @@ Relevant project lessons:
   INVENTORY_LEDGER_PATH="$CANDIDATE_A" .venv/bin/python -m pytest tests/extraction/test_inventory.py -q
   INVENTORY_LEDGER_PATH="$CANDIDATE_A" .venv/bin/python -m pytest tests/extraction/test_completeness.py -q
   INVENTORY_LEDGER_PATH="$CANDIDATE_A" .venv/bin/python -m pytest tests/ -q
-  .venv/bin/python -m extraction_pipeline.inventory promote --candidate "$CANDIDATE_A" --output "$LEDGER"
+  .venv/bin/python -m extraction_pipeline.inventory promote --source-repo "$GMD_GUIDELINES_REPO" --source-commit "$SOURCE_SHA" --source-map "$SOURCE_MAP" --draft-root extraction/20_drafts --candidate "$CANDIDATE_A" --output "$LEDGER"
   cmp -s "$LEDGER" "$CANDIDATE_A"
   rm "$CANDIDATE_A" "$CANDIDATE_B"
   trap - EXIT
   ```
 
-  Validate `status: draft_pending_human_inventory_review`, `source_identity_status: pending_task_b_approval`, 267 and `9/14/24/90/61/69`, all 318 source rows, 51 non-counting rows, nine shared rows, one non-source discrepancy, complete source-map coverage/evidence, and zero Chapter 8 canonical rows before promotion.
+  Validate `status: draft_pending_human_inventory_review`, 267 and `9/14/24/90/61/69`, all 318 source rows, 51 non-counting rows, nine shared rows, one non-source discrepancy, complete source-map coverage/evidence, and zero Chapter 8 canonical rows before promotion.
 
   Implementation allowlist:
 
@@ -381,8 +380,8 @@ Relevant project lessons:
 ## Documentation Checklist
 
 - [ ] Ledger top-level metadata states inventory version, authoritative source
-  repository, Task C baseline commit/hashes, pending Task B source-identity
-  status, normalization contract version, draft review status, and totals.
+  repository, Task C baseline commit/hashes, normalization contract version,
+  draft review status, and totals. Task B remains an independent gate.
 - [ ] The source map enumerates every inventory-bearing table/fragment/row,
   explicit exclusion, known alias, ownership rule, and expected classification.
 - [ ] Every occurrence row includes source name/path/table key/occurrence key
@@ -450,8 +449,8 @@ account for every configured source occurrence while identifying exactly 267
 unique canonical non-welfare outputs with module counts `9/14/24/90/61/69`.
 The nine LBR/UTL identifier repeats, top-level retired UTL phantom discrepancy,
 helper/inventory-only rows, and Chapter 8 exclusions remain visible but cannot
-enter the canonical denominator; source identity and human inventory approval
-remain explicitly pending rather than being fabricated.
+enter the canonical denominator; the Task B gate and human inventory review
+remain unresolved rather than being fabricated.
 
 ### Verification Surface
 
@@ -474,7 +473,7 @@ remain explicitly pending rather than being fabricated.
 |----|-------|------------|-------|
 | C1 | all | External human approval covers only the exact implementation/workflow paths and Denominator Decision recorded in the Approval Record; it does not amend general repository governance | Approval Record plus V10 allowlist evidence |
 | C2 | all | Do not modify `knowledge/`, review/approval records, source manifests, protected semantic fields, or country parameters | V10 baseline-aware path audit |
-| C3 | all | `d46dc03d253764ad7bdef53f625d54fd2a0a9ea1` is the Task C baseline, not an approved Task B source identity | Ledger pending-status fields, `git show` byte/hash validation, and no manifest change |
+| C3 | all | `d46dc03d253764ad7bdef53f625d54fd2a0a9ea1` is the Task C baseline, not an approved Task B source identity | Ledger commit/hash fields, `git show` byte/hash validation, and no manifest change |
 | C4 | 1-2 | Preserve source occurrences; deduplicate only canonical outputs by normalized `variable_id` | Occurrence/cardinality tests |
 | C5 | 1-2 | Counting is biconditional: every and only `canonical_output` row counts; Chapter 8 and all noncanonical dispositions cannot count | Model, aggregate, and welfare tests |
 | C6 | 2 | Any drift from 28 captions, 27 inventory tables, 318 source rows, 267 canonical rows, 51 non-counting rows, source bytes, drafts, owners, closed aliases, or classifications requires an explicit version update | Fixed-set/source-coverage tests |
@@ -552,7 +551,7 @@ none were deferred or accepted as residual risk.
 | Finding | Resolution |
 |---------|------------|
 | P1.1 | Obtained an external **Approve explicitly** response from the human operator and recorded its exact implementation/workflow scope, decision scope, authority, date, rationale, and blocked stops. |
-| P1.2 | Reclassified `d46dc...` as the Task C baseline, added pending source-identity metadata, and removed claims of Task B approval. |
+| P1.2 | Reclassified `d46dc...` as the Task C baseline and removed claims of Task B approval. |
 | P1.3 | Required `git show` immutable bytes, seven chapter hashes, dirty-checkout behavior, and mismatch tests. |
 | P1.4 | Added the externally approved Denominator Decision; modeled the phantom as top-level discrepancy metadata bound to the obsolete-inventory HEAD/blob citation and exact approval/decision section hashes, not a source row. |
 | P1.5 | Made the count invariant biconditional and equated canonical-row, true-count, and denominator totals. |

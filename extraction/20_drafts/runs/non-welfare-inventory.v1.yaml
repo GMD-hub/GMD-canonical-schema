@@ -1,6 +1,5 @@
 inventory_version: v1
 status: draft_pending_human_inventory_review
-source_identity_status: pending_task_b_approval
 source_commit: d46dc03d253764ad7bdef53f625d54fd2a0a9ea1
 source_repository: https://github.com/GMD-hub/GMD-guidelines.git
 chapter_sha256:

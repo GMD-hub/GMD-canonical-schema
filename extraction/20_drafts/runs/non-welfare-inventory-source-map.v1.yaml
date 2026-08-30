@@ -1,7 +1,6 @@
 source_map_version: v1
 source_repository: https://github.com/GMD-hub/GMD-guidelines.git
 source_commit: d46dc03d253764ad7bdef53f625d54fd2a0a9ea1
-source_identity_status: pending_task_b_approval
 toolchain:
   python: 3.11.15
   pydantic: 2.13.4
@@ -42,6 +41,7 @@ approval:
   approval_record_sha256: cc4e7cb4368be4b679119efdb8231001640f97e59ab6875dbe7c7ef54ad61e82
   denominator_decision_sha256: ee3db43a66372ac353bf956b69b3f340cda7d2cf2fea8867e43b059970d486f1
 discrepancy_claim:
+  discrepancy_id: DISC-UTL-PHANTOM-001
   repository: https://github.com/GMD-hub/GMD-canonical-schema.git
   commit: de5d6dbcc918261036073c83b46bacdba53da6e0
   path: extraction/20_drafts/runs/inventory-2026-08-13.md

@@ -7,7 +7,7 @@ import hashlib
 import os
 import re
 import subprocess
-import tempfile
+import uuid
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
@@ -29,8 +29,9 @@ from schema.extraction.inventory import (
 SOURCE_COMMIT = "d46dc03d253764ad7bdef53f625d54fd2a0a9ea1"
 CLAIM_COMMIT = "de5d6dbcc918261036073c83b46bacdba53da6e0"
 CLAIM_PATH = "extraction/20_drafts/runs/inventory-2026-08-13.md"
+SOURCE_MAP_PATH = "extraction/20_drafts/runs/non-welfare-inventory-source-map.v1.yaml"
 PLAN_PATH = ".cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md"
-MODULE_COUNTS = {
+V1_MODULE_COUNTS = {
     "MOD-IDN": 9,
     "MOD-GEO": 14,
     "MOD-DEM": 24,
@@ -38,6 +39,20 @@ MODULE_COUNTS = {
     "MOD-UTL": 61,
     "MOD-DWL": 69,
 }
+MODULE_COUNTS = dict(V1_MODULE_COUNTS)
+DISCREPANCY_SPECS = (
+    {
+        "discrepancy_id": "DISC-UTL-PHANTOM-001",
+        "module": "MOD-UTL",
+        "claimed_count": 66,
+        "resolved_count": 65,
+        "status": "retired_non_counting",
+        "explanation": (
+            "The unsupported fifth UTL count is retired and is not a source "
+            "occurrence."
+        ),
+    },
+)
 CHAPTERS = [
     ("chapters/chapter2-IDN.qmd", "MOD-IDN", 10, 9, "helper"),
     ("chapters/chapter3-GEO.qmd", "MOD-GEO", 18, 14, "inventory"),
@@ -245,10 +260,7 @@ def build_source_map(source_repo: Path, source_commit: str, plan_path: Path) -> 
         if len(rows) != expected_rows:
             raise InventoryError(f"source-row delta for {path}: expected {expected_rows}, found {len(rows)}")
         all_captions.extend({"source_path": path, **caption} for caption in captions)
-        chapter_records.append({
-            "source_path": path, "sha256": digest, "module": module,
-            "source_rows": expected_rows, "canonical_rows": canonical_rows,
-        })
+        chapter_rows: list[dict[str, Any]] = []
         for index, row in enumerate(rows, 1):
             disposition, owner = _classify(path, index, expected_rows, module, treatment)
             variable_id = None if disposition in {
@@ -256,7 +268,7 @@ def build_source_map(source_repo: Path, source_commit: str, plan_path: Path) -> 
                 RowDisposition.WELFARE_EXCLUDED.value,
             } else normalize_variable_id(row.raw_name)
             key = f"{row.table_key}.{row.occurrence_index:03d}"
-            all_rows.append({
+            chapter_rows.append({
                 "occurrence_key": key,
                 "source_path": path,
                 "table_key": row.table_key,
@@ -270,15 +282,67 @@ def build_source_map(source_repo: Path, source_commit: str, plan_path: Path) -> 
                 "annotation_removed": row.annotation_removed,
                 "excerpt_sha256": hashlib.sha256(row.excerpt.encode("utf-8")).hexdigest(),
             })
-    if len(all_captions) != 28 or len(all_rows) != 318:
-        raise InventoryError("caption/source-row baseline mismatch")
+        all_rows.extend(chapter_rows)
+        chapter_records.append({
+            "source_path": path,
+            "sha256": digest,
+            "module": module,
+            "source_rows": len(chapter_rows),
+            "canonical_rows": sum(
+                row["disposition"] == RowDisposition.CANONICAL_OUTPUT.value
+                for row in chapter_rows
+            ),
+        })
+        if chapter_records[-1]["canonical_rows"] != canonical_rows:
+            raise InventoryError(f"canonical-row delta for {path}")
+    canonical_records = [
+        row
+        for row in all_rows
+        if row["disposition"] == RowDisposition.CANONICAL_OUTPUT.value
+    ]
+    derived_module_counts = {
+        module: sum(row["owner_module"] == module for row in canonical_records)
+        for module in MODULE_COUNTS
+    }
+    discrepancy_claim = {
+        "discrepancy_id": DISCREPANCY_SPECS[0]["discrepancy_id"],
+        "repository": "https://github.com/GMD-hub/GMD-canonical-schema.git",
+        "commit": CLAIM_COMMIT,
+        "path": CLAIM_PATH,
+    }
+    expected = {
+        "captions": len(all_captions),
+        "inventory_tables": len({row["table_key"] for row in all_rows}),
+        "source_rows": len(all_rows),
+        "canonical_rows": len(canonical_records),
+        "non_counting_rows": len(all_rows) - len(canonical_records),
+        "module_counts": derived_module_counts,
+        "shared_rows": sum(
+            row["disposition"]
+            == RowDisposition.SHARED_IDENTIFIER_OCCURRENCE.value
+            for row in all_rows
+        ),
+        "discrepancies": len(DISCREPANCY_SPECS),
+    }
+    v1_expected = {
+        "captions": 28,
+        "inventory_tables": 27,
+        "source_rows": 318,
+        "canonical_rows": 267,
+        "non_counting_rows": 51,
+        "module_counts": V1_MODULE_COUNTS,
+        "shared_rows": 9,
+        "discrepancies": 1,
+    }
+    if expected != v1_expected:
+        raise InventoryError(f"generated v1 source baseline mismatch: {expected}")
     repository_root = _repository_root(plan_path)
     claim_blob = read_git_object(repository_root, CLAIM_COMMIT, CLAIM_PATH)
+    discrepancy_claim["blob_sha256"] = hashlib.sha256(claim_blob).hexdigest()
     return {
         "source_map_version": "v1",
         "source_repository": "https://github.com/GMD-hub/GMD-guidelines.git",
         "source_commit": source_commit,
-        "source_identity_status": "pending_task_b_approval",
         "toolchain": _toolchain(),
         "normalization_contract": {
             "version": "v1", "aliases": ALIASES,
@@ -292,17 +356,8 @@ def build_source_map(source_repo: Path, source_commit: str, plan_path: Path) -> 
             "approval_record_sha256": _section_hash(plan_text, "## Approval Record", "## Source Reconciliation Baseline"),
             "denominator_decision_sha256": _section_hash(plan_text, "## Denominator Decision", "## Approval Record"),
         },
-        "discrepancy_claim": {
-            "repository": "https://github.com/GMD-hub/GMD-canonical-schema.git",
-            "commit": CLAIM_COMMIT,
-            "path": CLAIM_PATH,
-            "blob_sha256": hashlib.sha256(claim_blob).hexdigest(),
-        },
-        "expected": {
-            "captions": 28, "inventory_tables": 27, "source_rows": 318,
-            "canonical_rows": 267, "non_counting_rows": 51,
-            "module_counts": MODULE_COUNTS, "shared_rows": 9, "discrepancies": 1,
-        },
+        "discrepancy_claim": discrepancy_claim,
+        "expected": expected,
         "table_disambiguations": {
             "table_6_2_physical_fragments": [5, 4],
             "table_7_7_keys": ["agricultural-land", "legal-documentation-image-non-inventory"],
@@ -464,18 +519,23 @@ def compile_ledger(source_repo: Path, source_commit: str, source_map_path: Path,
         excerpt=claim_excerpt, excerpt_sha256=hashlib.sha256(claim_excerpt.encode()).hexdigest(),
         evidence_role="references",
     )
+    discrepancy_spec = DISCREPANCY_SPECS[0]
     discrepancy = InventoryDiscrepancy(
-        discrepancy_id="DISC-UTL-PHANTOM-001", module="MOD-UTL", claimed_count=66,
-        resolved_count=65, status="retired_non_counting", claim_citation=claim,
+        discrepancy_id=claim_identity["discrepancy_id"],
+        module=discrepancy_spec["module"],
+        claimed_count=discrepancy_spec["claimed_count"],
+        resolved_count=discrepancy_spec["resolved_count"],
+        status=discrepancy_spec["status"],
+        claim_citation=claim,
         claim_repository_commit=claim_identity["commit"],
         claim_blob_sha256=claim_identity["blob_sha256"],
         decision_reference=f"{PLAN_PATH}#denominator-decision",
         decision_sha256=source_map["approval"]["denominator_decision_sha256"],
-        explanation="The unsupported fifth UTL count is retired and is not a source occurrence.",
+        explanation=discrepancy_spec["explanation"],
     )
     ledger = InventoryLedger(
         inventory_version="v1", status="draft_pending_human_inventory_review",
-        source_identity_status="pending_task_b_approval", source_commit=source_commit,
+        source_commit=source_commit,
         source_repository=source_map["source_repository"],
         chapter_sha256={item["source_path"]: item["sha256"] for item in source_map["chapters"]},
         normalization_contract="v1", toolchain=source_map["toolchain"],
@@ -484,10 +544,26 @@ def compile_ledger(source_repo: Path, source_commit: str, source_map_path: Path,
         denominator_decision_sha256=source_map["approval"]["denominator_decision_sha256"],
         source_row_count=len(occurrences),
         non_counting_row_count=sum(not row.counts_toward_denominator for row in occurrences),
-        denominator=267,
-        module_counts=[ModuleCount(module=module, count=count) for module, count in MODULE_COUNTS.items()],
+        denominator=sum(row.counts_toward_denominator for row in occurrences),
+        module_counts=[
+            ModuleCount(
+                module=module,
+                count=sum(
+                    row.counts_toward_denominator and row.owner_module == module
+                    for row in occurrences
+                ),
+            )
+            for module in MODULE_COUNTS
+        ],
         occurrences=occurrences, discrepancies=[discrepancy],
     )
+    expected_discrepancy_ids = {claim_identity["discrepancy_id"]}
+    actual_discrepancy_ids = {item.discrepancy_id for item in ledger.discrepancies}
+    if (
+        source_map["expected"]["discrepancies"] != len(ledger.discrepancies)
+        or expected_discrepancy_ids != actual_discrepancy_ids
+    ):
+        raise InventoryError("source-map discrepancy expectation mismatch")
     _validate_fixed_set(ledger)
     return ledger
 
@@ -498,13 +574,17 @@ def _validate_fixed_set(ledger: InventoryLedger) -> None:
     if ledger.non_counting_row_count != 51:
         raise InventoryError("non-counting occurrence total must be 51")
     actual = {item.module: item.count for item in ledger.module_counts}
-    if actual != MODULE_COUNTS or ledger.denominator != 267:
+    if actual != V1_MODULE_COUNTS or ledger.denominator != 267:
         raise InventoryError("canonical denominator/module totals mismatch")
     shared = [row for row in ledger.occurrences if row.disposition == RowDisposition.SHARED_IDENTIFIER_OCCURRENCE]
     if len(shared) != 9 or {row.owner_module for row in shared} != {"MOD-IDN"}:
         raise InventoryError("shared identifier occurrence set mismatch")
     if len(ledger.discrepancies) != 1:
         raise InventoryError("exactly one non-source discrepancy is required")
+    if {item.discrepancy_id for item in ledger.discrepancies} != {
+        "DISC-UTL-PHANTOM-001"
+    }:
+        raise InventoryError("v1 discrepancy identity mismatch")
     if any(row.counts_toward_denominator for row in ledger.occurrences if "chapter8-CONS.qmd" in row.source.source_path):
         raise InventoryError("Chapter 8 welfare leakage")
 
@@ -519,41 +599,120 @@ def serialize_ledger(ledger: InventoryLedger) -> bytes:
 def atomic_write(output: Path, content: bytes) -> None:
     """Write bytes under an exclusive sibling lock and atomic replacement."""
     output.parent.mkdir(parents=True, exist_ok=True)
-    lock = output.with_name(f".{output.name}.lock")
+    directory_flags = os.O_RDONLY
+    directory_flags |= getattr(os, "O_DIRECTORY", 0)
+    directory_flags |= getattr(os, "O_NOFOLLOW", 0)
     try:
-        fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+        directory_fd = os.open(output.parent, directory_flags)
+    except OSError as exc:
+        raise InventoryError(
+            f"output directory is not a stable real directory: {output.parent}"
+        ) from exc
+    lock_name = f".{output.name}.lock"
+    try:
+        lock_fd = os.open(
+            lock_name,
+            os.O_CREAT | os.O_EXCL | os.O_WRONLY,
+            0o600,
+            dir_fd=directory_fd,
+        )
     except FileExistsError as exc:
-        raise InventoryError(f"output lock is already held: {lock}") from exc
-    temporary: Path | None = None
+        os.close(directory_fd)
+        raise InventoryError(
+            f"output lock is already held: {output.with_name(lock_name)}"
+        ) from exc
+    temporary_name: str | None = None
     try:
-        os.close(fd)
-        with tempfile.NamedTemporaryFile(dir=output.parent, prefix=f".{output.name}.", suffix=".tmp", delete=False) as handle:
-            temporary = Path(handle.name)
+        os.close(lock_fd)
+        for _ in range(10):
+            candidate = f".{output.name}.{uuid.uuid4().hex}.tmp"
+            try:
+                temporary_fd = os.open(
+                    candidate,
+                    os.O_CREAT | os.O_EXCL | os.O_WRONLY,
+                    0o600,
+                    dir_fd=directory_fd,
+                )
+            except FileExistsError:
+                continue
+            temporary_name = candidate
+            break
+        else:
+            raise InventoryError("could not allocate a unique temporary output")
+        with os.fdopen(temporary_fd, "wb") as handle:
             handle.write(content)
             handle.flush()
             os.fsync(handle.fileno())
-        os.replace(temporary, output)
-        directory_fd = os.open(output.parent, os.O_RDONLY)
-        try:
-            os.fsync(directory_fd)
-        finally:
-            os.close(directory_fd)
+        opened = os.fstat(directory_fd)
+        current = os.stat(output.parent, follow_symlinks=False)
+        if (opened.st_dev, opened.st_ino) != (current.st_dev, current.st_ino):
+            raise InventoryError("output directory changed during atomic write")
+        os.replace(
+            temporary_name,
+            output.name,
+            src_dir_fd=directory_fd,
+            dst_dir_fd=directory_fd,
+        )
+        temporary_name = None
+        os.fsync(directory_fd)
     finally:
-        if temporary is not None:
-            temporary.unlink(missing_ok=True)
-        lock.unlink(missing_ok=True)
+        if temporary_name is not None:
+            try:
+                os.unlink(temporary_name, dir_fd=directory_fd)
+            except FileNotFoundError:
+                pass
+        try:
+            os.unlink(lock_name, dir_fd=directory_fd)
+        except FileNotFoundError:
+            pass
+        os.close(directory_fd)
 
 
 def _validate_ledger_file(path: Path) -> InventoryLedger:
     return InventoryLedger.model_validate(_load_yaml(path))
 
 
-def _require_approved_output(path: Path) -> None:
-    approved = Path("extraction/20_drafts/runs").resolve()
+def _resolve_repository_path(path: Path, repository_root: Path) -> Path:
+    """Resolve a CLI path relative to the canonical repository root."""
+    if path.is_absolute():
+        return path.resolve()
+    return (repository_root / path).resolve()
+
+
+def _resolve_approved_output(path: Path, repository_root: Path) -> Path:
+    """Return a normalized path contained by the canonical draft runs folder."""
+    canonical_root = repository_root.resolve()
+    literal_approved = canonical_root / "extraction/20_drafts/runs"
+    approved = literal_approved.resolve()
+    if approved != literal_approved:
+        raise InventoryError(
+            "approved runs directory escapes canonical repository root"
+        )
+    normalized = _resolve_repository_path(path, repository_root)
     try:
-        path.resolve().relative_to(approved)
+        relative = normalized.relative_to(approved)
     except ValueError as exc:
         raise InventoryError(f"output escapes approved runs directory: {path}") from exc
+    if len(relative.parts) != 1:
+        raise InventoryError("output must be a direct child of the approved runs directory")
+    return normalized
+
+
+def _reject_governed_input_output(
+    output: Path, source_map_path: Path, repository_root: Path
+) -> None:
+    """Prevent output replacement of governed compiler evidence inputs."""
+    protected = {
+        source_map_path.resolve(),
+        (repository_root / SOURCE_MAP_PATH).resolve(),
+        (repository_root / CLAIM_PATH).resolve(),
+    }
+    for governed_input in protected:
+        same_identity = output == governed_input
+        if not same_identity and output.exists() and governed_input.exists():
+            same_identity = output.samefile(governed_input)
+        if same_identity:
+            raise InventoryError(f"output would overwrite governed input: {output}")
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -579,26 +738,40 @@ def _parser() -> argparse.ArgumentParser:
 def main(argv: Iterable[str] | None = None) -> int:
     """Run compile, validation, or atomic promotion."""
     args = _parser().parse_args(argv)
+    try:
+        source_map_path = args.source_map.resolve(strict=True)
+    except FileNotFoundError as exc:
+        raise InventoryError(f"source map does not exist: {args.source_map}") from exc
+    repository_root = _repository_root(source_map_path)
+    source_map_path = _resolve_repository_path(source_map_path, repository_root)
+    draft_root = _resolve_repository_path(args.draft_root, repository_root)
+    source_repo = args.source_repo.resolve()
     if args.command == "promote":
-        _require_approved_output(args.candidate)
-        _require_approved_output(args.output)
+        candidate_path = _resolve_approved_output(args.candidate, repository_root)
+        output_path = _resolve_approved_output(args.output, repository_root)
+        _reject_governed_input_output(output_path, source_map_path, repository_root)
         compiled = serialize_ledger(
             compile_ledger(
-                args.source_repo, args.source_commit, args.source_map, args.draft_root
+                source_repo, args.source_commit, source_map_path, draft_root
             )
         )
-        candidate = args.candidate.read_bytes()
+        candidate = candidate_path.read_bytes()
         if candidate != compiled:
             raise InventoryError(
                 "promotion candidate bytes differ from immutable recompilation"
             )
-        atomic_write(args.output, compiled)
+        atomic_write(output_path, compiled)
         return 0
-    ledger = compile_ledger(args.source_repo, args.source_commit, args.source_map, args.draft_root)
+    ledger = compile_ledger(
+        source_repo, args.source_commit, source_map_path, draft_root
+    )
     content = serialize_ledger(ledger)
-    target = args.output if args.command == "compile" else args.ledger
+    target = _resolve_approved_output(
+        args.output if args.command == "compile" else args.ledger,
+        repository_root,
+    )
     if args.command == "compile":
-        _require_approved_output(target)
+        _reject_governed_input_output(target, source_map_path, repository_root)
         atomic_write(target, content)
     elif target.read_bytes() != content:
         raise InventoryError("ledger bytes differ from deterministic compilation")

@@ -25,6 +25,7 @@ _CHAPTER_PATHS = {
     "chapters/chapter8-CONS.qmd",
 }
 _SOURCE_REPOSITORY = "https://github.com/GMD-hub/GMD-guidelines.git"
+_V1_DISCREPANCY_IDS = {"DISC-UTL-PHANTOM-001"}
 
 
 class RowDisposition(StrEnum):
@@ -168,7 +169,6 @@ class InventoryLedger(BaseModel):
 
     inventory_version: Literal["v1"]
     status: Literal["draft_pending_human_inventory_review"]
-    source_identity_status: Literal["pending_task_b_approval"]
     source_commit: str
     source_repository: Literal["https://github.com/GMD-hub/GMD-guidelines.git"]
     chapter_sha256: dict[str, str]
@@ -215,6 +215,19 @@ class InventoryLedger(BaseModel):
             raise ValueError("duplicate occurrence ID")
         if len(occurrence_keys) != len(set(occurrence_keys)):
             raise ValueError("duplicate occurrence key")
+        if self.source_row_count != len(self.occurrences):
+            raise ValueError("source_row_count must match occurrence cardinality")
+        actual_non_counting = sum(
+            not row.counts_toward_denominator for row in self.occurrences
+        )
+        if self.non_counting_row_count != actual_non_counting:
+            raise ValueError(
+                "non_counting_row_count must match non-counting occurrence cardinality"
+            )
+        if self.denominator != self.source_row_count - self.non_counting_row_count:
+            raise ValueError(
+                "denominator must equal source_row_count minus non_counting_row_count"
+            )
         canonical = [row for row in self.occurrences if row.disposition == RowDisposition.CANONICAL_OUTPUT]
         canonical_ids = [row.variable_id for row in canonical]
         if len(canonical_ids) != len(set(canonical_ids)):
@@ -233,4 +246,11 @@ class InventoryLedger(BaseModel):
         declared_by_owner = {item.module: item.count for item in self.module_counts}
         if declared_by_owner != actual_by_owner:
             raise ValueError("module counts must match canonical owner_module totals")
+        discrepancy_ids = [item.discrepancy_id for item in self.discrepancies]
+        if len(discrepancy_ids) != len(set(discrepancy_ids)):
+            raise ValueError("duplicate discrepancy ID")
+        if set(discrepancy_ids) != _V1_DISCREPANCY_IDS:
+            raise ValueError(
+                "v1 discrepancies must be exactly {DISC-UTL-PHANTOM-001}"
+            )
         return self
