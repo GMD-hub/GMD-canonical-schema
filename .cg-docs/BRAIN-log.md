@@ -1,6 +1,6 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-26 · 31 artifacts (newest first) + 53 roadmap features_
+_Generated 2026-08-26 · 33 artifacts (newest first) + 53 roadmap features_
 
 ## undated
 
@@ -9,15 +9,19 @@ _Generated 2026-08-26 · 31 artifacts (newest first) + 53 roadmap features_
 
 ## 2026-08-26
 
-- **[2026-08-25-canonical-non-welfare-inventory-ledger-review](.cg-docs/reviews/2026-08-25-canonical-non-welfare-inventory-ledger-review.md)** · `review` · _—_ · `2026-08-26`
-  > **Review mode**: verify, mandated fallback to normal full review because no prior fixed review existed **Files review…
-- **[Fail-Closed Deterministic Promotion from Immutable Evidence](.cg-docs/solutions/data-quality/2026-08-26-fail-closed-deterministic-promotion.md)** · `solution` · _—_ · `2026-08-26`
-  > A promotion command could accept a hand-authored candidate that passed schema and fixed-total checks but was never re…
+- **[2026-08-25-complete-release-a-production-queue-cutover-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md)** · `review` · _—_ · `2026-08-26`
+  > **Review mode**: full (`review:auto`, release/security risk) **Findings**: 12 (P0: 3, P1: 5, P2: 4)
+- **[2026-08-25-complete-release-a-production-queue-cutover-review-2](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review-2.md)** · `review` · _—_ · `2026-08-26`
+  > `mode:verify` found no prior fixed finding and therefore fell back to a normal full review.
+- **[2026-08-25-complete-release-a-production-queue-cutover-verify-review](.cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-verify-review.md)** · `review` · _—_ · `2026-08-26`
+  > **Review mode**: light verification **Findings**: 1 (P0: 1)
+- **[Testing release queues with distinct commits and exact regeneration](.cg-docs/solutions/testing-patterns/2026-08-26-release-queue-validator-bindings.md)** · `solution` · _—_ · `2026-08-26`
+  > A production queue validator initially treated checkout `HEAD` as the pinned source commit. That fails after bootstra…
 
 ## 2026-08-25
 
-- **[Canonical Non-Welfare Inventory Ledger](.cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md)** · `plan` · _completed_ · `2026-08-25`
-  > Replace the contradictory prose inventory with one deterministic, row-level, machine-readable ledger that proves the …
+- **[Enable and Complete Release A Production Queue Cutover](.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md)** · `plan` · _active_ · `2026-08-25`
+  > Correct the release-blocking branch, source-binding, CI, and verification gaps; qualify the resulting application in …
 
 ## 2026-08-20
 
@@ -128,12 +132,12 @@ _Generated 2026-08-26 · 31 artifacts (newest first) + 53 roadmap features_
   > Build a private Shiny app for Posit Connect
 - **[Build a source-grounding review agent and skill](roadmap.json#build-source-grounding-review)** · `feature` · _planned_ · `—`
   > Build a source-grounding review agent and skill
-- **[Create the canonical non-welfare inventory ledger](roadmap.json#canonical-non-welfare-inventory-ledger)** · `feature` · _planned_ · `—`
-  > Create the canonical non-welfare inventory ledger
 - **[Classify mineducatage as a variable to draft or a country parameter to register \(currently an unregistered prerequisite reference in VAR-educat7\)](roadmap.json#classify-mineducatage)** · `feature` · _idea_ · `—`
   > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
+- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _active_ · `—`
+  > Complete Release A production queue cutover
 - **[Configure the real GPID CODEOWNERS team and branch protection](roadmap.json#configure-codeowners-protection)** · `feature` · _idea_ · `—`
   > Configure the real GPID CODEOWNERS team and branch protection
 - **[Confirm completion criteria for all non-welfare variables](roadmap.json#confirm-non-welfare-completion)** · `feature` · _idea_ · `—`
