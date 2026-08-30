@@ -26,7 +26,7 @@ library(testthat)
   )
   counter <- 0L
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -39,7 +39,7 @@ library(testthat)
     }
     if (grepl("git/trees$", url) && method == "POST") return(list(sha = "new-tree"))
     if (grepl("git/commits$", url) && method == "POST") return(list(sha = "new-commit"))
-    if (grepl("git/refs/heads/review", url) && method == "PATCH") {
+    if (grepl("git/refs/heads/fixture-review", url) && method == "PATCH") {
       state$commit <- "new-commit"
       return(list(object = list(sha = "new-commit")))
     }
@@ -47,7 +47,7 @@ library(testthat)
   }
   reviewapp::new_github_adapter(
     owner = "GMD-hub", repo = "fixture-repo",
-    default_branch = "main", review_branch = "review",
+    default_branch = "main", review_branch = "fixture-review",
     get_token = function() "tok", http = http_fun
   )
 }
@@ -55,7 +55,7 @@ library(testthat)
 test_that("perform_action submits a draft and applies the transition atomically", {
   ad <- .happy_write_adapter()
   rec <- .build_rec()  # draft
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec,
     body_sha256 = rec$current_content_sha256,
     blob_sha = "blob-rec", branch_head_sha = "commit-1",
@@ -73,7 +73,7 @@ test_that("perform_action rejects a role that is not authorized for the action",
   ad <- .happy_write_adapter()
   rec <- .build_rec()
   expect_error(
-    perform_action(ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
+    .perform_legacy_test_action(ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
                    action = "approved", actor = "r@example.org", role = "reviewer"),
     "unauthorized"
   )
@@ -82,7 +82,7 @@ test_that("perform_action rejects a role that is not authorized for the action",
 test_that("approval requires an approver role and writes the approved artifact path (R14)", {
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "in-review")
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec,
     body_sha256 = rec$current_content_sha256,
     blob_sha = "blob-rec", branch_head_sha = "commit-1",
@@ -103,7 +103,7 @@ test_that("approve without approved_content fails loudly", {
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "in-review")
   expect_error(
-    perform_action(ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
+    .perform_legacy_test_action(ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
                    action = "approved", actor = "a@example.org", role = "approver"),
     "requires approved_content"
   )
@@ -112,7 +112,7 @@ test_that("approve without approved_content fails loudly", {
 test_that("request-revision moves in-review to needs-revision (approver)", {
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "in-review")
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
     action = "request-revision", actor = "a@example.org", role = "approver",
     note = "please fix"
@@ -128,18 +128,18 @@ test_that("a stale write on an action is reported without claiming a transition"
   state$commit <- "moved-commit"
   state$blobs <- list("extraction/30_review/VAR-male.review.yml" = "blob-rec")
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     list(object = list())
   }
   ad <- reviewapp::new_github_adapter(
     owner = "GMD-hub", repo = "fixture-repo",
-    default_branch = "main", review_branch = "review",
+    default_branch = "main", review_branch = "fixture-review",
     get_token = function() "tok", http = http_fun
   )
   rec <- .build_rec()
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec, rec$current_content_sha256, "blob-rec", branch_head_sha = "OLD-HEAD",
     action = "submitted", actor = "r@example.org", role = "reviewer"
   )
@@ -153,11 +153,11 @@ test_that("reopen is administrator-only and emits an explicit event", {
   rec <- .build_rec(state = "approved")
   # reviewer cannot reopen
   expect_error(
-    perform_action(ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
+    .perform_legacy_test_action(ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
                    action = "reopened", actor = "r@example.org", role = "reviewer"),
     "unauthorized"
   )
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
     action = "reopened", actor = "admin@example.org", role = "administrator"
   )
@@ -169,7 +169,7 @@ test_that("reopen is administrator-only and emits an explicit event", {
 test_that("reopen persists the administrator reason", {
   ad <- .happy_write_adapter()
   rec <- .build_rec(state = "approved")
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec, rec$current_content_sha256, "blob-rec", "commit-1",
     action = "reopened", actor = "admin@example.org", role = "administrator",
     note = "The approved artifact needs a source correction."
@@ -200,7 +200,7 @@ test_that("perform_action('saved') persists a companion body file and appends a 
   )
   counter <- 0L
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -213,7 +213,7 @@ test_that("perform_action('saved') persists a companion body file and appends a 
     }
     if (grepl("git/trees$", url) && method == "POST") return(list(sha = "new-tree"))
     if (grepl("git/commits$", url) && method == "POST") return(list(sha = "new-commit"))
-    if (grepl("git/refs/heads/review", url) && method == "PATCH") {
+    if (grepl("git/refs/heads/fixture-review", url) && method == "PATCH") {
       state$commit <- "new-commit"
       return(list(object = list(sha = "new-commit")))
     }
@@ -221,11 +221,11 @@ test_that("perform_action('saved') persists a companion body file and appends a 
   }
   ad2 <- reviewapp::new_github_adapter(
     owner = "GMD-hub", repo = "fixture-repo",
-    default_branch = "main", review_branch = "review",
+    default_branch = "main", review_branch = "fixture-review",
     get_token = function() "tok", http = http_fun
   )
 
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad2, rec,
     body_sha256 = hash_body("edited body"),
     blob_sha = "blob-rec", branch_head_sha = "commit-1",
@@ -243,7 +243,7 @@ test_that("perform_action('saved') persists a companion body file and appends a 
 test_that("perform_action('assigned') appends an assigned event without a transition", {
   ad <- .happy_write_adapter()
   rec <- .build_rec()
-  res <- perform_action(
+  res <- .perform_legacy_test_action(
     ad, rec,
     body_sha256 = rec$current_content_sha256,
     blob_sha = "blob-rec", branch_head_sha = "commit-1",

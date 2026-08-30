@@ -41,7 +41,10 @@ is_safe_artifact_id <- function(artifact_id) {
 
 is_valid_source_artifact_path <- function(path, artifact_id = NULL) {
   valid <- .is_scalar_character(path) && grepl(
-    "^extraction/20_drafts/(idn|geo|dem|lbr|utl|dwl)/VAR-[a-z0-9]+[.]md$",
+    paste0(
+      "^extraction/20_drafts/",
+      "[a-z0-9][a-z0-9_-]*/VAR-[a-z0-9]+[.]md$"
+    ),
     path
   )
   if (!valid) return(FALSE)
@@ -172,7 +175,7 @@ new_event <- function(action, from_state = NULL, to_state = NULL, actor,
   if (!(action %in% ACTIONS)) stop(sprintf("invalid action '%s'", action))
   if (!(actor_role %in% ROLES)) stop(sprintf("invalid actor_role '%s'", actor_role))
   occurred_at <- occurred_at %||% format(
-    Sys.time(), tz = "UTC", usetz = TRUE, format = "%Y-%m-%dT%H:%M:%SZ"
+    Sys.time(), tz = "UTC", usetz = FALSE, format = "%Y-%m-%dT%H:%M:%SZ"
   )
   structure(list(
     event_id = as.character(uuid::UUIDgenerate()),
@@ -193,7 +196,7 @@ new_event_v2 <- function(action, from_state = NULL, to_state = NULL, actor,
                          actor_role, sequence, review_record_blob_sha_before,
                          body_sha256, note = NULL, occurred_at = NULL) {
   occurred_at <- occurred_at %||% format(
-    Sys.time(), tz = "UTC", usetz = TRUE, format = "%Y-%m-%dT%H:%M:%SZ"
+    Sys.time(), tz = "UTC", usetz = FALSE, format = "%Y-%m-%dT%H:%M:%SZ"
   )
   event <- structure(list(
     event_id = as.character(uuid::UUIDgenerate()),

@@ -30,84 +30,52 @@ approved_path_for <- function(source_artifact_path) {
   )
 }
 
-adapter_read_queue_manifest <- function(adapter) {
-  adapter_read_review(adapter, QUEUE_MANIFEST_PATH)
-}
-
-adapter_read_queue_index <- function(adapter) {
-  adapter_read_review(adapter, QUEUE_INDEX_PATH)
-}
-
-.queue_row_for <- function(index, artifact_id) {
-  rows <- index$rows %||% index
-  matches <- which(vapply(rows, function(row) {
-    identical(row$artifact_id, artifact_id)
-  }, logical(1)))
-  if (length(matches) != 1L) {
-    stop(sprintf("queue index must contain exactly one row for '%s'", artifact_id))
+adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
+  paths <- if (is.null(descriptor_path)) {
+    c(QUEUE_DESCRIPTOR_PATH, LEGACY_QUEUE_MANIFEST_PATH)
+  } else {
+    descriptor_path
   }
-  rows[[matches[[1L]]]]
-}
-
-.replace_queue_row <- function(index, row) {
-  rows <- index$rows %||% index
-  matches <- which(vapply(rows, function(candidate) {
-    identical(candidate$artifact_id, row$artifact_id)
-  }, logical(1)))
-  if (length(matches) != 1L) {
-    stop(sprintf("queue index must contain exactly one row for '%s'", row$artifact_id))
+  for (path in paths) {
+    blob <- tryCatch(
+      adapter_read_review(adapter, path),
+      error = function(error) error
+    )
+    if (!inherits(blob, "condition")) {
+      return(list(
+        descriptor = parse_queue_control(blob$content, path),
+        content = blob$content,
+        sha = blob$sha,
+        path = path
+      ))
+    }
+    if (!grepl(
+      "404|not found|blob not found",
+      conditionMessage(blob),
+      ignore.case = TRUE
+    )) {
+      stop(blob)
+    }
   }
-  rows[[matches[[1L]]]] <- row
-  if (!is.null(index$rows)) {
-    index$rows <- rows
-    return(index)
-  }
-  rows
-}
-
-.index_row_with_update <- function(index, artifact_id, updated, blob_sha, manifest) {
-  rows <- index$rows
-  hit <- which(vapply(rows, function(candidate) {
-    identical(candidate$artifact_id, artifact_id)
-  }, logical(1)))
-  if (length(hit) != 1L) stop("queue index selected row is missing or duplicated")
-  current <- rows[[hit[[1L]]]]
-  current$state <- updated$state
-  current$review_round <- as.integer(updated$review_round)
-  current$assigned_to <- updated$assigned_to
-  current$record_blob_sha <- blob_sha
-  current$governance_blocked <- length(queue_open_blockers(manifest, artifact_id)) > 0L
-  current$source_drift <- FALSE
-  validate_queue_index_row(current)
-  rows[[hit[[1L]]]] <- current
-  index$rows <- rows
-  index
+  stop(.queue_error("queue descriptor could not be read"))
 }
 
 .read_v2_controls <- function(
-  adapter, rec, record_blob_sha, expected_manifest_blob_sha = NULL,
-  expected_index_blob_sha = NULL
+  adapter, rec, record_blob_sha, expected_descriptor_blob_sha = NULL,
+  descriptor_path = NULL
 ) {
-  manifest_blob <- adapter_read_queue_manifest(adapter)
-  if (!is.null(expected_manifest_blob_sha) &&
-      !identical(manifest_blob$sha, expected_manifest_blob_sha)) {
+  control <- adapter_read_queue_descriptor(adapter, descriptor_path)
+  if (!is.null(expected_descriptor_blob_sha) &&
+      !identical(control$sha, expected_descriptor_blob_sha)) {
     stop(stale_write_error(
-      "queue manifest changed since load; reload before applying the action"
+      "queue descriptor changed since load; reload before applying the action"
     ))
   }
-  manifest <- parse_queue_manifest(manifest_blob$content)
-  if (!identical(manifest$queue_id, rec$queue_id)) {
-    stop(.queue_error("review record queue_id does not match the current queue manifest"))
-  }
-  index_blob <- adapter_read_queue_index(adapter)
-  index_changed_since_load <- !is.null(expected_index_blob_sha) &&
-    !identical(index_blob$sha, expected_index_blob_sha)
-  index <- parse_queue_index_blob(index_blob$content, manifest)
-  row <- .queue_row_for(index, rec$artifact_id)
-  if (!identical(row$record_blob_sha, record_blob_sha) ||
-      !identical(row$source_artifact_path, rec$source_artifact_path)) {
-    stop(stale_write_error(
-      "queue row changed since load; reload before applying the action"
+  descriptor <- control$descriptor
+  if (!identical(descriptor$queue_id, rec$queue_id) ||
+      !identical(descriptor$source_revision, rec$source_commit)) {
+    stop(.queue_error(
+      "review record identity does not match the current queue descriptor"
     ))
   }
   current_record <- adapter_read_review(adapter, ACTION_PATH(rec$artifact_id))
@@ -116,14 +84,18 @@ adapter_read_queue_index <- function(adapter) {
       "review record changed since load; reload before applying the action"
     ))
   }
+  parsed <- parse_review_record(current_record$content)
+  validate_review_record_v2(parsed)
+  if (!identical(queue_record_identity(parsed), queue_record_identity(rec))) {
+    stop(stale_write_error(
+      "review record enrollment identity changed; reload before applying the action"
+    ))
+  }
   list(
-    manifest = manifest,
-    manifest_blob_sha = manifest_blob$sha,
-    index = index,
-    index_blob_sha = index_blob$sha,
-    row = row,
-    index_changed_since_load = index_changed_since_load,
-    record = parse_review_record(current_record$content),
+    descriptor = descriptor,
+    descriptor_blob_sha = control$sha,
+    descriptor_path = control$path,
+    record = parsed,
     record_blob_sha = current_record$sha
   )
 }
@@ -162,34 +134,15 @@ adapter_read_queue_index <- function(adapter) {
   )
 }
 
-.updated_v2_queue_row <- function(
-  row, updated, new_record_blob_sha, manifest
-) {
-  row$state <- updated$state
-  row$review_round <- as.integer(updated$review_round)
-  row$assigned_to <- updated$assigned_to
-  row$record_blob_sha <- new_record_blob_sha
-  row$governance_blocked <- length(queue_open_blockers(
-    manifest,
-    updated$artifact_id
-  )) > 0L
-  row$source_drift <- FALSE
-  validate_queue_index_row(row)
-  row
-}
-
-.v2_approval_check <- function(manifest, record, binding) {
-  if (!queue_approval_eligible(manifest, record)) {
-    blockers <- queue_open_blockers(manifest, record$artifact_id)
+.v2_approval_check <- function(record, binding) {
+  if (!queue_approval_eligible(record, binding)) {
     reasons <- c(
-      if (!identical(manifest$approval_mode, "enabled")) {
-        "approval_mode is disabled"
+      "approval rubric gate is not installed",
+      if (!source_binding_is_current(binding)) {
+        "source binding is unresolved"
       },
-      if (length(blockers)) {
-        paste0("open blockers: ", paste(
-          vapply(blockers, function(blocker) blocker$id, character(1)),
-          collapse = ", "
-        ))
+      if (length(record$blocker_refs)) {
+        paste0("record blockers: ", paste(record$blocker_refs, collapse = ", "))
       },
       if (!assessment_approval_complete(record$assessment)) {
         "assessment is incomplete"
@@ -197,16 +150,13 @@ adapter_read_queue_index <- function(adapter) {
     )
     stop(sprintf("approval denied: %s", paste(reasons, collapse = "; ")))
   }
-  if (isTRUE(binding$drift)) {
-    stop(source_drift_error("approval denied because the source has drifted"))
-  }
   invisible(TRUE)
 }
 
 .perform_v2_action <- function(
   adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
   approved_content, body, note, assigned_identities = NULL,
-  expected_manifest_blob_sha = NULL, expected_index_blob_sha = NULL,
+  expected_descriptor_blob_sha = NULL, descriptor_path = NULL,
   max_retries = 1L
 ) {
   validate_review_record_v2(rec)
@@ -226,32 +176,34 @@ adapter_read_queue_index <- function(adapter) {
     stop("body_sha256 does not match the body supplied for the action")
   }
 
-  expected_manifest <- expected_manifest_blob_sha
-  expected_index <- expected_index_blob_sha
+  expected_descriptor <- expected_descriptor_blob_sha
   updated <- NULL
   updated_yaml <- NULL
   controls <- NULL
   binding <- NULL
+  authoritative <- NULL
   persisted_body <- NULL
   approved_blob <- NULL
   for (attempt in seq_len(as.integer(max_retries) + 1L)) {
-    binding <- assert_source_binding_current(adapter, rec)
     controls <- .read_v2_controls(
       adapter,
       rec,
       blob_sha,
-      expected_manifest_blob_sha = expected_manifest,
-      expected_index_blob_sha = expected_index
+      expected_descriptor_blob_sha = expected_descriptor,
+      descriptor_path = descriptor_path
     )
-    if (isTRUE(controls$index_changed_since_load) && attempt > 1L) {
-      stop(stale_write_error(
-        "queue index changed during the action; reload before applying the action"
-      ))
+    if (queue_descriptor_is_legacy(controls$descriptor)) {
+      stop("production-v2 compatibility is read-only until queue migration")
     }
+    if (identical(action, "reopened")) {
+      stop("v2 reopen is unavailable until the source-revision lifecycle is installed")
+    }
+    authoritative <- controls$record
+    binding <- assert_source_binding_current(adapter, authoritative)
     if (is.null(updated)) {
       persisted_body <- .read_v2_review_body(
         adapter,
-        rec,
+        authoritative,
         binding$enrolled$content
       )
       if (action != "saved" &&
@@ -261,15 +213,15 @@ adapter_read_queue_index <- function(adapter) {
         ))
       }
       if (action == "approved") {
-        .v2_approval_check(controls$manifest, rec, binding)
+        .v2_approval_check(authoritative, binding)
         approved_blob <- .optional_review_blob(
           adapter,
-          approved_path_for(rec$source_artifact_path)
+          approved_path_for(authoritative$source_artifact_path)
         )
       }
       updated <- if (action %in% c("saved", "assigned")) {
         replaced <- record_action(
-          rec,
+          authoritative,
           action,
           actor,
           role,
@@ -284,7 +236,7 @@ adapter_read_queue_index <- function(adapter) {
         }
       } else {
         transition(
-          rec,
+          authoritative,
           action,
           actor,
           role,
@@ -299,23 +251,8 @@ adapter_read_queue_index <- function(adapter) {
         "review record changed during a concurrent retry; no transition applied"
       ))
     }
-    new_record_sha <- tryCatch(
-      git_blob_sha(updated_yaml),
-      error = function(error) stop(sprintf(
-        "could not compute the updated record identity: %s",
-        conditionMessage(error)
-      ))
-    )
-    updated_index <- .index_row_with_update(
-      controls$index,
-      rec$artifact_id,
-      updated,
-      new_record_sha,
-      controls$manifest
-    )
     changes <- list()
     changes[[ACTION_PATH(rec$artifact_id)]] <- updated_yaml
-    changes[[QUEUE_INDEX_PATH]] <- serialize_queue_index(updated_index)
     if (action == "approved") {
       enrolled_split <- split_frontmatter_exact(binding$enrolled$content)
       enrolled_front <- enrolled_split$front
@@ -328,15 +265,18 @@ adapter_read_queue_index <- function(adapter) {
         persisted_body$content,
         separator = enrolled_split$line_ending
       )
-      changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
+      changes[[approved_path_for(authoritative$source_artifact_path)]] <-
+        approved_content
     }
     if (action == "saved" && !is.null(body)) {
       changes[[BODY_PATH(rec$artifact_id)]] <- body
     }
     expected_blobs <- c(
       setNames(list(blob_sha), ACTION_PATH(rec$artifact_id)),
-      setNames(list(controls$index_blob_sha), QUEUE_INDEX_PATH),
-      setNames(list(controls$manifest_blob_sha), QUEUE_MANIFEST_PATH),
+      setNames(
+        list(controls$descriptor_blob_sha),
+        controls$descriptor_path
+      ),
       setNames(list(persisted_body$sha), BODY_PATH(rec$artifact_id))
     )
     if (action == "approved") {
@@ -344,7 +284,7 @@ adapter_read_queue_index <- function(adapter) {
         expected_blobs,
         setNames(
           list(approved_blob$sha),
-          approved_path_for(rec$source_artifact_path)
+          approved_path_for(authoritative$source_artifact_path)
         )
       )
     }
@@ -358,23 +298,30 @@ adapter_read_queue_index <- function(adapter) {
         action,
         actor,
         rec$artifact_id
-      )
+      ),
+      reject_unrelated_head = FALSE
     )
     if (report$ok ||
         !report$error$kind %in% c("stale", "ref-race") ||
         attempt > as.integer(max_retries)) {
       return(list(report = report, record = updated, binding = binding))
     }
-    # A retry is safe only when the selected record and selected index row did
-    # not change. The next iteration re-reads all controls and source binding.
-    latest <- .read_v2_controls(adapter, rec, blob_sha)
-    same_row <- identical(latest$row, controls$row)
-    same_manifest <- identical(latest$manifest_blob_sha, controls$manifest_blob_sha)
-    if (!same_row || !same_manifest) {
+    # A retry is safe only when the selected record and descriptor did not
+    # change. Unrelated record commits do not create a data-level conflict.
+    latest <- .read_v2_controls(
+      adapter,
+      rec,
+      blob_sha,
+      expected_descriptor_blob_sha = controls$descriptor_blob_sha,
+      descriptor_path = controls$descriptor_path
+    )
+    if (!identical(
+      latest$descriptor_blob_sha,
+      controls$descriptor_blob_sha
+    )) {
       return(list(report = report, record = updated, binding = binding))
     }
-    expected_manifest <- latest$manifest_blob_sha
-    expected_index <- latest$index_blob_sha
+    expected_descriptor <- latest$descriptor_blob_sha
     branch_head_sha <- adapter_branch_head(
       adapter$owner,
       adapter$repo,
@@ -390,9 +337,14 @@ adapter_read_queue_index <- function(adapter) {
 perform_action <- function(
   adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
   approved_content = NULL, body = NULL, note = NULL,
-  assigned_identities = NULL, expected_manifest_blob_sha = NULL,
-  expected_index_blob_sha = NULL, legacy_read_only = FALSE
+  assigned_identities = NULL, expected_descriptor_blob_sha = NULL,
+  descriptor_path = NULL, legacy_read_only = FALSE
 ) {
+  if (isTRUE(adapter$read_only) ||
+      identical(adapter$review_branch, "review") ||
+      isTRUE(legacy_read_only)) {
+    stop("legacy review records are read-only")
+  }
   if (is_v2_review_record(rec)) {
     return(.perform_v2_action(
       adapter,
@@ -407,74 +359,9 @@ perform_action <- function(
       body,
       note,
       assigned_identities = assigned_identities,
-      expected_manifest_blob_sha = expected_manifest_blob_sha,
-      expected_index_blob_sha = expected_index_blob_sha
+      expected_descriptor_blob_sha = expected_descriptor_blob_sha,
+      descriptor_path = descriptor_path
     ))
   }
-  if (isTRUE(legacy_read_only)) {
-    stop("legacy calibration records are read-only")
-  }
-  # Legacy records are only served from the preserved calibration branch. A
-  # caller must explicitly opt into the old write API for test fixtures or an
-  # operator-owned non-production branch.
-  if (!authorize(role, action)) {
-    stop(sprintf(
-      "unauthorized: role '%s' cannot perform action '%s'",
-      role %||% "(none)",
-      action
-    ))
-  }
-  updated <- if (action %in% c("saved", "assigned")) {
-    record_action(
-      rec,
-      action,
-      actor,
-      role,
-      note = note,
-      body_sha256 = body_sha256,
-      blob_sha = blob_sha
-    )
-  } else {
-    transition(
-      rec,
-      action,
-      actor,
-      role,
-      note = note,
-      body_sha256 = body_sha256,
-      blob_sha = blob_sha
-    )
-  }
-  if (action == "assigned" && !is.null(assigned_identities)) {
-    updated <- set_assigned_to(updated, assigned_identities)
-  }
-  changes <- list()
-  record_path <- ACTION_PATH(rec$artifact_id)
-  changes[[record_path]] <- record_to_yaml(updated)
-  if (action == "approved") {
-    if (is.null(approved_content)) {
-      stop("performing 'approved' requires approved_content")
-    }
-    if (is.null(split_frontmatter(approved_content)$front)) {
-      stop("approved content must carry YAML front matter (structural gate, P2.5)")
-    }
-    changes[[approved_path_for(rec$source_artifact_path)]] <- approved_content
-  }
-  if (action == "saved" && !is.null(body)) {
-    changes[[BODY_PATH(rec$artifact_id)]] <- body
-  }
-  report <- adapter_write_with_recovery(
-    adapter,
-    changes = changes,
-    expected_ref_sha = branch_head_sha,
-    expected_blob_shas = setNames(list(blob_sha), record_path),
-    message = sprintf(
-      "review action '%s' by %s on %s",
-      action,
-      actor,
-      rec$artifact_id
-    ),
-    reject_unrelated_head = TRUE
-  )
-  list(report = report, record = updated)
+  stop("legacy review records are read-only")
 }

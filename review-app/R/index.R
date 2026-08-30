@@ -16,6 +16,7 @@ empty_review_index <- function() {
     record_blob_sha = character(0),
     governance_blocked = logical(0),
     source_drift = logical(0),
+    source_drift_status = character(0),
     queue_id = character(0),
     record_schema_version = character(0),
     approval_eligible = logical(0),
@@ -47,6 +48,7 @@ empty_review_index <- function() {
     record_blob_sha = record_blob_sha,
     governance_blocked = NA,
     source_drift = NA,
+    source_drift_status = NA_character_,
     queue_id = NA_character_,
     record_schema_version = NA_character_,
     approval_eligible = FALSE,
@@ -59,19 +61,14 @@ review_record_index_row <- function(
   artifact_id,
   parsed,
   record_blob_sha = NA_character_,
-  manifest = NULL,
-  source_drift = FALSE,
+  source_drift_status = "unchecked",
   record_path = NULL
 ) {
   record_path <- record_path %||% sprintf(
     "extraction/30_review/%s.review.yml",
     artifact_id
   )
-  blocked <- if (is.null(manifest)) {
-    FALSE
-  } else {
-    length(queue_open_blockers(manifest, artifact_id)) > 0L
-  }
+  blocked <- is_v2_review_record(parsed) && length(parsed$blocker_refs) > 0L
   data.frame(
     artifact_id = artifact_id,
     state = parsed$state,
@@ -83,8 +80,9 @@ review_record_index_row <- function(
     source_commit = parsed$source_commit,
     record_path = record_path,
     record_blob_sha = record_blob_sha,
-    governance_blocked = isTRUE(blocked),
-    source_drift = isTRUE(source_drift),
+    governance_blocked = blocked,
+    source_drift = identical(source_drift_status, "drifted"),
+    source_drift_status = source_drift_status,
     queue_id = parsed$queue_id %||% NA_character_,
     record_schema_version = parsed$record_schema_version %||% NA_character_,
     approval_eligible = FALSE,
@@ -135,8 +133,7 @@ index_review_records <- function(records, manifest = NULL) {
       id,
       parsed,
       record_blob_sha = record_sha,
-      manifest = manifest,
-      source_drift = record$source_drift %||% FALSE,
+      source_drift_status = record$source_drift_status %||% "unchecked",
       record_path = record_path
     )
   })
@@ -146,196 +143,69 @@ index_review_records <- function(records, manifest = NULL) {
   output
 }
 
-queue_index_row_from_record <- function(
-  record,
-  record_blob_sha,
-  manifest,
-  source_drift = FALSE
-) {
-  validate_review_record_v2(record)
-  blockers <- queue_open_blockers(manifest, record$artifact_id)
-  new_queue_index_row(
-    artifact_id = record$artifact_id,
-    source_artifact_path = record$source_artifact_path,
-    module = .index_module(record$source_artifact_path),
-    state = record$state,
-    review_round = record$review_round,
-    assigned_to = record$assigned_to,
-    record_path = sprintf(
-      "extraction/30_review/%s.review.yml",
-      record$artifact_id
-    ),
-    record_blob_sha = record_blob_sha,
-    governance_blocked = length(blockers) > 0L,
-    source_drift = source_drift
-  )
-}
-
-queue_index_from_record_items <- function(records, manifest) {
-  validate_queue_manifest(manifest)
-  if (!is.list(records)) stop("records must be a list")
-  rows <- lapply(records, function(item) {
-    if (!is.list(item) || is.null(item$record) || is.null(item$blob_sha)) {
-      stop("each record item requires record and blob_sha")
-    }
-    queue_index_row_from_record(item$record, item$blob_sha, manifest)
-  })
-  rows <- rows[order(vapply(rows, function(row) row$artifact_id, character(1)))]
-  validate_queue_index(rows, manifest)
-  rows
-}
-
-queue_index_from_records <- function(records, manifest) {
-  validate_queue_manifest(manifest)
-  rows <- lapply(records, function(record) {
-    parsed <- if (!is.null(record$record)) record$record else record
-    queue_index_row_from_record(
-      parsed,
-      record$blob_sha %||% record$record_blob_sha,
-      manifest,
-      record$source_drift %||% FALSE
-    )
-  })
-  rows <- rows[order(vapply(rows, function(row) row$artifact_id, character(1)))]
-  validate_queue_index(rows, manifest)
-  rows
-}
-
-new_queue_index <- function(queue_id, rows, manifest = NULL) {
-  .require_queue_scalar(queue_id, "queue_id")
-  rows <- queue_index_rows_to_list(rows)
-  if (!is.null(manifest)) validate_queue_index(rows, manifest)
-  structure(
-    list(
-      schema_version = QUEUE_SCHEMA_VERSION,
-      queue_id = queue_id,
-      rows = rows
-    ),
-    class = c("reviewapp_queue_index", "list")
-  )
-}
-
-queue_index_to_data_frame <- function(index, manifest = NULL) {
-  rows <- if (is.list(index) && !is.null(index$rows)) {
-    index$rows
-  } else {
-    index
-  }
-  rows <- queue_index_rows_to_list(rows)
-  if (!length(rows)) return(empty_review_index())
-  output <- do.call(rbind, lapply(rows, function(row) {
-    data.frame(
-      artifact_id = row$artifact_id,
-      state = row$state,
-      review_round = as.integer(row$review_round),
-      assigned_to = paste(row$assigned_to, collapse = ", "),
-      module = row$module,
-      source_artifact_path = row$source_artifact_path,
-      current_content_sha256 = NA_character_,
-      source_commit = NA_character_,
-      record_path = row$record_path,
-      record_blob_sha = row$record_blob_sha,
-      governance_blocked = row$governance_blocked,
-      source_drift = row$source_drift,
-      queue_id = manifest$queue_id %||% QUEUE_ID,
-      record_schema_version = REVIEW_RECORD_SCHEMA_VERSION,
-      approval_eligible = FALSE,
-      parse_error = NA_character_,
-      stringsAsFactors = FALSE
-    )
-  }))
-  row.names(output) <- NULL
-  output
-}
-
-serialize_queue_index <- function(index) {
-  queue <- if (is.list(index) && !is.null(index$rows)) {
-    index
-  } else {
-    new_queue_index(
-      queue_id = attr(index, "queue_id") %||% QUEUE_ID,
-      rows = index
-    )
-  }
-  queue$rows <- queue_index_rows_to_list(queue$rows)
-  queue$rows <- queue$rows[
-    order(vapply(queue$rows, function(row) row$artifact_id, character(1)))
-  ]
-  queue$schema_version <- QUEUE_SCHEMA_VERSION
-  canonical_yaml(queue)
-}
-
-rebuild_queue_index <- function(records, manifest) {
-  serialize_queue_index(new_queue_index(
-    manifest$queue_id,
-    queue_index_from_records(records, manifest),
-    manifest = manifest
+.review_record_paths <- function(tree_blobs) {
+  sort(grep(
+    paste0("^", REVIEW_DIR, "/VAR-[a-z0-9]+[.]review[.]yml$"),
+    names(tree_blobs),
+    value = TRUE
   ))
 }
 
-parse_queue_index_blob <- function(yaml_string, manifest = NULL) {
-  parse_queue_index(yaml_string, manifest = manifest)
+.queue_control_path <- function(tree_blobs) {
+  present <- intersect(
+    c(QUEUE_DESCRIPTOR_PATH, LEGACY_QUEUE_MANIFEST_PATH),
+    names(tree_blobs)
+  )
+  if (!length(present)) {
+    stop(.queue_error(
+      "queue descriptor is missing; initialize the queue outside the application"
+    ))
+  }
+  if (length(present) != 1L) {
+    stop(.queue_error("queue contains both simplified and legacy controls"))
+  }
+  present[[1L]]
 }
 
-.adapter_index_review <- function(adapter) {
-  token <- adapter$get_token()
-  if (identical(adapter$review_branch, "review")) {
-    tree <- adapter_fetch_tree(
+.legacy_review_index <- function(adapter, token) {
+  tree <- adapter_fetch_tree(
+    adapter$owner,
+    adapter$repo,
+    adapter$review_branch,
+    token,
+    adapter$http
+  )
+  paths <- .review_record_paths(tree$blobs)
+  records <- lapply(paths, function(path) {
+    blob <- adapter_fetch_blob(
       adapter$owner,
       adapter$repo,
+      path,
       adapter$review_branch,
       token,
       adapter$http
     )
-    paths <- grep(
-      paste0("^", REVIEW_DIR, "/[^/]+\\.review\\.yml$"),
-      names(tree$blobs),
-      value = TRUE
+    list(
+      id = sub("[.]review[.]yml$", "", basename(path)),
+      record_path = path,
+      yaml_string = blob$content,
+      blob_sha = blob$sha
     )
-    records <- lapply(paths, function(path) {
-      blob <- adapter_fetch_blob(
-        adapter$owner,
-        adapter$repo,
-        path,
-        adapter$review_branch,
-        token,
-        adapter$http
-      )
-      list(
-        id = sub("\\.review\\.yml$", "", basename(path)),
-        record_path = path,
-        yaml_string = blob$content,
-        blob_sha = blob$sha
-      )
-    })
-    return(list(
-      mode = "legacy_read_only",
-      queue_mode = "legacy_read_only",
-      index = index_review_records(records),
-      blobs = tree$blobs,
-      branch_head_sha = tree$commit,
-      manifest = NULL,
-      manifest_blob_sha = NULL,
-      index_blob_sha = NULL,
-      error = NULL
-    ))
-  }
-  if (!identical(adapter$review_branch, PRODUCTION_REVIEW_BRANCH)) {
-    return(list(
-      mode = "queue_error",
-      queue_mode = "queue_error",
-      index = empty_review_index(),
-      blobs = list(),
-      branch_head_sha = NULL,
-      manifest = NULL,
-      manifest_blob_sha = NULL,
-      index_blob_sha = NULL,
-      error = sprintf(
-        "unsupported production review branch; expected %s",
-        PRODUCTION_REVIEW_BRANCH
-      )
-    ))
-  }
+  })
+  list(
+    mode = "legacy_read_only",
+    queue_mode = "legacy_read_only",
+    index = index_review_records(records),
+    blobs = tree$blobs,
+    branch_head_sha = tree$commit,
+    descriptor = NULL,
+    descriptor_path = NULL,
+    descriptor_blob_sha = NULL,
+    error = NULL
+  )
+}
+
+.versioned_review_index <- function(adapter, token) {
   head <- adapter_branch_head(
     adapter$owner,
     adapter$repo,
@@ -350,89 +220,94 @@ parse_queue_index_blob <- function(yaml_string, manifest = NULL) {
     token,
     adapter$http
   )
-  manifest_sha <- tree$blobs[[QUEUE_MANIFEST_PATH]] %||% NULL
-  if (is.null(manifest_sha)) {
-    return(list(
-      mode = "bootstrap_required",
-      queue_mode = "bootstrap_required",
-      index = empty_review_index(),
-      blobs = tree$blobs,
-      branch_head_sha = head,
-      manifest = NULL,
-      manifest_blob_sha = NULL,
-      index_blob_sha = NULL,
-      error = "production review branch has no queue manifest; administrator bootstrap is required"
-    ))
-  }
-  manifest_blob <- adapter_fetch_blob_by_sha(
+  descriptor_path <- .queue_control_path(tree$blobs)
+  descriptor_sha <- tree$blobs[[descriptor_path]]
+  descriptor_blob <- adapter_fetch_blob_by_sha(
     adapter$owner,
     adapter$repo,
-    manifest_sha,
+    descriptor_sha,
     token,
     adapter$http
   )
-  manifest <- parse_queue_manifest(manifest_blob$content)
-  if (!.is_sha1(adapter$expected_source_commit) ||
-      !identical(manifest$source_commit, adapter$expected_source_commit)) {
-    stop(.queue_error(
-      "production manifest source does not match the expected source commit"
-    ))
+  descriptor <- parse_queue_control(descriptor_blob$content, descriptor_path)
+  paths <- .review_record_paths(tree$blobs)
+  blobs <- adapter_fetch_review_records_graphql(adapter, head, paths)
+  items <- lapply(paths, function(path) {
+    blob <- blobs[[path]] %||% NULL
+    expected_sha <- tree$blobs[[path]]
+    if (is.null(blob) || !identical(blob$sha, expected_sha) ||
+        !identical(git_blob_sha(blob$content), expected_sha)) {
+      stop(.queue_error(sprintf(
+        "review record '%s' does not match the queue tree",
+        path
+      )))
+    }
+    id <- sub("[.]review[.]yml$", "", basename(path))
+    record <- parse_review_record(blob$content)
+    if (!is_v2_review_record(record)) {
+      stop(.queue_error(sprintf("versioned queue record '%s' is not v2", id)))
+    }
+    if (!identical(record$artifact_id, id)) {
+      stop(.queue_error(sprintf(
+        "review record filename '%s' does not match artifact_id",
+        path
+      )))
+    }
+    list(
+      id = id,
+      record_path = path,
+      yaml_string = blob$content,
+      blob_sha = blob$sha,
+      record = record,
+      source_drift_status = "unchecked"
+    )
+  })
+  records <- lapply(items, function(item) item$record)
+  validate_queue_record_set(records, descriptor)
+  mode <- if (queue_descriptor_is_legacy(descriptor)) {
+    "production_v2_read_only"
+  } else {
+    "versioned"
   }
-  index_sha <- tree$blobs[[QUEUE_INDEX_PATH]] %||% NULL
-  if (is.null(index_sha)) {
-    return(list(
-      mode = "queue_error",
-      queue_mode = "queue_error",
-      index = empty_review_index(),
-      blobs = tree$blobs,
-      branch_head_sha = head,
-      manifest = manifest,
-      manifest_blob_sha = manifest_sha,
-      index_blob_sha = NULL,
-      error = "production queue manifest exists but queue-index.yml is missing"
-    ))
-  }
-  index_blob <- adapter_fetch_blob_by_sha(
-    adapter$owner,
-    adapter$repo,
-    index_sha,
-    token,
-    adapter$http
-  )
-  queue_index <- parse_queue_index_blob(index_blob$content, manifest)
-  result <- list(
-    mode = "production",
-    queue_mode = "production",
-    index = queue_index_to_data_frame(queue_index, manifest),
+  list(
+    mode = mode,
+    queue_mode = mode,
+    index = index_review_records(items, descriptor),
     blobs = tree$blobs,
     branch_head_sha = head,
-    manifest = manifest,
-    manifest_blob_sha = manifest_sha,
-    index_blob_sha = index_sha,
-    queue_index = queue_index,
+    descriptor = descriptor,
+    descriptor_path = descriptor_path,
+    descriptor_blob_sha = descriptor_sha,
     error = NULL
   )
-  result
+}
+
+.adapter_index_review <- function(adapter) {
+  token <- adapter$get_token()
+  if (isTRUE(adapter$read_only) || identical(adapter$review_branch, "review")) {
+    return(.legacy_review_index(adapter, token))
+  }
+  .versioned_review_index(adapter, token)
 }
 
 adapter_index_review <- function(adapter) {
   telemetry <- repository_telemetry_operation(adapter)
-  result <- tryCatch(.adapter_index_review(telemetry$adapter), error = function(error) {
-    list(
-      mode = "queue_error",
-      queue_mode = "queue_error",
-      index = empty_review_index(),
-      blobs = list(),
-      branch_head_sha = NULL,
-      manifest = NULL,
-      manifest_blob_sha = NULL,
-      index_blob_sha = NULL,
-      error = sprintf(
-        "production queue is invalid: %s",
-        conditionMessage(error)
+  result <- tryCatch(
+    .adapter_index_review(telemetry$adapter),
+    error = function(error) {
+      list(
+        mode = "queue_error",
+        queue_mode = "queue_error",
+        index = empty_review_index(),
+        blobs = list(),
+        branch_head_sha = NULL,
+        descriptor = NULL,
+        descriptor_path = NULL,
+        descriptor_blob_sha = NULL,
+        error = sprintf("review queue is invalid: %s", conditionMessage(error))
       )
-    )
-  })
+    }
+  )
   result$request_telemetry <- telemetry$snapshot()
   result
 }
