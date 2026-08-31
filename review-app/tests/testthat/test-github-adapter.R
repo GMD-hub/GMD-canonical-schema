@@ -10,11 +10,48 @@
 .fake_adapter <- function(http_fun) {
   reviewapp::new_github_adapter(
     owner = "GMD-hub", repo = "fixture-repo",
-    default_branch = "main", review_branch = "review",
+    default_branch = "main", review_branch = "fixture-review",
     get_token = function() "ghu_testtoken",
     http = http_fun
   )
 }
+
+test_that("adapter construction rejects the source branch as a write target", {
+  expect_error(
+    new_github_adapter(
+      "GMD-hub", "fixture-repo", "main", "main",
+      get_token = function() "secret",
+      http = function(...) list()
+    ),
+    "must differ"
+  )
+  preserved <- new_github_adapter(
+    "GMD-hub", "fixture-repo", "main", "review",
+    get_token = function() "secret",
+    http = function(...) list(),
+    read_only = FALSE
+  )
+  expect_true(preserved$read_only)
+})
+
+test_that("immutable source revisions must resolve as commit objects", {
+  commit_sha <- paste(rep("a", 40L), collapse = "")
+  tree_sha <- paste(rep("b", 40L), collapse = "")
+  expect_identical(
+    adapter_fetch_commit(
+      "o", "r", commit_sha, "secret",
+      http = function(...) list(sha = commit_sha, tree = list(sha = tree_sha))
+    ),
+    list(sha = commit_sha, tree_sha = tree_sha)
+  )
+  expect_error(
+    adapter_fetch_commit(
+      "o", "r", commit_sha, "secret",
+      http = function(...) list(sha = commit_sha)
+    ),
+    "not a verified commit"
+  )
+})
 
 # --- Step 1 (Phase 1): production write transport + Connect entry point ------
 
@@ -103,7 +140,6 @@ test_that("review_app_adapter() fails loudly when required secrets are missing",
     REVIEW_APP_GH_REPO = "",
     REVIEW_APP_GH_DEFAULT_BRANCH = "",
     REVIEW_APP_GH_REVIEW_BRANCH = "",
-    REVIEW_APP_EXPECTED_SOURCE_COMMIT = paste(rep("a", 40L), collapse = ""),
     GITHUB_APP_ID = "",
     GITHUB_APP_INSTALLATION_ID = "",
     GITHUB_APP_PRIVATE_KEY = ""
@@ -121,7 +157,6 @@ test_that("review_app_adapter() builds a live adapter when secrets are present",
     REVIEW_APP_GH_REPO = "fixture-repo",
     REVIEW_APP_GH_DEFAULT_BRANCH = "main",
     REVIEW_APP_GH_REVIEW_BRANCH = "review",
-    REVIEW_APP_EXPECTED_SOURCE_COMMIT = paste(rep("a", 40L), collapse = ""),
     GITHUB_APP_ID = "123",
     GITHUB_APP_INSTALLATION_ID = "999",
     GITHUB_APP_PRIVATE_KEY = "not-a-real-key"
@@ -133,10 +168,8 @@ test_that("review_app_adapter() builds a live adapter when secrets are present",
   expect_s3_class(ad, "reviewapp_github_adapter")
   expect_identical(ad$owner, "GMD-hub")
   expect_identical(ad$review_branch, "review")
-  expect_identical(
-    ad$expected_source_commit,
-    paste(rep("a", 40L), collapse = "")
-  )
+  expect_true(ad$read_only)
+  expect_false("expected_source_commit" %in% names(ad))
 })
 
 # --- Step 5: reads + hash verification --------------------------------------
@@ -178,7 +211,7 @@ test_that("atomic write succeeds with multiple files and rolls the branch forwar
   state$commit <- "commit-1"
   counter <- 0L
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -197,7 +230,7 @@ test_that("atomic write succeeds with multiple files and rolls the branch forwar
     if (grepl("git/commits$", url) && method == "POST") {
       return(list(sha = "new-commit"))
     }
-    if (grepl("git/refs/heads/review", url) && method == "PATCH") {
+    if (grepl("git/refs/heads/fixture-review", url) && method == "PATCH") {
       state$commit <- "new-commit"
       return(list(object = list(sha = "new-commit")))
     }
@@ -221,7 +254,7 @@ test_that("stale write (touched blob SHA changed since load) is rejected without
   state$commit <- "commit-1"
   state$blobs <- list("a.md" = "blob-a-CHANGED")
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -251,7 +284,7 @@ test_that("stale write where only the branch ref moved (unrelated file) is also 
   state$commit <- "commit-2"
   state$blobs <- list("a.md" = "blob-a")
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -280,7 +313,7 @@ test_that("concurrent-writer simulation rejects the lost update", {
   state$commit <- "commit-writer2"
   state$blobs <- list("a.md" = "blob-a")
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {

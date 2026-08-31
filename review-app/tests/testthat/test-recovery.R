@@ -7,7 +7,7 @@
 .fake_recovery_adapter <- function(http_fun) {
   reviewapp::new_github_adapter(
     owner = "GMD-hub", repo = "fixture-repo",
-    default_branch = "main", review_branch = "review",
+    default_branch = "main", review_branch = "fixture-review",
     get_token = function() "ghu_testtoken",
     http = http_fun
   )
@@ -18,7 +18,7 @@ test_that("recovery wrapper reports success and applies the transition on a full
   state <- new.env(parent = emptyenv())
   state$commit <- "commit-1"
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -27,7 +27,7 @@ test_that("recovery wrapper reports success and applies the transition on a full
     if (grepl("git/blobs$", url) && method == "POST") return(list(sha = "nb1"))
     if (grepl("git/trees$", url) && method == "POST") return(list(sha = "tree1"))
     if (grepl("git/commits$", url) && method == "POST") return(list(sha = "c1"))
-    if (grepl("git/refs/heads/review", url) && method == "PATCH") {
+    if (grepl("git/refs/heads/fixture-review", url) && method == "PATCH") {
       state$commit <- "c1"
       return(list(object = list(sha = "c1")))
     }
@@ -54,7 +54,7 @@ test_that("partial failure after ref update step is reported and never claims th
   calls <- character(0)
   http_fun <- function(method, url, token, body = NULL) {
     calls <<- c(calls, url)
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     if (grepl("git/trees/", url) && method == "GET") {
@@ -89,7 +89,7 @@ test_that("recovery wrapper surfaces a stale write without claiming a transition
   state <- new.env(parent = emptyenv())
   state$commit <- "commit-2" # moved since load
   http_fun <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/review", url) && method == "GET") {
+    if (grepl("git/ref/heads/fixture-review", url) && method == "GET") {
       return(list(object = list(sha = state$commit)))
     }
     list(object = list())
@@ -120,4 +120,68 @@ test_that("recovery_report_text renders useful operator text", {
     )),
     "PARTIAL FAILURE"
   )
+})
+
+test_that("atomic writes support forward-only control-file deletion", {
+  captured_tree <- NULL
+  captured_ref <- NULL
+  head <- paste(rep("a", 40L), collapse = "")
+  http_fun <- function(method, url, token, body = NULL) {
+    if (identical(method, "GET") && grepl("git/ref/heads/fixture-review", url)) {
+      return(list(object = list(sha = head)))
+    }
+    if (identical(method, "GET") && grepl("git/trees/", url)) {
+      return(list(
+        tree = list(
+          list(
+            path = LEGACY_QUEUE_MANIFEST_PATH,
+            type = "blob",
+            sha = paste(rep("b", 40L), collapse = "")
+          ),
+          list(
+            path = LEGACY_QUEUE_INDEX_PATH,
+            type = "blob",
+            sha = paste(rep("c", 40L), collapse = "")
+          )
+        ),
+        sha = paste(rep("d", 40L), collapse = ""),
+        truncated = FALSE
+      ))
+    }
+    if (identical(method, "POST") && grepl("git/blobs$", url)) {
+      return(list(sha = paste(rep("e", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/trees$", url)) {
+      captured_tree <<- body
+      return(list(sha = paste(rep("f", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/commits$", url)) {
+      return(list(sha = paste(rep("1", 40L), collapse = "")))
+    }
+    if (identical(method, "PATCH")) {
+      captured_ref <<- body
+      return(list(object = list(sha = body$sha)))
+    }
+    stop("unexpected request")
+  }
+  adapter <- .fake_recovery_adapter(http_fun)
+  changes <- list()
+  changes[QUEUE_DESCRIPTOR_PATH] <- list("schema_version: '1.0'\n")
+  changes[LEGACY_QUEUE_MANIFEST_PATH] <- list(NULL)
+  changes[LEGACY_QUEUE_INDEX_PATH] <- list(NULL)
+  result <- adapter_write_atomic(
+    adapter,
+    changes = changes,
+    expected_ref_sha = head,
+    message = "migrate queue"
+  )
+  entries <- stats::setNames(captured_tree$tree, vapply(
+    captured_tree$tree,
+    function(entry) entry$path,
+    character(1)
+  ))
+  expect_null(entries[[LEGACY_QUEUE_MANIFEST_PATH]]$sha)
+  expect_null(entries[[LEGACY_QUEUE_INDEX_PATH]]$sha)
+  expect_identical(captured_ref$force, FALSE)
+  expect_identical(result$commit_sha, paste(rep("1", 40L), collapse = ""))
 })

@@ -15,30 +15,31 @@
 # Storage interface (default implementations hit the GitHub API over HTTP)
 # ---------------------------------------------------------------------------
 
-PRODUCTION_REVIEW_BRANCH <- "review-production"
-
-expected_source_commit <- function(value = Sys.getenv(
-  "REVIEW_APP_EXPECTED_SOURCE_COMMIT", unset = ""
-)) {
-  if (!.is_sha1(value)) {
-    stop("REVIEW_APP_EXPECTED_SOURCE_COMMIT must be a lowercase Git SHA-1")
-  }
-  value
-}
-
 new_repository_read_telemetry <- function() {
   list(
     begin = function(http) {
       logical_reads <- 0L
       actual_attempts <- 0L
       per_record_reads <- 0L
+      batch_reads <- 0L
+      records_read <- 0L
       started <- proc.time()[["elapsed"]]
       list(
         http = function(method, url, token, body = NULL) {
-          if (identical(method, "GET")) {
+          if (identical(method, "GET") ||
+              (identical(method, "POST") && grepl("/graphql$", url))) {
             logical_reads <<- logical_reads + 1L
             if (grepl("/contents/extraction/30_review/[^?]+[.]review[.]yml", url)) {
               per_record_reads <<- per_record_reads + 1L
+            }
+            if (identical(method, "POST") && grepl("/graphql$", url)) {
+              batch_reads <<- batch_reads + 1L
+              aliases <- gregexpr("[[:space:]]b[0-9]{3}:", body$query %||% "")[[1L]]
+              records_read <<- records_read + if (identical(aliases[[1L]], -1L)) {
+                0L
+              } else {
+                length(aliases)
+              }
             }
           }
           if (identical(http, gh_adapter_http)) {
@@ -54,6 +55,8 @@ new_repository_read_telemetry <- function() {
           logical_reads = logical_reads,
           actual_attempts = actual_attempts,
           per_record_reads = per_record_reads,
+          batch_reads = batch_reads,
+          records_read = records_read,
           duration_ms = as.integer(round(
             (proc.time()[["elapsed"]] - started) * 1000
           ))
@@ -90,6 +93,24 @@ adapter_branch_head <- function(owner, repo, branch, token, http = NULL) {
     stop(sprintf("GitHub branch response did not contain a head SHA for '%s'", branch))
   }
   sha
+}
+
+adapter_fetch_commit <- function(owner, repo, commit_sha, token, http = NULL) {
+  if (!.is_sha1(commit_sha)) {
+    stop("commit reads require a lowercase Git SHA-1")
+  }
+  url <- sprintf(
+    "https://api.github.com/repos/%s/%s/git/commits/%s",
+    owner,
+    repo,
+    commit_sha
+  )
+  response <- http("GET", url, token)
+  if (!identical(response$sha %||% NULL, commit_sha) ||
+      !.is_sha1(response$tree$sha %||% NULL)) {
+    stop(sprintf("GitHub object '%s' is not a verified commit", commit_sha))
+  }
+  list(sha = response$sha, tree_sha = response$tree$sha)
 }
 
 #' Fetch the full recursive tree for a branch and return a name->blob map.
@@ -212,7 +233,11 @@ adapter_graphql <- function(owner, repo, query, variables, token, http = NULL) {
 }
 
 adapter_fetch_blobs_graphql <- function(
-  adapter, commit_sha, paths, batch_size = 50L, progress = NULL
+  adapter, commit_sha, paths, batch_size = 50L, progress = NULL,
+  allowed_path = paste0(
+    "^extraction/20_drafts/",
+    "[a-z0-9][a-z0-9_-]*/VAR-[a-z0-9]+[.]md$"
+  )
 ) {
   if (!.is_scalar_character(commit_sha) || !length(paths)) return(list())
   if (!is.numeric(batch_size) || length(batch_size) != 1L || batch_size < 1L ||
@@ -220,11 +245,8 @@ adapter_fetch_blobs_graphql <- function(
     stop("GraphQL batch_size must be between 1 and 50")
   }
   paths <- as.character(paths)
-  if (any(!grepl(
-    "^extraction/20_drafts/(idn|geo|dem|lbr|utl|dwl)/VAR-[a-z0-9]+[.]md$",
-    paths
-  ))) {
-    stop("GraphQL source blob batches contain an unsafe path")
+  if (any(!grepl(allowed_path, paths))) {
+    stop("GraphQL blob batches contain an unsafe path")
   }
   if (anyDuplicated(paths)) stop("GraphQL blob paths must be unique")
   batches <- split(paths, ceiling(seq_along(paths) / as.integer(batch_size)))
@@ -274,6 +296,22 @@ adapter_fetch_blobs_graphql <- function(
   result
 }
 
+adapter_fetch_review_records_graphql <- function(
+  adapter, commit_sha, paths, batch_size = 50L, progress = NULL
+) {
+  adapter_fetch_blobs_graphql(
+    adapter,
+    commit_sha,
+    paths,
+    batch_size = batch_size,
+    progress = progress,
+    allowed_path = paste0(
+      "^extraction/30_review/",
+      "VAR-[a-z0-9]+[.]review[.]yml$"
+    )
+  )
+}
+
 # ---------------------------------------------------------------------------
 # High-level adapter object
 # ---------------------------------------------------------------------------
@@ -287,21 +325,26 @@ adapter_fetch_blobs_graphql <- function(
 #' @param get_token function() returning an installation token.
 #' @param http function(method, url, token, body) returning parsed JSON
 #'   (injectable; defaults to `gh_adapter_http()`).
-#' @param expected_source_commit optional pinned lowercase Git SHA-1 required
-#'   for production queue manifest validation.
 #' @param telemetry optional operation telemetry factory created by
 #'   `new_repository_read_telemetry()`.
 new_github_adapter <- function(owner, repo, default_branch, review_branch,
                                get_token, http = NULL,
-                               expected_source_commit = NULL,
-                               telemetry = NULL) {
+                               telemetry = NULL,
+                               read_only = identical(review_branch, "review")) {
+  if (!.is_scalar_character(default_branch) ||
+      !.is_scalar_character(review_branch)) {
+    stop("GitHub adapter branches must be non-empty strings")
+  }
+  if (identical(default_branch, review_branch)) {
+    stop("review branch must differ from the source branch")
+  }
   transport <- http %||% gh_adapter_http
   structure(list(
     owner = owner,
     repo = repo,
     default_branch = default_branch,
     review_branch = review_branch,
-    expected_source_commit = expected_source_commit,
+    read_only = isTRUE(read_only) || identical(review_branch, "review"),
     telemetry = telemetry,
     get_token = get_token,
     http = transport
@@ -343,8 +386,6 @@ review_app_adapter <- function() {
   app_id <- .gh_app_env("GITHUB_APP_ID")
   installation_id <- .gh_app_env("GITHUB_APP_INSTALLATION_ID")
   private_key <- .gh_app_env("GITHUB_APP_PRIVATE_KEY")
-  source_commit <- expected_source_commit()
-
   missing <- c(
     owner = !nzchar(owner), repo = !nzchar(repo),
     default_branch = !nzchar(default_branch), review_branch = !nzchar(review_branch),
@@ -368,7 +409,6 @@ review_app_adapter <- function() {
     repo = repo,
     default_branch = default_branch,
     review_branch = review_branch,
-    expected_source_commit = source_commit,
     telemetry = new_repository_read_telemetry(),
     get_token = function() {
       installation_token(

@@ -88,28 +88,46 @@ adapter_check_stale <- function(
   response$sha
 }
 
+.assert_writable_adapter <- function(adapter) {
+  if (!inherits(adapter, "reviewapp_github_adapter")) {
+    stop("review writes require a validated GitHub adapter")
+  }
+  if (!.is_scalar_character(adapter$default_branch) ||
+      !.is_scalar_character(adapter$review_branch)) {
+    stop("review writes require configured source and review branches")
+  }
+  if (isTRUE(adapter$read_only) || identical(adapter$review_branch, "review")) {
+    stop("the configured review branch is read-only")
+  }
+  if (identical(adapter$review_branch, adapter$default_branch)) {
+    stop("review writes cannot target the source branch")
+  }
+  invisible(TRUE)
+}
+
 adapter_write_atomic <- function(
   adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(),
   message, inline_changes = NULL, max_payload_bytes = 900000L,
   reject_unrelated_head = NULL, preflight_tree = NULL
 ) {
+  .assert_writable_adapter(adapter)
   if (!is.list(changes) || !length(changes)) stop("atomic write requires changes")
   paths <- names(changes)
   if (is.null(paths) || any(!nzchar(paths)) || anyDuplicated(paths)) {
     stop("atomic write paths must be non-empty and unique")
   }
   if (any(!vapply(changes, function(content) {
-    is.character(content) && length(content) == 1L && !is.na(content)
+    is.null(content) ||
+      (is.character(content) && length(content) == 1L && !is.na(content))
   }, logical(1)))) {
-    stop("atomic write contents must be scalar character values")
+    stop("atomic write contents must be scalar text or NULL deletions")
   }
   owner <- adapter$owner
   repo <- adapter$repo
   branch <- adapter$review_branch
   token <- adapter$get_token()
   if (is.null(reject_unrelated_head)) {
-    control_paths <- c(QUEUE_MANIFEST_PATH, QUEUE_INDEX_PATH)
-    reject_unrelated_head <- !any(names(expected_blob_shas) %in% control_paths)
+    reject_unrelated_head <- TRUE
   }
   if (is.null(preflight_tree)) {
     tree <- adapter_check_stale(
@@ -143,6 +161,7 @@ adapter_write_atomic <- function(
     blob_shas <- list()
     blob_created <- FALSE
     for (path in names(changes)) {
+      if (is.null(changes[[path]])) next
       blob_shas[[path]] <- tryCatch(
         .write_blob(adapter, path, changes[[path]], token),
         error = function(error) {
@@ -165,11 +184,17 @@ adapter_write_atomic <- function(
       blob_created <- TRUE
     }
     entries <- lapply(names(changes), function(path) {
+      if (is.null(changes[[path]])) {
+        return(list(path = path, mode = "100644", type = "blob", sha = NULL))
+      }
       list(path = path, mode = "100644", type = "blob", sha = blob_shas[[path]])
     })
     completed <- c("staleness-check", "blob-creation")
   } else {
     entries <- lapply(names(payload_changes), function(path) {
+      if (is.null(payload_changes[[path]])) {
+        return(list(path = path, mode = "100644", type = "blob", sha = NULL))
+      }
       list(
         path = path,
         mode = "100644",

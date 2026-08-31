@@ -4,45 +4,24 @@ A private, Git-backed Shiny for R application for the GPID team's human review
 workflow. Built with the [Golem](https://thinkr-open.github.io/golem/) framework
 for production-grade Shiny applications and deployed on Posit Connect.
 
-## Queue Modes and Release A
+## Queue Contract
 
-The intended production review queue uses `review-production`. The preserved
-`review` branch is the legacy calibration queue and remains historical,
-read-only review data. These branches have different contracts:
+Versioned queues use authoritative v2 review records and one immutable
+`queue-descriptor.yml`. The descriptor records the queue ID, source revision,
+creation actor/time, expected record count, and digest of the immutable record
+identities. Dashboard state is derived from batched record reads. No mutable
+global queue index participates in a review action.
 
-- `review-production` requires the strict production queue manifest, queue
-  index, and versioned review records.
-- `review` supports legacy calibration records only as read-only content. It
-  must not be used as the production queue or as a source for a bootstrap.
+The preserved `review` calibration branch remains read-only. Existing
+production-v2 queues that still contain `queue-manifest.yml` and
+`queue-index.yml` are supported through a temporary read adapter. The old index
+is not authoritative and is not changed by review actions.
 
-Release A makes all 267 non-welfare drafts visible while approval remains
-disabled. The tracked denominator and module counts are:
-
-| Module | Count |
-|---|---:|
-| IDN | 9 |
-| GEO | 14 |
-| DEM | 24 |
-| LBR | 90 |
-| UTL | 61 |
-| DWL | 69 |
-| **Total** | **267** |
-
-An authenticated administrator performs the initial bootstrap. Records start
-unassigned. Governance-blocked records may be opened, edited, saved, submitted,
-and returned for revision, but no record may be approved while the global
-approval gate is disabled.
-
-The manifest, index, and production review records are operator-produced Git
-state; they are not generated or asserted by this README. Until bootstrap and
-the A9 smoke checks are complete, production commit, blob, bundle, and Connect
-GUID values are intentionally not recorded here.
-
-Production operators must run the fail-closed queue validator and redacted
-Connect attestor documented in
-[`docs/operator-guide.md`](docs/operator-guide.md#63-production-bootstrap).
-The tools are `tools/validate-production-queue.R` and
-`tools/attest-connect.R`; neither changes repository or remote state.
+Queue initialization and migration are authenticated operator functions, not
+Shiny controls. Both operations publish one non-force atomic Git commit.
+Initialization rejects any non-placeholder file in the review or approved
+namespace. Migration validates every source and record identity and leaves all
+record blobs unchanged.
 
 ## Project Structure
 
@@ -63,9 +42,9 @@ review-app/
 │   ├── hashing.R            # SHA-256 hashing (cross-language compatible)
 │   ├── identity.R           # Connect identity resolution
 │   ├── index.R              # Dashboard work-queue index builder
-│   ├── queue_manifest.R     # Production queue and index contracts
+│   ├── queue_manifest.R     # Queue descriptor and compatibility contracts
 │   ├── source_binding.R     # Immutable source and drift checks
-│   ├── enrollment.R         # Administrator production bootstrap
+│   ├── enrollment.R         # Operator-only initialization and migration
 │   ├── recovery.R           # Atomic multi-file commit + partial-failure recovery
 │   ├── actions.R            # Role-gated action orchestration
 │   └── frontmatter.R        # YAML front-matter handling + Markdown preview
@@ -194,8 +173,7 @@ targets R 4.5.2 with CRAN as the sole repository.
 | `REVIEW_APP_GH_OWNER` | Yes | GitHub repository owner |
 | `REVIEW_APP_GH_REPO` | Yes | GitHub repository name |
 | `REVIEW_APP_GH_DEFAULT_BRANCH` | Yes | Source branch (e.g. `main`) |
-| `REVIEW_APP_GH_REVIEW_BRANCH` | Yes | Protected production data branch (`review-production`) |
-| `REVIEW_APP_EXPECTED_SOURCE_COMMIT` | Yes | Qualified lowercase 40-character `main` commit required for bootstrap |
+| `REVIEW_APP_GH_REVIEW_BRANCH` | Yes | Protected review data branch |
 | `GITHUB_APP_ID` | Yes | Numeric GitHub App ID (not the `Iv...` Client ID) |
 | `GITHUB_APP_INSTALLATION_ID` | Yes | GitHub App installation ID |
 | `GITHUB_APP_PRIVATE_KEY` | Yes | Full GitHub App PEM private-key contents (Connect secret) |
@@ -265,45 +243,39 @@ Use the A9 smoke procedure in the operator guide. Do not call the deployment
 successful until Connect reports the active commit and the application boots
 with the expected branch configuration.
 
-## Queue Bootstrap and Recovery
+## Queue Initialization and Migration
 
-An administrator starts bootstrap from the application only after
-`review-production` exists and has no queue manifest. The app must show the
-source commit and the expected 267 total before confirmation. Bootstrap
-enumerates only `extraction/20_drafts/<module>/VAR-*.md`, validates the exact
-Release A path set and counts (`9/14/24/90/61/69`), creates 267 unassigned
-version-2 records, and writes the manifest and index in one protected Git
-commit. A repeated bootstrap, a source-head move, a path/count mismatch, or an
-incomplete payload fails without moving the production ref.
+`initialize_review_queue()` requires an authenticated administrator, an
+explicit immutable source revision, a queue ID, and an empty review/approved
+namespace. It also requires an independent expected record count and source
+path-set digest. It discovers generic `VAR-*.md` draft paths, creates
+source-bound v2 records, creates the minimal descriptor, and publishes one
+atomic commit.
 
-The queue dashboard reads the derived
-`extraction/30_review/queue-index.yml` rather than scanning all records. Each
-row identifies the artifact, source path, module, state, round, assignments,
-record path/blob identity, and governance/source-drift indicators. Per-artifact
-records remain the authoritative audit records. The manifest does not embed a
-mutable index digest; each action locks the current queue-index blob identity.
+`migrate_review_queue()` accepts an existing production-v2 queue. It validates
+the old immutable manifest fields, legacy index consistency, all v2 records,
+and the record set. It then adds the descriptor and removes the old manifest
+and index in one forward-only commit. Tests use only in-memory adapters and
+temporary repositories. Operators must never use production as a test target.
 
-If the index is missing or invalid, stop review writes and use the administrator
-repair procedure defined in `docs/operator-guide.md`. Rebuild the index from
-the authoritative v2 records and current manifest, validate the exact total,
-module counts, path set, and row identities, and verify that the serialized
-bytes are identical to the deterministic rebuild before publishing one
-non-force repair commit. Never hand-edit a row, repair an index without a
-manifest, or silently re-enroll records.
+Production-v2 compatibility is read-only until migration. Approval and v2
+reopen remain unavailable until the sequential Task D and Task E changes
+install their complete server-side gates.
 
 ## Source Binding and Fail-Closed Writes
 
 Every production record is bound to the enrolled source commit, Git blob SHA,
 and source-content SHA-256. The app displays the enrolled snapshot while also
-checking the current `main` artifact. A changed, deleted, unreadable, or
-unverifiable source is drift. The app rechecks source binding and the current
-queue manifest immediately before every state-changing action. Drift, API
-failure, invalid queue controls, or uncertain blocker state prevents every
+checking the current source artifact. A changed, deleted, unreadable, or
+unverifiable source is structured drift. The app rechecks source binding and
+the current queue descriptor immediately before every state-changing action.
+Drift, API failure, or invalid queue controls prevents every
 write, including save, submit, assignment, revision, and approval.
 
-An unrelated `main` commit is not drift when the enrolled artifact blob and
-content hash are unchanged. Approval, when enabled in Release B, uses the
-enrolled immutable front matter and persisted reviewed body only.
+An unrelated source-branch commit is not drift when the enrolled artifact blob
+and content hash are unchanged. Approval uses the enrolled immutable front
+matter and persisted reviewed body only, and remains blocked when drift is not
+resolved.
 
 For a data-cutover rollback, set the configured review branch back to `review`
 and restart the Git-backed Connect item. Legacy calibration records remain
@@ -320,8 +292,7 @@ installation IDs, private keys, or role-map contents in the attestation.
 REVIEW_APP_GH_OWNER=GMD-hub
 REVIEW_APP_GH_REPO=GMD-canonical-schema
 REVIEW_APP_GH_DEFAULT_BRANCH=main
-REVIEW_APP_GH_REVIEW_BRANCH=review-production
-REVIEW_APP_EXPECTED_SOURCE_COMMIT=<qualified-main-sha>
+REVIEW_APP_GH_REVIEW_BRANCH=<protected-review-branch>
 GOLEM_CONFIG_ACTIVE=production
 REVIEW_APP_USER=unset
 REVIEW_APP_OFFLINE=unset

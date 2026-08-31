@@ -1,237 +1,407 @@
-test_that("production and legacy branch contracts coexist", {
-  expect_identical(PRODUCTION_REVIEW_BRANCH, "review-production")
-  expect_true(production_branch_name(list(review_branch = "review-production")))
-  expect_false(production_branch_name(list(review_branch = "review")))
-  expect_false(production_branch_name(list(review_branch = "review/production")))
-})
-
-test_that("expected source commit is required and validated", {
-  withr::local_envvar(REVIEW_APP_EXPECTED_SOURCE_COMMIT = NA_character_)
-  expect_error(expected_source_commit(), "REVIEW_APP_EXPECTED_SOURCE_COMMIT")
-
-  withr::local_envvar(REVIEW_APP_EXPECTED_SOURCE_COMMIT = "ABC")
-  expect_error(expected_source_commit(), "lowercase Git SHA-1")
-
-  sha <- paste(rep("a", 40L), collapse = "")
-  withr::local_envvar(REVIEW_APP_EXPECTED_SOURCE_COMMIT = sha)
-  expect_identical(expected_source_commit(), sha)
-})
-
-test_that("production index performs four reads and no record reads", {
-  modules <- rep(names(QUEUE_EXPECTED_MODULE_COUNTS), QUEUE_EXPECTED_MODULE_COUNTS)
-  source_paths <- vapply(seq_len(QUEUE_EXPECTED_TOTAL), function(i) {
-    sprintf("extraction/20_drafts/%s/VAR-fixture%03d.md", modules[[i]], i)
-  }, character(1))
-  manifest <- new_queue_manifest(
-    created_at = "2026-08-24T13:25:07Z",
-    created_by = "admin@example.org",
-    source_commit = paste(rep("a", 40L), collapse = ""),
-    expected_path_set_sha256 = queue_path_set_digest(source_paths)
+.versioned_queue_http_fixture <- function(use_legacy_control = FALSE) {
+  records <- list(
+    .queue_record_fixture("VAR-one", "alpha"),
+    .queue_record_fixture("VAR-two", "beta"),
+    .queue_record_fixture("VAR-three", "gamma")
   )
-  rows <- lapply(seq_len(QUEUE_EXPECTED_TOTAL), function(i) {
-    module <- modules[[i]]
-    new_queue_index_row(
-      artifact_id = sprintf("VAR-fixture%03d", i),
-      module = module,
-      source_artifact_path = source_paths[[i]],
-      record_blob_sha = paste(rep(sprintf("%x", i %% 16L), 40L), collapse = ""),
-      governance_blocked = TRUE,
-      source_drift = FALSE
+  contents <- stats::setNames(
+    lapply(records, record_to_yaml),
+    vapply(records, function(record) ACTION_PATH(record$artifact_id), character(1))
+  )
+  contents <- contents[order(names(contents))]
+  if (use_legacy_control) {
+    paths <- vapply(records, function(record) {
+      record$source_artifact_path
+    }, character(1))
+    descriptor <- list(
+      schema_version = "1.0",
+      queue_id = "fixture-queue",
+      created_at = "2026-08-24T13:25:07Z",
+      created_by = "admin@example.org",
+      source_commit = .sha1_fixture,
+      expected_total = length(records),
+      expected_path_set_sha256 = queue_path_set_digest(paths)
     )
-  })
-  index <- new_queue_index(QUEUE_ID, rows, manifest)
-  manifest_raw <- charToRaw(canonical_yaml(manifest))
-  index_raw <- charToRaw(serialize_queue_index(index))
-  manifest_sha <- git_blob_sha_raw(manifest_raw)
-  index_sha <- git_blob_sha_raw(index_raw)
+    control_path <- LEGACY_QUEUE_MANIFEST_PATH
+  } else {
+    descriptor <- .queue_descriptor_fixture(records)
+    control_path <- QUEUE_DESCRIPTOR_PATH
+  }
+  control_raw <- charToRaw(canonical_yaml(descriptor))
+  control_sha <- git_blob_sha_raw(control_raw)
+  record_shas <- lapply(contents, git_blob_sha)
+  head <- paste(rep("d", 40L), collapse = "")
   calls <- character()
   http <- function(method, url, token, body = NULL) {
-    calls <<- c(calls, url)
-    if (grepl("git/ref/heads/", url)) {
-      return(list(object = list(sha = paste(rep("d", 40L), collapse = ""))))
+    calls <<- c(calls, paste(method, url))
+    if (grepl("git/ref/heads/", url) && identical(method, "GET")) {
+      return(list(object = list(sha = head)))
     }
-    if (grepl("git/trees/", url)) {
-      return(list(tree = list(
-        list(path = QUEUE_MANIFEST_PATH, type = "blob", sha = manifest_sha),
-        list(path = QUEUE_INDEX_PATH, type = "blob", sha = index_sha)
-      ), truncated = FALSE))
+    if (grepl("git/trees/", url) && identical(method, "GET")) {
+      entries <- c(
+        list(list(path = control_path, type = "blob", sha = control_sha)),
+        lapply(names(contents), function(path) {
+          list(path = path, type = "blob", sha = record_shas[[path]])
+        })
+      )
+      return(list(tree = entries, truncated = FALSE, sha = paste(rep("e", 40L), collapse = "")))
     }
-    raw <- if (grepl(manifest_sha, url, fixed = TRUE)) manifest_raw else index_raw
-    list(
-      sha = if (identical(raw, manifest_raw)) manifest_sha else index_sha,
-      encoding = "base64",
-      content = base64enc::base64encode(raw)
-    )
+    if (grepl(paste0("git/blobs/", control_sha), url, fixed = TRUE)) {
+      return(list(
+        sha = control_sha,
+        encoding = "base64",
+        content = base64enc::base64encode(control_raw)
+      ))
+    }
+    if (grepl("/graphql$", url) && identical(method, "POST")) {
+      repository <- list()
+      for (i in seq_along(contents)) {
+        repository[[sprintf("b%03d", i)]] <- list(
+          oid = record_shas[[i]],
+          text = contents[[i]]
+        )
+      }
+      return(list(data = list(repository = repository)))
+    }
+    stop("unexpected request: ", method, " ", url)
   }
-  telemetry <- new_repository_read_telemetry()
-  adapter <- new_github_adapter(
-    "GMD-hub", "fixture", "main", PRODUCTION_REVIEW_BRANCH,
-    get_token = function() "secret", http = http, telemetry = telemetry,
-    expected_source_commit = paste(rep("a", 40L), collapse = "")
+  list(
+    http = http,
+    calls = function() calls,
+    records = records,
+    descriptor = descriptor
   )
+}
 
+test_that("versioned queues use batched authoritative record reads", {
+  fixture <- .versioned_queue_http_fixture()
+  adapter <- new_github_adapter(
+    "GMD-hub", "fixture", "main", "fixture-review",
+    get_token = function() "secret",
+    http = fixture$http,
+    telemetry = new_repository_read_telemetry()
+  )
   result <- adapter_index_review(adapter)
-
-  expect_identical(result$mode, "production")
+  expect_identical(result$mode, "versioned")
+  expect_equal(nrow(result$index), 3L)
   expect_identical(result$request_telemetry$logical_reads, 4L)
-  expect_identical(result$request_telemetry$actual_attempts, 4L)
   expect_identical(result$request_telemetry$per_record_reads, 0L)
-  expect_gte(result$request_telemetry$duration_ms, 0L)
-  expect_length(calls, 4L)
+  expect_identical(result$request_telemetry$batch_reads, 1L)
+  expect_identical(result$request_telemetry$records_read, 3L)
+  expect_false(any(grepl("queue-index", fixture$calls(), fixed = TRUE)))
 })
 
-test_that("session telemetry does not share mutable counters", {
+test_that("record batch count scales with generic queue size", {
+  record_count <- 113L
+  paths <- sprintf(
+    "extraction/30_review/VAR-fixture%03d.review.yml",
+    seq_len(record_count)
+  )
+  batches <- split(paths, ceiling(seq_along(paths) / 50L))
+  request <- 0L
+  http <- function(method, url, token, body = NULL) {
+    request <<- request + 1L
+    batch <- batches[[request]]
+    repository <- list()
+    for (i in seq_along(batch)) {
+      repository[[sprintf("b%03d", i)]] <- list(
+        oid = paste(rep(sprintf("%x", i %% 16L), 40L), collapse = ""),
+        text = sprintf("record %d", i)
+      )
+    }
+    list(data = list(repository = repository))
+  }
   adapter <- new_github_adapter(
-    "GMD-hub", "fixture", "main", PRODUCTION_REVIEW_BRANCH,
+    "GMD-hub", "fixture", "main", "fixture-review",
+    get_token = function() "secret",
+    http = http,
+    telemetry = new_repository_read_telemetry()
+  )
+  operation <- repository_telemetry_operation(adapter)
+  records <- adapter_fetch_review_records_graphql(
+    operation$adapter,
+    .sha1_fixture,
+    paths
+  )
+  telemetry <- operation$snapshot()
+  expect_length(records, record_count)
+  expect_identical(request, 3L)
+  expect_identical(telemetry$batch_reads, 3L)
+  expect_identical(telemetry$records_read, record_count)
+  expect_identical(telemetry$per_record_reads, 0L)
+})
+
+test_that("production-v2 controls remain readable without the queue index", {
+  fixture <- .versioned_queue_http_fixture(use_legacy_control = TRUE)
+  adapter <- new_github_adapter(
+    "GMD-hub", "fixture", "main", "fixture-review",
+    get_token = function() "secret",
+    http = fixture$http
+  )
+  result <- adapter_index_review(adapter)
+  expect_identical(result$mode, "production_v2_read_only")
+  expect_true(queue_descriptor_is_legacy(result$descriptor))
+  expect_equal(nrow(result$index), 3L)
+})
+
+test_that("repository read telemetry is isolated by operation", {
+  adapter <- new_github_adapter(
+    "GMD-hub", "fixture", "main", "fixture-review",
     get_token = function() "secret",
     http = function(method, url, token, body = NULL) list(),
     telemetry = new_repository_read_telemetry()
   )
   first <- repository_telemetry_operation(adapter)
   second <- repository_telemetry_operation(adapter)
-  first$adapter$http("GET", "https://api.github.com/repos/o/r/git/trees/a", "secret")
+  first$adapter$http(
+    "GET",
+    "https://api.github.com/repos/o/r/git/trees/a",
+    "secret"
+  )
   expect_identical(first$snapshot()$logical_reads, 1L)
   expect_identical(second$snapshot()$logical_reads, 0L)
 })
 
-test_that("malformed production manifest returns a controlled queue error", {
-  manifest_raw <- charToRaw("not: [valid")
-  manifest_sha <- git_blob_sha_raw(manifest_raw)
-  http <- function(method, url, token, body = NULL) {
-    if (grepl("git/ref/heads/", url)) {
-      return(list(object = list(sha = paste(rep("d", 40L), collapse = ""))))
-    }
-    if (grepl("git/trees/", url)) {
-      return(list(tree = list(list(
-        path = QUEUE_MANIFEST_PATH, type = "blob", sha = manifest_sha
-      )), truncated = FALSE))
-    }
-    list(
-      sha = manifest_sha, encoding = "base64",
-      content = base64enc::base64encode(manifest_raw)
+test_that("the dashboard has no queue bootstrap UI or handlers", {
+  html <- as.character(mod_dashboard_ui("dashboard"))
+  expect_false(grepl("bootstrap_queue", html, fixed = TRUE))
+  expect_false(grepl("Bootstrap production queue", html, fixed = TRUE))
+  server_source <- paste(deparse(body(mod_dashboard_server)), collapse = "\n")
+  expect_false(grepl("bootstrap", server_source, ignore.case = TRUE))
+  expect_false("bootstrap_production_queue" %in% getNamespaceExports("reviewapp"))
+})
+
+test_that("non-administrators cannot initialize a queue", {
+  .local_queue_role_map()
+  adapter <- new_github_adapter(
+    "o", "r", "main", "fixture-review",
+    get_token = function() stop("token access is not allowed"),
+    http = function(...) stop("network access is not allowed")
+  )
+  expect_error(
+    initialize_review_queue(
+      adapter,
+      actor = "bbrunckhorst",
+      source_revision = .sha1_fixture,
+      queue_id = "fixture-queue"
+    ),
+    "authenticated administrator"
+  )
+})
+
+test_that("initialization rejects every non-empty governed namespace", {
+  .local_queue_role_map()
+  adapter <- list(
+    owner = "o", repo = "r", review_branch = "fixture-review",
+    default_branch = "main", read_only = FALSE,
+    get_token = function() "secret", http = function(...) list()
+  )
+  class(adapter) <- "reviewapp_github_adapter"
+  occupied_paths <- c(
+    "extraction/30_review/VAR-one.review.yml",
+    "extraction/30_review/VAR-one.body.md",
+    "extraction/30_review/events/VAR-one.yml",
+    "extraction/40_approved/dem/VAR-one.md"
+  )
+  for (path in occupied_paths) {
+    local_mocked_bindings(
+      adapter_branch_head = function(...) .sha1_fixture_2,
+      adapter_fetch_tree_at = function(...) {
+        list(commit = .sha1_fixture_2, blobs = stats::setNames(list("blob"), path))
+      },
+      .package = "reviewapp"
+    )
+    expect_error(
+      initialize_review_queue(
+        adapter,
+        actor = "acastanedaa",
+        source_revision = .sha1_fixture,
+        queue_id = "fixture-queue"
+      ),
+      "requires an empty review and approved namespace"
     )
   }
-  adapter <- new_github_adapter(
-    "GMD-hub", "fixture", "main", PRODUCTION_REVIEW_BRANCH,
-    get_token = function() "secret", http = http
-  )
-  result <- adapter_index_review(adapter)
-  expect_identical(result$mode, "queue_error")
-  expect_equal(nrow(result$index), 0L)
-  expect_match(result$error, "production queue is invalid")
 })
 
-test_that("bootstrap source mismatch aborts before any write", {
-  wrote <- FALSE
-  heads <- c(paste(rep("d", 40L), collapse = ""))
-  local_mocked_bindings(
-    adapter_branch_head = function(...) heads[[1L]],
-    adapter_fetch_tree_at = function(...) list(blobs = list()),
-    adapter_write_with_recovery = function(...) {
-      wrote <<- TRUE
-      stop("unexpected write")
-    },
-    .package = "reviewapp"
+test_that("initializer publishes one generic descriptor and record set", {
+  .local_queue_role_map()
+  paths <- c(
+    "extraction/20_drafts/alpha/VAR-one.md",
+    "extraction/20_drafts/beta/VAR-two.md",
+    "extraction/20_drafts/gamma/VAR-three.md"
   )
-  adapter <- list(
-    owner = "o", repo = "r", default_branch = "main",
-    review_branch = PRODUCTION_REVIEW_BRANCH,
-    get_token = function() "secret", http = function(...) list()
-  )
-  expect_error(
-    bootstrap_production_queue(
-      adapter, "admin@example.org", "administrator",
-      expected_source_commit = paste(rep("a", 40L), collapse = "")
-    ),
-    "does not match"
-  )
-  expect_false(wrote)
-})
-
-test_that("bootstrap rejects source movement before writing", {
-  expected <- paste(rep("a", 40L), collapse = "")
-  heads <- c(paste(rep("b", 40L), collapse = ""), expected,
-             paste(rep("c", 40L), collapse = ""))
-  calls <- 0L
-  wrote <- FALSE
-  local_mocked_bindings(
-    adapter_branch_head = function(...) {
-      calls <<- calls + 1L
-      heads[[calls]]
-    },
-    adapter_fetch_tree_at = function(...) list(blobs = list()),
-    release_a_draft_paths = function(...) "extraction/20_drafts/dem/VAR-male.md",
-    adapter_fetch_blobs_graphql = function(...) list(),
-    generate_production_enrollment = function(...) list(
-      payload_bytes = 1L, changes = list()
-    ),
-    adapter_write_with_recovery = function(...) {
-      wrote <<- TRUE
-      list(ok = TRUE)
-    },
-    .package = "reviewapp"
-  )
-  adapter <- list(
-    owner = "o", repo = "r", default_branch = "main",
-    review_branch = PRODUCTION_REVIEW_BRANCH,
-    get_token = function() "secret", http = function(...) list()
-  )
-  expect_error(
-    bootstrap_production_queue(
-      adapter, "admin@example.org", "administrator",
-      expected_source_commit = expected
-    ),
-    "moved"
-  )
-  expect_false(wrote)
-})
-
-test_that("bootstrap reports failed publication and returns successful evidence", {
-  expected <- paste(rep("a", 40L), collapse = "")
-  review_head <- paste(rep("b", 40L), collapse = "")
-  publish_ok <- FALSE
-  local_mocked_bindings(
-    adapter_branch_head = local({
-      calls <- 0L
-      function(...) {
-        calls <<- calls + 1L
-        c(review_head, expected, expected)[[(calls - 1L) %% 3L + 1L]]
-      }
+  contents <- stats::setNames(
+    lapply(seq_along(paths), function(i) {
+      sprintf("---\nartifact_id: VAR-%s\n---\nbody %d", c("one", "two", "three")[[i]], i)
     }),
-    adapter_fetch_tree_at = function(...) list(blobs = list()),
-    release_a_draft_paths = function(...) "extraction/20_drafts/dem/VAR-male.md",
-    adapter_fetch_blobs_graphql = function(...) list(),
-    generate_production_enrollment = function(...) list(
-      payload_bytes = 1L, changes = list("record" = "body"),
-      manifest = list(queue_id = QUEUE_ID), index = list(rows = list()),
-      records = list(one = list())
-    ),
-    adapter_write_with_recovery = function(...) {
-      if (publish_ok) list(ok = TRUE, commit_sha = expected) else list(
-        ok = FALSE, recovery = list(status = "not_published")
-      )
+    paths
+  )
+  source_blobs <- lapply(contents, function(content) list(
+    content = content,
+    raw = charToRaw(content),
+    sha = git_blob_sha(content)
+  ))
+  source_tree <- list(
+    commit = .sha1_fixture,
+    tree_sha = paste(rep("c", 40L), collapse = ""),
+    blobs = lapply(source_blobs, function(blob) blob$sha)
+  )
+  review_tree <- list(
+    commit = .sha1_fixture_2,
+    tree_sha = paste(rep("d", 40L), collapse = ""),
+    blobs = list(
+      "extraction/30_review/.gitkeep" = paste(rep("e", 40L), collapse = "")
+    )
+  )
+  published <- NULL
+  local_mocked_bindings(
+    adapter_branch_head = function(...) .sha1_fixture_2,
+    adapter_fetch_tree_at = function(owner, repo, commit_sha, ...) {
+      if (identical(commit_sha, .sha1_fixture)) source_tree else review_tree
     },
-    recovery_report_text = function(...) "not published",
+    adapter_fetch_commit = function(...) list(
+      sha = .sha1_fixture,
+      tree_sha = source_tree$tree_sha
+    ),
+    adapter_fetch_blobs_graphql = function(...) source_blobs,
+    adapter_write_with_recovery = function(adapter, changes, ...) {
+      published <<- changes
+      list(ok = TRUE, commit_sha = paste(rep("f", 40L), collapse = ""))
+    },
     .package = "reviewapp"
   )
   adapter <- list(
     owner = "o", repo = "r", default_branch = "main",
-    review_branch = PRODUCTION_REVIEW_BRANCH,
+    review_branch = "fixture-review", read_only = FALSE,
     get_token = function() "secret", http = function(...) list()
   )
-  expect_error(
-    bootstrap_production_queue(
-      adapter, "admin@example.org", "administrator",
-      expected_source_commit = expected
-    ),
-    "not published"
-  )
-  publish_ok <- TRUE
-  result <- bootstrap_production_queue(
-    adapter, "admin@example.org", "administrator",
-    expected_source_commit = expected
+  class(adapter) <- "reviewapp_github_adapter"
+  result <- initialize_review_queue(
+    adapter,
+    actor = "acastanedaa",
+    source_revision = .sha1_fixture,
+    queue_id = "generic-fixture",
+    expected_record_count = length(paths),
+    expected_path_set_sha256 = queue_path_set_digest(paths)
   )
   expect_true(result$ok)
-  expect_identical(result$commit_sha, expected)
-  expect_identical(result$record_count, 1L)
+  expect_identical(result$record_count, length(paths))
+  expect_setequal(
+    names(published),
+    c(QUEUE_DESCRIPTOR_PATH, vapply(
+      c("VAR-one", "VAR-two", "VAR-three"),
+      ACTION_PATH,
+      character(1)
+    ))
+  )
+  descriptor <- parse_queue_descriptor(published[[QUEUE_DESCRIPTOR_PATH]])
+  records <- lapply(setdiff(names(published), QUEUE_DESCRIPTOR_PATH), function(path) {
+    parse_review_record(published[[path]])
+  })
+  expect_no_error(validate_queue_record_set(records, descriptor))
+})
+
+test_that("production-v2 migration is deterministic and preserves record blobs", {
+  .local_queue_role_map()
+  source_content <- "---\na: b\n---\nbody"
+  source_raw <- charToRaw(source_content)
+  record <- .queue_record_fixture("VAR-one", source_content = source_content)
+  record_path <- ACTION_PATH(record$artifact_id)
+  record_content <- record_to_yaml(record)
+  record_sha <- git_blob_sha(record_content)
+  manifest <- list(
+    schema_version = "1.0",
+    queue_id = record$queue_id,
+    created_at = record$enrolled_at,
+    created_by = record$enrolled_by,
+    source_commit = record$source_commit,
+    expected_total = 1L,
+    expected_path_set_sha256 = queue_path_set_digest(record$source_artifact_path)
+  )
+  manifest_content <- canonical_yaml(manifest)
+  manifest_sha <- git_blob_sha(manifest_content)
+  index <- list(
+    schema_version = "1.0",
+    queue_id = record$queue_id,
+    rows = list(list(
+      artifact_id = record$artifact_id,
+      source_artifact_path = record$source_artifact_path,
+      record_path = record_path,
+      record_blob_sha = record_sha
+    ))
+  )
+  index_content <- canonical_yaml(index)
+  index_sha <- git_blob_sha(index_content)
+  tree <- list(
+    commit = .sha1_fixture_2,
+    tree_sha = paste(rep("c", 40L), collapse = ""),
+    blobs = list()
+  )
+  tree$blobs[record_path] <- list(record_sha)
+  tree$blobs[LEGACY_QUEUE_MANIFEST_PATH] <- list(manifest_sha)
+  tree$blobs[LEGACY_QUEUE_INDEX_PATH] <- list(index_sha)
+  source_tree <- list(
+    commit = record$source_commit,
+    tree_sha = paste(rep("d", 40L), collapse = ""),
+    blobs = stats::setNames(
+      list(record$source_artifact_blob_sha),
+      record$source_artifact_path
+    )
+  )
+  captured <- list()
+  local_mocked_bindings(
+    adapter_branch_head = function(...) .sha1_fixture_2,
+    adapter_fetch_tree_at = function(owner, repo, commit_sha, ...) {
+      if (identical(commit_sha, record$source_commit)) source_tree else tree
+    },
+    adapter_fetch_commit = function(...) list(
+      sha = record$source_commit,
+      tree_sha = source_tree$tree_sha
+    ),
+    adapter_fetch_blob_by_sha = function(owner, repo, sha, token, http) {
+      content <- if (identical(sha, manifest_sha)) manifest_content else index_content
+      list(content = content, sha = sha, raw = charToRaw(content))
+    },
+    adapter_fetch_review_records_graphql = function(...) {
+      stats::setNames(list(list(
+        content = record_content,
+        sha = record_sha,
+        raw = charToRaw(record_content)
+      )), record_path)
+    },
+    adapter_fetch_blobs_graphql = function(...) {
+      stats::setNames(list(list(
+        content = source_content,
+        sha = record$source_artifact_blob_sha,
+        raw = source_raw
+      )), record$source_artifact_path)
+    },
+    adapter_write_with_recovery = function(adapter, changes, ...) {
+      captured[[length(captured) + 1L]] <<- changes
+      list(ok = TRUE, commit_sha = paste(rep("f", 40L), collapse = ""))
+    },
+    .package = "reviewapp"
+  )
+  adapter <- list(
+    owner = "o", repo = "r", default_branch = "main",
+    review_branch = "fixture-review",
+    read_only = FALSE, get_token = function() "secret", http = function(...) list()
+  )
+  class(adapter) <- "reviewapp_github_adapter"
+  first <- migrate_review_queue(adapter, "acastanedaa")
+  second <- migrate_review_queue(adapter, "acastanedaa")
+  expect_identical(
+    captured[[1L]][[QUEUE_DESCRIPTOR_PATH]],
+    captured[[2L]][[QUEUE_DESCRIPTOR_PATH]]
+  )
+  expect_setequal(
+    names(captured[[1L]]),
+    c(
+      QUEUE_DESCRIPTOR_PATH,
+      LEGACY_QUEUE_MANIFEST_PATH,
+      LEGACY_QUEUE_INDEX_PATH
+    )
+  )
+  expect_identical(first$preserved_record_blobs[[record_path]], record_sha)
+  expect_identical(second$descriptor, first$descriptor)
 })

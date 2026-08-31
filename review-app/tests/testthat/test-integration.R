@@ -70,7 +70,7 @@ library(testthat)
   env <- new.env(parent = emptyenv())
   env$branches <- list(
     main = list(commit = "d-commit-1", blobs = seed_drafts),
-    review = list(commit = "r-commit-1", blobs = seed_review)
+    "fixture-review" = list(commit = "r-commit-1", blobs = seed_review)
   )
   env$pending_blobs <- list()
   env$pending_tree <- list()
@@ -197,7 +197,7 @@ library(testthat)
     owner = "GMD-hub",
     repo = "calibration-repo",
     default_branch = "main",
-    review_branch = "review",
+    review_branch = "fixture-review",
     get_token = function() "cal-token",
     http = gh$http
   )
@@ -255,7 +255,7 @@ test_that("PATH 1 approve-direct: draft -> submitted -> approved, atomic commit 
   st <- .load_review(ad, id)
   expect_identical(st$rec$state, "draft")
 
-  r1 <- reviewapp::perform_action(
+  r1 <- .perform_legacy_test_action(
     ad, st$rec,
     body_sha256 = reviewapp::hash_body(body),
     blob_sha = st$blob_sha, branch_head_sha = st$head_sha,
@@ -270,7 +270,7 @@ test_that("PATH 1 approve-direct: draft -> submitted -> approved, atomic commit 
   expect_identical(st2$rec$events[[1]]$action, "submitted")
   expect_identical(st2$rec$events[[1]]$sequence, 0L)
 
-  r2 <- reviewapp::perform_action(
+  r2 <- .perform_legacy_test_action(
     ad, st2$rec,
     body_sha256 = reviewapp::hash_body(body),
     blob_sha = st2$blob_sha, branch_head_sha = st2$head_sha,
@@ -311,7 +311,7 @@ test_that("PATH 2 needs-revision loop: round increments on re-submit and approve
   expect_identical(st$rec$state, "draft")
 
   # submit
-  r1 <- reviewapp::perform_action(
+  r1 <- .perform_legacy_test_action(
     ad, st$rec, body_sha256 = reviewapp::hash_body(body1),
     blob_sha = st$blob_sha, branch_head_sha = st$head_sha,
     action = "submitted", actor = "reviewer@example.org", role = "reviewer"
@@ -321,7 +321,7 @@ test_that("PATH 2 needs-revision loop: round increments on re-submit and approve
   # request revision
   st2 <- .load_review(ad, id)
   expect_identical(st2$rec$state, "in-review")
-  r2 <- reviewapp::perform_action(
+  r2 <- .perform_legacy_test_action(
     ad, st2$rec, body_sha256 = reviewapp::hash_body(body1),
     blob_sha = st2$blob_sha, branch_head_sha = st2$head_sha,
     action = "request-revision", actor = "approver@example.org", role = "approver",
@@ -336,7 +336,7 @@ test_that("PATH 2 needs-revision loop: round increments on re-submit and approve
   rec3 <- st3$rec
   rec3$current_content_sha256 <- reviewapp::hash_body(body2)
   reviewapp::validate_review_record(rec3)
-  r3 <- reviewapp::perform_action(
+  r3 <- .perform_legacy_test_action(
     ad, rec3, body_sha256 = reviewapp::hash_body(body2),
     blob_sha = st3$blob_sha, branch_head_sha = st3$head_sha,
     action = "submitted", actor = "reviewer@example.org", role = "reviewer"
@@ -350,7 +350,7 @@ test_that("PATH 2 needs-revision loop: round increments on re-submit and approve
   expect_identical(st4$rec$events[[3]]$sequence, 2L)
 
   # approve
-  r4 <- reviewapp::perform_action(
+  r4 <- .perform_legacy_test_action(
     ad, st4$rec, body_sha256 = reviewapp::hash_body(body2),
     blob_sha = st4$blob_sha, branch_head_sha = st4$head_sha,
     action = "approved", actor = "approver@example.org", role = "approver",
@@ -380,7 +380,7 @@ test_that("PATH 3 admin reopen: non-admin rejected, admin reopen emits an explic
 
   # non-admin reopen is rejected and writes nothing
   expect_error(
-    reviewapp::perform_action(
+    .perform_legacy_test_action(
       ad, st$rec, body_sha256 = st$rec$current_content_sha256,
       blob_sha = st$blob_sha, branch_head_sha = st$head_sha,
       action = "reopened", actor = "approver@example.org", role = "approver"
@@ -391,7 +391,7 @@ test_that("PATH 3 admin reopen: non-admin rejected, admin reopen emits an explic
   expect_identical(.load_review(ad, id)$rec$state, "approved")
 
   # administrator reopen applies the transition and appends the explicit event
-  r <- reviewapp::perform_action(
+  r <- .perform_legacy_test_action(
     ad, st$rec, body_sha256 = st$rec$current_content_sha256,
     blob_sha = st$blob_sha, branch_head_sha = st$head_sha,
     action = "reopened", actor = "admin@example.org", role = "administrator",
@@ -418,10 +418,10 @@ test_that("stale write at integration level is rejected without overwrite", {
 
   # a concurrent writer moves the branch after the reviewer loaded it
   concurrent <- "concurrent-version-of-the-review-record"
-  setup$env$branches$review$blobs[[.record_path(id)]] <- concurrent
-  setup$env$branches$review$commit <- "concurrent-commit"
+  setup$env$branches[["fixture-review"]]$blobs[[.record_path(id)]] <- concurrent
+  setup$env$branches[["fixture-review"]]$commit <- "concurrent-commit"
 
-  res <- reviewapp::perform_action(
+  res <- .perform_legacy_test_action(
     ad, st$rec, body_sha256 = reviewapp::hash_body(.body_for(id)),
     blob_sha = st$blob_sha, branch_head_sha = st$head_sha,
     action = "submitted", actor = "reviewer@example.org", role = "reviewer"
@@ -430,7 +430,10 @@ test_that("stale write at integration level is rejected without overwrite", {
   expect_false(res$report$transition_applied)
   expect_identical(res$report$error$kind, "stale")
   # the concurrent version is preserved and no ref update occurred
-  expect_identical(setup$env$branches$review$blobs[[.record_path(id)]], concurrent)
+  expect_identical(
+    setup$env$branches[["fixture-review"]]$blobs[[.record_path(id)]],
+    concurrent
+  )
   expect_identical(setup$env$counters[["patch"]], 0L)
 })
 
@@ -444,21 +447,29 @@ test_that("dashboard index reflects durable review-branch state after a lifecycl
   body <- .body_for(id)
 
   st <- .load_review(ad, id)
-  reviewapp::perform_action(
+  .perform_legacy_test_action(
     ad, st$rec, body_sha256 = reviewapp::hash_body(body),
     blob_sha = st$blob_sha, branch_head_sha = st$head_sha,
     action = "submitted", actor = "reviewer@example.org", role = "reviewer"
   )
   st2 <- .load_review(ad, id)
-  reviewapp::perform_action(
+  .perform_legacy_test_action(
     ad, st2$rec, body_sha256 = reviewapp::hash_body(body),
     blob_sha = st2$blob_sha, branch_head_sha = st2$head_sha,
     action = "approved", actor = "approver@example.org", role = "approver",
     approved_content = .make_artifact(art, body)
   )
 
-  out <- reviewapp::adapter_index_review(ad)
-  idx <- out$index
+  review_blobs <- setup$env$branches[["fixture-review"]]$blobs
+  record_paths <- grep("[.]review[.]yml$", names(review_blobs), value = TRUE)
+  idx <- reviewapp::index_review_records(lapply(record_paths, function(path) {
+    list(
+      id = sub("[.]review[.]yml$", "", basename(path)),
+      record_path = path,
+      yaml_string = review_blobs[[path]],
+      blob_sha = reviewapp::hash_body(review_blobs[[path]])
+    )
+  }))
   expect_true("VAR-male" %in% idx$artifact_id)
   expect_identical(idx$state[idx$artifact_id == "VAR-male"], "approved")
   # seeded states remain visible: VAR-urban (needs-revision), VAR-marital (approved)
@@ -470,5 +481,5 @@ test_that("dashboard index reflects durable review-branch state after a lifecycl
   expect_equal(nrow(reviewapp::filter_review_index(idx, module = "dem")), 5L)
   expect_equal(nrow(reviewapp::filter_review_index(idx, module = "geo")), 1L)
   # the approved artifact is on the review branch tree
-  expect_true(reviewapp::approved_path_for(art$path) %in% names(out$blobs))
+  expect_true(reviewapp::approved_path_for(art$path) %in% names(review_blobs))
 })
