@@ -164,6 +164,12 @@ index_review_records <- function(records, manifest = NULL) {
   if (length(present) != 1L) {
     stop(.queue_error("queue contains both simplified and legacy controls"))
   }
+  if (identical(present[[1L]], QUEUE_DESCRIPTOR_PATH) &&
+      LEGACY_QUEUE_INDEX_PATH %in% names(tree_blobs)) {
+    stop(.queue_error(
+      "simplified queue contains the obsolete production-v2 index"
+    ))
+  }
   present[[1L]]
 }
 
@@ -264,11 +270,12 @@ index_review_records <- function(records, manifest = NULL) {
   })
   records <- lapply(items, function(item) item$record)
   validate_queue_record_set(records, descriptor)
-  mode <- if (queue_descriptor_is_legacy(descriptor)) {
-    "production_v2_read_only"
-  } else {
-    "versioned"
-  }
+  validate_record_source_snapshots(adapter, records)
+  mode <- switch(queue_descriptor_format(descriptor),
+    production_v2 = "production_v2_read_only",
+    descriptor_1_0 = "descriptor_v1_0_read_only",
+    descriptor_1_1 = "versioned"
+  )
   list(
     mode = mode,
     queue_mode = mode,

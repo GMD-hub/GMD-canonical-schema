@@ -6,8 +6,12 @@
   module = "dem",
   queue_id = "fixture-queue",
   source_revision = .sha1_fixture,
-  source_content = "---\na: b\n---\nbody"
+  source_content = NULL
 ) {
+  source_content <- source_content %||% sprintf(
+    "---\nvariable_id: %s\n---\nbody",
+    id
+  )
   new_review_record_v2(
     artifact_id = id,
     queue_id = queue_id,
@@ -26,14 +30,27 @@
   )
 }
 
-.queue_descriptor_fixture <- function(records) {
+.queue_descriptor_fixture <- function(records, schema_version = "1.1") {
+  if (identical(schema_version, "1.0")) {
+    descriptor <- list(
+      schema_version = "1.0",
+      queue_id = records[[1L]]$queue_id,
+      source_revision = records[[1L]]$source_commit,
+      created_at = "2026-08-24T13:25:07Z",
+      created_by = "admin@example.org",
+      expected_record_count = length(records),
+      record_set_sha256 = queue_record_set_digest_v1_0(records)
+    )
+    return(parse_queue_descriptor(canonical_yaml(descriptor)))
+  }
   new_queue_descriptor(
     queue_id = records[[1L]]$queue_id,
     source_revision = records[[1L]]$source_commit,
     created_at = "2026-08-24T13:25:07Z",
     created_by = "admin@example.org",
     expected_record_count = length(records),
-    record_set_sha256 = queue_record_set_digest(records)
+    record_set_sha256 = queue_record_set_digest(records),
+    approvals_enabled = FALSE
   )
 }
 

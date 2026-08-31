@@ -235,12 +235,15 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       if (is.null(detail_state$record)) "draft" else detail_state$record$state
     })
     queue_read_only <- shiny::reactive({
-      queue_mode() %in% c("legacy_read_only", "production_v2_read_only")
+      queue_mode() %in% c(
+        "legacy_read_only",
+        "production_v2_read_only",
+        "descriptor_v1_0_read_only"
+      )
     })
     editable <- shiny::reactive({
       detail_is_editable(role(), current_state()) &&
-        !queue_read_only() &&
-        !isTRUE(detail_state$source_drift)
+        !queue_read_only()
     })
     dirty <- shiny::reactive({
       if (!editable() || !identical(detail_state$phase, "loaded")) {
@@ -295,7 +298,13 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           shiny::icon("triangle-exclamation", `aria-hidden` = "true"),
           shiny::div(
             shiny::strong("Source drift detected"),
-            shiny::span("This view shows the enrolled source snapshot. All writes are disabled until the source binding is reconciled."),
+            shiny::span(
+              paste(
+                "This view uses the enrolled source snapshot.",
+                "Reviewers can save and submit it, but approval stays blocked.",
+                "An administrator can explicitly re-enroll a verified source."
+              )
+            ),
             shiny::tags$details(
               shiny::tags$summary("Technical details"),
               shiny::code(sprintf(
@@ -485,7 +494,8 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           }
     }
 
-      run_action <- function(action, note = NULL, body = NULL) {
+      run_action <- function(action, note = NULL, body = NULL,
+                             candidate_source_commit = NULL) {
       shiny::req(detail_state$record)
       detail_state$action_error <- NULL
       detail_state$action_success <- NULL
@@ -516,16 +526,25 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
             role = role(),
             approved_content = approved_content,
             body = if (identical(action, "saved")) body else NULL,
-             note = note,
-             expected_descriptor_blob_sha = detail_state$descriptor_blob_sha,
-             descriptor_path = detail_state$descriptor_path,
-             legacy_read_only = queue_read_only()
+            note = note,
+            expected_descriptor_blob_sha = detail_state$descriptor_blob_sha,
+            descriptor_path = detail_state$descriptor_path,
+            legacy_read_only = queue_read_only(),
+            candidate_source_commit = candidate_source_commit
           )
           detail_state$report <- result$report
           if (!result$report$ok) {
             detail_state$action_error <- recovery_report_text(result$report)
+            indeterminate <- identical(
+              result$report$error$kind,
+              "indeterminate"
+            )
             shiny::showNotification(
-              "The change was not applied. Review the recovery message below.",
+              if (indeterminate) {
+                "Publication could not be confirmed. Do not retry until an operator reconciles the branch."
+              } else {
+                "The change was not applied. Review the recovery message below."
+              },
               type = "error",
               duration = 8
             )
@@ -536,20 +555,50 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
             detail_state$body <- body %||% ""
             detail_state$body_sha256 <- hash_body(detail_state$body)
           }
-          refresh_write_metadata(ad)
-          detail_state$action_success <- switch(action,
+          refresh_error <- tryCatch(
+            {
+              if (identical(action, "source-revision")) {
+                load_detail()
+                if (identical(detail_state$phase, "error")) {
+                  stop(detail_state$error %||% "detail refresh failed")
+                }
+              } else {
+                refresh_write_metadata(ad)
+              }
+              NULL
+            },
+            error = function(error) conditionMessage(error)
+          )
+          success_message <- switch(action,
             saved = "Draft saved. Its status did not change.",
             submitted = "Artifact submitted for approval.",
             `request-revision` = "Revision requested and reason recorded.",
             approved = "Artifact approved from the persisted reviewed content.",
-            reopened = "Artifact reopened and returned for revision.",
+            reopened = paste(
+              "Artifact reopened and returned for revision.",
+              "The active approved output was retired."
+            ),
+            `source-revision` = if (isTRUE(result$replay)) {
+              "The selected source revision is already enrolled. No new event was added."
+            } else {
+              "The verified source revision was enrolled and prior assessment data was reset."
+            },
             "Change recorded."
           )
+          detail_state$action_success <- if (is.null(refresh_error)) {
+            success_message
+          } else {
+            paste(
+              success_message,
+              "The change was applied, but the refreshed repository state could not be loaded.",
+              refresh_error
+            )
+          }
           session$sendCustomMessage("review-dirty-state", list(dirty = FALSE))
           refresh_counter(refresh_counter() + 1L)
           shiny::showNotification(
             detail_state$action_success,
-            type = "message",
+            type = if (is.null(refresh_error)) "message" else "warning",
             duration = 6
           )
           invisible(TRUE)
@@ -583,12 +632,18 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
         report <- detail_state$report
         stale <- !is.null(report) && !is.null(report$error) &&
           identical(report$error$kind, "stale")
+        indeterminate <- !is.null(report) && !is.null(report$error) &&
+          identical(report$error$kind, "indeterminate")
         return(shiny::div(
           class = "app-alert alert-error action-feedback",
           role = "alert",
           shiny::icon("circle-exclamation", `aria-hidden` = "true"),
           shiny::div(
-            shiny::strong("The change was not applied"),
+            shiny::strong(if (indeterminate) {
+              "Publication could not be confirmed"
+            } else {
+              "The change was not applied"
+            }),
             shiny::span(detail_state$action_error),
             if (!is.null(report) && !is.null(report$error$detail)) {
               shiny::tags$details(
@@ -613,10 +668,8 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       if (!identical(detail_state$phase, "loaded")) return(NULL)
       state <- current_state()
       current_role <- role()
-       actions <- list()
-       if (detail_is_editable(current_role, state) &&
-           !isTRUE(detail_state$source_drift) &&
-            !queue_read_only()) {
+      actions <- list()
+      if (detail_is_editable(current_role, state) && !queue_read_only()) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("save_draft"),
           "Save Draft",
@@ -631,34 +684,49 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           title = if (dirty()) "Save draft before submitting." else NULL
         )
       }
-       if (authorize(current_role, "request-revision") && state == "in-review" &&
-           !isTRUE(detail_state$source_drift) &&
-            !queue_read_only()) {
+      if (authorize(current_role, "request-revision") &&
+          state == "in-review" && !queue_read_only()) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("act_reqrev"),
           "Request revision",
           class = "btn btn-outline-secondary"
         )
       }
-       approval_eligible <- if (is.null(queue_descriptor())) {
-         FALSE
-       } else {
-         isTRUE(tryCatch(
-           queue_approval_eligible(
-             detail_state$record,
-             detail_state$source_binding
-           ),
-           error = function(error) FALSE
-         ))
-       }
-       if (authorize(current_role, "approved") && state == "in-review" &&
-           !isTRUE(detail_state$source_drift) &&
-            !queue_read_only() &&
-           approval_eligible) {
+      approval_eligible <- if (is.null(queue_descriptor())) {
+        FALSE
+      } else {
+        isTRUE(tryCatch(
+          queue_approval_eligible(
+            detail_state$record,
+            detail_state$source_binding,
+            queue_descriptor()
+          ),
+          error = function(error) FALSE
+        ))
+      }
+      if (authorize(current_role, "approved") && state == "in-review" &&
+          !isTRUE(detail_state$source_drift) && !queue_read_only() &&
+          approval_eligible) {
         actions[[length(actions) + 1L]] <- shiny::actionButton(
           session$ns("act_approve"),
           "Approve",
           class = "btn btn-success"
+        )
+      }
+      if (authorize(current_role, "source-revision") &&
+          !identical(state, "approved") && !queue_read_only()) {
+        actions[[length(actions) + 1L]] <- shiny::actionButton(
+          session$ns("act_source_revision"),
+          "Re-enroll source",
+          class = "btn btn-outline-secondary"
+        )
+      }
+      if (authorize(current_role, "reopened") &&
+          identical(state, "approved") && !queue_read_only()) {
+        actions[[length(actions) + 1L]] <- shiny::actionButton(
+          session$ns("act_reopen"),
+          "Reopen and retire output",
+          class = "btn btn-danger"
         )
       }
       shiny::div(
@@ -741,6 +809,54 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
               class = "btn btn-primary"
             )
           )
+        ),
+        reopen = shiny::modalDialog(
+          title = "Reopen approved artifact",
+          easyClose = TRUE,
+          shiny::p(
+            shiny::strong(artifact_id),
+            "will move to Needs revision. Its active approved output will be deleted in the same Git commit."
+          ),
+          shiny::textAreaInput(
+            session$ns("reopen_note"),
+            "Reason for reopen",
+            rows = 4
+          ),
+          shiny::uiOutput(session$ns("reopen_note_error")),
+          footer = shiny::tagList(
+            shiny::modalButton("Cancel"),
+            shiny::actionButton(
+              session$ns("confirm_reopen"),
+              "Reopen and retire output",
+              class = "btn btn-danger"
+            )
+          )
+        ),
+        source_revision = shiny::modalDialog(
+          title = "Re-enroll source revision",
+          easyClose = TRUE,
+          shiny::p(
+            shiny::strong(artifact_id),
+            "will keep its queue membership and use the same source path. Enter an immutable commit SHA."
+          ),
+          shiny::textInput(
+            session$ns("source_revision_commit"),
+            "Candidate source commit"
+          ),
+          shiny::textAreaInput(
+            session$ns("source_revision_note"),
+            "Reason for source revision",
+            rows = 4
+          ),
+          shiny::uiOutput(session$ns("source_revision_error")),
+          footer = shiny::tagList(
+            shiny::modalButton("Cancel"),
+            shiny::actionButton(
+              session$ns("confirm_source_revision"),
+              "Verify and re-enroll",
+              class = "btn btn-primary"
+            )
+          )
         )
       )
       shiny::showModal(modal)
@@ -762,12 +878,41 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
     }, ignoreInit = TRUE)
     shiny::observeEvent(input$act_reqrev, show_confirmation("revision"), ignoreInit = TRUE)
     shiny::observeEvent(input$act_approve, show_confirmation("approve"), ignoreInit = TRUE)
+    shiny::observeEvent(input$act_reopen, show_confirmation("reopen"), ignoreInit = TRUE)
+    shiny::observeEvent(
+      input$act_source_revision,
+      show_confirmation("source_revision"),
+      ignoreInit = TRUE
+    )
 
     output$revision_note_error <- shiny::renderUI({
       clicks <- input$confirm_revision %||% 0L
       if (clicks < 1L ||
           nzchar(trimws(input$revision_note %||% ""))) return(NULL)
       shiny::p(class = "field-error", role = "alert", "Enter a reason before requesting revision.")
+    })
+    output$reopen_note_error <- shiny::renderUI({
+      clicks <- input$confirm_reopen %||% 0L
+      if (clicks < 1L || nzchar(trimws(input$reopen_note %||% ""))) {
+        return(NULL)
+      }
+      shiny::p(
+        class = "field-error",
+        role = "alert",
+        "Enter a reason before reopening the artifact."
+      )
+    })
+    output$source_revision_error <- shiny::renderUI({
+      clicks <- input$confirm_source_revision %||% 0L
+      if (clicks < 1L) return(NULL)
+      commit <- trimws(input$source_revision_commit %||% "")
+      reason <- trimws(input$source_revision_note %||% "")
+      messages <- c(
+        if (!.is_sha1(commit)) "Enter a lowercase 40-character commit SHA.",
+        if (!nzchar(reason)) "Enter a reason for the source revision."
+      )
+      if (!length(messages)) return(NULL)
+      shiny::p(class = "field-error", role = "alert", paste(messages, collapse = " "))
     })
 
     shiny::observeEvent(input$confirm_submit, {
@@ -784,6 +929,23 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       if (!nzchar(note)) return()
       shiny::removeModal()
       run_action("request-revision", note = note)
+    }, ignoreInit = TRUE)
+    shiny::observeEvent(input$confirm_reopen, {
+      note <- trimws(input$reopen_note %||% "")
+      if (!nzchar(note)) return()
+      shiny::removeModal()
+      run_action("reopened", note = note)
+    }, ignoreInit = TRUE)
+    shiny::observeEvent(input$confirm_source_revision, {
+      commit <- trimws(input$source_revision_commit %||% "")
+      note <- trimws(input$source_revision_note %||% "")
+      if (!.is_sha1(commit) || !nzchar(note)) return()
+      shiny::removeModal()
+      run_action(
+        "source-revision",
+        note = note,
+        candidate_source_commit = commit
+      )
     }, ignoreInit = TRUE)
     shiny::observeEvent(input$reload_latest, {
       shiny::showModal(shiny::modalDialog(

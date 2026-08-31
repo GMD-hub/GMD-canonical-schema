@@ -29,6 +29,13 @@ ref_race_error <- function(msg) {
   )
 }
 
+indeterminate_publication_error <- function(msg, commit_sha) {
+  structure(
+    list(message = msg, commit_sha = commit_sha, call = NULL),
+    class = c("indeterminate_publication", "error", "condition")
+  )
+}
+
 .expected_blob_matches <- function(actual, expected) {
   if (length(expected) == 1L && is.na(expected)) return(is.null(actual))
   if (is.null(expected)) return(is.null(actual))
@@ -108,7 +115,8 @@ adapter_check_stale <- function(
 adapter_write_atomic <- function(
   adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(),
   message, inline_changes = NULL, max_payload_bytes = 900000L,
-  reject_unrelated_head = NULL, preflight_tree = NULL
+  reject_unrelated_head = NULL, preflight_tree = NULL,
+  pre_publish_check = NULL
 ) {
   .assert_writable_adapter(adapter)
   if (!is.list(changes) || !length(changes)) stop("atomic write requires changes")
@@ -121,6 +129,9 @@ adapter_write_atomic <- function(
       (is.character(content) && length(content) == 1L && !is.na(content))
   }, logical(1)))) {
     stop("atomic write contents must be scalar text or NULL deletions")
+  }
+  if (!is.null(pre_publish_check) && !is.function(pre_publish_check)) {
+    stop("pre_publish_check must be a function or NULL")
   }
   owner <- adapter$owner
   repo <- adapter$repo
@@ -250,6 +261,17 @@ adapter_write_atomic <- function(
   }
   new_commit <- response$sha
   completed <- c(completed, "commit-creation")
+  if (!is.null(pre_publish_check)) {
+    tryCatch(
+      pre_publish_check(),
+      error = function(error) {
+        error$steps_completed <- completed
+        stop(error)
+      }
+    )
+    completed <- c(completed, "pre-publication-check")
+  }
+  patch_error <- NULL
   response <- tryCatch(
     adapter$http(
       "PATCH",
@@ -263,23 +285,70 @@ adapter_write_atomic <- function(
       body = list(sha = new_commit, force = FALSE)
     ),
     error = function(error) {
-      if (inherits(error, "ref_race") ||
-          grepl(
-            "409|422|non-fast-forward|fast.?forward|reference.*match|not a fast forward",
-            conditionMessage(error),
-            ignore.case = TRUE
-          )) {
-        stop(ref_race_error(conditionMessage(error)))
-      }
-      stop(partial_failure_error(conditionMessage(error)))
+      patch_error <<- error
+      NULL
     }
   )
-  if (!.is_scalar_character(response$object$sha %||% NULL)) {
-    error <- ref_race_error(
-      "review branch ref moved before publication; no transition was applied"
+  if (!is.null(patch_error)) {
+    current <- tryCatch(
+      adapter_branch_head(owner, repo, branch, token, adapter$http),
+      error = function(error) NULL
     )
-    error$steps_completed <- completed
-    stop(error)
+    if (identical(current, new_commit)) {
+      response <- list(object = list(sha = new_commit))
+    } else if (inherits(patch_error, "ref_race") ||
+               grepl(
+                 paste0(
+                   "409|422|non-fast-forward|fast.?forward|",
+                   "reference.*match|not a fast forward"
+                 ),
+                 conditionMessage(patch_error),
+                 ignore.case = TRUE
+               )) {
+      error <- ref_race_error(conditionMessage(patch_error))
+      error$steps_completed <- completed
+      stop(error)
+    } else if (identical(current, tree$commit)) {
+      stop(.partial_failure_with_steps(
+        conditionMessage(patch_error),
+        completed
+      ))
+    } else {
+      error <- indeterminate_publication_error(
+        paste(
+          "review ref update result is indeterminate; reconcile the branch",
+          "before retrying"
+        ),
+        new_commit
+      )
+      error$steps_completed <- completed
+      stop(error)
+    }
+  }
+  if (!identical(response$object$sha %||% NULL, new_commit)) {
+    current <- tryCatch(
+      adapter_branch_head(owner, repo, branch, token, adapter$http),
+      error = function(error) NULL
+    )
+    if (identical(current, new_commit)) {
+      response <- list(object = list(sha = new_commit))
+    } else if (identical(current, tree$commit)) {
+      error <- ref_race_error(
+        "review branch ref did not publish the new commit"
+      )
+      error$steps_completed <- completed
+      stop(error)
+    } else {
+      error <- indeterminate_publication_error(
+        paste(
+          "review ref response was invalid and publication is indeterminate;",
+          "reconcile the branch before retrying"
+        ),
+        new_commit
+      )
+      error$steps_completed <- completed
+      stop(error)
+    }
   }
   completed <- c(completed, "ref-update")
   list(ok = TRUE, commit_sha = new_commit, steps_completed = completed)
@@ -288,7 +357,8 @@ adapter_write_atomic <- function(
 adapter_write_with_recovery <- function(
   adapter, changes, expected_ref_sha = NULL, expected_blob_shas = list(), message,
   inline_changes = NULL, max_payload_bytes = 900000L,
-  reject_unrelated_head = NULL, preflight_tree = NULL
+  reject_unrelated_head = NULL, preflight_tree = NULL,
+  pre_publish_check = NULL
 ) {
   tryCatch(
     {
@@ -301,7 +371,8 @@ adapter_write_with_recovery <- function(
         inline_changes = inline_changes,
         max_payload_bytes = max_payload_bytes,
         reject_unrelated_head = reject_unrelated_head,
-        preflight_tree = preflight_tree
+        preflight_tree = preflight_tree,
+        pre_publish_check = pre_publish_check
       )
       list(
         ok = TRUE,
@@ -316,7 +387,7 @@ adapter_write_with_recovery <- function(
         ok = FALSE,
         transition_applied = FALSE,
         commit_sha = NULL,
-        steps_completed = character(0),
+        steps_completed = error$steps_completed %||% character(0),
         error = list(kind = "stale", message = conditionMessage(error), detail = NULL)
       )
     },
@@ -329,6 +400,32 @@ adapter_write_with_recovery <- function(
           "staleness-check", "blob-creation", "tree-creation", "commit-creation"
         ),
         error = list(kind = "ref-race", message = conditionMessage(error), detail = NULL)
+      )
+    },
+    source_drift = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = FALSE,
+        commit_sha = NULL,
+        steps_completed = error$steps_completed %||% character(0),
+        error = list(
+          kind = "source-drift",
+          message = conditionMessage(error),
+          detail = NULL
+        )
+      )
+    },
+    indeterminate_publication = function(error) {
+      list(
+        ok = FALSE,
+        transition_applied = NA,
+        commit_sha = error$commit_sha %||% NULL,
+        steps_completed = error$steps_completed %||% character(0),
+        error = list(
+          kind = "indeterminate",
+          message = conditionMessage(error),
+          detail = NULL
+        )
       )
     },
     partial_failure = function(error) {
@@ -349,7 +446,7 @@ adapter_write_with_recovery <- function(
         ok = FALSE,
         transition_applied = FALSE,
         commit_sha = NULL,
-        steps_completed = character(0),
+        steps_completed = error$steps_completed %||% character(0),
         error = list(kind = "other", message = conditionMessage(error), detail = NULL)
       )
     }
@@ -357,6 +454,7 @@ adapter_write_with_recovery <- function(
 }
 
 recovery_report_text <- function(report) {
+  if (isTRUE(report$noop)) return("No write was needed; the requested state already exists.")
   if (report$ok) return(sprintf("Write succeeded (commit %s).", report$commit_sha))
   if (report$error$kind == "stale") {
     return(paste(
@@ -367,6 +465,19 @@ recovery_report_text <- function(report) {
   if (report$error$kind == "ref-race") {
     return(paste(
       "Concurrent publication rejected -- no transition applied.",
+      report$error$message
+    ))
+  }
+  if (report$error$kind == "source-drift") {
+    return(paste(
+      "Source drift rejected publication -- no transition applied.",
+      report$error$message
+    ))
+  }
+  if (report$error$kind == "indeterminate") {
+    return(paste(
+      "Publication result is indeterminate. Do not retry until an operator",
+      "reconciles the review branch.",
       report$error$message
     ))
   }

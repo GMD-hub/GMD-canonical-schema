@@ -7,10 +7,13 @@ for production-grade Shiny applications and deployed on Posit Connect.
 ## Queue Contract
 
 Versioned queues use authoritative v2 review records and one immutable
-`queue-descriptor.yml`. The descriptor records the queue ID, source revision,
-creation actor/time, expected record count, and digest of the immutable record
-identities. Dashboard state is derived from batched record reads. No mutable
-global queue index participates in a review action.
+`queue-descriptor.yml`. Descriptor schema 1.1 records the queue ID, immutable
+initial source baseline, creation actor/time, expected record count, stable
+membership digest, and one `approvals_enabled` Boolean. New and migrated queues
+set approval to `false`. The membership digest uses only queue ID, artifact ID,
+and source artifact path, so an explicit per-record source revision does not
+change queue membership. Dashboard state is derived from batched record reads.
+No mutable global queue index participates in a review action.
 
 The preserved `review` calibration branch remains read-only. Existing
 production-v2 queues that still contain `queue-manifest.yml` and
@@ -44,7 +47,9 @@ review-app/
 │   ├── index.R              # Dashboard work-queue index builder
 │   ├── queue_manifest.R     # Queue descriptor and compatibility contracts
 │   ├── source_binding.R     # Immutable source and drift checks
-│   ├── enrollment.R         # Operator-only initialization and migration
+│   ├── enrollment.R         # Operator-only initialization
+│   ├── queue_migration.R    # Forward-only queue-control migration
+│   ├── source_revision.R    # Re-enrollment and reopen lifecycle logic
 │   ├── recovery.R           # Atomic multi-file commit + partial-failure recovery
 │   ├── actions.R            # Role-gated action orchestration
 │   └── frontmatter.R        # YAML front-matter handling + Markdown preview
@@ -252,30 +257,44 @@ path-set digest. It discovers generic `VAR-*.md` draft paths, creates
 source-bound v2 records, creates the minimal descriptor, and publishes one
 atomic commit.
 
-`migrate_review_queue()` accepts an existing production-v2 queue. It validates
-the old immutable manifest fields, legacy index consistency, all v2 records,
-and the record set. It then adds the descriptor and removes the old manifest
-and index in one forward-only commit. Tests use only in-memory adapters and
-temporary repositories. Operators must never use production as a test target.
+`migrate_review_queue()` accepts an approval-disabled production-v2 queue or a
+strict descriptor 1.0 queue. It validates the old control, all v2 records,
+every record's immutable source bytes, and the legacy index when present. It
+then publishes descriptor 1.1 with `approvals_enabled: false`. The
+production-v2 path removes the old manifest and index; the descriptor 1.0 path
+replaces only the descriptor. Records, events, bodies, assignments, blockers,
+approved blobs, and prior controls remain preserved through Git history. Tests
+use only in-memory adapters and temporary repositories. Operators must never
+use production as a test target.
 
-Production-v2 compatibility is read-only until migration. Approval and v2
-reopen remain unavailable until the sequential Task D and Task E changes
-install their complete server-side gates.
+Production-v2 and descriptor 1.0 compatibility are read-only until migration.
+Approval remains fail-closed and disabled.
 
 ## Source Binding and Fail-Closed Writes
 
-Every production record is bound to the enrolled source commit, Git blob SHA,
-and source-content SHA-256. The app displays the enrolled snapshot while also
-checking the current source artifact. A changed, deleted, unreadable, or
-unverifiable source is structured drift. The app rechecks source binding and
-the current queue descriptor immediately before every state-changing action.
-Drift, API failure, or invalid queue controls prevents every
-write, including save, submit, assignment, revision, and approval.
+Every production record is bound independently to its enrolled source commit,
+path, Git blob SHA, source-content SHA-256, and body SHA-256. The app displays
+the enrolled snapshot while also checking the current source artifact. A
+changed, deleted, unreadable, or unverifiable current source is structured
+drift. Save and Submit continue against the enrolled immutable snapshot and
+expose the warning. Approval remains blocked on unresolved drift.
 
 An unrelated source-branch commit is not drift when the enrolled artifact blob
-and content hash are unchanged. Approval uses the enrolled immutable front
-matter and persisted reviewed body only, and remains blocked when drift is not
 resolved.
+
+An administrator can explicitly re-enroll one record from a supplied immutable
+commit. The server verifies the commit, unchanged artifact ID and path, Git
+blob, raw bytes, content hash, front matter, and body hash. Re-enrollment keeps
+queue membership, assignments, and blocker references; resets assessment data;
+records one source-revision event; and removes the stale companion body in the
+same commit. An approved record cannot be re-enrolled directly.
+
+An administrator can reopen an approved record with a required reason even
+when the current source is drifted or temporarily unreadable. Reopen verifies
+the authoritative record, immutable enrolled source, reviewed body, and exact
+approved output. It moves the record to Needs revision, records one event, and
+deletes the active approved output in the same atomic commit. The old approved
+blob remains in protected Git history.
 
 For a data-cutover rollback, set the configured review branch back to `review`
 and restart the Git-backed Connect item. Legacy calibration records remain

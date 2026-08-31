@@ -19,9 +19,12 @@ The authoritative queue state consists of:
 - approved outputs under `extraction/40_approved/`
 - protected Git commit history
 
-The descriptor contains only schema version, queue ID, source revision,
-creation actor/time, expected record count, and the immutable record-set
-digest. Dashboard rows are derived from batched record reads. There is no
+Descriptor schema 1.1 contains queue ID, the immutable initial source baseline,
+creation actor/time, expected record count, a stable membership digest, and one
+`approvals_enabled` Boolean. The digest uses queue ID, artifact ID, and source
+artifact path. Per-record source commit, blob, content, actor, and enrollment
+time are not membership inputs. New and migrated descriptors set approval to
+`false`. Dashboard rows are derived from batched record reads. There is no
 authoritative mutable queue index or global index lock.
 
 ## Authentication
@@ -83,7 +86,8 @@ in-memory adapter, a fixture, or a temporary repository.
 The application temporarily reads an existing production-v2
 `queue-manifest.yml`. It adapts only the immutable queue identity fields. The
 old `queue-index.yml` is ignored by dashboard reads and review actions.
-This compatibility mode is read-only. Migrate the queue before review writes.
+Strict descriptor 1.0 queues also remain readable. Both compatibility modes are
+read-only. Migrate the queue before review writes.
 
 The compatibility path preserves:
 
@@ -100,18 +104,22 @@ Migration is not available in the Shiny UI. An authenticated administrator
 invokes `migrate_review_queue()` only after the compatible application code is
 deployed and verified.
 
-Before publication, the migrator:
+The migration input can be an approval-disabled production-v2 manifest/index or
+a strict descriptor 1.0 queue. Before publication, the migrator:
 
 1. Locks the current review-branch head and tree.
-2. Validates the legacy immutable manifest fields.
-3. Validates the legacy index against every record and record blob.
-4. Validates all v2 source and record identities.
+2. Validates the strict descriptor 1.0 fields, or the legacy immutable manifest
+   fields and `approval_mode: disabled`.
+3. Validates the legacy index against every record and record blob when present.
+4. Validates every v2 record against its own immutable source commit and bytes.
 5. Creates deterministic descriptor bytes from the existing records.
 6. Confirms that no record, body, event history, or approved output is changed.
 
-The one migration commit adds `queue-descriptor.yml` and removes
-`queue-manifest.yml` and `queue-index.yml`. It is forward-only and non-force.
-A moved branch ref causes migration to fail without publication.
+The one migration commit publishes descriptor 1.1 with
+`approvals_enabled: false`. For production-v2, it removes
+`queue-manifest.yml` and `queue-index.yml`. For descriptor 1.0, it replaces only
+`queue-descriptor.yml`. It is forward-only and non-force. A moved branch ref or
+any validation failure leaves the old branch head and control files unchanged.
 
 Do not run migration against the production branch as part of development,
 tests, review, or CI. Production migration is a later explicit operator action.
@@ -123,14 +131,24 @@ full-content SHA-256, and exact enrolled-body SHA-256. The app displays the
 enrolled source snapshot and checks the current source path separately.
 
 Drift state is structured as `current`, `drifted`, or `unverifiable`, with a
-stable reason code and expected/actual identity fields. Every non-current state
-blocks save, submit, revision, assignment, approval, and reopen. Approval
-remains unavailable until Task D installs the complete human rubric gate. V2
-reopen remains unavailable until Task E installs approved-output retirement
-and source-revision lifecycle rules.
+stable reason code and expected/actual identity fields. Save and Submit operate
+against the enrolled immutable snapshot when the current source is drifted or
+unverifiable. Approval remains blocked on unresolved drift and is disabled by
+descriptor policy.
 
-Full source-revision retirement, re-enrollment, and reopen behavior remain a
-later sequential change.
+An administrator can use the explicit Re-enroll source action for a non-approved
+record. The action requires a reason and an immutable candidate commit. It
+keeps the artifact ID, source path, queue membership, assignments, and blocker
+references. It resets assessment data and reviewed body to the verified new
+source. Draft stays Draft, In review becomes Needs revision, and Needs revision
+stays Needs revision. A duplicate replay creates no commit or event.
+
+An approved record must first use Reopen and retire output. Reopen requires an
+administrator and a reason. It verifies the immutable enrolled source and exact
+approved output, permits current source drift or temporary current-source read
+failure, preserves the reviewed body, moves the record to Needs revision, and
+deletes the active approved output in the same Git commit. A missing,
+inconsistent, or concurrently changed approved output fails closed.
 
 ## Concurrency
 
@@ -138,7 +156,11 @@ Each action locks the selected record, descriptor, selected body, and selected
 approved output when applicable. It does not lock or rewrite a global index.
 An unrelated record commit can move the branch head without invalidating the
 selected record. A same-record or descriptor change fails as stale. A ref race
-can retry only after the selected dependencies are revalidated.
+can retry only after the selected dependencies are revalidated. Selected
+record, body, approved-output, or source changes are terminal. Source-sensitive
+writes create their Git objects, rerun the selected source check, and only then
+perform the non-force ref update. A failed final check leaves the new Git
+objects unreachable.
 
 ## Validation
 

@@ -3,7 +3,8 @@
 QUEUE_DESCRIPTOR_PATH <- "extraction/30_review/queue-descriptor.yml"
 LEGACY_QUEUE_MANIFEST_PATH <- "extraction/30_review/queue-manifest.yml"
 LEGACY_QUEUE_INDEX_PATH <- "extraction/30_review/queue-index.yml"
-QUEUE_DESCRIPTOR_SCHEMA_VERSION <- "1.0"
+QUEUE_DESCRIPTOR_SCHEMA_VERSION <- "1.1"
+QUEUE_DESCRIPTOR_V1_0_SCHEMA_VERSION <- "1.0"
 LEGACY_QUEUE_SCHEMA_VERSION <- "1.0"
 
 .queue_error <- function(message) {
@@ -48,20 +49,42 @@ queue_record_identity <- function(record) {
   )
 }
 
-queue_record_set_digest <- function(records) {
-  if (!is.list(records)) stop(.queue_error("queue records must be a list"))
-  identities <- lapply(records, queue_record_identity)
+queue_membership_identity <- function(record) {
+  validate_review_record_v2(record)
+  list(
+    queue_id = record$queue_id,
+    artifact_id = record$artifact_id,
+    source_artifact_path = record$source_artifact_path
+  )
+}
+
+.queue_identity_set_digest <- function(identities) {
   if (!length(identities)) return(hash_body(""))
-  order_index <- order(vapply(
-    identities,
-    function(identity) identity$artifact_id,
-    character(1)
-  ))
+  keys <- vapply(identities, function(identity) {
+    paste(
+      identity$queue_id %||% "",
+      identity$artifact_id %||% "",
+      identity$source_artifact_path %||% "",
+      sep = "\n"
+    )
+  }, character(1))
+  order_index <- order(keys)
   lines <- vapply(identities[order_index], function(identity) {
     values <- enc2utf8(unlist(identity, use.names = FALSE))
     paste0(nchar(values, type = "bytes"), ":", values, collapse = "")
   }, character(1))
   hash_body(paste0(paste(lines, collapse = "\n"), "\n"))
+}
+
+queue_record_set_digest_v1_0 <- function(records) {
+  if (!is.list(records)) stop(.queue_error("queue records must be a list"))
+  identities <- lapply(records, queue_record_identity)
+  .queue_identity_set_digest(identities)
+}
+
+queue_record_set_digest <- function(records) {
+  if (!is.list(records)) stop(.queue_error("queue records must be a list"))
+  .queue_identity_set_digest(lapply(records, queue_membership_identity))
 }
 
 new_queue_descriptor <- function(
@@ -70,7 +93,8 @@ new_queue_descriptor <- function(
   created_at,
   created_by,
   expected_record_count,
-  record_set_sha256
+  record_set_sha256,
+  approvals_enabled = FALSE
 ) {
   descriptor <- list(
     schema_version = QUEUE_DESCRIPTOR_SCHEMA_VERSION,
@@ -79,7 +103,8 @@ new_queue_descriptor <- function(
     created_at = created_at,
     created_by = created_by,
     expected_record_count = as.integer(expected_record_count),
-    record_set_sha256 = record_set_sha256
+    record_set_sha256 = record_set_sha256,
+    approvals_enabled = approvals_enabled
   )
   validate_queue_descriptor(descriptor)
   class(descriptor) <- c("reviewapp_queue_descriptor", "list")
@@ -87,12 +112,30 @@ new_queue_descriptor <- function(
 }
 
 validate_queue_descriptor <- function(descriptor) {
-  required <- c(
+  required_v1_0 <- c(
     "schema_version", "queue_id", "source_revision", "created_at",
     "created_by", "expected_record_count", "record_set_sha256"
   )
   if (!is.list(descriptor)) {
     stop(.queue_error("queue descriptor must be a mapping"))
+  }
+  version <- descriptor$schema_version %||% ""
+  if (!.is_scalar_character(version)) {
+    stop(.queue_error("queue descriptor schema_version must be a string"))
+  }
+  if (!version %in% c(
+    QUEUE_DESCRIPTOR_V1_0_SCHEMA_VERSION,
+    QUEUE_DESCRIPTOR_SCHEMA_VERSION
+  )) {
+    stop(.queue_error(sprintf(
+      "unsupported queue descriptor schema version '%s'",
+      version
+    )))
+  }
+  required <- if (identical(version, QUEUE_DESCRIPTOR_SCHEMA_VERSION)) {
+    c(required_v1_0, "approvals_enabled")
+  } else {
+    required_v1_0
   }
   missing <- required[!required %in% names(descriptor)]
   if (length(missing)) {
@@ -106,15 +149,6 @@ validate_queue_descriptor <- function(descriptor) {
     stop(.queue_error(sprintf(
       "queue descriptor contains unsupported fields: %s",
       paste(extra, collapse = ", ")
-    )))
-  }
-  if (!identical(
-    as.character(descriptor$schema_version),
-    QUEUE_DESCRIPTOR_SCHEMA_VERSION
-  )) {
-    stop(.queue_error(sprintf(
-      "unsupported queue descriptor schema version '%s'",
-      descriptor$schema_version
     )))
   }
   .require_queue_scalar(descriptor$queue_id, "queue_id")
@@ -135,17 +169,34 @@ validate_queue_descriptor <- function(descriptor) {
   if (!.is_sha256(descriptor$record_set_sha256)) {
     stop(.queue_error("queue descriptor record_set_sha256 must be a SHA-256"))
   }
+  if (identical(version, QUEUE_DESCRIPTOR_SCHEMA_VERSION) &&
+      (!is.logical(descriptor$approvals_enabled) ||
+       length(descriptor$approvals_enabled) != 1L ||
+       is.na(descriptor$approvals_enabled))) {
+    stop(.queue_error(
+      "queue descriptor approvals_enabled must be one Boolean value"
+    ))
+  }
   invisible(descriptor)
 }
 
 parse_queue_descriptor <- function(yaml_string) {
   descriptor <- yaml::read_yaml(text = yaml_string)
   validate_queue_descriptor(descriptor)
+  if (identical(
+    as.character(descriptor$schema_version),
+    QUEUE_DESCRIPTOR_V1_0_SCHEMA_VERSION
+  )) {
+    attr(descriptor, "compatibility_format") <- "descriptor_1_0"
+  }
   class(descriptor) <- c("reviewapp_queue_descriptor", "list")
   descriptor
 }
 
-parse_legacy_queue_manifest <- function(yaml_string) {
+parse_legacy_queue_manifest <- function(
+  yaml_string,
+  require_approval_disabled = FALSE
+) {
   manifest <- yaml::read_yaml(text = yaml_string)
   required <- c(
     "schema_version", "queue_id", "created_at", "created_by",
@@ -170,14 +221,21 @@ parse_legacy_queue_manifest <- function(yaml_string) {
   if (!is.numeric(manifest$expected_total) ||
       length(manifest$expected_total) != 1L ||
       is.na(manifest$expected_total) ||
-      as.integer(manifest$expected_total) < 1L) {
+      as.integer(manifest$expected_total) < 1L ||
+      manifest$expected_total != as.integer(manifest$expected_total)) {
     stop(.queue_error("legacy queue expected_total must be a positive integer"))
   }
   if (!.is_sha256(manifest$expected_path_set_sha256)) {
     stop(.queue_error("legacy queue path-set identity must be a SHA-256"))
   }
+  if (isTRUE(require_approval_disabled) &&
+      !identical(manifest$approval_mode %||% NULL, "disabled")) {
+    stop(.queue_error(
+      "production-v2 migration requires approval_mode to be disabled"
+    ))
+  }
   descriptor <- list(
-    schema_version = QUEUE_DESCRIPTOR_SCHEMA_VERSION,
+    schema_version = QUEUE_DESCRIPTOR_V1_0_SCHEMA_VERSION,
     queue_id = manifest$queue_id,
     source_revision = manifest$source_commit,
     created_at = manifest$created_at,
@@ -202,7 +260,24 @@ parse_queue_control <- function(yaml_string, path) {
 }
 
 queue_descriptor_is_legacy <- function(descriptor) {
-  identical(attr(descriptor, "compatibility_format"), "production_v2")
+  !identical(queue_descriptor_format(descriptor), "descriptor_1_1")
+}
+
+queue_descriptor_is_production_v2 <- function(descriptor) {
+  identical(queue_descriptor_format(descriptor), "production_v2")
+}
+
+queue_descriptor_format <- function(descriptor) {
+  if (identical(attr(descriptor, "compatibility_format"), "production_v2")) {
+    return("production_v2")
+  }
+  if (identical(descriptor$schema_version %||% NULL, "1.0")) {
+    return("descriptor_1_0")
+  }
+  if (identical(descriptor$schema_version %||% NULL, "1.1")) {
+    return("descriptor_1_1")
+  }
+  stop(.queue_error("queue descriptor format is unsupported"))
 }
 
 validate_queue_record_set <- function(records, descriptor) {
@@ -235,18 +310,19 @@ validate_queue_record_set <- function(records, descriptor) {
         record$artifact_id
       )))
     }
-    if (!identical(record$source_commit, descriptor$source_revision)) {
+    if (queue_descriptor_is_legacy(descriptor) &&
+        !identical(record$source_commit, descriptor$source_revision)) {
       stop(.queue_error(sprintf(
         "record '%s' source revision does not match the queue descriptor",
         record$artifact_id
       )))
     }
   }
-  actual_digest <- if (queue_descriptor_is_legacy(descriptor)) {
-    queue_path_set_digest(paths)
-  } else {
-    queue_record_set_digest(records)
-  }
+  actual_digest <- switch(queue_descriptor_format(descriptor),
+    production_v2 = queue_path_set_digest(paths),
+    descriptor_1_0 = queue_record_set_digest_v1_0(records),
+    descriptor_1_1 = queue_record_set_digest(records)
+  )
   if (!identical(actual_digest, descriptor$record_set_sha256)) {
     stop(.queue_error("queue record-set digest does not match the descriptor"))
   }
@@ -270,8 +346,20 @@ assessment_approval_complete <- function(assessment) {
   }, error = function(error) FALSE)
 }
 
-queue_approval_eligible <- function(record, source_binding = NULL) {
+queue_approval_eligible <- function(
+  record,
+  source_binding = NULL,
+  descriptor = NULL
+) {
   validate_review_record_v2(record)
+  if (is.null(descriptor) ||
+      !identical(
+        as.character(descriptor$schema_version %||% ""),
+        QUEUE_DESCRIPTOR_SCHEMA_VERSION
+      ) ||
+      !isTRUE(descriptor$approvals_enabled)) {
+    return(FALSE)
+  }
   if (!is.null(source_binding) && !source_binding_is_current(source_binding)) {
     return(FALSE)
   }

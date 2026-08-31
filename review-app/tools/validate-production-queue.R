@@ -63,6 +63,7 @@ record_matches_source_bytes <- function(record, source_raw) {
   if (!is.raw(source_raw)) stop("source content must be raw bytes")
   source_text <- rawToChar(source_raw)
   split <- reviewapp:::split_frontmatter_exact(source_text)
+  reviewapp:::.source_frontmatter(split, record$artifact_id)
   body_raw <- split$body_raw %||% charToRaw(enc2utf8(split$body %||% ""))
   identical(
     reviewapp:::git_blob_sha_raw(source_raw),
@@ -114,7 +115,10 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
   body_paths <- grep("^[^/]+[.]body[.]md$", paths, value = TRUE)
   allowed <- c(
     ".gitkeep", controls, record_paths, body_paths,
-    if ("queue-index.yml" %in% paths) "queue-index.yml"
+    if (identical(controls, "queue-manifest.yml") &&
+        "queue-index.yml" %in% paths) {
+      "queue-index.yml"
+    }
   )
   extras <- setdiff(paths, allowed)
   if (length(extras)) {
@@ -128,9 +132,10 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
     if (!identical(path, sprintf("%s.review.yml", record$artifact_id))) {
       stop("review record filename is not canonical")
     }
+    git_commit_sha(opts$repo, record$source_commit)
     source_raw <- git_blob_raw(
       opts$repo,
-      descriptor$source_revision,
+      record$source_commit,
       record$source_artifact_path
     )
     if (!record_matches_source_bytes(record, source_raw)) {
