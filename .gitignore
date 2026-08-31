@@ -19,34 +19,9 @@ compound-gpid.local.md
 # Generated test RSA key (defense-in-depth; tests write to tempdir)
 review-app/tests/testthat/pubkey
 
-# Compound GPID managed items (junctions + copied file - do not commit)
-.agents/AGENTS.md
-.agents/commands
-.agents/instructions
-.agents/shared
-.agents/skills
-.agents/subagents
-.claude/CLAUDE.md
-.claude/agents
-.claude/commands
-.claude/instructions
-.claude/shared
-.claude/skills
-.compound-gpid/managed-files.json
-.github/agents
-.github/copilot-instructions.md
-.github/instructions
-.github/prompts
-.github/shared
-.github/skills
+.kilo
 .kilo/AGENTS.md
-.kilo/agents
-.kilo/commands
-.kilo/instructions
 .kilo/kilo.json
-.kilo/shared
-.kilo/skills
-.kilo/plans
 .opencode/AGENTS.md
 .opencode/agents
 .opencode/commands
@@ -54,3 +29,18 @@ review-app/tests/testthat/pubkey
 .opencode/opencode.json
 .opencode/shared
 .opencode/skills
+
+# Compound GPID managed items (junctions + copied file - do not commit)
+.compound-gpid/*.bak
+.compound-gpid/*.tmp
+.compound-gpid/active/
+.compound-gpid/generations/
+.compound-gpid/managed-files.json
+.compound-gpid/projection-ownership.json
+.compound-gpid/projection-transaction.json
+.compound-gpid/quarantine/
+.compound-gpid/retired/
+.compound-gpid/staging/
+.kilo
+.kilo/AGENTS.md
+.kilo/kilo.json

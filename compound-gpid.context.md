@@ -11,6 +11,10 @@ this file is committed to git and shared with the team.
 
 ### Extraction pipeline conventions
 
+- **Promotion recomputes rather than trusts candidates**: Resolve evidence from
+  pinned Git commits/blobs, verify hashes, deterministically recompile, derive
+  aggregates from canonical rows, and require exact candidate-byte equality
+  before atomic replacement. Any mismatch must leave the prior artifact intact.
 - **Welfare boundary is content-based, not ID-based**: Welfare leakage is
   detected by inspecting candidate citations' `source_path` for
   `chapter8-CONS.qmd`, not by substring-matching inventory IDs. Never use
