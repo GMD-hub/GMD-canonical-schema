@@ -1,27 +1,20 @@
 """Preflight module — Phase 1 Step 2.
 
-Validates source manifest, Pandoc availability, and extraction preconditions.
+Validates source manifest, parser identity, and extraction preconditions.
 Fails loudly on any precondition violation.
 """
 
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 import yaml
 from loguru import logger
+from pydantic import ValidationError
+
+from schema.extraction.manifest import SourceFileEntry, SourceManifest
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-
-# Required source chapters — derived from extraction-governance.v1.yaml module
-# registry (source_chapter fields). This is a defensive cross-check; the
-# manifest source_files block is the source of truth for which files to
-# process, but this set ensures all non-welfare chapters are present.
-REQUIRED_CHAPTERS = frozenset({
-    "chapter2-IDN.qmd", "chapter3-GEO.qmd", "chapter4-DEM.qmd",
-    "chapter5-LMR.qmd", "chapter6-UTL.qmd", "chapter7-DWL.qmd",
-    "chapter8-CONS.qmd",
-})
 
 
 class PreflightError(Exception):
@@ -50,26 +43,24 @@ def load_manifest(manifest_path: Path | None = None) -> dict[str, Any]:
 
 
 def check_source_files(manifest: dict[str, Any]) -> None:
-    """Verify all source files have valid scope and consistent hashes."""
-    valid_scopes = {"included", "supporting", "welfare-excluded"}
+    """Verify selected paths, scopes, hashes, and uniqueness generically."""
+    source_files = manifest.get("source_files", [])
+    supporting_files = manifest.get("supporting_files", [])
+    if not isinstance(source_files, list) or not source_files:
+        raise PreflightError("Manifest source_files must be a non-empty list")
+    if not isinstance(supporting_files, list):
+        raise PreflightError("Manifest supporting_files must be a list")
+
     paths_seen: set[str] = set()
-    for source_file in manifest.get("source_files", []):
-        path = source_file.get("path", "")
-        if not path:
-            raise PreflightError("Source file entry missing 'path'")
+    for raw_entry in (*source_files, *supporting_files):
+        try:
+            source_file = SourceFileEntry.model_validate(raw_entry)
+        except ValidationError as exc:
+            raise PreflightError("Invalid source file identity") from exc
+        path = source_file.path
         if path in paths_seen:
             raise PreflightError(f"Duplicate source file path: {path}")
         paths_seen.add(path)
-        scope = source_file.get("scope", "")
-        if scope not in valid_scopes:
-            raise PreflightError(f"Invalid scope '{scope}' for {path}; must be one of {valid_scopes}")
-
-    # Verify required chapters exist
-    # Defensive cross-check; the manifest source_files block is the source of truth.
-    found = {f["path"] for f in manifest["source_files"]}
-    missing = REQUIRED_CHAPTERS - found
-    if missing:
-        raise PreflightError(f"Required source chapters missing from manifest: {missing}")
 
 
 def check_parser_contract(manifest: dict[str, Any]) -> None:
@@ -80,7 +71,7 @@ def check_parser_contract(manifest: dict[str, Any]) -> None:
     if not parser.get("version"):
         raise PreflightError(
             "Parser contract missing 'version'. "
-            "Set the approved Pandoc version in extraction/config/source-manifest.v1.yaml."
+            "Set the approved parser version in the source manifest."
         )
     if not parser.get("reader"):
         raise PreflightError("Parser contract missing 'reader'")
@@ -89,18 +80,57 @@ def check_parser_contract(manifest: dict[str, Any]) -> None:
 
 
 def check_output_allowlist(manifest: dict[str, Any]) -> None:
-    """Verify output configuration is within allowed paths."""
+    """Verify output paths are canonical and contained in the draft root."""
     output = manifest.get("output", {})
     root = output.get("root", "")
-    if not root.startswith("extraction/20_drafts/"):
-        raise PreflightError(
-            f"Output root must be under extraction/20_drafts/: {root}"
-        )
-    for path in output.get("allowlist", []):
-        if not path.startswith("extraction/20_drafts/"):
+    run_root = output.get("run_root", "")
+    draft_root = (PROJECT_ROOT / "extraction" / "20_drafts").resolve()
+
+    def resolve_output_path(value: object, label: str) -> Path:
+        if not isinstance(value, str) or not value:
+            raise PreflightError(f"{label} must be a non-empty relative path")
+        without_trailing_slash = value[:-1] if value.endswith("/") else value
+        candidate = PurePosixPath(without_trailing_slash)
+        if (
+            not without_trailing_slash
+            or candidate.is_absolute()
+            or "\\" in value
+            or ".." in candidate.parts
+            or candidate.as_posix() != without_trailing_slash
+        ):
+            raise PreflightError(f"{label} must be a safe repository-relative path")
+        resolved = (PROJECT_ROOT / candidate).resolve()
+        try:
+            resolved.relative_to(draft_root)
+        except ValueError as exc:
             raise PreflightError(
-                f"Allowlisted path must be under extraction/20_drafts/: {path}"
-            )
+                f"{label} must be under extraction/20_drafts/: {value}"
+            ) from exc
+        return resolved
+
+    resolved_root = resolve_output_path(root, "Output root")
+    resolved_run_root = resolve_output_path(run_root, "Run output root")
+    try:
+        resolved_run_root.relative_to(resolved_root)
+    except ValueError as exc:
+        raise PreflightError(
+            f"Run output root must be inside the output root: {run_root}"
+        ) from exc
+    resolved_allowlist_roots: list[Path] = []
+    for path in output.get("allowlist", []):
+        resolved_allowlist = resolve_output_path(path, "Allowlisted path")
+        resolved_allowlist_roots.append(resolved_allowlist)
+        try:
+            resolved_allowlist.relative_to(resolved_root)
+        except ValueError as exc:
+            raise PreflightError(
+                f"Allowlisted path must be inside the output root: {path}"
+            ) from exc
+    if not any(
+        resolved_run_root.is_relative_to(allowlist_root)
+        for allowlist_root in resolved_allowlist_roots
+    ):
+        raise PreflightError("Run output root must be inside the output allowlist")
 
 
 def check_governance_decisions(manifest: dict[str, Any]) -> None:
@@ -122,23 +152,12 @@ def check_repository_pin(manifest: dict[str, Any]) -> None:
     revisions. This is a blocking precondition per AGENTS.md and the
     project charter.
     """
-    repository = manifest.get("repository", {})
-    if not repository:
-        raise PreflightError("Manifest missing 'repository' section")
-    commit_sha = repository.get("commit_sha")
-    if commit_sha is None:
+    try:
+        SourceManifest.model_validate(manifest)
+    except ValidationError as exc:
         raise PreflightError(
-            "Repository commit_sha is null. Set the approved 40-character "
-            "hex commit SHA in extraction/config/source-manifest.v1.yaml "
-            "before running extraction. Branch names and tags are not accepted."
-        )
-    if not isinstance(commit_sha, str) or len(commit_sha) != 40 or not all(
-        c in "0123456789abcdef" for c in commit_sha.lower()
-    ):
-        raise PreflightError(
-            f"Repository commit_sha must be a 40-character hex string, "
-            f"got: {commit_sha!r}. Branch names and tags are not accepted."
-        )
+            "Source manifest schema validation failed"
+        ) from exc
 
 
 def run_preflight(manifest_path: Path | None = None) -> dict[str, Any]:
@@ -146,6 +165,10 @@ def run_preflight(manifest_path: Path | None = None) -> dict[str, Any]:
     logger.info("Starting preflight checks", manifest_path=str(manifest_path))
     manifest = load_manifest(manifest_path)
     check_source_files(manifest)
+    try:
+        manifest = SourceManifest.model_validate(manifest).model_dump(mode="json")
+    except ValidationError as exc:
+        raise PreflightError("Source manifest schema validation failed") from exc
     check_parser_contract(manifest)
     check_output_allowlist(manifest)
     check_governance_decisions(manifest)

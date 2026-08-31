@@ -3,45 +3,45 @@
 Citation validation, evidence collection, and canonical Markdown emission.
 """
 
-from pathlib import Path
 from typing import Any
+
+from pydantic import ValidationError
 
 from extraction_pipeline.hashing import hash_bytes
 from extraction_pipeline.pandoc_ast import recover_line_bounds
-from schema.extraction.evidence import CitationValidation
+from schema.extraction.evidence import (
+    CitationInput,
+    CitationValidation,
+    CollectedEvidencePacket,
+    VerifiedCitation,
+)
+from schema.extraction.manifest import ResolvedSource
 
 
 class CanonicalizationError(ValueError):
     """A blocking canonicalization failure — required fields missing."""
 
 
+class EvidenceValidationError(ValueError):
+    """A citation or evidence packet failed proof-backed validation."""
+
+
 class SourceCache:
-    """Cache source file bytes to avoid re-reading on every citation (P3.7).
+    """Expose immutable source bytes from one verified proof."""
 
-    When validating ~40-100 citations against the same 7 chapter files,
-    the same file was read and decoded once per citation. This cache reads
-    each file at most once per cache lifetime (typically one extraction run).
-    """
-
-    def __init__(self, source_dir: Path) -> None:
-        self._source_dir = source_dir
-        self._cache: dict[str, bytes] = {}
+    def __init__(self, resolved_source: ResolvedSource) -> None:
+        self._resolved_source = resolved_source
 
     def get_bytes(self, source_path: str) -> bytes | None:
-        """Return cached bytes for a source file, reading if necessary.
-
-        Returns None if the file does not exist.
-        """
-        if source_path not in self._cache:
-            file_path = self._source_dir / source_path
-            if not file_path.exists():
-                return None
-            self._cache[source_path] = file_path.read_bytes()
-        return self._cache[source_path]
+        """Return verified bytes, or ``None`` for an unselected path."""
+        try:
+            return self._resolved_source.get_bytes(source_path)
+        except KeyError:
+            return None
 
 
 def validate_citation(
-    source_dir: Path,
+    resolved_source: ResolvedSource,
     source_path: str,
     excerpt: str,
     expected_excerpt_sha256: str | None = None,
@@ -50,13 +50,14 @@ def validate_citation(
 
     Returns a :class:`CitationValidation` with the result.
     """
-    file_path = source_dir / source_path
-    if not file_path.exists():
+    if not isinstance(excerpt, str) or not excerpt.strip():
+        return CitationValidation(valid=False, error="Citation excerpt must be nonblank")
+    try:
+        source_bytes = resolved_source.get_bytes(source_path)
+    except KeyError:
         return CitationValidation(
             valid=False, error=f"Source file not found: {source_path}"
         )
-
-    source_bytes = file_path.read_bytes()
 
     # Verify excerpt hash if provided (before searching, to fail fast)
     if expected_excerpt_sha256:
@@ -89,7 +90,7 @@ def validate_citation(
 
 
 def validate_citations_batch(
-    source_dir: Path,
+    resolved_source: ResolvedSource,
     citations: list[dict[str, Any]],
 ) -> list[CitationValidation]:
     """Validate multiple citations, caching source file reads (P3.7).
@@ -99,20 +100,27 @@ def validate_citations_batch(
     :func:`validate_citation` performs when called in a loop.
 
     Args:
-        source_dir: Root directory of the resolved source checkout.
+        resolved_source: Verified source proof containing immutable bytes.
         citations: List of citation dicts, each with ``source_path``,
             ``excerpt``, and optionally ``expected_excerpt_sha256``.
 
     Returns:
         List of :class:`CitationValidation` results, one per citation.
     """
-    cache = SourceCache(source_dir)
+    cache = SourceCache(resolved_source)
     results: list[CitationValidation] = []
 
     for cit in citations:
-        source_path = cit.get("source_path", "")
-        excerpt = cit.get("excerpt", "")
-        expected_hash = cit.get("expected_excerpt_sha256")
+        try:
+            citation = CitationInput.model_validate(cit)
+        except ValidationError:
+            results.append(
+                CitationValidation(valid=False, error="Invalid citation input")
+            )
+            continue
+        source_path = citation.source_path
+        excerpt = citation.excerpt
+        expected_hash = citation.expected_excerpt_sha256
 
         source_bytes = cache.get_bytes(source_path)
         if source_bytes is None:
@@ -156,14 +164,13 @@ def validate_citations_batch(
 
 
 def collect_evidence(
-    source_dir: Path,
+    resolved_source: ResolvedSource,
     inventory_item: dict,
 ) -> dict:
     """Collect evidence citations for a single inventory item.
 
-    Validates that the inventory item has the required keys and that the
-    source file exists. Does not silently return unverified input —
-    raises ``FileNotFoundError`` if the source file is missing.
+    Validates that the item selects bytes in the exact source proof and records
+    identities that orchestration can bind to that proof.
     """
     inventory_id = inventory_item.get("inventory_id")
     source_path = inventory_item.get("source_path")
@@ -174,18 +181,59 @@ def collect_evidence(
     if not source_path:
         raise ValueError("inventory_item missing required 'source_path'")
 
-    # Verify the source file exists — fail loudly, not silently
-    source_file = source_dir / source_path
-    if not source_file.exists():
+    try:
+        source_file = resolved_source.get_file(source_path)
+    except KeyError as exc:
         raise FileNotFoundError(
             f"Source file not found for inventory item {inventory_id}: {source_path}"
+        ) from exc
+
+    if not isinstance(citations, list) or not citations:
+        raise EvidenceValidationError(
+            "inventory_item citations must be a non-empty list"
         )
 
-    return {
-        "inventory_id": inventory_id,
-        "source_path": source_path,
-        "citations": citations,
-    }
+    verified_citations: list[VerifiedCitation] = []
+    for raw_citation in citations:
+        try:
+            citation = CitationInput.model_validate(raw_citation)
+        except ValidationError as exc:
+            raise EvidenceValidationError("Invalid citation input") from exc
+        if citation.source_path != source_path:
+            raise EvidenceValidationError(
+                "Citation source_path must match the inventory source_path"
+            )
+        validation = validate_citation(
+            resolved_source,
+            citation.source_path,
+            citation.excerpt,
+            citation.expected_excerpt_sha256,
+        )
+        if not validation.valid:
+            raise EvidenceValidationError(validation.error or "Citation is invalid")
+        if validation.line_start is None or validation.line_end is None:
+            raise EvidenceValidationError("Citation line bounds were not recovered")
+        verified_citations.append(
+            VerifiedCitation(
+                citation_id=citation.citation_id,
+                source_path=citation.source_path,
+                excerpt=citation.excerpt,
+                excerpt_sha256=citation.expected_excerpt_sha256,
+                line_start=validation.line_start,
+                line_end=validation.line_end,
+            )
+        )
+
+    packet = CollectedEvidencePacket(
+        inventory_id=inventory_id,
+        source_path=source_path,
+        source_sha256=source_file.sha256,
+        source_blob_sha=source_file.blob_sha,
+        source_commit_sha=resolved_source.repository.commit_sha,
+        source_proof_sha256=resolved_source.proof_sha256(),
+        citations=verified_citations,
+    )
+    return packet.model_dump(mode="json")
 
 
 # Required frontmatter fields for canonical Markdown emission.
