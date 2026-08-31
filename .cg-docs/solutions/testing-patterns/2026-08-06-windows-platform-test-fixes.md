@@ -85,3 +85,4 @@ assert path.parts[-len(expected_parts):] == expected_parts
 - Python documentation: [`pathlib.Path.write_text`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.write_text)
 - Python documentation: [`pathlib.Path.resolve`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.resolve)
 - pytest documentation: [`skipif`](https://docs.pytest.org/en/latest/reference/reference.html#pytest-mark-skipif)
+- [Fail-closed deterministic promotion](../data-quality/2026-08-26-fail-closed-deterministic-promotion.md)

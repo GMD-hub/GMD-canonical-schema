@@ -1,6 +1,12 @@
 """Tests for completeness and reproducibility — Phase 6."""
 
+import os
 from pathlib import Path
+
+import pytest
+import yaml
+
+from schema.extraction.inventory import InventoryLedger
 
 from extraction_pipeline.reports import (
     build_completeness_report,
@@ -26,6 +32,17 @@ class TestCompleteness:
         assert report.canonical_count == 1
         assert report.blocked_count == 1
         assert report.undisposed_count == 0
+
+    def test_candidate_inventory_ledger_is_complete_when_directed(self) -> None:
+        ledger_path = os.environ.get("INVENTORY_LEDGER_PATH")
+        if not ledger_path:
+            pytest.skip("candidate-directed integration test")
+        ledger = InventoryLedger.model_validate(
+            yaml.safe_load(Path(ledger_path).read_text(encoding="utf-8"))
+        )
+        assert ledger.denominator == 267
+        assert ledger.source_row_count == 318
+        assert ledger.non_counting_row_count == 51
 
     def test_undisposed_item(self) -> None:
         run_state = RunState(
