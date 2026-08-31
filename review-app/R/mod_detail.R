@@ -72,6 +72,7 @@ mod_detail_ui <- function(id) {
               ),
               shiny::uiOutput(ns("save_indicator"))
             ),
+            shiny::uiOutput(ns("draft_recovery")),
             shiny::uiOutput(ns("editor_surface"))
           ),
           shiny::tags$section(
@@ -260,6 +261,21 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       )
     })
 
+    current_draft_recovery_context <- function(ad = adapter()) {
+      actor <- auth()$identity
+      if (!is_v2_review_record(detail_state$record) ||
+          !.is_scalar_character(actor)) {
+        return(NULL)
+      }
+      draft_recovery_context(
+        adapter = ad,
+        record = detail_state$record,
+        actor = actor,
+        base_body_sha256 = detail_state$body_sha256,
+        base_record_blob_sha = detail_state$blob_sha
+      )
+    }
+
     output$detail_status <- shiny::renderUI({
       if (identical(detail_state$phase, "loading")) {
         return(shiny::div(
@@ -429,6 +445,17 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       )
     })
 
+    output$draft_recovery <- shiny::renderUI({
+      if (!identical(detail_state$phase, "loaded")) return(NULL)
+      context <- current_draft_recovery_context()
+      if (is.null(context)) return(NULL)
+      draft_recovery_controls(
+        context,
+        session$ns("editor_body"),
+        editable = editable()
+      )
+    })
+
     preview_source <- shiny::reactive({
       if (editable()) input$editor_body %||% "" else detail_state$body %||% ""
     })
@@ -501,6 +528,15 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
       detail_state$action_success <- NULL
       detail_state$report <- NULL
       ad <- adapter()
+      recovery_ack <- if (identical(action, "saved")) {
+        context <- current_draft_recovery_context(ad)
+        if (is.null(context)) NULL else draft_recovery_save_ack(
+          context,
+          body %||% ""
+        )
+      } else {
+        NULL
+      }
       tryCatch(
         {
           approved_content <- if (identical(action, "approved")) {
@@ -569,6 +605,9 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
             },
             error = function(error) conditionMessage(error)
           )
+          if (!is.null(recovery_ack)) {
+            session$sendCustomMessage("review-draft-saved", recovery_ack)
+          }
           success_message <- switch(action,
             saved = "Draft saved. Its status did not change.",
             submitted = "Artifact submitted for approval.",

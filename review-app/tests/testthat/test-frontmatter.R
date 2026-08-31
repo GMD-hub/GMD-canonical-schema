@@ -80,6 +80,39 @@ test_that("preview escapes event-handler/SVG/javascript: XSS vectors (R9/P2.2)",
   expect_match(html, "Hello")
 })
 
+test_that("preview removes active forms and non-HTTPS link schemes", {
+  html <- render_markdown_preview(paste0(
+    '<form><button formaction="javascript:alert(1)">Open</button></form>',
+    '\n\n<a href="data:text/html,unsafe" style="display:block">Unsafe</a>',
+    '\n\n[Safe](https://example.org/path)'
+  ))
+
+  expect_false(grepl("<form", html, fixed = TRUE))
+  expect_false(grepl("<button", html, fixed = TRUE))
+  expect_false(grepl("formaction", html, fixed = TRUE))
+  expect_false(grepl("data:text/html", html, fixed = TRUE))
+  expect_false(grepl("style=", html, fixed = TRUE))
+  expect_match(html, 'href="https://example.org/path"', fixed = TRUE)
+})
+
+test_that("preview rejects obfuscated schemes and control characters", {
+  vectors <- c(
+    '<a href="java&#x09;script:alert(1)">tab</a>',
+    '<a href="java&#10;script:alert(1)">newline</a>',
+    '<a href="java&#13;script:alert(1)">return</a>',
+    '<a href="java\\script:alert(1)">backslash</a>',
+    '<a href="//example.org/path">protocol relative</a>'
+  )
+
+  for (vector in vectors) {
+    html <- render_markdown_preview(vector)
+    expect_false(grepl("href=", html, fixed = TRUE), info = vector)
+  }
+  expect_true(.safe_preview_href("relative/path.md"))
+  expect_true(.safe_preview_href("../relative/path.md"))
+  expect_true(.safe_preview_href("https://example.org/path"))
+})
+
 # --- Phase 1 Step 3 (R6/C1): CRLF + meaningful immutability -----------------
 
 test_that("split_frontmatter handles CRLF line endings (R6)", {

@@ -729,6 +729,51 @@ body {
   background: #e8edf1;
 }
 
+.review-app .draft-recovery-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e2c26b;
+  background: #fff7e6;
+}
+
+.review-app .draft-recovery-panel[hidden] {
+  display: none;
+}
+
+.review-app .draft-recovery-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.review-app .draft-recovery-status {
+  color: var(--review-muted);
+  font-size: 13px;
+}
+
+.review-app .draft-recovery-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.review-app .draft-recovery-select {
+  width: auto;
+  max-width: 230px;
+  min-height: 36px;
+}
+
+.review-app .draft-recovery-panel.recovery-stale,
+.review-app .draft-recovery-panel.recovery-error {
+  border-bottom-color: #e3a7a2;
+  background: #fff0ef;
+}
+
 .review-app .editor-panel .shiny-input-container {
   width: 100%;
   margin: 0;
@@ -1083,6 +1128,20 @@ body {
   .review-app .panel-heading {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .review-app .draft-recovery-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .review-app .draft-recovery-actions {
+    justify-content: flex-start;
+  }
+
+  .review-app .draft-recovery-select {
+    width: 100%;
+    max-width: none;
   }
 
   .review-app .action-bar {
