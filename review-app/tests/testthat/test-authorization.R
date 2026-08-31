@@ -8,6 +8,7 @@ test_that("authorize() enforces role gates for every action", {
   expect_false(reviewapp::authorize("reviewer", "request-revision"))
   expect_false(reviewapp::authorize("reviewer", "reopened"))
   expect_false(reviewapp::authorize("reviewer", "assigned"))
+  expect_false(reviewapp::authorize("reviewer", "source-revision"))
 
   # approver
   expect_false(reviewapp::authorize("approver", "submitted"))
@@ -15,6 +16,7 @@ test_that("authorize() enforces role gates for every action", {
   expect_true(reviewapp::authorize("approver", "request-revision"))
   expect_false(reviewapp::authorize("approver", "reopened"))
   expect_false(reviewapp::authorize("approver", "assigned"))
+  expect_false(reviewapp::authorize("approver", "source-revision"))
 
   # administrator
   expect_false(reviewapp::authorize("administrator", "submitted"))
@@ -22,10 +24,14 @@ test_that("authorize() enforces role gates for every action", {
   expect_false(reviewapp::authorize("administrator", "request-revision"))
   expect_true(reviewapp::authorize("administrator", "reopened"))
   expect_true(reviewapp::authorize("administrator", "assigned"))
+  expect_true(reviewapp::authorize("administrator", "source-revision"))
 })
 
 test_that("authorize() denies unmapped (NULL) roles for all gated actions", {
-  for (action in c("submitted", "approved", "request-revision", "reopened", "assigned")) {
+  for (action in c(
+    "submitted", "approved", "request-revision", "reopened", "assigned",
+    "source-revision"
+  )) {
     expect_false(reviewapp::authorize(NULL, action), info = action)
   }
 })

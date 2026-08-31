@@ -73,7 +73,8 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
   }
   descriptor <- control$descriptor
   if (!identical(descriptor$queue_id, rec$queue_id) ||
-      !identical(descriptor$source_revision, rec$source_commit)) {
+      (queue_descriptor_is_legacy(descriptor) &&
+       !identical(descriptor$source_revision, rec$source_commit))) {
     stop(.queue_error(
       "review record identity does not match the current queue descriptor"
     ))
@@ -134,10 +135,14 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
   )
 }
 
-.v2_approval_check <- function(record, binding) {
-  if (!queue_approval_eligible(record, binding)) {
+.v2_approval_check <- function(descriptor, record, binding) {
+  if (!queue_approval_eligible(record, binding, descriptor)) {
     reasons <- c(
-      "approval rubric gate is not installed",
+      if (!isTRUE(descriptor$approvals_enabled)) {
+        "queue approvals are disabled"
+      } else {
+        "approval rubric gate is not installed"
+      },
       if (!source_binding_is_current(binding)) {
         "source binding is unresolved"
       },
@@ -153,11 +158,145 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
   invisible(TRUE)
 }
 
+.no_op_report <- function() {
+  list(
+    ok = TRUE,
+    transition_applied = FALSE,
+    commit_sha = NULL,
+    steps_completed = character(0),
+    error = NULL,
+    noop = TRUE
+  )
+}
+
+.write_binding <- function(adapter, record) {
+  binding <- check_source_binding(adapter, record)
+  if (is.null(binding$enrolled$content)) {
+    stop(source_binding_error(sprintf(
+      "enrolled source is unavailable for '%s': %s",
+      record$artifact_id,
+      binding$message %||% binding$code
+    )))
+  }
+  binding
+}
+
+.perform_v2_source_revision <- function(
+  adapter, rec, blob_sha, branch_head_sha, actor, role, note,
+  candidate_source_commit, expected_descriptor_blob_sha = NULL,
+  descriptor_path = NULL, max_retries = 1L
+) {
+  reason <- .require_lifecycle_reason(note, "source re-enrollment")
+  if (!.is_sha1(candidate_source_commit)) {
+    stop("source re-enrollment requires an explicit immutable candidate commit")
+  }
+  expected_descriptor <- expected_descriptor_blob_sha
+  for (attempt in seq_len(as.integer(max_retries) + 1L)) {
+    controls <- .read_v2_controls(
+      adapter,
+      rec,
+      blob_sha,
+      expected_descriptor_blob_sha = expected_descriptor,
+      descriptor_path = descriptor_path
+    )
+    if (queue_descriptor_is_legacy(controls$descriptor)) {
+      stop("queue compatibility mode is read-only until queue migration")
+    }
+    authoritative <- controls$record
+    if (identical(authoritative$state, "approved")) {
+      stop("approved records must be reopened and retire their output first")
+    }
+    persisted_body <- .read_v2_review_body(
+      adapter,
+      authoritative,
+      verify_enrolled_source(adapter, authoritative)$content
+    )
+    candidate <- read_source_revision_candidate(
+      adapter,
+      authoritative,
+      candidate_source_commit
+    )
+    revision <- reenroll_review_record(
+      authoritative,
+      candidate,
+      actor,
+      role,
+      reason,
+      previous_blob_sha = blob_sha
+    )
+    if (isTRUE(revision$replay)) {
+      return(list(
+        report = .no_op_report(),
+        record = authoritative,
+        candidate = candidate,
+        replay = TRUE
+      ))
+    }
+    if (!identical(
+      queue_membership_identity(authoritative),
+      queue_membership_identity(revision$record)
+    )) {
+      stop("source re-enrollment changed immutable queue membership")
+    }
+    changes <- stats::setNames(
+      list(record_to_yaml(revision$record)),
+      ACTION_PATH(rec$artifact_id)
+    )
+    if (!is.na(persisted_body$sha)) {
+      changes[BODY_PATH(rec$artifact_id)] <- list(NULL)
+    }
+    expected_blobs <- c(
+      setNames(list(blob_sha), ACTION_PATH(rec$artifact_id)),
+      setNames(
+        list(controls$descriptor_blob_sha),
+        controls$descriptor_path
+      ),
+      setNames(list(persisted_body$sha), BODY_PATH(rec$artifact_id))
+    )
+    report <- adapter_write_with_recovery(
+      adapter,
+      changes = changes,
+      expected_ref_sha = branch_head_sha,
+      expected_blob_shas = expected_blobs,
+      message = sprintf(
+        "re-enroll source for %s by %s",
+        rec$artifact_id,
+        actor
+      ),
+      reject_unrelated_head = FALSE,
+      pre_publish_check = source_revision_pre_publish_check(
+        adapter,
+        authoritative,
+        candidate
+      )
+    )
+    result <- list(
+      report = report,
+      record = revision$record,
+      candidate = candidate,
+      replay = FALSE
+    )
+    if (report$ok || !identical(report$error$kind, "ref-race") ||
+        attempt > as.integer(max_retries)) {
+      return(result)
+    }
+    expected_descriptor <- controls$descriptor_blob_sha
+    branch_head_sha <- adapter_branch_head(
+      adapter$owner,
+      adapter$repo,
+      adapter$review_branch,
+      adapter$get_token(),
+      adapter$http
+    )
+  }
+  stop("source re-enrollment retry loop exhausted")
+}
+
 .perform_v2_action <- function(
   adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
   approved_content, body, note, assigned_identities = NULL,
   expected_descriptor_blob_sha = NULL, descriptor_path = NULL,
-  max_retries = 1L
+  candidate_source_commit = NULL, max_retries = 1L
 ) {
   validate_review_record_v2(rec)
   if (!is_valid_artifact_id(rec$artifact_id)) stop("invalid artifact ID")
@@ -169,21 +308,33 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
       action
     ))
   }
+  if (identical(action, "source-revision")) {
+    return(.perform_v2_source_revision(
+      adapter,
+      rec,
+      blob_sha,
+      branch_head_sha,
+      actor,
+      role,
+      note,
+      candidate_source_commit,
+      expected_descriptor_blob_sha,
+      descriptor_path,
+      max_retries
+    ))
+  }
   if (action == "approved" && is.null(approved_content)) {
     stop("performing 'approved' requires approved_content")
+  }
+  if (identical(action, "reopened")) {
+    .require_lifecycle_reason(note, "reopen")
   }
   if (!is.null(body) && !identical(hash_body(body), body_sha256)) {
     stop("body_sha256 does not match the body supplied for the action")
   }
 
   expected_descriptor <- expected_descriptor_blob_sha
-  updated <- NULL
-  updated_yaml <- NULL
-  controls <- NULL
-  binding <- NULL
-  authoritative <- NULL
-  persisted_body <- NULL
-  approved_blob <- NULL
+  selected_approved_sha <- NULL
   for (attempt in seq_len(as.integer(max_retries) + 1L)) {
     controls <- .read_v2_controls(
       adapter,
@@ -193,66 +344,87 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
       descriptor_path = descriptor_path
     )
     if (queue_descriptor_is_legacy(controls$descriptor)) {
-      stop("production-v2 compatibility is read-only until queue migration")
-    }
-    if (identical(action, "reopened")) {
-      stop("v2 reopen is unavailable until the source-revision lifecycle is installed")
+      stop("queue compatibility mode is read-only until queue migration")
     }
     authoritative <- controls$record
-    binding <- assert_source_binding_current(adapter, authoritative)
-    if (is.null(updated)) {
-      persisted_body <- .read_v2_review_body(
-        adapter,
-        authoritative,
-        binding$enrolled$content
-      )
-      if (action != "saved" &&
-          !identical(hash_body(persisted_body$content), body_sha256)) {
-        stop(stale_write_error(
-          "the supplied body hash does not match the persisted reviewed body"
-        ))
-      }
-      if (action == "approved") {
-        .v2_approval_check(authoritative, binding)
-        approved_blob <- .optional_review_blob(
-          adapter,
-          approved_path_for(authoritative$source_artifact_path)
-        )
-      }
-      updated <- if (action %in% c("saved", "assigned")) {
-        replaced <- record_action(
-          authoritative,
-          action,
-          actor,
-          role,
-          note = note,
-          body_sha256 = body_sha256,
-          blob_sha = blob_sha
-        )
-        if (action == "assigned" && !is.null(assigned_identities)) {
-          set_assigned_to(replaced, assigned_identities)
-        } else {
-          replaced
-        }
-      } else {
-        transition(
-          authoritative,
-          action,
-          actor,
-          role,
-          note = note,
-          body_sha256 = body_sha256,
-          blob_sha = blob_sha
-        )
-      }
-      updated_yaml <- record_to_yaml(updated)
-    } else if (!identical(controls$record_blob_sha, blob_sha)) {
+    if (identical(action, "reopened") &&
+        !identical(authoritative$state, "approved")) {
+      stop("reopen requires an approved record")
+    }
+    binding <- .write_binding(adapter, authoritative)
+    persisted_body <- .read_v2_review_body(
+      adapter,
+      authoritative,
+      binding$enrolled$content
+    )
+    if (action != "saved" &&
+        !identical(hash_body(persisted_body$content), body_sha256)) {
       stop(stale_write_error(
-        "review record changed during a concurrent retry; no transition applied"
+        "the supplied body hash does not match the persisted reviewed body"
       ))
     }
-    changes <- list()
-    changes[[ACTION_PATH(rec$artifact_id)]] <- updated_yaml
+    approved_blob <- NULL
+    approved_path <- NULL
+    if (action == "approved") {
+      .v2_approval_check(controls$descriptor, authoritative, binding)
+      approved_path <- approved_path_for(authoritative$source_artifact_path)
+      approved_blob <- .optional_review_blob(adapter, approved_path)
+    }
+    if (action == "reopened") {
+      approved_path <- approved_path_for(authoritative$source_artifact_path)
+      approved_blob <- .optional_review_blob(adapter, approved_path)
+      verify_approved_output(
+        approved_blob,
+        binding$enrolled,
+        persisted_body$content
+      )
+      if (is.null(selected_approved_sha)) {
+        selected_approved_sha <- approved_blob$sha
+      } else if (!identical(selected_approved_sha, approved_blob$sha)) {
+        stop(stale_write_error(
+          "approved output changed during a concurrent retry; reopen was rejected"
+        ))
+      }
+    }
+    updated <- if (action %in% c("saved", "assigned")) {
+      replaced <- record_action(
+        authoritative,
+        action,
+        actor,
+        role,
+        note = note,
+        body_sha256 = body_sha256,
+        blob_sha = blob_sha
+      )
+      if (action == "assigned" && !is.null(assigned_identities)) {
+        set_assigned_to(replaced, assigned_identities)
+      } else {
+        replaced
+      }
+    } else if (action == "reopened") {
+      reopen_review_record(
+        authoritative,
+        actor,
+        role,
+        note,
+        previous_blob_sha = blob_sha,
+        body_sha256 = body_sha256
+      )
+    } else {
+      transition(
+        authoritative,
+        action,
+        actor,
+        role,
+        note = note,
+        body_sha256 = body_sha256,
+        blob_sha = blob_sha
+      )
+    }
+    changes <- stats::setNames(
+      list(record_to_yaml(updated)),
+      ACTION_PATH(rec$artifact_id)
+    )
     if (action == "approved") {
       enrolled_split <- split_frontmatter_exact(binding$enrolled$content)
       enrolled_front <- enrolled_split$front
@@ -260,13 +432,14 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
           !frontmatter_unchanged(enrolled_front, approved_content)) {
         stop("approved content must preserve the enrolled YAML front matter")
       }
-      approved_content <- join_enrolled_body(
+      changes[[approved_path]] <- join_enrolled_body(
         enrolled_front,
         persisted_body$content,
         separator = enrolled_split$line_ending
       )
-      changes[[approved_path_for(authoritative$source_artifact_path)]] <-
-        approved_content
+    }
+    if (action == "reopened") {
+      changes[approved_path] <- list(NULL)
     }
     if (action == "saved" && !is.null(body)) {
       changes[[BODY_PATH(rec$artifact_id)]] <- body
@@ -279,13 +452,10 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
       ),
       setNames(list(persisted_body$sha), BODY_PATH(rec$artifact_id))
     )
-    if (action == "approved") {
+    if (action %in% c("approved", "reopened")) {
       expected_blobs <- c(
         expected_blobs,
-        setNames(
-          list(approved_blob$sha),
-          approved_path_for(authoritative$source_artifact_path)
-        )
+        setNames(list(approved_blob$sha), approved_path)
       )
     }
     report <- adapter_write_with_recovery(
@@ -299,29 +469,19 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
         actor,
         rec$artifact_id
       ),
-      reject_unrelated_head = FALSE
+      reject_unrelated_head = FALSE,
+      pre_publish_check = source_pre_publish_check(
+        adapter,
+        authoritative,
+        require_current = identical(action, "approved")
+      )
     )
-    if (report$ok ||
-        !report$error$kind %in% c("stale", "ref-race") ||
+    result <- list(report = report, record = updated, binding = binding)
+    if (report$ok || !identical(report$error$kind, "ref-race") ||
         attempt > as.integer(max_retries)) {
-      return(list(report = report, record = updated, binding = binding))
+      return(result)
     }
-    # A retry is safe only when the selected record and descriptor did not
-    # change. Unrelated record commits do not create a data-level conflict.
-    latest <- .read_v2_controls(
-      adapter,
-      rec,
-      blob_sha,
-      expected_descriptor_blob_sha = controls$descriptor_blob_sha,
-      descriptor_path = controls$descriptor_path
-    )
-    if (!identical(
-      latest$descriptor_blob_sha,
-      controls$descriptor_blob_sha
-    )) {
-      return(list(report = report, record = updated, binding = binding))
-    }
-    expected_descriptor <- latest$descriptor_blob_sha
+    expected_descriptor <- controls$descriptor_blob_sha
     branch_head_sha <- adapter_branch_head(
       adapter$owner,
       adapter$repo,
@@ -338,7 +498,8 @@ perform_action <- function(
   adapter, rec, body_sha256, blob_sha, branch_head_sha, action, actor, role,
   approved_content = NULL, body = NULL, note = NULL,
   assigned_identities = NULL, expected_descriptor_blob_sha = NULL,
-  descriptor_path = NULL, legacy_read_only = FALSE
+  descriptor_path = NULL, legacy_read_only = FALSE,
+  candidate_source_commit = NULL
 ) {
   if (isTRUE(adapter$read_only) ||
       identical(adapter$review_branch, "review") ||
@@ -360,7 +521,8 @@ perform_action <- function(
       note,
       assigned_identities = assigned_identities,
       expected_descriptor_blob_sha = expected_descriptor_blob_sha,
-      descriptor_path = descriptor_path
+      descriptor_path = descriptor_path,
+      candidate_source_commit = candidate_source_commit
     ))
   }
   stop("legacy review records are read-only")

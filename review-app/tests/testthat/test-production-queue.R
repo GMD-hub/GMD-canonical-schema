@@ -17,6 +17,8 @@ test_that("minimal descriptors serialize deterministically for generic queue siz
   )
   descriptor <- .queue_descriptor_fixture(records)
   expect_identical(descriptor$expected_record_count, 3L)
+  expect_identical(descriptor$schema_version, "1.1")
+  expect_false(descriptor$approvals_enabled)
   expect_identical(
     canonical_yaml(descriptor),
     canonical_yaml(parse_queue_descriptor(canonical_yaml(descriptor)))
@@ -43,16 +45,68 @@ test_that("record-set validation rejects missing and duplicate records", {
   )
   wrong <- records
   wrong[[2L]]$source_commit <- .sha1_fixture_2
-  expect_error(
-    validate_queue_record_set(wrong, descriptor),
-    "source revision"
-  )
+  expect_no_error(validate_queue_record_set(wrong, descriptor))
   rewritten_provenance <- records
   rewritten_provenance[[1L]]$enrolled_by <- "other-admin@example.org"
+  expect_no_error(validate_queue_record_set(rewritten_provenance, descriptor))
+  changed_membership <- records
+  changed_membership[[1L]]$source_artifact_path <-
+    "extraction/20_drafts/other/VAR-one.md"
   expect_error(
-    validate_queue_record_set(rewritten_provenance, descriptor),
+    validate_queue_record_set(changed_membership, descriptor),
     "record-set digest"
   )
+})
+
+test_that("descriptor 1.0 remains strict and valid", {
+  records <- list(
+    .queue_record_fixture("VAR-one"),
+    .queue_record_fixture("VAR-two")
+  )
+  descriptor <- .queue_descriptor_fixture(records, schema_version = "1.0")
+  expect_identical(descriptor$schema_version, "1.0")
+  expect_false("approvals_enabled" %in% names(descriptor))
+  expect_no_error(validate_queue_record_set(records, descriptor))
+  changed <- records
+  changed[[1L]]$enrolled_by <- "other-admin@example.org"
+  expect_error(validate_queue_record_set(changed, descriptor), "record-set digest")
+  with_extra <- unclass(descriptor)
+  attr(with_extra, "compatibility_format") <- NULL
+  with_extra$approvals_enabled <- FALSE
+  expect_error(validate_queue_descriptor(with_extra), "unsupported fields")
+})
+
+test_that("descriptor versions must be explicit strings", {
+  record <- .queue_record_fixture()
+  descriptor <- unclass(.queue_descriptor_fixture(list(record)))
+  descriptor$schema_version <- 1.10
+  expect_error(validate_queue_descriptor(descriptor), "must be a string")
+})
+
+test_that("descriptor 1.1 membership is stable across source revisions", {
+  records <- list(
+    .queue_record_fixture("VAR-one"),
+    .queue_record_fixture("VAR-two")
+  )
+  before <- queue_record_set_digest(records)
+  records[[1L]]$source_commit <- .sha1_fixture_2
+  records[[1L]]$source_artifact_blob_sha <- paste(rep("c", 40L), collapse = "")
+  records[[1L]]$source_content_sha256 <- paste(rep("d", 64L), collapse = "")
+  records[[1L]]$enrolled_body_sha256 <- paste(rep("e", 64L), collapse = "")
+  records[[1L]]$current_content_sha256 <- paste(rep("e", 64L), collapse = "")
+  records[[1L]]$enrolled_at <- "2026-08-25T13:25:07Z"
+  records[[1L]]$enrolled_by <- "other-admin@example.org"
+  expect_identical(queue_record_set_digest(records), before)
+  descriptor <- new_queue_descriptor(
+    queue_id = "fixture-queue",
+    source_revision = .sha1_fixture,
+    created_at = "2026-08-24T13:25:07Z",
+    created_by = "admin@example.org",
+    expected_record_count = 2L,
+    record_set_sha256 = before,
+    approvals_enabled = FALSE
+  )
+  expect_no_error(validate_queue_record_set(records, descriptor))
 })
 
 test_that("existing production-v2 manifests adapt to the descriptor contract", {
@@ -92,11 +146,13 @@ test_that("approval stays fail-closed until Task D installs the rubric gate", {
   )
   current <- list(status = "current")
   drifted <- list(status = "drifted")
+  descriptor <- .queue_descriptor_fixture(list(record))
+  descriptor$approvals_enabled <- TRUE
   expect_true(assessment_approval_complete(record$assessment))
-  expect_false(queue_approval_eligible(record, current))
-  expect_false(queue_approval_eligible(record, drifted))
+  expect_false(queue_approval_eligible(record, current, descriptor))
+  expect_false(queue_approval_eligible(record, drifted, descriptor))
   record$blocker_refs <- "record-blocker"
-  expect_false(queue_approval_eligible(record, current))
+  expect_false(queue_approval_eligible(record, current, descriptor))
 })
 
 test_that("production queue validation resolves source from a distinct commit", {
@@ -154,7 +210,9 @@ test_that("production queue validation preserves exact source and body bytes", {
     envir = environment
   )
 
-  source_raw <- charToRaw("---\r\na: b\r\n---\r\nbody\r\n")
+  source_raw <- charToRaw(
+    "---\r\nvariable_id: VAR-male\r\n---\r\nbody\r\n"
+  )
   exact_body <- split_frontmatter_exact(rawToChar(source_raw))$body_raw
   record <- new_review_record_v2(
     artifact_id = "VAR-male",

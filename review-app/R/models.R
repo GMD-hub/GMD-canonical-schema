@@ -3,7 +3,7 @@
 STATES <- c("draft", "in-review", "needs-revision", "approved")
 ACTIONS <- c(
   "submitted", "request-revision", "approved", "assigned", "reopened",
-  "saved"
+  "saved", "source-revision"
 )
 ROLES <- c("reviewer", "approver", "administrator")
 REVIEW_RECORD_SCHEMA_VERSION <- "2.0"
@@ -164,6 +164,29 @@ validate_review_event_v2 <- function(event) {
   }
   if (!is.null(event$note) && !.is_scalar_character(event$note)) {
     stop("v2 event note must be a non-empty string or null")
+  }
+  if (identical(event$action, "source-revision")) {
+    allowed <- list(
+      c("draft", "draft"),
+      c("in-review", "needs-revision"),
+      c("needs-revision", "needs-revision")
+    )
+    transition_valid <- any(vapply(allowed, function(states) {
+      identical(event$from_state, states[[1L]]) &&
+        identical(event$to_state, states[[2L]])
+    }, logical(1)))
+    if (!identical(event$actor_role, "administrator") ||
+        !.is_scalar_character(event$note %||% NULL) ||
+        !transition_valid) {
+      stop("source-revision event role, reason, or state transition is invalid")
+    }
+  }
+  if (identical(event$action, "reopened") &&
+      (!identical(event$actor_role, "administrator") ||
+       !.is_scalar_character(event$note %||% NULL) ||
+       !identical(event$from_state, "approved") ||
+       !identical(event$to_state, "needs-revision"))) {
+    stop("reopened event role, reason, or state transition is invalid")
   }
   invisible(event)
 }

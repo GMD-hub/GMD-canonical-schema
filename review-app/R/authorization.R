@@ -9,6 +9,7 @@ action_requires_role <- list(
   reopened = "administrator",
   assigned = "administrator",
   saved = "reviewer",
+  "source-revision" = "administrator",
   initialize = "administrator",
   migrate = "administrator"
 )

@@ -185,3 +185,232 @@ test_that("atomic writes support forward-only control-file deletion", {
   expect_identical(captured_ref$force, FALSE)
   expect_identical(result$commit_sha, paste(rep("1", 40L), collapse = ""))
 })
+
+test_that("pre-publication source failure leaves the new commit unreachable", {
+  head <- paste(rep("a", 40L), collapse = "")
+  calls <- character()
+  http_fun <- function(method, url, token, body = NULL) {
+    calls <<- c(calls, paste(method, url))
+    if (identical(method, "GET") && grepl("git/ref/heads/", url)) {
+      return(list(object = list(sha = head)))
+    }
+    if (identical(method, "GET") && grepl("git/trees/", url)) {
+      return(list(
+        tree = list(list(path = "a.md", type = "blob", sha = .sha1_fixture)),
+        sha = .sha1_fixture_2,
+        truncated = FALSE
+      ))
+    }
+    if (identical(method, "POST") && grepl("git/blobs$", url)) {
+      return(list(sha = paste(rep("c", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/trees$", url)) {
+      return(list(sha = paste(rep("d", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/commits$", url)) {
+      return(list(sha = paste(rep("e", 40L), collapse = "")))
+    }
+    if (identical(method, "PATCH")) stop("ref update must not occur")
+    stop("unexpected request")
+  }
+  adapter <- .fake_recovery_adapter(http_fun)
+  report <- adapter_write_with_recovery(
+    adapter,
+    changes = list("a.md" = "changed"),
+    expected_ref_sha = head,
+    expected_blob_shas = list("a.md" = .sha1_fixture),
+    message = "source-sensitive write",
+    pre_publish_check = function() {
+      stop(source_drift_error("selected source path changed"))
+    }
+  )
+  expect_false(report$ok)
+  expect_identical(report$error$kind, "source-drift")
+  expect_false(report$transition_applied)
+  expect_true("commit-creation" %in% report$steps_completed)
+  expect_false(any(grepl("^PATCH ", calls)))
+  expect_identical(head, paste(rep("a", 40L), collapse = ""))
+})
+
+test_that("pre-publication check runs between commit creation and ref update", {
+  head <- paste(rep("a", 40L), collapse = "")
+  order <- character()
+  http_fun <- function(method, url, token, body = NULL) {
+    if (identical(method, "GET") && grepl("git/ref/heads/", url)) {
+      return(list(object = list(sha = head)))
+    }
+    if (identical(method, "GET") && grepl("git/trees/", url)) {
+      return(list(
+        tree = list(list(path = "a.md", type = "blob", sha = .sha1_fixture)),
+        sha = .sha1_fixture_2,
+        truncated = FALSE
+      ))
+    }
+    if (identical(method, "POST") && grepl("git/blobs$", url)) {
+      return(list(sha = paste(rep("c", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/trees$", url)) {
+      return(list(sha = paste(rep("d", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/commits$", url)) {
+      order <<- c(order, "commit")
+      return(list(sha = paste(rep("e", 40L), collapse = "")))
+    }
+    if (identical(method, "PATCH")) {
+      order <<- c(order, "patch")
+      return(list(object = list(sha = body$sha)))
+    }
+    stop("unexpected request")
+  }
+  result <- adapter_write_atomic(
+    .fake_recovery_adapter(http_fun),
+    changes = list("a.md" = "changed"),
+    expected_ref_sha = head,
+    expected_blob_shas = list("a.md" = .sha1_fixture),
+    message = "ordered source check",
+    pre_publish_check = function() {
+      order <<- c(order, "check")
+      invisible(TRUE)
+    }
+  )
+  expect_identical(order, c("commit", "check", "patch"))
+  expect_true("pre-publication-check" %in% result$steps_completed)
+})
+
+test_that("approved-output deletion emits a Git tree sha NULL entry", {
+  captured_tree <- NULL
+  approved_path <- "extraction/40_approved/dem/VAR-male.md"
+  head <- paste(rep("a", 40L), collapse = "")
+  approved_sha <- paste(rep("b", 40L), collapse = "")
+  http_fun <- function(method, url, token, body = NULL) {
+    if (identical(method, "GET") && grepl("git/ref/heads/", url)) {
+      return(list(object = list(sha = head)))
+    }
+    if (identical(method, "GET") && grepl("git/trees/", url)) {
+      return(list(
+        tree = list(list(path = approved_path, type = "blob", sha = approved_sha)),
+        sha = .sha1_fixture,
+        truncated = FALSE
+      ))
+    }
+    if (identical(method, "POST") && grepl("git/trees$", url)) {
+      captured_tree <<- body
+      return(list(sha = .sha1_fixture_2))
+    }
+    if (identical(method, "POST") && grepl("git/commits$", url)) {
+      return(list(sha = paste(rep("c", 40L), collapse = "")))
+    }
+    if (identical(method, "PATCH")) {
+      return(list(object = list(sha = body$sha)))
+    }
+    stop("unexpected request")
+  }
+  adapter <- .fake_recovery_adapter(http_fun)
+  changes <- list()
+  changes[approved_path] <- list(NULL)
+  adapter_write_atomic(
+    adapter,
+    changes = changes,
+    expected_ref_sha = head,
+    expected_blob_shas = stats::setNames(list(approved_sha), approved_path),
+    message = "retire approved output"
+  )
+  entry <- captured_tree$tree[[1L]]
+  expect_identical(entry$path, approved_path)
+  expect_true("sha" %in% names(entry))
+  expect_null(entry$sha)
+})
+
+test_that("a lost PATCH response is reconciled when the ref moved", {
+  old_head <- paste(rep("a", 40L), collapse = "")
+  new_commit <- paste(rep("e", 40L), collapse = "")
+  state <- new.env(parent = emptyenv())
+  state$head <- old_head
+  http_fun <- function(method, url, token, body = NULL) {
+    if (identical(method, "GET") && grepl("git/ref/heads/", url)) {
+      return(list(object = list(sha = state$head)))
+    }
+    if (identical(method, "GET") && grepl("git/trees/", url)) {
+      return(list(
+        tree = list(list(path = "a.md", type = "blob", sha = .sha1_fixture)),
+        sha = .sha1_fixture_2,
+        truncated = FALSE
+      ))
+    }
+    if (identical(method, "POST") && grepl("git/blobs$", url)) {
+      return(list(sha = paste(rep("c", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/trees$", url)) {
+      return(list(sha = paste(rep("d", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/commits$", url)) {
+      return(list(sha = new_commit))
+    }
+    if (identical(method, "PATCH")) {
+      state$head <- body$sha
+      stop("connection reset after ref update")
+    }
+    stop("unexpected request")
+  }
+  report <- adapter_write_with_recovery(
+    .fake_recovery_adapter(http_fun),
+    changes = list("a.md" = "changed"),
+    expected_ref_sha = old_head,
+    expected_blob_shas = list("a.md" = .sha1_fixture),
+    message = "reconcile applied ref"
+  )
+  expect_true(report$ok)
+  expect_true(report$transition_applied)
+  expect_identical(report$commit_sha, new_commit)
+  expect_identical(state$head, new_commit)
+})
+
+test_that("an unreconciled PATCH response is reported as indeterminate", {
+  old_head <- paste(rep("a", 40L), collapse = "")
+  new_commit <- paste(rep("e", 40L), collapse = "")
+  concurrent_head <- paste(rep("f", 40L), collapse = "")
+  state <- new.env(parent = emptyenv())
+  state$head <- old_head
+  http_fun <- function(method, url, token, body = NULL) {
+    if (identical(method, "GET") && grepl("git/ref/heads/", url)) {
+      return(list(object = list(sha = state$head)))
+    }
+    if (identical(method, "GET") && grepl("git/trees/", url)) {
+      return(list(
+        tree = list(list(path = "a.md", type = "blob", sha = .sha1_fixture)),
+        sha = .sha1_fixture_2,
+        truncated = FALSE
+      ))
+    }
+    if (identical(method, "POST") && grepl("git/blobs$", url)) {
+      return(list(sha = paste(rep("c", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/trees$", url)) {
+      return(list(sha = paste(rep("d", 40L), collapse = "")))
+    }
+    if (identical(method, "POST") && grepl("git/commits$", url)) {
+      return(list(sha = new_commit))
+    }
+    if (identical(method, "PATCH")) {
+      state$head <- concurrent_head
+      stop("connection reset with concurrent publication")
+    }
+    stop("unexpected request")
+  }
+  report <- adapter_write_with_recovery(
+    .fake_recovery_adapter(http_fun),
+    changes = list("a.md" = "changed"),
+    expected_ref_sha = old_head,
+    expected_blob_shas = list("a.md" = .sha1_fixture),
+    message = "indeterminate ref"
+  )
+  expect_false(report$ok)
+  expect_true(is.na(report$transition_applied))
+  expect_identical(report$error$kind, "indeterminate")
+  expect_identical(report$commit_sha, new_commit)
+  expect_match(recovery_report_text(report), "Do not retry")
+})
+
+test_that("no-op reports have explicit recovery text", {
+  expect_match(recovery_report_text(.no_op_report()), "No write was needed")
+})
