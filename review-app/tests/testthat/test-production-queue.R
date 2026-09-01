@@ -232,6 +232,95 @@ test_that("production queue validation resolves source from a distinct commit", 
   )
 })
 
+test_that("production validator loads code from its own app checkout", {
+  root <- tryCatch(
+    rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),
+    error = function(error) NULL
+  )
+  if (is.null(root)) skip("repository tool is unavailable in the built package")
+  script_path <- file.path(
+    root,
+    "review-app",
+    "tools",
+    "validate-production-queue.R"
+  )
+  withr::local_envvar(REVIEWAPP_TOOL_TESTING = "1")
+  environment <- new.env(parent = globalenv())
+  sys.source(script_path, envir = environment)
+  expect_identical(
+    environment$tool_app_dir(paste0("--file=", script_path)),
+    normalizePath(file.path(root, "review-app"), mustWork = TRUE)
+  )
+})
+
+test_that("production validator enforces explicit bootstrap state", {
+  root <- tryCatch(
+    rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),
+    error = function(error) NULL
+  )
+  if (is.null(root)) skip("repository tool is unavailable in the built package")
+  withr::local_envvar(REVIEWAPP_TOOL_TESTING = "1")
+  environment <- new.env(parent = globalenv())
+  sys.source(
+    file.path(root, "review-app", "tools", "validate-production-queue.R"),
+    envir = environment
+  )
+  record <- .queue_record_fixture()
+  descriptor <- .queue_descriptor_fixture(list(record))
+  expect_no_error(environment$validate_bootstrap_state(
+    list(record), descriptor, character(0), character(0)
+  ))
+
+  submitted <- transition(
+    record,
+    "submitted",
+    "reviewer@example.org",
+    "reviewer",
+    blob_sha = .sha1_fixture_2
+  )
+  expect_error(
+    environment$validate_bootstrap_state(
+      list(submitted), descriptor, character(0), character(0)
+    ),
+    "does not match bootstrap state"
+  )
+  enabled <- descriptor
+  enabled$approvals_enabled <- TRUE
+  expect_error(
+    environment$validate_bootstrap_state(
+      list(record), enabled, character(0), character(0)
+    ),
+    "does not match bootstrap state"
+  )
+  wrong_source <- record
+  wrong_source$source_commit <- .sha1_fixture_2
+  expect_error(
+    environment$validate_bootstrap_state(
+      list(wrong_source), descriptor, character(0), character(0)
+    ),
+    "does not match bootstrap state"
+  )
+
+  paths <- record$source_artifact_path
+  enabled_manifest <- list(
+    schema_version = "1.0",
+    queue_id = record$queue_id,
+    created_at = "2026-08-24T13:25:07Z",
+    created_by = "admin@example.org",
+    source_commit = record$source_commit,
+    expected_total = 1L,
+    expected_path_set_sha256 = queue_path_set_digest(paths),
+    approval_mode = "enabled"
+  )
+  expect_error(
+    parse_legacy_queue_manifest(
+      canonical_yaml(enabled_manifest),
+      require_approval_disabled = TRUE
+    ),
+    "approval_mode to be disabled"
+  )
+})
+
 test_that("production queue validation preserves exact source and body bytes", {
   root <- tryCatch(
     rprojroot::find_root(rprojroot::has_file("AGENTS.md"), path = getwd()),

@@ -1,6 +1,8 @@
 #!/usr/bin/env Rscript
 
 parse_args <- function(args) {
+  bootstrap <- "--expect-bootstrap-state" %in% args
+  args <- args[args != "--expect-bootstrap-state"]
   required <- c(
     "--repo", "--expected-source", "--expected-count",
     "--expected-path-digest"
@@ -23,8 +25,25 @@ parse_args <- function(args) {
     repo = normalizePath(values[["--repo"]], mustWork = TRUE),
     expected_source = values[["--expected-source"]],
     expected_count = count,
-    expected_path_digest = values[["--expected-path-digest"]]
+    expected_path_digest = values[["--expected-path-digest"]],
+    bootstrap = bootstrap
   )
+}
+
+tool_app_dir <- function(command_args = commandArgs(trailingOnly = FALSE)) {
+  file_args <- grep("^--file=", command_args, value = TRUE)
+  if (length(file_args) != 1L) {
+    stop("cannot resolve validator script path")
+  }
+  script_path <- normalizePath(
+    sub("^--file=", "", file_args[[1L]]),
+    mustWork = TRUE
+  )
+  app_dir <- normalizePath(file.path(dirname(script_path), ".."), mustWork = TRUE)
+  if (!file.exists(file.path(app_dir, "DESCRIPTION"))) {
+    stop("validator script is not inside the review-app package")
+  }
+  app_dir
 }
 
 git_blob_raw <- function(repo, commit, path) {
@@ -59,6 +78,35 @@ git_commit_sha <- function(repo, revision) {
   output[[1L]]
 }
 
+git_tree_paths <- function(repo, commit, prefix) {
+  output <- system2(
+    "git",
+    c("-C", repo, "ls-tree", "-r", "--name-only", commit, "--", prefix),
+    stdout = TRUE,
+    stderr = TRUE,
+    env = "GIT_NO_REPLACE_OBJECTS=1"
+  )
+  if (!is.null(attr(output, "status"))) {
+    stop(sprintf("cannot inspect governed tree '%s'", prefix))
+  }
+  output
+}
+
+git_regular_blob_raw <- function(repo, commit, path) {
+  entry <- system2(
+    "git",
+    c("-C", repo, "ls-tree", commit, "--", path),
+    stdout = TRUE,
+    stderr = TRUE,
+    env = "GIT_NO_REPLACE_OBJECTS=1"
+  )
+  if (!is.null(attr(entry, "status")) || length(entry) != 1L ||
+      !grepl("^100644 blob [0-9a-f]{40}\\t", entry)) {
+    stop(sprintf("governed path '%s' is not one regular Git blob", path))
+  }
+  git_blob_raw(repo, commit, path)
+}
+
 record_matches_source_bytes <- function(record, source_raw) {
   if (!is.raw(source_raw)) stop("source content must be raw bytes")
   source_text <- rawToChar(source_raw)
@@ -81,11 +129,56 @@ read_raw_file <- function(path) {
   readBin(path, "raw", n = file.info(path)$size)
 }
 
-main <- function(args = commandArgs(trailingOnly = TRUE)) {
+validate_bootstrap_state <- function(
+  records,
+  descriptor,
+  body_paths,
+  approved_paths
+) {
+  invalid <- vapply(records, function(record) {
+    !identical(record$state, "draft") ||
+      !identical(record$review_round, 1L) ||
+      length(record$assigned_to) > 0L ||
+      length(record$events) > 0L ||
+      length(record$blocker_refs) > 0L ||
+      !identical(record$source_commit, descriptor$source_revision) ||
+      !identical(
+        record$current_content_sha256,
+        record$enrolled_body_sha256
+      )
+  }, logical(1))
+  if (any(invalid) || length(body_paths) || length(approved_paths) ||
+      isTRUE(descriptor$approvals_enabled %||% FALSE)) {
+    stop(paste(
+      "queue does not match bootstrap state:",
+      "records must be draft, round 1, unassigned, event-free,",
+      "blocker-free, body-unchanged, approval-disabled, and without",
+      "reviewed bodies or approved outputs"
+    ))
+  }
+  invisible(TRUE)
+}
+
+main <- function(
+  args = commandArgs(trailingOnly = TRUE),
+  app_dir = tool_app_dir()
+) {
   opts <- parse_args(args)
-  pkgload::load_all(file.path(opts$repo, "review-app"), quiet = TRUE)
-  queue_dir <- file.path(opts$repo, "extraction", "30_review")
-  paths <- list.files(queue_dir, recursive = TRUE, all.files = TRUE, no.. = TRUE)
+  pkgload::load_all(app_dir, quiet = TRUE)
+  queue_commit <- git_commit_sha(
+    opts$repo,
+    system2(
+      "git", c("-C", opts$repo, "rev-parse", "HEAD"),
+      stdout = TRUE,
+      env = "GIT_NO_REPLACE_OBJECTS=1"
+    )[[1L]]
+  )
+  queue_prefix <- "extraction/30_review"
+  paths <- sub(
+    paste0("^", queue_prefix, "/"),
+    "",
+    git_tree_paths(opts$repo, queue_commit, queue_prefix)
+  )
   controls <- intersect(
     c("queue-descriptor.yml", "queue-manifest.yml"),
     paths
@@ -98,11 +191,20 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
   } else {
     reviewapp:::LEGACY_QUEUE_MANIFEST_PATH
   }
-  control_raw <- read_raw_file(file.path(queue_dir, controls))
-  descriptor <- reviewapp:::parse_queue_control(
-    rawToChar(control_raw),
-    control_path
+  control_raw <- git_regular_blob_raw(
+    opts$repo,
+    queue_commit,
+    file.path(queue_prefix, controls)
   )
+  descriptor <- if (identical(control_path, reviewapp:::LEGACY_QUEUE_MANIFEST_PATH) &&
+                    isTRUE(opts$bootstrap)) {
+    reviewapp:::parse_legacy_queue_manifest(
+      rawToChar(control_raw),
+      require_approval_disabled = TRUE
+    )
+  } else {
+    reviewapp:::parse_queue_control(rawToChar(control_raw), control_path)
+  }
   if (!reviewapp:::.is_sha1(opts$expected_source) ||
       !identical(descriptor$source_revision, opts$expected_source)) {
     stop("queue source revision does not match --expected-source")
@@ -126,7 +228,11 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
   }
 
   records <- lapply(record_paths, function(path) {
-    raw <- read_raw_file(file.path(queue_dir, path))
+    raw <- git_regular_blob_raw(
+      opts$repo,
+      queue_commit,
+      file.path(queue_prefix, path)
+    )
     record <- reviewapp:::parse_review_record(rawToChar(raw))
     reviewapp:::validate_review_record_v2(record)
     if (!identical(path, sprintf("%s.review.yml", record$artifact_id))) {
@@ -144,9 +250,13 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
         record$artifact_id
       ))
     }
-    body_path <- file.path(queue_dir, sprintf("%s.body.md", record$artifact_id))
-    current_hash <- if (file.exists(body_path)) {
-      reviewapp:::hash_raw(read_raw_file(body_path))
+    body_path <- sprintf("%s.body.md", record$artifact_id)
+    current_hash <- if (body_path %in% body_paths) {
+      reviewapp:::hash_raw(git_regular_blob_raw(
+        opts$repo,
+        queue_commit,
+        file.path(queue_prefix, body_path)
+      ))
     } else {
       record$enrolled_body_sha256
     }
@@ -177,6 +287,34 @@ main <- function(args = commandArgs(trailingOnly = TRUE)) {
     stop("queue source path set does not match --expected-path-digest")
   }
   reviewapp:::validate_queue_record_set(records, descriptor)
+  approved_prefix <- "extraction/40_approved"
+  approved_paths <- sub(
+    paste0("^", approved_prefix, "/"),
+    "",
+    git_tree_paths(opts$repo, queue_commit, approved_prefix)
+  )
+  approved_paths <- setdiff(approved_paths, ".gitkeep")
+  if (isTRUE(opts$bootstrap)) {
+    validate_bootstrap_state(
+      records,
+      descriptor,
+      body_paths,
+      approved_paths
+    )
+  }
+  if (!identical(
+    git_commit_sha(
+      opts$repo,
+      system2(
+        "git", c("-C", opts$repo, "rev-parse", "HEAD"),
+        stdout = TRUE,
+        env = "GIT_NO_REPLACE_OBJECTS=1"
+      )[[1L]]
+    ),
+    queue_commit
+  )) {
+    stop("queue commit moved during validation")
+  }
   cat(sprintf(
     "validated review queue: %d records; source %s\n",
     length(records),
