@@ -118,13 +118,16 @@ validate_legacy_index_for_migration <- function(yaml_string, items, descriptor) 
   )
 }
 
-migrate_review_queue <- function(adapter, actor) {
+migrate_review_queue <- function(adapter, actor, expected_head) {
   .assert_writable_adapter(adapter)
-  if (!queue_administration_authorized(actor, "migrate")) {
-    stop("only an authenticated administrator may migrate a review queue")
-  }
   if (!.is_scalar_character(actor)) {
     stop("queue migration requires an authenticated actor")
+  }
+  if (!.is_sha1(expected_head)) {
+    stop("queue migration requires an expected lowercase Git SHA-1 branch head")
+  }
+  if (!queue_administration_authorized(actor, "migrate")) {
+    stop("only an authenticated administrator may migrate a review queue")
   }
   token <- adapter$get_token()
   head <- adapter_branch_head(
@@ -134,6 +137,9 @@ migrate_review_queue <- function(adapter, actor) {
     token,
     adapter$http
   )
+  if (!identical(head, expected_head)) {
+    stop("target branch head does not match the operator-supplied expected head")
+  }
   tree <- adapter_fetch_tree_at(
     adapter$owner,
     adapter$repo,
@@ -167,7 +173,7 @@ migrate_review_queue <- function(adapter, actor) {
   report <- adapter_write_with_recovery(
     adapter,
     changes = changes,
-    expected_ref_sha = head,
+    expected_ref_sha = expected_head,
     expected_blob_shas = input$expected,
     message = sprintf("migrate review queue %s by %s", descriptor$queue_id, actor),
     preflight_tree = tree,
@@ -178,6 +184,7 @@ migrate_review_queue <- function(adapter, actor) {
   }
   list(
     ok = TRUE,
+    old_head = head,
     commit_sha = report$commit_sha,
     source_format = input$kind,
     descriptor = descriptor,

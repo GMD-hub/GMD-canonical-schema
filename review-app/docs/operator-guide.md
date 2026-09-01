@@ -101,8 +101,11 @@ The compatibility path preserves:
 ## Migration
 
 Migration is not available in the Shiny UI. An authenticated administrator
-invokes `migrate_review_queue()` only after the compatible application code is
-deployed and verified.
+uses `tools/migrate-review-queue.R`, which invokes `migrate_review_queue()`.
+The CLI requires an explicit target branch, expected old branch head, and actor.
+It reads GitHub App credentials only from environment variables and builds the
+adapter with the explicit target. It does not use
+`REVIEW_APP_GH_REVIEW_BRANCH` as the migration target.
 
 The migration input can be an approval-disabled production-v2 manifest/index or
 a strict descriptor 1.0 queue. Before publication, the migrator:
@@ -120,6 +123,33 @@ The one migration commit publishes descriptor 1.1 with
 `queue-manifest.yml` and `queue-index.yml`. For descriptor 1.0, it replaces only
 `queue-descriptor.yml`. It is forward-only and non-force. A moved branch ref or
 any validation failure leaves the old branch head and control files unchanged.
+
+### Wave 3 Staging
+
+Before this command can run, `review-staging-wave3` must point exactly to
+`8b5de18ae78f1dd5bb09511fd076c57e670f1db9`. Creating that staging branch and
+running this command are separate operator actions after the CLI change is
+merged, deployed from `main`, and authorized for staging.
+
+```sh
+Rscript review-app/tools/migrate-review-queue.R \
+  --target-branch review-staging-wave3 \
+  --expected-head 8b5de18ae78f1dd5bb09511fd076c57e670f1db9 \
+  --actor acastanedaa
+```
+
+The command refuses a mismatched branch head before it reads or writes queue
+content. On success, it prints deterministic JSON with the repository, target
+branch, expected old head, migration commit, queue and source identities,
+source format, record count, record-set digest, preserved-record-blob digest,
+and `approvals_enabled: false`. The preserved-record-blob digest is SHA-256 over
+the sorted, length-prefixed record path and Git blob SHA pairs. The evidence
+does not include credentials, actor role data, or role-map contents.
+
+Validate the migrated staging queue before any Posit Connect change. The
+`review-staging-wave3` branch is staging data only. Never merge it into `main`
+or `review-production`. Production migration is a separate later authorization
+and is not authorized by this staging procedure.
 
 Do not run migration against the production branch as part of development,
 tests, review, or CI. Production migration is a later explicit operator action.

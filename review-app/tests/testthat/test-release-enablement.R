@@ -458,8 +458,8 @@ test_that("production-v2 migration is deterministic and preserves record blobs",
     read_only = FALSE, get_token = function() "secret", http = function(...) list()
   )
   class(adapter) <- "reviewapp_github_adapter"
-  first <- migrate_review_queue(adapter, "acastanedaa")
-  second <- migrate_review_queue(adapter, "acastanedaa")
+  first <- migrate_review_queue(adapter, "acastanedaa", .sha1_fixture_2)
+  second <- migrate_review_queue(adapter, "acastanedaa", .sha1_fixture_2)
   expect_identical(
     captured[[1L]][[QUEUE_DESCRIPTOR_PATH]],
     captured[[2L]][[QUEUE_DESCRIPTOR_PATH]]
@@ -561,7 +561,7 @@ test_that("descriptor 1.0 migration replaces only the descriptor", {
     get_token = function() "secret", http = function(...) list()
   )
   class(adapter) <- "reviewapp_github_adapter"
-  result <- migrate_review_queue(adapter, "acastanedaa")
+  result <- migrate_review_queue(adapter, "acastanedaa", .sha1_fixture_2)
   expect_true(result$ok)
   expect_identical(result$source_format, "descriptor_1_0")
   expect_setequal(names(captured$changes), QUEUE_DESCRIPTOR_PATH)
@@ -586,7 +586,7 @@ test_that("stateful migrations preserve governed blobs and parent history", {
     old_control_bytes <- lapply(old_controls, function(path) {
       fixture$blob_text(old_tree[[path]])
     })
-    result <- migrate_review_queue(fixture$adapter, "acastanedaa")
+    result <- migrate_review_queue(fixture$adapter, "acastanedaa", old_head)
     expect_true(result$ok, info = control)
     expect_false(identical(fixture$env$review_head, old_head), info = control)
     expect_identical(
@@ -638,7 +638,7 @@ test_that("stateful migration failure preserves exact production-v2 state", {
   old_bytes <- lapply(old_tree, fixture$blob_text)
   fixture$env$fail_patch <- TRUE
   expect_error(
-    migrate_review_queue(fixture$adapter, "acastanedaa"),
+    migrate_review_queue(fixture$adapter, "acastanedaa", old_head),
     "was not migrated"
   )
   expect_identical(fixture$env$review_head, old_head)
@@ -656,10 +656,70 @@ test_that("production-v2 migration requires explicit disabled approval", {
     )
     old_head <- fixture$env$review_head
     expect_error(
-      migrate_review_queue(fixture$adapter, "acastanedaa"),
+      migrate_review_queue(fixture$adapter, "acastanedaa", old_head),
       "approval_mode to be disabled"
     )
     expect_identical(fixture$env$review_head, old_head)
     expect_identical(fixture$env$patches, 0L)
   }
+})
+
+test_that("migration rejects invalid expected heads before authentication", {
+  adapter <- new_github_adapter(
+    "o", "r", "main", "fixture-review",
+    get_token = function() stop("token access is not allowed"),
+    http = function(...) stop("network access is not allowed")
+  )
+  expect_error(
+    migrate_review_queue(
+      adapter,
+      "acastanedaa",
+      paste(rep("A", 40L), collapse = "")
+    ),
+    "expected lowercase Git SHA-1"
+  )
+})
+
+test_that("migration requires an authenticated administrator", {
+  .local_queue_role_map()
+  fixture <- .stateful_git_fixture(control = "production_v2")
+  old_head <- fixture$env$review_head
+  expect_error(
+    migrate_review_queue(fixture$adapter, "bbrunckhorst", old_head),
+    "authenticated administrator"
+  )
+  expect_identical(fixture$env$token_calls, 0L)
+  expect_identical(fixture$env$review_head, old_head)
+  expect_identical(fixture$env$patches, 0L)
+})
+
+test_that("expected-head mismatch reads no queue and publishes no commit", {
+  .local_queue_role_map()
+  fixture <- .stateful_git_fixture(control = "production_v2")
+  old_head <- fixture$env$review_head
+  commit_count <- length(fixture$env$commits)
+  wrong_head <- paste(rep("d", 40L), collapse = "")
+  expect_error(
+    migrate_review_queue(fixture$adapter, "acastanedaa", wrong_head),
+    "operator-supplied expected head"
+  )
+  expect_identical(fixture$env$review_head, old_head)
+  expect_identical(length(fixture$env$commits), commit_count)
+  expect_identical(fixture$env$patch_attempts, 0L)
+  expect_identical(fixture$env$patches, 0L)
+})
+
+test_that("branch race publishes no migration commit", {
+  .local_queue_role_map()
+  fixture <- .stateful_git_fixture(control = "production_v2")
+  old_head <- fixture$env$review_head
+  fixture$env$race_approved <- TRUE
+  expect_error(
+    migrate_review_queue(fixture$adapter, "acastanedaa", old_head),
+    "was not migrated"
+  )
+  expect_false(identical(fixture$env$review_head, old_head))
+  expect_identical(fixture$env$review_head, fixture$env$last_competing_commit)
+  expect_identical(fixture$env$patch_attempts, 0L)
+  expect_identical(fixture$env$patches, 0L)
 })
