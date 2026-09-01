@@ -133,24 +133,47 @@ frontmatter_unchanged <- function(original_front, proposed) {
 #'
 #' @param markdown_html character(1) HTML emitted by commonmark.
 #' @return character(1) sanitized HTML (inner content of the markdown body).
+.safe_preview_href <- function(href) {
+  if (!is.character(href) || length(href) != 1L || is.na(href)) return(FALSE)
+  href <- trimws(href)
+  if (!nzchar(href) || grepl("[[:space:][:cntrl:]\\\\]", href)) return(FALSE)
+  if (grepl("^https://", href, ignore.case = TRUE)) return(TRUE)
+  if (grepl("^//", href) ||
+      grepl("^[a-z][a-z0-9+.-]*:", href, ignore.case = TRUE)) return(FALSE)
+  grepl("^(#|[?]|/[^/]|[.]/|[.][.]/|[a-z0-9_~.-])", href, ignore.case = TRUE)
+}
+
 sanitize_preview_html <- function(markdown_html) {
   wrapped <- paste0('<div class="markdown-body">', markdown_html, "</div>")
   doc <- xml2::read_html(wrapped)
   xml2::xml_remove(xml2::xml_find_all(
     doc,
-    '//script | //style | //iframe | //object | //embed | //svg | //img'
+    paste(
+      '//script | //style | //iframe | //object | //embed | //svg | //img |',
+      '//form | //button | //input | //select | //option | //textarea |',
+      '//meta | //base | //link | //video | //audio | //source | //track |',
+      '//canvas | //math'
+    )
   ))
-  for (n in xml2::xml_find_all(doc, "//*")) {
+  div <- xml2::xml_find_first(doc, '//div[contains(@class,"markdown-body")]')
+  for (n in xml2::xml_find_all(div, ".//*")) {
     attrs <- xml2::xml_attrs(n)
     if (length(attrs) == 0L) next
-    drop <- names(attrs)[
-      grepl("^on", names(attrs), ignore.case = TRUE) |
-        (names(attrs) %in% c("href", "src", "xlink:href") &
-          grepl("^\\s*javascript:", attrs, ignore.case = TRUE))
-    ]
+    element <- xml2::xml_name(n)
+    allowed <- switch(element,
+      a = c("href", "title"),
+      code = "class",
+      th = "align",
+      td = "align",
+      character(0)
+    )
+    drop <- names(attrs)[!(names(attrs) %in% allowed)]
+    href <- if ("href" %in% names(attrs)) attrs[["href"]] else NULL
+    if (!is.null(href) && !.safe_preview_href(href)) {
+      drop <- c(drop, "href")
+    }
     for (a in drop) xml2::xml_set_attr(n, a, NULL)
   }
-  div <- xml2::xml_find_first(doc, '//div[contains(@class,"markdown-body")]')
   inner <- as.character(xml2::xml_contents(div))
   paste(inner, collapse = "")
 }

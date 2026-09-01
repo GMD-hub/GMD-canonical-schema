@@ -57,6 +57,15 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Run browser recovery tests
+        working-directory: review-app
+        run: node --test tests/js/review-ui.test.js
+
       - name: Install and verify libgit2 runtime
         run: |
           sudo apt-get update
@@ -92,6 +101,9 @@ jobs:
               "tests/testthat/test-github-adapter.R",
               "tests/testthat/test-actions.R",
               "tests/testthat/test-detail.R",
+              "tests/testthat/test-draft-recovery.R",
+              "tests/testthat/test-draft-recovery-integration.R",
+              "tests/testthat/test-frontmatter.R",
               "tests/testthat/test-recovery.R",
               "tests/testthat/test-app-smoke.R",
               "tests/testthat/test-queue-manifest.R",
