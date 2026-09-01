@@ -108,9 +108,9 @@ jobs:
         if: steps.preflight.outputs.mode == 'migrate'
         id: migration
         env:
-          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
-          GITHUB_APP_INSTALLATION_ID: ${{ secrets.GITHUB_APP_INSTALLATION_ID }}
-          GITHUB_APP_PRIVATE_KEY: ${{ secrets.GITHUB_APP_PRIVATE_KEY }}
+          GITHUB_APP_ID: ${{ secrets.REVIEW_APP_ID }}
+          GITHUB_APP_INSTALLATION_ID: ${{ secrets.REVIEW_APP_INSTALLATION_ID }}
+          GITHUB_APP_PRIVATE_KEY: ${{ secrets.REVIEW_APP_PRIVATE_KEY }}
         shell: bash
         working-directory: review-app
         run: |
