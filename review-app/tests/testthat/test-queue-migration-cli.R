@@ -241,11 +241,12 @@ test_that("migration CLI failure returns nonzero without success evidence", {
   if (!migration_cli_available) {
     skip("repository migration CLI is unavailable in the built package")
   }
+  withr::local_envvar(REVIEWAPP_TOOL_TESTING = "1")
   stdout <- withr::local_tempfile()
   stderr <- withr::local_tempfile()
   status <- system2(
     file.path(R.home("bin"), "Rscript"),
-    normalizePath(migration_cli_path),
+    c(normalizePath(migration_cli_path), "--unsupported"),
     stdout = stdout,
     stderr = stderr
   )

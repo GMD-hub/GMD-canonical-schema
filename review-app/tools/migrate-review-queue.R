@@ -277,8 +277,7 @@ main <- function(
 
 `%||%` <- function(a, b) if (is.null(a)) b else a
 
-if (!identical(Sys.getenv("REVIEWAPP_TOOL_TESTING"), "1") &&
-    sys.nframe() == 0L) {
+if (sys.nframe() == 0L) {
   tryCatch(main(), error = function(error) {
     message("review queue migration failed")
     quit(status = 1L)
