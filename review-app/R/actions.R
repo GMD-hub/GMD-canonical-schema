@@ -135,27 +135,21 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
   )
 }
 
-.v2_approval_check <- function(descriptor, record, binding) {
-  if (!queue_approval_eligible(record, binding, descriptor)) {
-    reasons <- c(
-      if (!isTRUE(descriptor$approvals_enabled)) {
-        "queue approvals are disabled"
-      } else {
-        "approval rubric gate is not installed"
-      },
-      if (!source_binding_is_current(binding)) {
-        "source binding is unresolved"
-      },
-      if (length(record$blocker_refs)) {
-        paste0("record blockers: ", paste(record$blocker_refs, collapse = ", "))
-      },
-      if (!assessment_approval_complete(record$assessment)) {
-        "assessment is incomplete"
-      }
-    )
-    stop(sprintf("approval denied: %s", paste(reasons, collapse = "; ")))
-  }
-  invisible(TRUE)
+.v2_approval_check <- function(
+  descriptor, record, binding, persisted_body, actor, role, rationale,
+  proposed_content, approved_destination
+) {
+  validate_approval_gate(
+    descriptor = descriptor,
+    record = record,
+    binding = binding,
+    persisted_body = persisted_body,
+    actor = actor,
+    role = role,
+    rationale = rationale,
+    proposed_content = proposed_content,
+    approved_destination = approved_destination
+  )
 }
 
 .no_op_report <- function() {
@@ -326,6 +320,9 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
   if (action == "approved" && is.null(approved_content)) {
     stop("performing 'approved' requires approved_content")
   }
+  if (identical(action, "approved")) {
+    note <- .approval_rationale(note)
+  }
   if (identical(action, "reopened")) {
     .require_lifecycle_reason(note, "reopen")
   }
@@ -366,7 +363,6 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
     approved_blob <- NULL
     approved_path <- NULL
     if (action == "approved") {
-      .v2_approval_check(controls$descriptor, authoritative, binding)
       approved_path <- approved_path_for(authoritative$source_artifact_path)
       approved_blob <- .optional_review_blob(adapter, approved_path)
     }
@@ -378,13 +374,47 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
         binding$enrolled,
         persisted_body$content
       )
+    }
+    if (action %in% c("approved", "reopened")) {
       if (is.null(selected_approved_sha)) {
         selected_approved_sha <- approved_blob$sha
       } else if (!identical(selected_approved_sha, approved_blob$sha)) {
-        stop(stale_write_error(
-          "approved output changed during a concurrent retry; reopen was rejected"
-        ))
+        stop(stale_write_error(paste(
+          "approved destination changed during a concurrent retry;",
+          "the action was rejected"
+        )))
       }
+    }
+    approval <- NULL
+    occurred_at <- NULL
+    event_note <- note
+    if (action == "approved") {
+      approval <- .v2_approval_check(
+        controls$descriptor,
+        authoritative,
+        binding,
+        persisted_body$content,
+        actor,
+        role,
+        note,
+        approved_content,
+        approved_blob
+      )
+      occurred_at <- format(
+        Sys.time(),
+        tz = "UTC",
+        usetz = FALSE,
+        format = "%Y-%m-%dT%H:%M:%SZ"
+      )
+      event_note <- approval_attestation_note(
+        approval,
+        controls$descriptor,
+        authoritative,
+        actor,
+        role,
+        occurred_at,
+        blob_sha
+      )
     }
     updated <- if (action %in% c("saved", "assigned")) {
       replaced <- record_action(
@@ -416,41 +446,35 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
         action,
         actor,
         role,
-        note = note,
+        note = event_note,
         body_sha256 = body_sha256,
-        blob_sha = blob_sha
+        blob_sha = blob_sha,
+        occurred_at = occurred_at
       )
     }
     changes <- stats::setNames(
       list(record_to_yaml(updated)),
-      ACTION_PATH(rec$artifact_id)
+      ACTION_PATH(authoritative$artifact_id)
     )
     if (action == "approved") {
-      enrolled_split <- split_frontmatter_exact(binding$enrolled$content)
-      enrolled_front <- enrolled_split$front
-      if (is.null(enrolled_front) ||
-          !frontmatter_unchanged(enrolled_front, approved_content)) {
-        stop("approved content must preserve the enrolled YAML front matter")
-      }
-      changes[[approved_path]] <- join_enrolled_body(
-        enrolled_front,
-        persisted_body$content,
-        separator = enrolled_split$line_ending
-      )
+      changes[[approved_path]] <- approval$approved_content
     }
     if (action == "reopened") {
       changes[approved_path] <- list(NULL)
     }
     if (action == "saved" && !is.null(body)) {
-      changes[[BODY_PATH(rec$artifact_id)]] <- body
+      changes[[BODY_PATH(authoritative$artifact_id)]] <- body
     }
     expected_blobs <- c(
-      setNames(list(blob_sha), ACTION_PATH(rec$artifact_id)),
+      setNames(list(blob_sha), ACTION_PATH(authoritative$artifact_id)),
       setNames(
         list(controls$descriptor_blob_sha),
         controls$descriptor_path
       ),
-      setNames(list(persisted_body$sha), BODY_PATH(rec$artifact_id))
+      setNames(
+        list(persisted_body$sha),
+        BODY_PATH(authoritative$artifact_id)
+      )
     )
     if (action %in% c("approved", "reopened")) {
       expected_blobs <- c(
@@ -467,7 +491,7 @@ adapter_read_queue_descriptor <- function(adapter, descriptor_path = NULL) {
         "review action '%s' by %s on %s",
         action,
         actor,
-        rec$artifact_id
+        authoritative$artifact_id
       ),
       reject_unrelated_head = FALSE,
       pre_publish_check = source_pre_publish_check(

@@ -26,7 +26,7 @@ TRANSITIONS <- list(
 #' @return a NEW record with the transition applied and one event appended
 transition <- function(rec, action, actor, role, note = NULL,
                        body_sha256 = rec$current_content_sha256,
-                       blob_sha = rec$source_commit) {
+                       blob_sha = rec$source_commit, occurred_at = NULL) {
   validate_review_record(rec)
   from_state <- rec$state
 
@@ -61,7 +61,8 @@ transition <- function(rec, action, actor, role, note = NULL,
       sequence = sequence,
       review_record_blob_sha_before = blob_sha,
       body_sha256 = body_sha256,
-      note = note
+      note = note,
+      occurred_at = occurred_at
     )
   } else {
     new_event(
@@ -73,7 +74,8 @@ transition <- function(rec, action, actor, role, note = NULL,
       sequence = sequence,
       source_blob_sha = blob_sha,
       body_sha256 = body_sha256,
-      note = note
+      note = note,
+      occurred_at = occurred_at
     )
   }
 

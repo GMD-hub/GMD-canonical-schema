@@ -113,7 +113,7 @@ adapter_fetch_commit <- function(owner, repo, commit_sha, token, http = NULL) {
   list(sha = response$sha, tree_sha = response$tree$sha)
 }
 
-#' Fetch the full recursive tree for a branch and return a name->blob map.
+#' Fetch the full recursive tree for a branch and return its entries and blobs.
 adapter_fetch_tree_at <- function(owner, repo, commit_sha, token, http = NULL) {
   if (!.is_scalar_character(commit_sha)) {
     stop("a commit SHA is required to read a Git tree")
@@ -130,22 +130,31 @@ adapter_fetch_tree_at <- function(owner, repo, commit_sha, token, http = NULL) {
   }
   entries <- resp$tree
   out <- list()
+  all_entries <- list()
   if (is.data.frame(entries)) {
-    blobs <- entries[entries$type == "blob", , drop = FALSE]
-    for (i in seq_len(nrow(blobs))) {
-      if (!.is_scalar_character(blobs$path[i]) ||
-          !.is_scalar_character(blobs$sha[i])) {
-        stop("GitHub tree contained an invalid blob entry")
+    for (i in seq_len(nrow(entries))) {
+      if (!.is_scalar_character(entries$path[i]) ||
+          !.is_scalar_character(entries$type[i]) ||
+          !.is_scalar_character(entries$sha[i])) {
+        stop("GitHub tree contained an invalid entry")
       }
-      out[[blobs$path[i]]] <- blobs$sha[i]
+      all_entries[[entries$path[i]]] <- list(
+        type = entries$type[i],
+        sha = entries$sha[i]
+      )
+      if (identical(entries$type[i], "blob")) {
+        out[[entries$path[i]]] <- entries$sha[i]
+      }
     }
   } else if (is.list(entries)) {
     for (entry in entries) {
+      if (!.is_scalar_character(entry$path) ||
+          !.is_scalar_character(entry$type) ||
+          !.is_scalar_character(entry$sha)) {
+        stop("GitHub tree contained an invalid entry")
+      }
+      all_entries[[entry$path]] <- list(type = entry$type, sha = entry$sha)
       if (identical(entry$type, "blob")) {
-        if (!.is_scalar_character(entry$path) ||
-            !.is_scalar_character(entry$sha)) {
-          stop("GitHub tree contained an invalid blob entry")
-        }
         out[[entry$path]] <- entry$sha
       }
     }
@@ -155,7 +164,8 @@ adapter_fetch_tree_at <- function(owner, repo, commit_sha, token, http = NULL) {
   list(
     commit = commit_sha,
     tree_sha = resp$sha %||% commit_sha,
-    blobs = out
+    blobs = out,
+    entries = all_entries
   )
 }
 

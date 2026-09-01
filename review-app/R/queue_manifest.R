@@ -346,28 +346,6 @@ assessment_approval_complete <- function(assessment) {
   }, error = function(error) FALSE)
 }
 
-queue_approval_eligible <- function(
-  record,
-  source_binding = NULL,
-  descriptor = NULL
-) {
-  validate_review_record_v2(record)
-  if (is.null(descriptor) ||
-      !identical(
-        as.character(descriptor$schema_version %||% ""),
-        QUEUE_DESCRIPTOR_SCHEMA_VERSION
-      ) ||
-      !isTRUE(descriptor$approvals_enabled)) {
-    return(FALSE)
-  }
-  if (!is.null(source_binding) && !source_binding_is_current(source_binding)) {
-    return(FALSE)
-  }
-  # Task D installs the complete human rubric gate. Approval stays unavailable
-  # until that server-side predicate replaces this fail-closed foundation.
-  FALSE
-}
-
 canonical_yaml <- function(value) {
   yaml::as.yaml(unclass(value), indent = 2)
 }
