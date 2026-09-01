@@ -146,18 +146,36 @@ test_that("save remains available against a drifted enrolled snapshot", {
   expect_identical(captured[[BODY_PATH(record$artifact_id)]], new_body)
 })
 
-test_that("future approval remains blocked while source drift is unresolved", {
+test_that("approval remains blocked while source drift is unresolved", {
   record <- .queue_record_fixture()
-  record$state <- "in-review"
-  descriptor <- .queue_descriptor_fixture(list(record))
-  descriptor$approvals_enabled <- TRUE
+  record <- transition(
+    record,
+    "submitted",
+    "reviewer@example.org",
+    "reviewer",
+    body_sha256 = record$current_content_sha256,
+    blob_sha = .sha1_fixture_2
+  )
+  descriptor <- .queue_descriptor_fixture(
+    list(record),
+    approvals_enabled = TRUE
+  )
   expect_error(
     reviewapp:::.v2_approval_check(
       descriptor,
       record,
-      list(status = "drifted")
+      list(
+        status = "drifted",
+        enrolled = list(content = "---\nvariable_id: VAR-male\n---\nbody")
+      ),
+      "body",
+      "approver@example.org",
+      "approver",
+      "The source must be current.",
+      "---\nvariable_id: VAR-male\n---\nbody",
+      list(content = NULL, sha = NA_character_)
     ),
-    "source binding is unresolved"
+    "drifted or unverifiable"
   )
 })
 
@@ -189,6 +207,73 @@ test_that("production-v2 compatibility rejects writes until migration", {
     ),
     "read-only until queue migration"
   )
+})
+
+test_that("stateful production-v2 queue remains byte-exactly read-only", {
+  fixture <- .stateful_git_fixture(
+    control = "production_v2",
+    state = "draft"
+  )
+  old_head <- fixture$env$review_head
+  old_tree <- fixture$tree(old_head)
+  old_bytes <- lapply(old_tree, fixture$blob_text)
+  record <- parse_review_record(
+    fixture$blob_text(old_tree[[fixture$record_path]])
+  )
+
+  expect_error(
+    perform_action(
+      fixture$adapter,
+      record,
+      body_sha256 = record$current_content_sha256,
+      blob_sha = old_tree[[fixture$record_path]],
+      branch_head_sha = old_head,
+      action = "saved",
+      actor = "reviewer@example.org",
+      role = "reviewer",
+      body = fixture$reviewed_body
+    ),
+    "compatibility mode is read-only"
+  )
+  expect_identical(fixture$env$review_head, old_head)
+  expect_identical(fixture$tree(), old_tree)
+  expect_identical(lapply(fixture$tree(), fixture$blob_text), old_bytes)
+  expect_identical(fixture$env$patch_attempts, 0L)
+  expect_identical(fixture$env$patches, 0L)
+})
+
+test_that("literal review branch rejects v2 approval before token access", {
+  fixture <- .stateful_git_fixture(
+    state = "in-review",
+    approvals_enabled = TRUE,
+    blocker_refs = character(0),
+    approval_ready = TRUE
+  )
+  adapter <- fixture$adapter
+  adapter$review_branch <- "review"
+  old_head <- fixture$env$review_head
+  old_tree <- fixture$tree(old_head)
+
+  expect_error(
+    perform_action(
+      adapter,
+      fixture$record,
+      body_sha256 = fixture$record$current_content_sha256,
+      blob_sha = old_tree[[fixture$record_path]],
+      branch_head_sha = old_head,
+      action = "approved",
+      actor = "approver@example.org",
+      role = "approver",
+      approved_content = fixture$source_content,
+      note = "The persisted revision is correct."
+    ),
+    "legacy review records are read-only"
+  )
+  expect_identical(fixture$env$token_calls, 0L)
+  expect_identical(fixture$env$review_head, old_head)
+  expect_identical(fixture$tree(), old_tree)
+  expect_identical(fixture$env$patch_attempts, 0L)
+  expect_identical(fixture$env$patches, 0L)
 })
 
 test_that("drifted approved records reopen and retire output atomically", {

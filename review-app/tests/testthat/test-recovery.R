@@ -321,6 +321,44 @@ test_that("approved-output deletion emits a Git tree sha NULL entry", {
   expect_null(entry$sha)
 })
 
+test_that("absent destination locks reject trees and descendants", {
+  destination <- "extraction/40_approved/dem/VAR-male.md"
+  head <- paste(rep("a", 40L), collapse = "")
+  tree_sha <- paste(rep("b", 40L), collapse = "")
+  for (entries in list(
+    list(list(
+      path = destination,
+      type = "tree",
+      sha = paste(rep("c", 40L), collapse = "")
+    )),
+    list(list(
+      path = paste0(destination, "/keep.txt"),
+      type = "blob",
+      sha = paste(rep("d", 40L), collapse = "")
+    ))
+  )) {
+    http_fun <- function(method, url, token, body = NULL) {
+      if (identical(method, "GET") && grepl("git/ref/heads/", url)) {
+        return(list(object = list(sha = head)))
+      }
+      if (identical(method, "GET") && grepl("/git/trees/", url)) {
+        return(list(sha = tree_sha, truncated = FALSE, tree = entries))
+      }
+      stop("unexpected request")
+    }
+    expect_error(
+      adapter_check_stale(
+        .fake_recovery_adapter(http_fun),
+        expected_blob_shas = stats::setNames(
+          list(NA_character_),
+          destination
+        )
+      ),
+      "is no longer absent"
+    )
+  }
+})
+
 test_that("a lost PATCH response is reconciled when the ref moved", {
   old_head <- paste(rep("a", 40L), collapse = "")
   new_commit <- paste(rep("e", 40L), collapse = "")

@@ -30,7 +30,11 @@
   )
 }
 
-.queue_descriptor_fixture <- function(records, schema_version = "1.1") {
+.queue_descriptor_fixture <- function(
+  records,
+  schema_version = "1.1",
+  approvals_enabled = FALSE
+) {
   if (identical(schema_version, "1.0")) {
     descriptor <- list(
       schema_version = "1.0",
@@ -50,7 +54,7 @@
     created_by = "admin@example.org",
     expected_record_count = length(records),
     record_set_sha256 = queue_record_set_digest(records),
-    approvals_enabled = FALSE
+    approvals_enabled = approvals_enabled
   )
 }
 

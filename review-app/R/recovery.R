@@ -66,9 +66,24 @@ adapter_check_stale <- function(
   tree <- adapter_fetch_tree_at(owner, repo, current, token, adapter$http)
   dependencies <- expected_blob_shas
   if (!is.null(expected_tree)) dependencies <- c(dependencies, expected_tree)
+  entries <- tree$entries %||% lapply(tree$blobs, function(sha) {
+    list(type = "blob", sha = sha)
+  })
   for (path in names(dependencies)) {
     actual <- tree$blobs[[path]] %||% NULL
     expected <- dependencies[[path]]
+    expected_absent <- is.null(expected) ||
+      (length(expected) == 1L && is.na(expected))
+    path_occupied <- any(
+      names(entries) == path |
+        startsWith(names(entries), paste0(path, "/"))
+    )
+    if (expected_absent && path_occupied) {
+      stop(stale_write_error(sprintf(
+        "stale, please reload: path '%s' is no longer absent",
+        path
+      )))
+    }
     if (!.expected_blob_matches(actual, expected)) {
       stop(stale_write_error(sprintf(
         "stale, please reload: blob SHA for '%s' changed since load",

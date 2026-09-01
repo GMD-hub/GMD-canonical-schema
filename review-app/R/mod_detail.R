@@ -738,7 +738,9 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           queue_approval_eligible(
             detail_state$record,
             detail_state$source_binding,
-            queue_descriptor()
+            queue_descriptor(),
+            actor = auth()$identity,
+            role = current_role
           ),
           error = function(error) FALSE
         ))
@@ -815,9 +817,10 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           ),
           shiny::textAreaInput(
             session$ns("approval_note"),
-            "Approval note (optional)",
+            "Approval rationale",
             rows = 3
           ),
+          shiny::uiOutput(session$ns("approval_note_error")),
           footer = shiny::tagList(
             shiny::modalButton("Cancel"),
             shiny::actionButton(
@@ -930,6 +933,17 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
           nzchar(trimws(input$revision_note %||% ""))) return(NULL)
       shiny::p(class = "field-error", role = "alert", "Enter a reason before requesting revision.")
     })
+    output$approval_note_error <- shiny::renderUI({
+      clicks <- input$confirm_approve %||% 0L
+      if (clicks < 1L || nzchar(trimws(input$approval_note %||% ""))) {
+        return(NULL)
+      }
+      shiny::p(
+        class = "field-error",
+        role = "alert",
+        "Enter a rationale before approving the artifact."
+      )
+    })
     output$reopen_note_error <- shiny::renderUI({
       clicks <- input$confirm_reopen %||% 0L
       if (clicks < 1L || nzchar(trimws(input$reopen_note %||% ""))) {
@@ -960,8 +974,9 @@ mod_detail_server <- function(id, adapter, auth, role, selected_artifact,
     }, ignoreInit = TRUE)
     shiny::observeEvent(input$confirm_approve, {
       note <- trimws(input$approval_note %||% "")
+      if (!nzchar(note)) return()
       shiny::removeModal()
-      run_action("approved", note = if (nzchar(note)) note else NULL)
+      run_action("approved", note = note)
     }, ignoreInit = TRUE)
     shiny::observeEvent(input$confirm_revision, {
       note <- trimws(input$revision_note %||% "")

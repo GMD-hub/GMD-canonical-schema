@@ -1,11 +1,21 @@
 .stateful_git_fixture <- function(control = "descriptor_1_1",
                                   state = "approved",
-                                  approval_mode = "disabled") {
+                                  approval_mode = "disabled",
+                                  approvals_enabled = FALSE,
+                                  blocker_refs = "BLOCK-1",
+                                  approval_ready = FALSE,
+                                  submitted_by = "reviewer@example.org",
+                                  source_content = paste0(
+                                    "---\nvariable_id: VAR-one\n---\n",
+                                    "body"
+                                  ),
+                                  reviewed_body = "reviewed body") {
   env <- new.env(parent = emptyenv())
   env$blobs <- list()
   env$trees <- list()
   env$commits <- list()
   env$counter <- 1000L
+  env$token_calls <- 0L
   env$patches <- 0L
   env$last_patch <- NULL
   env$fail_patch <- FALSE
@@ -13,6 +23,11 @@
   env$corrupt_source_reads <- FALSE
   env$corrupt_blob_sha <- NULL
   env$race_approved <- FALSE
+  env$ref_races_remaining <- 0L
+  env$race_destination_on_patch <- FALSE
+  env$race_path_on_patch <- NULL
+  env$patch_attempts <- 0L
+  env$last_competing_commit <- NULL
 
   next_sha <- function() {
     env$counter <- env$counter + 1L
@@ -38,7 +53,6 @@
     env$trees[[env$commits[[commit]]$tree_sha]]
   }
 
-  source_content <- "---\nvariable_id: VAR-one\n---\nbody"
   source_path <- "extraction/20_drafts/alpha/VAR-one.md"
   source_blob_sha <- put_blob(source_content)
   source_commit <- paste(rep("a", 40L), collapse = "")
@@ -48,7 +62,6 @@
   )
   env$source_head <- source_commit
 
-  reviewed_body <- "reviewed body"
   record <- new_review_record_v2(
     artifact_id = "VAR-one",
     queue_id = "stateful-queue",
@@ -56,13 +69,15 @@
     source_commit = source_commit,
     source_artifact_blob_sha = source_blob_sha,
     source_content_sha256 = hash_body(source_content),
-    enrolled_body_sha256 = hash_body("body"),
+    enrolled_body_sha256 = hash_body(
+      split_frontmatter_exact(source_content)$body
+    ),
     current_content_sha256 = hash_body(reviewed_body),
     enrolled_at = "2026-08-24T13:25:07Z",
     enrolled_by = "admin@example.org",
-    state = state,
+    state = if (isTRUE(approval_ready)) "draft" else state,
     assigned_to = list("reviewer@example.org"),
-    blocker_refs = "BLOCK-1"
+    blocker_refs = blocker_refs
   )
   record <- record_action(
     record,
@@ -73,6 +88,19 @@
     body_sha256 = hash_body(reviewed_body),
     blob_sha = paste(rep("b", 40L), collapse = "")
   )
+  if (isTRUE(approval_ready)) {
+    if (!identical(state, "in-review")) {
+      stop("approval_ready fixtures must use state 'in-review'")
+    }
+    record <- transition(
+      record,
+      "submitted",
+      submitted_by,
+      "reviewer",
+      body_sha256 = hash_body(reviewed_body),
+      blob_sha = paste(rep("d", 40L), collapse = "")
+    )
+  }
   record_path <- ACTION_PATH(record$artifact_id)
   body_path <- BODY_PATH(record$artifact_id)
   approved_path <- approved_path_for(record$source_artifact_path)
@@ -86,7 +114,9 @@
   review_entries <- list()
   review_entries[record_path] <- list(record_sha)
   review_entries[body_path] <- list(body_sha)
-  review_entries[approved_path] <- list(approved_sha)
+  if (identical(state, "approved") && !isTRUE(approval_ready)) {
+    review_entries[approved_path] <- list(approved_sha)
+  }
 
   if (identical(control, "production_v2")) {
     manifest <- list(
@@ -119,7 +149,10 @@
     descriptor <- if (identical(control, "descriptor_1_0")) {
       .queue_descriptor_fixture(list(record), schema_version = "1.0")
     } else {
-      .queue_descriptor_fixture(list(record))
+      .queue_descriptor_fixture(
+        list(record),
+        approvals_enabled = approvals_enabled
+      )
     }
     review_entries[QUEUE_DESCRIPTOR_PATH] <- list(
       put_blob(canonical_yaml(descriptor))
@@ -144,6 +177,20 @@
     )
     tree[approved_path] <- list(put_blob(competitor))
     env$review_head <- put_commit(tree, parent = env$review_head)
+    env$last_competing_commit <- env$review_head
+  }
+  compete_unrelated <- function() {
+    tree <- commit_tree(env$review_head)
+    path <- sprintf("unrelated/race-%d.txt", env$counter)
+    tree[path] <- list(put_blob("unrelated concurrent change"))
+    env$review_head <- put_commit(tree, parent = env$review_head)
+    env$last_competing_commit <- env$review_head
+  }
+  compete_path <- function(path, content) {
+    tree <- commit_tree(env$review_head)
+    tree[path] <- list(put_blob(content))
+    env$review_head <- put_commit(tree, parent = env$review_head)
+    env$last_competing_commit <- env$review_head
   }
   add_source_revision <- function(content, commit_sha = next_sha()) {
     blob_sha <- put_blob(content)
@@ -264,6 +311,18 @@
       return(list(sha = sha))
     }
     if (identical(method, "PATCH") && grepl("/git/refs/heads/", url)) {
+      env$patch_attempts <- env$patch_attempts + 1L
+      if (isTRUE(env$race_destination_on_patch)) {
+        env$race_destination_on_patch <- FALSE
+        compete_approved()
+      } else if (!is.null(env$race_path_on_patch)) {
+        race <- env$race_path_on_patch
+        env$race_path_on_patch <- NULL
+        compete_path(race$path, race$content)
+      } else if (env$ref_races_remaining > 0L) {
+        env$ref_races_remaining <- env$ref_races_remaining - 1L
+        compete_unrelated()
+      }
       if (isTRUE(env$fail_patch)) stop("fixture ref update failure")
       commit <- env$commits[[body$sha]] %||% stop("commit not found")
       if (!identical(commit$parent, env$review_head) || isTRUE(body$force)) {
@@ -281,7 +340,10 @@
     "fixture",
     "main",
     "fixture-review",
-    get_token = function() "secret",
+    get_token = function() {
+      env$token_calls <- env$token_calls + 1L
+      "secret"
+    },
     http = http
   )
   list(
@@ -294,7 +356,13 @@
     source_path = source_path,
     source_commit = source_commit,
     source_blob_sha = source_blob_sha,
+    source_content = source_content,
+    reviewed_body = reviewed_body,
     add_source_revision = add_source_revision,
+    schedule_path_race = function(path, content) {
+      env$race_path_on_patch <- list(path = path, content = content)
+      invisible(NULL)
+    },
     tree = function(commit = env$review_head) commit_tree(commit),
     blob_text = function(sha) rawToChar(env$blobs[[sha]])
   )

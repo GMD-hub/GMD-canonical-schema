@@ -134,25 +134,60 @@ test_that("existing production-v2 manifests adapt to the descriptor contract", {
   expect_no_error(validate_queue_record_set(records, descriptor))
 })
 
-test_that("approval stays fail-closed until Task D installs the rubric gate", {
+test_that("minimal approval predicate ignores legacy assessment content", {
   record <- .queue_record_fixture()
-  record$assessment <- list(
-    layer1 = list(status = "pass", evidence_ref = "evidence/layer1.yml"),
-    layer2 = list(list(
-      section = "Definition", rating = "pass", notes = NULL
-    )),
-    content_errors = list(),
-    agent_review = list(status = "pass", evidence_ref = "evidence/agent.yml")
+  record <- record_action(
+    record,
+    "saved",
+    "reviewer@example.org",
+    "reviewer",
+    body_sha256 = record$current_content_sha256,
+    blob_sha = .sha1_fixture_2
+  )
+  record <- transition(
+    record,
+    "submitted",
+    "reviewer@example.org",
+    "reviewer",
+    body_sha256 = record$current_content_sha256,
+    blob_sha = .sha1_fixture_2
   )
   current <- list(status = "current")
   drifted <- list(status = "drifted")
-  descriptor <- .queue_descriptor_fixture(list(record))
-  descriptor$approvals_enabled <- TRUE
-  expect_true(assessment_approval_complete(record$assessment))
+  descriptor <- .queue_descriptor_fixture(
+    list(record),
+    approvals_enabled = TRUE
+  )
+  expect_false(assessment_approval_complete(record$assessment))
   expect_false(queue_approval_eligible(record, current, descriptor))
-  expect_false(queue_approval_eligible(record, drifted, descriptor))
+  expect_false(queue_approval_eligible(
+    record,
+    current,
+    descriptor,
+    actor = "approver@example.org"
+  ))
+  expect_true(queue_approval_eligible(
+    record,
+    current,
+    descriptor,
+    actor = "approver@example.org",
+    role = "approver"
+  ))
+  expect_false(queue_approval_eligible(
+    record,
+    drifted,
+    descriptor,
+    actor = "approver@example.org",
+    role = "approver"
+  ))
   record$blocker_refs <- "record-blocker"
-  expect_false(queue_approval_eligible(record, current, descriptor))
+  expect_false(queue_approval_eligible(
+    record,
+    current,
+    descriptor,
+    actor = "approver@example.org",
+    role = "approver"
+  ))
 })
 
 test_that("production queue validation resolves source from a distinct commit", {
