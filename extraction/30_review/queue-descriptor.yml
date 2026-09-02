@@ -1,0 +1,8 @@
+schema_version: '1.1'
+queue_id: cvs-production-2026-08
+source_revision: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+created_at: '2026-08-28T14:13:39Z'
+created_by: acastanedaa
+expected_record_count: 267
+record_set_sha256: bcd1c27bed9b72fbbe99a7f722f8a524e4ce1ebdc5736a17b4fbe559a74fb718
+approvals_enabled: no
