@@ -2,11 +2,11 @@
 
 _Generated 2026-09-03_
 
-## Establish Independent Agent Review Objective / Complete Universal Records Objective / Review
+## Complete Universal Records Objective / Establish Independent Agent Review Objective / Review
 
-_Keywords: `establish independent agent review
-objective` · `complete universal records
-objective` · `review`_ · 32 entities
+_Keywords: `complete universal records
+objective` · `establish independent agent review
+objective` · `review`_ · 33 entities
 
 - **[Define the versioned review states and manifest](roadmap.json#define-review-state-manifest)** · `feature` · _done_ · `—`
   > Define the versioned review states and manifest
@@ -72,6 +72,8 @@ objective` · `review`_ · 32 entities
   > Complete Release A production queue cutover
 - **[Launch production content review and approval](roadmap.json#launch-production-content-review)** · `feature` · _planned_ · `—`
   > Launch production content review and approval
+- **[Publish an approved-subset runtime release for Foundry](roadmap.json#publish-approved-subset-runtime)** · `feature` · _planned_ · `—`
+  > Publish an approved-subset runtime release for Foundry
 
 ## Universal Non / Welfare Schema Objective / Freeze Version
 

@@ -2088,6 +2088,28 @@
     {
       "date": "",
       "entity_type": "feature",
+      "path": "roadmap.json#publish-approved-subset-runtime",
+      "slug": "publish-approved-subset-runtime",
+      "status": "planned",
+      "summary": "Publish an approved-subset runtime release for Foundry",
+      "tags": [],
+      "title": "Publish an approved-subset runtime release for Foundry",
+      "top_keywords": [
+        "foundry\nmilestone",
+        "complete universal records\nobjective",
+        "publish",
+        "approved-subset",
+        "runtime",
+        "release",
+        "foundry",
+        "records",
+        "feature",
+        "milestone"
+      ]
+    },
+    {
+      "date": "",
+      "entity_type": "feature",
       "path": "roadmap.json#resolve-fallback-authority",
       "slug": "resolve-fallback-authority",
       "status": "idea",
@@ -2350,13 +2372,13 @@
       ]
     }
   ],
-  "entity_count": 92,
+  "entity_count": 93,
   "generated": "2026-09-03",
   "schema_version": "0.2.0",
   "topic_count": 6,
   "topics": [
     {
-      "entity_count": 32,
+      "entity_count": 33,
       "entity_paths": [
         "roadmap.json#define-review-state-manifest",
         "roadmap.json#build-shiny-review-app",
@@ -2389,15 +2411,16 @@
         "roadmap.json#promote-universal-records",
         "roadmap.json#complete-global-rules-modules",
         "roadmap.json#complete-release-a-production-queue-cutover",
-        "roadmap.json#launch-production-content-review"
+        "roadmap.json#launch-production-content-review",
+        "roadmap.json#publish-approved-subset-runtime"
       ],
       "keywords": [
-        "establish independent agent review\nobjective",
         "complete universal records\nobjective",
+        "establish independent agent review\nobjective",
         "review"
       ],
-      "label": "Establish Independent Agent Review\nObjective / Complete Universal Records\nObjective / Review",
-      "slug": "establish-independent-agent-review-objective-complete-universal-records-objective-review"
+      "label": "Complete Universal Records\nObjective / Establish Independent Agent Review\nObjective / Review",
+      "slug": "complete-universal-records-objective-establish-independent-agent-review-objective-review"
     },
     {
       "entity_count": 16,

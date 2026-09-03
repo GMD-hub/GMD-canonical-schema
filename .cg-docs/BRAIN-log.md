@@ -1,6 +1,6 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-09-03 · 37 artifacts (newest first) + 55 roadmap features_
+_Generated 2026-09-03 · 37 artifacts (newest first) + 56 roadmap features_
 
 ## undated
 
@@ -198,6 +198,8 @@ _Generated 2026-09-03 · 37 artifacts (newest first) + 55 roadmap features_
   > Promote approved universal records through the governed lifecycle
 - **[Generate proposed YAML changes on review branches](roadmap.json#propose-yaml-review-changes)** · `feature` · _idea_ · `—`
   > Generate proposed YAML changes on review branches
+- **[Publish an approved-subset runtime release for Foundry](roadmap.json#publish-approved-subset-runtime)** · `feature` · _planned_ · `—`
+  > Publish an approved-subset runtime release for Foundry
 - **[Record reviewer identity, review round, timestamps, and content hashes](roadmap.json#record-review-metadata)** · `feature` · _done_ · `—`
   > Record reviewer identity, review round, timestamps, and content hashes
 - **[Refresh review-agent test conventions and stale solution note after the parameter-registry fix](roadmap.json#refresh-review-agent-test-and-doc-conventions)** · `feature` · _idea_ · `—`
