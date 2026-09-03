@@ -288,8 +288,14 @@
         {
           "id": "complete-release-a-production-queue-cutover",
           "title": "Complete Release A production queue cutover",
-          "status": "active",
+          "status": "done",
           "plan": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md"
+        },
+        {
+          "id": "launch-production-content-review",
+          "title": "Launch production content review and approval",
+          "status": "planned",
+          "plan": null
         }
       ]
     },

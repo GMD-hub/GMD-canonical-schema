@@ -1,12 +1,12 @@
 # 🧠 Project Brain — Part 1
 
-_Generated 2026-08-30_
+_Generated 2026-09-03_
 
-## Establish Independent Agent Review Objective / Review / Complete Universal Records Objective
+## Establish Independent Agent Review Objective / Complete Universal Records Objective / Review
 
 _Keywords: `establish independent agent review
-objective` · `review` · `complete universal records
-objective`_ · 31 entities
+objective` · `complete universal records
+objective` · `review`_ · 32 entities
 
 - **[Define the versioned review states and manifest](roadmap.json#define-review-state-manifest)** · `feature` · _done_ · `—`
   > Define the versioned review states and manifest
@@ -68,8 +68,10 @@ objective`_ · 31 entities
   > Promote approved universal records through the governed lifecycle
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
-- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _active_ · `—`
+- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _done_ · `—`
   > Complete Release A production queue cutover
+- **[Launch production content review and approval](roadmap.json#launch-production-content-review)** · `feature` · _planned_ · `—`
+  > Launch production content review and approval
 
 ## Universal Non / Welfare Schema Objective / Freeze Version
 
@@ -147,6 +149,21 @@ objective` · `parameters`_ · 6 entities
   > Establish recurring regional exception gathering
 - **[Keep urban/rural parameters deferred unless evidence makes them necessary](roadmap.json#defer-urban-rural-parameters)** · `feature` · _idea_ · `—`
   > Keep urban/rural parameters deferred unless evidence makes them necessary
+
+## Cause / Prevention / Problem
+
+_Keywords: `cause` · `prevention` · `problem`_ · 5 entities
+
+- **[Fail-Closed Deterministic Promotion from Immutable Evidence](.cg-docs/solutions/data-quality/2026-08-26-fail-closed-deterministic-promotion.md)** · `solution` · _—_ · `2026-08-26`
+  > A promotion command could accept a hand-authored candidate that passed schema and fixed-total checks but was never re…
+- **[Direct GitHub App Review Queue Cutover](.cg-docs/solutions/git-workflows/2026-09-03-direct-review-queue-cutover.md)** · `solution` · _—_ · `2026-09-03`
+  > The production queue needed one format-only migration from production-v2 controls to descriptor schema 1.1. A separat…
+- **[Pydantic allow_unresolved_draft does not bypass rule_ids/parameter_ids validation](.cg-docs/solutions/testing-patterns/2026-08-15-pydantic-rule-ids-context.md)** · `solution` · _—_ · `2026-08-15`
+  > When validating extraction drafts against `VariableDefinition` with `allow_unresolved_draft=True`, Pydantic raised `u…
+- **[Derivation asymmetry check requires both variables in draft set](.cg-docs/solutions/testing-patterns/2026-08-15-unresolved-derivation-ref.md)** · `solution` · _—_ · `2026-08-15`
+  > VAR-urban declares `derived_from: [VAR-rurality]` but VAR-rurality is not in the draft set. The expected test for an …
+- **[Testing release queues with distinct commits and exact regeneration](.cg-docs/solutions/testing-patterns/2026-08-26-release-queue-validator-bindings.md)** · `solution` · _—_ · `2026-08-26`
+  > A production queue validator initially treated checkout `HEAD` as the pinned source commit. That fails after bootstra…
 
 ## Validate-Production-Queue.R / Review / Github_Adapter.R
 

@@ -1,9 +1,11 @@
 ---
 date: 2026-08-25
 title: "Enable and Complete Release A Production Queue Cutover"
-status: active
-completed-phases: [1]
-current-phase: 2
+status: completed
+completed-date: 2026-09-03
+completed-phases: [1, 2, 4, 5, 6]
+skipped-phases: [3]
+deferred-verifications: [V9, V10]
 scope: "Deep"
 brainstorm: ".cg-docs/brainstorms/2026-08-04-build-human-review-application.md"
 language: "both"
@@ -16,6 +18,63 @@ tags: [release-a, review-app, production-queue, posit-connect, github, cutover]
 ---
 
 # Plan: Enable and Complete Release A Production Queue Cutover
+
+## Completion Update
+
+This plan closed on 2026-09-03 with an approved simplification. The separate
+staging repository, staging Connect item, destructive ruleset probes, synthetic
+production smoke record, and duplicate evidence gates were not created. The
+existing automated test coverage and completed human-review calibration were
+accepted in place of the original isolated live rehearsal.
+
+Production was migrated directly with the reviewed CLI. The migration used one
+non-force GitHub App commit, preserved all 267 record blobs, and replaced only
+the three queue-control paths. The migrated queue passed the exact source,
+count, path-digest, bootstrap-state, and descriptor checks. Connect was then
+switched to `review-production`, restarted, attested, and confirmed to display
+267 rows. Approval remains disabled. The first genuine reviewer submission and
+distinct approver inspection will serve as the production role smoke when
+content review begins.
+
+The durable evidence and accepted deviations are in
+`.cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md`.
+
+Human operator `acastanedaa` approved the direct production cutover on
+2026-09-01 and approved replacing a synthetic production smoke record with the
+first genuine distinct-role review on 2026-09-02. This decision supersedes the
+original requirements V2-V4, the staging parts of V5, V6, the synthetic parts
+of V9-V10, and the obsolete four-blocker representation in C6.
+
+### Accepted Completion Contract
+
+The accepted outcome is one protected `review-production` queue with descriptor
+schema 1.1, the exact 267-record source set, unchanged record blobs, disabled
+approval, an attested Connect deployment displaying all records, and unchanged
+legacy `review` rollback. The following matrix records the disposition of the
+original verification surface:
+
+| IDs | Disposition | Evidence or replacement |
+|---|---|---|
+| V1 | Passed | Merged release code, full CI, and reviewed migration CLI |
+| V2 | Replaced | Fixed application commit qualification without the original hold-branch sequence |
+| V3-V4 | Skipped | Approved removal of the separate staging repository, Connect item, and telemetry repetition |
+| V5 | Replaced | Active exact production ruleset plus the successful App-authored non-force migration |
+| V6 | Replaced | Direct attestation of the unchanged reviewed Connect application without hold-branch restoration |
+| V7-V8 | Passed | Prior rollback proof, migration atomicity, and detached queue validation |
+| V9-V10 | Deferred | First genuine reviewer and distinct approver interaction; approval remains disabled |
+| V11 | Passed | Final refs, queue tree, Connect state, and this execution report |
+
+Accepted constraint deviations:
+
+| IDs | Disposition | Evidence or replacement |
+|---|---|---|
+| C3 | Skipped | Separate staging was removed by the approved direct-cutover decision |
+| C6 | Partially passed and replaced | Approval remains disabled; descriptor schema 1.1 replaced the obsolete four-blocker manifest representation |
+| C7 | Replaced | The App performed only the format migration; future review-state writes remain human actions |
+| C11 | Replaced | Human-approved direct cutover followed immutable candidate qualification without the original hold sequence |
+
+Deferred V9-V10 work belongs to human content review and is not a Release A
+cutover blocker under the approved simplification.
 
 ## Objective
 
@@ -139,7 +198,7 @@ supervised agent edits limited to:
 - `review-app/README.md`
 - `review-app/docs/operator-guide.md`
 - `.github/workflows/validate.yml`
-- `.cg-docs/work-reports/2026-08-25-release-a-production-queue-cutover.md`
+- `.cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md`
 - `.cg-docs/active-state/current.json`
 - `.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md`
   limited to `/cg-work` lifecycle frontmatter fields
@@ -677,7 +736,7 @@ Execute and record this sequence:
 
 - **Requirements**: R1, R15
 - **Files**:
-  `.cg-docs/work-reports/2026-08-25-release-a-production-queue-cutover.md`
+  `.cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md`
 - **Details**: Re-read remote refs and trees after smoke testing. Prove the
   legacy `review` branch remains at the preserved SHA and contains only its six
   calibration records. Prove `main` has no production queue files and
@@ -791,7 +850,11 @@ secret values, and reconcile every V/C row before completion.
 - Capturing exact bootstrap payload bytes; successful publication is the durable
   evidence that the enforced preflight limit passed.
 
-## Completion Contract
+## Original Completion Contract (Superseded)
+
+The accepted completion contract and verification dispositions at the start of
+this plan supersede the original strict contract below. This section remains as
+historical rationale and must not be read as executed evidence.
 
 ### Outcome
 
