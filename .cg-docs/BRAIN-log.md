@@ -1,11 +1,16 @@
 # 🧠 Project Brain — Chronological Log
 
-_Generated 2026-08-30 · 36 artifacts (newest first) + 54 roadmap features_
+_Generated 2026-09-03 · 37 artifacts (newest first) + 55 roadmap features_
 
 ## undated
 
 - **[2026-08-14-agent-review-lessons](.cg-docs/brainstorms/2026-08-14-agent-review-lessons.md)** · `brainstorm` · _—_ · `—`
   > A prototype of all 4 review agents was built and run against the 6 calibration drafts. The prototype was reverted bec…
+
+## 2026-09-03
+
+- **[Direct GitHub App Review Queue Cutover](.cg-docs/solutions/git-workflows/2026-09-03-direct-review-queue-cutover.md)** · `solution` · _—_ · `2026-09-03`
+  > The production queue needed one format-only migration from production-v2 controls to descriptor schema 1.1. A separat…
 
 ## 2026-08-30
 
@@ -29,8 +34,8 @@ _Generated 2026-08-30 · 36 artifacts (newest first) + 54 roadmap features_
 
 - **[Canonical Non-Welfare Inventory Ledger](.cg-docs/plans/2026-08-25-canonical-non-welfare-inventory-ledger.md)** · `plan` · _completed_ · `2026-08-25`
   > Replace the contradictory prose inventory with one deterministic, row-level, machine-readable ledger that proves the …
-- **[Enable and Complete Release A Production Queue Cutover](.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md)** · `plan` · _active_ · `2026-08-25`
-  > Correct the release-blocking branch, source-binding, CI, and verification gaps; qualify the resulting application in …
+- **[Enable and Complete Release A Production Queue Cutover](.cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md)** · `plan` · _completed_ · `2026-08-25`
+  > This plan closed on 2026-09-03 with an approved simplification. The separate staging repository, staging Connect item…
 
 ## 2026-08-20
 
@@ -147,7 +152,7 @@ _Generated 2026-08-30 · 36 artifacts (newest first) + 54 roadmap features_
   > Classify mineducatage as a variable to draft or a country parameter to register (currently an unregistered prerequisi…
 - **[Complete global rules and module specifications](roadmap.json#complete-global-rules-modules)** · `feature` · _idea_ · `—`
   > Complete global rules and module specifications
-- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _active_ · `—`
+- **[Complete Release A production queue cutover](roadmap.json#complete-release-a-production-queue-cutover)** · `feature` · _done_ · `—`
   > Complete Release A production queue cutover
 - **[Configure the real GPID CODEOWNERS team and branch protection](roadmap.json#configure-codeowners-protection)** · `feature` · _idea_ · `—`
   > Configure the real GPID CODEOWNERS team and branch protection
@@ -179,6 +184,8 @@ _Generated 2026-08-30 · 36 artifacts (newest first) + 54 roadmap features_
   > Establish recurring regional exception gathering
 - **[Inventory all non-welfare variables and classify structural fields](roadmap.json#inventory-non-welfare-variables)** · `feature` · _done_ · `—`
   > Inventory all non-welfare variables and classify structural fields
+- **[Launch production content review and approval](roadmap.json#launch-production-content-review)** · `feature` · _planned_ · `—`
+  > Launch production content review and approval
 - **[Measure extraction and agent-review errors](roadmap.json#measure-review-errors)** · `feature` · _done_ · `—`
   > Measure extraction and agent-review errors
 - **[Populate education parameters from authoritative sources](roadmap.json#populate-education-parameters)** · `feature` · _idea_ · `—`
