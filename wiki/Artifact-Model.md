@@ -39,6 +39,16 @@ The Markdown body normally adds a definition, conceptual intent, construction
 notes, consistency checks, escalation triggers, common mistakes, and change
 log. Keep one variable per file.
 
+Variable status controls harmonization eligibility:
+
+| Status | Meaning |
+|---|---|
+| `draft` | Not approved. Foundry and other harmonization agents must ignore it. |
+| `approved` | Human approved and promoted to `knowledge/`. Foundry may use it. |
+
+An approved variable must also record `provenance.human_reviewed: true` and a
+non-empty reviewer. Draft variables must remain unreviewed with a null reviewer.
+
 Mapping roles currently illustrated in the repository are:
 
 | Role | Meaning |

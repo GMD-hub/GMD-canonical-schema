@@ -61,6 +61,8 @@ Humans place approved candidates in `40_approved/`, then promote them to the
 correct canonical folder. Promotion includes:
 
 - placing universal artifacts under the appropriate `knowledge/` path;
+- setting approved variable records to `status: approved`,
+  `human_reviewed: true`, and the recorded reviewer;
 - placing country values or exceptions under `country-parameters/`;
 - updating `knowledge/index.md` for universal artifact inventory changes;
 - running validation and any relevant bundle compilation;
@@ -87,8 +89,9 @@ required for:
 - any addition or modification under `country-parameters/`;
 - any change to `AGENTS.md`.
 
-Never change an artifact from `active` to another status, and never move
-country-specific facts into the universal layer.
+Never mark a variable `status: approved` without explicit human approval and
+promotion evidence, and never move country-specific facts into the universal
+layer.
 
 ## Definition of done
 

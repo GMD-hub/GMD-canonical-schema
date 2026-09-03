@@ -2088,23 +2088,23 @@
     {
       "date": "",
       "entity_type": "feature",
-      "path": "roadmap.json#publish-approved-subset-runtime",
-      "slug": "publish-approved-subset-runtime",
-      "status": "planned",
-      "summary": "Publish an approved-subset runtime release for Foundry",
+      "path": "roadmap.json#enforce-approved-variable-status",
+      "slug": "enforce-approved-variable-status",
+      "status": "done",
+      "summary": "Use approved variable status for Foundry eligibility",
       "tags": [],
-      "title": "Publish an approved-subset runtime release for Foundry",
+      "title": "Use approved variable status for Foundry eligibility",
       "top_keywords": [
-        "foundry\nmilestone",
         "complete universal records\nobjective",
-        "publish",
-        "approved-subset",
-        "runtime",
-        "release",
+        "approved",
+        "variable",
+        "status",
         "foundry",
+        "eligibility",
         "records",
         "feature",
-        "milestone"
+        "milestone",
+        "reconcile"
       ]
     },
     {
@@ -2412,7 +2412,7 @@
         "roadmap.json#complete-global-rules-modules",
         "roadmap.json#complete-release-a-production-queue-cutover",
         "roadmap.json#launch-production-content-review",
-        "roadmap.json#publish-approved-subset-runtime"
+        "roadmap.json#enforce-approved-variable-status"
       ],
       "keywords": [
         "complete universal records\nobjective",

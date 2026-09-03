@@ -72,8 +72,8 @@ objective` · `review`_ · 33 entities
   > Complete Release A production queue cutover
 - **[Launch production content review and approval](roadmap.json#launch-production-content-review)** · `feature` · _planned_ · `—`
   > Launch production content review and approval
-- **[Publish an approved-subset runtime release for Foundry](roadmap.json#publish-approved-subset-runtime)** · `feature` · _planned_ · `—`
-  > Publish an approved-subset runtime release for Foundry
+- **[Use approved variable status for Foundry eligibility](roadmap.json#enforce-approved-variable-status)** · `feature` · _done_ · `—`
+  > Use approved variable status for Foundry eligibility
 
 ## Universal Non / Welfare Schema Objective / Freeze Version
 
