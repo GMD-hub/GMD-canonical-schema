@@ -37,7 +37,7 @@ class ParameterDefinition(BaseModel):
     authority: str
     kind: ParameterKind
     value_type: Literal["integer", "mapping"]
-    value_schema: dict[str, Literal["integer"]] | None = None
+    value_schema: dict[str, Literal["integer", "number"]] | None = None
     applies_to_variables: list[str]
     fallback_policy: FallbackPolicy
     global_default: Any = None
