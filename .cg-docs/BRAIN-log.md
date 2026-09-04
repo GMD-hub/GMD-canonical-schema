@@ -170,6 +170,8 @@ _Generated 2026-09-03 · 37 artifacts (newest first) + 56 roadmap features_
   > Document the schema approval from the 2026-07-29 GPID meeting
 - **[Allow editing only of the human Markdown section](roadmap.json#edit-human-markdown-only)** · `feature` · _done_ · `—`
   > Allow editing only of the human Markdown section
+- **[Use approved variable status for Foundry eligibility](roadmap.json#enforce-approved-variable-status)** · `feature` · _done_ · `—`
+  > Use approved variable status for Foundry eligibility
 - **[Extract all non-welfare variables into extraction/20_drafts/](roadmap.json#extract-non-welfare-variables)** · `feature` · _done_ · `—`
   > Extract all non-welfare variables into extraction/20_drafts/
 - **[Finalize the review rubric and acceptance criteria](roadmap.json#finalize-review-rubric)** · `feature` · _done_ · `—`
@@ -198,8 +200,6 @@ _Generated 2026-09-03 · 37 artifacts (newest first) + 56 roadmap features_
   > Promote approved universal records through the governed lifecycle
 - **[Generate proposed YAML changes on review branches](roadmap.json#propose-yaml-review-changes)** · `feature` · _idea_ · `—`
   > Generate proposed YAML changes on review branches
-- **[Publish an approved-subset runtime release for Foundry](roadmap.json#publish-approved-subset-runtime)** · `feature` · _planned_ · `—`
-  > Publish an approved-subset runtime release for Foundry
 - **[Record reviewer identity, review round, timestamps, and content hashes](roadmap.json#record-review-metadata)** · `feature` · _done_ · `—`
   > Record reviewer identity, review round, timestamps, and content hashes
 - **[Refresh review-agent test conventions and stale solution note after the parameter-registry fix](roadmap.json#refresh-review-agent-test-and-doc-conventions)** · `feature` · _idea_ · `—`

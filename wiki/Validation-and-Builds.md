@@ -106,6 +106,11 @@ Every artifact includes its structured front matter plus a `body` field with
 the Markdown content. `commit_hash` is the current `HEAD`, allowing downstream
 outputs to identify the exact repository snapshot used.
 
+The bundle can contain both draft and approved variable records and is suitable
+for development. A Foundry ingestion corpus must select only records whose
+exact `status` is `approved`. A direct GitHub consumer must apply the same check
+before using each canonical variable.
+
 Generated JSON is a runtime derivative. Do not hand edit it or treat it as the
 source for future canonical changes.
 

@@ -25,7 +25,7 @@ explicit human instruction from the GPID Team.
 | `extraction/20_drafts/` | Draft CVS artifacts generated from guidelines | Agent |
 | `extraction/30_review/` | Human review notes and decisions | Human only |
 | `extraction/40_approved/` | Artifacts approved for promotion | Human only |
-| `knowledge/` | Approved, finalized CVS artifacts | Human only |
+| `knowledge/` | Canonical CVS artifacts; variable status controls Foundry eligibility | Human only |
 | `country-parameters/` | Country parameter values and exceptions | Human only |
 | `schema/` | Pydantic validation models | Human or agent under supervision |
 | `extraction/25_agent_review/` | Agent review findings (YAML) | Agent |
@@ -48,7 +48,8 @@ Never write directly to `knowledge/`.
 - Invent harmonization rules not grounded in the GMD guidelines source document.
 - Guestimate field values. If a field cannot be determined from the source,
   set it to `null` and explain what is missing in `provenance.notes`.
-- Change the `status` field of any artifact from `active` to anything else.
+- Mark a variable `status: approved` without explicit human approval and
+  promotion into `knowledge/`.
 - Skip the staging folders. Every draft must pass through `20_drafts/` and
   `30_review/` before being promoted to `knowledge/`.
 - Include country-specific information in any file under `knowledge/`. The
@@ -62,6 +63,13 @@ GMD_household_survey_harmonization.md (GMD-hub/GMD-guidelines, main branch)
 
 When a CVS artifact conflicts with the source document, the source document
 wins. Document the conflict in `provenance.notes` and escalate to GPID Team.
+
+## Harmonization eligibility
+
+Foundry and other harmonization agents may use only canonical variable records
+under `knowledge/` whose exact field is `status: approved`. They must ignore
+variables with any other status. Review records, review branches, and staging
+folders are never harmonization inputs.
 
 ## Naming conventions
 

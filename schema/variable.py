@@ -3,7 +3,14 @@
 import re
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, ValidationInfo, field_validator, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    StrictBool,
+    ValidationInfo,
+    field_validator,
+    model_validator,
+)
 
 
 VARIABLE_ID_PATTERN = re.compile(r"^VAR-[a-z][a-z0-9]*$")
@@ -74,9 +81,17 @@ class VariableProvenance(BaseModel):
     source_section: str
     extraction_method: str
     extracted_on: str
-    human_reviewed: Literal[False]
-    reviewer: None = None
+    human_reviewed: StrictBool
+    reviewer: str | None = None
     notes: str | None
+
+    @model_validator(mode="after")
+    def validate_reviewer(self) -> "VariableProvenance":
+        if self.human_reviewed and not (self.reviewer and self.reviewer.strip()):
+            raise ValueError("reviewer is required when human_reviewed is true")
+        if not self.human_reviewed and self.reviewer is not None:
+            raise ValueError("reviewer must be null when human_reviewed is false")
+        return self
 
 
 class VariableDefinition(BaseModel):
@@ -88,7 +103,7 @@ class VariableDefinition(BaseModel):
     module_id: str
     gmd_version: str
     schema_version: str
-    status: Literal["draft"]
+    status: Literal["draft", "approved"]
     tier: int
     unit_of_analysis: str
     mapping_role: Literal["atomic", "derived", "derived_preferred"]
@@ -146,6 +161,11 @@ class VariableDefinition(BaseModel):
 
     @model_validator(mode="after")
     def validate_references(self, info: ValidationInfo) -> "VariableDefinition":
+        if self.status == "approved" and not self.provenance.human_reviewed:
+            raise ValueError("approved status requires human_reviewed provenance")
+        if self.status == "draft" and self.provenance.human_reviewed:
+            raise ValueError("draft status requires unreviewed provenance")
+
         context = info.context or {}
         variable_ids: set[str] = context.get("variable_ids", set())
         parameter_ids: set[str] = context.get("parameter_ids", set())
@@ -155,7 +175,9 @@ class VariableDefinition(BaseModel):
             item.variable_id for item in self.prerequisites
         }
         unknown_variables = referenced_variables - variable_ids
-        allow_unresolved_draft = context.get("allow_unresolved_draft", False)
+        allow_unresolved_draft = (
+            self.status == "draft" and context.get("allow_unresolved_draft", False)
+        )
         if unknown_variables and not allow_unresolved_draft:
             raise ValueError(f"unknown variable IDs: {sorted(unknown_variables)}")
 

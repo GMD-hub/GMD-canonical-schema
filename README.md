@@ -78,10 +78,10 @@ validity window:
 python3 build/compile_bundle.py PER
 ```
 
-The current compiler produces development bundles. It includes every artifact
-under `knowledge/` and does not yet publish an explicit approved-variable
-allowlist. Do not use these bundles for production Foundry harmonization until
-the approved-subset runtime gate described below is implemented.
+The compiler preserves each variable's `status` and can produce mixed
+development bundles. A Foundry ingestion corpus must select only approved
+variables. If Foundry reads the canonical schema directly from GitHub, it must
+check the status before using each variable.
 
 ## Authoring and governance
 
@@ -160,105 +160,50 @@ and no existing approved destination.
 
 ## Releasing an approved subset
 
-The team does not need to approve all 267 records before preparing an initial
-subset. A set of 12-15 variables can enter promotion when each selected
-variable has completed the review-app cycle. Variables outside that set remain
-in the review queue and are not eligible for harmonization.
+The team does not need to approve all 267 records before using an initial
+subset. A set of 12-15 variables can move forward when each selected variable
+has completed the review-app cycle. Variables outside that set remain `draft`
+and Foundry ignores them.
 
-Review-app approval is an approved staging decision. It is not, by itself, a
-canonical or Foundry-ready release. The review app preserves source YAML front
-matter while reviewers edit the human-readable Markdown body. The current
-schemas accept only draft and unreviewed metadata, so this promotion procedure
-is a target contract and is not yet executable end to end. After the approved
-metadata and runtime gate are implemented, the selected subset must complete
-these steps:
+Review-app approval creates an approved staging artifact under
+`extraction/40_approved/`. To make a selected variable available to Foundry:
 
-1. Select one current protected `review-production` head. At that exact commit,
-   require each selected record to remain `approved` and require its active
-   output hash to match its approval event. Never promote from a historical
-   output that was later reopened.
-2. Record each approved variable ID, review-record path and hash, approved-output
-   path and hash, and the exact `review-production` commit.
-3. Reconcile each approved Markdown body with its structured YAML fields. The
-   promoted artifact must use an approved lifecycle state and reviewed
-   provenance accepted by the production schema.
-4. Compute the complete dependency closure. Recursively include `derived_from`
-   and prerequisites; include referenced rules, parameters, modules, applicable
-   country values, and applicable exceptions. Use `derives_to` and
-   `applies_to_variables` as reverse consistency checks, not as permission to
-   harmonize additional variables. Reject unresolved or unreviewed dependencies.
-5. Create a normal feature branch from `main`. Copy and reconcile only the
-   selected approved artifacts into `knowledge/`; do not merge the review data
-   branch.
-6. Update `knowledge/index.md` and record the approved status and version for
-   every promoted artifact.
-7. Immediately before merging, recheck the current `review-production` head.
-   Stop if any selected record was reopened, changed, or lost its active output.
-8. Run schema, provenance, reference, derivation, and country-layer validation,
-   then merge the promotion PR after human review.
-9. Recheck the current `review-production` head immediately before release
-   publication and deployment. Then build from the exact merged `main` commit
-   in a clean detached checkout. The release must contain an explicit
-   `approved_variable_ids` allowlist, only the required approved dependency
-   closure, an artifact inventory with hashes, and a final bundle hash.
-10. Point the Foundry agent to that immutable release and verify one allowed and
-    one disallowed variable before production use.
+1. Reconcile its approved Markdown body with the structured YAML fields.
+2. Create a normal feature branch from `main`; never merge
+   `review-production` into `main`.
+3. Promote the reconciled variable into `knowledge/` with `status: approved`,
+   `provenance.human_reviewed: true`, and the recorded reviewer.
+4. Update `knowledge/index.md` to show the same approved status and version.
+5. Validate the schema and merge the promotion PR after human review.
 
-A variable is ready for Foundry only when it is promoted on `main`, is listed
-in the release's `approved_variable_ids`, is present in the matching runtime
-bundle, and is bound to verified approval and canonical hashes in a typed
-release manifest. Presence in `extraction/20_drafts/`,
-`extraction/30_review/`, `extraction/40_approved/`, or a review branch is not
-enough.
+That is the complete Foundry eligibility rule:
 
-The typed release manifest is the single machine authority. It must bind the
-release ID, merged `main` commit, source `review-production` commit, each
-approved review record and output hash, each promoted canonical path and hash,
-the callable variable IDs, included dependency IDs and hashes, country/year
-scope, and final bundle hash. The release builder must reject dirty worktrees,
-draft or unreviewed artifacts, missing dependencies, undecided blocking
-fallbacks, and unverified country records. The allowlist must be generated from
-verified approval and promotion evidence; it must never be accepted as a
-free-form operator list.
-
-A published release is immutable. A later reopen is prospective: it makes the
-variable ineligible for the next release but does not rewrite an existing
-release. If a reopen addresses a material error, the operator must suspend the
-current release in Foundry immediately and keep it suspended until a reviewed
-replacement or revocation release is deployed.
-
-### Foundry fail-closed instruction
-
-The production harmonization agent is configured in the Microsoft Foundry
-portal, outside this repository. Add the following instruction to that agent
-after the approved-subset runtime release is available:
-
-```text
-Use only the supplied CVS runtime release. You may harmonize a variable only
-when its exact variable_id appears in approved_variable_ids and the matching
-artifact is present in the same release.
-
-If approved_variable_ids is absent, empty, unreadable, or does not contain the
-requested variable_id, stop. Also stop if the matching artifact or dependency
-is missing, unreadable, malformed, unapproved, hash-mismatched, outside the
-release scope, or bound to an unverifiable release commit. State that the
-variable is not approved for harmonization and escalate to the GPID Team. Do
-not infer approval from a file, a review state, prior knowledge, or a similar
-variable.
-
-Never use artifacts from extraction/20_drafts, extraction/30_review,
-extraction/40_approved, review, or review-production as runtime canon. Use only
-the pinned main-branch release and record its commit_hash and variable_id in the
-Harmonization Specification.
+```mermaid
+flowchart TD
+    A[Canonical variable schema in knowledge] --> B{status == approved?}
+    B -->|Yes| C[Foundry may harmonize the variable]
+    B -->|No| D[Foundry ignores the variable]
 ```
 
-This instruction is defense in depth, not the authorization boundary. A
-deterministic guard outside the language model must check the exact requested
-ID against the immutable release manifest before model invocation and reject
-missing, malformed, case-altered, or unlisted IDs. It must also verify output
-provenance after invocation. The release compiler and external guard are
-tracked in the project roadmap and must be completed before the first
-production Foundry harmonization.
+Presence in a draft, review record, review branch, or approved staging folder
+is not sufficient. The canonical variable under `knowledge/` must have the
+exact field:
+
+```yaml
+status: approved
+```
+
+All other status values are ineligible. The production harmonization agent is
+configured in the Microsoft Foundry portal, outside this repository. Its
+instruction must include:
+
+```text
+Use only the canonical variable schema from knowledge/. Before harmonizing a
+variable, read its exact status field. Harmonize it only when status is
+approved. Ignore every variable whose status is missing or has any other value.
+Never use extraction drafts, review records, review branches, or approved
+staging files as canonical harmonization input.
+```
 
 ## Documentation
 
