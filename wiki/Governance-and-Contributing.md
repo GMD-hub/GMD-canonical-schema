@@ -59,9 +59,9 @@ validation workflow.
 The validation workflow checks structural models, country-layer scope and
 windows, representative bundle compilation, and automated tests. It uploads
 the governance reports for reviewers. Report rows are informational, so an
-undecided fallback, coverage gap, unverified value, or overlapping exception
-does not fail CI by itself. Structural failures, failed smoke builds, and failed
-tests do fail CI.
+undecided fallback, coverage gap, or unverified value does not fail CI by
+itself. Overlapping exceptions fail CI when deterministic conflict handling is
+missing. Structural failures, failed smoke builds, and failed tests do fail CI.
 
 Until an administrator enables branch protection and required code-owner
 review, the approval requirements on this page are a convention rather than a

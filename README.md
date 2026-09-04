@@ -41,7 +41,7 @@ more specific, but they never override universal structure.
 | `validation/` | Cross-repository structural and governance checks. |
 | `build/` | Compiler that produces one runtime JSON bundle for a country and optional survey year. |
 | `extraction/` | Staging workflow for turning source guidelines into reviewed CVS artifacts. |
-| `extraction_pipeline/` | Deterministic guideline extraction pipeline (preflight, source resolution, AST parsing, gates, agents, orchestrator). |
+| `extraction_pipeline/` | Deterministic guideline extraction pipeline (preflight, source resolution, AST parsing, gates, agents, orchestrator), plus country input adapters for ISCED/JMP extraction drafts. |
 | `governance/` | Project audits, open questions, decision records, and implementation traceability. |
 | `docs/` | Existing explanatory examples and schema notes. |
 | `wiki/` | Detailed project documentation and operating guidance. |
@@ -61,6 +61,9 @@ source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 python3 validation/validate_country_layer.py
 python3 build/compile_bundle.py PER 2019
+python3 -m extraction_pipeline.country_inputs.cli inspect
+python3 -m extraction_pipeline.country_inputs.cli extract
+python3 -m extraction_pipeline.country_inputs.cli check
 ```
 
 The validator prints reports for undecided fallbacks, country coverage gaps,

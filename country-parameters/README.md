@@ -94,6 +94,12 @@ consumption and is never hand edited. `build/compile_bundle.py` combines the
 whole universal knowledge base with one selected country layer, validates it,
 and records the source commit hash in the generated bundle.
 
+Extraction-stage country input transforms (for example, ISCED and JMP workbook
+extraction) may stage draft parameter contracts under
+`extraction/20_drafts/runs/country-parameters/contracts/` for draft validation.
+These files are not canonical registry entries and do not replace human-owned
+artifacts under `knowledge/parameters/`.
+
 JMP benchmarking estimates that are not used directly in executable
 harmonization logic must be stored outside executable country canon in a
 separate documentation or governance track. Only JMP-derived values used as

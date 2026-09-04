@@ -10,7 +10,8 @@ source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
 
-The project currently depends on Pydantic 2 and PyYAML 6.
+The project currently depends on Pydantic 2, PyYAML 6, pytest, loguru, and
+openpyxl (for country-input workbook extraction paths).
 
 ## Validate the country layer
 
@@ -27,14 +28,14 @@ country folder. It checks:
 - variable derivation cycles and governed reference resolution;
 - rule priorities as integers from 0 through 100;
 - country file identity and strict field schemas;
-- country values against registered integer or mapping shapes;
+- country values against registered integer, mapping, or table row schemas;
 - country exceptions against known variable IDs and ID naming rules;
 - duplicate exception IDs within one country and across the repository;
-- invalid or overlapping parameter validity windows;
+- invalid or overlapping parameter validity windows with selector-aware matching;
 - reversed exception validity windows;
 - country ISO3 values leaked into universal YAML front matter.
 
-It also prints four governance reports:
+It also prints governance reports:
 
 | Report | Meaning |
 |---|---|
@@ -42,9 +43,12 @@ It also prints four governance reports:
 | Coverage gap | Countries with no record for each registered parameter and their optional focal points |
 | Unverified values | Country records whose provenance is not human reviewed |
 | Overlapping exception | Exception pairs that share a variable and an overlapping validity window |
+| Deterministically resolved overlap | Exception pairs that overlap but resolve by `higher_precedence_wins` with distinct precedence |
 
 These reports can contain rows while validation exits successfully. The
 script exits with status 1 when the `Structural failures` section is nonempty.
+Overlapping exceptions without deterministic conflict handling are structural
+failures.
 
 !!! example "Structural failure versus governance report"
   A country record whose mapping omits the required `primary` key is a
@@ -58,6 +62,13 @@ script exits with status 1 when the `Structural failures` section is nonempty.
 
 ```sh
 python3 build/compile_bundle.py PER 2019
+```
+
+Optional selectors can be provided to include only records whose selector
+key-value pairs match the active runtime context:
+
+```sh
+python3 build/compile_bundle.py PER 2019 --selector survey_type=income --selector rural_only=true
 ```
 
 Arguments are an uppercase three-letter ISO3 code and an optional integer

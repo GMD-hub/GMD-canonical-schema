@@ -139,6 +139,17 @@ exception, establish an authoritative source, use the correct ISO3 folder,
 match an existing parameter or variable ID, define non-overlapping validity,
 record provenance, obtain human review, and run repository validation.
 
+## Extraction draft contracts
+
+Country-input extraction flows (for example, ISCED and JMP workbook adapters)
+may stage draft parameter contracts under
+`extraction/20_drafts/runs/country-parameters/contracts/` so draft payloads
+can be validated before promotion.
+
+These staged contracts are implementation scaffolding for draft validation.
+They are not canonical parameter registry entries and never replace governed
+human-owned artifacts under `knowledge/parameters/`.
+
 ## Suggested reading
 
 - **To compare the record contracts:** revisit the
