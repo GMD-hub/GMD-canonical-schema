@@ -26,6 +26,7 @@ class CountryParameterRecord(BaseModel):
     parameter_id: str
     effective_from: int | None
     effective_to: int | None
+    selectors: dict[str, str | int | bool] | None = None
     value: Any
     provenance: CountryValueProvenance
 
@@ -76,6 +77,40 @@ class CountryParameterFile(BaseModel):
         if definition.value_type == "integer":
             if isinstance(value, bool) or not isinstance(value, int):
                 raise ValueError(f"{definition.parameter_id} value must be an integer")
+            return
+
+        if definition.value_type == "table":
+            if not isinstance(value, list):
+                raise ValueError(f"{definition.parameter_id} value must be a list of rows")
+
+            schema = definition.row_schema or {}
+            expected = set(schema.keys())
+            for index, row in enumerate(value):
+                if not isinstance(row, dict):
+                    raise ValueError(
+                        f"{definition.parameter_id} row {index} must be a mapping"
+                    )
+                if set(row.keys()) != expected:
+                    raise ValueError(
+                        f"{definition.parameter_id} row {index} keys must be {sorted(expected)}"
+                    )
+                for key, expected_type in schema.items():
+                    item = row[key]
+                    if expected_type == "integer":
+                        if isinstance(item, bool) or not isinstance(item, int):
+                            raise ValueError(
+                                f"{definition.parameter_id} row {index} field {key} must be an integer"
+                            )
+                    elif expected_type == "string":
+                        if not isinstance(item, str):
+                            raise ValueError(
+                                f"{definition.parameter_id} row {index} field {key} must be a string"
+                            )
+                    elif expected_type == "boolean":
+                        if not isinstance(item, bool):
+                            raise ValueError(
+                                f"{definition.parameter_id} row {index} field {key} must be a boolean"
+                            )
             return
 
         if not isinstance(value, dict):

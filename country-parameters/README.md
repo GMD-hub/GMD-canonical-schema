@@ -18,6 +18,11 @@ variable. Loading is unconditional. The agent then selects records whose
 inclusive validity window contains the survey ID year. A null lower or upper
 bound is open ended.
 
+Records may also declare optional `selectors` for additional disambiguation
+(for example, survey design variants). A record with no selectors applies
+universally within its validity window. When selectors are present, all
+declared selector key-value pairs must match the active run context.
+
 The survey ID year is the calendar year in which survey fieldwork began. A
 survey beginning in December 2025 and ending in November 2026 uses 2025.
 Welfare year is a different concept and is outside this layer.
@@ -28,6 +33,8 @@ A country layer may contain only:
 
 - Parameter value records for IDs defined in `knowledge/parameters/`.
 - Country exception artifacts with condition and action statements.
+- Typed crosswalk rows where the universal parameter registry defines
+   `value_type: table` and a `row_schema`.
 
 It must never redefine value codes, definitions, data types, derivation
 relationships, missing codes, or any other CVS structure. Validation rejects
@@ -55,12 +62,29 @@ Resolution order is:
 Variables declare required parameter IDs in `country_parameters`. This is a
 completeness check, not a routing instruction.
 
+For row-based mappings, each country's parameter record may hold a table of
+typed rows (for example, education level crosswalks or water/sanitation
+crosswalks) when the universal parameter definition explicitly allows it.
+The country layer owns the country-year values; the universal layer owns the
+field contract and allowed row schema.
+
 ## Country exceptions
 
 Exceptions express country-specific conditional logic that cannot be reduced
 to a parameter value. They follow the same IF/THEN discipline as universal
 rules through natural-language `condition` and `action` fields, scoped by
 variable and validity window.
+
+Country exceptions may also include structured condition/action payloads and
+conflict metadata for deterministic runtime behavior:
+
+- `condition_structured` and `action_structured` for machine-readable logic.
+- Optional `selectors` for additional survey-level disambiguation.
+- `conflict_policy` and `precedence` for deterministic overlap resolution.
+
+Overlapping exceptions for the same variable and year are structural failures
+unless conflict handling is deterministic (`higher_precedence_wins` with
+distinct precedence values).
 
 ## Authoring and runtime bundles
 
@@ -69,6 +93,11 @@ author and approve these files. JSON is a derived build artifact for machine
 consumption and is never hand edited. `build/compile_bundle.py` combines the
 whole universal knowledge base with one selected country layer, validates it,
 and records the source commit hash in the generated bundle.
+
+JMP benchmarking estimates that are not used directly in executable
+harmonization logic must be stored outside executable country canon in a
+separate documentation or governance track. Only JMP-derived values used as
+governed parameter or exception inputs belong in this layer.
 
 ## Country layer IDs
 

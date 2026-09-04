@@ -36,6 +36,33 @@ def in_window(record: CountryParameterRecord | CountryExceptionRecord, year: int
     )
 
 
+def selector_matches(
+    record_selectors: dict[str, str | int | bool] | None,
+    active_selectors: dict[str, str | int | bool],
+) -> bool:
+    if not record_selectors:
+        return True
+    for key, expected in record_selectors.items():
+        if key not in active_selectors or active_selectors[key] != expected:
+            return False
+    return True
+
+
+def parse_selector(value: str) -> tuple[str, str | int | bool]:
+    if "=" not in value:
+        raise ValueError("selectors must be KEY=VALUE")
+    key, raw = value.split("=", 1)
+    key = key.strip()
+    raw = raw.strip()
+    if not key:
+        raise ValueError("selector key must not be empty")
+    if raw.lower() in {"true", "false"}:
+        return key, raw.lower() == "true"
+    if raw.isdigit() or (raw.startswith("-") and raw[1:].isdigit()):
+        return key, int(raw)
+    return key, raw
+
+
 def load_generic_artifacts(folder: Path) -> list[dict[str, Any]]:
     artifacts: list[dict[str, Any]] = []
     for path in sorted(folder.rglob("*.md")):
@@ -109,6 +136,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("iso3", help="ISO 3166-1 alpha-3 country code")
     parser.add_argument("survey_id_year", nargs="?", type=int)
+    parser.add_argument(
+        "--selector",
+        action="append",
+        default=[],
+        help="optional record selector in KEY=VALUE form; repeatable",
+    )
     args = parser.parse_args()
     if not re.fullmatch(r"[A-Z]{3}", args.iso3):
         parser.error("iso3 must contain exactly three uppercase letters")
@@ -118,6 +151,15 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     registry: dict[str, ParameterDefinition] = {}
+    active_selectors: dict[str, str | int | bool] = {}
+
+    try:
+        for selector in args.selector:
+            key, parsed = parse_selector(selector)
+            active_selectors[key] = parsed
+    except ValueError as exc:
+        print(f"Bundle compilation failed: {exc}", file=sys.stderr)
+        return 1
 
     try:
         parameters = load_parameter_artifacts(
@@ -147,12 +189,14 @@ def main() -> int:
     selected_parameters = [
         record
         for record in country_parameters.parameters
-        if args.survey_id_year is None or in_window(record, args.survey_id_year)
+        if (args.survey_id_year is None or in_window(record, args.survey_id_year))
+        and selector_matches(record.selectors, active_selectors)
     ]
     selected_exceptions = [
         record
         for record in country_exceptions.exceptions
-        if args.survey_id_year is None or in_window(record, args.survey_id_year)
+        if (args.survey_id_year is None or in_window(record, args.survey_id_year))
+        and selector_matches(record.selectors, active_selectors)
     ]
 
     commit_hash = subprocess.run(
@@ -169,6 +213,7 @@ def main() -> int:
         "commit_hash": commit_hash,
         "country_code": args.iso3,
         "survey_id_year": args.survey_id_year,
+        "selectors": active_selectors,
         "universal": {
             "modules": modules,
             "variables": variables,

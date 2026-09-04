@@ -9,11 +9,16 @@ separate from the canonical wiki and from the governed CVS artifacts.
 |---|---|---|
 | `audits/` | Findings about repository gaps, controls, documentation, tests, or operational risk | Gap audits and follow-up verification reports |
 | `decisions/` | Questions requiring authority, options considered, decisions taken, and their implementation trace | Open decision requests and closed decision records |
+| `benchmarks/` | Non-executable benchmark references for QA and context | JMP comparison tables and benchmark reconciliation notes |
 
 The `wiki/` folder is the maintained operational reference for how the system
 currently behaves. The `knowledge/` and `country-parameters/` folders contain
 governed canonical content. Governance records do not redefine rules, variable
 contracts, derivation relationships, fallback policies, or country values.
+
+`benchmarks/` stores observational reference material only. Benchmark-only
+datasets must not be compiled into runtime bundles and must not be treated as
+prescriptive country canon.
 
 `extraction/30_review/` remains the location for human review notes attached to
 candidate CVS artifacts. This folder records project-level audits and decisions
