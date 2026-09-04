@@ -30,6 +30,10 @@ review-app/tests/testthat/pubkey
 .opencode/shared
 .opencode/skills
 
+.kilo
+.kilo/AGENTS.md
+.kilo/kilo.json
+
 # Compound GPID managed items (junctions + copied file - do not commit)
 .compound-gpid/*.bak
 .compound-gpid/*.tmp
