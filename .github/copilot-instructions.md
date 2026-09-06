@@ -1,4 +1,4 @@
-<!-- compound-gpid:managed -->
+﻿<!-- compound-gpid:managed -->
 <!-- compound-gpid:template — source for copilot-instructions.md, managed by scripts/helpers.ps1.
      Run `cg-update` to regenerate the output file from this template.
      Do not edit .github/copilot-instructions.md directly.
@@ -11,7 +11,7 @@ skills: `.github/skills/`.
 
 ## Project Identity
 
-- **Name**: <project-name>
+- **Name**: GMD Canonical Variable Schema
 - **Type**: <not configured>
 - **Languages**: <not configured>
 - **Review depth**: <not configured>
@@ -36,7 +36,8 @@ skills: `.github/skills/`.
 
 ## Workspace
 
-- **Principal folder**: this one (<project-name>) — Compound GPID is
+- **Principal folder**: this one (GMD Canonical Variable Schema) — Compound GPID is
   active here.
 - For multi-folder workspace details, see `## Workspace Notes` in
   `compound-gpid.context.md` (if it exists).
+
