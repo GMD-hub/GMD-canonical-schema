@@ -1,0 +1,57 @@
+# Declarative binding for the JMP country household file, 2025 release.
+#
+# THIS IS THE ONLY FILE THAT CHANGES WHEN THE JMP TEMPLATE CHANGES.
+# Nothing in the Python hard-codes a sheet name, a column letter or a row number.
+profile: jmp_country_file_2025
+frame: "JMP service ladders (WHO/UNICEF), country file 2025"
+
+identity:
+  # Where the country name and ISO3 live.
+  sheet: [Introduction]
+  country_name_cell: C7
+  iso3_cell: G8
+  language_cell: G4
+  # Fallback if the Introduction sheet is absent or renamed.
+  filename_pattern: 'JMP_(?P<vintage>\d{4})_(?P<iso3>[A-Z]{3})_(?P<name>.+?)_\d+$'
+
+domains:
+  water:
+    sheet: [Water Data, "Water data", Drinking water Data]
+    master: jmp_water_master.yaml
+  sanitation:
+    sheet: [Sanitation Data, "Sanitation data"]
+    master: jmp_sanitation_master.yaml
+
+# Block geometry. Every data source occupies a fixed-width block of columns,
+# repeated across the sheet.
+block:
+  first_column: 2
+  width: 6
+  offsets:                 # relative to the first column of the block
+    definitions: 0         # the country's own denomination
+    classification: 1      # JMP group column
+    category: 2            # JMP sub-category column
+    urban: 3
+    rural: 4
+    total: 5
+  source_code_row: 2
+  source_type_row: 3
+  source_name_offset: 2    # column offset, on source_type_row
+
+# The concordance table inside each block is found by this anchor in the
+# definitions column, never by a fixed row number.
+anchor:
+  concordance_header: ["original denomination"]
+  # The Yes/No block saying which estimates JMP actually took from a source.
+  data_used_header: ["data used for estimates"]
+  facility_type_header: ["facility type estimates"]
+  service_level_header: ["service level estimate"]
+  # Rows after the tree that carry working notes rather than concordance.
+  stop_labels: [Calculations, Estimations, Ratios, Notes]
+
+# Which sources to extract. GMD harmonizes microdata, so this is the default.
+source_types:
+  microdata: ["survey with microdata"]
+  survey: ["survey"]
+  census: ["census"]
+  admin: ["admin", "administrative"]

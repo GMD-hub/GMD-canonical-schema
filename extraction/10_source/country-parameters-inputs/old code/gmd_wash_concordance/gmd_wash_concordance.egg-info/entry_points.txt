@@ -1,0 +1,2 @@
+[console_scripts]
+gmd-wash-concordance = gmd_wash_concordance.cli:main

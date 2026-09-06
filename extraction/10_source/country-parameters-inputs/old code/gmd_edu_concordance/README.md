@@ -1,0 +1,453 @@
+# gmd_edu_concordance — System 8
+
+**UIS "ISCED 2011 Mapping" workbook → GMD country education instruction.**
+
+Pass in one `ISCED_2011_Mapping_{Country}.xlsx`. Get back the cohort-aware
+instruction Systems 10 and 11 read, the derived grade ladder, and the findings
+that decide whether a focal point can sign it.
+
+```
+workbook ──► bind ──► read programmes ──► derive grades & years ──► validate ──► artefacts
+             (profile YAML)                (entrance age + duration)  (E-00…E-16)
+```
+
+## Install and run
+
+```bash
+pip install openpyxl pyyaml
+
+python3 -m gmd_edu_concordance inspect ISCED_2011_Mapping_Nigeria.xlsx
+python3 -m gmd_edu_concordance ladder  ISCED_2011_Mapping_Nigeria.xlsx
+python3 -m gmd_edu_concordance extract ISCED_2011_Mapping_Nigeria.xlsx --out out/
+python3 -m gmd_edu_concordance resolve ISCED_2011_Mapping_Nigeria.xlsx --grade 6 --year 2018
+python3 -m gmd_edu_concordance bulk    incoming/ --out out/
+python3 -m gmd_edu_concordance check   out/                    # re-validate, no workbook
+python3 -m gmd_edu_concordance viewer  out/ --serve          # live review app
+```
+
+Or as a library:
+
+```python
+from gmd_edu_concordance import extract, resolve
+res = extract("ISCED_2011_Mapping_Nigeria.xlsx", out="out/")
+resolve(res["instruction"], grade=6, year_last_in_school=2018)
+```
+
+**Run `inspect` first on any new file.** It prints which sheet and header row
+bound, which source column fed which schema field, the school-year reference
+and the derived structure. If a field does not bind it lists the candidate
+headers in that sheet — add the real string to the profile YAML, no Python
+changes. It writes nothing.
+
+## What the workbook holds, and what it does not
+
+It holds one banner naming the country, one **School Year reference**, and a
+table of national programmes. Per programme: names in both languages, minimum
+entrance requirement, qualification awarded, **theoretical entrance age**,
+**theoretical duration in years**, ISCED 2011 level and code, orientation,
+completion, access, and the three-digit ISCED-P and ISCED-A codes.
+
+It does not hold grades, and it does not hold any structure other than the one
+in force in the reference year. Both are worked out here, and both are marked
+**inferred** — `{value, confidence, evidence}` — so a focal point reviewing a
+draft can see, per field, what was inferred and from what.
+
+### Grades and years come from the duration column
+
+Take the ISCED 1 programme's entrance age as the origin of the ladder. Then
+for any programme:
+
+```
+years_before        = entrance_age − primary_entrance_age
+years_at_completion = years_before + duration
+grades              = years_before + 1  …  years_at_completion
+```
+
+The theoretical duration column is exactly what says **how many grades, and
+how many years, each level holds**:
+
+```
+NGA  structure 6-3-3            VNM  structure 5-4-3
+  ISCED 1  6 yr  grades 1-6       ISCED 1  5 yr  grades 1-5
+  ISCED 2  3 yr  grades 7-9       ISCED 2  4 yr  grades 6-9
+  ISCED 3  3 yr  grades 10-12     ISCED 3  3 yr  grades 10-12
+```
+
+Two things this deliberately does not do. It does not collapse a range: Viet
+Nam's *Professional technical secondary education* runs 3–4 years, so it
+produces grades 10–13 and cumulative years 12–13, and E-07 says the resolver
+needs a rule for the ambiguous years. And it does not put a grade on a
+tertiary programme: ISCED 5–8 carry years within the level and a cumulative
+year count — what `educ_years` needs — but a "grade" there would be an
+invention.
+
+### The workbook is the latest era
+
+One mapping documents one school year, so it yields one era, and that era runs
+to the open end. Its start is inferred from the reference year, and **the
+cohorts before it are a declared gap, never a default**:
+
+```
+grade  6 / left 2018  ->  primary          completed    Primary education
+grade  6 / left 1984  ->  UNRESOLVED       1984 is before 2014, the earliest year this
+                                           version covers. This is escalation ED-01,
+                                           not a fallback to the latest era.
+```
+
+That is what rule E-03 exists to stop. A 2023 survey interviewing a
+seventy-year-old must use the ladder that existed when that person was at
+school, and this package refuses to pretend it has one. Note which year drives
+the answer: the year the person was **last in school**, not the survey year.
+
+If the workbook's own notes name an earlier year in reform language
+("reform in 2013", "prior to 1990"), that is surfaced as a signal and the era
+start moves to it — the only in-file evidence that a second era exists.
+
+## What it writes
+
+Into `out/{ISO3}/`:
+
+| file | for |
+|---|---|
+| `{ISO3}_edu_v1.0.yaml` | the country instruction — S10 mapping, S11 display |
+| `{ISO3}_edu_ladder.json` | grade → ISCED level → canonical, plus years per level — S10 cohort resolution |
+| `{ISO3}_edu_rows.csv` | one flat row per programme, with the derivation evidence — human review |
+| `{ISO3}_edu_findings.json` | rule ids, levels, source rows — the S11 escalation queue |
+| `{ISO3}_edu_binding.json` | what bound where — the control-centre wizard |
+| `{ISO3}_edu_probe.txt` | the instruction answering real questions in plain language |
+| `{ISO3}_edu_view.json` | the viewer bundle |
+
+`bulk` adds `edu_batch_manifest.json` beside them.
+
+The probe file is the one to put in front of a focal point. Nobody should have
+to read YAML to know whether a mapping is right.
+
+One row of the instruction:
+
+```yaml
+rows:
+- era: 1
+  programme: Junior secondary
+  isced: '2'
+  isced_label: ISCED 2 Lower secondary
+  isced_p: '244'
+  isced_a: '244'
+  orientation: general
+  completion: full
+  access: true
+  access_to: ISCED 3
+  entrance_age: {min: 12.0, max: 12.0, unit: years, range: false, raw: '12'}
+  duration_years: {min: 3.0, max: 3.0, unit: years, range: false, raw: '3'}
+  years_in_level:
+    value: '3'
+    confidence: 1.0
+    evidence: "theoretical duration column: '3'"
+  grades:
+    value: 7-9
+    confidence: 0.85
+    evidence: theoretical entrance age '12' minus the ISCED 1 entrance age 6
+              (Primary education), plus theoretical duration '3'
+  years_at_completion: {value: '9', confidence: 0.85, evidence: …}
+  gmd: lower_secondary
+  complete_at: Junior secondary school certificate
+  source_row: 10
+```
+
+## More than one template family, and more than one language
+
+Two workbook families carry an ISCED mapping, and this package reads both:
+
+| profile | sheet | who returns it |
+|---|---|---|
+| `isced_uis_2011_mapping` | the mapping sheet | most countries, via UIS |
+| `uoe_scope_mapping` | `Scope UOE` | several European countries, via UOE / Eurostat |
+
+Which one a file is is decided by **trying to bind it**, not by its name, so a
+new family is a YAML file beside the others rather than a second reader.
+`inspect` prints which profiles were tried and what each did.
+
+### Which sheet, when there is more than one
+
+A returned workbook is rarely one sheet. There is an instructions page, a
+dropdown-list page, sometimes a blank annex left over from the template, and
+somewhere among them the mapping table — and it is not reliably first.
+Reading the first sheet whose header row happens to bind is how the wrong one
+gets read, and that failure is silent: a blank annex carries the same header
+row as the real table, binds every required column, and yields a valid,
+empty instruction.
+
+So **every sheet is scored against every profile** and the best pair wins:
+
+| what counts | why |
+|---|---|
+| do the profile's required columns bind at all | without them the sheet cannot be the table |
+| how many rows parse to a real ISCED level | the strongest signal — an annex has none |
+| how many columns bound | tie-break |
+| does the sheet read as prose | an instructions page is penalised |
+
+`inspect` prints the whole candidate list with each score, and the reader
+warns when the runner-up scores within 10% of the winner rather than choosing
+quietly. `--sheet "Scope UOE"` forces one when you disagree.
+
+Spain's workbook is the real case — three sheets, all of them plausible:
+
+```
+$ python3 -m gmd_edu_concordance inspect ISCED_2011_Mapping_Spain.xlsx
+profile   : uoe_scope_mapping
+sheet     : 'Scope UOE'   header row 1   35 programme row(s)
+
+  3 sheet/profile pair(s) scored; the table is the one whose required columns
+  bind and whose rows parse:
+   -> uoe_scope_mapping   Scope UOE                 35 parsed  17 bound  score 1192
+      uoe_scope_mapping   Quals outside scope UOE    3 parsed   8 bound  score   23  MISSING entrance_age
+      uoe_scope_mapping   Scope ECEC                 0 parsed   6 bound  score    6  MISSING isced_p
+```
+
+*Quals outside scope UOE* is a real table with real programmes on it — it is
+simply not the mapping, and it says so by not carrying a theoretical entrance
+age. No filename or sheet-name rule would have told them apart.
+
+The UOE sheet differs in two ways the profile declares rather than the code
+assuming: the level arrives as the 3-digit ISCED-P code (`100`, `244`, `344`)
+so the level is its first digit, and the school year is a range (`2020/2021`)
+so the reference year is the first of the two.
+
+### Language
+
+The UIS template is issued in several languages. Senegal's is French
+throughout — headers, values and banner. Every header string and every value
+word (*Achèvement complet*, *Oui, au niveau 3 de la CITE*, *Général*) is a
+candidate in the profile YAML, so adding a language means adding candidates
+there and never Python.
+
+The country is found by looking up **every contiguous run of words** in the
+banner against the ISO 3166 table, in any of eight languages — *Cartographie
+de la CITE 2011 de Sénégal* names it last, *Sri Lanka - ISCED 2011 Mapping*
+names it first. A name not in the table returns nothing rather than a guess.
+
+### An age band is not a rung
+
+Spain's UOE sheet gives adult programmes a theoretical starting age of
+`18-65`. Read as a ladder position that produced grades up to 61. A band wider
+than three years is recorded as **off-ladder** with the band as its evidence:
+no grade, and rule E-18 names those programmes, because a cohort in one
+resolves by qualification rather than by grade.
+
+### Nor is a single, exact, late starting age
+
+A band is the obvious case. The harder one is a programme whose entrance age
+is a single precise number that is nevertheless not a rung. The Central
+African Republic's *Formation des conseillers pédagogiques* is ISCED 4 and
+admits at 30, because it is an in-service qualification that requires years of
+teaching first. Read as a ladder position it produced grades 25-26 and a
+national ladder running to grade 26.
+
+Three rules separate those from real rungs, and each writes its reason into
+the row's evidence:
+
+1. **Entry far above the level below.** You enter a level after finishing the
+   one below it, so a programme starting more than three years after the level
+   below finishes is entering from somewhere other than the ladder. Nigeria's
+   IJMB A-level course starts the year senior secondary ends and stays at
+   grades 13-14; a programme starting eleven years later does not.
+2. **Levels settle from the bottom up.** A programme just ruled off the ladder
+   must not then raise the baseline for the level above it. Argentina's
+   *Adults primary education* finishes at year 12 of schooling; counting that
+   as the top of ISCED 1 made adult lower secondary entering at year 12 look
+   perfectly ordinary, and it kept grades 13-14.
+3. **A named adult route is never a rung.** Argentina's *Oriented cycle.
+   Adults secondary education* and Nigeria's IJMB course are numerically
+   identical — both ISCED 3, both entered the year the level below ends — and
+   only the name separates them. The workbook gives the name, in its own
+   language, so the name is read rather than guessed at.
+
+None of this deletes a programme. It stays in `programmes`, with its level,
+its duration and its attainment; what it loses is a claim to a grade it does
+not have.
+
+## The country's own wording
+
+The mapping workbook pairs every substantive column with a national-language
+twin: programme name, minimum entrance requirement, qualification awarded.
+Those twins are the only record of what a programme is actually called where
+it is taught — *Trung học cơ sở*, not *Lower secondary* — and once they are
+dropped nothing downstream can recover them. All three are kept verbatim, per
+row, and the viewer shows them under the English.
+
+The workbook never states which language that is, so the language **name** is
+inferred from the country via the profile's `by_iso3` map and carries that as
+its evidence. A country with no entry gets no hint rather than a guess. Rule
+E-17 warns when a national-language column is bound but empty for every
+programme — that is the country's wording not having been supplied, and it is
+worth knowing before the file is signed.
+
+## Attainment — complete and incomplete, not just the level
+
+`educ_highest` says which level a person reached. It does not say whether they
+finished it, and "reached lower secondary" means two different things. Every
+grade on the ladder now carries an **attainment**:
+
+```
+grade  8  lower_secondary  ->  lower_secondary_incomplete
+grade  9  lower_secondary  ->  lower_secondary_complete     ISCED-A 244
+```
+
+It comes from three things the workbook already holds: the ISCED level, the
+grade's position inside its programme, and the completion column
+(*Full completion*, *Partial completion*, *Insufficient for completion*). Where
+the completion column is empty, the ISCED-A code settles it — it repeats the
+level when the level is completed and drops below it when it is not.
+
+Where nothing settles it, the **bare level** is returned. That is a value in
+its own right, not a synonym for complete, and rule E-19 counts them. Folding
+"unsettled" into "complete" is the kind of thing that looks like data and is
+not.
+
+Sri Lanka is the case that shows why this is per-programme rather than per
+level: grade 11 ends Senior Secondary (O-levels, ISCED-A 343) and grade 13 ends
+Collegiate (A-levels, 344). Both are `upper_secondary_complete`, and grade 12
+is not.
+
+## Versions and schooling eras — a country over time
+
+`concordance_registry.json`, at the root of the output folder, records every
+ingest. For education the important distinction is:
+
+**A second workbook for the same school year is a new version.** MINOR for a
+rewording, MAJOR for a changed grade range, ISCED level, attainment or era
+window — computed from a signature, never declared, so a breaking change cannot
+be called cosmetic to avoid the reruns.
+
+**A second workbook for a different school year is a new era.** A 2014 mapping
+and a 2023 mapping are not two versions of one instruction; they are two eras
+of one country, and a cohort resolves against whichever was in force when that
+person was last in school. The registry keeps both and **closes the window
+between them** — the 2014 era stops at 2022 because a 2023 era exists. That is
+the only way rule E-03's declared gap ever gets closed, and it happens by
+ingesting the earlier mapping rather than by editing anything.
+
+```bash
+python3 -m gmd_edu_concordance registry --out out/ --verbose
+```
+
+## Editing and approving
+
+Both happen in the viewer while it is serving, and both are artefacts:
+`{ISO3}_edu_patches.json` and `{ISO3}_edu_approval.json`.
+
+An edit is a **patch beside the extract**, never a rewrite of it, so the
+instruction stays exactly what the workbook produced and a reviewer's change is
+visible as a change. Era windows are editable — that is how a focal point
+records a reform boundary the workbook does not name. Programme names are not:
+the extract has to stay comparable to the file it came from. Every edit needs a
+reason and a name.
+
+A blocked version cannot be approved, and every warning needs an
+acknowledgement in writing. The approval pins the fingerprint the approver saw.
+
+## The viewer — a review app, not a screenshot
+
+```bash
+# while you are iterating: serves the folder and re-reads it on every request
+python3 -m gmd_edu_concordance viewer out/ --serve --open
+
+# no server: a page that reads whatever folder you point it at
+python3 -m gmd_edu_concordance viewer --picker --out review.html
+
+# a frozen snapshot to send to someone who has neither Python nor the files
+python3 -m gmd_edu_concordance viewer out/ --embed --out review.html
+```
+
+**Serving is the mode to use while working.** The server re-reads the output
+directory on *every* request — nothing is cached and nothing is baked in — so
+rerun the extractor, hit reload, and the new output is there. The folder
+dropdown is the country selector: pick `IND`, or *all folders* to compare
+countries side by side. It binds to loopback only, serves nothing outside the
+directory you named, and refuses any extension that is not an artefact.
+
+**The picker page** carries no data at all. Open it and choose a country
+folder — or drop one anywhere on the page — and the browser reads the files
+directly. Chromium hands over a real directory handle, so *reload* re-reads
+disk there too; elsewhere it falls back to a folder picker.
+
+Every mode has an **Artefacts** tab listing every file the run wrote, readable
+inline. That is the difference between a viewer and a screenshot: what is on
+screen is what is on disk, and you can open the YAML that produced it without
+leaving the page.
+
+Education gets the era card with its inferred window and evidence, the
+programme table with derived grades, years-in-level and cumulative years and
+the national-language names beneath, the grade ladder, and a **working cohort
+resolver**. Water and sanitation get the facility-type table in the workbook's
+own words, the classification tree with every national category attached to
+the subgroup it lands on, a filterable row table with the full chain, and the
+source list with its vintage span. Both get the findings by rule id and the
+provenance of the workbook they came from. Light and dark.
+
+## The standalone validator
+
+```bash
+python3 -m gmd_edu_concordance check out/
+python3 -m gmd_edu_concordance check out/NGA/NGA_edu_v1.0.yaml
+```
+
+`check` loads an emitted instruction and re-runs the same rules with **no
+access to the workbook**. That matters because the first hand edit — a grade
+range corrected, an era window moved, a programme removed — would otherwise
+escape the rules entirely. Exit code 2 when anything blocks.
+
+## Rules
+
+| id | level | rule |
+|---|---|---|
+| E-00 | INFO | extraction summary |
+| E-01 | BLOCK | the country could not be determined |
+| E-02 | BLOCK/WARN | a required column did not bind (BLOCK), an optional one did not (WARN) |
+| E-03 | WARN | cohorts before the era start have no rule — escalate, never default |
+| E-04 | BLOCK | eras overlap |
+| E-05 | WARN | no theoretical entrance age; the programme cannot be placed |
+| E-06 | WARN | no theoretical duration; grades and years in the level are unknown |
+| E-07 | WARN | a duration range makes the grade range and cumulative years ranges too |
+| E-08 | BLOCK | no ISCED 1 programme with an entrance age — grade 1 cannot be placed |
+| E-09 | WARN | several programmes claim one grade; the general track is taken as the main path |
+| E-10 | BLOCK | the grade ladder has a hole |
+| E-11 | WARN | entrance ages are not monotone with the ISCED level |
+| E-12 | INFO | a programme name repeats |
+| E-13 / E-14 | BLOCK | ISCED level or GMD target outside the controlled list |
+| E-15 | WARN | a level with no completion point |
+| E-16 | WARN | the ISCED-P code's first digit disagrees with the level |
+| E-17 | WARN/INFO | a national-language column is bound but empty; what the country's own wording covers |
+| E-18 | WARN | a programme admits across an age band rather than at one rung |
+| E-19 | BLOCK/WARN | an attainment outside the controlled list (BLOCK); completion left unsettled (WARN) |
+| E-20 | BLOCK/WARN | a programme with no name in any language (BLOCK); no English name (WARN) |
+
+`blocked` if any BLOCK fired, `awaiting_review` if any WARN, `clean` otherwise.
+
+## When the template changes
+
+`data/isced_uis_2011_mapping.yaml` is the only file that changes. Header
+candidates, the banner patterns, the ISCED → GMD map, which levels sit on the
+grade ladder, and the completion and orientation vocabularies all live there.
+Header binding runs exact matches first, so a loose candidate on one field can
+never take a column another field names exactly.
+
+## Tests
+
+```bash
+GMD_ISCED_DIR=/path/to/workbooks python3 tests/test_edu.py
+```
+
+91 checks, including that the last grade of a level is complete and the first
+is not, that an unsettled completion never becomes complete, the era arithmetic
+when a second workbook arrives, the refusal to approve a blocked version, that
+a French workbook reads its French values, that the
+UOE family binds to its own profile and takes the level from the ISCED-P code,
+that an age band never becomes a grade, that a non-Latin script survives, that
+grade 1 lands on the ISCED 1 entrance age, that
+years-in-level comes from the duration column, that a pre-era cohort never
+falls through to the latest era, that the non-Latin script survives, that the
+standalone check catches a hand edit, that the mapping table wins over a
+blank annex carrying the same header row, that an in-service entry leaves the
+ladder while a genuine extra rung stays on it, and that the viewer never
+reaches for the network. Workbook tests skip cleanly when no ISCED file is present, so the
+suite runs in CI without shipping country data.
