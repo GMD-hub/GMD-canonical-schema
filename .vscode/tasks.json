@@ -444,6 +444,24 @@
 			"type": "shell",
 			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): refresh tasks configuration'; git status --short --untracked-files=no | Select-Object -First 40",
 			"isBackground": false
+		},
+		{
+			"label": "commit-benchmarks-g-m",
+			"type": "shell",
+			"command": "git add governance/benchmarks/G*.yaml governance/benchmarks/H*.yaml governance/benchmarks/I*.yaml governance/benchmarks/J*.yaml governance/benchmarks/K*.yaml governance/benchmarks/L*.yaml governance/benchmarks/M*.yaml; git commit -m 'chore(benchmarks): refresh JMP benchmark outputs for G-M countries'; git status --short --untracked-files=no | Select-Object -First 40",
+			"isBackground": false
+		},
+		{
+			"label": "commit-benchmarks-n-q",
+			"type": "shell",
+			"command": "git add governance/benchmarks/N*.yaml governance/benchmarks/O*.yaml governance/benchmarks/P*.yaml governance/benchmarks/Q*.yaml; git commit -m 'chore(benchmarks): refresh JMP benchmark outputs for N-Q countries'; git status --short --untracked-files=no | Select-Object -First 40",
+			"isBackground": false
+		},
+		{
+			"label": "commit-final-tasks-tail",
+			"type": "shell",
+			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): sync tasks after benchmark refresh runs'; git status --short --untracked-files=no; git log -6 --oneline",
+			"isBackground": false
 		}
 	]
 }
