@@ -432,6 +432,18 @@
 			"type": "shell",
 			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): add local tasks for country-input workflows'; git status --short --untracked-files=no; git log -1 --oneline",
 			"isBackground": false
+		},
+		{
+			"label": "status-before-new-staging",
+			"type": "shell",
+			"command": "git status --short; git status --short --untracked-files=no; git diff --name-only",
+			"isBackground": false
+		},
+		{
+			"label": "commit-tasks-refresh",
+			"type": "shell",
+			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): refresh tasks configuration'; git status --short --untracked-files=no | Select-Object -First 40",
+			"isBackground": false
 		}
 	]
 }
