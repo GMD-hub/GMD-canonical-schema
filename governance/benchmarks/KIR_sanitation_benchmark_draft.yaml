@@ -1,0 +1,1265 @@
+iso3: KIR
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_KIR_Kiribati_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: KIR
+    name: Kiribati
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_KIR_Kiribati_1.xlsx
+    sha256: 4789336e7ec0cf317bd7017cfae2c484fb40a373cbf82642a78cc5934a93c6d1
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T21:02:21+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 15.087942
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 6.950333
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 20.873152
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 24.648361
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 23.696942
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 25.324746
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 63.980403
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 56.699051
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 69.156882
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 20.525147
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 15.660957
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 23.98321
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 62.184029
+      - domain: Hygiene
+        split: Rural
+        year: '2024'
+        value: 58.578565
+      - domain: Hygiene
+        split: Urban
+        year: '2024'
+        value: 64.747236
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 4.499421
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 2.265662
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 6.087451
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 18.031602
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 7.517614
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 25.506233
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 16.432234
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 34.084954
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 3.882515
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 4.433375
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 3.376745
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 5.184555
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 32.361515
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 49.747742
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 20.001255
+  per_source:
+  - source:
+      code: KIR_2006_HIES
+      year: 2006
+      series: HIES
+      type: Survey with microdata
+      name: Household Income Expenditure Survey
+      column: 20
+      n_rows: 7
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 72.14579
+      rural: 24.58123
+      total: 45.60533
+    - jmp_id: flush_and_pour_flush.to_piped_sewer_system
+      jmp: Flush and pour flush > to piped sewer system
+      level: 1
+      structural: false
+      row: 61
+      national_label: ''
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 16.15419
+      rural: 2.21552
+      total: 8.37658
+    - jmp_id: flush_and_pour_flush.to_septic_tank
+      jmp: Flush and pour flush > to septic tank
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: true
+      gmd: flush_septic
+      rolls_up_to:
+      - Improved
+      - Septic tanks
+      urban: 49.54551
+      rural: 18.08551
+      total: 31.9912
+    - jmp_id: flush_toilets
+      jmp: Flush/toilets
+      level: 0
+      structural: false
+      row: 66
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 72.14579
+      rural: 24.58123
+      total: 45.60533
+    - jmp_id: flush_toilets.to_piped_sewer_system
+      jmp: Flush/toilets > to piped sewer system
+      level: 1
+      structural: false
+      row: 67
+      national_label: Public sewege system
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 16.15419
+      rural: 2.21552
+      total: 8.37658
+    - jmp_id: flush_toilets.to_septic_tank
+      jmp: Flush/toilets > to septic tank
+      level: 1
+      structural: false
+      row: 68
+      national_label: ''
+      improved: true
+      gmd: flush_septic
+      rolls_up_to:
+      - Improved
+      - Septic tanks
+      urban: 49.54551
+      rural: 18.08551
+      total: 31.9912
+    - jmp_id: flush_toilets.private_flush_toilet
+      jmp: Flush/toilets > Private flush/toilet
+      level: 1
+      structural: false
+      row: 72
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 49.54551
+      rural: 18.08551
+      total: 31.9912
+    - jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+      jmp: Flush/toilets > Private flush/toilet > to septic tank
+      level: 2
+      structural: false
+      row: 74
+      national_label: Own flush septic tank
+      improved: true
+      gmd: flush_septic
+      rolls_up_to:
+      - Improved
+      - Septic tanks
+      urban: 49.54551
+      rural: 18.08551
+      total: 31.9912
+    - jmp_id: flush_toilets.public_shared_flush_toilet
+      jmp: Flush/toilets > Public/shared flush/toilet
+      level: 1
+      structural: false
+      row: 78
+      national_label: Shared flush toilet
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 6.44609
+      rural: 4.2802
+      total: 5.23755
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 12.73196
+      rural: 43.19149
+      total: 29.72802
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 12.73196
+      rural: 43.19149
+      total: 29.72802
+    - jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Traditional latrine
+      level: 3
+      structural: false
+      row: 107
+      national_label: Household pit
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 4.0701
+      rural: 22.34061
+      total: 14.26483
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: Closet over sea or water (long drop)
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: 8.66186
+      rural: 20.85088
+      total: 15.46319
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: None
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 13.86101
+      rural: 24.53791
+      total: 19.81859
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 1.26124
+      rural: 7.68938
+      total: 4.84807
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 1.26124
+      rural: 7.68938
+      total: 4.84807
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.00001
+      total: 100.00001
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 74.643355
+        rural: 32.518192
+        total: 51.751407
+      - label: Sewer connection
+        label_local: Sewer connection
+        row: 7
+        urban: 16.15419
+        rural: 2.21552
+        total: 8.37658
+      - label: Septic tanks
+        label_local: Septic tanks
+        row: 8
+        urban: 49.54551
+        rural: 18.08551
+        total: 31.9912
+      - label: Other
+        label_local: Other
+        row: 9
+        urban: 8.943655
+        rural: 12.217162
+        total: 11.383627
+      - label: Open defecation
+        label_local: Open defecation
+        row: 10
+        urban: 13.86101
+        rural: 24.53791
+        total: 19.81859
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: Sewer connection
+        row: 12
+        urban: 16.15419
+        rural: 2.21552
+        total: 8.37658
+      - label: Wastewater enters network
+        label_local: Wastewater enters network
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: Wastewater reaches treatment plant
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Septic tanks
+        row: 15
+        urban: 49.54551
+        rural: 18.08551
+        total: 31.9912
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: Latrines and other improved
+        row: 22
+        urban: 8.943655
+        rural: 12.217162
+        total: 11.383627
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: Treated
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: At wastewater treatment plant
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: At faecal sludge treatment plant
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: Shared
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: Sewer connection
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: Wastewater enters network
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: Wastewater reaches treatment plant
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Septic tanks
+        row: 39
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: Latrines and other improved
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: Treated
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: At wastewater treatment plant
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: At faecal sludge treatment plant
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: Shared
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: Open defecation
+        row: 57
+        urban: 'Yes'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 17
+  - source:
+      code: KIR_2019_MICS
+      year: 2019
+      series: MICS
+      type: Survey with microdata
+      name: Multiple Indicators Cluster Survey
+      column: 98
+      n_rows: 12
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 73.95955
+      rural: 43.59985
+      total: 59.9772
+    - jmp_id: flush_and_pour_flush.to_piped_sewer_system
+      jmp: Flush and pour flush > to piped sewer system
+      level: 1
+      structural: false
+      row: 61
+      national_label: to piped sewer system
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 18.28839
+      rural: 0.12307
+      total: 9.92224
+    - jmp_id: flush_and_pour_flush.to_septic_tank
+      jmp: Flush and pour flush > to septic tank
+      level: 1
+      structural: false
+      row: 62
+      national_label: to septic tank
+      improved: true
+      gmd: flush_septic
+      rolls_up_to:
+      - Improved
+      - Septic tanks
+      urban: 45.53048
+      rural: 21.54063
+      total: 34.4818
+    - jmp_id: flush_and_pour_flush.to_pit
+      jmp: Flush and pour flush > to pit
+      level: 1
+      structural: false
+      row: 63
+      national_label: to pit
+      improved: true
+      gmd: flush_pit
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 7.51759
+      rural: 18.55622
+      total: 12.6015
+    - jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+      jmp: Flush and pour flush > to unknown place/ not sure/DK
+      level: 1
+      structural: false
+      row: 64
+      national_label: to do not know where
+      improved: null
+      gmd: flush_elsewhere
+      rolls_up_to: []
+      urban: 0.77667
+      rural: 0.34233
+      total: 0.57663
+    - jmp_id: flush_and_pour_flush.to_elsewhere
+      jmp: Flush and pour flush > to elsewhere
+      level: 1
+      structural: false
+      row: 65
+      national_label: to open drain
+      improved: false
+      gmd: flush_elsewhere
+      rolls_up_to: []
+      urban: 1.84642
+      rural: 3.0376
+      total: 2.39503
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.57913
+      rural: 7.30522
+      total: 4.75575
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.57913
+      rural: 7.30522
+      total: 4.75575
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.58265
+      rural: 2.88917
+      total: 2.18437
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: Ventilated Improved Pit latrine
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 0.0
+      rural: 0.29384
+      total: 0.13533
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: Pit latrine with slab/covered latrine
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 1.58265
+      rural: 2.59533
+      total: 2.04904
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Pit latrine without slab/open pit
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: 0.90856
+      rural: 4.41605
+      total: 2.52395
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: Hanging toilet/hanging latrine
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: 0.08792
+      rural: 0.0
+      total: 0.04743
+    - jmp_id: composting_toilets
+      jmp: Composting toilets
+      level: 0
+      structural: false
+      row: 128
+      national_label: Composting toilet
+      improved: true
+      gmd: composting
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 0.48359
+      rural: 1.33752
+      total: 0.87687
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: No facility/bush/field/beach
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 22.15709
+      rural: 47.12317
+      total: 33.65538
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.74736
+      rural: 0.63425
+      total: 0.69527
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.74736
+      rural: 0.63425
+      total: 0.69527
+    - jmp_id: dk_missing
+      jmp: DK/missing
+      level: 0
+      structural: true
+      row: 138
+      national_label: No response
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.07327
+      rural: 0.0
+      total: 0.03953
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 99.99999
+      rural: 100.00001
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 74.17937
+        rural: 44.78894
+        total: 60.64341
+      - label: Sewer connection
+        label_local: Sewer connection
+        row: 7
+        urban: 18.28839
+        rural: 0.12307
+        total: 9.92224
+      - label: Septic tanks
+        label_local: Septic tanks
+        row: 8
+        urban: 45.53048
+        rural: 21.54063
+        total: 34.4818
+      - label: Other
+        label_local: Other
+        row: 9
+        urban: 10.3605
+        rural: 23.12524
+        total: 16.23937
+      - label: Open defecation
+        label_local: Open defecation
+        row: 10
+        urban: 22.15709
+        rural: 47.12317
+        total: 33.65538
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: Sewer connection
+        row: 12
+        urban: 18.28839
+        rural: 0.12307
+        total: 9.92224
+      - label: Wastewater enters network
+        label_local: Wastewater enters network
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: Wastewater reaches treatment plant
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Septic tanks
+        row: 15
+        urban: 45.53048
+        rural: 21.54063
+        total: 34.4818
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 17
+        urban: 78.21049
+        rural: 79.81451
+        total: 78.67198
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 18
+        urban: 4.44158
+        rural: 8.66808
+        total: 5.65758
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 19
+        urban: 4.11973
+        rural: 5.1373
+        total: 4.41249
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 20
+        urban: 13.22819
+        rural: 6.38012
+        total: 11.25795
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: Latrines and other improved
+        row: 22
+        urban: 10.3605
+        rural: 23.12524
+        total: 16.23937
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 24
+        urban: 76.14679
+        rural: 86.82108
+        total: 83.29773
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 25
+        urban: 10.39755
+        rural: 5.4409
+        total: 7.07699
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 26
+        urban: 8.10398
+        rural: 6.49198
+        total: 7.02407
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 27
+        urban: 5.35168
+        rural: 1.24604
+        total: 2.60122
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: Treated
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: At wastewater treatment plant
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: At faecal sludge treatment plant
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: Shared
+        row: 32
+        urban: 31.74625
+        rural: 13.63415
+        total: 25.58549
+      - label: Safely managed
+        label_local: Safely managed
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: Sewer connection
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: Wastewater enters network
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: Wastewater reaches treatment plant
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Septic tanks
+        row: 39
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 41
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 42
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 43
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 44
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: Latrines and other improved
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: Contained/stored and treated
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: Not emptied/stored and disposed in situ
+        row: 48
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: Emptied and buried on site
+        row: 49
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: Emptied and discharged locally
+        row: 50
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: Emptied and removed offsite
+        row: 51
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: Delivered to treatment plant
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: Treated
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: At wastewater treatment plant
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: At faecal sludge treatment plant
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: Shared
+        row: 56
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Open defecation
+        label_local: Open defecation
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 19
+  summary:
+    sources: 2
+    sources_with_estimates: 2
+    categories_with_estimates: 36
+    from: 2006
+    to: 2019
+    has_country_ladder: true

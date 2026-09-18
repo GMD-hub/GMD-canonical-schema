@@ -1,0 +1,296 @@
+country_id: CTY-CPV
+country_name: Cabo Verde
+iso3: CPV
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: nascente
+    national_label_en: Nascente
+    national_label_local: All springs
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - source_category_code: poco
+    national_label_en: "Po\xE7o"
+    national_label_local: All wells
+    jmp_classification: Ground water > All wells
+    jmp_id: ground_water.all_wells
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 54
+  - source_category_code: nascente_protegida
+    national_label_en: Nascente protegida
+    national_label_local: Protected spring
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - source_category_code: poco_protegido
+    national_label_en: "Po\xE7o protegido"
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - source_category_code: poco
+    national_label_en: Poco
+    national_label_local: Traditional wells
+    jmp_classification: Ground water > Traditional wells
+    jmp_id: ground_water.traditional_wells
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 62
+  - source_category_code: poco_com_tubo_ou_poco
+    national_label_en: "Po\xE7o com  tubo ou po\xE7o"
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - source_category_code: nascente_desprotegida
+    national_label_en: Nascente desprotegida
+    national_label_local: Unprotected spring
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - source_category_code: poco_desprotegido
+    national_label_en: "Po\xE7o desprotegido"
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: comprado_em_um_carrinho_com_um_pequeno_tanque_ou_tambor
+    national_label_en: Comprado em um carrinho com um pequeno tanque ou tambor
+    national_label_local: Cart with small tank/drum
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - source_category_code: cisterna_publica
+    national_label_en: Cisterna Publica
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - source_category_code: auto_tanque
+    national_label_en: Auto-Tanque
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: autotanque
+    national_label_en: Autotanque
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: comprado_num_camiao_auto_tanque
+    national_label_en: "Comprado num cami\xE3o auto-tanque"
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: outro
+    national_label_en: Outro
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: nao_sabe
+    national_label_en: "N\xE3o sabe"
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: outro
+    national_label_en: Outro
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: agua_engarrafada
+    national_label_en: Agua engarrafada
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: agua_da_chuva_recolhida
+    national_label_en: "\xC1gua da chuva recolhida"
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: cisterna
+    national_label_en: Cisterna
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: cisterna_domiciliaria
+    national_label_en: "Cisterna Domicili\xE1ria"
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: aguas_superficiais_como_rio_represa_lago_lagoa_ribeira
+    national_label_en: "\xC1guas superficiais, como rio, represa, lago, lagoa, ribeira"
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: levada
+    national_label_en: Levada
+    national_label_local: Irrigation channel
+    jmp_classification: Surface water > Irrigation channel
+    jmp_id: surface_water.irrigation_channel
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 98
+  - source_category_code: agua_rede_publica_casa_dos_vizinhos
+    national_label_en: Agua rede publica casa dos vizinhos
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - source_category_code: agua_canalizada_da_rede_publica
+    national_label_en: Agua canalizada da rede publica
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - source_category_code: agua_da_rede_publica
+    national_label_en: "\xC1gua da rede p\xFAblica"
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - source_category_code: agua_canalizada_na_habitacao
+    national_label_en: "\xC1gua canalizada na habita\xE7\xE3o"
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: agua_canalizada_no_quintal_parcela_ou_condominio
+    national_label_en: "\xC1gua canalizada no quintal, parcela ou condominio"
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: chafariz
+    national_label_en: Chafariz
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_CPV_Cabo_Verde_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

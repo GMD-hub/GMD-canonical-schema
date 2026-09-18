@@ -1,0 +1,108 @@
+iso3: CYM
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_CYM_Cayman_Islands_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: CYM
+    name: '#N/A'
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: '#N/A'
+  file:
+    file: JMP_2025_CYM_Cayman_Islands_1.xlsx
+    sha256: 0dca4f5f0bbab4efeffa2698561e6578d4d2f4dc35801818f9984f83fff5d394
+    profile: jmp_country_file_2025
+    language: '#N/A'
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:53:17+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 95.460123
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 95.460123
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 83.244217
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 83.244217
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 0.0
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 0.0
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 10.135998
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 10.135998
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 4.529877
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 4.529877
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 6.619785
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 6.619785
+    - rung: No service
+      row: 35
+      values:
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 0.01
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 0.01
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 0.0
+      - domain: '#N/A'
+        split: '#N/A'
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

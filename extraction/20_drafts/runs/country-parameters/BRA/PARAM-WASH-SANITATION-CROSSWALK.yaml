@@ -1,0 +1,766 @@
+country_id: CTY-BRA
+country_name: Brazil
+iso3: BRA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: direto_para_o_rio_lago_ou_mar
+    national_label_en: Direto para o rio, lago ou mar
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: rio_lago_ou_mar
+    national_label_en: Rio, lago ou mar
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: rede_coletora_de_esgoto_ou_pluvial
+    national_label_en: Rede coletora de esgoto ou pluvial
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: rede_de_esgoto_ou_pluvial
+    national_label_en: Rede de esgoto ou pluvial
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: rede_geral_de_esgoto_ou_pluvial
+    national_label_en: REDE GERAL DE ESGOTO OU PLUVIAL
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: rede_geral_rede_pluvial_ou_fossa_ligada_a_rede
+    national_label_en: Rede geral, rede pluvial ou fossa ligada a rede
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: rede_geral_rede_pluvial_ou_fossa_septica_ligada_a_rede
+    national_label_en: Rede geral, rede pluvial ou fossa septica ligada a rede
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: fossa_septica_nao_ligada_a_rede_coletora_de_esgoto_ou_pluvial
+    national_label_en: Fossa septica nao ligada a rede coletora de esgoto ou pluvial
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: fossa_septica
+    national_label_en: "FOSSA S\xC9PTICA"
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: fossa_septica_ligada_a_rede_coletora_de_esgoto_ou_pluvial
+    national_label_en: Fossa septica ligada a rede coletora de esgoto ou pluvial
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: fossa_septica_nao_ligada_a_rede
+    national_label_en: "Fossa septica nao ligada \xE0 rede"
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: outra_forma_especifique
+    national_label_en: Outra forma (especifique)
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: own_flush_toilet
+    national_label_en: Own Flush Toilet
+    national_label_local: Private flush/toilet
+    jmp_classification: Flush/toilets > Private flush/toilet
+    jmp_id: flush_toilets.private_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 72
+  - source_category_code: private_domestic_connection_to_sewage_system
+    national_label_en: Private domestic connection to sewage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - source_category_code: private_flush_to_septic_tank
+    national_label_en: Private flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: shared_flush_toilet
+    national_label_en: Shared Flush Toilet
+    national_label_local: Public/shared flush/toilet
+    jmp_classification: Flush/toilets > Public/shared flush/toilet
+    jmp_id: flush_toilets.public_shared_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 78
+  - source_category_code: shared_domestic_connection_to_sewage_system
+    national_label_en: Shared domestic connection to sewage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - source_category_code: shared_flush_to_septic_tank
+    national_label_en: Shared flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - source_category_code: esgotamento_sanitario_rede_coletora
+    national_label_en: "Esgotamento sanit\xE1rio/Rede coletora"
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: rede_colectora
+    national_label_en: Rede colectora
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: rede_coletora
+    national_label_en: Rede coletora
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: rede_coletora_de_esgot
+    national_label_en: Rede coletora de esgot
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: rede_coletora_de_esgotos
+    national_label_en: Rede coletora de esgotos
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: rede_esgoto_pluvial
+    national_label_en: Rede esgoto/pluvial
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: sewer_system
+    national_label_en: Sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: esgotamento_sanitario_fossa_septica_nao_ligada_a_rede_coletora
+    national_label_en: "Esgotamento sanit\xE1rio/Fossa s\xE9ptica n\xE3o ligada \xE0\
+      \ rede coletora"
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: fossa_septica_nao_ligada_a_rede_coletora
+    national_label_en: "Fossa s\xE9ptica n\xE3o ligada \xE0 rede coletora"
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: esgotamento_sanitario_fossa_septica_ligada_a_rede_coletora
+    national_label_en: "Esgotamento sanit\xE1rio/ Fossa s\xE9ptica ligada \xE0 rede\
+      \ coletora"
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: fossa_septica
+    national_label_en: Fossa septica
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: fossa_septica_ligada_a_rede_coletora
+    national_label_en: "Fossa s\xE9ptica ligada \xE0 rede coletora"
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: fossa_set
+    national_label_en: Fossa set.
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: septic_tank
+    national_label_en: Septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+    national_label_en: Bucket latrine (where fresh excreta are manually removed)
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: direto_no_rio_mar_lago
+    national_label_en: Direto no rio/mar/lago
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: ditch_or_trench
+    national_label_en: Ditch or trench
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: uncovered_dry_latrine_without_privacy
+    national_label_en: Uncovered dry latrine (without privacy)
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: vala
+    national_label_en: Vala
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: vala_aberta
+    national_label_en: Vala Aberta
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: esgotamento_sanitario_fossa_rudimentar
+    national_label_en: "Esgotamento sanit\xE1rio/ Fossa rudimentar"
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: fossa_nao_ligada_a_rede
+    national_label_en: Fossa nao ligada a rede
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: fossa_nao_ligada_a_rede_fossa_rudimentar
+    national_label_en: Fossa nao ligada a rede+fossa rudimentar
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: fossa_rudimentar
+    national_label_en: Fossa rudimentar
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: fossa_rudimentar_comun
+    national_label_en: Fossa rudimentar/comun
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: fossa_septica_nao_ligada_a_rede_fossa_rudimentar
+    national_label_en: Fossa septica nao ligada a rede+fossa rudimentar
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: rudimentary_pit_or_cesspool
+    national_label_en: Rudimentary pit or cesspool
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: trad_pit_toilet
+    national_label_en: Trad. Pit Toilet
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: private_covered_dry_latrine_with_privacy
+    national_label_en: Private covered dry latrine (with privacy)
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
+      slab/covered latrine
+    jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 114
+  - source_category_code: shared_covered_dry_latrine_with_privacy
+    national_label_en: Shared covered dry latrine (with privacy)
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - source_category_code: vala_aberta_negra
+    national_label_en: Vala aberta/negra
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 124
+  - source_category_code: private_pour_flush_latrine
+    national_label_en: Private pour flush latrine
+    national_label_local: Private pour flush latrine
+    jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
+    jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 91
+  - source_category_code: shared_pour_flush_latrine
+    national_label_en: Shared pour flush latrine
+    national_label_local: Public/shared pour flush latrine
+    jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
+      latrine
+    jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 97
+  - source_category_code: direto_para_o_rio_lago_ou_mar
+    national_label_en: Direto para o rio, lago ou mar
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: nao_tem
+    national_label_en: "N\xC3O TEM"
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: nao_tem_banheiro_ou_sanitario_no_domicilio_ou_na_propriedade
+    national_label_en: Nao tem banheiro ou sanitario no domicilio ou na propriedade
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: nao_tem_sanitario_direto_rio_mar_lago
+    national_label_en: Nao tem sanitario & Direto rio/mar/lago
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: nao_tem_sanitario_exclusivo
+    national_label_en: Nao tem sanitario exclusivo
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: nao_tinham
+    national_label_en: Nao tinham
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: nao_utiliza_sanitario_buraco
+    national_label_en: Nao utiliza sanitario/buraco
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities_open_defecation
+    national_label_en: No facilities (open defecation)
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facility_bush
+    national_label_en: No Facility,Bush
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_sewage_disposal_system
+    national_label_en: No sewage disposal system
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: qualque_lugar
+    national_label_en: Qualque Lugar
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: sem_sanitario_ou_buraco
+    national_label_en: Sem sanitario ou buraco
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: outra
+    national_label_en: Outra
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: outra_forma
+    national_label_en: Outra forma
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: outra_forma_de_escoadouro_do_banheiro_ou_sanitario
+    national_label_en: Outra forma de escoadouro do banheiro ou sanitario
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: outro
+    national_label_en: Outro
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: rio_lago_ou_mar
+    national_label_en: RIO, LAGO OU MAR
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: tem_sanitario_comun
+    national_label_en: Tem sanitario comun
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: outro_escoadouro
+    national_label_en: OUTRO ESCOADOURO
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  - source_category_code: unknown
+    national_label_en: Unknown
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  - source_category_code: utiliza_sanitario_buraco
+    national_label_en: Utiliza sanitario/buraco
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BRA_Brazil_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

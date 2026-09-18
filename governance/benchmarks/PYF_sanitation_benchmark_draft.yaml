@@ -1,0 +1,83 @@
+iso3: PYF
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PYF_French_Polynesia_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: PYF
+    name: "Polyn\xE9sie fran\xE7aise"
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_PYF_French_Polynesia_1.xlsx
+    sha256: a1d6e5f94e3c0de276b16ad05712af14895f5e424c351ecdf8488fb79b3f051a
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:58:03+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 90.448718
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 9.551282
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 97.50989
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 2.49011
+    - rung: No service
+      row: 35
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

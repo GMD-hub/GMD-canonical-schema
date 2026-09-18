@@ -1,0 +1,856 @@
+country_id: CTY-BGR
+country_name: Bulgaria
+iso3: BGR
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Pre-school education
+    national_label_local: "\u041F\u0440\u0435\u0434\u0443\u0447\u0438\u043B\u0438\u0449\
+      \u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435"
+    entry_age: 3
+    duration_years: 4
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Primary stage of basic education
+    national_label_local: "\u041D\u0430\u0447\u0430\u043B\u0435\u043D \u0435\u0442\
+      \u0430\u043F \u043D\u0430 \u043E\u0441\u043D\u043E\u0432\u043D\u043E\u0442\u043E\
+      \ \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 6
+  - national_label_en: Lower secondary stage of basic education
+    national_label_local: "\u041F\u0440\u043E\u0433\u0438\u043C\u043D\u0430\u0437\u0438\
+      \u0430\u043B\u0435\u043D \u0435\u0442\u0430\u043F \u043D\u0430 \u043E\u0441\u043D\
+      \u043E\u0432\u043D\u043E\u0442\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\
+      \u0430\u043D\u0438\u0435"
+    entry_age: 11
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 7
+  - national_label_en: First gymnasium stage of upper secondary general and upper
+      secondary special profile education
+    national_label_local: "\u041F\u044A\u0440\u0432\u0438 \u0433\u0438\u043C\u043D\
+      \u0430\u0437\u0438\u0430\u043B\u0435\u043D \u0435\u0442\u0430\u043F \u043D\u0430\
+      \ \u0441\u0440\u0435\u0434\u043D\u043E \u043E\u0431\u0449\u043E \u0438 \u0441\
+      \u0440\u0435\u0434\u043D\u043E \u043F\u0440\u043E\u0444\u0438\u043B\u0438\u0440\
+      \u0430\u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\
+      \u0435"
+    entry_age: 14
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 8
+  - national_label_en: First gymnasium stage of upper secondary vocational education
+    national_label_local: "\u041F\u044A\u0440\u0432\u0438 \u0433\u0438\u043C\u043D\
+      \u0430\u0437\u0438\u0430\u043B\u0435\u043D \u0435\u0442\u0430\u043F \u043D\u0430\
+      \ \u0441\u0440\u0435\u0434\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\
+      \u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\
+      \u0430\u043D\u0438\u0435"
+    entry_age: 14
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 9
+  - national_label_en: Second gymnasium stage of upper secondary general and upper
+      secondary special profile education
+    national_label_local: "\u0412\u0442\u043E\u0440\u0438 \u0433\u0438\u043C\u043D\
+      \u0430\u0437\u0438\u0430\u043B\u0435\u043D \u0435\u0442\u0430\u043F \u043D\u0430\
+      \ \u0441\u0440\u0435\u0434\u043D\u043E \u043E\u0431\u0449\u043E \u0438 \u0441\
+      \u0440\u0435\u0434\u043D\u043E \u043F\u0440\u043E\u0444\u0438\u043B\u0438\u0440\
+      \u0430\u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\
+      \u0435"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 10
+  - national_label_en: Second  gymnasium stage of upper secondary vocational education
+    national_label_local: "\u0412\u0442\u043E\u0440\u0438 \u0433\u0438\u043C\u043D\
+      \u0430\u0437\u0438\u0430\u043B\u0435\u043D \u0435\u0442\u0430\u043F \u043D\u0430\
+      \ \u0441\u0440\u0435\u0434\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\
+      \u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\
+      \u0430\u043D\u0438\u0435"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 11
+  - national_label_en: General secondary education - not profiled
+    national_label_local: "\u0421\u0440\u0435\u0434\u043D\u043E \u043E\u0431\u0449\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 -\
+      \ \u043D\u0435\u043F\u0440\u043E\u0444\u0438\u043B\u0438\u0440\u0430\u043D\u043E"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 12
+  - national_label_en: General profiled secondary education
+    national_label_local: "\u0421\u0440\u0435\u0434\u043D\u043E \u043E\u0431\u0449\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 -\
+      \ \u043F\u0440\u043E\u0444\u0438\u043B\u0438\u0440\u0430\u043D\u043E"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 13
+  - national_label_en: VET programmes for second level of professional qualification
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438 \u0432\u0442\
+      \u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+  - national_label_en: VET programmes for third  level of professional qualification
+      after 8 Grade
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438 \u0442\u0440\
+      \u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0441\u043B\u0435\u0434 8\
+      \ \u043A\u043B\u0430\u0441"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+  - national_label_en: VET programmes for third level of professional qualification
+      after 7 Grade
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438 \u0442\u0440\
+      \u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F, \u0441\u043B\u0435\u0434 7\
+      \ \u043A\u043B\u0430\u0441"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 16
+  - national_label_en: VET programmes for first level of professional qualification
+      after 7 Grade
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438 \u043F\u044A\
+      \u0440\u0432\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F, \u0441\u043B\u0435\u0434 7\
+      \ \u043A\u043B\u0430\u0441"
+    entry_age: 14
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 17
+  - national_label_en: "Framework programmes A1-\u04108 for initial vocational training\
+      \ with obtaining of first level of professional qualification"
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04101-\u04108 \u0437\u0430 \u043D\u0430\
+      \u0447\u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\
+      \ \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435\
+      \ \u043D\u0430 \u043F\u044A\u0440\u0432\u0430 \u0441\u0442\u0435\u043F\u0435\
+      \u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u044F"
+    entry_age: 14
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 18
+  - national_label_en: Framework programme A9 for initial vocational training with
+      obtaining of first level of professional qualification for pupils under additional
+      state admission plan  learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 A9 \u0437\u0430 \u043D\u0430\u0447\u0430\
+      \u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0441 \u043F\
+      \u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u043F\
+      \u044A\u0440\u0432\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\
+      \u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\
+      \u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0437\u0430\
+      \ \u0443\u0447\u0435\u043D\u0438\u0446\u0438 \u043F\u043E \u0434\u043E\u043F\
+      \u044A\u043B\u043D\u0438\u0442\u0435\u043B\u0435\u043D \u0434\u044A\u0440\u0436\
+      \u0430\u0432\u0435\u043D \u043F\u043B\u0430\u043D-\u043F\u0440\u0438\u0435\u043C\
+      \ \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\u0437\
+      \ \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 19
+  - national_label_en: Framework programme A10 for initial vocational training with
+      obtaining of first level of professional qualification for persons older than
+      16 years
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 A10 \u0437\u0430 \u043D\u0430\u0447\u0430\
+      \u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0441 \u043F\
+      \u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u043F\
+      \u044A\u0440\u0432\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\
+      \u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\
+      \u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0437\u0430\
+      \ \u043B\u0438\u0446\u0430, \u043D\u0430\u0432\u044A\u0440\u0448\u0438\u043B\
+      \u0438 16 \u0433\u043E\u0434\u0438\u043D\u0438"
+    entry_age: 0
+    duration_years: 0
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 20
+  - national_label_en: Framework programme B1-B3 and B7-B8 for initial vocational
+      training with obtaining of second level of professional qualification
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04111-\u04113 \u0438 \u04117-\u04118\
+      \ \u0437\u0430 \u043D\u0430\u0447\u0430\u043B\u043D\u043E \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\
+      \u0447\u0435\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\
+      \u0432\u0430\u043D\u0435 \u043D\u0430 \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\
+      \u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\
+      \u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\
+      \u043A\u0430\u0446\u0438\u044F"
+    entry_age: 14
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 21
+  - national_label_en: Framework programme B4-B6 for initial vocational training with
+      obtaining of second level of professional qualification learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04114-\u04116 \u0437\u0430 \u043D\u0430\
+      \u0447\u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\
+      \ \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435\
+      \ \u043D\u0430 \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\
+      \u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u044F \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\
+      \u0437 \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 14
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 22
+  - national_label_en: Framework programmes B9-B11 for continuing vocational training
+      with obtaining second level of professional qualification for students under
+      additional state admission plan
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04119-\u041111 \u0437\u0430 \u043F\u0440\
+      \u043E\u0434\u044A\u043B\u0436\u0430\u0432\u0430\u0449\u043E \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\
+      \u0447\u0435\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\
+      \u0432\u0430\u043D\u0435 \u043D\u0430 \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\
+      \u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\
+      \u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\
+      \u043A\u0430\u0446\u0438\u044F \u0437\u0430 \u0443\u0447\u0435\u043D\u0438\u0446\
+      \u0438 \u043F\u043E \u0434\u043E\u043F\u044A\u043B\u043D\u0438\u0442\u0435\u043B\
+      \u0435\u043D \u0434\u044A\u0440\u0436\u0430\u0432\u0435\u043D \u043F\u043B\u0430\
+      \u043D-\u043F\u0440\u0438\u0435\u043C"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 23
+  - national_label_en: Framework programme B12 for continuing vocational training
+      with obtaining second level of professional qualification for students under
+      additional admission plan learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041112 \u0437\u0430 \u043F\u0440\u043E\
+      \u0434\u044A\u043B\u0436\u0430\u0432\u0430\u0449\u043E \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\
+      \u0435\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\
+      \u0430\u043D\u0435 \u043D\u0430 \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\
+      \u0430\u0446\u0438\u044F \u0437\u0430 \u0443\u0447\u0435\u043D\u0438\u0446\u0438\
+      \ \u043F\u043E \u0434\u043E\u043F\u044A\u043B\u043D\u0438\u0442\u0435\u043B\u0435\
+      \u043D \u0434\u044A\u0440\u0436\u0430\u0432\u0435\u043D \u043F\u043B\u0430\u043D\
+      -\u043F\u0440\u0438\u0435\u043C \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\
+      \ \u0447\u0440\u0435\u0437 \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 24
+  - national_label_en: Framework programmes B13-B14 for initial vocational training
+      with obtaining second level of professional qualification for persons older
+      than 16 years
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u041113-\u041114 \u0437\u0430 \u043D\u0430\
+      \u0447\u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\
+      \ \u0437\u0430 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435\
+      \ \u043D\u0430 \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\
+      \u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u044F \u0437\u0430 \u043B\u0438\u0446\u0430, \u043D\u0430\u0432\u044A\
+      \u0440\u0448\u0438\u043B\u0438 16 \u0433\u043E\u0434\u0438\u043D\u0438"
+    entry_age: 0
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 25
+  - national_label_en: Framework programme B15 for initial vocational training with
+      obtaining second level of professional qualification for persons older than
+      16 years learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041115 \u0437\u0430 \u043D\u0430\u0447\
+      \u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\
+      \u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u0437\u0430 \u043B\u0438\u0446\u0430, \u043D\u0430\u0432\u044A\u0440\u0448\
+      \u0438\u043B\u0438 16 \u0433\u043E\u0434\u0438\u043D\u0438 \u043E\u0431\u0443\
+      \u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\u0437 \u0440\u0430\u0431\u043E\
+      \u0442\u0430"
+    entry_age: 0
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 26
+  - national_label_en: Framework programmes B16-B17 for initial vocational training
+      with obtaining third level of professional qualification for persons older than
+      16 years
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u041116-\u041117 \u0437\u0430 \u043D\u0430\
+      \u0447\u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\
+      \ \u0437\u0430 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435\
+      \ \u043D\u0430 \u0442\u0440\u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\
+      \u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u044F \u0437\u0430 \u043B\u0438\u0446\u0430, \u043D\u0430\u0432\u044A\
+      \u0440\u0448\u0438\u043B\u0438 16 \u0433\u043E\u0434\u0438\u043D\u0438"
+    entry_age: 0
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 27
+  - national_label_en: Framework programme B18 for initial vocational training with
+      obtaining third level of professional qualification for persons older than 16
+      years learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041118 \u0437\u0430 \u043D\u0430\u0447\
+      \u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\
+      \u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0442\u0440\u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u0437\u0430 \u043B\u0438\u0446\u0430, \u043D\u0430\u0432\u044A\u0440\u0448\
+      \u0438\u043B\u0438 16 \u0433\u043E\u0434\u0438\u043D\u0438 \u043E\u0431\u0443\
+      \u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\u0437 \u0440\u0430\u0431\u043E\
+      \u0442\u0430"
+    entry_age: 0
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 28
+  - national_label_en: Framework programmes V1-V6, V16 and V18 for vocational education
+      with obtaining of second level of professional qualification
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04121-\u04126, \u041216 \u0438 \u0412\
+      18 \u0437\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\
+      \u0435 \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435\
+      \ \u043D\u0430 \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\
+      \u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u044F"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 29
+  - national_label_en: Framework programmes V7-V9 for vocational education with obtaining
+      of third level of professional qualification in art schools/ sport schools/
+      spiritual schools
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04127-\u04129 \u0437\u0430 \u043F\u0440\
+      \u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\
+      \u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\
+      \u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u0442\u0440\u0435\
+      \u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\
+      \u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0432 \u0443\u0447\u0438\
+      \u043B\u0438\u0449\u0430 \u043F\u043E \u0438\u0437\u043A\u0443\u0441\u0442\u0432\
+      \u0430\u0442\u0430/ \u0441\u043F\u043E\u0440\u0442\u043D\u0438\u0442\u0435 \u0443\
+      \u0447\u0438\u043B\u0438\u0449\u0430/ \u0434\u0443\u0445\u043E\u0432\u043D\u0438\
+      \u0442\u0435 \u0443\u0447\u0438\u043B\u0438\u0449\u0430"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 30
+  - national_label_en: Framework programmes V10, V12 and V14 for vocational education
+      with obtaining of second level of professional qualification learning through
+      work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u041210, \u041212 \u0438 \u041214 \u0437\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\u0437\
+      \ \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 31
+  - national_label_en: Framework programme V11, V13 and V15 for vocational education
+      with obtaining of third level of professional qualification learning through
+      work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u041211, \u041213 \u0438 \u041215 \u0437\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0442\u0440\u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\u0437\
+      \ \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 32
+  - national_label_en: Framework programme V17 and V19 for vocational education with
+      obtaining of third level of professional qualification
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041217 \u0438 \u041219 \u0437\u0430 \u043F\
+      \u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\
+      \u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\
+      \u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u0442\u0440\
+      \u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\
+      \u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\
+      \u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 33
+  - national_label_en: Framework programme V20, V24 and V26 for vocational education
+      with obtaining second level of professional qualification for students under
+      additional state admission plan
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041220, \u041224 \u0438 \u041226 \u0437\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u0437\u0430 \u0443\u0447\u0435\u043D\u0438\u0446\u0438 \u043F\u043E \u0434\
+      \u043E\u043F\u044A\u043B\u043D\u0438\u0442\u0435\u043B\u0435\u043D \u0434\u044A\
+      \u0440\u0436\u0430\u0432\u0435\u043D \u043F\u043B\u0430\u043D-\u043F\u0440\u0438\
+      \u0435\u043C"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 34
+  - national_label_en: Framework programme V21, V25 and V27 for vocational education
+      with obtaining third level of professional qualification
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041221, \u041225 \u0438 \u041227 \u0437\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0442\u0440\u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 35
+  - national_label_en: Framework programme V22 for vocational education with obtaining
+      second level of professional qualification for students in additional state
+      admission plan learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041222 \u0437\u0430 \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0440\
+      \u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\
+      \u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u0432\u0442\u043E\u0440\
+      \u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0437\u0430 \u0443\u0447\u0435\
+      \u043D\u0438\u0446\u0438 \u043F\u043E \u0434\u043E\u043F\u044A\u043B\u043D\u0438\
+      \u0442\u0435\u043B\u0435\u043D \u0434\u044A\u0440\u0436\u0430\u0432\u0435\u043D\
+      \ \u043F\u043B\u0430\u043D-\u043F\u0440\u0438\u0435\u043C \u043E\u0431\u0443\
+      \u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\u0437 \u0440\u0430\u0431\u043E\
+      \u0442\u0430"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 36
+  - national_label_en: Framework programme V23 for vocational education with obtaining
+      third level of professional qualification learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041223 \u0437\u0430 \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0440\
+      \u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\
+      \u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u0442\u0440\u0435\u0442\
+      \u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u043E\u0431\u0443\u0447\u0435\
+      \u043D\u0438\u0435 \u0447\u0440\u0435\u0437 \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 37
+  - national_label_en: Framework programmes V28, V32 and V34 for vocational education
+      with obtaining second level of professional qualification for students
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041228, \u041232 \u0438 \u041234 \u0437\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0432\u0442\u043E\u0440\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u0437\u0430 \u0443\u0447\u0435\u043D\u0438\u0446\u0438"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 38
+  - national_label_en: Framework programmes V29, V33 and V35 for vocational education
+      with obtaining third level of professional qualification for students
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041229, \u041233 \u0438 \u041235 \u0437\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0442\u0440\u0435\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\
+      \u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F\
+      \ \u0437\u0430 \u0443\u0447\u0435\u043D\u0438\u0446\u0438"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 39
+  - national_label_en: Framework programme V30 for vocational education with obtaining
+      second level of professional qualification for students, learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041230 \u0437\u0430 \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0440\
+      \u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\
+      \u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u0432\u0442\u043E\u0440\
+      \u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0437\u0430 \u0443\u0447\u0435\
+      \u043D\u0438\u0446\u0438, \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\
+      \u0440\u0435\u0437 \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 40
+  - national_label_en: Framework programme V31 for vocational education with obtaining
+      third level of professional qualification for students, learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u041231 \u0437\u0430 \u043F\u0440\u043E\
+      \u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0440\
+      \u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\
+      \u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430 \u0442\u0440\u0435\u0442\
+      \u0430 \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u0437\u0430 \u0443\u0447\u0435\
+      \u043D\u0438\u0446\u0438, \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\
+      \u0440\u0435\u0437 \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 41
+  - national_label_en: Framework programme G1-G3 for initial vocational training with
+      obtaining fourth level of professional qualification
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0438 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0438 \u04131-\u04133 \u0437\u0430 \u043D\u0430\
+      \u0447\u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435\
+      \ \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435\
+      \ \u043D\u0430 \u0447\u0435\u0442\u0432\u044A\u0440\u0442\u0430 \u0441\u0442\
+      \u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\
+      \u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\
+      \u043A\u0430\u0446\u0438\u044F"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 42
+  - national_label_en: Framework programmes G4 for initial vocational training with
+      obtaining fourth level of professional qualification learning through work
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u04134 \u0437\u0430 \u043D\u0430\u0447\
+      \u0430\u043B\u043D\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\
+      \u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0441\
+      \ \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\u0430\u043D\u0435 \u043D\u0430\
+      \ \u0447\u0435\u0442\u0432\u044A\u0440\u0442\u0430 \u0441\u0442\u0435\u043F\u0435\
+      \u043D \u043D\u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\
+      \u043B\u043D\u0430 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u044F \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0447\u0440\u0435\
+      \u0437 \u0440\u0430\u0431\u043E\u0442\u0430"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 43
+  - national_label_en: Framework programme G5 for continuing vocational training with
+      obtaining fourth level of professional qualification
+    national_label_local: "\u0420\u0430\u043C\u043A\u043E\u0432\u0430 \u043F\u0440\
+      \u043E\u0433\u0440\u0430\u043C\u0430 \u04135 \u0437\u0430 \u043F\u0440\u043E\
+      \u0434\u044A\u043B\u0436\u0430\u0432\u0430\u0449\u043E \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u043E \u043E\u0431\u0443\u0447\
+      \u0435\u043D\u0438\u0435 \u0441 \u043F\u0440\u0438\u0434\u043E\u0431\u0438\u0432\
+      \u0430\u043D\u0435 \u043D\u0430 \u0447\u0435\u0442\u0432\u044A\u0440\u0442\u0430\
+      \ \u0441\u0442\u0435\u043F\u0435\u043D \u043D\u0430 \u043F\u0440\u043E\u0444\
+      \u0435\u0441\u0438\u043E\u043D\u0430\u043B\u043D\u0430 \u043A\u0432\u0430\u043B\
+      \u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F"
+    entry_age: 0
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 44
+  - national_label_en: "Tertiary education \u2013 Professional Bachelor's educational\
+      \ and qualification degree"
+    national_label_local: "\u0412\u0438\u0441\u0448\u0435 \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u2013 \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u0442\u0435\u043B\u043D\u043E-\u043A\u0432\u0430\u043B\u0438\
+      \u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u201E\u043F\u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\
+      \u0430\u043B\u0435\u043D \u0431\u0430\u043A\u0430\u043B\u0430\u0432\u044A\u0440\
+      \u201C"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 45
+  - national_label_en: "Tertiary education \u2013 Bachelor's educational and qualification\
+      \ degree"
+    national_label_local: "\u0412\u0438\u0441\u0448\u0435 \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u2013 \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u0442\u0435\u043B\u043D\u043E-\u043A\u0432\u0430\u043B\u0438\
+      \u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u201E\u0431\u0430\u043A\u0430\u043B\u0430\u0432\u044A\u0440\
+      \u201C"
+    entry_age: 19
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 46
+  - national_label_en: "Tertiary education \u2013 Master's educational and qualification\
+      \ degree after completed secondary education"
+    national_label_local: "\u0412\u0438\u0441\u0448\u0435 \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u2013 \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u0442\u0435\u043B\u043D\u043E-\u043A\u0432\u0430\u043B\u0438\
+      \u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u201E\u043C\u0430\u0433\u0438\u0441\u0442\u044A\u0440\u201C\
+      \ \u0441\u043B\u0435\u0434 \u0437\u0430\u0432\u044A\u0440\u0448\u0435\u043D\u043E\
+      \ \u0441\u0440\u0435\u0434\u043D\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\
+      \u0430\u043D\u0438\u0435"
+    entry_age: 19
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 47
+  - national_label_en: "Tertiary education \u2013 Master's educational and qualification\
+      \ degree after a Bachelor degree"
+    national_label_local: "\u0412\u0438\u0441\u0448\u0435 \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u2013 \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u0442\u0435\u043B\u043D\u043E-\u043A\u0432\u0430\u043B\u0438\
+      \u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u201E\u043C\u0430\u0433\u0438\u0441\u0442\u044A\u0440\u201C\
+      \ \u0441\u043B\u0435\u0434 \u0441\u0442\u0435\u043F\u0435\u043D \u201E\u0431\
+      \u0430\u043A\u0430\u043B\u0430\u0432\u044A\u0440\u201C"
+    entry_age: 23
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 48
+  - national_label_en: "Tertiary education \u2013 Master's educational and qualification\
+      \ degree after a Professional Bachelor degree"
+    national_label_local: "\u0412\u0438\u0441\u0448\u0435 \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u2013 \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u0442\u0435\u043B\u043D\u043E-\u043A\u0432\u0430\u043B\u0438\
+      \u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u201E\u043C\u0430\u0433\u0438\u0441\u0442\u044A\u0440\u201C\
+      \ \u0441\u043B\u0435\u0434 \u0441\u0442\u0435\u043F\u0435\u043D \u201E\u043F\
+      \u0440\u043E\u0444\u0435\u0441\u0438\u043E\u043D\u0430\u043B\u0435\u043D \u0431\
+      \u0430\u043A\u0430\u043B\u0430\u0432\u044A\u0440\u201C"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 49
+  - national_label_en: Doctor's educational and scientific degree (PhD)
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u043D\u0430 \u0438 \u043D\u0430\u0443\u0447\u043D\u0430 \u0441\u0442\u0435\
+      \u043F\u0435\u043D \u201E\u0434\u043E\u043A\u0442\u043E\u0440\u201C"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 50
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Bulgaria.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

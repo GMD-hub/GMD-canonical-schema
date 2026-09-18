@@ -1,0 +1,167 @@
+iso3: DEU
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_DEU_Germany_0.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: DEU
+    name: Germany
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_DEU_Germany_0.xlsx
+    sha256: 22a0d7ec7f7a619f1c8af835a8446b73f1d80af35e1182f8f89879575cfa5d50
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:53:38+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 99.917298
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 99.639118
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 99.996237
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 96.765221
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 91.263427
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 98.326515
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.082702
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.360882
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.003763
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 2.461729
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 7.728508
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.967128
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.77305
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 1.008065
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.706357
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

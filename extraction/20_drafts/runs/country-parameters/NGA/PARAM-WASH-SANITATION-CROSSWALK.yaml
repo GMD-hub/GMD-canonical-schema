@@ -1,0 +1,1549 @@
+country_id: CTY-NGA
+country_name: Nigeria
+iso3: NGA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: composting_toilet
+    national_label_en: Composting toilet
+    national_label_local: Composting toilets
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: composting_toilet_twin_pit_with_slab
+    national_label_en: 'Composting toilet: twin pit with slab'
+    national_label_local: Composting toilets
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: composting_toilets
+    national_label_en: Composting toilets
+    national_label_local: Composting toilets
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: flush_pour_flush_flush_to_open_drain
+    national_label_en: 'FLUSH / POUR FLUSH: FLUSH TO OPEN DRAIN'
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: flush_to_open_drain_somewhere_else
+    national_label_en: flush to open drain/somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: flush_to_somewhere_else
+    national_label_en: Flush to somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: flush_pour_flush_flush_to_open_drain
+    national_label_en: Flush/pour flush - flush to open drain
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: chasse_d_eau_evacuation_aux_eaux_usees
+    national_label_en: Chasse d'eau evacuation aux eaux usees
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+    national_label_en: 'FLUSH / POUR FLUSH: FLUSH TO PIPED SEWER SYSTEM'
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_to_piped_sewage_system
+    national_label_en: Flush to piped sewage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_to_sewage
+    national_label_en: Flush to sewage
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_to_sewer
+    national_label_en: Flush to sewer
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+    national_label_en: Flush/pour flush - flush to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+    national_label_en: 'FLUSH / POUR FLUSH: FLUSH TO PIT LATRINE'
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+    national_label_en: Flush/pour flush - flush to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: flushed_to_pit_latrine
+    national_label_en: flushed to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: chasse_d_eau_evacuation_en_fosse_septique
+    national_label_en: Chasse d'eau evacuation en fosse septique
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: flush_pour_flush_flush_to_septic_tank
+    national_label_en: 'FLUSH / POUR FLUSH: FLUSH TO SEPTIC TANK'
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: flush_to_septic
+    national_label_en: Flush to septic
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: flush_pour_flush_flush_to_septic_tank
+    national_label_en: Flush/pour flush - flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: flush_pour_flush_flush_to_dk_where
+    national_label_en: 'FLUSH / POUR FLUSH: FLUSH TO DK WHERE'
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_to_don_t_know_where
+    national_label_en: Flush to don't know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_to_unknown_place_not_sure_dk_where
+    national_label_en: Flush to unknown place / Not sure / DK where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_to_unknown_place_not_sure
+    national_label_en: flush to unknown place/not sure
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_to_unknown_place_not_sure_dont_know_where
+    national_label_en: Flush to unknown place/not sure/dont know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_don_t_know_where
+    national_label_en: flush, don't know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_pour_flush_flush_to_don_t_know_where
+    national_label_en: Flush/pour flush - flush to don?t know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush
+    national_label_en: Flush
+    national_label_local: Flush/toilets
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - source_category_code: flush_or_pour_flush_to_piped_sewer_system_septic_tank_pit_latrine_dk
+    national_label_en: Flush or pour flush to piped sewer system, septic tank, pit
+      latrine/DK
+    national_label_local: Flush/toilets
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - source_category_code: flush_toilet
+    national_label_en: Flush toilet
+    national_label_local: Flush/toilets
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - source_category_code: own_water_closet
+    national_label_en: Own water closet
+    national_label_local: Private flush/toilet
+    jmp_classification: Flush/toilets > Private flush/toilet
+    jmp_id: flush_toilets.private_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 72
+  - source_category_code: flush_to_sewage_not_shared
+    national_label_en: Flush To Sewage, not shared
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - source_category_code: flush_to_septic_tank_not_shared
+    national_label_en: Flush To Septic Tank, not shared
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: shared_flush_toilet_w_c
+    national_label_en: Shared flush toilet (W.C.)
+    national_label_local: Public/shared flush/toilet
+    jmp_classification: Flush/toilets > Public/shared flush/toilet
+    jmp_id: flush_toilets.public_shared_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 78
+  - source_category_code: flush_to_sewage_shared
+    national_label_en: Flush To Sewage, shared
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - source_category_code: flush_to_septic_tank_shared
+    national_label_en: Flush To Septic Tank, shared
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - source_category_code: flush_or_pour_flush_to_elsewhere
+    national_label_en: Flush or pour flush to elsewhere
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: flush_to_somewhere_else
+    national_label_en: Flush to somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: to_elsewhere
+    national_label_en: to elsewhere
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: flush_or_pour_flush_to_piped_sewer_system
+    national_label_en: Flush or pour flush to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: flush_to_piped_sewer
+    national_label_en: flush to piped sewer
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: flush_to_sewage
+    national_label_en: flush to sewage
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: flush_or_pour_flush_to_pit
+    national_label_en: Flush or pour flush to pit
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: flush_to_pit_latrine
+    national_label_en: flush to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: flush_or_pour_flush_to_septic_tank
+    national_label_en: Flush or pour flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: flush_or_pour_flush_to_unknown_place_not_sure_dk
+    national_label_en: Flush or pour flush to unknown place/ not sure/DK
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: flush_to_unknown_place
+    national_label_en: flush to unknown place
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: flush_to_unknown_place_not_sure_dk_where
+    national_label_en: Flush to unknown place/not sure/DK where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: flush_don_t_know_where
+    national_label_en: Flush, don't know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: bucket
+    national_label_en: Bucket
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: bucket_latrine
+    national_label_en: Bucket latrine
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: bucket_toilet
+    national_label_en: Bucket toilet
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: pail_or_bucket
+    national_label_en: Pail or bucket
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: pail_bucket
+    national_label_en: pail/bucket
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: hanging_latrine_hanging_toilet
+    national_label_en: hanging latrine/hanging toilet
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hanging_toilet_or_latrine
+    national_label_en: hanging toilet or latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hanging_toilet_hanging_latrine
+    national_label_en: Hanging toilet, Hanging latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hanging_toilet_hanging_latrine
+    national_label_en: Hanging toilet/ hanging latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hanging_toilet_hanging_latrine
+    national_label_en: Hanging toilet/hanging latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hanging_toilet_latrine
+    national_label_en: Hanging toilet/latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: toilet_on_water
+    national_label_en: Toilet on water
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: toilet_over_water
+    national_label_en: Toilet over water
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: covered_pit_latrine
+    national_label_en: Covered pit latrine
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: dry_pit_latrine_pit_latrine_with_slab
+    national_label_en: 'Dry pit latrine: pit latrine with slab'
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: latrine_a_fosse_couverte
+    national_label_en: "Latrine a\_ fosse couverte"
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine with slab
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: pit_latrine_with_slab_covered_latrine
+    national_label_en: Pit latrine with slab/covered latrine
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: dry_pit_latrine_pit_latrine_without_slab_open_pit
+    national_label_en: 'Dry pit latrine: pit latrine without slab/open pit'
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: open_pit_latrine_no_slab
+    national_label_en: open pit latrine (no slab)
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: pit_latrine_w_o_slab_open_pit
+    national_label_en: Pit latrine w/o slab/open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab / Open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: pit_latrine_without_slab
+    national_label_en: Pit latrine without slab/
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab/open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: uncovered_pit_latrine
+    national_label_en: Uncovered pit latrine
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: covered_pit_latrine
+    national_label_en: covered pit latrine
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: latrine_a_fosse_non_couverte
+    national_label_en: "Latrine a\_ fosse non couverte"
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: pit
+    national_label_en: Pit
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: traditional_pit_latrine
+    national_label_en: Traditional pit latrine
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: traditional_pit_toilet
+    national_label_en: Traditional pit toilet
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: pit_latrine_ventilated_improved_pit_vip
+    national_label_en: Pit latrine - ventilated improved pit (VIP)
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: v_i_p_latrine
+    national_label_en: v.i.p latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: v_i_p_latrine
+    national_label_en: V.I.P. latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: ventilated_improved_pit_vip
+    national_label_en: Ventilated improved pit (vip)
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: ventilated_improved_pit_latrine
+    national_label_en: Ventilated Improved pit latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: ventilated_improved_pit_latrine_vip
+    national_label_en: Ventilated Improved Pit latrine (VIP)
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: ventiliated_improved_latrine
+    national_label_en: Ventiliated improved  latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: vip
+    national_label_en: VIP
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: vip_latrine
+    national_label_en: VIP latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: pail_bucket_not_shared
+    national_label_en: Pail/Bucket, not shared
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.private_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 118
+  - source_category_code: toilet_on_water_not_shared
+    national_label_en: Toilet On Water, not shared
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.private_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 117
+  - source_category_code: uncovered_pit_latrine_not_shared
+    national_label_en: Uncovered Pit Latrine, not shared
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
+      slab/open pit
+    jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 116
+  - source_category_code: covered_pit_latrine_not_shared
+    national_label_en: Covered Pit Latrine, not shared
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
+    jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 115
+  - source_category_code: v_i_p_latrine_not_shared
+    national_label_en: V.I.P Latrine, not shared
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 113
+  - source_category_code: bucket
+    national_label_en: BUCKET
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 126
+  - source_category_code: bucket_toilet
+    national_label_en: bucket toilet
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 126
+  - source_category_code: pail_bucket_shared
+    national_label_en: Pail/Bucket, shared
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 126
+  - source_category_code: recipient_seau
+    national_label_en: Recipient / Seau
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 126
+  - source_category_code: hanging_toilet_hanging_latrine
+    national_label_en: HANGING TOILET / HANGING LATRINE
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
+      toilet/hanging latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 125
+  - source_category_code: hanging_toilet_latrine
+    national_label_en: hanging toilet/latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
+      toilet/hanging latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 125
+  - source_category_code: toilet_on_water_shared
+    national_label_en: Toilet On Water, shared
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
+      toilet/hanging latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 125
+  - source_category_code: latrines_communautaires
+    national_label_en: Latrines communautaires
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - source_category_code: pit_latrine_pit_latrine_with_slab
+    national_label_en: 'PIT LATRINE: PIT LATRINE WITH SLAB'
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
+    national_label_en: 'PIT LATRINE: PIT LATRINE WITHOUT SLAB / OPEN PIT'
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 124
+  - source_category_code: uncovered_pit_latrine_shared
+    national_label_en: Uncovered Pit Latrine, shared
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: true
+    source_row: 124
+  - source_category_code: covered_pit_latrine_shared
+    national_label_en: Covered Pit Latrine, shared
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - source_category_code: pit_latrine_ventilated_improved_pit_latrine
+    national_label_en: 'PIT LATRINE: VENTILATED IMPROVED PIT LATRINE'
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
+      Improved Pit latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 121
+  - source_category_code: v_i_p_latrine_shared
+    national_label_en: V.I.P Latrine, shared
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
+      Improved Pit latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 121
+  - source_category_code: aucun_plein_air
+    national_label_en: Aucun (plein air)
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: bush_field_river
+    national_label_en: Bush/field/river
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities
+    national_label_en: No facilities
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities_or_bush_or_field
+    national_label_en: No facilities or bush or field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities_bush_or_field
+    national_label_en: No facilities, bush, or field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facility
+    national_label_en: No facility
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facility_bush_field
+    national_label_en: NO FACILITY / BUSH / FIELD
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facility_bush_field
+    national_label_en: No facility, bush, field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facility_bush_field
+    national_label_en: No facility/bush/field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facility_bush_field_river
+    national_label_en: No facility/bush/field/river
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_latrine
+    national_label_en: No latrine
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_main_facility
+    national_label_en: No main facility
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_toilet_field_forest
+    national_label_en: No toilet/field/forest
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: non_pas_disponible
+    national_label_en: Non, pas disponible
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: none
+    national_label_en: None
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: none_field_bush_water_or_other
+    national_label_en: None (field, bush, water) or Other
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: none_fac
+    national_label_en: None Fac
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: open_defecation_no_facility_bush_field
+    national_label_en: Open defecation (no facility, bush, field)
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: improved
+    national_label_en: Improved
+    national_label_local: Other
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: other_composting_toilet
+    national_label_en: Other composting toilet
+    national_label_local: Other
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: twin_pit_with_slab
+    national_label_en: twin pit with slab
+    national_label_local: Other
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: container_based_sanitation
+    national_label_en: Container based sanitation
+    national_label_local: Other
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 133
+  - source_category_code: autre_precisez
+    national_label_en: Autre, precisez
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: composting_toilet_twin_pit_without_slab
+    national_label_en: 'Composting toilet: twin pit without slab'
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other_specify
+    national_label_en: other (specify)
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other_type_of_sanitation
+    national_label_en: Other type of sanitation
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
+    national_label_en: Other unimproved (we don't know the type of facilities)
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other_specify
+    national_label_en: Other(specify)
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: twin_pit_without_slab
+    national_label_en: twin pit without slab
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: flush_to_open_drain
+    national_label_en: Flush to open drain
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  - source_category_code: other_specify
+    national_label_en: other-specify
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  - source_category_code: toilet_on_water
+    national_label_en: toilet on water
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NGA_Nigeria_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

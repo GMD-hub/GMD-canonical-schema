@@ -1,0 +1,87 @@
+iso3: MNP
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MNP_Northern_Mariana_Islands_2.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: MNP
+    name: Northern Mariana Islands
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_MNP_Northern_Mariana_Islands_2.xlsx
+    sha256: 8c8f43af432edde83e374e3fc9648eacf07be36a5f4b0b2bc9ebdf6129f7128e
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:53:16+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 81.454545
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 18.545455
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 99.758579
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.081793
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.159628
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 3.672313
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

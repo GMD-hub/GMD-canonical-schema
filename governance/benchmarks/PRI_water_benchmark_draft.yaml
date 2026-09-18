@@ -1,0 +1,2407 @@
+iso3: PRI
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PRI_Puerto_Rico_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: PRI
+    name: Puerto Rico
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: Spanish
+  file:
+    file: JMP_2025_PRI_Puerto_Rico_1.xlsx
+    sha256: 3b6e15b8bead0ed38509bb6bfab10655e3ee01237a1e2340446669562ad69716
+    profile: jmp_country_file_2025
+    language: Spanish
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:57:03+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Agua para consumo
+        split: Total
+        year: '2024'
+        value: 98.940262
+      - domain: Saneamiento
+        split: Total
+        year: '2024'
+        value: 32.509161
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Agua para consumo
+        split: Total
+        year: '2024'
+        value: 1.059738
+      - domain: Saneamiento
+        split: Total
+        year: '2024'
+        value: 67.490839
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Agua para consumo
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Saneamiento
+        split: Total
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Agua para consumo
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Saneamiento
+        split: Total
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Agua para consumo
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Saneamiento
+        split: Total
+        year: '2024'
+        value: 0.0
+  per_source:
+  - source:
+      code: PRI_2008_ACS
+      year: 2008
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 20
+      n_rows: 0
+    categories: []
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 0
+  - source:
+      code: PRI_2009_ACS
+      year: 2009
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 26
+      n_rows: 0
+    categories: []
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 0
+  - source:
+      code: PRI_2010_ACS
+      year: 2010
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 32
+      n_rows: 0
+    categories: []
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 0
+  - source:
+      code: PRI_2011_ACS
+      year: 2011
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 50
+      n_rows: 0
+    categories: []
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 0
+  - source:
+      code: PRI_2012_ACS
+      year: 2012
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 62
+      n_rows: 0
+    categories: []
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 0
+  - source:
+      code: PRI_2013_ACS
+      year: 2013
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 74
+      n_rows: 2
+    categories:
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 98.9445
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Running water
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 98.9445
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 1.0555
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Without running water
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 1.0555
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: 99.47225
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: 98.9445
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: 0.52775
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: 99.46945
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 5
+  - source:
+      code: PRI_2014_ACS
+      year: 2014
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 86
+      n_rows: 2
+    categories:
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.10529
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Running water
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.10529
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.89471
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Without running water
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.89471
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: 99.552645
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: 99.10529
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: 0.447355
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: 99.550635
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 5
+  - source:
+      code: PRI_2015_ACS
+      year: 2015
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 98
+      n_rows: 2
+    categories:
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.13356
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Running water
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.13356
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.86644
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Without running water
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.86644
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: 99.56678
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: 99.13356
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: 0.43322
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: 99.564895
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 5
+  - source:
+      code: PRI_2016_ACS
+      year: 2016
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 104
+      n_rows: 2
+    categories:
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.10414
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Running water
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.10414
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.89586
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Without running water
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.89586
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: 99.55207
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: 99.10414
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: 0.44793
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: 99.550055
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 5
+  - source:
+      code: PRI_2017_ACS
+      year: 2017
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 110
+      n_rows: 2
+    categories:
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 98.93811
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Running water
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 98.93811
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 1.06189
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Without running water
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 1.06189
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: 99.469055
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: 98.93811
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: 0.530945
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: 99.466221
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 5
+  - source:
+      code: PRI_2018_ACS
+      year: 2018
+      series: ACS
+      type: Survey with microdata
+      name: American Community Survey
+      column: 122
+      n_rows: 2
+    categories:
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.09117
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Running water
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: 99.09117
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.90883
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Without running water
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.90883
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 6
+        urban: null
+        rural: null
+        total: 99.545585
+      - label: All piped
+        label_local: Toda entubada
+        row: 7
+        urban: null
+        rural: null
+        total: 99.09117
+      - label: Non-piped
+        label_local: Non entubada
+        row: 8
+        urban: null
+        rural: null
+        total: 0.454415
+      - label: Piped on premises
+        label_local: Conexiones domiciliarias
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Surface water
+        label_local: Agua superficial
+        row: 10
+        urban: null
+        rural: null
+        total: null
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: In situ
+        row: 13
+        urban: null
+        rural: null
+        total: 99.543511
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Disponibilidad
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Suficiente
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: La mayor parte del tiempo
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuo
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Calidad
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbiano
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoruro
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: "Ars\xE9nico"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Otro
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Gestionado de manera segura
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Mejorado
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: All piped
+        label_local: Toda entubada
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Accessibility
+        label_local: Accesibilidad
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: In situ
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Within 30 minutes
+        label_local: En 30 minutos
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Disponibilidad
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Calidad
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Agua superficial
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 5
+  summary:
+    sources: 11
+    sources_with_estimates: 6
+    categories_with_estimates: 30
+    from: 2008
+    to: 2018
+    has_country_ladder: true

@@ -1,0 +1,76 @@
+iso3: BRN
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BRN_Brunei_Darussalam_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: BRN
+    name: Brunei Darussalam
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_BRN_Brunei_Darussalam_1.xlsx
+    sha256: fe4f1ac4752e16f20e04e09a733d5761af2c4768c19d8088f6d6dbf08a8f9cc7
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T21:02:20+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 100.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 100.0
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

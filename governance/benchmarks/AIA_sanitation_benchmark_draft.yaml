@@ -1,0 +1,108 @@
+iso3: AIA
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_AIA_Anguilla_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: AIA
+    name: Anguilla
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_AIA_Anguilla_1.xlsx
+    sha256: 5203d9548e63c0352e60ca0f0e2df72df0067406a3c2351ab55a505a9c8b27f8
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:56:41+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 97.482274
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 97.482274
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 96.702162
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 96.702162
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 2.377922
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 2.377922
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 2.517726
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 2.517726
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 0.377916
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 0.377916
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 0.542
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 0.542
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

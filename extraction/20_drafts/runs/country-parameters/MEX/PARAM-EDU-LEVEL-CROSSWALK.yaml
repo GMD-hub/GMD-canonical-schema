@@ -1,0 +1,127 @@
+country_id: CTY-MEX
+country_name: Mexico
+iso3: MEX
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Pre-primary Education
+    national_label_local: "Educaci\xF3n Preescolar"
+    entry_age: 3
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+  - national_label_en: Primary Education
+    national_label_local: "Educaci\xF3n Primaria"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 7
+  - national_label_en: Lower Secondary Education
+    national_label_local: "Educaci\xF3n Secundaria"
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 8
+  - national_label_en: Job Training
+    national_label_local: "Capacitaci\xF3n para el Trabajo"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 9
+  - national_label_en: Upper Secondary Education (General Programs)
+    national_label_local: "Bachillerato General, Bachillerato por Cooperaci\xF3n,\
+      \ Bachillerato Pedag\xF3gico, Bachillerato de Arte"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 10
+  - national_label_en: Upper Secondary (combined General and Technical Programs)
+    national_label_local: "Bachillerato Tecnol\xF3gico, Profesional T\xE9cnico Bachiller"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 11
+  - national_label_en: Upper Secondary (Vocational or Technical Programs)
+    national_label_local: "Profesional T\xE9cnico"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 12
+  - national_label_en: Technical Professional Education (Technological Institute Program)
+    national_label_local: "T\xE9cnico Superior"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+  - national_label_en: "Teacher's College (Bachelor\xB4s Degree Program)"
+    national_label_local: "Educaci\xF3n Normal Licenciatura"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: "Master\xB4s Degree Program (Postgraduate Studies) (long)"
+    national_label_local: "Maestr\xEDa"
+    entry_age: 23
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Specialisation Program (Postgraduate Studies) (short)
+    national_label_local: "Especializaci\xF3n"
+    entry_age: 23
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Mexico.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

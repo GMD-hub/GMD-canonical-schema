@@ -1,0 +1,148 @@
+country_id: CTY-UGA
+country_name: Uganda
+iso3: UGA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Early childhood education (pre-primary)
+    national_label_local: Early childhood education (pre-primary)
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Primary
+    national_label_local: Primary
+    entry_age: 6
+    duration_years: 7
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+  - national_label_en: Lower secondary (O' level)
+    national_label_local: Lower secondary (O' level)
+    entry_age: 13
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+  - national_label_en: Post-primary, (vocational)
+    national_label_local: Post-primary, (vocational)
+    entry_age: 13
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: Upper secondary (A' level)
+    national_label_local: Upper secondary (A' level)
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: Upper secondary (other, e.g. Business, Technical Vocational
+      Education and Training (BTVET) and Primary Teachers Colleges programmes)
+    national_label_local: Upper secondary (other, e.g. Business, Technical Vocational
+      Education and Training (BTVET) and Primary Teachers Colleges programmes)
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Diploma programmes (After UACE)
+    national_label_local: Diploma programmes (After UACE)
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+  - national_label_en: Diploma programmes (After certificate 2)
+    national_label_local: Diploma programmes (After certificate 2)
+    entry_age: 19
+    duration_years: 3
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: Bachelor's degree programme
+    national_label_local: Bachelor's degree programme
+    entry_age: 19
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: long Bachelor's degree programme
+    national_label_local: Long Bachelor's degree programme
+    entry_age: 19
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Postgraduate studies
+    national_label_local: Postgraduate studies
+    entry_age: 22
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Master's degree
+    national_label_local: Master's degree
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Doctoral studies
+    national_label_local: Doctoral studies
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Uganda.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

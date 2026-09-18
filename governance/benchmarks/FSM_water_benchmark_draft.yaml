@@ -1,0 +1,65 @@
+iso3: FSM
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_FSM_Micronesia_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: FSM
+    name: Micronesia (Federated States of)
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_FSM_Micronesia_1.xlsx
+    sha256: faef00bcae012d6a8adb17a37b28ca3780500d0be4942bedabf034fc224cb62e
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:55:57+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2020'
+        value: 89.881954
+      - domain: Sanitation
+        split: Total*
+        year: '2020'
+        value: 90.453901
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2020'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2020'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2020'
+        value: 10.118046
+      - domain: Sanitation
+        split: Total*
+        year: '2020'
+        value: 9.546099
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

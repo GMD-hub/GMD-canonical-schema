@@ -1,0 +1,119 @@
+iso3: MAF
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MAF_Saint_Martin_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: MAF
+    name: "Saint-Martin (partie fran\xE7aise)"
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_MAF_Saint_Martin_1.xlsx
+    sha256: 6fe486e6342f26e3bbfb93e21a2915da5ca7b6478860f1a8c8506849def20aa6
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:51:04+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 96.625481
+      - domain: Eau
+        split: Urbain
+        year: '2024'
+        value: 96.625481
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 3.297457
+      - domain: Eau
+        split: Urbain
+        year: '2024'
+        value: 3.297457
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 100.0
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 100.0
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Urbain
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.077062
+      - domain: Eau
+        split: Urbain
+        year: '2024'
+        value: 0.077062
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Urbain
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

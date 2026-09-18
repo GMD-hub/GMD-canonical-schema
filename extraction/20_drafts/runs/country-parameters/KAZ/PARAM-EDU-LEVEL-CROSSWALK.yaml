@@ -1,0 +1,208 @@
+country_id: CTY-KAZ
+country_name: Kazakhstan
+iso3: KAZ
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Early childhood education and training
+    national_label_local: "\u041C\u0435\u043A\u0442\u0435\u043F\u043A\u0435 \u0434\
+      \u0435\u0439\u0456\u043D\u0433\u0456 \u0442\u04D9\u0440\u0431\u0438\u0435 \u043C\
+      \u0435\u043D \u043E\u049B\u044B\u0442\u0443"
+    entry_age: 1
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Pre-primary education
+    national_label_local: "\u041C\u0435\u043A\u0442\u0435\u043F\u043A\u0435 \u0434\
+      \u0435\u0439\u0456\u043D\u0433\u0456 \u0442\u04D9\u0440\u0431\u0438\u0435 \u043C\
+      \u0435\u043D \u043E\u049B\u044B\u0442\u0443"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: Primary education
+    national_label_local: "\u0411\u0430\u0441\u0442\u0430\u0443\u044B\u0448 \u0431\
+      \u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443"
+    entry_age: 6
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+  - national_label_en: Lower secondary education
+    national_label_local: "\u041D\u0435\u0433\u0456\u0437\u0433\u0456 \u043E\u0440\
+      \u0442\u0430 \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443"
+    entry_age: 10
+    duration_years: 5
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: Upper secondary general education
+    national_label_local: "\u0416\u0430\u043B\u043F\u044B \u043E\u0440\u0442\u0430\
+      \ \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: Technical and vocational education for training in mass professions
+      (first stage of the program)
+    national_label_local: "\u0422\u0435\u0445\u043D\u0438\u043A\u0430\u043B\u044B\u049B\
+      \ \u0436\u04D9\u043D\u0435 \u043A\u04D9\u0441\u0456\u043F\u0442\u0456\u043A\
+      \ \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443\u0434\u0435 \u0436\
+      \u0430\u043B\u043F\u044B \u043C\u0430\u043C\u0430\u043D\u0434\u044B\u049B\u0442\
+      \u0430\u0440 \u0431\u043E\u0439\u044B\u043D\u0448\u0430 \u043A\u0430\u0434\u0440\
+      \u043B\u0430\u0440 \u0434\u0430\u0439\u044B\u043D\u0434\u0430\u0443 (\u0431\u0430\
+      \u0493\u0434\u0430\u0440\u043B\u0430\u043C\u0430\u043D\u044B\u04A3 \u0431\u0456\
+      \u0440\u0456\u043D\u0448\u0456 \u043A\u0435\u0437\u0435\u04A3\u0456)"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Technical and vocational education for the training of mid-level
+      specialists (first stage of the program)
+    national_label_local: "\u0422\u0435\u0445\u043D\u0438\u043A\u0430\u043B\u044B\u049B\
+      \ \u0436\u04D9\u043D\u0435 \u043A\u04D9\u0441\u0456\u043F\u0442\u0456\u043A\
+      \ \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443 \u0431\u043E\u0439\
+      \u044B\u043D\u0448\u0430 \u043E\u0440\u0442\u0430 \u0431\u0443\u044B\u043D \u043C\
+      \u0430\u043C\u0430\u043D\u0434\u0430\u0440\u044B\u043D \u0434\u0430\u0439\u044B\
+      \u043D\u0434\u0430\u0443 (\u0431\u0430\u0493\u0434\u0430\u0440\u043B\u0430\u043C\
+      \u0430\u043D\u044B\u04A3 \u0431\u0456\u0440\u0456\u043D\u0448\u0456 \u043A\u0435\
+      \u0437\u0435\u04A3\u0456)"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: Technical and vocational education for training in mass professions
+      (second stage of the program)
+    national_label_local: "\u0422\u0435\u0445\u043D\u0438\u043A\u0430\u043B\u044B\u049B\
+      \ \u0436\u04D9\u043D\u0435 \u043A\u04D9\u0441\u0456\u043F\u0442\u0456\u043A\
+      \ \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443\u0434\u0435 \u0436\
+      \u0430\u043B\u043F\u044B \u043C\u0430\u043C\u0430\u043D\u0434\u044B\u049B\u0442\
+      \u0430\u0440 \u0431\u043E\u0439\u044B\u043D\u0448\u0430 \u043A\u0430\u0434\u0440\
+      \u043B\u0430\u0440 \u0434\u0430\u0439\u044B\u043D\u0434\u0430\u0443 (\u0431\u0430\
+      \u0493\u0434\u0430\u0440\u043B\u0430\u043C\u0430\u043D\u044B\u04A3 \u0435\u043A\
+      \u0456\u043D\u0448\u0456 \u043A\u0435\u0437\u0435\u04A3\u0456)"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: Technical and vocational education for the training of mid-level
+      specialists (second stage of the program)
+    national_label_local: "\u0422\u0435\u0445\u043D\u0438\u043A\u0430\u043B\u044B\u049B\
+      \ \u0436\u04D9\u043D\u0435 \u043A\u04D9\u0441\u0456\u043F\u0442\u0456\u043A\
+      \ \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443 \u0431\u043E\u0439\
+      \u044B\u043D\u0448\u0430 \u043E\u0440\u0442\u0430 \u0431\u0443\u044B\u043D \u043C\
+      \u0430\u043C\u0430\u043D\u0434\u0430\u0440\u044B\u043D \u0434\u0430\u0439\u044B\
+      \u043D\u0434\u0430\u0443 (\u0431\u0430\u0493\u0434\u0430\u0440\u043B\u0430\u043C\
+      \u0430\u043D\u044B\u04A3 \u0435\u043A\u0456\u043D\u0448\u0456 \u043A\u0435\u0437\
+      \u0435\u04A3\u0456)"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: Higher education, Bachelor's
+    national_label_local: "\u0416\u043E\u0493\u0430\u0440\u044B \u0431\u0456\u043B\
+      \u0456\u043C \u0431\u0435\u0440\u0443, \u0431\u0430\u043A\u0430\u043B\u0430\u0432\
+      \u0440"
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Postgraduate education, Master's
+    national_label_local: "\u0416\u043E\u0493\u0430\u0440\u044B \u0431\u0456\u043B\
+      \u0456\u043C\u043D\u0435\u043D \u043A\u0435\u0439\u0456\u043D\u0433\u0456 \u0431\
+      \u0456\u043B\u0456\u043C, \u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\
+      \u0443\u0440\u0430"
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Medical Education (basic medical education + internship)
+    national_label_local: "\u041C\u0435\u0434\u0438\u0446\u0438\u043D\u0430\u043B\u044B\
+      \u049B \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443 (\u043D\u0435\
+      \u0433\u0456\u0437\u0433\u0456 \u043C\u0435\u0434\u0438\u0446\u0438\u043D\u0430\
+      \u043B\u044B\u049B \u0431\u0456\u043B\u0456\u043C + \u0438\u043D\u0442\u0435\
+      \u0440\u043D\u0430\u0442\u0443\u0440\u0430)"
+    entry_age: 17
+    duration_years: 7
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Medical education - residency programme
+    national_label_local: "\u041C\u0435\u0434\u0438\u0446\u0438\u043D\u0430\u043B\u044B\
+      \u049B \u0431\u0456\u043B\u0456\u043C \u0431\u0435\u0440\u0443 - \u0440\u0435\
+      \u0437\u0438\u0434\u0435\u043D\u0442\u0443\u0440\u0430"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: "Postgraduate education - \u0420h.D."
+    national_label_local: "\u0416\u043E\u0493\u0430\u0440\u044B \u0431\u0456\u043B\
+      \u0456\u043C\u043D\u0435\u043D \u043A\u0435\u0439\u0456\u043D\u0433\u0456 \u0431\
+      \u0456\u043B\u0456\u043C -  \u0420h.D."
+    entry_age: 23
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Kazakhstan.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

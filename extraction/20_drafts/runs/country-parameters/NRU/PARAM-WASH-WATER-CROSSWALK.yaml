@@ -1,0 +1,106 @@
+country_id: CTY-NRU
+country_name: Nauru
+iso3: NRU
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - source_category_code: tanker_truck_desalination
+    national_label_en: Tanker truck/desalination
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - source_category_code: community_tank
+    national_label_en: Community tank
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 104
+  - source_category_code: other
+    national_label_en: other
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: rainwater
+    national_label_en: Rainwater
+    national_label_local: Rainwater
+    jmp_classification: Rainwater
+    jmp_id: rainwater
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 86
+  - source_category_code: piped_to_neighbour
+    national_label_en: Piped to neighbour
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - source_category_code: piped_water_into_dwelling
+    national_label_en: Piped water into dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: piped_water_to_yard_plot
+    national_label_en: Piped water to yard/plot
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NRU_Nauru_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,266 @@
+country_id: CTY-BTN
+country_name: Bhutan
+iso3: BTN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: protected_spring
+    national_label_en: Protected spring
+    national_label_local: Protected spring
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - source_category_code: protected_dug_well
+    national_label_en: Protected dug well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - source_category_code: tube_well_borehole
+    national_label_en: Tube well, borehole
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - source_category_code: unprotected_spring
+    national_label_en: Unprotected spring
+    national_label_local: Unprotected spring
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - source_category_code: cart_with_small_tank_drum
+    national_label_en: Cart with small tank/drum
+    national_label_local: Cart with small tank/drum
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - source_category_code: other_improved
+    national_label_en: Other improved
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - source_category_code: tanker_truck
+    national_label_en: Tanker truck
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: covered_cistern_tank_rainwater
+    national_label_en: Covered cistern/tank (Rainwater)
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: rain_water_collection_covered_reservoir
+    national_label_en: Rain water collection (covered reservoir)
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: rain_water_collection_uncovered_reservoir
+    national_label_en: Rain water collection (uncovered reservoir)
+    national_label_local: Uncovered cistern/tank
+    jmp_classification: Rainwater > Uncovered cistern/tank
+    jmp_id: rainwater.uncovered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 88
+  - source_category_code: uncovered_cistern_tank_rainwater
+    national_label_en: Uncovered cistern/tank (Rainwater)
+    national_label_local: Uncovered cistern/tank
+    jmp_classification: Rainwater > Uncovered cistern/tank
+    jmp_id: rainwater.uncovered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 88
+  - source_category_code: surface_water
+    national_label_en: Surface water
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: irrigation_channel
+    national_label_en: Irrigation channel
+    national_label_local: Irrigation channel
+    jmp_classification: Surface water > Irrigation channel
+    jmp_id: surface_water.irrigation_channel
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 98
+  - source_category_code: pond
+    national_label_en: Pond
+    national_label_local: Pond
+    jmp_classification: Surface water > Pond
+    jmp_id: surface_water.pond
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 96
+  - source_category_code: river
+    national_label_en: River
+    national_label_local: River
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - source_category_code: stream
+    national_label_en: Stream
+    national_label_local: Stream
+    jmp_classification: Surface water > Stream
+    jmp_id: surface_water.stream
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 97
+  - source_category_code: other_piped_water
+    national_label_en: Other, piped water
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - source_category_code: piped_in_dwelling
+    national_label_en: Piped in dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: piped_water_into_dwelling
+    national_label_en: Piped water into dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: pipe_in_compound_but_outside_the_dwelling
+    national_label_en: Pipe in compound but outside the dwelling
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: piped_water_to_yard_plot
+    national_label_en: Piped water to yard/plot
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: public_tap_standpipe
+    national_label_en: Public tap, standpipe
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BTN_Bhutan_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

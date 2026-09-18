@@ -1,0 +1,1444 @@
+country_id: CTY-MEX
+country_name: "M\xE9xico"
+iso3: MEX
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: composting_toilet
+    national_label_en: composting toilet
+    national_label_local: Letrinas de compostaje
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: excusado_de_compostaje
+    national_label_en: Excusado de compostaje
+    national_label_local: Letrinas de compostaje
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: composting_toilet_not_shared
+    national_label_en: composting toilet - not shared
+    national_label_local: Letrinas de compostaje (privado)
+    jmp_classification: Composting toilets > Composting toilet (private)
+    jmp_id: composting_toilets.composting_toilet_private
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 129
+  - source_category_code: conectado_a_una_tuberia_que_va_a_dar_a_un_rio_lago_o_mar_connectado_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta
+    national_label_en: "Conectado a una tuber\xEDa que va a dar a un r\xEDo, lago\
+      \ o mar + Connectado a una tuber\xEDa que va a dar a una barranca o grieta"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: conectado_a_una_tuberia_que_va_dar_a_un_rio_lago_o_mar
+    national_label_en: conectado a una tuberia que va dar a un rio, lago o mar
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: connected_to_pipes_that_go_into_a_ravine_or_creek_pipes_that_go_into_a_river_lake_or_sea
+    national_label_en: Connected to pipes that go into a ravine or creek + Pipes that
+      go into a river, lake or sea
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: descarga_a_otra_parte
+    national_label_en: Descarga a otra parte
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: descarga_a_tuberia_que_va_a_dar_a_una_barranca_o_grieta_rio_lago_o_mar
+    national_label_en: "Descarga a tuber\xEDa que va a dar a una barranca o grieta/r\xED\
+      o, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: excusado_conectado_a_una_tuberia_que_va_dar_a_un_rio_lago_o_mar
+    national_label_en: Excusado conectado a una tuberia que va dar a un rio, lago
+      o mar
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: excusado_retrete_o_sanita_con_descarga_a_una_tuberia_que_va_a_dar_a_un_rio_lago_o_mar
+    national_label_en: "Excusado, retrete o sanita con descarga a una tuber\xEDa que\
+      \ va a dar a un r\xEDo, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: excusado_letrina_conectado_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_un_rio_lago_o_mar
+    national_label_en: 'Excusado/letrina: conectado a una tuberia que va a dar a una
+      barranca o grieta, un rio, lago o mar'
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: excusado_retrete_sanitario_letrina_u_hoyo_negro_conectado_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_o_un_rio_lago_o_mar
+    national_label_en: "Excusado/retrete/sanitario(letrina u hoyo negro): Conectado\
+      \ a una tuber\xEDa que va a dar a una barranca o grieta o un rio, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: flush_pour_to_other_location
+    national_label_en: flush/pour to other location
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: taza_de_bano_excusado_sanitario_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_rio_o_mar
+    national_label_en: "Taza de ba\xF1o (excusado, sanitario): una tuber\xEDa que\
+      \ va a dar a una barranca o grieta +, r\xEDo o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: taza_de_bano_excusado_sanitario_una_tuberia_que_va_a_dar_a_una_barranca_grieta_rio_o_mar
+    national_label_en: "Taza de ba\xF1o (excusado, sanitario): una tuber\xEDa que\
+      \ va a dar a una barranca, grieta, r\xEDo o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: taza_de_bano_excusado_sanitario_una_tuberia_que_va_a_dar_a_una_barranca_grieta_rio_o_mar_una_tuberia_que_va_a_dar_a_un_rio_lago_o_mar
+    national_label_en: "Taza de ba\xF1o (excusado, sanitario): una tuber\xEDa que\
+      \ va a dar a una barranca, grieta, r\xEDo o mar + una tuber\xEDa que va a dar\
+      \ a un r\xEDo, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: tiene_conexion_de_agua
+    national_label_en: "tiene conexi\xF3n de agua"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: tiene_servicio_sanitario_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grietaa_o_rio_lago_o_mar
+    national_label_en: "Tiene servicio sanitario: a una tuber\xEDa que va a dar a\
+      \ una barranca o grietaa o r\xEDo, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: conectado_a_la_red_publica
+    national_label_en: "Conectado a la red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: drainage_or_sewage_connected_to_the_public_system
+    national_label_en: Drainage or sewage connected to the public system
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: excusado_conectado_a_la_red_publica
+    national_label_en: Excusado conectado a la red publica
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: excusado_conectado_al_alcantarillado
+    national_label_en: Excusado conectado al alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: excusado_retrete_o_sanita_con_descarga_a_la_red_publica
+    national_label_en: Excusado, retrete o sanita con descarga a la red publica
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: excusado_letrina_conectado_a_la_red_publica
+    national_label_en: 'Excusado/letrina: conectado a la red publica'
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: excusado_retrete_sanitario_letrina_u_hoyo_negro_conectado_a_la_red_publica
+    national_label_en: "Excusado/retrete/sanitario(letrina u hoyo negro): Conectado\
+      \ a la red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_pour_to_piped_sewage_system
+    national_label_en: flush/pour to piped sewage system
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: red_publica
+    national_label_en: Red publica
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: taza_de_bano_excusado_sanitario_la_red_publica
+    national_label_en: "Taza de ba\xF1o (excusado, sanitario): la red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: tiene_servicio_sanitario_a_la_red_publica
+    national_label_en: 'Tiene servicio sanitario: a la red publica'
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: flush_pour_to_pit_latrine
+    national_label_en: flush/pour to pit latrine
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: letrina_pozo_negro_hoyo
+    national_label_en: Letrina (pozo negro, hoyo)
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: conectado_a_una_fosa_septica
+    national_label_en: "Conectado a una fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: conectado_a_una_fosa_septica_o_tanque_septico_biodigestor
+    national_label_en: conectado a una fosa septica o tanque septico (biodigestor)
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: connected_to_a_septic_tank
+    national_label_en: Connected to a septic tank
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: excusado_conectado_a_tanque_septico
+    national_label_en: Excusado conectado a tanque septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: excusado_conectado_a_una_fosa_septica
+    national_label_en: Excusado conectado a una fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: excusado_retrete_o_sanita_con_descarga_a_fosa_septica
+    national_label_en: Excusado, retrete o sanita con descarga a fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: excusado_letrina_conectado_a_una_fosa_septica
+    national_label_en: 'Excusado/letrina: conectado a una fosa septica'
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: excusado_retrete_sanitario_letrina_u_hoyo_negro_conectado_a_una_fosa_septica_biodigestor
+    national_label_en: "Excusado/retrete/sanitario(letrina u hoyo negro): Conectado\
+      \ a una fosa s\xE9ptica (biodigestor)"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: flush_pour_to_septic_tank
+    national_label_en: flush/pour to septic tank
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: fosa_septica
+    national_label_en: Fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: taza_de_bano_excusado_sanitario_una_fosa_septica
+    national_label_en: "Taza de ba\xF1o (excusado, sanitario): una fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: tiene_servicio_sanitario_una_fosa_septica_o_tanque_septico_biodigestor
+    national_label_en: "Tiene servicio sanitario: una fosa s\xE9ptica o tanque s\xE9\
+      ptico (biodigestor)"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: descarga_a_sitio_desconocido_no_esta_seguro_donde_ns_donde
+    national_label_en: Descarga a sitio desconocido / no esta seguro donde / NS donde
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: excusado_retrete_o_sanita_con_descarga_a_ns
+    national_label_en: Excusado, retrete o sanita con descarga a  NS
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: excusado_retrete_sanitario_letrina_u_hoyo_negro_no_especificado
+    national_label_en: Excusado/retrete/sanitario(letrina u hoyo negro) no especificado
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: flush_pour_to_unknown
+    national_label_en: flush/pour to unknown
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: excusado
+    national_label_en: Excusado
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico"
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - source_category_code: conectado_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_o_un_rio_lago_o_mar
+    national_label_en: "Conectado a una tuber\xEDa que va a dar a una barranca o grieta\
+      \ o un rio lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: excusado_letrina_conectado_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_o_un_rio_lago_o_mar
+    national_label_en: "Excusado/letrina: Conectado a una tuber\xEDa que va a dar\
+      \ a una barranca o grieta o un rio lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: taza_de_bano_excusado_sanitario_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_o_a_un_rio_lago_o_mar
+    national_label_en: 'Taza de bano (excusado, sanitario): a una tuberia que va a
+      dar a una barranca o grieta o a un rio lago o mar'
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: una_tuberia_que_va_a_dar_a_un_rio_lago_o_mar
+    national_label_en: "Una tuber\xEDa que va a dar a un r\xEDo, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_rio_lago_etc
+    national_label_en: "Una tuber\xEDa que va a dar a una barranca o grieta/rio,lago\
+      \ etc."
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: conectado_a_la_red_publica
+    national_label_en: "Conectado a la red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: drainage_to_sewer_system
+    national_label_en: DRAINAGE TO SEWER SYSTEM
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: excusado_letrina_conectado_a_la_red_publica
+    national_label_en: "Excusado/letrina: Conectado a la red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: flush_to_piped_sewage_system
+    national_label_en: Flush to piped sewage system
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: la_red_publica
+    national_label_en: "La red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: taza_de_bano_excusado_sanitario_a_red_publica
+    national_label_en: 'Taza de bano (excusado, sanitario): a red publica'
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: taza_de_bano_excusado_sanitario_no_tiene_drenaje
+    national_label_en: 'Taza de bano (excusado, sanitario): no tiene drenaje'
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: conecatdo_a_una_fosa_septica
+    national_label_en: "Conecatdo a una fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: drainage_to_septic_tank
+    national_label_en: DRAINAGE TO SEPTIC TANK
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: excusado_letrina_conectado_a_una_fosa_septica
+    national_label_en: "Excusado/letrina: Conectado a una fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: taza_de_bano_excusado_sanitario_una_fosa_septica_o_tanque_septico_biodigestor
+    national_label_en: 'Taza de bano (excusado, sanitario): una fosa septica o tanque
+      septico (biodigestor)'
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: una_fosa_septica
+    national_label_en: "Una fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: taza_de_bano_excusado_sanitario_no_especificado
+    national_label_en: 'Taza de bano (excusado, sanitario): no especificado'
+    national_label_local: no sabe donde
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: una_tuberia_que_va_a_dar_a_una_barranca_o_grieta
+    national_label_en: "Una tuber\xEDa que va a dar a una barranca o grieta"
+    national_label_local: no sabe donde
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: bucket
+    national_label_en: bucket
+    national_label_local: Letrina de cubeta
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: bucket_latrine_excrements_are_manually_removed
+    national_label_en: BUCKET LATRINE (EXCREMENTS ARE MANUALLY REMOVED)
+    national_label_local: Letrina de cubeta
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+    national_label_en: Bucket latrine (where fresh excreta are manually removed)
+    national_label_local: Letrina de cubeta
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: excusado_colgante_letrina_colgante
+    national_label_en: Excusado colgante, Letrina colgante
+    national_label_local: Letrina colgante
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hanging_toilet_latrine
+    national_label_en: hanging toilet/latrine
+    national_label_local: Letrina colgante
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: hoyo_negro_o_pozo
+    national_label_en: Hoyo negro o pozo
+    national_label_local: Otro
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Other
+    jmp_id: latrines.dry_latrines.improved_latrines.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 111
+  - source_category_code: hoyo_negro_o_pozo_ciego
+    national_label_en: Hoyo negro o pozo ciego
+    national_label_local: Otro
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Other
+    jmp_id: latrines.dry_latrines.improved_latrines.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 111
+  - source_category_code: covered_dry_latrine_with_privacy
+    national_label_en: Covered dry latrine (with privacy)
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_de_fosa_con_losa
+    national_label_en: Letrina de fosa con losa
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: pit_with_slab
+    national_label_en: pit with slab
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_de_fosa_sin_losa_foso_abierto
+    national_label_en: Letrina de fosa sin losa/Foso abierto
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: pit_witout_slap_open
+    national_label_en: pit witout slap/open
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: uncovered_dry_latrine_without_privacy
+    national_label_en: Uncovered dry latrine (without privacy)
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: excusado_retrete_o_sanita_sin_descarga
+    national_label_en: Excusado, retrete o sanita sin descarga
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: excusado_no_tiene_drenaje
+    national_label_en: Excusado/ no tiene drenaje
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: excusado_letrina_no_tiene_drenaje
+    national_label_en: 'Excusado/letrina: No tiene drenaje'
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: excusado_retrete_sanitario_letrina_u_hoyo_negro_no_tiene_drenaje
+    national_label_en: Excusado/retrete/sanitario(letrina u hoyo negro) no tiene drenaje
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina
+    national_label_en: Letrina
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_hoyo_negro_no_tiene_drenaje
+    national_label_en: 'Letrina (hoyo negro): no tiene drenaje'
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_pozo_o_hoyo_no_tiene_drenaje
+    national_label_en: 'Letrina (pozo o hoyo): no tiene drenaje'
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: no_se_le_echa_agua
+    national_label_en: no se le echa agua
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: no_tiene_drenaje
+    national_label_en: No tiene drenaje
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: no_tiene_drenaje_no_tiene_excusado
+    national_label_en: No tiene drenaje &  no tiene excusado
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: there_is_no_drainage_system
+    national_label_en: There is no drainage system
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: tiene_servicio_sanitario_no_tiene_drenaje
+    national_label_en: 'Tiene servicio sanitario: no tiene drenaje'
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_de_fosa_mejorada_con_ventilacion
+    national_label_en: Letrina de fosa mejorada con ventilacion
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: ventilation_improved_pit_latrine
+    national_label_en: ventilation improved pit latrine
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: pour_flush_latrine
+    national_label_en: Pour flush latrine
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico"
+    jmp_classification: Latrines > Pour flush latrines
+    jmp_id: latrines.pour_flush_latrines
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 85
+  - source_category_code: latrine_with_drainage_connected_to_river_lake_gorge
+    national_label_en: LATRINE WITH DRAINAGE - Connected to RIVER/LAKE/GORGE
+    national_label_local: a drenaje abierto
+    jmp_classification: Latrines > Pour flush latrines > to elsewhere
+    jmp_id: latrines.pour_flush_latrines.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 90
+  - source_category_code: le_echan_agua_con_cubeta
+    national_label_en: le echan agua con cubeta
+    national_label_local: a drenaje abierto
+    jmp_classification: Latrines > Pour flush latrines > to elsewhere
+    jmp_id: latrines.pour_flush_latrines.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 90
+  - source_category_code: letrina_hoyo_negro_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta
+    national_label_en: "Letrina (hoyo negro): una tuber\xEDa que va a dar a una barranca\
+      \ o grieta"
+    national_label_local: a drenaje abierto
+    jmp_classification: Latrines > Pour flush latrines > to elsewhere
+    jmp_id: latrines.pour_flush_latrines.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 90
+  - source_category_code: letrina_hoyo_negro_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_lago_o_mar
+    national_label_en: "Letrina (hoyo negro): una tuber\xEDa que va a dar a una barranca\
+      \ o grieta + lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Latrines > Pour flush latrines > to elsewhere
+    jmp_id: latrines.pour_flush_latrines.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 90
+  - source_category_code: letrina_hoyo_negro_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_una_tuberia_que_va_a_dar_a_un_rio_lago_o_mar
+    national_label_en: "Letrina (hoyo negro): una tuber\xEDa que va a dar a una barranca\
+      \ o grieta + una tuber\xEDa que va a dar a un r\xEDo, lago o mar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Latrines > Pour flush latrines > to elsewhere
+    jmp_id: latrines.pour_flush_latrines.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 90
+  - source_category_code: letrina_pozo_hoyo_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta_o_a_un_rio_lago_o_mar
+    national_label_en: Letrina (pozo, hoyo) a una tuberia que va a dar a una barranca
+      o grieta o a un rio lago o mar
+    national_label_local: a drenaje abierto
+    jmp_classification: Latrines > Pour flush latrines > to elsewhere
+    jmp_id: latrines.pour_flush_latrines.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 90
+  - source_category_code: drenaje
+    national_label_en: Drenaje
+    national_label_local: al alcantarillado
+    jmp_classification: Latrines > Pour flush latrines > to piped sewer system
+    jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 86
+  - source_category_code: latrine_with_drainage_connected_to_grid
+    national_label_en: LATRINE WITH DRAINAGE - Connected to GRID
+    national_label_local: al alcantarillado
+    jmp_classification: Latrines > Pour flush latrines > to piped sewer system
+    jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 86
+  - source_category_code: letrina_hoyo_negro_la_red_publica
+    national_label_en: "Letrina (hoyo negro): la red p\xFAblica"
+    national_label_local: al alcantarillado
+    jmp_classification: Latrines > Pour flush latrines > to piped sewer system
+    jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 86
+  - source_category_code: letrina_pozo_o_hoyo_a_red_publica
+    national_label_en: 'Letrina (pozo o hoyo): a red publica'
+    national_label_local: al alcantarillado
+    jmp_classification: Latrines > Pour flush latrines > to piped sewer system
+    jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 86
+  - source_category_code: latrine_without_drainage
+    national_label_en: LATRINE WITHOUT DRAINAGE
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Latrines > Pour flush latrines > to pit
+    jmp_id: latrines.pour_flush_latrines.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 88
+  - source_category_code: fosa_septica
+    national_label_en: fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Latrines > Pour flush latrines > to septic tank
+    jmp_id: latrines.pour_flush_latrines.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: latrine_with_drainage_connected_to_septic_tank
+    national_label_en: LATRINE WITH DRAINAGE - Connected to SEPTIC TANK
+    national_label_local: a pozo septico
+    jmp_classification: Latrines > Pour flush latrines > to septic tank
+    jmp_id: latrines.pour_flush_latrines.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: letrina_hoyo_negro_una_fosa_septica
+    national_label_en: "Letrina (hoyo negro): una fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Latrines > Pour flush latrines > to septic tank
+    jmp_id: latrines.pour_flush_latrines.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: letrina_pozo_o_hoyo_una_fosa_septica_o_tanque_septico_biodigestor
+    national_label_en: 'Letrina (pozo o hoyo): una fosa septica o tanque septico (biodigestor)'
+    national_label_local: a pozo septico
+    jmp_classification: Latrines > Pour flush latrines > to septic tank
+    jmp_id: latrines.pour_flush_latrines.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: latrine_with_drainage_connected_to_don_t_know
+    national_label_en: LATRINE WITH DRAINAGE - Connected to DON'T KNOW
+    national_label_local: no sabe donde
+    jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
+    jmp_id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 89
+  - source_category_code: letrina_pozo_o_hoyo_no_especificado
+    national_label_en: 'Letrina (pozo o hoyo): no especificado'
+    national_label_local: no sabe donde
+    jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
+    jmp_id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 89
+  - source_category_code: no_dispone_de_servicio_sanitario
+    national_label_en: No dispone de servicio sanitario
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities_bush_field
+    national_label_en: no facilities (bush, field)
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities_open_defecation
+    national_label_en: No facilities (open defecation)
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_hay_instalacion_sanitaria_va_al_monte_campo
+    national_label_en: No hay instalacion sanitaria, va al monte, campo
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_sanitation_facilities_defecation_in_the_open_air
+    national_label_en: NO SANITATION FACILITIES (DEFECATION IN THE OPEN AIR)
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene
+    national_label_en: No tiene
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_el_servicio_sanitario
+    national_label_en: No tiene el servicio sanitario
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_excusado
+    national_label_en: No tiene excusado
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_excusado_o_letrina
+    national_label_en: No tiene excusado o letrina
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_excusado_retrete_sanitario_letrina_u_hoyo_negro
+    national_label_en: No tiene excusado, retrete, sanitario, letrina u hoyo negro
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_excusado_letrina
+    national_label_en: No tiene excusado/letrina
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_excusado_retrete_sanitario_letrina_u_hoyo_negro
+    national_label_en: No tiene excusado/retrete/sanitario(letrina u hoyo negro)
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_servicio_sanitario
+    national_label_en: No tiene servicio sanitario
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_taza_de_bano_ni_letrina
+    national_label_en: "No tiene taza de ba\xF1o ni letrina"
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: none
+    national_label_en: None
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: conectado_a_una_tuberia_que_va_dar_a_una_barranca_o_grieta
+    national_label_en: conectado a una tuberia que va dar a una barranca o grieta
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: excusado_conectado_a_una_tuberia_que_va_dar_a_una_barranca_o_grieta
+    national_label_en: Excusado conectado a una tuberia que va dar a una barranca
+      o grieta
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: excusado_retrete_o_sanita_con_descarga_a_una_tuberia_que_va_a_dar_a_una_barranca_o_grieta
+    national_label_en: "Excusado, retrete o sanita con descarga a una tuber\xEDa que\
+      \ va a dar a una barranca o grieta"
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: no_tiene_drenaje
+    national_label_en: No tiene drenaje
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other_specify
+    national_label_en: other, specify
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: otros
+    national_label_en: Otros
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: taza_de_bano_excusado_sanitario_no_tiene_drenaje
+    national_label_en: "Taza de ba\xF1o (excusado, sanitario): no tiene drenaje"
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: albaal
+    national_label_en: albaal
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MEX_Mexico_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

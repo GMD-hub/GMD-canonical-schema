@@ -1,0 +1,3241 @@
+﻿{
+  "ok": true,
+  "count": 400,
+  "files": [
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ABW\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 14389,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AFG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9745,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AFG\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 36813,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AFG\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 46848,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AGO\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4581,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AGO\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 24568,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AGO\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 30798,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AIA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 3665,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ALB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8376,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ALB\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 15245,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ALB\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 12542,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AND\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4546,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10077,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARE\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 6766,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARE\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 9156,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7559,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARG\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 20346,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARG\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 17937,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8501,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 20814,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ARM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 26699,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ATG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6424,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AUS\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8124,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AUT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 17381,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AZE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6622,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AZE\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 16926,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\AZE\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 19203,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BDI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7745,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BDI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 17409,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BDI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 15618,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BEL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 22147,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BEN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9061,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BEN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 36659,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BEN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 36212,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BFA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10019,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BFA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 58540,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BFA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 60796,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BGD\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 12844,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BGD\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 33379,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BGD\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 29384,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BGR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 48966,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BGR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 4164,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BGR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4267,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BHR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 12534,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BHS\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 3494,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BHS\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 1141,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BHS\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 1054,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BIH\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11723,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BIH\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 18891,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BIH\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 16535,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BLR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13402,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BLR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 11889,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BLR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 6753,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BLZ\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4901,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BLZ\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 17580,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BLZ\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 25967,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BMU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4606,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BOL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4661,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BOL\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 31382,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BOL\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 36557,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BRA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 28710,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BRA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 30464,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BRB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6812,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BRB\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 5404,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BRB\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4273,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BRN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9545,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BTN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8318,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BTN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 8552,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BTN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 9113,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BWA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 10173,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\BWA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 16855,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CAF\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6773,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CAF\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 25480,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CAF\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 21766,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CAN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7620,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CAN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 1928,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CAN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 2797,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 16449,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6016,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHL\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 4074,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHL\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4415,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4897,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 10269,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CHN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 7569,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CIV\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11488,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CIV\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 56695,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CIV\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 54502,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CMR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13241,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CMR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 29214,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CMR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 37588,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COD\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9648,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COD\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 25236,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COD\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 26325,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6348,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COG\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 26304,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COG\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 20705,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COK\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4376,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13280,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COL\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 14438,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COL\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 20604,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5155,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\COM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 14252,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CPV\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6965,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CPV\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 2443,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CPV\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 10199,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CRI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10945,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CRI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 12740,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CRI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 15901,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CUB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9722,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CUB\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 18808,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CUB\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 15055,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CUW\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9237,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CYM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5117,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CZE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 18698,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CZE\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 2013,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\CZE\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 2750,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DEU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 52620,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DJI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4180,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DJI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 15550,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DJI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 18879,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DMA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4422,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DNK\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11424,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DOM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6639,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DOM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 35313,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DOM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 43011,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DZA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10490,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DZA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 12510,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\DZA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 12251,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ECU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9615,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ECU\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 20926,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ECU\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 36713,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\EGY\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8807,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\EGY\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 36272,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\EGY\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 28378,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ERI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5942,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ERI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 3345,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ERI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4405,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ESP\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13328,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ESP\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 2344,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ESP\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 3484,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\EST\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6629,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\EST\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 6769,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\EST\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4156,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ETH\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7444,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ETH\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 47293,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ETH\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 46893,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\FIN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9527,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\FJI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4572,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\FJI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 5213,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\FJI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 5827,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\FRA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 17965,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\FSM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4938,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GAB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10318,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GAB\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 11716,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GAB\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 20065,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GBR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 16966,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GEO\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9497,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GEO\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 20549,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GEO\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 19256,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GHA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5029,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GHA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 59288,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GHA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 54891,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GIB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6159,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GIN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5231,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GIN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 27673,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GIN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 33222,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GMB\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 24530,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GMB\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 24672,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GNB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6489,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GNB\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 18695,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GNB\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 23767,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GNQ\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4505,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GNQ\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 2366,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GNQ\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4964,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GRC\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 14069,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GRD\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8260,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GTM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7994,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GTM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 29258,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GTM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 33484,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GUY\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8246,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GUY\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 23580,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\GUY\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 26288,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HKG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10546,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HND\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5456,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HND\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 32801,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HND\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 38920,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HRV\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13299,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HRV\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 4817,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HRV\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 4507,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HTI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 28401,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HTI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 37686,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HUN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 17359,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\HUN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 3433,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IDN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8879,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IDN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 16962,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IDN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 26899,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IND\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13798,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IND\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 35260,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IND\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 28916,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IRL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11299,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IRN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7879,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IRQ\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6774,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IRQ\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 21743,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\IRQ\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 23659,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ISL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 18957,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ISR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 14955,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ITA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11657,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ITA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 1119,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ITA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 1150,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JAM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4091,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JAM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 15939,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JAM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 22708,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JOR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5380,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JOR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 21492,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JOR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 20264,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\JPN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 35778,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KAZ\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9596,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KAZ\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 26964,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KAZ\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 21304,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KEN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7524,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KEN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 64041,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KEN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 69349,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KGZ\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11762,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KGZ\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 25615,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KGZ\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 25163,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KHM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13828,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KHM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 36202,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KHM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 27365,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KIR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 3902,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KIR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 7383,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KIR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 7316,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\KWT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10107,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LAO\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13155,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LAO\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 22828,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LAO\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 19401,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8749,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 2531,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 10602,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 23068,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 24137,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBY\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5993,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBY\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 7209,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LBY\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 8726,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LCA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6801,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LCA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 6095,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LCA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 10257,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LIE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6191,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LKA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 18012,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LKA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 23522,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LKA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 23220,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LSO\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 26014,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LSO\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 28079,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LTU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7945,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LUX\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 25550,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LVA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 20214,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LVA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 5403,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\LVA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 3001,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MAC\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5508,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MAR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 12212,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MAR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 23326,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MAR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 29111,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MCO\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6328,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5906,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 17565,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 16416,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11326,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDG\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 41381,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDG\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 39498,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDV\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 10433,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MDV\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 6557,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MEX\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4389,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MEX\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 58081,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MEX\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 54640,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MHL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5893,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MHL\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 2696,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MHL\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 5532,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MKD\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9017,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MKD\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 12297,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MKD\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 11016,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MLI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9264,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MLI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 47791,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MLI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 48633,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MLT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 13432,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MMR\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 12876,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MMR\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 18936,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MNE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11274,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MNE\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 8399,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MNE\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 8331,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MNG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6641,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MNG\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 34097,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MNG\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 32784,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MOZ\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 27995,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MOZ\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 33631,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MRT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6339,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MRT\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 15714,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MRT\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 24376,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MSR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 3196,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MUS\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8795,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MUS\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 1771,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MUS\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 2744,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MWI\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6310,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MWI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 45270,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MWI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 42787,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MYS\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 14183,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MYS\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 5692,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\MYS\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 3435,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NAM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 28863,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NAM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 29573,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NER\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9047,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NER\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 81688,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NER\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 81410,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NGA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6851,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NGA\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 58909,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NGA\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 52245,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NIU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5269,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NLD\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11972,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NOR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10732,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NPL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4757,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NPL\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 26095,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NPL\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 28764,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NRU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4662,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NRU\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 4084,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NRU\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 3348,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\NZL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6677,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\OMN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9895,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PAK\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6997,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PAK\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 29542,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PAK\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 39043,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PAN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5189,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PAN\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 11666,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PAN\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 19914,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PER\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7205,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PER\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 36478,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PER\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 28124,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PHL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4961,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PHL\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 50480,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PHL\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 39693,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PNG\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7778,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PNG\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 16492,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PNG\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 16675,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\POL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 16315,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRI\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 1037,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRI\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 1025,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 25330,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRY\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 29067,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRY\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 31438,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PSE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6544,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PSE\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 20643,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PSE\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 24662,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PYF\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 423,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PYF\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 418,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\QAT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9943,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\QAT\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 405,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\QAT\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 400,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ROU\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8225,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\RUS\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8906,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\RWA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5250,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SDN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8246,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SEN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7415,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SGP\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7380,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SLE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7145,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SLV\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7737,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SMR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4411,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SOM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5914,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SRB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9583,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SUR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9442,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SVK\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 14245,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SVN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8553,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SWE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 20167,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SYC\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5298,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\SYR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7214,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TCA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 2584,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TCD\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9280,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TGO\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9376,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\THA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 15451,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TJK\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5607,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TKL\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4956,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TKM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4105,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TLS\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4477,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TON\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7288,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TUN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 12376,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TUR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10283,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TUV\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 3185,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\TZA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 10798,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\UGA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4957,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\UKR\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7597,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\URY\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 11266,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\USA\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5942,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\UZB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 4456,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VCT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5653,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VEN\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 7735,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VGB\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5620,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VNM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6060,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VNM\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "size": 26515,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VNM\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "size": 34870,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\VUT\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 8028,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\WSM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 6427,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\YEM\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5265,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ZAF\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 9390,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\ZWE\\PARAM-EDU-LEVEL-CROSSWALK.yaml",
+      "size": 5963,
+      "has_parameters": true,
+      "has_value": true,
+      "valid": true,
+      "error": ""
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRK\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "warning": "file disappeared during scan; skipped"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRK\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "warning": "file disappeared during scan; skipped"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRT\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "warning": "file disappeared during scan; skipped"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PRT\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "warning": "file disappeared during scan; skipped"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PYF\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "warning": "PARAM-WASH-SANITATION-CROSSWALK has empty table value; skipped as non-blocking draft"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\PYF\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "warning": "PARAM-WASH-WATER-CROSSWALK has empty table value; skipped as non-blocking draft"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\QAT\\PARAM-WASH-SANITATION-CROSSWALK.yaml",
+      "warning": "PARAM-WASH-SANITATION-CROSSWALK has empty table value; skipped as non-blocking draft"
+    },
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters\\QAT\\PARAM-WASH-WATER-CROSSWALK.yaml",
+      "warning": "PARAM-WASH-WATER-CROSSWALK has empty table value; skipped as non-blocking draft"
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+country_id: CTY-COL
+country_name: Colombia
+iso3: COL
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: bajamar
+    national_label_en: Bajamar
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: traditional_toilet_to_sea_river_low_tide
+    national_label_en: Traditional toilet to sea/river (low tide)
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: inodoro_a_alcantarillado
+    national_label_en: Inodoro a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: inodoro_conectado_a_alcantarillado
+    national_label_en: Inodoro conectado a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: inodoro_conectado_al_alcantarillado
+    national_label_en: Inodoro conectado al alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: toilet_connected_to_sewer
+    national_label_en: Toilet connected to sewer
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: inodoro_sin_conexion
+    national_label_en: "Inodoro sin conexi\xF3n"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: inodoro_sin_connexion
+    national_label_en: Inodoro sin connexion
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: toilet_connected_to_plot_yard
+    national_label_en: Toilet connected to plot/yard
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: inodoro_a_pozo_septico
+    national_label_en: Inodoro a pozo septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: inodoro_conectado_a_pozo_septico
+    national_label_en: "Inodoro conectado a pozo s\xE9ptico"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: inodoro_conectao_al_pozo_septico
+    national_label_en: Inodoro conectao al pozo septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: toilet_connected_to_septic_well
+    national_label_en: Toilet connected to septic well
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: bajamar
+    national_label_en: Bajamar
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: inodoro_a_otros
+    national_label_en: Inodoro a otros
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: inodoro_a_quebrada_campo_abierto
+    national_label_en: Inodoro a quebrada, campo abierto
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: inodoro_con_descarga_directa_a_fuentes_de_agua_bajamar
+    national_label_en: Inodoro con descarga directa a fuentes de agua (bajamar)
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: indoro_alcantarillad
+    national_label_en: indoro/alcantarillad
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_alcantarilla
+    national_label_en: Inodoro (alcantarilla)
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_a_alcantarillado
+    national_label_en: Inodoro a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_conectado_a_alcantarillado
+    national_label_en: Inodoro conectado a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_conectado_al_alcantarillado
+    national_label_en: Inodoro conectado al alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_alcantarillado
+    national_label_en: Inodoro-alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_sin_conexion
+    national_label_en: "Inodoro sin conexi\xF3n"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: indoro_pozo_septico
+    national_label_en: indoro/pozo septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: inodoro_pozo_septico
+    national_label_en: Inodoro (pozo septico)
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: inodoro_a_pozo_septico
+    national_label_en: Inodoro a pozo septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: inodoro_conectado_a_pozo_septico
+    national_label_en: "Inodoro conectado a pozo s\xE9ptico"
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: inodoro_pozo_septico
+    national_label_en: Inodoro-pozo septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: letrina
+    national_label_en: Letrina
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_pozo_negro_hoyo
+    national_label_en: Letrina (pozo negro, hoyo)
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: traditional_pit_toilet
+    national_label_en: Traditional pit toilet
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: no_tiene_sanitario
+    national_label_en: no tiene sanitario
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_servicio_sanitario
+    national_label_en: No tiene servicio sanitario
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_toilet_facility
+    national_label_en: No toilet facility
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: otro_no_sabe
+    national_label_en: Otro/ no sabe
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_COL_Colombia_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

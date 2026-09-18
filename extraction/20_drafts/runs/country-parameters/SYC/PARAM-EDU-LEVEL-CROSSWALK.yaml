@@ -1,0 +1,166 @@
+country_id: CTY-SYC
+country_name: Seychelles
+iso3: SYC
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Creche
+    national_label_local: Creche
+    entry_age: 4
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Primary
+    national_label_local: Primary
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+  - national_label_en: Secondary 1 to 3
+    national_label_local: Secondary 1 to 3
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+  - national_label_en: Secondary 4 to 5
+    national_label_local: Secondary 4 to 5
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 10
+  - national_label_en: Apprenticeship programmes
+    national_label_local: Apprenticeship programmes
+    entry_age: 16
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 11
+  - national_label_en: Advanced Certificate (Cambridge A levels)
+    national_label_local: Advanced Certificate (Cambridge A levels)
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Certificate Programmes
+    national_label_local: Certificate Programmes
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: Diploma Programmes
+    national_label_local: Diploma Programmes
+    entry_age: 18
+    duration_years: 3
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: Advanced Diploma Programmes
+    national_label_local: Advanced Diploma Programmes
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: Primary Teacher Training
+    national_label_local: Primary Teacher Training
+    entry_age: 17
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Secondary Teacher Training
+    national_label_local: Secondary Teacher Training
+    entry_age: 19
+    duration_years: 3
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Bachelor's degree
+    national_label_local: Bachelor's degree
+    entry_age: 19
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Bachelor's degree
+    national_label_local: Bachelor's degree
+    entry_age: 19
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: Post Graduate Certificate in Education
+    national_label_local: Post Graduate Certificate in Education
+    entry_age: 23
+    duration_years: 2
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: Master's Programme
+    national_label_local: Master's Programme
+    entry_age: 23
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Seychelles.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

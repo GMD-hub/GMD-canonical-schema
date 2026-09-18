@@ -1,0 +1,79 @@
+iso3: MYT
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MYT_Mayotte_2.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: MYT
+    name: Mayotte
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_MYT_Mayotte_2.xlsx
+    sha256: eaafdc1c21f5d7a9f9b83b8284f0b41c2c466a408effd8a2589d50ace685d9a5
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:54:22+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Eau
+        split: Total
+        year: '2023'
+        value: 92.461107
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total
+        year: '2023'
+        value: 3.910073
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 100.0
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total
+        year: '2023'
+        value: 0.0
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total
+        year: '2023'
+        value: 3.62882
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

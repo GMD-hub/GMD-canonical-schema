@@ -1,0 +1,198 @@
+country_id: CTY-SOM
+country_name: Somalia
+iso3: SOM
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Integrated Quaranic schools (IQSs)
+    national_label_local: Integrated Quaranic schools (IQSs)
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: 'Kindergarten
+
+      (early childhood
+
+      education)'
+    national_label_local: 'Kindergarten
+
+      (early childhood
+
+      education)'
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: 'Lower primary
+
+      education'
+    national_label_local: Lower primary education
+    entry_age: 6
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+  - national_label_en: Upper primary education
+    national_label_local: Upper primary education
+    entry_age: 10
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: Vocational Training Institute
+    national_label_local: Vocational Training Institutes Courses
+    entry_age: 18
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 11
+  - national_label_en: Alternative basic education (ABE)
+    national_label_local: Alternative basic education (ABE)
+    entry_age: 9
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 12
+  - national_label_en: General Secondary Education
+    national_label_local: General Secondary Education
+    entry_age: 14
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: 'Level 2: Islamic
+
+      institutes'
+    national_label_local: 'Level 2: Islamic
+
+      institutes'
+    entry_age: 14
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+  - national_label_en: Professional education
+    national_label_local: Professional education
+    entry_age: 14
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 15
+  - national_label_en: Technical secondary education
+    national_label_local: Technical secondary education
+    entry_age: 14
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+  - national_label_en: 'Pre-service teacher
+
+      training (Primary)'
+    national_label_local: 'Pre-service teacher
+
+      training (Primary)'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: 'Level 3: Diploma'
+    national_label_local: 'Level 3: Diploma'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: 'Level 3: Diploma'
+    national_label_local: 'Level 3: Diploma'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: Education Bachelor
+    national_label_local: Education Bachelor
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: Higher Education
+    national_label_local: Higher Education
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: 'Level 3: Postgraduate
+
+      diploma'
+    national_label_local: 'Level 3: Postgraduate
+
+      diploma'
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Som.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

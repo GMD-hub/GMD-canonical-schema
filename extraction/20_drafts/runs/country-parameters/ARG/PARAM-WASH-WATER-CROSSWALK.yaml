@@ -1,0 +1,465 @@
+country_id: CTY-ARG
+country_name: Argentina
+iso3: ARG
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: aljibe_o_pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: Aljibe o pozo fuera de la vivienda pero dentro del terreno
+    national_label_local: Otro
+    jmp_classification: Ground water > All springs > Other
+    jmp_id: ground_water.all_springs.other
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 77
+  - source_category_code: pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: Pozo fuera de la vivienda pero dentro del terreno
+    national_label_local: Otro
+    jmp_classification: Ground water > All springs > Other
+    jmp_id: ground_water.all_springs.other
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 77
+  - source_category_code: aljibe_o_pozo_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Aljibe o pozo por ca\xF1er\xEDa dentro de la vivienda"
+    national_label_local: Privado
+    jmp_classification: Ground water > All springs > Private
+    jmp_id: ground_water.all_springs.private
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 75
+  - source_category_code: pozo_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Pozo por ca\xF1er\xEDa dentro de la vivienda"
+    national_label_local: Privado
+    jmp_classification: Ground water > All springs > Private
+    jmp_id: ground_water.all_springs.private
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 75
+  - source_category_code: aljibe_o_pozo_fuera_del_terreno
+    national_label_en: Aljibe o pozo fuera del terreno
+    national_label_local: Publico
+    jmp_classification: Ground water > All springs > Public
+    jmp_id: ground_water.all_springs.public
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: true
+    source_row: 76
+  - source_category_code: pozo_fuera_del_terreno
+    national_label_en: Pozo fuera del terreno
+    national_label_local: Publico
+    jmp_classification: Ground water > All springs > Public
+    jmp_id: ground_water.all_springs.public
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: true
+    source_row: 76
+  - source_category_code: pozo_protegido
+    national_label_en: Pozo Protegido
+    national_label_local: Pozos protegidos
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - source_category_code: perforacion_con_bomba_manual_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: "Perforaci\xF3n con bomba manual fuera de la vivienda pero\
+      \ dentro del terreno"
+    national_label_local: Otro
+    jmp_classification: Ground water > Protected well > Other
+    jmp_id: ground_water.protected_well.other
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: perforacion_con_bomba_manual_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Perforaci\xF3n con bomba manual por ca\xF1er\xEDa dentro de\
+      \ la vivienda"
+    national_label_local: Privado
+    jmp_classification: Ground water > Protected well > Private
+    jmp_id: ground_water.protected_well.private
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: perforacion_con_bomba_manual_fuera_del_terreno
+    national_label_en: "Perforaci\xF3n con bomba manual fuera del terreno"
+    national_label_local: Publico
+    jmp_classification: Ground water > Protected well > Public
+    jmp_id: ground_water.protected_well.public
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 68
+  - source_category_code: pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: Pozo fuera de la vivienda pero dentro del terreno
+    national_label_local: Otro
+    jmp_classification: Ground water > Traditional wells > Other
+    jmp_id: ground_water.traditional_wells.other
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: pozo_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Pozo por ca\xF1er\xEDa dentro de la vivienda"
+    national_label_local: Privado
+    jmp_classification: Ground water > Traditional wells > Private
+    jmp_id: ground_water.traditional_wells.private
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 63
+  - source_category_code: pozo_fuera_del_terreno
+    national_label_en: Pozo fuera del terreno
+    national_label_local: Publico
+    jmp_classification: Ground water > Traditional wells > Public
+    jmp_id: ground_water.traditional_wells.public
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 64
+  - source_category_code: pozo_con_tuberia
+    national_label_en: "Pozo Con Tuber\xEDa"
+    national_label_local: Pozos entubados o de sondeo
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - source_category_code: perforacion_con_bomba_a_motor_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: "Perforaci\xF3n con bomba a motor fuera de la vivienda pero\
+      \ dentro del terreno"
+    national_label_local: Otro
+    jmp_classification: Ground water > Tubewell, borehole > Other
+    jmp_id: ground_water.tubewell_borehole.other
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: perforacion_con_bomba_a_motor_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Perforaci\xF3n con bomba a motor por ca\xF1er\xEDa dentro\
+      \ de la vivienda"
+    national_label_local: Privado
+    jmp_classification: Ground water > Tubewell, borehole > Private
+    jmp_id: ground_water.tubewell_borehole.private
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 59
+  - source_category_code: perforacion_con_bomba_a_motor_fuera_del_terreno
+    national_label_en: "Perforaci\xF3n con bomba a motor fuera del terreno"
+    national_label_local: Publico
+    jmp_classification: Ground water > Tubewell, borehole > Public
+    jmp_id: ground_water.tubewell_borehole.public
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 60
+  - source_category_code: pozo_no_protegido
+    national_label_en: Pozo No Protegido
+    national_label_local: Pozos non protegidos
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - source_category_code: otras_fuentes_por_caneria_dentro_de_la_vivienda
+    national_label_en: "otras fuentes por ca\xF1er\xEDa dentro de la vivienda"
+    national_label_local: Otro
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - source_category_code: camion_cisterna
+    national_label_en: "Cami\xF3n Cisterna"
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: transporte_por_cisterna
+    national_label_en: Transporte por cisterna
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: otras_fuentes_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: otras fuentes fuera de la vivienda, pero dentro del terreno
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otras_fuentes_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Otras fuentes por ca\xF1er\xEDa dentro de la vivienda"
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otro_especifique
+    national_label_en: Otro (Especifique)
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otro_por_caneria_dentro_de_la_vivienda_o_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: "Otro por ca\xF1er\xEDa dentro de la vivienda o fuera de la\
+      \ vivienda pero dentro del terreno"
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otras
+    national_label_en: Otras
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: otras_fuentes_fuera_de_la_vivienda_o_del_terreno
+    national_label_en: Otras fuentes fuera de la vivienda o del terreno
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: otras_fuentes_fuera_del_terreno
+    national_label_en: otras fuentes fuera del terreno
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: agua_embotellada
+    national_label_en: Agua Embotellada
+    national_label_local: Agua embotellada
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: bolsa_de_agua
+    national_label_en: Bolsa De Agua
+    national_label_local: Agua en bolsita
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - source_category_code: agua_de_lluvia
+    national_label_en: Agua De Lluvia
+    national_label_local: Cisterna/tanque cubierto
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: agua_de_lluvia_rio_canal_arroyo
+    national_label_en: Agua de lluvia, rio, canal, arroyo
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: agua_de_lluvia_rio_canal_arroyo_o_acequia
+    national_label_en: "Agua de lluvia, r\xEDo, canal, arroyo o acequia"
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal
+    national_label_en: "Agua De Superficie (R\xEDo, Represa, Lago, Estanque, Arroyo,\
+      \ Canal)"
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: caneria_conectada_al_vecino
+    national_label_en: "Ca\xF1er\xEDa Conectada Al Vecino"
+    national_label_local: Otro
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - source_category_code: agua_de_red_publica_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Agua de red p\xFAblica, por ca\xF1er\xEDa dentro de la vivienda"
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: caneria_dentro_de_la_vivienda
+    national_label_en: "Ca\xF1er\xEDa Dentro De La Vivienda"
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: red_publica_agua_corriente_por_caneria_dentro_de_la_vivienda
+    national_label_en: "Red p\xFAblica (agua corriente) por ca\xF1er\xEDa dentro de\
+      \ la vivienda"
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: agua_de_red_publica_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: "Agua de red p\xFAblica, fuera de la vivienda pero dentro del\
+      \ terreno"
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: caneria_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: "Ca\xF1er\xEDa Fuera De La Vivienda, Pero Dentro Del Terreno"
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: red_publica_agua_corriente_fuera_de_la_vivienda_pero_dentro_del_terreno
+    national_label_en: "Red p\xFAblica (agua corriente) fuera de la vivienda pero\
+      \ dentro del terreno"
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: agua_de_red_publica_fuera_del_terreno
+    national_label_en: "Agua de red p\xFAblica, fuera del terreno"
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: canilla_grifo_publico
+    national_label_en: "Canilla/Grifo P\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: red_publica_agua_corriente_fuera_del_terreno
+    national_label_en: "Red p\xFAblica (agua corriente) fuera del terreno"
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ARG_Argentina_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

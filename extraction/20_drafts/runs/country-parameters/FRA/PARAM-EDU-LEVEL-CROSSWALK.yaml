@@ -1,0 +1,441 @@
+country_id: CTY-FRA
+country_name: France
+iso3: FRA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Pre-primary education
+    national_label_local: "Enseignement pr\xE9\xE9l\xE9mentaire"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Primary education
+    national_label_local: Enseignement primaire
+    entry_age: 6
+    duration_years: 5
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 6
+  - national_label_en: Secondary education (1st cycle)
+    national_label_local: "Enseignement du premier cycle du second degr\xE9 \u2013\
+      \ Coll\xE8ge"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 7
+  - national_label_en: Vocational secondary education (2nd cycle) preparing to Certificat
+      d'aptitude professionnelle (CAP)
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant au CAP"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 8
+  - national_label_en: Vocational secondary education (2nd cycle) preparing to Certificat
+      d'aptitude professionnelle (CAP)
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant au CAP"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 9
+  - national_label_en: "Vocational secondary education (2nd cycle) preparing to Mention\
+      \ Compl\xE9mentaire (MC)"
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant \xE0 une mention compl\xE9mentaire ou \xE9quivalent"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 10
+  - national_label_en: "Vocational secondary education (2nd cycle) preparing to Mention\
+      \ Compl\xE9mentaire (MC)"
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant \xE0 une mention compl\xE9mentaire ou \xE9quivalent"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 11
+  - national_label_en: Vocational secondary education (2nd cycle) in health and social
+      services institutions, preparing to qualifications of child care assistants  and
+      equivalents
+    national_label_local: "Enseignement de second cycle professionnel des \xE9coles\
+      \ sanitaires et sociales conduisant aux dipl\xF4mes d'auxiliaires de pu\xE9\
+      riculture et \xE9quivalents"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 12
+  - national_label_en: Vocational secondary education (2nd cycle) preparing to Brevet
+      Professionnel (BP)
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant au brevet professionnel"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 13
+  - national_label_en: Vocational secondary education (2nd cycle) preparing to Bac
+      Professionnel or to an equivalent diploma
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant au Bacccalaur\xE9at Professionnel ou \xE0 un \xE9quivalent"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+  - national_label_en: Vocational secondary education (2nd cycle) preparing to Bac
+      Professionnel or to an equivalent diploma
+    national_label_local: "Enseignement de second cycle professionnel du second degr\xE9\
+      \ conduisant au Bacccalaur\xE9at Professionnel ou \xE0 un \xE9quivalent"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+  - national_label_en: "General secondary education (2nd cycle), preparing to Bac\
+      \ g\xE9n\xE9ral, technologique and Brevet de technicien"
+    national_label_local: "Enseignement de second cycle g\xE9n\xE9ral du second degr\xE9\
+      \ conduisant au baccalaur\xE9at g\xE9n\xE9ral ou technologique ou au brevet\
+      \ de technicien"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 16
+  - national_label_en: "Vocational secondary education (2nd cycle) in health and care\
+      \ institutions preparing to qualifications of Moniteur \xE9ducateur (and equivalent)"
+    national_label_local: "Enseignement de second cycle professionnel des \xE9coles\
+      \ sociales conduisant aux dipl\xF4mes de moniteurs \xE9ducateurs et \xE9quivalents"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 17
+  - national_label_en: "Vocational secondary training programme (ISCED 3) preparing\
+      \ to Titre Habilit\xE9 (TH)"
+    national_label_local: "Formation de second cycle professionnel du second degr\xE9\
+      \ conduisant \xE0 un titre professionnel"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 18
+  - national_label_en: Bridge programmes (university) to allow access to levels 5
+      or 6
+    national_label_local: "Enseignement pr\xE9-universitaire"
+    entry_age: 20
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: Preparatory courses to competitive entrance examinations
+    national_label_local: "Classes de mise \xE0 niveau des STS, classes pr\xE9paratoires\
+      \ aux \xE9coles param\xE9dicales, aux \xE9coles d'arts et aux concours de la\
+      \ fonction publique niveau bac, dipl\xF4mes d'universit\xE9 post secondaires\
+      \ et certificats d'\xE9coles"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: School certificates in arts, university degrees
+    national_label_local: "Certificats d'\xE9cole en arts, dipl\xF4mes d'universit\xE9\
+      \ bac \xE0 bac+1"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: Professional tertiary education in universities (IUT)
+    national_label_local: Enseignement en institut universitaire de technologie (IUT)
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  - national_label_en: "Professional tertiary education preparing to Brevets de techniciens\
+      \ sup\xE9rieurs (BTS)"
+    national_label_local: "Enseignement conduisant aux Brevets de techniciens sup\xE9\
+      rieurs et \xE9quivalent"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+  - national_label_en: Professional tertiary education in universities and other institutions
+      preparing to health and care qualifications and to few diploma in technics,
+      law and arts
+    national_label_local: "Enseignement dispens\xE9 en \xE9coles sp\xE9cialis\xE9\
+      es ou \xE0 l'universit\xE9 conduisant principalement aux dipl\xF4mes professionnels\
+      \ param\xE9dicaux et sociaux, et \xE0 quelques dipl\xF4mes professionnels de\
+      \ technologie, de droit et d'art, commerce"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+  - national_label_en: "Academic tertiary education preparing students to the competitive\
+      \ entrance examinations for \u201Cgrandes \xE9coles\u201D"
+    national_label_local: "Enseignement des classes pr\xE9paratoires aux grandes \xE9\
+      coles (CPGE)"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  - national_label_en: University education, 1st graduation
+    national_label_local: "Enseignement universitaire de premier grade (LMD) conduisant\
+      \ \xE0 la Licence ou dipl\xF4me d'\xE9coles priv\xE9es ou grandes \xE9coles,\
+      \ EHESS, Dauphine et IEP niveau licence"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+  - national_label_en: University education, 1st graduation
+    national_label_local: "Enseignement universitaire de premier grade (LMD) conduisant\
+      \ \xE0 la Licence professionnelle"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+  - national_label_en: Business schools in 3 years
+    national_label_local: "Enseignement en \xE9cole de commerce conduisant au niveau\
+      \ bac+3"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+  - national_label_en: Professional tertiary education in 3 years in health (nurses
+      from 2012), diploma in applied arts, accountability
+    national_label_local: "Formations param\xE9dicales de grade Licence, d'arts appliqu\xE9\
+      s, de comptabilit\xE9, diverses formations conduisant au niveau bac+3"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+  - national_label_en: Preparation for the entrance exam and training certificate
+      for lawyers, Preparation for the entrance exam to the National School of Magistracy,
+      Preparation for administrative exams
+    national_label_local: "Pr\xE9paration \xE0 l'examen d'entr\xE9e et certificat\
+      \ de formation \xE0 la profession d'avocat, Pr\xE9paration au concours d'acc\xE8\
+      s \xE0 l'Ecole Nationale de la Magistrature, Pr\xE9paration aux concours administratifs\
+      \ de niveau \xE9quivalent."
+    entry_age: 21
+    duration_years: 0
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+  - national_label_en: Academic tertiary education in universities and diverse institutions
+      leading to Master-type degrees
+    national_label_local: "Enseignements g\xE9n\xE9raux d'\xE9coles, de facult\xE9\
+      s priv\xE9es et d'universit\xE9s conduisant au niveau bac+5"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 31
+  - national_label_en: Professional tertiary education preparing to an engineer degree
+    national_label_local: "Enseignement conduisant \xE0 un dipl\xF4me d'ing\xE9nieur"
+    entry_age: 20
+    duration_years: 3
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 32
+  - national_label_en: Business schools in 5 years
+    national_label_local: "Enseignement en \xE9cole de commerce conduisant  au niveau\
+      \ bac+5"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 33
+  - national_label_en: Professional tertiary education in applied arts, veterinaries,
+      etc. leading to Master-type degrees
+    national_label_local: "Enseignement en \xE9cole sup\xE9rieure d'art, d'architecture,\
+      \ d'\xE9cole v\xE9t\xE9rinaire conduisant au niveau bac+5"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 34
+  - national_label_en: Programmes (universities) in medicine, pharmacy, odontology
+      and midwife studies.
+    national_label_local: "Enseignement en sant\xE9 (m\xE9decine, pharmacie, chirurgie\
+      \ dentaire, kin\xE9, osth\xE9opathie, odontologie) dans les universit\xE9s,\
+      \ \xE9tudes de sages-femmes."
+    entry_age: 18
+    duration_years: 6
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 35
+  - national_label_en: University education, 2nd graduation
+    national_label_local: Enseignement universitaire de deuxieme grade conduisant
+      au master
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 36
+  - national_label_en: Education for teachers in ESPE
+    national_label_local: "Enseignement des \xE9tablissements de formation des professionnels\
+      \ de l'enseignement (ESPE)"
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 37
+  - national_label_en: Second tertiary programmes in professional fields (law, accountability)
+      leading to a master type degree
+    national_label_local: "Enseignements professionnels de droit, de comptabilit\xE9\
+      , d'affaires et dipl\xF4mes d'universit\xE9"
+    entry_age: 21
+    duration_years: 3
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 38
+  - national_label_en: Specialized tertiary professional degrees following a Master
+    national_label_local: "Enseignements conduisant aux dipl\xF4mes compl\xE9mentaires\
+      \ de sant\xE9 (capacit\xE9,\u2026) et diverses sp\xE9cialisations"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 39
+  - national_label_en: University education, 3rd cycle, doctorate
+    national_label_local: "Enseignement de troisi\xE8me cycle des \xE9tudes universitaires\
+      \ conduisant au Doctorat"
+    entry_age: 23
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 40
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_France.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

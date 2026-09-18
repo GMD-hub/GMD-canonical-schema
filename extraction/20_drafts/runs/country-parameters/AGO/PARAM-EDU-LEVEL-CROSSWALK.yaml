@@ -1,0 +1,133 @@
+country_id: CTY-AGO
+country_name: Angola
+iso3: AGO
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Prescolaire
+    national_label_local: Preescolar
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Enseignement primaire
+    national_label_local: "Ensino Prim\xE1rio"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 8
+  - national_label_en: "I\xBA cycle de l'enseignement secondaire g\xE9n\xE9ral"
+    national_label_local: 'Ensino secundario Primeiro ciclo
+
+      (Geral)'
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+  - national_label_en: "Enseignement du 1\xBA Cycle de l\xB4Enseignement secondaire\
+      \ t\xE9chnique"
+    national_label_local: "Ensino secundario Primeiro ciclo\n(T\xE9cnico)"
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: "II\xBA cycle de l'enseignement secondaire g\xE9n\xE9ral"
+    national_label_local: 'Ensino secundario segundo ciclo
+
+      (Geral)'
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: "II\xBA cycle de l'enseignement secondaire, Formation des enseignants"
+    national_label_local: "Ensino secundario segundo ciclo, Forma\xE7\xE3o de Professor"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: "Ll\xB4Enseignement\xB4du Ii\xBA cycle du  secondaire t\xE9\
+      chnique et Professionnel"
+    national_label_local: "Ensino secund\xE1rio do II\xBA ciclo, Forma\xE7\xE3o T\xE9\
+      cnica Profissional"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: "Enseignement sup\xE9rieur"
+    national_label_local: Ensino Superior (Bacharelato)
+    entry_age: 18
+    duration_years: 3
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: "Enseignement sup\xE9rieur graduation (Licence )"
+    national_label_local: "Ensino Superior-Gradua\xE7\xE3o (Licenciatura)"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: "Ensino Superior             P\xF3s-Gradua\xE7\xE3o (Mestrado)"
+    entry_age: 24
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: "Enseignement sup\xE9rieur Niveau doctorat"
+    national_label_local: "Ensino Superior, N\xEDvel do Doutoramento"
+    entry_age: 24
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Angola.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

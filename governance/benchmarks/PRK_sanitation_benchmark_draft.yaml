@@ -1,0 +1,163 @@
+iso3: PRK
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PRK_Democratic_Peoples_Republic_of_Korea_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: PRK
+    name: Democratic People's Republic of Korea
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_PRK_Democratic_Peoples_Republic_of_Korea_1.xlsx
+    sha256: 99851b813d8e028cbeb6a959be6e7b6802dc7a5dddd82677dc7a8b785cb6c2ff
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:57:11+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2023'
+        value: 66.612135
+      - domain: Drinking water
+        split: Rural
+        year: '2023'
+        value: 48.832316
+      - domain: Drinking water
+        split: Urban
+        year: '2023'
+        value: 76.963605
+      - domain: Sanitation
+        split: Rural
+        year: '2023'
+        value: 1.227911
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2023'
+        value: 27.298783
+      - domain: Drinking water
+        split: Rural
+        year: '2023'
+        value: 39.921309
+      - domain: Drinking water
+        split: Urban
+        year: '2023'
+        value: 19.949905
+      - domain: Sanitation
+        split: Total*
+        year: '2023'
+        value: 84.818452
+      - domain: Sanitation
+        split: Rural
+        year: '2023'
+        value: 71.827433
+      - domain: Sanitation
+        split: Urban*
+        year: '2023'
+        value: 91.666972
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2023'
+        value: 0.687436
+      - domain: Drinking water
+        split: Rural
+        year: '2023'
+        value: 0.35644
+      - domain: Drinking water
+        split: Urban
+        year: '2023'
+        value: 0.880143
+      - domain: Sanitation
+        split: Total*
+        year: '2023'
+        value: 0.635843
+      - domain: Sanitation
+        split: Rural
+        year: '2023'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban*
+        year: '2023'
+        value: 1.006034
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2023'
+        value: 5.401646
+      - domain: Drinking water
+        split: Rural
+        year: '2023'
+        value: 10.889935
+      - domain: Drinking water
+        split: Urban
+        year: '2023'
+        value: 2.206347
+      - domain: Sanitation
+        split: Total*
+        year: '2023'
+        value: 14.545705
+      - domain: Sanitation
+        split: Rural
+        year: '2023'
+        value: 26.944656
+      - domain: Sanitation
+        split: Urban*
+        year: '2023'
+        value: 7.326994
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Urban
+        year: '2023'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2023'
+        value: 0.0
+      - domain: Sanitation
+        split: Rural
+        year: '2023'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban*
+        year: '2023'
+        value: 0.0
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Hygiene
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Hygiene
+        split: Urban
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

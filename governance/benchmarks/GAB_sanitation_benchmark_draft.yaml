@@ -1,0 +1,4237 @@
+iso3: GAB
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_GAB_Gabon_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: GAB
+    name: Gabon
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_GAB_Gabon_1.xlsx
+    sha256: 68428aade12e720daf8a2cd78191d8c41b66fc4527485133192a60d4ef95ab38
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:56:07+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 88.599501
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 49.107166
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 92.359418
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 57.401503
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 24.599979
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 60.524413
+      - domain: "Hygi\xE8ne"
+        split: Total
+        year: '2024'
+        value: 48.17127
+      - domain: "Hygi\xE8ne"
+        split: Rural
+        year: '2024'
+        value: 31.63627
+      - domain: "Hygi\xE8ne"
+        split: Urbain
+        year: '2024'
+        value: 49.745505
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 5.779922
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 10.909591
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 5.291546
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 18.635627
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 5.51895
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 19.884416
+      - domain: "Hygi\xE8ne"
+        split: Total
+        year: '2024'
+        value: 44.134989
+      - domain: "Hygi\xE8ne"
+        split: Rural
+        year: '2024'
+        value: 58.795705
+      - domain: "Hygi\xE8ne"
+        split: Urbain
+        year: '2024'
+        value: 42.739197
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 3.700686
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 20.933121
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 2.060051
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 22.623885
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 67.257826
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 18.374455
+    - rung: No service
+      row: 35
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 1.91989
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 19.050122
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 0.288985
+      - domain: Assainissement
+        split: Total*
+        year: '2024'
+        value: 1.338986
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 2.623245
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 1.216717
+      - domain: "Hygi\xE8ne"
+        split: Total
+        year: '2024'
+        value: 7.693741
+      - domain: "Hygi\xE8ne"
+        split: Rural
+        year: '2024'
+        value: 9.568026
+      - domain: "Hygi\xE8ne"
+        split: Urbain
+        year: '2024'
+        value: 7.515297
+  per_source:
+  - source:
+      code: GAB_2000_DHS
+      year: 2000
+      series: DHS
+      type: Survey with microdata
+      name: Demographic and Health Survey
+      column: 2
+      n_rows: 7
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 30.2
+      rural: 3.6
+      total: null
+    - jmp_id: flush_toilets
+      jmp: Flush/toilets
+      level: 0
+      structural: false
+      row: 66
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 30.2
+      rural: 3.6
+      total: null
+    - jmp_id: flush_toilets.private_flush_toilet
+      jmp: Flush/toilets > Private flush/toilet
+      level: 1
+      structural: false
+      row: 72
+      national_label: "WC moderne avec chasse d'eau priv\xE9e"
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 25.0
+      rural: 3.2
+      total: null
+    - jmp_id: flush_toilets.public_shared_flush_toilet
+      jmp: Flush/toilets > Public/shared flush/toilet
+      level: 1
+      structural: false
+      row: 78
+      national_label: WC moderne avec chasse d'eau en commun
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 5.2
+      rural: 0.4
+      total: null
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 67.5
+      rural: 91.5
+      total: null
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 67.5
+      rural: 91.5
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 27.2
+      rural: 8.8
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: ''
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 27.2
+      rural: 8.8
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Traditional latrine
+      level: 3
+      structural: false
+      row: 107
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 40.3
+      rural: 82.7
+      total: null
+    - jmp_id: latrines.dry_latrines.private_latrines
+      jmp: Latrines > Dry latrines > Private Latrines
+      level: 2
+      structural: false
+      row: 112
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 17.6
+      rural: 48.6
+      total: null
+    - jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Private Latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 113
+      national_label: Latrines ameliorees privees
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 6.9
+      rural: 4.2
+      total: null
+    - jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
+      jmp: Latrines > Dry latrines > Private Latrines > Traditional latrine
+      level: 3
+      structural: false
+      row: 115
+      national_label: Fosse rudimentaire privee
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 10.7
+      rural: 44.4
+      total: null
+    - jmp_id: latrines.dry_latrines.public_shared_latrines
+      jmp: Latrines > Dry latrines > Public/shared Latrines
+      level: 2
+      structural: false
+      row: 120
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 49.9
+      rural: 42.9
+      total: null
+    - jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Public/shared Latrines > Ventilated Improved
+        Pit latrine
+      level: 3
+      structural: false
+      row: 121
+      national_label: Latrines ameliorees en commun
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 20.3
+      rural: 4.6
+      total: null
+    - jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+      jmp: Latrines > Dry latrines > Public/shared Latrines > Traditional latrine
+      level: 3
+      structural: false
+      row: 123
+      national_label: Fosse rudimentaire en commun
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 29.6
+      rural: 38.3
+      total: null
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Pas de toilettes/ nature/ autre
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 2.2
+      rural: 4.9
+      total: null
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 99.9
+      rural: 100.0
+      total: null
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: 76.745095
+        rural: 22.220502
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: 30.2
+        rural: 3.6
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: 46.545095
+        rural: 18.620502
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 2.2
+        rural: 4.9
+        total: null
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: 30.2
+        rural: 3.6
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: 46.545095
+        rural: 18.620502
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: 51.914507
+        rural: 44.930233
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 17
+  - source:
+      code: GAB_2005_EGEP
+      year: 2005
+      series: EGEP
+      type: Survey with microdata
+      name: "Enqu\xEAte Gabonaise pour l'Evaluation et le Suivi de la Pauvret\xE9\
+        \ (EGEP)"
+      column: 44
+      n_rows: 7
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 27.565394
+      rural: 8.816621
+      total: null
+    - jmp_id: flush_toilets
+      jmp: Flush/toilets
+      level: 0
+      structural: false
+      row: 66
+      national_label: WC avec chasse d'eau
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 27.565394
+      rural: 8.816621
+      total: null
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 70.50927
+      rural: 88.934502
+      total: null
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 70.50927
+      rural: 88.934502
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 18.417384
+      rural: 6.729776
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: "Latrines am\xE9lior\xE9es"
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 18.417384
+      rural: 6.729776
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Traditional latrine
+      level: 3
+      structural: false
+      row: 107
+      national_label: Latrines simples
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 32.69639
+      rural: 31.560403
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Fosse
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: 19.395496
+      rural: 50.644323
+      total: null
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Nature
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 0.977278
+      rural: 1.828028
+      total: null
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.948059
+      rural: 0.420849
+      total: null
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: Method unknown
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.734654
+      rural: 0.345814
+      total: null
+    - jmp_id: other_unimproved.other#2
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 137
+      national_label: Autre
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.213405
+      rural: 0.075035
+      total: null
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: null
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: 61.677933
+        rural: 19.294148
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: 27.565394
+        rural: 8.816621
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: 34.11254
+        rural: 10.477527
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 0.977278
+        rural: 1.828028
+        total: null
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: 27.565394
+        rural: 8.816621
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: 34.11254
+        rural: 10.477527
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 13
+  - source:
+      code: GAB_2005_QUIBB
+      year: 2005
+      series: QUIBB
+      type: Survey with microdata
+      name: "Questionnaire Unifi\xE9 sur les Indicateurs de Bien-\xEAtre de Base"
+      column: 38
+      n_rows: 6
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 25.9
+      rural: 6.3
+      total: null
+    - jmp_id: flush_toilets
+      jmp: Flush/toilets
+      level: 0
+      structural: false
+      row: 66
+      national_label: WC avec chasse d'eau
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 25.9
+      rural: 6.3
+      total: null
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 72.6
+      rural: 90.6
+      total: null
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 72.6
+      rural: 90.6
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 18.8
+      rural: 6.5
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: "Latrines am\xE9lior\xE9es"
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 18.8
+      rural: 6.5
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Traditional latrine
+      level: 3
+      structural: false
+      row: 107
+      national_label: Latrines simples
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 33.1
+      rural: 35.7
+      total: null
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Fosse
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: 20.7
+      rural: 48.4
+      total: null
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Nature
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 1.4
+      rural: 2.9
+      total: null
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.2
+      rural: 0.1
+      total: null
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: Autre
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.2
+      rural: 0.1
+      total: null
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.1
+      rural: 99.9
+      total: null
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: 60.5889
+        rural: 17.039322
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: 25.9
+        rural: 6.3
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: 34.6889
+        rural: 10.739322
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 1.4
+        rural: 2.9
+        total: null
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: 25.9
+        rural: 6.3
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: 34.6889
+        rural: 10.739322
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 12
+  - source:
+      code: GAB_2012_DHS
+      year: 2012
+      series: DHS
+      type: Survey with microdata
+      name: Measure DHS
+      column: 80
+      n_rows: 7
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 37.98235
+      rural: 7.116409
+      total: 33.143094
+    - jmp_id: flush_and_pour_flush.to_piped_sewer_system
+      jmp: Flush and pour flush > to piped sewer system
+      level: 1
+      structural: false
+      row: 61
+      national_label: ''
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 37.98235
+      rural: 7.116409
+      total: 33.143094
+    - jmp_id: flush_toilets
+      jmp: Flush/toilets
+      level: 0
+      structural: false
+      row: 66
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 37.98235
+      rural: 7.116409
+      total: 33.143094
+    - jmp_id: flush_toilets.to_piped_sewer_system
+      jmp: Flush/toilets > to piped sewer system
+      level: 1
+      structural: false
+      row: 67
+      national_label: Flush to piped sewer system
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 37.98235
+      rural: 7.116409
+      total: 33.143094
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 59.068158
+      rural: 87.944119
+      total: 63.595418
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 59.068158
+      rural: 87.944119
+      total: 63.595418
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 32.895456
+      rural: 11.536659
+      total: 29.546759
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: Ventilated Improved Pit latrine (VIP)
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 6.206427
+      rural: 2.446765
+      total: 5.616976
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: Pit latrine with slab
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 26.689029
+      rural: 9.089894
+      total: 23.929783
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Pit latrine without slab/open pit
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: 22.290929
+      rural: 62.365646
+      total: 28.573965
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: Hanging toilet/latrine
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: 3.881772
+      rural: 14.041815
+      total: 5.474694
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: No facility/bush/field
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 1.889045
+      rural: 4.82978
+      total: 2.350102
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 1.060448
+      rural: 0.109692
+      total: 0.911385
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 1.060448
+      rural: 0.109692
+      total: 0.911385
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: 70.877806
+        rural: 18.653068
+        total: 62.689853
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: 37.98235
+        rural: 7.116409
+        total: 33.143094
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: 32.895456
+        rural: 11.536659
+        total: 29.546759
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 1.889045
+        rural: 4.82978
+        total: 2.350102
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: 37.98235
+        rural: 7.116409
+        total: 33.143094
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: 32.895456
+        rural: 11.536659
+        total: 29.546759
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: 39.441739
+        rural: 30.318655
+        total: 39.01834
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 15
+  - source:
+      code: GAB_2015_AFB
+      year: 2015
+      series: AFB
+      type: Survey with microdata
+      name: ROUND 6 AFROBAROMETER - QUALITE DE LA DEMOCRATIE ET DE LA GOUVERNANCE
+        AU GABON
+      column: 92
+      n_rows: 1
+    categories:
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Non, pas disponible
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 0.0
+      rural: 0.0
+      total: 0.0
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 100.0
+      rural: 99.99999
+      total: 100.0
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 100.0
+      rural: 99.99999
+      total: 100.0
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 99.99999
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 0.0
+        rural: 0.0
+        total: 0.0
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 4
+  - source:
+      code: GAB_2017_AFB
+      year: 2017
+      series: AFB
+      type: Survey with microdata
+      name: ROUND 7 AFROBAROMETER - QUALITE DE LA DEMOCRATIE ET DE LA GOUVERNANCE
+        AU GABON
+      column: 104
+      n_rows: 1
+    categories:
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Non, pas disponible
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 0.91336
+      rural: 2.68501
+      total: 1.28245
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 99.08664
+      rural: 97.31499
+      total: 98.71756
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 99.08664
+      rural: 97.31499
+      total: 98.71756
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.00001
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 0.91336
+        rural: 2.68501
+        total: 1.28245
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 4
+  - source:
+      code: GAB_2020_AFB
+      year: 2020
+      series: AFB
+      type: Survey with microdata
+      name: ROUND 8 AFROBAROMETER - QUALITE DE LA DEMOCRATIE ET DE LA GOUVERNANCE
+        AU GABON
+      column: 110
+      n_rows: 1
+    categories:
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Non, pas disponible
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 2.78279
+      rural: 2.54786
+      total: 2.75065
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 97.21721
+      rural: 97.45215
+      total: 97.24935
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 97.21721
+      rural: 97.45215
+      total: 97.24935
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.00001
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 2.78279
+        rural: 2.54786
+        total: 2.75065
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 4
+  - source:
+      code: GAB_2021_AFB
+      year: 2021
+      series: AFB
+      type: Survey with microdata
+      name: ROUND 9 AFROBAROMETER - QUALITE DE LA DEMOCRATIE ET DE LA GOUVERNANCE
+        AU GABON
+      column: 116
+      n_rows: 1
+    categories:
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: Non, pas disponible
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 0.46546
+      rural: 0.91511
+      total: 0.52689
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 99.53454
+      rural: 99.08489
+      total: 99.47311
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 99.53454
+      rural: 99.08489
+      total: 99.47311
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: null
+        rural: null
+        total: null
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 0.46546
+        rural: 0.91511
+        total: 0.52689
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 4
+  - source:
+      code: GAB_2021_DHS
+      year: 2021
+      series: DHS
+      type: Survey with microdata
+      name: "Enqu\xEAte D\xE9mographique et de Sant\xE9 au Gabon, 2019\u2013\n21"
+      column: 122
+      n_rows: 13
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 54.54762
+      rural: 7.04115
+      total: 49.71656
+    - jmp_id: flush_and_pour_flush.to_piped_sewer_system
+      jmp: Flush and pour flush > to piped sewer system
+      level: 1
+      structural: false
+      row: 61
+      national_label: ''
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 3.1109
+      rural: 0.37358
+      total: 2.83253
+    - jmp_id: flush_and_pour_flush.to_septic_tank
+      jmp: Flush and pour flush > to septic tank
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: true
+      gmd: flush_septic
+      rolls_up_to:
+      - Improved
+      - Septic tanks
+      urban: 48.69386
+      rural: 5.95624
+      total: 44.34777
+    - jmp_id: flush_and_pour_flush.to_pit
+      jmp: Flush and pour flush > to pit
+      level: 1
+      structural: false
+      row: 63
+      national_label: ''
+      improved: true
+      gmd: flush_pit
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 1.96579
+      rural: 0.49514
+      total: 1.81623
+    - jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+      jmp: Flush and pour flush > to unknown place/ not sure/DK
+      level: 1
+      structural: false
+      row: 64
+      national_label: ''
+      improved: null
+      gmd: flush_elsewhere
+      rolls_up_to: []
+      urban: 0.21755
+      rural: 0.03161
+      total: 0.19864
+    - jmp_id: flush_and_pour_flush.to_elsewhere
+      jmp: Flush and pour flush > to elsewhere
+      level: 1
+      structural: false
+      row: 65
+      national_label: ''
+      improved: false
+      gmd: flush_elsewhere
+      rolls_up_to: []
+      urban: 0.55952
+      rural: 0.18458
+      total: 0.52139
+    - jmp_id: flush_toilets
+      jmp: Flush/toilets
+      level: 0
+      structural: false
+      row: 66
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 54.54762
+      rural: 7.04115
+      total: 49.71656
+    - jmp_id: flush_toilets.to_piped_sewer_system
+      jmp: Flush/toilets > to piped sewer system
+      level: 1
+      structural: false
+      row: 67
+      national_label: flush to piped sewer system
+      improved: true
+      gmd: flush_sewer
+      rolls_up_to:
+      - Improved
+      - Sewer connection
+      urban: 3.1109
+      rural: 0.37358
+      total: 2.83253
+    - jmp_id: flush_toilets.to_septic_tank
+      jmp: Flush/toilets > to septic tank
+      level: 1
+      structural: false
+      row: 68
+      national_label: flush to septic tank
+      improved: true
+      gmd: flush_septic
+      rolls_up_to:
+      - Improved
+      - Septic tanks
+      urban: 48.69386
+      rural: 5.95624
+      total: 44.34777
+    - jmp_id: flush_toilets.to_pit
+      jmp: Flush/toilets > to pit
+      level: 1
+      structural: false
+      row: 69
+      national_label: flush to pit latrine
+      improved: true
+      gmd: flush_pit
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 1.96579
+      rural: 0.49514
+      total: 1.81623
+    - jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+      jmp: Flush/toilets > to unknown place/ not sure/DK
+      level: 1
+      structural: false
+      row: 70
+      national_label: flush, don't know where
+      improved: null
+      gmd: flush_elsewhere
+      rolls_up_to: []
+      urban: 0.21755
+      rural: 0.03161
+      total: 0.19864
+    - jmp_id: flush_toilets.to_elsewhere
+      jmp: Flush/toilets > to elsewhere
+      level: 1
+      structural: false
+      row: 71
+      national_label: flush to somewhere else
+      improved: false
+      gmd: flush_elsewhere
+      rolls_up_to: []
+      urban: 0.55952
+      rural: 0.18458
+      total: 0.52139
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 44.38032
+      rural: 89.46226
+      total: 48.96481
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 44.38032
+      rural: 89.46226
+      total: 48.96481
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 24.88547
+      rural: 12.56079
+      total: 23.63214
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: ventilated improved pit latrine (vip)
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 3.58171
+      rural: 1.93728
+      total: 3.41448
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: pit latrine with slab
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 21.30376
+      rural: 10.62351
+      total: 20.21766
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: pit latrine without slab/open pit
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: 12.58031
+      rural: 49.20827
+      total: 16.3051
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: hanging toilet/latrine
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: 6.41064
+      rural: 27.5721
+      total: 8.5626
+    - jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Bucket latrine
+      level: 3
+      structural: false
+      row: 110
+      national_label: bucket toilet
+      improved: false
+      gmd: bucket
+      rolls_up_to: []
+      urban: 0.5039
+      rural: 0.1211
+      total: 0.46497
+    - jmp_id: composting_toilets
+      jmp: Composting toilets
+      level: 0
+      structural: false
+      row: 128
+      national_label: composting toilet
+      improved: true
+      gmd: composting
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: 0.37401
+      rural: 0.60784
+      total: 0.39779
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: no facility/bush/field
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: 0.63853
+      rural: 2.88875
+      total: 0.86736
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.05953
+      rural: 0.0
+      total: 0.05347
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.05953
+      rural: 0.0
+      total: 0.05347
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.00001
+      rural: 100.0
+      total: 99.99999
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 6
+        urban: 79.24758
+        rural: 20.0252
+        total: 73.2251
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 7
+        urban: 3.1109
+        rural: 0.37358
+        total: 2.83253
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 8
+        urban: 48.69386
+        rural: 5.95624
+        total: 44.34777
+      - label: Other
+        label_local: Autre
+        row: 9
+        urban: 27.44282
+        rural: 13.69538
+        total: 26.0448
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 10
+        urban: 0.63853
+        rural: 2.88875
+        total: 0.86736
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 12
+        urban: 3.1109
+        rural: 0.37358
+        total: 2.83253
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 15
+        urban: 48.69386
+        rural: 5.95624
+        total: 44.34777
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 22
+        urban: 27.44282
+        rural: 13.69538
+        total: 26.0448
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 32
+        urban: 26.33465
+        rural: 20.96106
+        total: 26.18521
+      - label: Safely managed
+        label_local: "G\xE9r\xE9 en toute s\xE9curit\xE9"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "Amelior\xE9"
+        row: 35
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Sewer connection
+        label_local: "Raccordement \xE0 l'\xE9gout"
+        row: 36
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "Eaux us\xE9es entrent dans le r\xE9seau"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "Eaux us\xE9es atteignent la station d'\xE9puration"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: Fosses septiques
+        row: 39
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "Latrines et autres am\xE9lior\xE9es"
+        row: 46
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "Confin\xE9s/stock\xE9s et trait\xE9s"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "Non vid\xE9/stock\xE9 et \xE9limin\xE9 in situ"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "Vid\xE9 et enterr\xE9 sur place"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "Vid\xE9 et d\xE9charg\xE9 localement"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "Vidang\xE9 et ger\xE9 hors site"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "Livr\xE9 \xE0 la station d'\xE9puration"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "Trait\xE9"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "A la station d'\xE9puration"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "A la station d'\xE9puration des boues de vidange"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "Partag\xE9es"
+        row: 56
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Open defecation
+        label_local: "D\xE9f\xE9cation \xE0 l'air libre"
+        row: 57
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 25
+  summary:
+    sources: 9
+    sources_with_estimates: 9
+    categories_with_estimates: 98
+    from: 2000
+    to: 2021
+    has_country_ladder: true

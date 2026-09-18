@@ -1,0 +1,151 @@
+iso3: BEL
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BEL_Belgium_0.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: BEL
+    name: Belgique
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_BEL_Belgium_0.xlsx
+    sha256: 281b274690411576ed2cf6d1820ed298f90b61426c9078d523486e145ef9f096
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:58:48+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 99.547135
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 94.89701
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.452865
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 100.0
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 100.0
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 4.589211
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 99.491308
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 99.486125
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 0.513727
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 0.505545
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 0.513875
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 5.3e-05
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 0.003147
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Urbain*
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

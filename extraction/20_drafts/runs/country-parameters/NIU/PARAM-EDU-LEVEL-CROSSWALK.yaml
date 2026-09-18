@@ -1,0 +1,158 @@
+country_id: CTY-NIU
+country_name: Niue
+iso3: NIU
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Playschool/Kindergarten
+    national_label_local: ECCED
+    entry_age: 1
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Early Childhood Education
+    national_label_local: Aoga Fakamahani
+    entry_age: 4
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: Primary School
+    national_label_local: Aoga Ikiiki
+    entry_age: 5
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+  - national_label_en: Intermediate/Lower Secondary School (Year 7-10)
+    national_label_local: Aoga Tokolalo
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: Year 11/NCEA Level 1
+    national_label_local: Year 11/NCEA Level 1
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 11
+  - national_label_en: Year 12/NCEA Level 2
+    national_label_local: Aoga Tokoluga
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 12
+  - national_label_en: Year 13/NCEA Level 3
+    national_label_local: Year 13/NCEA Level 3
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: USP Certificate course
+    national_label_local: USP Certificate course
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+  - national_label_en: Youth Employment Program
+    national_label_local: Youth Employment Program
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+  - national_label_en: Pre-vocational programme (PVP) (includes food and nutrition,
+      horticulture, ICT, design, hospitality, tourism)
+    national_label_local: Pre-vocational programme (PVP) (includes food and nutrition,
+      horticulture, ICT, design, hospitality, tourism)
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+  - national_label_en: Open Polytechnic Certificate
+    national_label_local: Open Polytechnic Certificate
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 17
+  - national_label_en: USP and Open Polytechnic Diploma courses
+    national_label_local: USP and Open Polytechnic Diploma courses
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: USP and Open Polytechnic Bachelor's course
+    national_label_local: USP and Open Polytechnic Bachelor's course
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: USP Master's course
+    national_label_local: USP Master's course
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Niue.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

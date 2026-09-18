@@ -1,0 +1,347 @@
+country_id: CTY-THA
+country_name: Thailand
+iso3: THA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Learning and childcare
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E1B\u0E10\u0E21\u0E27\u0E31\u0E22"
+    entry_age: 1
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Pre-primary
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E01\u0E48\u0E2D\u0E19\u0E1B\u0E23\u0E30\u0E16\u0E21\u0E28\
+      \u0E36\u0E01\u0E29\u0E32"
+    entry_age: 3
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: Primary education
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E1B\u0E23\u0E30\u0E16\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+  - national_label_en: Primary Basic Education for Adults
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E19\u0E2D\
+      \u0E01\u0E23\u0E30\u0E1A\u0E1A \u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\
+      \u0E0A\u0E31\u0E49\u0E19\u0E1B\u0E23\u0E30\u0E16\u0E21\u0E28\u0E36\u0E01\u0E29\
+      \u0E32"
+    entry_age: 15
+    duration_years: 0
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 10
+  - national_label_en: Lower Secondary education (Grades 7-9)
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\
+      \u0E15\u0E2D\u0E19\u0E15\u0E49\u0E19"
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 11
+  - national_label_en: Lower Secondary  Basic Education for Adults
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E19\u0E2D\
+      \u0E01\u0E23\u0E30\u0E1A\u0E1A \u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\
+      \u0E0A\u0E31\u0E49\u0E19\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\
+      \u0E32\u0E15\u0E2D\u0E19\u0E15\u0E49\u0E19"
+    entry_age: 15
+    duration_years: 0
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 12
+  - national_label_en: Upper Secondary education (Grades 10-12)
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\
+      \u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22 \n\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\
+      \u0E2A\u0E32\u0E22\u0E2A\u0E32\u0E21\u0E31\u0E0D/\u0E27\u0E34\u0E0A\u0E32\u0E01\
+      \u0E32\u0E23"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: Upper Secondary  Basic Education for Adults
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E19\u0E2D\
+      \u0E01\u0E23\u0E30\u0E1A\u0E1A \u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\
+      \u0E0A\u0E31\u0E49\u0E19\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\
+      \u0E32\u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22"
+    entry_age: 15
+    duration_years: 0
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+  - national_label_en: Upper Secondary, Vocational Education and Training
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\
+      \u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22\n\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\
+      \u0E2D\u0E32\u0E0A\u0E35\u0E27\u0E28\u0E36\u0E01\u0E29\u0E32"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 15
+  - national_label_en: Education provided by other agencies in Upper Secondary
+    national_label_local: "\u0E01\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E28\
+      \u0E36\u0E01\u0E29\u0E32\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E17\u0E32\u0E07 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E21\
+      \u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\u0E15\u0E2D\u0E19\u0E1B\
+      \u0E25\u0E32\u0E22 \u0E2A\u0E32\u0E22\u0E2D\u0E32\u0E0A\u0E35\u0E1E(\u0E1B\u0E27\
+      \u0E0A."
+    entry_age: 14
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+  - national_label_en: Diploma in other types of education
+    national_label_local: "\u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E2D\u0E19\
+      \u0E38\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Diploma in Technical education
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \n\u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E15\u0E48\u0E33\u0E01\u0E27\u0E48\
+      \u0E32\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\u0E15\u0E23\u0E35 \u0E1B\u0E23\u0E30\
+      \u0E40\u0E20\u0E17\u0E2D\u0E32\u0E0A\u0E35\u0E27\u0E28\u0E36\u0E01\u0E29\u0E32"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Diploma in Vocational education
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E23\
+      \u0E30\u0E14\u0E31\u0E1A\u0E15\u0E48\u0E33\u0E01\u0E27\u0E48\u0E32\u0E1B\u0E23\
+      \u0E34\u0E0D\u0E0D\u0E32 : \u0E1B\u0E23\u0E30\u0E01\u0E32\u0E28\u0E19\u0E35\u0E22\
+      \u0E1A\u0E31\u0E15\u0E23\u0E27\u0E34\u0E0A\u0E32\u0E0A\u0E35\u0E1E\u0E0A\u0E31\
+      \u0E49\u0E19\u0E2A\u0E39\u0E07"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: "Bachelor\u2019s or equivalent Level, Vocational Education\
+      \ and Training"
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\u0E15\u0E48\u0E2D\u0E40\u0E19\u0E37\u0E48\u0E2D\u0E07 \u0E1B\
+      \u0E23\u0E30\u0E40\u0E20\u0E17\u0E2D\u0E32\u0E0A\u0E35\u0E27\u0E28\u0E36\u0E01\
+      \u0E29\u0E32"
+    entry_age: 20
+    duration_years: 2
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: "Bachelor\u2019s or equivalent Level, General Education and\
+      \ Training"
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\u0E15\u0E48\u0E2D\u0E40\u0E19\u0E37\u0E48\u0E2D\u0E07 \u0E1B\
+      \u0E23\u0E30\u0E40\u0E20\u0E17\u0E2A\u0E32\u0E21\u0E31\u0E0D\u0E28\u0E36\u0E01\
+      \u0E29\u0E32"
+    entry_age: 20
+    duration_years: 2
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: Bachelor's Degree - academic
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35 \u0E2A\u0E32\u0E22\u0E27\u0E34\u0E0A\u0E32\u0E01\u0E32\u0E23"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  - national_label_en: Bachelor's Degree - professional
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35 \u0E2A\u0E32\u0E22\u0E27\u0E34\u0E0A\u0E32\u0E0A\u0E35\u0E1E"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+  - national_label_en: 'Bachelor''s Degree - teachers
+
+      - architecture
+
+      - engineer'
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\u0E2A\u0E32\u0E22\u0E27\u0E34\u0E0A\u0E32\u0E0A\u0E35\u0E1E"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+  - national_label_en: Education provided by other agencies in Bachelor's Degree
+    national_label_local: "\u0E01\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E28\
+      \u0E36\u0E01\u0E29\u0E32\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E17\u0E32\u0E07 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E1B\
+      \u0E23\u0E34\u0E0D\u0E0D\u0E32\u0E15\u0E23\u0E35"
+    entry_age: 0
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  - national_label_en: Graduate Diploma
+    national_label_local: "\u0E1B\u0E23\u0E30\u0E01\u0E32\u0E28\u0E19\u0E35\u0E22\u0E1A\
+      \u0E31\u0E15\u0E23\u0E1A\u0E31\u0E13\u0E11\u0E34\u0E15"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+  - national_label_en: Bachelor's Degree - medical
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\n-\u0E2A\u0E32\u0E22\u0E41\u0E1E\u0E17\u0E28\u0E32\u0E2A\u0E15\
+      \u0E23\u0E4C"
+    entry_age: 18
+    duration_years: 6
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+  - national_label_en: Master's Degree
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E42\u0E17"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+  - national_label_en: Education provided by other agencies in Master's Degree
+    national_label_local: "\u0E01\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E28\
+      \u0E36\u0E01\u0E29\u0E32\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E17\u0E32\u0E07 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E1B\
+      \u0E23\u0E34\u0E0D\u0E0D\u0E32\u0E42\u0E17"
+    entry_age: 0
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+  - national_label_en: Higher Graduate Diploma
+    national_label_local: "\u0E1B\u0E23\u0E30\u0E01\u0E32\u0E28\u0E19\u0E35\u0E22\u0E1A\
+      \u0E31\u0E15\u0E23\u0E1A\u0E31\u0E13\u0E11\u0E34\u0E15\u0E0A\u0E31\u0E49\u0E19\
+      \u0E2A\u0E39\u0E07"
+    entry_age: 24
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+  - national_label_en: Doctorate Degree
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E40\u0E2D\u0E01"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 31
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Thailand.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

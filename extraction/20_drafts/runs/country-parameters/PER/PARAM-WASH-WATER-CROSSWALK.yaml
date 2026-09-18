@@ -1,0 +1,788 @@
+country_id: CTY-PER
+country_name: "Per\xFA"
+iso3: PER
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: manantial
+    national_label_en: Manantial
+    national_label_local: Todos los manantiales
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - source_category_code: manantial_puquio
+    national_label_en: Manantial (Puquio)
+    national_label_local: Todos los manantiales
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - source_category_code: manantial_o_puquio
+    national_label_en: Manantial o puquio
+    national_label_local: Todos los manantiales
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - source_category_code: spring
+    national_label_en: Spring
+    national_label_local: Todos los manantiales
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - source_category_code: pozo
+    national_label_en: Pozo
+    national_label_local: Todos los pozos
+    jmp_classification: Ground water > All wells
+    jmp_id: ground_water.all_wells
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 54
+  - source_category_code: pozo_agua_subterranea
+    national_label_en: Pozo (agua subterranea)
+    national_label_local: Todos los pozos
+    jmp_classification: Ground water > All wells
+    jmp_id: ground_water.all_wells
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 54
+  - source_category_code: well
+    national_label_en: Well
+    national_label_local: Todos los pozos
+    jmp_classification: Ground water > All wells
+    jmp_id: ground_water.all_wells
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 54
+  - source_category_code: pozo_en_la_casa_patio
+    national_label_en: Pozo en la casa /patio
+    national_label_local: Privado
+    jmp_classification: Ground water > All wells > Private
+    jmp_id: ground_water.all_wells.private
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 55
+  - source_category_code: pozo_en_la_casa_patio
+    national_label_en: Pozo en la casa/patio
+    national_label_local: Privado
+    jmp_classification: Ground water > All wells > Private
+    jmp_id: ground_water.all_wells.private
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 55
+  - source_category_code: private_well
+    national_label_en: Private well
+    national_label_local: Privado
+    jmp_classification: Ground water > All wells > Private
+    jmp_id: ground_water.all_wells.private
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 55
+  - source_category_code: well_in_house_or_yard
+    national_label_en: Well in house or yard
+    national_label_local: Privado
+    jmp_classification: Ground water > All wells > Private
+    jmp_id: ground_water.all_wells.private
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 55
+  - source_category_code: well_inside_dwelling
+    national_label_en: Well inside dwelling
+    national_label_local: Privado
+    jmp_classification: Ground water > All wells > Private
+    jmp_id: ground_water.all_wells.private
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 55
+  - source_category_code: pozo_publico
+    national_label_en: Pozo publico
+    national_label_local: Publico
+    jmp_classification: Ground water > All wells > Public
+    jmp_id: ground_water.all_wells.public
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 56
+  - source_category_code: public_well
+    national_label_en: Public well
+    national_label_local: Publico
+    jmp_classification: Ground water > All wells > Public
+    jmp_id: ground_water.all_wells.public
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 56
+  - source_category_code: pozo
+    national_label_en: Pozo
+    national_label_local: Pozos tradicionales
+    jmp_classification: Ground water > Traditional wells
+    jmp_id: ground_water.traditional_wells
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 62
+  - source_category_code: well
+    national_label_en: WELL
+    national_label_local: Pozos tradicionales
+    jmp_classification: Ground water > Traditional wells
+    jmp_id: ground_water.traditional_wells
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 62
+  - source_category_code: pozo_en_la_casa_patio
+    national_label_en: Pozo en la casa/patio
+    national_label_local: Privado
+    jmp_classification: Ground water > Traditional wells > Private
+    jmp_id: ground_water.traditional_wells.private
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 63
+  - source_category_code: pozo_en_la_casa_patio_lote
+    national_label_en: Pozo en la casa/patio/lote
+    national_label_local: Privado
+    jmp_classification: Ground water > Traditional wells > Private
+    jmp_id: ground_water.traditional_wells.private
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 63
+  - source_category_code: pozo_en_la_vivineda_patio_lote
+    national_label_en: Pozo en la vivineda/patio/lote
+    national_label_local: Privado
+    jmp_classification: Ground water > Traditional wells > Private
+    jmp_id: ground_water.traditional_wells.private
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 63
+  - source_category_code: pozo_publico
+    national_label_en: Pozo publico
+    national_label_local: Publico
+    jmp_classification: Ground water > Traditional wells > Public
+    jmp_id: ground_water.traditional_wells.public
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 64
+  - source_category_code: pump
+    national_label_en: PUMP
+    national_label_local: Pozos entubados o de sondeo
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - source_category_code: camion_cisterna_u_otro_similar
+    national_label_en: Camion - cisterna u otro similar
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: camion_cisterna
+    national_label_en: Camion cisterna
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: camion_tanque
+    national_label_en: Camion tanque
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: camion_tanque_aguatero
+    national_label_en: Camion tanque/aguatero
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: camion_cisterna_u_otro_similar
+    national_label_en: "Cami\xF3n-cisterna u otro similar"
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: tanker_truck
+    national_label_en: Tanker truck
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: water_tank_or_seller
+    national_label_en: WATER TANK OR SELLER
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: other
+    national_label_en: other
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otra
+    national_label_en: Otra
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: otros
+    national_label_en: Otros
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: agua_embotellada
+    national_label_en: Agua embotellada
+    national_label_local: Agua embotellada
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: bw_with_improved_source
+    national_label_en: BW with improved source
+    national_label_local: Agua embotellada
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: bw_with_improved_sources
+    national_label_en: BW with improved sources
+    national_label_local: Agua embotellada
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - source_category_code: bw_with_unimproved_source
+    national_label_en: BW with unimproved source
+    national_label_local: Agua en bolsita
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - source_category_code: bw_with_unimproved_sources
+    national_label_en: BW with unimproved sources
+    national_label_local: Agua en bolsita
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - source_category_code: agua_de_lluivia
+    national_label_en: Agua de lluivia
+    national_label_local: Cisterna/tanque cubierto
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: agua_de_lluvia
+    national_label_en: Agua de lluvia
+    national_label_local: Cisterna/tanque cubierto
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: rainwater
+    national_label_en: Rainwater
+    national_label_local: Cisterna/tanque cubierto
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: rio_acequia_lago_laguna
+    national_label_en: "R\xEDo, acequia, lago, laguna"
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: rio_acequia_manantial_o_similar
+    national_label_en: Rio, acequia, manantial o similar
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: rio_acequia_manantial_o_similar
+    national_label_en: "R\xEDo, acequia.manantial o similar"
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: rio_acequia
+    national_label_en: "R\xEDo/ acequia"
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: rio_acequia_laguna
+    national_label_en: "R\xEDo/ acequia / Laguna"
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: rio_acequia
+    national_label_en: Rio/acequia
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: river_irrigation_channel
+    national_label_en: River, irrigation channel
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: river_irrigation_channel
+    national_label_en: River/ irrigation channel
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
+    national_label_en: River/dam/lake/ponds/stream/canal/irirgation channel
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+    national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: rio_acequia
+    national_label_en: "R\xEDo/ acequia"
+    national_label_local: "R\xEDo"
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - source_category_code: river_or_stream
+    national_label_en: RIVER OR STREAM
+    national_label_local: "R\xEDo"
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - source_category_code: connection_outdoors
+    national_label_en: Connection outdoors
+    national_label_local: Otro
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - source_category_code: household_connection_neighbour_s
+    national_label_en: Household connection (neighbour's)
+    national_label_local: Otro
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - source_category_code: household_connection
+    national_label_en: Household connection
+    national_label_local: Conexiones domiciliarias
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - source_category_code: red_publica_dentro_de_la_vivienda_fuera_de_la_vivienda_y_pilon_de_uso_publico
+    national_label_en: "Red p\xFAblica dentro de la vivienda, fuera de la vivienda\
+      \ y pil\xF3n de uso p\xFAblico"
+    national_label_local: Conexiones domiciliarias
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - source_category_code: household_connection_to_system
+    national_label_en: Household connection to system
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: inside_the_house
+    national_label_en: INSIDE THE HOUSE
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: piped_into_dwelling
+    national_label_en: Piped into dwelling
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: red_publica_dentro_de_la_viv
+    national_label_en: "Red p\xFAblica Dentro de la viv."
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: red_publica_dentro_de_la_vivienda
+    national_label_en: Red publica dentro de la vivienda
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: red_publica_dentro_de_la_vivienda
+    national_label_en: Red publica, dentro de la vivienda
+    national_label_local: Agua entubada en la vivienda
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - source_category_code: building_connection_to_system
+    national_label_en: Building connection to system
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: outside_the_house_but_inside_the_compound
+    national_label_en: OUTSIDE THE HOUSE, BUT INSIDE THE COMPOUND.
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: piped_outside_dwelling_but_within_buikding
+    national_label_en: Piped outside dwelling but within buikding
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: red_publica_fuera_de_la_vivienda
+    national_label_en: "Red P\xFAblica Fuera de la vivienda"
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
+    national_label_en: Red publica fuera de la vivienda pero dentro del edificio
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
+    national_label_en: "Red p\xFAblica fuera de la vivienda, pero dentro de la edificaci\xF3\
+      n"
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
+    national_label_en: Red publica, fuera de la vivienda pero dentro del edificio
+    national_label_local: Agua corriente al patio/parcela
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - source_category_code: pilon_grifo_publico
+    national_label_en: Pilon /grifo publico/
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: pilon_de_uso_publico
+    national_label_en: "Pil\xF3n de uso p\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: pilon_o_pileta_de_uso_publico
+    national_label_en: "Pil\xF3n o pileta de uso p\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: pilon_grifo_publico
+    national_label_en: Pilon/Grifo publico
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: public_standpipe
+    national_label_en: Public standpipe
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PER_Peru_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

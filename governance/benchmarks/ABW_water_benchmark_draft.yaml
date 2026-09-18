@@ -1,0 +1,88 @@
+iso3: ABW
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ABW_Aruba_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: ABW
+    name: Aruba
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_ABW_Aruba_1.xlsx
+    sha256: 1378a427762bd694661576de9dfa72c2a138b5954f875241bea37c5ecd8d9482
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:56:24+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2016'
+        value: 96.739776
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 98.840002
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 98.607243
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2016'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 1.222757
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2016'
+        value: 3.260224
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.302227
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2016'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.857771
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 0.17
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

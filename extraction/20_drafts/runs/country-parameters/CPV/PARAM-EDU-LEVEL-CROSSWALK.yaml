@@ -1,0 +1,199 @@
+country_id: CTY-CPV
+country_name: Cabo Verde
+iso3: CPV
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: "Pr\xE9-scolaire"
+    national_label_local: "Educa\xE7\xE3o Pr\xE9-escolar"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: "Enseignement de Base\n(1-6 ann\xE9es)"
+    national_label_local: "Ensino B\xE1sico\n(1-6 anos)"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+  - national_label_en: "Enseignement r\xE9currente\n(1-6 ann\xE9es)"
+    national_label_local: 'Ensino recorrente
+
+      (1-6 anos)'
+    entry_age: 15
+    duration_years: 3
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+  - national_label_en: "Enseignement de Base\n(7-8 ann\xE9es)"
+    national_label_local: "Ensino B\xE1sico\n(7-8 anos)"
+    entry_age: 12
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+  - national_label_en: "Enseignement r\xE9currente\n(7-8 ann\xE9es)"
+    national_label_local: 'Ensino recorrente
+
+      (7-8 anos)'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 11
+  - national_label_en: "Enseignement secondaire \n1-\xE8re cycle \n(via general)\n\
+      1-\xE8re ann\xE9e"
+    national_label_local: "Ensino Secund\xE1rio \n1\xBA Ciclo (Via Geral)\n1\xBA ano"
+    entry_age: 14
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 12
+  - national_label_en: "Enseignement r\xE9currente \n(secondaire 1\xE9re cycle)\n\
+      (9 ann\xE9e)"
+    national_label_local: "Ensino recorrente\n(Secund\xE1rio - 1\xBA Ciclo)\n(9 ano)"
+    entry_age: 20
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 13
+  - national_label_en: "Enseignement secondaire \n1-\xE8re cycle \n(via general)\n\
+      2-\xE8me ann\xE9e"
+    national_label_local: "Ensino Secund\xE1rio\n1\xBA Ciclo (Via Geral)\n2o ano"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+  - national_label_en: "Enseignement r\xE9currente \n(secondaire 1\xE9re cycle)\n\
+      (10 ann\xE9e)"
+    national_label_local: "Ensino recorrente\n(Secund\xE1rio - 1\xBA Ciclo)\n(10 ano)"
+    entry_age: 21
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+  - national_label_en: "Enseignement secondaire 2\xE9me cycle (via g\xE9n\xE9rale)"
+    national_label_local: "Ensino Secund\xE1rio - 2\xBA Ciclo (Via Geral)"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+  - national_label_en: "Enseignement secondaire 2e cycle (Via T\xE9chnique)"
+    national_label_local: "Ensino Secund\xE1rio - 2\xBA Ciclo (Via T\xE9cnica)"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 17
+  - national_label_en: "Enseignement r\xE9currente \n(secondaire 2\xE9me cycle)\n\
+      (11-12 ann\xE9e)"
+    national_label_local: "Ensino recorrente\n(Secund\xE1rio - 2\xBA Ciclo)\n(11 -12ano)"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 18
+  - national_label_en: "Ann\xE9e compl\xE9mentaire professionnelle\n(ACP)"
+    national_label_local: 'Ano complementar profissionalizante
+
+      (ACP)'
+    entry_age: 18
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: "Etudes sup\xE9rieures professionelles"
+    national_label_local: 'Curso de estudos superior e profissionalizante
+
+      (CESP)'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: Ensino Superior (Bacharelato)
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: Ensino Superior (Mestrado)
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  - national_label_en: "Enseignement sup\xE9rieur (Doctorat)"
+    national_label_local: Ensino Superior (Doutoramento)
+    entry_age: 24
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Cabo_Verde.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

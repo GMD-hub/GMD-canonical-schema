@@ -1,0 +1,234 @@
+country_id: CTY-PNG
+country_name: Papua New Guinea
+iso3: PNG
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: ECCE programmes (private)
+    national_label_local: ECCE programmes (private)
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Preparatory year
+    national_label_local: Preparatory year
+    entry_age: 6
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: Elementary School (Grade 1 to 2)        Primary School     (Grade
+      3 to 6)
+    national_label_local: Elementary School (Grade 1 to 2)        Primary School     (Grade
+      3 to 6)
+    entry_age: 7
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+  - national_label_en: Primary School     (Grade 7 to 8)
+    national_label_local: Primary School     (Grade 7 to 8)
+    entry_age: 13
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+  - national_label_en: Vocational training programme
+    national_label_local: Vocational training programme
+    entry_age: 15
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 11
+  - national_label_en: Secondary School (Grade 9 to 10)
+    national_label_local: Secondary School (Grade 9 to 10)
+    entry_age: 15
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 12
+  - national_label_en: Secondary School (Grade 11 to 12)
+    national_label_local: Secondary School (Grade 11 to 12)
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: Technical Training Certificate (TTC) programme
+    national_label_local: Technical Training Certificate (TTC) programme
+    entry_age: 19
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: Certificate of Elementary Teaching programme
+    national_label_local: Certificate of Elementary Teaching programme
+    entry_age: 19
+    duration_years: 3
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: 'CTCS Certificate (Distance courses, bridging courseto enter
+      Bachelor degree)
+
+      programme'
+    national_label_local: 'CTCS Certificate (Distance courses, bridging course to
+      enter Bachelor degree)
+
+      programme'
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Science Foundation
+    national_label_local: Science Foundation
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Diploma of Nursing
+    national_label_local: Diploma of Nursing
+    entry_age: 19
+    duration_years: 3
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Diploma of Teaching (primary)
+    national_label_local: Diploma of Teaching (primary)
+    entry_age: 19
+    duration_years: 3
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: Commerce Diploma programme
+    national_label_local: Commerce Diploma programme
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: Technical Certificate programme
+    national_label_local: Technical Certificate programme
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: Bachelor's in secondary teaching
+    national_label_local: Bachelor's in secondary teaching
+    entry_age: 19
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  - national_label_en: Bachelor degree programmes
+    national_label_local: Bachelor degree programmes
+    entry_age: 19
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+  - national_label_en: Postgraduate Law Diploma programme
+    national_label_local: Postgraduate Law Diploma programme
+    entry_age: 23
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+  - national_label_en: Bachelor degree in medicine programme
+    national_label_local: Bachelor degree in medicine programme
+    entry_age: 20
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  - national_label_en: Master degree programme
+    national_label_local: Master degree programme
+    entry_age: 23
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+  - national_label_en: Doctorate
+    national_label_local: Doctorate
+    entry_age: 25
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Papua_New_Guinea.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

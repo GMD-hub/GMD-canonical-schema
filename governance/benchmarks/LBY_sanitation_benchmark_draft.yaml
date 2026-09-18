@@ -1,0 +1,1741 @@
+iso3: LBY
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LBY_Libya_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: LBY
+    name: "\u0644\u064A\u0628\u064A\u0627"
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: Arabic
+  file:
+    file: JMP_2025_LBY_Libya_1.xlsx
+    sha256: a39d4b13a0a48b174f25bf939b1e1206cb904b32821e88a1ad6e88be75e85ad5
+    profile: jmp_country_file_2025
+    language: Arabic
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:49:56+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 21.746917
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 96.354544
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 66.752229
+      - domain: "\u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0627\u0644\u0639\u0627\
+          \u0645\u0629"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 95.59
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 3.484378
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 6.866313
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 0.067893
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 4.065932
+    - rung: No service
+      row: 35
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 0.093185
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 0.568608
+  per_source:
+  - source:
+      code: LBY_2020_MSNA
+      year: 2020
+      series: MSNA
+      type: Survey with microdata
+      name: Multi Sectoral Needs Assessment
+      column: 38
+      n_rows: 10
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: Flush or pour/flush toilet
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 92.30998
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 6.93053
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 6.93053
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 2.44648
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: Pit VIP toilet (Pit latrine with ventilation)
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: null
+      rural: null
+      total: 0.55743
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: Pit latrine with a slab and platform
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: null
+      rural: null
+      total: 1.88905
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Pit latrine without a slab and platform
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 3.72834
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: Hanging toilet/latrine
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.28449
+    - jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Bucket latrine
+      level: 3
+      structural: false
+      row: 110
+      national_label: Bucket toilet
+      improved: false
+      gmd: bucket
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.0
+    - jmp_id: latrines.dry_latrines.improved_latrines.other
+      jmp: Latrines > Dry latrines > Improved latrines > Other
+      level: 3
+      structural: false
+      row: 111
+      national_label: Open hole
+      improved: null
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.47122
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: None of the above, open defecation
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: null
+      rural: null
+      total: 0.0
+    - jmp_id: other_unimproved
+      jmp: Other unimproved
+      level: 0
+      structural: false
+      row: 135
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.0
+    - jmp_id: other_unimproved.other
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 136
+      national_label: Other (specify)
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.0
+    - jmp_id: other_unimproved.other#2
+      jmp: Other unimproved > Other
+      level: 1
+      structural: false
+      row: 137
+      national_label: Plastic bag
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.0
+    - jmp_id: dk_missing
+      jmp: DK/missing
+      level: 0
+      structural: true
+      row: 138
+      national_label: Don't know
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.75949
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "\u0645\u062D\u0633\u0651\u0646"
+        row: 6
+        urban: null
+        rural: null
+        total: 94.75646
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: "\u0622\u062E\u0631"
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "\u0627\u0644\u062A\u063A\u0648\u0637 \u0641\u064A \u0627\u0644\
+          \u0639\u0631\u0627\u0621"
+        row: 10
+        urban: null
+        rural: null
+        total: 0.0
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "\u062A\u062F\u062E\u0644 \u0645\u064A\u0627\u0647 \u0627\u0644\
+          \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0625\u0644\u0649 \u0627\
+          \u0644\u0634\u0628\u0643\u0629"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0645\u064A\u0627\u0647 \u0627\
+          \u0644\u0635\u0631\u0641 \u0625\u0644\u0649 \u0645\u062D\u0637\u0629 \u0627\
+          \u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0645\u0631\u0627\
+          \u062D\u064A\u0636 \u0648\u063A\u064A\u0631\u0647\u0627"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "\u0645\u0639\u0627\u0644\u062C"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0645\u064A\u0627\u0647 \u0627\u0644\u0635\u0631\u0641 \u0627\
+          \u0644\u0635\u062D\u064A"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0627\u0644\u062D\u0645\u0623\u0629 \u0627\u0644\u0628\u0631\
+          \u0627\u0632\u064A\u0629"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "\u0645\u0634\u062A\u0631\u0643"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "\u062A\u062F\u0627\u0631 \u0628\u0623\u0645\u0627\u0646"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "\u0645\u062D\u0633\u0651\u0646"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "\u062A\u062F\u062E\u0644 \u0645\u064A\u0627\u0647 \u0627\u0644\
+          \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0625\u0644\u0649 \u0627\
+          \u0644\u0634\u0628\u0643\u0629"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0645\u064A\u0627\u0647 \u0627\
+          \u0644\u0635\u0631\u0641 \u0625\u0644\u0649 \u0645\u062D\u0637\u0629 \u0627\
+          \u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0645\u0631\u0627\
+          \u062D\u064A\u0636 \u0648\u063A\u064A\u0631\u0647\u0627"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "\u0645\u0639\u0627\u0644\u062C"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0645\u064A\u0627\u0647 \u0627\u0644\u0635\u0631\u0641 \u0627\
+          \u0644\u0635\u062D\u064A"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0627\u0644\u062D\u0645\u0623\u0629 \u0627\u0644\u0628\u0631\
+          \u0627\u0632\u064A\u0629"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "\u0645\u0634\u062A\u0631\u0643"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "\u0627\u0644\u062A\u063A\u0648\u0637 \u0641\u064A \u0627\u0644\
+          \u0639\u0631\u0627\u0621"
+        row: 57
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+    n_with_estimates: 16
+  - source:
+      code: LBY_2021_MSNA
+      year: 2021
+      series: MSNA
+      type: Survey with microdata
+      name: Libyan Population Multi-Sector Needs Assessment (MSNA)
+      column: 44
+      n_rows: 8
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: Flush or pour/flush toilet
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 89.33007
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 9.84696
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 9.84696
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 4.72946
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: Pit VIP toilet (Pit latrine with ventilation)
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: null
+      rural: null
+      total: 0.1515
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: Pit latrine with a slab and platform
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: null
+      rural: null
+      total: 4.57796
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Pit latrine without a slab or platform
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 4.1291
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: Hanging toilet/latrine
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.86517
+    - jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Bucket latrine
+      level: 3
+      structural: false
+      row: 110
+      national_label: Bucket toilet
+      improved: false
+      gmd: bucket
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.11225
+    - jmp_id: latrines.dry_latrines.improved_latrines.other
+      jmp: Latrines > Dry latrines > Improved latrines > Other
+      level: 3
+      structural: false
+      row: 111
+      national_label: Plastic bag
+      improved: null
+      gmd: other
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.01098
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: None + open hole
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: null
+      rural: null
+      total: 0.5243
+    - jmp_id: dk_missing
+      jmp: DK/missing
+      level: 0
+      structural: true
+      row: 138
+      national_label: Don't know + Prefer not to answer
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.29866
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 99.99999
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "\u0645\u062D\u0633\u0651\u0646"
+        row: 6
+        urban: null
+        rural: null
+        total: 94.05953
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: "\u0622\u062E\u0631"
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "\u0627\u0644\u062A\u063A\u0648\u0637 \u0641\u064A \u0627\u0644\
+          \u0639\u0631\u0627\u0621"
+        row: 10
+        urban: null
+        rural: null
+        total: 0.5243
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "\u062A\u062F\u062E\u0644 \u0645\u064A\u0627\u0647 \u0627\u0644\
+          \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0625\u0644\u0649 \u0627\
+          \u0644\u0634\u0628\u0643\u0629"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0645\u064A\u0627\u0647 \u0627\
+          \u0644\u0635\u0631\u0641 \u0625\u0644\u0649 \u0645\u062D\u0637\u0629 \u0627\
+          \u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0645\u0631\u0627\
+          \u062D\u064A\u0636 \u0648\u063A\u064A\u0631\u0647\u0627"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "\u0645\u0639\u0627\u0644\u062C"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0645\u064A\u0627\u0647 \u0627\u0644\u0635\u0631\u0641 \u0627\
+          \u0644\u0635\u062D\u064A"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0627\u0644\u062D\u0645\u0623\u0629 \u0627\u0644\u0628\u0631\
+          \u0627\u0632\u064A\u0629"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "\u0645\u0634\u062A\u0631\u0643"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "\u062A\u062F\u0627\u0631 \u0628\u0623\u0645\u0627\u0646"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "\u0645\u062D\u0633\u0651\u0646"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "\u062A\u062F\u062E\u0644 \u0645\u064A\u0627\u0647 \u0627\u0644\
+          \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0625\u0644\u0649 \u0627\
+          \u0644\u0634\u0628\u0643\u0629"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0645\u064A\u0627\u0647 \u0627\
+          \u0644\u0635\u0631\u0641 \u0625\u0644\u0649 \u0645\u062D\u0637\u0629 \u0627\
+          \u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0645\u0631\u0627\
+          \u062D\u064A\u0636 \u0648\u063A\u064A\u0631\u0647\u0627"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "\u0645\u0639\u0627\u0644\u062C"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0645\u064A\u0627\u0647 \u0627\u0644\u0635\u0631\u0641 \u0627\
+          \u0644\u0635\u062D\u064A"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0627\u0644\u062D\u0645\u0623\u0629 \u0627\u0644\u0628\u0631\
+          \u0627\u0632\u064A\u0629"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "\u0645\u0634\u062A\u0631\u0643"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "\u0627\u0644\u062A\u063A\u0648\u0637 \u0641\u064A \u0627\u0644\
+          \u0639\u0631\u0627\u0621"
+        row: 57
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+    n_with_estimates: 13
+  - source:
+      code: LBY_2022_MSNA
+      year: 2022
+      series: MSNA
+      type: Survey with microdata
+      name: Libyan Population Multi-Sector Needs Assessment (MSNA)
+      column: 50
+      n_rows: 7
+    categories:
+    - jmp_id: flush_and_pour_flush
+      jmp: Flush and pour flush
+      level: 0
+      structural: false
+      row: 60
+      national_label: Flush or pour/flush toilet
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 88.16
+    - jmp_id: latrines
+      jmp: Latrines
+      level: 0
+      structural: false
+      row: 84
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 7.68
+    - jmp_id: latrines.dry_latrines
+      jmp: Latrines > Dry latrines
+      level: 1
+      structural: false
+      row: 103
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 7.68
+    - jmp_id: latrines.dry_latrines.improved_latrines
+      jmp: Latrines > Dry latrines > Improved latrines
+      level: 2
+      structural: false
+      row: 104
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 4.83
+    - jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+      level: 3
+      structural: false
+      row: 105
+      national_label: Pit VIP toilet (Pit latrine with ventilation)
+      improved: true
+      gmd: vip
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: null
+      rural: null
+      total: 1.04
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered
+        latrine
+      level: 3
+      structural: false
+      row: 106
+      national_label: Pit latrine with a slab and platform
+      improved: true
+      gmd: pit_slab
+      rolls_up_to:
+      - Improved
+      - Other
+      urban: null
+      rural: null
+      total: 3.79
+    - jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+      jmp: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open
+        pit
+      level: 3
+      structural: false
+      row: 108
+      national_label: Pit latrine without a slab or platform
+      improved: false
+      gmd: pit_noslab
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 2.26
+    - jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+      level: 3
+      structural: false
+      row: 109
+      national_label: Hanging toilet/latrine
+      improved: false
+      gmd: hanging
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.51
+    - jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+      jmp: Latrines > Dry latrines > Improved latrines > Bucket latrine
+      level: 3
+      structural: false
+      row: 110
+      national_label: Bucket toilet
+      improved: false
+      gmd: bucket
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 0.08
+    - jmp_id: no_facility_bush_field
+      jmp: No facility, bush, field
+      level: 0
+      structural: false
+      row: 134
+      national_label: None of the above, open defecation + open hole
+      improved: false
+      gmd: open
+      rolls_up_to:
+      - Open defecation
+      urban: null
+      rural: null
+      total: 0.83
+    - jmp_id: dk_missing
+      jmp: DK/missing
+      level: 0
+      structural: true
+      row: 138
+      national_label: Don't know + Prefer not to answer
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 3.32
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 139
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: null
+      rural: null
+      total: 99.99
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: "\u0645\u062D\u0633\u0651\u0646"
+        row: 6
+        urban: null
+        rural: null
+        total: 92.99
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 7
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 8
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: "\u0622\u062E\u0631"
+        row: 9
+        urban: null
+        rural: null
+        total: null
+      - label: Open defecation
+        label_local: "\u0627\u0644\u062A\u063A\u0648\u0637 \u0641\u064A \u0627\u0644\
+          \u0639\u0631\u0627\u0621"
+        row: 10
+        urban: null
+        rural: null
+        total: 0.83
+      service_level_estimate:
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater enters network
+        label_local: "\u062A\u062F\u062E\u0644 \u0645\u064A\u0627\u0647 \u0627\u0644\
+          \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0625\u0644\u0649 \u0627\
+          \u0644\u0634\u0628\u0643\u0629"
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Wastewater reaches treatment plant
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0645\u064A\u0627\u0647 \u0627\
+          \u0644\u0635\u0631\u0641 \u0625\u0644\u0649 \u0645\u062D\u0637\u0629 \u0627\
+          \u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Latrines and other improved
+        label_local: "\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0645\u0631\u0627\
+          \u062D\u064A\u0636 \u0648\u063A\u064A\u0631\u0647\u0627"
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 26
+        urban: null
+        rural: null
+        total: null
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 27
+        urban: null
+        rural: null
+        total: null
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 28
+        urban: null
+        rural: null
+        total: null
+      - label: Treated
+        label_local: "\u0645\u0639\u0627\u0644\u062C"
+        row: 29
+        urban: null
+        rural: null
+        total: null
+      - label: At wastewater treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0645\u064A\u0627\u0647 \u0627\u0644\u0635\u0631\u0641 \u0627\
+          \u0644\u0635\u062D\u064A"
+        row: 30
+        urban: null
+        rural: null
+        total: null
+      - label: At faecal sludge treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0627\u0644\u062D\u0645\u0623\u0629 \u0627\u0644\u0628\u0631\
+          \u0627\u0632\u064A\u0629"
+        row: 31
+        urban: null
+        rural: null
+        total: null
+      - label: Shared
+        label_local: "\u0645\u0634\u062A\u0631\u0643"
+        row: 32
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: "\u062A\u062F\u0627\u0631 \u0628\u0623\u0645\u0627\u0646"
+        row: 33
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: "\u0645\u062D\u0633\u0651\u0646"
+        row: 35
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+      - label: Sewer connection
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0627\u0644\u0635\u0631\u0641\
+          \ \u0627\u0644\u0635\u062D\u064A"
+        row: 36
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater enters network
+        label_local: "\u062A\u062F\u062E\u0644 \u0645\u064A\u0627\u0647 \u0627\u0644\
+          \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0625\u0644\u0649 \u0627\
+          \u0644\u0634\u0628\u0643\u0629"
+        row: 37
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Wastewater reaches treatment plant
+        label_local: "\u062A\u0648\u0635\u064A\u0644 \u0645\u064A\u0627\u0647 \u0627\
+          \u0644\u0635\u0631\u0641 \u0625\u0644\u0649 \u0645\u062D\u0637\u0629 \u0627\
+          \u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 38
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Septic tanks
+        label_local: "\u062E\u0632\u0627\u0646\u0627\u062A \u0627\u0644\u0635\u0631\
+          \u0641 \u0627\u0644\u0635\u062D\u064A"
+        row: 39
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 40
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 41
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 42
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 43
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 44
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 45
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Latrines and other improved
+        label_local: "\u062A\u062D\u0633\u064A\u0646 \u0627\u0644\u0645\u0631\u0627\
+          \u062D\u064A\u0636 \u0648\u063A\u064A\u0631\u0647\u0627"
+        row: 46
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Contained/stored and treated
+        label_local: "\u0645\u0634\u0645\u0648\u0644/\u0645\u062E\u0632\u0646 \u0648\
+          \u0645\u0639\u0627\u0644\u062C"
+        row: 47
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Not emptied/stored and disposed in situ
+        label_local: "\u0644\u0627 \u064A\u062A\u0645 \u062A\u0641\u0631\u064A\u063A\
+          \u0647\u0627 / \u062A\u062E\u0632\u064A\u0646\u0647\u0627 \u0648\u0627\u0644\
+          \u062A\u062E\u0644\u0635 \u0645\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\
+          \u0645\u0648\u0642\u0639"
+        row: 48
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and buried on site
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627 \u0641\u064A \u0627\u0644\u0645\u0648\u0642\
+          \u0639"
+        row: 49
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and discharged locally
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u062F\u0641\u0646\u0647\u0627  \u0645\u062D\u0644\u064A\u0627"
+        row: 50
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Emptied and removed offsite
+        label_local: "\u062A\u0645 \u0625\u0641\u0631\u0627\u063A\u0647\u0627 \u0648\
+          \u0625\u0632\u0627\u0644\u062A\u0647\u0627 \u062E\u0627\u0631\u062C \u0627\
+          \u0644\u0645\u0648\u0642\u0639"
+        row: 51
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Delivered to treatment plant
+        label_local: "\u0633\u0644\u0645\u062A \u0625\u0644\u0649 \u0645\u062D\u0637\
+          \u0629 \u0627\u0644\u0645\u0639\u0627\u0644\u062C\u0629"
+        row: 52
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Treated
+        label_local: "\u0645\u0639\u0627\u0644\u062C"
+        row: 53
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: At wastewater treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0645\u064A\u0627\u0647 \u0627\u0644\u0635\u0631\u0641 \u0627\
+          \u0644\u0635\u062D\u064A"
+        row: 54
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: At faecal sludge treatment plant
+        label_local: "\u0641\u064A \u0645\u062D\u0637\u0629 \u0645\u0639\u0627\u0644\
+          \u062C\u0629 \u0627\u0644\u062D\u0645\u0623\u0629 \u0627\u0644\u0628\u0631\
+          \u0627\u0632\u064A\u0629"
+        row: 55
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Shared
+        label_local: "\u0645\u0634\u062A\u0631\u0643"
+        row: 56
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Open defecation
+        label_local: "\u0627\u0644\u062A\u063A\u0648\u0637 \u0641\u064A \u0627\u0644\
+          \u0639\u0631\u0627\u0621"
+        row: 57
+        urban: 'No'
+        rural: 'No'
+        total: 'Yes'
+    n_with_estimates: 12
+  summary:
+    sources: 3
+    sources_with_estimates: 3
+    categories_with_estimates: 41
+    from: 2020
+    to: 2022
+    has_country_ladder: true

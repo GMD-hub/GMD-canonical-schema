@@ -1,0 +1,372 @@
+country_id: CTY-ESP
+country_name: Spain
+iso3: ESP
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Early childhood education - First cycle
+    national_label_local: "Educaci\xF3n Infantil Primer ciclo (0-2 a\xF1os)"
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Early childhood education - Second cycle
+    national_label_local: "Educaci\xF3n Infantil Segundo ciclo (3+ a\xF1os)"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+  - national_label_en: Primary education
+    national_label_local: "Educaci\xF3n Primaria"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 7
+  - national_label_en: Adult education - primary level
+    national_label_local: "Ense\xF1anzas Iniciales de Educaci\xF3n B\xE1sica para\
+      \ personas en edad adulta"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+  - national_label_en: Compulsory-lower secondary education
+    national_label_local: "Educaci\xF3n Secundaria Obligatoria - Primer ciclo (1\xBA\
+      \ a 3\xBA curso)"
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 9
+  - national_label_en: Adult compulsory secondary education
+    national_label_local: "Educaci\xF3n Secundaria para Adultos"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+  - national_label_en: Pre-vocational - special education
+    national_label_local: "Transici\xF3n a la vida adulta"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 11
+  - national_label_en: Professional Certificate - level 1
+    national_label_local: Certificados de Profesionalidad de nivel 1
+    entry_age: 16
+    duration_years: 0
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 12
+  - national_label_en: Other training programmes of basic level
+    national_label_local: "Otros programas formativos de nivel b\xE1sico"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 13
+  - national_label_en: Compulsory-upper secondary education
+    national_label_local: "Educaci\xF3n Secundaria Obligatoria - Segundo ciclo (4\xBA\
+      \ curso)"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+  - national_label_en: General upper secondary education
+    national_label_local: Bachillerato
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+  - national_label_en: General upper secondary education (distance learning)
+    national_label_local: Bachillerato (distancia)
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 16
+  - national_label_en: Vocational training -intermediate level
+    national_label_local: Ciclos Formativos  de Grado Medio
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 17
+  - national_label_en: Vocational training -intermediate level
+    national_label_local: Ciclos Formativos  de Grado Medio
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 18
+  - national_label_en: Vocational training - intermediate level (distance learning)
+    national_label_local: Ciclos Formativos  de Grado Medio (distancia)
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 19
+  - national_label_en: Languages studies at the official school for languages
+    national_label_local: Escuelas Oficiales de Idiomas
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 20
+  - national_label_en: Dance and Music studies - intermediate level
+    national_label_local: "E. Profesionales de Danza y de M\xFAsica"
+    entry_age: 12
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 21
+  - national_label_en: Professional Certificate - level 2
+    national_label_local: Certificados de Profesionalidad de nivel 2
+    entry_age: 16
+    duration_years: 0
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 22
+  - national_label_en: Basic Vocational Training
+    national_label_local: "Formaci\xF3n Profesional B\xE1sica"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 23
+  - national_label_en: Basic Vocational Training
+    national_label_local: "Formaci\xF3n Profesional B\xE1sica"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 24
+  - national_label_en: Specific degrees of universities (less 2 years)
+    national_label_local: "T\xEDtulos propios de Universidad (menos 2 a\xF1os)"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  - national_label_en: Professional Certificate - level 3
+    national_label_local: Certificados de Profesionalidad de nivel 3
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+  - national_label_en: Specialization courses for Intermediate VET graduates
+    national_label_local: "Cursos de especializaci\xF3n de graduados de Formaci\xF3\
+      n Profesional de grado medio"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+  - national_label_en: Specific vocational training - advanced level
+    national_label_local: Ciclos Formativos de Grado Superior
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+  - national_label_en: Specific vocational training - advanced level
+    national_label_local: Ciclos Formativos de Grado Superior
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+  - national_label_en: Specific vocational training  -advanced level(Distance learning)
+    national_label_local: Ciclos Formativos de Grado Superior-Distancia
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+  - national_label_en: Specific degrees of universities (2 and more years)
+    national_label_local: "T\xEDtulos propios de Universidad (2 y m\xE1s a\xF1os)"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 31
+  - national_label_en: Specialization courses for Higher VET graduates
+    national_label_local: "Cursos de especializaci\xF3n de graduados de Formaci\xF3\
+      n Profesional de grado superior"
+    entry_age: 20
+    duration_years: 1
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 32
+  - national_label_en: Bachelor (4 years)
+    national_label_local: "Grado (4 a\xF1os)"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 33
+  - national_label_en: Short Post-grade degree
+    national_label_local: "T\xEDtulos propios universitarios de experto o especialista\
+      \ (menos de 60 cr\xE9ditos ECTS)"
+    entry_age: 22
+    duration_years: 0
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 34
+  - national_label_en: Master degree
+    national_label_local: "M\xE1ster oficial"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 35
+  - national_label_en: Long Bachelor degree (5 and 6 years)
+    national_label_local: "Grado (5 y 6 a\xF1os)"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 36
+  - national_label_en: Post-degree health studies  (specialist )
+    national_label_local: Especialidades Sanitarias
+    entry_age: 24
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 37
+  - national_label_en: Specific master degrees of universities
+    national_label_local: "M\xE1ster universitario y curso post-grado"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 38
+  - national_label_en: University education - Doctorate
+    national_label_local: Doctorado
+    entry_age: 23
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 39
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Spain.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

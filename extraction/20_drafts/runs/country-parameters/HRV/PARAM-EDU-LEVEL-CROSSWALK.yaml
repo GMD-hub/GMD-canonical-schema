@@ -1,0 +1,329 @@
+country_id: CTY-HRV
+country_name: Croatia
+iso3: HRV
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Educational programs for children under 3 years of age
+    national_label_local: Obrazovni programi za djecu ispod 3 godine starosti
+    entry_age: 0
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Pre-school education programme
+    national_label_local: "Pred\u0161kolsko obrazovanje"
+    entry_age: 3
+    duration_years: 4
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+  - national_label_en: Initial primary education, the first stage of basic education
+    national_label_local: "Po\u010Detno osnovno obrazovanje, prvi stupanj osnovnog\
+      \ obrazovanja"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 7
+  - national_label_en: Formal education in the upper grades of elementary school
+    national_label_local: "Programi redovnog obrazovanja u vi\u0161im razredima osnovne\
+      \ \u0161kole"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 8
+  - national_label_en: Art education at the elementary level
+    national_label_local: "Programi osnovnog umjetni\u010Dkog obrazovanja"
+    entry_age: 7
+    duration_years: 6
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+  - national_label_en: Elementary education - Adult education
+    national_label_local: "Osnovno \u0161kolovanje odraslih"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: Vocational training programmes for adult persons that enable
+      access to labour market, and which do not lead to continuation of education.
+      In order to access this level person has to succesfully complete Level 2.
+    national_label_local: "Programi osposobljavanja za odrasle koji omogu\u0107uju\
+      \ pristup tr\u017Ei\u0161tu rada, a ne vode nastavku obrazovanja. Uvjet upisa\
+      \ je zavr\u0161ena razina 2"
+    entry_age: 15
+    duration_years: 120
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: Vocational education programmes within regular education in
+      duration of one year, that enable access to labour market
+    national_label_local: "Programi strukovnog obrazovanja u trajanju od jedne godine\
+      \ u sklopu redovnog obrazovanja koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Vocational education programmes within adult education system
+      in duration of one year , that enable access to labour market or entry to ISCED
+      level 3
+    national_label_local: "Programi strukovnog obrazovanja u trajanju od jedne godine\
+      \ u sklopu obrazovanja odraslih koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada i upis u programe obrazovanja odraslih na ISCED razini 3"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: Vocational education programmes within regular education system
+      in duration up to two years, that enable access to labour market
+    national_label_local: "Programi strukovnog obrazovanja u trajanju do dvije godine\
+      \ u sklopu redovnog obrazovanja koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+  - national_label_en: Vocational education programmes within adult education system
+      in duration up to two years, that enable access to labour market or entry to
+      ISCED level 3
+    national_label_local: "Programi strukovnog obrazovanja u trajanju do dvije godine\
+      \ u sklopu obrazovanja odraslih koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada i upis u programe obrazovanja odraslih na ISCED razini 3"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 15
+  - national_label_en: Vocational education programmes within regular education system
+      in duration of three or three years , that enable access to labour market  or
+      entry to ISCED level 03.08
+    national_label_local: "Programi strukovnog obrazovanja u trajanju od tri  godine\
+      \ u sklopu redovnog obrazovanja koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada i upis u programe 03.08"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+  - national_label_en: Vocational education programmes within adult education system
+      in duration of three years that enable access to labour market or entry to ISCED
+      level 03.09
+    national_label_local: "Programi strukovnog obrazovanja u trajanju od tri godine\
+      \ u sklopu obrazovanja odraslih koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada i upis u programe obrazovanja odraslih 03.09"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 17
+  - national_label_en: Vocational education programmes within regular education system
+      in duration of four or more years , that enable access to labour market or entry
+      to ISCED levels 5 and 6
+    national_label_local: "Programi strukovnog obrazovanja u trajanju \u010Detiri\
+      \ ili vi\u0161e godina u sklopu redovnog obrazovanja koji omogu\u0107uju ulazak\
+      \ na tr\u017Ei\u0161te rada i upis u programe na ISCED razini 5 i 6"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 18
+  - national_label_en: Vocational education programmes within adult education system
+      in duration of four or more years , that enable access to labour market or entry
+      to ISCED levels 5 and 6
+    national_label_local: "Programi strukovnog obrazovanja u trajanju \u010Detiri\
+      \ u sklopu obrazovanja odraslih koji omogu\u0107uju ulazak na tr\u017Ei\u0161\
+      te rada i upis u programe na ISCED razini 5 i 6"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 19
+  - national_label_en: Art education - duration 4 years
+    national_label_local: "Umjetni\u010Dko obrazovanje u trajanju od 4 godine"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 20
+  - national_label_en: Art education within adult education system-duration 4 years
+    national_label_local: "Umjetni\u010Dko obrazovanje u trajanju od 4 godine u sklopu\
+      \ obrazovanja odraslih"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 21
+  - national_label_en: Grammar secondary school educational programs - duration 4
+      years
+    national_label_local: Gimnazijski obrazovni programi u trajanju od 4 godine
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 22
+  - national_label_en: Grammar secondary school educational programs within adult
+      education system-duration 4 years
+    national_label_local: Gimnazijski obrazovni programi u trajanju od 4 godine u
+      sklopu obrazovanja odraslih
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 23
+  - national_label_en: Short-cycle professional study
+    national_label_local: "Kratki stru\u010Dni studij \n(u trajanju kra\u0107em od\
+      \ tri godine)"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+  - national_label_en: Professional (undergraduate) study
+    national_label_local: "Preddiplomski stru\u010Dni studij\n(u trajanju od najmanje\
+      \ tri godine)"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  - national_label_en: Undergraduate university study
+    national_label_local: "Preddiplomski sveu\u010Dili\u0161ni studij"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+  - national_label_en: "Graduate university\n study"
+    national_label_local: "Diplomski sveu\u010Dili\u0161ni studij"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+  - national_label_en: Integrated undergraduate and graduate university study
+    national_label_local: "Integrirani preddiplomski i diplomski sveu\u010Dili\u0161\
+      ni studij"
+    entry_age: 19
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+  - national_label_en: Specialist graduate professional study
+    national_label_local: "Specijalisti\u010Dki diplomski stru\u010Dni studij"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+  - national_label_en: Postgraduate specialist study
+    national_label_local: "Poslijediplomski specijalisti\u010Dki studij"
+    entry_age: 24
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+  - national_label_en: Postgraduate university (doctoral) study
+    national_label_local: "Poslijediplomski sveu\u010Dili\u0161ni studij"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 31
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Croatia.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

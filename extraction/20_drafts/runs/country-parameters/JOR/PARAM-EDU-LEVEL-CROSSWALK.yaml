@@ -1,0 +1,148 @@
+country_id: CTY-JOR
+country_name: Jordan
+iso3: JOR
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Kindergarten
+    national_label_local: "\u0645\u0631\u062D\u0644\u0629 \u0627\u0644\u0631\u0648\
+      \u0636\u0629"
+    entry_age: 4
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: First cycle of basic education
+    national_label_local: "\u0627\u0644\u0645\u0631\u062D\u0644\u0629 \u0627\u0644\
+      \u0623\u0648\u0644\u0649 \u0645\u0646 \u0627\u0644\u062A\u0639\u0644\u064A\u0645\
+      \ \u0627\u0644\u0623\u0633\u0627\u0633\u064A"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+  - national_label_en: Second cycle of basic education
+    national_label_local: "\u0627\u0644\u0645\u0631\u062D\u0644\u0629 \u0627\u0644\
+      \u062B\u0627\u0646\u064A\u0629 \u0645\u0646 \u0627\u0644\u062A\u0639\u0644\u064A\
+      \u0645 \u0627\u0644\u0623\u0633\u0627\u0633\u064A"
+    entry_age: 12
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: Secondary education
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u062B\u0627\u0646\u0648\u064A"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: Applied secondary education
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u062B\u0627\u0646\u0648\u064A \u0627\u0644\u062A\u0637\u0628\u064A\u0642\u064A"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Community college programmes
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0643\u0644\u064A\u0627\
+      \u062A \u0627\u0644\u0645\u062C\u062A\u0645\u0639"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+  - national_label_en: Bachelor's programme
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u0628\u0643\
+      \u0627\u0644\u0648\u0631\u064A\u0648\u0633"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: Bachelor's  in engineering
+    national_label_local: "\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0648\u0633\
+      \ \u0641\u064A \u0627\u0644\u0647\u0646\u062F\u0633\u0629"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: Higher diploma
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645 \u0627\u0644\
+      \u0639\u0627\u0644\u064A"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Bachelor in medicine
+    national_label_local: "\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0648\u0633\
+      \ \u0641\u064A \u0627\u0644\u0637\u0628"
+    entry_age: 18
+    duration_years: 6
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Master
+    national_label_local: "\u0627\u0644\u0645\u0627\u062C\u0633\u062A\u064A\u0631"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Doctorate
+    national_label_local: "\u0627\u0644\u062F\u0643\u062A\u0648\u0631\u0627\u0647"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Jordan.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

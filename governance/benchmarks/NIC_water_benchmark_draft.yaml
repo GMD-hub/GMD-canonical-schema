@@ -1,0 +1,32 @@
+iso3: NIC
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NIC_Nicaragua_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: NIC
+    name: Nicaragua
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: Spanish
+  file:
+    file: JMP_2025_NIC_Nicaragua_1.xlsx
+    sha256: 3edde15235b2de684f0e0f0cd27231619f849fc9bdb36d523b2a5ab54acfb48f
+    profile: jmp_country_file_2025
+    language: Spanish
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:55:09+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs: []
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: false

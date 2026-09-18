@@ -1,0 +1,211 @@
+country_id: CTY-PER
+country_name: Peru
+iso3: PER
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: 'Early childhood education: cycle I'
+    national_label_local: "Educaci\xF3n Inicial: Ciclo I"
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: 'Early childhood education: cycle II'
+    national_label_local: "Educaci\xF3n Inicial: Ciclo II"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+  - national_label_en: Primary education
+    national_label_local: "Educaci\xF3n Primaria"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+  - national_label_en: Alternative basic education - Initial and intermediate cycles
+    national_label_local: "Educaci\xF3n B\xE1sica Alternativa-Ciclos Inicial e Intermedio"
+    entry_age: 14
+    duration_years: 5
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 10
+  - national_label_en: Secondary education, Grades 1 to 3
+    national_label_local: "Educaci\xF3n Secundaria. Del 1ero. al 3er. grados."
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 11
+  - national_label_en: Alternative basic education - Advanced cycle (grades 1 and
+      2)
+    national_label_local: "Educaci\xF3n B\xE1sica Alternativa-Ciclo Avanzado. Grados\
+      \ 1er. y 2o."
+    entry_age: 19
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 12
+  - national_label_en: Technical productive education - Middle cycle
+    national_label_local: "Educaci\xF3n T\xE9cnico Productiva-Ciclo Medio"
+    entry_age: 14
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 13
+  - national_label_en: Alternative basic education - Advanced cycle (grades 3 and
+      4)
+    national_label_local: "Educaci\xF3n B\xE1sica Alternativa-Ciclo Avanzado. Grados\
+      \ 3er. y 4o."
+    entry_age: 21
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+  - national_label_en: Secondary education. Grades 4 to 5.
+    national_label_local: "Educaci\xF3n Secundaria. Del 4to. al 5to. grados."
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 15
+  - national_label_en: Non-university higher education (technical training)
+    national_label_local: "Educaci\xF3n Superior No Universitaria (T\xE9cnica)"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Non-university higher technological education
+    national_label_local: "Educaci\xF3n Superior Tecnol\xF3gica No Universitaria"
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Non-university higher education; pedagogical and artistic training
+    national_label_local: "Educaci\xF3n Superior No Universitaria Pedag\xF3gica y\
+      \ Art\xEDstica"
+    entry_age: 17
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: University higher education
+    national_label_local: Pregrado universitario
+    entry_age: 17
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: Postgraduate
+    national_label_local: Diplomado
+    entry_age: 22
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: Bachelor in Law
+    national_label_local: Pregrado en Derecho
+    entry_age: 17
+    duration_years: 6
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: Bachelor in Medicine
+    national_label_local: Pregrado en Medicina
+    entry_age: 17
+    duration_years: 7
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  - national_label_en: Second Professsional Specialization
+    national_label_local: Segunda Especialidad Profesional
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+  - national_label_en: Master
+    national_label_local: "Maestr\xEDa"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+  - national_label_en: Doctorate
+    national_label_local: Doctorado
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Peru.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

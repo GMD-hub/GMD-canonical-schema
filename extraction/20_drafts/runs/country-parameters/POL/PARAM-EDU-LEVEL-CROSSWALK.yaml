@@ -1,0 +1,436 @@
+country_id: CTY-POL
+country_name: Poland
+iso3: POL
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Pre-school education
+    national_label_local: Wychowanie przedszkolne
+    entry_age: 3
+    duration_years: 4
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Special pre-school education
+    national_label_local: Wychowanie przedszkolne specjalne
+    entry_age: 3
+    duration_years: 4
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+  - national_label_en: General primary 1st level music school (grades 1-4)
+    national_label_local: "Og\xF3lnokszta\u0142c\u0105ca szko\u0142a muzyczna I stopnia\
+      \ (klasy 1-4)"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 7
+  - national_label_en: General primary 1st level music school (grades 5-8)
+    national_label_local: "Og\xF3lnokszta\u0142c\u0105ca szko\u0142a muzyczna I stopnia\
+      \ (klasy 5-8)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 8
+  - national_label_en: Primary school for children and youth (grades 1-4)
+    national_label_local: "Szko\u0142a podstawowa dla dzieci i m\u0142odzie\u017C\
+      y (klasy 1-4)"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+  - national_label_en: Primary school for children and youth (grades 5-8)
+    national_label_local: "Szko\u0142a podstawowa dla dzieci i m\u0142odzie\u017C\
+      y (klasy 5-8)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+  - national_label_en: Special primary  school for children and youth (grades 1-4)
+    national_label_local: "Szko\u0142a podstawowa specjalna dla dzieci i m\u0142odzie\u017C\
+      y (klasy 1-4)"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 11
+  - national_label_en: Special primary  school for children and youth (grades 5-8)
+    national_label_local: "Szko\u0142a podstawowa specjalna dla dzieci i m\u0142odzie\u017C\
+      y (klasy 5-8)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 12
+  - national_label_en: Primary special school for children with moderate or severe
+      intellectual disabilities (grades 1-4)
+    national_label_local: "Szko\u0142a podstawowa specjalna dla uczni\xF3w z niepe\u0142\
+      nosprawno\u015Bci\u0105 intelektualn\u0105 w stopniu umiarkowanym lub w stopniu\
+      \ znacznym (klasy 1-4)"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 13
+  - national_label_en: Primary special school for children with moderate or severe
+      intellectual disabilities (grades 5-8)
+    national_label_local: "Szko\u0142a podstawowa specjalna dla uczni\xF3w z niepe\u0142\
+      nosprawno\u015Bci\u0105 intelektualn\u0105 w stopniu umiarkowanym lub w stopniu\
+      \ znacznym (klasy 5-8)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 14
+  - national_label_en: Primary school (for adults)
+    national_label_local: "Szko\u0142a podstawowa (dla doros\u0142ych)"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 15
+  - national_label_en: Primary sports and sports masterclass school for youth            (grades
+      1-4)
+    national_label_local: "Szko\u0142a podstawowa sportowa i mistrzostwa sportowego\
+      \ (klasy 1-4)"
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 16
+  - national_label_en: Primary sports and sports masterclass school for youth         (grades
+      5-8)
+    national_label_local: "Szko\u0142a podstawowa sportowa i mistrzostwa sportowego\
+      \ (klasy 5-8)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 17
+  - national_label_en: Three year special school preparing for employment (for youth
+      with moderate or severe intelectual impariment or with multiple disability including
+      intelectual disability)
+    national_label_local: "Trzyletnia szko\u0142a specjalna przysposabiaj\u0105ca\
+      \ do pracy (dla uczni\xF3w z niepe\u0142nosprawno\u015Bci\u0105 intelektualn\u0105\
+      \ w stopniu umiarkowanym lub  znacznym oraz dla uczni\xF3w z niepe\u0142nosprawno\u015B\
+      ciami sprz\u0119\u017Conymi)"
+    entry_age: 16
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 19
+  - national_label_en: General ballet school
+    national_label_local: "Og\xF3lnokszta\u0142c\u0105ca szko\u0142a baletowa"
+    entry_age: 11
+    duration_years: 9
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 20
+  - national_label_en: General primary  2nd level music school
+    national_label_local: "Og\xF3lnokszta\u0142c\u0105ca szko\u0142a muzyczna II stopnia"
+    entry_age: 13
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 21
+  - national_label_en: 2nd level music school
+    national_label_local: "Szko\u0142a muzyczna II stopnia"
+    entry_age: 10
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 22
+  - national_label_en: School of Fine Arts
+    national_label_local: "Og\xF3lnokszta\u0142c\u0105ca szko\u0142a sztuk pi\u0119\
+      knych"
+    entry_age: 13
+    duration_years: 6
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 23
+  - national_label_en: Secondary School of Fine Arts
+    national_label_local: Liceum sztuk plastycznych
+    entry_age: 16
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 24
+  - national_label_en: Circus Arts School (2nd level arts school)
+    national_label_local: "Szko\u0142a sztuki cyrkowej - szko\u0142a artystyczna II\
+      \ stopnia"
+    entry_age: 13
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 25
+  - national_label_en: Vocational qualification course
+    national_label_local: Kwalifikacyjny kurs zawodowy/KKZ
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 26
+  - national_label_en: Technical secondary school (for youth)
+    national_label_local: "Technikum (dla m\u0142odzie\u017Cy)"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 27
+  - national_label_en: Special  technical secondary school (for youth)
+    national_label_local: "Technikum specjalne (dla m\u0142odzie\u017Cy)"
+    entry_age: 15
+    duration_years: 5
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 28
+  - national_label_en: General secondary school (for youth)
+    national_label_local: "Liceum og\xF3lnokszta\u0142c\u0105ce (dla m\u0142odzie\u017C\
+      y)"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 29
+  - national_label_en: Special general secondary school (for youth)
+    national_label_local: "Liceum og\xF3lnokszta\u0142c\u0105ce specjalne (dla m\u0142\
+      odzie\u017Cy)"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 30
+  - national_label_en: General secondary school (for adults)
+    national_label_local: "Liceum og\xF3lnokszta\u0142c\u0105ce (dla doros\u0142ych)"
+    entry_age: 0
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 31
+  - national_label_en: Sports and sports masterclass secondary school (lasts 3 years,
+      for youth)
+    national_label_local: "Liceum sportowe i mistrzostwa sportowego dla m\u0142odzie\u017C\
+      y"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 32
+  - national_label_en: Stage I sectoral vocational school (for youth)
+    national_label_local: "Bran\u017Cowa szko\u0142a I stopnia (dla m\u0142odzie\u017C\
+      y)"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 33
+  - national_label_en: Special stage I sectoral  vocational school (for youth)
+    national_label_local: "Bran\u017Cowa szko\u0142a I stopnia specjalna (dla m\u0142\
+      odzie\u017Cy)"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 34
+  - national_label_en: Stage I sectoral vocational school (for youth) - juvenile workers
+    national_label_local: "Bran\u017Cowa szko\u0142a I stopnia (dla m\u0142odzie\u017C\
+      y) - m\u0142odociani pracownicy"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 35
+  - national_label_en: School of dance arts
+    national_label_local: "Szko\u0142a sztuki ta\u0144ca"
+    entry_age: 7
+    duration_years: 9
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 36
+  - national_label_en: Stage II sectoral vocational school
+    national_label_local: "Bran\u017Cowa szko\u0142a II stopnia"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 37
+  - national_label_en: Special stage II sectoral vocational school
+    national_label_local: "Bran\u017Cowa szko\u0142a II stopnia specjalna"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 38
+  - national_label_en: Post-secondary school
+    national_label_local: "Szko\u0142a policealna"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 39
+  - national_label_en: Special post-secondary school
+    national_label_local: "Szko\u0142a policealna specjalna"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 40
+  - national_label_en: Post- secondary music school
+    national_label_local: "Szko\u0142a policealna muzyczna"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 41
+  - national_label_en: Post- secondary school of fine arts
+    national_label_local: "Szko\u0142a policealna plastyczna"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 42
+  - national_label_en: Colleges of social work
+    national_label_local: "Kolegium pracownik\xF3w s\u0142u\u017Cb spo\u0142ecznych"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 43
+  - national_label_en: Specialist programmes
+    national_label_local: "Kszta\u0142cenie specjalistyczne"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 44
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Poland.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

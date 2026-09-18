@@ -1,0 +1,191 @@
+iso3: COM
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_COM_Comoros_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: COM
+    name: Comores
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_COM_Comoros_1.xlsx
+    sha256: 7604baeaadd2fbcc49e74d823790dc61e31e7e25b8a737f420bbf530ac2f6789
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:52:27+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 49.35548
+      - domain: Assainissement
+        split: Rural
+        year: '2024'
+        value: 50.784687
+      - domain: Assainissement
+        split: Urbain
+        year: '2024'
+        value: 46.086129
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 85.053928
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 82.921745
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 89.931356
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 7.867609
+      - domain: Assainissement
+        split: Rural
+        year: '2024'
+        value: 6.313094
+      - domain: Assainissement
+        split: Urbain
+        year: '2024'
+        value: 11.423605
+      - domain: "Hygi\xE8ne"
+        split: Total
+        year: '2024'
+        value: 34.78109
+      - domain: "Hygi\xE8ne"
+        split: Rural
+        year: '2024'
+        value: 32.198149
+      - domain: "Hygi\xE8ne"
+        split: Urbain
+        year: '2024'
+        value: 40.68964
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 10.985117
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 11.622572
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 9.526923
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 15.726745
+      - domain: Assainissement
+        split: Rural
+        year: '2024'
+        value: 14.423475
+      - domain: Assainissement
+        split: Urbain
+        year: '2024'
+        value: 18.708011
+      - domain: "Hygi\xE8ne"
+        split: Total
+        year: '2024'
+        value: 33.314659
+      - domain: "Hygi\xE8ne"
+        split: Rural
+        year: '2024'
+        value: 36.560635
+      - domain: "Hygi\xE8ne"
+        split: Urbain
+        year: '2024'
+        value: 25.889401
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 3.510648
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 4.952921
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 0.211408
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 25.24034
+      - domain: Assainissement
+        split: Rural
+        year: '2024'
+        value: 26.36007
+      - domain: Assainissement
+        split: Urbain
+        year: '2024'
+        value: 22.678927
+    - rung: No service
+      row: 35
+      values:
+      - domain: Eau
+        split: Total*
+        year: '2024'
+        value: 0.450307
+      - domain: Eau
+        split: Rural*
+        year: '2024'
+        value: 0.502762
+      - domain: Eau
+        split: Urbain*
+        year: '2024'
+        value: 0.330313
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 1.809825
+      - domain: Assainissement
+        split: Rural
+        year: '2024'
+        value: 2.118673
+      - domain: Assainissement
+        split: Urbain
+        year: '2024'
+        value: 1.103327
+      - domain: "Hygi\xE8ne"
+        split: Total
+        year: '2024'
+        value: 31.904249
+      - domain: "Hygi\xE8ne"
+        split: Rural
+        year: '2024'
+        value: 31.241215
+      - domain: "Hygi\xE8ne"
+        split: Urbain
+        year: '2024'
+        value: 33.420959
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

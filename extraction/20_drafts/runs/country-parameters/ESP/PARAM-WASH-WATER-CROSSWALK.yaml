@@ -1,0 +1,96 @@
+country_id: CTY-ESP
+country_name: "Espa\xF1a"
+iso3: ESP
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: protected_dug_well_or_protected_spring
+    national_label_en: Protected dug well or protected spring
+    national_label_local: Pozos o manantiales protegidos
+    jmp_classification: Ground water > Protected wells or springs
+    jmp_id: ground_water.protected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: protected_well|protected_spring
+    improved_flag: true
+    shared_flag: false
+    source_row: 46
+  - source_category_code: protected_tube_well_or_bore_hole
+    national_label_en: Protected tube well or bore hole
+    national_label_local: Pozos entubados o de sondeo
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - source_category_code: unprotected_dug_well_or_spring
+    national_label_en: Unprotected dug well or spring
+    national_label_local: Pozos o manantiales non protegidos
+    jmp_classification: Ground water > Unprotected wells or springs
+    jmp_id: ground_water.unprotected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: unprotected_well|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 50
+  - source_category_code: tanker_truck_vendor
+    national_label_en: Tanker-truck, vendor
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - source_category_code: rainwater_into_tank_or_cistern
+    national_label_en: Rainwater (into tank or cistern )
+    national_label_local: Cisterna/tanque cubierto
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - source_category_code: water_taken_directly_from_pond_water_or_stream
+    national_label_en: Water taken directly from pond-water or stream
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - source_category_code: piped_water_through_house_connection_or_yard
+    national_label_en: Piped water through house connection or yard
+    national_label_local: Conexiones domiciliarias
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - source_category_code: public_standpipe
+    national_label_en: Public standpipe
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ESP_Spain_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,305 @@
+country_id: CTY-PAN
+country_name: "Panam\xE1"
+iso3: PAN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: letrina_de_compostaje
+    national_label_en: Letrina de compostaje
+    national_label_local: Letrinas de compostaje
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: conectado_a_alcantarillado_o_tanque_septico
+    national_label_en: "Conectado a alcantarillado o tanque s\xE9ptico"
+    national_label_local: Descarga/baldeo con agua
+    jmp_classification: Flush and pour flush
+    jmp_id: flush_and_pour_flush
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 60
+  - source_category_code: servicio_con_conexion_al_mar_rio_o_quebrada_u_otro_lugar_circundante
+    national_label_en: "Servicio con conexi\xF3n al mar, r\xEDo o quebrada u otro\
+      \ lugar circundante"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: conectado_a_alcantarillado
+    national_label_en: Conectado a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: servicio_conectado_al_alcantarillado
+    national_label_en: Servicio conectado al alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: letrina_de_arrastre
+    national_label_en: Letrina de arrastre
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: conectado_a_tanque_septico
+    national_label_en: Conectado a tanque septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: servicio_conectado_a_tanque_septico_o_a_fosa_septica
+    national_label_en: "Servicio conectado a tanque s\xE9ptico o a fosa s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: connection_to_sewer_private
+    national_label_en: Connection to sewer, private
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - source_category_code: connection_to_septic_tank_private
+    national_label_en: Connection to septic tank, private
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: connection_to_sewer_shared
+    national_label_en: Connection to sewer, shared
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - source_category_code: connection_to_septic_tank_shared
+    national_label_en: Connection to septic tank, shared
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - source_category_code: conectado_a_alcantarillado
+    national_label_en: Conectado a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: conectado_a_alcantarillado_sanitario
+    national_label_en: Conectado a alcantarillado sanitario
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: conectado_a_tanque_septico
+    national_label_en: Conectado a tanque septico
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: servicio_colgante_sobre_el_rio_o_el_mar
+    national_label_en: "Servicio colgante sobre el r\xEDo o el mar"
+    national_label_local: Letrina colgante
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - source_category_code: letrina_o_servicio_hueco_sin_piso
+    national_label_en: Letrina o servicio hueco sin piso
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: de_hueco_o_letrina
+    national_label_en: De hueco o letrina
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: hueco_hole_o_letrina
+    national_label_en: Hueco {hole} o letrina
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_o_servicio_de_hueco_sin_ventilacion
+    national_label_en: "Letrina o servicio de hueco sin ventilaci\xF3n"
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_o_servicio_de_hueco_con_ventilacion
+    national_label_en: "Letrina o servicio de hueco con ventilaci\xF3n"
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: private_latrine
+    national_label_en: Private latrine
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
+    jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 115
+  - source_category_code: shared_latrine
+    national_label_en: Shared latrine
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - source_category_code: no_hay_servicio_sanitario_va_al_monte_campo
+    national_label_en: No hay servicio sanitario, va al monte, campo
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene
+    national_label_en: No tiene
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_no_usa_el_servicio_sanitario_del_vecino
+    national_label_en: No tiene/no usa el servicio sanitario del vecino
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: usa_servicio_sanitario_del_vecino
+    national_label_en: Usa servicio sanitario del vecino
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PAN_Panama_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

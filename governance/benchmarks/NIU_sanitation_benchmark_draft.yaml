@@ -1,0 +1,87 @@
+iso3: NIU
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NIU_Niue_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: NIU
+    name: Niue
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_NIU_Niue_1.xlsx
+    sha256: 6bc6412c189f686ead9484d2e1eb8ed11db592ad404077564a0528e230f5d281
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T20:55:15+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 92.956022
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 5.157257
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 97.938374
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 1.886721
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 1.459245
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2024'
+        value: 0.602381
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 7.45505
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

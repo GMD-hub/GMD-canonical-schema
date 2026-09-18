@@ -1,0 +1,716 @@
+country_id: CTY-PRY
+country_name: Paraguay
+iso3: PRY
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo_rio
+    national_label_en: Con arrastre de agua en - La superficie de la tierra,zanja,arroyo,
+      rio
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_hoyo_abierto_zanja_arroyo
+    national_label_en: con arrastre de agua en la superficie de la tierra,hoyo abierto,zanja,arroyo...
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
+    national_label_en: Con arrastre de agua en la superficie de la tierra,zanja,arroyo...
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: desague_a_la_superficie_de_la_tierra_arroyo_rio_etc
+    national_label_en: "Desague a la superficie de la tierra, arroyo, r\xEDo, etc."
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: la_calle_patio_terreno_o_en_algun_otro_lugar
+    national_label_en: "La calle, patio/terreno o en alg\xFAn otro lugar"
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
+    national_label_en: Con arrastre de agua - Red de alcantarillado sanitario
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: con_arrastre_de_agua_con_red_de_alcantarillado_sanitario
+    national_label_en: con arrastre de agua con red de alcantarillado sanitario
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
+    national_label_en: Con arrastre de agua, red de alcantarillado sanitario
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: red_de_alcantarillado_sanitario_cloaca
+    national_label_en: Red de alcantarillado sanitario (cloaca)
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: con_arrastre_de_agua_pozo_ciego_sin_camara_septica
+    national_label_en: "Con arrastre de agua - Pozo ciego, sin c\xE1mara s\xE9ptica"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
+    national_label_en: con arrastre de agua con pozo ciego(absorbente)
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: pozo_ciego_sin_camara_septica
+    national_label_en: "Pozo ciego sin c\xE1mara s\xE9ptica"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: pozo_ciego_sin_camara_septica
+    national_label_en: "Pozo ciego, sin c\xE1mara s\xE9ptica"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: camara_septica_y_pozo_ciego
+    national_label_en: "C\xE1mara s\xE9ptica y pozo ciego"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego
+    national_label_en: "Con arrastre de agua - C\xE1mara s\xE9ptica y pozo ciego"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
+    national_label_en: "Con arrastre de agua, c\xE1mara s\xE9ptica y pozo ciego(absorbente)"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: con_arrastre_de_agua_con_camara_septica_y_pozo_ciego_absorbente
+    national_label_en: "con arrastre de agua, con c\xE1mara s\xE9ptica y pozo ciego(absorbente)"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: pozo_ciego_con_camara_septica
+    national_label_en: "Pozo ciego con c\xE1mara s\xE9ptica"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: no_sabe_donde_se_depositan
+    national_label_en: "No sabe d\xF3nde se depositan"
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: wc_con_arrastre_agua
+    national_label_en: WC con arrastre agua
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico"
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - source_category_code: bano_conectado_a_red_publica_o_pozo_ciego
+    national_label_en: "Bano conectado a red p\xFAblica, o pozo ciego"
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
+    jmp_classification: Flush/toilets > Private flush/toilet
+    jmp_id: flush_toilets.private_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 72
+  - source_category_code: private_domestic_connection_to_sewage_system
+    national_label_en: Private domestic connection to sewage system
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - source_category_code: private_flush_to_septic_tank
+    national_label_en: Private flush to septic tank
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: shared_domestic_connection_to_sewage_system
+    national_label_en: Shared domestic connection to sewage system
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - source_category_code: shared_flush_to_septic_tank
+    national_label_en: Shared flush to septic tank
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
+    national_label_en: Con arrastre de agua en la superficie de la tierra, zanja,
+      arroyo
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
+    national_label_en: Con arrastre de agua, red de alcantarillado sanitario
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: wc_connect_a_red_publica
+    national_label_en: WC connect a red publica
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
+    national_label_en: Con arrastre de agua con pozo ciego (absorbente)
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: wc_con_pozo_ciego
+    national_label_en: WC con pozo ciego
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
+    national_label_en: "Con arrastre de agua, c\xE1mara s\xE9ptica y pozo ciego (absorbente)"
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+    national_label_en: Bucket latrine (where fresh excreta are manually removed)
+    national_label_local: Letrina de cubeta
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - source_category_code: letrina_comun_sin_losa_pero_con_techo_o_puerta
+    national_label_en: "Letrina com\xFAn sin losa pero con techo o puerta"
+    national_label_local: Otro
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Other
+    jmp_id: latrines.dry_latrines.improved_latrines.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 111
+  - source_category_code: letrina_comun_de_hoyo_seco
+    national_label_en: "Letrina com\xFAn de hoyo seco"
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
+    national_label_en: "Letrina com\xFAn de hoyo seco (con losa,techo,paredes y puertas)"
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_comun_de_hoyo_seco_con_loza_paredes_techo_y_puerta
+    national_label_en: "Letrina com\xFAn de hoyo seco (con loza, paredes, techo y\
+      \ puerta)"
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
+    national_label_en: "Letrina com\xFAn de hoyo seco(con losa,techo,paredes y puertas)"
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_comun_sin_losa_sin_techo_o_puerta
+    national_label_en: "Letrina com\xFAn sin losa, sin techo o puerta"
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: uncovered_dry_latrine_without_privacy
+    national_label_en: Uncovered dry latrine (without privacy)
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: letrina
+    national_label_en: Letrina
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_comun_sin_techo_o_puerta
+    national_label_en: "Letrina com\xFAn sin techo o puerta"
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
+    national_label_en: "Letrina ventilada de hoyo seco (com\xFAn c/tubo de ventilaci\xF3\
+      n)"
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
+    national_label_en: "Letrina ventilada de hoyo seco(com\xFAn c/tubo de ventilaci\xF3\
+      n)"
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_con_tubo_de_ventilacion
+    national_label_en: "Letrina ventilada de hoyo seco(com\xFAn con tubo de ventilaci\xF3\
+      n)"
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: private_covered_dry_latrine_with_privacy
+    national_label_en: Private covered dry latrine (with privacy)
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
+      slab/covered latrine
+    jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 114
+  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
+    national_label_en: "Letrina com\xFAn de hoyo seco(con losa,techo,paredes y puertas)"
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - source_category_code: shared_covered_dry_latrine_with_privacy
+    national_label_en: Shared covered dry latrine (with privacy)
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - source_category_code: letrina_comun
+    national_label_en: Letrina comun
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - source_category_code: letrina_comun_o_municipal
+    national_label_en: "Letrina com\xFAn o municipal"
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - source_category_code: letrina_comun_sin_techo_o_puerta
+    national_label_en: "Letrina com\xFAn sin techo o puerta"
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
+    national_label_en: "Letrina ventilada de hoyo seco(com\xFAn c/tubo de ventilaci\xF3\
+      n)"
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
+      Improved Pit latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 121
+  - source_category_code: private_pour_flush_latrine
+    national_label_en: Private pour flush latrine
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (privado)"
+    jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
+    jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 91
+  - source_category_code: shared_pour_flush_latrine
+    national_label_en: Shared pour flush latrine
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (publico)"
+    jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
+      latrine
+    jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 97
+  - source_category_code: excusado
+    national_label_en: Excusado
+    national_label_local: al alcantarillado
+    jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
+      latrine > to piped sewer system
+    jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 98
+  - source_category_code: defecacion_al_aire_libre_no_hay_instalacion_campo_abierto_matorrales
+    national_label_en: "Defecaci\xF3n al aire libre (no hay instalaci\xF3n, campo\
+      \ abierto, matorrales)"
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_facilities_open_defecation
+    national_label_en: No facilities (open defecation)
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_hay_servicios
+    national_label_en: No hay servicios
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene
+    national_label_en: No tiene
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_bano
+    national_label_en: "No tiene ba\xF1o"
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_bano_no_informado
+    national_label_en: "No tiene ba\xF1o/No informado"
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene_no_informo
+    national_label_en: No tiene/no informo
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_sin_techo_paredes_y_puertas
+    national_label_en: "Letrina com\xFAn  de hoyo seco con losa (sin techo, paredes\
+      \ y puertas)"
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: bano_de_silla_basin_para_adultos_ninos_o_enfermos
+    national_label_en: "Ba\xF1o de silla/basin para adultos/ni\xF1os o enfermos"
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: other
+    national_label_en: Other
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: otros
+    national_label_en: Otros
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PRY_Paraguay_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

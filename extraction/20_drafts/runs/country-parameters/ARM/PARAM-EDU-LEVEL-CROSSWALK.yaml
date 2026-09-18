@@ -1,0 +1,189 @@
+country_id: CTY-ARM
+country_name: Armenia
+iso3: ARM
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Pre-primary
+    national_label_local: "\u0546\u0561\u056D\u0561\u0564\u057A\u0580\u0578\u0581\u0561\
+      \u056F\u0561\u0576 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0578\u0582\u0576"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Primary general education
+    national_label_local: "\u054F\u0561\u0580\u0580\u0561\u056F\u0561\u0576 \u0568\
+      \u0576\u0564\u0570\u0561\u0576\u0578\u0582\u0580 \u056F\u0580\u0569\u0578\u0582\
+      \u0569\u0575\u0578\u0582\u0576"
+    entry_age: 6
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 8
+  - national_label_en: Basic general education (1st stage of secondary education)
+    national_label_local: "\u0540\u056B\u0574\u0576\u0561\u056F\u0561\u0576 \u0568\
+      \u0576\u0564\u0570\u0561\u0576\u0578\u0582\u0580 \u056F\u0580\u0569\u0578\u0582\
+      \u0569\u0575\u0578\u0582\u0576 (\u0574\u056B\u057B\u0576\u0561\u056F\u0561\u0580\
+      \u0563 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0561\u0576 1-\u056B\u0576\
+      \ \u0574\u0561\u056F\u0561\u0580\u0564\u0561\u056F)"
+    entry_age: 10
+    duration_years: 5
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+  - national_label_en: Secondary general education (2nd stage of secondary education)
+    national_label_local: "\u0544\u056B\u057B\u0576\u0561\u056F\u0561\u0580\u0563\
+      \ \u0568\u0576\u0564\u0570\u0561\u0576\u0578\u0582\u0580 \u056F\u0580\u0569\u0578\
+      \u0582\u0569\u0575\u0578\u0582\u0576 (\u0574\u056B\u057B\u0576\u0561\u056F\u0561\
+      \u0580\u0563 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0561\u0576 2-\u0580\
+      \u0564 \u0574\u0561\u056F\u0561\u0580\u0564\u0561\u056F)"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 10
+  - national_label_en: Initial vocational (handicraft) training, long programme
+    national_label_local: "\u0546\u0561\u056D\u0576\u0561\u056F\u0561\u0576 \u0574\
+      \u0561\u057D\u0576\u0561\u0563\u056B\u057F\u0561\u056F\u0561\u0576 (\u0561\u0580\
+      \u0570\u0565\u057D\u057F\u0561\u0563\u0578\u0580\u056E\u0561\u056F\u0561\u0576\
+      ) \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0578\u0582\u0576"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: Advanced vocational education on the basis of general basic
+      education (Grades 1-2)
+    national_label_local: "\u0544\u056B\u057B\u056B\u0576 \u0574\u0561\u057D\u0576\
+      \u0561\u0563\u056B\u057F\u0561\u056F\u0561\u0576 \u056F\u0580\u0569\u0578\u0582\
+      \u0569\u0575\u0578\u0582\u0576 \u0570\u056B\u0574\u0576\u0561\u056F\u0561\u0576\
+      \ \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0561\u0576 \u0570\u056B\u0574\u0584\
+      \u056B \u057E\u0580\u0561"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Advanced vocational education on the basis of general basic
+      education (Grades 3-4/5)
+    national_label_local: "\u0544\u056B\u057B\u056B\u0576 \u0574\u0561\u057D\u0576\
+      \u0561\u0563\u056B\u057F\u0561\u056F\u0561\u0576 \u056F\u0580\u0569\u0578\u0582\
+      \u0569\u0575\u0578\u0582\u0576 \u0570\u056B\u0574\u0576\u0561\u056F\u0561\u0576\
+      \ \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0561\u0576 \u0570\u056B\u0574\u0584\
+      \u056B \u057E\u0580\u0561"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+  - national_label_en: Advanced vocational education on the basis of secondary general
+      education
+    national_label_local: "\u0544\u0561\u057D\u0576\u0561\u0563\u056B\u057F\u0561\u056F\
+      \u0561\u0576 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0578\u0582\u0576  \u0574\
+      \u056B\u057B\u0576\u0561\u056F\u0561\u0580\u0563 \u0568\u0576\u0564\u0570\u0561\
+      \u0576\u0578\u0582\u0580 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0561\u0576\
+      \ \u0570\u056B\u0574\u0561\u0576 \u057E\u0580\u0561"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+  - national_label_en: "Bachelor\u2019s degree education programme"
+    national_label_local: "\u0532\u0561\u056F\u0561\u056C\u0561\u057E\u0580\u056B\
+      \ \u0561\u057D\u057F\u056B\u0573\u0561\u0576 \u056F\u0580\u0569\u0561\u056F\u0561\
+      \u0576 \u056E\u0580\u0561\u0563\u056B\u0580\u0568"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: Long first degree tertiary programme, leading to a specialist
+      diploma
+    national_label_local: "\u0535\u0580\u0580\u0578\u0580\u0564\u0561\u0575\u056B\u0576\
+      \ \u056E\u0580\u0561\u0563\u0580\u056B \u0565\u0580\u056F\u0561\u0580 \u0561\
+      \u057C\u0561\u057B\u056B\u0576 \u0561\u057D\u057F\u056B\u0573\u0561\u0576\u0568\
+      ` \u0564\u056B\u057A\u056C\u0578\u0574\u0561\u057E\u0578\u0580\u057E\u0561\u056E\
+      \ \u0574\u0561\u057D\u0576\u0561\u0563\u0565\u057F"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: Master's degree
+    national_label_local: "\u0544\u0561\u0563\u056B\u057D\u057F\u0580\u0578\u057D\u056B\
+      \ \u0561\u057D\u057F\u056B\u0573\u0561\u0576"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: Postgraduate education, kandidat nauk programme
+    national_label_local: "\u0540\u0565\u057F\u0562\u0578\u0582\u0570\u0561\u056F\u0561\
+      \u0576 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0578\u0582\u0576, \u0563\u056B\
+      \u057F\u0578\u0582\u0569\u0575\u0578\u0582\u0576\u0576\u0565\u0580\u056B \u0569\
+      \u0565\u056F\u0576\u0561\u056E\u0578\u0582"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: Postgraduate education, doktor nauk programme
+    national_label_local: "\u0540\u0565\u057F\u0562\u0578\u0582\u0570\u0561\u056F\u0561\
+      \u0576 \u056F\u0580\u0569\u0578\u0582\u0569\u0575\u0578\u0582\u0576,  \u0563\
+      \u056B\u057F\u0578\u0582\u0569\u0575\u0578\u0582\u0576\u0576\u0565\u0580\u056B\
+      \ \u0564\u0578\u056F\u057F\u0578\u0580"
+    entry_age: 27
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Armenia.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

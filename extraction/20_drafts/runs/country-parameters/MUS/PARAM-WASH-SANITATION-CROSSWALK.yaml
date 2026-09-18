@@ -1,0 +1,56 @@
+country_id: CTY-MUS
+country_name: Maurice
+iso3: MUS
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: no_latrine
+    national_label_en: No latrine
+    national_label_local: Pas de toilette/nature/plein air
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_none_available
+    national_label_en: No, none available
+    national_label_local: Pas de toilette/nature/plein air
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: non_pas_disponible
+    national_label_en: Non, pas disponible
+    national_label_local: Pas de toilette/nature/plein air
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
+    national_label_en: Other unimproved (we don't know the type of facilities)
+    national_label_local: Autre
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MUS_Mauritius_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

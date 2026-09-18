@@ -1,0 +1,253 @@
+country_id: CTY-TCD
+country_name: Tchad
+iso3: TCD
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: "Enseignement pr\xE9primaire"
+    national_label_local: "Enseignement pr\xE9primaire"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Enseignement primaire
+    national_label_local: Enseignement primaire
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 8
+  - national_label_en: "Enseignement moyen (Enseignement secondaire g\xE9n\xE9ral,\
+      \ 1er cycle)"
+    national_label_local: "Enseignement moyen (Enseignement secondaire g\xE9n\xE9\
+      ral, 1er cycle)"
+    entry_age: 12
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+  - national_label_en: "Enseignement technique 1er cycle dans centre de formation\
+      \ technique et professionnel, ou coll\xE8ges techniques"
+    national_label_local: "Enseignement technique 1er cycle dans centre de formation\
+      \ technique et professionnel, ou coll\xE8ges techniques"
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+  - national_label_en: "Enseignement g\xE9n\xE9ral secondaire du 2\xE8me cycle"
+    national_label_local: "Enseignement g\xE9n\xE9ral secondaire du 2\xE8me cycle"
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+  - national_label_en: Enseignement secondaire technique et professionnel, Brevet
+      de Technicien
+    national_label_local: Enseignement secondaire technique et professionnel, Brevet
+      de Technicien
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+  - national_label_en: Formation des instituteurs de l'enseignement primaire (Instituteurs
+      adjoints)
+    national_label_local: Formation des instituteurs de l'enseignement primaire (Instituteurs
+      adjoints)
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+  - national_label_en: Enseignement secondaire technique et professionnel, Bac technique
+    national_label_local: Enseignement secondaire technique et professionnel, Bac
+      technique
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+  - national_label_en: Formation des instituteurs de l'enseignement primaire (Instituteurs
+      titulaires)
+    national_label_local: Formation des instituteurs de l'enseignement primaire (Instituteurs
+      titulaires)
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+  - national_label_en: Programme de BTS, DUT
+    national_label_local: Programme de BTS, DUT
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+  - national_label_en: "Programme de formation des Professeurs de Coll\xE8ge d'enseignement\
+      \ g\xE9n\xE9ral (CEG)"
+    national_label_local: "Programme de formation des Professeurs de Coll\xE8ge d'enseignement\
+      \ g\xE9n\xE9ral (CEG)"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+  - national_label_en: "Enseignement sup\xE9rieur, 1er cycle g\xE9n\xE9ral"
+    national_label_local: "Enseignement sup\xE9rieur, 1er cycle g\xE9n\xE9ral"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+  - national_label_en: "Programme de formation des professeurs de Lyc\xE9e ou Lyc\xE9\
+      e d'enseignement technique"
+    national_label_local: "Programme de formation des professeurs de Lyc\xE9e ou Lyc\xE9\
+      e d'enseignement technique"
+    entry_age: 25
+    duration_years: 2
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+  - national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: "Enseignement sup\xE9rieur (Licence)"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+  - national_label_en: "Enseignement sup\xE9rieur, 2\xE8me cycle"
+    national_label_local: "Enseignement sup\xE9rieur, 2\xE8me cycle"
+    entry_age: 21
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+  - national_label_en: "Enseignement sup\xE9rieur, licence professionnelle"
+    national_label_local: "Enseignement sup\xE9rieur, licence professionnelle"
+    entry_age: 21
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+  - national_label_en: "Enseignement sup\xE9rieur, programme d'ing\xE9nieur (Travaux\
+      \ publics, g\xE9nie civil)"
+    national_label_local: "Enseignement sup\xE9rieur, programme d'ing\xE9nieur (Travaux\
+      \ publics, g\xE9nie civil)"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+  - national_label_en: "Enseignement sup\xE9rieur, programme de ma\xEEtrise"
+    national_label_local: "Enseignement sup\xE9rieur, programme de ma\xEEtrise"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+  - national_label_en: "Enseignement sup\xE9rieur, programme de ma\xEEtrise professionnelle"
+    national_label_local: "Enseignement sup\xE9rieur, programme de ma\xEEtrise professionnelle"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+  - national_label_en: "Programme de m\xE9decine"
+    national_label_local: "Programme de m\xE9decine"
+    entry_age: 19
+    duration_years: 7
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+  - national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: "Enseignement sup\xE9rieur (Master)"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+  - national_label_en: "Enseignement sup\xE9rieur (Doctorat)"
+    national_label_local: "Enseignement sup\xE9rieur (Doctorat)"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Chad.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

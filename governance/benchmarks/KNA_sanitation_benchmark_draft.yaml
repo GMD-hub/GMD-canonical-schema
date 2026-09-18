@@ -1,0 +1,76 @@
+iso3: KNA
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_KNA_Saint_Kitts_and_Nevis_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: KNA
+    name: Saint Kitts and Nevis
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_KNA_Saint_Kitts_and_Nevis_1.xlsx
+    sha256: 019ddea2b5e0dbe66c2eeb8f9dc64d1203f3c874f8f6504c2ccf85f90d728a36
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-18T21:02:28+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 98.611854
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 94.953595
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 1.348225
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 1.388146
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 2.378214
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 1.319966
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

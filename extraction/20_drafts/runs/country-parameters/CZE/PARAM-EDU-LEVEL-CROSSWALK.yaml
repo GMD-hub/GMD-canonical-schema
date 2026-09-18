@@ -1,0 +1,493 @@
+country_id: CTY-CZE
+country_name: Czechia
+iso3: CZE
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - national_label_en: Nursery school
+    national_label_local: "Mate\u0159sk\xE1 \u0161kola"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Preparatory classes for socially disadvantaged children
+    national_label_local: "P\u0159\xEDpravn\xE9 t\u0159\xEDdy pro d\u011Bti se soci\xE1\
+      ln\xEDm znev\xFDhodn\u011Bn\xEDm"
+    entry_age: 6
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+  - national_label_en: Preparatory stage of special basic school
+    national_label_local: "P\u0159\xEDpravn\xFD stupe\u0148 z\xE1kladn\xED \u0161\
+      koly speci\xE1ln\xED"
+    entry_age: 6
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: "Basic school \u2013 1st stage"
+    national_label_local: "Z\xE1kladn\xED \u0161kola \u2013 1. stupe\u0148"
+    entry_age: 6
+    duration_years: 5
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+  - national_label_en: "Special basic school \u2013 1st stage"
+    national_label_local: "Z\xE1kladn\xED \u0161kola speci\xE1ln\xED \u2013 1. stupe\u0148"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+  - national_label_en: Basic school - Home schooling (1st stage)
+    national_label_local: "Z\xE1kladn\xED \u0161kola - individu\xE1ln\xED vzd\u011B\
+      l\xE1v\xE1n\xED (1. stupe\u0148)"
+    entry_age: 6
+    duration_years: 5
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 10
+  - national_label_en: "Special basic school \u2013 1st stage - education of pupils\
+      \ suffering from serious mental disability"
+    national_label_local: "Z\xE1kladn\xED \u0161kola - vzd\u011Bl\xE1v\xE1n\xED \u017E\
+      \xE1k\u016F s hlubok\xFDm ment\xE1ln\xEDm posti\u017Een\xEDm (1. stupe\u0148\
+      )"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 11
+  - national_label_en: "Basic school \u2013 2nd stage"
+    national_label_local: "Z\xE1kladn\xED \u0161kola \u2013 2. stupe\u0148"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 12
+  - national_label_en: 1- or 2-years special vocational school
+    national_label_local: "Praktick\xE1 \u0161kola 1-2let\xE1"
+    entry_age: 16
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 13
+  - national_label_en: Courses for completing basic education
+    national_label_local: "Kursy pro z\xEDsk\xE1n\xED z\xE1kladn\xEDho vzd\u011Bl\xE1\
+      n\xED"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 14
+  - national_label_en: "Special basic school \u2013 2nd stage"
+    national_label_local: "Z\xE1kladn\xED \u0161kola speci\xE1ln\xED \u2013 2. stupe\u0148"
+    entry_age: 12
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 15
+  - national_label_en: '"Gymnasium" - lower stage of 8-years courses (1st to 4th grade)'
+    national_label_local: "8let\xE9 gymn\xE1zium - ni\u017E\u0161\xED stupe\u0148\
+      \ (1.-4. ro\u010Dn\xEDk)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 16
+  - national_label_en: '"Gymnasium" - lower stage of 6-years courses (1st and 2nd
+      grade)'
+    national_label_local: "6let\xE9 gymn\xE1zium - ni\u017E\u0161\xED stupe\u0148\
+      \ (1.-2. ro\u010Dn\xEDk)"
+    entry_age: 13
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 17
+  - national_label_en: Conservatoire - lower stage of 8-years courses (1st to 4th
+      grade)
+    national_label_local: "8let\xFD obor konzervato\u0159e - 1.-4. ro\u010Dn\xEDk"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 18
+  - national_label_en: "Special basic school \u2013 2nd stage - education of pupils\
+      \ suffering from serious mental disability"
+    national_label_local: "Z\xE1kladn\xED \u0161kola - vzd\u011Bl\xE1v\xE1n\xED \u017E\
+      \xE1k\u016F s hlubok\xFDm ment\xE1ln\xEDm posti\u017Een\xEDm (2. stupe\u0148\
+      )"
+    entry_age: 12
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 19
+  - national_label_en: Basic school - Home schooling (2nd stage)
+    national_label_local: "Z\xE1kladn\xED \u0161kola - individu\xE1ln\xED vzd\u011B\
+      l\xE1v\xE1n\xED (2. stupe\u0148)"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 20
+  - national_label_en: '"Gymnasium" - upper stage of 8-years courses (5th to 8th grade)'
+    national_label_local: "8let\xE9 gymn\xE1zium - vy\u0161\u0161\xED stupe\u0148\
+      \ (5.-8. ro\u010Dn\xEDk)"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 21
+  - national_label_en: '"Gymnasium" - upper stage fo 6-years courses (3rd to 6th grade)'
+    national_label_local: "6let\xE9 gymn\xE1zium - vy\u0161\u0161\xED stupe\u0148\
+      \ (3.-6. ro\u010Dn\xEDk)"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 22
+  - national_label_en: "\"Gymnasium\" \u2013 4-years courses"
+    national_label_local: "4let\xE9 gymn\xE1zium"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 23
+  - national_label_en: Study of selected subjects
+    national_label_local: "Studium jednotliv\xFDch p\u0159edm\u011Bt\u016F a ucelen\xFD\
+      ch \u010D\xE1st\xED u\u010Diva"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 24
+  - national_label_en: Secondary education courses without maturita exam
+    national_label_local: "St\u0159edn\xED vzd\u011Bl\xE1n\xED"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 25
+  - national_label_en: Secondary education courses with VET certificate
+    national_label_local: "St\u0159edn\xED vzd\u011Bl\xE1n\xED s v\xFDu\u010Dn\xED\
+      m listem"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 26
+  - national_label_en: Secondary technical and vocational courses with maturita exam
+    national_label_local: "St\u0159edn\xED vzd\u011Bl\xE1n\xED s maturitn\xED zkou\u0161\
+      kou (odborn\xE9)"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 27
+  - national_label_en: "Secondary education courses with VET certificate \u2013 2-years\
+      \ courses"
+    national_label_local: "St\u0159edn\xED vzd\u011Bl\xE1n\xED s v\xFDu\u010Dn\xED\
+      m listem - 2let\xE9 obory"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 28
+  - national_label_en: Conservatoire - middle stage of 8-years courses (5th and 6th
+      grade)
+    national_label_local: "8let\xFD obor konzervato\u0159e - 5.-6. ro\u010Dn\xEDk"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 29
+  - national_label_en: Conservatoire - lower stage of 6-years courses (1st to 4th
+      grade)
+    national_label_local: "6let\xFD obor konzervato\u0159e - 1.-4. ro\u010Dn\xEDk"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 30
+  - national_label_en: Lyceum
+    national_label_local: Lyceum
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 31
+  - national_label_en: Language schools with certificate of Ministry of Education
+      (post-secondary courses)
+    national_label_local: "Jazykov\xE1 \u0161kola (pomaturirn\xED studium)"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 32
+  - national_label_en: 'Universities: the second qualification for graduates from
+      upper secondary education'
+    national_label_local: "Dal\u0161\xED vzd\u011Bl\xE1v\xE1n\xED na vysok\xE9 \u0161\
+      kole: pro absolventy S\u0160"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 33
+  - national_label_en: Follow-up courses (for graduates of secondary education courses
+      without maturita exam or secondary education courses with VET certificate)
+    national_label_local: "N\xE1stavbov\xE9 studium"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 34
+  - national_label_en: Shortened courses leading to apprenticeship certificate (second
+      qualification for graduates of upper secondary education with VET certificate
+      or maturita exam)
+    national_label_local: "Zkr\xE1cen\xE9 studium s v\xFDu\u010Dn\xEDm listem"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 35
+  - national_label_en: Shortened courses leading to maturita exam (second qualification
+      for graduates of upper secondary education with maturita exam)
+    national_label_local: "Zkr\xE1cen\xE9 studium s maturitn\xED zkou\u0161kou"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 36
+  - national_label_en: Courses for retraining, vocational type
+    national_label_local: "Rekvalifika\u010Dn\xED kursy"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 37
+  - national_label_en: Courses for retraining, vocational type, with VET certificate
+    national_label_local: "Rekvalifika\u010Dn\xED kursy s v\xFDu\u010Dn\xEDm listem"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 38
+  - national_label_en: Post-secondary courses, vocational type
+    national_label_local: "Pomaturitn\xED studium"
+    entry_age: 19
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 39
+  - national_label_en: Conservatoire - upper stage of 8-years courses (7th and 8th
+      grade)
+    national_label_local: "8let\xFD obor konzervato\u0159e - 7.-8. ro\u010Dn\xEDk"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 40
+  - national_label_en: Conservatoire - upper stage of 6-years (5th and 6th grade)
+    national_label_local: "6let\xFD obor konzervato\u0159e - 5.-6. ro\u010Dn\xEDk"
+    entry_age: 19
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 41
+  - national_label_en: Higher technical school
+    national_label_local: "Vy\u0161\u0161\xED odborn\xE1 \u0161kola \u2013 3-and 4-years\
+      \ courses"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 42
+  - national_label_en: Bachelor study
+    national_label_local: "Bakal\xE1\u0159sk\xE9 studium"
+    entry_age: 19
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 43
+  - national_label_en: Master study (long 5-years programmes)
+    national_label_local: "Magistersk\xE9 studium (dlouh\xE9 5\u20136let\xE9 programy)"
+    entry_age: 19
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 44
+  - national_label_en: Master study (short 2- to 3-years follow-up programmes)
+    national_label_local: "Magistersk\xE9 navazuj\xEDc\xED studium (2\u20133let\xE9\
+      )"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 45
+  - national_label_en: 'Universities: special courses for bachelors and graduates
+      of higher technical schools'
+    national_label_local: "Dal\u0161\xED vzd\u011Bl\xE1v\xE1n\xED na vysok\xE9 \u0161\
+      kole: pro bakal\xE1\u0159e a absolventy VO\u0160"
+    entry_age: 21
+    duration_years: 6
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 46
+  - national_label_en: 'Universities: special courses for masters'
+    national_label_local: "Dal\u0161\xED vzd\u011Bl\xE1v\xE1n\xED na vysok\xE9 \u0161\
+      kole: pro absolventy magistersk\xFDch studijn\xEDch programu."
+    entry_age: 24
+    duration_years: 6
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 47
+  - national_label_en: Doctoral study
+    national_label_local: "Doktorsk\xE9 studium"
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 48
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Czechia.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
