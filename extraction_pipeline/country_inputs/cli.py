@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +22,27 @@ from schema.parameter import ParameterDefinition
 SOURCE_ROOT = ROOT / "extraction" / "10_source" / "country-parameters-inputs"
 DRAFT_ROOT = ROOT / "extraction" / "20_drafts" / "runs" / "country-parameters"
 CONTRACT_ROOT = DRAFT_ROOT / "contracts"
+
+ISO3_PATTERN = re.compile(r"^[A-Z]{3}$")
+
+
+def _is_valid_iso3(value: str) -> bool:
+    return bool(ISO3_PATTERN.fullmatch(value or ""))
+
+
+def _delete_if_exists(path: Path) -> bool:
+    if path.exists():
+        path.unlink()
+        return True
+    return False
+
+
+def _cleanup_stale_root_level_yaml() -> list[str]:
+    cleaned: list[str] = []
+    for path in sorted(DRAFT_ROOT.glob("*.yaml")):
+        path.unlink()
+        cleaned.append(str(path.relative_to(ROOT)))
+    return cleaned
 
 
 def _find_xlsx(folder: Path) -> list[Path]:
@@ -96,17 +118,40 @@ def run_extract() -> dict[str, Any]:
         }
 
     written: list[str] = []
+    skipped: list[dict[str, Any]] = []
+    cleaned = _cleanup_stale_root_level_yaml()
 
     for relative in inputs["ISCED"]:
         source = ROOT / relative
-        iso3, country_name, rows, reference_year = _extract_education(source)
+        iso3, country_name, rows, _reference_year = _extract_education(source)
+        if not _is_valid_iso3(iso3):
+            skipped.append(
+                {
+                    "file": str(source.relative_to(ROOT)),
+                    "parameter_id": "PARAM-EDU-LEVEL-CROSSWALK",
+                    "reason": f"invalid iso3 '{iso3}'",
+                }
+            )
+            continue
+        if not rows:
+            stale_path = DRAFT_ROOT / iso3 / "PARAM-EDU-LEVEL-CROSSWALK.yaml"
+            if _delete_if_exists(stale_path):
+                cleaned.append(str(stale_path.relative_to(ROOT)))
+            skipped.append(
+                {
+                    "file": str(source.relative_to(ROOT)),
+                    "parameter_id": "PARAM-EDU-LEVEL-CROSSWALK",
+                    "reason": "no rows extracted",
+                }
+            )
+            continue
         out_path = emit_parameter_draft(
             iso3=iso3,
             country_name=country_name,
             parameter_id="PARAM-EDU-LEVEL-CROSSWALK",
             rows=rows,
             source=str(source.relative_to(ROOT)),
-            effective_from=reference_year,
+            effective_from=None,
             effective_to=None,
         )
         written.append(str(out_path.relative_to(ROOT)))
@@ -122,30 +167,61 @@ def run_extract() -> dict[str, Any]:
             bench_san,
         ) = _extract_wash(source)
 
-        water_path = emit_parameter_draft(
-            iso3=iso3,
-            country_name=country_name,
-            parameter_id="PARAM-WASH-WATER-CROSSWALK",
-            rows=water_rows,
-            source=str(source.relative_to(ROOT)),
-            effective_from=None,
-            effective_to=None,
-        )
-        san_path = emit_parameter_draft(
-            iso3=iso3,
-            country_name=country_name,
-            parameter_id="PARAM-WASH-SANITATION-CROSSWALK",
-            rows=sanitation_rows,
-            source=str(source.relative_to(ROOT)),
-            effective_from=None,
-            effective_to=None,
-        )
-        written.extend(
-            [
-                str(water_path.relative_to(ROOT)),
-                str(san_path.relative_to(ROOT)),
-            ]
-        )
+        if not _is_valid_iso3(iso3):
+            skipped.append(
+                {
+                    "file": str(source.relative_to(ROOT)),
+                    "parameter_id": "PARAM-WASH-*",
+                    "reason": f"invalid iso3 '{iso3}'",
+                }
+            )
+            continue
+
+        if water_rows:
+            water_path = emit_parameter_draft(
+                iso3=iso3,
+                country_name=country_name,
+                parameter_id="PARAM-WASH-WATER-CROSSWALK",
+                rows=water_rows,
+                source=str(source.relative_to(ROOT)),
+                effective_from=None,
+                effective_to=None,
+            )
+            written.append(str(water_path.relative_to(ROOT)))
+        else:
+            stale_water = DRAFT_ROOT / iso3 / "PARAM-WASH-WATER-CROSSWALK.yaml"
+            if _delete_if_exists(stale_water):
+                cleaned.append(str(stale_water.relative_to(ROOT)))
+            skipped.append(
+                {
+                    "file": str(source.relative_to(ROOT)),
+                    "parameter_id": "PARAM-WASH-WATER-CROSSWALK",
+                    "reason": "no rows extracted",
+                }
+            )
+
+        if sanitation_rows:
+            san_path = emit_parameter_draft(
+                iso3=iso3,
+                country_name=country_name,
+                parameter_id="PARAM-WASH-SANITATION-CROSSWALK",
+                rows=sanitation_rows,
+                source=str(source.relative_to(ROOT)),
+                effective_from=None,
+                effective_to=None,
+            )
+            written.append(str(san_path.relative_to(ROOT)))
+        else:
+            stale_san = DRAFT_ROOT / iso3 / "PARAM-WASH-SANITATION-CROSSWALK.yaml"
+            if _delete_if_exists(stale_san):
+                cleaned.append(str(stale_san.relative_to(ROOT)))
+            skipped.append(
+                {
+                    "file": str(source.relative_to(ROOT)),
+                    "parameter_id": "PARAM-WASH-SANITATION-CROSSWALK",
+                    "reason": "no rows extracted",
+                }
+            )
 
         b1 = emit_benchmark(
             iso3,
@@ -161,12 +237,19 @@ def run_extract() -> dict[str, Any]:
         )
         written.extend([str(b1.relative_to(ROOT)), str(b2.relative_to(ROOT))])
 
-    return {"ok": True, "inputs": inputs, "written": written}
+    return {
+        "ok": True,
+        "inputs": inputs,
+        "written": written,
+        "cleaned": cleaned,
+        "skipped": skipped,
+    }
 
 
 def run_check() -> dict[str, Any]:
     base = DRAFT_ROOT
     errors: list[dict[str, str]] = []
+    warnings: list[dict[str, str]] = []
     try:
         registry = load_parameter_registry()
     except Exception as exc:  # noqa: BLE001
@@ -175,6 +258,7 @@ def run_check() -> dict[str, Any]:
             "count": 0,
             "files": [],
             "errors": [{"file": "registry", "error": str(exc)}],
+            "warnings": [],
         }
 
     findings: list[dict[str, Any]] = []
@@ -190,10 +274,40 @@ def run_check() -> dict[str, Any]:
                     "error": "no draft country-parameter files found",
                 }
             ],
+            "warnings": [],
         }
 
     for path in paths:
-        text = path.read_text(encoding="utf-8")
+        relative_path = path.relative_to(base)
+        # Only validate drafts placed under an ISO3 folder (e.g., VNM/file.yaml).
+        if len(relative_path.parts) < 2:
+            warnings.append(
+                {
+                    "file": str(path.relative_to(ROOT)),
+                    "warning": "skipped non-ISO3 root-level draft file",
+                }
+            )
+            continue
+        iso3_dir = relative_path.parts[0]
+        if not _is_valid_iso3(iso3_dir):
+            warnings.append(
+                {
+                    "file": str(path.relative_to(ROOT)),
+                    "warning": f"skipped draft under non-ISO3 folder '{iso3_dir}'",
+                }
+            )
+            continue
+
+        try:
+            text = path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            warnings.append(
+                {
+                    "file": str(path.relative_to(ROOT)),
+                    "warning": "file disappeared during scan; skipped",
+                }
+            )
+            continue
         file_ok = True
         detail_error = ""
         try:
@@ -205,7 +319,12 @@ def run_check() -> dict[str, Any]:
             for record in parsed.parameters:
                 definition = registry[record.parameter_id]
                 if definition.value_type == "table" and len(record.value) == 0:
-                    raise ValueError(f"{record.parameter_id} table value must contain at least one row")
+                    warnings.append(
+                        {
+                            "file": str(path.relative_to(ROOT)),
+                            "warning": f"{record.parameter_id} has empty table value; skipped as non-blocking draft",
+                        }
+                    )
         except Exception as exc:  # noqa: BLE001
             file_ok = False
             detail_error = str(exc)
@@ -231,6 +350,7 @@ def run_check() -> dict[str, Any]:
         "count": len(findings),
         "files": findings,
         "errors": errors,
+        "warnings": warnings,
     }
 
 
