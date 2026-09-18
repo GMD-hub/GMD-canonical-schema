@@ -474,6 +474,18 @@
 			"type": "shell",
 			"command": "git add governance/benchmarks/QAT_sanitation_benchmark_draft.yaml governance/benchmarks/QAT_water_benchmark_draft.yaml .vscode/tasks.json; git commit -m 'chore(benchmarks): finalize QAT benchmark tail and tasks sync'; git status --short --untracked-files=no; git log -3 --oneline",
 			"isBackground": false
+		},
+		{
+			"label": "final-clean-check",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git status --short | Select-Object -First 20; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-final-tasks-only",
+			"type": "shell",
+			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): finalize tasks.json updates'; git status --short --untracked-files=no; git rev-parse --short HEAD",
+			"isBackground": false
 		}
 	]
 }
