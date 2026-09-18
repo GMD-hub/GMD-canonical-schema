@@ -1,0 +1,437 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "country-inputs-extract-check",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "install-requirements-venv",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"pip",
+				"install",
+				"-r",
+				"requirements.txt"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-extract",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-after-cleanup",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-extract-rerun",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-rerun",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-summary",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"import json; from extraction_pipeline.country_inputs.cli import run_check; r=run_check(); print(json.dumps({'ok': r.get('ok'), 'count': r.get('count'), 'error_count': len(r.get('errors', [])), 'errors_sample': r.get('errors', [])[:20]}, indent=2))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-summary-2",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"import json; from extraction_pipeline.country_inputs.cli import run_check; r=run_check(); print('ok=', r.get('ok')); print('count=', r.get('count')); print('error_count=', len(r.get('errors', []))); print(json.dumps(r.get('errors', [])[:20], indent=2))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-summary-3",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"import json; from extraction_pipeline.country_inputs.cli import run_check; r=run_check(); print(\"ok=\", r.get(\"ok\")); print(\"count=\", r.get(\"count\")); print(\"error_count=\", len(r.get(\"errors\", []))); print(json.dumps(r.get(\"errors\", [])[:20], indent=2))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "cleanup-invalid-country-drafts",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$root='extraction/20_drafts/runs/country-parameters'; $deleted=@(); $rootFile=Join-Path $root 'PARAM-EDU-LEVEL-CROSSWALK.yaml'; if(Test-Path $rootFile){ Remove-Item $rootFile -Force; $deleted += $rootFile }; Get-ChildItem $root -Recurse -File -Filter *.yaml | ForEach-Object { $txt=Get-Content $_.FullName -Raw; if($txt -match '(?m)^\\s*value:\\s*\\[\\]\\s*$'){ Remove-Item $_.FullName -Force; $deleted += $_.FullName } }; Write-Output ('DELETED_COUNT=' + $deleted.Count); $deleted | Select-Object -First 20"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "cleanup-invalid-country-drafts-2",
+			"type": "shell",
+			"command": "$root=\"extraction/20_drafts/runs/country-parameters\"; $deleted=@(); $rootFile=Join-Path $root \"PARAM-EDU-LEVEL-CROSSWALK.yaml\"; if(Test-Path $rootFile){ Remove-Item $rootFile -Force; $deleted += $rootFile }; Get-ChildItem $root -Recurse -File -Filter *.yaml | ForEach-Object { $lines=Get-Content $_.FullName; if($lines -match '^\\s*value:\\s*\\[\\]\\s*$'){ Remove-Item $_.FullName -Force; $deleted += $_.FullName } }; Write-Output (\"DELETED_COUNT=\" + $deleted.Count); $deleted | Select-Object -First 20",
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-extract-final-rerun",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-final-rerun",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-extract-after-patch",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-after-patch",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-after-check-patch",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-to-file",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/check_result.json'; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli check | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-extract-refresh-effective-from",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-after-effective-from-refresh",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/check_result.json'; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli check | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "country-inputs-check-after-race-fix",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/check_result.json'; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli check | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "country-params-inventory",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $isoFolders=($files | ForEach-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object -Unique).Count; Write-Output ('TOTAL_YAML=' + $files.Count); Write-Output ('ISO3_FOLDERS=' + $isoFolders); $files | Group-Object Name | Sort-Object Name | ForEach-Object { Write-Output ($_.Name + '=' + $_.Count) }",
+			"isBackground": false
+		},
+		{
+			"label": "generate-promotion-checklist",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $out='extraction/20_drafts/runs/country-parameters/PROMOTION_CHECKLIST_2026-09-18.md'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $groups=$files | Group-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object Name; $total=$files.Count; $isoCount=$groups.Count; $edu=($files | Where-Object Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml').Count; $san=($files | Where-Object Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml').Count; $wat=($files | Where-Object Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml').Count; $lines=@(); $lines += '# Promotion Checklist - Country Parameters'; $lines += ''; $lines += 'Date: 2026-09-18'; $lines += 'Branch: feat/country-schema-v0.2'; $lines += 'Source root: extraction/20_drafts/runs/country-parameters/'; $lines += ''; $lines += '## Snapshot'; $lines += ''; $lines += ('- Total YAML draft files (excluding contracts): ' + $total); $lines += ('- ISO3 folders with at least one draft file: ' + $isoCount); $lines += ('- PARAM-EDU-LEVEL-CROSSWALK.yaml: ' + $edu); $lines += ('- PARAM-WASH-SANITATION-CROSSWALK.yaml: ' + $san); $lines += ('- PARAM-WASH-WATER-CROSSWALK.yaml: ' + $wat); $lines += ''; $lines += '## Review Checklist'; $lines += ''; $lines += '| ISO3 | EDU | WASH_SAN | WASH_WATER | Reviewer | Decision | Notes |'; $lines += '|---|---|---|---|---|---|---|'; foreach($g in $groups){ $iso=$g.Name; $names=$g.Group.Name; $hasEdu = if($names -contains 'PARAM-EDU-LEVEL-CROSSWALK.yaml'){'Y'}else{''}; $hasSan = if($names -contains 'PARAM-WASH-SANITATION-CROSSWALK.yaml'){'Y'}else{''}; $hasWat = if($names -contains 'PARAM-WASH-WATER-CROSSWALK.yaml'){'Y'}else{''}; $lines += ('| ' + $iso + ' | ' + $hasEdu + ' | ' + $hasSan + ' | ' + $hasWat + ' |  | pending |  |') }; $lines += ''; $lines += '## Promotion Rule'; $lines += ''; $lines += '- Promote only after human review approval.'; $lines += '- Keep EDU effective_from as null unless clear educational era evidence exists.'; $lines += '- Validate after promotion: .\\\\.venv\\\\Scripts\\\\python.exe validation/validate_country_layer.py'; $lines -join \"`r`n\" | Out-File -FilePath $out -Encoding utf8; Write-Output ('WROTE=' + $out); Write-Output ('ROWS=' + $groups.Count)",
+			"isBackground": false
+		},
+		{
+			"label": "generate-promotion-checklist-2",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $out='extraction/20_drafts/runs/country-parameters/PROMOTION_CHECKLIST_2026-09-18.md'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $groups=$files | Group-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object Name; $total=$files.Count; $isoCount=$groups.Count; $edu=($files | Where-Object Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml').Count; $san=($files | Where-Object Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml').Count; $wat=($files | Where-Object Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml').Count; $lines=@(); $lines += '# Promotion Checklist - Country Parameters'; $lines += ''; $lines += 'Date: 2026-09-18'; $lines += 'Branch: feat/country-schema-v0.2'; $lines += 'Source root: extraction/20_drafts/runs/country-parameters/'; $lines += ''; $lines += '## Snapshot'; $lines += ''; $lines += ('- Total YAML draft files (excluding contracts): ' + $total); $lines += ('- ISO3 folders with at least one draft file: ' + $isoCount); $lines += ('- PARAM-EDU-LEVEL-CROSSWALK.yaml: ' + $edu); $lines += ('- PARAM-WASH-SANITATION-CROSSWALK.yaml: ' + $san); $lines += ('- PARAM-WASH-WATER-CROSSWALK.yaml: ' + $wat); $lines += ''; $lines += '## Review Checklist'; $lines += ''; $lines += '| ISO3 | EDU | WASH_SAN | WASH_WATER | Reviewer | Decision | Notes |'; $lines += '|---|---|---|---|---|---|---|'; foreach($g in $groups){ $iso=$g.Name; $names=$g.Group.Name; $hasEdu = if($names -contains 'PARAM-EDU-LEVEL-CROSSWALK.yaml'){'Y'}else{''}; $hasSan = if($names -contains 'PARAM-WASH-SANITATION-CROSSWALK.yaml'){'Y'}else{''}; $hasWat = if($names -contains 'PARAM-WASH-WATER-CROSSWALK.yaml'){'Y'}else{''}; $lines += ('| ' + $iso + ' | ' + $hasEdu + ' | ' + $hasSan + ' | ' + $hasWat + ' |  | pending |  |') }; $lines += ''; $lines += '## Promotion Rule'; $lines += ''; $lines += '- Promote only after human review approval.'; $lines += '- Keep EDU effective_from as null unless clear educational era evidence exists.'; $lines += '- Validate after promotion: .\\\\.venv\\\\Scripts\\\\python.exe validation/validate_country_layer.py'; Set-Content -Path $out -Value $lines -Encoding utf8; Write-Output ('WROTE=' + $out); Write-Output ('ROWS=' + $groups.Count)",
+			"isBackground": false
+		},
+		{
+			"label": "fresh-extract",
+			"type": "shell",
+			"command": "$ErrorActionPreference='Stop'; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "fresh-check-to-file",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/check_result.json'; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli check | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "fresh-inventory",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $groups=$files | Group-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object Name; Write-Output ('TOTAL=' + $files.Count); Write-Output ('ISO3=' + $groups.Count); Write-Output ('EDU=' + (($files | Where-Object Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml').Count)); Write-Output ('SAN=' + (($files | Where-Object Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml').Count)); Write-Output ('WATER=' + (($files | Where-Object Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml').Count))",
+			"isBackground": false
+		},
+		{
+			"label": "refresh-promotion-checklist",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $out='extraction/20_drafts/runs/country-parameters/PROMOTION_CHECKLIST_2026-09-18.md'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $groups=$files | Group-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object Name; $total=$files.Count; $isoCount=$groups.Count; $edu=($files | Where-Object Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml').Count; $san=($files | Where-Object Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml').Count; $wat=($files | Where-Object Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml').Count; $lines=@(); $lines += '# Promotion Checklist - Country Parameters'; $lines += ''; $lines += 'Date: 2026-09-18'; $lines += 'Branch: feat/country-schema-v0.2'; $lines += 'Source root: extraction/20_drafts/runs/country-parameters/'; $lines += ''; $lines += '## Snapshot'; $lines += ''; $lines += ('- Total YAML draft files (excluding contracts): ' + $total); $lines += ('- ISO3 folders with at least one draft file: ' + $isoCount); $lines += ('- PARAM-EDU-LEVEL-CROSSWALK.yaml: ' + $edu); $lines += ('- PARAM-WASH-SANITATION-CROSSWALK.yaml: ' + $san); $lines += ('- PARAM-WASH-WATER-CROSSWALK.yaml: ' + $wat); $lines += ''; $lines += '## Review Checklist'; $lines += ''; $lines += '| ISO3 | EDU | WASH_SAN | WASH_WATER | Reviewer | Decision | Notes |'; $lines += '|---|---|---|---|---|---|---|'; foreach($g in $groups){ $iso=$g.Name; $names=$g.Group.Name; $hasEdu = if($names -contains 'PARAM-EDU-LEVEL-CROSSWALK.yaml'){'Y'}else{''}; $hasSan = if($names -contains 'PARAM-WASH-SANITATION-CROSSWALK.yaml'){'Y'}else{''}; $hasWat = if($names -contains 'PARAM-WASH-WATER-CROSSWALK.yaml'){'Y'}else{''}; $lines += ('| ' + $iso + ' | ' + $hasEdu + ' | ' + $hasSan + ' | ' + $hasWat + ' |  | pending |  |') }; $lines += ''; $lines += '## Promotion Rule'; $lines += ''; $lines += '- Promote only after human review approval.'; $lines += '- Keep EDU effective_from as null unless clear educational era evidence exists.'; $lines += '- Validate after promotion: .\\\\.venv\\\\Scripts\\\\python.exe validation/validate_country_layer.py'; Set-Content -Path $out -Value $lines -Encoding utf8; Write-Output ('WROTE=' + $out); Write-Output ('ROWS=' + $groups.Count)",
+			"isBackground": false
+		},
+		{
+			"label": "refresh-promotion-manifest",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $out='extraction/20_drafts/runs/country-parameters/PROMOTION_MANIFEST_2026-09-18.md'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $groups=$files | Group-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object Name; $total=$files.Count; $isoCount=$groups.Count; $edu=($files | Where-Object Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml').Count; $san=($files | Where-Object Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml').Count; $wat=($files | Where-Object Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml').Count; $lines=@(); $lines += '# Promotion Manifest - Country Parameter Draft Run'; $lines += ''; $lines += 'Date: 2026-09-18'; $lines += 'Branch: feat/country-schema-v0.2'; $lines += 'Source root: extraction/20_drafts/runs/country-parameters/'; $lines += 'Validation snapshot: extraction/20_drafts/runs/check_result.json'; $lines += ''; $lines += '## Current Inventory Snapshot'; $lines += ''; $lines += ('- Total YAML draft files (excluding contracts): ' + $total); $lines += ('- ISO3 folders with at least one draft file: ' + $isoCount); $lines += ''; $lines += 'Breakdown by parameter artifact:'; $lines += ''; $lines += ('- PARAM-EDU-LEVEL-CROSSWALK.yaml: ' + $edu); $lines += ('- PARAM-WASH-SANITATION-CROSSWALK.yaml: ' + $san); $lines += ('- PARAM-WASH-WATER-CROSSWALK.yaml: ' + $wat); $lines += ''; $lines += '## Promotion Scope'; $lines += ''; $lines += 'This manifest is for human-guided promotion from extraction drafts into canonical country parameter files.'; $lines += ''; $lines += 'Promotion targets:'; $lines += ''; $lines += '- country-parameters/countries/<ISO3>/parameters.md'; $lines += '- country-parameters/countries/<ISO3>/exceptions.md when exception logic is required'; $lines += ''; $lines += '## Preconditions'; $lines += ''; $lines += '1. Draft check is green (ok=true) from extraction_pipeline.country_inputs.cli check.'; $lines += '2. Human reviewer confirms mapping quality and provenance.'; $lines += '3. Effective dating follows rule: EDU effective_from is null unless clear era evidence exists.'; $lines += ''; $lines += '## Promotion Procedure (Per Country)'; $lines += ''; $lines += '1. Open each source draft in extraction/20_drafts/runs/country-parameters/<ISO3>/.'; $lines += '2. Merge approved records into country-parameters/countries/<ISO3>/parameters.md.'; $lines += '3. Keep schema_version, IDs, and provenance shape aligned with canonical schema.'; $lines += '4. Add or update exceptions only in exceptions.md where needed.'; $lines += ''; $lines += '## Post-Promotion Verification'; $lines += ''; $lines += 'Run:'; $lines += ''; $lines += '- .\\\\.venv\\\\Scripts\\\\python.exe validation/validate_country_layer.py'; $lines += ''; $lines += 'If exit code is non-zero, resolve structural failures before commit.'; $lines += ''; $lines += '## Commit Recommendation'; $lines += ''; $lines += '1. chore(country-inputs): extraction and check behavior updates'; $lines += '2. chore(country-inputs): refresh extraction draft outputs'; $lines += '3. feat(country-parameters): promote reviewed country parameter records'; Set-Content -Path $out -Value $lines -Encoding utf8; Write-Output ('WROTE=' + $out)",
+			"isBackground": false
+		},
+		{
+			"label": "git-status-for-commits",
+			"type": "shell",
+			"command": "git status --short; git status; git diff --stat; git diff --name-only; git branch -vv",
+			"isBackground": false
+		},
+		{
+			"label": "git-tracked-only-status",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git diff --name-only; git diff --cached --name-only; git branch -vv",
+			"isBackground": false
+		},
+		{
+			"label": "untracked-summary",
+			"type": "shell",
+			"command": "$files = git ls-files --others --exclude-standard; Write-Output ('UNTRACKED_TOTAL=' + $files.Count); $files | Group-Object { ($_ -split '/')[0..2] -join '/' } | Sort-Object Count -Descending | Select-Object -First 20 | ForEach-Object { Write-Output ($_.Name + '=' + $_.Count) }; Write-Output '---KEY FILES---'; $files | Where-Object { $_ -like 'extraction/20_drafts/runs/country-parameters/*' -or $_ -like 'extraction/20_drafts/runs/check_result.json' -or $_ -like 'extraction/10_source/country-parameters-inputs/*' -or $_ -like '.vscode/*' } | Select-Object -First 40",
+			"isBackground": false
+		},
+		{
+			"label": "commit-stage-1",
+			"type": "shell",
+			"command": "git add extraction_pipeline/country_inputs/cli.py extraction/20_drafts/runs/country-parameters/contracts/PARAM-EDU-LEVEL-CROSSWALK.yaml extraction/20_drafts/runs/country-parameters/contracts/PARAM-WASH-SANITATION-CROSSWALK.yaml extraction/20_drafts/runs/country-parameters/contracts/PARAM-WASH-WATER-CROSSWALK.yaml; git commit -m \"fix(country-inputs): harden extract/check and remove duplicate draft contracts\"; git show --name-status --oneline -1",
+			"isBackground": false
+		},
+		{
+			"label": "status-after-stage1-fail",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "commit-stage-1-retry",
+			"type": "shell",
+			"command": "git commit -m 'fix(country-inputs): harden extract/check and remove duplicate draft contracts'; git show --name-status --oneline -1",
+			"isBackground": false
+		},
+		{
+			"label": "commit-stage-2-sources",
+			"type": "shell",
+			"command": "git add extraction/10_source/country-parameters-inputs; git commit -m 'chore(country-inputs): add bulk ISCED and JMP source workbooks'; git show --name-status --oneline -1",
+			"isBackground": false
+		},
+		{
+			"label": "verify-stage-2",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git log -2 --oneline",
+			"isBackground": false
+		},
+		{
+			"label": "verify-source-tracked",
+			"type": "shell",
+			"command": "git ls-files extraction/10_source/country-parameters-inputs/ISCED/ISCED_2011_Mapping_Afghanistan.xlsx; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-stage-3-drafts",
+			"type": "shell",
+			"command": "git add extraction/20_drafts/runs governance/benchmarks; git commit -m 'chore(country-inputs): refresh extracted drafts and promotion package'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "final-status-after-commits",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-stage-4-benchmarks",
+			"type": "shell",
+			"command": "git add governance/benchmarks/CAF_sanitation_benchmark_draft.yaml governance/benchmarks/CAF_water_benchmark_draft.yaml governance/benchmarks/CAN_sanitation_benchmark_draft.yaml governance/benchmarks/CAN_water_benchmark_draft.yaml governance/benchmarks/KIR_sanitation_benchmark_draft.yaml governance/benchmarks/KIR_water_benchmark_draft.yaml governance/benchmarks/KNA_sanitation_benchmark_draft.yaml governance/benchmarks/KNA_water_benchmark_draft.yaml governance/benchmarks/KWT_sanitation_benchmark_draft.yaml governance/benchmarks/KWT_water_benchmark_draft.yaml governance/benchmarks/LAO_sanitation_benchmark_draft.yaml governance/benchmarks/LAO_water_benchmark_draft.yaml; git commit -m 'chore(benchmarks): refresh selected JMP benchmark drafts'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "commit-stage-5-benchmarks",
+			"type": "shell",
+			"command": "git add governance/benchmarks/CHE_sanitation_benchmark_draft.yaml governance/benchmarks/CHE_water_benchmark_draft.yaml governance/benchmarks/KOR_sanitation_benchmark_draft.yaml governance/benchmarks/KOR_water_benchmark_draft.yaml; git commit -m 'chore(benchmarks): finalize benchmark refresh delta'; git status --short --untracked-files=no; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-final-benchmark-sweep",
+			"type": "shell",
+			"command": "git add governance/benchmarks; git commit -m 'chore(benchmarks): apply remaining benchmark output updates'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "final-commit-summary",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20; git log -8 --oneline",
+			"isBackground": false
+		},
+		{
+			"label": "commit-last-two-benchmarks",
+			"type": "shell",
+			"command": "git add governance/benchmarks/CHN_sanitation_benchmark_draft.yaml governance/benchmarks/CHN_water_benchmark_draft.yaml; git commit -m 'chore(benchmarks): sync CHN benchmark outputs'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "commit-global-final-sweep",
+			"type": "shell",
+			"command": "git add -u; git commit -m 'chore(country-inputs): finalize remaining tracked output refresh'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "verify-clean-tracked-and-log",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20; git log -10 --oneline",
+			"isBackground": false
+		},
+		{
+			"label": "commit-remaining-6-benchmarks",
+			"type": "shell",
+			"command": "git add governance/benchmarks/CMR_sanitation_benchmark_draft.yaml governance/benchmarks/CMR_water_benchmark_draft.yaml governance/benchmarks/LBY_sanitation_benchmark_draft.yaml governance/benchmarks/LBY_water_benchmark_draft.yaml governance/benchmarks/LIE_sanitation_benchmark_draft.yaml governance/benchmarks/LIE_water_benchmark_draft.yaml; git commit -m 'chore(benchmarks): commit remaining CMR LBY LIE benchmark updates'; git status --short --untracked-files=no; git log -1 --oneline",
+			"isBackground": false
+		},
+		{
+			"label": "status-before-final-logical-commits",
+			"type": "shell",
+			"command": "git status --short; git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 200",
+			"isBackground": false
+		},
+		{
+			"label": "commit-rest-stage-cd",
+			"type": "shell",
+			"command": "git add governance/benchmarks/C*.yaml governance/benchmarks/D*.yaml; git commit -m 'chore(benchmarks): refresh JMP benchmark outputs for C-D countries'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "commit-rest-stage-lm",
+			"type": "shell",
+			"command": "git add governance/benchmarks/L*.yaml governance/benchmarks/M*.yaml; git commit -m 'chore(benchmarks): refresh JMP benchmark outputs for L-M countries'; git status --short --untracked-files=no",
+			"isBackground": false
+		},
+		{
+			"label": "commit-rest-stage-dom-tail",
+			"type": "shell",
+			"command": "git add governance/benchmarks/DOM_sanitation_benchmark_draft.yaml governance/benchmarks/DOM_water_benchmark_draft.yaml; git commit -m 'chore(benchmarks): finalize DOM benchmark refresh'; git status --short --untracked-files=no; git log -5 --oneline",
+			"isBackground": false
+		},
+		{
+			"label": "verify-final-clean-tracked",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20",
+			"isBackground": false
+		},
+		{
+			"label": "commit-rest-stage-mli-tail",
+			"type": "shell",
+			"command": "git add governance/benchmarks/MLI_sanitation_benchmark_draft.yaml governance/benchmarks/MLI_water_benchmark_draft.yaml; git commit -m 'chore(benchmarks): finalize MLI benchmark refresh'; git status --short --untracked-files=no; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-all-remaining",
+			"type": "shell",
+			"command": "git add -u; git commit -m 'chore(benchmarks): commit all remaining tracked benchmark updates'; git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20; git log -3 --oneline",
+			"isBackground": false
+		},
+		{
+			"label": "commit-tail-1",
+			"type": "shell",
+			"command": "git add -u; git commit -m 'chore(benchmarks): finalize residual benchmark delta'; git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-tail-2",
+			"type": "shell",
+			"command": "git add -u; git commit -m 'chore(benchmarks): finalize remaining benchmark tail'; git status --short --untracked-files=no; git ls-files --others --exclude-standard | Select-Object -First 20; git rev-parse --short HEAD",
+			"isBackground": false
+		},
+		{
+			"label": "commit-vscode-tasks",
+			"type": "shell",
+			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): add local tasks for country-input workflows'; git status --short --untracked-files=no; git log -1 --oneline",
+			"isBackground": false
+		}
+	]
+}
