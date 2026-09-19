@@ -1,0 +1,618 @@
+country_id: CTY-EGY
+country_name: Egypt
+iso3: EGY
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1-Metropolitan
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: EGY_2015_GAULx_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: EGY_2015_GAULx_1
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '1'
+    geo_nvar: ADM1_NAME
+    geo_name: Alexandria & Cairo & Port Said & Suez & Dakahlia
+    source_row: 4201
+  - survey_labels: 2-Lower
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: EGY_2015_GAULx_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: EGY_2015_GAULx_2
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '2'
+    geo_nvar: ADM1_NAME
+    geo_name: Behera & Damietta & Gharbia & Ismailia & Kafr El-Shikh & Menoufia &
+      Shrkia
+    source_row: 4202
+  - survey_labels: 4-Upper
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: EGY_2015_GAULx_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: EGY_2015_GAULx_4
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '4'
+    geo_nvar: ADM1_NAME
+    geo_name: Aswan & Assiut & Beni Suef & Fayoum & Giza & Kalyoubia & Luxor & Menia
+      & Qena & Suhag
+    source_row: 4203
+  - survey_labels: 6-Borders | Border governorates
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: EGY_2015_GAULx_6
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: EGY_2015_GAULx_6
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '6'
+    geo_nvar: ADM1_NAME
+    geo_name: Matrouh & New Valley & North Sinai & Red Sea & South Sinai
+    source_row: 4204
+  - survey_labels: 2 - Alexandria | Alexandria
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61510
+    gmd_subnatid2: EGY_2015_GAUL1_61510
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61510
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61510'
+    geo_nvar: ADM1_NAME
+    geo_name: Alexandria
+    source_row: 4209
+  - survey_labels: 28 - Aswan | Asswan | Aswan
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61512
+    gmd_subnatid2: EGY_2015_GAUL1_61512
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61512
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61512'
+    geo_nvar: ADM1_NAME
+    geo_name: Aswan
+    source_row: 4210
+  - survey_labels: 25 - Assiut | Assyout
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61511
+    gmd_subnatid2: EGY_2015_GAUL1_61511
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61511
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61511'
+    geo_nvar: ADM1_NAME
+    geo_name: Assiut
+    source_row: 4211
+  - survey_labels: 18 - Behera | Behira
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61513
+    gmd_subnatid2: EGY_2015_GAUL1_61513
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61513
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61513'
+    geo_nvar: ADM1_NAME
+    geo_name: Behera
+    source_row: 4212
+  - survey_labels: 22 - Beni Suef | Beni-souef
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61514
+    gmd_subnatid2: EGY_2015_GAUL1_61514
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61514
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61514'
+    geo_nvar: ADM1_NAME
+    geo_name: Beni Suef
+    source_row: 4213
+  - survey_labels: 1 - Cairo | Cairo
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61515
+    gmd_subnatid2: EGY_2015_GAUL1_61515
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61515
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61515'
+    geo_nvar: ADM1_NAME
+    geo_name: Cairo
+    source_row: 4215
+  - survey_labels: 12 - Dakahleya | Dakahliya
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61516
+    gmd_subnatid2: EGY_2015_GAUL1_61516
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61516
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61516'
+    geo_nvar: ADM1_NAME
+    geo_name: Dakahlia
+    source_row: 4216
+  - survey_labels: 11 - Damietta | Domiyat
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61517
+    gmd_subnatid2: EGY_2015_GAUL1_61517
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61517
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61517'
+    geo_nvar: ADM1_NAME
+    geo_name: Damietta
+    source_row: 4217
+  - survey_labels: 23 - Fayoum | Fayoum
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61518
+    gmd_subnatid2: EGY_2015_GAUL1_61518
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61518
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61518'
+    geo_nvar: ADM1_NAME
+    geo_name: Fayoum
+    source_row: 4218
+  - survey_labels: 16 - Gharbia | Gharbiya
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61519
+    gmd_subnatid2: EGY_2015_GAUL1_61519
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61519
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61519'
+    geo_nvar: ADM1_NAME
+    geo_name: Gharbia
+    source_row: 4219
+  - survey_labels: 21 - Giza | Giza
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61520
+    gmd_subnatid2: EGY_2015_GAUL1_61520
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61520
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61520'
+    geo_nvar: ADM1_NAME
+    geo_name: Giza
+    source_row: 4220
+  - survey_labels: 19 - Ismailia | Ismailia
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61521
+    gmd_subnatid2: EGY_2015_GAUL1_61521
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61521
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61521'
+    geo_nvar: ADM1_NAME
+    geo_name: Ismailia
+    source_row: 4221
+  - survey_labels: 15 - Kafr ElSheikh | Kafr-elsheikh
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61522
+    gmd_subnatid2: EGY_2015_GAUL1_61522
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61522
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61522'
+    geo_nvar: ADM1_NAME
+    geo_name: Kafr El-Shikh
+    source_row: 4222
+  - survey_labels: 14 - Qalyoubia | Kaliobiya
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61523
+    gmd_subnatid2: EGY_2015_GAUL1_61523
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61523
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61523'
+    geo_nvar: ADM1_NAME
+    geo_name: Kalyoubia
+    source_row: 4223
+  - survey_labels: 29 - Luxor | Luxor
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61524
+    gmd_subnatid2: EGY_2015_GAUL1_61524
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61524
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61524'
+    geo_nvar: ADM1_NAME
+    geo_name: Luxor
+    source_row: 4224
+  - survey_labels: 24 - Minya | Menia
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61526
+    gmd_subnatid2: EGY_2015_GAUL1_61526
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61526
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61526'
+    geo_nvar: ADM1_NAME
+    geo_name: Menia
+    source_row: 4225
+  - survey_labels: 17 - Menoufia | Menofiya
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61527
+    gmd_subnatid2: EGY_2015_GAUL1_61527
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61527
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61527'
+    geo_nvar: ADM1_NAME
+    geo_name: Menoufia
+    source_row: 4226
+  - survey_labels: 3 - Port Said | Port-Said
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61530
+    gmd_subnatid2: EGY_2015_GAUL1_61530
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61530
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61530'
+    geo_nvar: ADM1_NAME
+    geo_name: Port Said
+    source_row: 4227
+  - survey_labels: 27 - Qena | Quena
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61531
+    gmd_subnatid2: EGY_2015_GAUL1_61531
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61531
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61531'
+    geo_nvar: ADM1_NAME
+    geo_name: Qena
+    source_row: 4228
+  - survey_labels: 13 - Sharqia | Sharkiya
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61533
+    gmd_subnatid2: EGY_2015_GAUL1_61533
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61533
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61533'
+    geo_nvar: ADM1_NAME
+    geo_name: Shrkia
+    source_row: 4229
+  - survey_labels: 26 - Sohag | Souhag
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61536
+    gmd_subnatid2: EGY_2015_GAUL1_61536
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61536
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61536'
+    geo_nvar: ADM1_NAME
+    geo_name: Suhag
+    source_row: 4230
+  - survey_labels: 4 - Suez | Suez
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: EGY_2015_GAUL1_61535
+    gmd_subnatid2: EGY_2015_GAUL1_61535
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: EGY_2015_GAUL1_61535
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61535'
+    geo_nvar: ADM1_NAME
+    geo_name: Suez
+    source_row: 4231
+  - survey_labels: 31 - The Red Sea
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: EGY_2015_GAUL1_61532
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61532'
+    geo_nvar: ADM1_NAME
+    geo_name: Red Sea
+    source_row: 4289
+  - survey_labels: 32 - The New Valley
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: EGY_2015_GAUL1_61528
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61528'
+    geo_nvar: ADM1_NAME
+    geo_name: New Valley
+    source_row: 4290
+  - survey_labels: 33 - Matrouh
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: EGY_2015_GAUL1_61525
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61525'
+    geo_nvar: ADM1_NAME
+    geo_name: Matrouh
+    source_row: 4291
+  - survey_labels: 35 - South Sinai
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: EGY_2015_GAUL1_61534
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61534'
+    geo_nvar: ADM1_NAME
+    geo_name: South Sinai
+    source_row: 4292
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,1126 @@
+country_id: CTY-KEN
+country_name: KEN
+iso3: KEN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: 2015
+  selectors: null
+  value:
+  - survey_labels: "1 - Nairobi | 1 \u2013 Nairobi | 1-Central"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51328
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51328
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51328'
+    geo_nvar: ADM1_NAME
+    geo_name: Nairobi
+    source_row: 8548
+  - survey_labels: "2 - Central | 2 \u2013 Central | 2-Coast"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51325
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51325
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51325'
+    geo_nvar: ADM1_NAME
+    geo_name: Central
+    source_row: 8549
+  - survey_labels: "3 - Coast | 3 \u2013 Coast | 3-Eastern"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51326
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51326
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51326'
+    geo_nvar: ADM1_NAME
+    geo_name: Coast
+    source_row: 8550
+  - survey_labels: "4 - Eastern | 4 \u2013 Eastern | 4-Nairobi"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51327
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51327
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51327'
+    geo_nvar: ADM1_NAME
+    geo_name: Eastern
+    source_row: 8551
+  - survey_labels: "5 - North Eastern | 5 \u2013 North Eastern | 5-North Eastern"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51329
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51329
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51329'
+    geo_nvar: ADM1_NAME
+    geo_name: North Eastern
+    source_row: 8552
+  - survey_labels: "6 - Nyanza | 6 \u2013 Nyanza | 6-Nyanza"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51330
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51330
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51330'
+    geo_nvar: ADM1_NAME
+    geo_name: Nyanza
+    source_row: 8553
+  - survey_labels: "7 - Rift Valley | 7 \u2013 Rift Valley | 7-Rift Valley"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51331
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51331
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51331'
+    geo_nvar: ADM1_NAME
+    geo_name: Rift Valley
+    source_row: 8554
+  - survey_labels: "8 - Western | 8 \u2013 Western | 8-Western"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KEN_2015_GAUL1_51332
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KEN_2015_GAUL1_51332
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '51332'
+    geo_nvar: ADM1_NAME
+    geo_name: Western
+    source_row: 8555
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2022
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Mombasa | 1-Mombasa
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.28_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.28_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.28_1
+    geo_nvar: NAME_1
+    geo_name: Mombasa
+    source_row: 8580
+  - survey_labels: 10 - Marsabit | 10-Marsabit
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.25_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.25_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.25_1
+    geo_nvar: NAME_1
+    geo_name: Marsabit
+    source_row: 8581
+  - survey_labels: 11 - Isiolo | 11-Isiolo
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.9_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.9_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.9_1
+    geo_nvar: NAME_1
+    geo_name: Isiolo
+    source_row: 8582
+  - survey_labels: 12 - Meru | 12-Meru
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.26_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.26_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.26_1
+    geo_nvar: NAME_1
+    geo_name: Meru
+    source_row: 8583
+  - survey_labels: 13 - Tharaka Nithi | 13-Tharaka-Nithi
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.41_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.41_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.41_1
+    geo_nvar: NAME_1
+    geo_name: Tharaka-Nithi
+    source_row: 8584
+  - survey_labels: 14 - Embu | 14-Embu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.6_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.6_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.6_1
+    geo_nvar: NAME_1
+    geo_name: Embu
+    source_row: 8585
+  - survey_labels: 15 - Kitui | 15-Kitui
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.18_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.18_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.18_1
+    geo_nvar: NAME_1
+    geo_name: Kitui
+    source_row: 8586
+  - survey_labels: 16 - Machakos | 16-Machakos
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.22_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.22_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.22_1
+    geo_nvar: NAME_1
+    geo_name: Machakos
+    source_row: 8587
+  - survey_labels: 17 - Makueni | 17-Makueni
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.23_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.23_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.23_1
+    geo_nvar: NAME_1
+    geo_name: Makueni
+    source_row: 8588
+  - survey_labels: 18 - Nyandarua | 18-Nyandarua
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.35_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.35_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.35_1
+    geo_nvar: NAME_1
+    geo_name: Nyandarua
+    source_row: 8589
+  - survey_labels: 19 - Nyeri | 19-Nyeri
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.36_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.36_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.36_1
+    geo_nvar: NAME_1
+    geo_name: Nyeri
+    source_row: 8590
+  - survey_labels: 2 - Kwale | 2-Kwale
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.19_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.19_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.19_1
+    geo_nvar: NAME_1
+    geo_name: Kwale
+    source_row: 8591
+  - survey_labels: 20 - Kirinyaga | 20-Kirinyaga
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.15_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.15_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.15_1
+    geo_nvar: NAME_1
+    geo_name: Kirinyaga
+    source_row: 8592
+  - survey_labels: 21 - Murang'a | 21-Murang'a
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.29_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.29_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.29_1
+    geo_nvar: NAME_1
+    geo_name: Murang'a
+    source_row: 8593
+  - survey_labels: 22 - Kiambu | 22-Kiambu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.13_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.13_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.13_1
+    geo_nvar: NAME_1
+    geo_name: Kiambu
+    source_row: 8594
+  - survey_labels: 23 - Turkana | 23-Turkana
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.43_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.43_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.43_1
+    geo_nvar: NAME_1
+    geo_name: Turkana
+    source_row: 8595
+  - survey_labels: 24 - West Pokot | 24-West Pokot
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.47_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.47_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.47_1
+    geo_nvar: NAME_1
+    geo_name: West Pokot
+    source_row: 8596
+  - survey_labels: 25 - Samburu | 25-Samburu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.37_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.37_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.37_1
+    geo_nvar: NAME_1
+    geo_name: Samburu
+    source_row: 8597
+  - survey_labels: 26 - Trans Nzoia | 26-Trans Nzoia
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.42_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.42_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.42_1
+    geo_nvar: NAME_1
+    geo_name: Trans Nzoia
+    source_row: 8598
+  - survey_labels: 27 - Uasin Gishu | 27-Uasin Gishu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.44_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.44_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.44_1
+    geo_nvar: NAME_1
+    geo_name: Uasin Gishu
+    source_row: 8599
+  - survey_labels: 28 - Elgeyo Marakwet | 28-Elgeyo/Marakwet
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.5_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.5_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.5_1
+    geo_nvar: NAME_1
+    geo_name: Elgeyo-Marakwet
+    source_row: 8600
+  - survey_labels: 29 - Nandi | 29-Nandi
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.32_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.32_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.32_1
+    geo_nvar: NAME_1
+    geo_name: Nandi
+    source_row: 8601
+  - survey_labels: 3 - Kilifi | 3-Kilifi
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.14_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.14_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.14_1
+    geo_nvar: NAME_1
+    geo_name: Kilifi
+    source_row: 8602
+  - survey_labels: 30 - Baringo | 30-Baringo
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.1_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.1_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.1_1
+    geo_nvar: NAME_1
+    geo_name: Baringo
+    source_row: 8603
+  - survey_labels: 31 - Laikipia | 31-Laikipia
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.20_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.20_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.20_1
+    geo_nvar: NAME_1
+    geo_name: Laikipia
+    source_row: 8604
+  - survey_labels: 32 - Nakuru | 32-Nakuru
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.31_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.31_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.31_1
+    geo_nvar: NAME_1
+    geo_name: Nakuru
+    source_row: 8605
+  - survey_labels: 33 - Narok | 33-Narok
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.33_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.33_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.33_1
+    geo_nvar: NAME_1
+    geo_name: Narok
+    source_row: 8606
+  - survey_labels: 34 - Kajiado | 34-Kajiado
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.10_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.10_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.10_1
+    geo_nvar: NAME_1
+    geo_name: Kajiado
+    source_row: 8607
+  - survey_labels: 35 - Kericho | 35-Kericho
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.12_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.12_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.12_1
+    geo_nvar: NAME_1
+    geo_name: Kericho
+    source_row: 8608
+  - survey_labels: 36 - Bomet | 36-Bomet
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.2_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.2_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.2_1
+    geo_nvar: NAME_1
+    geo_name: Bomet
+    source_row: 8609
+  - survey_labels: 37 - Kakamega | 37-Kakamega
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.11_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.11_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.11_1
+    geo_nvar: NAME_1
+    geo_name: Kakamega
+    source_row: 8610
+  - survey_labels: 38 - Vihiga | 38-Vihiga
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.45_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.45_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.45_1
+    geo_nvar: NAME_1
+    geo_name: Vihiga
+    source_row: 8611
+  - survey_labels: 39 - Bungoma | 39-Bungoma
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.3_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.3_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.3_1
+    geo_nvar: NAME_1
+    geo_name: Bungoma
+    source_row: 8612
+  - survey_labels: 4 - Tana River | 4-Tana River
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.40_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.40_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.40_1
+    geo_nvar: NAME_1
+    geo_name: Tana River
+    source_row: 8613
+  - survey_labels: 40 - Busia | 40-Busia
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.4_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.4_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.4_1
+    geo_nvar: NAME_1
+    geo_name: Busia
+    source_row: 8614
+  - survey_labels: 41 - Siaya | 41-Siaya
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.38_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.38_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.38_1
+    geo_nvar: NAME_1
+    geo_name: Siaya
+    source_row: 8615
+  - survey_labels: 42 - Kisumu | 42-Kisumu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.17_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.17_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.17_1
+    geo_nvar: NAME_1
+    geo_name: Kisumu
+    source_row: 8616
+  - survey_labels: 43 - Homa Bay | 43-Homa Bay
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.8_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.8_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.8_1
+    geo_nvar: NAME_1
+    geo_name: Homa Bay
+    source_row: 8617
+  - survey_labels: 44 - Migori | 44-Migori
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.27_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.27_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.27_1
+    geo_nvar: NAME_1
+    geo_name: Migori
+    source_row: 8618
+  - survey_labels: 45 - Kisii | 45-Kisii
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.16_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.16_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.16_1
+    geo_nvar: NAME_1
+    geo_name: Kisii
+    source_row: 8619
+  - survey_labels: 46 - Nyamira | 46-Nyamira
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.34_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.34_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.34_1
+    geo_nvar: NAME_1
+    geo_name: Nyamira
+    source_row: 8620
+  - survey_labels: 47 - Nairobi | 47-Nairobi City
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.30_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.30_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.30_1
+    geo_nvar: NAME_1
+    geo_name: Nairobi
+    source_row: 8621
+  - survey_labels: 5 - Lamu | 5-Lamu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.21_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.21_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.21_1
+    geo_nvar: NAME_1
+    geo_name: Lamu
+    source_row: 8622
+  - survey_labels: 6 - Taita Taveta | 6-Taita/Taveta
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.39_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.39_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.39_1
+    geo_nvar: NAME_1
+    geo_name: Taita Taveta
+    source_row: 8623
+  - survey_labels: 7 - Garissa | 7-Garissa
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.7_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.7_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.7_1
+    geo_nvar: NAME_1
+    geo_name: Garissa
+    source_row: 8624
+  - survey_labels: 8 - Wajir | 8-Wajir
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.46_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.46_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.46_1
+    geo_nvar: NAME_1
+    geo_name: Wajir
+    source_row: 8625
+  - survey_labels: 9 - Mandera | 9-Mandera
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: KEN_2022_GADM1_KEN.24_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: KEN_2022_GADM1_KEN.24_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KEN.24_1
+    geo_nvar: NAME_1
+    geo_name: Mandera
+    source_row: 8626
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

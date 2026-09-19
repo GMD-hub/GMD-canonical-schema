@@ -1,0 +1,416 @@
+country_id: CTY-BDI
+country_name: BDI
+iso3: BDI
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 -  Bubanza | 1 - Bubanza
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40542
+    gmd_subnatid2: BDI_2015_GAUL1_40542
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40542
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40542'
+    geo_nvar: ADM1_NAME
+    geo_name: Bubanza
+    source_row: 547
+  - survey_labels: 10 - Kirundo | 9 -  Kirundo
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40551
+    gmd_subnatid2: BDI_2015_GAUL1_40551
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40551
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40551'
+    geo_nvar: ADM1_NAME
+    geo_name: Kirundo
+    source_row: 548
+  - survey_labels: 10 -  Makamba | 11 - Makamba
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40552
+    gmd_subnatid2: BDI_2015_GAUL1_40552
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40552
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40552'
+    geo_nvar: ADM1_NAME
+    geo_name: Makamba
+    source_row: 549
+  - survey_labels: 11 -  Muramvya | 12 - Muramvya
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40553
+    gmd_subnatid2: BDI_2015_GAUL1_40553
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40553
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40553'
+    geo_nvar: ADM1_NAME
+    geo_name: Muramvya
+    source_row: 550
+  - survey_labels: 12 -  Muyinga | 13 - Muyinga
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40554
+    gmd_subnatid2: BDI_2015_GAUL1_40554
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40554
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40554'
+    geo_nvar: ADM1_NAME
+    geo_name: Muyinga
+    source_row: 551
+  - survey_labels: 13 -  Mwaro | 14 - Mwaro
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40555
+    gmd_subnatid2: BDI_2015_GAUL1_40555
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40555
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40555'
+    geo_nvar: ADM1_NAME
+    geo_name: Mwaro
+    source_row: 552
+  - survey_labels: 14 -  Ngozi | 15 - Ngozi
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40556
+    gmd_subnatid2: BDI_2015_GAUL1_40556
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40556
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40556'
+    geo_nvar: ADM1_NAME
+    geo_name: Ngozi
+    source_row: 553
+  - survey_labels: 15 -  Rutana | 16 - Rutana
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40557
+    gmd_subnatid2: BDI_2015_GAUL1_40557
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40557
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40557'
+    geo_nvar: ADM1_NAME
+    geo_name: Rutana
+    source_row: 554
+  - survey_labels: 16 -  Ruyigi | 17 - Ruyigi
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40558
+    gmd_subnatid2: BDI_2015_GAUL1_40558
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40558
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40558'
+    geo_nvar: ADM1_NAME
+    geo_name: Ruyigi
+    source_row: 555
+  - survey_labels: 17 -  Bujumbura Mairie | 2 - Bujumbura Mairie
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40543
+    gmd_subnatid2: BDI_2015_GAUL1_40543
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40543
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40543'
+    geo_nvar: ADM1_NAME
+    geo_name: Bujumbura Mairie
+    source_row: 556
+  - survey_labels: 3 - Bujumbura rural
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40544
+    gmd_subnatid2: BDI_2015_GAUL1_40544
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40544
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40544'
+    geo_nvar: ADM1_NAME
+    geo_name: Bujumbura Rural
+    source_row: 557
+  - survey_labels: 4 - Bururi
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40545
+    gmd_subnatid2: BDI_2015_GAUL1_40545
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40545
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40545'
+    geo_nvar: ADM1_NAME
+    geo_name: Bururi
+    source_row: 558
+  - survey_labels: 4 -  Cankuzo | 5 - Cankuzo
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40546
+    gmd_subnatid2: BDI_2015_GAUL1_40546
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40546
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40546'
+    geo_nvar: ADM1_NAME
+    geo_name: Cankuzo
+    source_row: 559
+  - survey_labels: 5 -  Cibitoke | 6 - Cibitoke
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40547
+    gmd_subnatid2: BDI_2015_GAUL1_40547
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40547
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40547'
+    geo_nvar: ADM1_NAME
+    geo_name: Cibitoke
+    source_row: 560
+  - survey_labels: 6 -  Gitega | 7 - Gitega
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40548
+    gmd_subnatid2: BDI_2015_GAUL1_40548
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40548
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40548'
+    geo_nvar: ADM1_NAME
+    geo_name: Gitega
+    source_row: 561
+  - survey_labels: 7 -  Karusi | 8 - Karuzi
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40549
+    gmd_subnatid2: BDI_2015_GAUL1_40549
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40549
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40549'
+    geo_nvar: ADM1_NAME
+    geo_name: Karuzi
+    source_row: 562
+  - survey_labels: 8 -  Kayanza | 9 - Kayanza
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: BDI_2015_GAUL1_40550
+    gmd_subnatid2: BDI_2015_GAUL1_40550
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: BDI_2015_GAUL1_40550
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40550'
+    geo_nvar: ADM1_NAME
+    geo_name: Kayanza
+    source_row: 563
+  - survey_labels: 18 -  Rumonge
+    survey_variables: subnatid
+    gmd_subnatid1: BDI_2015_GAULx_18
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BDI_2015_GAULx_18
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '18'
+    geo_nvar: ADM2_NAME
+    geo_name: Buyengero & Burambi & Rumonge & Bugarama & Muhuta
+    source_row: 590
+  - survey_labels: 2 -  Bujumbura
+    survey_variables: subnatid
+    gmd_subnatid1: BDI_2015_GAULx_40544
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BDI_2015_GAULx_40544
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '40544'
+    geo_nvar: ADM1_NAME
+    geo_name: Bujumbura Rural
+    source_row: 591
+  - survey_labels: 3 -  Bururi
+    survey_variables: subnatid
+    gmd_subnatid1: BDI_2015_GAULx_40545
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BDI_2015_GAULx_40545
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '40545'
+    geo_nvar: ADM1_NAME
+    geo_name: Bururi
+    source_row: 592
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

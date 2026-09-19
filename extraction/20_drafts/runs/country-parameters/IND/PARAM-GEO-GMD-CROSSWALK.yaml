@@ -1,0 +1,876 @@
+country_id: CTY-IND
+country_name: India
+iso3: IND
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 35 - A & N Islands | 35 - Andaman & Nicober | A & N Islands
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1484
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1484
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1484'
+    geo_nvar: ADM1_NAME
+    geo_name: Andaman and Nicobar
+    source_row: 7088
+  - survey_labels: 28 - Andhra Pradesh | Andhra Pradesh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1485
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1485
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1485'
+    geo_nvar: ADM1_NAME
+    geo_name: Andhra Pradesh
+    source_row: 7089
+  - survey_labels: 12 - Arunachal Pradesh | Arunachal Pradesh
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70072
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70072
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70072'
+    geo_nvar: ADM1_NAME
+    geo_name: Arunachal Pradesh
+    source_row: 7090
+  - survey_labels: 18 - Assam | Assam
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1487
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1487
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1487'
+    geo_nvar: ADM1_NAME
+    geo_name: Assam
+    source_row: 7091
+  - survey_labels: Bihar
+    survey_variables: subnatid1
+    gmd_subnatid1: IND_2015_GAULx_Br
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: Br
+    geo_nvar: ADM1_NAME
+    geo_name: Bihar
+    source_row: 7092
+  - survey_labels: 04 - Chandigarh | 4 - Chandigarh | Chandigarh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70074
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70074
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70074'
+    geo_nvar: ADM1_NAME
+    geo_name: Chandigarh
+    source_row: 7093
+  - survey_labels: 26 - Dadra & Nagar Haveli | Dadra & Nagar Haveli
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70076
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70076
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70076'
+    geo_nvar: ADM1_NAME
+    geo_name: Dadra and Nagar Haveli
+    source_row: 7094
+  - survey_labels: 25 - Daman & Diu | Daman & Diu
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70077
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70077
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70077'
+    geo_nvar: ADM1_NAME
+    geo_name: Daman and Diu
+    source_row: 7095
+  - survey_labels: 07 - Delhi | 7 - Delhi | Delhi
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1489
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1489
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1489'
+    geo_nvar: ADM1_NAME
+    geo_name: Delhi
+    source_row: 7096
+  - survey_labels: 30 - Goa | Goa
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1490
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1490
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1490'
+    geo_nvar: ADM1_NAME
+    geo_name: Goa
+    source_row: 7097
+  - survey_labels: 24 - Gujarat | Gujarat
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1491
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1491
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1491'
+    geo_nvar: ADM1_NAME
+    geo_name: Gujarat
+    source_row: 7098
+  - survey_labels: 06 - Haryana | 6 - Haryana | Haryana
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1492
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1492
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1492'
+    geo_nvar: ADM1_NAME
+    geo_name: Haryana
+    source_row: 7099
+  - survey_labels: 02 - Himachal Pradesh | 2 - Himachal Pradesh | Himachal Pradesh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1493
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1493
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1493'
+    geo_nvar: ADM1_NAME
+    geo_name: Himachal Pradesh
+    source_row: 7100
+  - survey_labels: 01 - Jammu & Kashmir | 1 - Jammu & Kashmir | Jammu & Kashmir
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL0_40781
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL0_40781
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '0'
+    geo_idvar: ADM0_CODE
+    geo_id: '40781'
+    geo_nvar: ADM0_NAME
+    geo_name: Jammu and Kashmir
+    source_row: 7101
+  - survey_labels: 29 - Karnataka | Karnataka
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1494
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1494
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1494'
+    geo_nvar: ADM1_NAME
+    geo_name: Karnataka
+    source_row: 7102
+  - survey_labels: 32 - Kerala | Kerala
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1495
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1495
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1495'
+    geo_nvar: ADM1_NAME
+    geo_name: Kerala
+    source_row: 7103
+  - survey_labels: 31 - Lakshadweep | Lakshadweep
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1496
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1496
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1496'
+    geo_nvar: ADM1_NAME
+    geo_name: Lakshadweep
+    source_row: 7104
+  - survey_labels: Madhya Pradesh
+    survey_variables: subnatid1
+    gmd_subnatid1: IND_2015_GAULx_MP
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: MP
+    geo_nvar: ADM1_NAME
+    geo_name: Madhya Pradesh
+    source_row: 7105
+  - survey_labels: 27 - Maharashtra | 27 - Maharastra | Maharashtra
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1498
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1498
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1498'
+    geo_nvar: ADM1_NAME
+    geo_name: Maharashtra
+    source_row: 7106
+  - survey_labels: 14 - Manipur | Manipur
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1500
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1500
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1500'
+    geo_nvar: ADM1_NAME
+    geo_name: Manipur
+    source_row: 7107
+  - survey_labels: 17 - Meghalaya | Meghalaya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1501
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1501
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1501'
+    geo_nvar: ADM1_NAME
+    geo_name: Meghalaya
+    source_row: 7108
+  - survey_labels: 15 - Mizoram | Mizoram
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1502
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1502
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1502'
+    geo_nvar: ADM1_NAME
+    geo_name: Mizoram
+    source_row: 7109
+  - survey_labels: 13 - Nagaland | Nagaland
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1503
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1503
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1503'
+    geo_nvar: ADM1_NAME
+    geo_name: Nagaland
+    source_row: 7110
+  - survey_labels: 21 - Odisha | 21 - Orissa | Odisha | Orissa
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1504
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1504
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1504'
+    geo_nvar: ADM1_NAME
+    geo_name: Orissa
+    source_row: 7111
+  - survey_labels: 34 - Pondicherry | 34 - Puduchery | Pondicherry | Puducherry
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70080
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70080
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70080'
+    geo_nvar: ADM1_NAME
+    geo_name: Puducherry
+    source_row: 7112
+  - survey_labels: 03 - Punjab | 3 - Punjab | Punjab
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1505
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1505
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1505'
+    geo_nvar: ADM1_NAME
+    geo_name: Punjab
+    source_row: 7113
+  - survey_labels: 08 - Rajasthan | 8 - Rajasthan | Rajasthan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1506
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1506
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1506'
+    geo_nvar: ADM1_NAME
+    geo_name: Rajasthan
+    source_row: 7114
+  - survey_labels: 11 - Sikkim | Sikkim
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1507
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1507
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1507'
+    geo_nvar: ADM1_NAME
+    geo_name: Sikkim
+    source_row: 7115
+  - survey_labels: 33 - Tamil Nadu | Tamil Nadu
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1508
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1508
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1508'
+    geo_nvar: ADM1_NAME
+    geo_name: Tamil Nadu
+    source_row: 7116
+  - survey_labels: 16 - Tripura | Tripura
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1509
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1509
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1509'
+    geo_nvar: ADM1_NAME
+    geo_name: Tripura
+    source_row: 7117
+  - survey_labels: Uttar Pradesh
+    survey_variables: subnatid1
+    gmd_subnatid1: IND_2015_GAULx_UP
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: UP
+    geo_nvar: ADM1_NAME
+    geo_name: Uttar Pradesh
+    source_row: 7118
+  - survey_labels: 19 - West Bengal | West Bengal
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_1511
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_1511
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1511'
+    geo_nvar: ADM1_NAME
+    geo_name: West Bengal
+    source_row: 7119
+  - survey_labels: 10 - Bihar | Bihar
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70073
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70073
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70073'
+    geo_nvar: ADM1_NAME
+    geo_name: Bihar
+    source_row: 7124
+  - survey_labels: 22 - Chhattisgarh | Chhattisgarh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70075
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70075
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70075'
+    geo_nvar: ADM1_NAME
+    geo_name: Chhattisgarh
+    source_row: 7126
+  - survey_labels: 20 - Jharkhand | Jharkhand
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70078
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70078
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70078'
+    geo_nvar: ADM1_NAME
+    geo_name: Jharkhand
+    source_row: 7135
+  - survey_labels: 23 - Madhya Pradesh | Madhya Pradesh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70079
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70079
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70079'
+    geo_nvar: ADM1_NAME
+    geo_name: Madhya Pradesh
+    source_row: 7139
+  - survey_labels: 09 - Uttar Pradesh | 9 - Uttar Pradesh | Uttar Pradesh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70081
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70081
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70081'
+    geo_nvar: ADM1_NAME
+    geo_name: Uttar Pradesh
+    source_row: 7152
+  - survey_labels: 05 - Uttarakhand | 5 - Uttaranchal | Uttarakhand | Uttaranchal
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: IND_2015_GAUL1_70082
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IND_2015_GAUL1_70082
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '70082'
+    geo_nvar: ADM1_NAME
+    geo_name: Uttarakhand
+    source_row: 7153
+  - survey_labels: 01 - Jammu & Kashmir
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: IND_2015_GAULx_JK
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: JK
+    geo_nvar: ADM0_NAME
+    geo_name: Jammu and Kashmir
+    source_row: 7341
+  - survey_labels: 25 - Dadra & Nagar Haveli & Daman & Diu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: IND_2015_GAULx_DNHDD
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: DNHDD
+    geo_nvar: ADM1_NAME
+    geo_name: Daman and Diu & Dadra and Nagar Haveli
+    source_row: 7365
+  - survey_labels: 28 - Andhra Pradesh
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: IND_2015_GAULx_AP
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: AP
+    geo_nvar: ADM1_NAME
+    geo_name: Andhra Pradesh
+    source_row: 7367
+  - survey_labels: 36 - Telangana
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: IND_2015_GAULx_Tel
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: Tel
+    geo_nvar: sample
+    geo_name: Telangana
+    source_row: 7375
+  - survey_labels: 37 - Ladakh
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: IND_2015_GAULx_Ldk
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: Ldk
+    geo_nvar: sample
+    geo_name: Ladakh
+    source_row: 7376
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

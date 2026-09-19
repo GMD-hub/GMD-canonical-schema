@@ -1,0 +1,216 @@
+country_id: CTY-CAN
+country_name: CAN
+iso3: CAN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: '[10]Newfoundland and Labrador'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '829'
+    geo_nvar: ADM1_NAME
+    geo_name: Newfoundland and Labrador / Terre-Neuve-et-Labrador
+    source_row: 2018
+  - survey_labels: '[11]Prince Edward Island'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '834'
+    geo_nvar: ADM1_NAME
+    geo_name: "Prince Edward Island / \xCEle-du-Prince-\xC9douard"
+    source_row: 2019
+  - survey_labels: '[12]Nova Scotia'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '831'
+    geo_nvar: ADM1_NAME
+    geo_name: "Nova Scotia / Nouvelle-\xC9cosse"
+    source_row: 2020
+  - survey_labels: '[13]New Brunswick'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '828'
+    geo_nvar: ADM1_NAME
+    geo_name: New Brunswick / Nouveau-Brunswick
+    source_row: 2021
+  - survey_labels: '[24]Quebec'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '835'
+    geo_nvar: ADM1_NAME
+    geo_name: "Quebec / Qu\xE9bec"
+    source_row: 2022
+  - survey_labels: '[35]Ontario'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '833'
+    geo_nvar: ADM1_NAME
+    geo_name: Ontario
+    source_row: 2023
+  - survey_labels: '[46]Manitoba'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '827'
+    geo_nvar: ADM1_NAME
+    geo_name: Manitoba
+    source_row: 2024
+  - survey_labels: '[47]Saskatchewan'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '836'
+    geo_nvar: ADM1_NAME
+    geo_name: Saskatchewan
+    source_row: 2025
+  - survey_labels: '[48]Alberta'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '825'
+    geo_nvar: ADM1_NAME
+    geo_name: Alberta
+    source_row: 2026
+  - survey_labels: '[59]British Columbia'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '826'
+    geo_nvar: ADM1_NAME
+    geo_name: British Columbia / Colombie-Britannique
+    source_row: 2027
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,216 @@
+country_id: CTY-ZWE
+country_name: ZWE
+iso3: ZWE
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 0-Bulawayo
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3435
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3435
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3435'
+    geo_nvar: ADM1_NAME
+    geo_name: Bulawayo
+    source_row: 18769
+  - survey_labels: 1-Manicaland
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3437
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3437
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3437'
+    geo_nvar: ADM1_NAME
+    geo_name: Manicaland
+    source_row: 18770
+  - survey_labels: 2-Mashonaland central
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3438
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3438
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3438'
+    geo_nvar: ADM1_NAME
+    geo_name: Mashonaland Central
+    source_row: 18771
+  - survey_labels: 3-Mashonaland east
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_69550
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_69550
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '69550'
+    geo_nvar: ADM1_NAME
+    geo_name: Mashonaland East
+    source_row: 18772
+  - survey_labels: 4-Mashonaland west
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3440
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3440
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3440'
+    geo_nvar: ADM1_NAME
+    geo_name: Mashonaland West
+    source_row: 18773
+  - survey_labels: 5-Matabaleland north
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_69549
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_69549
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '69549'
+    geo_nvar: ADM1_NAME
+    geo_name: Matabeleland North
+    source_row: 18774
+  - survey_labels: 6-Matabaleland south
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3443
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3443
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3443'
+    geo_nvar: ADM1_NAME
+    geo_name: Matabeleland South
+    source_row: 18775
+  - survey_labels: 7-Midlands
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3444
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3444
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3444'
+    geo_nvar: ADM1_NAME
+    geo_name: Midlands
+    source_row: 18776
+  - survey_labels: 8-Masvingo
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3441
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3441
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3441'
+    geo_nvar: ADM1_NAME
+    geo_name: Masvingo
+    source_row: 18777
+  - survey_labels: 9-Harare
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZWE_2015_GAUL1_3436
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZWE_2015_GAUL1_3436
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3436'
+    geo_nvar: ADM1_NAME
+    geo_name: Harare
+    source_row: 18778
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

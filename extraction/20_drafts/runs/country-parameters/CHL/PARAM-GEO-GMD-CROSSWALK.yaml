@@ -1,0 +1,405 @@
+country_id: CTY-CHL
+country_name: CHL
+iso3: CHL
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 -    I Region de Tarapaca | 1 - Arica y Parinacota y Tarapac\xE1"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAULx_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAULx_1
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '1'
+    geo_nvar: ADM1_NAME
+    geo_name: Arica y Painacota & Tarapaca
+    source_row: 2183
+  - survey_labels: "10 -    X Region de Los Lagos | 10 - Los R\xEDos y Los Lagos"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAULx_10
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAULx_10
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '10'
+    geo_nvar: ADM1_NAME
+    geo_name: Los Rios & Los Lagos
+    source_row: 2184
+  - survey_labels: "11 -   XI Region de Aysen del Gral. Carlos Iba\xF1ez | 11 -  \
+      \ XI Region de Aysen del Gral. Carlos Iba\uFFFDez | 11 - Ays\xE9n | 11 - XI\
+      \ Region de Aysen del Gral. Carlos Iba\xF1ez"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_886
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_886
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '886'
+    geo_nvar: ADM1_NAME
+    geo_name: "Aisen del Gral. Carlos Iba\xF1ez del Campo"
+    source_row: 2185
+  - survey_labels: "12 -  XII Region de Magallanes y de la Antartica | 12 - Magallanes\
+      \ y La Ant\xE1rtica Chilena | 12 - XII Region de Magallanes y de la Antartica"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_891
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_891
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '891'
+    geo_nvar: ADM1_NAME
+    geo_name: Magallanes y Antartica chilena
+    source_row: 2186
+  - survey_labels: "13 - Regi\xF3n Metropolitana | 13 - XIII Region Metropolitana\
+      \ de Santiago"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_893
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_893
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '893'
+    geo_nvar: ADM1_NAME
+    geo_name: Metropolitana
+    source_row: 2187
+  - survey_labels: 2 -   II Region de Antofagasta | 2 - Antofagasta | 2 - II Region
+      de Antofagasta
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_883
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_883
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '883'
+    geo_nvar: ADM1_NAME
+    geo_name: Antofagasta
+    source_row: 2188
+  - survey_labels: 3 -  III Region de Atacama | 3 - Atacama | 3 - III Region de Atacama
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_885
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_885
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '885'
+    geo_nvar: ADM1_NAME
+    geo_name: Atacama
+    source_row: 2189
+  - survey_labels: 4 -   IV Region de Coquimbo | 4 - Coquimbo | 4 - IV Region de Coquimbo
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_888
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_888
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '888'
+    geo_nvar: ADM1_NAME
+    geo_name: Coquimbo
+    source_row: 2190
+  - survey_labels: "5 -    V Region de Valparaiso | 5 - V Region de Valparaiso | 5\
+      \ - Valpara\xEDso"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_149630
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_149630
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '149630'
+    geo_nvar: ADM1_NAME
+    geo_name: Valparaiso
+    source_row: 2191
+  - survey_labels: 6 -   VI Region del Libertador Gral. B. O'Higgins | 6 - Libertador
+      Bernardo O'Higgins | 6 - VI Region del Libertador Gral. B. O'Higgins
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_889
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_889
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '889'
+    geo_nvar: ADM1_NAME
+    geo_name: Libertador Gral. Bernardo O'Higgins
+    source_row: 2192
+  - survey_labels: 7 -  VII Region del Maule | 7 - Maule | 7 - VII Region del Maule
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_892
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_892
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '892'
+    geo_nvar: ADM1_NAME
+    geo_name: Maule
+    source_row: 2193
+  - survey_labels: "8 - B\xEDo B\xEDo | 8 - VIII Region del BioBio"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_887
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_887
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '887'
+    geo_nvar: ADM1_NAME
+    geo_name: Biobio
+    source_row: 2194
+  - survey_labels: "9 -   IX Region de la Araucania | 9 - IX Region de la Araucania\
+      \ | 9 - La Araucan\xEDa"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_884
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_884
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '884'
+    geo_nvar: ADM1_NAME
+    geo_name: Araucania
+    source_row: 2195
+  - survey_labels: 1 -    I Region de Tarapaca | 1 - I Region de Tarapaca
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_91502
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_91502
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '91502'
+    geo_nvar: ADM1_NAME
+    geo_name: Tarapaca
+    source_row: 2209
+  - survey_labels: 10 -    X Region de Los Lagos | 10 - X Region de Los Lagos
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_91501
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_91501
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '91501'
+    geo_nvar: ADM1_NAME
+    geo_name: Los Lagos
+    source_row: 2210
+  - survey_labels: 14 -  XIV Region de Los Rios | 14 - XIV Region de Los Rios
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_91504
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_91504
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '91504'
+    geo_nvar: ADM1_NAME
+    geo_name: Los Rios
+    source_row: 2214
+  - survey_labels: 15 -   XV Region de Arica y Parinacota | 15 - XV Region de Arica
+      y Parinacota
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL1_91503
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL1_91503
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '91503'
+    geo_nvar: ADM1_NAME
+    geo_name: Arica y Painacota
+    source_row: 2215
+  - survey_labels: 8 - VIII Region del BioBio
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAULx_8
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAULx_8
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '8'
+    geo_nvar: ADM1_NAME
+    geo_name: Biobio
+    source_row: 2267
+  - survey_labels: "16 -  XVI Region del \xD1uble | 16 - XVI Region del \xD1uble"
+    survey_variables: subnatid1 | subnatidsurvey
+    gmd_subnatid1: CHL_2015_GAUL2_12947
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CHL_2015_GAUL2_12947
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '12947'
+    geo_nvar: ADM2_NAME
+    geo_name: "\xD1uble"
+    source_row: 2276
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

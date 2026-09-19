@@ -1,0 +1,279 @@
+country_id: CTY-BFA
+country_name: BFA
+iso3: BFA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 - Hauts Bassins | 1 \u2013 Hauts Bassins | 9 - Hauts Bassins\
+      \ | 9 - Hauts-Bassins"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40284
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40284
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40284'
+    geo_nvar: ADM1_NAME
+    geo_name: Hauts-bassins
+    source_row: 722
+  - survey_labels: "10 - Centre Est | 10 \u2013 Centre Est | 4 - Centre-Est"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40279
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40279
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40279'
+    geo_nvar: ADM1_NAME
+    geo_name: Centre-est
+    source_row: 723
+  - survey_labels: "11 - Centre | 11 \u2013 Centre | 3 - Centre"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40278
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40278
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40278'
+    geo_nvar: ADM1_NAME
+    geo_name: Centre
+    source_row: 724
+  - survey_labels: "12 - Cascade | 12 - Cascades | 12 \u2013 Cascades | 2 - Cascades"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40277
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40277
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40277'
+    geo_nvar: ADM1_NAME
+    geo_name: Cascades
+    source_row: 725
+  - survey_labels: "13 - Centre Sud | 13 \u2013 Centre Sud | 7 - Centre-Sud"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40282
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40282
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40282'
+    geo_nvar: ADM1_NAME
+    geo_name: Centre-sud
+    source_row: 726
+  - survey_labels: "1 - Boucle du Mouhoum | 1 - Boucle du Mouhoun | 2 - Boucle du\
+      \ Mouhoun | 2 \u2013 Boucle du Mouhoun"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40276
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40276
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40276'
+    geo_nvar: ADM1_NAME
+    geo_name: Boucle Du Mouhoun
+    source_row: 727
+  - survey_labels: "12 - Sahel | 3 - Sahel | 3 \u2013 Sahel"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40287
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40287
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40287'
+    geo_nvar: ADM1_NAME
+    geo_name: Sahel
+    source_row: 728
+  - survey_labels: "4 - Est | 4 \u2013 Est | 8 - Est"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40283
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40283
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40283'
+    geo_nvar: ADM1_NAME
+    geo_name: Est
+    source_row: 729
+  - survey_labels: "13 - Sud-Ouest | 5 - Sud Ouest | 5 \u2013 Sud Ouest"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40288
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40288
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40288'
+    geo_nvar: ADM1_NAME
+    geo_name: Sud-ouest
+    source_row: 730
+  - survey_labels: "5 - Centre-Nord | 6 - Centre Nord | 6 \u2013 Centre Nord"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40280
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40280
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40280'
+    geo_nvar: ADM1_NAME
+    geo_name: Centre-nord
+    source_row: 731
+  - survey_labels: "6 - Centre-Ouest | 7 - Centre Ouest | 7 \u2013 Centre Ouest"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40281
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40281
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40281'
+    geo_nvar: ADM1_NAME
+    geo_name: Centre-ouest
+    source_row: 732
+  - survey_labels: "11 - Plateau-Central | 8 - Plateau Central | 8 \u2013 Plateau\
+      \ central"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40286
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40286
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40286'
+    geo_nvar: ADM1_NAME
+    geo_name: Plateau Central
+    source_row: 733
+  - survey_labels: "10 - Nord | 9 - Nord | 9 \u2013 Nord"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: BFA_2015_GAUL1_40285
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BFA_2015_GAUL1_40285
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40285'
+    geo_nvar: ADM1_NAME
+    geo_name: Nord
+    source_row: 734
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

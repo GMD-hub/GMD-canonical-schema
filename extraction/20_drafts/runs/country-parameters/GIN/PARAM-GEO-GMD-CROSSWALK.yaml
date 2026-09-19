@@ -1,0 +1,177 @@
+country_id: CTY-GIN
+country_name: GIN
+iso3: GIN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 - Bok\xE9 | 1 \u2013 Bok\xE9"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40700
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40700
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40700'
+    geo_nvar: ADM1_NAME
+    geo_name: Boke
+    source_row: 5685
+  - survey_labels: "2 - Conakry | 2 \u2013 Conakry"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40701
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40701
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40701'
+    geo_nvar: ADM1_NAME
+    geo_name: Conakry
+    source_row: 5686
+  - survey_labels: "3 - Faranah | 3 \u2013 Faranah"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40702
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40702
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40702'
+    geo_nvar: ADM1_NAME
+    geo_name: Faranah
+    source_row: 5687
+  - survey_labels: "4 - Kankan | 4 \u2013 Kankan"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40703
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40703
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40703'
+    geo_nvar: ADM1_NAME
+    geo_name: Kankan
+    source_row: 5688
+  - survey_labels: "5 - Kindia | 5 \u2013 Kindia"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40704
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40704
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40704'
+    geo_nvar: ADM1_NAME
+    geo_name: Kindia
+    source_row: 5689
+  - survey_labels: "6 - Lab\xE9 | 6 \u2013 Lab\xE9"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40705
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40705
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40705'
+    geo_nvar: ADM1_NAME
+    geo_name: Labe
+    source_row: 5690
+  - survey_labels: "7 - Mamou | 7 \u2013 Mamou"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40706
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40706
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40706'
+    geo_nvar: ADM1_NAME
+    geo_name: Mamou
+    source_row: 5691
+  - survey_labels: "8 - N'Z\xE9r\xE9kor\xE9 | 8 - Nz\xE9r\xE9kor\xE9 | 8 \u2013 Nz\xE9\
+      r\xE9kor\xE9"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GIN_2015_GAUL1_40707
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GIN_2015_GAUL1_40707
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '40707'
+    geo_nvar: ADM1_NAME
+    geo_name: Nzerekore
+    source_row: 5692
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,136 @@
+country_id: CTY-ISR
+country_name: ISR
+iso3: ISR
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: '[11]Jerusalem'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1612'
+    geo_nvar: ADM1_NAME
+    geo_name: Jerusalem
+    source_row: 7900
+  - survey_labels: Center
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1610'
+    geo_nvar: ADM1_NAME
+    geo_name: Central District
+    source_row: 7901
+  - survey_labels: Haifa
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1611'
+    geo_nvar: ADM1_NAME
+    geo_name: Haifa
+    source_row: 7902
+  - survey_labels: North
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1614'
+    geo_nvar: ADM1_NAME
+    geo_name: Southern District
+    source_row: 7903
+  - survey_labels: South
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1613'
+    geo_nvar: ADM1_NAME
+    geo_name: Northern
+    source_row: 7904
+  - survey_labels: Tel Aviv
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1615'
+    geo_nvar: ADM1_NAME
+    geo_name: Tel Aviv
+    source_row: 7905
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

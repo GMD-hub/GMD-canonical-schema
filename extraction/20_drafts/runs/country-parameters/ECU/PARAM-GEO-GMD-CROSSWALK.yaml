@@ -1,0 +1,517 @@
+country_id: CTY-ECU
+country_name: ECU
+iso3: ECU
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Azuay
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1135
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1135
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1135'
+    geo_nvar: ADM1_NAME
+    geo_name: Azuay
+    source_row: 3807
+  - survey_labels: 10 - Imbabura
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1145
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1145
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1145'
+    geo_nvar: ADM1_NAME
+    geo_name: Imbabura
+    source_row: 3808
+  - survey_labels: 11 - Loja
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1146
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1146
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1146'
+    geo_nvar: ADM1_NAME
+    geo_name: Loja
+    source_row: 3809
+  - survey_labels: "12 - Los R\xEDos | 12 - Los R\uFFFDos"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1147
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1147
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1147'
+    geo_nvar: ADM1_NAME
+    geo_name: Los Rios
+    source_row: 3810
+  - survey_labels: "13 - Manab\xED | 13 - Manab\uFFFD"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1148
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1148
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1148'
+    geo_nvar: ADM1_NAME
+    geo_name: Manabi
+    source_row: 3811
+  - survey_labels: 14 - Morona Santiago
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1149
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1149
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1149'
+    geo_nvar: ADM1_NAME
+    geo_name: Morona Santiago
+    source_row: 3812
+  - survey_labels: 15 - Napo
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1150
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1150
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1150'
+    geo_nvar: ADM1_NAME
+    geo_name: Napo
+    source_row: 3813
+  - survey_labels: 16 - Pastaza
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1152
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1152
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1152'
+    geo_nvar: ADM1_NAME
+    geo_name: Pastaza
+    source_row: 3814
+  - survey_labels: 17 - Pichincha
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_22006
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_22006
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '22006'
+    geo_nvar: ADM1_NAME
+    geo_name: Pichincha
+    source_row: 3815
+  - survey_labels: 18 - Tunguragua
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1155
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1155
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1155'
+    geo_nvar: ADM1_NAME
+    geo_name: Tungurahua
+    source_row: 3816
+  - survey_labels: 19 - Zamora Chinchipe
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1156
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1156
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1156'
+    geo_nvar: ADM1_NAME
+    geo_name: Zamora Chinchipe
+    source_row: 3817
+  - survey_labels: "2 - Bol\xEDvar | 2 - Bol\uFFFDvar"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1136
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1136
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1136'
+    geo_nvar: ADM1_NAME
+    geo_name: Bolivar
+    source_row: 3818
+  - survey_labels: "21 - Sucumb\xEDos | 21 - Sucumb\uFFFDos"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1154
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1154
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1154'
+    geo_nvar: ADM1_NAME
+    geo_name: Sucumbios
+    source_row: 3819
+  - survey_labels: 22 - Orellana
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1151
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1151
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1151'
+    geo_nvar: ADM1_NAME
+    geo_name: Orellana
+    source_row: 3820
+  - survey_labels: "3 - Ca\xF1ar | 3 - Ca\uFFFDar"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1137
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1137
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1137'
+    geo_nvar: ADM1_NAME
+    geo_name: Canar
+    source_row: 3821
+  - survey_labels: 4 - Carchi
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1138
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1138
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1138'
+    geo_nvar: ADM1_NAME
+    geo_name: Carchi
+    source_row: 3822
+  - survey_labels: 5 - Cotopaxi
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1140
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1140
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1140'
+    geo_nvar: ADM1_NAME
+    geo_name: Cotopaxi
+    source_row: 3823
+  - survey_labels: 6 - Chimborazo
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1139
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1139
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1139'
+    geo_nvar: ADM1_NAME
+    geo_name: Chimborazo
+    source_row: 3824
+  - survey_labels: 7 - El Oro
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1141
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1141
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1141'
+    geo_nvar: ADM1_NAME
+    geo_name: El Oro
+    source_row: 3825
+  - survey_labels: 8 - Esmeraldas
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1142
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1142
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1142'
+    geo_nvar: ADM1_NAME
+    geo_name: Esmeraldas
+    source_row: 3826
+  - survey_labels: 9 - Guayas
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_22005
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_22005
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '22005'
+    geo_nvar: ADM1_NAME
+    geo_name: Guayas
+    source_row: 3827
+  - survey_labels: 90 - Zonas no Delimitadas
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1157
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1157
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1157'
+    geo_nvar: ADM1_NAME
+    geo_name: Zona No Delimitada
+    source_row: 3828
+  - survey_labels: "23 - Santo Domingo de los Ts\xE1chilas | 23 - Santo Domingo de\
+      \ los Ts\uFFFDchilas"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_22008
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_22008
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '22008'
+    geo_nvar: ADM1_NAME
+    geo_name: Santo Domingo de los Tsachilas
+    source_row: 4041
+  - survey_labels: 24 - Santa Elena
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_22007
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_22007
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '22007'
+    geo_nvar: ADM1_NAME
+    geo_name: Santa Elena
+    source_row: 4042
+  - survey_labels: "20 - Gal\xE1pagos | 20 - Gal\uFFFDpagos"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ECU_2015_GAUL1_1143
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ECU_2015_GAUL1_1143
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1143'
+    geo_nvar: ADM1_NAME
+    geo_name: Galapagos
+    source_row: 4063
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,236 @@
+country_id: CTY-BRB
+country_name: BRB
+iso3: BRB
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: '581'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '581'
+    geo_nvar: ADM1_NAME
+    geo_name: Christ Church
+    source_row: 1872
+  - survey_labels: '582'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '582'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Andrew
+    source_row: 1873
+  - survey_labels: '583'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '583'
+    geo_nvar: ADM1_NAME
+    geo_name: St. George
+    source_row: 1874
+  - survey_labels: '584'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '584'
+    geo_nvar: ADM1_NAME
+    geo_name: St. James
+    source_row: 1875
+  - survey_labels: '585'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '585'
+    geo_nvar: ADM1_NAME
+    geo_name: St. John
+    source_row: 1876
+  - survey_labels: '586'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '586'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Joseph
+    source_row: 1877
+  - survey_labels: '587'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '587'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Lucy
+    source_row: 1878
+  - survey_labels: '588'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '588'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Michael
+    source_row: 1879
+  - survey_labels: '589'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '589'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Peter
+    source_row: 1880
+  - survey_labels: '590'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '590'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Phillip
+    source_row: 1881
+  - survey_labels: '591'
+    survey_variables: gaul_adm1_code
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '591'
+    geo_nvar: ADM1_NAME
+    geo_name: St. Tomas
+    source_row: 1882
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

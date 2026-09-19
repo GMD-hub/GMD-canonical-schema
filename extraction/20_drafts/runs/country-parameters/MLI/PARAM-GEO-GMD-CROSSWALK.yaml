@@ -1,0 +1,236 @@
+country_id: CTY-MLI
+country_name: MLI
+iso3: MLI
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 - Kayes | 1 \u2013 Kayes"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1928
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1928
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1928'
+    geo_nvar: ADM1_NAME
+    geo_name: Kayes
+    source_row: 10106
+  - survey_labels: "2 - Koulikoro | 2 \u2013 Koulikoro"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1930
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1930
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1930'
+    geo_nvar: ADM1_NAME
+    geo_name: Koulikoro
+    source_row: 10107
+  - survey_labels: "3 - Sikasso | 3 \u2013 Sikasso"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1933
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1933
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1933'
+    geo_nvar: ADM1_NAME
+    geo_name: Sikasso
+    source_row: 10108
+  - survey_labels: "4 - Segou | 4 - S\uFFFDgou | 4 \u2013 S\xE9gou"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1932
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1932
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1932'
+    geo_nvar: ADM1_NAME
+    geo_name: Segou
+    source_row: 10109
+  - survey_labels: "5 - Mopti | 5 \u2013 Mopti"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1931
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1931
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1931'
+    geo_nvar: ADM1_NAME
+    geo_name: Mopti
+    source_row: 10110
+  - survey_labels: "6 - Tombouctou | 6 \u2013 Tombouctou"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1934
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1934
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1934'
+    geo_nvar: ADM1_NAME
+    geo_name: Tombouctou
+    source_row: 10111
+  - survey_labels: "7 - Gao | 7 \u2013 Gao"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1927
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1927
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1927'
+    geo_nvar: ADM1_NAME
+    geo_name: Gao
+    source_row: 10112
+  - survey_labels: "8 - Kidal | 8 \u2013 Kidal"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1929
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1929
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1929'
+    geo_nvar: ADM1_NAME
+    geo_name: Kidal
+    source_row: 10113
+  - survey_labels: "9 - Bamako | 9 \u2013 Bamako"
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: MLI_2015_GAUL1_1926
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL1_1926
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1926'
+    geo_nvar: ADM1_NAME
+    geo_name: Bamako
+    source_row: 10114
+  - survey_labels: 11 - Menaka
+    survey_variables: subnatid
+    gmd_subnatid1: MLI_2015_GAUL2_19375
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAUL2_19375
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '19375'
+    geo_nvar: ADM2_NAME
+    geo_name: Menaka
+    source_row: 10125
+  - survey_labels: 7 - Gao
+    survey_variables: subnatid
+    gmd_subnatid1: MLI_2015_GAULx_1927
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MLI_2015_GAULx_1927
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '1927'
+    geo_nvar: ADM1_NAME
+    geo_name: Gao
+    source_row: 10131
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

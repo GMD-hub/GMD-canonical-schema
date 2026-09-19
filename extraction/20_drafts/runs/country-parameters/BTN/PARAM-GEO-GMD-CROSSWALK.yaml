@@ -1,0 +1,416 @@
+country_id: CTY-BTN
+country_name: BTN
+iso3: BTN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 21 - Bumthang | Bumthang
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_622
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_622
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '622'
+    geo_nvar: ADM1_NAME
+    geo_name: Bumthang
+    source_row: 1883
+  - survey_labels: 11 - Chukha | Chukha
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_623
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_623
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '623'
+    geo_nvar: ADM1_NAME
+    geo_name: Chhukha
+    source_row: 1884
+  - survey_labels: 44 - Dagana | Dagana
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41308
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41308
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41308'
+    geo_nvar: ADM1_NAME
+    geo_name: Dagana
+    source_row: 1885
+  - survey_labels: 16 - Gasa | Gasa
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_625
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_625
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '625'
+    geo_nvar: ADM1_NAME
+    geo_name: Gasa
+    source_row: 1886
+  - survey_labels: 12 - Ha | Ha
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41309
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41309
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41309'
+    geo_nvar: ADM1_NAME
+    geo_name: Haa
+    source_row: 1887
+  - survey_labels: 31 - Lhuntshi | Lhuntshi
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_627
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_627
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '627'
+    geo_nvar: ADM1_NAME
+    geo_name: Lhuentse
+    source_row: 1888
+  - survey_labels: 32 - Mongar | Mongar
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_628
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_628
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '628'
+    geo_nvar: ADM1_NAME
+    geo_name: Monggar
+    source_row: 1889
+  - survey_labels: 13 - Paro | Paro
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_629
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_629
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '629'
+    geo_nvar: ADM1_NAME
+    geo_name: Paro
+    source_row: 1890
+  - survey_labels: 35 - Pemagatshel | Pemagatshel
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41310
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41310
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41310'
+    geo_nvar: ADM1_NAME
+    geo_name: Pemagatshel
+    source_row: 1891
+  - survey_labels: 15 - Punakha | Punakha
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_631
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_631
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '631'
+    geo_nvar: ADM1_NAME
+    geo_name: Punakha
+    source_row: 1892
+  - survey_labels: 36 - Samdrup Jongkhar | Samdrup Jongkhar
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41311
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41311
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41311'
+    geo_nvar: ADM1_NAME
+    geo_name: Samdrupjongkhar
+    source_row: 1893
+  - survey_labels: 41 - Samtse | Samtse
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41312
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41312
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41312'
+    geo_nvar: ADM1_NAME
+    geo_name: Samtse
+    source_row: 1894
+  - survey_labels: 42 - Sarpang | Sarpang
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41313
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41313
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41313'
+    geo_nvar: ADM1_NAME
+    geo_name: Sarpang
+    source_row: 1895
+  - survey_labels: 34 - Tashi Yangtse | Tashi Yangtse
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_636
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_636
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '636'
+    geo_nvar: ADM1_NAME
+    geo_name: Trashiyangtse
+    source_row: 1896
+  - survey_labels: 14 - Thimphu | Thimphu
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_635
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_635
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '635'
+    geo_nvar: ADM1_NAME
+    geo_name: Thimphu
+    source_row: 1897
+  - survey_labels: 33 - Trashigang | Trashigang
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_637
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_637
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '637'
+    geo_nvar: ADM1_NAME
+    geo_name: Trashigang
+    source_row: 1898
+  - survey_labels: 22 - Trongsa | Trongsa
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_638
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_638
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '638'
+    geo_nvar: ADM1_NAME
+    geo_name: Trongsa
+    source_row: 1899
+  - survey_labels: 43 - Tsirang | Tsirang
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_639
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_639
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '639'
+    geo_nvar: ADM1_NAME
+    geo_name: Tsirang
+    source_row: 1900
+  - survey_labels: 17 - Wangdi Phodrang | Wangdi Phodrang
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_640
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_640
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '640'
+    geo_nvar: ADM1_NAME
+    geo_name: Wangduephodrang
+    source_row: 1901
+  - survey_labels: 23 - Zhemgang | Zhemgang
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BTN_2015_GAUL1_41314
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BTN_2015_GAUL1_41314
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41314'
+    geo_nvar: ADM1_NAME
+    geo_name: Zhemgang
+    source_row: 1902
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

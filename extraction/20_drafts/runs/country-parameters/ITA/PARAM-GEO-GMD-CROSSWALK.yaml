@@ -1,0 +1,116 @@
+country_id: CTY-ITA
+country_name: ITA
+iso3: ITA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1-ITC
+    survey_variables: subnatid
+    gmd_subnatid1: ITA_2021_NUTS1_ITC
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ITA_2021_NUTS1_ITC
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: ITC
+    geo_nvar: NAME_LATN
+    geo_name: Nord-Ovest
+    source_row: 7978
+  - survey_labels: 2-ITF
+    survey_variables: subnatid
+    gmd_subnatid1: ITA_2021_NUTS1_ITF
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ITA_2021_NUTS1_ITF
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: ITF
+    geo_nvar: NAME_LATN
+    geo_name: Sud
+    source_row: 7979
+  - survey_labels: 3-ITG
+    survey_variables: subnatid
+    gmd_subnatid1: ITA_2021_NUTS1_ITG
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ITA_2021_NUTS1_ITG
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: ITG
+    geo_nvar: NAME_LATN
+    geo_name: Isole
+    source_row: 7980
+  - survey_labels: 4-ITH
+    survey_variables: subnatid
+    gmd_subnatid1: ITA_2021_NUTS1_ITH
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ITA_2021_NUTS1_ITH
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: ITH
+    geo_nvar: NAME_LATN
+    geo_name: Nord-Est
+    source_row: 7981
+  - survey_labels: 5-ITI
+    survey_variables: subnatid
+    gmd_subnatid1: ITA_2021_NUTS1_ITI
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ITA_2021_NUTS1_ITI
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: ITI
+    geo_nvar: NAME_LATN
+    geo_name: Centro (IT)
+    source_row: 7982
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

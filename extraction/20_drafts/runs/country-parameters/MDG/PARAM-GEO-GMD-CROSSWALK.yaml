@@ -1,0 +1,457 @@
+country_id: CTY-MDG
+country_name: MDG
+iso3: MDG
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 33 - ALAOTRA MANGORO | 33 - Alaotra Mangoro | Alaotra Mangoro
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41750
+    gmd_subnatid2: MDG_2015_GAUL1_41750
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41750
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41750'
+    geo_nvar: ADM1_NAME
+    geo_name: Alaotra Mangoro
+    source_row: 9325
+  - survey_labels: 22 - AMORON I MANIA | 22 - Amoron'I Mania | 22 - Amoron'i Mania
+      | Amoron'i Mania
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41751
+    gmd_subnatid2: MDG_2015_GAUL1_41751
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41751
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41751'
+    geo_nvar: ADM1_NAME
+    geo_name: Amoron I Mania
+    source_row: 9326
+  - survey_labels: 11 - ANALAMANGA | 11 - Analamanga | Analamanga
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41752
+    gmd_subnatid2: MDG_2015_GAUL1_41752
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41752
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41752'
+    geo_nvar: ADM1_NAME
+    geo_name: Analamanga
+    source_row: 9327
+  - survey_labels: 32 - ANALANJIROFO | 32 - Analanjirofo | Analanjirofo
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41753
+    gmd_subnatid2: MDG_2015_GAUL1_41753
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41753
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41753'
+    geo_nvar: ADM1_NAME
+    geo_name: Analanjirofo
+    source_row: 9328
+  - survey_labels: 52 - ANDROY | 52 - Androy | Androy
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41754
+    gmd_subnatid2: MDG_2015_GAUL1_41754
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41754
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41754'
+    geo_nvar: ADM1_NAME
+    geo_name: Androy
+    source_row: 9329
+  - survey_labels: 53 - ANOSY | 53 - Anosy | Anosy
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41755
+    gmd_subnatid2: MDG_2015_GAUL1_41755
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41755
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41755'
+    geo_nvar: ADM1_NAME
+    geo_name: Anosy
+    source_row: 9330
+  - survey_labels: 51 - ATSIMO ANDREFANA | 51 - Atsimo Andrefana | Atsimo-Andrefana
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41756
+    gmd_subnatid2: MDG_2015_GAUL1_41756
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41756
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41756'
+    geo_nvar: ADM1_NAME
+    geo_name: Atsimo Andrefana
+    source_row: 9331
+  - survey_labels: 25 - ATSIMO ATSINANANA | 25 - Atsimo Atsinanana | Atsimo-Atsinanana
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41757
+    gmd_subnatid2: MDG_2015_GAUL1_41757
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41757
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41757'
+    geo_nvar: ADM1_NAME
+    geo_name: Atsimo Atsinanana
+    source_row: 9332
+  - survey_labels: 31 - ATSINANANA | 31 - Atsinanana | Atsinanana
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41758
+    gmd_subnatid2: MDG_2015_GAUL1_41758
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41758
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41758'
+    geo_nvar: ADM1_NAME
+    geo_name: Atsinanana
+    source_row: 9333
+  - survey_labels: 43 - BETSIBOKA | 43 - Betsiboka | Betsiboka
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41759
+    gmd_subnatid2: MDG_2015_GAUL1_41759
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41759
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41759'
+    geo_nvar: ADM1_NAME
+    geo_name: Betsiboka
+    source_row: 9334
+  - survey_labels: 41 - BOENY | 41 - Boeny | Boeny
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41760
+    gmd_subnatid2: MDG_2015_GAUL1_41760
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41760
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41760'
+    geo_nvar: ADM1_NAME
+    geo_name: Boeny
+    source_row: 9335
+  - survey_labels: 14 - BONGOLAVA | 14 - Bongolava | Bongolava
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41761
+    gmd_subnatid2: MDG_2015_GAUL1_41761
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41761
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41761'
+    geo_nvar: ADM1_NAME
+    geo_name: Bongolava
+    source_row: 9336
+  - survey_labels: 61 - DIANA | 71 - DIANA | 71 - Diana | Diana
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41762
+    gmd_subnatid2: MDG_2015_GAUL1_41762
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41762
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41762'
+    geo_nvar: ADM1_NAME
+    geo_name: Diana
+    source_row: 9337
+  - survey_labels: 24 - IHOROMBE | 24 - Ihorombe | Ihorombe
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41764
+    gmd_subnatid2: MDG_2015_GAUL1_41764
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41764
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41764'
+    geo_nvar: ADM1_NAME
+    geo_name: Ihorombe
+    source_row: 9338
+  - survey_labels: 13 - ITASY | 13 - Itasy | Itasy
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41765
+    gmd_subnatid2: MDG_2015_GAUL1_41765
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41765
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41765'
+    geo_nvar: ADM1_NAME
+    geo_name: Itasy
+    source_row: 9339
+  - survey_labels: 21 - HAUTE MATSIATRA | 21 - Matsiatra Ambony | Matsiatra Ambony
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41763
+    gmd_subnatid2: MDG_2015_GAUL1_41763
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41763
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41763'
+    geo_nvar: ADM1_NAME
+    geo_name: Haute Matsiatra
+    source_row: 9340
+  - survey_labels: 44 - MELAKY | 44 - Melaky | Melaky
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41766
+    gmd_subnatid2: MDG_2015_GAUL1_41766
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41766
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41766'
+    geo_nvar: ADM1_NAME
+    geo_name: Melaky
+    source_row: 9341
+  - survey_labels: 54 - MENABE | 54 - Menabe | Menabe
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41767
+    gmd_subnatid2: MDG_2015_GAUL1_41767
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41767
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41767'
+    geo_nvar: ADM1_NAME
+    geo_name: Menabe
+    source_row: 9342
+  - survey_labels: 62 - SAVA | 72 - SAVA | 72 - Sava | Sava
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41768
+    gmd_subnatid2: MDG_2015_GAUL1_41768
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41768
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41768'
+    geo_nvar: ADM1_NAME
+    geo_name: Sava
+    source_row: 9343
+  - survey_labels: 42 - SOFIA | 42 - Sofia | Sofia
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41769
+    gmd_subnatid2: MDG_2015_GAUL1_41769
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41769
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41769'
+    geo_nvar: ADM1_NAME
+    geo_name: Sofia
+    source_row: 9344
+  - survey_labels: 12 - VAKINANKARATRA | 12 - Vakinankaratra | Vakinankaratra
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41770
+    gmd_subnatid2: MDG_2015_GAUL1_41770
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41770
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41770'
+    geo_nvar: ADM1_NAME
+    geo_name: Vakinankaratra
+    source_row: 9345
+  - survey_labels: 23 - VATOVAVY | 23 - Vatovavy Fitovinany | Vatovavy Fitovinany
+    survey_variables: subnatid | subnatid2 | subnatidsurvey
+    gmd_subnatid1: MDG_2015_GAUL1_41771
+    gmd_subnatid2: MDG_2015_GAUL1_41771
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: MDG_2015_GAUL1_41771
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '41771'
+    geo_nvar: ADM1_NAME
+    geo_name: Vatovavy Fitovinany
+    source_row: 9346
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

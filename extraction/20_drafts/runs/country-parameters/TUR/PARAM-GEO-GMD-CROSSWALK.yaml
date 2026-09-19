@@ -1,0 +1,539 @@
+country_id: CTY-TUR
+country_name: TUR
+iso3: TUR
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: TR10 - Istanbul
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR10
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR10
+    geo_nvar: NAME_LATN
+    geo_name: "\u0130stanbul"
+    source_row: 16664
+  - survey_labels: "TR21 - Tekirda\u011F, Edirne, K\u0131rklareli"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR21
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR21
+    geo_nvar: NAME_LATN
+    geo_name: "Tekirda\u011F, Edirne, K\u0131rklareli"
+    source_row: 16665
+  - survey_labels: "TR22 - Bal\u0131kesir, \xC7anakkale"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR22
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR22
+    geo_nvar: NAME_LATN
+    geo_name: "Bal\u0131kesir, \xC7anakkale"
+    source_row: 16666
+  - survey_labels: "TR31 - \u0130zmir"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR31
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR31
+    geo_nvar: NAME_LATN
+    geo_name: "\u0130zmir"
+    source_row: 16667
+  - survey_labels: "TR32 - Ayd\u0131n, Denizli, Mu\u011Fla"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR32
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR32
+    geo_nvar: NAME_LATN
+    geo_name: "Ayd\u0131n, Denizli, Mu\u011Fla"
+    source_row: 16668
+  - survey_labels: "TR33 - Manisa, Afyon, K\xFCtahya, U\u015Fak"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR33
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR33
+    geo_nvar: NAME_LATN
+    geo_name: "Manisa, Afyonkarahisar, K\xFCtahya, U\u015Fak"
+    source_row: 16669
+  - survey_labels: "TR41 - Bursa, Eski\u015Fehir, Bilecik"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR41
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR41
+    geo_nvar: NAME_LATN
+    geo_name: "Bursa, Eski\u015Fehir, Bilecik"
+    source_row: 16670
+  - survey_labels: "TR42 - Kocaeli, Sakarya, D\xFCzce, Bolu, Yalova"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR42
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR42
+    geo_nvar: NAME_LATN
+    geo_name: "Kocaeli, Sakarya, D\xFCzce, Bolu, Yalova"
+    source_row: 16671
+  - survey_labels: TR51 - Ankara
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR51
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR51
+    geo_nvar: NAME_LATN
+    geo_name: Ankara
+    source_row: 16672
+  - survey_labels: TR52 - Konya, Karaman
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR52
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR52
+    geo_nvar: NAME_LATN
+    geo_name: Konya, Karaman
+    source_row: 16673
+  - survey_labels: TR61 - Antalya, Isparta, Burdur
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR61
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR61
+    geo_nvar: NAME_LATN
+    geo_name: Antalya, Isparta, Burdur
+    source_row: 16674
+  - survey_labels: TR62 - Adana, Mersin
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR62
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR62
+    geo_nvar: NAME_LATN
+    geo_name: Adana, Mersin
+    source_row: 16675
+  - survey_labels: "TR63 - Hatay, Kahramanmara\u015F, Osmaniye"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR63
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR63
+    geo_nvar: NAME_LATN
+    geo_name: "Hatay, Kahramanmara\u015F, Osmaniye"
+    source_row: 16676
+  - survey_labels: "TR71 - K\u0131r\u0131kkale, Aksaray, Ni\u011Fde, Nev\u015Fehir,\
+      \ K\u0131r\u015Fehir"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR71
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR71
+    geo_nvar: NAME_LATN
+    geo_name: "K\u0131r\u0131kkale, Aksaray, Ni\u011Fde, Nev\u015Fehir, K\u0131r\u015F\
+      ehir"
+    source_row: 16677
+  - survey_labels: TR72 - Kayseri, Sivas, Yozgat
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR72
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR72
+    geo_nvar: NAME_LATN
+    geo_name: Kayseri, Sivas, Yozgat
+    source_row: 16678
+  - survey_labels: "TR81 - Zonguldak, Karab\xFCk, Bart\u0131n"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR81
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR81
+    geo_nvar: NAME_LATN
+    geo_name: "Zonguldak, Karab\xFCk, Bart\u0131n"
+    source_row: 16679
+  - survey_labels: "TR82 - Kastamonu, \xC7ank\u0131r\u0131, Sinop"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR82
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR82
+    geo_nvar: NAME_LATN
+    geo_name: "Kastamonu, \xC7ank\u0131r\u0131, Sinop"
+    source_row: 16680
+  - survey_labels: "TR83 - Samsun, Tokat, \xC7orum, Amasya"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR83
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR83
+    geo_nvar: NAME_LATN
+    geo_name: "Samsun, Tokat, \xC7orum, Amasya"
+    source_row: 16681
+  - survey_labels: "TR90 - Trabzon, Ordu, Giresun, Rize, Artvin, G\xFCm\xFC\u015F\
+      hane"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TR90
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TR90
+    geo_nvar: NAME_LATN
+    geo_name: "Trabzon, Ordu, Giresun, Rize, Artvin, G\xFCm\xFC\u015Fhane"
+    source_row: 16682
+  - survey_labels: TRA1 - Erzurum, Erzincan, Bayburt
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRA1
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRA1
+    geo_nvar: NAME_LATN
+    geo_name: Erzurum, Erzincan, Bayburt
+    source_row: 16683
+  - survey_labels: "TRA2 - A\u011Fr\u0131, Kars, I\u011Fd\u0131r, Ardahan"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRA2
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRA2
+    geo_nvar: NAME_LATN
+    geo_name: "A\u011Fr\u0131, Kars, I\u011Fd\u0131r, Ardahan"
+    source_row: 16684
+  - survey_labels: "TRB1 - Malatya, Elaz\u0131\u011F, Bing\xF6l, Tunceli"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRB1
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRB1
+    geo_nvar: NAME_LATN
+    geo_name: "Malatya, Elaz\u0131\u011F, Bing\xF6l, Tunceli"
+    source_row: 16685
+  - survey_labels: "TRB2 - Van, Mu\u015F, Bitlis, Hakkari"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRB2
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRB2
+    geo_nvar: NAME_LATN
+    geo_name: "Van, Mu\u015F, Bitlis, Hakkari"
+    source_row: 16686
+  - survey_labels: "TRC1 - Gaziantep, Ad\u0131yaman, Kilis"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRC1
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRC1
+    geo_nvar: NAME_LATN
+    geo_name: "Gaziantep, Ad\u0131yaman, Kilis"
+    source_row: 16687
+  - survey_labels: "TRC2 - \u015Eanl\u0131urfa, Diyarbak\u0131r"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRC2
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRC2
+    geo_nvar: NAME_LATN
+    geo_name: "\u015Eanl\u0131urfa, Diyarbak\u0131r"
+    source_row: 16688
+  - survey_labels: "TRC3 - Mardin, Batman, \u015E\u0131rnak, Siirt"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: TUR_2021_NUTS2_TRC3
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: TRC3
+    geo_nvar: NAME_LATN
+    geo_name: "Mardin, Batman, \u015E\u0131rnak, Siirt"
+    source_row: 16689
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

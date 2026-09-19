@@ -1,0 +1,276 @@
+country_id: CTY-ETH
+country_name: ETH
+iso3: ETH
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Tigray
+    survey_variables: subnatid
+    gmd_subnatid1: ETH_2015_GAUL1_1237
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1237
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1237'
+    geo_nvar: ADM1_NAME
+    geo_name: Tigray
+    source_row: 4720
+  - survey_labels: 13 - Harari
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1233
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1233
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1233'
+    geo_nvar: ADM1_NAME
+    geo_name: Hareri
+    source_row: 4721
+  - survey_labels: 14 - Addis Ababa
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1227
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1227
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1227'
+    geo_nvar: ADM1_NAME
+    geo_name: Addis Ababa
+    source_row: 4722
+  - survey_labels: 2 - Afar | 2 - Afara
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1228
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1228
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1228'
+    geo_nvar: ADM1_NAME
+    geo_name: Afar
+    source_row: 4723
+  - survey_labels: 3 - Amahara | 3 - Amhara
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1229
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1229
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1229'
+    geo_nvar: ADM1_NAME
+    geo_name: Amhara
+    source_row: 4724
+  - survey_labels: 4 - Oromia | 4 - Oromiya
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_47678
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_47678
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '47678'
+    geo_nvar: ADM1_NAME
+    geo_name: Oromia
+    source_row: 4725
+  - survey_labels: 5 - Somali
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_47679
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_47679
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '47679'
+    geo_nvar: ADM1_NAME
+    geo_name: Somali
+    source_row: 4726
+  - survey_labels: 6 - Benshangul | 6 - Benshangul Gumuz
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1230
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1230
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1230'
+    geo_nvar: ADM1_NAME
+    geo_name: Beneshangul Gumu
+    source_row: 4727
+  - survey_labels: 7 - SNNP
+    survey_variables: subnatid
+    gmd_subnatid1: ETH_2015_GAUL1_1236
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1236
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1236'
+    geo_nvar: ADM1_NAME
+    geo_name: SNNPR
+    source_row: 4728
+  - survey_labels: 12 - Gambella
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1232
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1232
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1232'
+    geo_nvar: ADM1_NAME
+    geo_name: Gambela
+    source_row: 4730
+  - survey_labels: 15 - Dire Dawa
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: ETH_2015_GAUL1_1231
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ETH_2015_GAUL1_1231
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1231'
+    geo_nvar: ADM1_NAME
+    geo_name: Dire Dawa
+    source_row: 4733
+  - survey_labels: 7 - SNNP
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ETH_2015_GAULx_1236
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '1236'
+    geo_nvar: ADM1_NAME
+    geo_name: SNNPR
+    source_row: 4760
+  - survey_labels: 8 - Sidama
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ETH_2015_GAUL2_40838
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '40838'
+    geo_nvar: ADM2_NAME
+    geo_name: Sidama
+    source_row: 4761
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

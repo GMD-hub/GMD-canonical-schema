@@ -1,0 +1,306 @@
+country_id: CTY-UZB
+country_name: UZB
+iso3: UZB
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1-Karakalpakstan | 101 -  Karakalpakstan | 1735 -  Karakalpakstan
+      | Karakalpakstan -  Karakalpakstan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3287
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3287
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3287'
+    geo_nvar: ADM1_NAME
+    geo_name: Karakalpakstan
+    source_row: 18366
+  - survey_labels: 10-Syrdarya | 106 -  Navoi region | 1712 -  Navoi | 1724 -  Syrdarya
+      | Navoi -  Navoi
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_39697
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_39697
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '39697'
+    geo_nvar: ADM1_NAME
+    geo_name: Navoiy
+    source_row: 18367
+  - survey_labels: 11-Tashkent | 111 -  Tashkent region | Tashkent (Region) -  Tashkent
+      (Region)
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3295
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3295
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3295'
+    geo_nvar: ADM1_NAME
+    geo_name: Tashkent
+    source_row: 18368
+  - survey_labels: 112 -  Fergana region | 12-Fergana | 1730 -  Fergana | Fergana
+      -  Fergana
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3286
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3286
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3286'
+    geo_nvar: ADM1_NAME
+    geo_name: Fergana
+    source_row: 18369
+  - survey_labels: 113 -  Khorezm region | 13-Khorezm | Khorasm -  Khorasm
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3289
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3289
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3289'
+    geo_nvar: ADM1_NAME
+    geo_name: Khorezm
+    source_row: 18370
+  - survey_labels: 114 -  Tashkent city | 14-Tashkent city | 1726 -  Tashkent (city)
+      | Tashkent (City) -  Tashkent (City)
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_39698
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_39698
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '39698'
+    geo_nvar: ADM1_NAME
+    geo_name: Tashkent city
+    source_row: 18371
+  - survey_labels: 102 -  Andijan region | 1703 -  Andijan | 2-Andijan | Andijan -  Andijan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3284
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3284
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3284'
+    geo_nvar: ADM1_NAME
+    geo_name: Andijan
+    source_row: 18372
+  - survey_labels: 103 -  Bukhara region | 1706 -  Bukhara | 3-Bukhara | Bukhara -  Bukhara
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3285
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3285
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3285'
+    geo_nvar: ADM1_NAME
+    geo_name: Bukhara
+    source_row: 18373
+  - survey_labels: 104 -  Jizzakh region | 4-Jizzak | Jizzakh -  Jizzakh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_39696
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_39696
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '39696'
+    geo_nvar: ADM1_NAME
+    geo_name: Jizzakh
+    source_row: 18374
+  - survey_labels: 105 -  Kashkadarya region | 1710 -  Kashkadarya | 5-Kashkadarya
+      | Kashkadarya -  Kashkadarya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3288
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3288
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3288'
+    geo_nvar: ADM1_NAME
+    geo_name: Kashkadarya
+    source_row: 18375
+  - survey_labels: 110 -  Syrdarya region | 1712 -  Navoi | 1724 -  Syrdarya | 6-Navoi
+      | Syrdarya -  Syrdarya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3294
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3294
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3294'
+    geo_nvar: ADM1_NAME
+    geo_name: Sirdarya
+    source_row: 18376
+  - survey_labels: 107 -  Namangan region | 1714 -  Namangan | 7-Namangan | Namangan
+      -  Namangan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3291
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3291
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3291'
+    geo_nvar: ADM1_NAME
+    geo_name: Namangan
+    source_row: 18377
+  - survey_labels: 108 -  Samarkand region | 1718 -  Samarkand | 8-Samarkand | Samarkand
+      -  Samarkand
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3292
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3292
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3292'
+    geo_nvar: ADM1_NAME
+    geo_name: Samarkand
+    source_row: 18378
+  - survey_labels: 109 -  Surkhandarya region | 1722 -  Surkhandarya | 9-Surkhandarya
+      | Surkhandarya -  Surkhandarya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3293
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3293
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3293'
+    geo_nvar: ADM1_NAME
+    geo_name: Surkhandarya
+    source_row: 18379
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

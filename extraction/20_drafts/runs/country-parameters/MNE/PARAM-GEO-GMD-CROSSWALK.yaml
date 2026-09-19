@@ -1,0 +1,117 @@
+country_id: CTY-MNE
+country_name: MNE
+iso3: MNE
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 \u2013 North | 1-North"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MNE_2015_GAULx_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MNE_2015_GAULx_1
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '1'
+    geo_nvar: ADM1_NAME
+    geo_name: Mojkovac & Kolasin & Plav & Bijelo Polje & Pljevlja & Pluzine & Zabljak
+      & Berane & Savnik & Rozaj & Andrijevica
+    source_row: 10168
+  - survey_labels: "2 \u2013 Central | 2-Central"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MNE_2015_GAULx_2a
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MNE_2015_GAULx_2a
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: 2a
+    geo_nvar: ADM1_NAME
+    geo_name: Cetinje & Danilovgrad & Niksic & Podgorica
+    source_row: 10169
+  - survey_labels: "3 \u2013 South | 3-South"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MNE_2015_GAULx_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MNE_2015_GAULx_3
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '3'
+    geo_nvar: ADM1_NAME
+    geo_name: Herceg Novi & Kotor & Budva & Tivat & Ulcinj & Bar
+    source_row: 10170
+  - survey_labels: "2 \u2013 Center"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MNE_2015_GAULx_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MNE_2015_GAULx_2
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '2'
+    geo_nvar: ADM1_NAME
+    geo_name: Cetinje & Danilovgrad & Niksic
+    source_row: 10172
+  - survey_labels: "4 \u2013 Podgorica"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MNE_2015_GAUL1_25365
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MNE_2015_GAUL1_25365
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '25365'
+    geo_nvar: ADM1_NAME
+    geo_name: Podgorica
+    source_row: 10174
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

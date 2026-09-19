@@ -1,0 +1,256 @@
+country_id: CTY-GBR
+country_name: GBR
+iso3: GBR
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: '[1]UKC - North East'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKC
+    geo_nvar: NAME_LATN
+    geo_name: North East (England)
+    source_row: 5270
+  - survey_labels: '[10]UKL - Wales'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKL
+    geo_nvar: NAME_LATN
+    geo_name: Wales
+    source_row: 5271
+  - survey_labels: '[11]UKM - Scotland'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKM
+    geo_nvar: NAME_LATN
+    geo_name: Scotland
+    source_row: 5272
+  - survey_labels: '[12]UKN - Northern Ireland'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKN
+    geo_nvar: NAME_LATN
+    geo_name: Northern Ireland
+    source_row: 5273
+  - survey_labels: '[2]UKD - North West'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKD
+    geo_nvar: NAME_LATN
+    geo_name: North West (England)
+    source_row: 5274
+  - survey_labels: '[3]UKE - Yorkshire and the Humbe'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKE
+    geo_nvar: NAME_LATN
+    geo_name: Yorkshire and the Humber
+    source_row: 5275
+  - survey_labels: '[4]UKF - East Midlands'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKF
+    geo_nvar: NAME_LATN
+    geo_name: East Midlands (England)
+    source_row: 5276
+  - survey_labels: '[5]UKG - West Midlands'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKG
+    geo_nvar: NAME_LATN
+    geo_name: West Midlands (England)
+    source_row: 5277
+  - survey_labels: '[6]UKH - East of England'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKH
+    geo_nvar: NAME_LATN
+    geo_name: East of England
+    source_row: 5278
+  - survey_labels: '[7]UKI - Greater London'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKI
+    geo_nvar: NAME_LATN
+    geo_name: London
+    source_row: 5279
+  - survey_labels: '[8]UKJ - South East'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKJ
+    geo_nvar: NAME_LATN
+    geo_name: South East (England)
+    source_row: 5280
+  - survey_labels: '[9]UKK - South West'
+    survey_variables: region_c
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '1'
+    geo_idvar: NUTS_ID
+    geo_id: UKK
+    geo_nvar: NAME_LATN
+    geo_name: South West (England)
+    source_row: 5281
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

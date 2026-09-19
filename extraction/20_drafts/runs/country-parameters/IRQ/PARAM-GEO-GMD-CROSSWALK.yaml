@@ -1,0 +1,376 @@
+country_id: CTY-IRQ
+country_name: IRQ
+iso3: IRQ
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 11 - DUHOK | 11 - Duhouk
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1574
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1574
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1574'
+    geo_nvar: ADM1_NAME
+    geo_name: Dahuk
+    source_row: 7846
+  - survey_labels: 12 - NINEVEH | 12 - Nineveh
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1578
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1578
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1578'
+    geo_nvar: ADM1_NAME
+    geo_name: Ninewa
+    source_row: 7847
+  - survey_labels: 13 - SULAYMANIYAH | 13 - Suleimaniya
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1580
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1580
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1580'
+    geo_nvar: ADM1_NAME
+    geo_name: Sulaymaniyah
+    source_row: 7848
+  - survey_labels: 14 - KIRKUK | 14 - Karkouk
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1570
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1570
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1570'
+    geo_nvar: ADM1_NAME
+    geo_name: Kirkuk
+    source_row: 7849
+  - survey_labels: 15 - ERBIL | 15 - Erbil
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1569
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1569
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1569'
+    geo_nvar: ADM1_NAME
+    geo_name: Erbil
+    source_row: 7850
+  - survey_labels: 21 - DIYALA | 21 - Diala
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1575
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1575
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1575'
+    geo_nvar: ADM1_NAME
+    geo_name: Diyala
+    source_row: 7851
+  - survey_labels: 22 - AL-ANBAR | 22 - Al-Anbar
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1564
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1564
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1564'
+    geo_nvar: ADM1_NAME
+    geo_name: Anbar
+    source_row: 7852
+  - survey_labels: 23 - BAGHDAD | 23 - Baghdad
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1572
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1572
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1572'
+    geo_nvar: ADM1_NAME
+    geo_name: Baghdad
+    source_row: 7853
+  - survey_labels: 24 - BABYLON | 24 - Babil
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1571
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1571
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1571'
+    geo_nvar: ADM1_NAME
+    geo_name: Babil
+    source_row: 7854
+  - survey_labels: 25 - KARBALA | 25 - Kerbala
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1576
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1576
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1576'
+    geo_nvar: ADM1_NAME
+    geo_name: Kerbala
+    source_row: 7855
+  - survey_labels: 26 - WASIT | 26 - Wasit
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1581
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1581
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1581'
+    geo_nvar: ADM1_NAME
+    geo_name: Wassit
+    source_row: 7856
+  - survey_labels: 27 - SALAH AL-DIN | 27 - Salahuddin
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1579
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1579
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1579'
+    geo_nvar: ADM1_NAME
+    geo_name: Salah al-Din
+    source_row: 7857
+  - survey_labels: 28 - Al-Najaf | 28 - NAJAF
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1568
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1568
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1568'
+    geo_nvar: ADM1_NAME
+    geo_name: Najaf
+    source_row: 7858
+  - survey_labels: 31 - AL-QADISIYAH | 31 - Al-Qadisiya
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1567
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1567
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1567'
+    geo_nvar: ADM1_NAME
+    geo_name: Qadissiya
+    source_row: 7859
+  - survey_labels: 32 - Al-Muthanna | 32 - MUTHANNA
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1566
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1566
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1566'
+    geo_nvar: ADM1_NAME
+    geo_name: Muthanna
+    source_row: 7860
+  - survey_labels: 33 - DHI QAR | 33 - Thi-Qar
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1573
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1573
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1573'
+    geo_nvar: ADM1_NAME
+    geo_name: Thi-Qar
+    source_row: 7861
+  - survey_labels: 34 - MAYSAN | 34 - Missan
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1577
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1577
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1577'
+    geo_nvar: ADM1_NAME
+    geo_name: Missan
+    source_row: 7862
+  - survey_labels: 35 - BASRA | 35 - Basrah
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: IRQ_2015_GAUL1_1565
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: IRQ_2015_GAUL1_1565
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1565'
+    geo_nvar: ADM1_NAME
+    geo_name: Basrah
+    source_row: 7863
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

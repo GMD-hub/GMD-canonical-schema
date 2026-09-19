@@ -1,0 +1,76 @@
+country_id: CTY-HRV
+country_name: HRV
+iso3: HRV
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2006
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1-HR01
+    survey_variables: subnatid
+    gmd_subnatid1: HRV_2006_NUTS2_HR01
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: HRV_2006_NUTS2_HR01
+    geo_year: '2006'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: HR01
+    geo_nvar: NAME_LATN
+    geo_name: Sjeverozapadna Hrvatska
+    source_row: 6117
+  - survey_labels: 2-HR02
+    survey_variables: subnatid
+    gmd_subnatid1: HRV_2006_NUTS2_HR02
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: HRV_2006_NUTS2_HR02
+    geo_year: '2006'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: HR02
+    geo_nvar: NAME_LATN
+    geo_name: "Sredi\u0161nja i Isto\u010Dna (Panonska) Hrvatska"
+    source_row: 6118
+  - survey_labels: 3-HR03
+    survey_variables: subnatid
+    gmd_subnatid1: HRV_2006_NUTS2_HR03
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: HRV_2006_NUTS2_HR03
+    geo_year: '2006'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: HR03
+    geo_nvar: NAME_LATN
+    geo_name: Jadranska Hrvatska
+    source_row: 6119
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

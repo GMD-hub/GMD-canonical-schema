@@ -1,0 +1,117 @@
+country_id: CTY-URY
+country_name: URY
+iso3: URY
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Montevideo Metropolitano
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: URY_2015_GAULx_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: URY_2015_GAULx_1
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '1'
+    geo_nvar: ADM1_NAME
+    geo_name: Canelones & Montevideo & San Jose
+    source_row: 17456
+  - survey_labels: 2 - Interior Norte
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: URY_2015_GAULx_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: URY_2015_GAULx_2
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '2'
+    geo_nvar: ADM1_NAME
+    geo_name: Artigas & Rivera & Salto
+    source_row: 17457
+  - survey_labels: 3 - Interior Centro Norte
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: URY_2015_GAULx_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: URY_2015_GAULx_3
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '3'
+    geo_nvar: ADM1_NAME
+    geo_name: Cerro Largo & Durazno & Paysandu & Rio Negro & Tacuarembo & Treinta
+      Y Tres
+    source_row: 17458
+  - survey_labels: 4 - Interior Centro Sur
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: URY_2015_GAULx_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: URY_2015_GAULx_4
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '4'
+    geo_nvar: ADM1_NAME
+    geo_name: Flores & Florida & Lavalleja & Rocha & Soriano
+    source_row: 17459
+  - survey_labels: 5 - Interior Sur
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: URY_2015_GAULx_5
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: URY_2015_GAULx_5
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '5'
+    geo_nvar: ADM1_NAME
+    geo_name: Canelones & Colonia & Maldonado & San Jose
+    source_row: 17460
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

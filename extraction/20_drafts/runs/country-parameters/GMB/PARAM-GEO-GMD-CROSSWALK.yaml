@@ -1,0 +1,1027 @@
+country_id: CTY-GMB
+country_name: GMB
+iso3: GMB
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: 2015
+  selectors: null
+  value:
+  - survey_labels: 1 - Banjul | 1-Banjul
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAUL2_16405
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAUL2_16405
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '16405'
+    geo_nvar: ADM2_NAME
+    geo_name: Banjul
+    source_row: 5717
+  - survey_labels: 2 - Kanifing | 2-Kanifing
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAUL2_16416
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAUL2_16416
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '16416'
+    geo_nvar: ADM2_NAME
+    geo_name: Kombo Saint Mary
+    source_row: 5718
+  - survey_labels: 3 - Brikama | 3-Brikama
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAUL1_1290
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAUL1_1290
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1290'
+    geo_nvar: ADM1_NAME
+    geo_name: West Coast
+    source_row: 5719
+  - survey_labels: 4 - Mansa Konko | 4 - Mansakonko | 4-Mansa Konko
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAUL1_1287
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAUL1_1287
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1287'
+    geo_nvar: ADM1_NAME
+    geo_name: Lower River
+    source_row: 5720
+  - survey_labels: 5 - Kerewan | 5-Kerewan
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAUL1_1288
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAUL1_1288
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1288'
+    geo_nvar: ADM1_NAME
+    geo_name: North Bank
+    source_row: 5721
+  - survey_labels: 6 - Kuntaur | 6-Kuntaur
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAULx_6
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAULx_6
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '6'
+    geo_nvar: ADM1_NAME
+    geo_name: Sami & Upper Saloum & Niani & Nianija & Lower Saloum
+    source_row: 5722
+  - survey_labels: 7 - Janjanbureh | 7 - Janjangbureh | 7-Janjanbureh
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAULx_7
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAULx_7
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '7'
+    geo_nvar: ADM1_NAME
+    geo_name: Niamina East & Niamina West & Fulladu West & Janjanbureh & Niamina Dankunku
+    source_row: 5723
+  - survey_labels: 8 - Basse | 8-Basse
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: GMB_2015_GAUL1_1289
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GMB_2015_GAUL1_1289
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1289'
+    geo_nvar: ADM1_NAME
+    geo_name: Upper River
+    source_row: 5724
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2024
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 10 - Banjul City Council
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAULx_10
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '10'
+    geo_nvar: gaul2_name
+    geo_name: Banjul South & Banjul Central & Banjul North
+    source_row: 5749
+  - survey_labels: 20 - Kanifing Municipal Council
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAULx_20
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '20'
+    geo_nvar: gaul2_name
+    geo_name: Bakau & Jeshwang & Sere Kunda Central & Sere Kunda East & Sere Kunda
+      West
+    source_row: 5750
+  - survey_labels: 30 - Kombo North
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103232
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103232'
+    geo_nvar: gaul2_name
+    geo_name: Kombo North/St Marie
+    source_row: 5751
+  - survey_labels: 31 - Kombo South
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103233
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103233'
+    geo_nvar: gaul2_name
+    geo_name: Kombo South
+    source_row: 5752
+  - survey_labels: 32 - Kombo Central
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103230
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103230'
+    geo_nvar: gaul2_name
+    geo_name: Kombo Central
+    source_row: 5753
+  - survey_labels: 33 - Kombo East
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103231
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103231'
+    geo_nvar: gaul2_name
+    geo_name: Kombo East
+    source_row: 5754
+  - survey_labels: 34 - Foni Brefet
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103227
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103227'
+    geo_nvar: gaul2_name
+    geo_name: Foni Brefet
+    source_row: 5755
+  - survey_labels: 35 - Foni Bintang Karanai
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103225
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103225'
+    geo_nvar: gaul2_name
+    geo_name: Foni Bintang Karenai
+    source_row: 5756
+  - survey_labels: 36 - Foni Kansala
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103229
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103229'
+    geo_nvar: gaul2_name
+    geo_name: Foni Kansala
+    source_row: 5757
+  - survey_labels: 37 - Foni Bondali
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103226
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103226'
+    geo_nvar: gaul2_name
+    geo_name: Foni Bondali
+    source_row: 5758
+  - survey_labels: 38 - Foni Jarrol
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103228
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103228'
+    geo_nvar: gaul2_name
+    geo_name: Foni Jarrol
+    source_row: 5759
+  - survey_labels: 40 - Kiang West
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103210
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103210'
+    geo_nvar: gaul2_name
+    geo_name: Kiang West
+    source_row: 5760
+  - survey_labels: 41 - Kiang Central
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103208
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103208'
+    geo_nvar: gaul2_name
+    geo_name: Kiang Central
+    source_row: 5761
+  - survey_labels: 42 - Kiang East
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103209
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103209'
+    geo_nvar: gaul2_name
+    geo_name: Kiang East
+    source_row: 5762
+  - survey_labels: 43 - Jarra West
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103207
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103207'
+    geo_nvar: gaul2_name
+    geo_name: Jarra West
+    source_row: 5763
+  - survey_labels: 44 - Jarra Central
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103205
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103205'
+    geo_nvar: gaul2_name
+    geo_name: Jarra Central
+    source_row: 5764
+  - survey_labels: 45 - Jarra East
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103206
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103206'
+    geo_nvar: gaul2_name
+    geo_name: Jarra East
+    source_row: 5765
+  - survey_labels: 50 - Lower Niumi
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103215
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103215'
+    geo_nvar: gaul2_name
+    geo_name: Lower Niumi
+    source_row: 5766
+  - survey_labels: 51 - Upper Niumi
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103217
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103217'
+    geo_nvar: gaul2_name
+    geo_name: Upper Niumi
+    source_row: 5767
+  - survey_labels: 52 - Jokadu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103213
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103213'
+    geo_nvar: gaul2_name
+    geo_name: Jokadu
+    source_row: 5768
+  - survey_labels: 53 - Lower Badibu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103214
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103214'
+    geo_nvar: gaul2_name
+    geo_name: Lower Baddibu
+    source_row: 5769
+  - survey_labels: 54 - Central Badibu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103211
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103211'
+    geo_nvar: gaul2_name
+    geo_name: Central Baddibu
+    source_row: 5770
+  - survey_labels: 55 - Illiasa
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103212
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103212'
+    geo_nvar: gaul2_name
+    geo_name: Illiassa
+    source_row: 5771
+  - survey_labels: 56 - Sabach Sanjar
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103216
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103216'
+    geo_nvar: gaul2_name
+    geo_name: Sabach - Sanjal
+    source_row: 5772
+  - survey_labels: 60 - Lower Saloum
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103188
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103188'
+    geo_nvar: gaul2_name
+    geo_name: Lower Saloum
+    source_row: 5773
+  - survey_labels: 61 - Upper Saloum
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103192
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103192'
+    geo_nvar: gaul2_name
+    geo_name: Upper Saloum
+    source_row: 5774
+  - survey_labels: 62 - Nianija
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103190
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103190'
+    geo_nvar: gaul2_name
+    geo_name: Nianija
+    source_row: 5775
+  - survey_labels: 63 - Niani
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103189
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103189'
+    geo_nvar: gaul2_name
+    geo_name: Niani
+    source_row: 5776
+  - survey_labels: 64 - Sami
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103191
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103191'
+    geo_nvar: gaul2_name
+    geo_name: Sami
+    source_row: 5777
+  - survey_labels: 70 - Niamina Dankunku
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103195
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103195'
+    geo_nvar: gaul2_name
+    geo_name: Niamina Dankunku
+    source_row: 5778
+  - survey_labels: 71 - Niamina West
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103197
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103197'
+    geo_nvar: gaul2_name
+    geo_name: Niamina West
+    source_row: 5779
+  - survey_labels: 72 - Niamina East
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103196
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103196'
+    geo_nvar: gaul2_name
+    geo_name: Niamina East
+    source_row: 5780
+  - survey_labels: 73 - Lower Fuladu West
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103194
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103194'
+    geo_nvar: gaul2_name
+    geo_name: Lower Fuladu West
+    source_row: 5781
+  - survey_labels: 74 - Upper Fuladu West
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103198
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103198'
+    geo_nvar: gaul2_name
+    geo_name: Upper Fuladu West
+    source_row: 5782
+  - survey_labels: 75 - Janjanbureh
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103193
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103193'
+    geo_nvar: gaul2_name
+    geo_name: Janjanbureh
+    source_row: 5783
+  - survey_labels: 80 - Jimara
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103219
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103219'
+    geo_nvar: gaul2_name
+    geo_name: Jimara
+    source_row: 5784
+  - survey_labels: 81 - Basse
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103218
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103218'
+    geo_nvar: gaul2_name
+    geo_name: Basse
+    source_row: 5785
+  - survey_labels: 82 - Tumana
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103222
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103222'
+    geo_nvar: gaul2_name
+    geo_name: Tumana
+    source_row: 5786
+  - survey_labels: 83 - Kantora
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103220
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103220'
+    geo_nvar: gaul2_name
+    geo_name: Kantora
+    source_row: 5787
+  - survey_labels: 84 - Wuli West
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103224
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103224'
+    geo_nvar: gaul2_name
+    geo_name: Wuli West
+    source_row: 5788
+  - survey_labels: 85 - Wuli East
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103223
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103223'
+    geo_nvar: gaul2_name
+    geo_name: Wuli East
+    source_row: 5789
+  - survey_labels: 86 - Sandu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GMB_2024_GAUL2_103221
+    geo_year: '2024'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: gaul2_code
+    geo_id: '103221'
+    geo_nvar: gaul2_name
+    geo_name: Sandu
+    source_row: 5790
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

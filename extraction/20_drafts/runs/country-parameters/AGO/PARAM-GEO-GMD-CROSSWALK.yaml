@@ -1,0 +1,376 @@
+country_id: CTY-AGO
+country_name: AGO
+iso3: AGO
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Cabinda | 1-Cabinda
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_401
+    gmd_subnatid2: AGO_2015_GAUL1_401
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_401
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '401'
+    geo_nvar: ADM1_NAME
+    geo_name: Cabinda
+    source_row: 2
+  - survey_labels: 14 - Namibe | 14-Namibe
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_413
+    gmd_subnatid2: AGO_2015_GAUL1_413
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_413
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '413'
+    geo_nvar: ADM1_NAME
+    geo_name: Namibe
+    source_row: 3
+  - survey_labels: "15 - Huila | 15-Hu\xEDla"
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_406
+    gmd_subnatid2: AGO_2015_GAUL1_406
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_406
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '406'
+    geo_nvar: ADM1_NAME
+    geo_name: Huila
+    source_row: 4
+  - survey_labels: 16 - Cunene | 16-Cunene
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_404
+    gmd_subnatid2: AGO_2015_GAUL1_404
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_404
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '404'
+    geo_nvar: ADM1_NAME
+    geo_name: Cunene
+    source_row: 5
+  - survey_labels: 4 - Luanda | 4-Luanda
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_408
+    gmd_subnatid2: AGO_2015_GAUL1_408
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_408
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '408'
+    geo_nvar: ADM1_NAME
+    geo_name: Luanda
+    source_row: 6
+  - survey_labels: 8 - Lunda Norte | 8-Lunda Norte
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_409
+    gmd_subnatid2: AGO_2015_GAUL1_409
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_409
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '409'
+    geo_nvar: ADM1_NAME
+    geo_name: Lunda Norte
+    source_row: 7
+  - survey_labels: 9 - Benguela | 9-Benguela
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_399
+    gmd_subnatid2: AGO_2015_GAUL1_399
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_399
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '399'
+    geo_nvar: ADM1_NAME
+    geo_name: Benguela
+    source_row: 8
+  - survey_labels: 10 - Huambo | 10-Huambo
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_405
+    gmd_subnatid2: AGO_2015_GAUL1_405
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_405
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '405'
+    geo_nvar: ADM1_NAME
+    geo_name: Huambo
+    source_row: 10
+  - survey_labels: "11 - Bi\xE9 | 11-Bi\xE9"
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_400
+    gmd_subnatid2: AGO_2015_GAUL1_400
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_400
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '400'
+    geo_nvar: ADM1_NAME
+    geo_name: Bie
+    source_row: 11
+  - survey_labels: "12 - Moxico | 12-M\xF3xico"
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_412
+    gmd_subnatid2: AGO_2015_GAUL1_412
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_412
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '412'
+    geo_nvar: ADM1_NAME
+    geo_name: Moxico
+    source_row: 12
+  - survey_labels: 13 - Kuando Kubango | 13-Cuando Cubango
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_402
+    gmd_subnatid2: AGO_2015_GAUL1_402
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_402
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '402'
+    geo_nvar: ADM1_NAME
+    geo_name: Cuando Cubango
+    source_row: 13
+  - survey_labels: 17 - Lunda Sul | 17-Lunda Sul
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_410
+    gmd_subnatid2: AGO_2015_GAUL1_410
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_410
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '410'
+    geo_nvar: ADM1_NAME
+    geo_name: Lunda Sul
+    source_row: 17
+  - survey_labels: 18 - Bengo | 18-Bengo
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_398
+    gmd_subnatid2: AGO_2015_GAUL1_398
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_398
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '398'
+    geo_nvar: ADM1_NAME
+    geo_name: Bengo
+    source_row: 18
+  - survey_labels: 2 - Zaire | 2-Zaire
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_415
+    gmd_subnatid2: AGO_2015_GAUL1_415
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_415
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '415'
+    geo_nvar: ADM1_NAME
+    geo_name: Zaire
+    source_row: 19
+  - survey_labels: "3 - Uige | 3-U\xEDge"
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_414
+    gmd_subnatid2: AGO_2015_GAUL1_414
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_414
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '414'
+    geo_nvar: ADM1_NAME
+    geo_name: Uige
+    source_row: 20
+  - survey_labels: 5 - Kwanza Norte | 5-Cuanza Norte
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_407
+    gmd_subnatid2: AGO_2015_GAUL1_407
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_407
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '407'
+    geo_nvar: ADM1_NAME
+    geo_name: Kuanza Norte
+    source_row: 22
+  - survey_labels: 6 - Kwanza Sul | 6-Cuanza Sul
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_403
+    gmd_subnatid2: AGO_2015_GAUL1_403
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_403
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '403'
+    geo_nvar: ADM1_NAME
+    geo_name: Cuanza Sul
+    source_row: 23
+  - survey_labels: 7 - Malange | 7-Malanje
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: AGO_2015_GAUL1_411
+    gmd_subnatid2: AGO_2015_GAUL1_411
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: AGO_2015_GAUL1_411
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '411'
+    geo_nvar: ADM1_NAME
+    geo_name: Malanje
+    source_row: 24
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

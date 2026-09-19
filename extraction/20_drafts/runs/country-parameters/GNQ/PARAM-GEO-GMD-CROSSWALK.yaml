@@ -1,0 +1,156 @@
+country_id: CTY-GNQ
+country_name: GNQ
+iso3: GNQ
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 - Annob\xF3N"
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1198
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1198'
+    geo_nvar: ADM1_NAME
+    geo_name: Annobon
+    source_row: 5818
+  - survey_labels: 2 - Bioko Norte
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1199
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1199'
+    geo_nvar: ADM1_NAME
+    geo_name: Bioko Norte
+    source_row: 5819
+  - survey_labels: 3 - Bioko Sur
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1200
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1200'
+    geo_nvar: ADM1_NAME
+    geo_name: Bioko Sur
+    source_row: 5820
+  - survey_labels: 4 - Centro Sur
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1201
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1201'
+    geo_nvar: ADM1_NAME
+    geo_name: Centro Sur
+    source_row: 5821
+  - survey_labels: 6 - Kie Ntem
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1202
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1202'
+    geo_nvar: ADM1_NAME
+    geo_name: Kientem
+    source_row: 5822
+  - survey_labels: 7 - Litoral
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1203
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1203'
+    geo_nvar: ADM1_NAME
+    geo_name: Litoral
+    source_row: 5823
+  - survey_labels: 8 - Wele Nzas
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GNQ_2015_GAUL1_1204
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1204'
+    geo_nvar: ADM1_NAME
+    geo_name: Welenzas
+    source_row: 5824
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

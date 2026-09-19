@@ -1,0 +1,297 @@
+country_id: CTY-PAN
+country_name: PAN
+iso3: PAN
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Bocas del Toro
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_93668
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_93668
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '93668'
+    geo_nvar: ADM1_NAME
+    geo_name: Bocas del Toro
+    source_row: 11004
+  - survey_labels: 2 - Cocle
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_2282
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_2282
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2282'
+    geo_nvar: ADM1_NAME
+    geo_name: "Cocl\xE9"
+    source_row: 11005
+  - survey_labels: 3 - Colon
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_2283
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_2283
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2283'
+    geo_nvar: ADM1_NAME
+    geo_name: "Col\xF3n"
+    source_row: 11006
+  - survey_labels: 4 - Chiriqui
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_93669
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_93669
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '93669'
+    geo_nvar: ADM1_NAME
+    geo_name: "Chiriqu\xED"
+    source_row: 11007
+  - survey_labels: 5 - Darien
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_93670
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_93670
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '93670'
+    geo_nvar: ADM1_NAME
+    geo_name: "Dari\xE9n"
+    source_row: 11008
+  - survey_labels: 6 - Herrera
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_2286
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_2286
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2286'
+    geo_nvar: ADM1_NAME
+    geo_name: Herrera
+    source_row: 11009
+  - survey_labels: 7 - Los Santos
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_2287
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_2287
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2287'
+    geo_nvar: ADM1_NAME
+    geo_name: Los Santos
+    source_row: 11010
+  - survey_labels: 8 - Panama
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_2288
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2288'
+    geo_nvar: ADM1_NAME
+    geo_name: "Panam\xE1"
+    source_row: 11011
+  - survey_labels: 9 - Veraguas
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_93673
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_93673
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '93673'
+    geo_nvar: ADM1_NAME
+    geo_name: Veraguas
+    source_row: 11012
+  - survey_labels: 10 - Comarca Kuna Yala
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_2284
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_2284
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2284'
+    geo_nvar: ADM1_NAME
+    geo_name: Kuna Yala
+    source_row: 11014
+  - survey_labels: 11 - Comarca Embera
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_93671
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_93671
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '93671'
+    geo_nvar: ADM1_NAME
+    geo_name: "Ember\xE1"
+    source_row: 11015
+  - survey_labels: 12 - Comarca Ngobe-Bugle
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAUL1_93672
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAUL1_93672
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '93672'
+    geo_nvar: ADM1_NAME
+    geo_name: "Ng\xF6be Bugl\xE9"
+    source_row: 11016
+  - survey_labels: 13 - Panama-Oeste
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAULx_13
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAULx_13
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '13'
+    geo_nvar: ADM2_NAME
+    geo_name: "Capira & Chame & San Carlos & Arraij\xE1n & La Chorrera"
+    source_row: 11185
+  - survey_labels: 8 - Panama
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PAN_2015_GAULx_8
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PAN_2015_GAULx_8
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '8'
+    geo_nvar: ADM2_NAME
+    geo_name: "Balboa & Chim\xE1n & San Miguelito & Taboga & Chepo & Panam\xE1 & Kuna\
+      \ de Madungand\xED"
+    source_row: 11192
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

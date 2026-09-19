@@ -1,0 +1,156 @@
+country_id: CTY-BGD
+country_name: Bangladesh
+iso3: BGD
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 10 - Barisal | 10-Barisal | Barisal
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_575
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_575
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '575'
+    geo_nvar: ADM1_NAME
+    geo_name: Barisal
+    source_row: 787
+  - survey_labels: 20 - Chittagong | 20-Chittagong | Chittagong
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_576
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_576
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '576'
+    geo_nvar: ADM1_NAME
+    geo_name: Chittagong
+    source_row: 788
+  - survey_labels: 30 - Dhaka | 30-Dhaka | Dhaka
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_577
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_577
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '577'
+    geo_nvar: ADM1_NAME
+    geo_name: Dhaka
+    source_row: 789
+  - survey_labels: 40 - Khulna | Khulna
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_578
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_578
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '578'
+    geo_nvar: ADM1_NAME
+    geo_name: Khulna
+    source_row: 790
+  - survey_labels: 50 - Rajshahi | 50-Rajshahi | Rajshahi
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_61362
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_61362
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61362'
+    geo_nvar: ADM1_NAME
+    geo_name: Rajshahi
+    source_row: 791
+  - survey_labels: 55 - Rangpur | 55-Rangpur | Rangpur
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_61363
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_61363
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '61363'
+    geo_nvar: ADM1_NAME
+    geo_name: Rangpur
+    source_row: 792
+  - survey_labels: 60 - Sylhet | 60-Sylhet | Sylhet
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BGD_2015_GAUL1_580
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BGD_2015_GAUL1_580
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '580'
+    geo_nvar: ADM1_NAME
+    geo_name: Sylhet
+    source_row: 793
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

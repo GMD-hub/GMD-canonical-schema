@@ -1,0 +1,397 @@
+country_id: CTY-KGZ
+country_name: KGZ
+iso3: KGZ
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: 2015
+  selectors: null
+  value:
+  - survey_labels: 1 - Bishkek | 1-Bishkek | Bishkek
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_147293
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_147293
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '147293'
+    geo_nvar: ADM1_NAME
+    geo_name: Bishkek
+    source_row: 8768
+  - survey_labels: 2-Issyk-kul | Issyk-kul
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_1752
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_1752
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1752'
+    geo_nvar: ADM1_NAME
+    geo_name: Ysyk-Kol
+    source_row: 8769
+  - survey_labels: 3-Jalal-Abad | Jalal-Abad
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_1748
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_1748
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1748'
+    geo_nvar: ADM1_NAME
+    geo_name: Jalal-Abad
+    source_row: 8770
+  - survey_labels: 4-Naryn | Naryn
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_1749
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_1749
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1749'
+    geo_nvar: ADM1_NAME
+    geo_name: Naryn
+    source_row: 8771
+  - survey_labels: 6-Osh | Osh
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_1750
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_1750
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1750'
+    geo_nvar: ADM1_NAME
+    geo_name: Osh
+    source_row: 8772
+  - survey_labels: 7-Talas | Talas
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_1751
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_1751
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1751'
+    geo_nvar: ADM1_NAME
+    geo_name: Talas
+    source_row: 8773
+  - survey_labels: 8-Chui | Chui
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_147294
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2015_GAUL1_147294
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '147294'
+    geo_nvar: ADM1_NAME
+    geo_name: Chuy
+    source_row: 8774
+  - survey_labels: Batken
+    survey_variables: subnatid1
+    gmd_subnatid1: KGZ_2015_GAUL1_1746
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1746'
+    geo_nvar: ADM1_NAME
+    geo_name: Batken
+    source_row: 8790
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2022
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Bishkek | 1-Bishkek
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.2_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.2_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.2_1
+    geo_nvar: NAME_1
+    geo_name: "Bi\u0161kek"
+    source_row: 8804
+  - survey_labels: 2 - Issyk-kul | 2-Issyk-kul | Issykul
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.9_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.9_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.9_1
+    geo_nvar: NAME_1
+    geo_name: "Ysyk-K\xF6l"
+    source_row: 8805
+  - survey_labels: 3 - Jalal-Abad | 3-Jalal-Abad | Jalal-Abad
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.4_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.4_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.4_1
+    geo_nvar: NAME_1
+    geo_name: Jalal-Abad
+    source_row: 8806
+  - survey_labels: 4 - Naryn | 4-Naryn | Naryn
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.5_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.5_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.5_1
+    geo_nvar: NAME_1
+    geo_name: Naryn
+    source_row: 8807
+  - survey_labels: 5 - Batken | 5-Batken | Batken
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.1_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.1_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.1_1
+    geo_nvar: NAME_1
+    geo_name: Batken
+    source_row: 8808
+  - survey_labels: 6 - Osh | 6-Osh | Osh
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.7_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.7_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.7_1
+    geo_nvar: NAME_1
+    geo_name: Osh
+    source_row: 8809
+  - survey_labels: 7 - Talas | 7-Talas | Talas
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.8_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.8_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.8_1
+    geo_nvar: NAME_1
+    geo_name: Talas
+    source_row: 8810
+  - survey_labels: 8 - Chui | 8-Chui | Chui
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.3_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.3_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.3_1
+    geo_nvar: NAME_1
+    geo_name: "Ch\xFCy"
+    source_row: 8811
+  - survey_labels: 16 - Osh city | 9 - Osh c. | 9-Osh c.
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: KGZ_2022_GADM1_KGZ.6_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: KGZ_2022_GADM1_KGZ.6_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: KGZ.6_1
+    geo_nvar: NAME_1
+    geo_name: Osh (city)
+    source_row: 8812
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors:
+    geo_year: unknown
+  value:
+  - survey_labels: 2 - Other urban | 3 - Rural | rural | urban
+    survey_variables: subnatid
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: ''
+    geo_source: ''
+    geo_level: ''
+    geo_idvar: ''
+    geo_id: ''
+    geo_nvar: ''
+    geo_name: ''
+    source_row: 8776
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

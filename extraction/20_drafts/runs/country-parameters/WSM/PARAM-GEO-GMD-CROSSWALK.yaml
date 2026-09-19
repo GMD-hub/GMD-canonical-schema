@@ -1,0 +1,176 @@
+country_id: CTY-WSM
+country_name: WSM
+iso3: WSM
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2011
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: Apia
+    survey_variables: strata
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '1'
+    geo_nvar: r_name
+    geo_name: Apia Urban Area
+    source_row: 18528
+  - survey_labels: NWU
+    survey_variables: strata
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '2'
+    geo_nvar: r_name
+    geo_name: North West Upolu
+    source_row: 18529
+  - survey_labels: RoU
+    survey_variables: strata
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '3'
+    geo_nvar: r_name
+    geo_name: Rest of Upolu
+    source_row: 18530
+  - survey_labels: Savaii
+    survey_variables: strata
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '4'
+    geo_nvar: r_name
+    geo_name: Savaii
+    source_row: 18531
+  - survey_labels: 1-Apia Urban Areas
+    survey_variables: subnatid1
+    gmd_subnatid1: WSM_2011_NSO1_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '1'
+    geo_nvar: r_name
+    geo_name: Apia Urban Area
+    source_row: 18532
+  - survey_labels: 2-North West Upolu
+    survey_variables: subnatid1
+    gmd_subnatid1: WSM_2011_NSO1_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '2'
+    geo_nvar: r_name
+    geo_name: North West Upolu
+    source_row: 18533
+  - survey_labels: 3-Rest of Upolu
+    survey_variables: subnatid1
+    gmd_subnatid1: WSM_2011_NSO1_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '3'
+    geo_nvar: r_name
+    geo_name: Rest of Upolu
+    source_row: 18534
+  - survey_labels: 4-Savali
+    survey_variables: subnatid1
+    gmd_subnatid1: WSM_2011_NSO1_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: rid
+    geo_id: '4'
+    geo_nvar: r_name
+    geo_name: Savaii
+    source_row: 18535
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

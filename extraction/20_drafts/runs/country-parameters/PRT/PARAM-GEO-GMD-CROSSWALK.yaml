@@ -1,0 +1,346 @@
+country_id: CTY-PRT
+country_name: PRT
+iso3: PRT
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: 2021
+  selectors: null
+  value:
+  - survey_labels: 1-PT11
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT11
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT11
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT11
+    geo_nvar: NAME_LATN
+    geo_name: Norte
+    source_row: 12589
+  - survey_labels: 2-PT15
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT15
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT15
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT15
+    geo_nvar: NAME_LATN
+    geo_name: Algarve
+    source_row: 12590
+  - survey_labels: 3-PT16
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT16
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT16
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT16
+    geo_nvar: NAME_LATN
+    geo_name: Centro (PT)
+    source_row: 12591
+  - survey_labels: 4-PT17
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT17
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT17
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT17
+    geo_nvar: NAME_LATN
+    geo_name: "\xC1rea Metropolitana de Lisboa"
+    source_row: 12592
+  - survey_labels: 5-PT18
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT18
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT18
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT18
+    geo_nvar: NAME_LATN
+    geo_name: Alentejo
+    source_row: 12593
+  - survey_labels: 6-PT20
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT20
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT20
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT20
+    geo_nvar: NAME_LATN
+    geo_name: "Regi\xE3o Aut\xF3noma dos A\xE7ores"
+    source_row: 12594
+  - survey_labels: 7-PT30
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2021_NUTS2_PT30
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2021_NUTS2_PT30
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT30
+    geo_nvar: NAME_LATN
+    geo_name: "Regi\xE3o Aut\xF3noma da Madeira"
+    source_row: 12595
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2024
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1-PT11
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT11
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT11
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT11
+    geo_nvar: NAME_LATN
+    geo_name: Norte
+    source_row: 12631
+  - survey_labels: 2-PT15
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT15
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT15
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT15
+    geo_nvar: NAME_LATN
+    geo_name: Algarve
+    source_row: 12632
+  - survey_labels: 3-PT19
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT19
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT19
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT19
+    geo_nvar: NAME_LATN
+    geo_name: Centro (PT)
+    source_row: 12633
+  - survey_labels: 4-PT1A
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT1A
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT1A
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT1A
+    geo_nvar: NAME_LATN
+    geo_name: "\xC1rea Metropolitana de Lisboa"
+    source_row: 12634
+  - survey_labels: 5-PT1B
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT1B
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT1B
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT1B
+    geo_nvar: NAME_LATN
+    geo_name: "Pen\xEDnsula de Set\xFAbal"
+    source_row: 12635
+  - survey_labels: 6-PT1C
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT1C
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT1C
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT1C
+    geo_nvar: NAME_LATN
+    geo_name: Alentejo
+    source_row: 12636
+  - survey_labels: 7-PT1D
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT1D
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT1D
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT1D
+    geo_nvar: NAME_LATN
+    geo_name: Oeste e Vale do Tejo
+    source_row: 12637
+  - survey_labels: 8-PT20
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT20
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT20
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT20
+    geo_nvar: NAME_LATN
+    geo_name: "Regi\xE3o Aut\xF3noma dos A\xE7ores"
+    source_row: 12638
+  - survey_labels: 9-PT30
+    survey_variables: subnatid
+    gmd_subnatid1: PRT_2024_NUTS2_PT30
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: PRT_2024_NUTS2_PT30
+    geo_year: '2024'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: PT30
+    geo_nvar: NAME_LATN
+    geo_name: "Regi\xE3o Aut\xF3noma da Madeira"
+    source_row: 12639
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,378 @@
+country_id: CTY-PRY
+country_name: PRY
+iso3: PRY
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 0 - Asuncion
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAUL2_23849
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAUL2_23849
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '23849'
+    geo_nvar: ADM2_NAME
+    geo_name: Asuncion
+    source_row: 12640
+  - survey_labels: 10 - Alto Parana | 4 - Alto Parana
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAUL1_2312
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2312
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2312'
+    geo_nvar: ADM1_NAME
+    geo_name: Alto Parana
+    source_row: 12641
+  - survey_labels: 11 - Central | 5 - Central
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAULx_2318
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAULx_2318
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '2318'
+    geo_nvar: ADM1_NAME
+    geo_name: Central
+    source_row: 12642
+  - survey_labels: 1 - San Pedro | 2 - San Pedro
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAUL1_2327
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2327
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2327'
+    geo_nvar: ADM1_NAME
+    geo_name: San Pedro
+    source_row: 12643
+  - survey_labels: 20 - Resto
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAULx_20
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAULx_20
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '20'
+    geo_nvar: ADM1_NAME
+    geo_name: Alto Paraguay & Amambay & Boqueron & Canindeyu & Concepcion & Cordillera
+      & Guaira & Misiones & Neembucu & Paraguari & Presidente Hayes
+    source_row: 12644
+  - survey_labels: 2 - Caaguazu | 5 - Caaguazu
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAUL1_2315
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2315
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2315'
+    geo_nvar: ADM1_NAME
+    geo_name: Caaguazu
+    source_row: 12645
+  - survey_labels: 6 - Caazapa
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAUL1_2316
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2316
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2316'
+    geo_nvar: ADM1_NAME
+    geo_name: Caazapa
+    source_row: 12646
+  - survey_labels: 3 - Itapua | 7 - Itapua
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: PRY_2015_GAUL1_2322
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2322
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2322'
+    geo_nvar: ADM1_NAME
+    geo_name: Itapua
+    source_row: 12647
+  - survey_labels: 6 - Resto del pais
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAULx_6
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '6'
+    geo_nvar: ADM1_NAME
+    geo_name: Alto Paraguay & Amambay & Boqueron & Canindeyu & Concepcion & Cordillera
+      & Guaira & Misiones & Neembucu & Paraguari & Presidente Hayes & Caazapa
+    source_row: 12654
+  - survey_labels: 1 - Concepcion
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2319
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2319'
+    geo_nvar: ADM1_NAME
+    geo_name: Concepcion
+    source_row: 12859
+  - survey_labels: 12 - Neembucu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2324
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2324'
+    geo_nvar: ADM1_NAME
+    geo_name: Neembucu
+    source_row: 12862
+  - survey_labels: 13 - Amambay
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2313
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2313'
+    geo_nvar: ADM1_NAME
+    geo_name: Amambay
+    source_row: 12863
+  - survey_labels: 14 - Canindeyu
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2317
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2317'
+    geo_nvar: ADM1_NAME
+    geo_name: Canindeyu
+    source_row: 12864
+  - survey_labels: 15 - Presidente Hayes
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2326
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2326'
+    geo_nvar: ADM1_NAME
+    geo_name: Presidente Hayes
+    source_row: 12865
+  - survey_labels: 3 - Cordillera
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2320
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2320'
+    geo_nvar: ADM1_NAME
+    geo_name: Cordillera
+    source_row: 12867
+  - survey_labels: 4 - Guaira
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2321
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2321'
+    geo_nvar: ADM1_NAME
+    geo_name: Guaira
+    source_row: 12868
+  - survey_labels: 8 - Misiones
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2323
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2323'
+    geo_nvar: ADM1_NAME
+    geo_name: Misiones
+    source_row: 12872
+  - survey_labels: 9 - Paraguari
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: PRY_2015_GAUL1_2325
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2325'
+    geo_nvar: ADM1_NAME
+    geo_name: Paraguari
+    source_row: 12873
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

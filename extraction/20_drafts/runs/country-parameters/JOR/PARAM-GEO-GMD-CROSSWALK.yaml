@@ -1,0 +1,96 @@
+country_id: CTY-JOR
+country_name: JOR
+iso3: JOR
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Amman
+    survey_variables: subnatid
+    gmd_subnatid1: JOR_2015_GAUL1_1705
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: JOR_2015_GAUL1_1705
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1705'
+    geo_nvar: ADM1_NAME
+    geo_name: Amman
+    source_row: 8109
+  - survey_labels: '2 - Middle: Balqa, Zarqa, Madaba'
+    survey_variables: subnatid
+    gmd_subnatid1: JOR_2015_GAULx_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: JOR_2015_GAULx_2
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '2'
+    geo_nvar: ADM1_NAME
+    geo_name: Balqa & Zarqa & Madaba
+    source_row: 8110
+  - survey_labels: '3 - North: Irbid, Mafraq, Jarash, Ajloun'
+    survey_variables: subnatid
+    gmd_subnatid1: JOR_2015_GAULx_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: JOR_2015_GAULx_3
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '3'
+    geo_nvar: ADM1_NAME
+    geo_name: Irbid & Mafraq & Jarash & Ajloon
+    source_row: 8111
+  - survey_labels: '4 - South: Karak, Tafilen, Ma''an, Aqaba'
+    survey_variables: subnatid
+    gmd_subnatid1: JOR_2015_GAULx_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: JOR_2015_GAULx_4
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '4'
+    geo_nvar: ADM1_NAME
+    geo_name: Karak & Tafiela & Ma'an & Aqaba
+    source_row: 8112
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

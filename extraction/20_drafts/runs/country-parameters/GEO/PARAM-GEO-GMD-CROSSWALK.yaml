@@ -1,0 +1,256 @@
+country_id: CTY-GEO
+country_name: GEO
+iso3: GEO
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 0 - Kakheti | 0-Kakheti
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1300
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1300
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1300'
+    geo_nvar: ADM1_NAME
+    geo_name: Kakheti
+    source_row: 5414
+  - survey_labels: 1 - Tbilisi | 1-Tbilisi
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1307
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1307
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1307'
+    geo_nvar: ADM1_NAME
+    geo_name: Tbilisi
+    source_row: 5415
+  - survey_labels: 10 - Imereti, Racha-Lechkhumi and Kvemo Svan
+    survey_variables: subnatid
+    gmd_subnatid1: GEO_2015_GAULx_10
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAULx_10
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '10'
+    geo_nvar: ADM1_NAME
+    geo_name: Imerati & Racha-Lechkhumi and Kvemo (lower) Svaneti
+    source_row: 5416
+  - survey_labels: 2 - Shida Kartli | 2-Shida Kartli
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1306
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1306
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1306'
+    geo_nvar: ADM1_NAME
+    geo_name: Shida Kartli
+    source_row: 5417
+  - survey_labels: 3 - Kvemo Kartli | 3-Kvemo Kartli
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1301
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1301
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1301'
+    geo_nvar: ADM1_NAME
+    geo_name: Kvemo Kartli
+    source_row: 5418
+  - survey_labels: 5 - Samtskhe-Javakheti | 5-Samtskhe-Javakheti
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1305
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1305
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1305'
+    geo_nvar: ADM1_NAME
+    geo_name: Samtskhe-Javakheti
+    source_row: 5419
+  - survey_labels: 7 - Adjara A.R.
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1297
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1297
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1297'
+    geo_nvar: ADM1_NAME
+    geo_name: Adjara Aut. Rep.
+    source_row: 5420
+  - survey_labels: 8 - Guria | 8-Guria
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1298
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1298
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1298'
+    geo_nvar: ADM1_NAME
+    geo_name: Guria
+    source_row: 5421
+  - survey_labels: 9 - Samegrelo-Zemo Svaneti
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1304
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1304
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1304'
+    geo_nvar: ADM1_NAME
+    geo_name: Samergelo and Zemo (upper) Svaneti
+    source_row: 5422
+  - survey_labels: 11 - Mtskheta-Mtianeti | 11-Mtskheta-Mtianeti
+    survey_variables: subnatid | subnatidsurvey
+    gmd_subnatid1: GEO_2015_GAUL1_1302
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1302
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1302'
+    geo_nvar: ADM1_NAME
+    geo_name: Mtskheta-Mtianeti
+    source_row: 5426
+  - survey_labels: 10 - Imereti
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1299
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1299'
+    geo_nvar: ADM1_NAME
+    geo_name: Imereti
+    source_row: 5625
+  - survey_labels: 13 - Racha-Lechkhumi and Kvemo Svaneti
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: GEO_2015_GAUL1_1303
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1303'
+    geo_nvar: ADM1_NAME
+    geo_name: Racha-Lechkhumi and Kvemo (lower) Svaneti
+    source_row: 5627
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

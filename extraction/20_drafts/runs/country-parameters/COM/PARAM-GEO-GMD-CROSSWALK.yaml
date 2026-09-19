@@ -1,0 +1,110 @@
+country_id: CTY-COM
+country_name: COM
+iso3: COM
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Mwali | 4 - Mwali
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: COM_2015_GAUL1_968
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: COM_2015_GAUL1_968
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '968'
+    geo_nvar: ADM1_NAME
+    geo_name: Moheli
+    source_row: 3064
+  - survey_labels: 2 - Ndzouani | 3 - Ndzouani | 3 - Ndzuwani
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: COM_2015_GAUL1_967
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: COM_2015_GAUL1_967
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '967'
+    geo_nvar: ADM1_NAME
+    geo_name: Anjouan
+    source_row: 3065
+  - survey_labels: 1 - Moroni | 3 - Ngazidja
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: COM_2015_GAUL1_969
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: COM_2015_GAUL1_969
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '969'
+    geo_nvar: ADM1_NAME
+    geo_name: Ngazidja
+    source_row: 3066
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors:
+    geo_year: unknown
+  value:
+  - survey_labels: 11 - FOMBONI | 12 - NIOUMACHOUA | 13 - DJANDO | 21 - MUTSAMUDU
+      | 22 - OUANI | 23 - DOMONI | 24 - MREMANI | 25 - SIMA | 26 - MOYA | 31 - MORONI-BAMBAO
+      | 32 - HAMBOU | 33 - MBADJINI OUEST | 34 - MBADJINI EST | 35 - OICHILI-DIMANI
+      | 36 - HAMAHAMET-MBOINKOU | 37 - MITSAMIOULI | 38 - MBOUDE | 39 - ITSANDRA-HAMANVOU
+    survey_variables: subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 0
+    gmd_subnatidsurvey: ''
+    geo_year: ''
+    geo_source: ''
+    geo_level: ''
+    geo_idvar: ''
+    geo_id: ''
+    geo_nvar: ''
+    geo_name: ''
+    source_row: 3073
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

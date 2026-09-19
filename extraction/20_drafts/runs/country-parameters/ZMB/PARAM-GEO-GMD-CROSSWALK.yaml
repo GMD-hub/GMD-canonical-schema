@@ -1,0 +1,257 @@
+country_id: CTY-ZMB
+country_name: ZMB
+iso3: ZMB
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Central | 1-Central
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3426
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3426
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3426'
+    geo_nvar: ADM1_NAME
+    geo_name: Central
+    source_row: 18722
+  - survey_labels: 2 - Copperbelt | 2-Copperbelt
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3427
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3427
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3427'
+    geo_nvar: ADM1_NAME
+    geo_name: Copperbelt
+    source_row: 18723
+  - survey_labels: 3 - Eastern | 3-Eastern
+    survey_variables: subnatid
+    gmd_subnatid1: ZMB_2015_GAUL1_3428
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3428
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3428'
+    geo_nvar: ADM1_NAME
+    geo_name: Eastern
+    source_row: 18724
+  - survey_labels: 4 - Luapula | 4-Luapula
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3429
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3429
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3429'
+    geo_nvar: ADM1_NAME
+    geo_name: Luapula
+    source_row: 18725
+  - survey_labels: 5 - Lusaka | 5-Lusaka
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3430
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3430
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3430'
+    geo_nvar: ADM1_NAME
+    geo_name: Lusaka
+    source_row: 18726
+  - survey_labels: 6 - Northern | 6-Northern
+    survey_variables: subnatid
+    gmd_subnatid1: ZMB_2015_GAUL1_3432
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3432
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3432'
+    geo_nvar: ADM1_NAME
+    geo_name: Northern
+    source_row: 18727
+  - survey_labels: 7 - North Western | 7-North Western | 8 - North Western | 8-North
+      Western
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3431
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3431
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3431'
+    geo_nvar: ADM1_NAME
+    geo_name: North-Western
+    source_row: 18728
+  - survey_labels: 8 - Southern | 8-Southern | 9 - Southern | 9-Southern
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3433
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3433
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3433'
+    geo_nvar: ADM1_NAME
+    geo_name: Southern
+    source_row: 18729
+  - survey_labels: 10 - Western | 10-Western | 9 - Western | 9-Western
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAUL1_3434
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAUL1_3434
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3434'
+    geo_nvar: ADM1_NAME
+    geo_name: Western
+    source_row: 18730
+  - survey_labels: 3-Eastern
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAULx_3428
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAULx_3428
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '3428'
+    geo_nvar: ADM1_NAME
+    geo_name: Eastern
+    source_row: 18752
+  - survey_labels: 6-Muchinga
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAULx_6
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAULx_6
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '6'
+    geo_nvar: ADM2_NAME
+    geo_name: Chama & ChinsaliIsoka & Mpika & Nakonde
+    source_row: 18755
+  - survey_labels: 7-Northern
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: ZMB_2015_GAULx_3432
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ZMB_2015_GAULx_3432
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: x
+    geo_idvar: ADM1_CODE
+    geo_id: '3432'
+    geo_nvar: ADM1_NAME
+    geo_name: Northern
+    source_row: 18756
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

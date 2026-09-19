@@ -1,0 +1,276 @@
+country_id: CTY-SLE
+country_name: SLE
+iso3: SLE
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 11 - Kailahun | 11-Kailahun
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25406
+    gmd_subnatid2: SLE_2015_GAUL2_25406
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25406
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25406'
+    geo_nvar: ADM2_NAME
+    geo_name: Kailahun
+    source_row: 14607
+  - survey_labels: 12 - Kenema | 12-Kenema
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25407
+    gmd_subnatid2: SLE_2015_GAUL2_25407
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25407
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25407'
+    geo_nvar: ADM2_NAME
+    geo_name: Kenema
+    source_row: 14608
+  - survey_labels: 13 - Kono | 13-Kono
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25408
+    gmd_subnatid2: SLE_2015_GAUL2_25408
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25408
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25408'
+    geo_nvar: ADM2_NAME
+    geo_name: Kono
+    source_row: 14609
+  - survey_labels: "21 - Bombali | 21\u2013Bombali/32\u2013Karene"
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25409
+    gmd_subnatid2: SLE_2015_GAUL2_25409
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25409
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25409'
+    geo_nvar: ADM2_NAME
+    geo_name: Bombali
+    source_row: 14610
+  - survey_labels: 22 - Kambia | 31-Kambia
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25410
+    gmd_subnatid2: SLE_2015_GAUL2_25410
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25410
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25410'
+    geo_nvar: ADM2_NAME
+    geo_name: Kambia
+    source_row: 14611
+  - survey_labels: "22\u2013Falaba/23\u2013Koinadugu | 23 - Koinadugu"
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25411
+    gmd_subnatid2: SLE_2015_GAUL2_25411
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25411
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25411'
+    geo_nvar: ADM2_NAME
+    geo_name: Koinadugu
+    source_row: 14612
+  - survey_labels: 24 - Port Loko | 33-Port Loko
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25412
+    gmd_subnatid2: SLE_2015_GAUL2_25412
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25412
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25412'
+    geo_nvar: ADM2_NAME
+    geo_name: Port Loko
+    source_row: 14613
+  - survey_labels: 24-Tonkolili | 25 - Tonkilili
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25413
+    gmd_subnatid2: SLE_2015_GAUL2_25413
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25413
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25413'
+    geo_nvar: ADM2_NAME
+    geo_name: Tonkolili
+    source_row: 14614
+  - survey_labels: 31 - Bo | 41-Bo
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25414
+    gmd_subnatid2: SLE_2015_GAUL2_25414
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25414
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25414'
+    geo_nvar: ADM2_NAME
+    geo_name: Bo
+    source_row: 14615
+  - survey_labels: 32 - Bonthe | 42-Bonthe
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25415
+    gmd_subnatid2: SLE_2015_GAUL2_25415
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25415
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25415'
+    geo_nvar: ADM2_NAME
+    geo_name: Bonthe
+    source_row: 14616
+  - survey_labels: 33 - Moyamba | 43-Moyamba
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25416
+    gmd_subnatid2: SLE_2015_GAUL2_25416
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25416
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25416'
+    geo_nvar: ADM2_NAME
+    geo_name: Moyamba
+    source_row: 14617
+  - survey_labels: 34 - Pujehun | 44-Pujehun
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL2_25417
+    gmd_subnatid2: SLE_2015_GAUL2_25417
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL2_25417
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '2'
+    geo_idvar: ADM2_CODE
+    geo_id: '25417'
+    geo_nvar: ADM2_NAME
+    geo_name: Pujehun
+    source_row: 14618
+  - survey_labels: 51-Western Area
+    survey_variables: subnatid | subnatid2
+    gmd_subnatid1: SLE_2015_GAUL1_2657
+    gmd_subnatid2: SLE_2015_GAUL1_2657
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: SLE_2015_GAUL1_2657
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2657'
+    geo_nvar: ADM1_NAME
+    geo_name: Western Area
+    source_row: 14619
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

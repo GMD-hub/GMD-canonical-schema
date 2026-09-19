@@ -1,0 +1,197 @@
+country_id: CTY-MKD
+country_name: MKD
+iso3: MKD
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 \u2013 Skopje | 1-Skopje | 8 \u2013 Skopje"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK008
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK008
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK008
+    geo_nvar: NAME_LATN
+    geo_name: Skopski
+    source_row: 10064
+  - survey_labels: 2-Other
+    survey_variables: subnatid
+    gmd_subnatid1: MKD_2021_NUTSx_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTSx_2
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '2'
+    geo_nvar: NAME_LATN
+    geo_name: "Isto\u010Den & Jugoisto\u010Den & Jugozapaden & Pelagoniski & Polo\u0161\
+      ki & Severoisto\u010Den & Vardarski"
+    source_row: 10065
+  - survey_labels: "1 \u2013 Vardar"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK001
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK001
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK001
+    geo_nvar: NAME_LATN
+    geo_name: Vardarski
+    source_row: 10067
+  - survey_labels: "2 \u2013 Eastern"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK002
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK002
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK002
+    geo_nvar: NAME_LATN
+    geo_name: "Isto\u010Den"
+    source_row: 10068
+  - survey_labels: "3 \u2013 Southwestern"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK003
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK003
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK003
+    geo_nvar: NAME_LATN
+    geo_name: Jugozapaden
+    source_row: 10069
+  - survey_labels: "4 \u2013 Southeastern"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK004
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK004
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK004
+    geo_nvar: NAME_LATN
+    geo_name: "Jugoisto\u010Den"
+    source_row: 10070
+  - survey_labels: "5 \u2013 Pelagonia"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK005
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK005
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK005
+    geo_nvar: NAME_LATN
+    geo_name: Pelagoniski
+    source_row: 10071
+  - survey_labels: "6 \u2013 Polog"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK006
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK006
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK006
+    geo_nvar: NAME_LATN
+    geo_name: "Polo\u0161ki"
+    source_row: 10072
+  - survey_labels: "7 \u2013 Northeastern"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: MKD_2021_NUTS3_MK007
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: MKD_2021_NUTS3_MK007
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: MK007
+    geo_nvar: NAME_LATN
+    geo_name: "Severoisto\u010Den"
+    source_row: 10073
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

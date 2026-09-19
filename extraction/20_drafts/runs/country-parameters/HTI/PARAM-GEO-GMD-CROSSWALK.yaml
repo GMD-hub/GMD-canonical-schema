@@ -1,0 +1,216 @@
+country_id: CTY-HTI
+country_name: HTI
+iso3: HTI
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1 - Artibonite
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1409
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1409'
+    geo_nvar: ADM1_NAME
+    geo_name: Artibonite
+    source_row: 6120
+  - survey_labels: 10 - Sud-Est
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1417
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1417'
+    geo_nvar: ADM1_NAME
+    geo_name: Sud Est
+    source_row: 6121
+  - survey_labels: 2 - Centre
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1410
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1410'
+    geo_nvar: ADM1_NAME
+    geo_name: Centre
+    source_row: 6122
+  - survey_labels: 3 - Grand'Anse
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_72911
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '72911'
+    geo_nvar: ADM1_NAME
+    geo_name: Grande Anse
+    source_row: 6123
+  - survey_labels: 4 - Nippes
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_72912
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '72912'
+    geo_nvar: ADM1_NAME
+    geo_name: Nippes
+    source_row: 6124
+  - survey_labels: 5 - Nord
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1412
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1412'
+    geo_nvar: ADM1_NAME
+    geo_name: Nord
+    source_row: 6125
+  - survey_labels: 6 - Nord-Est
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1413
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1413'
+    geo_nvar: ADM1_NAME
+    geo_name: Nord Est
+    source_row: 6126
+  - survey_labels: 7 - Nord-Ouest
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1414
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1414'
+    geo_nvar: ADM1_NAME
+    geo_name: Nord Ouest
+    source_row: 6127
+  - survey_labels: 8 - Ouest
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1415
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1415'
+    geo_nvar: ADM1_NAME
+    geo_name: Ouest
+    source_row: 6128
+  - survey_labels: 9 - Sud
+    survey_variables: subnatid2
+    gmd_subnatid1: ''
+    gmd_subnatid2: HTI_2015_GAUL1_1416
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '1416'
+    geo_nvar: ADM1_NAME
+    geo_name: Sud
+    source_row: 6129
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

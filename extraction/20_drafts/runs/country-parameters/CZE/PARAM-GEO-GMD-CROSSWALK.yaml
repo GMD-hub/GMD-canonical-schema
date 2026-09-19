@@ -1,0 +1,176 @@
+country_id: CTY-CZE
+country_name: CZE
+iso3: CZE
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: 1-CZ01
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ01
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ01
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ01
+    geo_nvar: NAME_LATN
+    geo_name: Praha
+    source_row: 3327
+  - survey_labels: 2-CZ02
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ02
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ02
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ02
+    geo_nvar: NAME_LATN
+    geo_name: "St\u0159edn\xED \u010Cechy"
+    source_row: 3328
+  - survey_labels: 3-CZ03
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ03
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ03
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ03
+    geo_nvar: NAME_LATN
+    geo_name: "Jihoz\xE1pad"
+    source_row: 3329
+  - survey_labels: 4-CZ04
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ04
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ04
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ04
+    geo_nvar: NAME_LATN
+    geo_name: "Severoz\xE1pad"
+    source_row: 3330
+  - survey_labels: 5-CZ05
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ05
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ05
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ05
+    geo_nvar: NAME_LATN
+    geo_name: "Severov\xFDchod"
+    source_row: 3331
+  - survey_labels: 6-CZ06
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ06
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ06
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ06
+    geo_nvar: NAME_LATN
+    geo_name: "Jihov\xFDchod"
+    source_row: 3332
+  - survey_labels: 7-CZ07
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ07
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ07
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ07
+    geo_nvar: NAME_LATN
+    geo_name: "St\u0159edn\xED Morava"
+    source_row: 3333
+  - survey_labels: 8-CZ08
+    survey_variables: subnatid
+    gmd_subnatid1: CZE_2021_NUTS2_CZ08
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CZE_2021_NUTS2_CZ08
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: CZ08
+    geo_nvar: NAME_LATN
+    geo_name: Moravskoslezsko
+    source_row: 3334
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

@@ -1,0 +1,260 @@
+country_id: CTY-BWA
+country_name: BWA
+iso3: BWA
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2011
+  effective_to: null
+  selectors: null
+  value:
+  - survey_labels: "1 - Gaborone | 1 \u2013 Gaborone"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BWA_2011_UN2_BW0101
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UN2_BW0101
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: '2'
+    geo_idvar: ADM2_PCODE
+    geo_id: BW0101
+    geo_nvar: ADM2_EN
+    geo_name: GABORONE
+    source_row: 1983
+  - survey_labels: "2 - Francistown | 2 \u2013 Francistown"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: BWA_2011_UN2_BW0201
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UN2_BW0201
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: '2'
+    geo_idvar: ADM2_PCODE
+    geo_id: BW0201
+    geo_nvar: ADM2_EN
+    geo_name: FRANCISTOWN
+    source_row: 1984
+  - survey_labels: 3 - Other cities & towns
+    survey_variables: subnatid
+    gmd_subnatid1: BWA_2011_UNx_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UNx_3
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '3'
+    geo_nvar: ADM2_EN
+    geo_name: "LOBATSE & SELIBE\_PHIKWE & ORAPA & JWANENG & SOWA\_TOWN"
+    source_row: 1985
+  - survey_labels: 4 - Rural South-East
+    survey_variables: subnatid
+    gmd_subnatid1: BWA_2011_UNx_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UNx_4
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '4'
+    geo_nvar: ADM2_EN
+    geo_name: "SOUTHERN & BAROLONG & SOUTH\_EAST & KWENENG\_EAST & KGATLENG"
+    source_row: 1986
+  - survey_labels: 5 - Rural North-East
+    survey_variables: subnatid
+    gmd_subnatid1: BWA_2011_UNx_5
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UNx_5
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '5'
+    geo_nvar: ADM2_EN
+    geo_name: "SEROWE\_PALAPYE & MAHALAPYE & BOBONONG & BOTETI & TUTUME & NORTH\_\
+      EAST"
+    source_row: 1987
+  - survey_labels: 6 - Rural North-West
+    survey_variables: subnatid
+    gmd_subnatid1: BWA_2011_UNx_6
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UNx_6
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '6'
+    geo_nvar: ADM2_EN
+    geo_name: "NGAMILAND\_EAST & NGAMILAND\_WEST & NGAMILAND\_DELTA & CHOBE"
+    source_row: 1988
+  - survey_labels: 7 - Rural South-West
+    survey_variables: subnatid
+    gmd_subnatid1: BWA_2011_UNx_7
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BWA_2011_UNx_7
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: sample
+    geo_id: '7'
+    geo_nvar: ADM2_EN
+    geo_name: "NGWAKETSE\_WEST & KWENENG\_WEST & GHANZI & CENTRAL\_KGALAGADI\_GAME\_\
+      RESERVE & KGALAGADI\_SOUTH & KGALAGADI\_NORTH"
+    source_row: 1989
+  - survey_labels: "3 \u2013 Other Towns"
+    survey_variables: subnatid1
+    gmd_subnatid1: BWA_2011_UNx_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: ADM2_PCODE
+    geo_id: '3'
+    geo_nvar: ADM2_EN
+    geo_name: "LOBATSE & SELIBE\_PHIKWE & ORAPA & JWANENG & SOWA\_TOWN"
+    source_row: 1999
+  - survey_labels: "4 \u2013 South East"
+    survey_variables: subnatid1
+    gmd_subnatid1: BWA_2011_UNx_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: ADM2_PCODE
+    geo_id: '4'
+    geo_nvar: ADM2_EN
+    geo_name: "SOUTHERN & BAROLONG & SOUTH\_EAST & KWENENG\_EAST & KGATLENG"
+    source_row: 2000
+  - survey_labels: "5 \u2013 North East"
+    survey_variables: subnatid1
+    gmd_subnatid1: BWA_2011_UNx_5
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: ADM2_PCODE
+    geo_id: '5'
+    geo_nvar: ADM2_EN
+    geo_name: "SEROWE\_PALAPYE & MAHALAPYE & BOBONONG & BOTETI & TUTUME & NORTH\_\
+      EAST"
+    source_row: 2001
+  - survey_labels: "6 \u2013 North West"
+    survey_variables: subnatid1
+    gmd_subnatid1: BWA_2011_UNx_6
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: ADM2_PCODE
+    geo_id: '6'
+    geo_nvar: ADM2_EN
+    geo_name: "NGAMILAND\_EAST & NGAMILAND\_WEST & NGAMILAND\_DELTA & CHOBE"
+    source_row: 2002
+  - survey_labels: "7 \u2013 South West"
+    survey_variables: subnatid1
+    gmd_subnatid1: BWA_2011_UNx_7
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2011'
+    geo_source: UN
+    geo_level: x
+    geo_idvar: ADM2_PCODE
+    geo_id: '7'
+    geo_nvar: ADM2_EN
+    geo_name: "NGWAKETSE\_WEST & KWENENG\_WEST & GHANZI & CENTRAL\_KGALAGADI\_GAME\_\
+      RESERVE & KGALAGADI\_SOUTH & KGALAGADI\_NORTH"
+    source_row: 2003
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
