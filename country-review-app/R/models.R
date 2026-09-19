@@ -66,8 +66,19 @@ build_artifact_id <- function(path, artifact_type, iso3) {
   sprintf("%s_CTY-%s", stem, iso3)
 }
 
+raw_to_hex <- function(raw_value) {
+  paste(sprintf("%02x", as.integer(raw_value)), collapse = "")
+}
+
 sha256_text <- function(text) {
-  raw_to_hex(openssl::sha256(charToRaw(enc2utf8(text %||% ""))))
+  value <- enc2utf8(text %||% "")
+  if (requireNamespace("openssl", quietly = TRUE)) {
+    return(raw_to_hex(openssl::sha256(charToRaw(value))))
+  }
+  if (requireNamespace("digest", quietly = TRUE)) {
+    return(digest::digest(value, algo = "sha256", serialize = FALSE))
+  }
+  stop("sha256 hashing requires either the 'openssl' or 'digest' package")
 }
 
 new_review_event <- function(action, from_state, to_state, actor, role, note = NULL) {
