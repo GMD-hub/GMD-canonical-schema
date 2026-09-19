@@ -920,6 +920,31 @@
 			"type": "shell",
 			"command": "$root='extraction/20_drafts/runs/country-parameters'; $cut=(Get-Date).AddMinutes(-20); $recent=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.LastWriteTime -gt $cut }; $geo=($recent | Where-Object { $_.Name -eq 'PARAM-GEO-GMD-CROSSWALK.yaml' }).Count; $edu=($recent | Where-Object { $_.Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml' }).Count; $water=($recent | Where-Object { $_.Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml' }).Count; $san=($recent | Where-Object { $_.Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml' }).Count; Write-Output ('RECENT_TOTAL=' + $recent.Count); Write-Output ('RECENT_GEO=' + $geo); Write-Output ('RECENT_EDU=' + $edu); Write-Output ('RECENT_WATER=' + $water); Write-Output ('RECENT_SAN=' + $san)",
 			"isBackground": false
+		},
+		{
+			"label": "country-parameter-snapshot-counts",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $files=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.FullName -notmatch '\\\\contracts\\\\' }; $iso=($files | ForEach-Object { Split-Path -Leaf (Split-Path -Parent $_.FullName) } | Sort-Object -Unique).Count; $edu=($files | Where-Object { $_.Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml' }).Count; $ws=($files | Where-Object { $_.Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml' }).Count; $ww=($files | Where-Object { $_.Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml' }).Count; $geo=($files | Where-Object { $_.Name -eq 'PARAM-GEO-GMD-CROSSWALK.yaml' }).Count; Write-Output ('TOTAL=' + $files.Count); Write-Output ('ISO=' + $iso); Write-Output ('EDU=' + $edu); Write-Output ('WASH_SAN=' + $ws); Write-Output ('WASH_WATER=' + $ww); Write-Output ('GEO=' + $geo)",
+			"isBackground": false
+		},
+		{
+			"label": "add-geo-column-to-checklist",
+			"type": "shell",
+			"command": "$path='extraction/20_drafts/runs/country-parameters/PROMOTION_CHECKLIST_2026-09-18.md'; $lines=Get-Content $path; $out=@(); foreach($line in $lines){ if($line -eq '| ISO3 | EDU | WASH_SAN | WASH_WATER | Reviewer | Decision | Notes |'){ $out += '| ISO3 | EDU | WASH_SAN | WASH_WATER | GEO | Reviewer | Decision | Notes |'; continue }; if($line -eq '|---|---|---|---|---|---|---|---|'){ $out += '|---|---|---|---|---|---|---|---|---|'; continue }; if($line -match '^\\|\\s*([A-Z0-9]{3})\\s*\\|\\s*([^|]*)\\|\\s*([^|]*)\\|\\s*([^|]*)\\|\\s*([^|]*)\\|\\s*([^|]*)\\|\\s*([^|]*)\\|\\s*$'){ $iso=$matches[1].Trim(); $edu=$matches[2].Trim(); $san=$matches[3].Trim(); $wat=$matches[4].Trim(); $rev=$matches[5].Trim(); $dec=$matches[6].Trim(); $notes=$matches[7].Trim(); $geoPath=\"extraction/20_drafts/runs/country-parameters/$iso/PARAM-GEO-GMD-CROSSWALK.yaml\"; $geo = if(Test-Path $geoPath){ 'Y' } else { '' }; $out += \"| $iso | $edu | $san | $wat | $geo | $rev | $dec | $notes |\"; continue }; $out += $line }; Set-Content -Path $path -Value $out -Encoding UTF8",
+			"isBackground": false
+		},
+		{
+			"label": "run-add-geo-column-script",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"extraction/20_drafts/runs/add_geo_column_checklist.ps1"
+			],
+			"isBackground": false
 		}
 	]
 }

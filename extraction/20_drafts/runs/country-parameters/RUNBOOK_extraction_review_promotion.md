@@ -1,6 +1,6 @@
 # Country Parameter Draft Runbook
 
-Date: 2026-09-18
+Date: 2026-09-19
 Branch: feat/country-schema-v0.2
 Scope: Country parameter extraction drafts under extraction/20_drafts/runs/country-parameters/
 
@@ -14,6 +14,7 @@ This runbook defines the operating steps for extraction, review, and promotion o
 - Promotion to country-parameters/countries/<ISO3>/ is human-owned and must follow review approval.
 - Universal schema ownership remains in knowledge/parameters/.
 - For EDU level crosswalk drafts, effective_from defaults to null unless there is explicit era evidence.
+- GEO crosswalk drafts are generated only through GEO pipeline logic and must not be hand-edited in bulk.
 
 ## Step 1: Extraction
 
@@ -23,7 +24,9 @@ Run from repository root.
    - .\\.venv\\Scripts\\Activate.ps1
 2. Inspect available source workbooks
    - .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli inspect
-3. Extract drafts for all discovered inputs
+3. Force full refresh for all domains (ISCED + JMP + GEO)
+   - .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract --force
+4. Incremental rerun (only changed input/schema outputs are rewritten)
    - .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract
 
 Expected extraction behavior in current branch:
@@ -31,6 +34,16 @@ Expected extraction behavior in current branch:
 - Invalid root-level or non-ISO3 draft paths are cleaned/skipped.
 - Empty table extractions are skipped as draft outputs.
 - Stale draft files for empty extractions are removed.
+- Incremental state is stored in extraction/20_drafts/runs/country-parameters/.incremental_state.json.
+- JMP extraction is fault-tolerant per file: a single bad workbook is logged and skipped instead of halting the full run.
+- ISO3 fallback is attempted from JMP filename pattern when workbook identity parsing is incomplete.
+
+### Domain-specific reruns
+
+- GEO only, one country:
+  - .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli geo-example --iso3 <ISO3> --limit 0 --write
+- GEO only, all countries in workbook:
+  - .\\.venv\\Scripts\\python.exe extraction/20_drafts/runs/geo_all_run.py
 
 ## Step 2: Draft Validation
 
@@ -43,6 +56,14 @@ Interpretation:
 
 - ok=true with exit code 0 means no blocking schema errors in draft set.
 - warnings may exist for empty table placeholders and are non-blocking in this draft stage.
+
+### Status artifacts generated during force runs
+
+- extraction/20_drafts/runs/extract_force_all_result.json
+- extraction/20_drafts/runs/geo_all_run_summary.json
+- extraction/20_drafts/runs/check_result.json
+
+If a file is empty due to terminal stream behavior, rerun using a direct Python script that writes JSON from in-process results.
 
 ## Step 3: Human Review
 
@@ -90,3 +111,7 @@ Recommended logical commit order:
 2. Draft output refresh under extraction/20_drafts/runs/country-parameters/
 3. Canonical country promotions under country-parameters/countries/
 4. Validation evidence snapshots such as extraction/20_drafts/runs/check_result.json if intentionally versioned
+
+Recommended additional split when GEO refresh is part of run:
+
+5. GEO draft bulk refresh under extraction/20_drafts/runs/country-parameters/*/PARAM-GEO-GMD-CROSSWALK.yaml

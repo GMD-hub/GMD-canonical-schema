@@ -1,233 +1,144 @@
 # Agent Session Handover - Country Schema v0.2
 
-Date: 2026-09-06
+Date: 2026-09-19
 Branch: feat/country-schema-v0.2
 Repository: GMD-hub/GMD-canonical-schema
 
 ## 1) Executive summary
 
-This workstream upgraded the country parameter architecture to support country-year-variable specific logic in a governed, machine-validatable way, then implemented extraction adapters to transform legacy ISCED/JMP workbooks into schema-ready draft artifacts.
+This phase moved from initial VNM-only extraction to full-country draft generation and operational hardening.
 
-The implementation is split into logical commits:
-- schema/runtime evolution (v0.2)
-- docs alignment
-- extraction pipeline adapters + schema-aware checks
-- generated draft outputs and benchmark documentation outputs
+Major outcomes:
+- GEO parameter contract and extraction flow implemented and scaled to all available GEO countries.
+- GEO output semantics refined (dedupe by geo identity, boundary-aware effective dating, variant support for labels/variables).
+- `subnatid` rule fixed to behave as `subnatid1` (level 1).
+- `extract` gained incremental write behavior and `--force` support.
+- JMP extraction loop hardened so a single bad workbook does not abort the whole run.
+- Review/promotion operational docs were updated to reflect current workflow and counts.
 
-The current branch is ahead of main with these commits:
-- b3e109e chore(country-parameters): stage VNM crosswalk drafts and benchmark outputs
-- 21aca90 feat(extraction): add country input adapters and schema-aware checks
-- f100c07 docs(country-parameters): align schema and extraction structure documentation
-- c535a37 feat(country-parameters): add v0.2 schema for typed crosswalks
+## 2) Key logic decisions implemented
 
-## 2) Problem framing and objective evolution
+### 2.1 GEO variant representation
 
-Initial trajectory:
-- understand repository scope and architecture
-- test whether existing country-parameter schema could handle variable-specific country logic
-- add support for structured country-level rules and complex crosswalks
-- separate JMP benchmark content from executable harmonization canon
-- operationalize extraction from legacy workbook packages
+GEO rows now use plural variant fields:
+- `survey_labels`
+- `survey_variables`
 
-Final objective in this stage:
-- ensure the country schema/structure can represent country + year + variable specific conditions and values
-- support row-based crosswalk tables (education, water, sanitation)
-- enforce deterministic conflict behavior for overlapping exceptions
-- produce extraction-stage draft artifacts from legacy workbook sources
+Variants are merged and deduplicated per geo identity key.
 
-## 3) Core design logic adopted
+### 2.2 GEO identity and dedupe
 
-### 3.1 Table-aware parameter contracts
+Row uniqueness is anchored on geo structure, not literal label text. This prevents duplicate rows caused by spelling/format variants.
 
-Why:
-- mapping-only contracts were too narrow for real education and WASH crosswalks.
+### 2.3 GEO effective dating behavior
 
-Decision:
-- extend universal parameter contract model to allow value_type: table with typed row_schema.
+Records are segmented by boundary signature; the latest segment keeps:
+- `effective_to: null`
 
-Result:
-- country records can now carry list-of-row payloads with strict field-level type validation.
+### 2.4 Level inference rule for `subnatid`
 
-### 3.2 Selector-based disambiguation
+`subnatid` is treated as level 1 (equivalent to `subnatid1`) for representative-level and `gmd_subnatid1` mapping.
 
-Why:
-- year windows alone are insufficient when multiple survey contexts exist in same period.
+### 2.5 Incremental extraction behavior
 
-Decision:
-- add selectors to country parameter records and country exception records.
-- add runtime selector filtering in bundle compiler and compatibility checks in overlap validation.
+`extract` now skips rewrites when input+schema+extractor signature is unchanged.
 
-Result:
-- selective activation by context key-value pairs (for example survey_type, rural_only) without changing universal structure.
+State file:
+- `extraction/20_drafts/runs/country-parameters/.incremental_state.json`
 
-### 3.3 Deterministic overlap policy for exceptions
+Override:
+- `extract --force` forces full rewrite.
 
-Why:
-- overlapping exception windows create ambiguous runtime behavior.
+### 2.6 JMP resilience and language/identity fallback
 
-Decision:
-- overlapping exceptions are structural failures unless both declare:
-  - conflict_policy: higher_precedence_wins
-  - distinct numeric precedence values
+JMP run loop now catches per-file extraction failures and continues.
 
-Result:
-- deterministic selected exception in overlap scenarios; non-deterministic cases fail validation.
+Fallback behavior:
+- if parser does not produce a valid ISO3, infer ISO3 from `JMP_<year>_<ISO3>_...` filename pattern.
 
-### 3.4 Governance split for JMP benchmarks
+Result payload now includes per-file JMP status details for diagnostics.
 
-Why:
-- benchmark material is useful but not always executable harmonization logic.
+## 3) Commits made in this phase
 
-Decision:
-- keep executable country inputs in country parameter drafts.
-- route non-executable benchmark outputs to governance benchmark track.
+Committed logical stages:
+- `a48c33b` feat(country-inputs): add incremental extract and subnatid level-1 mapping
+- `b609afc` chore(geo): add GEO crosswalk drafts for all countries
 
-Result:
-- avoids leaking benchmark-only material into executable canon.
+Note:
+- Large pre-existing WASH/benchmark modifications were intentionally left out of those commits.
 
-## 4) What was implemented
+## 4) Force-run and generation status
 
-### 4.1 Schema/runtime v0.2 (already committed)
+Full-domain forced extraction was executed via:
+- `.\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract --force`
 
-Updated:
-- schema/parameter.py
-- schema/country_parameters.py
-- schema/country_exceptions.py
-- validation/validate_country_layer.py
-- build/compile_bundle.py
+GEO all-country rerun summary:
+- `extraction/20_drafts/runs/geo_all_run_summary.json`
+- `ok: true`, `count: 144`, `success: 144`, `failed: []`
 
-Behavior added:
-- table value type + row schema typing
-- selectors on records
-- deterministic exception overlap enforcement
-- selector-aware bundle selection
+Current draft inventory snapshot (excluding contracts):
+- Total YAML: 623
+- ISO3 folders: 206
+- EDU drafts: 183
+- WASH sanitation drafts: 146
+- WASH water drafts: 150
+- GEO drafts: 144
 
-### 4.2 Extraction rewrite package (legacy adapters)
+## 5) Operational documentation updated
 
-Added package:
-- extraction_pipeline/country_inputs/__init__.py
-- extraction_pipeline/country_inputs/legacy.py
-- extraction_pipeline/country_inputs/transform.py
-- extraction_pipeline/country_inputs/emit.py
-- extraction_pipeline/country_inputs/cli.py
+Updated run/review/promotion docs:
+- `extraction/20_drafts/runs/country-parameters/RUNBOOK_extraction_review_promotion.md`
+- `extraction/20_drafts/runs/country-parameters/PROMOTION_MANIFEST_2026-09-18.md`
+- `extraction/20_drafts/runs/country-parameters/PROMOTION_CHECKLIST_2026-09-18.md`
 
-Key capabilities:
-- inspect source workbooks
-- extract from legacy ISCED/JMP packages
-- transform into new table-row schema
-- emit draft country parameter artifacts
-- emit benchmark draft outputs to governance track
-- run schema-aware check validation against registry + staged draft contracts
+Checklist table now includes GEO column.
 
-### 4.3 Tests and dependency updates
+## 6) Known caveats and troubleshooting notes
 
-Added/updated:
-- tests/extraction/test_country_inputs_transform.py
-- tests/extraction/test_country_inputs_check.py
-- requirements.txt (openpyxl)
+1. Terminal execution context instability
+- Some terminals intermittently parsed shell snippets as Python input, causing misleading syntax errors.
+- Reliable execution path in this phase used VS Code tasks and direct Python script runners.
 
-## 5) Draft artifacts generated in this stage
+2. Locked workbook risk (JMP)
+- Example observed: URY JMP workbook read failure when file lock existed.
+- With current code, such failures are recorded and skipped per file rather than aborting entire run.
 
-Country parameter drafts:
-- extraction/20_drafts/runs/country-parameters/VNM/PARAM-EDU-LEVEL-CROSSWALK.yaml
-- extraction/20_drafts/runs/country-parameters/VNM/PARAM-WASH-WATER-CROSSWALK.yaml
-- extraction/20_drafts/runs/country-parameters/VNM/PARAM-WASH-SANITATION-CROSSWALK.yaml
+3. Output-capture inconsistencies
+- Some `Out-File` captures were observed as empty despite successful execution.
+- Preferred pattern is writing JSON directly from Python runner scripts.
 
-Draft contracts for extraction-stage validation:
-- extraction/20_drafts/runs/country-parameters/contracts/PARAM-EDU-LEVEL-CROSSWALK.yaml
-- extraction/20_drafts/runs/country-parameters/contracts/PARAM-WASH-WATER-CROSSWALK.yaml
-- extraction/20_drafts/runs/country-parameters/contracts/PARAM-WASH-SANITATION-CROSSWALK.yaml
+## 7) Next steps for next agent
 
-Benchmark documentation outputs:
-- governance/benchmarks/VNM_water_benchmark_draft.yaml
-- governance/benchmarks/VNM_sanitation_benchmark_draft.yaml
+1. Validate JMP per-file status artifact quality
+- Confirm `jmp_file_statuses` content completeness in force extract result output.
 
-## 6) Documentation updates completed
+2. Add targeted rerun command for one ISO3/domain
+- For faster recovery on locked files without full rerun.
 
-Updated to reflect new schema/structure and extraction path:
-- README.md
-- country-parameters/README.md
-- wiki/Repository-Map.md
-- wiki/Validation-and-Builds.md
-- wiki/Governance-and-Contributing.md
-- wiki/Country-Parameter-Layer.md
+3. Stabilize run output capture
+- Consolidate on one canonical result-writer script for overnight runs.
 
-## 7) Validation and verification performed
+4. Decide commit strategy for remaining modified benchmark/WASH files
+- Many changes exist outside GEO commits and may need separate review commit(s).
 
-Executed and observed:
-- pytest tests/extraction/test_country_inputs_transform.py tests/extraction/test_country_inputs_check.py -q
-  - Result: pass
-- python -m extraction_pipeline.country_inputs.cli inspect
-  - Result: found ISCED and JMP VNM source files
-- python -m extraction_pipeline.country_inputs.cli extract
-  - Result: generated VNM parameter drafts and benchmark outputs
-- python -m extraction_pipeline.country_inputs.cli check
-  - Result: ok=true for generated draft files
+## 8) Restart checklist
 
-Additional note:
-- openpyxl warning about Data Validation extension was observed during extract; does not block extraction path.
+1. Confirm branch/state
+- `git branch --show-current`
+- `git status --short`
 
-## 8) Lessons learned
+2. Inspect available source workbooks
+- `.\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli inspect`
 
-1. Table contracts are necessary for real country crosswalks.
-- Mapping-only schemas lose important row-level semantics and bilingual/source metadata.
+3. Force full extraction (all domains)
+- `.\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract --force`
 
-2. Determinism must be structural, not advisory.
-- Exception overlaps require enforceable conflict policies, not informational warnings.
+4. Validate drafts
+- `.\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli check`
 
-3. Selectors are essential for practical runtime targeting.
-- Year filtering alone does not capture survey context variants.
+5. GEO-only rerun if needed
+- `.\\.venv\\Scripts\\python.exe extraction/20_drafts/runs/geo_all_run.py`
 
-4. Governance split reduces accidental canon contamination.
-- Keeping benchmark-only outputs outside executable country layer prevents policy drift.
+## 9) Governance reminder
 
-5. Fail-loud checks are critical for staged extraction.
-- Unknown parameter IDs, missing contracts, and invalid row types should fail early.
-
-## 9) Current workspace state and caveats
-
-Current unstaged items at handover time:
-- modified: .github/copilot-instructions.md
-- untracked: extraction/10_source/country-parameters-inputs/
-
-Important caveat:
-- extraction/10_source/country-parameters-inputs includes many transient files from legacy packages (pycache, egg-info, pytest cache).
-- these were intentionally excluded from the logical staged commits.
-
-## 10) Suggested next steps for next agent
-
-1. Curate source-input folder tracking policy.
-- decide which files from extraction/10_source/country-parameters-inputs should be committed (likely only canonical workbook inputs + essential legacy source, excluding runtime cache artifacts).
-
-2. Add ignore/cleanup guardrails for transient artifacts.
-- prevent pycache/pytest cache/egg-info spillover in tracked source-input trees.
-
-3. Expand extraction tests.
-- add multi-country fixture coverage for inspect/extract/check.
-- add negative tests for malformed selector payloads and empty table rows.
-
-4. Continue phase 3.
-- strengthen selector metadata conventions.
-- wire richer schema checks for benchmark segregation and provenance completeness.
-
-## 11) Restart checklist (copy/paste)
-
-1. Confirm branch and status:
-- git branch --show-current
-- git status --short
-
-2. Run focused extraction tests:
-- C:/WBG/Python313/python.exe -m pytest tests/extraction/test_country_inputs_transform.py tests/extraction/test_country_inputs_check.py -q
-
-3. Re-run extraction flow:
-- C:/WBG/Python313/python.exe -m extraction_pipeline.country_inputs.cli inspect
-- C:/WBG/Python313/python.exe -m extraction_pipeline.country_inputs.cli extract
-- C:/WBG/Python313/python.exe -m extraction_pipeline.country_inputs.cli check
-
-4. Review generated drafts before further promotion:
-- extraction/20_drafts/runs/country-parameters/VNM/
-- governance/benchmarks/
-
-## 12) Governance reminder
-
-Per AGENTS.md constraints, agent-authored artifacts remain in staging paths unless explicitly directed otherwise. This handover file is intentionally written under extraction/20_drafts/runs/.
+Per AGENTS.md constraints, agent-authored artifacts should remain in staging paths unless explicitly instructed for promotion. This handover file remains under extraction-stage runtime docs.
