@@ -4,8 +4,8 @@ This file is the master registry of all artifacts in the knowledge base.
 Every artifact must be listed here. The index is the agent's entry point
 to the knowledge base.
 
-Last updated: 2026-08-03
-Schema version: 0.0.1
+Last updated: 2026-09-18
+Schema version: 0.2
 
 ## Variable specifications
 
@@ -30,6 +30,10 @@ Schema version: 0.0.1
 |---|---|---|---|---|---|
 | PARAM-EDU-YEARS-BY-LEVEL | Duration in years of each education level | MOD-DEM | parameters/PARAM-EDU-YEARS-BY-LEVEL.md | draft | 0.1 |
 | PARAM-DEM-MIN-MARRIAGE-AGE | Minimum legal marriage age | MOD-DEM | parameters/PARAM-DEM-MIN-MARRIAGE-AGE.md | draft | 0.1 |
+| PARAM-EDU-LEVEL-CROSSWALK | Country education crosswalk rows | MOD-EDU | parameters/PARAM-EDU-LEVEL-CROSSWALK.md | draft | 0.2 |
+| PARAM-WASH-WATER-CROSSWALK | Country water source crosswalk rows | MOD-DWL | parameters/PARAM-WASH-WATER-CROSSWALK.md | draft | 0.2 |
+| PARAM-WASH-SANITATION-CROSSWALK | Country sanitation source crosswalk rows | MOD-DWL | parameters/PARAM-WASH-SANITATION-CROSSWALK.md | draft | 0.2 |
+| PARAM-GEO-GMD-CROSSWALK | Country geography crosswalk rows | MOD-GEO | parameters/PARAM-GEO-GMD-CROSSWALK.md | draft | 0.2 |
 
 ## Module specifications
 

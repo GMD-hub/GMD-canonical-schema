@@ -486,6 +486,341 @@
 			"type": "shell",
 			"command": "git add .vscode/tasks.json; git commit -m 'chore(vscode): finalize tasks.json updates'; git status --short --untracked-files=no; git rev-parse --short HEAD",
 			"isBackground": false
+		},
+		{
+			"label": "sanity-check-status-end",
+			"type": "shell",
+			"command": "git status --short --untracked-files=no; git status --short | Select-Object -First 20",
+			"isBackground": false
+		},
+		{
+			"label": "final-country-check",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-check-help",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"check",
+				"--help"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "country-check-to-file",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				".\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli check > extraction\\20_drafts\\runs\\check_result.json"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "extract-all-to-file",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				".\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract > extraction\\20_drafts\\runs\\extract_result.json"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "extract-all-direct",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "extract-incremental-pass1",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"\".\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract > extraction\\20_drafts\\runs\\extract_result_pass1.json\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "compile-cli",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"py_compile",
+				"extraction_pipeline/country_inputs/cli.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "extract-pass1-json",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				".\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract > extraction\\20_drafts\\runs\\extract_result_pass1.json"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "extract-to-file-ps",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/extract_result_pass1.json'; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "extract-to-file-ps2",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/extract_result_pass1b.json'; if(Test-Path $out){ Remove-Item $out -Force }; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "extract-capture-all-streams",
+			"type": "shell",
+			"command": "$log='extraction/20_drafts/runs/extract_run.log'; if(Test-Path $log){ Remove-Item $log -Force }; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract *> $log; Write-Output \"LOG=$log\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "import-cli-smoke",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"from extraction_pipeline.country_inputs.cli import run_extract; print('import_ok')"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "import-cli-smoke2",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"from extraction_pipeline.country_inputs.cli import run_extract; print(\"import_ok\")"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "extract-exit-check",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-countries-write",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"import json; from extraction_pipeline.country_inputs.cli import list_geo_iso3s, run_geo_example; iso3s,_=list_geo_iso3s(); results=[run_geo_example(i,0,True) for i in iso3s]; summary={'ok': all(r.get('ok',False) for r in results), 'count': len(results), 'success': sum(1 for r in results if r.get('ok',False)), 'failed': [r for r in results if not r.get('ok',False)]}; print(json.dumps(summary, indent=2, ensure_ascii=False))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-countries-write-2",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"import json; from extraction_pipeline.country_inputs.cli import list_geo_iso3s, run_geo_example; iso3s,_=list_geo_iso3s(); results=[run_geo_example(i,0,True) for i in iso3s]; summary={\"ok\": all(r.get(\"ok\", False) for r in results), \"count\": len(results), \"success\": sum(1 for r in results if r.get(\"ok\", False)), \"failed\": [r for r in results if not r.get(\"ok\", False)]}; print(json.dumps(summary, indent=2, ensure_ascii=False))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-countries-write-file",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"import json; from pathlib import Path; from extraction_pipeline.country_inputs.cli import list_geo_iso3s, run_geo_example; iso3s,_=list_geo_iso3s(); results=[run_geo_example(i,0,True) for i in iso3s]; summary={\"ok\": all(r.get(\"ok\", False) for r in results), \"count\": len(results), \"success\": sum(1 for r in results if r.get(\"ok\", False)), \"failed\": [r for r in results if not r.get(\"ok\", False)]}; out=Path(\"extraction/20_drafts/runs/geo_all_run_summary.json\"); out.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding=\"utf-8\"); print(str(out))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-via-script",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/geo_all_run.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-via-script-2",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/geo_all_run.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-via-cmd",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				".\\.venv\\Scripts\\python.exe extraction\\20_drafts\\runs\\geo_all_run.py & echo EXIT=%ERRORLEVEL%"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-example-yem-after-subnatid-rule",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"geo-example",
+				"--iso3",
+				"YEM",
+				"--limit",
+				"0",
+				"--write"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "geo-all-rerun-after-subnatid-fix",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/geo_all_run.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-status-short",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"status",
+				"--short"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-diff-name-only",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git diff --name-only > extraction\\20_drafts\\runs\\git_changed_files.txt"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-geo-changed-list",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git diff --name-only -- \"extraction/20_drafts/runs/country-parameters/*/PARAM-GEO-GMD-CROSSWALK.yaml\" > extraction\\20_drafts\\runs\\git_geo_changed.txt"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-untracked-list",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git ls-files --others --exclude-standard > extraction\\20_drafts\\runs\\git_untracked.txt"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-commit-stage1-code",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git add extraction_pipeline/country_inputs/cli.py && git commit -m \"feat(country-inputs): add incremental extract and subnatid level-1 mapping\""
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-commit-stage1-code-ps",
+			"type": "shell",
+			"command": "git add extraction_pipeline/country_inputs/cli.py; git commit -m \"feat(country-inputs): add incremental extract and subnatid level-1 mapping\"",
+			"isBackground": false
+		},
+		{
+			"label": "git-commit-stage1-code-ps2",
+			"type": "shell",
+			"command": "git add extraction_pipeline/country_inputs/cli.py; git commit -m 'feat(country-inputs): add incremental extract and subnatid level-1 mapping'",
+			"isBackground": false
+		},
+		{
+			"label": "git-commit-stage2-geo-drafts",
+			"type": "shell",
+			"command": "git add -- 'extraction/20_drafts/runs/country-parameters/*/PARAM-GEO-GMD-CROSSWALK.yaml'; git commit -m 'chore(geo): add GEO crosswalk drafts for all countries'",
+			"isBackground": false
+		},
+		{
+			"label": "git-status-after-commits",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"status",
+				"--short"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "git-log-last2",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"log",
+				"-2",
+				"--oneline"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "debug-ury-jmp-rows",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-c",
+				"from extraction_pipeline.country_inputs.cli import _extract_wash, ROOT; p = ROOT / \"extraction/10_source/country-parameters-inputs/JMP/JMP_2025_URY_Uruguay_1.xlsx\"; iso3, country, water_rows, sanitation_rows, _, _ = _extract_wash(p); print(\"iso3=\", iso3); print(\"country=\", country); print(\"water_rows=\", len(water_rows)); print(\"sanitation_rows=\", len(sanitation_rows))"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-debug-ury-jmp",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/debug_ury_jmp.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-debug-ury-jmp-2",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/debug_ury_jmp.py"
+			],
+			"isBackground": false
 		}
 	]
 }
