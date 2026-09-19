@@ -1,0 +1,32 @@
+iso3: VAT
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_VAT_Holy_See_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: VAT
+    name: Holy See
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_VAT_Holy_See_1.xlsx
+    sha256: 923cfeae170d520fb87e504fe1a12c1f4098e6c9aae899a83ea5b363d96a0d07
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:41:54+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs: []
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: false

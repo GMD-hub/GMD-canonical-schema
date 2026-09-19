@@ -1,0 +1,66 @@
+country_id: CTY-WLF
+country_name: "\xCEles Wallis-et-Futuna"
+iso3: WLF
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: wc_interieur_et_pas_fosse_septique
+    national_label_en: WC interieur et pas fosse septique
+    national_label_local: "reli\xE9e aux latrine"
+    jmp_classification: Flush/toilets > Private flush/toilet > to pit
+    jmp_id: flush_toilets.private_flush_toilet.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 75
+  - source_category_code: wc_interieur_et_fosse_septique
+    national_label_en: WC interieur et fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: pas_de_system
+    national_label_en: Pas de system
+    national_label_local: Pas de toilette/nature/plein air
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: pas_wc_interieur_et_pas_fosse_septique
+    national_label_en: pas WC interieur et pas fosse septique
+    national_label_local: Pas de toilette/nature/plein air
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: systeme_d_assainnissement_des_eaux_usees
+    national_label_en: "syst\xE8me d'assainnissement des\neaux us\xE9es"
+    national_label_local: Autre
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_WLF_Wallis_and_Futuna_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null

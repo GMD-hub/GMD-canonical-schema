@@ -821,6 +821,105 @@
 				"extraction/20_drafts/runs/debug_ury_jmp.py"
 			],
 			"isBackground": false
+		},
+		{
+			"label": "run-extract-force-to-json",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/extract_result_jmp_redo.json'; if(Test-Path $out){ Remove-Item $out -Force }; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract --force | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "redo-jmp-extract-script",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/redo_jmp_extract_and_summarize.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "redo-jmp-script-exit",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe extraction/20_drafts/runs/redo_jmp_extract_and_summarize.py; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "redo-jmp-script-log",
+			"type": "shell",
+			"command": "$log='extraction/20_drafts/runs/redo_jmp_script.log'; if(Test-Path $log){ Remove-Item $log -Force }; .\\.venv\\Scripts\\python.exe extraction/20_drafts/runs/redo_jmp_extract_and_summarize.py *> $log; Write-Output \"LOG=$log\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "extract-force-all-to-file",
+			"type": "shell",
+			"command": "$out='extraction/20_drafts/runs/extract_force_all_result.json'; if(Test-Path $out){ Remove-Item $out -Force }; .\\.venv\\Scripts\\python.exe -m extraction_pipeline.country_inputs.cli extract --force | Out-File -FilePath $out -Encoding utf8; Write-Output \"WROTE=$out\"; Write-Output \"EXIT=$LASTEXITCODE\"",
+			"isBackground": false
+		},
+		{
+			"label": "extract-force-all-direct",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"-m",
+				"extraction_pipeline.country_inputs.cli",
+				"extract",
+				"--force"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "run-extract-force-safe",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/run_extract_force_safe.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "check-force-result-metadata",
+			"type": "shell",
+			"command": "$p1='extraction/20_drafts/runs/extract_force_all_result.json'; $p2='extraction/20_drafts/runs/extract_force_all_error.txt'; if(Test-Path $p1){ Get-Item $p1 | Select-Object FullName,Length,LastWriteTime }; if(Test-Path $p2){ Get-Item $p2 | Select-Object FullName,Length,LastWriteTime } else { Write-Output 'NO_ERROR_FILE' }",
+			"isBackground": false
+		},
+		{
+			"label": "check-force-result-size",
+			"type": "shell",
+			"command": "$p='extraction/20_drafts/runs/extract_force_all_result.json'; if(Test-Path $p){ $i=Get-Item $p; Write-Output ('LEN=' + $i.Length); Write-Output ('TIME=' + $i.LastWriteTime.ToString('s')) }",
+			"isBackground": false
+		},
+		{
+			"label": "run-force-and-report",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe extraction/20_drafts/runs/run_extract_force_safe.py; $ec=$LASTEXITCODE; $p='extraction/20_drafts/runs/extract_force_all_result.json'; if(Test-Path $p){ $i=Get-Item $p; Write-Output ('EC=' + $ec); Write-Output ('LEN=' + $i.Length); Write-Output ('TIME=' + $i.LastWriteTime.ToString('s')) } else { Write-Output ('EC=' + $ec); Write-Output 'LEN=missing' }",
+			"isBackground": false
+		},
+		{
+			"label": "verify-recent-output-writes",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $cut=(Get-Date).AddMinutes(-20); $recent=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.LastWriteTime -gt $cut }; $geo=($recent | Where-Object { $_.Name -eq 'PARAM-GEO-GMD-CROSSWALK.yaml' }).Count; $edu=($recent | Where-Object { $_.Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml' }).Count; $water=($recent | Where-Object { $_.Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml' }).Count; $san=($recent | Where-Object { $_.Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml' }).Count; Write-Output ('RECENT_TOTAL=' + $recent.Count); Write-Output ('RECENT_GEO=' + $geo); Write-Output ('RECENT_EDU=' + $edu); Write-Output ('RECENT_WATER=' + $water); Write-Output ('RECENT_SAN=' + $san)",
+			"isBackground": false
+		},
+		{
+			"label": "check-running-python-processes",
+			"type": "shell",
+			"command": "Get-CimInstance Win32_Process -Filter \"name = 'python.exe'\" | Select-Object ProcessId,CommandLine | Out-String -Width 220",
+			"isBackground": false
+		},
+		{
+			"label": "rerun-geo-all-force-equivalent",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"extraction/20_drafts/runs/geo_all_run.py"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "verify-recent-output-writes-2",
+			"type": "shell",
+			"command": "$root='extraction/20_drafts/runs/country-parameters'; $cut=(Get-Date).AddMinutes(-20); $recent=Get-ChildItem $root -Recurse -File -Filter *.yaml | Where-Object { $_.LastWriteTime -gt $cut }; $geo=($recent | Where-Object { $_.Name -eq 'PARAM-GEO-GMD-CROSSWALK.yaml' }).Count; $edu=($recent | Where-Object { $_.Name -eq 'PARAM-EDU-LEVEL-CROSSWALK.yaml' }).Count; $water=($recent | Where-Object { $_.Name -eq 'PARAM-WASH-WATER-CROSSWALK.yaml' }).Count; $san=($recent | Where-Object { $_.Name -eq 'PARAM-WASH-SANITATION-CROSSWALK.yaml' }).Count; Write-Output ('RECENT_TOTAL=' + $recent.Count); Write-Output ('RECENT_GEO=' + $geo); Write-Output ('RECENT_EDU=' + $edu); Write-Output ('RECENT_WATER=' + $water); Write-Output ('RECENT_SAN=' + $san)",
+			"isBackground": false
 		}
 	]
 }

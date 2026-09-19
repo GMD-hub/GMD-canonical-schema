@@ -1,7 +1,6 @@
 iso3: BGD
 domain: water
-source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BGD_Bangladesh_0
-  (1).xlsx
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BGD_Bangladesh_0.xlsx
 status: draft
 benchmark:
   country:
@@ -11,12 +10,12 @@ benchmark:
   frame: JMP service ladders (WHO/UNICEF), country file 2025
   language: English
   file:
-    file: JMP_2025_BGD_Bangladesh_0 (1).xlsx
+    file: JMP_2025_BGD_Bangladesh_0.xlsx
     sha256: 35c9de134974d736f52a99846e982f467114273cadee208a544eb71303303fba
     profile: jmp_country_file_2025
     language: English
     vintage: '2025'
-    extracted_at: '2026-09-19T03:24:21+00:00'
+    extracted_at: '2026-09-19T04:10:05+00:00'
     extractor: gmd_wash_concordance/1.0.0
   note: published by JMP; kept beside the instruction and never inside it -- a country
     instruction may not carry survey-level data

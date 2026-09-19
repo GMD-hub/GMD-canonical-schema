@@ -177,6 +177,14 @@ def _to_int_year(value: Any) -> int | None:
         return None
 
 
+def _iso3_from_jmp_filename(path: Path) -> str:
+    match = re.search(r"JMP_\d{4}_([A-Z]{3})_", path.name)
+    if not match:
+        return ""
+    iso3 = match.group(1).upper()
+    return iso3 if _is_valid_iso3(iso3) else ""
+
+
 def _geo_boundary_signature(row: dict[str, Any]) -> tuple[str, ...]:
     return (
         row["survey_variables"],
@@ -589,11 +597,15 @@ def _extract_wash(path: Path) -> tuple[str, str, list[dict[str, Any]], list[dict
     sanitation_rows = transform_wash_rows(result, "sanitation")
 
     water_instruction = result["domains"]["water"]["instruction"]
+    iso3 = (water_instruction.iso3 or "").upper()
+    if not _is_valid_iso3(iso3):
+        iso3 = _iso3_from_jmp_filename(path) or iso3
+    country_name = water_instruction.country or (_country_name_for_iso3(iso3) if _is_valid_iso3(iso3) else "")
     bench_water = to_benchmark_payload(result, "water")
     bench_san = to_benchmark_payload(result, "sanitation")
     return (
-        water_instruction.iso3,
-        water_instruction.country,
+        iso3,
+        country_name,
         water_rows,
         sanitation_rows,
         bench_water,
@@ -614,6 +626,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
     written: list[str] = []
     skipped: list[dict[str, Any]] = []
     incremental_skipped: list[dict[str, Any]] = []
+    jmp_file_statuses: list[dict[str, Any]] = []
     cleaned = _cleanup_stale_root_level_yaml()
     state = _load_incremental_state()
     extractor_sig = _extractor_signature()
@@ -673,16 +686,48 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
 
     for relative in inputs["JMP"]:
         source = ROOT / relative
-        (
-            iso3,
-            country_name,
-            water_rows,
-            sanitation_rows,
-            bench_water,
-            bench_san,
-        ) = _extract_wash(source)
+        source_status: dict[str, Any] = {
+            "file": str(source.relative_to(ROOT)),
+            "iso3": _iso3_from_jmp_filename(source),
+            "water": "pending",
+            "sanitation": "pending",
+            "benchmark_water": "pending",
+            "benchmark_sanitation": "pending",
+            "error": "",
+        }
+        try:
+            (
+                iso3,
+                country_name,
+                water_rows,
+                sanitation_rows,
+                bench_water,
+                bench_san,
+            ) = _extract_wash(source)
+            source_status["iso3"] = iso3
+        except Exception as exc:  # noqa: BLE001
+            source_status["water"] = "error"
+            source_status["sanitation"] = "error"
+            source_status["benchmark_water"] = "error"
+            source_status["benchmark_sanitation"] = "error"
+            source_status["error"] = str(exc)
+            jmp_file_statuses.append(source_status)
+            skipped.append(
+                {
+                    "file": str(source.relative_to(ROOT)),
+                    "parameter_id": "PARAM-WASH-*",
+                    "reason": f"extract failed ({exc})",
+                }
+            )
+            continue
 
         if not _is_valid_iso3(iso3):
+            source_status["water"] = "invalid_iso3"
+            source_status["sanitation"] = "invalid_iso3"
+            source_status["benchmark_water"] = "invalid_iso3"
+            source_status["benchmark_sanitation"] = "invalid_iso3"
+            source_status["error"] = f"invalid iso3 '{iso3}'"
+            jmp_file_statuses.append(source_status)
             skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
@@ -718,6 +763,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 )
                 _record_artifact_state(state, water_key, water_sig, water_path)
                 written.append(str(water_path.relative_to(ROOT)))
+                source_status["water"] = "written"
             else:
                 incremental_skipped.append(
                     {
@@ -726,6 +772,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                         "reason": "unchanged input/schema",
                     }
                 )
+                source_status["water"] = "unchanged"
         else:
             _drop_artifact_state(state, f"draft:{iso3}:PARAM-WASH-WATER-CROSSWALK")
             stale_water = DRAFT_ROOT / iso3 / "PARAM-WASH-WATER-CROSSWALK.yaml"
@@ -738,6 +785,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                     "reason": "no rows extracted",
                 }
             )
+            source_status["water"] = "no_rows"
 
         if sanitation_rows:
             san_out = DRAFT_ROOT / iso3 / "PARAM-WASH-SANITATION-CROSSWALK.yaml"
@@ -765,6 +813,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 )
                 _record_artifact_state(state, san_key, san_sig, san_path)
                 written.append(str(san_path.relative_to(ROOT)))
+                source_status["sanitation"] = "written"
             else:
                 incremental_skipped.append(
                     {
@@ -773,6 +822,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                         "reason": "unchanged input/schema",
                     }
                 )
+                source_status["sanitation"] = "unchanged"
         else:
             _drop_artifact_state(state, f"draft:{iso3}:PARAM-WASH-SANITATION-CROSSWALK")
             stale_san = DRAFT_ROOT / iso3 / "PARAM-WASH-SANITATION-CROSSWALK.yaml"
@@ -785,6 +835,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                     "reason": "no rows extracted",
                 }
             )
+            source_status["sanitation"] = "no_rows"
 
         bench_water_key = f"benchmark:{iso3}:water"
         bench_water_path = ROOT / "governance" / "benchmarks" / f"{iso3}_water_benchmark_draft.yaml"
@@ -804,6 +855,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             )
             _record_artifact_state(state, bench_water_key, bench_water_sig, b1)
             written.append(str(b1.relative_to(ROOT)))
+            source_status["benchmark_water"] = "written"
         else:
             incremental_skipped.append(
                 {
@@ -812,6 +864,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                     "reason": "unchanged input/schema",
                 }
             )
+            source_status["benchmark_water"] = "unchanged"
 
         bench_san_key = f"benchmark:{iso3}:sanitation"
         bench_san_path = ROOT / "governance" / "benchmarks" / f"{iso3}_sanitation_benchmark_draft.yaml"
@@ -831,6 +884,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             )
             _record_artifact_state(state, bench_san_key, bench_san_sig, b2)
             written.append(str(b2.relative_to(ROOT)))
+            source_status["benchmark_sanitation"] = "written"
         else:
             incremental_skipped.append(
                 {
@@ -839,6 +893,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                     "reason": "unchanged input/schema",
                 }
             )
+            source_status["benchmark_sanitation"] = "unchanged"
+
+        source_status["water_rows"] = len(water_rows)
+        source_status["sanitation_rows"] = len(sanitation_rows)
+        jmp_file_statuses.append(source_status)
 
     if inputs["GEO"]:
         try:
@@ -917,6 +976,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
         "cleaned": cleaned,
         "skipped": skipped,
         "incremental_skipped": incremental_skipped,
+        "jmp_file_statuses": jmp_file_statuses,
         "incremental_state": str(STATE_PATH.relative_to(ROOT)),
         "force": force,
     }

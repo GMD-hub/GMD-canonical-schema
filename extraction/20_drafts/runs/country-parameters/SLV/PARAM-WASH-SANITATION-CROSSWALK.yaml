@@ -1,0 +1,557 @@
+country_id: CTY-SLV
+country_name: El Salvador
+iso3: SLV
+schema_version: '0.2'
+status: draft
+parameters:
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - source_category_code: letrina_abonera
+    national_label_en: Letrina abonera
+    national_label_local: Letrinas de compostaje
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: letrina_abonera_seca_sin_con_plataforma_para_sentarse
+    national_label_en: Letrina abonera seca sin/con plataforma para sentarse
+    national_label_local: Letrinas de compostaje
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: letrina_de_composta_abonera
+    national_label_en: Letrina de composta/abonera
+    national_label_local: Letrinas de compostaje
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - source_category_code: letrina_abonera
+    national_label_en: Letrina abonera
+    national_label_local: Letrinas de compostaje (privado)
+    jmp_classification: Composting toilets > Composting toilet (private)
+    jmp_id: composting_toilets.composting_toilet_private
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 129
+  - source_category_code: letrina_abonera_privada
+    national_label_en: Letrina abonera privada
+    national_label_local: Letrinas de compostaje (privado)
+    jmp_classification: Composting toilets > Composting toilet (private)
+    jmp_id: composting_toilets.composting_toilet_private
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 129
+  - source_category_code: letrina_abonera_comun
+    national_label_en: Letrina abonera comun
+    national_label_local: Letrinas de compostaje (compartido)
+    jmp_classification: Composting toilets > Composting toilet (shared)
+    jmp_id: composting_toilets.composting_toilet_shared
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 130
+  - source_category_code: inodoro_a_alcantarillado_o_a_fosa_septica
+    national_label_en: Inodoro a alcantarillado o a fosa septica
+    national_label_local: Descarga/baldeo con agua
+    jmp_classification: Flush and pour flush
+    jmp_id: flush_and_pour_flush
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 60
+  - source_category_code: chorro_baldeo_a_otro_lugar
+    national_label_en: Chorro/baldeo a otro lugar
+    national_label_local: a drenaje abierto
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - source_category_code: chorro_baldeo_a_sistema_de_alcantarillado
+    national_label_en: 'Chorro/baldeo a:: Sistema de alcantarillado'
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: inodoro_conectado_al_alcantarillado
+    national_label_en: Inodoro conectado al alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - source_category_code: chorro_baldeo_a_pozo_negro
+    national_label_en: 'Chorro/baldeo a:: Pozo negro'
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: inodoro_letrina_sin_conexion
+    national_label_en: "Inodoro/letrina sin conexi\xF3n"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - source_category_code: chorro_baldeo_a_tanque_septico
+    national_label_en: "Chorro/baldeo a:: Tanque s\xE9ptico"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: inodoro_conectado_a_fosa_septica_resumidero
+    national_label_en: "Inodoro conectado a fosa s\xE9ptica/ resumidero"
+    national_label_local: a pozo septico
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - source_category_code: chorro_baldeo_a_sitio_desconocido_ns
+    national_label_en: 'Chorro/baldeo a:: Sitio desconocido/NS'
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: inodoro_lavable
+    national_label_en: Inodoro lavable
+    national_label_local: no sabe donde
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - source_category_code: inodoro_propio
+    national_label_en: Inodoro propio
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
+    jmp_classification: Flush/toilets > Private flush/toilet
+    jmp_id: flush_toilets.private_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 72
+  - source_category_code: inodoro_a_alcantarillado
+    national_label_en: Inodoro a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - source_category_code: inodoro_privado_a_alcantarillado
+    national_label_en: Inodoro privado a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - source_category_code: inodoro_a_fosa_septica
+    national_label_en: Inodoro a fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: inodoro_privado_a_fosa_septica
+    national_label_en: Inodoro privado a fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - source_category_code: inodoro_publico
+    national_label_en: "Inodoro p\xFAblico"
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (publico)"
+    jmp_classification: Flush/toilets > Public/shared flush/toilet
+    jmp_id: flush_toilets.public_shared_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 78
+  - source_category_code: inodoro_comun_a_alcantarillado
+    national_label_en: Inodoro comun a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - source_category_code: inodoro_comun_a_fosa_septica
+    national_label_en: Inodoro comun a fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - source_category_code: inodoro_a_alcantarillado
+    national_label_en: Inodoro a alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_con_conexion_a_alcantarillado
+    national_label_en: "Inodoro con conexi\xF3n a alcantarillado"
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_o_alcantarillado
+    national_label_en: Inodoro o alcantarillado
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - source_category_code: inodoro_a_fosa_septica
+    national_label_en: Inodoro a fosa septica
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - source_category_code: letrina_de_hoyo_o_pozo_negro_sin_plataforma_para_sentarse
+    national_label_en: Letrina de hoyo o pozo negro sin plataforma para sentarse
+    national_label_local: Otro
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Other
+    jmp_id: latrines.dry_latrines.improved_latrines.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 111
+  - source_category_code: letrina_con_plataforma
+    national_label_en: Letrina con plataforma
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_de_pozo_con_losa
+    national_label_en: Letrina de pozo con losa
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - source_category_code: letrina_sin_plataforma_hueco_abierto
+    national_label_en: Letrina sin plataforma/ hueco abierto
+    national_label_local: Letrina simple sin loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - source_category_code: letrina_comun
+    national_label_en: "Letrina com\xFAn"
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_de_hoyo_con_o_sin_plataforma
+    national_label_en: Letrina de hoyo con o sin plataforma
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_de_hoyo_o_pozo_negro_con_plataforma_para_sentarse
+    national_label_en: Letrina de hoyo o pozo negro con plataforma para sentarse
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_de_pozo_sin_losa_pozo_abierto_pozo_simple
+    national_label_en: Letrina de pozo sin losa/pozo abierto/ pozo simple
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - source_category_code: letrina_mejorada_con_ventilacion
+    national_label_en: "Letrina mejorada con ventilaci\xF3n"
+    national_label_local: Letrina de pozo mejorada ventilada
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - source_category_code: letrina_abonera_solar_propia
+    national_label_en: Letrina (abonera, solar) propia
+    national_label_local: Letrina privada
+    jmp_classification: Latrines > Dry latrines > Private Latrines
+    jmp_id: latrines.dry_latrines.private_latrines
+    gmd_target: ''
+    gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
+    improved_flag: false
+    shared_flag: false
+    source_row: 112
+  - source_category_code: letrina_privada
+    national_label_en: Letrina privada
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
+    jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 115
+  - source_category_code: letrina_publica
+    national_label_en: "Letrina p\xFAblica"
+    national_label_local: Letrina publica/compartida
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines
+    jmp_id: latrines.dry_latrines.public_shared_latrines
+    gmd_target: ''
+    gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
+    improved_flag: false
+    shared_flag: true
+    source_row: 120
+  - source_category_code: letrina_comun
+    national_label_en: Letrina comun
+    national_label_local: Letrina tradicional
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - source_category_code: letrina_de_pozo_ventilada_hidraulica
+    national_label_en: "Letrina de pozo ventilada/hidr\xE1ulica"
+    national_label_local: a letrina con cierre hidraulico
+    jmp_classification: Latrines > Pour flush latrines > to pit
+    jmp_id: latrines.pour_flush_latrines.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 88
+  - source_category_code: defecacion_al_aire_libre_no_hay_instalacion_campo_abierto_matorrales
+    national_label_en: "Defecaci\xF3n al aire libre (no hay instalaci\xF3n, campo\
+      \ abierto, matorrales)"
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: ninguno_arbustos_campo
+    national_label_en: Ninguno/arbustos/campo
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: no_tiene
+    national_label_en: No tiene
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - source_category_code: inodoro_de_compostaje
+    national_label_en: Inodoro de compostaje
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: instalaciones_mejoradas_de_saneamiento_forma_a
+    national_label_en: instalaciones mejoradas de saneamiento (forma A)
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: letrina_solar
+    national_label_en: Letrina solar
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: letrina_solar_privada
+    national_label_en: Letrina solar privada
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: letrina_solar_sin_con_plataforma_para_sentarse
+    national_label_en: Letrina solar sin/con plataforma para sentarse
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - source_category_code: letrina_solar_comun
+    national_label_en: Letrina solar comun
+    national_label_local: Otro
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 133
+  - source_category_code: otro
+    national_label_en: Otro
+    national_label_local: Otro
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SLV_El_Salvador_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
