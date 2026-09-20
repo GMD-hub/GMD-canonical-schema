@@ -1,0 +1,334 @@
+---
+country_id: CTY-NLD
+iso3: NLD
+schema_version: '0.2'
+status: draft
+country_name: NLD
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: ~
+  effective_to: ~
+  selectors: ~
+  value:
+  - national_label_en: Private day-care centres
+    national_label_local: Kinderdagverblijven
+    entry_age: 3
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+  - national_label_en: Pre-school education in day care centers and play groups
+    national_label_local: Voorschools onderwijs
+    entry_age: 2
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+  - national_label_en: Pre-primary education in school settings group (class) 1 and
+      2
+    national_label_local: Basisonderwijs en speciaal basisonderwijs, groep 1 en 2
+    entry_age: 4
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+  - national_label_en: Primary education group (class) 3-8
+    national_label_local: Basisonderwijs en speciaal basisonderwijs, groep 3 tot en
+      met 8
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+  - national_label_en: Primary special needs education in Centres of Expertise
+    national_label_local: Expertisecentra-basisonderwijs
+    entry_age: 4
+    duration_years: 8
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+  - national_label_en: 'Vocational education: training to assistant level; (level
+      1); full time school based and dual programmes'
+    national_label_local: Entreeopleiding (mbo-1), voltijd bol en bbl
+    entry_age: 16
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+  - national_label_en: Practical  training
+    national_label_local: Praktijkonderwijs
+    entry_age: 12
+    duration_years: 5
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 11
+  - national_label_en: Pre-vocational secondary education (including programmes with
+      prevocational content, general content and mixed content)
+    national_label_local: Voorbereidend middelbaar beroepsonderwijs (VMBO) (beroepsgerichte,
+      gemengde en theoretische leerwegen)
+    entry_age: 12
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 12
+  - national_label_en: Junior general secondary education (first three grades of HAVO
+      and VWO and combined classes)
+    national_label_local: HAVO en VWO klas 1-3, en de gecombineerde AVO klassen 1-3
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 13
+  - national_label_en: Secondary special needs education in Centres of Expertise
+    national_label_local: Expertisecentra-voortgezet onderwijs
+    entry_age: 12
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 14
+  - national_label_en: Junior general secondary education for adults
+    national_label_local: VAVO-MAVO-niveau
+    entry_age: 16
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 15
+  - national_label_en: Vocational education, basic vocational training  (level 2);
+      fulltime school based programmes
+    national_label_local: WEB-basisberoepsopleiding, voltijd bol
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 16
+  - national_label_en: Vocational education, basic vocational training  (level 2);
+      fulltime dual programmes
+    national_label_local: WEB-basisberoepsopleiding, voltijd bbl
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 17
+  - national_label_en: Vocational education, basic vocational training  (level 2);
+      parttime programmes, school based
+    national_label_local: WEB-basisberoepsopleiding, deeltijd bol
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 18
+  - national_label_en: Vocational education, professional training (level 3); fulltime
+      school based programmes
+    national_label_local: WEB-vakopleiding, voltijd bol
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 19
+  - national_label_en: Vocational education, professional training (level 3); fulltime
+      dual programmes
+    national_label_local: WEB-vakopleiding, voltijd bbl
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 20
+  - national_label_en: Vocational education, professional training (level 3); parttime
+      programmes, school based
+    national_label_local: WEB-vakopleiding, deeltijd bol
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 21
+  - national_label_en: Vocational education, middle-management training (level 4);
+      fulltime school based programmes
+    national_label_local: WEB-middenkaderopleiding, voltijd bol
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 22
+  - national_label_en: Vocational education, middle-management training (level 4);
+      fulltime dual programmes
+    national_label_local: WEB-middenkaderopleiding, voltijd bbl
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 23
+  - national_label_en: Vocational education, middle-management training (level 4);
+      parttime programmes, school based
+    national_label_local: WEB-middenkaderopleiding, deeltijd bol
+    entry_age: 18
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 24
+  - national_label_en: Senior general secondary education
+    national_label_local: Klas 4-5 HAVO
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 25
+  - national_label_en: Senior general secondary education
+    national_label_local: Klas 4-6 VWO
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 26
+  - national_label_en: Senior general secondary education for adults
+    national_label_local: VAVO-HAVO
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 27
+  - national_label_en: Senior general secondary education for adults
+    national_label_local: VAVO-VWO
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 28
+  - national_label_en: Associate degree programmes
+    national_label_local: Associate degree opleiding
+    entry_age: 20
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+  - national_label_en: Professional bachelor's degree programmes
+    national_label_local: HBO bacheloropleiding
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+  - national_label_en: Academic bachelor's degree programmes
+    national_label_local: WO bacheloropleiding
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 31
+  - national_label_en: Professional master's degree programmes
+    national_label_local: HBO masteropleiding
+    entry_age: 21
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 32
+  - national_label_en: Academic master's degree programmes
+    national_label_local: WO masteropleiding
+    entry_age: 21
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 33
+  - national_label_en: Research assistants
+    national_label_local: Assistenten in opleiding (aio's)
+    entry_age: 0
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 34
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Netherlands.xlsx
+    verified_on: ~
+    human_reviewed: no
+    reviewer: ~
+---
+
