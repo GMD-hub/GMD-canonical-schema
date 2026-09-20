@@ -244,6 +244,17 @@ save_body <- function(artifact_id, body_text) {
   path
 }
 
+remove_review_artifacts <- function(artifact_id) {
+  rec_path <- review_record_path(artifact_id)
+  body_path <- review_body_path(artifact_id)
+  if (file.exists(rec_path)) {
+    file.remove(rec_path)
+  }
+  if (file.exists(body_path)) {
+    file.remove(body_path)
+  }
+}
+
 perform_action <- function(item, record, body_text, action, actor, role, note = NULL) {
   if (identical(item$artifact_type, "benchmark") && action != "saved") {
     stop("benchmark artifacts are read-only references")
@@ -272,6 +283,8 @@ perform_action <- function(item, record, body_text, action, actor, role, note = 
     approved_path <- approved_path_for(item)
     write_text_file(approved_path, body_text)
     promote_approved_to_country_layer(item, body_text)
+    # Approval exits review queue: remove review artifacts after successful stage/promote.
+    remove_review_artifacts(item$artifact_id)
   }
 
   updated

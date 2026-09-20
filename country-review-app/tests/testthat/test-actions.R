@@ -55,6 +55,8 @@ testthat::test_that("approved action writes staged approved output", {
 
   approved_path <- approved_path_for(item)
   testthat::expect_true(file.exists(approved_path))
+  testthat::expect_false(file.exists(review_record_path(item$artifact_id)))
+  testthat::expect_false(file.exists(review_body_path(item$artifact_id)))
   testthat::expect_identical(rec$state, "approved")
 })
 
