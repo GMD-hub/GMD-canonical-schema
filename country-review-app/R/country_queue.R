@@ -10,10 +10,19 @@ raw_to_hex <- function(raw_value) {
 }
 
 queue_membership_digest <- function(index_df) {
-  if (!nrow(index_df)) return(raw_to_hex(openssl::sha256(charToRaw(""))))
+  hash_text <- function(value) {
+    if (requireNamespace("openssl", quietly = TRUE)) {
+      return(raw_to_hex(openssl::sha256(charToRaw(value))))
+    }
+    if (requireNamespace("digest", quietly = TRUE)) {
+      return(digest::digest(value, algo = "sha256", serialize = FALSE))
+    }
+    stop("queue digest requires either the 'openssl' or 'digest' package")
+  }
+  if (!nrow(index_df)) return(hash_text(""))
   keys <- paste(index_df$artifact_id, index_df$source_artifact_path, sep = "|")
   payload <- paste(sort(keys), collapse = "\n")
-  raw_to_hex(openssl::sha256(charToRaw(payload)))
+  hash_text(payload)
 }
 
 read_yaml_safe <- function(path) {

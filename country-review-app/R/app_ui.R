@@ -5,7 +5,7 @@ app_ui <- function() {
     shiny::titlePanel("Country Input Review App"),
     shiny::fluidRow(
       shiny::column(
-        width = 4,
+        width = 3,
         shiny::checkboxInput("include_benchmarks", "Include benchmark references", TRUE),
         shiny::selectInput("filter_type", "Artifact type", choices = c("all", ARTIFACT_TYPES), selected = "all"),
         shiny::textInput("filter_iso3", "ISO3 filter", value = ""),
@@ -15,12 +15,16 @@ app_ui <- function() {
         shiny::actionButton("refresh", "Refresh queue")
       ),
       shiny::column(
-        width = 8,
+        width = 9,
         shiny::verbatimTextOutput("queue_summary"),
-        shiny::tableOutput("queue_table"),
-        shiny::tags$hr(),
+        shiny::tableOutput("queue_table")
+      )
+    ),
+    shiny::tags$hr(),
+    shiny::fluidRow(
+      shiny::column(
+        width = 12,
         shiny::verbatimTextOutput("detail_meta"),
-        shiny::textAreaInput("editor_body", "Artifact content", value = "", rows = 18),
         shiny::textInput("action_note", "Action note", value = ""),
         shiny::fluidRow(
           shiny::column(2, shiny::actionButton("act_save", "Save")),
@@ -29,7 +33,18 @@ app_ui <- function() {
           shiny::column(2, shiny::actionButton("act_approve", "Approve")),
           shiny::column(2, shiny::actionButton("act_reopen", "Reopen"))
         ),
-        shiny::verbatimTextOutput("action_result")
+        shiny::fluidRow(
+          shiny::column(3, shiny::actionButton("act_approve_all", "Approve all filtered"))
+        ),
+        shiny::verbatimTextOutput("action_result"),
+        shiny::tags$hr(),
+        shiny::textAreaInput(
+          "editor_body",
+          "Artifact content",
+          value = "",
+          rows = 36,
+          width = "100%"
+        )
       )
     )
   )

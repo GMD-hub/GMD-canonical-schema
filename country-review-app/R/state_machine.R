@@ -23,7 +23,7 @@ transition <- function(rec, action, actor, role, note = NULL, content_sha256 = N
   }
   required_role <- valid[[1L]]
   to_state <- valid[[2L]]
-  if (!identical(role, required_role)) {
+  if (!(identical(role, required_role) || identical(role, "administrator"))) {
     stop(sprintf(
       "unauthorized transition: '%s' from '%s' requires '%s'",
       action,

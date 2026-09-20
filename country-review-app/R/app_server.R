@@ -130,11 +130,96 @@ app_server <- function(input, output, session) {
     queue_data(build_country_queue_index(include_benchmarks = isTRUE(input$include_benchmarks)))
   }
 
+  approve_one_item <- function(item, actor, role, note = NULL) {
+    source_text <- read_text_file(item$source_artifact_path) %||% ""
+    rec <- load_review_record(item, source_text, actor = actor)
+    body_text <- read_text_file(review_body_path(item$artifact_id)) %||% source_text
+
+    if (identical(item$artifact_type, "benchmark") || isTRUE(item$read_only)) {
+      return(list(status = "skipped", reason = "read-only"))
+    }
+
+    if (identical(rec$state, "approved")) {
+      return(list(status = "skipped", reason = "already approved"))
+    }
+
+    if (identical(rec$state, "draft")) {
+      rec <- perform_action(item, rec, body_text, "submitted", actor, role, note = note)
+    } else if (identical(rec$state, "needs-revision")) {
+      rec <- perform_action(item, rec, body_text, "submitted", actor, role, note = note)
+    }
+
+    if (identical(rec$state, "in-review")) {
+      rec <- perform_action(item, rec, body_text, "approved", actor, role, note = note)
+    }
+
+    if (identical(rec$state, "approved")) {
+      return(list(status = "approved", reason = "ok"))
+    }
+    list(status = "skipped", reason = paste("state not approvable:", rec$state))
+  }
+
   shiny::observeEvent(input$act_save, run_action("saved"), ignoreInit = TRUE)
   shiny::observeEvent(input$act_submit, run_action("submitted"), ignoreInit = TRUE)
   shiny::observeEvent(input$act_revision, run_action("request-revision"), ignoreInit = TRUE)
   shiny::observeEvent(input$act_approve, run_action("approved"), ignoreInit = TRUE)
   shiny::observeEvent(input$act_reopen, run_action("reopened"), ignoreInit = TRUE)
+
+  shiny::observeEvent(input$act_approve_all, {
+    role <- input$actor_role %||% "reviewer"
+    actor <- input$actor_id %||% "reviewer@example.org"
+    note <- input$action_note %||% NULL
+
+    if (!identical(role, "administrator")) {
+      action_status("Approve all filtered is restricted to administrator role")
+      return()
+    }
+
+    df <- filtered()
+    if (!nrow(df)) {
+      action_status("No filtered artifacts to process")
+      return()
+    }
+
+    approved_count <- 0L
+    skipped_count <- 0L
+    failed_count <- 0L
+    failed_ids <- character(0)
+
+    for (i in seq_len(nrow(df))) {
+      item <- as.list(df[i, , drop = FALSE])
+      result <- tryCatch(
+        approve_one_item(item, actor = actor, role = role, note = note),
+        error = function(error) list(status = "failed", reason = conditionMessage(error))
+      )
+      if (identical(result$status, "approved")) {
+        approved_count <- approved_count + 1L
+      } else if (identical(result$status, "failed")) {
+        failed_count <- failed_count + 1L
+        failed_ids <- c(failed_ids, item$artifact_id)
+      } else {
+        skipped_count <- skipped_count + 1L
+      }
+    }
+
+    queue_data(build_country_queue_index(include_benchmarks = isTRUE(input$include_benchmarks)))
+    if (length(failed_ids)) {
+      action_status(sprintf(
+        "Approve all completed: approved=%d skipped=%d failed=%d (%s)",
+        approved_count,
+        skipped_count,
+        failed_count,
+        paste(failed_ids, collapse = ", ")
+      ))
+    } else {
+      action_status(sprintf(
+        "Approve all completed: approved=%d skipped=%d failed=%d",
+        approved_count,
+        skipped_count,
+        failed_count
+      ))
+    }
+  }, ignoreInit = TRUE)
 
   output$action_result <- shiny::renderText({
     action_status()

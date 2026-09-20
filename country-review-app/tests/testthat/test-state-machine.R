@@ -32,3 +32,16 @@ testthat::test_that("transition enforces role and state rules", {
   approved <- transition(submitted, "approved", "approver@example.org", "approver")
   testthat::expect_identical(approved$state, "approved")
 })
+
+testthat::test_that("administrator can approve directly from in-review", {
+  item <- list(
+    artifact_id = "PARAM-EDU-LEVEL-CROSSWALK_CTY-PER",
+    artifact_type = "parameter",
+    iso3 = "PER",
+    source_artifact_path = "extraction/20_drafts/runs/country-parameters/PER/PARAM-EDU-LEVEL-CROSSWALK.yaml"
+  )
+  rec <- new_review_record(item, "a: 1\n")
+  submitted <- transition(rec, "submitted", "reviewer@example.org", "reviewer")
+  approved <- transition(submitted, "approved", "admin@example.org", "administrator")
+  testthat::expect_identical(approved$state, "approved")
+})

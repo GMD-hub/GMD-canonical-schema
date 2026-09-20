@@ -17,5 +17,8 @@ authorize <- function(role, action) {
   if (is.null(required)) {
     return(FALSE)
   }
-  !is.null(role) && identical(role, required)
+  if (is.null(role)) {
+    return(FALSE)
+  }
+  identical(role, required) || identical(role, "administrator")
 }
