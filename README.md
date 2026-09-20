@@ -94,6 +94,16 @@ New artifacts follow this lifecycle:
 source/context -> agent draft -> human review -> approved staging -> knowledge
 ```
 
+For country-input parameter and exception drafts, the operational flow is:
+
+```text
+extraction/20_drafts/runs/country-parameters -> extraction/30_review/country-inputs -> extraction/40_approved/country-parameters -> country-parameters/countries/<ISO3>/
+```
+
+Approved country-input records are staged to `40_approved`, promoted into the
+country layer, and then removed from `30_review` so that `30_review` remains an
+active-review workspace.
+
 AI agents write drafts to `extraction/20_drafts/`. Humans own review,
 approval, and promotion into `knowledge/` and `country-parameters/`. Never
 invent a rule or parameter value; use `null` where the source is insufficient

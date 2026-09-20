@@ -20,8 +20,10 @@ contracts, derivation relationships, fallback policies, or country values.
 datasets must not be compiled into runtime bundles and must not be treated as
 prescriptive country canon.
 
-`extraction/30_review/` remains the location for human review notes attached to
-candidate CVS artifacts. This folder records project-level audits and decisions
+`extraction/30_review/` is the location for active human review notes attached
+to candidate CVS artifacts. In the country-input flow, approved items move on
+to `40_approved` and canonical country artifacts, and are then removed from the
+active review queue. This folder records project-level audits and decisions
 that may span multiple artifacts or repository controls.
 
 ## Record lifecycle

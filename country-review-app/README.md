@@ -18,10 +18,12 @@ Phase 1 to Phase 5 core workflow is implemented:
 - local review record/body persistence and staged approvals (`R/actions.R`)
 - detail pane with YAML editor and action buttons (save/submit/revision/approve/reopen)
 
-This app intentionally does not write to canonical `country-parameters/countries/`.
-Approved outputs will be staged under `extraction/40_approved/country-parameters/`.
+Approved outputs are staged under `extraction/40_approved/country-parameters/`
+and promoted into `country-parameters/countries/<ISO3>/`.
 
-Review records are persisted under `extraction/30_review/country-inputs/`.
+Review records are persisted under `extraction/30_review/country-inputs/` while
+active; approved records are removed from that queue after successful stage and
+promotion.
 
 ## Local run (development)
 

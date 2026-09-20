@@ -94,13 +94,17 @@ related records, affected files, and follow-up evidence.
 | `00_context/` | Supporting context needed to interpret the source | Governed project process |
 | `10_source/` | Source material or scoped source extracts | Governed project process |
 | `20_drafts/` | Agent-generated candidate artifacts | AI agents |
-| `30_review/` | Human review notes and decisions | Humans only |
-| `40_approved/` | Artifacts approved for promotion | Humans only |
+| `30_review/` | Human review workspace for active items | Humans only |
+| `40_approved/` | Approved staging prior to archive or cleanup | Humans only |
 | `agents/` | Extraction workflow support | Governed project process |
 
 Approval staging does not itself make an artifact canonical. Human promotion
 into `knowledge/` or `country-parameters/`, plus index maintenance where
 applicable, completes the lifecycle.
+
+In the country-input review flow, approved items are removed from
+`30_review/country-inputs/` after successful staging and promotion, so the
+review queue reflects only active work.
 
 !!! example "Hypothetical path: a proposed parameter"
 	An agent drafts one parameter definition in `20_drafts/`. A human records

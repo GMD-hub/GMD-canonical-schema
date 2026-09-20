@@ -48,6 +48,10 @@ semantic fidelity to the guidelines, not only YAML validity. In particular,
 reviewers inspect IF/THEN logic, derivation links, country specificity,
 fallback consequences, provenance, and test examples.
 
+For the country-input review flow, `30_review/country-inputs/` is treated as an
+active-review queue. Once an item is approved and successfully staged/promoted,
+its review record and body are removed from that queue.
+
 Requested changes return to the draft stage. Agents do not write review
 decisions or approve their own output.
 
@@ -68,6 +72,14 @@ correct canonical folder. Promotion includes:
 
 `40_approved/` is a staging checkpoint, not a runtime input. The compiler reads
 from `knowledge/` and `country-parameters/` only.
+
+For country-input artifacts, approval stages the payload in
+`extraction/40_approved/country-parameters/`, promotes it into
+`country-parameters/countries/<ISO3>/`, and removes the approved record from
+`extraction/30_review/country-inputs/`.
+
+After successful promotion verification, `40_approved` payloads can be archived
+and cleared as operational cleanup.
 
 !!! example "What promotion changes"
     Before promotion, compiling a bundle cannot include the candidate because

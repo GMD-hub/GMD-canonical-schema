@@ -3,6 +3,10 @@
 This guide covers the protected Git-backed review queue. It does not authorize
 a production migration or a Posit Connect configuration change.
 
+Scope note: this guide describes the `review-app` queue system. The
+`country-review-app` workflow has different operational behavior for approved
+country-input items (stage, promote, then remove from active review queue).
+
 ## Architecture
 
 The application uses Connect identity for authentication and the repository
