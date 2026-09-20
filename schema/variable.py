@@ -1,7 +1,7 @@
 """Models for universal variable specifications."""
 
 import re
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import (
     BaseModel,
@@ -30,11 +30,11 @@ class AllowedRange(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     min: int
-    max: int
+    max: int | None            # None = open-ended upper bound (e.g. aggregates)
 
     @model_validator(mode="after")
     def validate_range(self) -> "AllowedRange":
-        if self.min > self.max:
+        if self.max is not None and self.min > self.max:
             raise ValueError("min must be less than or equal to max")
         return self
 
@@ -106,7 +106,7 @@ class VariableDefinition(BaseModel):
     status: Literal["draft", "approved"]
     tier: int
     unit_of_analysis: str
-    mapping_role: Literal["atomic", "derived", "derived_preferred"]
+    mapping_role: Literal["atomic", "derived", "derived_preferred", "aggregate"]
     data_type: str
     value_codes: list[ValueCode] | None
     allowed_range: AllowedRange | None
@@ -120,6 +120,11 @@ class VariableDefinition(BaseModel):
     external_standards: list[ExternalStandard]
     source_hints: SourceHints
     provenance: VariableProvenance
+    # aggregate-only blocks (present iff mapping_role == "aggregate")
+    component_structure: dict[str, Any] | None = None
+    methodological_switches: list[Any] | None = None
+    construction_pipeline: list[Any] | None = None
+    reconciliation: dict[str, Any] | None = None
 
     @field_validator("variable_id")
     @classmethod
@@ -158,6 +163,26 @@ class VariableDefinition(BaseModel):
         if invalid:
             raise ValueError(f"invalid rule IDs: {invalid}")
         return values
+
+    @model_validator(mode="after")
+    def validate_aggregate_blocks(self) -> "VariableDefinition":
+        blocks = (
+            self.component_structure,
+            self.methodological_switches,
+            self.construction_pipeline,
+            self.reconciliation,
+        )
+        if self.mapping_role == "aggregate":
+            if self.component_structure is None:
+                raise ValueError(
+                    "aggregate variables require a component_structure block"
+                )
+        elif any(block is not None for block in blocks):
+            raise ValueError(
+                "component_structure/methodological_switches/construction_pipeline/"
+                "reconciliation are only valid for mapping_role: aggregate"
+            )
+        return self
 
     @model_validator(mode="after")
     def validate_references(self, info: ValidationInfo) -> "VariableDefinition":
