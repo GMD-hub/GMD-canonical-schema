@@ -41,8 +41,8 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []
@@ -84,7 +84,7 @@ required for all persons in the household.
 
 `age` is one of the most fundamental demographic variables in the GMD. It is
 used for age disaggregation across virtually all modules and is essential for
-poverty, welfare, and demographic analysis. It is also a prerequisite for
+poverty, welfare, and demographic analysis. It is also used as a gate for
 constructing a wide range of derived variables and for applying age cut-offs
 such as `mineducatage` and the under-five indicators.
 

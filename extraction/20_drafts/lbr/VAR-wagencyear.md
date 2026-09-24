@@ -28,7 +28,7 @@ derives_to:
 - VAR-twagencototalyear
 - VAR-lincnc
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
   condition: lstatus_year == 1
 - variable_id: VAR-empstatyear

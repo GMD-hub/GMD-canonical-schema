@@ -37,7 +37,7 @@ derives_to:
 - VAR-wagenc2
 - VAR-wagetotal2
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 1
 rules: []

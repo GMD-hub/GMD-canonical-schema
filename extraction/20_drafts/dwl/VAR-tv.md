@@ -43,8 +43,8 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []
@@ -86,7 +86,7 @@ A standard media/durable asset indicator widely used in asset-based welfare indi
 
 ## Construction notes
 
-Map the raw television-ownership question to 0/1. Both color and black-and-white sets qualify. `tv` is a prerequisite for `tv_cable`.
+Map the raw television-ownership question to 0/1. Both color and black-and-white sets qualify. `tv` is a gate for `tv_cable`.
 
 ## Consistency checks
 

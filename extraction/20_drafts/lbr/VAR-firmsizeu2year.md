@@ -25,7 +25,7 @@ missing_codes:
 derived_from: []
 derives_to: []
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
   condition: lstatus_year == 1
 rules: []

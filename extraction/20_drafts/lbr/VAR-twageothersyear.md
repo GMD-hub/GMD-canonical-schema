@@ -29,7 +29,7 @@ derives_to:
 - VAR-lincnc
 - VAR-twagetotalyear
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

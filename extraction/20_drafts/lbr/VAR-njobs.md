@@ -30,7 +30,7 @@ derives_to:
 - VAR-lincnc
 - VAR-laborincome
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

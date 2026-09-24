@@ -23,7 +23,7 @@ country folder. It checks:
 
 - parameter definition schemas and duplicate parameter IDs;
 - strict variable and rule schemas with unknown fields forbidden;
-- variable, rule, parameter, and prerequisite reference formats;
+- variable, rule, parameter, and gate reference formats;
 - variable derivation cycles and governed reference resolution;
 - rule priorities as integers from 0 through 100;
 - country file identity and strict field schemas;

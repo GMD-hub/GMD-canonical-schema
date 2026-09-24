@@ -31,7 +31,7 @@ derives_to:
 - VAR-thoursannual
 - VAR-lincnc
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 1
 rules: []

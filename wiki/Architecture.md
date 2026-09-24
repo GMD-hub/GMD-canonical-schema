@@ -46,7 +46,7 @@ variables.
 `knowledge/` defines concepts that must remain stable across countries:
 
 - variable identity, type, allowed values, and missing codes;
-- derivation relationships and prerequisites;
+- derivation relationships and gates;
 - reusable decision rules and prohibitions;
 - parameter definitions, value shapes, and fallback policies;
 - universal modules, rubrics, and exceptions when they are added.

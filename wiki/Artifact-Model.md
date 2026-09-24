@@ -30,7 +30,7 @@ fields cover:
 - identity: `variable_id`, name, label, module, GMD version, and schema version;
 - behavior: tier, mapping role, unit of analysis, and data type;
 - output contract: value codes or numeric range and extended missing codes;
-- graph: `derived_from`, `derives_to`, and prerequisites;
+- graph: `derived_from`, `derives_to`, and gates;
 - dependencies: decision rules, exceptions, and country parameter declarations;
 - discovery: questionnaire keywords and common section names;
 - provenance: source location, extraction method, review status, and notes.
@@ -59,7 +59,7 @@ Mapping roles currently illustrated in the repository are:
 
 !!! example "Example: reading a variable specification"
   The current draft `VAR-educy` is `derived_preferred`. That label alone is
-  not an algorithm. Its `derived_from`, prerequisites, rules, and country
+  not an algorithm. Its `derived_from`, gates, rules, and country
   parameter declarations must be read together to understand the permitted
   paths and required evidence. This is why a variable file is a contract
   with references, not a standalone recipe.

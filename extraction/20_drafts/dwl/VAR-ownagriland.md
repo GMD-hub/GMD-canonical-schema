@@ -43,10 +43,10 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites:
+# --- Universe / skip gate ---
+gates:
   - variable_id: VAR-agriland
-    condition: "agriland = 1"
+    condition: "agriland == 1"
 
 # --- Cross-references ---
 rules: []

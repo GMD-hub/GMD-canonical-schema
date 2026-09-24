@@ -28,7 +28,7 @@ derived_from: []
 derives_to:
 - VAR-wagetotal2year
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
   condition: lstatus_year == 1
 rules: []

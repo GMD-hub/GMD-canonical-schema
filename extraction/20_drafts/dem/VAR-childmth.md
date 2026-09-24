@@ -41,10 +41,10 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites:
+# --- Universe / skip gate ---
+gates:
   - variable_id: VAR-age
-    condition: "Applied only to children aged under 5 years (less than 60 months)."
+    condition: age < 5
 
 # --- Cross-references ---
 rules: []

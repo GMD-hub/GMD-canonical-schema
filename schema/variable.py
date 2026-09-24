@@ -46,7 +46,7 @@ class MissingCode(BaseModel):
     label: str
 
 
-class Prerequisite(BaseModel):
+class Gate(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     variable_id: str
@@ -114,7 +114,7 @@ class VariableDefinition(BaseModel):
     derived_from: list[str]
     derives_to: list[str]
     country_parameters: list[str]
-    prerequisites: list[Prerequisite]
+    gates: list[Gate]
     rules: list[str]
     exceptions: list[str]
     external_standards: list[ExternalStandard]
@@ -172,7 +172,7 @@ class VariableDefinition(BaseModel):
         rule_ids: set[str] = context.get("rule_ids", set())
 
         referenced_variables = set(self.derived_from) | set(self.derives_to) | {
-            item.variable_id for item in self.prerequisites
+            item.variable_id for item in self.gates
         }
         unknown_variables = referenced_variables - variable_ids
         allow_unresolved_draft = (
@@ -195,7 +195,7 @@ def unresolved_variable_references(
     variable: VariableDefinition, variable_ids: set[str]
 ) -> set[str]:
     references = set(variable.derived_from) | set(variable.derives_to) | {
-        item.variable_id for item in variable.prerequisites
+        item.variable_id for item in variable.gates
     }
     return references - variable_ids
 

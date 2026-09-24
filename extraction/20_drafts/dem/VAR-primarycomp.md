@@ -45,14 +45,10 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Set primarycomp to .c for individuals below mineducatage."
-  - variable_id: VAR-educat7
-    condition: "Preferred source. Derive primarycomp from educat7 when available."
-  - variable_id: VAR-educat5
-    condition: "Fallback source when educat7 is not defined."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: age >= mineducatage
 
 # --- Cross-references ---
 rules: []

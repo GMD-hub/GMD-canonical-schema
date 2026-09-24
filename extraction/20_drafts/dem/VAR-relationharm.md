@@ -52,11 +52,8 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-relationcs
-    condition: "Must be constructed first. relationharm maps the country-specific
-                relationship categories into the harmonized six categories."
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []

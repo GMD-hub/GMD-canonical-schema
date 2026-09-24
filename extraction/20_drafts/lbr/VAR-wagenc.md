@@ -28,11 +28,11 @@ derives_to:
 - VAR-twagencotal
 - VAR-lincnc
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 1
 - variable_id: VAR-empstat
-  condition: empstat <= 2 (paid or non-paid employee)
+  condition: empstat <= 2
 rules: []
 exceptions: []
 external_standards: []
