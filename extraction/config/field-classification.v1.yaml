@@ -51,7 +51,7 @@ classifications:
         class: "agent-interpreted"
       - field: "country_parameters"
         class: "agent-interpreted"
-      - field: "prerequisites"
+      - field: "gates"
         class: "agent-interpreted"
       - field: "rules"
         class: "agent-interpreted"
@@ -81,7 +81,7 @@ classifications:
       - field: "label"
         class: "source-explicit"
 
-  - model: "Prerequisite"
+  - model: "Gate"
     fields:
       - field: "variable_id"
         class: "agent-interpreted"
