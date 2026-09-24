@@ -36,7 +36,7 @@ def temp_repository(tmp_path: Path) -> Path:
         data, body = load_markdown(path)
         data["derived_from"] = []
         data["derives_to"] = []
-        data["prerequisites"] = []
+        data["gates"] = []
         write_markdown(path, data, body)
 
     subprocess.run(["git", "init", "--quiet"], cwd=repository, check=True)
