@@ -35,7 +35,7 @@ missing_codes:
 derived_from: []
 derives_to: []
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 3
 rules: []

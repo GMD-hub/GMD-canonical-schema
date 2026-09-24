@@ -30,7 +30,7 @@ derives_to:
 - VAR-thoursannual
 - VAR-thourstotalyear
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
   condition: lstatus_year == 1
 rules: []

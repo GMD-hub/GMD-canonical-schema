@@ -72,7 +72,7 @@ derives_to:
 - VAR-twagencototalyear
 - VAR-twagetotalyear
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-minlaborageyear
   condition: age >= minlaborage_year
 rules: []

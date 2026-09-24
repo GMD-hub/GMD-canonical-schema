@@ -27,7 +27,7 @@ derives_to:
 - VAR-industrycat10
 - VAR-industrycat4
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 1
 rules: []

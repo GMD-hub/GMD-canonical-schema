@@ -46,7 +46,7 @@ derived_from: []
 derives_to:
 - VAR-wagetotal2
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 1
 - variable_id: VAR-empstat2

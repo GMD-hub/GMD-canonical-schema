@@ -57,11 +57,10 @@ derives_to:
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Must be evaluated first. Set educat7 to .c for all
-                individuals where age is below mineducatage."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: age >= mineducatage
 
 # --- Cross-references ---
 rules: []

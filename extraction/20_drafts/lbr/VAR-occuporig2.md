@@ -26,7 +26,7 @@ derived_from: []
 derives_to:
 - VAR-occup2
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatus
   condition: lstatus == 1
 rules: []

@@ -29,7 +29,7 @@ derives_to:
 - VAR-wagetotalyear
 - VAR-lincnc
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
   condition: lstatus_year == 1
 rules: []

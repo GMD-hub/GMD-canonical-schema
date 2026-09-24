@@ -53,13 +53,10 @@ derives_to:
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Set educat5 to .c for individuals below mineducatage."
-  - variable_id: VAR-educat7
-    condition: "Must be defined and used as the source; educat5 is derived from
-                educat7 via the stated recode."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: age >= mineducatage
 
 # --- Cross-references ---
 rules: []
