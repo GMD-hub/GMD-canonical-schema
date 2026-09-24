@@ -22,6 +22,10 @@ notes, consistency checks, escalation triggers, and common mistakes.
 
 ## The fields
 
+For the maintained field-by-field contract, including nested YAML fields and
+code-enforced checks, see the
+[CVS Variable YAML Reference](../wiki/CVS-Variable-YAML-Reference.md).
+
 | Field | What it captures |
 |---|---|
 | Variable name and label | Stata name and official GMD label |
