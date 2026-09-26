@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education
+  - country_entry_id: LBY-EDU-01
+    national_label_en: Pre-primary education
     national_label_local: التعليم ما قبل الابتدائي
     entry_age: 4
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: First stage of basic education
+  - country_entry_id: LBY-EDU-02
+    national_label_en: First stage of basic education
     national_label_local: التعليم الاساسي - الشق الاول
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Second stage of basic education
+  - country_entry_id: LBY-EDU-03
+    national_label_en: Second stage of basic education
     national_label_local: التعليم الأساسي - الشق الثاني
     entry_age: 12
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: General secondary education
+  - country_entry_id: LBY-EDU-04
+    national_label_en: General secondary education
     national_label_local: التعليم الثانوي العام
     entry_age: 15
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Technical secondary education
+  - country_entry_id: LBY-EDU-05
+    national_label_en: Technical secondary education
     national_label_local: التعليم الثانوي الفني
     entry_age: 15
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Higher technical diploma
+  - country_entry_id: LBY-EDU-06
+    national_label_en: Higher technical diploma
     national_label_local: الدبلوم العالي التقني
     entry_age: 18
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Bachelor's and licence programmes
+  - country_entry_id: LBY-EDU-07
+    national_label_en: Bachelor's and licence programmes
     national_label_local: برامج البكالوريوس والليسانس
     entry_age: 18
     duration_years: 4
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Technical Bachelor's Programmes
+  - country_entry_id: LBY-EDU-08
+    national_label_en: Technical Bachelor's Programmes
     national_label_local: برامج البكالوريوس التقني
     entry_age: 18
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Bachelor's programmes in medicine, engineering, pharmacology
+  - country_entry_id: LBY-EDU-09
+    national_label_en: Bachelor's programmes in medicine, engineering, pharmacology
       and medical technology
     national_label_local: برامج البكالوريوس في الطب، الهندسة، الصيدلة وتكنولوجيا الطب
     entry_age: 18
@@ -101,7 +110,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Master's programmes
+  - country_entry_id: LBY-EDU-10
+    national_label_en: Master's programmes
     national_label_local: برامج الماجستير
     entry_age: 22
     duration_years: 3
@@ -111,7 +121,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Technical Master's Programmes
+  - country_entry_id: LBY-EDU-11
+    national_label_en: Technical Master's Programmes
     national_label_local: برامج الماجستير التقني
     entry_age: 22
     duration_years: 3
@@ -121,7 +132,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Doctorate programmes
+  - country_entry_id: LBY-EDU-12
+    national_label_en: Doctorate programmes
     national_label_local: برامج الدكتوراه
     entry_age: 25
     duration_years: 3
@@ -141,7 +153,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_or_pour_flush_toilet
+  - country_entry_id: LBY-SAN-01
+    source_category_code: flush_or_pour_flush_toilet
     national_label_en: Flush or pour/flush toilet
     national_label_local: شطف وصب دافق
     jmp_classification: Flush and pour flush
@@ -151,7 +164,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 60
-  - source_category_code: bucket_toilet
+  - country_entry_id: LBY-SAN-02
+    source_category_code: bucket_toilet
     national_label_en: Bucket toilet
     national_label_local: مرحاض دلو
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -161,7 +175,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: LBY-SAN-03
+    source_category_code: hanging_toilet_latrine
     national_label_en: Hanging toilet/latrine
     national_label_local: دورة مياه معلقة / مرحاض معلق
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -172,7 +187,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: open_hole
+  - country_entry_id: LBY-SAN-04
+    source_category_code: open_hole
     national_label_en: Open hole
     national_label_local: آخر
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -182,7 +198,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: plastic_bag
+  - country_entry_id: LBY-SAN-05
+    source_category_code: plastic_bag
     national_label_en: Plastic bag
     national_label_local: آخر
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -192,7 +209,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: pit_latrine_with_a_slab_and_platform
+  - country_entry_id: LBY-SAN-06
+    source_category_code: pit_latrine_with_a_slab_and_platform
     national_label_en: Pit latrine with a slab and platform
     national_label_local: مرحاض حفرة مع بلاطة / مرحاض مغطى
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -203,7 +221,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_a_slab_and_platform
+  - country_entry_id: LBY-SAN-07
+    source_category_code: pit_latrine_without_a_slab_and_platform
     national_label_en: Pit latrine without a slab and platform
     national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -214,7 +233,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_a_slab_or_platform
+  - country_entry_id: LBY-SAN-08
+    source_category_code: pit_latrine_without_a_slab_or_platform
     national_label_en: Pit latrine without a slab or platform
     national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -225,7 +245,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_vip_toilet_pit_latrine_with_ventilation
+  - country_entry_id: LBY-SAN-09
+    source_category_code: pit_vip_toilet_pit_latrine_with_ventilation
     national_label_en: Pit VIP toilet (Pit latrine with ventilation)
     national_label_local: مراحيض حفرة محسنة جيدة التهوية
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -236,7 +257,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: none_open_hole
+  - country_entry_id: LBY-SAN-10
+    source_category_code: none_open_hole
     national_label_en: None + open hole
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -246,7 +268,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none_of_the_above_open_defecation
+  - country_entry_id: LBY-SAN-11
+    source_category_code: none_of_the_above_open_defecation
     national_label_en: None of the above, open defecation
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -256,7 +279,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none_of_the_above_open_defecation_open_hole
+  - country_entry_id: LBY-SAN-12
+    source_category_code: none_of_the_above_open_defecation_open_hole
     national_label_en: None of the above, open defecation + open hole
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -266,7 +290,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other_specify
+  - country_entry_id: LBY-SAN-13
+    source_category_code: other_specify
     national_label_en: Other (specify)
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -276,7 +301,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: plastic_bag
+  - country_entry_id: LBY-SAN-14
+    source_category_code: plastic_bag
     national_label_en: Plastic bag
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -296,7 +322,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: LBY-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: ينبوع المحمي
     jmp_classification: Ground water > Protected spring
@@ -306,7 +333,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well_e_g_in_your_house_or_in_the_mosque
+  - country_entry_id: LBY-WAS-02
+    source_category_code: protected_well_e_g_in_your_house_or_in_the_mosque
     national_label_en: Protected well (e.g. in your house or in the mosque)
     national_label_local: محمي بشكل جيد
     jmp_classification: Ground water > Protected well
@@ -316,7 +344,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: borehole_or_tubewell
+  - country_entry_id: LBY-WAS-03
+    source_category_code: borehole_or_tubewell
     national_label_en: Borehole or tubewell
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -326,7 +355,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_well
+  - country_entry_id: LBY-WAS-04
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: بئر غير محمي
     jmp_classification: Ground water > Unprotected well
@@ -336,7 +366,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: water_kiosk
+  - country_entry_id: LBY-WAS-05
+    source_category_code: water_kiosk
     national_label_en: Water kiosk
     national_label_local: آخر
     jmp_classification: Other improved sources > Other
@@ -346,7 +377,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: tanker_truck
+  - country_entry_id: LBY-WAS-06
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -356,7 +388,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_trucking
+  - country_entry_id: LBY-WAS-07
+    source_category_code: water_trucking
     national_label_en: Water trucking
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -366,7 +399,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other_please_specify
+  - country_entry_id: LBY-WAS-08
+    source_category_code: other_please_specify
     national_label_en: Other (please specify)
     national_label_local: آخر
     jmp_classification: Other non-improved > Other
@@ -376,7 +410,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: LBY-WAS-09
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: مياه معبأة
     jmp_classification: Packaged water > Bottled water
@@ -386,7 +421,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: sachet_water
+  - country_entry_id: LBY-WAS-10
+    source_category_code: sachet_water
     national_label_en: Sachet water
     national_label_local: كيس ماء
     jmp_classification: Packaged water > Sachet water
@@ -396,7 +432,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater
+  - country_entry_id: LBY-WAS-11
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: مياه الأمطار
     jmp_classification: Rainwater
@@ -406,7 +443,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: rainwater
+  - country_entry_id: LBY-WAS-12
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: خزان / خزان مغطى
     jmp_classification: Rainwater > Covered cistern/tank
@@ -416,7 +454,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water_lakes_ponds_rivers_etc
+  - country_entry_id: LBY-WAS-13
+    source_category_code: surface_water_lakes_ponds_rivers_etc
     national_label_en: Surface water (lakes, ponds, rivers, etc.)
     national_label_local: سطح الماء
     jmp_classification: Surface water
@@ -426,7 +465,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+  - country_entry_id: LBY-WAS-14
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: Surface water (river, dam, lake, pond, stream, canal, irrigation
       channel)
     national_label_local: سطح الماء
@@ -437,7 +477,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: public_network
+  - country_entry_id: LBY-WAS-15
+    source_category_code: public_network
     national_label_en: Public network
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -447,7 +488,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: public_network_connected_to_the_shelter
+  - country_entry_id: LBY-WAS-16
+    source_category_code: public_network_connected_to_the_shelter
     national_label_en: Public network (connected to the shelter)
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -457,7 +499,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: public_network_connected_to_the_neighbour_s_shelter
+  - country_entry_id: LBY-WAS-17
+    source_category_code: public_network_connected_to_the_neighbour_s_shelter
     national_label_en: Public network (connected to the neighbour's shelter)
     national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -467,7 +510,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: LBY-WAS-18
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -477,7 +521,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: tap_accessible_to_the_public
+  - country_entry_id: LBY-WAS-19
+    source_category_code: tap_accessible_to_the_public
     national_label_en: Tap accessible to the public
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe

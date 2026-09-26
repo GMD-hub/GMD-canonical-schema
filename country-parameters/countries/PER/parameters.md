@@ -44,7 +44,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: 'Early childhood education: cycle I'
+  - country_entry_id: PER-EDU-01
+    national_label_en: 'Early childhood education: cycle I'
     national_label_local: 'Educación Inicial: Ciclo I'
     entry_age: 0
     duration_years: 3
@@ -54,7 +55,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: 'Early childhood education: cycle II'
+  - country_entry_id: PER-EDU-02
+    national_label_en: 'Early childhood education: cycle II'
     national_label_local: 'Educación Inicial: Ciclo II'
     entry_age: 3
     duration_years: 3
@@ -64,7 +66,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary education
+  - country_entry_id: PER-EDU-03
+    national_label_en: Primary education
     national_label_local: Educación Primaria
     entry_age: 6
     duration_years: 6
@@ -74,7 +77,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Alternative basic education - Initial and intermediate cycles
+  - country_entry_id: PER-EDU-04
+    national_label_en: Alternative basic education - Initial and intermediate cycles
     national_label_local: Educación Básica Alternativa-Ciclos Inicial e Intermedio
     entry_age: 14
     duration_years: 5
@@ -84,7 +88,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Secondary education, Grades 1 to 3
+  - country_entry_id: PER-EDU-05
+    national_label_en: Secondary education, Grades 1 to 3
     national_label_local: Educación Secundaria. Del 1ero. al 3er. grados.
     entry_age: 12
     duration_years: 3
@@ -94,7 +99,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Alternative basic education - Advanced cycle (grades 1 and
+  - country_entry_id: PER-EDU-06
+    national_label_en: Alternative basic education - Advanced cycle (grades 1 and
       2)
     national_label_local: Educación Básica Alternativa-Ciclo Avanzado. Grados 1er.
       y 2o.
@@ -106,7 +112,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Technical productive education - Middle cycle
+  - country_entry_id: PER-EDU-07
+    national_label_en: Technical productive education - Middle cycle
     national_label_local: Educación Técnico Productiva-Ciclo Medio
     entry_age: 14
     duration_years: 3
@@ -116,7 +123,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Alternative basic education - Advanced cycle (grades 3 and
+  - country_entry_id: PER-EDU-08
+    national_label_en: Alternative basic education - Advanced cycle (grades 3 and
       4)
     national_label_local: Educación Básica Alternativa-Ciclo Avanzado. Grados 3er.
       y 4o.
@@ -128,7 +136,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Secondary education. Grades 4 to 5.
+  - country_entry_id: PER-EDU-09
+    national_label_en: Secondary education. Grades 4 to 5.
     national_label_local: Educación Secundaria. Del 4to. al 5to. grados.
     entry_age: 15
     duration_years: 2
@@ -138,7 +147,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Non-university higher education (technical training)
+  - country_entry_id: PER-EDU-10
+    national_label_en: Non-university higher education (technical training)
     national_label_local: Educación Superior No Universitaria (Técnica)
     entry_age: 17
     duration_years: 2
@@ -148,7 +158,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Non-university higher technological education
+  - country_entry_id: PER-EDU-11
+    national_label_en: Non-university higher technological education
     national_label_local: Educación Superior Tecnológica No Universitaria
     entry_age: 17
     duration_years: 4
@@ -158,7 +169,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Non-university higher education; pedagogical and artistic training
+  - country_entry_id: PER-EDU-12
+    national_label_en: Non-university higher education; pedagogical and artistic training
     national_label_local: Educación Superior No Universitaria Pedagógica y Artística
     entry_age: 17
     duration_years: 5
@@ -168,7 +180,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: University higher education
+  - country_entry_id: PER-EDU-13
+    national_label_en: University higher education
     national_label_local: Pregrado universitario
     entry_age: 17
     duration_years: 5
@@ -178,7 +191,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Postgraduate
+  - country_entry_id: PER-EDU-14
+    national_label_en: Postgraduate
     national_label_local: Diplomado
     entry_age: 22
     duration_years: 1
@@ -188,7 +202,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Bachelor in Law
+  - country_entry_id: PER-EDU-15
+    national_label_en: Bachelor in Law
     national_label_local: Pregrado en Derecho
     entry_age: 17
     duration_years: 6
@@ -198,7 +213,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Bachelor in Medicine
+  - country_entry_id: PER-EDU-16
+    national_label_en: Bachelor in Medicine
     national_label_local: Pregrado en Medicina
     entry_age: 17
     duration_years: 7
@@ -208,7 +224,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Second Professsional Specialization
+  - country_entry_id: PER-EDU-17
+    national_label_en: Second Professsional Specialization
     national_label_local: Segunda Especialidad Profesional
     entry_age: 22
     duration_years: 2
@@ -218,7 +235,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Master
+  - country_entry_id: PER-EDU-18
+    national_label_en: Master
     national_label_local: Maestría
     entry_age: 22
     duration_years: 2
@@ -228,7 +246,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Doctorate
+  - country_entry_id: PER-EDU-19
+    national_label_en: Doctorate
     national_label_local: Doctorado
     entry_age: 24
     duration_years: 3
@@ -248,7 +267,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Amazonas | 1-Amazonas
+  - country_entry_id: PER-SUBNAT-01
+    survey_labels: 1 - Amazonas | 1-Amazonas
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2328
@@ -268,7 +288,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Amazonas
     source_row: 11285
-  - survey_labels: 10 - Huanuco | 10-Huanuco
+  - country_entry_id: PER-SUBNAT-02
+    survey_labels: 10 - Huanuco | 10-Huanuco
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2337
@@ -288,7 +309,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Huánuco
     source_row: 11286
-  - survey_labels: 11 - Ica | 11-Ica
+  - country_entry_id: PER-SUBNAT-03
+    survey_labels: 11 - Ica | 11-Ica
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2338
@@ -308,7 +330,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ica
     source_row: 11287
-  - survey_labels: 12 - Junin | 12-Junin
+  - country_entry_id: PER-SUBNAT-04
+    survey_labels: 12 - Junin | 12-Junin
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2339
@@ -328,7 +351,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Junín
     source_row: 11288
-  - survey_labels: 13 - La Libertad | 13-La Libertad
+  - country_entry_id: PER-SUBNAT-05
+    survey_labels: 13 - La Libertad | 13-La Libertad
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2340
@@ -348,7 +372,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: La Libertad
     source_row: 11289
-  - survey_labels: 14 - Lambayeque | 14-Lambayeque
+  - country_entry_id: PER-SUBNAT-06
+    survey_labels: 14 - Lambayeque | 14-Lambayeque
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2341
@@ -368,7 +393,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lambayeque
     source_row: 11290
-  - survey_labels: 15 - Lima | 15-Lima
+  - country_entry_id: PER-SUBNAT-07
+    survey_labels: 15 - Lima | 15-Lima
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2342
@@ -388,7 +414,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lima
     source_row: 11291
-  - survey_labels: 16 - Loreto | 16-Loreto
+  - country_entry_id: PER-SUBNAT-08
+    survey_labels: 16 - Loreto | 16-Loreto
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2343
@@ -408,7 +435,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Loreto
     source_row: 11292
-  - survey_labels: 17 - Madre de Dios | 17-Madre de Dios
+  - country_entry_id: PER-SUBNAT-09
+    survey_labels: 17 - Madre de Dios | 17-Madre de Dios
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2344
@@ -428,7 +456,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Madre de Dios
     source_row: 11293
-  - survey_labels: 18 - Moquegua | 18-Moquegua
+  - country_entry_id: PER-SUBNAT-10
+    survey_labels: 18 - Moquegua | 18-Moquegua
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2345
@@ -448,7 +477,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Moquegua
     source_row: 11294
-  - survey_labels: 19 - Pasco | 19-Pasco
+  - country_entry_id: PER-SUBNAT-11
+    survey_labels: 19 - Pasco | 19-Pasco
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2346
@@ -468,7 +498,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pasco
     source_row: 11295
-  - survey_labels: 2 - Ancash | 2-Ancash
+  - country_entry_id: PER-SUBNAT-12
+    survey_labels: 2 - Ancash | 2-Ancash
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2329
@@ -488,7 +519,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ancash
     source_row: 11296
-  - survey_labels: 20 - Piura | 20-Piura
+  - country_entry_id: PER-SUBNAT-13
+    survey_labels: 20 - Piura | 20-Piura
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2347
@@ -508,7 +540,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Piura
     source_row: 11297
-  - survey_labels: 21 - Puno | 21-Puno
+  - country_entry_id: PER-SUBNAT-14
+    survey_labels: 21 - Puno | 21-Puno
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2348
@@ -528,7 +561,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Puno
     source_row: 11298
-  - survey_labels: 22 - San Mart�n | 22-San Mart�n
+  - country_entry_id: PER-SUBNAT-15
+    survey_labels: 22 - San Mart�n | 22-San Mart�n
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2349
@@ -548,7 +582,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: San Martín
     source_row: 11299
-  - survey_labels: 23 - Tacna | 23-Tacna
+  - country_entry_id: PER-SUBNAT-16
+    survey_labels: 23 - Tacna | 23-Tacna
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2350
@@ -568,7 +603,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tacna
     source_row: 11300
-  - survey_labels: 24 - Tumbes | 24-Tumbes
+  - country_entry_id: PER-SUBNAT-17
+    survey_labels: 24 - Tumbes | 24-Tumbes
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2351
@@ -588,7 +624,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tumbes
     source_row: 11301
-  - survey_labels: 25 - Ucayali | 25-Ucayali
+  - country_entry_id: PER-SUBNAT-18
+    survey_labels: 25 - Ucayali | 25-Ucayali
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2352
@@ -608,7 +645,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ucayali
     source_row: 11302
-  - survey_labels: 3 - Apurimac | 3-Apurimac
+  - country_entry_id: PER-SUBNAT-19
+    survey_labels: 3 - Apurimac | 3-Apurimac
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2330
@@ -628,7 +666,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Apurímac
     source_row: 11303
-  - survey_labels: 4 - Arequipa | 4-Arequipa
+  - country_entry_id: PER-SUBNAT-20
+    survey_labels: 4 - Arequipa | 4-Arequipa
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2331
@@ -648,7 +687,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Arequipa
     source_row: 11304
-  - survey_labels: 5 - Ayacucho | 5-Ayacucho
+  - country_entry_id: PER-SUBNAT-21
+    survey_labels: 5 - Ayacucho | 5-Ayacucho
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2332
@@ -668,7 +708,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ayacucho
     source_row: 11305
-  - survey_labels: 6 - Cajamarca | 6-Cajamarca
+  - country_entry_id: PER-SUBNAT-22
+    survey_labels: 6 - Cajamarca | 6-Cajamarca
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2333
@@ -688,7 +729,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cajamarca
     source_row: 11306
-  - survey_labels: 7 - Callao | 7-Callao
+  - country_entry_id: PER-SUBNAT-23
+    survey_labels: 7 - Callao | 7-Callao
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2334
@@ -708,7 +750,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Callao
     source_row: 11307
-  - survey_labels: 8 - Cuzco | 8-Cuzco
+  - country_entry_id: PER-SUBNAT-24
+    survey_labels: 8 - Cuzco | 8-Cuzco
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2335
@@ -728,7 +771,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cusco
     source_row: 11308
-  - survey_labels: 9 - Huancavelica | 9-Huancavelica
+  - country_entry_id: PER-SUBNAT-25
+    survey_labels: 9 - Huancavelica | 9-Huancavelica
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2336
@@ -758,7 +802,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: a_rio_acequi_etc
+  - country_entry_id: PER-SAN-01
+    source_category_code: a_rio_acequi_etc
     national_label_en: A río, acequi, etc.
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -768,7 +813,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: rio_o_canal
+  - country_entry_id: PER-SAN-02
+    source_category_code: rio_o_canal
     national_label_en: Río o canal
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -778,7 +824,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: rio_acequia_o_canal
+  - country_entry_id: PER-SAN-03
+    source_category_code: rio_acequia_o_canal
     national_label_en: Río, acequia o canal
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -788,7 +835,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: rio_acequia_canal
+  - country_entry_id: PER-SAN-04
+    source_category_code: rio_acequia_canal
     national_label_en: Rio, acequia, canal
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -798,7 +846,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: rio_acequia_canal_o_similar
+  - country_entry_id: PER-SAN-05
+    source_category_code: rio_acequia_canal_o_similar
     national_label_en: Río, acequia, canal o similar
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -808,7 +857,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: r_o_acequia_o_canal
+  - country_entry_id: PER-SAN-06
+    source_category_code: r_o_acequia_o_canal
     national_label_en: R¡o, acequia o canal
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -818,7 +868,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: conectado_a_red_publica_de_desague
+  - country_entry_id: PER-SAN-07
+    source_category_code: conectado_a_red_publica_de_desague
     national_label_en: Conectado a red pública de desague
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -828,7 +879,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: conectado_a_red_publica_de_desague_dentro_de_la_vivienda_fuera_de_la_vivienda_pero_dentro_del_edificio
+  - country_entry_id: PER-SAN-08
+    source_category_code: conectado_a_red_publica_de_desague_dentro_de_la_vivienda_fuera_de_la_vivienda_pero_dentro_del_edificio
     national_label_en: Conectado a red pública de desague ( Dentro de la vivienda
       + Fuera de la vivienda, pero dentro del edificio )
     national_label_local: al alcantarillado
@@ -839,7 +891,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: red_publica
+  - country_entry_id: PER-SAN-09
+    source_category_code: red_publica
     national_label_en: Red pública
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -849,7 +902,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: red_publica_de_desague_dentro_de_la_vivienda_de_desague_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
+  - country_entry_id: PER-SAN-10
+    source_category_code: red_publica_de_desague_dentro_de_la_vivienda_de_desague_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
     national_label_en: Red pública (de desagüe dentro de la vivienda + de desagüe
       fuera de la vivienda pero dentro de la edificación)
     national_label_local: al alcantarillado
@@ -860,7 +914,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: red_publica_de_desague_dentro_de_la_vivienda_de_desague_fuera_de_la_vivienda_pero_dentro_del_edificio
+  - country_entry_id: PER-SAN-11
+    source_category_code: red_publica_de_desague_dentro_de_la_vivienda_de_desague_fuera_de_la_vivienda_pero_dentro_del_edificio
     national_label_en: Red pública (de desagüe dentro de la vivienda + de desagüe
       fuera de la vivienda pero dentro del edificio)
     national_label_local: al alcantarillado
@@ -871,7 +926,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: red_publica_dentro_o_fuera_de_la_vivienda
+  - country_entry_id: PER-SAN-12
+    source_category_code: red_publica_dentro_o_fuera_de_la_vivienda
     national_label_en: Red pública dentro o fuera de la vivienda
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -881,7 +937,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: pozo_septico
+  - country_entry_id: PER-SAN-13
+    source_category_code: pozo_septico
     national_label_en: Pozo septico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -891,7 +948,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_septico_con_o_sin_observacion_directa
+  - country_entry_id: PER-SAN-14
+    source_category_code: pozo_septico_con_o_sin_observacion_directa
     national_label_en: Pozo séptico (con o sin observacion directa)
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -901,7 +959,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_septico_tanque_septico
+  - country_entry_id: PER-SAN-15
+    source_category_code: pozo_septico_tanque_septico
     national_label_en: Pozo septico / tanque septico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -911,7 +970,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_septico_tanque_septico_o_biodigesto
+  - country_entry_id: PER-SAN-16
+    source_category_code: pozo_septico_tanque_septico_o_biodigesto
     national_label_en: Pozo séptico, tanque séptico o biodigesto
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -921,7 +981,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_septico_tanque_septico_o_biodigesto_con_o_sin_observacion_directa
+  - country_entry_id: PER-SAN-17
+    source_category_code: pozo_septico_tanque_septico_o_biodigesto_con_o_sin_observacion_directa
     national_label_en: Pozo séptico, tanque séptico o biodigesto (con o sin observacion
       directa)
     national_label_local: a pozo septico
@@ -932,7 +993,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_septico_tanque_septico_o_biodigestor
+  - country_entry_id: PER-SAN-18
+    source_category_code: pozo_septico_tanque_septico_o_biodigestor
     national_label_en: Pozo séptico, tanque septico o biodigestor
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -942,7 +1004,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_exclusivo
+  - country_entry_id: PER-SAN-19
+    source_category_code: inodoro_exclusivo
     national_label_en: Inodoro exclusivo
     national_label_local: Inodoros de arrastre hidráulico (privado)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -952,7 +1015,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: private_toilet
+  - country_entry_id: PER-SAN-20
+    source_category_code: private_toilet
     national_label_en: Private toilet
     national_label_local: Inodoros de arrastre hidráulico (privado)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -962,7 +1026,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: domestic_connection_to_system
+  - country_entry_id: PER-SAN-21
+    source_category_code: domestic_connection_to_system
     national_label_en: Domestic connection to system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -972,7 +1037,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: public_network_connection_inside_house
+  - country_entry_id: PER-SAN-22
+    source_category_code: public_network_connection_inside_house
     national_label_en: PUBLIC NETWORK CONNECTION INSIDE HOUSE
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -982,7 +1048,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: inodoro_fuera_la_vivienda
+  - country_entry_id: PER-SAN-23
+    source_category_code: inodoro_fuera_la_vivienda
     national_label_en: Inodoro fuera la vivienda
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > Private flush/toilet > to unknown place/ not
@@ -993,7 +1060,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 76
-  - source_category_code: inodoro_comun
+  - country_entry_id: PER-SAN-24
+    source_category_code: inodoro_comun
     national_label_en: Inodoro comun
     national_label_local: Inodoros de arrastre hidráulico (publico)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -1003,7 +1071,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_toilet
+  - country_entry_id: PER-SAN-25
+    source_category_code: shared_toilet
     national_label_en: Shared toilet
     national_label_local: Inodoros de arrastre hidráulico (publico)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -1013,7 +1082,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: public_network_connection_outside_house
+  - country_entry_id: PER-SAN-26
+    source_category_code: public_network_connection_outside_house
     national_label_en: PUBLIC NETWORK CONNECTION OUTSIDE HOUSE
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1024,7 +1094,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: water_closet_excusado
+  - country_entry_id: PER-SAN-27
+    source_category_code: water_closet_excusado
     national_label_en: Water closet (Excusado)
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1035,7 +1106,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: a_rio_acequi_etc
+  - country_entry_id: PER-SAN-28
+    source_category_code: a_rio_acequi_etc
     national_label_en: A río, acequi, etc.
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
@@ -1045,7 +1117,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: sewer_or_canal
+  - country_entry_id: PER-SAN-29
+    source_category_code: sewer_or_canal
     national_label_en: SEWER OR CANAL
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
@@ -1055,7 +1128,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: red_publica_dentro_o_fuera_de_la_vivienda
+  - country_entry_id: PER-SAN-30
+    source_category_code: red_publica_dentro_o_fuera_de_la_vivienda
     national_label_en: Red pública dentro o fuera de la vivienda
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1065,7 +1139,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: sanitario_connectado_a_red_publica_fuera_o_dentro_de_la_casa
+  - country_entry_id: PER-SAN-31
+    source_category_code: sanitario_connectado_a_red_publica_fuera_o_dentro_de_la_casa
     national_label_en: Sanitario connectado a red publica fuera o dentro de la casa
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1075,7 +1150,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: wc_inside_dwelling
+  - country_entry_id: PER-SAN-32
+    source_category_code: wc_inside_dwelling
     national_label_en: WC inside dwelling
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1085,7 +1161,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: pozo_septico
+  - country_entry_id: PER-SAN-33
+    source_category_code: pozo_septico
     national_label_en: Pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1095,7 +1172,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: sanitaria_connectado_a_septic_well
+  - country_entry_id: PER-SAN-34
+    source_category_code: sanitaria_connectado_a_septic_well
     national_label_en: Sanitaria connectado a septic well
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1105,7 +1183,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: septic_tank
+  - country_entry_id: PER-SAN-35
+    source_category_code: septic_tank
     national_label_en: SEPTIC TANK
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1115,7 +1194,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: wc_septic_well
+  - country_entry_id: PER-SAN-36
+    source_category_code: wc_septic_well
     national_label_en: WC septic well
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1125,7 +1205,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: turkish_chair_silla_turca
+  - country_entry_id: PER-SAN-37
+    source_category_code: turkish_chair_silla_turca
     national_label_en: '"Turkish chair" (Silla turca)'
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1135,7 +1216,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: inodoro_dentro_la_vivienda
+  - country_entry_id: PER-SAN-38
+    source_category_code: inodoro_dentro_la_vivienda
     national_label_en: Inodoro dentro la vivienda
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1145,7 +1227,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: latrina_mejorada_colgante_flotante
+  - country_entry_id: PER-SAN-39
+    source_category_code: latrina_mejorada_colgante_flotante
     national_label_en: 'Latrina: Mejorada colgante / flotante'
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1156,7 +1239,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: latrine_over_river_lake
+  - country_entry_id: PER-SAN-40
+    source_category_code: latrine_over_river_lake
     national_label_en: Latrine over river/lake
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1167,7 +1251,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: mejorada_colgante_flotante
+  - country_entry_id: PER-SAN-41
+    source_category_code: mejorada_colgante_flotante
     national_label_en: Mejorada colgante / flotante
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1178,7 +1263,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: rio_acequia_o_canal
+  - country_entry_id: PER-SAN-42
+    source_category_code: rio_acequia_o_canal
     national_label_en: Río, acequia o canal
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1189,7 +1275,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: river_canal
+  - country_entry_id: PER-SAN-43
+    source_category_code: river_canal
     national_label_en: River, canal
     national_label_local: Otro
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -1199,7 +1286,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: pozo_ciego_o_negro
+  - country_entry_id: PER-SAN-44
+    source_category_code: pozo_ciego_o_negro
     national_label_en: Pozo ciego o negro
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1210,7 +1298,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pozo_ciego_o_negro_con_o_sin_observacion_directa
+  - country_entry_id: PER-SAN-45
+    source_category_code: pozo_ciego_o_negro_con_o_sin_observacion_directa
     national_label_en: Pozo ciego o negro (con o sin observacion directa)
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1221,7 +1310,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pozo_ciego_o_negro_letrina
+  - country_entry_id: PER-SAN-46
+    source_category_code: pozo_ciego_o_negro_letrina
     national_label_en: Pozo ciego o negro/letrina
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1232,7 +1322,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrina_pozo_ciego_o_negro
+  - country_entry_id: PER-SAN-47
+    source_category_code: latrina_pozo_ciego_o_negro
     national_label_en: 'Latrina: Pozo ciego o negro'
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1243,7 +1334,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: latrine_ciego_o_negro
+  - country_entry_id: PER-SAN-48
+    source_category_code: latrine_ciego_o_negro
     national_label_en: Latrine (ciego o negro)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1254,7 +1346,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina
+  - country_entry_id: PER-SAN-49
+    source_category_code: letrina
     national_label_en: Letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1265,7 +1358,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_con_o_sin_observacion_directa
+  - country_entry_id: PER-SAN-50
+    source_category_code: letrina_con_o_sin_observacion_directa
     national_label_en: Letrina (con o sin observacion directa)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1276,7 +1370,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_con_tratamiento
+  - country_entry_id: PER-SAN-51
+    source_category_code: letrina_con_tratamiento
     national_label_en: Letrina (con tratamiento)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1287,7 +1382,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_pozo_ciego_o_negro
+  - country_entry_id: PER-SAN-52
+    source_category_code: letrina_pozo_ciego_o_negro
     national_label_en: Letrina (pozo ciego o negro)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1298,7 +1394,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine
+  - country_entry_id: PER-SAN-53
+    source_category_code: pit_latrine
     national_label_en: PIT LATRINE
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1309,7 +1406,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pozo_ciego_o_negro_con_o_sin_observacion_directa
+  - country_entry_id: PER-SAN-54
+    source_category_code: pozo_ciego_o_negro_con_o_sin_observacion_directa
     national_label_en: Pozo ciego o negro (con o sin observacion directa)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1320,7 +1418,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pozo_ciego_o_negro_letrina
+  - country_entry_id: PER-SAN-55
+    source_category_code: pozo_ciego_o_negro_letrina
     national_label_en: Pozo ciego o negro / letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1331,7 +1430,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pozo_ciego_o_negro_letrina
+  - country_entry_id: PER-SAN-56
+    source_category_code: pozo_ciego_o_negro_letrina
     national_label_en: Pozo ciego o negro/letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1342,7 +1442,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: latrina_mejorada_ventilada
+  - country_entry_id: PER-SAN-57
+    source_category_code: latrina_mejorada_ventilada
     national_label_en: 'Latrina: Mejorada ventilada'
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1353,7 +1454,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: mejorada_ventilada
+  - country_entry_id: PER-SAN-58
+    source_category_code: mejorada_ventilada
     national_label_en: Mejorada ventilada
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1364,7 +1466,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_latrine
+  - country_entry_id: PER-SAN-59
+    source_category_code: ventilated_latrine
     national_label_en: Ventilated latrine
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1375,7 +1478,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: letrina_exclusiva
+  - country_entry_id: PER-SAN-60
+    source_category_code: letrina_exclusiva
     national_label_en: Letrina exclusiva
     national_label_local: Letrina privada
     jmp_classification: Latrines > Dry latrines > Private Latrines
@@ -1385,7 +1489,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 112
-  - source_category_code: letrina_exclusiva
+  - country_entry_id: PER-SAN-61
+    source_category_code: letrina_exclusiva
     national_label_en: Letrina exclusiva
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1395,7 +1500,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: letrina_exclusiva_fuera_de_la_vivienda
+  - country_entry_id: PER-SAN-62
+    source_category_code: letrina_exclusiva_fuera_de_la_vivienda
     national_label_en: Letrina exclusiva (fuera de la vivienda)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1405,7 +1511,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: pozo_ciego_o_negro
+  - country_entry_id: PER-SAN-63
+    source_category_code: pozo_ciego_o_negro
     national_label_en: Pozo ciego o negro
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1415,7 +1522,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: simple_pit_private
+  - country_entry_id: PER-SAN-64
+    source_category_code: simple_pit_private
     national_label_en: Simple pit (private)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1425,7 +1533,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: letrina_comun
+  - country_entry_id: PER-SAN-65
+    source_category_code: letrina_comun
     national_label_en: Letrina comun
     national_label_local: Letrina publica/compartida
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines
@@ -1435,7 +1544,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 120
-  - source_category_code: letrina_commun
+  - country_entry_id: PER-SAN-66
+    source_category_code: letrina_commun
     national_label_en: Letrina commun
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1446,7 +1556,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: letrina_comun
+  - country_entry_id: PER-SAN-67
+    source_category_code: letrina_comun
     national_label_en: Letrina común
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1457,7 +1568,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: letrina_comun_fuera_de_la_vivienda
+  - country_entry_id: PER-SAN-68
+    source_category_code: letrina_comun_fuera_de_la_vivienda
     national_label_en: Letrina comun (fuera de la vivienda)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1468,7 +1580,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: simple_pit_shared
+  - country_entry_id: PER-SAN-69
+    source_category_code: simple_pit_shared
     national_label_en: Simple pit (shared)
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1479,7 +1592,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: pour_flush_private
+  - country_entry_id: PER-SAN-70
+    source_category_code: pour_flush_private
     national_label_en: Pour-flush (private)
     national_label_local: Letrinas de arrastre hidráulico (privado)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1489,7 +1603,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: pour_flush_shared
+  - country_entry_id: PER-SAN-71
+    source_category_code: pour_flush_shared
     national_label_en: Pour-flush (shared)
     national_label_local: Letrinas de arrastre hidráulico (publico)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1500,7 +1615,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: wc_outside_dwelling
+  - country_entry_id: PER-SAN-72
+    source_category_code: wc_outside_dwelling
     national_label_en: WC outside dwelling
     national_label_local: al alcantarillado
     jmp_classification: Latrines > Pour flush latrines > to piped sewer system
@@ -1510,7 +1626,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: blind_well_soakaway
+  - country_entry_id: PER-SAN-73
+    source_category_code: blind_well_soakaway
     national_label_en: Blind well (soakaway)
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Latrines > Pour flush latrines > to pit
@@ -1520,7 +1637,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: pour_flush_botadero
+  - country_entry_id: PER-SAN-74
+    source_category_code: pour_flush_botadero
     national_label_en: Pour-flush (Botadero)
     national_label_local: a pozo septico
     jmp_classification: Latrines > Pour flush latrines > to septic tank
@@ -1530,7 +1648,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: bush_river_irrigation_ditch_canal
+  - country_entry_id: PER-SAN-75
+    source_category_code: bush_river_irrigation_ditch_canal
     national_label_en: Bush / River, irrigation ditch, canal
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1540,7 +1659,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: campo_abierto_o_al_aire_libre
+  - country_entry_id: PER-SAN-76
+    source_category_code: campo_abierto_o_al_aire_libre
     national_label_en: Campo abierto o al aire libre
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1550,7 +1670,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility
+  - country_entry_id: PER-SAN-77
+    source_category_code: no_facility
     national_label_en: No facility
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1560,7 +1681,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_hay_servicio
+  - country_entry_id: PER-SAN-78
+    source_category_code: no_hay_servicio
     national_label_en: No hay servicio
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1570,7 +1692,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_hay_servicio_matorral_campo
+  - country_entry_id: PER-SAN-79
+    source_category_code: no_hay_servicio_matorral_campo
     national_label_en: No hay servicio (matorral / campo)
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1580,7 +1703,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_sanitation_facilities
+  - country_entry_id: PER-SAN-80
+    source_category_code: no_sanitation_facilities
     national_label_en: NO SANITATION FACILITIES
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1590,7 +1714,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_service
+  - country_entry_id: PER-SAN-81
+    source_category_code: no_service
     national_label_en: No service
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1600,7 +1725,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene
+  - country_entry_id: PER-SAN-82
+    source_category_code: no_tiene
     national_label_en: No tiene
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1610,7 +1736,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: sin_servicio_matorral_campo
+  - country_entry_id: PER-SAN-83
+    source_category_code: sin_servicio_matorral_campo
     national_label_en: Sin servicio (matorral/campo)
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1620,7 +1747,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: servicio_de_alcantarillado_y_letrinas
+  - country_entry_id: PER-SAN-84
+    source_category_code: servicio_de_alcantarillado_y_letrinas
     national_label_en: Servicio de alcantarillado y letrinas
     national_label_local: Otro
     jmp_classification: Other improved > Other
@@ -1630,7 +1758,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: letrina_con_o_sin_observacion_directa
+  - country_entry_id: PER-SAN-85
+    source_category_code: letrina_con_o_sin_observacion_directa
     national_label_en: Letrina (con o sin observacion directa)
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1640,7 +1769,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: PER-SAN-86
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1650,7 +1780,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otra
+  - country_entry_id: PER-SAN-87
+    source_category_code: otra
     national_label_en: Otra
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1660,7 +1791,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro
+  - country_entry_id: PER-SAN-88
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1670,7 +1802,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: outro
+  - country_entry_id: PER-SAN-89
+    source_category_code: outro
     national_label_en: Outro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1680,7 +1813,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: rio_acequia_o_canal
+  - country_entry_id: PER-SAN-90
+    source_category_code: rio_acequia_o_canal
     national_label_en: Río, acequia o canal
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1700,7 +1834,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: manantial
+  - country_entry_id: PER-WAS-01
+    source_category_code: manantial
     national_label_en: Manantial
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1710,7 +1845,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: manantial_puquio
+  - country_entry_id: PER-WAS-02
+    source_category_code: manantial_puquio
     national_label_en: Manantial (Puquio)
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1720,7 +1856,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: manantial_o_puquio
+  - country_entry_id: PER-WAS-03
+    source_category_code: manantial_o_puquio
     national_label_en: Manantial o puquio
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1730,7 +1867,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: spring
+  - country_entry_id: PER-WAS-04
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1740,7 +1878,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: pozo
+  - country_entry_id: PER-WAS-05
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1750,7 +1889,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: pozo_agua_subterranea
+  - country_entry_id: PER-WAS-06
+    source_category_code: pozo_agua_subterranea
     national_label_en: Pozo (agua subterranea)
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1760,7 +1900,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: well
+  - country_entry_id: PER-WAS-07
+    source_category_code: well
     national_label_en: Well
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1770,7 +1911,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: pozo_en_la_casa_patio
+  - country_entry_id: PER-WAS-08
+    source_category_code: pozo_en_la_casa_patio
     national_label_en: Pozo en la casa /patio
     national_label_local: Privado
     jmp_classification: Ground water > All wells > Private
@@ -1780,7 +1922,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: pozo_en_la_casa_patio
+  - country_entry_id: PER-WAS-09
+    source_category_code: pozo_en_la_casa_patio
     national_label_en: Pozo en la casa/patio
     national_label_local: Privado
     jmp_classification: Ground water > All wells > Private
@@ -1790,7 +1933,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: private_well
+  - country_entry_id: PER-WAS-10
+    source_category_code: private_well
     national_label_en: Private well
     national_label_local: Privado
     jmp_classification: Ground water > All wells > Private
@@ -1800,7 +1944,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: well_in_house_or_yard
+  - country_entry_id: PER-WAS-11
+    source_category_code: well_in_house_or_yard
     national_label_en: Well in house or yard
     national_label_local: Privado
     jmp_classification: Ground water > All wells > Private
@@ -1810,7 +1955,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: well_inside_dwelling
+  - country_entry_id: PER-WAS-12
+    source_category_code: well_inside_dwelling
     national_label_en: Well inside dwelling
     national_label_local: Privado
     jmp_classification: Ground water > All wells > Private
@@ -1820,7 +1966,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: pozo_publico
+  - country_entry_id: PER-WAS-13
+    source_category_code: pozo_publico
     national_label_en: Pozo publico
     national_label_local: Publico
     jmp_classification: Ground water > All wells > Public
@@ -1830,7 +1977,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: public_well
+  - country_entry_id: PER-WAS-14
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Publico
     jmp_classification: Ground water > All wells > Public
@@ -1840,7 +1988,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: pozo
+  - country_entry_id: PER-WAS-15
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1850,7 +1999,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: well
+  - country_entry_id: PER-WAS-16
+    source_category_code: well
     national_label_en: WELL
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1860,7 +2010,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_en_la_casa_patio
+  - country_entry_id: PER-WAS-17
+    source_category_code: pozo_en_la_casa_patio
     national_label_en: Pozo en la casa/patio
     national_label_local: Privado
     jmp_classification: Ground water > Traditional wells > Private
@@ -1870,7 +2021,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: pozo_en_la_casa_patio_lote
+  - country_entry_id: PER-WAS-18
+    source_category_code: pozo_en_la_casa_patio_lote
     national_label_en: Pozo en la casa/patio/lote
     national_label_local: Privado
     jmp_classification: Ground water > Traditional wells > Private
@@ -1880,7 +2032,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: pozo_en_la_vivineda_patio_lote
+  - country_entry_id: PER-WAS-19
+    source_category_code: pozo_en_la_vivineda_patio_lote
     national_label_en: Pozo en la vivineda/patio/lote
     national_label_local: Privado
     jmp_classification: Ground water > Traditional wells > Private
@@ -1890,7 +2043,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: pozo_publico
+  - country_entry_id: PER-WAS-20
+    source_category_code: pozo_publico
     national_label_en: Pozo publico
     national_label_local: Publico
     jmp_classification: Ground water > Traditional wells > Public
@@ -1900,7 +2054,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: pump
+  - country_entry_id: PER-WAS-21
+    source_category_code: pump
     national_label_en: PUMP
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1910,7 +2065,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: camion_cisterna_u_otro_similar
+  - country_entry_id: PER-WAS-22
+    source_category_code: camion_cisterna_u_otro_similar
     national_label_en: Camion - cisterna u otro similar
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1920,7 +2076,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_cisterna
+  - country_entry_id: PER-WAS-23
+    source_category_code: camion_cisterna
     national_label_en: Camion cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1930,7 +2087,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_tanque
+  - country_entry_id: PER-WAS-24
+    source_category_code: camion_tanque
     national_label_en: Camion tanque
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1940,7 +2098,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_tanque_aguatero
+  - country_entry_id: PER-WAS-25
+    source_category_code: camion_tanque_aguatero
     national_label_en: Camion tanque/aguatero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1950,7 +2109,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_cisterna_u_otro_similar
+  - country_entry_id: PER-WAS-26
+    source_category_code: camion_cisterna_u_otro_similar
     national_label_en: Camión-cisterna u otro similar
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1960,7 +2120,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: PER-WAS-27
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1970,7 +2131,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_tank_or_seller
+  - country_entry_id: PER-WAS-28
+    source_category_code: water_tank_or_seller
     national_label_en: WATER TANK OR SELLER
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1980,7 +2142,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: PER-WAS-29
+    source_category_code: other
     national_label_en: other
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1990,7 +2153,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otra
+  - country_entry_id: PER-WAS-30
+    source_category_code: otra
     national_label_en: Otra
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -2000,7 +2164,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: PER-WAS-31
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -2010,7 +2175,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otros
+  - country_entry_id: PER-WAS-32
+    source_category_code: otros
     national_label_en: Otros
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -2020,7 +2186,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: PER-WAS-33
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -2030,7 +2197,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: otro
+  - country_entry_id: PER-WAS-34
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -2040,7 +2208,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: agua_embotellada
+  - country_entry_id: PER-WAS-35
+    source_category_code: agua_embotellada
     national_label_en: Agua embotellada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -2050,7 +2219,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bw_with_improved_source
+  - country_entry_id: PER-WAS-36
+    source_category_code: bw_with_improved_source
     national_label_en: BW with improved source
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -2060,7 +2230,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bw_with_improved_sources
+  - country_entry_id: PER-WAS-37
+    source_category_code: bw_with_improved_sources
     national_label_en: BW with improved sources
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -2070,7 +2241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bw_with_unimproved_source
+  - country_entry_id: PER-WAS-38
+    source_category_code: bw_with_unimproved_source
     national_label_en: BW with unimproved source
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -2080,7 +2252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: bw_with_unimproved_sources
+  - country_entry_id: PER-WAS-39
+    source_category_code: bw_with_unimproved_sources
     national_label_en: BW with unimproved sources
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -2090,7 +2263,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: agua_de_lluivia
+  - country_entry_id: PER-WAS-40
+    source_category_code: agua_de_lluivia
     national_label_en: Agua de lluivia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2100,7 +2274,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_de_lluvia
+  - country_entry_id: PER-WAS-41
+    source_category_code: agua_de_lluvia
     national_label_en: Agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2110,7 +2285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: PER-WAS-42
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2120,7 +2296,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rio_acequia_lago_laguna
+  - country_entry_id: PER-WAS-43
+    source_category_code: rio_acequia_lago_laguna
     national_label_en: Río, acequia, lago, laguna
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2130,7 +2307,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia_manantial_o_similar
+  - country_entry_id: PER-WAS-44
+    source_category_code: rio_acequia_manantial_o_similar
     national_label_en: Rio, acequia, manantial o similar
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2140,7 +2318,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia_manantial_o_similar
+  - country_entry_id: PER-WAS-45
+    source_category_code: rio_acequia_manantial_o_similar
     national_label_en: Río, acequia.manantial o similar
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2150,7 +2329,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia
+  - country_entry_id: PER-WAS-46
+    source_category_code: rio_acequia
     national_label_en: Río/ acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2160,7 +2340,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia_laguna
+  - country_entry_id: PER-WAS-47
+    source_category_code: rio_acequia_laguna
     national_label_en: Río/ acequia / Laguna
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2170,7 +2351,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia
+  - country_entry_id: PER-WAS-48
+    source_category_code: rio_acequia
     national_label_en: Rio/acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2180,7 +2362,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_irrigation_channel
+  - country_entry_id: PER-WAS-49
+    source_category_code: river_irrigation_channel
     national_label_en: River, irrigation channel
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2190,7 +2373,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_irrigation_channel
+  - country_entry_id: PER-WAS-50
+    source_category_code: river_irrigation_channel
     national_label_en: River/ irrigation channel
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2200,7 +2384,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
+  - country_entry_id: PER-WAS-51
+    source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irirgation channel
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2210,7 +2395,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+  - country_entry_id: PER-WAS-52
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2220,7 +2406,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia
+  - country_entry_id: PER-WAS-53
+    source_category_code: rio_acequia
     national_label_en: Río/ acequia
     national_label_local: Río
     jmp_classification: Surface water > River
@@ -2230,7 +2417,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_or_stream
+  - country_entry_id: PER-WAS-54
+    source_category_code: river_or_stream
     national_label_en: RIVER OR STREAM
     national_label_local: Río
     jmp_classification: Surface water > River
@@ -2240,7 +2428,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: connection_outdoors
+  - country_entry_id: PER-WAS-55
+    source_category_code: connection_outdoors
     national_label_en: Connection outdoors
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2250,7 +2439,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: household_connection_neighbour_s
+  - country_entry_id: PER-WAS-56
+    source_category_code: household_connection_neighbour_s
     national_label_en: Household connection (neighbour's)
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2260,7 +2450,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: household_connection
+  - country_entry_id: PER-WAS-57
+    source_category_code: household_connection
     national_label_en: Household connection
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2270,7 +2461,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: red_publica_dentro_de_la_vivienda_fuera_de_la_vivienda_y_pilon_de_uso_publico
+  - country_entry_id: PER-WAS-58
+    source_category_code: red_publica_dentro_de_la_vivienda_fuera_de_la_vivienda_y_pilon_de_uso_publico
     national_label_en: Red pública dentro de la vivienda, fuera de la vivienda y pilón
       de uso público
     national_label_local: Conexiones domiciliarias
@@ -2281,7 +2473,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: household_connection_to_system
+  - country_entry_id: PER-WAS-59
+    source_category_code: household_connection_to_system
     national_label_en: Household connection to system
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2291,7 +2484,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: inside_the_house
+  - country_entry_id: PER-WAS-60
+    source_category_code: inside_the_house
     national_label_en: INSIDE THE HOUSE
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2301,7 +2495,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: PER-WAS-61
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2311,7 +2506,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_dentro_de_la_viv
+  - country_entry_id: PER-WAS-62
+    source_category_code: red_publica_dentro_de_la_viv
     national_label_en: Red pública Dentro de la viv.
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2321,7 +2517,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_dentro_de_la_vivienda
+  - country_entry_id: PER-WAS-63
+    source_category_code: red_publica_dentro_de_la_vivienda
     national_label_en: Red publica dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2331,7 +2528,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_dentro_de_la_vivienda
+  - country_entry_id: PER-WAS-64
+    source_category_code: red_publica_dentro_de_la_vivienda
     national_label_en: Red publica, dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2341,7 +2539,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: building_connection_to_system
+  - country_entry_id: PER-WAS-65
+    source_category_code: building_connection_to_system
     national_label_en: Building connection to system
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2351,7 +2550,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: outside_the_house_but_inside_the_compound
+  - country_entry_id: PER-WAS-66
+    source_category_code: outside_the_house_but_inside_the_compound
     national_label_en: OUTSIDE THE HOUSE, BUT INSIDE THE COMPOUND.
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2361,7 +2561,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_outside_dwelling_but_within_buikding
+  - country_entry_id: PER-WAS-67
+    source_category_code: piped_outside_dwelling_but_within_buikding
     national_label_en: Piped outside dwelling but within buikding
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2371,7 +2572,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_fuera_de_la_vivienda
+  - country_entry_id: PER-WAS-68
+    source_category_code: red_publica_fuera_de_la_vivienda
     national_label_en: Red Pública Fuera de la vivienda
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2381,7 +2583,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
+  - country_entry_id: PER-WAS-69
+    source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
     national_label_en: Red publica fuera de la vivienda pero dentro del edificio
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2391,7 +2594,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
+  - country_entry_id: PER-WAS-70
+    source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
     national_label_en: Red pública fuera de la vivienda, pero dentro de la edificación
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2401,7 +2605,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
+  - country_entry_id: PER-WAS-71
+    source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
     national_label_en: Red publica, fuera de la vivienda pero dentro del edificio
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2411,7 +2616,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: pilon_grifo_publico
+  - country_entry_id: PER-WAS-72
+    source_category_code: pilon_grifo_publico
     national_label_en: Pilon /grifo publico/
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2421,7 +2627,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: pilon_de_uso_publico
+  - country_entry_id: PER-WAS-73
+    source_category_code: pilon_de_uso_publico
     national_label_en: Pilón de uso público
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2431,7 +2638,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: pilon_o_pileta_de_uso_publico
+  - country_entry_id: PER-WAS-74
+    source_category_code: pilon_o_pileta_de_uso_publico
     national_label_en: Pilón o pileta de uso público
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2441,7 +2649,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: pilon_grifo_publico
+  - country_entry_id: PER-WAS-75
+    source_category_code: pilon_grifo_publico
     national_label_en: Pilon/Grifo publico
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2451,7 +2660,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: PER-WAS-76
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2461,7 +2671,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: PER-WAS-77
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

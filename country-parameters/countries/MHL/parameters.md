@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-kindergarten
+  - country_entry_id: MHL-EDU-01
+    national_label_en: Pre-kindergarten
     national_label_local: Pre-kindergarten
     entry_age: 2
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarten
+  - country_entry_id: MHL-EDU-02
+    national_label_en: Kindergarten
     national_label_local: Kindergarten
     entry_age: 5
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Elementary School Gr1-Gr6
+  - country_entry_id: MHL-EDU-03
+    national_label_en: Elementary School Gr1-Gr6
     national_label_local: Elementary School Gr1-Gr6
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Middle School Gr7-Gr8
+  - country_entry_id: MHL-EDU-04
+    national_label_en: Middle School Gr7-Gr8
     national_label_local: Middle School Gr7-Gr8
     entry_age: 12
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Grade Pre-9
+  - country_entry_id: MHL-EDU-05
+    national_label_en: Grade Pre-9
     national_label_local: Grade Pre-9
     entry_age: 13
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: "High School \nGr9-Gr12"
+  - country_entry_id: MHL-EDU-06
+    national_label_en: "High School \nGr9-Gr12"
     national_label_local: "High School \nGr9-Gr12"
     entry_age: 14
     duration_years: 4
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: USP prelim
+  - country_entry_id: MHL-EDU-07
+    national_label_en: USP prelim
     national_label_local: USP prelim
     entry_age: 18
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: USP Form 7
+  - country_entry_id: MHL-EDU-08
+    national_label_en: USP Form 7
     national_label_local: USP Form 7
     entry_age: 19
     duration_years: 1
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: College of Marshall Islands Diploma - Adult Basic Education
+  - country_entry_id: MHL-EDU-09
+    national_label_en: College of Marshall Islands Diploma - Adult Basic Education
     national_label_local: College of Marshall Islands Diploma - Adult Basic Education
     entry_age: 17
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: "Life skills academy \nGr. Pre 9-Gr12"
+  - country_entry_id: MHL-EDU-10
+    national_label_en: "Life skills academy \nGr. Pre 9-Gr12"
     national_label_local: "Life skills academy \nGr. Pre 9-Gr12"
     entry_age: 14
     duration_years: 4
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: USP Campus - Certificate
+  - country_entry_id: MHL-EDU-11
+    national_label_en: USP Campus - Certificate
     national_label_local: USP Campus - Certificate
     entry_age: 18
     duration_years: 1
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: College of Marshall Islands Diploma
+  - country_entry_id: MHL-EDU-12
+    national_label_en: College of Marshall Islands Diploma
     national_label_local: College of Marshall Islands Diploma
     entry_age: 18
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: USP Campus - Vocational
+  - country_entry_id: MHL-EDU-13
+    national_label_en: USP Campus - Vocational
     national_label_local: USP Campus - Vocational
     entry_age: 18
     duration_years: 1
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: USP Campus - Diploma
+  - country_entry_id: MHL-EDU-14
+    national_label_en: USP Campus - Diploma
     national_label_local: USP Campus - Diploma
     entry_age: 18
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: College of Marshall Islands - Associate Degrees in Science
+  - country_entry_id: MHL-EDU-15
+    national_label_en: College of Marshall Islands - Associate Degrees in Science
       and Arts
     national_label_local: College of Marshall Islands - Associate Degrees in Science
       and Arts
@@ -162,7 +177,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: College of Marshall Islands - Bachelor Degree
+  - country_entry_id: MHL-EDU-16
+    national_label_en: College of Marshall Islands - Bachelor Degree
     national_label_local: College of Marshall Islands - Bachelor Degree
     entry_age: 20
     duration_years: 3
@@ -183,7 +199,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_to_seomewhere_else
+  - country_entry_id: MHL-SAN-01
+    source_category_code: flush_to_seomewhere_else
     national_label_en: Flush to seomewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -193,7 +210,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: MHL-SAN-02
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -203,7 +221,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_pour_flush_to_pit_latrine
+  - country_entry_id: MHL-SAN-03
+    source_category_code: flush_pour_flush_to_pit_latrine
     national_label_en: Flush/pour flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -213,7 +232,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: MHL-SAN-04
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -223,7 +243,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: MHL-SAN-05
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -234,7 +255,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: MHL-SAN-06
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -254,7 +276,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_well
+  - country_entry_id: MHL-WAS-01
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -264,7 +287,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole
+  - country_entry_id: MHL-WAS-02
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -274,7 +298,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_well
+  - country_entry_id: MHL-WAS-03
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -284,7 +309,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: other
+  - country_entry_id: MHL-WAS-04
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -294,7 +320,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: unimproved_water_source
+  - country_entry_id: MHL-WAS-05
+    source_category_code: unimproved_water_source
     national_label_en: Unimproved water source
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -304,7 +331,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottle_of_water
+  - country_entry_id: MHL-WAS-06
+    source_category_code: bottle_of_water
     national_label_en: Bottle of water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -314,7 +342,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: MHL-WAS-07
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -324,7 +353,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater_collection
+  - country_entry_id: MHL-WAS-08
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -334,7 +364,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_tank
+  - country_entry_id: MHL-WAS-09
+    source_category_code: rainwater_tank
     national_label_en: Rainwater tank
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -344,7 +375,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: piped_water_to_neighbour
+  - country_entry_id: MHL-WAS-10
+    source_category_code: piped_water_to_neighbour
     national_label_en: piped water to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -354,7 +386,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: public_piped_water_supply_to_yard_plot_or_to_neighbor
+  - country_entry_id: MHL-WAS-11
+    source_category_code: public_piped_water_supply_to_yard_plot_or_to_neighbor
     national_label_en: Public piped water supply to yard/plot or to Neighbor
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -364,7 +397,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: MHL-WAS-12
+    source_category_code: piped_water_into_dwelling
     national_label_en: piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -374,7 +408,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_yard_plot
+  - country_entry_id: MHL-WAS-13
+    source_category_code: piped_water_into_yard_plot
     national_label_en: piped water into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -384,7 +419,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MHL-WAS-14
+    source_category_code: public_tap_standpipe
     national_label_en: public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -394,7 +430,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_shared_tap
+  - country_entry_id: MHL-WAS-15
+    source_category_code: public_shared_tap
     national_label_en: Public/shared tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education in pre-primary institution
+  - country_entry_id: MKD-EDU-01
+    national_label_en: Pre-primary education in pre-primary institution
     national_label_local: Preducilisno obrazovanie vo predskolskite ustanovi
     entry_age: 0
     duration_years: 0
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Pre-primary education in pre-primary institution
+  - country_entry_id: MKD-EDU-02
+    national_label_en: Pre-primary education in pre-primary institution
     national_label_local: Preducilisno obrazovanie vo predskolskite ustanovi
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Primary education-regular
+  - country_entry_id: MKD-EDU-03
+    national_label_en: Primary education-regular
     national_label_local: Osnovno redovno obrazovanie
     entry_age: 5
     duration_years: 5
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 7
-  - national_label_en: Primary education - special need education
+  - country_entry_id: MKD-EDU-04
+    national_label_en: Primary education - special need education
     national_label_local: Osnovno obrazovanie-specijalno
     entry_age: 5
     duration_years: 5
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Primary education - adult education
+  - country_entry_id: MKD-EDU-05
+    national_label_en: Primary education - adult education
     national_label_local: Osnovno obrazovanie-vozrasni
     entry_age: 17
     duration_years: 4
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Primary education-art education
+  - country_entry_id: MKD-EDU-06
+    national_label_en: Primary education-art education
     national_label_local: Osnovno obrazovanie-umetnicko
     entry_age: 5
     duration_years: 4
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Lower secondary education - regular
+  - country_entry_id: MKD-EDU-07
+    national_label_en: Lower secondary education - regular
     national_label_local: Osnovno redovno obrazovanie
     entry_age: 10
     duration_years: 4
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Lower secondary  education-special need education
+  - country_entry_id: MKD-EDU-08
+    national_label_en: Lower secondary  education-special need education
     national_label_local: Osnovno obrazovanie-specijalno
     entry_age: 10
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Lower secondary -adult education
+  - country_entry_id: MKD-EDU-09
+    national_label_en: Lower secondary -adult education
     national_label_local: Osnovno obrazovanie-vozrasni
     entry_age: 17
     duration_years: 4
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Lower secondary -art education
+  - country_entry_id: MKD-EDU-10
+    national_label_en: Lower secondary -art education
     national_label_local: Osnovno obrazovanie-umetnicko
     entry_age: 10
     duration_years: 4
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: Upper secondary education-regular
+  - country_entry_id: MKD-EDU-11
+    national_label_en: Upper secondary education-regular
     national_label_local: Sredno obrazovanie - redovno
     entry_age: 14
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Upper secondary education-special need education
+  - country_entry_id: MKD-EDU-12
+    national_label_en: Upper secondary education-special need education
     national_label_local: Sredno strucno obrazovanie- specijalno
     entry_age: 14
     duration_years: 3
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Vocational training
+  - country_entry_id: MKD-EDU-13
+    national_label_en: Vocational training
     national_label_local: Strucno osposobuvanje
     entry_age: 14
     duration_years: 2
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Upper secondary education-regular general
+  - country_entry_id: MKD-EDU-14
+    national_label_en: Upper secondary education-regular general
     national_label_local: Sredno obrazovanie - redovno opsto
     entry_age: 14
     duration_years: 4
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Upper secondary education-regular vocational education
+  - country_entry_id: MKD-EDU-15
+    national_label_en: Upper secondary education-regular vocational education
     national_label_local: Sredno obrazovanie - redovno strucno
     entry_age: 14
     duration_years: 4
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: Upper secondary vocational education-special need education
+  - country_entry_id: MKD-EDU-16
+    national_label_en: Upper secondary vocational education-special need education
     national_label_local: Sredno strucno obrazovanie- specijalno
     entry_age: 14
     duration_years: 4
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
-  - national_label_en: Upper secondary education-regular religious- vocational
+  - country_entry_id: MKD-EDU-17
+    national_label_en: Upper secondary education-regular religious- vocational
     national_label_local: Sredno obrazovanie - versko
     entry_age: 14
     duration_years: 4
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
-  - national_label_en: Workers' programs
+  - country_entry_id: MKD-EDU-18
+    national_label_en: Workers' programs
     national_label_local: Specijalisticko obrazovanie
     entry_age: 18
     duration_years: 1
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: University education - three years educational programmes -180
+  - country_entry_id: MKD-EDU-19
+    national_label_en: University education - three years educational programmes -180
       credits, University education - four year studies-240 credits.
     national_label_local: Dodiplomski  studii (3 godisni I 4 godisni  studii (180
       I 240 krediti)
@@ -202,7 +221,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: University education - five year studies
+  - country_entry_id: MKD-EDU-20
+    national_label_en: University education - five year studies
     national_label_local: Dodiplomski  studii 5 godisni studii
     entry_age: 18
     duration_years: 5
@@ -212,7 +232,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Integrated studies(long 1st degree programms)
+  - country_entry_id: MKD-EDU-21
+    national_label_en: Integrated studies(long 1st degree programms)
     national_label_local: Integrirani studii
     entry_age: 18
     duration_years: 5
@@ -222,7 +243,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Masters' degree
+  - country_entry_id: MKD-EDU-22
+    national_label_en: Masters' degree
     national_label_local: Postdiplomski studii za Magister
     entry_age: 22
     duration_years: 1
@@ -232,7 +254,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Specialist's degree
+  - country_entry_id: MKD-EDU-23
+    national_label_en: Specialist's degree
     national_label_local: Postdiplomski studii za Specijalist
     entry_age: 22
     duration_years: 1
@@ -242,7 +265,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Doctorate
+  - country_entry_id: MKD-EDU-24
+    national_label_en: Doctorate
     national_label_local: Doktorat
     entry_age: 24
     duration_years: 3
@@ -263,7 +287,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 – Skopje | 1-Skopje | 8 – Skopje
+  - country_entry_id: MKD-SUBNAT-01
+    survey_labels: 1 – Skopje | 1-Skopje | 8 – Skopje
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK008
     gmd_subnatid2: ''
@@ -283,7 +308,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Skopski
     source_row: 10064
-  - survey_labels: 2-Other
+  - country_entry_id: MKD-SUBNAT-02
+    survey_labels: 2-Other
     survey_variables: subnatid
     gmd_subnatid1: MKD_2021_NUTSx_2
     gmd_subnatid2: ''
@@ -304,7 +330,8 @@ parameters:
     geo_name: Istočen & Jugoistočen & Jugozapaden & Pelagoniski & Pološki & Severoistočen
       & Vardarski
     source_row: 10065
-  - survey_labels: 1 – Vardar
+  - country_entry_id: MKD-SUBNAT-03
+    survey_labels: 1 – Vardar
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK001
     gmd_subnatid2: ''
@@ -324,7 +351,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Vardarski
     source_row: 10067
-  - survey_labels: 2 – Eastern
+  - country_entry_id: MKD-SUBNAT-04
+    survey_labels: 2 – Eastern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK002
     gmd_subnatid2: ''
@@ -344,7 +372,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Istočen
     source_row: 10068
-  - survey_labels: 3 – Southwestern
+  - country_entry_id: MKD-SUBNAT-05
+    survey_labels: 3 – Southwestern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK003
     gmd_subnatid2: ''
@@ -364,7 +393,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Jugozapaden
     source_row: 10069
-  - survey_labels: 4 – Southeastern
+  - country_entry_id: MKD-SUBNAT-06
+    survey_labels: 4 – Southeastern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK004
     gmd_subnatid2: ''
@@ -384,7 +414,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Jugoistočen
     source_row: 10070
-  - survey_labels: 5 – Pelagonia
+  - country_entry_id: MKD-SUBNAT-07
+    survey_labels: 5 – Pelagonia
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK005
     gmd_subnatid2: ''
@@ -404,7 +435,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Pelagoniski
     source_row: 10071
-  - survey_labels: 6 – Polog
+  - country_entry_id: MKD-SUBNAT-08
+    survey_labels: 6 – Polog
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK006
     gmd_subnatid2: ''
@@ -424,7 +456,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Pološki
     source_row: 10072
-  - survey_labels: 7 – Northeastern
+  - country_entry_id: MKD-SUBNAT-09
+    survey_labels: 7 – Northeastern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK007
     gmd_subnatid2: ''
@@ -454,7 +487,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilets
+  - country_entry_id: MKD-SAN-01
+    source_category_code: composting_toilets
     national_label_en: Composting toilets
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -464,7 +498,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: to_elsewhere
+  - country_entry_id: MKD-SAN-02
+    source_category_code: to_elsewhere
     national_label_en: to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -474,7 +509,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: to_open_drain
+  - country_entry_id: MKD-SAN-03
+    source_category_code: to_open_drain
     national_label_en: to open drain
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -484,7 +520,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_or_pour_flush_to_piped_sewer_system
+  - country_entry_id: MKD-SAN-04
+    source_category_code: flush_or_pour_flush_to_piped_sewer_system
     national_label_en: Flush or pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -494,7 +531,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: MKD-SAN-05
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -504,7 +542,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_or_pour_flush_to_pit
+  - country_entry_id: MKD-SAN-06
+    source_category_code: flush_or_pour_flush_to_pit
     national_label_en: Flush or pour flush to pit
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -514,7 +553,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: to_pit
+  - country_entry_id: MKD-SAN-07
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -524,7 +564,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_or_pour_flush_to_septic_tank
+  - country_entry_id: MKD-SAN-08
+    source_category_code: flush_or_pour_flush_to_septic_tank
     national_label_en: Flush or pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -534,7 +575,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: to_septic_tank
+  - country_entry_id: MKD-SAN-09
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -544,7 +586,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_or_pour_flush_to_unknown_place_not_sure_dk
+  - country_entry_id: MKD-SAN-10
+    source_category_code: flush_or_pour_flush_to_unknown_place_not_sure_dk
     national_label_en: Flush or pour flush to unknown place/ not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -554,7 +597,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: i_do_not_know_where
+  - country_entry_id: MKD-SAN-11
+    source_category_code: i_do_not_know_where
     national_label_en: I do not know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -564,7 +608,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_toilet
+  - country_entry_id: MKD-SAN-12
+    source_category_code: flush_toilet
     national_label_en: flush toilet
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -574,7 +619,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: MKD-SAN-13
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -584,7 +630,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: MKD-SAN-14
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -594,7 +641,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: MKD-SAN-15
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit (latrine)
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -604,7 +652,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: MKD-SAN-16
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -614,7 +663,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_to_unknown_place_not_sure_dk_where
+  - country_entry_id: MKD-SAN-17
+    source_category_code: flush_to_unknown_place_not_sure_dk_where
     national_label_en: Flush to unknown place/not sure/DK where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -624,7 +674,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: pan_bucket
+  - country_entry_id: MKD-SAN-18
+    source_category_code: pan_bucket
     national_label_en: pan/bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -634,7 +685,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: MKD-SAN-19
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -645,7 +697,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: MKD-SAN-20
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -656,7 +709,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: MKD-SAN-21
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -667,7 +721,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: MKD-SAN-22
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -678,7 +733,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine
+  - country_entry_id: MKD-SAN-23
+    source_category_code: pit_latrine
     national_label_en: pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -689,7 +745,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: kvip
+  - country_entry_id: MKD-SAN-24
+    source_category_code: kvip
     national_label_en: kvip
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -700,7 +757,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: MKD-SAN-25
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -711,7 +769,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: MKD-SAN-26
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -722,7 +781,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facilities_or_bush_or_field
+  - country_entry_id: MKD-SAN-27
+    source_category_code: no_facilities_or_bush_or_field
     national_label_en: No facilities or bush or field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -732,7 +792,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: MKD-SAN-28
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -742,7 +803,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: toilet_in_another_house
+  - country_entry_id: MKD-SAN-29
+    source_category_code: toilet_in_another_house
     national_label_en: toilet in another house
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -752,7 +814,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: other
+  - country_entry_id: MKD-SAN-30
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -762,7 +825,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: public_toilet_flush_bucket_kvip
+  - country_entry_id: MKD-SAN-31
+    source_category_code: public_toilet_flush_bucket_kvip
     national_label_en: public toilet (flush, bucket, kvip)
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -782,7 +846,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: MKD-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -792,7 +857,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: regulated_spring
+  - country_entry_id: MKD-WAS-02
+    source_category_code: regulated_spring
     national_label_en: regulated spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -802,7 +868,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: MKD-WAS-03
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -812,7 +879,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole
+  - country_entry_id: MKD-WAS-04
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -822,7 +890,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: MKD-WAS-05
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -832,7 +901,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: excavated_well_pump
+  - country_entry_id: MKD-WAS-06
+    source_category_code: excavated_well_pump
     national_label_en: excavated well (pump)
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -842,7 +912,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: perforated_piped_pump
+  - country_entry_id: MKD-WAS-07
+    source_category_code: perforated_piped_pump
     national_label_en: perforated (piped) pump
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -852,7 +923,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: unprotected_spring
+  - country_entry_id: MKD-WAS-08
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -862,7 +934,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unregulated_spring
+  - country_entry_id: MKD-WAS-09
+    source_category_code: unregulated_spring
     national_label_en: unregulated spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -872,7 +945,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: MKD-WAS-10
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -882,7 +956,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: public_fountain_connected_on_separate_spring
+  - country_entry_id: MKD-WAS-11
+    source_category_code: public_fountain_connected_on_separate_spring
     national_label_en: public fountain connected on separate spring
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -892,7 +967,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: other
+  - country_entry_id: MKD-WAS-12
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -902,7 +978,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: MKD-WAS-13
+    source_category_code: bottled_water
     national_label_en: bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -912,7 +989,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bw_with_improved_sources
+  - country_entry_id: MKD-WAS-14
+    source_category_code: bw_with_improved_sources
     national_label_en: BW with improved sources
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -922,7 +1000,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: MKD-WAS-15
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -932,7 +1011,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater
+  - country_entry_id: MKD-WAS-16
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -942,7 +1022,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water
+  - country_entry_id: MKD-WAS-17
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -952,7 +1033,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: other
+  - country_entry_id: MKD-WAS-18
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -962,7 +1044,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: MKD-WAS-19
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -972,7 +1055,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: water_supply_connected_to_private_air_compressed_water_tank
+  - country_entry_id: MKD-WAS-20
+    source_category_code: water_supply_connected_to_private_air_compressed_water_tank
     national_label_en: water supply connected to private air compressed water tank
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -982,7 +1066,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: MKD-WAS-21
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -992,7 +1077,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: MKD-WAS-22
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1002,7 +1088,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: water_supply_connected_to_public_water_pipeline
+  - country_entry_id: MKD-WAS-23
+    source_category_code: water_supply_connected_to_public_water_pipeline
     national_label_en: water supply connected to public water pipeline
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1012,7 +1099,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: MKD-WAS-24
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1022,7 +1110,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: MKD-WAS-25
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1032,7 +1121,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: private_fountain_connected_to_public_water_pipeline
+  - country_entry_id: MKD-WAS-26
+    source_category_code: private_fountain_connected_to_public_water_pipeline
     national_label_en: private fountain connected to public water pipeline
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1042,7 +1132,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_neighbour
+  - country_entry_id: MKD-WAS-27
+    source_category_code: piped_water_to_neighbour
     national_label_en: Piped water to neighbour
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1052,7 +1143,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_fountain_connected_to_public_water_pipeline
+  - country_entry_id: MKD-WAS-28
+    source_category_code: public_fountain_connected_to_public_water_pipeline
     national_label_en: public fountain connected to public water pipeline
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1062,7 +1154,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MKD-WAS-29
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1072,7 +1165,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MKD-WAS-30
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

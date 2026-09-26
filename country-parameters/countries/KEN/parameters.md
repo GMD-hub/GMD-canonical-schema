@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early Childhood Development (ECD) - Baby class
+  - country_entry_id: KEN-EDU-01
+    national_label_en: Early Childhood Development (ECD) - Baby class
     national_label_local: Early Childhood Development (ECD) - Baby class
     entry_age: 3
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Early Childhood Development (ECD) - Nursery
+  - country_entry_id: KEN-EDU-02
+    national_label_en: Early Childhood Development (ECD) - Nursery
     national_label_local: Early Childhood Development (ECD) - Nursery
     entry_age: 4
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Early Childhood Development (ECD) - Pre-unit
+  - country_entry_id: KEN-EDU-03
+    national_label_en: Early Childhood Development (ECD) - Pre-unit
     national_label_local: Early Childhood Development (ECD) - Pre-unit
     entry_age: 5
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: First stage of primary education (Standards 1 to 3)
+  - country_entry_id: KEN-EDU-04
+    national_label_en: First stage of primary education (Standards 1 to 3)
     national_label_local: First stage of primary education (Standards 1 to 3)
     entry_age: 6
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Second stage of primary education (Standards 4 to 6)
+  - country_entry_id: KEN-EDU-05
+    national_label_en: Second stage of primary education (Standards 4 to 6)
     national_label_local: Second stage of primary education (Standards 4 to 6)
     entry_age: 9
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Second stage of primary education (Standards 7 and 8)
+  - country_entry_id: KEN-EDU-06
+    national_label_en: Second stage of primary education (Standards 7 and 8)
     national_label_local: Second stage of primary education (Standards 7 and 8)
     entry_age: 12
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Youth polytechnics
+  - country_entry_id: KEN-EDU-07
+    national_label_en: Youth polytechnics
     national_label_local: Youth polytechnics
     entry_age: 14
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Secondary education
+  - country_entry_id: KEN-EDU-08
+    national_label_en: Secondary education
     national_label_local: Secondary education
     entry_age: 14
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Youth polytechnics
+  - country_entry_id: KEN-EDU-09
+    national_label_en: Youth polytechnics
     national_label_local: Youth polytechnics
     entry_age: 14
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Technical Vocational Education and Training (TVET)
+  - country_entry_id: KEN-EDU-10
+    national_label_en: Technical Vocational Education and Training (TVET)
     national_label_local: Technical Vocational Education and Training (TVET)
     entry_age: 18
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Pre-Primary Teacher training
+  - country_entry_id: KEN-EDU-11
+    national_label_en: Pre-Primary Teacher training
     national_label_local: Pre-Primary Teacher training
     entry_age: 18
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Primary teacher training college
+  - country_entry_id: KEN-EDU-12
+    national_label_en: Primary teacher training college
     national_label_local: Primary teacher training college
     entry_age: 18
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Teacher training college diploma
+  - country_entry_id: KEN-EDU-13
+    national_label_en: Teacher training college diploma
     national_label_local: Teacher training college diploma
     entry_age: 18
     duration_years: 3
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: National polytechnics (certificate and diploma)
+  - country_entry_id: KEN-EDU-14
+    national_label_en: National polytechnics (certificate and diploma)
     national_label_local: National polytechnics (certificate and diploma)
     entry_age: 18
     duration_years: 3
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: National polytechnics (Higher diploma)
+  - country_entry_id: KEN-EDU-15
+    national_label_en: National polytechnics (Higher diploma)
     national_label_local: National polytechnics (Higher diploma)
     entry_age: 21
     duration_years: 2
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Bachelor's degree (Science, Education, Education Science, Arts,
+  - country_entry_id: KEN-EDU-16
+    national_label_en: Bachelor's degree (Science, Education, Education Science, Arts,
       Law, Commerce...)
     national_label_local: Bachelor's degree (Science, Education, Education Science,
       Arts, Law, Commerce...)
@@ -172,7 +188,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Bachelor's degree
+  - country_entry_id: KEN-EDU-17
+    national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree (Engineering, Medicine….)
     entry_age: 18
     duration_years: 5
@@ -182,7 +199,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Bachelor's degree (Architecture)
+  - country_entry_id: KEN-EDU-18
+    national_label_en: Bachelor's degree (Architecture)
     national_label_local: Bachelor's degree (Architecture)
     entry_age: 18
     duration_years: 6
@@ -192,7 +210,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Master's degree
+  - country_entry_id: KEN-EDU-19
+    national_label_en: Master's degree
     national_label_local: Master's degree
     entry_age: 22
     duration_years: 2
@@ -202,7 +221,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Doctorate
+  - country_entry_id: KEN-EDU-20
+    national_label_en: Doctorate
     national_label_local: Doctorate
     entry_age: 24
     duration_years: 3
@@ -222,7 +242,8 @@ parameters:
   effective_to: 2015
   selectors: ~
   value:
-  - survey_labels: 1 - Nairobi | 1 – Nairobi | 1-Central
+  - country_entry_id: KEN-SUBNAT-01
+    survey_labels: 1 - Nairobi | 1 – Nairobi | 1-Central
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51328
     gmd_subnatid2: ''
@@ -242,7 +263,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nairobi
     source_row: 8548
-  - survey_labels: 2 - Central | 2 – Central | 2-Coast
+  - country_entry_id: KEN-SUBNAT-02
+    survey_labels: 2 - Central | 2 – Central | 2-Coast
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51325
     gmd_subnatid2: ''
@@ -262,7 +284,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Central
     source_row: 8549
-  - survey_labels: 3 - Coast | 3 – Coast | 3-Eastern
+  - country_entry_id: KEN-SUBNAT-03
+    survey_labels: 3 - Coast | 3 – Coast | 3-Eastern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51326
     gmd_subnatid2: ''
@@ -282,7 +305,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Coast
     source_row: 8550
-  - survey_labels: 4 - Eastern | 4 – Eastern | 4-Nairobi
+  - country_entry_id: KEN-SUBNAT-04
+    survey_labels: 4 - Eastern | 4 – Eastern | 4-Nairobi
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51327
     gmd_subnatid2: ''
@@ -302,7 +326,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Eastern
     source_row: 8551
-  - survey_labels: 5 - North Eastern | 5 – North Eastern | 5-North Eastern
+  - country_entry_id: KEN-SUBNAT-05
+    survey_labels: 5 - North Eastern | 5 – North Eastern | 5-North Eastern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51329
     gmd_subnatid2: ''
@@ -322,7 +347,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North Eastern
     source_row: 8552
-  - survey_labels: 6 - Nyanza | 6 – Nyanza | 6-Nyanza
+  - country_entry_id: KEN-SUBNAT-06
+    survey_labels: 6 - Nyanza | 6 – Nyanza | 6-Nyanza
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51330
     gmd_subnatid2: ''
@@ -342,7 +368,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nyanza
     source_row: 8553
-  - survey_labels: 7 - Rift Valley | 7 – Rift Valley | 7-Rift Valley
+  - country_entry_id: KEN-SUBNAT-07
+    survey_labels: 7 - Rift Valley | 7 – Rift Valley | 7-Rift Valley
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51331
     gmd_subnatid2: ''
@@ -362,7 +389,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Rift Valley
     source_row: 8554
-  - survey_labels: 8 - Western | 8 – Western | 8-Western
+  - country_entry_id: KEN-SUBNAT-08
+    survey_labels: 8 - Western | 8 – Western | 8-Western
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51332
     gmd_subnatid2: ''
@@ -392,7 +420,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Mombasa | 1-Mombasa
+  - country_entry_id: KEN-SUBNAT-01
+    survey_labels: 1 - Mombasa | 1-Mombasa
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.28_1
@@ -412,7 +441,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Mombasa
     source_row: 8580
-  - survey_labels: 10 - Marsabit | 10-Marsabit
+  - country_entry_id: KEN-SUBNAT-02
+    survey_labels: 10 - Marsabit | 10-Marsabit
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.25_1
@@ -432,7 +462,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Marsabit
     source_row: 8581
-  - survey_labels: 11 - Isiolo | 11-Isiolo
+  - country_entry_id: KEN-SUBNAT-03
+    survey_labels: 11 - Isiolo | 11-Isiolo
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.9_1
@@ -452,7 +483,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Isiolo
     source_row: 8582
-  - survey_labels: 12 - Meru | 12-Meru
+  - country_entry_id: KEN-SUBNAT-04
+    survey_labels: 12 - Meru | 12-Meru
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.26_1
@@ -472,7 +504,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Meru
     source_row: 8583
-  - survey_labels: 13 - Tharaka Nithi | 13-Tharaka-Nithi
+  - country_entry_id: KEN-SUBNAT-05
+    survey_labels: 13 - Tharaka Nithi | 13-Tharaka-Nithi
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.41_1
@@ -492,7 +525,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Tharaka-Nithi
     source_row: 8584
-  - survey_labels: 14 - Embu | 14-Embu
+  - country_entry_id: KEN-SUBNAT-06
+    survey_labels: 14 - Embu | 14-Embu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.6_1
@@ -512,7 +546,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Embu
     source_row: 8585
-  - survey_labels: 15 - Kitui | 15-Kitui
+  - country_entry_id: KEN-SUBNAT-07
+    survey_labels: 15 - Kitui | 15-Kitui
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.18_1
@@ -532,7 +567,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kitui
     source_row: 8586
-  - survey_labels: 16 - Machakos | 16-Machakos
+  - country_entry_id: KEN-SUBNAT-08
+    survey_labels: 16 - Machakos | 16-Machakos
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.22_1
@@ -552,7 +588,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Machakos
     source_row: 8587
-  - survey_labels: 17 - Makueni | 17-Makueni
+  - country_entry_id: KEN-SUBNAT-09
+    survey_labels: 17 - Makueni | 17-Makueni
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.23_1
@@ -572,7 +609,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Makueni
     source_row: 8588
-  - survey_labels: 18 - Nyandarua | 18-Nyandarua
+  - country_entry_id: KEN-SUBNAT-10
+    survey_labels: 18 - Nyandarua | 18-Nyandarua
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.35_1
@@ -592,7 +630,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Nyandarua
     source_row: 8589
-  - survey_labels: 19 - Nyeri | 19-Nyeri
+  - country_entry_id: KEN-SUBNAT-11
+    survey_labels: 19 - Nyeri | 19-Nyeri
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.36_1
@@ -612,7 +651,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Nyeri
     source_row: 8590
-  - survey_labels: 2 - Kwale | 2-Kwale
+  - country_entry_id: KEN-SUBNAT-12
+    survey_labels: 2 - Kwale | 2-Kwale
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.19_1
@@ -632,7 +672,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kwale
     source_row: 8591
-  - survey_labels: 20 - Kirinyaga | 20-Kirinyaga
+  - country_entry_id: KEN-SUBNAT-13
+    survey_labels: 20 - Kirinyaga | 20-Kirinyaga
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.15_1
@@ -652,7 +693,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kirinyaga
     source_row: 8592
-  - survey_labels: 21 - Murang'a | 21-Murang'a
+  - country_entry_id: KEN-SUBNAT-14
+    survey_labels: 21 - Murang'a | 21-Murang'a
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.29_1
@@ -672,7 +714,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Murang'a
     source_row: 8593
-  - survey_labels: 22 - Kiambu | 22-Kiambu
+  - country_entry_id: KEN-SUBNAT-15
+    survey_labels: 22 - Kiambu | 22-Kiambu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.13_1
@@ -692,7 +735,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kiambu
     source_row: 8594
-  - survey_labels: 23 - Turkana | 23-Turkana
+  - country_entry_id: KEN-SUBNAT-16
+    survey_labels: 23 - Turkana | 23-Turkana
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.43_1
@@ -712,7 +756,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Turkana
     source_row: 8595
-  - survey_labels: 24 - West Pokot | 24-West Pokot
+  - country_entry_id: KEN-SUBNAT-17
+    survey_labels: 24 - West Pokot | 24-West Pokot
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.47_1
@@ -732,7 +777,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: West Pokot
     source_row: 8596
-  - survey_labels: 25 - Samburu | 25-Samburu
+  - country_entry_id: KEN-SUBNAT-18
+    survey_labels: 25 - Samburu | 25-Samburu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.37_1
@@ -752,7 +798,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Samburu
     source_row: 8597
-  - survey_labels: 26 - Trans Nzoia | 26-Trans Nzoia
+  - country_entry_id: KEN-SUBNAT-19
+    survey_labels: 26 - Trans Nzoia | 26-Trans Nzoia
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.42_1
@@ -772,7 +819,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Trans Nzoia
     source_row: 8598
-  - survey_labels: 27 - Uasin Gishu | 27-Uasin Gishu
+  - country_entry_id: KEN-SUBNAT-20
+    survey_labels: 27 - Uasin Gishu | 27-Uasin Gishu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.44_1
@@ -792,7 +840,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Uasin Gishu
     source_row: 8599
-  - survey_labels: 28 - Elgeyo Marakwet | 28-Elgeyo/Marakwet
+  - country_entry_id: KEN-SUBNAT-21
+    survey_labels: 28 - Elgeyo Marakwet | 28-Elgeyo/Marakwet
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.5_1
@@ -812,7 +861,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Elgeyo-Marakwet
     source_row: 8600
-  - survey_labels: 29 - Nandi | 29-Nandi
+  - country_entry_id: KEN-SUBNAT-22
+    survey_labels: 29 - Nandi | 29-Nandi
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.32_1
@@ -832,7 +882,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Nandi
     source_row: 8601
-  - survey_labels: 3 - Kilifi | 3-Kilifi
+  - country_entry_id: KEN-SUBNAT-23
+    survey_labels: 3 - Kilifi | 3-Kilifi
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.14_1
@@ -852,7 +903,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kilifi
     source_row: 8602
-  - survey_labels: 30 - Baringo | 30-Baringo
+  - country_entry_id: KEN-SUBNAT-24
+    survey_labels: 30 - Baringo | 30-Baringo
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.1_1
@@ -872,7 +924,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Baringo
     source_row: 8603
-  - survey_labels: 31 - Laikipia | 31-Laikipia
+  - country_entry_id: KEN-SUBNAT-25
+    survey_labels: 31 - Laikipia | 31-Laikipia
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.20_1
@@ -892,7 +945,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Laikipia
     source_row: 8604
-  - survey_labels: 32 - Nakuru | 32-Nakuru
+  - country_entry_id: KEN-SUBNAT-26
+    survey_labels: 32 - Nakuru | 32-Nakuru
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.31_1
@@ -912,7 +966,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Nakuru
     source_row: 8605
-  - survey_labels: 33 - Narok | 33-Narok
+  - country_entry_id: KEN-SUBNAT-27
+    survey_labels: 33 - Narok | 33-Narok
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.33_1
@@ -932,7 +987,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Narok
     source_row: 8606
-  - survey_labels: 34 - Kajiado | 34-Kajiado
+  - country_entry_id: KEN-SUBNAT-28
+    survey_labels: 34 - Kajiado | 34-Kajiado
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.10_1
@@ -952,7 +1008,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kajiado
     source_row: 8607
-  - survey_labels: 35 - Kericho | 35-Kericho
+  - country_entry_id: KEN-SUBNAT-29
+    survey_labels: 35 - Kericho | 35-Kericho
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.12_1
@@ -972,7 +1029,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kericho
     source_row: 8608
-  - survey_labels: 36 - Bomet | 36-Bomet
+  - country_entry_id: KEN-SUBNAT-30
+    survey_labels: 36 - Bomet | 36-Bomet
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.2_1
@@ -992,7 +1050,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Bomet
     source_row: 8609
-  - survey_labels: 37 - Kakamega | 37-Kakamega
+  - country_entry_id: KEN-SUBNAT-31
+    survey_labels: 37 - Kakamega | 37-Kakamega
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.11_1
@@ -1012,7 +1071,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kakamega
     source_row: 8610
-  - survey_labels: 38 - Vihiga | 38-Vihiga
+  - country_entry_id: KEN-SUBNAT-32
+    survey_labels: 38 - Vihiga | 38-Vihiga
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.45_1
@@ -1032,7 +1092,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Vihiga
     source_row: 8611
-  - survey_labels: 39 - Bungoma | 39-Bungoma
+  - country_entry_id: KEN-SUBNAT-33
+    survey_labels: 39 - Bungoma | 39-Bungoma
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.3_1
@@ -1052,7 +1113,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Bungoma
     source_row: 8612
-  - survey_labels: 4 - Tana River | 4-Tana River
+  - country_entry_id: KEN-SUBNAT-34
+    survey_labels: 4 - Tana River | 4-Tana River
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.40_1
@@ -1072,7 +1134,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Tana River
     source_row: 8613
-  - survey_labels: 40 - Busia | 40-Busia
+  - country_entry_id: KEN-SUBNAT-35
+    survey_labels: 40 - Busia | 40-Busia
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.4_1
@@ -1092,7 +1155,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Busia
     source_row: 8614
-  - survey_labels: 41 - Siaya | 41-Siaya
+  - country_entry_id: KEN-SUBNAT-36
+    survey_labels: 41 - Siaya | 41-Siaya
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.38_1
@@ -1112,7 +1176,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Siaya
     source_row: 8615
-  - survey_labels: 42 - Kisumu | 42-Kisumu
+  - country_entry_id: KEN-SUBNAT-37
+    survey_labels: 42 - Kisumu | 42-Kisumu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.17_1
@@ -1132,7 +1197,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kisumu
     source_row: 8616
-  - survey_labels: 43 - Homa Bay | 43-Homa Bay
+  - country_entry_id: KEN-SUBNAT-38
+    survey_labels: 43 - Homa Bay | 43-Homa Bay
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.8_1
@@ -1152,7 +1218,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Homa Bay
     source_row: 8617
-  - survey_labels: 44 - Migori | 44-Migori
+  - country_entry_id: KEN-SUBNAT-39
+    survey_labels: 44 - Migori | 44-Migori
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.27_1
@@ -1172,7 +1239,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Migori
     source_row: 8618
-  - survey_labels: 45 - Kisii | 45-Kisii
+  - country_entry_id: KEN-SUBNAT-40
+    survey_labels: 45 - Kisii | 45-Kisii
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.16_1
@@ -1192,7 +1260,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kisii
     source_row: 8619
-  - survey_labels: 46 - Nyamira | 46-Nyamira
+  - country_entry_id: KEN-SUBNAT-41
+    survey_labels: 46 - Nyamira | 46-Nyamira
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.34_1
@@ -1212,7 +1281,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Nyamira
     source_row: 8620
-  - survey_labels: 47 - Nairobi | 47-Nairobi City
+  - country_entry_id: KEN-SUBNAT-42
+    survey_labels: 47 - Nairobi | 47-Nairobi City
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.30_1
@@ -1232,7 +1302,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Nairobi
     source_row: 8621
-  - survey_labels: 5 - Lamu | 5-Lamu
+  - country_entry_id: KEN-SUBNAT-43
+    survey_labels: 5 - Lamu | 5-Lamu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.21_1
@@ -1252,7 +1323,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Lamu
     source_row: 8622
-  - survey_labels: 6 - Taita Taveta | 6-Taita/Taveta
+  - country_entry_id: KEN-SUBNAT-44
+    survey_labels: 6 - Taita Taveta | 6-Taita/Taveta
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.39_1
@@ -1272,7 +1344,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Taita Taveta
     source_row: 8623
-  - survey_labels: 7 - Garissa | 7-Garissa
+  - country_entry_id: KEN-SUBNAT-45
+    survey_labels: 7 - Garissa | 7-Garissa
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.7_1
@@ -1292,7 +1365,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Garissa
     source_row: 8624
-  - survey_labels: 8 - Wajir | 8-Wajir
+  - country_entry_id: KEN-SUBNAT-46
+    survey_labels: 8 - Wajir | 8-Wajir
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.46_1
@@ -1312,7 +1386,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Wajir
     source_row: 8625
-  - survey_labels: 9 - Mandera | 9-Mandera
+  - country_entry_id: KEN-SUBNAT-47
+    survey_labels: 9 - Mandera | 9-Mandera
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: KEN_2022_GADM1_KEN.24_1
@@ -1342,7 +1417,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: 5_compositing_toilet
+  - country_entry_id: KEN-SAN-01
+    source_category_code: 5_compositing_toilet
     national_label_en: 5 =COMPOSITING TOILET
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -1352,7 +1428,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: 8_composting_toilet
+  - country_entry_id: KEN-SAN-02
+    source_category_code: 8_composting_toilet
     national_label_en: 8. Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -1362,7 +1439,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: 9_composting_toilet
+  - country_entry_id: KEN-SAN-03
+    source_category_code: 9_composting_toilet
     national_label_en: 9. Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -1372,7 +1450,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: composting_toilet
+  - country_entry_id: KEN-SAN-04
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -1382,7 +1461,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_or_pour_flush_toilet
+  - country_entry_id: KEN-SAN-05
+    source_category_code: flush_or_pour_flush_toilet
     national_label_en: Flush or pour flush toilet
     national_label_local: Flush and pour flush
     jmp_classification: Flush and pour flush
@@ -1392,7 +1472,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 60
-  - source_category_code: 3_flush_pour_flush_toilets_connected_to_elsewhere
+  - country_entry_id: KEN-SAN-06
+    source_category_code: 3_flush_pour_flush_toilets_connected_to_elsewhere
     national_label_en: '3. Flush/pour flush toilets connected to: Elsewhere'
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1402,7 +1483,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: 4_flush_pour_flush_toilets_connected_to_elsewhere
+  - country_entry_id: KEN-SAN-07
+    source_category_code: 4_flush_pour_flush_toilets_connected_to_elsewhere
     national_label_en: '4. Flush/pour flush toilets connected to: Elsewhere'
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1412,7 +1494,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: KEN-SAN-08
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush - to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1422,7 +1505,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: KEN-SAN-09
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1432,7 +1516,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flushed_toilet_to_elsewhere
+  - country_entry_id: KEN-SAN-10
+    source_category_code: flushed_toilet_to_elsewhere
     national_label_en: Flushed toilet to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1442,7 +1527,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: 1_flush_pour_flush_toilets_connected_to_piped_sewer_system
+  - country_entry_id: KEN-SAN-11
+    source_category_code: 1_flush_pour_flush_toilets_connected_to_piped_sewer_system
     national_label_en: '1. Flush/pour flush toilets connected to: Piped sewer system'
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1452,7 +1538,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: KEN-SAN-12
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush - to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1462,7 +1549,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: KEN-SAN-13
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1472,7 +1560,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_sewage
+  - country_entry_id: KEN-SAN-14
+    source_category_code: flush_to_sewage
     national_label_en: Flush to sewage
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1482,7 +1571,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_sewer
+  - country_entry_id: KEN-SAN-15
+    source_category_code: flush_to_sewer
     national_label_en: Flush to sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1492,7 +1582,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet_to_piped_sewer_system
+  - country_entry_id: KEN-SAN-16
+    source_category_code: flush_toilet_to_piped_sewer_system
     national_label_en: Flush toilet to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1502,7 +1593,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: 13_flush_pour_flush_toilets_connected_to_pit_latrine
+  - country_entry_id: KEN-SAN-17
+    source_category_code: 13_flush_pour_flush_toilets_connected_to_pit_latrine
     national_label_en: '13. Flush/pour flush toilets connected to: Pit Latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1512,7 +1604,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: 3_flush_pour_flush_toilets_connected_to_pit_latrine
+  - country_entry_id: KEN-SAN-18
+    source_category_code: 3_flush_pour_flush_toilets_connected_to_pit_latrine
     national_label_en: '3. Flush/pour flush toilets connected to: Pit Latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1522,7 +1615,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: KEN-SAN-19
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush - to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1532,7 +1626,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: KEN-SAN-20
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit (latrine)
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1542,7 +1637,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: KEN-SAN-21
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1552,7 +1648,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flushed_toilet_to_pit_latrine
+  - country_entry_id: KEN-SAN-22
+    source_category_code: flushed_toilet_to_pit_latrine
     national_label_en: Flushed toilet to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1562,7 +1659,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: 2_flush_pour_flush_toilets_connected_to_septic_tank
+  - country_entry_id: KEN-SAN-23
+    source_category_code: 2_flush_pour_flush_toilets_connected_to_septic_tank
     national_label_en: '2. Flush/pour flush toilets connected to: Septic tank'
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1572,7 +1670,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: KEN-SAN-24
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush - to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1582,7 +1681,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: KEN-SAN-25
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1592,7 +1692,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flushed_toilet_to_septic_tank
+  - country_entry_id: KEN-SAN-26
+    source_category_code: flushed_toilet_to_septic_tank
     national_label_en: Flushed toilet to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1602,7 +1703,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: 1_flush_toilet
+  - country_entry_id: KEN-SAN-27
+    source_category_code: 1_flush_toilet
     national_label_en: 1 =FLUSH TOILET
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1612,7 +1714,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: 4_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
+  - country_entry_id: KEN-SAN-28
+    source_category_code: 4_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
     national_label_en: '4. Flush/pour flush toilets connected to: Unknown / Not sure
       / Do not know'
     national_label_local: to unknown place/ not sure/DK
@@ -1623,7 +1726,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: 5_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
+  - country_entry_id: KEN-SAN-29
+    source_category_code: 5_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
     national_label_en: '5. Flush/pour flush toilets connected to: Unknown / Not sure
       / Do not know'
     national_label_local: to unknown place/ not sure/DK
@@ -1634,7 +1738,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: KEN-SAN-30
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush - don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1644,7 +1749,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_unknown_place_not_sure_dk_where
+  - country_entry_id: KEN-SAN-31
+    source_category_code: flush_to_unknown_place_not_sure_dk_where
     national_label_en: Flush to unknown place/not sure/dk where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1654,7 +1760,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: KEN-SAN-32
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1664,7 +1771,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_toilet
+  - country_entry_id: KEN-SAN-33
+    source_category_code: flush_toilet
     national_label_en: flush toilet
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -1674,7 +1782,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: flush_toilet
+  - country_entry_id: KEN-SAN-34
+    source_category_code: flush_toilet
     national_label_en: Flush Toilet*
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -1684,7 +1793,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: w_c
+  - country_entry_id: KEN-SAN-35
+    source_category_code: w_c
     national_label_en: w.c.
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -1694,7 +1804,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: own_flush_toilet
+  - country_entry_id: KEN-SAN-36
+    source_category_code: own_flush_toilet
     national_label_en: Own Flush Toilet
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -1704,7 +1815,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: KEN-SAN-37
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -1714,7 +1826,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: KEN-SAN-38
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -1724,7 +1837,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: KEN-SAN-39
+    source_category_code: shared_flush_toilet
     national_label_en: Shared Flush Toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -1734,7 +1848,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: KEN-SAN-40
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1745,7 +1860,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: KEN-SAN-41
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -1755,7 +1871,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: 3_flush_elsewhere
+  - country_entry_id: KEN-SAN-42
+    source_category_code: 3_flush_elsewhere
     national_label_en: 3. flush_elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -1765,7 +1882,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: KEN-SAN-43
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -1775,7 +1893,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: 1_flush_pour_type_toilet_connected_to_piped_sewer_system
+  - country_entry_id: KEN-SAN-44
+    source_category_code: 1_flush_pour_type_toilet_connected_to_piped_sewer_system
     national_label_en: 1. Flush / pour type toilet connected to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1785,7 +1904,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: 1_flush_sewer
+  - country_entry_id: KEN-SAN-45
+    source_category_code: 1_flush_sewer
     national_label_en: 1. flush_sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1795,7 +1915,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_main_sewer
+  - country_entry_id: KEN-SAN-46
+    source_category_code: flush_to_main_sewer
     national_label_en: Flush To Main Sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1805,7 +1926,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: KEN-SAN-47
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1815,7 +1937,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_cess_pool
+  - country_entry_id: KEN-SAN-48
+    source_category_code: flush_to_cess_pool
     national_label_en: Flush To Cess Pool
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -1825,7 +1948,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: KEN-SAN-49
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -1835,7 +1959,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: 2_flush_pour_type_toilet_connected_to_septic_tank
+  - country_entry_id: KEN-SAN-50
+    source_category_code: 2_flush_pour_type_toilet_connected_to_septic_tank
     national_label_en: 2. Flush / pour type toilet connected to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -1845,7 +1970,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: 2_flush_septic
+  - country_entry_id: KEN-SAN-51
+    source_category_code: 2_flush_septic
     national_label_en: 2. flush_septic
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -1855,7 +1981,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: KEN-SAN-52
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -1865,7 +1992,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: 4_flush_unknown
+  - country_entry_id: KEN-SAN-53
+    source_category_code: 4_flush_unknown
     national_label_en: 4. flush_unknown
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1875,7 +2003,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: flush_to_sewage_system_septic_tank
+  - country_entry_id: KEN-SAN-54
+    source_category_code: flush_to_sewage_system_septic_tank
     national_label_en: flush to sewage system/septic tank
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1885,7 +2014,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: flush_toilet
+  - country_entry_id: KEN-SAN-55
+    source_category_code: flush_toilet
     national_label_en: flush toilet
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1895,7 +2025,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: KEN-SAN-56
+    source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1905,7 +2036,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: KEN-SAN-57
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush; Don?t know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -1915,7 +2047,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: 10_bucket
+  - country_entry_id: KEN-SAN-58
+    source_category_code: 10_bucket
     national_label_en: 10. Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1925,7 +2058,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: 6_bucket_toilet
+  - country_entry_id: KEN-SAN-59
+    source_category_code: 6_bucket_toilet
     national_label_en: 6 =BUCKET TOILET
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1935,7 +2069,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: 7_bucket_latrine
+  - country_entry_id: KEN-SAN-60
+    source_category_code: 7_bucket_latrine
     national_label_en: 7. Bucket latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1945,7 +2080,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket
+  - country_entry_id: KEN-SAN-61
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1955,7 +2091,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_latrine
+  - country_entry_id: KEN-SAN-62
+    source_category_code: bucket_latrine
     national_label_en: Bucket Latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1965,7 +2102,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: KEN-SAN-63
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1975,7 +2113,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: KEN-SAN-64
+    source_category_code: bucket_toilet
     national_label_en: bucket toilet
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1985,7 +2124,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_pot
+  - country_entry_id: KEN-SAN-65
+    source_category_code: bucket_pot
     national_label_en: Bucket/pot
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1995,7 +2135,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pan_bucket
+  - country_entry_id: KEN-SAN-66
+    source_category_code: pan_bucket
     national_label_en: Pan/bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -2005,7 +2146,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: 10_hanging_toilet_hanging_latrine
+  - country_entry_id: KEN-SAN-67
+    source_category_code: 10_hanging_toilet_hanging_latrine
     national_label_en: 10. Hanging toilet /Hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2016,7 +2158,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: 11_hanging_toilet_hanging_latrine
+  - country_entry_id: KEN-SAN-68
+    source_category_code: 11_hanging_toilet_hanging_latrine
     national_label_en: 11. Hanging toilet /Hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2027,7 +2170,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: 7_hanging_toilet_hanging_latrine
+  - country_entry_id: KEN-SAN-69
+    source_category_code: 7_hanging_toilet_hanging_latrine
     national_label_en: 7 =HANGING TOILET/ HANGING LATRINE
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2038,7 +2182,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet
+  - country_entry_id: KEN-SAN-70
+    source_category_code: hanging_toilet
     national_label_en: Hanging toilet
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2049,7 +2194,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: KEN-SAN-71
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2060,7 +2206,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: KEN-SAN-72
+    source_category_code: hanging_toilet_latrine
     national_label_en: hanging toilet/latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2071,7 +2218,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: 12_other
+  - country_entry_id: KEN-SAN-73
+    source_category_code: 12_other
     national_label_en: 12. Other
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -2081,7 +2229,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: 6_cess_pool
+  - country_entry_id: KEN-SAN-74
+    source_category_code: 6_cess_pool
     national_label_en: 6. Cess pool
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -2091,7 +2240,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: 3_pit_latrine_with_slab
+  - country_entry_id: KEN-SAN-75
+    source_category_code: 3_pit_latrine_with_slab
     national_label_en: 3 =PIT LATRINE WITH SLAB
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2102,7 +2252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: 4_pit_latrine_covered
+  - country_entry_id: KEN-SAN-76
+    source_category_code: 4_pit_latrine_covered
     national_label_en: 4. Pit latrine covered
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2113,7 +2264,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: 6_pit_latrine_with_slab
+  - country_entry_id: KEN-SAN-77
+    source_category_code: 6_pit_latrine_with_slab
     national_label_en: 6. Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2124,7 +2276,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: 6_pit_with_slab
+  - country_entry_id: KEN-SAN-78
+    source_category_code: 6_pit_with_slab
     national_label_en: 6. pit_with_slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2135,7 +2288,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: 7_pit_latrine_with_slab
+  - country_entry_id: KEN-SAN-79
+    source_category_code: 7_pit_latrine_with_slab
     national_label_en: 7. Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2146,7 +2300,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: covered_pit_latrine
+  - country_entry_id: KEN-SAN-80
+    source_category_code: covered_pit_latrine
     national_label_en: Covered pit latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2157,7 +2312,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: improved_pit_latrine
+  - country_entry_id: KEN-SAN-81
+    source_category_code: improved_pit_latrine
     national_label_en: improved pit latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2168,7 +2324,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: KEN-SAN-82
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine - with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2179,7 +2336,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: KEN-SAN-83
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2190,7 +2348,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: 4_pit_latrine_without_slab_open_pit
+  - country_entry_id: KEN-SAN-84
+    source_category_code: 4_pit_latrine_without_slab_open_pit
     national_label_en: 4 =PIT LATRINE WITHOUT SLAB/OPEN PIT
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2201,7 +2360,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: 5_pit_latrine_uncovered
+  - country_entry_id: KEN-SAN-85
+    source_category_code: 5_pit_latrine_uncovered
     national_label_en: 5. Pit latrine uncovered
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2212,7 +2372,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: 7_pit_latrine_without_slab_open_pit
+  - country_entry_id: KEN-SAN-86
+    source_category_code: 7_pit_latrine_without_slab_open_pit
     national_label_en: 7. Pit latrine without slab  / open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2223,7 +2384,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: 7_pit_no_slab
+  - country_entry_id: KEN-SAN-87
+    source_category_code: 7_pit_no_slab
     national_label_en: 7. pit_no_slab
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2234,7 +2396,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: 8_pit_latrine_without_slab_open_pit
+  - country_entry_id: KEN-SAN-88
+    source_category_code: 8_pit_latrine_without_slab_open_pit
     national_label_en: 8. Pit latrine without slab  / open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2245,7 +2408,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: open_pit
+  - country_entry_id: KEN-SAN-89
+    source_category_code: open_pit
     national_label_en: open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2256,7 +2420,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: KEN-SAN-90
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine - without slab / open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2267,7 +2432,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab
+  - country_entry_id: KEN-SAN-91
+    source_category_code: pit_latrine_without_slab
     national_label_en: Pit latrine without slab
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2278,7 +2444,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: KEN-SAN-92
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2289,7 +2456,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: KEN-SAN-93
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2300,7 +2468,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_pit_latrine
+  - country_entry_id: KEN-SAN-94
+    source_category_code: uncovered_pit_latrine
     national_label_en: Uncovered pit latrine
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2311,7 +2480,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit
+  - country_entry_id: KEN-SAN-95
+    source_category_code: pit
     national_label_en: pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2322,7 +2492,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine
+  - country_entry_id: KEN-SAN-96
+    source_category_code: pit_latrine
     national_label_en: Pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2333,7 +2504,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine
+  - country_entry_id: KEN-SAN-97
+    source_category_code: pit_latrine
     national_label_en: Pit Latrine**
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2344,7 +2516,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: KEN-SAN-98
+    source_category_code: traditional_pit_latrine
     national_label_en: traditional pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2355,7 +2528,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: KEN-SAN-99
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional Pit Toilet
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2366,7 +2540,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: KEN-SAN-100
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional Pit Toilet**
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2377,7 +2552,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: uncovered_pit_latrine
+  - country_entry_id: KEN-SAN-101
+    source_category_code: uncovered_pit_latrine
     national_label_en: Uncovered pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2388,7 +2564,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: 2_pit_latrine_ventilated
+  - country_entry_id: KEN-SAN-102
+    source_category_code: 2_pit_latrine_ventilated
     national_label_en: 2 =PIT LATRINE VENTILATED
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2399,7 +2576,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: 3_ventilated_improved_pit_latrine_vip
+  - country_entry_id: KEN-SAN-103
+    source_category_code: 3_ventilated_improved_pit_latrine_vip
     national_label_en: 3. Ventilated Improved Pit latrine (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2410,7 +2588,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: 5_ventilated_improved_pit_latrine
+  - country_entry_id: KEN-SAN-104
+    source_category_code: 5_ventilated_improved_pit_latrine
     national_label_en: 5. Ventilated improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2421,7 +2600,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: 5_vip
+  - country_entry_id: KEN-SAN-105
+    source_category_code: 5_vip
     national_label_en: 5. vip
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2432,7 +2612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: 6_ventilated_improved_pit_latrine
+  - country_entry_id: KEN-SAN-106
+    source_category_code: 6_ventilated_improved_pit_latrine
     national_label_en: 6. Ventilated improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2443,7 +2624,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_ventilated_improved_pit_vip
+  - country_entry_id: KEN-SAN-107
+    source_category_code: pit_latrine_ventilated_improved_pit_vip
     national_label_en: Pit latrine - ventilated improved pit (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2454,7 +2636,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: v_i_p_latrine
+  - country_entry_id: KEN-SAN-108
+    source_category_code: v_i_p_latrine
     national_label_en: v.i.p. latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2465,7 +2648,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit
+  - country_entry_id: KEN-SAN-109
+    source_category_code: ventilated_improved_pit
     national_label_en: Ventilated Improved Pit
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2476,7 +2660,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_vip_latrine
+  - country_entry_id: KEN-SAN-110
+    source_category_code: ventilated_improved_pit_vip_latrine
     national_label_en: Ventilated improved pit (VIP) latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2487,7 +2672,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: KEN-SAN-111
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: ventilated improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2498,7 +2684,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: KEN-SAN-112
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit Latrine (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2509,7 +2696,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: vip
+  - country_entry_id: KEN-SAN-113
+    source_category_code: vip
     national_label_en: VIP
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2520,7 +2708,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: vip_latrine
+  - country_entry_id: KEN-SAN-114
+    source_category_code: vip_latrine
     national_label_en: VIP latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2531,7 +2720,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: bucket_latrine
+  - country_entry_id: KEN-SAN-115
+    source_category_code: bucket_latrine
     national_label_en: Bucket Latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
@@ -2541,7 +2731,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 118
-  - source_category_code: pit_latrine_covered
+  - country_entry_id: KEN-SAN-116
+    source_category_code: pit_latrine_covered
     national_label_en: Pit Latrine Covered
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -2552,7 +2743,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: KEN-SAN-117
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -2563,7 +2755,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: pit_latrine_uncovered
+  - country_entry_id: KEN-SAN-118
+    source_category_code: pit_latrine_uncovered
     national_label_en: Pit Latrine Uncovered
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
@@ -2574,7 +2767,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 116
-  - source_category_code: vip_pit_latrin
+  - country_entry_id: KEN-SAN-119
+    source_category_code: vip_pit_latrin
     national_label_en: Vip Pit Latrin
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -2585,7 +2779,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: 9_bucket
+  - country_entry_id: KEN-SAN-120
+    source_category_code: 9_bucket
     national_label_en: 9. bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -2596,7 +2791,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: bucket_toilet
+  - country_entry_id: KEN-SAN-121
+    source_category_code: bucket_toilet
     national_label_en: Bucket toilet
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -2607,7 +2803,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: pail_bucket
+  - country_entry_id: KEN-SAN-122
+    source_category_code: pail_bucket
     national_label_en: Pail / Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -2618,7 +2815,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: KEN-SAN-123
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet / hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
@@ -2629,7 +2827,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 125
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: KEN-SAN-124
+    source_category_code: hanging_toilet_latrine
     national_label_en: Hanging toilet/latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
@@ -2640,7 +2839,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 125
-  - source_category_code: community_latrine
+  - country_entry_id: KEN-SAN-125
+    source_category_code: community_latrine
     national_label_en: Community latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -2651,7 +2851,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: KEN-SAN-126
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -2662,7 +2863,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: pour_flush
+  - country_entry_id: KEN-SAN-127
+    source_category_code: pour_flush
     national_label_en: pour flush
     national_label_local: Pour flush latrines
     jmp_classification: Latrines > Pour flush latrines
@@ -2672,7 +2874,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: KEN-SAN-128
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Private pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -2682,7 +2885,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: KEN-SAN-129
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Public/shared pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -2693,7 +2897,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: pour_flush_latrine
+  - country_entry_id: KEN-SAN-130
+    source_category_code: pour_flush_latrine
     national_label_en: pour flush latrine
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
@@ -2703,7 +2908,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 89
-  - source_category_code: 12_bush
+  - country_entry_id: KEN-SAN-131
+    source_category_code: 12_bush
     national_label_en: 12. bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2713,7 +2919,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: 12_no_facility_bush_field
+  - country_entry_id: KEN-SAN-132
+    source_category_code: 12_no_facility_bush_field
     national_label_en: 12. No facility / bush / field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2723,7 +2930,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: 13_no_facility_bush_field
+  - country_entry_id: KEN-SAN-133
+    source_category_code: 13_no_facility_bush_field
     national_label_en: 13. No facility / bush / field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2733,7 +2941,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: 8_no_faciliity_bush_field
+  - country_entry_id: KEN-SAN-134
+    source_category_code: 8_no_faciliity_bush_field
     national_label_en: 8 =NO FACILIITY/BUSH/FIELD
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2743,7 +2952,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: 8_no_facility_bush_field_etc
+  - country_entry_id: KEN-SAN-135
+    source_category_code: 8_no_facility_bush_field_etc
     national_label_en: 8. No facility (Bush, Field, etc.)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2753,7 +2963,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: bush_or_field
+  - country_entry_id: KEN-SAN-136
+    source_category_code: bush_or_field
     national_label_en: Bush or field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2763,7 +2974,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities
+  - country_entry_id: KEN-SAN-137
+    source_category_code: no_facilities
     national_label_en: No Facilities
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2773,7 +2985,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: KEN-SAN-138
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2783,7 +2996,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_bush
+  - country_entry_id: KEN-SAN-139
+    source_category_code: no_facilities_bush
     national_label_en: No Facilities/Bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2793,7 +3007,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_bush_field
+  - country_entry_id: KEN-SAN-140
+    source_category_code: no_facilities_bush_field
     national_label_en: no facilities/bush/field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2803,7 +3018,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: KEN-SAN-141
+    source_category_code: no_facility_bush_field
     national_label_en: no facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2813,7 +3029,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: KEN-SAN-142
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/ bush/ field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2823,7 +3040,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: KEN-SAN-143
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2833,7 +3051,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_latrine
+  - country_entry_id: KEN-SAN-144
+    source_category_code: no_latrine
     national_label_en: No latrine
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2843,7 +3062,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_pas_disponible
+  - country_entry_id: KEN-SAN-145
+    source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2853,7 +3073,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: KEN-SAN-146
+    source_category_code: none
     national_label_en: none
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2863,7 +3084,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open
+  - country_entry_id: KEN-SAN-147
+    source_category_code: open
     national_label_en: Open
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2873,7 +3095,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation
+  - country_entry_id: KEN-SAN-148
+    source_category_code: open_defecation
     national_label_en: Open defecation
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2883,7 +3106,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: access_to_sanitation
+  - country_entry_id: KEN-SAN-149
+    source_category_code: access_to_sanitation
     national_label_en: access to sanitation
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -2893,7 +3117,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: community_latrines
+  - country_entry_id: KEN-SAN-150
+    source_category_code: community_latrines
     national_label_en: Community latrines
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -2903,7 +3128,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: flush_to_bio_septic_tank
+  - country_entry_id: KEN-SAN-151
+    source_category_code: flush_to_bio_septic_tank
     national_label_en: Flush To Bio-Septic Tank
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -2913,7 +3139,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: 11_other
+  - country_entry_id: KEN-SAN-152
+    source_category_code: 11_other
     national_label_en: 11. other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2923,7 +3150,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: non_access_to_sanitation
+  - country_entry_id: KEN-SAN-153
+    source_category_code: non_access_to_sanitation
     national_label_en: non access to sanitation
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2933,7 +3161,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: KEN-SAN-154
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2943,7 +3172,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_type_of_sanitation
+  - country_entry_id: KEN-SAN-155
+    source_category_code: other_type_of_sanitation
     national_label_en: Other type of sanitation
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2953,7 +3183,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
+  - country_entry_id: KEN-SAN-156
+    source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
     national_label_en: Other unimproved (we don't know the type of facilities)
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2963,7 +3194,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_specify
+  - country_entry_id: KEN-SAN-157
+    source_category_code: other_specify
     national_label_en: Other, specify
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2973,7 +3205,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_unknown
+  - country_entry_id: KEN-SAN-158
+    source_category_code: other_unknown
     national_label_en: Other/unknown
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2983,7 +3216,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: others
+  - country_entry_id: KEN-SAN-159
+    source_category_code: others
     national_label_en: Others
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2993,7 +3227,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: 97_other
+  - country_entry_id: KEN-SAN-160
+    source_category_code: 97_other
     national_label_en: 97. Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -3013,7 +3248,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: KEN-WAS-01
+    source_category_code: spring
     national_label_en: spring
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -3023,7 +3259,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: spring_water
+  - country_entry_id: KEN-WAS-02
+    source_category_code: spring_water
     national_label_en: Spring water
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -3033,7 +3270,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: tubewell_dug_well_borehole
+  - country_entry_id: KEN-WAS-03
+    source_category_code: tubewell_dug_well_borehole
     national_label_en: Tubewell, dug well, borehole
     national_label_local: All wells
     jmp_classification: Ground water > All wells
@@ -3043,7 +3281,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: 6_protected_spring
+  - country_entry_id: KEN-WAS-04
+    source_category_code: 6_protected_spring
     national_label_en: 6. Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3053,7 +3292,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: 7_protected_spring
+  - country_entry_id: KEN-WAS-05
+    source_category_code: 7_protected_spring
     national_label_en: 7. protected_spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3063,7 +3303,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: 7_water_from_spring_protected_spring
+  - country_entry_id: KEN-WAS-06
+    source_category_code: 7_water_from_spring_protected_spring
     national_label_en: '7. Water from Spring: Protected Spring'
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3073,7 +3314,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: KEN-WAS-07
+    source_category_code: protected_spring
     national_label_en: protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3083,7 +3325,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring_closed
+  - country_entry_id: KEN-WAS-08
+    source_category_code: protected_spring_closed
     national_label_en: Protected spring (closed)
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3093,7 +3336,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring_41
+  - country_entry_id: KEN-WAS-09
+    source_category_code: protected_spring_41
     national_label_en: PROTECTED SPRING 41
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3103,7 +3347,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: water_from_spring_protected_spring
+  - country_entry_id: KEN-WAS-10
+    source_category_code: water_from_spring_protected_spring
     national_label_en: Water from spring - protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -3113,7 +3358,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: KEN-WAS-11
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Private
     jmp_classification: Ground water > Protected spring > Private
@@ -3123,7 +3369,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 79
-  - source_category_code: 3_protected_dug_well
+  - country_entry_id: KEN-WAS-12
+    source_category_code: 3_protected_dug_well
     national_label_en: 3 =PROTECTED DUG WELL
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3133,7 +3380,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: 4_protected_well
+  - country_entry_id: KEN-WAS-13
+    source_category_code: 4_protected_well
     national_label_en: 4. Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3143,7 +3391,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: 5_dug_well_protected_well
+  - country_entry_id: KEN-WAS-14
+    source_category_code: 5_dug_well_protected_well
     national_label_en: '5. Dug Well: Protected Well'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3153,7 +3402,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: 5_protected_dug_well
+  - country_entry_id: KEN-WAS-15
+    source_category_code: 5_protected_dug_well
     national_label_en: 5. protected_dug_well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3163,7 +3413,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: dug_well_protected_well
+  - country_entry_id: KEN-WAS-16
+    source_category_code: dug_well_protected_well
     national_label_en: Dug well - protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3173,7 +3424,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well
+  - country_entry_id: KEN-WAS-17
+    source_category_code: protected_dug_well
     national_label_en: protected dug well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3183,7 +3435,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_closed_or_with_handpump
+  - country_entry_id: KEN-WAS-18
+    source_category_code: protected_dug_well_closed_or_with_handpump
     national_label_en: Protected dug well (closed) or with handpump
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3193,7 +3446,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: KEN-WAS-19
+    source_category_code: protected_well
     national_label_en: protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3203,7 +3457,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well_31
+  - country_entry_id: KEN-WAS-20
+    source_category_code: protected_well_31
     national_label_en: PROTECTED WELL 31
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -3213,7 +3468,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: covered_well_in_compound_plot
+  - country_entry_id: KEN-WAS-21
+    source_category_code: covered_well_in_compound_plot
     national_label_en: covered well in compound/plot
     national_label_local: Private
     jmp_classification: Ground water > Protected well > Private
@@ -3223,7 +3479,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: protected_dug_well
+  - country_entry_id: KEN-WAS-22
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Private
     jmp_classification: Ground water > Protected well > Private
@@ -3233,7 +3490,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: covered_public_well
+  - country_entry_id: KEN-WAS-23
+    source_category_code: covered_public_well
     national_label_en: covered public well
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -3243,7 +3501,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: public_well
+  - country_entry_id: KEN-WAS-24
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -3253,7 +3512,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: KEN-WAS-25
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -3263,7 +3523,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: well_without_handpump
+  - country_entry_id: KEN-WAS-26
+    source_category_code: well_without_handpump
     national_label_en: Well without Handpump
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
@@ -3273,7 +3534,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: well_in_residence
+  - country_entry_id: KEN-WAS-27
+    source_category_code: well_in_residence
     national_label_en: Well in residence
     national_label_local: Private
     jmp_classification: Ground water > Traditional wells > Private
@@ -3283,7 +3545,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: public_well
+  - country_entry_id: KEN-WAS-28
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Public
     jmp_classification: Ground water > Traditional wells > Public
@@ -3293,7 +3556,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: 10_borehole
+  - country_entry_id: KEN-WAS-29
+    source_category_code: 10_borehole
     national_label_en: 10. Borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3303,7 +3567,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: 2_tube_well
+  - country_entry_id: KEN-WAS-30
+    source_category_code: 2_tube_well
     national_label_en: 2 =TUBE WELL
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3313,7 +3578,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: 4_tube_well_or_borehole
+  - country_entry_id: KEN-WAS-31
+    source_category_code: 4_tube_well_or_borehole
     national_label_en: 4. Tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3323,7 +3589,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: 4_tubewell
+  - country_entry_id: KEN-WAS-32
+    source_category_code: 4_tubewell
     national_label_en: 4. tubewell
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3333,7 +3600,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: bore_hole_well
+  - country_entry_id: KEN-WAS-33
+    source_category_code: bore_hole_well
     national_label_en: Bore hole/ well
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3343,7 +3611,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole
+  - country_entry_id: KEN-WAS-34
+    source_category_code: borehole
     national_label_en: borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3353,7 +3622,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole_with_handpump_pump
+  - country_entry_id: KEN-WAS-35
+    source_category_code: borehole_with_handpump_pump
     national_label_en: Borehole (with handpump/pump)
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3363,7 +3633,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole_tube_well
+  - country_entry_id: KEN-WAS-36
+    source_category_code: borehole_tube_well
     national_label_en: Borehole/Tube Well
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3373,7 +3644,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: KEN-WAS-37
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3383,7 +3655,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: KEN-WAS-38
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3393,7 +3666,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole_21
+  - country_entry_id: KEN-WAS-39
+    source_category_code: tube_well_or_borehole_21
     national_label_en: TUBE WELL OR BOREHOLE 21
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3403,7 +3677,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_borehole_with_pump
+  - country_entry_id: KEN-WAS-40
+    source_category_code: tube_well_borehole_with_pump
     national_label_en: Tube/well/borehole with pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3413,7 +3688,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: KEN-WAS-41
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3423,7 +3699,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: KEN-WAS-42
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: tubewell/borehole with pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3433,7 +3710,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: well_with_handpump
+  - country_entry_id: KEN-WAS-43
+    source_category_code: well_with_handpump
     national_label_en: Well with Handpump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -3443,7 +3721,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole_with_pump
+  - country_entry_id: KEN-WAS-44
+    source_category_code: borehole_with_pump
     national_label_en: Borehole with pump
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -3453,7 +3732,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: 7_unprotected_spring
+  - country_entry_id: KEN-WAS-45
+    source_category_code: 7_unprotected_spring
     national_label_en: 7. Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3463,7 +3743,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: 8_unprotected_spring
+  - country_entry_id: KEN-WAS-46
+    source_category_code: 8_unprotected_spring
     national_label_en: 8. unprotected_spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3473,7 +3754,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: 8_water_from_spring_unprotected_spring
+  - country_entry_id: KEN-WAS-47
+    source_category_code: 8_water_from_spring_unprotected_spring
     national_label_en: '8. Water from Spring: Unprotected Spring'
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3483,7 +3765,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: protected_spring
+  - country_entry_id: KEN-WAS-48
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3493,7 +3776,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: KEN-WAS-49
+    source_category_code: unprotected_spring
     national_label_en: unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3503,7 +3787,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring_open
+  - country_entry_id: KEN-WAS-50
+    source_category_code: unprotected_spring_open
     national_label_en: Unprotected spring (open)
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3513,7 +3798,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring_42
+  - country_entry_id: KEN-WAS-51
+    source_category_code: unprotected_spring_42
     national_label_en: UNPROTECTED SPRING 42
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3523,7 +3809,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: water_from_spring_unprotected_spring
+  - country_entry_id: KEN-WAS-52
+    source_category_code: water_from_spring_unprotected_spring
     national_label_en: Water from spring - unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -3533,7 +3820,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: 4_unprotected_dug_well
+  - country_entry_id: KEN-WAS-53
+    source_category_code: 4_unprotected_dug_well
     national_label_en: 4 =UNPROTECTED DUG WELL
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3543,7 +3831,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: 5_unprotected_well
+  - country_entry_id: KEN-WAS-54
+    source_category_code: 5_unprotected_well
     national_label_en: 5. Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3553,7 +3842,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: 6_dug_well_unprotected_well
+  - country_entry_id: KEN-WAS-55
+    source_category_code: 6_dug_well_unprotected_well
     national_label_en: '6. Dug Well: Unprotected Well'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3563,7 +3853,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: 6_unprotected_dug_well
+  - country_entry_id: KEN-WAS-56
+    source_category_code: 6_unprotected_dug_well
     national_label_en: 6. unprotected_dug_well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3573,7 +3864,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: dug_well_unprotected_well
+  - country_entry_id: KEN-WAS-57
+    source_category_code: dug_well_unprotected_well
     national_label_en: Dug well - unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3583,7 +3875,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: KEN-WAS-58
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3593,7 +3886,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_open
+  - country_entry_id: KEN-WAS-59
+    source_category_code: unprotected_dug_well_open
     national_label_en: Unprotected dug well (open)
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3603,7 +3897,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_springs
+  - country_entry_id: KEN-WAS-60
+    source_category_code: unprotected_dug_well_springs
     national_label_en: Unprotected dug well/springs
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3613,7 +3908,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: KEN-WAS-61
+    source_category_code: unprotected_well
     national_label_en: unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3623,7 +3919,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well_32
+  - country_entry_id: KEN-WAS-62
+    source_category_code: unprotected_well_32
     national_label_en: UNPROTECTED WELL 32
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3633,7 +3930,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well_rain_water
+  - country_entry_id: KEN-WAS-63
+    source_category_code: unprotected_well_rain_water
     national_label_en: Unprotected well/rain water
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -3643,7 +3941,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: well_on_residence_plot
+  - country_entry_id: KEN-WAS-64
+    source_category_code: well_on_residence_plot
     national_label_en: Well on Residence/plot
     national_label_local: Private
     jmp_classification: Ground water > Unprotected well > Private
@@ -3653,7 +3952,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: KEN-WAS-65
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -3663,7 +3963,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: unprotected_dug_well_unprotected_spring
+  - country_entry_id: KEN-WAS-66
+    source_category_code: unprotected_dug_well_unprotected_spring
     national_label_en: unprotected dug well/unprotected spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -3673,7 +3974,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: open_well_in_compound_plot
+  - country_entry_id: KEN-WAS-67
+    source_category_code: open_well_in_compound_plot
     national_label_en: open well in compound/plot
     national_label_local: Private
     jmp_classification: Ground water > Unprotected wells or springs > Private
@@ -3683,7 +3985,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 51
-  - source_category_code: unprotected_dug_wells_springs
+  - country_entry_id: KEN-WAS-68
+    source_category_code: unprotected_dug_wells_springs
     national_label_en: Unprotected dug wells/springs
     national_label_local: Private
     jmp_classification: Ground water > Unprotected wells or springs > Private
@@ -3693,7 +3996,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 51
-  - source_category_code: open_public_well
+  - country_entry_id: KEN-WAS-69
+    source_category_code: open_public_well
     national_label_en: open public well
     national_label_local: Public
     jmp_classification: Ground water > Unprotected wells or springs > Public
@@ -3703,7 +4007,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 52
-  - source_category_code: 11_cart
+  - country_entry_id: KEN-WAS-70
+    source_category_code: 11_cart
     national_label_en: 11. cart
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3713,7 +4018,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: 11_cart_with_small_tank
+  - country_entry_id: KEN-WAS-71
+    source_category_code: 11_cart_with_small_tank
     national_label_en: 11. Cart with Small Tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3723,7 +4029,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: 8_cart_with_small_tank
+  - country_entry_id: KEN-WAS-72
+    source_category_code: 8_cart_with_small_tank
     national_label_en: 8 =CART WITH SMALL TANK
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3733,7 +4040,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: KEN-WAS-73
+    source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3743,7 +4051,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_small_tank_71
+  - country_entry_id: KEN-WAS-74
+    source_category_code: cart_with_small_tank_71
     national_label_en: CART WITH SMALL TANK 71
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3753,7 +4062,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
+  - country_entry_id: KEN-WAS-75
+    source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
     national_label_en: Purchased from a cart with a small tank or drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3763,7 +4073,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: vendors_cart_with_small_tank_drum_buckets
+  - country_entry_id: KEN-WAS-76
+    source_category_code: vendors_cart_with_small_tank_drum_buckets
     national_label_en: Vendors - cart with small tank/drum/buckets
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -3773,7 +4084,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: access_to_safe_water
+  - country_entry_id: KEN-WAS-77
+    source_category_code: access_to_safe_water
     national_label_en: Access to safe water
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -3783,7 +4095,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: vendors_bicycles_with_buckets
+  - country_entry_id: KEN-WAS-78
+    source_category_code: vendors_bicycles_with_buckets
     national_label_en: Vendors - bicycles with buckets
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -3793,7 +4106,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: water_vendor
+  - country_entry_id: KEN-WAS-79
+    source_category_code: water_vendor
     national_label_en: WATER VENDOR
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -3803,7 +4117,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: 10_tanker
+  - country_entry_id: KEN-WAS-80
+    source_category_code: 10_tanker
     national_label_en: 10. tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3813,7 +4128,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: 10_tanker_truck
+  - country_entry_id: KEN-WAS-81
+    source_category_code: 10_tanker_truck
     national_label_en: 10. Tanker Truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3823,7 +4139,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: 7_tanker_water
+  - country_entry_id: KEN-WAS-82
+    source_category_code: 7_tanker_water
     national_label_en: 7 =TANKER WATER
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3833,7 +4150,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: purchased_from_a_tanker_truck
+  - country_entry_id: KEN-WAS-83
+    source_category_code: purchased_from_a_tanker_truck
     national_label_en: Purchased from a tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3843,7 +4161,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: KEN-WAS-84
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3853,7 +4172,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_61
+  - country_entry_id: KEN-WAS-85
+    source_category_code: tanker_truck_61
     national_label_en: TANKER TRUCK 61
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3863,7 +4183,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: KEN-WAS-86
+    source_category_code: tanker_truck_vendor
     national_label_en: tanker truck vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3873,7 +4194,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: KEN-WAS-87
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker truck/vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3883,7 +4205,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: KEN-WAS-88
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3893,7 +4216,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: KEN-WAS-89
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker/truck/vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3903,7 +4227,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tankers_truck_vendor
+  - country_entry_id: KEN-WAS-90
+    source_category_code: tankers_truck_vendor
     national_label_en: Tankers/Truck/Vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3913,7 +4238,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: vendor_truck
+  - country_entry_id: KEN-WAS-91
+    source_category_code: vendor_truck
     national_label_en: Vendor, Truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3923,7 +4249,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: vendors_tankers_truck
+  - country_entry_id: KEN-WAS-92
+    source_category_code: vendors_tankers_truck
     national_label_en: Vendors - tankers-truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3933,7 +4260,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_selling_cart_or_truck
+  - country_entry_id: KEN-WAS-93
+    source_category_code: water_selling_cart_or_truck
     national_label_en: Water-selling cart or truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -3943,7 +4271,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: non_access_to_safe_water
+  - country_entry_id: KEN-WAS-94
+    source_category_code: non_access_to_safe_water
     national_label_en: Non-access to safe water
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -3953,7 +4282,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: KEN-WAS-95
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -3963,7 +4293,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_96
+  - country_entry_id: KEN-WAS-96
+    source_category_code: other_96
     national_label_en: OTHER 96
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -3973,7 +4304,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_source
+  - country_entry_id: KEN-WAS-97
+    source_category_code: other_source
     national_label_en: Other source
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -3983,7 +4315,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: others
+  - country_entry_id: KEN-WAS-98
+    source_category_code: others
     national_label_en: Others
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -3993,7 +4326,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: rock_catchments
+  - country_entry_id: KEN-WAS-99
+    source_category_code: rock_catchments
     national_label_en: Rock Catchments
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -4003,7 +4337,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: KEN-WAS-100
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -4013,7 +4348,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: refused_don_t_know
+  - country_entry_id: KEN-WAS-101
+    source_category_code: refused_don_t_know
     national_label_en: Refused + Don't know
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -4023,7 +4359,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: KEN-WAS-102
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Packaged water
     jmp_classification: Packaged water
@@ -4033,7 +4370,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 89
-  - source_category_code: 10_bottled_water
+  - country_entry_id: KEN-WAS-103
+    source_category_code: 10_bottled_water
     national_label_en: 10 =BOTTLED WATER
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4043,7 +4381,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: 12_bottled_water
+  - country_entry_id: KEN-WAS-104
+    source_category_code: 12_bottled_water
     national_label_en: 12. Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4053,7 +4392,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: 13_bottled
+  - country_entry_id: KEN-WAS-105
+    source_category_code: 13_bottled
     national_label_en: 13. bottled
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4063,7 +4403,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: 13_bottled_water
+  - country_entry_id: KEN-WAS-106
+    source_category_code: 13_bottled_water
     national_label_en: 13. Bottled Water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4073,7 +4414,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottle_water
+  - country_entry_id: KEN-WAS-107
+    source_category_code: bottle_water
     national_label_en: Bottle water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4083,7 +4425,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: KEN-WAS-108
+    source_category_code: bottled_water
     national_label_en: bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4093,7 +4436,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_91
+  - country_entry_id: KEN-WAS-109
+    source_category_code: bottled_water_91
     national_label_en: BOTTLED WATER 91
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -4103,7 +4447,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: '0'
+  - country_entry_id: KEN-WAS-110
+    source_category_code: '0'
     national_label_en: '0'
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -4113,7 +4458,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: 14_sachet
+  - country_entry_id: KEN-WAS-111
+    source_category_code: 14_sachet
     national_label_en: 14. sachet
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -4123,7 +4469,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: 14_sachet_water
+  - country_entry_id: KEN-WAS-112
+    source_category_code: 14_sachet_water
     national_label_en: 14. Sachet Water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -4133,7 +4480,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: sachet_water
+  - country_entry_id: KEN-WAS-113
+    source_category_code: sachet_water
     national_label_en: sachet water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -4143,7 +4491,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: 9_rainwater
+  - country_entry_id: KEN-WAS-114
+    source_category_code: 9_rainwater
     national_label_en: 9. Rainwater
     national_label_local: Rainwater
     jmp_classification: Rainwater
@@ -4153,7 +4502,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: 6_rainwater
+  - country_entry_id: KEN-WAS-115
+    source_category_code: 6_rainwater
     national_label_en: 6 =RAINWATER
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4163,7 +4513,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: 9_rain_harvested
+  - country_entry_id: KEN-WAS-116
+    source_category_code: 9_rain_harvested
     national_label_en: 9. Rain / Harvested
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4173,7 +4524,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: 9_rainwater
+  - country_entry_id: KEN-WAS-117
+    source_category_code: 9_rainwater
     national_label_en: 9. rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4183,7 +4535,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water
+  - country_entry_id: KEN-WAS-118
+    source_category_code: rain_water
     national_label_en: Rain Water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4193,7 +4546,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water_collection
+  - country_entry_id: KEN-WAS-119
+    source_category_code: rain_water_collection
     national_label_en: Rain water collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4203,7 +4557,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_harvested_water
+  - country_entry_id: KEN-WAS-120
+    source_category_code: rain_harvested_water
     national_label_en: Rain/Harvested Water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4213,7 +4568,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: KEN-WAS-121
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4223,7 +4579,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: KEN-WAS-122
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4233,7 +4590,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_51
+  - country_entry_id: KEN-WAS-123
+    source_category_code: rainwater_51
     national_label_en: RAINWATER 51
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4243,7 +4601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: KEN-WAS-124
+    source_category_code: rainwater_collection
     national_label_en: rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4253,7 +4612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: roof_catchment
+  - country_entry_id: KEN-WAS-125
+    source_category_code: roof_catchment
     national_label_en: roof catchment
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -4263,7 +4623,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: 12_surface_water
+  - country_entry_id: KEN-WAS-126
+    source_category_code: 12_surface_water
     national_label_en: 12. Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4273,7 +4634,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: 12_surface_water
+  - country_entry_id: KEN-WAS-127
+    source_category_code: 12_surface_water
     national_label_en: 12. surface_water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4283,7 +4645,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: 8_surface_water
+  - country_entry_id: KEN-WAS-128
+    source_category_code: 8_surface_water
     national_label_en: 8. Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4293,7 +4656,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: 9_surface_water
+  - country_entry_id: KEN-WAS-129
+    source_category_code: 9_surface_water
     national_label_en: 9 =SURFACE WATER
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4303,7 +4667,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_lake_ponds_streams
+  - country_entry_id: KEN-WAS-130
+    source_category_code: river_lake_ponds_streams
     national_label_en: River /lake /ponds/streams
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4313,7 +4678,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_lake_pond
+  - country_entry_id: KEN-WAS-131
+    source_category_code: river_lake_pond
     national_label_en: River, lake, pond
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4323,7 +4689,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+  - country_entry_id: KEN-WAS-132
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: river/dam/lake/ponds/stream/canal/irrigation channel
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4333,7 +4700,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_ponds_stream
+  - country_entry_id: KEN-WAS-133
+    source_category_code: river_ponds_stream
     national_label_en: River/ponds/stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4343,7 +4711,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_spring_lake_reservoir
+  - country_entry_id: KEN-WAS-134
+    source_category_code: river_spring_lake_reservoir
     national_label_en: River/spring + Lake/reservoir
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4353,7 +4722,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: KEN-WAS-135
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4363,7 +4733,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_pond_river_stream
+  - country_entry_id: KEN-WAS-136
+    source_category_code: surface_water_pond_river_stream
     national_label_en: Surface water (pond/river/stream)
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4373,7 +4744,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_81
+  - country_entry_id: KEN-WAS-137
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_81
     national_label_en: SURFACE WATER (RIVER/DAM/LAKE/POND/STREAM/CANAL) 81
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4383,7 +4755,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_c
+  - country_entry_id: KEN-WAS-138
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_c
     national_label_en: SURFACE WATER (RIVER/DAM/LAKE/POND/STREAM/CANAL/IRRIGATION
       C
     national_label_local: Surface water
@@ -4394,7 +4767,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
+  - country_entry_id: KEN-WAS-139
+    source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
     national_label_en: Surface water, like a river, dam, lake, pond, stream, canal
       or irrigation channel
     national_label_local: Surface water
@@ -4405,7 +4779,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: KEN-WAS-140
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -4415,7 +4790,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: dam
+  - country_entry_id: KEN-WAS-141
+    source_category_code: dam
     national_label_en: dam
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -4425,7 +4801,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: lake
+  - country_entry_id: KEN-WAS-142
+    source_category_code: lake
     national_label_en: Lake
     national_label_local: Lake
     jmp_classification: Surface water > Lake
@@ -4435,7 +4812,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: lake_pond
+  - country_entry_id: KEN-WAS-143
+    source_category_code: lake_pond
     national_label_en: Lake/Pond
     national_label_local: Lake
     jmp_classification: Surface water > Lake
@@ -4445,7 +4823,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: lake_pond_dam
+  - country_entry_id: KEN-WAS-144
+    source_category_code: lake_pond_dam
     national_label_en: lake/pond/dam
     national_label_local: Lake
     jmp_classification: Surface water > Lake
@@ -4455,7 +4834,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: pond_lake
+  - country_entry_id: KEN-WAS-145
+    source_category_code: pond_lake
     national_label_en: pond, lake
     national_label_local: Lake
     jmp_classification: Surface water > Lake
@@ -4465,7 +4845,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: pond_lake_dam
+  - country_entry_id: KEN-WAS-146
+    source_category_code: pond_lake_dam
     national_label_en: Pond/Lake/Dam
     national_label_local: Lake
     jmp_classification: Surface water > Lake
@@ -4475,7 +4856,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: pond_river_or_stream
+  - country_entry_id: KEN-WAS-147
+    source_category_code: pond_river_or_stream
     national_label_en: pond, river or stream
     national_label_local: Other
     jmp_classification: Surface water > Other
@@ -4485,7 +4867,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
+  - country_entry_id: KEN-WAS-148
+    source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irirgation channel
     national_label_local: Other
     jmp_classification: Surface water > Other
@@ -4495,7 +4878,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+  - country_entry_id: KEN-WAS-149
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
     national_label_local: Other
     jmp_classification: Surface water > Other
@@ -4505,7 +4889,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: pond
+  - country_entry_id: KEN-WAS-150
+    source_category_code: pond
     national_label_en: Pond
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -4515,7 +4900,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: pond_lake
+  - country_entry_id: KEN-WAS-151
+    source_category_code: pond_lake
     national_label_en: Pond/ lake
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -4525,7 +4911,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: pond_water_pan
+  - country_entry_id: KEN-WAS-152
+    source_category_code: pond_water_pan
     national_label_en: Pond/Water pan
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -4535,7 +4922,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: river
+  - country_entry_id: KEN-WAS-153
+    source_category_code: river
     national_label_en: River
     national_label_local: River
     jmp_classification: Surface water > River
@@ -4545,7 +4933,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: KEN-WAS-154
+    source_category_code: river_stream
     national_label_en: river, stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -4555,7 +4944,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: KEN-WAS-155
+    source_category_code: river_stream
     national_label_en: River/Stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -4565,7 +4955,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: stream_river
+  - country_entry_id: KEN-WAS-156
+    source_category_code: stream_river
     national_label_en: Stream/ River
     national_label_local: Stream
     jmp_classification: Surface water > Stream
@@ -4575,7 +4966,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 97
-  - source_category_code: piped_water
+  - country_entry_id: KEN-WAS-157
+    source_category_code: piped_water
     national_label_en: piped water
     national_label_local: Tap water
     jmp_classification: Tap water
@@ -4585,7 +4977,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: piped_to_neighbor
+  - country_entry_id: KEN-WAS-158
+    source_category_code: piped_to_neighbor
     national_label_en: piped to neighbor
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -4595,7 +4988,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: KEN-WAS-159
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to Neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -4605,7 +4999,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: public_to_neighborhood
+  - country_entry_id: KEN-WAS-160
+    source_category_code: public_to_neighborhood
     national_label_en: public to neighborhood
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -4615,7 +5010,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: 1_piped_water
+  - country_entry_id: KEN-WAS-161
+    source_category_code: 1_piped_water
     national_label_en: 1 =PIPED WATER
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -4625,7 +5021,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_in_the_dwelling_compound
+  - country_entry_id: KEN-WAS-162
+    source_category_code: piped_in_the_dwelling_compound
     national_label_en: Piped in the dwelling/Compound
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -4635,7 +5032,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_house
+  - country_entry_id: KEN-WAS-163
+    source_category_code: piped_into_house
     national_label_en: Piped into House
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -4645,7 +5043,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_residence
+  - country_entry_id: KEN-WAS-164
+    source_category_code: piped_into_residence
     national_label_en: Piped into Residence
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -4655,7 +5054,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water
+  - country_entry_id: KEN-WAS-165
+    source_category_code: piped_water
     national_label_en: Piped water
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -4665,7 +5065,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: KEN-WAS-166
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -4675,7 +5076,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: 1_piped_water_piped_into_dwelling_indoor
+  - country_entry_id: KEN-WAS-167
+    source_category_code: 1_piped_water_piped_into_dwelling_indoor
     national_label_en: '1. Piped Water: Piped into dwelling/indoor'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4685,7 +5087,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: 1_piped_indoor
+  - country_entry_id: KEN-WAS-168
+    source_category_code: 1_piped_indoor
     national_label_en: 1. piped_indoor
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4695,7 +5098,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: 1_water_pipe_into_dwelling
+  - country_entry_id: KEN-WAS-169
+    source_category_code: 1_water_pipe_into_dwelling
     national_label_en: 1. Water pipe into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4705,7 +5109,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: KEN-WAS-170
+    source_category_code: piped_into_dwelling
     national_label_en: piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4715,7 +5120,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling_11
+  - country_entry_id: KEN-WAS-171
+    source_category_code: piped_into_dwelling_11
     national_label_en: PIPED INTO DWELLING 11
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4725,7 +5131,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling_compound
+  - country_entry_id: KEN-WAS-172
+    source_category_code: piped_into_dwelling_compound
     national_label_en: Piped into dwelling/compound
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4735,7 +5142,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_residence_compound_or_plot
+  - country_entry_id: KEN-WAS-173
+    source_category_code: piped_into_residence_compound_or_plot
     national_label_en: Piped into residence/compound or plot
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4745,7 +5153,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_into_dwelling
+  - country_entry_id: KEN-WAS-174
+    source_category_code: piped_water_piped_into_dwelling
     national_label_en: Piped  water - piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4755,7 +5164,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: KEN-WAS-175
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -4765,7 +5175,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: 2_piped_water_pipe_to_yard_plot
+  - country_entry_id: KEN-WAS-176
+    source_category_code: 2_piped_water_pipe_to_yard_plot
     national_label_en: '2. Piped Water: Pipe to yard/plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4775,7 +5186,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: 2_piped_yard
+  - country_entry_id: KEN-WAS-177
+    source_category_code: 2_piped_yard
     national_label_en: 2. piped_yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4785,7 +5197,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: 2_water_pipe_into_compound
+  - country_entry_id: KEN-WAS-178
+    source_category_code: 2_water_pipe_into_compound
     national_label_en: 2. Water pipe into compound
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4795,7 +5208,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_compound_plot
+  - country_entry_id: KEN-WAS-179
+    source_category_code: piped_into_compound_plot
     national_label_en: piped into compound/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4805,7 +5219,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_plot_yard
+  - country_entry_id: KEN-WAS-180
+    source_category_code: piped_into_plot_yard
     national_label_en: Piped into plot/yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4815,7 +5230,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: KEN-WAS-181
+    source_category_code: piped_into_yard_or_plot
     national_label_en: piped into yard or plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4825,7 +5241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_plot
+  - country_entry_id: KEN-WAS-182
+    source_category_code: piped_into_yard_plot
     national_label_en: Piped into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4835,7 +5252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: KEN-WAS-183
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4845,7 +5263,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_to_yard_plot_12
+  - country_entry_id: KEN-WAS-184
+    source_category_code: piped_to_yard_plot_12
     national_label_en: PIPED TO YARD/PLOT 12
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4855,7 +5274,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_piped_into_plot_yard
+  - country_entry_id: KEN-WAS-185
+    source_category_code: piped_water_piped_into_plot_yard
     national_label_en: Piped  water - piped into plot/yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4865,7 +5285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard
+  - country_entry_id: KEN-WAS-186
+    source_category_code: piped_water_into_yard
     national_label_en: Piped water into yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4875,7 +5296,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot_or_compound
+  - country_entry_id: KEN-WAS-187
+    source_category_code: piped_water_into_yard_plot_or_compound
     national_label_en: Piped water into yard, plot or compound
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -4885,7 +5307,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: 3_piped_water_public_tap_standpipe
+  - country_entry_id: KEN-WAS-188
+    source_category_code: 3_piped_water_public_tap_standpipe
     national_label_en: '3. Piped Water: Public tap/standpipe'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4895,7 +5318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: 3_piped_public
+  - country_entry_id: KEN-WAS-189
+    source_category_code: 3_piped_public
     national_label_en: 3. piped_public
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4905,7 +5329,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: 3_water_pipe_outside_compound
+  - country_entry_id: KEN-WAS-190
+    source_category_code: 3_water_pipe_outside_compound
     national_label_en: 3. Water pipe outside compound
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4915,7 +5340,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: piped_water_public_tap_stand_pipe
+  - country_entry_id: KEN-WAS-191
+    source_category_code: piped_water_public_tap_stand_pipe
     national_label_en: Piped  water - public tap/stand pipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4925,7 +5351,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_out_door_tap_borehole
+  - country_entry_id: KEN-WAS-192
+    source_category_code: public_out_door_tap_borehole
     national_label_en: Public out door tap/borehole
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4935,7 +5362,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: KEN-WAS-193
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4945,7 +5373,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: KEN-WAS-194
+    source_category_code: public_tap
     national_label_en: Public Tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4955,7 +5384,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_or_standpipe
+  - country_entry_id: KEN-WAS-195
+    source_category_code: public_tap_or_standpipe
     national_label_en: Public tap or standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4965,7 +5395,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: KEN-WAS-196
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -4975,7 +5406,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe_13
+  - country_entry_id: KEN-WAS-197
+    source_category_code: public_tap_standpipe_13
     national_label_en: PUBLIC TAP/STANDPIPE 13
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

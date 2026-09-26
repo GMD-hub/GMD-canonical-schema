@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nursery
+  - country_entry_id: YEM-EDU-01
+    national_label_en: Nursery
     national_label_local: حضانة
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Preparatory
+  - country_entry_id: YEM-EDU-02
+    national_label_en: Preparatory
     national_label_local: ما قبل المدرسي
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Basic education (Grade 1-6)
+  - country_entry_id: YEM-EDU-03
+    national_label_en: Basic education (Grade 1-6)
     national_label_local: التعليم الأساسي (الصفوف من 1-6)
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Basic education (Grade 7-9)
+  - country_entry_id: YEM-EDU-04
+    national_label_en: Basic education (Grade 7-9)
     national_label_local: التعليم الأساسي (الصفوف من 7-9)
     entry_age: 12
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Secondary education
+  - country_entry_id: YEM-EDU-05
+    national_label_en: Secondary education
     national_label_local: التعليم الثانوي
     entry_age: 15
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Technical secondary
+  - country_entry_id: YEM-EDU-06
+    national_label_en: Technical secondary
     national_label_local: الثانوية التقنية
     entry_age: 15
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Technical and vocational education
+  - country_entry_id: YEM-EDU-07
+    national_label_en: Technical and vocational education
     national_label_local: التعليم المهني والفني
     entry_age: 15
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Bachelor's programme
+  - country_entry_id: YEM-EDU-08
+    national_label_en: Bachelor's programme
     national_label_local: برامج البكالوريوس
     entry_age: 18
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Post graduate diploma
+  - country_entry_id: YEM-EDU-09
+    national_label_en: Post graduate diploma
     national_label_local: دبلوم بعد الجامعة
     entry_age: 22
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Medicine programme
+  - country_entry_id: YEM-EDU-10
+    national_label_en: Medicine programme
     national_label_local: برنامج الطب
     entry_age: 18
     duration_years: 7
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Master's programmes
+  - country_entry_id: YEM-EDU-11
+    national_label_en: Master's programmes
     national_label_local: برامج الماجستير
     entry_age: 22
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Doctoral programmes
+  - country_entry_id: YEM-EDU-12
+    national_label_en: Doctoral programmes
     national_label_local: برامج الدكتوراه
     entry_age: 24
     duration_years: 2
@@ -140,7 +152,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 11 - ibb
+  - country_entry_id: YEM-SUBNAT-01
+    survey_labels: 11 - ibb
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3419
     gmd_subnatid2: ''
@@ -160,7 +173,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ibb
     source_row: 18634
-  - survey_labels: 12 - abyan
+  - country_entry_id: YEM-SUBNAT-02
+    survey_labels: 12 - abyan
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3407
     gmd_subnatid2: ''
@@ -180,7 +194,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Abyan
     source_row: 18635
-  - survey_labels: 13 - sanaa city
+  - country_entry_id: YEM-SUBNAT-03
+    survey_labels: 13 - sanaa city
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_144969
     gmd_subnatid2: ''
@@ -200,7 +215,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Amanat Al Asimah
     source_row: 18636
-  - survey_labels: 14 - al-baida
+  - country_entry_id: YEM-SUBNAT-04
+    survey_labels: 14 - al-baida
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3410
     gmd_subnatid2: ''
@@ -220,7 +236,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Al Bayda
     source_row: 18637
-  - survey_labels: 15 - taiz
+  - country_entry_id: YEM-SUBNAT-05
+    survey_labels: 15 - taiz
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3425
     gmd_subnatid2: ''
@@ -240,7 +257,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Taizz
     source_row: 18638
-  - survey_labels: 16 - al-jawf
+  - country_entry_id: YEM-SUBNAT-06
+    survey_labels: 16 - al-jawf
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3412
     gmd_subnatid2: ''
@@ -260,7 +278,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Al Jawf
     source_row: 18639
-  - survey_labels: 17 - hajja
+  - country_entry_id: YEM-SUBNAT-07
+    survey_labels: 17 - hajja
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3418
     gmd_subnatid2: ''
@@ -280,7 +299,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hajjah
     source_row: 18640
-  - survey_labels: 18 - al-hodeida
+  - country_entry_id: YEM-SUBNAT-08
+    survey_labels: 18 - al-hodeida
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3411
     gmd_subnatid2: ''
@@ -300,7 +320,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Al Hudaydah
     source_row: 18641
-  - survey_labels: 19 - hadramout
+  - country_entry_id: YEM-SUBNAT-09
+    survey_labels: 19 - hadramout
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_144970
     gmd_subnatid2: ''
@@ -320,7 +341,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hadramaut
     source_row: 18642
-  - survey_labels: 20 - dhamar
+  - country_entry_id: YEM-SUBNAT-10
+    survey_labels: 20 - dhamar
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3416
     gmd_subnatid2: ''
@@ -340,7 +362,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Dhamar
     source_row: 18643
-  - survey_labels: 21 - shabwah
+  - country_entry_id: YEM-SUBNAT-11
+    survey_labels: 21 - shabwah
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3424
     gmd_subnatid2: ''
@@ -360,7 +383,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shabwah
     source_row: 18644
-  - survey_labels: 22 - saadah
+  - country_entry_id: YEM-SUBNAT-12
+    survey_labels: 22 - saadah
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3422
     gmd_subnatid2: ''
@@ -380,7 +404,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sa'ada
     source_row: 18645
-  - survey_labels: 23 - sanaa region
+  - country_entry_id: YEM-SUBNAT-13
+    survey_labels: 23 - sanaa region
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_144972
     gmd_subnatid2: ''
@@ -400,7 +425,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sana'a
     source_row: 18646
-  - survey_labels: 24 - aden
+  - country_entry_id: YEM-SUBNAT-14
+    survey_labels: 24 - aden
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_144973
     gmd_subnatid2: ''
@@ -420,7 +446,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Aden
     source_row: 18647
-  - survey_labels: 25 - laheg
+  - country_entry_id: YEM-SUBNAT-15
+    survey_labels: 25 - laheg
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3420
     gmd_subnatid2: ''
@@ -440,7 +467,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lahj
     source_row: 18648
-  - survey_labels: 26 - mareb
+  - country_entry_id: YEM-SUBNAT-16
+    survey_labels: 26 - mareb
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3421
     gmd_subnatid2: ''
@@ -460,7 +488,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Marib
     source_row: 18649
-  - survey_labels: 27 - al-mahweet
+  - country_entry_id: YEM-SUBNAT-17
+    survey_labels: 27 - al-mahweet
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3414
     gmd_subnatid2: ''
@@ -480,7 +509,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Al Mahwit
     source_row: 18650
-  - survey_labels: 28 - al-maharh
+  - country_entry_id: YEM-SUBNAT-18
+    survey_labels: 28 - al-maharh
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3413
     gmd_subnatid2: ''
@@ -500,7 +530,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Al Maharah
     source_row: 18651
-  - survey_labels: 29 - amran
+  - country_entry_id: YEM-SUBNAT-19
+    survey_labels: 29 - amran
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3415
     gmd_subnatid2: ''
@@ -520,7 +551,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Amran
     source_row: 18652
-  - survey_labels: 30 - al-dhale
+  - country_entry_id: YEM-SUBNAT-20
+    survey_labels: 30 - al-dhale
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_3408
     gmd_subnatid2: ''
@@ -540,7 +572,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Al Dhale'e
     source_row: 18653
-  - survey_labels: 31 - remah
+  - country_entry_id: YEM-SUBNAT-21
+    survey_labels: 31 - remah
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAUL1_144971
     gmd_subnatid2: ''
@@ -560,7 +593,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Raymah
     source_row: 18654
-  - survey_labels: 19 - hadramout
+  - country_entry_id: YEM-SUBNAT-22
+    survey_labels: 19 - hadramout
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAULx_144970
     gmd_subnatid2: ''
@@ -580,7 +614,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hadramaut
     source_row: 18663
-  - survey_labels: 31 - socatra
+  - country_entry_id: YEM-SUBNAT-23
+    survey_labels: 31 - socatra
     survey_variables: subnatid
     gmd_subnatid1: YEM_2015_GAULx_31
     gmd_subnatid2: ''
@@ -610,7 +645,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flsuh_to_somewhere_else
+  - country_entry_id: YEM-SAN-01
+    source_category_code: flsuh_to_somewhere_else
     national_label_en: flsuh to somewhere else
     national_label_local: إلى مكان آخر
     jmp_classification: Flush and pour flush > to elsewhere
@@ -620,7 +656,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: to_open_drain
+  - country_entry_id: YEM-SAN-02
+    source_category_code: to_open_drain
     national_label_en: to open drain
     national_label_local: إلى مكان آخر
     jmp_classification: Flush and pour flush > to elsewhere
@@ -630,7 +667,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_piped
+  - country_entry_id: YEM-SAN-03
+    source_category_code: flush_to_piped
     national_label_en: flush to piped
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -640,7 +678,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: YEM-SAN-04
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -650,7 +689,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: YEM-SAN-05
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -660,7 +700,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: fluh_to_pit
+  - country_entry_id: YEM-SAN-06
+    source_category_code: fluh_to_pit
     national_label_en: fluh to pit
     national_label_local: للحفر
     jmp_classification: Flush and pour flush > to pit
@@ -670,7 +711,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: to_pit
+  - country_entry_id: YEM-SAN-07
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: للحفر
     jmp_classification: Flush and pour flush > to pit
@@ -680,7 +722,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flus_to_septic
+  - country_entry_id: YEM-SAN-08
+    source_category_code: flus_to_septic
     national_label_en: flus to septic
     national_label_local: لخزان الصرف الصحي
     jmp_classification: Flush and pour flush > to septic tank
@@ -690,7 +733,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: YEM-SAN-09
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: لخزان الصرف الصحي
     jmp_classification: Flush and pour flush > to septic tank
@@ -700,7 +744,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_dk_where
+  - country_entry_id: YEM-SAN-10
+    source_category_code: flush_to_dk_where
     national_label_en: flush to DK where
     national_label_local: إلى مكان غير معروف / لست متأكدًا / لا أعرف
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -710,7 +755,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: to_unknown_place_not_sure_dk
+  - country_entry_id: YEM-SAN-11
+    source_category_code: to_unknown_place_not_sure_dk
     national_label_en: to unknown place/ not sure/DK
     national_label_local: إلى مكان غير معروف / لست متأكدًا / لا أعرف
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -720,7 +766,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: street_toilet
+  - country_entry_id: YEM-SAN-12
+    source_category_code: street_toilet
     national_label_en: Street toilet
     national_label_local: عام / دافق مشترك / مرحاض
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -730,7 +777,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: toilet_connected_to_open_drainage
+  - country_entry_id: YEM-SAN-13
+    source_category_code: toilet_connected_to_open_drainage
     national_label_en: Toilet connected to open drainage
     national_label_local: إلى مكان آخر
     jmp_classification: Flush/toilets > to elsewhere
@@ -740,7 +788,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: connected_flush_toilet
+  - country_entry_id: YEM-SAN-14
+    source_category_code: connected_flush_toilet
     national_label_en: Connected flush toilet
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush/toilets > to piped sewer system
@@ -750,7 +799,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_toilet_with_sewer
+  - country_entry_id: YEM-SAN-15
+    source_category_code: flush_toilet_with_sewer
     national_label_en: Flush toilet with sewer
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush/toilets > to piped sewer system
@@ -760,7 +810,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: public_network
+  - country_entry_id: YEM-SAN-16
+    source_category_code: public_network
     national_label_en: Public network
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush/toilets > to piped sewer system
@@ -770,7 +821,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: disconnected_flush_toilet
+  - country_entry_id: YEM-SAN-17
+    source_category_code: disconnected_flush_toilet
     national_label_en: Disconnected flush toilet
     national_label_local: لخزان الصرف الصحي
     jmp_classification: Flush/toilets > to septic tank
@@ -780,7 +832,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_toilet_without_sewer
+  - country_entry_id: YEM-SAN-18
+    source_category_code: flush_toilet_without_sewer
     national_label_en: Flush toilet without sewer
     national_label_local: لخزان الصرف الصحي
     jmp_classification: Flush/toilets > to septic tank
@@ -790,7 +843,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket
+  - country_entry_id: YEM-SAN-19
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: مرحاض دلو
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -800,7 +854,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: YEM-SAN-20
+    source_category_code: bucket_toilet
     national_label_en: bucket toilet
     national_label_local: مرحاض دلو
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -810,7 +865,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: other_used_facility
+  - country_entry_id: YEM-SAN-21
+    source_category_code: other_used_facility
     national_label_en: other used facility
     national_label_local: آخر
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -820,7 +876,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: improved_pit
+  - country_entry_id: YEM-SAN-22
+    source_category_code: improved_pit
     national_label_en: Improved pit
     national_label_local: مرحاض حفرة مع بلاطة / مرحاض مغطى
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -831,7 +888,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: YEM-SAN-23
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: مرحاض حفرة مع بلاطة / مرحاض مغطى
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -842,7 +900,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_with_slab
+  - country_entry_id: YEM-SAN-24
+    source_category_code: pit_with_slab
     national_label_en: pit with slab
     national_label_local: مرحاض حفرة مع بلاطة / مرحاض مغطى
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -853,7 +912,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: sealed_pit
+  - country_entry_id: YEM-SAN-25
+    source_category_code: sealed_pit
     national_label_en: Sealed pit
     national_label_local: مرحاض حفرة مع بلاطة / مرحاض مغطى
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -864,7 +924,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: YEM-SAN-26
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -875,7 +936,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: YEM-SAN-27
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -886,7 +948,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_without_slab
+  - country_entry_id: YEM-SAN-28
+    source_category_code: pit_without_slab
     national_label_en: pit without slab
     national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -897,7 +960,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_toilet
+  - country_entry_id: YEM-SAN-29
+    source_category_code: uncovered_toilet
     national_label_en: Uncovered toilet
     national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -908,7 +972,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrine_plus_pit
+  - country_entry_id: YEM-SAN-30
+    source_category_code: latrine_plus_pit
     national_label_en: latrine plus pit
     national_label_local: المراحيض التقليدية
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -919,7 +984,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit
+  - country_entry_id: YEM-SAN-31
+    source_category_code: traditional_pit
     national_label_en: Traditional pit*
     national_label_local: المراحيض التقليدية
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -930,7 +996,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: improved_pit_with_ventilation
+  - country_entry_id: YEM-SAN-32
+    source_category_code: improved_pit_with_ventilation
     national_label_en: Improved pit with ventilation
     national_label_local: مراحيض حفرة محسنة جيدة التهوية
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -941,7 +1008,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: YEM-SAN-33
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: مراحيض حفرة محسنة جيدة التهوية
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -952,7 +1020,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit
+  - country_entry_id: YEM-SAN-34
+    source_category_code: pit
     national_label_en: Pit
     national_label_local: المراحيض التقليدية
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -962,7 +1031,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: latrine_shared
+  - country_entry_id: YEM-SAN-35
+    source_category_code: latrine_shared
     national_label_en: Latrine shared
     national_label_local: المراحيض التقليدية
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -973,7 +1043,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: flush_toilet
+  - country_entry_id: YEM-SAN-36
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: مراحيض خاصة
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -983,7 +1054,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: in_the_nature
+  - country_entry_id: YEM-SAN-37
+    source_category_code: in_the_nature
     national_label_en: In the nature
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -993,7 +1065,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: YEM-SAN-38
+    source_category_code: no_facility_bush_field
     national_label_en: no facility, bush, field
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -1003,7 +1076,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: YEM-SAN-39
+    source_category_code: none
     national_label_en: None
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -1013,7 +1087,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_air
+  - country_entry_id: YEM-SAN-40
+    source_category_code: open_air
     national_label_en: Open air
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -1023,7 +1098,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation
+  - country_entry_id: YEM-SAN-41
+    source_category_code: open_defecation
     national_label_en: Open defecation
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -1033,7 +1109,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: unavailable
+  - country_entry_id: YEM-SAN-42
+    source_category_code: unavailable
     national_label_en: Unavailable
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -1043,7 +1120,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: improved_sanitation_facility_network_flush_toilet_vip_latrine_public_latrine
+  - country_entry_id: YEM-SAN-43
+    source_category_code: improved_sanitation_facility_network_flush_toilet_vip_latrine_public_latrine
     national_label_en: Improved sanitation facility (network, flush toilet, VIP latrine,
       public latrine)
     national_label_local: آخر
@@ -1054,7 +1132,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: non_flush_but_with_severals_sewage_connections
+  - country_entry_id: YEM-SAN-44
+    source_category_code: non_flush_but_with_severals_sewage_connections
     national_label_en: Non flush (But with severals sewage connections)
     national_label_local: آخر
     jmp_classification: Other improved > Other
@@ -1064,7 +1143,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: other
+  - country_entry_id: YEM-SAN-45
+    source_category_code: other
     national_label_en: Other
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -1074,7 +1154,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_unimproved_facility
+  - country_entry_id: YEM-SAN-46
+    source_category_code: other_unimproved_facility
     national_label_en: other unimproved  facility
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -1084,7 +1165,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: others
+  - country_entry_id: YEM-SAN-47
+    source_category_code: others
     national_label_en: Others
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -1094,7 +1176,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: unimproved_open_hole_tube_pipe_outside_house_other
+  - country_entry_id: YEM-SAN-48
+    source_category_code: unimproved_open_hole_tube_pipe_outside_house_other
     national_label_en: Unimproved (open hole, tube/pipe outside house, other)
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -1104,7 +1187,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: ambiguous_pit_latrine_closed_pit_latrine
+  - country_entry_id: YEM-SAN-49
+    source_category_code: ambiguous_pit_latrine_closed_pit_latrine
     national_label_en: Ambiguous (pit latrine, closed pit latrine)
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -1124,7 +1208,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: YEM-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: كل الينابيع
     jmp_classification: Ground water > All springs
@@ -1134,7 +1219,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: protected_spring
+  - country_entry_id: YEM-WAS-02
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: ينبوع المحمي
     jmp_classification: Ground water > Protected spring
@@ -1144,7 +1230,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: YEM-WAS-03
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: محمي بشكل جيد
     jmp_classification: Ground water > Protected well
@@ -1154,7 +1241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: covered_well_spring
+  - country_entry_id: YEM-WAS-04
+    source_category_code: covered_well_spring
     national_label_en: Covered well/spring
     national_label_local: آبار أو ينابيع محمية
     jmp_classification: Ground water > Protected wells or springs
@@ -1164,7 +1252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: artesian_well
+  - country_entry_id: YEM-WAS-05
+    source_category_code: artesian_well
     national_label_en: Artesian well
     national_label_local: الآبار التقليدية
     jmp_classification: Ground water > Traditional wells
@@ -1174,7 +1263,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: well
+  - country_entry_id: YEM-WAS-06
+    source_category_code: well
     national_label_en: Well
     national_label_local: الآبار التقليدية
     jmp_classification: Ground water > Traditional wells
@@ -1184,7 +1274,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: well
+  - country_entry_id: YEM-WAS-07
+    source_category_code: well
     national_label_en: well
     national_label_local: آخر
     jmp_classification: Ground water > Traditional wells > Other
@@ -1194,7 +1285,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: well_without_pump
+  - country_entry_id: YEM-WAS-08
+    source_category_code: well_without_pump
     national_label_en: well without pump
     national_label_local: آخر
     jmp_classification: Ground water > Traditional wells > Other
@@ -1204,7 +1296,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: artesian_well
+  - country_entry_id: YEM-WAS-09
+    source_category_code: artesian_well
     national_label_en: Artesian well
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -1214,7 +1307,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: YEM-WAS-10
+    source_category_code: tube_well_or_borehole
     national_label_en: tube well or borehole
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -1224,7 +1318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: YEM-WAS-11
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -1234,7 +1329,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: YEM-WAS-12
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -1244,7 +1340,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: well_with_pump
+  - country_entry_id: YEM-WAS-13
+    source_category_code: well_with_pump
     national_label_en: Well with pump
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -1254,7 +1351,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: YEM-WAS-14
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: ينبوع غير المحمي
     jmp_classification: Ground water > Unprotected spring
@@ -1264,7 +1362,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: YEM-WAS-15
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: بئر غير محمي
     jmp_classification: Ground water > Unprotected well
@@ -1274,7 +1373,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_stream_well
+  - country_entry_id: YEM-WAS-16
+    source_category_code: unprotected_stream_well
     national_label_en: Unprotected stream/well
     national_label_local: الآبار أو الينابيع غير المحمية
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1284,7 +1384,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: YEM-WAS-17
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: عربة مع خزان صغير / أسطوانة
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1294,7 +1395,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: container
+  - country_entry_id: YEM-WAS-18
+    source_category_code: container
     national_label_en: container
     national_label_local: آخر
     jmp_classification: Other improved sources > Other
@@ -1304,7 +1406,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: private_owned_water_source
+  - country_entry_id: YEM-WAS-19
+    source_category_code: private_owned_water_source
     national_label_en: private owned water source
     national_label_local: آخر
     jmp_classification: Other improved sources > Other
@@ -1314,7 +1417,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: tanker_truck
+  - country_entry_id: YEM-WAS-20
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1324,7 +1428,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_provided
+  - country_entry_id: YEM-WAS-21
+    source_category_code: tanker_truck_provided
     national_label_en: Tanker truck provided
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1334,7 +1439,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_trucking
+  - country_entry_id: YEM-WAS-22
+    source_category_code: water_trucking
     national_label_en: Water trucking
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1344,7 +1450,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: from_neighbours
+  - country_entry_id: YEM-WAS-23
+    source_category_code: from_neighbours
     national_label_en: From neighbours
     national_label_local: آخر
     jmp_classification: Other non-improved > Other
@@ -1354,7 +1461,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: YEM-WAS-24
+    source_category_code: other
     national_label_en: Other
     national_label_local: آخر
     jmp_classification: Other non-improved > Other
@@ -1364,7 +1472,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: YEM-WAS-25
+    source_category_code: other
     national_label_en: Other
     national_label_local: آخر
     jmp_classification: Other non-improved > Other
@@ -1374,7 +1483,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: YEM-WAS-26
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: مياه معبأة
     jmp_classification: Packaged water > Bottled water
@@ -1384,7 +1494,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: YEM-WAS-27
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: كيس ماء
     jmp_classification: Packaged water > Sachet water
@@ -1394,7 +1505,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: sachet_water
+  - country_entry_id: YEM-WAS-28
+    source_category_code: sachet_water
     national_label_en: Sachet water
     national_label_local: كيس ماء
     jmp_classification: Packaged water > Sachet water
@@ -1404,7 +1516,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater
+  - country_entry_id: YEM-WAS-29
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: مياه الأمطار
     jmp_classification: Rainwater
@@ -1414,7 +1527,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: covered_cistern
+  - country_entry_id: YEM-WAS-30
+    source_category_code: covered_cistern
     national_label_en: Covered Cistern
     national_label_local: خزان / خزان مغطى
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1424,7 +1538,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: YEM-WAS-31
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: خزان / خزان مغطى
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1434,7 +1549,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: YEM-WAS-32
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: خزان / خزان مغطى
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1444,7 +1560,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: uncovered_cistern
+  - country_entry_id: YEM-WAS-33
+    source_category_code: uncovered_cistern
     national_label_en: Uncovered Cistern
     national_label_local: خزان / خزان غير مغطى
     jmp_classification: Rainwater > Uncovered cistern/tank
@@ -1454,7 +1571,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: surface_water
+  - country_entry_id: YEM-WAS-34
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: سطح الماء
     jmp_classification: Surface water
@@ -1464,7 +1582,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_protected_and_unprotected
+  - country_entry_id: YEM-WAS-35
+    source_category_code: surface_water_protected_and_unprotected
     national_label_en: surface water (protected and unprotected)
     national_label_local: سطح الماء
     jmp_classification: Surface water
@@ -1474,7 +1593,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: dam
+  - country_entry_id: YEM-WAS-36
+    source_category_code: dam
     national_label_en: Dam
     national_label_local: سد
     jmp_classification: Surface water > Dam
@@ -1484,7 +1604,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: dam_reservoir
+  - country_entry_id: YEM-WAS-37
+    source_category_code: dam_reservoir
     national_label_en: Dam, reservoir
     national_label_local: سد
     jmp_classification: Surface water > Dam
@@ -1494,7 +1615,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: open_pond
+  - country_entry_id: YEM-WAS-38
+    source_category_code: open_pond
     national_label_en: Open pond
     national_label_local: آخر
     jmp_classification: Surface water > Other
@@ -1504,7 +1626,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: uncovered_pond
+  - country_entry_id: YEM-WAS-39
+    source_category_code: uncovered_pond
     national_label_en: Uncovered pond
     national_label_local: آخر
     jmp_classification: Surface water > Other
@@ -1514,7 +1637,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: covered_pond
+  - country_entry_id: YEM-WAS-40
+    source_category_code: covered_pond
     national_label_en: Covered Pond
     national_label_local: بركة ماء
     jmp_classification: Surface water > Pond
@@ -1524,7 +1648,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: stream
+  - country_entry_id: YEM-WAS-41
+    source_category_code: stream
     national_label_en: Stream
     national_label_local: تدفق
     jmp_classification: Surface water > Stream
@@ -1534,7 +1659,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 97
-  - source_category_code: stream_fountain
+  - country_entry_id: YEM-WAS-42
+    source_category_code: stream_fountain
     national_label_en: Stream/fountain
     national_label_local: تدفق
     jmp_classification: Surface water > Stream
@@ -1544,7 +1670,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 97
-  - source_category_code: stream_spring_water
+  - country_entry_id: YEM-WAS-43
+    source_category_code: stream_spring_water
     national_label_en: stream/spring water
     national_label_local: تدفق
     jmp_classification: Surface water > Stream
@@ -1554,7 +1681,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 97
-  - source_category_code: cooperative_network
+  - country_entry_id: YEM-WAS-44
+    source_category_code: cooperative_network
     national_label_en: cooperative network
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -1564,7 +1692,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: local_network
+  - country_entry_id: YEM-WAS-45
+    source_category_code: local_network
     national_label_en: local network
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -1574,7 +1703,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: YEM-WAS-46
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -1584,7 +1714,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water
+  - country_entry_id: YEM-WAS-47
+    source_category_code: piped_water
     national_label_en: Piped water
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -1594,7 +1725,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: private_network
+  - country_entry_id: YEM-WAS-48
+    source_category_code: private_network
     national_label_en: Private network
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -1604,7 +1736,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: private_project
+  - country_entry_id: YEM-WAS-49
+    source_category_code: private_project
     national_label_en: Private project
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -1614,7 +1747,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: government_project
+  - country_entry_id: YEM-WAS-50
+    source_category_code: government_project
     national_label_en: Government project
     national_label_local: اتصالات المنزل
     jmp_classification: Tap water > Piped on premises
@@ -1624,7 +1758,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_residence
+  - country_entry_id: YEM-WAS-51
+    source_category_code: piped_into_residence
     national_label_en: Piped into Residence
     national_label_local: اتصالات المنزل
     jmp_classification: Tap water > Piped on premises
@@ -1634,7 +1769,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: government_network
+  - country_entry_id: YEM-WAS-52
+    source_category_code: government_network
     national_label_en: government network
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1644,7 +1780,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: YEM-WAS-53
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1654,7 +1791,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: YEM-WAS-54
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1664,7 +1802,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: public_network
+  - country_entry_id: YEM-WAS-55
+    source_category_code: public_network
     national_label_en: Public network
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1674,7 +1813,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: YEM-WAS-56
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1684,7 +1824,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: YEM-WAS-57
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1694,7 +1835,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: cooperative_network
+  - country_entry_id: YEM-WAS-58
+    source_category_code: cooperative_network
     national_label_en: Cooperative network
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -1704,7 +1846,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: cooperative_project
+  - country_entry_id: YEM-WAS-59
+    source_category_code: cooperative_project
     national_label_en: Cooperative project
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -1714,7 +1857,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: piped_outside
+  - country_entry_id: YEM-WAS-60
+    source_category_code: piped_outside
     national_label_en: Piped outside
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -1724,7 +1868,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: YEM-WAS-61
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -1734,7 +1879,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: YEM-WAS-62
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -1744,7 +1890,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: YEM-WAS-63
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -1754,7 +1901,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_top_outside_the_house
+  - country_entry_id: YEM-WAS-64
+    source_category_code: public_top_outside_the_house
     national_label_en: public top outside the house
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe

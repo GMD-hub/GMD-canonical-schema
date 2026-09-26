@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 0 - Asuncion
+  - country_entry_id: PRY-SUBNAT-01
+    survey_labels: 0 - Asuncion
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAUL2_23849
@@ -30,7 +31,8 @@ parameters:
     geo_nvar: ADM2_NAME
     geo_name: Asuncion
     source_row: 12640
-  - survey_labels: 10 - Alto Parana | 4 - Alto Parana
+  - country_entry_id: PRY-SUBNAT-02
+    survey_labels: 10 - Alto Parana | 4 - Alto Parana
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAUL1_2312
@@ -50,7 +52,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alto Parana
     source_row: 12641
-  - survey_labels: 11 - Central | 5 - Central
+  - country_entry_id: PRY-SUBNAT-03
+    survey_labels: 11 - Central | 5 - Central
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAULx_2318
@@ -70,7 +73,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Central
     source_row: 12642
-  - survey_labels: 1 - San Pedro | 2 - San Pedro
+  - country_entry_id: PRY-SUBNAT-04
+    survey_labels: 1 - San Pedro | 2 - San Pedro
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAUL1_2327
@@ -90,7 +94,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: San Pedro
     source_row: 12643
-  - survey_labels: 20 - Resto
+  - country_entry_id: PRY-SUBNAT-05
+    survey_labels: 20 - Resto
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAULx_20
@@ -111,7 +116,8 @@ parameters:
     geo_name: Alto Paraguay & Amambay & Boqueron & Canindeyu & Concepcion & Cordillera
       & Guaira & Misiones & Neembucu & Paraguari & Presidente Hayes
     source_row: 12644
-  - survey_labels: 2 - Caaguazu | 5 - Caaguazu
+  - country_entry_id: PRY-SUBNAT-06
+    survey_labels: 2 - Caaguazu | 5 - Caaguazu
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAUL1_2315
@@ -131,7 +137,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Caaguazu
     source_row: 12645
-  - survey_labels: 6 - Caazapa
+  - country_entry_id: PRY-SUBNAT-07
+    survey_labels: 6 - Caazapa
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAUL1_2316
@@ -151,7 +158,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Caazapa
     source_row: 12646
-  - survey_labels: 3 - Itapua | 7 - Itapua
+  - country_entry_id: PRY-SUBNAT-08
+    survey_labels: 3 - Itapua | 7 - Itapua
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PRY_2015_GAUL1_2322
@@ -171,7 +179,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Itapua
     source_row: 12647
-  - survey_labels: 6 - Resto del pais
+  - country_entry_id: PRY-SUBNAT-09
+    survey_labels: 6 - Resto del pais
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -192,7 +201,8 @@ parameters:
     geo_name: Alto Paraguay & Amambay & Boqueron & Canindeyu & Concepcion & Cordillera
       & Guaira & Misiones & Neembucu & Paraguari & Presidente Hayes & Caazapa
     source_row: 12654
-  - survey_labels: 1 - Concepcion
+  - country_entry_id: PRY-SUBNAT-10
+    survey_labels: 1 - Concepcion
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -212,7 +222,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Concepcion
     source_row: 12859
-  - survey_labels: 12 - Neembucu
+  - country_entry_id: PRY-SUBNAT-11
+    survey_labels: 12 - Neembucu
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -232,7 +243,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Neembucu
     source_row: 12862
-  - survey_labels: 13 - Amambay
+  - country_entry_id: PRY-SUBNAT-12
+    survey_labels: 13 - Amambay
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -252,7 +264,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Amambay
     source_row: 12863
-  - survey_labels: 14 - Canindeyu
+  - country_entry_id: PRY-SUBNAT-13
+    survey_labels: 14 - Canindeyu
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -272,7 +285,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Canindeyu
     source_row: 12864
-  - survey_labels: 15 - Presidente Hayes
+  - country_entry_id: PRY-SUBNAT-14
+    survey_labels: 15 - Presidente Hayes
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -292,7 +306,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Presidente Hayes
     source_row: 12865
-  - survey_labels: 3 - Cordillera
+  - country_entry_id: PRY-SUBNAT-15
+    survey_labels: 3 - Cordillera
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -312,7 +327,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cordillera
     source_row: 12867
-  - survey_labels: 4 - Guaira
+  - country_entry_id: PRY-SUBNAT-16
+    survey_labels: 4 - Guaira
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -332,7 +348,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Guaira
     source_row: 12868
-  - survey_labels: 8 - Misiones
+  - country_entry_id: PRY-SUBNAT-17
+    survey_labels: 8 - Misiones
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -352,7 +369,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Misiones
     source_row: 12872
-  - survey_labels: 9 - Paraguari
+  - country_entry_id: PRY-SUBNAT-18
+    survey_labels: 9 - Paraguari
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -382,7 +400,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo_rio
+  - country_entry_id: PRY-SAN-01
+    source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo_rio
     national_label_en: Con arrastre de agua en - La superficie de la tierra,zanja,arroyo,
       rio
     national_label_local: a drenaje abierto
@@ -393,7 +412,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_hoyo_abierto_zanja_arroyo
+  - country_entry_id: PRY-SAN-02
+    source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_hoyo_abierto_zanja_arroyo
     national_label_en: con arrastre de agua en la superficie de la tierra,hoyo abierto,zanja,arroyo...
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -403,7 +423,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
+  - country_entry_id: PRY-SAN-03
+    source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
     national_label_en: Con arrastre de agua en la superficie de la tierra,zanja,arroyo...
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -413,7 +434,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: desague_a_la_superficie_de_la_tierra_arroyo_rio_etc
+  - country_entry_id: PRY-SAN-04
+    source_category_code: desague_a_la_superficie_de_la_tierra_arroyo_rio_etc
     national_label_en: Desague a la superficie de la tierra, arroyo, río, etc.
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -423,7 +445,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: la_calle_patio_terreno_o_en_algun_otro_lugar
+  - country_entry_id: PRY-SAN-05
+    source_category_code: la_calle_patio_terreno_o_en_algun_otro_lugar
     national_label_en: La calle, patio/terreno o en algún otro lugar
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -433,7 +456,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
+  - country_entry_id: PRY-SAN-06
+    source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
     national_label_en: Con arrastre de agua - Red de alcantarillado sanitario
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -443,7 +467,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: con_arrastre_de_agua_con_red_de_alcantarillado_sanitario
+  - country_entry_id: PRY-SAN-07
+    source_category_code: con_arrastre_de_agua_con_red_de_alcantarillado_sanitario
     national_label_en: con arrastre de agua con red de alcantarillado sanitario
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -453,7 +478,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
+  - country_entry_id: PRY-SAN-08
+    source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
     national_label_en: Con arrastre de agua, red de alcantarillado sanitario
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -463,7 +489,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: red_de_alcantarillado_sanitario_cloaca
+  - country_entry_id: PRY-SAN-09
+    source_category_code: red_de_alcantarillado_sanitario_cloaca
     national_label_en: Red de alcantarillado sanitario (cloaca)
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -473,7 +500,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: con_arrastre_de_agua_pozo_ciego_sin_camara_septica
+  - country_entry_id: PRY-SAN-10
+    source_category_code: con_arrastre_de_agua_pozo_ciego_sin_camara_septica
     national_label_en: Con arrastre de agua - Pozo ciego, sin cámara séptica
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -483,7 +511,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
+  - country_entry_id: PRY-SAN-11
+    source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
     national_label_en: con arrastre de agua con pozo ciego(absorbente)
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -493,7 +522,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: pozo_ciego_sin_camara_septica
+  - country_entry_id: PRY-SAN-12
+    source_category_code: pozo_ciego_sin_camara_septica
     national_label_en: Pozo ciego sin cámara séptica
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -503,7 +533,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: pozo_ciego_sin_camara_septica
+  - country_entry_id: PRY-SAN-13
+    source_category_code: pozo_ciego_sin_camara_septica
     national_label_en: Pozo ciego, sin cámara séptica
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -513,7 +544,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: camara_septica_y_pozo_ciego
+  - country_entry_id: PRY-SAN-14
+    source_category_code: camara_septica_y_pozo_ciego
     national_label_en: Cámara séptica y pozo ciego
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -523,7 +555,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego
+  - country_entry_id: PRY-SAN-15
+    source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego
     national_label_en: Con arrastre de agua - Cámara séptica y pozo ciego
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -533,7 +566,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
+  - country_entry_id: PRY-SAN-16
+    source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
     national_label_en: Con arrastre de agua, cámara séptica y pozo ciego(absorbente)
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -543,7 +577,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: con_arrastre_de_agua_con_camara_septica_y_pozo_ciego_absorbente
+  - country_entry_id: PRY-SAN-17
+    source_category_code: con_arrastre_de_agua_con_camara_septica_y_pozo_ciego_absorbente
     national_label_en: con arrastre de agua, con cámara séptica y pozo ciego(absorbente)
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -553,7 +588,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_ciego_con_camara_septica
+  - country_entry_id: PRY-SAN-18
+    source_category_code: pozo_ciego_con_camara_septica
     national_label_en: Pozo ciego con cámara séptica
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -563,7 +599,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: no_sabe_donde_se_depositan
+  - country_entry_id: PRY-SAN-19
+    source_category_code: no_sabe_donde_se_depositan
     national_label_en: No sabe dónde se depositan
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -573,7 +610,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: wc_con_arrastre_agua
+  - country_entry_id: PRY-SAN-20
+    source_category_code: wc_con_arrastre_agua
     national_label_en: WC con arrastre agua
     national_label_local: Inodoros de arrastre hidráulico
     jmp_classification: Flush/toilets
@@ -583,7 +621,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: bano_conectado_a_red_publica_o_pozo_ciego
+  - country_entry_id: PRY-SAN-21
+    source_category_code: bano_conectado_a_red_publica_o_pozo_ciego
     national_label_en: Bano conectado a red pública, o pozo ciego
     national_label_local: Inodoros de arrastre hidráulico (privado)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -593,7 +632,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: PRY-SAN-22
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -603,7 +643,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: PRY-SAN-23
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -613,7 +654,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: PRY-SAN-24
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -624,7 +666,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: PRY-SAN-25
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -634,7 +677,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
+  - country_entry_id: PRY-SAN-26
+    source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
     national_label_en: Con arrastre de agua en la superficie de la tierra, zanja,
       arroyo
     national_label_local: a drenaje abierto
@@ -645,7 +689,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
+  - country_entry_id: PRY-SAN-27
+    source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
     national_label_en: Con arrastre de agua, red de alcantarillado sanitario
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -655,7 +700,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: wc_connect_a_red_publica
+  - country_entry_id: PRY-SAN-28
+    source_category_code: wc_connect_a_red_publica
     national_label_en: WC connect a red publica
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -665,7 +711,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
+  - country_entry_id: PRY-SAN-29
+    source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
     national_label_en: Con arrastre de agua con pozo ciego (absorbente)
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -675,7 +722,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: wc_con_pozo_ciego
+  - country_entry_id: PRY-SAN-30
+    source_category_code: wc_con_pozo_ciego
     national_label_en: WC con pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -685,7 +733,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
+  - country_entry_id: PRY-SAN-31
+    source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
     national_label_en: Con arrastre de agua, cámara séptica y pozo ciego (absorbente)
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -695,7 +744,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: PRY-SAN-32
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -705,7 +755,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: letrina_comun_sin_losa_pero_con_techo_o_puerta
+  - country_entry_id: PRY-SAN-33
+    source_category_code: letrina_comun_sin_losa_pero_con_techo_o_puerta
     national_label_en: Letrina común sin losa pero con techo o puerta
     national_label_local: Otro
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -715,7 +766,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: letrina_comun_de_hoyo_seco
+  - country_entry_id: PRY-SAN-34
+    source_category_code: letrina_comun_de_hoyo_seco
     national_label_en: Letrina común de hoyo seco
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -726,7 +778,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
+  - country_entry_id: PRY-SAN-35
+    source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
     national_label_en: Letrina común de hoyo seco (con losa,techo,paredes y puertas)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -737,7 +790,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_comun_de_hoyo_seco_con_loza_paredes_techo_y_puerta
+  - country_entry_id: PRY-SAN-36
+    source_category_code: letrina_comun_de_hoyo_seco_con_loza_paredes_techo_y_puerta
     national_label_en: Letrina común de hoyo seco (con loza, paredes, techo y puerta)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -748,7 +802,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
+  - country_entry_id: PRY-SAN-37
+    source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
     national_label_en: Letrina común de hoyo seco(con losa,techo,paredes y puertas)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -759,7 +814,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_comun_sin_losa_sin_techo_o_puerta
+  - country_entry_id: PRY-SAN-38
+    source_category_code: letrina_comun_sin_losa_sin_techo_o_puerta
     national_label_en: Letrina común sin losa, sin techo o puerta
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -770,7 +826,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: PRY-SAN-39
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -781,7 +838,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina
+  - country_entry_id: PRY-SAN-40
+    source_category_code: letrina
     national_label_en: Letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -792,7 +850,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_comun_sin_techo_o_puerta
+  - country_entry_id: PRY-SAN-41
+    source_category_code: letrina_comun_sin_techo_o_puerta
     national_label_en: Letrina común sin techo o puerta
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -803,7 +862,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
+  - country_entry_id: PRY-SAN-42
+    source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
     national_label_en: Letrina ventilada de hoyo seco (común c/tubo de ventilación)
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -814,7 +874,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
+  - country_entry_id: PRY-SAN-43
+    source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
     national_label_en: Letrina ventilada de hoyo seco(común c/tubo de ventilación)
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -825,7 +886,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_con_tubo_de_ventilacion
+  - country_entry_id: PRY-SAN-44
+    source_category_code: letrina_ventilada_de_hoyo_seco_comun_con_tubo_de_ventilacion
     national_label_en: Letrina ventilada de hoyo seco(común con tubo de ventilación)
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -836,7 +898,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: PRY-SAN-45
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -847,7 +910,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
+  - country_entry_id: PRY-SAN-46
+    source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
     national_label_en: Letrina común de hoyo seco(con losa,techo,paredes y puertas)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -858,7 +922,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: PRY-SAN-47
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -869,7 +934,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: letrina_comun
+  - country_entry_id: PRY-SAN-48
+    source_category_code: letrina_comun
     national_label_en: Letrina comun
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -880,7 +946,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: letrina_comun_o_municipal
+  - country_entry_id: PRY-SAN-49
+    source_category_code: letrina_comun_o_municipal
     national_label_en: Letrina común o municipal
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -891,7 +958,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: letrina_comun_sin_techo_o_puerta
+  - country_entry_id: PRY-SAN-50
+    source_category_code: letrina_comun_sin_techo_o_puerta
     national_label_en: Letrina común sin techo o puerta
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -902,7 +970,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
+  - country_entry_id: PRY-SAN-51
+    source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
     national_label_en: Letrina ventilada de hoyo seco(común c/tubo de ventilación)
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -913,7 +982,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 121
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: PRY-SAN-52
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico (privado)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -923,7 +993,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: PRY-SAN-53
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico (publico)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -934,7 +1005,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: excusado
+  - country_entry_id: PRY-SAN-54
+    source_category_code: excusado
     national_label_en: Excusado
     national_label_local: al alcantarillado
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -945,7 +1017,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 98
-  - source_category_code: defecacion_al_aire_libre_no_hay_instalacion_campo_abierto_matorrales
+  - country_entry_id: PRY-SAN-55
+    source_category_code: defecacion_al_aire_libre_no_hay_instalacion_campo_abierto_matorrales
     national_label_en: Defecación al aire libre (no hay instalación, campo abierto,
       matorrales)
     national_label_local: No hay installacion sanitaria
@@ -956,7 +1029,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: PRY-SAN-56
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -966,7 +1040,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_hay_servicios
+  - country_entry_id: PRY-SAN-57
+    source_category_code: no_hay_servicios
     national_label_en: No hay servicios
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -976,7 +1051,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene
+  - country_entry_id: PRY-SAN-58
+    source_category_code: no_tiene
     national_label_en: No tiene
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -986,7 +1062,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_bano
+  - country_entry_id: PRY-SAN-59
+    source_category_code: no_tiene_bano
     national_label_en: No tiene baño
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -996,7 +1073,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_bano_no_informado
+  - country_entry_id: PRY-SAN-60
+    source_category_code: no_tiene_bano_no_informado
     national_label_en: No tiene baño/No informado
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1006,7 +1084,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_no_informo
+  - country_entry_id: PRY-SAN-61
+    source_category_code: no_tiene_no_informo
     national_label_en: No tiene/no informo
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1016,7 +1095,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: letrina_comun_de_hoyo_seco_con_losa_sin_techo_paredes_y_puertas
+  - country_entry_id: PRY-SAN-62
+    source_category_code: letrina_comun_de_hoyo_seco_con_losa_sin_techo_paredes_y_puertas
     national_label_en: Letrina común  de hoyo seco con losa (sin techo, paredes y
       puertas)
     national_label_local: Otro
@@ -1027,7 +1107,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: bano_de_silla_basin_para_adultos_ninos_o_enfermos
+  - country_entry_id: PRY-SAN-63
+    source_category_code: bano_de_silla_basin_para_adultos_ninos_o_enfermos
     national_label_en: Baño de silla/basin para adultos/niños o enfermos
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1037,7 +1118,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: PRY-SAN-64
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1047,7 +1129,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro
+  - country_entry_id: PRY-SAN-65
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1057,7 +1140,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otros
+  - country_entry_id: PRY-SAN-66
+    source_category_code: otros
     national_label_en: Otros
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1067,7 +1151,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro
+  - country_entry_id: PRY-SAN-67
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1087,7 +1172,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: manantial_o_naciente
+  - country_entry_id: PRY-WAS-01
+    source_category_code: manantial_o_naciente
     national_label_en: Manantial o naciente
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1097,7 +1183,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: manantial_naciente_o_ycua
+  - country_entry_id: PRY-WAS-02
+    source_category_code: manantial_naciente_o_ycua
     national_label_en: Manantial, naciente o ycua
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1107,7 +1194,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: manantial_protegido
+  - country_entry_id: PRY-WAS-03
+    source_category_code: manantial_protegido
     national_label_en: Manantial protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -1117,7 +1205,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: pozo_excavado_protegido_brocal_y_tapa
+  - country_entry_id: PRY-WAS-04
+    source_category_code: pozo_excavado_protegido_brocal_y_tapa
     national_label_en: Pozo excavado protegido (brocal y tapa)
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -1127,7 +1216,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: pozo_protegido
+  - country_entry_id: PRY-WAS-05
+    source_category_code: pozo_protegido
     national_label_en: Pozo protegido
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -1137,7 +1227,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: PRY-WAS-06
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Pozos o manantiales protegidos
     jmp_classification: Ground water > Protected wells or springs
@@ -1147,7 +1238,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: pozo_sin_bomba
+  - country_entry_id: PRY-WAS-07
+    source_category_code: pozo_sin_bomba
     national_label_en: Pozo sin bomba
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1157,7 +1249,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: well_without_pump
+  - country_entry_id: PRY-WAS-08
+    source_category_code: well_without_pump
     national_label_en: Well without pump
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1167,7 +1260,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_artesiano
+  - country_entry_id: PRY-WAS-09
+    source_category_code: pozo_artesiano
     national_label_en: Pozo artesiano
     national_label_local: Otro
     jmp_classification: Ground water > Traditional wells > Other
@@ -1177,7 +1271,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: pozo_sin_bomba
+  - country_entry_id: PRY-WAS-10
+    source_category_code: pozo_sin_bomba
     national_label_en: Pozo sin bomba
     national_label_local: Publico
     jmp_classification: Ground water > Traditional wells > Public
@@ -1187,7 +1282,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: pozo_con_bomba
+  - country_entry_id: PRY-WAS-11
+    source_category_code: pozo_con_bomba
     national_label_en: Pozo con bomba
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1197,7 +1293,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: pozo_con_bomba_electrica
+  - country_entry_id: PRY-WAS-12
+    source_category_code: pozo_con_bomba_electrica
     national_label_en: Pozo con bomba eléctrica
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1207,7 +1304,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: pozo_con_tuberia
+  - country_entry_id: PRY-WAS-13
+    source_category_code: pozo_con_tuberia
     national_label_en: Pozo con tubería
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1217,7 +1315,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: PRY-WAS-14
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1227,7 +1326,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: well_with_handpump
+  - country_entry_id: PRY-WAS-15
+    source_category_code: well_with_handpump
     national_label_en: Well with handpump
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1237,7 +1337,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: manantial_no_protegido
+  - country_entry_id: PRY-WAS-16
+    source_category_code: manantial_no_protegido
     national_label_en: Manantial no protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -1247,7 +1348,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: manantial_sin_proteccion
+  - country_entry_id: PRY-WAS-17
+    source_category_code: manantial_sin_proteccion
     national_label_en: Manantial sin protección
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -1257,7 +1359,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: pozo_excavado_sin_proteccion_sin_brocal_ni_tapa
+  - country_entry_id: PRY-WAS-18
+    source_category_code: pozo_excavado_sin_proteccion_sin_brocal_ni_tapa
     national_label_en: Pozo excavado sin protección (sin brocal ni tapa)
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -1267,7 +1370,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: pozo_no_protegido
+  - country_entry_id: PRY-WAS-19
+    source_category_code: pozo_no_protegido
     national_label_en: Pozo no protegido
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -1277,7 +1381,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: PRY-WAS-20
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Pozos o manantiales non protegidos
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1287,7 +1392,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: carreta_con_tanque_tambor_pequeno
+  - country_entry_id: PRY-WAS-21
+    source_category_code: carreta_con_tanque_tambor_pequeno
     national_label_en: Carreta con tanque/tambor pequeño
     national_label_local: Carro con tanque / tambor pequeño
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1297,7 +1403,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: vendedor_de_agua
+  - country_entry_id: PRY-WAS-22
+    source_category_code: vendedor_de_agua
     national_label_en: Vendedor de agua
     national_label_local: Carro con tanque / tambor pequeño
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1307,7 +1414,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: red_privada_dentro_de_la_vivienda_o_patio
+  - country_entry_id: PRY-WAS-23
+    source_category_code: red_privada_dentro_de_la_vivienda_o_patio
     national_label_en: Red privada dentro de la vivienda o patio
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1317,7 +1425,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: red_comunitaria_dentro_de_la_vivienda_o_patio
+  - country_entry_id: PRY-WAS-24
+    source_category_code: red_comunitaria_dentro_de_la_vivienda_o_patio
     national_label_en: Red Comunitaria dentro de la vivienda o patio
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1327,7 +1436,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: aguatero
+  - country_entry_id: PRY-WAS-25
+    source_category_code: aguatero
     national_label_en: Aguatero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1337,7 +1447,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carro_tanque_camion_cisterna
+  - country_entry_id: PRY-WAS-26
+    source_category_code: carro_tanque_camion_cisterna
     national_label_en: Carro-tanque/camión cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1347,7 +1458,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: PRY-WAS-27
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1357,7 +1469,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: truck
+  - country_entry_id: PRY-WAS-28
+    source_category_code: truck
     national_label_en: Truck
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1367,7 +1480,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: aguatero
+  - country_entry_id: PRY-WAS-29
+    source_category_code: aguatero
     national_label_en: Aguatero
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1377,7 +1491,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: no_informo
+  - country_entry_id: PRY-WAS-30
+    source_category_code: no_informo
     national_label_en: No informo
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1387,7 +1502,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: PRY-WAS-31
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1397,7 +1513,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otra
+  - country_entry_id: PRY-WAS-32
+    source_category_code: otra
     national_label_en: Otra
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1407,7 +1524,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otra_fuente
+  - country_entry_id: PRY-WAS-33
+    source_category_code: otra_fuente
     national_label_en: Otra fuente
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1417,7 +1535,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otra_fuente_del_vecino
+  - country_entry_id: PRY-WAS-34
+    source_category_code: otra_fuente_del_vecino
     national_label_en: Otra fuente del vecino
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1427,7 +1546,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: PRY-WAS-35
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1437,7 +1557,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: PRY-WAS-36
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1447,7 +1568,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: otros
+  - country_entry_id: PRY-WAS-37
+    source_category_code: otros
     national_label_en: Otros
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1457,7 +1579,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: agua_embotellada
+  - country_entry_id: PRY-WAS-38
+    source_category_code: agua_embotellada
     national_label_en: Agua embotellada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1467,7 +1590,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embotellada_envasada
+  - country_entry_id: PRY-WAS-39
+    source_category_code: agua_embotellada_envasada
     national_label_en: Agua embotellada/envasada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1477,7 +1601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_de_lluvia
+  - country_entry_id: PRY-WAS-40
+    source_category_code: agua_de_lluvia
     national_label_en: Agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1487,7 +1612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: aljibe_con_bomba
+  - country_entry_id: PRY-WAS-41
+    source_category_code: aljibe_con_bomba
     national_label_en: Aljibe con bomba
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1497,7 +1623,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: PRY-WAS-42
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1507,7 +1634,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: recogen_agua_de_lluvia
+  - country_entry_id: PRY-WAS-43
+    source_category_code: recogen_agua_de_lluvia
     national_label_en: Recogen agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1517,7 +1645,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: water_tank_aljibe
+  - country_entry_id: PRY-WAS-44
+    source_category_code: water_tank_aljibe
     national_label_en: Water tank (Aljibe)
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1527,7 +1656,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: aljibe_sin_bomba
+  - country_entry_id: PRY-WAS-45
+    source_category_code: aljibe_sin_bomba
     national_label_en: Aljibe sin bomba
     national_label_local: Cisterna/tanque descubierto
     jmp_classification: Rainwater > Uncovered cistern/tank
@@ -1537,7 +1667,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_de_irrigacion
+  - country_entry_id: PRY-WAS-46
+    source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_de_irrigacion
     national_label_en: Agua de superficie (río, arroyo,represa,lago,estanque,canal
       de irrigación)
     national_label_local: Agua superficial
@@ -1548,7 +1679,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo
+  - country_entry_id: PRY-WAS-47
+    source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo
     national_label_en: Agua superficial(río,represa,lago,estanque,arroyo)
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1558,7 +1690,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo_canales
+  - country_entry_id: PRY-WAS-48
+    source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo_canales
     national_label_en: Agua superficial(río,represa,lago,estanque,arroyo,canales)
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1568,7 +1701,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_manantial
+  - country_entry_id: PRY-WAS-49
+    source_category_code: rio_manantial
     national_label_en: Río, manantial
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1578,7 +1712,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_spring
+  - country_entry_id: PRY-WAS-50
+    source_category_code: river_spring
     national_label_en: River, spring
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1588,7 +1723,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: PRY-WAS-51
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1598,7 +1734,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: ycua_o_manantial_arroyo_rio_aljibe_con_bomba_aljibe_sin_bomba
+  - country_entry_id: PRY-WAS-52
+    source_category_code: ycua_o_manantial_arroyo_rio_aljibe_con_bomba_aljibe_sin_bomba
     national_label_en: Ycua o manantial - Arroyo - Rio - Aljibe con bomba, Aljibe
       sin bomba
     national_label_local: Agua superficial
@@ -1609,7 +1746,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: aguatero
+  - country_entry_id: PRY-WAS-53
+    source_category_code: aguatero
     national_label_en: Aguatero
     national_label_local: Canal de riego
     jmp_classification: Surface water > Irrigation channel
@@ -1619,7 +1757,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 98
-  - source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo_canales
+  - country_entry_id: PRY-WAS-54
+    source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo_canales
     national_label_en: Agua superficial(río,represa,lago,estanque,arroyo,canales)
     national_label_local: Otro
     jmp_classification: Surface water > Other
@@ -1629,7 +1768,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: tajamar_rio_o_arroyo
+  - country_entry_id: PRY-WAS-55
+    source_category_code: tajamar_rio_o_arroyo
     national_label_en: Tajamar, rio o arroyo
     national_label_local: Otro
     jmp_classification: Surface water > Other
@@ -1639,7 +1779,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: ycua_manantial
+  - country_entry_id: PRY-WAS-56
+    source_category_code: ycua_manantial
     national_label_en: Ycua/Manantial
     national_label_local: Otro
     jmp_classification: Surface water > Other
@@ -1649,7 +1790,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: arroyo_rio
+  - country_entry_id: PRY-WAS-57
+    source_category_code: arroyo_rio
     national_label_en: Arroyo, Rio
     national_label_local: Río
     jmp_classification: Surface water > River
@@ -1659,7 +1801,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: corposana_o_senasa_o_red_privada
+  - country_entry_id: PRY-WAS-58
+    source_category_code: corposana_o_senasa_o_red_privada
     national_label_en: Corposana o Senasa o red privada
     national_label_local: Agua del grifo
     jmp_classification: Tap water
@@ -1669,7 +1812,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: essap_ex_corposana_junta_de_saneamiento_senasa_red_comunitaria_red_o_prestador_privado
+  - country_entry_id: PRY-WAS-59
+    source_category_code: essap_ex_corposana_junta_de_saneamiento_senasa_red_comunitaria_red_o_prestador_privado
     national_label_en: ESSAP (ex-corposana) + Junta de Saneamiento (SENASA) + Red
       Comunitaria + Red o Prestador privado
     national_label_local: Agua del grifo
@@ -1680,7 +1824,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: caneria_del_vecino
+  - country_entry_id: PRY-WAS-60
+    source_category_code: caneria_del_vecino
     national_label_en: Caneria del vecino
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1690,7 +1835,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: red_comunitaria_essap_senasa_otros_dentro_de_la_vivienda_del_vecino
+  - country_entry_id: PRY-WAS-61
+    source_category_code: red_comunitaria_essap_senasa_otros_dentro_de_la_vivienda_del_vecino
     national_label_en: Red Comunitaria, essap, senasa otros) dentro de la vivienda
       del vecino
     national_label_local: Otro
@@ -1701,7 +1847,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: red_o_prestador_privado
+  - country_entry_id: PRY-WAS-62
+    source_category_code: red_o_prestador_privado
     national_label_en: Red o Prestador privado
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1711,7 +1858,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: tuberia_al_vecino
+  - country_entry_id: PRY-WAS-63
+    source_category_code: tuberia_al_vecino
     national_label_en: Tubería al vecino
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1721,7 +1869,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: vecino_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
+  - country_entry_id: PRY-WAS-64
+    source_category_code: vecino_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
     national_label_en: Vecino (ESSAP (ex-corposana) + Junta de Saneamiento o SENASA
       + Red comunitaria + Red o prestador privado)
     national_label_local: Otro
@@ -1732,7 +1881,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: PRY-WAS-65
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -1742,7 +1892,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: caneria_dentro_de_la_vivienda
+  - country_entry_id: PRY-WAS-66
+    source_category_code: caneria_dentro_de_la_vivienda
     national_label_en: Cañería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1752,7 +1903,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: caneria_dentro_de_la_vivienda_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
+  - country_entry_id: PRY-WAS-67
+    source_category_code: caneria_dentro_de_la_vivienda_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
     national_label_en: Cañería dentro de la vivienda (ESSAP (ex-corposana) + Junta
       de Saneamiento o SENASA +  Red comunitaria + Red o prestador privado)
     national_label_local: Agua entubada en la vivienda
@@ -1763,7 +1915,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: essap_senasa_o_junta_de_saneamiento_dentro_de_la_vivienda
+  - country_entry_id: PRY-WAS-68
+    source_category_code: essap_senasa_o_junta_de_saneamiento_dentro_de_la_vivienda
     national_label_en: ESSAP, SENASA o Junta de Saneamiento dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1773,7 +1926,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_house
+  - country_entry_id: PRY-WAS-69
+    source_category_code: piped_into_house
     national_label_en: Piped into house
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1783,7 +1937,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_dentro_de_la_vivienda
+  - country_entry_id: PRY-WAS-70
+    source_category_code: tuberia_dentro_de_la_vivienda
     national_label_en: Tubería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1793,7 +1948,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_en_casa
+  - country_entry_id: PRY-WAS-71
+    source_category_code: tuberia_en_casa
     national_label_en: Tubería en casa
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1803,7 +1959,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: caneria_fuera_de_vivienda_pero_dentro_del_patio
+  - country_entry_id: PRY-WAS-72
+    source_category_code: caneria_fuera_de_vivienda_pero_dentro_del_patio
     national_label_en: Cañería fuera de vivienda pero dentro del patio
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1813,7 +1970,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: caneria_fuera_de_vivienda_pero_dentro_del_patio_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
+  - country_entry_id: PRY-WAS-73
+    source_category_code: caneria_fuera_de_vivienda_pero_dentro_del_patio_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
     national_label_en: Cañería fuera de vivienda pero dentro del patio (ESSAP (ex-corposana)
       + Junta de Saneamiento o SENASA  + Red comunitaria + Red o prestador privado)
     national_label_local: Agua corriente al patio/parcela
@@ -1824,7 +1982,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: essap_senasa_o_junta_de_saneamientofuera_de_la_vivienda_en_el_patio
+  - country_entry_id: PRY-WAS-74
+    source_category_code: essap_senasa_o_junta_de_saneamientofuera_de_la_vivienda_en_el_patio
     national_label_en: ESSAP, SENASA o Junta de Saneamientofuera de la vivienda en
       el patio
     national_label_local: Agua corriente al patio/parcela
@@ -1835,7 +1994,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: essap_senasa_o_junta_de_saneamientofuera_de_la_vivienda_en_el_patio
+  - country_entry_id: PRY-WAS-75
+    source_category_code: essap_senasa_o_junta_de_saneamientofuera_de_la_vivienda_en_el_patio
     national_label_en: ESSAP,SENASA o Junta de Saneamientofuera de la vivienda en
       el patio
     national_label_local: Agua corriente al patio/parcela
@@ -1846,7 +2006,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard
+  - country_entry_id: PRY-WAS-76
+    source_category_code: piped_into_yard
     national_label_en: Piped into yard
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1856,7 +2017,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_dentro_del_terreno_patio_o_lote
+  - country_entry_id: PRY-WAS-77
+    source_category_code: tuberia_dentro_del_terreno_patio_o_lote
     national_label_en: Tubería dentro del terreno,patio o lote
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1866,7 +2028,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_en_el_patio
+  - country_entry_id: PRY-WAS-78
+    source_category_code: tuberia_en_el_patio
     national_label_en: Tubería en el patio
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1876,7 +2039,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: canilla_publica
+  - country_entry_id: PRY-WAS-79
+    source_category_code: canilla_publica
     national_label_en: Canilla pública
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1886,7 +2050,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: canilla_publica_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
+  - country_entry_id: PRY-WAS-80
+    source_category_code: canilla_publica_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
     national_label_en: Canilla pública (ESSAP (ex-corposana) + Junta de Saneamiento
       o SENASA + Red comunitaria + Red o prestador privado)
     national_label_local: Fuentes públicas
@@ -1897,7 +2062,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: canilla_publica_todas
+  - country_entry_id: PRY-WAS-81
+    source_category_code: canilla_publica_todas
     national_label_en: Canilla pública todas
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1907,7 +2073,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: canilla_llave_grifo_publico
+  - country_entry_id: PRY-WAS-82
+    source_category_code: canilla_llave_grifo_publico
     national_label_en: Canilla/llave/grifo público
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1917,7 +2084,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: PRY-WAS-83
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

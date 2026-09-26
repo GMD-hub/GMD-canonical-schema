@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education
+  - country_entry_id: ERI-EDU-01
+    national_label_en: Pre-primary education
     national_label_local: Pre-primary education
     entry_age: 4
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Elementary education
+  - country_entry_id: ERI-EDU-02
+    national_label_en: Elementary education
     national_label_local: Elementary education
     entry_age: 6
     duration_years: 5
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Middle education
+  - country_entry_id: ERI-EDU-03
+    national_label_en: Middle education
     national_label_local: Middle education
     entry_age: 11
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Secondary education
+  - country_entry_id: ERI-EDU-04
+    national_label_en: Secondary education
     national_label_local: Secondary education
     entry_age: 14
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: TVET programme
+  - country_entry_id: ERI-EDU-05
+    national_label_en: TVET programme
     national_label_local: TVET programme
     entry_age: 16
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Postsecondary TVET programme
+  - country_entry_id: ERI-EDU-06
+    national_label_en: Postsecondary TVET programme
     national_label_local: Postsecondary TVET programme
     entry_age: 18
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Basic education teacher certificate programme
+  - country_entry_id: ERI-EDU-07
+    national_label_en: Basic education teacher certificate programme
     national_label_local: Basic education teacher certificate programme
     entry_age: 18
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Diploma programme
+  - country_entry_id: ERI-EDU-08
+    national_label_en: Diploma programme
     national_label_local: Diploma programme
     entry_age: 18
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Advanced diploma programme
+  - country_entry_id: ERI-EDU-09
+    national_label_en: Advanced diploma programme
     national_label_local: Advanced diploma programme
     entry_age: 18
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Basic education teacher diploma programme
+  - country_entry_id: ERI-EDU-10
+    national_label_en: Basic education teacher diploma programme
     national_label_local: Basic education teacher diploma programme
     entry_age: 18
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Bachelor's degree programme
+  - country_entry_id: ERI-EDU-11
+    national_label_en: Bachelor's degree programme
     national_label_local: Bachelor's degree programme
     entry_age: 18
     duration_years: 4
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: |-
+  - country_entry_id: ERI-EDU-12
+    national_label_en: |-
       Bachelor's degree programme
       (after Diploma)
     national_label_local: |-
@@ -134,7 +146,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: "Bachelor's degree programme \n(long)"
+  - country_entry_id: ERI-EDU-13
+    national_label_en: "Bachelor's degree programme \n(long)"
     national_label_local: "Bachelor's degree programme \n(long)"
     entry_age: 18
     duration_years: 5
@@ -144,7 +157,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: |-
+  - country_entry_id: ERI-EDU-14
+    national_label_en: |-
       Master's degree programme
       (after degree)
     national_label_local: |-
@@ -158,7 +172,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: |-
+  - country_entry_id: ERI-EDU-15
+    national_label_en: |-
       Medical doctor (MD) - programme
       (after Upper secondary)
     national_label_local: |-
@@ -172,7 +187,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: |-
+  - country_entry_id: ERI-EDU-16
+    national_label_en: |-
       MD - programme
       (after Bachelor's)
     national_label_local: |-
@@ -196,7 +212,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: ERI-SAN-01
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -206,7 +223,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: ERI-SAN-02
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -216,7 +234,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: ERI-SAN-03
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -226,7 +245,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: ERI-SAN-04
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -237,7 +257,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: ERI-SAN-05
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated improved pit Latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -248,7 +269,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: ERI-SAN-06
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/ bush/ field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -258,7 +280,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: ERI-SAN-07
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -268,7 +291,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: any_facility_shared_with_other_households
+  - country_entry_id: ERI-SAN-08
+    source_category_code: any_facility_shared_with_other_households
     national_label_en: Any facility shared with other households
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -288,7 +312,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_well_in_residence_yard_plot
+  - country_entry_id: ERI-WAS-01
+    source_category_code: protected_well_in_residence_yard_plot
     national_label_en: Protected well in residence/ yard/ plot
     national_label_local: Private
     jmp_classification: Ground water > Protected well > Private
@@ -298,7 +323,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: protected_public_well
+  - country_entry_id: ERI-WAS-02
+    source_category_code: protected_public_well
     national_label_en: Protected public well
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -308,7 +334,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: unprotected_well_in_residence_yard_plot
+  - country_entry_id: ERI-WAS-03
+    source_category_code: unprotected_well_in_residence_yard_plot
     national_label_en: Unprotected well in residence/ yard/ plot
     national_label_local: Private
     jmp_classification: Ground water > Unprotected well > Private
@@ -318,7 +345,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: unprotected_public_well
+  - country_entry_id: ERI-WAS-04
+    source_category_code: unprotected_public_well
     national_label_en: Unprotected public well
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
@@ -328,7 +356,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 72
-  - source_category_code: tanker_truck
+  - country_entry_id: ERI-WAS-05
+    source_category_code: tanker_truck
     national_label_en: Tanker Truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -338,7 +367,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: ERI-WAS-06
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -348,7 +378,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: ERI-WAS-07
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Packaged water
     jmp_classification: Packaged water
@@ -358,7 +389,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 89
-  - source_category_code: rain_water
+  - country_entry_id: ERI-WAS-08
+    source_category_code: rain_water
     national_label_en: Rain water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -368,7 +400,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water
+  - country_entry_id: ERI-WAS-09
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -378,7 +411,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: private_tap
+  - country_entry_id: ERI-WAS-10
+    source_category_code: private_tap
     national_label_en: Private tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -388,7 +422,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_residence_yard_plot
+  - country_entry_id: ERI-WAS-11
+    source_category_code: piped_into_residence_yard_plot
     national_label_en: Piped into residence/yard/ plot
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -398,7 +433,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: public_tap
+  - country_entry_id: ERI-WAS-12
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

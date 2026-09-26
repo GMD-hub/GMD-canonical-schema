@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Special education consulting, early development and care
+  - country_entry_id: HUN-EDU-01
+    national_label_en: Special education consulting, early development and care
     national_label_local: Gyógypedagógiai tanácsadás, korai fejlesztés és gondozás
     entry_age: 0
     duration_years: 0
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Kindergarten (under 3 years)
+  - country_entry_id: HUN-EDU-02
+    national_label_en: Kindergarten (under 3 years)
     national_label_local: Óvoda (3 év alatt)
     entry_age: 2
     duration_years: 0
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Kindergarten (3 years and older)
+  - country_entry_id: HUN-EDU-03
+    national_label_en: Kindergarten (3 years and older)
     national_label_local: Óvoda (3 éves és idősebb)
     entry_age: 3
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary school primary level (Grades 1-4) (full-time education)
+  - country_entry_id: HUN-EDU-04
+    national_label_en: Primary school primary level (Grades 1-4) (full-time education)
     national_label_local: Általános iskola  1-4. évfolyam (nappali rendszerű oktatás)
     entry_age: 6
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Primary school primary level (Grades 1-4) (adult literacy course)
+  - country_entry_id: HUN-EDU-05
+    national_label_en: Primary school primary level (Grades 1-4) (adult literacy course)
     national_label_local: Általános iskola 1-4. évfolyam (felnőttoktatás)
     entry_age: 16
     duration_years: 4
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Programmes for severely disabled children (6-12 years)
+  - country_entry_id: HUN-EDU-06
+    national_label_en: Programmes for severely disabled children (6-12 years)
     national_label_local: Fejlesztő nevelés-oktatás (6-12 évesek)
     entry_age: 6
     duration_years: 4
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Primary school lower secondary level (Grades 5-8), and grades
+  - country_entry_id: HUN-EDU-07
+    national_label_en: Primary school lower secondary level (Grades 5-8), and grades
       5-8 of the upper secondary general school (full-time education)
     national_label_local: Általános iskola  5-8., illetve gimnázium 5-8., évfolyamai
       (nappali rendszerű oktatás)
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Primary school lower secondary level (Grades 5-8) (adult education)
+  - country_entry_id: HUN-EDU-08
+    national_label_en: Primary school lower secondary level (Grades 5-8) (adult education)
     national_label_local: Általános iskola 5-8. évfolyam (felnőttoktatás)
     entry_age: 16
     duration_years: 4
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Programmes for severely disabled children (13-23 years)
+  - country_entry_id: HUN-EDU-09
+    national_label_en: Programmes for severely disabled children (13-23 years)
     national_label_local: Fejlesztő nevelés-oktatás (13-23 évesek)
     entry_age: 13
     duration_years: 4
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Upper secondary general school (Grades 9-12(13)) (full-time
+  - country_entry_id: HUN-EDU-10
+    national_label_en: Upper secondary general school (Grades 9-12(13)) (full-time
       education)
     national_label_local: Gimnázium 9-12(13). évfolyam (nappali rendszerű oktatás)
     entry_age: 14
@@ -113,7 +123,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Upper secondary general school (Grades 9-12(13)) (adult education)
+  - country_entry_id: HUN-EDU-11
+    national_label_en: Upper secondary general school (Grades 9-12(13)) (adult education)
     national_label_local: Gimnázium 9-12(13). évfolyam (felnőttoktatás)
     entry_age: 16
     duration_years: 4
@@ -123,7 +134,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Special skills development school (full-time education).
+  - country_entry_id: HUN-EDU-12
+    national_label_en: Special skills development school (full-time education).
     national_label_local: Készségfejlesztő iskola (nappali rendszerű oktatás)
     entry_age: 14
     duration_years: 4
@@ -133,7 +145,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Vocational school education for SEN students (full-time education)
+  - country_entry_id: HUN-EDU-13
+    national_label_en: Vocational school education for SEN students (full-time education)
     national_label_local: Szakiskolai oktatás, képzés (nappali rendszerű oktatás)
     entry_age: 14
     duration_years: 4
@@ -143,7 +156,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational school education for SEN students (adult education)
+  - country_entry_id: HUN-EDU-14
+    national_label_en: Vocational school education for SEN students (adult education)
     national_label_local: Szakiskolai oktatás, képzés (felnőttoktatás)
     entry_age: 16
     duration_years: 4
@@ -153,7 +167,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Springboard (Dobbantó) Programme
+  - country_entry_id: HUN-EDU-15
+    national_label_en: Springboard (Dobbantó) Programme
     national_label_local: Dobbantó Program (előkészítő évfolyam)
     entry_age: 16
     duration_years: 1
@@ -163,7 +178,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: School workshop programme
+  - country_entry_id: HUN-EDU-16
+    national_label_en: School workshop programme
     national_label_local: Műhelyiskola
     entry_age: 16
     duration_years: 0
@@ -173,7 +189,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: Career orientation development year
+  - country_entry_id: HUN-EDU-17
+    national_label_en: Career orientation development year
     national_label_local: Orientációs évfolyam
     entry_age: 14
     duration_years: 1
@@ -183,7 +200,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: Short VET Programme (full-time education)
+  - country_entry_id: HUN-EDU-18
+    national_label_en: Short VET Programme (full-time education)
     national_label_local: Szakképző iskolai oktatás, képzés (nappali rendszerű oktatás)
     entry_age: 14
     duration_years: 3
@@ -193,7 +211,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: Short VET Programme (part-time education)
+  - country_entry_id: HUN-EDU-19
+    national_label_en: Short VET Programme (part-time education)
     national_label_local: Szakképző iskolai oktatás, képzés (nem nappali oktatás)
     entry_age: 16
     duration_years: 3
@@ -203,7 +222,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Technicum, upper secondary vocational school (Grades 9-13)
+  - country_entry_id: HUN-EDU-20
+    national_label_en: Technicum, upper secondary vocational school (Grades 9-13)
       (full-time education)
     national_label_local: Technikum, szakgimnázium 9-13. évfolyam (nappali rendszerű
       oktatás)
@@ -215,7 +235,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
-  - national_label_en: Technicum, upper secondary vocational school (Grades 9-13)
+  - country_entry_id: HUN-EDU-21
+    national_label_en: Technicum, upper secondary vocational school (Grades 9-13)
       (part-time education)
     national_label_local: Technikum, szakgimnázium 9-13. évfolyam (nem nappali oktatás)
     entry_age: 16
@@ -226,7 +247,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
-  - national_label_en: Programmes preparing strictly for final examination at secondary
+  - country_entry_id: HUN-EDU-22
+    national_label_en: Programmes preparing strictly for final examination at secondary
       level at technicums, upper secondary vocational schools
     national_label_local: Technikum, szakgimnázium kizárólag érettségi vizsgára felkészítő
       évfolyamai
@@ -238,7 +260,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
-  - national_label_en: Programmes preparing strictly for vocational qualifications
+  - country_entry_id: HUN-EDU-23
+    national_label_en: Programmes preparing strictly for vocational qualifications
       at upper secondary vocational school (not requiring maturity examination)
     national_label_local: Szakgimnázium kizárólag szakképesítésre felkészítő évfolyamai
       (érettségit nem igénylől)
@@ -250,7 +273,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
-  - national_label_en: Vocational programmes requiring certification of maturity examination
+  - country_entry_id: HUN-EDU-24
+    national_label_en: Vocational programmes requiring certification of maturity examination
       (full-time education)
     national_label_local: Érettségire épülő szakmai képzés (nappali rendszerű oktatás)
     entry_age: 18
@@ -261,7 +285,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Vocational programmes requiring certification of maturity examination
+  - country_entry_id: HUN-EDU-25
+    national_label_en: Vocational programmes requiring certification of maturity examination
       (part-time education)
     national_label_local: Érettségire épülő szakmai képzés (nem nappali oktatás)
     entry_age: 18
@@ -272,7 +297,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Tertiary vocational programme (full-time education) (short
+  - country_entry_id: HUN-EDU-26
+    national_label_en: Tertiary vocational programme (full-time education) (short
       cycle)
     national_label_local: Felsőoktatási szakképzés (nappali munkarend)
     entry_age: 18
@@ -283,7 +309,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Tertiary vocational programme (part-time education) (short
+  - country_entry_id: HUN-EDU-27
+    national_label_en: Tertiary vocational programme (part-time education) (short
       cycle)
     national_label_local: Felsőoktatási szakképzés (esti, levelező, távoktatás munkarend)
     entry_age: 18
@@ -294,7 +321,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Bachelor programmes (full-time education)
+  - country_entry_id: HUN-EDU-28
+    national_label_en: Bachelor programmes (full-time education)
     national_label_local: Alapképzés (nappali munkarend)
     entry_age: 18
     duration_years: 3
@@ -304,7 +332,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Bachelor programmes (part-time education)
+  - country_entry_id: HUN-EDU-29
+    national_label_en: Bachelor programmes (part-time education)
     national_label_local: Alapképzés (esti, levelező, távoktatás munkarend)
     entry_age: 18
     duration_years: 3
@@ -314,7 +343,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: 'Postgraduate specialization programme (full-time education).
+  - country_entry_id: HUN-EDU-30
+    national_label_en: 'Postgraduate specialization programme (full-time education).
       Minimun entry requirements: College or Bachelor degree'
     national_label_local: 'Szakirányú továbbképzés (nappali munkarend). Felvételi
       feltétel: főiskolai diploma vagy alapfokozat'
@@ -326,7 +356,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
-  - national_label_en: 'Postgraduate specialization programme (part-time education).
+  - country_entry_id: HUN-EDU-31
+    national_label_en: 'Postgraduate specialization programme (part-time education).
       Minimun entry requirements: College or Bachelor degree'
     national_label_local: 'Szakirányú továbbképzés (esti, levelező, távoktatás munkarend).
       Felvételi feltétel: főiskolai diploma vagy alapfokozat'
@@ -338,7 +369,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
-  - national_label_en: Master (full-time education)
+  - country_entry_id: HUN-EDU-32
+    national_label_en: Master (full-time education)
     national_label_local: Mesterképzés (nappali munkarend)
     entry_age: 21
     duration_years: 2
@@ -348,7 +380,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
-  - national_label_en: Master (part-time education)
+  - country_entry_id: HUN-EDU-33
+    national_label_en: Master (part-time education)
     national_label_local: Mesterképzés (esti, levelező, távoktatás munkarend)
     entry_age: 21
     duration_years: 2
@@ -358,7 +391,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
-  - national_label_en: Undivided programmes in universities (full-time education)
+  - country_entry_id: HUN-EDU-34
+    national_label_en: Undivided programmes in universities (full-time education)
     national_label_local: Osztatlan képzés (nappali munkarend)
     entry_age: 18
     duration_years: 5
@@ -368,7 +402,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
-  - national_label_en: Undivided programmes in universities (part-time education)
+  - country_entry_id: HUN-EDU-35
+    national_label_en: Undivided programmes in universities (part-time education)
     national_label_local: Osztatlan képzés (esti, levelező, távoktatás munkarend)
     entry_age: 18
     duration_years: 5
@@ -378,7 +413,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
-  - national_label_en: 'Postgraduate specialization programme (full-time education).
+  - country_entry_id: HUN-EDU-36
+    national_label_en: 'Postgraduate specialization programme (full-time education).
       Minimun entry requirements: University or Master degree'
     national_label_local: 'Szakirányú továbbképzés (nappali munkarend). Felvételi
       feltétel: egyetemi diploma vagy mesterfokozat'
@@ -390,7 +426,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 40
-  - national_label_en: 'Postgraduate specialization programme (part-time education).
+  - country_entry_id: HUN-EDU-37
+    national_label_en: 'Postgraduate specialization programme (part-time education).
       Minimun entry requirements: University or Master degree'
     national_label_local: 'Szakirányú továbbképzés (esti, levelező, távoktatás munkarend).
       Felvételi feltétel: egyetemi diploma vagy mesterfokozat'
@@ -402,7 +439,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 41
-  - national_label_en: Doctoral programme (full-time education)
+  - country_entry_id: HUN-EDU-38
+    national_label_en: Doctoral programme (full-time education)
     national_label_local: PhD,  DLA (nappali munkarend)
     entry_age: 23
     duration_years: 4
@@ -412,7 +450,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
-  - national_label_en: Doctoral programme (part-time education)
+  - country_entry_id: HUN-EDU-39
+    national_label_en: Doctoral programme (part-time education)
     national_label_local: PhD,  DLA (esti, levelező munkarend)
     entry_age: 23
     duration_years: 4
@@ -432,7 +471,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-HU1
+  - country_entry_id: HUN-SUBNAT-01
+    survey_labels: 1-HU1
     survey_variables: subnatid
     gmd_subnatid1: HUN_2021_NUTS1_HU1
     gmd_subnatid2: ''
@@ -452,7 +492,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Közép-Magyarország
     source_row: 6130
-  - survey_labels: 2-HU2
+  - country_entry_id: HUN-SUBNAT-02
+    survey_labels: 2-HU2
     survey_variables: subnatid
     gmd_subnatid1: HUN_2021_NUTS1_HU2
     gmd_subnatid2: ''
@@ -472,7 +513,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Dunántúl
     source_row: 6131
-  - survey_labels: 3-HU3
+  - country_entry_id: HUN-SUBNAT-03
+    survey_labels: 3-HU3
     survey_variables: subnatid
     gmd_subnatid1: HUN_2021_NUTS1_HU3
     gmd_subnatid2: ''
@@ -502,7 +544,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: HUN-WAS-01
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -512,7 +555,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: HUN-WAS-02
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -522,7 +566,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: HUN-WAS-03
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -532,7 +577,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: HUN-WAS-04
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -542,7 +588,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: HUN-WAS-05
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -552,7 +599,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: HUN-WAS-06
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -562,7 +610,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: HUN-WAS-07
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -572,7 +621,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: public_standpipe
+  - country_entry_id: HUN-WAS-08
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

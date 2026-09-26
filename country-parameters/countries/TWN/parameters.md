@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: '[1]New Taipei city | [1]Taipei county'
+  - country_entry_id: TWN-SUBNAT-01
+    survey_labels: '[1]New Taipei city | [1]Taipei county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -30,7 +31,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: New Taipei
     source_row: 16846
-  - survey_labels: '[10]Chiayi county'
+  - country_entry_id: TWN-SUBNAT-02
+    survey_labels: '[10]Chiayi county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -50,7 +52,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Chiayi County
     source_row: 16847
-  - survey_labels: '[13]Pingtung county'
+  - country_entry_id: TWN-SUBNAT-03
+    survey_labels: '[13]Pingtung county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -70,7 +73,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Pingtung
     source_row: 16848
-  - survey_labels: '[14]Taitung county'
+  - country_entry_id: TWN-SUBNAT-04
+    survey_labels: '[14]Taitung county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -90,7 +94,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Taitung
     source_row: 16849
-  - survey_labels: '[15]Hualien county'
+  - country_entry_id: TWN-SUBNAT-05
+    survey_labels: '[15]Hualien county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -110,7 +115,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Hualien
     source_row: 16850
-  - survey_labels: '[16]Penghu county'
+  - country_entry_id: TWN-SUBNAT-06
+    survey_labels: '[16]Penghu county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -130,7 +136,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Penghu
     source_row: 16851
-  - survey_labels: '[17]Keelung city'
+  - country_entry_id: TWN-SUBNAT-07
+    survey_labels: '[17]Keelung city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -150,7 +157,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Keelung
     source_row: 16852
-  - survey_labels: '[18]Hsinchu city'
+  - country_entry_id: TWN-SUBNAT-08
+    survey_labels: '[18]Hsinchu city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -170,7 +178,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Hsinchu City
     source_row: 16853
-  - survey_labels: '[19]Taichung city'
+  - country_entry_id: TWN-SUBNAT-09
+    survey_labels: '[19]Taichung city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -190,7 +199,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Taichung
     source_row: 16854
-  - survey_labels: '[2]Yilan county'
+  - country_entry_id: TWN-SUBNAT-10
+    survey_labels: '[2]Yilan county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -210,7 +220,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Yilan
     source_row: 16855
-  - survey_labels: '[20]Chiayi city'
+  - country_entry_id: TWN-SUBNAT-11
+    survey_labels: '[20]Chiayi city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -230,7 +241,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Chiayi City
     source_row: 16856
-  - survey_labels: '[21]Tainan city'
+  - country_entry_id: TWN-SUBNAT-12
+    survey_labels: '[21]Tainan city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -250,7 +262,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Tainan
     source_row: 16857
-  - survey_labels: '[3]Taoyuan city | [3]Taoyuan county'
+  - country_entry_id: TWN-SUBNAT-13
+    survey_labels: '[3]Taoyuan city | [3]Taoyuan county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -270,7 +283,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Taoyuan
     source_row: 16858
-  - survey_labels: '[4]Hsinchu county'
+  - country_entry_id: TWN-SUBNAT-14
+    survey_labels: '[4]Hsinchu county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -290,7 +304,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Hsinchu County
     source_row: 16859
-  - survey_labels: '[5]Miaoli county'
+  - country_entry_id: TWN-SUBNAT-15
+    survey_labels: '[5]Miaoli county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -310,7 +325,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Miaoli
     source_row: 16860
-  - survey_labels: '[60]Kinmen county'
+  - country_entry_id: TWN-SUBNAT-16
+    survey_labels: '[60]Kinmen county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -330,7 +346,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Kinmen
     source_row: 16861
-  - survey_labels: '[63]Taipei city'
+  - country_entry_id: TWN-SUBNAT-17
+    survey_labels: '[63]Taipei city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -350,7 +367,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Taipei
     source_row: 16862
-  - survey_labels: '[64]Kaohsiung city'
+  - country_entry_id: TWN-SUBNAT-18
+    survey_labels: '[64]Kaohsiung city'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -370,7 +388,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Kaohsiung
     source_row: 16863
-  - survey_labels: '[7]Changhua county'
+  - country_entry_id: TWN-SUBNAT-19
+    survey_labels: '[7]Changhua county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -390,7 +409,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Changhua
     source_row: 16864
-  - survey_labels: '[8]Nantou county'
+  - country_entry_id: TWN-SUBNAT-20
+    survey_labels: '[8]Nantou county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -410,7 +430,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Nantou
     source_row: 16865
-  - survey_labels: '[9]Yunlin county'
+  - country_entry_id: TWN-SUBNAT-21
+    survey_labels: '[9]Yunlin county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -430,7 +451,8 @@ parameters:
     geo_nvar: NAME_2
     geo_name: Yulin
     source_row: 16866
-  - survey_labels: '[59]Lienchiang county'
+  - country_entry_id: TWN-SUBNAT-22
+    survey_labels: '[59]Lienchiang county'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''

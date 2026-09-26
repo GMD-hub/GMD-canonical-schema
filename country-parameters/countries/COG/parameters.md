@@ -10,7 +10,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - national_label_en: Éducation pré-scolaire
+  - country_entry_id: COG-EDU-01
+    national_label_en: Éducation pré-scolaire
     national_label_local: Éducation pré-scolaire
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Enseignement primaire
+  - country_entry_id: COG-EDU-02
+    national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Enseignement secondaire général 1 e cycle
+  - country_entry_id: COG-EDU-03
+    national_label_en: Enseignement secondaire général 1 e cycle
     national_label_local: Enseignement secondaire général 1 e cycle
     entry_age: 12
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Centre de métiers
+  - country_entry_id: COG-EDU-04
+    national_label_en: Centre de métiers
     national_label_local: Centre de métiers
     entry_age: 12
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Enseignement secondaire technique 1 e cycle
+  - country_entry_id: COG-EDU-05
+    national_label_en: Enseignement secondaire technique 1 e cycle
     national_label_local: Enseignement secondaire technique 1 e cycle
     entry_age: 14
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Enseignement secondaire général 2 e cycle
+  - country_entry_id: COG-EDU-06
+    national_label_en: Enseignement secondaire général 2 e cycle
     national_label_local: Enseignement secondaire général 2 e cycle
     entry_age: 16
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Enseignement secondaire professionnelle (BEP)
+  - country_entry_id: COG-EDU-07
+    national_label_en: Enseignement secondaire professionnelle (BEP)
     national_label_local: Enseignement secondaire professionnelle (BEP)
     entry_age: 16
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Enseignement secondaire professionnelle (CAP)
+  - country_entry_id: COG-EDU-08
+    national_label_en: Enseignement secondaire professionnelle (CAP)
     national_label_local: Enseignement secondaire professionnelle (CAP)
     entry_age: 16
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Enseignement secondaire technique 2 e cycle
+  - country_entry_id: COG-EDU-09
+    national_label_en: Enseignement secondaire technique 2 e cycle
     national_label_local: Enseignement secondaire technique 2 e cycle
     entry_age: 16
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Enseignement supérieur (cycle court)
+  - country_entry_id: COG-EDU-10
+    national_label_en: Enseignement supérieur (cycle court)
     national_label_local: Enseignement supérieur (cycle court)
     entry_age: 19
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Enseignement supérieur (cycle moyen supérieur, licence)
+  - country_entry_id: COG-EDU-11
+    national_label_en: Enseignement supérieur (cycle moyen supérieur, licence)
     national_label_local: Enseignement supérieur (cycle moyen supérieur, licence)
     entry_age: 19
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Enseignement supérieur (cycle moyen supérieur, licence professionnelle)
+  - country_entry_id: COG-EDU-12
+    national_label_en: Enseignement supérieur (cycle moyen supérieur, licence professionnelle)
     national_label_local: Enseignement supérieur (cycle moyen supérieur, licence professionnelle)
     entry_age: 19
     duration_years: 3
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Etudes de médecine
+  - country_entry_id: COG-EDU-13
+    national_label_en: Etudes de médecine
     national_label_local: Etudes de médecine
     entry_age: 19
     duration_years: 7
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Enseignement supérieur (cycle  supérieur, master)
+  - country_entry_id: COG-EDU-14
+    national_label_en: Enseignement supérieur (cycle  supérieur, master)
     national_label_local: Enseignement supérieur (cycle  supérieur, master)
     entry_age: 22
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Enseignement supérieur (Cycle doctorat)
+  - country_entry_id: COG-EDU-15
+    national_label_en: Enseignement supérieur (Cycle doctorat)
     national_label_local: Enseignement supérieur (Cycle doctorat)
     entry_age: 24
     duration_years: 3
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Certificat d'etudes spéciales
+  - country_entry_id: COG-EDU-16
+    national_label_en: Certificat d'etudes spéciales
     national_label_local: Certificat d'etudes spéciales
     entry_age: 26
     duration_years: 5
@@ -180,7 +196,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - survey_labels: 1 - Brazzaville | 11 - Brazzaville
+  - country_entry_id: COG-SUBNAT-01
+    survey_labels: 1 - Brazzaville | 11 - Brazzaville
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_190432
     gmd_subnatid2: ''
@@ -200,7 +217,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Brazzaville
     source_row: 2522
-  - survey_labels: 12 - Pointe-Noire | 2 - Pointe Noire
+  - country_entry_id: COG-SUBNAT-02
+    survey_labels: 12 - Pointe-Noire | 2 - Pointe Noire
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_190434
     gmd_subnatid2: ''
@@ -220,7 +238,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Point-Noire
     source_row: 2523
-  - survey_labels: 1 - Kouilou
+  - country_entry_id: COG-SUBNAT-03
+    survey_labels: 1 - Kouilou
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_190433
     gmd_subnatid2: ''
@@ -240,7 +259,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kouilou
     source_row: 2527
-  - survey_labels: 10 - Likouala
+  - country_entry_id: COG-SUBNAT-04
+    survey_labels: 10 - Likouala
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_975
     gmd_subnatid2: ''
@@ -260,7 +280,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Likouala
     source_row: 2528
-  - survey_labels: 2 - Niari
+  - country_entry_id: COG-SUBNAT-05
+    survey_labels: 2 - Niari
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_976
     gmd_subnatid2: ''
@@ -280,7 +301,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Niari
     source_row: 2531
-  - survey_labels: 3 - Lékoumou
+  - country_entry_id: COG-SUBNAT-06
+    survey_labels: 3 - Lékoumou
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_974
     gmd_subnatid2: ''
@@ -300,7 +322,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lekoumou
     source_row: 2532
-  - survey_labels: 4 - Bouenza
+  - country_entry_id: COG-SUBNAT-07
+    survey_labels: 4 - Bouenza
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_970
     gmd_subnatid2: ''
@@ -320,7 +343,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bouenza
     source_row: 2533
-  - survey_labels: 5 - Pool
+  - country_entry_id: COG-SUBNAT-08
+    survey_labels: 5 - Pool
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_190431
     gmd_subnatid2: ''
@@ -340,7 +364,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pool
     source_row: 2534
-  - survey_labels: 6 - Plateaux
+  - country_entry_id: COG-SUBNAT-09
+    survey_labels: 6 - Plateaux
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_977
     gmd_subnatid2: ''
@@ -360,7 +385,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Plateaux
     source_row: 2535
-  - survey_labels: 7 - Cuvette
+  - country_entry_id: COG-SUBNAT-10
+    survey_labels: 7 - Cuvette
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_971
     gmd_subnatid2: ''
@@ -380,7 +406,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cuvette
     source_row: 2536
-  - survey_labels: 8 - Cuvette-Ouest
+  - country_entry_id: COG-SUBNAT-11
+    survey_labels: 8 - Cuvette-Ouest
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_972
     gmd_subnatid2: ''
@@ -400,7 +427,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cuvette-Ouest
     source_row: 2537
-  - survey_labels: 9 - Sangha
+  - country_entry_id: COG-SUBNAT-12
+    survey_labels: 9 - Sangha
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_979
     gmd_subnatid2: ''
@@ -431,7 +459,8 @@ parameters:
   selectors:
     geo_year: unknown
   value:
-  - survey_labels: 3 - Autres communes | 4 - Semi urbain | 5 - Milieu rural
+  - country_entry_id: COG-SUBNAT-01
+    survey_labels: 3 - Autres communes | 4 - Semi urbain | 5 - Milieu rural
     survey_variables: subnatid
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -461,7 +490,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: toilettes_a_compostage
+  - country_entry_id: COG-SAN-01
+    source_category_code: toilettes_a_compostage
     national_label_en: Toilettes a compostage
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
@@ -471,7 +501,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 128
-  - source_category_code: wc_avec_chasse_d_eau
+  - country_entry_id: COG-SAN-02
+    source_category_code: wc_avec_chasse_d_eau
     national_label_en: WC avec chasse d'eau
     national_label_local: Toilette à chasse d'eau
     jmp_classification: Flush/toilets
@@ -481,7 +512,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 66
-  - source_category_code: chasse_d_eau_pour_le_menage_seul
+  - country_entry_id: COG-SAN-03
+    source_category_code: chasse_d_eau_pour_le_menage_seul
     national_label_en: Chasse d'eau pour le ménage seul
     national_label_local: Toilette à chasse d'eau (privée)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -491,7 +523,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 72
-  - source_category_code: chasse_d_eau_pour_le_menage_seul
+  - country_entry_id: COG-SAN-04
+    source_category_code: chasse_d_eau_pour_le_menage_seul
     national_label_en: Chasse d'eau pour le ménage seul
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -501,7 +534,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 73
-  - source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
+  - country_entry_id: COG-SAN-05
+    source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
     national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -511,7 +545,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 73
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: COG-SAN-06
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system (*)
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -521,7 +556,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 73
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
+  - country_entry_id: COG-SAN-07
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse d'aisances
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -531,7 +567,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 75
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
+  - country_entry_id: COG-SAN-08
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -541,7 +578,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 74
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: COG-SAN-09
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -551,7 +589,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 74
-  - source_category_code: chasse_d_eau_en_commun
+  - country_entry_id: COG-SAN-10
+    source_category_code: chasse_d_eau_en_commun
     national_label_en: Chasse d'eau en commun
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -561,7 +600,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 78
-  - source_category_code: chasse_d_eau_en_commun
+  - country_entry_id: COG-SAN-11
+    source_category_code: chasse_d_eau_en_commun
     national_label_en: Chasse d'eau en commun
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -572,7 +612,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 79
-  - source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
+  - country_entry_id: COG-SAN-12
+    source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
     national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -583,7 +624,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 79
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: COG-SAN-13
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system (*)
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -594,7 +636,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 79
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
+  - country_entry_id: COG-SAN-14
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse d'aisances
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to pit
@@ -604,7 +647,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 81
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
+  - country_entry_id: COG-SAN-15
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -614,7 +658,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 80
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: COG-SAN-16
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -624,7 +669,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 80
-  - source_category_code: reliee_a_autre_chose
+  - country_entry_id: COG-SAN-17
+    source_category_code: reliee_a_autre_chose
     national_label_en: Reliee a autre chose
     national_label_local: reliée al'air libre
     jmp_classification: Flush/toilets > to elsewhere
@@ -634,7 +680,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 71
-  - source_category_code: reliee_a_des_latrines
+  - country_entry_id: COG-SAN-18
+    source_category_code: reliee_a_des_latrines
     national_label_en: Reliee a  des latrines
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > to pit
@@ -644,7 +691,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 69
-  - source_category_code: connectee_a_fosse_septique
+  - country_entry_id: COG-SAN-19
+    source_category_code: connectee_a_fosse_septique
     national_label_en: Connectee a  fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > to septic tank
@@ -654,7 +702,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 68
-  - source_category_code: reliee_a_endroit_inconnu_nsp_ou
+  - country_entry_id: COG-SAN-20
+    source_category_code: reliee_a_endroit_inconnu_nsp_ou
     national_label_en: Reliee a  endroit inconnu/ NSP ou
     national_label_local: reliée a autre chose
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -664,7 +713,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: COG-SAN-21
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -674,7 +724,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 110
-  - source_category_code: seau
+  - country_entry_id: COG-SAN-22
+    source_category_code: seau
     national_label_en: Seau
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -684,7 +735,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 110
-  - source_category_code: seaux
+  - country_entry_id: COG-SAN-23
+    source_category_code: seaux
     national_label_en: Seaux
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -694,7 +746,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 110
-  - source_category_code: latrines_suspendues_sur_pilotis
+  - country_entry_id: COG-SAN-24
+    source_category_code: latrines_suspendues_sur_pilotis
     national_label_en: Latrines suspendues/sur pilotis
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -705,7 +758,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 109
-  - source_category_code: toilettes_latrines_suspendues
+  - country_entry_id: COG-SAN-25
+    source_category_code: toilettes_latrines_suspendues
     national_label_en: Toilettes / latrines suspendues
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -716,7 +770,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 109
-  - source_category_code: toilettes_latrines_suspendues
+  - country_entry_id: COG-SAN-26
+    source_category_code: toilettes_latrines_suspendues
     national_label_en: Toilettes/latrines suspendues
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -727,7 +782,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 109
-  - source_category_code: latrines_a_fosses_avec_dalle
+  - country_entry_id: COG-SAN-27
+    source_category_code: latrines_a_fosses_avec_dalle
     national_label_en: Latrines a fosses avec dalle
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -738,7 +794,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 106
-  - source_category_code: fosse_d_aisances_sans_dalle_trou_ouvert
+  - country_entry_id: COG-SAN-28
+    source_category_code: fosse_d_aisances_sans_dalle_trou_ouvert
     national_label_en: Fosse d'aisances sans dalle/trou ouvert
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -749,7 +806,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: latrines_a_fosses_sans_dalle_trou_ouvert
+  - country_entry_id: COG-SAN-29
+    source_category_code: latrines_a_fosses_sans_dalle_trou_ouvert
     national_label_en: Latrines a fosses sans dalle/trou ouvert
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -760,7 +818,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: latrines_non_couvertes
+  - country_entry_id: COG-SAN-30
+    source_category_code: latrines_non_couvertes
     national_label_en: Latrines non couvertes
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -771,7 +830,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: COG-SAN-31
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -782,7 +842,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: latrines_couvertes
+  - country_entry_id: COG-SAN-32
+    source_category_code: latrines_couvertes
     national_label_en: Latrines couvertes
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -793,7 +854,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: latrines_ameliorees_ventilees_lav
+  - country_entry_id: COG-SAN-33
+    source_category_code: latrines_ameliorees_ventilees_lav
     national_label_en: Latrines ameliorees ventilees (LAV)
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -804,7 +866,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: latrines_ventillees_ameliorees
+  - country_entry_id: COG-SAN-34
+    source_category_code: latrines_ventillees_ameliorees
     national_label_en: Latrines ventillées améliorées
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -815,7 +878,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: fosse_latrines_ameliorees_privees
+  - country_entry_id: COG-SAN-35
+    source_category_code: fosse_latrines_ameliorees_privees
     national_label_en: Fosse/latrines améliorées privées
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -826,7 +890,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 114
-  - source_category_code: fosses_d_aisances_avec_dalle
+  - country_entry_id: COG-SAN-36
+    source_category_code: fosses_d_aisances_avec_dalle
     national_label_en: Fosses d'aisances avec dalle
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -837,7 +902,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 114
-  - source_category_code: fosse_latrine_rudimentaire_privee
+  - country_entry_id: COG-SAN-37
+    source_category_code: fosse_latrine_rudimentaire_privee
     national_label_en: Fosse/latrine rudimentaire privée
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
@@ -848,7 +914,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 116
-  - source_category_code: fosse_latrine_ameioree_privee
+  - country_entry_id: COG-SAN-38
+    source_category_code: fosse_latrine_ameioree_privee
     national_label_en: Fosse/latrine améiorée privée
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -858,7 +925,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 115
-  - source_category_code: fosse_latrines_rudimentaires_privees
+  - country_entry_id: COG-SAN-39
+    source_category_code: fosse_latrines_rudimentaires_privees
     national_label_en: Fosse/latrines rudimentaires privées
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -868,7 +936,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 115
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: COG-SAN-40
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -878,7 +947,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 115
-  - source_category_code: fosse_d_aisances_amelioree_auto_aeree
+  - country_entry_id: COG-SAN-41
+    source_category_code: fosse_d_aisances_amelioree_auto_aeree
     national_label_en: Fosse d'aisances améliorée auto-aérée
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -889,7 +959,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 113
-  - source_category_code: fosse_latrines_ameliorees_en_commun
+  - country_entry_id: COG-SAN-42
+    source_category_code: fosse_latrines_ameliorees_en_commun
     national_label_en: Fosse/latrines améliorées en commun
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -900,7 +971,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 122
-  - source_category_code: fosses_d_aisances_avec_dalle
+  - country_entry_id: COG-SAN-43
+    source_category_code: fosses_d_aisances_avec_dalle
     national_label_en: Fosses d'aisances avec dalle
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -911,7 +983,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 122
-  - source_category_code: fosse_latrine_rudimentaire_en_commun
+  - country_entry_id: COG-SAN-44
+    source_category_code: fosse_latrine_rudimentaire_en_commun
     national_label_en: Fosse/latrine rudimentaire en commun
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -922,7 +995,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 124
-  - source_category_code: fosse_latrine_amelioree_en_commun
+  - country_entry_id: COG-SAN-45
+    source_category_code: fosse_latrine_amelioree_en_commun
     national_label_en: Fosse/latrine améliorée en commun
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -933,7 +1007,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 123
-  - source_category_code: fosse_latrines_rudimentaires_en_commun
+  - country_entry_id: COG-SAN-46
+    source_category_code: fosse_latrines_rudimentaires_en_commun
     national_label_en: Fosse/latrines rudimentaires en commun
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -944,7 +1019,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 123
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: COG-SAN-47
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -955,7 +1031,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 123
-  - source_category_code: fosse_d_aisances_amelioree_auto_aeree
+  - country_entry_id: COG-SAN-48
+    source_category_code: fosse_d_aisances_amelioree_auto_aeree
     national_label_en: Fosse d'aisances améliorée auto-aérée
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -966,7 +1043,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 121
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: COG-SAN-49
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Latrines à chasse d'eau (privées)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -976,7 +1054,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: COG-SAN-50
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Latrines à chasse d'eau (publiques/partagées)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -987,7 +1066,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 97
-  - source_category_code: aucun_dans_la_nature
+  - country_entry_id: COG-SAN-51
+    source_category_code: aucun_dans_la_nature
     national_label_en: Aucun/dans la nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -997,7 +1077,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: COG-SAN-52
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1007,7 +1088,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: pa_de_toilette_nature
+  - country_entry_id: COG-SAN-53
+    source_category_code: pa_de_toilette_nature
     national_label_en: Pa de toilette/nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1017,7 +1099,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: pas_de_toilettes_nature
+  - country_entry_id: COG-SAN-54
+    source_category_code: pas_de_toilettes_nature
     national_label_en: Pas de toilettes, nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1027,7 +1110,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: pas_de_toilettes_nature
+  - country_entry_id: COG-SAN-55
+    source_category_code: pas_de_toilettes_nature
     national_label_en: Pas de toilettes/nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1037,7 +1121,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: autre
+  - country_entry_id: COG-SAN-56
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre non ameliorée
     jmp_classification: Other unimproved
@@ -1047,7 +1132,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 135
-  - source_category_code: autre
+  - country_entry_id: COG-SAN-57
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1057,7 +1143,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: autre_a_preciser
+  - country_entry_id: COG-SAN-58
+    source_category_code: autre_a_preciser
     national_label_en: Autre(à préciser)
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1067,7 +1154,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: COG-SAN-59
+    source_category_code: other
     national_label_en: Other
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1077,7 +1165,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: autre
+  - country_entry_id: COG-SAN-60
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1097,7 +1186,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: source_d_eau_protegee
+  - country_entry_id: COG-WAS-01
+    source_category_code: source_d_eau_protegee
     national_label_en: Source d'eau protégée
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1107,7 +1197,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: source_protege
+  - country_entry_id: COG-WAS-02
+    source_category_code: source_protege
     national_label_en: Source protégé
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1117,7 +1208,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: source_protegee
+  - country_entry_id: COG-WAS-03
+    source_category_code: source_protegee
     national_label_en: Source protégée
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1127,7 +1219,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: puits_creuse_protege
+  - country_entry_id: COG-WAS-04
+    source_category_code: puits_creuse_protege
     national_label_en: Puits creusé protégé
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1137,7 +1230,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: puits_protege
+  - country_entry_id: COG-WAS-05
+    source_category_code: puits_protege
     national_label_en: Puits protégé
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1147,7 +1241,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: puits_protege_dans_la_parcelle
+  - country_entry_id: COG-WAS-06
+    source_category_code: puits_protege_dans_la_parcelle
     national_label_en: Puits protégé dans la parcelle
     national_label_local: Privé
     jmp_classification: Ground water > Protected well > Private
@@ -1157,7 +1252,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 67
-  - source_category_code: puits_protege_dans_parcelle
+  - country_entry_id: COG-WAS-07
+    source_category_code: puits_protege_dans_parcelle
     national_label_en: Puits protégé dans parcelle
     national_label_local: Privé
     jmp_classification: Ground water > Protected well > Private
@@ -1167,7 +1263,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 67
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: COG-WAS-08
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Puits ou sources protégées
     jmp_classification: Ground water > Protected wells or springs
@@ -1177,7 +1274,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 46
-  - source_category_code: pompe_villageoise_forage_a_pompe_manuelle
+  - country_entry_id: COG-WAS-09
+    source_category_code: pompe_villageoise_forage_a_pompe_manuelle
     national_label_en: Pompe villageoise/Forage á pompe manuelle
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1187,7 +1285,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: COG-WAS-10
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1197,7 +1296,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: puits_a_pompe_forage
+  - country_entry_id: COG-WAS-11
+    source_category_code: puits_a_pompe_forage
     national_label_en: Puits à pompe / forage
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1207,7 +1307,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: forage_puits_a_pompe_public
+  - country_entry_id: COG-WAS-12
+    source_category_code: forage_puits_a_pompe_public
     national_label_en: Forage, puits à pompe public
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1217,7 +1318,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 60
-  - source_category_code: forage_puits_a_pompe_public
+  - country_entry_id: COG-WAS-13
+    source_category_code: forage_puits_a_pompe_public
     national_label_en: Forage/puits à pompe public
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1227,7 +1329,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 60
-  - source_category_code: source_d_eau_non_protegee
+  - country_entry_id: COG-WAS-14
+    source_category_code: source_d_eau_non_protegee
     national_label_en: Source d'eau non-protégée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1237,7 +1340,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: source_non_protege
+  - country_entry_id: COG-WAS-15
+    source_category_code: source_non_protege
     national_label_en: Source non protégé
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1247,7 +1351,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: source_non_protegee
+  - country_entry_id: COG-WAS-16
+    source_category_code: source_non_protegee
     national_label_en: Source non protégée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1257,7 +1362,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: puits_creuse_non_protege
+  - country_entry_id: COG-WAS-17
+    source_category_code: puits_creuse_non_protege
     national_label_en: Puits creusé non-protégé
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1267,7 +1373,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: puits_non_protege
+  - country_entry_id: COG-WAS-18
+    source_category_code: puits_non_protege
     national_label_en: Puits non protégé
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1277,7 +1384,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: puits_non_protege_dans_la_parcelle
+  - country_entry_id: COG-WAS-19
+    source_category_code: puits_non_protege_dans_la_parcelle
     national_label_en: Puits non protégé dans la parcelle
     national_label_local: Privé
     jmp_classification: Ground water > Unprotected well > Private
@@ -1287,7 +1395,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 71
-  - source_category_code: puits_non_protege_dans_parcelle
+  - country_entry_id: COG-WAS-20
+    source_category_code: puits_non_protege_dans_parcelle
     national_label_en: Puits non protégé dans parcelle
     national_label_local: Privé
     jmp_classification: Ground water > Unprotected well > Private
@@ -1297,7 +1406,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 71
-  - source_category_code: puits_non_protege_public
+  - country_entry_id: COG-WAS-21
+    source_category_code: puits_non_protege_public
     national_label_en: Puits non protégé public
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
@@ -1307,7 +1417,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 72
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: COG-WAS-22
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Puits ou sources non protégées
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1317,7 +1428,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 50
-  - source_category_code: camion_citerne
+  - country_entry_id: COG-WAS-23
+    source_category_code: camion_citerne
     national_label_en: Camion-citerne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1327,7 +1439,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: COG-WAS-24
+    source_category_code: tanker_truck
     national_label_en: tanker truck
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1337,7 +1450,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: COG-WAS-25
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1347,7 +1461,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: autre
+  - country_entry_id: COG-WAS-26
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autres non améliorées
     jmp_classification: Other non-improved
@@ -1357,7 +1472,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 105
-  - source_category_code: autre
+  - country_entry_id: COG-WAS-27
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1367,7 +1483,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: autre_a_preciser
+  - country_entry_id: COG-WAS-28
+    source_category_code: autre_a_preciser
     national_label_en: Autre(à préciser)
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1377,7 +1494,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: autre
+  - country_entry_id: COG-WAS-29
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1387,7 +1505,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: COG-WAS-30
+    source_category_code: bottled_water
     national_label_en: bottled water
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1397,7 +1516,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: eau_en_bouteille
+  - country_entry_id: COG-WAS-31
+    source_category_code: eau_en_bouteille
     national_label_en: Eau en bouteille
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1407,7 +1527,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: bache_a_eau_citerne
+  - country_entry_id: COG-WAS-32
+    source_category_code: bache_a_eau_citerne
     national_label_en: Bache á eau/citerne
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1417,7 +1538,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: eau_de_pluie
+  - country_entry_id: COG-WAS-33
+    source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1427,7 +1549,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: COG-WAS-34
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1437,7 +1560,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: COG-WAS-35
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1447,7 +1571,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: pluie
+  - country_entry_id: COG-WAS-36
+    source_category_code: pluie
     national_label_en: Pluie
     national_label_local: Citerne/réservoir découvert
     jmp_classification: Rainwater > Uncovered cistern/tank
@@ -1457,7 +1582,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 88
-  - source_category_code: eau_de_surface
+  - country_entry_id: COG-WAS-37
+    source_category_code: eau_de_surface
     national_label_en: Eau de surface
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1467,7 +1593,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: eau_de_surface_rivia_re_fleuve_barrage_lac_mare_canal_canal_d_irrigation
+  - country_entry_id: COG-WAS-38
+    source_category_code: eau_de_surface_rivia_re_fleuve_barrage_lac_mare_canal_canal_d_irrigation
     national_label_en: Eau de surface (riviÃ¨re, fleuve, barrage, lac, mare, canal,
       canal d?irrigation)
     national_label_local: Eau de surface
@@ -1478,7 +1605,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: riviere_fleuve_marigot
+  - country_entry_id: COG-WAS-39
+    source_category_code: riviere_fleuve_marigot
     national_label_en: Rivière/fleuve/marigot
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1488,7 +1616,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: riviere_marigot_source
+  - country_entry_id: COG-WAS-40
+    source_category_code: riviere_marigot_source
     national_label_en: Rivière/marigot/source
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1498,7 +1627,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: COG-WAS-41
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1508,7 +1638,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: fontaine_robinet_public
+  - country_entry_id: COG-WAS-42
+    source_category_code: fontaine_robinet_public
     national_label_en: Fontaine/Robinet public
     national_label_local: Autre
     jmp_classification: Tap water > Other
@@ -1518,7 +1649,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 42
-  - source_category_code: robinet_du_voisin
+  - country_entry_id: COG-WAS-43
+    source_category_code: robinet_du_voisin
     national_label_en: Robinet du voisin
     national_label_local: Autre
     jmp_classification: Tap water > Other
@@ -1528,7 +1660,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 42
-  - source_category_code: eau_courante_snde_a_la_maison
+  - country_entry_id: COG-WAS-44
+    source_category_code: eau_courante_snde_a_la_maison
     national_label_en: Eau courante SNDE á la maison
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -1538,7 +1671,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: COG-WAS-45
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -1548,7 +1682,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: robinet_dans_le_logement
+  - country_entry_id: COG-WAS-46
+    source_category_code: robinet_dans_le_logement
     national_label_en: Robinet dans le logement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1558,7 +1693,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: robinet_dans_logement
+  - country_entry_id: COG-WAS-47
+    source_category_code: robinet_dans_logement
     national_label_en: Robinet dans logement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1568,7 +1704,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: robinet_dans_la_concession_cour_ou_parcelle
+  - country_entry_id: COG-WAS-48
+    source_category_code: robinet_dans_la_concession_cour_ou_parcelle
     national_label_en: Robinet dans la concession, cour ou parcelle
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1578,7 +1715,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: robinet_dans_la_cour_concession
+  - country_entry_id: COG-WAS-49
+    source_category_code: robinet_dans_la_cour_concession
     national_label_en: Robinet dans la cour/concession
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1588,7 +1726,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: robinet_dans_la_parcelle
+  - country_entry_id: COG-WAS-50
+    source_category_code: robinet_dans_la_parcelle
     national_label_en: Robinet dans la parcelle
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1598,7 +1737,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: robinet_dans_parcelle
+  - country_entry_id: COG-WAS-51
+    source_category_code: robinet_dans_parcelle
     national_label_en: Robinet dans parcelle
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1608,7 +1748,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: eau_courante_snde_ailleurs
+  - country_entry_id: COG-WAS-52
+    source_category_code: eau_courante_snde_ailleurs
     national_label_en: Eau courante SNDE ailleurs
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1618,7 +1759,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: COG-WAS-53
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1628,7 +1770,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: robinet_exterieur
+  - country_entry_id: COG-WAS-54
+    source_category_code: robinet_exterieur
     national_label_en: Robinet extérieur
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1638,7 +1781,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: robinet_public_borne_fontaine
+  - country_entry_id: COG-WAS-55
+    source_category_code: robinet_public_borne_fontaine
     national_label_en: Robinet public / Borne fontaine
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1648,7 +1792,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: robinet_public_fontaine
+  - country_entry_id: COG-WAS-56
+    source_category_code: robinet_public_fontaine
     national_label_en: Robinet public/fontaine
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe

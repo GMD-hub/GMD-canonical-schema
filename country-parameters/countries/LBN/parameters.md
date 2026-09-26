@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pré primaire
+  - country_entry_id: LBN-EDU-01
+    national_label_en: Pré primaire
     national_label_local: ما قبل الابتدائي
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Cycle primaire (1er et 2ème cycles de l'enseignement principal)
+  - country_entry_id: LBN-EDU-02
+    national_label_en: Cycle primaire (1er et 2ème cycles de l'enseignement principal)
     national_label_local: المرحلة الابتدائية (الحلقتين الأولى والثانية من التعليم
       الأساسي)
     entry_age: 6
@@ -31,7 +33,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Cycle moyen (3ème cycle de l'enseignement principal)
+  - country_entry_id: LBN-EDU-03
+    national_label_en: Cycle moyen (3ème cycle de l'enseignement principal)
     national_label_local: المرحلة المتوسطة (الحلقة الثالثة من التعليم الأساسي)
     entry_age: 12
     duration_years: 3
@@ -41,7 +44,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Aptitude professionnelle
+  - country_entry_id: LBN-EDU-04
+    national_label_en: Aptitude professionnelle
     national_label_local: الكفاءة المهنية
     entry_age: 13
     duration_years: 2
@@ -51,7 +55,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Brevet professionnel (B.P.)
+  - country_entry_id: LBN-EDU-05
+    national_label_en: Brevet professionnel (B.P.)
     national_label_local: التكميلية المهنية
     entry_age: 14
     duration_years: 2
@@ -61,7 +66,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Secondaire générale
+  - country_entry_id: LBN-EDU-06
+    national_label_en: Secondaire générale
     national_label_local: الثانوية العامة
     entry_age: 15
     duration_years: 3
@@ -71,7 +77,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Secondaire professionnelle
+  - country_entry_id: LBN-EDU-07
+    national_label_en: Secondaire professionnelle
     national_label_local: الثانوية  المهنية
     entry_age: 15
     duration_years: 3
@@ -81,7 +88,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Secondaire technique
+  - country_entry_id: LBN-EDU-08
+    national_label_en: Secondaire technique
     national_label_local: الثانوية الفنية
     entry_age: 15
     duration_years: 3
@@ -91,7 +99,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Diplôme Universitaire - 1 an
+  - country_entry_id: LBN-EDU-09
+    national_label_en: Diplôme Universitaire - 1 an
     national_label_local: دبلوم جامعي- سنة واحدة
     entry_age: 18
     duration_years: 1
@@ -101,7 +110,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Diplôme Universitaire
+  - country_entry_id: LBN-EDU-10
+    national_label_en: Diplôme Universitaire
     national_label_local: دبلوم جامعي
     entry_age: 18
     duration_years: 2
@@ -111,7 +121,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Technique supérieur (TS)
+  - country_entry_id: LBN-EDU-11
+    national_label_en: Technique supérieur (TS)
     national_label_local: امتياز فني
     entry_age: 18
     duration_years: 2
@@ -121,7 +132,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Licence technique
+  - country_entry_id: LBN-EDU-12
+    national_label_en: Licence technique
     national_label_local: الإجازة الفنية
     entry_age: 20
     duration_years: 1
@@ -131,7 +143,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Licence
+  - country_entry_id: LBN-EDU-13
+    national_label_en: Licence
     national_label_local: إجازة
     entry_age: 18
     duration_years: 3
@@ -141,7 +154,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Maîtrise
+  - country_entry_id: LBN-EDU-14
+    national_label_en: Maîtrise
     national_label_local: جدارة
     entry_age: 18
     duration_years: 4
@@ -151,7 +165,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Etude de médecine
+  - country_entry_id: LBN-EDU-15
+    national_label_en: Etude de médecine
     national_label_local: دراسة  الطب
     entry_age: 18
     duration_years: 7
@@ -161,7 +176,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Magistère
+  - country_entry_id: LBN-EDU-16
+    national_label_en: Magistère
     national_label_local: ماجستير
     entry_age: 21
     duration_years: 2
@@ -171,7 +187,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Diplôme d'études supérieures (D.E.S.)
+  - country_entry_id: LBN-EDU-17
+    national_label_en: Diplôme d'études supérieures (D.E.S.)
     national_label_local: دبلوم دراسات عليا
     entry_age: 21
     duration_years: 2
@@ -181,7 +198,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Diplôme d'études approfondies (D.E.A.)
+  - country_entry_id: LBN-EDU-18
+    national_label_en: Diplôme d'études approfondies (D.E.A.)
     national_label_local: دبلوم دراسات معمقة
     entry_age: 22
     duration_years: 1
@@ -191,7 +209,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Études supérieures spécialisées
+  - country_entry_id: LBN-EDU-19
+    national_label_en: Études supérieures spécialisées
     national_label_local: دراسات عليا متخصصة
     entry_age: 22
     duration_years: 2
@@ -201,7 +220,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Doctorat
+  - country_entry_id: LBN-EDU-20
+    national_label_en: Doctorat
     national_label_local: دكتوراه
     entry_age: 23
     duration_years: 3
@@ -221,7 +241,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Beirut | 1-Beirut
+  - country_entry_id: LBN-SUBNAT-01
+    survey_labels: 1 - Beirut | 1-Beirut
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: LBN_2015_GAUL1_1798
     gmd_subnatid2: ''
@@ -241,7 +262,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Beirut
     source_row: 8975
-  - survey_labels: 2 - Mount Lebanon | 2-Mount Lebanon
+  - country_entry_id: LBN-SUBNAT-02
+    survey_labels: 2 - Mount Lebanon | 2-Mount Lebanon
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: LBN_2015_GAUL1_1801
     gmd_subnatid2: ''
@@ -261,7 +283,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mount Lebanon
     source_row: 8976
-  - survey_labels: 3 - North
+  - country_entry_id: LBN-SUBNAT-03
+    survey_labels: 3 - North
     survey_variables: subnatid
     gmd_subnatid1: LBN_2015_GAUL1_1799
     gmd_subnatid2: ''
@@ -281,7 +304,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North
     source_row: 8977
-  - survey_labels: 5 - Bekaa | 5-Bekaa
+  - country_entry_id: LBN-SUBNAT-04
+    survey_labels: 5 - Bekaa | 5-Bekaa
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: LBN_2015_GAUL1_1797
     gmd_subnatid2: ''
@@ -301,7 +325,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bekaa
     source_row: 8978
-  - survey_labels: 6 - South
+  - country_entry_id: LBN-SUBNAT-05
+    survey_labels: 6 - South
     survey_variables: subnatid
     gmd_subnatid1: LBN_2015_GAUL1_1800
     gmd_subnatid2: ''
@@ -321,7 +346,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: South
     source_row: 8979
-  - survey_labels: 7 - Nabatieh
+  - country_entry_id: LBN-SUBNAT-06
+    survey_labels: 7 - Nabatieh
     survey_variables: subnatid
     gmd_subnatid1: LBN_2015_GAUL1_1802
     gmd_subnatid2: ''
@@ -341,7 +367,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nabatiye
     source_row: 8980
-  - survey_labels: 3-North
+  - country_entry_id: LBN-SUBNAT-07
+    survey_labels: 3-North
     survey_variables: subnatid1
     gmd_subnatid1: LBN_2015_GAULx_3
     gmd_subnatid2: ''
@@ -361,7 +388,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North
     source_row: 8983
-  - survey_labels: 4-Akkar
+  - country_entry_id: LBN-SUBNAT-08
+    survey_labels: 4-Akkar
     survey_variables: subnatid1
     gmd_subnatid1: LBN_2015_GAUL2_18797
     gmd_subnatid2: ''
@@ -391,7 +419,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: open_sewage_system
+  - country_entry_id: LBN-SAN-01
+    source_category_code: open_sewage_system
     national_label_en: Open sewage system
     national_label_local: إلى مكان آخر
     jmp_classification: Flush and pour flush > to elsewhere
@@ -401,7 +430,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: public_sewage_system
+  - country_entry_id: LBN-SAN-02
+    source_category_code: public_sewage_system
     national_label_en: Public sewage system
     national_label_local: إلى نظام الصرف الصحي بالأنابيب
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -411,7 +441,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: septic_tank
+  - country_entry_id: LBN-SAN-03
+    source_category_code: septic_tank
     national_label_en: Septic tank
     national_label_local: لخزان الصرف الصحي
     jmp_classification: Flush and pour flush > to septic tank
@@ -421,7 +452,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: no_facility
+  - country_entry_id: LBN-SAN-04
+    source_category_code: no_facility
     national_label_en: No facility
     national_label_local: لا توجد منشأة ، شجيرة ، حقل
     jmp_classification: No facility, bush, field
@@ -431,7 +463,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other_source
+  - country_entry_id: LBN-SAN-05
+    source_category_code: other_source
     national_label_en: Other source
     national_label_local: آخر
     jmp_classification: Other unimproved > Other
@@ -451,7 +484,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: LBN-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: ينبوع المحمي
     jmp_classification: Ground water > Protected spring
@@ -461,7 +495,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: LBN-WAS-02
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: محمي بشكل جيد
     jmp_classification: Ground water > Protected well
@@ -471,7 +506,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_wells_or_springs
+  - country_entry_id: LBN-WAS-03
+    source_category_code: protected_wells_or_springs
     national_label_en: Protected wells or springs
     national_label_local: آبار أو ينابيع محمية
     jmp_classification: Ground water > Protected wells or springs
@@ -481,7 +517,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: boreholes_tubewells
+  - country_entry_id: LBN-WAS-04
+    source_category_code: boreholes_tubewells
     national_label_en: Boreholes/Tubewells
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -491,7 +528,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_borehole
+  - country_entry_id: LBN-WAS-05
+    source_category_code: tube_well_borehole
     national_label_en: Tube well, Borehole
     national_label_local: بئر أنبوبي ، بئر
     jmp_classification: Ground water > Tubewell, borehole
@@ -501,7 +539,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: LBN-WAS-06
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: ينبوع غير المحمي
     jmp_classification: Ground water > Unprotected spring
@@ -511,7 +550,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: LBN-WAS-07
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: بئر غير محمي
     jmp_classification: Ground water > Unprotected well
@@ -521,7 +561,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_wells_or_springs
+  - country_entry_id: LBN-WAS-08
+    source_category_code: unprotected_wells_or_springs
     national_label_en: Unprotected wells or springs
     national_label_local: الآبار أو الينابيع غير المحمية
     jmp_classification: Ground water > Unprotected wells or springs
@@ -531,7 +572,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: LBN-WAS-09
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank / drum
     national_label_local: عربة مع خزان صغير / أسطوانة
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -541,7 +583,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: delivered_water_tanker_trucks
+  - country_entry_id: LBN-WAS-10
+    source_category_code: delivered_water_tanker_trucks
     national_label_en: Delivered water (tanker trucks)
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -551,7 +594,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: LBN-WAS-11
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: يتم توفير شاحنة صهريج
     jmp_classification: Other improved sources > Tanker truck provided
@@ -561,7 +605,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: LBN-WAS-12
+    source_category_code: other
     national_label_en: other
     national_label_local: آخر
     jmp_classification: Other non-improved > Other
@@ -571,7 +616,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: LBN-WAS-13
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: مياه معبأة
     jmp_classification: Packaged water > Bottled water
@@ -581,7 +627,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: packed_water_bottled
+  - country_entry_id: LBN-WAS-14
+    source_category_code: packed_water_bottled
     national_label_en: Packed water (bottled)
     national_label_local: مياه معبأة
     jmp_classification: Packaged water > Bottled water
@@ -591,7 +638,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater_collection
+  - country_entry_id: LBN-WAS-15
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: مياه الأمطار
     jmp_classification: Rainwater
@@ -601,7 +649,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: surface_water
+  - country_entry_id: LBN-WAS-16
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: سطح الماء
     jmp_classification: Surface water
@@ -611,7 +660,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
+  - country_entry_id: LBN-WAS-17
+    source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
     national_label_en: Surface water (river, stream, dam, lake, pond, canal, irrigation
       channel)
     national_label_local: سطح الماء
@@ -622,7 +672,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: LBN-WAS-18
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: آخر
     jmp_classification: Tap water > Other
@@ -632,7 +683,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: LBN-WAS-19
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -642,7 +694,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tap_water_into_dwelling
+  - country_entry_id: LBN-WAS-20
+    source_category_code: tap_water_into_dwelling
     national_label_en: Tap water into dwelling
     national_label_local: الماء بالأنابيب في المسكن
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -652,7 +705,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_compound_yard_or_plot
+  - country_entry_id: LBN-WAS-21
+    source_category_code: piped_into_compound_yard_or_plot
     national_label_en: Piped into compound, yard or plot
     national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -662,7 +716,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_stanposts
+  - country_entry_id: LBN-WAS-22
+    source_category_code: public_stanposts
     national_label_en: Public stanposts
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe
@@ -672,7 +727,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: LBN-WAS-23
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap / standpipe
     national_label_local: الحنفية العامة والصنبور الرأسي
     jmp_classification: Tap water > Public tap, standpipe

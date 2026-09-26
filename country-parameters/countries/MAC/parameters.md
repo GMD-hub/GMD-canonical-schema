@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Infant education
+  - country_entry_id: MAC-EDU-01
+    national_label_en: Infant education
     national_label_local: |-
       幼兒教育
       Ensino infantil
@@ -22,7 +23,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary education
+  - country_entry_id: MAC-EDU-02
+    national_label_en: Primary education
     national_label_local: |-
       小學教育
       Ensino primário
@@ -34,7 +36,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Junior secondary education
+  - country_entry_id: MAC-EDU-03
+    national_label_en: Junior secondary education
     national_label_local: |-
       初中教育
       Ensino secundário geral
@@ -46,7 +49,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Senior secondary education
+  - country_entry_id: MAC-EDU-04
+    national_label_en: Senior secondary education
     national_label_local: |-
       高中教育
       Ensino secundário complementar
@@ -58,7 +62,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Senior secondary education (Courses of vocational and technical
+  - country_entry_id: MAC-EDU-05
+    national_label_en: Senior secondary education (Courses of vocational and technical
       education)
     national_label_local: |-
       高中教育（職業技術教育課程）
@@ -71,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Senior secondary education (Courses of vocational and technical
+  - country_entry_id: MAC-EDU-06
+    national_label_en: Senior secondary education (Courses of vocational and technical
       education)
     national_label_local: |-
       高中教育（職業技術教育課程）
@@ -84,7 +90,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Higher education diploma programme (2 years)
+  - country_entry_id: MAC-EDU-07
+    national_label_en: Higher education diploma programme (2 years)
     national_label_local: |-
       高等教育文憑
       Diploma de ensino superior
@@ -96,7 +103,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: "Bacharelato \nprogramme (3 years)"
+  - country_entry_id: MAC-EDU-08
+    national_label_en: "Bacharelato \nprogramme (3 years)"
     national_label_local: |-
       高等專科學位
       Bacharelato
@@ -108,7 +116,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Bachelor's degree programme (4 years)
+  - country_entry_id: MAC-EDU-09
+    national_label_en: Bachelor's degree programme (4 years)
     national_label_local: |-
       學士學位
       Licenciatura
@@ -120,7 +129,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Bachelor's degree programme  (5 years)
+  - country_entry_id: MAC-EDU-10
+    national_label_en: Bachelor's degree programme  (5 years)
     national_label_local: |-
       學士學位
       Licenciatura
@@ -132,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Master's degree programme
+  - country_entry_id: MAC-EDU-11
+    national_label_en: Master's degree programme
     national_label_local: |-
       碩士學位
       Mestrado
@@ -144,7 +155,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Postgraduate diploma programme
+  - country_entry_id: MAC-EDU-12
+    national_label_en: Postgraduate diploma programme
     national_label_local: |-
       學位後文憑
       Diploma de Pós-Graduação
@@ -156,7 +168,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Doctor's degree programme
+  - country_entry_id: MAC-EDU-13
+    national_label_en: Doctor's degree programme
     national_label_local: |-
       博士學位
       Doutoramente

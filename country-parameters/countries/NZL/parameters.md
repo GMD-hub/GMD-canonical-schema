@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-01
+    national_label_en: See (5)
     national_label_local: Centre-based early childhood education
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-02
+    national_label_en: See (5)
     national_label_local: Centre-based early childhood education
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-03
+    national_label_en: See (5)
     national_label_local: Home-based early childhood education
     entry_age: 0
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-04
+    national_label_en: See (5)
     national_label_local: Home-based early childhood education
     entry_age: 3
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Kōhanga Reo in Māori translates as "Language Nest" in English.
+  - country_entry_id: NZL-EDU-05
+    national_label_en: Kōhanga Reo in Māori translates as "Language Nest" in English.
       However, it is commonly known and referred to as "kōhanga reo" in New Zealand
       English.
     national_label_local: Kōhanga Reo
@@ -62,7 +67,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Kōhanga Reo in Māori translates as "Language Nest" in English.
+  - country_entry_id: NZL-EDU-06
+    national_label_en: Kōhanga Reo in Māori translates as "Language Nest" in English.
       However, it is commonly known and referred to as "kōhanga reo" in New Zealand
       English.
     national_label_local: Kōhanga Reo
@@ -74,7 +80,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-07
+    national_label_en: See (5)
     national_label_local: Primary level education (Years 1 to 6)
     entry_age: 5
     duration_years: 6
@@ -84,7 +91,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-08
+    national_label_en: See (5)
     national_label_local: Intermediate level education (Years 7-8)
     entry_age: 11
     duration_years: 2
@@ -94,7 +102,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-09
+    national_label_en: See (5)
     national_label_local: Lower secondary education (Years 9-10)
     entry_age: 13
     duration_years: 2
@@ -104,7 +113,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Upper secondary education (Year 11)
+  - country_entry_id: NZL-EDU-10
+    national_label_en: Upper secondary education (Year 11)
     national_label_local: Upper secondary education (Year 11)
     entry_age: 15
     duration_years: 1
@@ -114,7 +124,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Upper secondary education (Year 12)
+  - country_entry_id: NZL-EDU-11
+    national_label_en: Upper secondary education (Year 12)
     national_label_local: Upper secondary education (Year 12)
     entry_age: 15
     duration_years: 2
@@ -124,7 +135,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Upper secondary education (Year 13)
+  - country_entry_id: NZL-EDU-12
+    national_label_en: Upper secondary education (Year 13)
     national_label_local: Upper secondary education (Year 13)
     entry_age: 15
     duration_years: 3
@@ -134,7 +146,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-13
+    national_label_en: See (5)
     national_label_local: Bachelors Degrees
     entry_age: 0
     duration_years: 3
@@ -144,7 +157,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-14
+    national_label_en: See (5)
     national_label_local: Bachelors Degrees (longer than 4 years)
     entry_age: 0
     duration_years: 5
@@ -154,7 +168,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-15
+    national_label_en: See (5)
     national_label_local: Graduate Certificates and Diplomas
     entry_age: 0
     duration_years: 1
@@ -164,7 +179,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-16
+    national_label_en: See (5)
     national_label_local: Postgraduate Certificates and Diplomas
     entry_age: 0
     duration_years: 1
@@ -174,7 +190,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-17
+    national_label_en: See (5)
     national_label_local: Masters Degrees
     entry_age: 0
     duration_years: 2
@@ -184,7 +201,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: See (5)
+  - country_entry_id: NZL-EDU-18
+    national_label_en: See (5)
     national_label_local: Ph.D.s and other Doctorates
     entry_age: 0
     duration_years: 3

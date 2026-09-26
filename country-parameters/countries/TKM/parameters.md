@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education for young children
+  - country_entry_id: TKM-EDU-01
+    national_label_en: Pre-primary education for young children
     national_label_local: ''
     entry_age: 1
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary education
+  - country_entry_id: TKM-EDU-02
+    national_label_en: Pre-primary education
     national_label_local: ''
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary education
+  - country_entry_id: TKM-EDU-03
+    national_label_en: Primary education
     national_label_local: ''
     entry_age: 6
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: "General basic education \n(1st stage)"
+  - country_entry_id: TKM-EDU-04
+    national_label_en: "General basic education \n(1st stage)"
     national_label_local: ''
     entry_age: 10
     duration_years: 6
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: "General secondary education \n(2nd stage)"
+  - country_entry_id: TKM-EDU-05
+    national_label_en: "General secondary education \n(2nd stage)"
     national_label_local: ''
     entry_age: 16
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Basic vocational education
+  - country_entry_id: TKM-EDU-06
+    national_label_en: Basic vocational education
     national_label_local: ''
     entry_age: 18
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Secondary vocational education
+  - country_entry_id: TKM-EDU-07
+    national_label_en: Secondary vocational education
     national_label_local: ''
     entry_age: 18
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Bachelor
+  - country_entry_id: TKM-EDU-08
+    national_label_en: Bachelor
     national_label_local: ''
     entry_age: 18
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: "Higher professional education \n(Specialist)"
+  - country_entry_id: TKM-EDU-09
+    national_label_en: "Higher professional education \n(Specialist)"
     national_label_local: ''
     entry_age: 18
     duration_years: 5
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Master
+  - country_entry_id: TKM-EDU-10
+    national_label_en: Master
     national_label_local: ''
     entry_age: 22
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Aspirantura
+  - country_entry_id: TKM-EDU-11
+    national_label_en: Aspirantura
     national_label_local: ''
     entry_age: 28
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Doctorantura
+  - country_entry_id: TKM-EDU-12
+    national_label_en: Doctorantura
     national_label_local: ''
     entry_age: 31
     duration_years: 3
@@ -140,7 +152,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: to_open_drain
+  - country_entry_id: TKM-SAN-01
+    source_category_code: to_open_drain
     national_label_en: to open drain
     national_label_local: куда-то в другое место
     jmp_classification: Flush and pour flush > to elsewhere
@@ -150,7 +163,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: TKM-SAN-02
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -160,7 +174,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: TKM-SAN-03
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -170,7 +185,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: TKM-SAN-04
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit (latrine)
     national_label_local: в выгребную яму
     jmp_classification: Flush and pour flush > to pit
@@ -180,7 +196,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: to_pit
+  - country_entry_id: TKM-SAN-05
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: в выгребную яму
     jmp_classification: Flush and pour flush > to pit
@@ -190,7 +207,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: TKM-SAN-06
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush and pour flush > to septic tank
@@ -200,7 +218,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: to_septic_tank
+  - country_entry_id: TKM-SAN-07
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush and pour flush > to septic tank
@@ -210,7 +229,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: to_don_t_know_where
+  - country_entry_id: TKM-SAN-08
+    source_category_code: to_don_t_know_where
     national_label_en: to don't know where
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -220,7 +240,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_piped_sewer_system_private
+  - country_entry_id: TKM-SAN-09
+    source_category_code: flush_to_piped_sewer_system_private
     national_label_en: Flush to piped sewer system - private
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -230,7 +251,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: flush_to_pit_latrine_private
+  - country_entry_id: TKM-SAN-10
+    source_category_code: flush_to_pit_latrine_private
     national_label_en: Flush to pit (latrine) - private
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -240,7 +262,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 75
-  - source_category_code: flush_to_septic_tank_private
+  - country_entry_id: TKM-SAN-11
+    source_category_code: flush_to_septic_tank_private
     national_label_en: Flush to septic tank - private
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -250,7 +273,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: flush_to_piped_sewer_system_shared
+  - country_entry_id: TKM-SAN-12
+    source_category_code: flush_to_piped_sewer_system_shared
     national_label_en: Flush to piped sewer system - shared
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -261,7 +285,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: TKM-SAN-13
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -273,7 +298,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: TKM-SAN-14
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -285,7 +311,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: TKM-SAN-15
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -297,7 +324,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: TKM-SAN-16
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -308,7 +336,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: TKM-SAN-17
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -319,7 +348,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_with_slab_private
+  - country_entry_id: TKM-SAN-18
+    source_category_code: pit_latrine_with_slab_private
     national_label_en: Pit latrine with slab - private
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -331,7 +361,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: ventilated_improved_pit_latrine_vip_private
+  - country_entry_id: TKM-SAN-19
+    source_category_code: ventilated_improved_pit_latrine_vip_private
     national_label_en: Ventilated Improved Pit latrine (VIP) - private
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -342,7 +373,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: pit_latrine_with_slab_shared
+  - country_entry_id: TKM-SAN-20
+    source_category_code: pit_latrine_with_slab_shared
     national_label_en: Pit latrine with slab - shared
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -354,7 +386,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: ventilated_improved_pit_latrine_vip_shared
+  - country_entry_id: TKM-SAN-21
+    source_category_code: ventilated_improved_pit_latrine_vip_shared
     national_label_en: Ventilated Improved Pit latrine (VIP) - shared
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -365,7 +398,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 121
-  - source_category_code: no_facilities_or_bush_or_field
+  - country_entry_id: TKM-SAN-22
+    source_category_code: no_facilities_or_bush_or_field
     national_label_en: No facilities or bush or field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -375,7 +409,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: TKM-SAN-23
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -385,7 +420,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: TKM-SAN-24
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -405,7 +441,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: TKM-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Защищённый родник
     jmp_classification: Ground water > Protected spring
@@ -415,7 +452,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: TKM-WAS-02
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -425,7 +463,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole
+  - country_entry_id: TKM-WAS-03
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -435,7 +474,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: TKM-WAS-04
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -445,7 +485,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: TKM-WAS-05
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Незащищённый родник
     jmp_classification: Ground water > Unprotected spring
@@ -455,7 +496,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: TKM-WAS-06
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -465,7 +507,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: TKM-WAS-07
+    source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -475,7 +518,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: TKM-WAS-08
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -485,7 +529,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_tank_drum
+  - country_entry_id: TKM-WAS-09
+    source_category_code: cart_with_tank_drum
     national_label_en: cart with tank/drum
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -495,7 +540,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: tanker_truck
+  - country_entry_id: TKM-WAS-10
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -505,7 +551,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: TKM-WAS-11
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -515,7 +562,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: TKM-WAS-12
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -525,7 +573,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rain_water
+  - country_entry_id: TKM-WAS-13
+    source_category_code: rain_water
     national_label_en: Rain water
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -535,7 +584,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: TKM-WAS-14
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -545,7 +595,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water
+  - country_entry_id: TKM-WAS-15
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -555,7 +606,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_used_for_the_estimates
+  - country_entry_id: TKM-WAS-16
+    source_category_code: surface_water_used_for_the_estimates
     national_label_en: Surface water used for the estimates
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -565,7 +617,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: TKM-WAS-17
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -575,7 +628,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: to_neighbour
+  - country_entry_id: TKM-WAS-18
+    source_category_code: to_neighbour
     national_label_en: to neighbour
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -585,7 +639,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: into_dwelling
+  - country_entry_id: TKM-WAS-19
+    source_category_code: into_dwelling
     national_label_en: into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -595,7 +650,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: TKM-WAS-20
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -605,7 +661,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: TKM-WAS-21
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -615,7 +672,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: into_yard_plot
+  - country_entry_id: TKM-WAS-22
+    source_category_code: into_yard_plot
     national_label_en: into yard/plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -625,7 +683,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: TKM-WAS-23
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -635,7 +694,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: TKM-WAS-24
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -645,7 +705,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: TKM-WAS-25
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -655,7 +716,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: TKM-WAS-26
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

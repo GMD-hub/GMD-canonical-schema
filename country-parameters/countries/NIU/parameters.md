@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Playschool/Kindergarten
+  - country_entry_id: NIU-EDU-01
+    national_label_en: Playschool/Kindergarten
     national_label_local: ECCED
     entry_age: 1
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Early Childhood Education
+  - country_entry_id: NIU-EDU-02
+    national_label_en: Early Childhood Education
     national_label_local: Aoga Fakamahani
     entry_age: 4
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary School
+  - country_entry_id: NIU-EDU-03
+    national_label_en: Primary School
     national_label_local: Aoga Ikiiki
     entry_age: 5
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Intermediate/Lower Secondary School (Year 7-10)
+  - country_entry_id: NIU-EDU-04
+    national_label_en: Intermediate/Lower Secondary School (Year 7-10)
     national_label_local: Aoga Tokolalo
     entry_age: 11
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Year 11/NCEA Level 1
+  - country_entry_id: NIU-EDU-05
+    national_label_en: Year 11/NCEA Level 1
     national_label_local: Year 11/NCEA Level 1
     entry_age: 15
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Year 12/NCEA Level 2
+  - country_entry_id: NIU-EDU-06
+    national_label_en: Year 12/NCEA Level 2
     national_label_local: Aoga Tokoluga
     entry_age: 16
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Year 13/NCEA Level 3
+  - country_entry_id: NIU-EDU-07
+    national_label_en: Year 13/NCEA Level 3
     national_label_local: Year 13/NCEA Level 3
     entry_age: 17
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: USP Certificate course
+  - country_entry_id: NIU-EDU-08
+    national_label_en: USP Certificate course
     national_label_local: USP Certificate course
     entry_age: 17
     duration_years: 1
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Youth Employment Program
+  - country_entry_id: NIU-EDU-09
+    national_label_en: Youth Employment Program
     national_label_local: Youth Employment Program
     entry_age: 16
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Pre-vocational programme (PVP) (includes food and nutrition,
+  - country_entry_id: NIU-EDU-10
+    national_label_en: Pre-vocational programme (PVP) (includes food and nutrition,
       horticulture, ICT, design, hospitality, tourism)
     national_label_local: Pre-vocational programme (PVP) (includes food and nutrition,
       horticulture, ICT, design, hospitality, tourism)
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Open Polytechnic Certificate
+  - country_entry_id: NIU-EDU-11
+    national_label_en: Open Polytechnic Certificate
     national_label_local: Open Polytechnic Certificate
     entry_age: 16
     duration_years: 1
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: USP and Open Polytechnic Diploma courses
+  - country_entry_id: NIU-EDU-12
+    national_label_en: USP and Open Polytechnic Diploma courses
     national_label_local: USP and Open Polytechnic Diploma courses
     entry_age: 18
     duration_years: 2
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: USP and Open Polytechnic Bachelor's course
+  - country_entry_id: NIU-EDU-13
+    national_label_en: USP and Open Polytechnic Bachelor's course
     national_label_local: USP and Open Polytechnic Bachelor's course
     entry_age: 18
     duration_years: 3
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: USP Master's course
+  - country_entry_id: NIU-EDU-14
+    national_label_en: USP Master's course
     national_label_local: USP Master's course
     entry_age: 21
     duration_years: 2

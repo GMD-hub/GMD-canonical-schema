@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-Choiseul
+  - country_entry_id: SLB-SUBNAT-01
+    survey_labels: 1-Choiseul
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.2_1
     gmd_subnatid2: ''
@@ -30,7 +31,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Choiseul
     source_row: 14597
-  - survey_labels: 10-Honiara
+  - country_entry_id: SLB-SUBNAT-02
+    survey_labels: 10-Honiara
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.4_1
     gmd_subnatid2: ''
@@ -50,7 +52,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Honiara
     source_row: 14598
-  - survey_labels: 2-Western
+  - country_entry_id: SLB-SUBNAT-03
+    survey_labels: 2-Western
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.10_1
     gmd_subnatid2: ''
@@ -70,7 +73,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Western
     source_row: 14599
-  - survey_labels: 3-Isabel
+  - country_entry_id: SLB-SUBNAT-04
+    survey_labels: 3-Isabel
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.5_1
     gmd_subnatid2: ''
@@ -90,7 +94,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Isabel
     source_row: 14600
-  - survey_labels: 4-Central
+  - country_entry_id: SLB-SUBNAT-05
+    survey_labels: 4-Central
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.1_1
     gmd_subnatid2: ''
@@ -110,7 +115,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Central
     source_row: 14601
-  - survey_labels: 5-Rennel Belonna
+  - country_entry_id: SLB-SUBNAT-06
+    survey_labels: 5-Rennel Belonna
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.8_1
     gmd_subnatid2: ''
@@ -130,7 +136,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Rennell and Bellona
     source_row: 14602
-  - survey_labels: 6-GUadacanal
+  - country_entry_id: SLB-SUBNAT-07
+    survey_labels: 6-GUadacanal
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.3_1
     gmd_subnatid2: ''
@@ -150,7 +157,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Guadalcanal
     source_row: 14603
-  - survey_labels: 7-Malaita
+  - country_entry_id: SLB-SUBNAT-08
+    survey_labels: 7-Malaita
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.7_1
     gmd_subnatid2: ''
@@ -170,7 +178,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Malaita
     source_row: 14604
-  - survey_labels: 8-Makira
+  - country_entry_id: SLB-SUBNAT-09
+    survey_labels: 8-Makira
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.6_1
     gmd_subnatid2: ''
@@ -190,7 +199,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Makira Ulawa
     source_row: 14605
-  - survey_labels: 9-Temotu
+  - country_entry_id: SLB-SUBNAT-10
+    survey_labels: 9-Temotu
     survey_variables: subnatid1
     gmd_subnatid1: SLB_2022_GADM1_SLB.9_1
     gmd_subnatid2: ''
@@ -220,7 +230,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: SLB-SAN-01
+    source_category_code: composting_toilet
     national_label_en: composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -230,7 +241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: SLB-SAN-02
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -240,7 +252,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: SLB-SAN-03
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -250,7 +263,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: SLB-SAN-04
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -260,7 +274,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: SLB-SAN-05
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -270,7 +285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_don_t_know_where
+  - country_entry_id: SLB-SAN-06
+    source_category_code: flush_to_don_t_know_where
     national_label_en: flush to don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -280,7 +296,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: SLB-SAN-07
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush - to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -290,7 +307,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: SLB-SAN-08
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush - to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -300,7 +318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: SLB-SAN-09
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush - to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -310,7 +329,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: SLB-SAN-10
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush - to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -320,7 +340,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: SLB-SAN-11
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush - don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -330,7 +351,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: SLB-SAN-12
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: hanging toilet / hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -341,7 +363,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: SLB-SAN-13
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -352,7 +375,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: SLB-SAN-14
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine - with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -363,7 +387,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: SLB-SAN-15
+    source_category_code: pit_latrine_with_slab
     national_label_en: pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -374,7 +399,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: SLB-SAN-16
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine - without slab / open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -385,7 +411,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: SLB-SAN-17
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: pit latrine without slab / open pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -396,7 +423,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_ventilated_improved_pit_vip
+  - country_entry_id: SLB-SAN-18
+    source_category_code: pit_latrine_ventilated_improved_pit_vip
     national_label_en: Pit latrine - ventilated improved pit (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -407,7 +435,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: SLB-SAN-19
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: ventilated improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -418,7 +447,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: bush_field_sea_ocean_beach
+  - country_entry_id: SLB-SAN-20
+    source_category_code: bush_field_sea_ocean_beach
     national_label_en: bush/field/sea/ocean/beach
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -428,7 +458,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: SLB-SAN-21
+    source_category_code: other
     national_label_en: other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -448,7 +479,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: SLB-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -458,7 +490,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: SLB-WAS-02
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -468,7 +501,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: SLB-WAS-03
+    source_category_code: tube_well_or_borehole
     national_label_en: tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -478,7 +512,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: SLB-WAS-04
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -488,7 +523,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: SLB-WAS-05
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -498,7 +534,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: SLB-WAS-06
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -508,7 +545,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: tanker_truck
+  - country_entry_id: SLB-WAS-07
+    source_category_code: tanker_truck
     national_label_en: tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -518,7 +556,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_cart_with_small_tank
+  - country_entry_id: SLB-WAS-08
+    source_category_code: tanker_truck_cart_with_small_tank
     national_label_en: Tanker truck/cart with small tank
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -528,7 +567,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: SLB-WAS-09
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -538,7 +578,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: SLB-WAS-10
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -548,7 +589,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rain_water
+  - country_entry_id: SLB-WAS-11
+    source_category_code: rain_water
     national_label_en: Rain water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -558,7 +600,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: SLB-WAS-12
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -568,7 +611,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water
+  - country_entry_id: SLB-WAS-13
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -578,7 +622,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+  - country_entry_id: SLB-WAS-14
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: surface water (river/dam/lake/pond/stream/canal/irrigation
       channel)
     national_label_local: Surface water
@@ -589,7 +634,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: SLB-WAS-15
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -599,7 +645,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: SLB-WAS-16
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -609,7 +656,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: SLB-WAS-17
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

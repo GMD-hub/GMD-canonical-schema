@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Preschool
+  - country_entry_id: BMU-EDU-01
+    national_label_en: Preschool
     national_label_local: Preschool
     entry_age: 4
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary school
+  - country_entry_id: BMU-EDU-02
+    national_label_en: Primary school
     national_label_local: Primary school
     entry_age: 5
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Middle School
+  - country_entry_id: BMU-EDU-03
+    national_label_en: Middle School
     national_label_local: Middle School
     entry_age: 11
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Senior School
+  - country_entry_id: BMU-EDU-04
+    national_label_en: Senior School
     national_label_local: Senior School
     entry_age: 14
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-05
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 18
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 11
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-06
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 18
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Certificate
+  - country_entry_id: BMU-EDU-07
+    national_label_en: Certificate
     national_label_local: Certificate
     entry_age: 18
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Certificate
+  - country_entry_id: BMU-EDU-08
+    national_label_en: Certificate
     national_label_local: Certificate
     entry_age: 18
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Associate degree
+  - country_entry_id: BMU-EDU-09
+    national_label_en: Associate degree
     national_label_local: Associate degree
     entry_age: 18
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-10
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 25
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-11
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 25
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-12
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 25
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-13
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 25
     duration_years: 2
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Diploma
+  - country_entry_id: BMU-EDU-14
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 25
     duration_years: 3

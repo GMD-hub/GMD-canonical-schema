@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary school
+  - country_entry_id: ITA-EDU-01
+    national_label_en: Pre-primary school
     national_label_local: Scuola dell'infanzia
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Primary school
+  - country_entry_id: ITA-EDU-02
+    national_label_en: Primary school
     national_label_local: Scuola primaria
     entry_age: 6
     duration_years: 5
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 6
-  - national_label_en: Course of cultural alphabetisation of primary education (for
+  - country_entry_id: ITA-EDU-03
+    national_label_en: Course of cultural alphabetisation of primary education (for
       adults)
     national_label_local: Corso di alfabetizzazione e di apprendimento della lingua
       italiana
@@ -42,7 +45,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
-  - national_label_en: Lower secondary education
+  - country_entry_id: ITA-EDU-04
+    national_label_en: Lower secondary education
     national_label_local: "Scuola secondaria \ndi primo grado"
     entry_age: 11
     duration_years: 3
@@ -52,7 +56,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
-  - national_label_en: Course of lower secondary education (for adults)
+  - country_entry_id: ITA-EDU-05
+    national_label_en: Course of lower secondary education (for adults)
     national_label_local: Percorsi di istruzione di primo livello
     entry_age: 16
     duration_years: 1
@@ -62,7 +67,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Education and vocational training (three-year courses)
+  - country_entry_id: ITA-EDU-06
+    national_label_en: Education and vocational training (three-year courses)
     national_label_local: Istruzione e formazione professionale - IeFP (corsi triennali)
     entry_age: 14
     duration_years: 3
@@ -72,7 +78,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
-  - national_label_en: Education and vocational training (fourth year)
+  - country_entry_id: ITA-EDU-07
+    national_label_en: Education and vocational training (fourth year)
     national_label_local: Istruzione e formazione professionale - IeFP (IV anno)
     entry_age: 17
     duration_years: 1
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Technical Institute education
+  - country_entry_id: ITA-EDU-08
+    national_label_en: Technical Institute education
     national_label_local: Istruzione Tecnica
     entry_age: 14
     duration_years: 5
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Liceo education (classical liceo, scientific liceo, linguistic
+  - country_entry_id: ITA-EDU-09
+    national_label_en: Liceo education (classical liceo, scientific liceo, linguistic
       liceo, human sciences liceo, music/dance liceo, artistic liceo)
     national_label_local: "Istruzione Liceale - \n(Liceo classico, scientifico, linguistico,
       delle scienze umane, musicale/coreutico, artistico)"
@@ -104,7 +113,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Upper secondary artistic education courses for adults
+  - country_entry_id: ITA-EDU-10
+    national_label_en: Upper secondary artistic education courses for adults
     national_label_local: Percorsi di istruzione di secondo livello svolti presso
       le scuole secondarie di secondo grado ad indirizzo artistico
     entry_age: 16
@@ -115,7 +125,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Vocational Institute education
+  - country_entry_id: ITA-EDU-11
+    national_label_en: Vocational Institute education
     national_label_local: Istruzione professionale
     entry_age: 14
     duration_years: 5
@@ -125,7 +136,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Upper secondary vocational education courses for adults
+  - country_entry_id: ITA-EDU-12
+    national_label_en: Upper secondary vocational education courses for adults
     national_label_local: Percorsi di istruzione di secondo livello svolti presso
       le scuole secondarie di secondo grado ad indirizzo tecnico e professionale
     entry_age: 16
@@ -136,7 +148,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Regional vocational training for disadvantaged people
+  - country_entry_id: ITA-EDU-13
+    national_label_en: Regional vocational training for disadvantaged people
     national_label_local: Formazione professionale regionale per categorie svantaggiate
     entry_age: 0
     duration_years: 1
@@ -146,7 +159,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Regional vocational training after the attainment of an ISCED3
+  - country_entry_id: ITA-EDU-14
+    national_label_en: Regional vocational training after the attainment of an ISCED3
       qualification or diploma
     national_label_local: Formazione professionale regionale post diploma
     entry_age: 18
@@ -157,7 +171,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Higher-level technical education and training
+  - country_entry_id: ITA-EDU-15
+    national_label_en: Higher-level technical education and training
     national_label_local: Istruzione e Formazione Tecnica Superiore (IFTS)
     entry_age: 18
     duration_years: 1
@@ -167,7 +182,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: University - Master (long first degree, 5-6 years)
+  - country_entry_id: ITA-EDU-16
+    national_label_en: University - Master (long first degree, 5-6 years)
     national_label_local: Corso di Laurea magistrale a ciclo unico
     entry_age: 19
     duration_years: 5
@@ -177,7 +193,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: University - Bachelor programme
+  - country_entry_id: ITA-EDU-17
+    national_label_en: University - Bachelor programme
     national_label_local: Corso di Laurea
     entry_age: 19
     duration_years: 3
@@ -187,7 +204,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: University - Post-Bachelor programme
+  - country_entry_id: ITA-EDU-18
+    national_label_en: University - Post-Bachelor programme
     national_label_local: Master universitario di 1° livello
     entry_age: 22
     duration_years: 1
@@ -197,7 +215,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: University - Master programme (second degree)
+  - country_entry_id: ITA-EDU-19
+    national_label_en: University - Master programme (second degree)
     national_label_local: Corso di Laurea magistrale
     entry_age: 22
     duration_years: 2
@@ -207,7 +226,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Unversity -  Post-Master programme
+  - country_entry_id: ITA-EDU-20
+    national_label_en: Unversity -  Post-Master programme
     national_label_local: Master universitario di 2° livello
     entry_age: 24
     duration_years: 1
@@ -217,7 +237,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: University - Specialisation post-master programme
+  - country_entry_id: ITA-EDU-21
+    national_label_en: University - Specialisation post-master programme
     national_label_local: Scuole di Specializzazione post-laurea
     entry_age: 24
     duration_years: 2
@@ -227,7 +248,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Higher education in Fine Arts, Drama, Dance and Music - first
+  - country_entry_id: ITA-EDU-22
+    national_label_en: Higher education in Fine Arts, Drama, Dance and Music - first
       level programme (bachelor)
     national_label_local: Corsi accademici di Alta Formazione Artistica Musicale e
       Coreutica - 1° livello
@@ -239,7 +261,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Higher education in Fine Arts, Drama, Dance and Music - second
+  - country_entry_id: ITA-EDU-23
+    national_label_en: Higher education in Fine Arts, Drama, Dance and Music - second
       level (master) (including long first degree course in Restoration, 5 years )
     national_label_local: Corsi accademici di Alta Formazione Artistica Musicale e
       Coreutica - 2° livello
@@ -251,7 +274,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Post 1° level  programme - Higher education in Fine Arts, Drama,
+  - country_entry_id: ITA-EDU-24
+    national_label_en: Post 1° level  programme - Higher education in Fine Arts, Drama,
       Dance and Music
     national_label_local: Corsi accademici di Specializzazione/Perfezionamento dell'Alta
       Formazione Artistica Musicale e Coreutica - 1° livello
@@ -263,7 +287,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Higher level technical education
+  - country_entry_id: ITA-EDU-25
+    national_label_en: Higher level technical education
     national_label_local: Istruzione Tecnica Superiore (ITS)
     entry_age: 19
     duration_years: 2
@@ -273,7 +298,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Post 2° level  programme - Higher education in Fine Arts, Drama,
+  - country_entry_id: ITA-EDU-26
+    national_label_en: Post 2° level  programme - Higher education in Fine Arts, Drama,
       Dance and Music
     national_label_local: Corsi accademici di Specializzazione/Perfezionamento dell'Alta
       Formazione Artistica Musicale e Coreutica - 2° livello
@@ -285,7 +311,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: University - Research  Doctorate (PhD)
+  - country_entry_id: ITA-EDU-27
+    national_label_en: University - Research  Doctorate (PhD)
     national_label_local: Dottorato di ricerca
     entry_age: 24
     duration_years: 3
@@ -295,7 +322,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
-  - national_label_en: Higher education in Fine Arts, Drama, Dance and Music -  Advanced
+  - country_entry_id: ITA-EDU-28
+    national_label_en: Higher education in Fine Arts, Drama, Dance and Music -  Advanced
       research academic diploma
     national_label_local: Corsi accademici di Formazione alla Ricerca dell'Alta Formazione
       Artistica Musicale e Coreutica
@@ -317,7 +345,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-ITC
+  - country_entry_id: ITA-SUBNAT-01
+    survey_labels: 1-ITC
     survey_variables: subnatid
     gmd_subnatid1: ITA_2021_NUTS1_ITC
     gmd_subnatid2: ''
@@ -337,7 +366,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Nord-Ovest
     source_row: 7978
-  - survey_labels: 2-ITF
+  - country_entry_id: ITA-SUBNAT-02
+    survey_labels: 2-ITF
     survey_variables: subnatid
     gmd_subnatid1: ITA_2021_NUTS1_ITF
     gmd_subnatid2: ''
@@ -357,7 +387,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Sud
     source_row: 7979
-  - survey_labels: 3-ITG
+  - country_entry_id: ITA-SUBNAT-03
+    survey_labels: 3-ITG
     survey_variables: subnatid
     gmd_subnatid1: ITA_2021_NUTS1_ITG
     gmd_subnatid2: ''
@@ -377,7 +408,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Isole
     source_row: 7980
-  - survey_labels: 4-ITH
+  - country_entry_id: ITA-SUBNAT-04
+    survey_labels: 4-ITH
     survey_variables: subnatid
     gmd_subnatid1: ITA_2021_NUTS1_ITH
     gmd_subnatid2: ''
@@ -397,7 +429,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Nord-Est
     source_row: 7981
-  - survey_labels: 5-ITI
+  - country_entry_id: ITA-SUBNAT-05
+    survey_labels: 5-ITI
     survey_variables: subnatid
     gmd_subnatid1: ITA_2021_NUTS1_ITI
     gmd_subnatid2: ''
@@ -427,7 +460,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: allaccio_alle_fogne
+  - country_entry_id: ITA-SAN-01
+    source_category_code: allaccio_alle_fogne
     national_label_en: allaccio alle fogne
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -437,7 +471,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: no_allaccio_alle_fogne
+  - country_entry_id: ITA-SAN-02
+    source_category_code: no_allaccio_alle_fogne
     national_label_en: no allaccio alle fogne
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -457,7 +492,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: acqua_potabile_fuori_dall_abitazione
+  - country_entry_id: ITA-WAS-01
+    source_category_code: acqua_potabile_fuori_dall_abitazione
     national_label_en: acqua potabile fuori dall'abitazione
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -467,7 +503,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: acqua_potabile_nell_abitazione
+  - country_entry_id: ITA-WAS-02
+    source_category_code: acqua_potabile_nell_abitazione
     national_label_en: acqua potabile nell'abitazione
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling

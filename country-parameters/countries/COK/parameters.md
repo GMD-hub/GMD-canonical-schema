@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early Childhood Education
+  - country_entry_id: COK-EDU-01
+    national_label_en: Early Childhood Education
     national_label_local: Early Childhood Education
     entry_age: 3
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary Education
+  - country_entry_id: COK-EDU-02
+    national_label_en: Primary Education
     national_label_local: Primary Education
     entry_age: 5
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Secondary Education (Year 7 to Year 10)
+  - country_entry_id: COK-EDU-03
+    national_label_en: Secondary Education (Year 7 to Year 10)
     national_label_local: Secondary Education (Year 7 to Year 10)
     entry_age: 11
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Senior Secondary Education (Year 11)
+  - country_entry_id: COK-EDU-04
+    national_label_en: Senior Secondary Education (Year 11)
     national_label_local: Senior Secondary Education (Year 11)
     entry_age: 15
     duration_years: 1
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Senior Secondary Education (Year 12 )
+  - country_entry_id: COK-EDU-05
+    national_label_en: Senior Secondary Education (Year 12 )
     national_label_local: Senior Secondary Education (Year 12 )
     entry_age: 16
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Senior Secondary Educaiton (Year 13)
+  - country_entry_id: COK-EDU-06
+    national_label_en: Senior Secondary Educaiton (Year 13)
     national_label_local: Senior Secondary Educaiton (Year 13)
     entry_age: 17
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Certificate
+  - country_entry_id: COK-EDU-07
+    national_label_en: Certificate
     national_label_local: Faculty of hospitality & tourism, food & beverage
     entry_age: 17
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Certificate
+  - country_entry_id: COK-EDU-08
+    national_label_en: Certificate
     national_label_local: Faculty of  Trade and Technology
     entry_age: 17
     duration_years: 1
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: University Diploma  distance courses (in various fields)
+  - country_entry_id: COK-EDU-09
+    national_label_en: University Diploma  distance courses (in various fields)
     national_label_local: University Diploma distance courses (in various fields)
     entry_age: 17
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: University Education - Bachelor distance courses (in various
+  - country_entry_id: COK-EDU-10
+    national_label_en: University Education - Bachelor distance courses (in various
       fields)
     national_label_local: University - Bachelor distance courses (various fields)
     entry_age: 18
@@ -111,7 +121,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: University Master Distance courses (in various fields)
+  - country_entry_id: COK-EDU-11
+    national_label_en: University Master Distance courses (in various fields)
     national_label_local: University Master Distance courses (various fields)
     entry_age: 21
     duration_years: 4

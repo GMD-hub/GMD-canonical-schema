@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood education
+  - country_entry_id: AZE-EDU-01
+    national_label_en: Early childhood education
     national_label_local: məktəbəqədər təhsil
     entry_age: 1
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Early childhood education
+  - country_entry_id: AZE-EDU-02
+    national_label_en: Early childhood education
     national_label_local: məktəbəqədər təhsil
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Early childhood education (preparatory Grade)
+  - country_entry_id: AZE-EDU-03
+    national_label_en: Early childhood education (preparatory Grade)
     national_label_local: məktəbəqədər təhsil                                                 (hazırlıq
       sinifi)
     entry_age: 5
@@ -41,7 +44,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: elementary education
+  - country_entry_id: AZE-EDU-04
+    national_label_en: elementary education
     national_label_local: ibtidai təhsil
     entry_age: 6
     duration_years: 4
@@ -51,7 +55,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: general secondary education
+  - country_entry_id: AZE-EDU-05
+    national_label_en: general secondary education
     national_label_local: ümumi orta təhsil
     entry_age: 10
     duration_years: 5
@@ -61,7 +66,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: complete secondary education
+  - country_entry_id: AZE-EDU-06
+    national_label_en: complete secondary education
     national_label_local: tam orta təhsil
     entry_age: 15
     duration_years: 2
@@ -71,7 +77,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: initial vocational education combined with complete secondary
+  - country_entry_id: AZE-EDU-07
+    national_label_en: initial vocational education combined with complete secondary
       education
     national_label_local: ilk peşə-ixtisas təhsili tam orta təhsil ilə birlikdə
     entry_age: 15
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: initial vocational education
+  - country_entry_id: AZE-EDU-08
+    national_label_en: initial vocational education
     national_label_local: ilk peşə-ixtisas təhsili
     entry_age: 17
     duration_years: 1
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: 1st-2nd years of vocational secondary education
+  - country_entry_id: AZE-EDU-09
+    national_label_en: 1st-2nd years of vocational secondary education
     national_label_local: orta ixtisas təhsili 1-2-ci kurslar
     entry_age: 15
     duration_years: 2
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: 3rd-4th years of vocational specialized education
+  - country_entry_id: AZE-EDU-10
+    national_label_en: 3rd-4th years of vocational specialized education
     national_label_local: orta ixtisas təhsili 3-4 kurslar
     entry_age: 17
     duration_years: 2
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: vocational specialized education
+  - country_entry_id: AZE-EDU-11
+    national_label_en: vocational specialized education
     national_label_local: orta ixtisas təhsili
     entry_age: 17
     duration_years: 2
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: the first stage of tertiary education - bachelor's degree
+  - country_entry_id: AZE-EDU-12
+    national_label_en: the first stage of tertiary education - bachelor's degree
     national_label_local: ali təhsilin birinci mərhələsi - bakalavriat
     entry_age: 17
     duration_years: 4
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Long-term first degree (5 years or more) (Master's or equivalent)
+  - country_entry_id: AZE-EDU-13
+    national_label_en: Long-term first degree (5 years or more) (Master's or equivalent)
     national_label_local: Uzunmüddətli birinci dərəcə (5 ildən az olmasın) (Magistr
       və ya ekvivalenti)
     entry_age: 17
@@ -143,7 +156,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: second stage of tertiary education - master's degree
+  - country_entry_id: AZE-EDU-14
+    national_label_en: second stage of tertiary education - master's degree
     national_label_local: ali təhsilin ikinci mərhələsi - maqistratura
     entry_age: 21
     duration_years: 2
@@ -153,7 +167,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: doctoral studies for the preparation of a doctor of philosophy
+  - country_entry_id: AZE-EDU-15
+    national_label_en: doctoral studies for the preparation of a doctor of philosophy
     national_label_local: fəlsəfə doktoru hazırlığı üzrə doktorantura
     entry_age: 23
     duration_years: 3
@@ -163,7 +178,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: doctoral studies for the preparation of doctors of sciences
+  - country_entry_id: AZE-EDU-16
+    national_label_en: doctoral studies for the preparation of doctors of sciences
       (PhD)
     national_label_local: elmlər doktoru hazırlığı üzrə doktorantura
     entry_age: 26
@@ -184,7 +200,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 – Absheron | 1 – ab�eron
+  - country_entry_id: AZE-SUBNAT-01
+    survey_labels: 1 – Absheron | 1 – ab�eron
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAULx_147297
     gmd_subnatid2: ''
@@ -204,7 +221,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Absheron
     source_row: 511
-  - survey_labels: 0 – Nakhchyvan | 0 – nax��van mr | 1 – nax��van mr
+  - country_entry_id: AZE-SUBNAT-02
+    survey_labels: 0 – Nakhchyvan | 0 – nax��van mr | 1 – nax��van mr
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147304
     gmd_subnatid2: ''
@@ -224,7 +242,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhchivan
     source_row: 512
-  - survey_labels: 2 – Ganja-Gazakh | 2 – g�nc�- qazax | 4 – g�nc�-qazax
+  - country_entry_id: AZE-SUBNAT-03
+    survey_labels: 2 – Ganja-Gazakh | 2 – g�nc�- qazax | 4 – g�nc�-qazax
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147300
     gmd_subnatid2: ''
@@ -244,7 +263,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ganja-Gazakh
     source_row: 513
-  - survey_labels: 3 – Shaki-Zagatala | 3 – ��ki- zaqatala | 5 – ��ki-zaqatala
+  - country_entry_id: AZE-SUBNAT-04
+    survey_labels: 3 – Shaki-Zagatala | 3 – ��ki- zaqatala | 5 – ��ki-zaqatala
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147305
     gmd_subnatid2: ''
@@ -264,7 +284,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shaki-Zaqatala
     source_row: 514
-  - survey_labels: 4 – Lankaran | 4 – l�nk�ran- astara | 6 – l�nk�ran-astara
+  - country_entry_id: AZE-SUBNAT-05
+    survey_labels: 4 – Lankaran | 4 – l�nk�ran- astara | 6 – l�nk�ran-astara
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147303
     gmd_subnatid2: ''
@@ -284,7 +305,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lankaran
     source_row: 515
-  - survey_labels: 7 – Yukhary Garabagh | 7 – yuxari qaraba�
+  - country_entry_id: AZE-SUBNAT-06
+    survey_labels: 7 – Yukhary Garabagh | 7 – yuxari qaraba�
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147306
     gmd_subnatid2: ''
@@ -304,7 +326,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yukhari Garabakh
     source_row: 516
-  - survey_labels: 8 – Baku City | 8 – bak� | 9 – bak�
+  - country_entry_id: AZE-SUBNAT-07
+    survey_labels: 8 – Baku City | 8 – bak� | 9 – bak�
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL2_495
     gmd_subnatid2: ''
@@ -324,7 +347,8 @@ parameters:
     geo_nvar: ADM2_NAME
     geo_name: Baku
     source_row: 517
-  - survey_labels: 9 – Daghlig Shirvan | 9 – dagliq �irvan
+  - country_entry_id: AZE-SUBNAT-08
+    survey_labels: 9 – Daghlig Shirvan | 9 – dagliq �irvan
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147299
     gmd_subnatid2: ''
@@ -344,7 +368,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Daghlig Shirvan
     source_row: 518
-  - survey_labels: 5 – Guba-Khachmaz | 5 – quba- xacmaz
+  - country_entry_id: AZE-SUBNAT-09
+    survey_labels: 5 – Guba-Khachmaz | 5 – quba- xacmaz
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147301
     gmd_subnatid2: ''
@@ -364,7 +389,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Guba-Khachmaz
     source_row: 532
-  - survey_labels: 6 – Aran | 6 – aran
+  - country_entry_id: AZE-SUBNAT-10
+    survey_labels: 6 – Aran | 6 – aran
     survey_variables: subnatid
     gmd_subnatid1: AZE_2015_GAUL1_147298
     gmd_subnatid2: ''
@@ -394,7 +420,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: AZE-SAN-01
+    source_category_code: composting_toilet
     national_label_en: composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -404,7 +431,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: AZE-SAN-02
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: куда-то в другое место
     jmp_classification: Flush and pour flush > to elsewhere
@@ -414,7 +442,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: AZE-SAN-03
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -424,7 +453,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: AZE-SAN-04
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush and pour flush > to septic tank
@@ -434,7 +464,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: don_t_know_where
+  - country_entry_id: AZE-SAN-05
+    source_category_code: don_t_know_where
     national_label_en: Don't know where
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -444,7 +475,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_sewage_system_septic_tank
+  - country_entry_id: AZE-SAN-06
+    source_category_code: flush_to_sewage_system_septic_tank
     national_label_en: Flush to sewage system/ septic tank
     national_label_local: Туалеты со смывом
     jmp_classification: Flush/toilets
@@ -454,7 +486,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: AZE-SAN-07
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush - to somewhere else
     national_label_local: куда-то в другое место
     jmp_classification: Flush/toilets > to elsewhere
@@ -464,7 +497,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_pour_flush_flush_to_open_drain
+  - country_entry_id: AZE-SAN-08
+    source_category_code: flush_pour_flush_flush_to_open_drain
     national_label_en: 'flush / pour flush: flush to open drain'
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -474,7 +508,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: AZE-SAN-09
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush - to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -484,7 +519,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: AZE-SAN-10
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -494,7 +530,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: to_pit
+  - country_entry_id: AZE-SAN-11
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -504,7 +541,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: AZE-SAN-12
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush - to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -514,7 +552,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: to_septic_tank
+  - country_entry_id: AZE-SAN-13
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -524,7 +563,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_pour_flush_flush_to_dk_where
+  - country_entry_id: AZE-SAN-14
+    source_category_code: flush_pour_flush_flush_to_dk_where
     national_label_en: 'flush / pour flush: flush to dk where'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -534,7 +574,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket
+  - country_entry_id: AZE-SAN-15
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -544,7 +585,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: improved_pit_latrine
+  - country_entry_id: AZE-SAN-16
+    source_category_code: improved_pit_latrine
     national_label_en: Improved pit latrine
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -556,7 +598,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: AZE-SAN-17
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine - with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -568,7 +611,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: AZE-SAN-18
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -580,7 +624,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_pit_latrine_with_slab
+  - country_entry_id: AZE-SAN-19
+    source_category_code: pit_latrine_pit_latrine_with_slab
     national_label_en: 'pit latrine: pit latrine with slab'
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -591,7 +636,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: AZE-SAN-20
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -603,7 +649,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: AZE-SAN-21
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine - without slab / open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -615,7 +662,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: AZE-SAN-22
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab / Open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -627,7 +675,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
+  - country_entry_id: AZE-SAN-23
+    source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
     national_label_en: 'pit latrine: pit latrine without slab / open pit'
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -638,7 +687,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: AZE-SAN-24
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine
     national_label_local: Традиционная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -649,7 +699,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_ventilated_improved_pit_latrine
+  - country_entry_id: AZE-SAN-25
+    source_category_code: pit_latrine_ventilated_improved_pit_latrine
     national_label_en: 'pit latrine: ventilated improved pit latrine'
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -660,7 +711,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: AZE-SAN-26
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet, Hanging latrine
     national_label_local: Подвесной туалет/подвесная уборная
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
@@ -671,7 +723,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 125
-  - source_category_code: pour_flush_latrine
+  - country_entry_id: AZE-SAN-27
+    source_category_code: pour_flush_latrine
     national_label_en: Pour flush latrine
     national_label_local: Уборные со смывом
     jmp_classification: Latrines > Pour flush latrines
@@ -681,7 +734,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: AZE-SAN-28
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, Bush, Field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -691,7 +745,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: AZE-SAN-29
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/ bush/ field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -701,7 +756,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: AZE-SAN-30
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -711,7 +767,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: AZE-SAN-31
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -731,7 +788,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: AZE-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Защищённый родник
     jmp_classification: Ground water > Protected spring
@@ -741,7 +799,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: spring_protected_spring
+  - country_entry_id: AZE-WAS-02
+    source_category_code: spring_protected_spring
     national_label_en: 'spring: protected spring'
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -751,7 +810,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: dug_well_protected_well
+  - country_entry_id: AZE-WAS-03
+    source_category_code: dug_well_protected_well
     national_label_en: 'dug well: protected well'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -761,7 +821,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well
+  - country_entry_id: AZE-WAS-04
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -771,7 +832,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: AZE-WAS-05
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -781,7 +843,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tube_well_borehole
+  - country_entry_id: AZE-WAS-06
+    source_category_code: tube_well_borehole
     national_label_en: tube well / borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -791,7 +854,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: AZE-WAS-07
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -801,7 +865,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: AZE-WAS-08
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -811,7 +876,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: AZE-WAS-09
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: Tubewell/ borehole with pump
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -821,7 +887,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: spring_unprotected_spring
+  - country_entry_id: AZE-WAS-10
+    source_category_code: spring_unprotected_spring
     national_label_en: 'spring: unprotected spring'
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -831,7 +898,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: AZE-WAS-11
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Незащищённый родник
     jmp_classification: Ground water > Unprotected spring
@@ -841,7 +909,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: dug_well_unprotected_well
+  - country_entry_id: AZE-WAS-12
+    source_category_code: dug_well_unprotected_well
     national_label_en: 'dug well: unprotected well'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -851,7 +920,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: AZE-WAS-13
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -861,7 +931,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: AZE-WAS-14
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -871,7 +942,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: AZE-WAS-15
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Незащищённые колодцы или родники
     jmp_classification: Ground water > Unprotected wells or springs
@@ -881,7 +953,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: cart_with_small_tank_or_drum
+  - country_entry_id: AZE-WAS-16
+    source_category_code: cart_with_small_tank_or_drum
     national_label_en: Cart with small tank or drum
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -891,7 +964,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: tanker_truck_cartwith_small_tank
+  - country_entry_id: AZE-WAS-17
+    source_category_code: tanker_truck_cartwith_small_tank
     national_label_en: Tanker truck, cartwith small tank
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -901,7 +975,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: AZE-WAS-18
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker, truck, vendor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -911,7 +986,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: AZE-WAS-19
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -921,7 +997,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: AZE-WAS-20
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -931,7 +1008,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_missing
+  - country_entry_id: AZE-WAS-21
+    source_category_code: other_missing
     national_label_en: Other, missing
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -941,7 +1019,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: AZE-WAS-22
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -951,7 +1030,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_with_improved_source_for_cooking_washing
+  - country_entry_id: AZE-WAS-23
+    source_category_code: bottled_water_with_improved_source_for_cooking_washing
     national_label_en: Bottled water, with improved source for cooking/washing
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -961,7 +1041,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: packaged_water_water_bottles
+  - country_entry_id: AZE-WAS-24
+    source_category_code: packaged_water_water_bottles
     national_label_en: 'packaged water: water bottles'
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -971,7 +1052,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: AZE-WAS-25
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Вода в пакетах
     jmp_classification: Packaged water > Sachet water
@@ -981,7 +1063,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: bottled_water_non_improved_source_for_cooking_washing
+  - country_entry_id: AZE-WAS-26
+    source_category_code: bottled_water_non_improved_source_for_cooking_washing
     national_label_en: Bottled water, non-improved source for cooking/washing
     national_label_local: Вода в пакетах
     jmp_classification: Packaged water > Sachet water
@@ -991,7 +1074,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater_collection
+  - country_entry_id: AZE-WAS-27
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1001,7 +1085,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: pond_river_or_stream
+  - country_entry_id: AZE-WAS-28
+    source_category_code: pond_river_or_stream
     national_label_en: Pond, river or stream
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -1011,7 +1096,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: AZE-WAS-29
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -1021,7 +1107,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_lake_canal
+  - country_entry_id: AZE-WAS-30
+    source_category_code: surface_water_river_lake_canal
     national_label_en: surface water (river, lake, canal)
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1031,7 +1118,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: AZE-WAS-31
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -1041,7 +1129,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: AZE-WAS-32
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'piped water: piped to neighbour'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1051,7 +1140,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_into_dwelling_yard_plot
+  - country_entry_id: AZE-WAS-33
+    source_category_code: piped_water_into_dwelling_yard_plot
     national_label_en: Piped water into dwelling, yard,plot
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -1061,7 +1151,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: AZE-WAS-34
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1071,7 +1162,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_into_house_apartment
+  - country_entry_id: AZE-WAS-35
+    source_category_code: piped_water_piped_into_house_apartment
     national_label_en: 'piped water: piped into house / apartment'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1081,7 +1173,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_compound_yard_or_plot
+  - country_entry_id: AZE-WAS-36
+    source_category_code: piped_into_compound_yard_or_plot
     national_label_en: Piped into compound, yard or plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1091,7 +1184,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: AZE-WAS-37
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1101,7 +1195,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_piped_to_yard_plot
+  - country_entry_id: AZE-WAS-38
+    source_category_code: piped_water_piped_to_yard_plot
     national_label_en: 'piped water: piped to yard / plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1111,7 +1206,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_public_tap_standpipe
+  - country_entry_id: AZE-WAS-39
+    source_category_code: piped_water_public_tap_standpipe
     national_label_en: 'piped water: public tap / standpipe'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1121,7 +1217,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: AZE-WAS-40
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -1131,7 +1228,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: AZE-WAS-41
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap / standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -1141,7 +1239,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: AZE-WAS-42
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

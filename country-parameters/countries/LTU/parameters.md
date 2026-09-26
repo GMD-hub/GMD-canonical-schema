@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Primary education programmes
+  - country_entry_id: LTU-EDU-01
+    national_label_en: Primary education programmes
     national_label_local: Pradinio ugdymo programos
     entry_age: 7
     duration_years: 4
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
-  - national_label_en: General lower secondary (basic) education programmes
+  - country_entry_id: LTU-EDU-02
+    national_label_en: General lower secondary (basic) education programmes
     national_label_local: Pagrindinio ugdymo programos
     entry_age: 11
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
-  - national_label_en: Individualised programmes of general lower secondary education
+  - country_entry_id: LTU-EDU-03
+    national_label_en: Individualised programmes of general lower secondary education
     national_label_local: Pagrindinio ugdymo individualizuotos programos
     entry_age: 11
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Vocational education programmes for person without basic education
+  - country_entry_id: LTU-EDU-04
+    national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification and basic education
     national_label_local: Profesinio mokymo programos kartu su pagrindinio ugdymo
       programomis
@@ -52,7 +56,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Vocational education programmes for person without basic education
+  - country_entry_id: LTU-EDU-05
+    national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification
     national_label_local: Profesinio mokymo programos, neįgyjant pagrindinio išsilavinimo
     entry_age: 14
@@ -63,7 +68,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: General lower secondary (basic) education programme for adults
+  - country_entry_id: LTU-EDU-06
+    national_label_en: General lower secondary (basic) education programme for adults
     national_label_local: Suaugusiųjų pagrindinio ugdymo programa
     entry_age: 0
     duration_years: 6
@@ -73,7 +79,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: General upper secondary education programmes
+  - country_entry_id: LTU-EDU-07
+    national_label_en: General upper secondary education programmes
     national_label_local: Vidurinio ugdymo programos
     entry_age: 17
     duration_years: 2
@@ -83,7 +90,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: General secondary educational programmes for children of special
+  - country_entry_id: LTU-EDU-08
+    national_label_en: General secondary educational programmes for children of special
       needs
     national_label_local: Socialinių įgūdžių ugdymo programos
     entry_age: 17
@@ -94,7 +102,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Vocational education programmes for person without basic education
+  - country_entry_id: LTU-EDU-09
+    national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification and secondary education
     national_label_local: Profesinio mokymo programos kartu su vidurinio ugdymo programomis
     entry_age: 17
@@ -105,7 +114,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Vocational education programmes for person without basic education
+  - country_entry_id: LTU-EDU-10
+    national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification
     national_label_local: Profesinio mokymo programos, neįgyjant vidurinio išsilavinimo
     entry_age: 17
@@ -116,7 +126,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: General secondary education programmes for adults
+  - country_entry_id: LTU-EDU-11
+    national_label_en: General secondary education programmes for adults
     national_label_local: Suaugusiųjų vidurinio ugdymo programa
     entry_age: 0
     duration_years: 2
@@ -126,7 +137,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational education programmes for persons with secondary
+  - country_entry_id: LTU-EDU-12
+    national_label_en: Vocational education programmes for persons with secondary
       education
     national_label_local: Profesinio mokymo programos turint vidurinį išsilavinimą
     entry_age: 19
@@ -137,7 +149,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Higher non-university studies
+  - country_entry_id: LTU-EDU-13
+    national_label_en: Higher non-university studies
     national_label_local: Profesinio bakalauro studijų programos
     entry_age: 19
     duration_years: 3
@@ -147,7 +160,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Bachelor's studies
+  - country_entry_id: LTU-EDU-14
+    national_label_en: Bachelor's studies
     national_label_local: Bakalauro studijų programos
     entry_age: 19
     duration_years: 4
@@ -157,7 +171,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Non-degree studies
+  - country_entry_id: LTU-EDU-15
+    national_label_en: Non-degree studies
     national_label_local: Laipsnio nesuteikiančios studijų programos
     entry_age: 23
     duration_years: 1
@@ -167,7 +182,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Master's studies
+  - country_entry_id: LTU-EDU-16
+    national_label_en: Master's studies
     national_label_local: Magistrantūros studijų programos
     entry_age: 23
     duration_years: 2
@@ -177,7 +193,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Integrated studies
+  - country_entry_id: LTU-EDU-17
+    national_label_en: Integrated studies
     national_label_local: Vientisųjų studijų programos
     entry_age: 19
     duration_years: 6
@@ -187,7 +204,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Medical residency
+  - country_entry_id: LTU-EDU-18
+    national_label_en: Medical residency
     national_label_local: Rezidentūros programos
     entry_age: 25
     duration_years: 1
@@ -197,7 +215,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Doctorate studies
+  - country_entry_id: LTU-EDU-19
+    national_label_en: Doctorate studies
     national_label_local: Doktorantūra
     entry_age: 25
     duration_years: 4

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nursery school
+  - country_entry_id: CZE-EDU-01
+    national_label_en: Nursery school
     national_label_local: Mateřská škola
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Preparatory classes for socially disadvantaged children
+  - country_entry_id: CZE-EDU-02
+    national_label_en: Preparatory classes for socially disadvantaged children
     national_label_local: Přípravné třídy pro děti se sociálním znevýhodněním
     entry_age: 6
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Preparatory stage of special basic school
+  - country_entry_id: CZE-EDU-03
+    national_label_en: Preparatory stage of special basic school
     national_label_local: Přípravný stupeň základní školy speciální
     entry_age: 6
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Basic school – 1st stage
+  - country_entry_id: CZE-EDU-04
+    national_label_en: Basic school – 1st stage
     national_label_local: Základní škola – 1. stupeň
     entry_age: 6
     duration_years: 5
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Special basic school – 1st stage
+  - country_entry_id: CZE-EDU-05
+    national_label_en: Special basic school – 1st stage
     national_label_local: Základní škola speciální – 1. stupeň
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Basic school - Home schooling (1st stage)
+  - country_entry_id: CZE-EDU-06
+    national_label_en: Basic school - Home schooling (1st stage)
     national_label_local: Základní škola - individuální vzdělávání (1. stupeň)
     entry_age: 6
     duration_years: 5
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Special basic school – 1st stage - education of pupils suffering
+  - country_entry_id: CZE-EDU-07
+    national_label_en: Special basic school – 1st stage - education of pupils suffering
       from serious mental disability
     national_label_local: Základní škola - vzdělávání žáků s hlubokým mentálním postižením
       (1. stupeň)
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: Basic school – 2nd stage
+  - country_entry_id: CZE-EDU-08
+    national_label_en: Basic school – 2nd stage
     national_label_local: Základní škola – 2. stupeň
     entry_age: 11
     duration_years: 4
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: 1- or 2-years special vocational school
+  - country_entry_id: CZE-EDU-09
+    national_label_en: 1- or 2-years special vocational school
     national_label_local: Praktická škola 1-2letá
     entry_age: 16
     duration_years: 1
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Courses for completing basic education
+  - country_entry_id: CZE-EDU-10
+    national_label_en: Courses for completing basic education
     national_label_local: Kursy pro získání základního vzdělání
     entry_age: 15
     duration_years: 1
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 14
-  - national_label_en: Special basic school – 2nd stage
+  - country_entry_id: CZE-EDU-11
+    national_label_en: Special basic school – 2nd stage
     national_label_local: Základní škola speciální – 2. stupeň
     entry_age: 12
     duration_years: 4
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 15
-  - national_label_en: '"Gymnasium" - lower stage of 8-years courses (1st to 4th grade)'
+  - country_entry_id: CZE-EDU-12
+    national_label_en: '"Gymnasium" - lower stage of 8-years courses (1st to 4th grade)'
     national_label_local: 8leté gymnázium - nižší stupeň (1.-4. ročník)
     entry_age: 11
     duration_years: 4
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 16
-  - national_label_en: '"Gymnasium" - lower stage of 6-years courses (1st and 2nd
+  - country_entry_id: CZE-EDU-13
+    national_label_en: '"Gymnasium" - lower stage of 6-years courses (1st and 2nd
       grade)'
     national_label_local: 6leté gymnázium - nižší stupeň (1.-2. ročník)
     entry_age: 13
@@ -143,7 +156,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 17
-  - national_label_en: Conservatoire - lower stage of 8-years courses (1st to 4th
+  - country_entry_id: CZE-EDU-14
+    national_label_en: Conservatoire - lower stage of 8-years courses (1st to 4th
       grade)
     national_label_local: 8letý obor konzervatoře - 1.-4. ročník
     entry_age: 11
@@ -154,7 +168,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 18
-  - national_label_en: Special basic school – 2nd stage - education of pupils suffering
+  - country_entry_id: CZE-EDU-15
+    national_label_en: Special basic school – 2nd stage - education of pupils suffering
       from serious mental disability
     national_label_local: Základní škola - vzdělávání žáků s hlubokým mentálním postižením
       (2. stupeň)
@@ -166,7 +181,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 19
-  - national_label_en: Basic school - Home schooling (2nd stage)
+  - country_entry_id: CZE-EDU-16
+    national_label_en: Basic school - Home schooling (2nd stage)
     national_label_local: Základní škola - individuální vzdělávání (2. stupeň)
     entry_age: 11
     duration_years: 4
@@ -176,7 +192,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 20
-  - national_label_en: '"Gymnasium" - upper stage of 8-years courses (5th to 8th grade)'
+  - country_entry_id: CZE-EDU-17
+    national_label_en: '"Gymnasium" - upper stage of 8-years courses (5th to 8th grade)'
     national_label_local: 8leté gymnázium - vyšší stupeň (5.-8. ročník)
     entry_age: 15
     duration_years: 4
@@ -186,7 +203,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: '"Gymnasium" - upper stage fo 6-years courses (3rd to 6th grade)'
+  - country_entry_id: CZE-EDU-18
+    national_label_en: '"Gymnasium" - upper stage fo 6-years courses (3rd to 6th grade)'
     national_label_local: 6leté gymnázium - vyšší stupeň (3.-6. ročník)
     entry_age: 15
     duration_years: 4
@@ -196,7 +214,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: '"Gymnasium" – 4-years courses'
+  - country_entry_id: CZE-EDU-19
+    national_label_en: '"Gymnasium" – 4-years courses'
     national_label_local: 4leté gymnázium
     entry_age: 15
     duration_years: 4
@@ -206,7 +225,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Study of selected subjects
+  - country_entry_id: CZE-EDU-20
+    national_label_en: Study of selected subjects
     national_label_local: Studium jednotlivých předmětů a ucelených částí učiva
     entry_age: 15
     duration_years: 1
@@ -216,7 +236,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
-  - national_label_en: Secondary education courses without maturita exam
+  - country_entry_id: CZE-EDU-21
+    national_label_en: Secondary education courses without maturita exam
     national_label_local: Střední vzdělání
     entry_age: 15
     duration_years: 3
@@ -226,7 +247,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
-  - national_label_en: Secondary education courses with VET certificate
+  - country_entry_id: CZE-EDU-22
+    national_label_en: Secondary education courses with VET certificate
     national_label_local: Střední vzdělání s výučním listem
     entry_age: 15
     duration_years: 3
@@ -236,7 +258,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
-  - national_label_en: Secondary technical and vocational courses with maturita exam
+  - country_entry_id: CZE-EDU-23
+    national_label_en: Secondary technical and vocational courses with maturita exam
     national_label_local: Střední vzdělání s maturitní zkouškou (odborné)
     entry_age: 15
     duration_years: 4
@@ -246,7 +269,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
-  - national_label_en: Secondary education courses with VET certificate – 2-years
+  - country_entry_id: CZE-EDU-24
+    national_label_en: Secondary education courses with VET certificate – 2-years
       courses
     national_label_local: Střední vzdělání s výučním listem - 2leté obory
     entry_age: 15
@@ -257,7 +281,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 28
-  - national_label_en: Conservatoire - middle stage of 8-years courses (5th and 6th
+  - country_entry_id: CZE-EDU-25
+    national_label_en: Conservatoire - middle stage of 8-years courses (5th and 6th
       grade)
     national_label_local: 8letý obor konzervatoře - 5.-6. ročník
     entry_age: 15
@@ -268,7 +293,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 29
-  - national_label_en: Conservatoire - lower stage of 6-years courses (1st to 4th
+  - country_entry_id: CZE-EDU-26
+    national_label_en: Conservatoire - lower stage of 6-years courses (1st to 4th
       grade)
     national_label_local: 6letý obor konzervatoře - 1.-4. ročník
     entry_age: 15
@@ -279,7 +305,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 30
-  - national_label_en: Lyceum
+  - country_entry_id: CZE-EDU-27
+    national_label_en: Lyceum
     national_label_local: Lyceum
     entry_age: 15
     duration_years: 4
@@ -289,7 +316,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 31
-  - national_label_en: Language schools with certificate of Ministry of Education
+  - country_entry_id: CZE-EDU-28
+    national_label_en: Language schools with certificate of Ministry of Education
       (post-secondary courses)
     national_label_local: Jazyková škola (pomaturirní studium)
     entry_age: 19
@@ -300,7 +328,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: 'Universities: the second qualification for graduates from
+  - country_entry_id: CZE-EDU-29
+    national_label_en: 'Universities: the second qualification for graduates from
       upper secondary education'
     national_label_local: 'Další vzdělávání na vysoké škole: pro absolventy SŠ'
     entry_age: 19
@@ -311,7 +340,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: Follow-up courses (for graduates of secondary education courses
+  - country_entry_id: CZE-EDU-30
+    national_label_en: Follow-up courses (for graduates of secondary education courses
       without maturita exam or secondary education courses with VET certificate)
     national_label_local: Nástavbové studium
     entry_age: 18
@@ -322,7 +352,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 34
-  - national_label_en: Shortened courses leading to apprenticeship certificate (second
+  - country_entry_id: CZE-EDU-31
+    national_label_en: Shortened courses leading to apprenticeship certificate (second
       qualification for graduates of upper secondary education with VET certificate
       or maturita exam)
     national_label_local: Zkrácené studium s výučním listem
@@ -334,7 +365,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 35
-  - national_label_en: Shortened courses leading to maturita exam (second qualification
+  - country_entry_id: CZE-EDU-32
+    national_label_en: Shortened courses leading to maturita exam (second qualification
       for graduates of upper secondary education with maturita exam)
     national_label_local: Zkrácené studium s maturitní zkouškou
     entry_age: 19
@@ -345,7 +377,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 36
-  - national_label_en: Courses for retraining, vocational type
+  - country_entry_id: CZE-EDU-33
+    national_label_en: Courses for retraining, vocational type
     national_label_local: Rekvalifikační kursy
     entry_age: 18
     duration_years: 0
@@ -355,7 +388,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
-  - national_label_en: Courses for retraining, vocational type, with VET certificate
+  - country_entry_id: CZE-EDU-34
+    national_label_en: Courses for retraining, vocational type, with VET certificate
     national_label_local: Rekvalifikační kursy s výučním listem
     entry_age: 19
     duration_years: 1
@@ -365,7 +399,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
-  - national_label_en: Post-secondary courses, vocational type
+  - country_entry_id: CZE-EDU-35
+    national_label_en: Post-secondary courses, vocational type
     national_label_local: Pomaturitní studium
     entry_age: 19
     duration_years: 1
@@ -375,7 +410,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
-  - national_label_en: Conservatoire - upper stage of 8-years courses (7th and 8th
+  - country_entry_id: CZE-EDU-36
+    national_label_en: Conservatoire - upper stage of 8-years courses (7th and 8th
       grade)
     national_label_local: 8letý obor konzervatoře - 7.-8. ročník
     entry_age: 17
@@ -386,7 +422,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 40
-  - national_label_en: Conservatoire - upper stage of 6-years (5th and 6th grade)
+  - country_entry_id: CZE-EDU-37
+    national_label_en: Conservatoire - upper stage of 6-years (5th and 6th grade)
     national_label_local: 6letý obor konzervatoře - 5.-6. ročník
     entry_age: 19
     duration_years: 2
@@ -396,7 +433,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 41
-  - national_label_en: Higher technical school
+  - country_entry_id: CZE-EDU-38
+    national_label_en: Higher technical school
     national_label_local: Vyšší odborná škola – 3-and 4-years courses
     entry_age: 19
     duration_years: 3
@@ -406,7 +444,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
-  - national_label_en: Bachelor study
+  - country_entry_id: CZE-EDU-39
+    national_label_en: Bachelor study
     national_label_local: Bakalářské studium
     entry_age: 19
     duration_years: 3
@@ -416,7 +455,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 43
-  - national_label_en: Master study (long 5-years programmes)
+  - country_entry_id: CZE-EDU-40
+    national_label_en: Master study (long 5-years programmes)
     national_label_local: Magisterské studium (dlouhé 5–6leté programy)
     entry_age: 19
     duration_years: 5
@@ -426,7 +466,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 44
-  - national_label_en: Master study (short 2- to 3-years follow-up programmes)
+  - country_entry_id: CZE-EDU-41
+    national_label_en: Master study (short 2- to 3-years follow-up programmes)
     national_label_local: Magisterské navazující studium (2–3leté)
     entry_age: 22
     duration_years: 2
@@ -436,7 +477,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 45
-  - national_label_en: 'Universities: special courses for bachelors and graduates
+  - country_entry_id: CZE-EDU-42
+    national_label_en: 'Universities: special courses for bachelors and graduates
       of higher technical schools'
     national_label_local: 'Další vzdělávání na vysoké škole: pro bakaláře a absolventy
       VOŠ'
@@ -448,7 +490,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 46
-  - national_label_en: 'Universities: special courses for masters'
+  - country_entry_id: CZE-EDU-43
+    national_label_en: 'Universities: special courses for masters'
     national_label_local: 'Další vzdělávání na vysoké škole: pro absolventy magisterských
       studijních programu.'
     entry_age: 24
@@ -459,7 +502,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 47
-  - national_label_en: Doctoral study
+  - country_entry_id: CZE-EDU-44
+    national_label_en: Doctoral study
     national_label_local: Doktorské studium
     entry_age: 24
     duration_years: 3
@@ -479,7 +523,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-CZ01
+  - country_entry_id: CZE-SUBNAT-01
+    survey_labels: 1-CZ01
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ01
     gmd_subnatid2: ''
@@ -499,7 +544,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Praha
     source_row: 3327
-  - survey_labels: 2-CZ02
+  - country_entry_id: CZE-SUBNAT-02
+    survey_labels: 2-CZ02
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ02
     gmd_subnatid2: ''
@@ -519,7 +565,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Střední Čechy
     source_row: 3328
-  - survey_labels: 3-CZ03
+  - country_entry_id: CZE-SUBNAT-03
+    survey_labels: 3-CZ03
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ03
     gmd_subnatid2: ''
@@ -539,7 +586,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Jihozápad
     source_row: 3329
-  - survey_labels: 4-CZ04
+  - country_entry_id: CZE-SUBNAT-04
+    survey_labels: 4-CZ04
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ04
     gmd_subnatid2: ''
@@ -559,7 +607,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Severozápad
     source_row: 3330
-  - survey_labels: 5-CZ05
+  - country_entry_id: CZE-SUBNAT-05
+    survey_labels: 5-CZ05
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ05
     gmd_subnatid2: ''
@@ -579,7 +628,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Severovýchod
     source_row: 3331
-  - survey_labels: 6-CZ06
+  - country_entry_id: CZE-SUBNAT-06
+    survey_labels: 6-CZ06
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ06
     gmd_subnatid2: ''
@@ -599,7 +649,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Jihovýchod
     source_row: 3332
-  - survey_labels: 7-CZ07
+  - country_entry_id: CZE-SUBNAT-07
+    survey_labels: 7-CZ07
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ07
     gmd_subnatid2: ''
@@ -619,7 +670,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Střední Morava
     source_row: 3333
-  - survey_labels: 8-CZ08
+  - country_entry_id: CZE-SUBNAT-08
+    survey_labels: 8-CZ08
     survey_variables: subnatid
     gmd_subnatid1: CZE_2021_NUTS2_CZ08
     gmd_subnatid2: ''
@@ -649,7 +701,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_to_piped_sewage_system
+  - country_entry_id: CZE-SAN-01
+    source_category_code: flush_to_piped_sewage_system
     national_label_en: Flush to piped sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -659,7 +712,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: CZE-SAN-02
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -669,7 +723,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: covered_dry_latrine_with_privacy
+  - country_entry_id: CZE-SAN-03
+    source_category_code: covered_dry_latrine_with_privacy
     national_label_en: Covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -680,7 +735,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pour_flush_latrine
+  - country_entry_id: CZE-SAN-04
+    source_category_code: pour_flush_latrine
     national_label_en: Pour flush latrine
     national_label_local: Pour flush latrines
     jmp_classification: Latrines > Pour flush latrines
@@ -700,7 +756,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: CZE-WAS-01
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -710,7 +767,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: CZE-WAS-02
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -720,7 +778,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: CZE-WAS-03
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -730,7 +789,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: CZE-WAS-04
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -740,7 +800,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: CZE-WAS-05
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -750,7 +811,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: public_standpipe
+  - country_entry_id: CZE-WAS-06
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Learning and childcare
+  - country_entry_id: THA-EDU-01
+    national_label_en: Learning and childcare
     national_label_local: การศึกษาระดับปฐมวัย
     entry_age: 1
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary
+  - country_entry_id: THA-EDU-02
+    national_label_en: Pre-primary
     national_label_local: การศึกษาระดับก่อนประถมศึกษา
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary education
+  - country_entry_id: THA-EDU-03
+    national_label_en: Primary education
     national_label_local: การศึกษาระดับประถมศึกษา
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Primary Basic Education for Adults
+  - country_entry_id: THA-EDU-04
+    national_label_en: Primary Basic Education for Adults
     national_label_local: การศึกษานอกระบบ หลักสูตรชั้นประถมศึกษา
     entry_age: 15
     duration_years: 0
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Lower Secondary education (Grades 7-9)
+  - country_entry_id: THA-EDU-05
+    national_label_en: Lower Secondary education (Grades 7-9)
     national_label_local: การศึกษาระดับมัธยมศึกษาตอนต้น
     entry_age: 12
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Lower Secondary  Basic Education for Adults
+  - country_entry_id: THA-EDU-06
+    national_label_en: Lower Secondary  Basic Education for Adults
     national_label_local: การศึกษานอกระบบ หลักสูตรชั้นมัธยมศึกษาตอนต้น
     entry_age: 15
     duration_years: 0
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Upper Secondary education (Grades 10-12)
+  - country_entry_id: THA-EDU-07
+    national_label_en: Upper Secondary education (Grades 10-12)
     national_label_local: "การศึกษาระดับมัธยมศึกษาตอนปลาย \nประเภทสายสามัญ/วิชาการ"
     entry_age: 15
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Upper Secondary  Basic Education for Adults
+  - country_entry_id: THA-EDU-08
+    national_label_en: Upper Secondary  Basic Education for Adults
     national_label_local: การศึกษานอกระบบ หลักสูตรชั้นมัธยมศึกษาตอนปลาย
     entry_age: 15
     duration_years: 0
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Upper Secondary, Vocational Education and Training
+  - country_entry_id: THA-EDU-09
+    national_label_en: Upper Secondary, Vocational Education and Training
     national_label_local: |-
       การศึกษาระดับมัธยมศึกษาตอนปลาย
       ประเภทอาชีวศึกษา
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Education provided by other agencies in Upper Secondary
+  - country_entry_id: THA-EDU-10
+    national_label_en: Education provided by other agencies in Upper Secondary
     national_label_local: การจัดการศึกษาเฉพาะทาง หลักสูตรระดับมัธยมศึกษาตอนปลาย สายอาชีพ(ปวช.
     entry_age: 14
     duration_years: 3
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Diploma in other types of education
+  - country_entry_id: THA-EDU-11
+    national_label_en: Diploma in other types of education
     national_label_local: หลักสูตรอนุปริญญา
     entry_age: 18
     duration_years: 2
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Diploma in Technical education
+  - country_entry_id: THA-EDU-12
+    national_label_en: Diploma in Technical education
     national_label_local: "การศึกษาระดับอุดมศึกษา \nหลักสูตรต่ำกว่าปริญญาตรี ประเภทอาชีวศึกษา"
     entry_age: 18
     duration_years: 2
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Diploma in Vocational education
+  - country_entry_id: THA-EDU-13
+    national_label_en: Diploma in Vocational education
     national_label_local: 'การศึกษาระดับอุดมศึกษา ระดับต่ำกว่าปริญญา : ประกาศนียบัตรวิชาชีพชั้นสูง'
     entry_age: 18
     duration_years: 2
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Bachelor’s or equivalent Level, Vocational Education and Training
+  - country_entry_id: THA-EDU-14
+    national_label_en: Bachelor’s or equivalent Level, Vocational Education and Training
     national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรีต่อเนื่อง ประเภทอาชีวศึกษา
     entry_age: 20
     duration_years: 2
@@ -152,7 +166,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Bachelor’s or equivalent Level, General Education and Training
+  - country_entry_id: THA-EDU-15
+    national_label_en: Bachelor’s or equivalent Level, General Education and Training
     national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรีต่อเนื่อง ประเภทสามัญศึกษา
     entry_age: 20
     duration_years: 2
@@ -162,7 +177,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Bachelor's Degree - academic
+  - country_entry_id: THA-EDU-16
+    national_label_en: Bachelor's Degree - academic
     national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรี สายวิชาการ
     entry_age: 18
     duration_years: 4
@@ -172,7 +188,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Bachelor's Degree - professional
+  - country_entry_id: THA-EDU-17
+    national_label_en: Bachelor's Degree - professional
     national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรี สายวิชาชีพ
     entry_age: 18
     duration_years: 4
@@ -182,7 +199,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: |-
+  - country_entry_id: THA-EDU-18
+    national_label_en: |-
       Bachelor's Degree - teachers
       - architecture
       - engineer
@@ -195,7 +213,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Education provided by other agencies in Bachelor's Degree
+  - country_entry_id: THA-EDU-19
+    national_label_en: Education provided by other agencies in Bachelor's Degree
     national_label_local: การจัดการศึกษาเฉพาะทาง หลักสูตรระดับปริญญาตรี
     entry_age: 0
     duration_years: 4
@@ -205,7 +224,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Graduate Diploma
+  - country_entry_id: THA-EDU-20
+    national_label_en: Graduate Diploma
     national_label_local: ประกาศนียบัตรบัณฑิต
     entry_age: 22
     duration_years: 1
@@ -215,7 +235,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Bachelor's Degree - medical
+  - country_entry_id: THA-EDU-21
+    national_label_en: Bachelor's Degree - medical
     national_label_local: |-
       การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรี
       -สายแพทศาสตร์
@@ -227,7 +248,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Master's Degree
+  - country_entry_id: THA-EDU-22
+    national_label_en: Master's Degree
     national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาโท
     entry_age: 22
     duration_years: 2
@@ -237,7 +259,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Education provided by other agencies in Master's Degree
+  - country_entry_id: THA-EDU-23
+    national_label_en: Education provided by other agencies in Master's Degree
     national_label_local: การจัดการศึกษาเฉพาะทาง หลักสูตรระดับปริญญาโท
     entry_age: 0
     duration_years: 2
@@ -247,7 +270,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Higher Graduate Diploma
+  - country_entry_id: THA-EDU-24
+    national_label_en: Higher Graduate Diploma
     national_label_local: ประกาศนียบัตรบัณฑิตชั้นสูง
     entry_age: 24
     duration_years: 1
@@ -257,7 +281,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Doctorate Degree
+  - country_entry_id: THA-EDU-25
+    national_label_en: Doctorate Degree
     national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาเอก
     entry_age: 24
     duration_years: 3
@@ -277,7 +302,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-Bangkok Metropolis
+  - country_entry_id: THA-SUBNAT-01
+    survey_labels: 1-Bangkok Metropolis
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: THA_2015_GAULx_1
     gmd_subnatid2: ''
@@ -298,7 +324,8 @@ parameters:
     geo_name: Bangkok & Nakhon Pathom & Nonthaburi & Pathum Thani & Samut Prakarn
       & Samut Sakhon
     source_row: 15219
-  - survey_labels: 2-Central (Exclude 1)
+  - country_entry_id: THA-SUBNAT-02
+    survey_labels: 2-Central (Exclude 1)
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: THA_2015_GAULx_2
     gmd_subnatid2: ''
@@ -321,7 +348,8 @@ parameters:
       & Suphanburi & Chachoengsao & Chanthaburi & Chonburi & Phachinburi & Rayong
       & Sa Kaeo & Trad & Phra Nakhon Si Ayudhya
     source_row: 15220
-  - survey_labels: 3-North
+  - country_entry_id: THA-SUBNAT-03
+    survey_labels: 3-North
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: THA_2015_GAULx_3
     gmd_subnatid2: ''
@@ -343,7 +371,8 @@ parameters:
       Son & Nakhon Sawan & NanPhayao & Phetchabun & Phichit & Phitsanulok & Phrae
       & Sukhothai & Tak & Uthai Thani & Uttaradit
     source_row: 15221
-  - survey_labels: 4-Northeast
+  - country_entry_id: THA-SUBNAT-04
+    survey_labels: 4-Northeast
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: THA_2015_GAULx_4
     gmd_subnatid2: ''
@@ -366,7 +395,8 @@ parameters:
       & Nong Khai & Roi Et & Sakon Nakhon & Si Saket & Surin & Ubon Ratchathani &
       Udon Thani & Yasothon
     source_row: 15222
-  - survey_labels: 5-South
+  - country_entry_id: THA-SUBNAT-05
+    survey_labels: 5-South
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: THA_2015_GAULx_5
     gmd_subnatid2: ''
@@ -387,7 +417,8 @@ parameters:
     geo_name: Chumphon & Krabi & Nakhon Si Thammarat & Narathiwat & Pattani & Phangnga
       & Phatthalung & Phuket & Ranong & Satun & Songkhla & Surat Thani & TrangYala
     source_row: 15223
-  - survey_labels: 10-Bangkok
+  - country_entry_id: THA-SUBNAT-06
+    survey_labels: 10-Bangkok
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2853
@@ -407,7 +438,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bangkok
     source_row: 15234
-  - survey_labels: 11-Samut Prakan
+  - country_entry_id: THA-SUBNAT-07
+    survey_labels: 11-Samut Prakan
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2906
@@ -427,7 +459,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Samut Prakarn
     source_row: 15235
-  - survey_labels: 12-Nonthaburi
+  - country_entry_id: THA-SUBNAT-08
+    survey_labels: 12-Nonthaburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2885
@@ -447,7 +480,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nonthaburi
     source_row: 15236
-  - survey_labels: 13-Pathum Thani
+  - country_entry_id: THA-SUBNAT-09
+    survey_labels: 13-Pathum Thani
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2886
@@ -467,7 +501,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pathum Thani
     source_row: 15237
-  - survey_labels: 14-Phra Nakhon Si Ayu
+  - country_entry_id: THA-SUBNAT-10
+    survey_labels: 14-Phra Nakhon Si Ayu
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2896
@@ -487,7 +522,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phra Nakhon Si Ayudhya
     source_row: 15238
-  - survey_labels: 15-Ang Thong
+  - country_entry_id: THA-SUBNAT-11
+    survey_labels: 15-Ang Thong
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2852
@@ -507,7 +543,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ang Thong
     source_row: 15239
-  - survey_labels: 16-Lop Buri | 16-Lopburi
+  - country_entry_id: THA-SUBNAT-12
+    survey_labels: 16-Lop Buri | 16-Lopburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2871
@@ -527,7 +564,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lopburi
     source_row: 15240
-  - survey_labels: 17-Sing Buri | 17-Singburi
+  - country_entry_id: THA-SUBNAT-13
+    survey_labels: 17-Sing Buri | 17-Singburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2912
@@ -547,7 +585,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Singburi
     source_row: 15241
-  - survey_labels: 18-Chai Nat | 18-Chainat
+  - country_entry_id: THA-SUBNAT-14
+    survey_labels: 18-Chai Nat | 18-Chainat
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2856
@@ -567,7 +606,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chainat
     source_row: 15242
-  - survey_labels: 19-Saraburi
+  - country_entry_id: THA-SUBNAT-15
+    survey_labels: 19-Saraburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2909
@@ -587,7 +627,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Saraburi
     source_row: 15243
-  - survey_labels: 20-Chon Buri | 20-Chonburi
+  - country_entry_id: THA-SUBNAT-16
+    survey_labels: 20-Chon Buri | 20-Chonburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2861
@@ -607,7 +648,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chonburi
     source_row: 15244
-  - survey_labels: 21-Rayong
+  - country_entry_id: THA-SUBNAT-17
+    survey_labels: 21-Rayong
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2902
@@ -627,7 +669,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Rayong
     source_row: 15245
-  - survey_labels: 22-Chanthaburi
+  - country_entry_id: THA-SUBNAT-18
+    survey_labels: 22-Chanthaburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2858
@@ -647,7 +690,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chanthaburi
     source_row: 15246
-  - survey_labels: 23-Trat
+  - country_entry_id: THA-SUBNAT-19
+    survey_labels: 23-Trat
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2919
@@ -667,7 +711,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Trad
     source_row: 15247
-  - survey_labels: 24-Chachoengsao
+  - country_entry_id: THA-SUBNAT-20
+    survey_labels: 24-Chachoengsao
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2855
@@ -687,7 +732,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chachoengsao
     source_row: 15248
-  - survey_labels: 25-Prachin Buri
+  - country_entry_id: THA-SUBNAT-21
+    survey_labels: 25-Prachin Buri
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2899
@@ -707,7 +753,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Prachuap Khilikhan
     source_row: 15249
-  - survey_labels: 26-Nakhon Nayok
+  - country_entry_id: THA-SUBNAT-22
+    survey_labels: 26-Nakhon Nayok
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2875
@@ -727,7 +774,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhon Nayok
     source_row: 15250
-  - survey_labels: 27-Sa Kaeo
+  - country_entry_id: THA-SUBNAT-23
+    survey_labels: 27-Sa Kaeo
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2904
@@ -747,7 +795,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sa Kaeo
     source_row: 15251
-  - survey_labels: 30-Nakhon Ratchasima
+  - country_entry_id: THA-SUBNAT-24
+    survey_labels: 30-Nakhon Ratchasima
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2878
@@ -767,7 +816,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhon Ratchasima
     source_row: 15252
-  - survey_labels: 31-Buri Ram | 31-Buriram
+  - country_entry_id: THA-SUBNAT-25
+    survey_labels: 31-Buri Ram | 31-Buriram
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2854
@@ -787,7 +837,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Buriram
     source_row: 15253
-  - survey_labels: 32-Surin
+  - country_entry_id: THA-SUBNAT-26
+    survey_labels: 32-Surin
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2917
@@ -807,7 +858,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Surin
     source_row: 15254
-  - survey_labels: 33-Si Sa Ket | 33-Si Saket
+  - country_entry_id: THA-SUBNAT-27
+    survey_labels: 33-Si Sa Ket | 33-Si Saket
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2911
@@ -827,7 +879,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Si Saket
     source_row: 15255
-  - survey_labels: 34-Ubon Ratchathani
+  - country_entry_id: THA-SUBNAT-28
+    survey_labels: 34-Ubon Ratchathani
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2921
@@ -847,7 +900,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ubon Ratchathani
     source_row: 15256
-  - survey_labels: 35-Yasothon
+  - country_entry_id: THA-SUBNAT-29
+    survey_labels: 35-Yasothon
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2926
@@ -867,7 +921,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yasothon
     source_row: 15257
-  - survey_labels: 36-Chaiyaphum
+  - country_entry_id: THA-SUBNAT-30
+    survey_labels: 36-Chaiyaphum
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2857
@@ -887,7 +942,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chaiyaphum
     source_row: 15258
-  - survey_labels: 37-Am Nat Charoen | 37-Amnat Charoen
+  - country_entry_id: THA-SUBNAT-31
+    survey_labels: 37-Am Nat Charoen | 37-Amnat Charoen
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2851
@@ -907,7 +963,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Amnat Charoen
     source_row: 15259
-  - survey_labels: 39-Nong Bua Lam Phu | 39-Nong Bua Lamphu
+  - country_entry_id: THA-SUBNAT-32
+    survey_labels: 39-Nong Bua Lam Phu | 39-Nong Bua Lamphu
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2883
@@ -927,7 +984,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nong Bua Lamphu
     source_row: 15260
-  - survey_labels: 40-Khon Kaen
+  - country_entry_id: THA-SUBNAT-33
+    survey_labels: 40-Khon Kaen
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2866
@@ -947,7 +1005,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Khon Kaen
     source_row: 15261
-  - survey_labels: 41-Udon Thani
+  - country_entry_id: THA-SUBNAT-34
+    survey_labels: 41-Udon Thani
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2922
@@ -967,7 +1026,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Udon Thani
     source_row: 15262
-  - survey_labels: 42-Loei
+  - country_entry_id: THA-SUBNAT-35
+    survey_labels: 42-Loei
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2870
@@ -987,7 +1047,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Loei
     source_row: 15263
-  - survey_labels: 43-Nong Khai
+  - country_entry_id: THA-SUBNAT-36
+    survey_labels: 43-Nong Khai
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2884
@@ -1007,7 +1068,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nong Khai
     source_row: 15264
-  - survey_labels: 44-Maha Sarakham
+  - country_entry_id: THA-SUBNAT-37
+    survey_labels: 44-Maha Sarakham
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2873
@@ -1027,7 +1089,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Maha Sarakham
     source_row: 15265
-  - survey_labels: 45-Roi Et
+  - country_entry_id: THA-SUBNAT-38
+    survey_labels: 45-Roi Et
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2903
@@ -1047,7 +1110,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Roi Et
     source_row: 15266
-  - survey_labels: 46-Kalasin
+  - country_entry_id: THA-SUBNAT-39
+    survey_labels: 46-Kalasin
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2863
@@ -1067,7 +1131,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kalasin
     source_row: 15267
-  - survey_labels: 47-Sakon Nakhon
+  - country_entry_id: THA-SUBNAT-40
+    survey_labels: 47-Sakon Nakhon
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2905
@@ -1087,7 +1152,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sakon Nakhon
     source_row: 15268
-  - survey_labels: 48-Nakhon Phanom
+  - country_entry_id: THA-SUBNAT-41
+    survey_labels: 48-Nakhon Phanom
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2877
@@ -1107,7 +1173,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhon Phanom
     source_row: 15269
-  - survey_labels: 49-Mukdahan
+  - country_entry_id: THA-SUBNAT-42
+    survey_labels: 49-Mukdahan
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2874
@@ -1127,7 +1194,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mukdahan
     source_row: 15270
-  - survey_labels: 50-Chiang Mai
+  - country_entry_id: THA-SUBNAT-43
+    survey_labels: 50-Chiang Mai
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2859
@@ -1147,7 +1215,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chiang Mai
     source_row: 15271
-  - survey_labels: 51-Lamphun
+  - country_entry_id: THA-SUBNAT-44
+    survey_labels: 51-Lamphun
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2869
@@ -1167,7 +1236,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lamphun
     source_row: 15272
-  - survey_labels: 52-Lampang
+  - country_entry_id: THA-SUBNAT-45
+    survey_labels: 52-Lampang
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2868
@@ -1187,7 +1257,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lampang
     source_row: 15273
-  - survey_labels: 53-Uttaradit
+  - country_entry_id: THA-SUBNAT-46
+    survey_labels: 53-Uttaradit
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2924
@@ -1207,7 +1278,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Uttaradit
     source_row: 15274
-  - survey_labels: 54-Phrae
+  - country_entry_id: THA-SUBNAT-47
+    survey_labels: 54-Phrae
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2897
@@ -1227,7 +1299,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phrae
     source_row: 15275
-  - survey_labels: 55-Nan
+  - country_entry_id: THA-SUBNAT-48
+    survey_labels: 55-Nan
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2881
@@ -1247,7 +1320,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nan
     source_row: 15276
-  - survey_labels: 56-Phayao
+  - country_entry_id: THA-SUBNAT-49
+    survey_labels: 56-Phayao
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2891
@@ -1267,7 +1341,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phayao
     source_row: 15277
-  - survey_labels: 57-Chiang Rai
+  - country_entry_id: THA-SUBNAT-50
+    survey_labels: 57-Chiang Rai
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2860
@@ -1287,7 +1362,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chiang Rai
     source_row: 15278
-  - survey_labels: 58-Mae Hong Son
+  - country_entry_id: THA-SUBNAT-51
+    survey_labels: 58-Mae Hong Son
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2872
@@ -1307,7 +1383,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mae Hong Son
     source_row: 15279
-  - survey_labels: 60-Nakhon Sawan
+  - country_entry_id: THA-SUBNAT-52
+    survey_labels: 60-Nakhon Sawan
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2879
@@ -1327,7 +1404,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhon Sawan
     source_row: 15280
-  - survey_labels: 61-Uthai Thani
+  - country_entry_id: THA-SUBNAT-53
+    survey_labels: 61-Uthai Thani
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2923
@@ -1347,7 +1425,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Uthai Thani
     source_row: 15281
-  - survey_labels: 62-Kamphaeng Phet
+  - country_entry_id: THA-SUBNAT-54
+    survey_labels: 62-Kamphaeng Phet
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2864
@@ -1367,7 +1446,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kampaeng Phet
     source_row: 15282
-  - survey_labels: 63-Tak
+  - country_entry_id: THA-SUBNAT-55
+    survey_labels: 63-Tak
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2918
@@ -1387,7 +1467,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tak
     source_row: 15283
-  - survey_labels: 64-Sukhothai
+  - country_entry_id: THA-SUBNAT-56
+    survey_labels: 64-Sukhothai
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2914
@@ -1407,7 +1488,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sukhothai
     source_row: 15284
-  - survey_labels: 65-Phitsanulok
+  - country_entry_id: THA-SUBNAT-57
+    survey_labels: 65-Phitsanulok
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2895
@@ -1427,7 +1509,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phitsanulok
     source_row: 15285
-  - survey_labels: 66-Phichit
+  - country_entry_id: THA-SUBNAT-58
+    survey_labels: 66-Phichit
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2894
@@ -1447,7 +1530,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phichit
     source_row: 15286
-  - survey_labels: 67-Phetchabun
+  - country_entry_id: THA-SUBNAT-59
+    survey_labels: 67-Phetchabun
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2892
@@ -1467,7 +1551,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phetchabun
     source_row: 15287
-  - survey_labels: 70-Ratchaburi
+  - country_entry_id: THA-SUBNAT-60
+    survey_labels: 70-Ratchaburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2901
@@ -1487,7 +1572,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ratchaburi
     source_row: 15288
-  - survey_labels: 71-Kanchanaburi
+  - country_entry_id: THA-SUBNAT-61
+    survey_labels: 71-Kanchanaburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2865
@@ -1507,7 +1593,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kanchanaburi
     source_row: 15289
-  - survey_labels: 72-Suphun Buri
+  - country_entry_id: THA-SUBNAT-62
+    survey_labels: 72-Suphun Buri
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2915
@@ -1527,7 +1614,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Suphanburi
     source_row: 15290
-  - survey_labels: 73-Nakhon Pathom | 73-Nakhon Phanom
+  - country_entry_id: THA-SUBNAT-63
+    survey_labels: 73-Nakhon Pathom | 73-Nakhon Phanom
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2876
@@ -1547,7 +1635,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhon Pathom
     source_row: 15291
-  - survey_labels: 74-Samut Sakhon
+  - country_entry_id: THA-SUBNAT-64
+    survey_labels: 74-Samut Sakhon
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2907
@@ -1567,7 +1656,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Samut Sakhon
     source_row: 15292
-  - survey_labels: 75-Samut Songkhram
+  - country_entry_id: THA-SUBNAT-65
+    survey_labels: 75-Samut Songkhram
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2908
@@ -1587,7 +1677,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Samut Songkham
     source_row: 15293
-  - survey_labels: 76-Phetchaburi
+  - country_entry_id: THA-SUBNAT-66
+    survey_labels: 76-Phetchaburi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2893
@@ -1607,7 +1698,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phetchaburi
     source_row: 15294
-  - survey_labels: 77-Prachuap Khiri Kha
+  - country_entry_id: THA-SUBNAT-67
+    survey_labels: 77-Prachuap Khiri Kha
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2888
@@ -1627,7 +1719,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phachinburi
     source_row: 15295
-  - survey_labels: 80-Nakhon Si Thammara
+  - country_entry_id: THA-SUBNAT-68
+    survey_labels: 80-Nakhon Si Thammara
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2880
@@ -1647,7 +1740,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nakhon Si Thammarat
     source_row: 15296
-  - survey_labels: 81-Krabi
+  - country_entry_id: THA-SUBNAT-69
+    survey_labels: 81-Krabi
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2867
@@ -1667,7 +1761,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Krabi
     source_row: 15297
-  - survey_labels: 82-Phangnga
+  - country_entry_id: THA-SUBNAT-70
+    survey_labels: 82-Phangnga
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2889
@@ -1687,7 +1782,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phangnga
     source_row: 15298
-  - survey_labels: 83-Phuket
+  - country_entry_id: THA-SUBNAT-71
+    survey_labels: 83-Phuket
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2898
@@ -1707,7 +1803,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phuket
     source_row: 15299
-  - survey_labels: 84-Surat Thani
+  - country_entry_id: THA-SUBNAT-72
+    survey_labels: 84-Surat Thani
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2916
@@ -1727,7 +1824,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Surat Thani
     source_row: 15300
-  - survey_labels: 85-Ranong
+  - country_entry_id: THA-SUBNAT-73
+    survey_labels: 85-Ranong
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2900
@@ -1747,7 +1845,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ranong
     source_row: 15301
-  - survey_labels: 86-Chumphon
+  - country_entry_id: THA-SUBNAT-74
+    survey_labels: 86-Chumphon
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2862
@@ -1767,7 +1866,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chumphon
     source_row: 15302
-  - survey_labels: 90-Songkhla
+  - country_entry_id: THA-SUBNAT-75
+    survey_labels: 90-Songkhla
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2913
@@ -1787,7 +1887,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Songkhla
     source_row: 15303
-  - survey_labels: 91-Satun
+  - country_entry_id: THA-SUBNAT-76
+    survey_labels: 91-Satun
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2910
@@ -1807,7 +1908,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Satun
     source_row: 15304
-  - survey_labels: 92-Trang
+  - country_entry_id: THA-SUBNAT-77
+    survey_labels: 92-Trang
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2920
@@ -1827,7 +1929,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Trang
     source_row: 15305
-  - survey_labels: 93-Phatthalung
+  - country_entry_id: THA-SUBNAT-78
+    survey_labels: 93-Phatthalung
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2890
@@ -1847,7 +1950,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Phatthalung
     source_row: 15306
-  - survey_labels: 94-Pattani
+  - country_entry_id: THA-SUBNAT-79
+    survey_labels: 94-Pattani
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2887
@@ -1867,7 +1971,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pattani
     source_row: 15307
-  - survey_labels: 95-Yala
+  - country_entry_id: THA-SUBNAT-80
+    survey_labels: 95-Yala
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2925
@@ -1887,7 +1992,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yala
     source_row: 15308
-  - survey_labels: 96-Narathiwat
+  - country_entry_id: THA-SUBNAT-81
+    survey_labels: 96-Narathiwat
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAUL1_2882
@@ -1907,7 +2013,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Narathiwat
     source_row: 15309
-  - survey_labels: 38-Bueng Kan
+  - country_entry_id: THA-SUBNAT-82
+    survey_labels: 38-Bueng Kan
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAULx_38
@@ -1928,7 +2035,8 @@ parameters:
     geo_name: Bung Kan & Bung Khla & Bung Khong Long & Pak Khat & Phon Charoen & Seka
       & Si Wichai & So Phisai
     source_row: 15660
-  - survey_labels: 43-Nong Khai
+  - country_entry_id: THA-SUBNAT-83
+    survey_labels: 43-Nong Khai
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: THA_2015_GAULx_43
@@ -1958,7 +2066,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_pour_flush_flush_to_elsewhere
+  - country_entry_id: THA-SAN-01
+    source_category_code: flush_pour_flush_flush_to_elsewhere
     national_label_en: 'flush / pour flush: flush to elsewhere'
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1968,7 +2077,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_to_elsewhere
+  - country_entry_id: THA-SAN-02
+    source_category_code: flush_pour_flush_to_elsewhere
     national_label_en: flush/pour flush to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1978,7 +2088,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: to_elsewhere
+  - country_entry_id: THA-SAN-03
+    source_category_code: to_elsewhere
     national_label_en: to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1988,7 +2099,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+  - country_entry_id: THA-SAN-04
+    source_category_code: flush_pour_flush_flush_to_piped_sewer_system
     national_label_en: 'flush / pour flush: flush to piped sewer system'
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1998,7 +2110,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: THA-SAN-05
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: flush/pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -2008,7 +2121,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+  - country_entry_id: THA-SAN-06
+    source_category_code: flush_pour_flush_flush_to_pit_latrine
     national_label_en: 'flush / pour flush: flush to pit latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -2018,7 +2132,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_to_pit_latrine
+  - country_entry_id: THA-SAN-07
+    source_category_code: flush_pour_flush_to_pit_latrine
     national_label_en: flush/pour flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -2028,7 +2143,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_flush_to_sewage_tank_septic_tank
+  - country_entry_id: THA-SAN-08
+    source_category_code: flush_pour_flush_flush_to_sewage_tank_septic_tank
     national_label_en: 'flush / pour flush: flush to sewage tank (septic tank)'
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -2038,7 +2154,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: THA-SAN-09
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: flush/pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -2048,7 +2165,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_to_sewage_tank_septic_tank
+  - country_entry_id: THA-SAN-10
+    source_category_code: flush_pour_flush_to_sewage_tank_septic_tank
     national_label_en: flush/pour flush to sewage tank (septic tank)
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -2058,7 +2176,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_flush_to_dk_where
+  - country_entry_id: THA-SAN-11
+    source_category_code: flush_pour_flush_flush_to_dk_where
     national_label_en: 'flush / pour flush: flush to dk where'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -2068,7 +2187,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_pour_flush_to_do_not_know_where
+  - country_entry_id: THA-SAN-12
+    source_category_code: flush_pour_flush_to_do_not_know_where
     national_label_en: flush/pour flush to do not know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -2078,7 +2198,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: to_unknown_place_not_sure_dk
+  - country_entry_id: THA-SAN-13
+    source_category_code: to_unknown_place_not_sure_dk
     national_label_en: to unknown place/ not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -2088,7 +2209,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_septic_tank
+  - country_entry_id: THA-SAN-14
+    source_category_code: flush_septic_tank
     national_label_en: Flush & Septic tank
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -2098,7 +2220,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: moulded_latrine_private_flush_latrine_private
+  - country_entry_id: THA-SAN-15
+    source_category_code: moulded_latrine_private_flush_latrine_private
     national_label_en: Moulded latrine-Private+Flush latrine-Private
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -2108,7 +2231,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: flush_latrine_shared_flush_and_moulded_shared
+  - country_entry_id: THA-SAN-16
+    source_category_code: flush_latrine_shared_flush_and_moulded_shared
     national_label_en: Flush latrine-Shared +Flush and moulded-Shared
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -2118,7 +2242,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: THA-SAN-17
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -2128,7 +2253,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: to_elsewhere
+  - country_entry_id: THA-SAN-18
+    source_category_code: to_elsewhere
     national_label_en: to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -2138,7 +2264,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: THA-SAN-19
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -2148,7 +2275,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: THA-SAN-20
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: 'Flush/pour flush to: Piped sewer system'
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -2158,7 +2286,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: THA-SAN-21
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -2168,7 +2297,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_pour_flush_to_pit
+  - country_entry_id: THA-SAN-22
+    source_category_code: flush_pour_flush_to_pit
     national_label_en: 'Flush/pour flush to: pit'
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -2178,7 +2308,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: THA-SAN-23
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -2188,7 +2319,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: THA-SAN-24
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: 'Flush/pour flush to: Septic tank'
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -2198,7 +2330,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_pour_flush_to_unknown_place_pit_latrine
+  - country_entry_id: THA-SAN-25
+    source_category_code: flush_pour_flush_to_unknown_place_pit_latrine
     national_label_en: |-
       Flush/pour flush
       to unknown place, pit latrine
@@ -2210,7 +2343,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket_latrine
+  - country_entry_id: THA-SAN-26
+    source_category_code: bucket_latrine
     national_label_en: Bucket latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -2220,7 +2354,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: THA-SAN-27
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -2231,7 +2366,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: THA-SAN-28
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2242,7 +2378,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: THA-SAN-29
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2253,7 +2390,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: THA-SAN-30
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2264,7 +2402,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_or_hole_in_ground
+  - country_entry_id: THA-SAN-31
+    source_category_code: pit_or_hole_in_ground
     national_label_en: Pit or hole in ground
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -2275,7 +2414,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit
+  - country_entry_id: THA-SAN-32
+    source_category_code: pit
     national_label_en: Pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -2286,7 +2426,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: THA-SAN-33
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -2297,7 +2438,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: public_latrine
+  - country_entry_id: THA-SAN-34
+    source_category_code: public_latrine
     national_label_en: Public latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -2308,7 +2450,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: flush_latrine_or_moulded_latrine_private
+  - country_entry_id: THA-SAN-35
+    source_category_code: flush_latrine_or_moulded_latrine_private
     national_label_en: Flush latrine or Moulded latrine-Private
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -2319,7 +2462,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 93
-  - source_category_code: moulded_latrine_private
+  - country_entry_id: THA-SAN-36
+    source_category_code: moulded_latrine_private
     national_label_en: Moulded latrine-Private
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -2330,7 +2474,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 93
-  - source_category_code: to_unknown_place_not_sure_dk
+  - country_entry_id: THA-SAN-37
+    source_category_code: to_unknown_place_not_sure_dk
     national_label_en: to unknown place/ not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -2341,7 +2486,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: flush_latrine_or_moulded_latrine_shared
+  - country_entry_id: THA-SAN-38
+    source_category_code: flush_latrine_or_moulded_latrine_shared
     national_label_en: Flush latrine or Moulded latrine-Shared
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -2352,7 +2498,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 99
-  - source_category_code: moulded_latrine_shared
+  - country_entry_id: THA-SAN-39
+    source_category_code: moulded_latrine_shared
     national_label_en: Moulded latrine-Shared
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -2363,7 +2510,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 99
-  - source_category_code: no_facilities_nearby
+  - country_entry_id: THA-SAN-40
+    source_category_code: no_facilities_nearby
     national_label_en: No facilities nearby
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2373,7 +2521,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility
+  - country_entry_id: THA-SAN-41
+    source_category_code: no_facility
     national_label_en: No facility
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2383,7 +2532,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_or_bush_or_field
+  - country_entry_id: THA-SAN-42
+    source_category_code: no_facility_or_bush_or_field
     national_label_en: No facility or bush or field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2393,7 +2543,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_toilet
+  - country_entry_id: THA-SAN-43
+    source_category_code: no_toilet
     national_label_en: No toilet
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2403,7 +2554,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: THA-SAN-44
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -2413,7 +2565,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: flush_into_river_sea
+  - country_entry_id: THA-SAN-45
+    source_category_code: flush_into_river_sea
     national_label_en: Flush into river / sea
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2423,7 +2576,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: THA-SAN-46
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2443,7 +2597,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: neighbors_well_pond
+  - country_entry_id: THA-WAS-01
+    source_category_code: neighbors_well_pond
     national_label_en: Neighbors' Well/pond
     national_label_local: Other
     jmp_classification: Ground water > All wells > Other
@@ -2453,7 +2608,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 57
-  - source_category_code: private_well_pond
+  - country_entry_id: THA-WAS-02
+    source_category_code: private_well_pond
     national_label_en: Private well/pond
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -2463,7 +2619,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: public_well_pond
+  - country_entry_id: THA-WAS-03
+    source_category_code: public_well_pond
     national_label_en: Public well/pond
     national_label_local: Public
     jmp_classification: Ground water > All wells > Public
@@ -2473,7 +2630,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: protected_spring
+  - country_entry_id: THA-WAS-04
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -2483,7 +2641,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: dug_well_protected_e_g_roof_well_lid_etc
+  - country_entry_id: THA-WAS-05
+    source_category_code: dug_well_protected_e_g_roof_well_lid_etc
     national_label_en: 'dug well: protected (e.g. Roof, well lid, etc('
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -2493,7 +2652,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: dug_well_protected_e_g_roof_well_lid_etc
+  - country_entry_id: THA-WAS-06
+    source_category_code: dug_well_protected_e_g_roof_well_lid_etc
     national_label_en: 'dug well: protected (e.g. roof, well lid, etc.)'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -2503,7 +2663,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: THA-WAS-07
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -2513,7 +2674,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: well_or_public_tap
+  - country_entry_id: THA-WAS-08
+    source_category_code: well_or_public_tap
     national_label_en: Well or public tap
     national_label_local: Public
     jmp_classification: Ground water > Traditional wells > Public
@@ -2523,7 +2685,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: tube_well
+  - country_entry_id: THA-WAS-09
+    source_category_code: tube_well
     national_label_en: tube-well
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -2533,7 +2696,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_bore_hole
+  - country_entry_id: THA-WAS-10
+    source_category_code: tube_well_bore_hole
     national_label_en: Tube-well/ bore-hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -2543,7 +2707,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: THA-WAS-11
+    source_category_code: tubewell_borehole
     national_label_en: tubewell-borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -2553,7 +2718,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: THA-WAS-12
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/Borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -2563,7 +2729,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: inside_piped_underground_water_private
+  - country_entry_id: THA-WAS-13
+    source_category_code: inside_piped_underground_water_private
     national_label_en: Inside piped underground water, private
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -2573,7 +2740,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: inside_piped_underground_water_shared
+  - country_entry_id: THA-WAS-14
+    source_category_code: inside_piped_underground_water_shared
     national_label_en: Inside piped underground water, shared
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -2583,7 +2751,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: unprotected_spring
+  - country_entry_id: THA-WAS-15
+    source_category_code: unprotected_spring
     national_label_en: unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -2593,7 +2762,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: dug_well_unprotected
+  - country_entry_id: THA-WAS-16
+    source_category_code: dug_well_unprotected
     national_label_en: 'dug well: unprotected'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -2603,7 +2773,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: THA-WAS-17
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -2613,7 +2784,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: uprotected_well
+  - country_entry_id: THA-WAS-18
+    source_category_code: uprotected_well
     national_label_en: Uprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -2623,7 +2795,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: THA-WAS-19
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -2633,7 +2806,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: coin_operated_water_dispenser
+  - country_entry_id: THA-WAS-20
+    source_category_code: coin_operated_water_dispenser
     national_label_en: Coin operated water-dispenser
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -2643,7 +2817,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: packaged_water_glass_cup_water
+  - country_entry_id: THA-WAS-21
+    source_category_code: packaged_water_glass_cup_water
     national_label_en: 'packaged water: glass / cup water'
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -2653,7 +2828,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: water_supply_piped
+  - country_entry_id: THA-WAS-22
+    source_category_code: water_supply_piped
     national_label_en: Water supply piped
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -2663,7 +2839,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: coin_operated_water_dispenser
+  - country_entry_id: THA-WAS-23
+    source_category_code: coin_operated_water_dispenser
     national_label_en: coin-operated water dispenser
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -2673,7 +2850,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: tanker_truck
+  - country_entry_id: THA-WAS-24
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -2683,7 +2861,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_other_vendor
+  - country_entry_id: THA-WAS-25
+    source_category_code: tanker_truck_other_vendor
     national_label_en: Tanker, truck, other vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -2693,7 +2872,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: THA-WAS-26
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -2703,7 +2883,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_tank_truck
+  - country_entry_id: THA-WAS-27
+    source_category_code: water_tank_truck
     national_label_en: Water tank truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -2713,7 +2894,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: THA-WAS-28
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -2723,7 +2905,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: THA-WAS-29
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -2733,7 +2916,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_users_with_unimproved_source
+  - country_entry_id: THA-WAS-30
+    source_category_code: bottled_water_users_with_unimproved_source
     national_label_en: Bottled water users with unimproved source
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -2743,7 +2927,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: packaged_water_bottled_water
+  - country_entry_id: THA-WAS-31
+    source_category_code: packaged_water_bottled_water
     national_label_en: 'packaged water: bottled water'
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -2753,7 +2938,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: packaged_water_bottled_water_gallon_sized
+  - country_entry_id: THA-WAS-32
+    source_category_code: packaged_water_bottled_water_gallon_sized
     national_label_en: 'packaged water: bottled water/gallon sized'
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -2763,7 +2949,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: packaged_water_gallon_sized_water
+  - country_entry_id: THA-WAS-33
+    source_category_code: packaged_water_gallon_sized_water
     national_label_en: 'packaged water: gallon sized water'
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -2773,7 +2960,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: packaged_water_glass_cup_water
+  - country_entry_id: THA-WAS-34
+    source_category_code: packaged_water_glass_cup_water
     national_label_en: 'packaged water: glass/cup water'
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -2783,7 +2971,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater
+  - country_entry_id: THA-WAS-35
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Rainwater
     jmp_classification: Rainwater
@@ -2793,7 +2982,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: rain_water
+  - country_entry_id: THA-WAS-36
+    source_category_code: rain_water
     national_label_en: Rain water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2803,7 +2993,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water_collection
+  - country_entry_id: THA-WAS-37
+    source_category_code: rain_water_collection
     national_label_en: |-
       Rain-water
       collection
@@ -2815,7 +3006,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: THA-WAS-38
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2825,7 +3017,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: THA-WAS-39
+    source_category_code: rainwater_collection
     national_label_en: rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2835,7 +3028,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: river_spring_surface_water
+  - country_entry_id: THA-WAS-40
+    source_category_code: river_spring_surface_water
     national_label_en: River, spring, surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2845,7 +3039,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: THA-WAS-41
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2855,7 +3050,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_stream_etc
+  - country_entry_id: THA-WAS-42
+    source_category_code: river_stream_etc
     national_label_en: River, stream, etc.
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2865,7 +3061,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: outside_piped_or_public_tap
+  - country_entry_id: THA-WAS-43
+    source_category_code: outside_piped_or_public_tap
     national_label_en: Outside piped or Public tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2875,7 +3072,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: THA-WAS-44
+    source_category_code: piped_to_neighbour
     national_label_en: piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2885,7 +3083,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_to_neighbour
+  - country_entry_id: THA-WAS-45
+    source_category_code: piped_water_to_neighbour
     national_label_en: Piped water to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2895,7 +3094,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_piped_hosed_to_neighbouroughs_house
+  - country_entry_id: THA-WAS-46
+    source_category_code: piped_water_piped_hosed_to_neighbouroughs_house
     national_label_en: 'piped water: piped/hosed to neighbouroughs house'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2905,7 +3105,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_hosed_to_neighbour_s_house
+  - country_entry_id: THA-WAS-47
+    source_category_code: piped_hosed_to_neighbour_s_house
     national_label_en: piped/hosed to neighbour's house
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2915,7 +3116,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: water_supply_piped
+  - country_entry_id: THA-WAS-48
+    source_category_code: water_supply_piped
     national_label_en: Water supply piped
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2925,7 +3127,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_residence
+  - country_entry_id: THA-WAS-49
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -2935,7 +3138,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: inside_piped_water_supply_private
+  - country_entry_id: THA-WAS-50
+    source_category_code: inside_piped_water_supply_private
     national_label_en: Inside piped water supply, private
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2945,7 +3149,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: THA-WAS-51
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2955,7 +3160,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: THA-WAS-52
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2965,7 +3171,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_hosed_into_dwelling
+  - country_entry_id: THA-WAS-53
+    source_category_code: piped_water_piped_hosed_into_dwelling
     national_label_en: 'piped water: piped/hosed into dwelling'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2975,7 +3182,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_hosed_into_dwelling
+  - country_entry_id: THA-WAS-54
+    source_category_code: piped_hosed_into_dwelling
     national_label_en: piped/hosed into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2985,7 +3193,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: inside_piped_water_supply_shared
+  - country_entry_id: THA-WAS-55
+    source_category_code: inside_piped_water_supply_shared
     national_label_en: Inside piped water supply, shared
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2995,7 +3204,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_plot_or_yard
+  - country_entry_id: THA-WAS-56
+    source_category_code: piped_into_plot_or_yard
     national_label_en: Piped into plot or yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -3005,7 +3215,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_plot
+  - country_entry_id: THA-WAS-57
+    source_category_code: piped_into_yard_plot
     national_label_en: piped into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -3015,7 +3226,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot
+  - country_entry_id: THA-WAS-58
+    source_category_code: piped_water_into_yard_plot
     national_label_en: Piped water into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -3025,7 +3237,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_piped_hosed_into_compound
+  - country_entry_id: THA-WAS-59
+    source_category_code: piped_water_piped_hosed_into_compound
     national_label_en: 'piped water: piped/hosed into compound'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -3035,7 +3248,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_hosed_into_compound
+  - country_entry_id: THA-WAS-60
+    source_category_code: piped_hosed_into_compound
     national_label_en: piped/hosed into compound
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -3045,7 +3259,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: outside_piped_or_public_tap
+  - country_entry_id: THA-WAS-61
+    source_category_code: outside_piped_or_public_tap
     national_label_en: Outside piped or Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -3055,7 +3270,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: piped_water_public_tap
+  - country_entry_id: THA-WAS-62
+    source_category_code: piped_water_public_tap
     national_label_en: 'piped water: public tap'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -3065,7 +3281,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: THA-WAS-63
+    source_category_code: public_tap
     national_label_en: Public Tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -3075,7 +3292,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_stand_pipe
+  - country_entry_id: THA-WAS-64
+    source_category_code: public_tap_stand_pipe
     national_label_en: Public tap/stand-pipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -3085,7 +3303,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: THA-WAS-65
+    source_category_code: public_tap_standpipe
     national_label_en: Public Tap/Standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

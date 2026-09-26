@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood development
+  - country_entry_id: MDA-EDU-01
+    national_label_en: Early childhood development
     national_label_local: Educaţie timpurie
     entry_age: 1
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary
+  - country_entry_id: MDA-EDU-02
+    national_label_en: Pre-primary
     national_label_local: Învăţămîntul preşcolar
     entry_age: 3
     duration_years: 4
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary education
+  - country_entry_id: MDA-EDU-03
+    national_label_en: Primary education
     national_label_local: Învăţămîntul primar
     entry_age: 7
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Gymnasium education, 1st cycle
+  - country_entry_id: MDA-EDU-04
+    national_label_en: Gymnasium education, 1st cycle
     national_label_local: Învăţămîntul secundar, ciclul I (gimnazial)
     entry_age: 11
     duration_years: 5
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Secondary education, II cycle (lyceum)
+  - country_entry_id: MDA-EDU-05
+    national_label_en: Secondary education, II cycle (lyceum)
     national_label_local: Învăţămîntul secundar, ciclul II (liceal)
     entry_age: 16
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Secondary technical vocational education (related vocations)
+  - country_entry_id: MDA-EDU-06
+    national_label_en: Secondary technical vocational education (related vocations)
     national_label_local: Învăţămîntul profesional tehnic secundar (meserii conexe)
     entry_age: 16
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Secondary technical vocational education (one or two vocations)
+  - country_entry_id: MDA-EDU-07
+    national_label_en: Secondary technical vocational education (one or two vocations)
     national_label_local: Învățămîntul profesional tehnic secundar (o meserie/dual)
     entry_age: 16
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Post-Secondary technical vocational education (Grades 1-2 of
+  - country_entry_id: MDA-EDU-08
+    national_label_en: Post-Secondary technical vocational education (Grades 1-2 of
       Secondary integrated programme)
     national_label_local: Învățămîntul profesional tehnic postsecundar (primii 2 ani
       ai programului integrat)
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Secondary technical vocational education
+  - country_entry_id: MDA-EDU-09
+    national_label_en: Secondary technical vocational education
     national_label_local: Învăţămîntul profesional tehnic secundar
     entry_age: 19
     duration_years: 1
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: |-
+  - country_entry_id: MDA-EDU-10
+    national_label_en: |-
       Postsecondary technical vocational education
       (Year 3 and 4 of the integrated program)
     national_label_local: "Învăţămîntul profesional tehnic postsecundar \n(Anul 3
@@ -115,7 +125,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Higher education licentiate (1st cycle)
+  - country_entry_id: MDA-EDU-11
+    national_label_en: Higher education licentiate (1st cycle)
     national_label_local: Studii superioare de licenţă (Ciclul I)
     entry_age: 19
     duration_years: 3
@@ -125,7 +136,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Higher integrated education
+  - country_entry_id: MDA-EDU-12
+    national_label_en: Higher integrated education
     national_label_local: Studiile superioare integrate
     entry_age: 19
     duration_years: 6
@@ -135,7 +147,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Higher education - Master (2nd cycle)
+  - country_entry_id: MDA-EDU-13
+    national_label_en: Higher education - Master (2nd cycle)
     national_label_local: Studii superioare de master (Ciclul II)
     entry_age: 23
     duration_years: 2
@@ -145,7 +158,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Higher education - Doctorantura (3rd cycle)
+  - country_entry_id: MDA-EDU-14
+    national_label_en: Higher education - Doctorantura (3rd cycle)
     national_label_local: Studii superioare de doctorat (Ciclul III)
     entry_age: 25
     duration_years: 3
@@ -165,7 +179,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 -  Nord | 1 - Nord | 1 – Nord
+  - country_entry_id: MDA-SUBNAT-01
+    survey_labels: 1 -  Nord | 1 - Nord | 1 – Nord
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: MDA_2015_GAULx_1
     gmd_subnatid2: ''
@@ -185,7 +200,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Balti & Edinet & Soroca
     source_row: 9269
-  - survey_labels: 2 -  Centru | 2 - Centru | 2 – Centru
+  - country_entry_id: MDA-SUBNAT-02
+    survey_labels: 2 -  Centru | 2 - Centru | 2 – Centru
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: MDA_2015_GAULx_2
     gmd_subnatid2: ''
@@ -205,7 +221,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Orhei & Ungheni & Lapusna
     source_row: 9270
-  - survey_labels: 3 -  Sud | 3 - Sud | 3 – Sud
+  - country_entry_id: MDA-SUBNAT-03
+    survey_labels: 3 -  Sud | 3 - Sud | 3 – Sud
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: MDA_2015_GAULx_3
     gmd_subnatid2: ''
@@ -225,7 +242,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cahul & Gagauzia & Tighina
     source_row: 9271
-  - survey_labels: 4 -  Chisinau | 4 - Chisinau | 4 – Chisinau
+  - country_entry_id: MDA-SUBNAT-04
+    survey_labels: 4 -  Chisinau | 4 - Chisinau | 4 – Chisinau
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: MDA_2015_GAUL1_2064
     gmd_subnatid2: ''
@@ -255,7 +273,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: MDA-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Компостирующие туалеты
     jmp_classification: Composting toilets
@@ -265,7 +284,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: composting_toilets
+  - country_entry_id: MDA-SAN-02
+    source_category_code: composting_toilets
     national_label_en: composting toilets
     national_label_local: Компостирующие туалеты
     jmp_classification: Composting toilets
@@ -275,7 +295,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_pour_flush_to_elsewhere
+  - country_entry_id: MDA-SAN-03
+    source_category_code: flush_pour_flush_to_elsewhere
     national_label_en: Flush/pour flush to elsewhere
     national_label_local: куда-то в другое место
     jmp_classification: Flush and pour flush > to elsewhere
@@ -285,7 +306,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: MDA-SAN-04
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -295,7 +317,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: public_system
+  - country_entry_id: MDA-SAN-05
+    source_category_code: public_system
     national_label_en: Public system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -305,7 +328,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_to_pit
+  - country_entry_id: MDA-SAN-06
+    source_category_code: flush_pour_flush_to_pit
     national_label_en: Flush/pour flush to pit
     national_label_local: в выгребную яму
     jmp_classification: Flush and pour flush > to pit
@@ -315,7 +339,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: MDA-SAN-07
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush and pour flush > to septic tank
@@ -325,7 +350,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_to_unknown_place_not_sure_dk
+  - country_entry_id: MDA-SAN-08
+    source_category_code: flush_pour_flush_to_unknown_place_not_sure_dk
     national_label_en: Flush/pour flush to unknown place/not sure/DK
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -335,7 +361,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_toilet
+  - country_entry_id: MDA-SAN-09
+    source_category_code: flush_toilet
     national_label_en: flush toilet
     national_label_local: Туалеты со смывом
     jmp_classification: Flush/toilets
@@ -345,7 +372,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: flush_to_piped_sewage_system
+  - country_entry_id: MDA-SAN-10
+    source_category_code: flush_to_piped_sewage_system
     national_label_en: Flush to piped sewage system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -355,7 +383,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_sewage_system_septic_tank
+  - country_entry_id: MDA-SAN-11
+    source_category_code: flush_to_sewage_system_septic_tank
     national_label_en: Flush to sewage system/ septic tank
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -365,7 +394,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: bucket
+  - country_entry_id: MDA-SAN-12
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -375,7 +405,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: MDA-SAN-13
+    source_category_code: bucket_toilet
     national_label_en: bucket toilet
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -385,7 +416,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: MDA-SAN-14
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Подвесной туалет/подвесная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -396,7 +428,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: improved_pit_latrine
+  - country_entry_id: MDA-SAN-15
+    source_category_code: improved_pit_latrine
     national_label_en: Improved pit latrine
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -408,7 +441,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: MDA-SAN-16
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -420,7 +454,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: MDA-SAN-17
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -432,7 +467,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: MDA-SAN-18
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -444,7 +480,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: MDA-SAN-19
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -456,7 +493,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: MDA-SAN-20
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine*
     national_label_local: Традиционная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -467,7 +505,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_vip
+  - country_entry_id: MDA-SAN-21
+    source_category_code: pit_latrine_vip
     national_label_en: Pit Latrine - VIP
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -478,7 +517,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_ventilated
+  - country_entry_id: MDA-SAN-22
+    source_category_code: pit_latrine_ventilated
     national_label_en: pit latrine ventilated
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -489,7 +529,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: MDA-SAN-23
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -500,7 +541,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pour_flush_latrine
+  - country_entry_id: MDA-SAN-24
+    source_category_code: pour_flush_latrine
     national_label_en: Pour flush latrine
     national_label_local: Уборные со смывом
     jmp_classification: Latrines > Pour flush latrines
@@ -510,7 +552,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: no_faciliity_bush_field
+  - country_entry_id: MDA-SAN-25
+    source_category_code: no_faciliity_bush_field
     national_label_en: no faciliity/bush/field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -520,7 +563,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_bush_field
+  - country_entry_id: MDA-SAN-26
+    source_category_code: no_facilities_bush_field
     national_label_en: No facilities/ bush/ field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -530,7 +574,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: MDA-SAN-27
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -540,7 +585,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: MDA-SAN-28
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other improved > Other
@@ -550,7 +596,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: 'no'
+  - country_entry_id: MDA-SAN-29
+    source_category_code: 'no'
     national_label_en: 'No'
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -560,7 +607,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: MDA-SAN-30
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -580,7 +628,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: MDA-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: Все родники
     jmp_classification: Ground water > All springs
@@ -590,7 +639,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: well
+  - country_entry_id: MDA-WAS-02
+    source_category_code: well
     national_label_en: Well
     national_label_local: Все колодцы
     jmp_classification: Ground water > All wells
@@ -600,7 +650,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: protected_spring
+  - country_entry_id: MDA-WAS-03
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Защищённый родник
     jmp_classification: Ground water > Protected spring
@@ -610,7 +661,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: MDA-WAS-04
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -620,7 +672,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: MDA-WAS-05
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -630,7 +683,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: artesian_well_with_pump
+  - country_entry_id: MDA-WAS-06
+    source_category_code: artesian_well_with_pump
     national_label_en: artesian well with pump
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -640,7 +694,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: MDA-WAS-07
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -650,7 +705,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: MDA-WAS-08
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: Tubewell/ borehole with pump
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -660,7 +716,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: MDA-WAS-09
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Незащищённый родник
     jmp_classification: Ground water > Unprotected spring
@@ -670,7 +727,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: MDA-WAS-10
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -680,7 +738,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: MDA-WAS-11
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -690,7 +749,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: MDA-WAS-12
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -700,7 +760,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_trailer_with_water_tank
+  - country_entry_id: MDA-WAS-13
+    source_category_code: cart_trailer_with_water_tank
     national_label_en: cart/trailer with water tank
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -710,7 +771,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: tanker_truck_provided
+  - country_entry_id: MDA-WAS-14
+    source_category_code: tanker_truck_provided
     national_label_en: Tanker truck provided
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -720,7 +782,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: MDA-WAS-15
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker truck vendor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -730,7 +793,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: MDA-WAS-16
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -740,7 +804,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: MDA-WAS-17
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -750,7 +815,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_with_improved
+  - country_entry_id: MDA-WAS-18
+    source_category_code: bottled_with_improved
     national_label_en: Bottled with improved
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -760,7 +826,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_without_improved
+  - country_entry_id: MDA-WAS-19
+    source_category_code: bottled_without_improved
     national_label_en: Bottled without improved
     national_label_local: Вода в пакетах
     jmp_classification: Packaged water > Sachet water
@@ -770,7 +837,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater_collection
+  - country_entry_id: MDA-WAS-20
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -780,7 +848,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: water_tank
+  - country_entry_id: MDA-WAS-21
+    source_category_code: water_tank
     national_label_en: water tank
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -790,7 +859,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: pond_river_stream
+  - country_entry_id: MDA-WAS-22
+    source_category_code: pond_river_stream
     national_label_en: Pond, river, stream
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -800,7 +870,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_to_neighbour
+  - country_entry_id: MDA-WAS-23
+    source_category_code: piped_water_to_neighbour
     national_label_en: Piped water to neighbour
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -810,7 +881,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: aqueduct
+  - country_entry_id: MDA-WAS-24
+    source_category_code: aqueduct
     national_label_en: Aqueduct
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -820,7 +892,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: aqueduct_in_the_dwelling
+  - country_entry_id: MDA-WAS-25
+    source_category_code: aqueduct_in_the_dwelling
     national_label_en: aqueduct in the dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -830,7 +903,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: MDA-WAS-26
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -840,7 +914,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: MDA-WAS-27
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -850,7 +925,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: aqueduct_in_the_courtyard
+  - country_entry_id: MDA-WAS-28
+    source_category_code: aqueduct_in_the_courtyard
     national_label_en: aqueduct in the courtyard
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -860,7 +936,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: MDA-WAS-29
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -870,7 +947,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: MDA-WAS-30
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -880,7 +958,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap
+  - country_entry_id: MDA-WAS-31
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -890,7 +969,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MDA-WAS-32
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -900,7 +980,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: standpost
+  - country_entry_id: MDA-WAS-33
+    source_category_code: standpost
     national_label_en: Standpost
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

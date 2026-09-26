@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Éducation de la petite enfance
+  - country_entry_id: MAR-EDU-01
+    national_label_en: Éducation de la petite enfance
     national_label_local: تنمية الطفولة المبكرة
     entry_age: 1
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Enseignement préscolaire
+  - country_entry_id: MAR-EDU-02
+    national_label_en: Enseignement préscolaire
     national_label_local: التعليم قبل المدرسي
     entry_age: 4
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Enseignement primaire
+  - country_entry_id: MAR-EDU-03
+    national_label_en: Enseignement primaire
     national_label_local: التعليم الابتدائي
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Enseignement secondaire collégial
+  - country_entry_id: MAR-EDU-04
+    national_label_en: Enseignement secondaire collégial
     national_label_local: التعليم الثانوي الإعدادي
     entry_age: 12
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Formation professionnelle / Spécialisation
+  - country_entry_id: MAR-EDU-05
+    national_label_en: Formation professionnelle / Spécialisation
     national_label_local: 'التكوين المهني: مستوى التخصص'
     entry_age: 15
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Secondaire qualifiant général
+  - country_entry_id: MAR-EDU-06
+    national_label_en: Secondaire qualifiant général
     national_label_local: التعليم الثانوي التأهيلي
     entry_age: 15
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Formation professionnelle / Qualification
+  - country_entry_id: MAR-EDU-07
+    national_label_en: Formation professionnelle / Qualification
     national_label_local: التكوين المهني- مستوى التأهيل
     entry_age: 15
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Enseignement technique et professionnel
+  - country_entry_id: MAR-EDU-08
+    national_label_en: Enseignement technique et professionnel
     national_label_local: التعليم التقني والمهني
     entry_age: 15
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Formation professionnelle / Technicien
+  - country_entry_id: MAR-EDU-09
+    national_label_en: Formation professionnelle / Technicien
     national_label_local: التكوين المهني - مستوى فني
     entry_age: 18
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Formation professionnelle / Technicien supérieur
+  - country_entry_id: MAR-EDU-10
+    national_label_en: Formation professionnelle / Technicien supérieur
     national_label_local: التكوين المهني - مستوى التقني العالي
     entry_age: 18
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Formation professionnelle / Technicien spécialisé
+  - country_entry_id: MAR-EDU-11
+    national_label_en: Formation professionnelle / Technicien spécialisé
     national_label_local: مستوى التقني المتخصص
     entry_age: 18
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Diplôme Universitaire de Technologie
+  - country_entry_id: MAR-EDU-12
+    national_label_en: Diplôme Universitaire de Technologie
     national_label_local: الدبلوم الجامعي في التكنولوجيا
     entry_age: 18
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Licence professionnelle (LP)
+  - country_entry_id: MAR-EDU-13
+    national_label_en: Licence professionnelle (LP)
     national_label_local: الإجازة المهنية
     entry_age: 18
     duration_years: 3
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Licence sciences et technique (LST)
+  - country_entry_id: MAR-EDU-14
+    national_label_en: Licence sciences et technique (LST)
     national_label_local: إجازة العلوم و التقنية
     entry_age: 18
     duration_years: 3
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Licence d'études fondamentales (LEF)
+  - country_entry_id: MAR-EDU-15
+    national_label_en: Licence d'études fondamentales (LEF)
     national_label_local: إجازة الدراسات الأساسية
     entry_age: 18
     duration_years: 3
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Formation des instituteurs du primaire
+  - country_entry_id: MAR-EDU-16
+    national_label_en: Formation des instituteurs du primaire
     national_label_local: تكوين أساتذة التعليم الابتدائي
     entry_age: 21
     duration_years: 1
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Formation des enseignants du secondaire collégial
+  - country_entry_id: MAR-EDU-17
+    national_label_en: Formation des enseignants du secondaire collégial
     national_label_local: تكوين أساتذة التعليم الثانوي الإعدادي
     entry_age: 21
     duration_years: 1
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Formation des enseignants du secondaire
+  - country_entry_id: MAR-EDU-18
+    national_label_en: Formation des enseignants du secondaire
     national_label_local: تكوين أساتذة التعليم الثانوي
     entry_age: 21
     duration_years: 1
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Médecine dentaire
+  - country_entry_id: MAR-EDU-19
+    national_label_en: Médecine dentaire
     national_label_local: طب الأسنان
     entry_age: 18
     duration_years: 5
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Sciences de l'ingénieur
+  - country_entry_id: MAR-EDU-20
+    national_label_en: Sciences de l'ingénieur
     national_label_local: علوم المهندس
     entry_age: 18
     duration_years: 5
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Pharmacie
+  - country_entry_id: MAR-EDU-21
+    national_label_en: Pharmacie
     national_label_local: الصيدلة
     entry_age: 18
     duration_years: 6
@@ -220,7 +241,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Médecine
+  - country_entry_id: MAR-EDU-22
+    national_label_en: Médecine
     national_label_local: الطب
     entry_age: 18
     duration_years: 7
@@ -230,7 +252,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Programmes de master
+  - country_entry_id: MAR-EDU-23
+    national_label_en: Programmes de master
     national_label_local: برامج الماستر
     entry_age: 21
     duration_years: 2
@@ -240,7 +263,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Interprète
+  - country_entry_id: MAR-EDU-24
+    national_label_en: Interprète
     national_label_local: الترجمة
     entry_age: 21
     duration_years: 2
@@ -250,7 +274,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Spécialité en Médecine Dentaire
+  - country_entry_id: MAR-EDU-25
+    national_label_en: Spécialité en Médecine Dentaire
     national_label_local: التخصص في طب الأسنان
     entry_age: 25
     duration_years: 3
@@ -260,7 +285,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Spécialité en Médecine
+  - country_entry_id: MAR-EDU-26
+    national_label_en: Spécialité en Médecine
     national_label_local: التخصص في الطب
     entry_age: 25
     duration_years: 3
@@ -270,7 +296,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Étude de Doctorat
+  - country_entry_id: MAR-EDU-27
+    national_label_en: Étude de Doctorat
     national_label_local: دراسات الدكتوراه
     entry_age: 23
     duration_years: 3
@@ -290,7 +317,8 @@ parameters:
   effective_to: 2015
   selectors: ~
   value:
-  - survey_labels: 1 - Regions sahariennes
+  - country_entry_id: MAR-SUBNAT-01
+    survey_labels: 1 - Regions sahariennes
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAULx_1
     gmd_subnatid2: ''
@@ -310,7 +338,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Guelmim - Es-Semara & Laâyoune - Boujdour - Sakia El Hamra
     source_row: 9231
-  - survey_labels: 10 - Tadla-Azilal
+  - country_entry_id: MAR-SUBNAT-02
+    survey_labels: 10 - Tadla-Azilal
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147336
     gmd_subnatid2: ''
@@ -330,7 +359,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tadla - Azilal
     source_row: 9232
-  - survey_labels: 11 - Meknes-Tafilalet
+  - country_entry_id: MAR-SUBNAT-03
+    survey_labels: 11 - Meknes-Tafilalet
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_2107
     gmd_subnatid2: ''
@@ -350,7 +380,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Meknès - Tafilalet
     source_row: 9233
-  - survey_labels: 12 - Fes-Boulemane-Taounate
+  - country_entry_id: MAR-SUBNAT-04
+    survey_labels: 12 - Fes-Boulemane-Taounate
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAULx_12
     gmd_subnatid2: ''
@@ -370,7 +401,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Fès - Boulemane & Taounate
     source_row: 9234
-  - survey_labels: 13 - Taza-Hoceima
+  - country_entry_id: MAR-SUBNAT-05
+    survey_labels: 13 - Taza-Hoceima
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAULx_13
     gmd_subnatid2: ''
@@ -390,7 +422,8 @@ parameters:
     geo_nvar: ADM2_NAME
     geo_name: Taza & Al Hoceima
     source_row: 9235
-  - survey_labels: 14 - Tanger-Tetouan
+  - country_entry_id: MAR-SUBNAT-06
+    survey_labels: 14 - Tanger-Tetouan
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147337
     gmd_subnatid2: ''
@@ -410,7 +443,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tanger - Tétouan
     source_row: 9236
-  - survey_labels: 2 - Souss- Massa-Draa
+  - country_entry_id: MAR-SUBNAT-07
+    survey_labels: 2 - Souss- Massa-Draa
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147335
     gmd_subnatid2: ''
@@ -430,7 +464,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Souss - Massa - Draâ
     source_row: 9237
-  - survey_labels: 3 - Gharb-Chrarda-Beni Hssen
+  - country_entry_id: MAR-SUBNAT-08
+    survey_labels: 3 - Gharb-Chrarda-Beni Hssen
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147329
     gmd_subnatid2: ''
@@ -450,7 +485,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gharb - Chrarda - Béni Hssen
     source_row: 9238
-  - survey_labels: 4 - Chaouia-Ouardigha
+  - country_entry_id: MAR-SUBNAT-09
+    survey_labels: 4 - Chaouia-Ouardigha
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147326
     gmd_subnatid2: ''
@@ -470,7 +506,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chaouia - Ouardigha
     source_row: 9239
-  - survey_labels: 5 - Marrakech-Tensift-Haouz
+  - country_entry_id: MAR-SUBNAT-10
+    survey_labels: 5 - Marrakech-Tensift-Haouz
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147333
     gmd_subnatid2: ''
@@ -490,7 +527,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Marrakech - Tensift - Al Haouz
     source_row: 9240
-  - survey_labels: 6 - Oriental
+  - country_entry_id: MAR-SUBNAT-11
+    survey_labels: 6 - Oriental
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_2109
     gmd_subnatid2: ''
@@ -510,7 +548,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Oriental
     source_row: 9241
-  - survey_labels: 7 - Grand Casablanca
+  - country_entry_id: MAR-SUBNAT-12
+    survey_labels: 7 - Grand Casablanca
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147330
     gmd_subnatid2: ''
@@ -530,7 +569,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Grand Casablanca
     source_row: 9242
-  - survey_labels: 8 -Rabat-Sale-Zemmour-Zaer
+  - country_entry_id: MAR-SUBNAT-13
+    survey_labels: 8 -Rabat-Sale-Zemmour-Zaer
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147334
     gmd_subnatid2: ''
@@ -550,7 +590,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Rabat - Salé - Zemmour - Zaer
     source_row: 9243
-  - survey_labels: 9 - Doukkala-Abda
+  - country_entry_id: MAR-SUBNAT-14
+    survey_labels: 9 - Doukkala-Abda
     survey_variables: subnatid
     gmd_subnatid1: MAR_2015_GAUL1_147327
     gmd_subnatid2: ''
@@ -580,7 +621,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Tanger-Tetouan-Al Hoceima
+  - country_entry_id: MAR-SUBNAT-01
+    survey_labels: 1 - Tanger-Tetouan-Al Hoceima
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA010
     gmd_subnatid2: ''
@@ -600,7 +642,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Tanger-Tétouan-Al Hoceima
     source_row: 9259
-  - survey_labels: 10 - Guelmim-Oued Noun
+  - country_entry_id: MAR-SUBNAT-02
+    survey_labels: 10 - Guelmim-Oued Noun
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA005
     gmd_subnatid2: ''
@@ -620,7 +663,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Guelmim-Oued Noun
     source_row: 9260
-  - survey_labels: 2 - Oriental
+  - country_entry_id: MAR-SUBNAT-03
+    survey_labels: 2 - Oriental
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA007
     gmd_subnatid2: ''
@@ -640,7 +684,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Oriental
     source_row: 9261
-  - survey_labels: 3 - Fes-Méknès
+  - country_entry_id: MAR-SUBNAT-04
+    survey_labels: 3 - Fes-Méknès
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA004
     gmd_subnatid2: ''
@@ -660,7 +705,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Fès-Meknès
     source_row: 9262
-  - survey_labels: 4 - Rabat-Salé-Kenitra
+  - country_entry_id: MAR-SUBNAT-05
+    survey_labels: 4 - Rabat-Salé-Kenitra
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA008
     gmd_subnatid2: ''
@@ -680,7 +726,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Rabat-Salé-Kénitra
     source_row: 9263
-  - survey_labels: 5 - Beni Mellal-Khenifra
+  - country_entry_id: MAR-SUBNAT-06
+    survey_labels: 5 - Beni Mellal-Khenifra
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA001
     gmd_subnatid2: ''
@@ -700,7 +747,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Béni Mellal-Khénifra
     source_row: 9264
-  - survey_labels: 6 - Grand Casablanca
+  - country_entry_id: MAR-SUBNAT-07
+    survey_labels: 6 - Grand Casablanca
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA002
     gmd_subnatid2: ''
@@ -720,7 +768,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Grand Casablanca-Settat
     source_row: 9265
-  - survey_labels: 7 - Marrakech-Safi
+  - country_entry_id: MAR-SUBNAT-08
+    survey_labels: 7 - Marrakech-Safi
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA006
     gmd_subnatid2: ''
@@ -740,7 +789,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Marrakech-Safi
     source_row: 9266
-  - survey_labels: 8 - Draa-Tafilalet
+  - country_entry_id: MAR-SUBNAT-09
+    survey_labels: 8 - Draa-Tafilalet
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA003
     gmd_subnatid2: ''
@@ -760,7 +810,8 @@ parameters:
     geo_nvar: ADM1_FR
     geo_name: Drâa-Tafilalet
     source_row: 9267
-  - survey_labels: 9 - Souss-Massa
+  - country_entry_id: MAR-SUBNAT-10
+    survey_labels: 9 - Souss-Massa
     survey_variables: subnatid
     gmd_subnatid1: MAR_2023_UN1_MA009
     gmd_subnatid2: ''
@@ -790,7 +841,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: chasse_branchee_a_d_autres_moyens
+  - country_entry_id: MAR-SAN-01
+    source_category_code: chasse_branchee_a_d_autres_moyens
     national_label_en: Chasse branchée à d’autres moyens
     national_label_local: reliée al'air libre
     jmp_classification: Flush and pour flush > to elsewhere
@@ -800,7 +852,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: chasse_branchee_a_l_egout
+  - country_entry_id: MAR-SAN-02
+    source_category_code: chasse_branchee_a_l_egout
     national_label_en: Chasse branchée à l'égout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -810,7 +863,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: toilette_avec_siphon_reliee_aux_egouts
+  - country_entry_id: MAR-SAN-03
+    source_category_code: toilette_avec_siphon_reliee_aux_egouts
     national_label_en: Toilette avec siphon reliee aux egouts
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -820,7 +874,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: chasse_branchee_a_latrine
+  - country_entry_id: MAR-SAN-04
+    source_category_code: chasse_branchee_a_latrine
     national_label_en: Chasse branchée à latrine
     national_label_local: reliée aux latrine
     jmp_classification: Flush and pour flush > to pit
@@ -830,7 +885,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: toilette_avec_siphon_non_reliee_aux_egouts
+  - country_entry_id: MAR-SAN-05
+    source_category_code: toilette_avec_siphon_non_reliee_aux_egouts
     national_label_en: Toilette avec siphon non reliee aux egouts
     national_label_local: reliée a fosse septique
     jmp_classification: Flush and pour flush > to septic tank
@@ -840,7 +896,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: private_flush
+  - country_entry_id: MAR-SAN-06
+    source_category_code: private_flush
     national_label_en: Private flush
     national_label_local: Toilette à chasse d'eau (privée)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -850,7 +907,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: private_flush_inside
+  - country_entry_id: MAR-SAN-07
+    source_category_code: private_flush_inside
     national_label_en: Private flush inside
     national_label_local: Toilette à chasse d'eau (privée)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -860,7 +918,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: toilette_a_l_interieur
+  - country_entry_id: MAR-SAN-08
+    source_category_code: toilette_a_l_interieur
     national_label_en: Toilette à l'intérieur
     national_label_local: Toilette à chasse d'eau (privée)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -870,7 +929,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: wc_a_l_interieur_et_exterieur_prive
+  - country_entry_id: MAR-SAN-09
+    source_category_code: wc_a_l_interieur_et_exterieur_prive
     national_label_en: WC à l'intérieur et extérieur privé
     national_label_local: Toilette à chasse d'eau (privée)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -880,7 +940,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: MAR-SAN-10
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -890,7 +951,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: MAR-SAN-11
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -900,7 +962,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: outdoor_collective_wc
+  - country_entry_id: MAR-SAN-12
+    source_category_code: outdoor_collective_wc
     national_label_en: Outdoor Collective WC
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -910,7 +973,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_flush
+  - country_entry_id: MAR-SAN-13
+    source_category_code: shared_flush
     national_label_en: Shared flush
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -920,7 +984,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_flush_inside
+  - country_entry_id: MAR-SAN-14
+    source_category_code: shared_flush_inside
     national_label_en: Shared flush inside
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -930,7 +995,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: toilette_publique
+  - country_entry_id: MAR-SAN-15
+    source_category_code: toilette_publique
     national_label_en: Toilette publique
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -940,7 +1006,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: toilettes_a_l_exterieur
+  - country_entry_id: MAR-SAN-16
+    source_category_code: toilettes_a_l_exterieur
     national_label_en: Toilettes à l'extérieur
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -950,7 +1017,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: wc_a_l_interieur_et_exterieur_collectif
+  - country_entry_id: MAR-SAN-17
+    source_category_code: wc_a_l_interieur_et_exterieur_collectif
     national_label_en: WC à l'intérieur et extérieur collectif
     national_label_local: Toilette à chasse d'eau (publique/partagée)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -960,7 +1028,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: MAR-SAN-18
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -971,7 +1040,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: MAR-SAN-19
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -981,7 +1051,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: egout
+  - country_entry_id: MAR-SAN-20
+    source_category_code: egout
     national_label_en: Egout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > to piped sewer system
@@ -991,7 +1062,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: toilette_branchee_aux_egouts
+  - country_entry_id: MAR-SAN-21
+    source_category_code: toilette_branchee_aux_egouts
     national_label_en: Toilette branchée aux égouts
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1001,7 +1073,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: toilette_avec_siphone_non_branchee_aux_egouts
+  - country_entry_id: MAR-SAN-22
+    source_category_code: toilette_avec_siphone_non_branchee_aux_egouts
     national_label_en: Toilette avec siphone non branchée aux égouts
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > to pit
@@ -1011,7 +1084,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: fosse_septique
+  - country_entry_id: MAR-SAN-23
+    source_category_code: fosse_septique
     national_label_en: Fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > to septic tank
@@ -1021,7 +1095,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: toilette_branchee_a_une_fosse_septique
+  - country_entry_id: MAR-SAN-24
+    source_category_code: toilette_branchee_a_une_fosse_septique
     national_label_en: Toilette branchée à une fosse séptique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > to septic tank
@@ -1031,7 +1106,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: MAR-SAN-25
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1041,7 +1117,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: seau
+  - country_entry_id: MAR-SAN-26
+    source_category_code: seau
     national_label_en: Seau
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1051,7 +1128,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: fosse
+  - country_entry_id: MAR-SAN-27
+    source_category_code: fosse
     national_label_en: Fosse
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1062,7 +1140,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: MAR-SAN-28
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1073,7 +1152,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: fosse_d_aisance_ou_latrine
+  - country_entry_id: MAR-SAN-29
+    source_category_code: fosse_d_aisance_ou_latrine
     national_label_en: Fosse d aisance ou latrine
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1084,7 +1164,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: fosse_somaire
+  - country_entry_id: MAR-SAN-30
+    source_category_code: fosse_somaire
     national_label_en: Fosse somaire
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1095,7 +1176,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: latrine
+  - country_entry_id: MAR-SAN-31
+    source_category_code: latrine
     national_label_en: Latrine
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1106,7 +1188,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: latrines
+  - country_entry_id: MAR-SAN-32
+    source_category_code: latrines
     national_label_en: Latrines
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1117,7 +1200,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: simple_pit
+  - country_entry_id: MAR-SAN-33
+    source_category_code: simple_pit
     national_label_en: Simple Pit*
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1128,7 +1212,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: fosse_amelioree_et_ventilee
+  - country_entry_id: MAR-SAN-34
+    source_category_code: fosse_amelioree_et_ventilee
     national_label_en: Fosse ameliorée et ventilée
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1139,7 +1224,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: improved_pit
+  - country_entry_id: MAR-SAN-35
+    source_category_code: improved_pit
     national_label_en: Improved Pit
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1150,7 +1236,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: MAR-SAN-36
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -1161,7 +1248,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: MAR-SAN-37
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1172,7 +1260,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: MAR-SAN-38
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Latrines à chasse d'eau (privées)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1182,7 +1271,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: MAR-SAN-39
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Latrines à chasse d'eau (publiques/partagées)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1193,7 +1283,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: dans_la_nature_pas_de_toilette
+  - country_entry_id: MAR-SAN-40
+    source_category_code: dans_la_nature_pas_de_toilette
     national_label_en: Dans la nature pas de toilette
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1203,7 +1294,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: en_plein_air
+  - country_entry_id: MAR-SAN-41
+    source_category_code: en_plein_air
     national_label_en: En plein air
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1213,7 +1305,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: jetees_dans_la_nature
+  - country_entry_id: MAR-SAN-42
+    source_category_code: jetees_dans_la_nature
     national_label_en: Jetées dans la nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1223,7 +1316,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities
+  - country_entry_id: MAR-SAN-43
+    source_category_code: no_facilities
     national_label_en: No Facilities
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1233,7 +1327,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: MAR-SAN-44
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1243,7 +1338,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_none_available
+  - country_entry_id: MAR-SAN-45
+    source_category_code: no_none_available
     national_label_en: No, none available
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1253,7 +1349,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_pas_disponible
+  - country_entry_id: MAR-SAN-46
+    source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1263,7 +1360,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilet_dans_la_nature
+  - country_entry_id: MAR-SAN-47
+    source_category_code: pas_de_toilet_dans_la_nature
     national_label_en: Pas de toilet dans la nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1273,7 +1371,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilettes_dans_la_brousse_ou_dans_des_champs
+  - country_entry_id: MAR-SAN-48
+    source_category_code: pas_de_toilettes_dans_la_brousse_ou_dans_des_champs
     national_label_en: Pas de toilettes dans la brousse ou dans des champs
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1283,7 +1382,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: plein_air
+  - country_entry_id: MAR-SAN-49
+    source_category_code: plein_air
     national_label_en: Plein air
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1293,7 +1393,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: autres_installations_d_assainissement_ameliorees
+  - country_entry_id: MAR-SAN-50
+    source_category_code: autres_installations_d_assainissement_ameliorees
     national_label_en: Autres (Installations d'assainissement améliorées)
     national_label_local: Autre
     jmp_classification: Other improved > Other
@@ -1303,7 +1404,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: toilette_sans_siphon_reliee_aux_egouts
+  - country_entry_id: MAR-SAN-51
+    source_category_code: toilette_sans_siphon_reliee_aux_egouts
     national_label_en: Toilette sans siphon reliee aux egouts
     national_label_local: Autre
     jmp_classification: Other improved > Other
@@ -1313,7 +1415,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: toilette_sans_siphone_branchee_aux_egouts
+  - country_entry_id: MAR-SAN-52
+    source_category_code: toilette_sans_siphone_branchee_aux_egouts
     national_label_en: Toilette sans siphone branchée aux égouts
     national_label_local: Autre
     jmp_classification: Other improved > Other
@@ -1323,7 +1426,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: autre
+  - country_entry_id: MAR-SAN-53
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1333,7 +1437,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: autres_installations_d_assainissement_non_ameliorees
+  - country_entry_id: MAR-SAN-54
+    source_category_code: autres_installations_d_assainissement_non_ameliorees
     national_label_en: Autres (Installations d'assainissement non améliorées)
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1343,7 +1448,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: MAR-SAN-55
+    source_category_code: other
     national_label_en: Other
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1353,7 +1459,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_not_defined
+  - country_entry_id: MAR-SAN-56
+    source_category_code: other_not_defined
     national_label_en: Other (Not Defined)
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1363,7 +1470,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_type_of_sanitation
+  - country_entry_id: MAR-SAN-57
+    source_category_code: other_type_of_sanitation
     national_label_en: Other type of sanitation
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1383,7 +1491,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: source
+  - country_entry_id: MAR-WAS-01
+    source_category_code: source
     national_label_en: Source
     national_label_local: Toutes les sources
     jmp_classification: Ground water > All springs
@@ -1393,7 +1502,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: spring
+  - country_entry_id: MAR-WAS-02
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: Toutes les sources
     jmp_classification: Ground water > All springs
@@ -1403,7 +1513,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: well
+  - country_entry_id: MAR-WAS-03
+    source_category_code: well
     national_label_en: Well
     national_label_local: Tous les puits
     jmp_classification: Ground water > All wells
@@ -1413,7 +1524,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: well_in_yard
+  - country_entry_id: MAR-WAS-04
+    source_category_code: well_in_yard
     national_label_en: Well in yard
     national_label_local: Privé
     jmp_classification: Ground water > All wells > Private
@@ -1423,7 +1535,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: public_well
+  - country_entry_id: MAR-WAS-05
+    source_category_code: public_well
     national_label_en: Public Well
     national_label_local: Public
     jmp_classification: Ground water > All wells > Public
@@ -1433,7 +1546,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: MAR-WAS-06
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1443,7 +1557,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: MAR-WAS-07
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1453,7 +1568,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: source_protegee
+  - country_entry_id: MAR-WAS-08
+    source_category_code: source_protegee
     national_label_en: Source protegee
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1463,7 +1579,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: source_surveillee
+  - country_entry_id: MAR-WAS-09
+    source_category_code: source_surveillee
     national_label_en: Source survéillée
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1473,7 +1590,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: MAR-WAS-10
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1483,7 +1601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: puits_proteges
+  - country_entry_id: MAR-WAS-11
+    source_category_code: puits_proteges
     national_label_en: Puits protégés
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1493,7 +1612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: puits_protege_dans_le_logement_cour
+  - country_entry_id: MAR-WAS-12
+    source_category_code: puits_protege_dans_le_logement_cour
     national_label_en: Puits protégé dans le logement/cour
     national_label_local: Privé
     jmp_classification: Ground water > Protected well > Private
@@ -1503,7 +1623,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: puits_public_protege
+  - country_entry_id: MAR-WAS-13
+    source_category_code: puits_public_protege
     national_label_en: Puits public protégé
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -1513,7 +1634,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: eua_de_puits
+  - country_entry_id: MAR-WAS-14
+    source_category_code: eua_de_puits
     national_label_en: Eua de puits
     national_label_local: Puits traditionnels
     jmp_classification: Ground water > Traditional wells
@@ -1523,7 +1645,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: puits_non_equipe_d_une_pompe
+  - country_entry_id: MAR-WAS-15
+    source_category_code: puits_non_equipe_d_une_pompe
     national_label_en: Puits non équipé d'une pompe
     national_label_local: Puits traditionnels
     jmp_classification: Ground water > Traditional wells
@@ -1533,7 +1656,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: puits_sans_pompe
+  - country_entry_id: MAR-WAS-16
+    source_category_code: puits_sans_pompe
     national_label_en: Puits sans pompe
     national_label_local: Puits traditionnels
     jmp_classification: Ground water > Traditional wells
@@ -1543,7 +1667,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: puits_source_metfia_oued
+  - country_entry_id: MAR-WAS-17
+    source_category_code: puits_source_metfia_oued
     national_label_en: Puits, source metfia, oued
     national_label_local: Autre
     jmp_classification: Ground water > Traditional wells > Other
@@ -1553,7 +1678,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: MAR-WAS-18
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1563,7 +1689,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_avec_pompe
+  - country_entry_id: MAR-WAS-19
+    source_category_code: puits_avec_pompe
     national_label_en: Puits avec pompe
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1573,7 +1700,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_equipe_d_une_pompe
+  - country_entry_id: MAR-WAS-20
+    source_category_code: puits_equipe_d_une_pompe
     national_label_en: Puits équipé d'une pompe
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1583,7 +1711,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: MAR-WAS-21
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1593,7 +1722,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: source_non_protege
+  - country_entry_id: MAR-WAS-22
+    source_category_code: source_non_protege
     national_label_en: Source non protégé
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1603,7 +1733,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: source_non_protegee
+  - country_entry_id: MAR-WAS-23
+    source_category_code: source_non_protegee
     national_label_en: Source non protegee
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1613,7 +1744,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: source_non_surveillee
+  - country_entry_id: MAR-WAS-24
+    source_category_code: source_non_surveillee
     national_label_en: Source non survéillée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1623,7 +1755,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: MAR-WAS-25
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1633,7 +1766,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: puits_non_proteges
+  - country_entry_id: MAR-WAS-26
+    source_category_code: puits_non_proteges
     national_label_en: Puits non protégés
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1643,7 +1777,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: MAR-WAS-27
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1653,7 +1788,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: puits_ouvert_dans_le_logement_cour
+  - country_entry_id: MAR-WAS-28
+    source_category_code: puits_ouvert_dans_le_logement_cour
     national_label_en: Puits ouvert dans le logement/cour
     national_label_local: Privé
     jmp_classification: Ground water > Unprotected well > Private
@@ -1663,7 +1799,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: puits_public_ouvert
+  - country_entry_id: MAR-WAS-29
+    source_category_code: puits_public_ouvert
     national_label_en: Puits public ouvert
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
@@ -1673,7 +1810,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 72
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: MAR-WAS-30
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Puits ou sources non protégées
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1683,7 +1821,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
+  - country_entry_id: MAR-WAS-31
+    source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
     national_label_en: Purchased from a cart with a small tank or drum
     national_label_local: Chariot avec petit réservoir/tambour
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1693,7 +1832,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: autres_sources_ameliorees
+  - country_entry_id: MAR-WAS-32
+    source_category_code: autres_sources_ameliorees
     national_label_en: Autres (Sources améliorées)
     national_label_local: Autre
     jmp_classification: Other improved sources > Other
@@ -1703,7 +1843,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: camion_cisterne
+  - country_entry_id: MAR-WAS-33
+    source_category_code: camion_cisterne
     national_label_en: Camion cisterne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1713,7 +1854,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_citerne
+  - country_entry_id: MAR-WAS-34
+    source_category_code: camion_citerne
     national_label_en: Camion citerne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1723,7 +1865,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_citerne
+  - country_entry_id: MAR-WAS-35
+    source_category_code: camion_citerne
     national_label_en: Camion-citerne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1733,7 +1876,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: purchased_from_a_tanker_truck
+  - country_entry_id: MAR-WAS-36
+    source_category_code: purchased_from_a_tanker_truck
     national_label_en: Purchased from a tanker truck
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1743,7 +1887,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker
+  - country_entry_id: MAR-WAS-37
+    source_category_code: tanker
     national_label_en: Tanker
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1753,7 +1898,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: MAR-WAS-38
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1763,7 +1909,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: vehicule_equipe_d_un_reservoir_d_eau
+  - country_entry_id: MAR-WAS-39
+    source_category_code: vehicule_equipe_d_un_reservoir_d_eau
     national_label_en: Véhicule équipé d'un réservoir d'eau
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1773,7 +1920,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: autre
+  - country_entry_id: MAR-WAS-40
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1783,7 +1931,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: autres_sources_non_ameliorees
+  - country_entry_id: MAR-WAS-41
+    source_category_code: autres_sources_non_ameliorees
     national_label_en: Autres(Sources non améliorées)
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1793,7 +1942,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: MAR-WAS-42
+    source_category_code: other
     national_label_en: Other
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1803,7 +1953,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: vendeur
+  - country_entry_id: MAR-WAS-43
+    source_category_code: vendeur
     national_label_en: Vendeur
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1813,7 +1964,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: autres
+  - country_entry_id: MAR-WAS-44
+    source_category_code: autres
     national_label_en: Autres
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1823,7 +1975,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: eau_en_bouteille
+  - country_entry_id: MAR-WAS-45
+    source_category_code: eau_en_bouteille
     national_label_en: Eau en bouteille
     national_label_local: Eau conditionnée
     jmp_classification: Packaged water
@@ -1833,7 +1986,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 89
-  - source_category_code: eau_en_buiteille
+  - country_entry_id: MAR-WAS-46
+    source_category_code: eau_en_buiteille
     national_label_en: Eau en buiteille
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1843,7 +1997,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: eau_minerale_en_bouteille
+  - country_entry_id: MAR-WAS-47
+    source_category_code: eau_minerale_en_bouteille
     national_label_en: Eau minerale en bouteille
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1853,7 +2008,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: l_eau_minerale_en_verre_ou_en_plastique
+  - country_entry_id: MAR-WAS-48
+    source_category_code: l_eau_minerale_en_verre_ou_en_plastique
     national_label_en: L'eau minerale en verre ou en plastique
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1863,7 +2019,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: MAR-WAS-49
+    source_category_code: bottled_water
     national_label_en: Bottled Water
     national_label_local: Sachet d'eau
     jmp_classification: Packaged water > Sachet water
@@ -1873,7 +2030,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: eau_de_pluie
+  - country_entry_id: MAR-WAS-50
+    source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1883,7 +2041,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: eau_des_pluies
+  - country_entry_id: MAR-WAS-51
+    source_category_code: eau_des_pluies
     national_label_en: Eau des pluies
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1893,7 +2052,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water
+  - country_entry_id: MAR-WAS-52
+    source_category_code: rain_water
     national_label_en: Rain Water
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1903,7 +2063,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: MAR-WAS-53
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1913,7 +2074,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: MAR-WAS-54
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1923,7 +2085,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: source_riviere_barrage_lac
+  - country_entry_id: MAR-WAS-55
+    source_category_code: source_riviere_barrage_lac
     national_label_en: Source, rivière, barrage, lac
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1933,7 +2096,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
+  - country_entry_id: MAR-WAS-56
+    source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
     national_label_en: Surface water, like a river, dam, lake, pond, stream, canal
       or irrigation channel
     national_label_local: Eau de surface
@@ -1944,7 +2108,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: MAR-WAS-57
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1954,7 +2119,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: barrage
+  - country_entry_id: MAR-WAS-58
+    source_category_code: barrage
     national_label_en: Barrage
     national_label_local: Endiguer
     jmp_classification: Surface water > Dam
@@ -1964,7 +2130,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: dam
+  - country_entry_id: MAR-WAS-59
+    source_category_code: dam
     national_label_en: Dam
     national_label_local: Endiguer
     jmp_classification: Surface water > Dam
@@ -1974,7 +2141,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: etang_lac
+  - country_entry_id: MAR-WAS-60
+    source_category_code: etang_lac
     national_label_en: Etang / Lac
     national_label_local: Lac
     jmp_classification: Surface water > Lake
@@ -1984,7 +2152,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: lac
+  - country_entry_id: MAR-WAS-61
+    source_category_code: lac
     national_label_en: Lac
     national_label_local: Lac
     jmp_classification: Surface water > Lake
@@ -1994,7 +2163,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: pond
+  - country_entry_id: MAR-WAS-62
+    source_category_code: pond
     national_label_en: Pond
     national_label_local: Étang
     jmp_classification: Surface water > Pond
@@ -2004,7 +2174,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: pond_lake
+  - country_entry_id: MAR-WAS-63
+    source_category_code: pond_lake
     national_label_en: Pond/Lake
     national_label_local: Étang
     jmp_classification: Surface water > Pond
@@ -2014,7 +2185,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: river_stream
+  - country_entry_id: MAR-WAS-64
+    source_category_code: river_stream
     national_label_en: River/Stream
     national_label_local: Fleuve
     jmp_classification: Surface water > River
@@ -2024,7 +2196,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: riviere_cours_d_eau
+  - country_entry_id: MAR-WAS-65
+    source_category_code: riviere_cours_d_eau
     national_label_en: Riviere / Cours d'eau
     national_label_local: Fleuve
     jmp_classification: Surface water > River
@@ -2034,7 +2207,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: riviere_fleuve_ruisseau
+  - country_entry_id: MAR-WAS-66
+    source_category_code: riviere_fleuve_ruisseau
     national_label_en: Riviere, Fleuve, Ruisseau
     national_label_local: Fleuve
     jmp_classification: Surface water > River
@@ -2044,7 +2218,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: riviere_ruisseau
+  - country_entry_id: MAR-WAS-67
+    source_category_code: riviere_ruisseau
     national_label_en: Rivière/ruisseau
     national_label_local: Fleuve
     jmp_classification: Surface water > River
@@ -2054,7 +2229,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: eau_du_robinet
+  - country_entry_id: MAR-WAS-68
+    source_category_code: eau_du_robinet
     national_label_en: Eau du robinet
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -2064,7 +2240,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water
+  - country_entry_id: MAR-WAS-69
+    source_category_code: piped_water
     national_label_en: Piped water
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -2074,7 +2251,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: MAR-WAS-70
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -2084,7 +2262,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: private_tap
+  - country_entry_id: MAR-WAS-71
+    source_category_code: private_tap
     national_label_en: Private Tap
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -2094,7 +2273,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: reseau_public
+  - country_entry_id: MAR-WAS-72
+    source_category_code: reseau_public
     national_label_en: Réseau public
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -2104,7 +2284,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: eau_du_robinet_dans_le_logement
+  - country_entry_id: MAR-WAS-73
+    source_category_code: eau_du_robinet_dans_le_logement
     national_label_en: Eau du robinet dans le logement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2114,7 +2295,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: MAR-WAS-74
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2124,7 +2306,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: reseau_public
+  - country_entry_id: MAR-WAS-75
+    source_category_code: reseau_public
     national_label_en: Reseau public
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2134,7 +2317,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: eau_du_robinet_dans_la_cour
+  - country_entry_id: MAR-WAS-76
+    source_category_code: eau_du_robinet_dans_la_cour
     national_label_en: Eau du robinet dans la cour
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2144,7 +2328,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot_or_compound
+  - country_entry_id: MAR-WAS-77
+    source_category_code: piped_water_into_yard_plot_or_compound
     national_label_en: Piped water into yard, plot or compound
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2154,7 +2339,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: fontaine_publique
+  - country_entry_id: MAR-WAS-78
+    source_category_code: fontaine_publique
     national_label_en: Fontaine publique
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -2164,7 +2350,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: MAR-WAS-79
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -2174,7 +2361,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_or_standpipe
+  - country_entry_id: MAR-WAS-80
+    source_category_code: public_tap_or_standpipe
     national_label_en: Public tap or standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -2184,7 +2372,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: robinet_public_borne_fontaine
+  - country_entry_id: MAR-WAS-81
+    source_category_code: robinet_public_borne_fontaine
     national_label_en: Robinet public/ borne fontaine
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -2194,7 +2383,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: standpipe
+  - country_entry_id: MAR-WAS-82
+    source_category_code: standpipe
     national_label_en: Standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe

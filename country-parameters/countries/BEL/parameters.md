@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Child care
+  - country_entry_id: BEL-EDU-01
+    national_label_en: Child care
     national_label_local: Kinderopvang
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: European School - regular nursery education
+  - country_entry_id: BEL-EDU-02
+    national_label_en: European School - regular nursery education
     national_label_local: Europese School - gewoon kleuter
     entry_age: 2
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Regular nursery education
+  - country_entry_id: BEL-EDU-03
+    national_label_en: Regular nursery education
     national_label_local: Gewoon kleuteronderwijs
     entry_age: 2
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Special nursery education
+  - country_entry_id: BEL-EDU-04
+    national_label_en: Special nursery education
     national_label_local: Buitengewoon kleuteronderwijs
     entry_age: 2
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Regular primary education
+  - country_entry_id: BEL-EDU-05
+    national_label_en: Regular primary education
     national_label_local: Gewoon lager onderwijs
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: European School - regular primary education
+  - country_entry_id: BEL-EDU-06
+    national_label_en: European School - regular primary education
     national_label_local: Europese School - gewoon lager
     entry_age: 6
     duration_years: 6
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Special primary education
+  - country_entry_id: BEL-EDU-07
+    national_label_en: Special primary education
     national_label_local: Buitengewoon lager onderwijs
     entry_age: 6
     duration_years: 7
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: Reception class for immigrants
+  - country_entry_id: BEL-EDU-08
+    national_label_en: Reception class for immigrants
     national_label_local: Onthaalklas voor anderstalige nieuwkomers
     entry_age: 12
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Regular secondary education - 1st stage
+  - country_entry_id: BEL-EDU-09
+    national_label_en: Regular secondary education - 1st stage
     national_label_local: Gewoon secundair onderwijs - 1ste graad
     entry_age: 12
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: European School - 1st stage
+  - country_entry_id: BEL-EDU-10
+    national_label_en: European School - 1st stage
     national_label_local: Europese School - 1ste graad
     entry_age: 14
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 14
-  - national_label_en: Special secondary education - training form 4 - 1st stage
+  - country_entry_id: BEL-EDU-11
+    national_label_en: Special secondary education - training form 4 - 1st stage
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 1ste
       graad
     entry_age: 12
@@ -121,7 +132,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 15
-  - national_label_en: Special secondary education - training form 1 and 2
+  - country_entry_id: BEL-EDU-12
+    national_label_en: Special secondary education - training form 1 and 2
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 1 en 2
     entry_age: 12
     duration_years: 9
@@ -131,7 +143,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 16
-  - national_label_en: Special secondary education - training form 3
+  - country_entry_id: BEL-EDU-13
+    national_label_en: Special secondary education - training form 3
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 3
     entry_age: 12
     duration_years: 6
@@ -141,7 +154,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 17
-  - national_label_en: Secondary adult education - language courses (foreign languages
+  - country_entry_id: BEL-EDU-14
+    national_label_en: Secondary adult education - language courses (foreign languages
       and Dutch for non-native speakers) - content specification of level 1
     national_label_local: Secundair volwassenenonderwijs - vreemde talen en NT2 -
       richtgraad 1
@@ -153,7 +167,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 18
-  - national_label_en: Regular secondary education - 2nd stage ASO (ASO= general secondary
+  - country_entry_id: BEL-EDU-15
+    national_label_en: Regular secondary education - 2nd stage ASO (ASO= general secondary
       education)
     national_label_local: Gewoon secundair onderwijs - 2de graad ASO
     entry_age: 14
@@ -164,7 +179,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: European School - regular secondary education - 2nd stage
+  - country_entry_id: BEL-EDU-16
+    national_label_en: European School - regular secondary education - 2nd stage
     national_label_local: Europese School - 2de graad
     entry_age: 14
     duration_years: 2
@@ -174,7 +190,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: European School - regular secondary education - 1st & 2nd year
+  - country_entry_id: BEL-EDU-17
+    national_label_en: European School - regular secondary education - 1st & 2nd year
       of the 3rd stage
     national_label_local: Europese School - 1ste & 2de jaar 3de graad
     entry_age: 16
@@ -185,7 +202,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: Regular secondary education - 2nd stage KSO (KSO= artistic
+  - country_entry_id: BEL-EDU-18
+    national_label_en: Regular secondary education - 2nd stage KSO (KSO= artistic
       secondary education)
     national_label_local: Gewoon secundair onderwijs - 2de graad KSO
     entry_age: 14
@@ -196,7 +214,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: Special secondary education - training form 4 - 2nd stage ASO
+  - country_entry_id: BEL-EDU-19
+    national_label_en: Special secondary education - training form 4 - 2nd stage ASO
       (ASO= general secondary education; KSO = artistic secondary education)
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 2de
       graad ASO en KSO
@@ -208,7 +227,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Secondary adult education - language courses (foreign languages
+  - country_entry_id: BEL-EDU-20
+    national_label_en: Secondary adult education - language courses (foreign languages
       and Dutch for non-native speakers) - content specification of level 2 and 3
     national_label_local: Secundair volwassenenonderwijs - vreemde talen en NT2 -
       richtgraad 2 en 3
@@ -220,7 +240,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
-  - national_label_en: Regular secondary education - 2nd stage TSO (= technical secondary
+  - country_entry_id: BEL-EDU-21
+    national_label_en: Regular secondary education - 2nd stage TSO (= technical secondary
       education) and BSO (= vocational secondary education; including modular education).
     national_label_local: Gewoon secundair onderwijs - 2de graad TSO en BSO
     entry_age: 14
@@ -231,7 +252,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
-  - national_label_en: Special secondary education - training form 4 - 2nd stage TSO
+  - country_entry_id: BEL-EDU-22
+    national_label_en: Special secondary education - training form 4 - 2nd stage TSO
       (= technical secondary education) and BSO (= vocational secondary education;
       including modular education).
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 2de
@@ -244,7 +266,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
-  - national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
+  - country_entry_id: BEL-EDU-23
+    national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - ASO (general secondary education)
     national_label_local: Gewoon secundair onderwijs - 1ste en 2de leerjaar van de
       3de graad ASO
@@ -256,7 +279,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
-  - national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
+  - country_entry_id: BEL-EDU-24
+    national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - KSO (artistic secondary education)
     national_label_local: Gewoon secundair onderwijs - 1ste en 2de leerjaar van de
       3de graad KSO
@@ -268,7 +292,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 28
-  - national_label_en: Special secondary education - training form 4 - 1st and 2nd
+  - country_entry_id: BEL-EDU-25
+    national_label_en: Special secondary education - training form 4 - 1st and 2nd
       year of the 3rd stage ASO and KSO
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 1ste
       en 2de leerjaar van de 3de graad ASO en KSO
@@ -280,7 +305,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 29
-  - national_label_en: Secondary adult education
+  - country_entry_id: BEL-EDU-26
+    national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs (isc2 GEN)
     entry_age: 18
     duration_years: 0
@@ -290,7 +316,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 30
-  - national_label_en: Secondary adult education
+  - country_entry_id: BEL-EDU-27
+    national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs (isc3 VOC)
     entry_age: 18
     duration_years: 0
@@ -300,7 +327,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 31
-  - national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
+  - country_entry_id: BEL-EDU-28
+    national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - BSO (vocational secondary education; including modular education)
     national_label_local: Gewoon secundair onderwijs - 1ste en 2de leerjaar van de
       3de graad BSO (incl. modulair onderwijs)
@@ -312,7 +340,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 32
-  - national_label_en: Special secondary education - training form 4 - 3rd stage -
+  - country_entry_id: BEL-EDU-29
+    national_label_en: Special secondary education - training form 4 - 3rd stage -
       1st and 2nd year of 3rd stage BSO (vocational secondary education)
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 1ste
       en 2de leerjaar van de 3de graad BSO.
@@ -324,7 +353,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 33
-  - national_label_en: Secondary adult education
+  - country_entry_id: BEL-EDU-30
+    national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs
     entry_age: 18
     duration_years: 0
@@ -334,7 +364,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 34
-  - national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
+  - country_entry_id: BEL-EDU-31
+    national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - TSO (technical secondary education)
     national_label_local: Gewoon secundair onderwijs - 1ste en 2de leerjaar van de
       3de graad TSO
@@ -346,7 +377,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 35
-  - national_label_en: Special secondary education training form 4 - 3rd stage - 1st
+  - country_entry_id: BEL-EDU-32
+    national_label_en: Special secondary education training form 4 - 3rd stage - 1st
       and 2nd year of the 3rd stage - TSO (technical secondary education)
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 1ste
       en 2de leerjaar van de 3de graad TSO
@@ -358,7 +390,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 36
-  - national_label_en: Regular secondary education - 3rd stage - 3rd year of the 3rd
+  - country_entry_id: BEL-EDU-33
+    national_label_en: Regular secondary education - 3rd stage - 3rd year of the 3rd
       stage - BSO (vocational secondary education; including modular education)
     national_label_local: Gewoon secundair onderwijs - 3de leerjaar van de 3de graad
       BSO
@@ -370,7 +403,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 37
-  - national_label_en: Special secondary education - training form 4 - 3rd stage -
+  - country_entry_id: BEL-EDU-34
+    national_label_en: Special secondary education - training form 4 - 3rd stage -
       3rd year of the 3rd stage - BSO (vocational secondary education)
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 3de
       leerjaar van de 3de graad BSO
@@ -382,7 +416,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 38
-  - national_label_en: Part-time vocational secondary education
+  - country_entry_id: BEL-EDU-35
+    national_label_en: Part-time vocational secondary education
     national_label_local: Deeltijds beroepssecundair onderwijs
     entry_age: 15
     duration_years: 3
@@ -392,7 +427,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 39
-  - national_label_en: Apprenticeship (organised by 'SYNTRA' - Flemish Agency for
+  - country_entry_id: BEL-EDU-36
+    national_label_en: Apprenticeship (organised by 'SYNTRA' - Flemish Agency for
       Entrepreneural Training).
     national_label_local: Leertijd (Syntra-Vlaanderen)
     entry_age: 15
@@ -403,7 +439,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 40
-  - national_label_en: Secondary adult education
+  - country_entry_id: BEL-EDU-37
+    national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs
     entry_age: 18
     duration_years: 0
@@ -413,7 +450,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 41
-  - national_label_en: Secondary adult education - language courses (foreign languages
+  - country_entry_id: BEL-EDU-38
+    national_label_en: Secondary adult education - language courses (foreign languages
       and Dutch for non-native speakers) - content specification of level 4
     national_label_local: Secundair volwassenenonderwijs - vreemde talen en NT2 -
       richtgraad 4
@@ -425,7 +463,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
-  - national_label_en: Regular secondary education - 3rd year of the 3rd stage ASO
+  - country_entry_id: BEL-EDU-39
+    national_label_en: Regular secondary education - 3rd year of the 3rd stage ASO
       and KSO (ASO = general secondary education; KSO= artistic secondary education)
     national_label_local: Gewoon secundair onderwijs - 3de leerjaar van de 3de graad
       ASO en KSO
@@ -437,7 +476,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 43
-  - national_label_en: Special education - 3rd year of the 3rd stage ASO and KSO (ASO
+  - country_entry_id: BEL-EDU-40
+    national_label_en: Special education - 3rd year of the 3rd stage ASO and KSO (ASO
       = general secondary education; KSO= artistic secondary education)
     national_label_local: Buitengewoon secundair onderwijs - 3de leerjaar van de 3de
       graad ASO en KSO
@@ -449,7 +489,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 44
-  - national_label_en: Entrepreneurial training courses (organised by 'SYNTRA' - Flemish
+  - country_entry_id: BEL-EDU-41
+    national_label_en: Entrepreneurial training courses (organised by 'SYNTRA' - Flemish
       Agency for Entrepreneural Training)
     national_label_local: Ondernemersopleiding (Syntra - Vlaanderen)
     entry_age: 18
@@ -460,7 +501,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 45
-  - national_label_en: Advanced secondary education (KSO and TSO; KSO = artistic secondary
+  - country_entry_id: BEL-EDU-42
+    national_label_en: Advanced secondary education (KSO and TSO; KSO = artistic secondary
       education and TSO = technical secondary education)
     national_label_local: Se-n-Se (KSO en TSO)
     entry_age: 18
@@ -471,7 +513,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 46
-  - national_label_en: Secondary adult education
+  - country_entry_id: BEL-EDU-43
+    national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs
     entry_age: 18
     duration_years: 0
@@ -481,7 +524,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 47
-  - national_label_en: Associate degree programmes of higher education
+  - country_entry_id: BEL-EDU-44
+    national_label_en: Associate degree programmes of higher education
     national_label_local: Hogerberoepsonderwijs (HBO5 - verpleegkunde)
     entry_age: 18
     duration_years: 1
@@ -491,7 +535,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 48
-  - national_label_en: Associate degree programmes of higher education
+  - country_entry_id: BEL-EDU-45
+    national_label_en: Associate degree programmes of higher education
     national_label_local: Graduaatsopleidingen
     entry_age: 18
     duration_years: 1
@@ -501,7 +546,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 49
-  - national_label_en: Academic Bachelor's programmes
+  - country_entry_id: BEL-EDU-46
+    national_label_en: Academic Bachelor's programmes
     national_label_local: Academisch gerichte bachelor
     entry_age: 18
     duration_years: 3
@@ -511,7 +557,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 50
-  - national_label_en: Professional Bachelor’s programmes
+  - country_entry_id: BEL-EDU-47
+    national_label_en: Professional Bachelor’s programmes
     national_label_local: Professioneel gerichte bachelor
     entry_age: 18
     duration_years: 3
@@ -521,7 +568,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 51
-  - national_label_en: Advanced Bachelor's programmes
+  - country_entry_id: BEL-EDU-48
+    national_label_en: Advanced Bachelor's programmes
     national_label_local: Bachelor na bachelor
     entry_age: 21
     duration_years: 1
@@ -531,7 +579,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 52
-  - national_label_en: Specific teacher training
+  - country_entry_id: BEL-EDU-49
+    national_label_en: Specific teacher training
     national_label_local: Specifieke lerarenopleidingen
     entry_age: 0
     duration_years: 1
@@ -541,7 +590,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 53
-  - national_label_en: Master's programmes
+  - country_entry_id: BEL-EDU-50
+    national_label_en: Master's programmes
     national_label_local: Master na professionele bachelor
     entry_age: 22
     duration_years: 1
@@ -551,7 +601,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 54
-  - national_label_en: Master's programmes
+  - country_entry_id: BEL-EDU-51
+    national_label_en: Master's programmes
     national_label_local: Master
     entry_age: 21
     duration_years: 1
@@ -561,7 +612,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 55
-  - national_label_en: Advanced Master’s programme
+  - country_entry_id: BEL-EDU-52
+    national_label_en: Advanced Master’s programme
     national_label_local: Master na master
     entry_age: 21
     duration_years: 0
@@ -571,7 +623,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 56
-  - national_label_en: Doctorate
+  - country_entry_id: BEL-EDU-53
+    national_label_en: Doctorate
     national_label_local: Doctoraat
     entry_age: 0
     duration_years: 0
@@ -591,7 +644,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-BE1
+  - country_entry_id: BEL-SUBNAT-01
+    survey_labels: 1-BE1
     survey_variables: subnatid
     gmd_subnatid1: BEL_2021_NUTS1_BE1
     gmd_subnatid2: ''
@@ -611,7 +665,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest
     source_row: 599
-  - survey_labels: 2-BE2
+  - country_entry_id: BEL-SUBNAT-02
+    survey_labels: 2-BE2
     survey_variables: subnatid
     gmd_subnatid1: BEL_2021_NUTS1_BE2
     gmd_subnatid2: ''
@@ -631,7 +686,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Vlaams Gewest
     source_row: 600
-  - survey_labels: 3-BE3
+  - country_entry_id: BEL-SUBNAT-03
+    survey_labels: 3-BE3
     survey_variables: subnatid
     gmd_subnatid1: BEL_2021_NUTS1_BE3
     gmd_subnatid2: ''

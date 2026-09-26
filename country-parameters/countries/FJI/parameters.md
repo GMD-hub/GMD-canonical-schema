@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre School
+  - country_entry_id: FJI-EDU-01
+    national_label_en: Pre School
     national_label_local: Pre School
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary (Year 1 to 6)
+  - country_entry_id: FJI-EDU-02
+    national_label_en: Primary (Year 1 to 6)
     national_label_local: Primary (Year 1 to 6)
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Primary (Year 7 and 8)
+  - country_entry_id: FJI-EDU-03
+    national_label_en: Primary (Year 7 and 8)
     national_label_local: Primary (Year 7 and 8)
     entry_age: 12
     duration_years: 2
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Secondary (Year 9 to 10)
+  - country_entry_id: FJI-EDU-04
+    national_label_en: Secondary (Year 9 to 10)
     national_label_local: Secondary (Year 9 to 10)
     entry_age: 14
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Secondary (Year 11 to 12)
+  - country_entry_id: FJI-EDU-05
+    national_label_en: Secondary (Year 11 to 12)
     national_label_local: Secondary (Year 11 to 12)
     entry_age: 16
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Secondary (Year 13)
+  - country_entry_id: FJI-EDU-06
+    national_label_en: Secondary (Year 13)
     national_label_local: Secondary (Year 13)
     entry_age: 18
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Technical vocational education (TVET)
+  - country_entry_id: FJI-EDU-07
+    national_label_en: Technical vocational education (TVET)
     national_label_local: Technical vocational education (TVET)
     entry_age: 17
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Vocational Certificate
+  - country_entry_id: FJI-EDU-08
+    national_label_en: Vocational Certificate
     national_label_local: Vocational Certificate
     entry_age: 18
     duration_years: 1
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Vocational Diploma
+  - country_entry_id: FJI-EDU-09
+    national_label_en: Vocational Diploma
     national_label_local: Vocational Diploma
     entry_age: 18
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Vocational Degree
+  - country_entry_id: FJI-EDU-10
+    national_label_en: Vocational Degree
     national_label_local: Vocational Degree
     entry_age: 18
     duration_years: 4
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Bachelor
+  - country_entry_id: FJI-EDU-11
+    national_label_en: Bachelor
     national_label_local: Bachelor
     entry_age: 19
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Master
+  - country_entry_id: FJI-EDU-12
+    national_label_en: Master
     national_label_local: Master
     entry_age: 22
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Doctorate
+  - country_entry_id: FJI-EDU-13
+    national_label_en: Doctorate
     national_label_local: Doctorate
     entry_age: 24
     duration_years: 4
@@ -150,7 +163,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-Central
+  - country_entry_id: FJI-SUBNAT-01
+    survey_labels: 1-Central
     survey_variables: subnatid1
     gmd_subnatid1: FJI_2015_GAUL1_40187
     gmd_subnatid2: ''
@@ -170,7 +184,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Central
     source_row: 4846
-  - survey_labels: 2-Eastern
+  - country_entry_id: FJI-SUBNAT-02
+    survey_labels: 2-Eastern
     survey_variables: subnatid1
     gmd_subnatid1: FJI_2015_GAUL1_40188
     gmd_subnatid2: ''
@@ -190,7 +205,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Eastern
     source_row: 4847
-  - survey_labels: 3-Northern
+  - country_entry_id: FJI-SUBNAT-03
+    survey_labels: 3-Northern
     survey_variables: subnatid1
     gmd_subnatid1: FJI_2015_GAUL1_40189
     gmd_subnatid2: ''
@@ -210,7 +226,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Northern
     source_row: 4848
-  - survey_labels: 4-Western
+  - country_entry_id: FJI-SUBNAT-04
+    survey_labels: 4-Western
     survey_variables: subnatid1
     gmd_subnatid1: FJI_2015_GAUL1_40190
     gmd_subnatid2: ''
@@ -230,7 +247,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Western
     source_row: 4849
-  - survey_labels: '40187'
+  - country_entry_id: FJI-SUBNAT-05
+    survey_labels: '40187'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -250,7 +268,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Central
     source_row: 4858
-  - survey_labels: '40188'
+  - country_entry_id: FJI-SUBNAT-06
+    survey_labels: '40188'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -270,7 +289,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Eastern
     source_row: 4859
-  - survey_labels: '40189'
+  - country_entry_id: FJI-SUBNAT-07
+    survey_labels: '40189'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -290,7 +310,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Northern
     source_row: 4860
-  - survey_labels: '40190'
+  - country_entry_id: FJI-SUBNAT-08
+    survey_labels: '40190'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -320,7 +341,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: FJI-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -330,7 +352,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_pour_flush_flush_to_open_drain
+  - country_entry_id: FJI-SAN-02
+    source_category_code: flush_pour_flush_flush_to_open_drain
     national_label_en: 'Flush / Pour Flush: Flush To Open Drain'
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -340,7 +363,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+  - country_entry_id: FJI-SAN-03
+    source_category_code: flush_pour_flush_flush_to_piped_sewer_system
     national_label_en: 'Flush / Pour Flush: Flush To Piped Sewer System'
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -350,7 +374,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+  - country_entry_id: FJI-SAN-04
+    source_category_code: flush_pour_flush_flush_to_pit_latrine
     national_label_en: 'Flush / Pour Flush: Flush To Pit Latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -360,7 +385,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_flush_to_septic_tank
+  - country_entry_id: FJI-SAN-05
+    source_category_code: flush_pour_flush_flush_to_septic_tank
     national_label_en: 'Flush / Pour Flush: Flush To Septic Tank'
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -370,7 +396,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_flush_to_dk_where
+  - country_entry_id: FJI-SAN-06
+    source_category_code: flush_pour_flush_flush_to_dk_where
     national_label_en: 'Flush / Pour Flush: Flush To Dk Where'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -380,7 +407,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: bucket
+  - country_entry_id: FJI-SAN-07
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -390,7 +418,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pit_latrine_pit_latrine_with_slab
+  - country_entry_id: FJI-SAN-08
+    source_category_code: pit_latrine_pit_latrine_with_slab
     national_label_en: 'Pit Latrine: Pit Latrine With Slab'
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -401,7 +430,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
+  - country_entry_id: FJI-SAN-09
+    source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
     national_label_en: 'Pit Latrine: Pit Latrine Without Slab / Open Pit'
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -412,7 +442,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_ventilated_improved_pit_latrine
+  - country_entry_id: FJI-SAN-10
+    source_category_code: pit_latrine_ventilated_improved_pit_latrine
     national_label_en: 'Pit Latrine: Ventilated Improved Pit Latrine'
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -423,7 +454,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: FJI-SAN-11
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -433,7 +465,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: FJI-SAN-12
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -453,7 +486,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring_protected_spring
+  - country_entry_id: FJI-WAS-01
+    source_category_code: spring_protected_spring
     national_label_en: 'Spring: Protected Spring'
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -463,7 +497,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: dug_well_protected_well
+  - country_entry_id: FJI-WAS-02
+    source_category_code: dug_well_protected_well
     national_label_en: 'Dug Well: Protected Well'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -473,7 +508,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tube_well_borehole
+  - country_entry_id: FJI-WAS-03
+    source_category_code: tube_well_borehole
     national_label_en: Tube Well / Borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -483,7 +519,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: spring_unprotected_spring
+  - country_entry_id: FJI-WAS-04
+    source_category_code: spring_unprotected_spring
     national_label_en: 'Spring: Unprotected Spring'
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -493,7 +530,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: dug_well_unprotected_well
+  - country_entry_id: FJI-WAS-05
+    source_category_code: dug_well_unprotected_well
     national_label_en: 'Dug Well: Unprotected Well'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -503,7 +541,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: FJI-WAS-06
+    source_category_code: cart_with_small_tank
     national_label_en: Cart With Small Tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -513,7 +552,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: tanker_truck
+  - country_entry_id: FJI-WAS-07
+    source_category_code: tanker_truck
     national_label_en: Tanker-Truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -523,7 +563,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: FJI-WAS-08
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -533,7 +574,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: packaged_water_bottled_water
+  - country_entry_id: FJI-WAS-09
+    source_category_code: packaged_water_bottled_water
     national_label_en: 'Packaged Water: Bottled Water'
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -543,7 +585,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater
+  - country_entry_id: FJI-WAS-10
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -553,7 +596,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+  - country_entry_id: FJI-WAS-11
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: Surface Water (River, Dam, Lake, Pond, Stream, Canal, Irrigation
       Channel)
     national_label_local: Surface water
@@ -564,7 +608,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: FJI-WAS-12
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'Piped Water: Piped To Neighbour'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -574,7 +619,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_piped_into_dwelling
+  - country_entry_id: FJI-WAS-13
+    source_category_code: piped_water_piped_into_dwelling
     national_label_en: 'Piped Water: Piped Into Dwelling'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -584,7 +630,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_to_yard_plot
+  - country_entry_id: FJI-WAS-14
+    source_category_code: piped_water_piped_to_yard_plot
     national_label_en: 'Piped Water: Piped To Yard / Plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -594,7 +641,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_public_tap_standpipe
+  - country_entry_id: FJI-WAS-15
+    source_category_code: piped_water_public_tap_standpipe
     national_label_en: 'Piped Water: Public Tap / Standpipe'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

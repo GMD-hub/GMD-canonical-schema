@@ -10,7 +10,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - national_label_en: Pre-primary education
+  - country_entry_id: RUS-EDU-01
+    national_label_en: Pre-primary education
     national_label_local: Дошкольное образование
     entry_age: 3
     duration_years: 4
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary education
+  - country_entry_id: RUS-EDU-02
+    national_label_en: Primary education
     national_label_local: Начальное образование
     entry_age: 7
     duration_years: 4
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Lower secondary education
+  - country_entry_id: RUS-EDU-03
+    national_label_en: Lower secondary education
     national_label_local: Основное общее образование
     entry_age: 11
     duration_years: 5
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Upper secondary education
+  - country_entry_id: RUS-EDU-04
+    national_label_en: Upper secondary education
     national_label_local: Полное (среднее) общее образование
     entry_age: 16
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Tertiary education
+  - country_entry_id: RUS-EDU-05
+    national_label_en: Tertiary education
     national_label_local: Среднее профессиональное образование  на базе основного
       общего образования
     entry_age: 16
@@ -61,7 +66,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Upper secondary education
+  - country_entry_id: RUS-EDU-06
+    national_label_en: Upper secondary education
     national_label_local: Начальное профессиональное образование на базе основного
       общего образования
     entry_age: 16
@@ -72,7 +78,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Post secondary, non-tertiary education
+  - country_entry_id: RUS-EDU-07
+    national_label_en: Post secondary, non-tertiary education
     national_label_local: Начальное профессиональное образование на базе полного (среднего)
       общего образования
     entry_age: 18
@@ -83,7 +90,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Tertiary education
+  - country_entry_id: RUS-EDU-08
+    national_label_en: Tertiary education
     national_label_local: Среднее профессиональное образование на базе полного (среднего)
       общего образования
     entry_age: 18
@@ -94,7 +102,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Tertiary education
+  - country_entry_id: RUS-EDU-09
+    national_label_en: Tertiary education
     national_label_local: Высшее профессиональное образование (бакалавриат)
     entry_age: 18
     duration_years: 4
@@ -104,7 +113,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Tertiary education
+  - country_entry_id: RUS-EDU-10
+    national_label_en: Tertiary education
     national_label_local: Высшее профессиональное образование (специалитет)
     entry_age: 18
     duration_years: 5
@@ -114,7 +124,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Tertiary education
+  - country_entry_id: RUS-EDU-11
+    national_label_en: Tertiary education
     national_label_local: Высшее профессиональное образование (магистратура)
     entry_age: 22
     duration_years: 1
@@ -124,7 +135,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Tertiary education
+  - country_entry_id: RUS-EDU-12
+    national_label_en: Tertiary education
     national_label_local: Высшее профессиональное образование (интернатура)
     entry_age: 23
     duration_years: 1
@@ -134,7 +146,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Advanced research programmes
+  - country_entry_id: RUS-EDU-13
+    national_label_en: Advanced research programmes
     national_label_local: Послевузовское образование (аспирантура)
     entry_age: 23
     duration_years: 3
@@ -144,7 +157,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Advanced research programmes
+  - country_entry_id: RUS-EDU-14
+    national_label_en: Advanced research programmes
     national_label_local: Послевузовское образование (докторантура)
     entry_age: 27
     duration_years: 3
@@ -165,7 +179,8 @@ parameters:
   effective_to: 2015
   selectors: null
   value:
-  - survey_labels: 1 - Altai krai | 1 – Altai krai
+  - country_entry_id: RUS-SUBNAT-01
+    survey_labels: 1 - Altai krai | 1 – Altai krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -185,7 +200,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Altayskiy Kray
     source_row: 13160
-  - survey_labels: 10 - Amur oblast | 10 – Amur oblast
+  - country_entry_id: RUS-SUBNAT-02
+    survey_labels: 10 - Amur oblast | 10 – Amur oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -205,7 +221,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Amurskaya Oblast
     source_row: 13161
-  - survey_labels: 11 - Arkhangelsk oblast | 11 – Arkhangelsk oblast
+  - country_entry_id: RUS-SUBNAT-03
+    survey_labels: 11 - Arkhangelsk oblast | 11 – Arkhangelsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -225,7 +242,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Arkhangelskaya Oblast & Nenetskiy Okrug
     source_row: 13162
-  - survey_labels: 12 - Astrakhan oblast | 12 – Astrakhan oblast
+  - country_entry_id: RUS-SUBNAT-04
+    survey_labels: 12 - Astrakhan oblast | 12 – Astrakhan oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -245,7 +263,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Astrakhanskaya Oblast
     source_row: 13163
-  - survey_labels: 14 - Belgorod oblast | 14 – Belgorod oblast
+  - country_entry_id: RUS-SUBNAT-05
+    survey_labels: 14 - Belgorod oblast | 14 – Belgorod oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -265,7 +284,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Belgorodskaya Oblast
     source_row: 13164
-  - survey_labels: 15 - Bryansk oblast | 15 – Bryansk oblast
+  - country_entry_id: RUS-SUBNAT-06
+    survey_labels: 15 - Bryansk oblast | 15 – Bryansk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -285,7 +305,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bryanskaya Oblast
     source_row: 13165
-  - survey_labels: 17 - Vladimir oblast | 17 – Vladimir oblast
+  - country_entry_id: RUS-SUBNAT-07
+    survey_labels: 17 - Vladimir oblast | 17 – Vladimir oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -305,7 +326,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Vladimirskaya Oblast
     source_row: 13166
-  - survey_labels: 18 - Volgograd oblast | 18 – Volgograd oblast
+  - country_entry_id: RUS-SUBNAT-08
+    survey_labels: 18 - Volgograd oblast | 18 – Volgograd oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -325,7 +347,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Volgogradskaya Oblast
     source_row: 13167
-  - survey_labels: 19 - Vologda oblast | 19 – Vologda oblast
+  - country_entry_id: RUS-SUBNAT-09
+    survey_labels: 19 - Vologda oblast | 19 – Vologda oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -345,7 +368,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Vologodskaya Oblast
     source_row: 13168
-  - survey_labels: 20 - Voronezh oblast | 20 – Voronezh oblast
+  - country_entry_id: RUS-SUBNAT-10
+    survey_labels: 20 - Voronezh oblast | 20 – Voronezh oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -365,7 +389,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Voronezhskaya Oblast
     source_row: 13169
-  - survey_labels: 22 - Nizhny Novgorod oblast | 22 – Nizhny Novgorod oblast
+  - country_entry_id: RUS-SUBNAT-11
+    survey_labels: 22 - Nizhny Novgorod oblast | 22 – Nizhny Novgorod oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -385,7 +410,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nizhegorodskaya Oblast
     source_row: 13170
-  - survey_labels: 24 - Ivanovo oblast | 24 – Ivanovo oblast
+  - country_entry_id: RUS-SUBNAT-12
+    survey_labels: 24 - Ivanovo oblast | 24 – Ivanovo oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -405,7 +431,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ivanovskaya Oblast
     source_row: 13171
-  - survey_labels: 25 - Irkutsk oblast | 25 – Irkutsk oblast
+  - country_entry_id: RUS-SUBNAT-13
+    survey_labels: 25 - Irkutsk oblast | 25 – Irkutsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -425,7 +452,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Irkutskaya Oblast & Ustordynskiy Buryatskiy Okrug
     source_row: 13172
-  - survey_labels: 26 - Ingush republic | 26 – Ingush republic
+  - country_entry_id: RUS-SUBNAT-14
+    survey_labels: 26 - Ingush republic | 26 – Ingush republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -445,7 +473,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ingushetiya Rep.
     source_row: 13173
-  - survey_labels: 27 - Kaliningrad oblast | 27 – Kaliningrad oblast
+  - country_entry_id: RUS-SUBNAT-15
+    survey_labels: 27 - Kaliningrad oblast | 27 – Kaliningrad oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -465,7 +494,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kaliningradskaya Oblast
     source_row: 13174
-  - survey_labels: 28 - Tver oblast | 28 – Tver oblast
+  - country_entry_id: RUS-SUBNAT-16
+    survey_labels: 28 - Tver oblast | 28 – Tver oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -485,7 +515,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tverskaya Oblast
     source_row: 13175
-  - survey_labels: 29 - Kaluga oblast | 29 – Kaluga oblast
+  - country_entry_id: RUS-SUBNAT-17
+    survey_labels: 29 - Kaluga oblast | 29 – Kaluga oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -505,7 +536,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kaluzhskaya Oblast
     source_row: 13176
-  - survey_labels: 3 - Krasnodar krai | 3 – Krasnodar krai
+  - country_entry_id: RUS-SUBNAT-18
+    survey_labels: 3 - Krasnodar krai | 3 – Krasnodar krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -525,7 +557,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Krasnodarskiy Kray
     source_row: 13177
-  - survey_labels: 30 - Kamchatka krai | 30 – Kamchatka krai
+  - country_entry_id: RUS-SUBNAT-19
+    survey_labels: 30 - Kamchatka krai | 30 – Kamchatka krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -545,7 +578,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kamchatskaya Oblast & Koryakskiy Okrug
     source_row: 13178
-  - survey_labels: 32 - Kemerovo oblast | 32 – Kemerovo oblast
+  - country_entry_id: RUS-SUBNAT-20
+    survey_labels: 32 - Kemerovo oblast | 32 – Kemerovo oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -565,7 +599,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kemerovskaya Oblast
     source_row: 13179
-  - survey_labels: 33 - Kirov oblast | 33 – Kirov oblast
+  - country_entry_id: RUS-SUBNAT-21
+    survey_labels: 33 - Kirov oblast | 33 – Kirov oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -585,7 +620,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kirovskaya Oblast
     source_row: 13180
-  - survey_labels: 34 - Kostroma oblast | 34 – Kostroma oblast
+  - country_entry_id: RUS-SUBNAT-22
+    survey_labels: 34 - Kostroma oblast | 34 – Kostroma oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -605,7 +641,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kostromskaya Oblast
     source_row: 13181
-  - survey_labels: 36 - Samara oblast | 36 – Samara oblast
+  - country_entry_id: RUS-SUBNAT-23
+    survey_labels: 36 - Samara oblast | 36 – Samara oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -625,7 +662,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Samarskaya Oblast
     source_row: 13182
-  - survey_labels: 37 - Kurgan oblast | 37 – Kurgan oblast
+  - country_entry_id: RUS-SUBNAT-24
+    survey_labels: 37 - Kurgan oblast | 37 – Kurgan oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -645,7 +683,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kurganskaya Oblast
     source_row: 13183
-  - survey_labels: 38 - Kursk oblast | 38 – Kursk oblast
+  - country_entry_id: RUS-SUBNAT-25
+    survey_labels: 38 - Kursk oblast | 38 – Kursk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -665,7 +704,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kurskaya Oblast
     source_row: 13184
-  - survey_labels: 4 - Krasnoyarsk krai | 4 – Krasnoyarsk krai
+  - country_entry_id: RUS-SUBNAT-26
+    survey_labels: 4 - Krasnoyarsk krai | 4 – Krasnoyarsk krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -685,7 +725,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Evenkiyskiy Okrug & Krasnoyarskiy Kray & Taymyrskiy Okrug
     source_row: 13185
-  - survey_labels: 40 - St. Petersburg city | 40 – St. Petersburg city
+  - country_entry_id: RUS-SUBNAT-27
+    survey_labels: 40 - St. Petersburg city | 40 – St. Petersburg city
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -705,7 +746,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sankt-peterburg
     source_row: 13186
-  - survey_labels: 41 - Leningrad oblast | 41 – Leningrad oblast
+  - country_entry_id: RUS-SUBNAT-28
+    survey_labels: 41 - Leningrad oblast | 41 – Leningrad oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -725,7 +767,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Leningradskaya Oblast
     source_row: 13187
-  - survey_labels: 42 - Lipetsk oblast | 42 – Lipetsk oblast
+  - country_entry_id: RUS-SUBNAT-29
+    survey_labels: 42 - Lipetsk oblast | 42 – Lipetsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -745,7 +788,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lipetskaya Oblast
     source_row: 13188
-  - survey_labels: 44 - Magadan oblast | 44 – Magadan oblast
+  - country_entry_id: RUS-SUBNAT-30
+    survey_labels: 44 - Magadan oblast | 44 – Magadan oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -765,7 +809,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Magadanskaya Oblast
     source_row: 13189
-  - survey_labels: 45 - Moscow city | 45 – Moscow city
+  - country_entry_id: RUS-SUBNAT-31
+    survey_labels: 45 - Moscow city | 45 – Moscow city
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -785,7 +830,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Moskva
     source_row: 13190
-  - survey_labels: 46 - Moskow oblast | 46 – Moskow oblast
+  - country_entry_id: RUS-SUBNAT-32
+    survey_labels: 46 - Moskow oblast | 46 – Moskow oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -805,7 +851,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Moskovskaya Oblast
     source_row: 13191
-  - survey_labels: 47 - Murmansk oblast | 47 – Murmansk oblast
+  - country_entry_id: RUS-SUBNAT-33
+    survey_labels: 47 - Murmansk oblast | 47 – Murmansk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -825,7 +872,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Murmanskaya Oblast
     source_row: 13192
-  - survey_labels: 49 - Novgorod oblast | 49 – Novgorod oblast
+  - country_entry_id: RUS-SUBNAT-34
+    survey_labels: 49 - Novgorod oblast | 49 – Novgorod oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -845,7 +893,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Novgorodskaya Oblast
     source_row: 13193
-  - survey_labels: 5 - Primorskii krai | 5 – Primorskii krai
+  - country_entry_id: RUS-SUBNAT-35
+    survey_labels: 5 - Primorskii krai | 5 – Primorskii krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -865,7 +914,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Primorskiy Kray
     source_row: 13194
-  - survey_labels: 50 - Novosibirsk oblast | 50 – Novosibirsk oblast
+  - country_entry_id: RUS-SUBNAT-36
+    survey_labels: 50 - Novosibirsk oblast | 50 – Novosibirsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -885,7 +935,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Novosibirskaya Oblast
     source_row: 13195
-  - survey_labels: 52 - Omsk oblast | 52 – Omsk oblast
+  - country_entry_id: RUS-SUBNAT-37
+    survey_labels: 52 - Omsk oblast | 52 – Omsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -905,7 +956,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Omskaya Oblast
     source_row: 13196
-  - survey_labels: 53 - Orenburg oblast | 53 – Orenburg oblast
+  - country_entry_id: RUS-SUBNAT-38
+    survey_labels: 53 - Orenburg oblast | 53 – Orenburg oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -925,7 +977,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Orenburgskaya Oblast
     source_row: 13197
-  - survey_labels: 54 - Oryol oblast | 54 – Oryol oblast
+  - country_entry_id: RUS-SUBNAT-39
+    survey_labels: 54 - Oryol oblast | 54 – Oryol oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -945,7 +998,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Orlovskaya Oblast
     source_row: 13198
-  - survey_labels: 56 - Penza oblast | 56 – Penza oblast
+  - country_entry_id: RUS-SUBNAT-40
+    survey_labels: 56 - Penza oblast | 56 – Penza oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -965,7 +1019,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Penzenskaya Oblast
     source_row: 13199
-  - survey_labels: 57 - Perm krai | 57 – Perm krai
+  - country_entry_id: RUS-SUBNAT-41
+    survey_labels: 57 - Perm krai | 57 – Perm krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -985,7 +1040,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Komi-permyatskiy Okrug & Permskaya Oblast
     source_row: 13200
-  - survey_labels: 58 - Pskov oblast | 58 – Pskov oblast
+  - country_entry_id: RUS-SUBNAT-42
+    survey_labels: 58 - Pskov oblast | 58 – Pskov oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1005,7 +1061,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pskovskaya Oblast
     source_row: 13201
-  - survey_labels: 60 - Rostov oblast | 60 – Rostov oblast
+  - country_entry_id: RUS-SUBNAT-43
+    survey_labels: 60 - Rostov oblast | 60 – Rostov oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1025,7 +1082,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Rostovskaya Oblast
     source_row: 13202
-  - survey_labels: 61 - Ryazan oblast | 61 – Ryazan oblast
+  - country_entry_id: RUS-SUBNAT-44
+    survey_labels: 61 - Ryazan oblast | 61 – Ryazan oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1045,7 +1103,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ryazanskaya Oblast
     source_row: 13203
-  - survey_labels: 63 - Saratov oblast | 63 – Saratov oblast
+  - country_entry_id: RUS-SUBNAT-45
+    survey_labels: 63 - Saratov oblast | 63 – Saratov oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1065,7 +1124,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Saratovskaya Oblast
     source_row: 13204
-  - survey_labels: 64 - Sakhalin oblast | 64 – Sakhalin oblast
+  - country_entry_id: RUS-SUBNAT-46
+    survey_labels: 64 - Sakhalin oblast | 64 – Sakhalin oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1085,7 +1145,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sakhalinskaya Oblast
     source_row: 13205
-  - survey_labels: 65 - Sverdlovsk oblast | 65 – Sverdlovsk oblast
+  - country_entry_id: RUS-SUBNAT-47
+    survey_labels: 65 - Sverdlovsk oblast | 65 – Sverdlovsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1105,7 +1166,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sverdlovskaya Oblast
     source_row: 13206
-  - survey_labels: 66 - Smolensk oblast | 66 – Smolensk oblast
+  - country_entry_id: RUS-SUBNAT-48
+    survey_labels: 66 - Smolensk oblast | 66 – Smolensk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1125,7 +1187,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Smolenskaya Oblast
     source_row: 13207
-  - survey_labels: 68 - Tambov oblast | 68 – Tambov oblast
+  - country_entry_id: RUS-SUBNAT-49
+    survey_labels: 68 - Tambov oblast | 68 – Tambov oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1145,7 +1208,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tambovskaya Oblast
     source_row: 13208
-  - survey_labels: 69 - Tomsk oblast | 69 – Tomsk oblast
+  - country_entry_id: RUS-SUBNAT-50
+    survey_labels: 69 - Tomsk oblast | 69 – Tomsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1165,7 +1229,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tomskaya Oblast
     source_row: 13209
-  - survey_labels: 7 - Stavropol krai | 7 – Stavropol krai
+  - country_entry_id: RUS-SUBNAT-51
+    survey_labels: 7 - Stavropol krai | 7 – Stavropol krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1185,7 +1250,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Stavropolskiy Kray
     source_row: 13210
-  - survey_labels: 70 - Tula oblast | 70 – Tula oblast
+  - country_entry_id: RUS-SUBNAT-52
+    survey_labels: 70 - Tula oblast | 70 – Tula oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1205,7 +1271,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tulskaya Oblast
     source_row: 13211
-  - survey_labels: 71 - Tyumen oblast | 71 – Tyumen oblast
+  - country_entry_id: RUS-SUBNAT-53
+    survey_labels: 71 - Tyumen oblast | 71 – Tyumen oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1225,7 +1292,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Khanty-mansyiskiy Okrug & Tyumenskaya Oblast & Yamalo-nenetskiy Okrug
     source_row: 13212
-  - survey_labels: 73 - Ulyanovsk oblast | 73 – Ulyanovsk oblast
+  - country_entry_id: RUS-SUBNAT-54
+    survey_labels: 73 - Ulyanovsk oblast | 73 – Ulyanovsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1245,7 +1313,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ulyanovskaya Oblast
     source_row: 13213
-  - survey_labels: 75 - Chelyabinsk oblast | 75 – Chelyabinsk oblast
+  - country_entry_id: RUS-SUBNAT-55
+    survey_labels: 75 - Chelyabinsk oblast | 75 – Chelyabinsk oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1265,7 +1334,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chelyabinskaya Oblast
     source_row: 13214
-  - survey_labels: 76 - Zabaikalskiy krai | 76 – Zabaikalskiy krai
+  - country_entry_id: RUS-SUBNAT-56
+    survey_labels: 76 - Zabaikalskiy krai | 76 – Zabaikalskiy krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1285,7 +1355,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Aginskiy Buryatskiy A. Okrug & Chitinskaya Oblast
     source_row: 13215
-  - survey_labels: 77 - Chukotka autonomous okrug | 77 – Chukotka autonomous okrug
+  - country_entry_id: RUS-SUBNAT-57
+    survey_labels: 77 - Chukotka autonomous okrug | 77 – Chukotka autonomous okrug
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1305,7 +1376,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chukotskiy Okrug
     source_row: 13216
-  - survey_labels: 78 - Yaroslavl oblast | 78 – Yaroslavl oblast
+  - country_entry_id: RUS-SUBNAT-58
+    survey_labels: 78 - Yaroslavl oblast | 78 – Yaroslavl oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1325,7 +1397,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yaroslavskaya Oblast
     source_row: 13217
-  - survey_labels: 79 - Adygeya republic | 79 – Adygeya republic
+  - country_entry_id: RUS-SUBNAT-59
+    survey_labels: 79 - Adygeya republic | 79 – Adygeya republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1345,7 +1418,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Adygeya Rep.
     source_row: 13218
-  - survey_labels: 8 - Khabarovsk krai | 8 – Khabarovsk krai
+  - country_entry_id: RUS-SUBNAT-60
+    survey_labels: 8 - Khabarovsk krai | 8 – Khabarovsk krai
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1365,7 +1439,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Khabarovskiy Kray
     source_row: 13219
-  - survey_labels: 80 - Bashkortostan republic | 80 – Bashkortostan republic
+  - country_entry_id: RUS-SUBNAT-61
+    survey_labels: 80 - Bashkortostan republic | 80 – Bashkortostan republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1385,7 +1460,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bashkortostan Rep.
     source_row: 13220
-  - survey_labels: 81 - Buryat republic | 81 – Buryat republic
+  - country_entry_id: RUS-SUBNAT-62
+    survey_labels: 81 - Buryat republic | 81 – Buryat republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1405,7 +1481,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Buryatiya Rep.
     source_row: 13221
-  - survey_labels: 82 - Dagestan republic | 82 – Dagestan republic
+  - country_entry_id: RUS-SUBNAT-63
+    survey_labels: 82 - Dagestan republic | 82 – Dagestan republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1425,7 +1502,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Dagestan Rep.
     source_row: 13222
-  - survey_labels: 83 - Kabardino-Balkar republic | 83 – Kabardino-Balkar republic
+  - country_entry_id: RUS-SUBNAT-64
+    survey_labels: 83 - Kabardino-Balkar republic | 83 – Kabardino-Balkar republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1445,7 +1523,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kabardino-balkariya Rep.
     source_row: 13223
-  - survey_labels: 84 - Altai republic | 84 – Altai republic
+  - country_entry_id: RUS-SUBNAT-65
+    survey_labels: 84 - Altai republic | 84 – Altai republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1465,7 +1544,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Altay Rep.
     source_row: 13224
-  - survey_labels: 85 - Kalmyk republic | 85 – Kalmyk republic
+  - country_entry_id: RUS-SUBNAT-66
+    survey_labels: 85 - Kalmyk republic | 85 – Kalmyk republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1485,7 +1565,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kalmykiya Rep.
     source_row: 13225
-  - survey_labels: 86 - Karelia republic | 86 – Karelia republic
+  - country_entry_id: RUS-SUBNAT-67
+    survey_labels: 86 - Karelia republic | 86 – Karelia republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1505,7 +1586,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Karelya Rep.
     source_row: 13226
-  - survey_labels: 87 - Komi republic | 87 – Komi republic
+  - country_entry_id: RUS-SUBNAT-68
+    survey_labels: 87 - Komi republic | 87 – Komi republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1525,7 +1607,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Komi Rep.
     source_row: 13227
-  - survey_labels: 88 - Mari-El republic | 88 – Mari-El republic
+  - country_entry_id: RUS-SUBNAT-69
+    survey_labels: 88 - Mari-El republic | 88 – Mari-El republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1545,7 +1628,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mariy-el Rep.
     source_row: 13228
-  - survey_labels: 89 - Mordovia republic | 89 – Mordovia republic
+  - country_entry_id: RUS-SUBNAT-70
+    survey_labels: 89 - Mordovia republic | 89 – Mordovia republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1565,7 +1649,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mordoviya Rep.
     source_row: 13229
-  - survey_labels: 90 - North Osetiya republic | 90 – North Osetiya republic
+  - country_entry_id: RUS-SUBNAT-71
+    survey_labels: 90 - North Osetiya republic | 90 – North Osetiya republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1585,7 +1670,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Severnaya Osetiya-alaniya Rep.
     source_row: 13230
-  - survey_labels: 91 - Karachaevo-Cherkess republic | 91 – Karachaevo-Cherkess republic
+  - country_entry_id: RUS-SUBNAT-72
+    survey_labels: 91 - Karachaevo-Cherkess republic | 91 – Karachaevo-Cherkess republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1605,7 +1691,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Karatchayevo-cherkesiya Rep.
     source_row: 13231
-  - survey_labels: 92 - Tatarstan republic | 92 – Tatarstan republic
+  - country_entry_id: RUS-SUBNAT-73
+    survey_labels: 92 - Tatarstan republic | 92 – Tatarstan republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1625,7 +1712,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tatarstan Rep.
     source_row: 13232
-  - survey_labels: 93 - Tuva republic | 93 – Tuva republic
+  - country_entry_id: RUS-SUBNAT-74
+    survey_labels: 93 - Tuva republic | 93 – Tuva republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1645,7 +1733,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tyva Rep.
     source_row: 13233
-  - survey_labels: 94 - Udmurtia Republic | 94 – Udmurtia Republic
+  - country_entry_id: RUS-SUBNAT-75
+    survey_labels: 94 - Udmurtia Republic | 94 – Udmurtia Republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1665,7 +1754,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Udmurtiya Rep.
     source_row: 13234
-  - survey_labels: 95 - Khakasia republic | 95 – Khakasia republic
+  - country_entry_id: RUS-SUBNAT-76
+    survey_labels: 95 - Khakasia republic | 95 – Khakasia republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1685,7 +1775,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Khakasiya Rep.
     source_row: 13235
-  - survey_labels: 97 - Chuvash republic | 97 – Chuvash republic
+  - country_entry_id: RUS-SUBNAT-77
+    survey_labels: 97 - Chuvash republic | 97 – Chuvash republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1705,7 +1796,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chuvashiya Rep.
     source_row: 13236
-  - survey_labels: 98 - Sakha (Yakutia) republic | 98 – Sakha (Yakutia) republic
+  - country_entry_id: RUS-SUBNAT-78
+    survey_labels: 98 - Sakha (Yakutia) republic | 98 – Sakha (Yakutia) republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1725,7 +1817,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sakha Rep.
     source_row: 13237
-  - survey_labels: 99 - Evrei autonomous oblast | 99 – Evrei autonomous oblast
+  - country_entry_id: RUS-SUBNAT-79
+    survey_labels: 99 - Evrei autonomous oblast | 99 – Evrei autonomous oblast
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1745,7 +1838,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yevreyskaya A. Oblast
     source_row: 13238
-  - survey_labels: 96 – Chechnya republic
+  - country_entry_id: RUS-SUBNAT-80
+    survey_labels: 96 – Chechnya republic
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1775,7 +1869,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - survey_labels: 1 - Central Federal Okrug
+  - country_entry_id: RUS-SUBNAT-01
+    survey_labels: 1 - Central Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU001
     gmd_subnatid2: ''
@@ -1795,7 +1890,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: Central Federal District
     source_row: 13152
-  - survey_labels: 2 - North-Western Federal Okrug
+  - country_entry_id: RUS-SUBNAT-02
+    survey_labels: 2 - North-Western Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU004
     gmd_subnatid2: ''
@@ -1815,7 +1911,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: Northwestern Federal District
     source_row: 13153
-  - survey_labels: 3 - Southern Federal Okrug
+  - country_entry_id: RUS-SUBNAT-03
+    survey_labels: 3 - Southern Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU006
     gmd_subnatid2: ''
@@ -1835,7 +1932,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: South federal district
     source_row: 13154
-  - survey_labels: 4 - North-Caucas Federal Okrug
+  - country_entry_id: RUS-SUBNAT-04
+    survey_labels: 4 - North-Caucas Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU003
     gmd_subnatid2: ''
@@ -1855,7 +1953,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: North Caucasus federal district
     source_row: 13155
-  - survey_labels: 5 - Volga Federal Okrug
+  - country_entry_id: RUS-SUBNAT-05
+    survey_labels: 5 - Volga Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU008
     gmd_subnatid2: ''
@@ -1875,7 +1974,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: Volga Federal District
     source_row: 13156
-  - survey_labels: 6 - Ural Federal Okrug
+  - country_entry_id: RUS-SUBNAT-06
+    survey_labels: 6 - Ural Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU007
     gmd_subnatid2: ''
@@ -1895,7 +1995,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: Ural Federal District
     source_row: 13157
-  - survey_labels: 7 - Siberia Federal Okrug
+  - country_entry_id: RUS-SUBNAT-07
+    survey_labels: 7 - Siberia Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU005
     gmd_subnatid2: ''
@@ -1915,7 +2016,8 @@ parameters:
     geo_nvar: ADM1_EN
     geo_name: Siberian Federal District
     source_row: 13158
-  - survey_labels: 8 - Far East Federal Okrug
+  - country_entry_id: RUS-SUBNAT-08
+    survey_labels: 8 - Far East Federal Okrug
     survey_variables: subnatid
     gmd_subnatid1: RUS_2022_UN1_RU002
     gmd_subnatid2: ''
@@ -1946,7 +2048,8 @@ parameters:
   selectors:
     geo_year: unknown
   value:
-  - survey_labels: 13 – | 72 – | 74 –
+  - country_entry_id: RUS-SUBNAT-01
+    survey_labels: 13 – | 72 – | 74 –
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1976,7 +2079,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: central_sewerage
+  - country_entry_id: RUS-SAN-01
+    source_category_code: central_sewerage
     national_label_en: Central sewerage
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1986,7 +2090,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: RUS-SAN-02
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -1996,7 +2101,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: RUS-SAN-03
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -2006,7 +2112,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 74
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: RUS-SAN-04
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -2017,7 +2124,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: RUS-SAN-05
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -2027,7 +2135,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 80
-  - source_category_code: central_sewerage
+  - country_entry_id: RUS-SAN-06
+    source_category_code: central_sewerage
     national_label_en: Central sewerage
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -2037,7 +2146,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 67
-  - source_category_code: housing_central_sewerage
+  - country_entry_id: RUS-SAN-07
+    source_category_code: housing_central_sewerage
     national_label_en: housing central sewerage
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -2047,7 +2157,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 67
-  - source_category_code: indoor_sewerage
+  - country_entry_id: RUS-SAN-08
+    source_category_code: indoor_sewerage
     national_label_en: Indoor sewerage
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -2057,7 +2168,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 67
-  - source_category_code: connection_to_septic_tank
+  - country_entry_id: RUS-SAN-09
+    source_category_code: connection_to_septic_tank
     national_label_en: Connection to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -2067,7 +2179,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 68
-  - source_category_code: septic_tank
+  - country_entry_id: RUS-SAN-10
+    source_category_code: septic_tank
     national_label_en: Septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -2077,7 +2190,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 68
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: RUS-SAN-11
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -2087,7 +2201,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 110
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: RUS-SAN-12
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -2099,7 +2214,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: RUS-SAN-13
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -2111,7 +2227,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 114
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: RUS-SAN-14
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -2123,7 +2240,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 122
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: RUS-SAN-15
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Собственная уборная с промывом вручную
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -2133,7 +2251,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: RUS-SAN-16
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Общественная/совместного пользования уборная с промывом
       вручную
@@ -2145,7 +2264,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 97
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: RUS-SAN-17
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -2155,7 +2275,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_central_sewerage
+  - country_entry_id: RUS-SAN-18
+    source_category_code: no_central_sewerage
     national_label_en: no central sewerage
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -2165,7 +2286,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: no_sewerage_and_no_septic
+  - country_entry_id: RUS-SAN-19
+    source_category_code: no_sewerage_and_no_septic
     national_label_en: No sewerage and no septic
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -2175,7 +2297,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: RUS-SAN-20
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -2185,7 +2308,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: shared_open_body_of_water_other
+  - country_entry_id: RUS-SAN-21
+    source_category_code: shared_open_body_of_water_other
     national_label_en: Shared, open body of water, other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -2205,7 +2329,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: natural_spring
+  - country_entry_id: RUS-WAS-01
+    source_category_code: natural_spring
     national_label_en: Natural spring
     national_label_local: Все родники
     jmp_classification: Ground water > All springs
@@ -2215,7 +2340,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 74
-  - source_category_code: spring
+  - country_entry_id: RUS-WAS-02
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: Все родники
     jmp_classification: Ground water > All springs
@@ -2225,7 +2351,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 74
-  - source_category_code: well_or_pump
+  - country_entry_id: RUS-WAS-03
+    source_category_code: well_or_pump
     national_label_en: Well or pump
     national_label_local: Все колодцы
     jmp_classification: Ground water > All wells
@@ -2235,7 +2362,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 54
-  - source_category_code: private_well
+  - country_entry_id: RUS-WAS-04
+    source_category_code: private_well
     national_label_en: Private well
     national_label_local: Частный
     jmp_classification: Ground water > All wells > Private
@@ -2245,7 +2373,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 55
-  - source_category_code: communal_well
+  - country_entry_id: RUS-WAS-05
+    source_category_code: communal_well
     national_label_en: Communal well
     national_label_local: Общественный
     jmp_classification: Ground water > All wells > Public
@@ -2255,7 +2384,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 56
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: RUS-WAS-06
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Защищённые колодцы или родники
     jmp_classification: Ground water > Protected wells or springs
@@ -2265,7 +2395,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 46
-  - source_category_code: well_by_the_house
+  - country_entry_id: RUS-WAS-07
+    source_category_code: well_by_the_house
     national_label_en: Well by the house
     national_label_local: Частный
     jmp_classification: Ground water > Traditional wells > Private
@@ -2275,7 +2406,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 63
-  - source_category_code: communal_water_well
+  - country_entry_id: RUS-WAS-08
+    source_category_code: communal_water_well
     national_label_en: Communal water well
     national_label_local: Общественный
     jmp_classification: Ground water > Traditional wells > Public
@@ -2285,7 +2417,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 64
-  - source_category_code: communal_water_pump
+  - country_entry_id: RUS-WAS-09
+    source_category_code: communal_water_pump
     national_label_en: Communal water pump
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -2295,7 +2428,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: RUS-WAS-10
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -2305,7 +2439,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: RUS-WAS-11
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Незащищённые колодцы или родники
     jmp_classification: Ground water > Unprotected wells or springs
@@ -2315,7 +2450,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 50
-  - source_category_code: independent_water_supply
+  - country_entry_id: RUS-WAS-12
+    source_category_code: independent_water_supply
     national_label_en: independent water supply
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -2325,7 +2461,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 103
-  - source_category_code: distributor_and_other
+  - country_entry_id: RUS-WAS-13
+    source_category_code: distributor_and_other
     national_label_en: Distributor and other
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -2335,7 +2472,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: RUS-WAS-14
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -2345,7 +2483,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: no_central_water
+  - country_entry_id: RUS-WAS-15
+    source_category_code: no_central_water
     national_label_en: No central water
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -2355,7 +2494,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: no_centralised_no_independent_in_house
+  - country_entry_id: RUS-WAS-16
+    source_category_code: no_centralised_no_independent_in_house
     national_label_en: no centralised/no independent in house
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -2365,7 +2505,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: RUS-WAS-17
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -2375,7 +2516,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: river_lake_pond_distributor_and_other
+  - country_entry_id: RUS-WAS-18
+    source_category_code: river_lake_pond_distributor_and_other
     national_label_en: River, lake, pond, Distributor and other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -2385,7 +2527,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: RUS-WAS-19
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -2395,7 +2538,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: RUS-WAS-20
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2405,7 +2549,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: river_lake_pond
+  - country_entry_id: RUS-WAS-21
+    source_category_code: river_lake_pond
     national_label_en: River, lake, pond
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -2415,7 +2560,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: RUS-WAS-22
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -2425,7 +2571,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: central_water
+  - country_entry_id: RUS-WAS-23
+    source_category_code: central_water
     national_label_en: Central water
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2435,7 +2582,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: home_has_central_water_supply
+  - country_entry_id: RUS-WAS-24
+    source_category_code: home_has_central_water_supply
     national_label_en: Home has central water supply
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2445,7 +2593,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: housing_central_water
+  - country_entry_id: RUS-WAS-25
+    source_category_code: housing_central_water
     national_label_en: housing-central water
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2455,7 +2604,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: indoor_plumbing
+  - country_entry_id: RUS-WAS-26
+    source_category_code: indoor_plumbing
     national_label_en: Indoor plumbing
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2465,7 +2615,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: RUS-WAS-27
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2475,7 +2626,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: running_water_in_house
+  - country_entry_id: RUS-WAS-28
+    source_category_code: running_water_in_house
     national_label_en: Running water in house
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2485,7 +2637,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: tap_in_house
+  - country_entry_id: RUS-WAS-29
+    source_category_code: tap_in_house
     national_label_en: Tap in house
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2495,7 +2648,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: water_valve
+  - country_entry_id: RUS-WAS-30
+    source_category_code: water_valve
     national_label_en: Water valve
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -2505,7 +2659,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: outdoor_plumbing_by_the_house
+  - country_entry_id: RUS-WAS-31
+    source_category_code: outdoor_plumbing_by_the_house
     national_label_en: Outdoor plumbing, by the house
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -2515,7 +2670,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: RUS-WAS-32
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -2525,7 +2681,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: standpipe
+  - country_entry_id: RUS-WAS-33
+    source_category_code: standpipe
     national_label_en: Standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

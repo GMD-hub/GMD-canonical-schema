@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Family Day Care and Centre Based Day Care
+  - country_entry_id: AUS-EDU-01
+    national_label_en: Family Day Care and Centre Based Day Care
     national_label_local: Family Day Care and Centre Based Day Care
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Quality early childhood education program
+  - country_entry_id: AUS-EDU-02
+    national_label_en: Quality early childhood education program
     national_label_local: Quality early childhood education program
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Preschool
+  - country_entry_id: AUS-EDU-03
+    national_label_en: Preschool
     national_label_local: Preschool
     entry_age: 4
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary School
+  - country_entry_id: AUS-EDU-04
+    national_label_en: Primary School
     national_label_local: Primary School
     entry_age: 5
     duration_years: 7
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Secondary School
+  - country_entry_id: AUS-EDU-05
+    national_label_en: Secondary School
     national_label_local: Secondary School
     entry_age: 12
     duration_years: 4
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Certificate I
+  - country_entry_id: AUS-EDU-06
+    national_label_en: Certificate I
     national_label_local: Certificate I
     entry_age: 0
     duration_years: 0
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Certificate II
+  - country_entry_id: AUS-EDU-07
+    national_label_en: Certificate II
     national_label_local: Certificate II
     entry_age: 0
     duration_years: 0
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Senior Secondary School
+  - country_entry_id: AUS-EDU-08
+    national_label_en: Senior Secondary School
     national_label_local: Senior Secondary School
     entry_age: 16
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Enabling course
+  - country_entry_id: AUS-EDU-09
+    national_label_en: Enabling course
     national_label_local: Enabling course
     entry_age: 0
     duration_years: 0
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Certificate III
+  - country_entry_id: AUS-EDU-10
+    national_label_en: Certificate III
     national_label_local: Certificate III
     entry_age: 0
     duration_years: 1
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Certificate IV
+  - country_entry_id: AUS-EDU-11
+    national_label_en: Certificate IV
     national_label_local: Certificate IV
     entry_age: 0
     duration_years: 0
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Diploma
+  - country_entry_id: AUS-EDU-12
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 0
     duration_years: 1
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Advanced Diploma
+  - country_entry_id: AUS-EDU-13
+    national_label_en: Advanced Diploma
     national_label_local: Advanced Diploma
     entry_age: 0
     duration_years: 1
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Associate Degree
+  - country_entry_id: AUS-EDU-14
+    national_label_en: Associate Degree
     national_label_local: Associate Degree
     entry_age: 0
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Bachelor Degree
+  - country_entry_id: AUS-EDU-15
+    national_label_en: Bachelor Degree
     national_label_local: Bachelor Degree
     entry_age: 0
     duration_years: 3
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Bachelor Degree
+  - country_entry_id: AUS-EDU-16
+    national_label_en: Bachelor Degree
     national_label_local: Bachelor Degree
     entry_age: 0
     duration_years: 4
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Bachelor Honours Degree
+  - country_entry_id: AUS-EDU-17
+    national_label_en: Bachelor Honours Degree
     national_label_local: Bachelor Honours Degree
     entry_age: 0
     duration_years: 1
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Graduate Certificate
+  - country_entry_id: AUS-EDU-18
+    national_label_en: Graduate Certificate
     national_label_local: Graduate Certificate
     entry_age: 0
     duration_years: 0
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Graduate Diploma
+  - country_entry_id: AUS-EDU-19
+    national_label_en: Graduate Diploma
     national_label_local: Graduate Diploma
     entry_age: 0
     duration_years: 1
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Masters Degree (Coursework)
+  - country_entry_id: AUS-EDU-20
+    national_label_en: Masters Degree (Coursework)
     national_label_local: Masters Degree (Coursework)
     entry_age: 0
     duration_years: 1
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Masters Degree (Research)
+  - country_entry_id: AUS-EDU-21
+    national_label_en: Masters Degree (Research)
     national_label_local: Masters Degree (Research)
     entry_age: 0
     duration_years: 1
@@ -220,7 +241,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Masters Degree (Extended)
+  - country_entry_id: AUS-EDU-22
+    national_label_en: Masters Degree (Extended)
     national_label_local: Masters Degree (Extended)
     entry_age: 0
     duration_years: 3
@@ -230,7 +252,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Doctoral Degree (Professional)
+  - country_entry_id: AUS-EDU-23
+    national_label_en: Doctoral Degree (Professional)
     national_label_local: Doctoral Degree (Professional)
     entry_age: 0
     duration_years: 3
@@ -240,7 +263,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Doctoral Degree (Research)
+  - country_entry_id: AUS-EDU-24
+    national_label_en: Doctoral Degree (Research)
     national_label_local: Doctoral Degree (Research)
     entry_age: 0
     duration_years: 3
@@ -260,7 +284,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: '[1]New South Wales'
+  - country_entry_id: AUS-SUBNAT-01
+    survey_labels: '[1]New South Wales'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -280,7 +305,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: New South Wales
     source_row: 410
-  - survey_labels: '[2]Victoria'
+  - country_entry_id: AUS-SUBNAT-02
+    survey_labels: '[2]Victoria'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -300,7 +326,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Victoria
     source_row: 411
-  - survey_labels: '[3]Queensland'
+  - country_entry_id: AUS-SUBNAT-03
+    survey_labels: '[3]Queensland'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -320,7 +347,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Queensland
     source_row: 412
-  - survey_labels: '[4]South Australia'
+  - country_entry_id: AUS-SUBNAT-04
+    survey_labels: '[4]South Australia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -340,7 +368,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: South Australia
     source_row: 413
-  - survey_labels: '[5]Western Australia'
+  - country_entry_id: AUS-SUBNAT-05
+    survey_labels: '[5]Western Australia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -360,7 +389,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Western Australia
     source_row: 414
-  - survey_labels: '[6]Tasmania'
+  - country_entry_id: AUS-SUBNAT-06
+    survey_labels: '[6]Tasmania'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -380,7 +410,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tasmania
     source_row: 415
-  - survey_labels: '[7]Canberra region (ACT) and Nor'
+  - country_entry_id: AUS-SUBNAT-07
+    survey_labels: '[7]Canberra region (ACT) and Nor'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -400,7 +431,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Australian Capital Territory & Northern Territory
     source_row: 416
-  - survey_labels: '[7]Northern Territory'
+  - country_entry_id: AUS-SUBNAT-08
+    survey_labels: '[7]Northern Territory'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -420,7 +452,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Northern Territory
     source_row: 430
-  - survey_labels: '[8]Canberra region (ACT)'
+  - country_entry_id: AUS-SUBNAT-09
+    survey_labels: '[8]Canberra region (ACT)'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''

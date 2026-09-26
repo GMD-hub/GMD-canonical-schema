@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Prescolaire
+  - country_entry_id: AGO-EDU-01
+    national_label_en: Prescolaire
     national_label_local: Preescolar
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Enseignement primaire
+  - country_entry_id: AGO-EDU-02
+    national_label_en: Enseignement primaire
     national_label_local: Ensino Primário
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Iº cycle de l'enseignement secondaire général
+  - country_entry_id: AGO-EDU-03
+    national_label_en: Iº cycle de l'enseignement secondaire général
     national_label_local: |-
       Ensino secundario Primeiro ciclo
       (Geral)
@@ -42,7 +45,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Enseignement du 1º Cycle de l´Enseignement secondaire téchnique
+  - country_entry_id: AGO-EDU-04
+    national_label_en: Enseignement du 1º Cycle de l´Enseignement secondaire téchnique
     national_label_local: |-
       Ensino secundario Primeiro ciclo
       (Técnico)
@@ -54,7 +58,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: IIº cycle de l'enseignement secondaire général
+  - country_entry_id: AGO-EDU-05
+    national_label_en: IIº cycle de l'enseignement secondaire général
     national_label_local: |-
       Ensino secundario segundo ciclo
       (Geral)
@@ -66,7 +71,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: IIº cycle de l'enseignement secondaire, Formation des enseignants
+  - country_entry_id: AGO-EDU-06
+    national_label_en: IIº cycle de l'enseignement secondaire, Formation des enseignants
     national_label_local: Ensino secundario segundo ciclo, Formação de Professor
     entry_age: 15
     duration_years: 4
@@ -76,7 +82,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Ll´Enseignement´du Iiº cycle du  secondaire téchnique et Professionnel
+  - country_entry_id: AGO-EDU-07
+    national_label_en: Ll´Enseignement´du Iiº cycle du  secondaire téchnique et Professionnel
     national_label_local: Ensino secundário do IIº ciclo, Formação Técnica Profissional
     entry_age: 15
     duration_years: 4
@@ -86,7 +93,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Enseignement supérieur
+  - country_entry_id: AGO-EDU-08
+    national_label_en: Enseignement supérieur
     national_label_local: Ensino Superior (Bacharelato)
     entry_age: 18
     duration_years: 3
@@ -96,7 +104,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Enseignement supérieur graduation (Licence )
+  - country_entry_id: AGO-EDU-09
+    national_label_en: Enseignement supérieur graduation (Licence )
     national_label_local: Ensino Superior-Graduação (Licenciatura)
     entry_age: 18
     duration_years: 4
@@ -106,7 +115,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Enseignement supérieur (Master)
+  - country_entry_id: AGO-EDU-10
+    national_label_en: Enseignement supérieur (Master)
     national_label_local: Ensino Superior             Pós-Graduação (Mestrado)
     entry_age: 24
     duration_years: 2
@@ -116,7 +126,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Enseignement supérieur Niveau doctorat
+  - country_entry_id: AGO-EDU-11
+    national_label_en: Enseignement supérieur Niveau doctorat
     national_label_local: Ensino Superior, Nível do Doutoramento
     entry_age: 24
     duration_years: 4
@@ -136,7 +147,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Cabinda | 1-Cabinda
+  - country_entry_id: AGO-SUBNAT-01
+    survey_labels: 1 - Cabinda | 1-Cabinda
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_401
     gmd_subnatid2: AGO_2015_GAUL1_401
@@ -156,7 +168,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cabinda
     source_row: 2
-  - survey_labels: 14 - Namibe | 14-Namibe
+  - country_entry_id: AGO-SUBNAT-02
+    survey_labels: 14 - Namibe | 14-Namibe
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_413
     gmd_subnatid2: AGO_2015_GAUL1_413
@@ -176,7 +189,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Namibe
     source_row: 3
-  - survey_labels: 15 - Huila | 15-Huíla
+  - country_entry_id: AGO-SUBNAT-03
+    survey_labels: 15 - Huila | 15-Huíla
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_406
     gmd_subnatid2: AGO_2015_GAUL1_406
@@ -196,7 +210,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Huila
     source_row: 4
-  - survey_labels: 16 - Cunene | 16-Cunene
+  - country_entry_id: AGO-SUBNAT-04
+    survey_labels: 16 - Cunene | 16-Cunene
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_404
     gmd_subnatid2: AGO_2015_GAUL1_404
@@ -216,7 +231,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cunene
     source_row: 5
-  - survey_labels: 4 - Luanda | 4-Luanda
+  - country_entry_id: AGO-SUBNAT-05
+    survey_labels: 4 - Luanda | 4-Luanda
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_408
     gmd_subnatid2: AGO_2015_GAUL1_408
@@ -236,7 +252,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Luanda
     source_row: 6
-  - survey_labels: 8 - Lunda Norte | 8-Lunda Norte
+  - country_entry_id: AGO-SUBNAT-06
+    survey_labels: 8 - Lunda Norte | 8-Lunda Norte
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_409
     gmd_subnatid2: AGO_2015_GAUL1_409
@@ -256,7 +273,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lunda Norte
     source_row: 7
-  - survey_labels: 9 - Benguela | 9-Benguela
+  - country_entry_id: AGO-SUBNAT-07
+    survey_labels: 9 - Benguela | 9-Benguela
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_399
     gmd_subnatid2: AGO_2015_GAUL1_399
@@ -276,7 +294,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Benguela
     source_row: 8
-  - survey_labels: 10 - Huambo | 10-Huambo
+  - country_entry_id: AGO-SUBNAT-08
+    survey_labels: 10 - Huambo | 10-Huambo
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_405
     gmd_subnatid2: AGO_2015_GAUL1_405
@@ -296,7 +315,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Huambo
     source_row: 10
-  - survey_labels: 11 - Bié | 11-Bié
+  - country_entry_id: AGO-SUBNAT-09
+    survey_labels: 11 - Bié | 11-Bié
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_400
     gmd_subnatid2: AGO_2015_GAUL1_400
@@ -316,7 +336,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bie
     source_row: 11
-  - survey_labels: 12 - Moxico | 12-Móxico
+  - country_entry_id: AGO-SUBNAT-10
+    survey_labels: 12 - Moxico | 12-Móxico
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_412
     gmd_subnatid2: AGO_2015_GAUL1_412
@@ -336,7 +357,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Moxico
     source_row: 12
-  - survey_labels: 13 - Kuando Kubango | 13-Cuando Cubango
+  - country_entry_id: AGO-SUBNAT-11
+    survey_labels: 13 - Kuando Kubango | 13-Cuando Cubango
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_402
     gmd_subnatid2: AGO_2015_GAUL1_402
@@ -356,7 +378,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cuando Cubango
     source_row: 13
-  - survey_labels: 17 - Lunda Sul | 17-Lunda Sul
+  - country_entry_id: AGO-SUBNAT-12
+    survey_labels: 17 - Lunda Sul | 17-Lunda Sul
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_410
     gmd_subnatid2: AGO_2015_GAUL1_410
@@ -376,7 +399,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lunda Sul
     source_row: 17
-  - survey_labels: 18 - Bengo | 18-Bengo
+  - country_entry_id: AGO-SUBNAT-13
+    survey_labels: 18 - Bengo | 18-Bengo
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_398
     gmd_subnatid2: AGO_2015_GAUL1_398
@@ -396,7 +420,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bengo
     source_row: 18
-  - survey_labels: 2 - Zaire | 2-Zaire
+  - country_entry_id: AGO-SUBNAT-14
+    survey_labels: 2 - Zaire | 2-Zaire
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_415
     gmd_subnatid2: AGO_2015_GAUL1_415
@@ -416,7 +441,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Zaire
     source_row: 19
-  - survey_labels: 3 - Uige | 3-Uíge
+  - country_entry_id: AGO-SUBNAT-15
+    survey_labels: 3 - Uige | 3-Uíge
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_414
     gmd_subnatid2: AGO_2015_GAUL1_414
@@ -436,7 +462,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Uige
     source_row: 20
-  - survey_labels: 5 - Kwanza Norte | 5-Cuanza Norte
+  - country_entry_id: AGO-SUBNAT-16
+    survey_labels: 5 - Kwanza Norte | 5-Cuanza Norte
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_407
     gmd_subnatid2: AGO_2015_GAUL1_407
@@ -456,7 +483,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kuanza Norte
     source_row: 22
-  - survey_labels: 6 - Kwanza Sul | 6-Cuanza Sul
+  - country_entry_id: AGO-SUBNAT-17
+    survey_labels: 6 - Kwanza Sul | 6-Cuanza Sul
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_403
     gmd_subnatid2: AGO_2015_GAUL1_403
@@ -476,7 +504,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cuanza Sul
     source_row: 23
-  - survey_labels: 7 - Malange | 7-Malanje
+  - country_entry_id: AGO-SUBNAT-18
+    survey_labels: 7 - Malange | 7-Malanje
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_411
     gmd_subnatid2: AGO_2015_GAUL1_411
@@ -506,7 +535,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: AGO-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -516,7 +546,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: directo_ao_rio_no_mar_ou_lago
+  - country_entry_id: AGO-SAN-02
+    source_category_code: directo_ao_rio_no_mar_ou_lago
     national_label_en: Directo ao rio, no mar ou lago
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -526,7 +557,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: casa_de_banho_c_sistema_de_esgoto
+  - country_entry_id: AGO-SAN-03
+    source_category_code: casa_de_banho_c_sistema_de_esgoto
     national_label_en: Casa de banho c/ sistema de esgoto
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -536,7 +568,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: sistema_de_esgoto_pia_sanita
+  - country_entry_id: AGO-SAN-04
+    source_category_code: sistema_de_esgoto_pia_sanita
     national_label_en: Sistema de esgoto(Pia/Sanita)
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -546,7 +579,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: poco_roto_somente
+  - country_entry_id: AGO-SAN-05
+    source_category_code: poco_roto_somente
     national_label_en: Poço roto somente
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -556,7 +590,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: poco_roto_somente_pour_flush_latrine
+  - country_entry_id: AGO-SAN-06
+    source_category_code: poco_roto_somente_pour_flush_latrine
     national_label_en: Poço roto somente (pour flush latrine)
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -566,7 +601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: casa_de_banho_c_fossa_septica
+  - country_entry_id: AGO-SAN-07
+    source_category_code: casa_de_banho_c_fossa_septica
     national_label_en: Casa de banho c/ fossa séptica
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -576,7 +612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: com_fosse_septica_e_poco_roto
+  - country_entry_id: AGO-SAN-08
+    source_category_code: com_fosse_septica_e_poco_roto
     national_label_en: Com fosse séptica e poço roto
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -586,7 +623,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: AGO-SAN-09
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush - to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -596,7 +634,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: other_place
+  - country_entry_id: AGO-SAN-10
+    source_category_code: other_place
     national_label_en: Other place
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -606,7 +645,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: sanita_ligada_a_fossa_aberta_vala_ou_rio
+  - country_entry_id: AGO-SAN-11
+    source_category_code: sanita_ligada_a_fossa_aberta_vala_ou_rio
     national_label_en: Sanita ligada a fossa aberta (vala ou rio)
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -616,7 +656,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: AGO-SAN-12
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -626,7 +667,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: piped_sewage_system
+  - country_entry_id: AGO-SAN-13
+    source_category_code: piped_sewage_system
     national_label_en: Piped sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -636,7 +678,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: sanita_ligada_a_rede_publica_de_esgotos
+  - country_entry_id: AGO-SAN-14
+    source_category_code: sanita_ligada_a_rede_publica_de_esgotos
     national_label_en: Sanita ligada a rede publica de esgotos
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -646,7 +689,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: sanitation_through_connection_to_sewer_system
+  - country_entry_id: AGO-SAN-15
+    source_category_code: sanitation_through_connection_to_sewer_system
     national_label_en: Sanitation through connection to sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -656,7 +700,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: sistema_de_esgotos_pia_ou_sanita
+  - country_entry_id: AGO-SAN-16
+    source_category_code: sistema_de_esgotos_pia_ou_sanita
     national_label_en: Sistema de esgotos (Pia ou sanita)
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -666,7 +711,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: apenas_poco_roto
+  - country_entry_id: AGO-SAN-17
+    source_category_code: apenas_poco_roto
     national_label_en: Apenas poço roto
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -676,7 +722,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: AGO-SAN-18
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -686,7 +733,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: pit_latrine
+  - country_entry_id: AGO-SAN-19
+    source_category_code: pit_latrine
     national_label_en: Pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -696,7 +744,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: AGO-SAN-20
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -706,7 +755,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: fossa_septica_ou_poco_roto
+  - country_entry_id: AGO-SAN-21
+    source_category_code: fossa_septica_ou_poco_roto
     national_label_en: Fossa séptica ou poço roto
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -716,7 +766,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: sanita_ligada_a_fossa_septica
+  - country_entry_id: AGO-SAN-22
+    source_category_code: sanita_ligada_a_fossa_septica
     national_label_en: Sanita ligada a fossa septica
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -726,7 +777,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: sanitation_through_connection_to_septic_tank_and_soakaway
+  - country_entry_id: AGO-SAN-23
+    source_category_code: sanitation_through_connection_to_septic_tank_and_soakaway
     national_label_en: Sanitation through connection to septic tank and soakaway
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -736,7 +788,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: septic_tank
+  - country_entry_id: AGO-SAN-24
+    source_category_code: septic_tank
     national_label_en: Septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -746,7 +799,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: water_flow_do_not_know_where
+  - country_entry_id: AGO-SAN-25
+    source_category_code: water_flow_do_not_know_where
     national_label_en: Water flow do not know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -756,7 +810,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: latrina_seca
+  - country_entry_id: AGO-SAN-26
+    source_category_code: latrina_seca
     national_label_en: Latrina seca
     national_label_local: Dry latrines
     jmp_classification: Latrines > Dry latrines
@@ -766,7 +821,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 103
-  - source_category_code: balde_bucket
+  - country_entry_id: AGO-SAN-27
+    source_category_code: balde_bucket
     national_label_en: Balde (bucket)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -776,7 +832,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: balde_bacio_outro_recipiente
+  - country_entry_id: AGO-SAN-28
+    source_category_code: balde_bacio_outro_recipiente
     national_label_en: Balde / bacio / outro recipiente
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -786,7 +843,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket
+  - country_entry_id: AGO-SAN-29
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -796,7 +854,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: AGO-SAN-30
+    source_category_code: bucket_toilet
     national_label_en: Bucket toilet
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -806,7 +865,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: lata_balde_ou_saco_plastico
+  - country_entry_id: AGO-SAN-31
+    source_category_code: lata_balde_ou_saco_plastico
     national_label_en: Lata, balde ou saco plástico
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -816,7 +876,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: lata_balde_saco_plastico
+  - country_entry_id: AGO-SAN-32
+    source_category_code: lata_balde_saco_plastico
     national_label_en: Lata/Balde/Saco plástico
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -826,7 +887,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: AGO-SAN-33
+    source_category_code: hanging_toilet_latrine
     national_label_en: Hanging toilet/latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -837,7 +899,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: cemented_with_sink
+  - country_entry_id: AGO-SAN-34
+    source_category_code: cemented_with_sink
     national_label_en: Cemented with sink
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -848,7 +911,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: AGO-SAN-35
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -859,7 +923,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_ditch
+  - country_entry_id: AGO-SAN-36
+    source_category_code: open_ditch
     national_label_en: Open ditch
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -870,7 +935,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: AGO-SAN-37
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -881,7 +947,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: vala_aberta_open_trench
+  - country_entry_id: AGO-SAN-38
+    source_category_code: vala_aberta_open_trench
     national_label_en: Vala aberta (open trench)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -892,7 +959,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: without_cement_sink
+  - country_entry_id: AGO-SAN-39
+    source_category_code: without_cement_sink
     national_label_en: Without cement sink
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -903,7 +971,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrina
+  - country_entry_id: AGO-SAN-40
+    source_category_code: latrina
     national_label_en: Latrina
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -914,7 +983,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: latrina_seca_ou_latrina_c_descarga_manual_pit_latrine_or_pour_flush
+  - country_entry_id: AGO-SAN-41
+    source_category_code: latrina_seca_ou_latrina_c_descarga_manual_pit_latrine_or_pour_flush
     national_label_en: Latrina seca ou latrina c/ descarga manual (pit latrine or
       pour flush )
     national_label_local: Traditional latrine
@@ -926,7 +996,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: latrina_seca_ou_latrina_com_descarga_manual
+  - country_entry_id: AGO-SAN-42
+    source_category_code: latrina_seca_ou_latrina_com_descarga_manual
     national_label_en: Latrina seca ou latrina com descarga manual
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -937,7 +1008,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: simple_pit
+  - country_entry_id: AGO-SAN-43
+    source_category_code: simple_pit
     national_label_en: Simple pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -948,7 +1020,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_vip
+  - country_entry_id: AGO-SAN-44
+    source_category_code: ventilated_improved_vip
     national_label_en: Ventilated improved (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -959,7 +1032,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: AGO-SAN-45
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -970,7 +1044,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: retrete_latrina_ligada_a_fossa_aberta_vala_ou_rio
+  - country_entry_id: AGO-SAN-46
+    source_category_code: retrete_latrina_ligada_a_fossa_aberta_vala_ou_rio
     national_label_en: Retrete/latrina ligada a  fossa aberta  (vala ou rio)
     national_label_local: to elsewhere
     jmp_classification: Latrines > Pour flush latrines > to elsewhere
@@ -980,7 +1055,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 90
-  - source_category_code: retrete_latrina_ligada_a_rede_publica_de_esgotos
+  - country_entry_id: AGO-SAN-47
+    source_category_code: retrete_latrina_ligada_a_rede_publica_de_esgotos
     national_label_en: Retrete/latrina ligada a rede publica de esgotos
     national_label_local: to piped sewer system
     jmp_classification: Latrines > Pour flush latrines > to piped sewer system
@@ -990,7 +1066,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: soakaway
+  - country_entry_id: AGO-SAN-48
+    source_category_code: soakaway
     national_label_en: Soakaway
     national_label_local: to pit
     jmp_classification: Latrines > Pour flush latrines > to pit
@@ -1000,7 +1077,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: retrete_latrina_ligada_a_fossa_septica
+  - country_entry_id: AGO-SAN-49
+    source_category_code: retrete_latrina_ligada_a_fossa_septica
     national_label_en: Retrete/latrina ligada a fossa séptica
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > to septic tank
@@ -1010,7 +1088,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: capim_ou_mato_ou_ar_livre
+  - country_entry_id: AGO-SAN-50
+    source_category_code: capim_ou_mato_ou_ar_livre
     national_label_en: Capim ou mato ou ar livre
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1020,7 +1099,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: capim_mato_ou_ar_livre_e_rio_mar_ou_lago
+  - country_entry_id: AGO-SAN-51
+    source_category_code: capim_mato_ou_ar_livre_e_rio_mar_ou_lago
     national_label_en: Capim, mato ou ar livre e Rio, mar ou lago
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1030,7 +1110,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: capim_mato_ou_ar_livre_open_defecation
+  - country_entry_id: AGO-SAN-52
+    source_category_code: capim_mato_ou_ar_livre_open_defecation
     national_label_en: Capim, mato ou ar-livre (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1040,7 +1121,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: capim_mato_e_ar_livre
+  - country_entry_id: AGO-SAN-53
+    source_category_code: capim_mato_e_ar_livre
     national_label_en: Capim,mato e ar livre
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1050,7 +1132,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: nenhum_sanitario_ar_livre_mato
+  - country_entry_id: AGO-SAN-54
+    source_category_code: nenhum_sanitario_ar_livre_mato
     national_label_en: Nenhum sanitário / ar livre/mato
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1060,7 +1143,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush
+  - country_entry_id: AGO-SAN-55
+    source_category_code: no_facility_bush
     national_label_en: No facility/bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1070,7 +1154,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: AGO-SAN-56
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1080,7 +1165,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_sanitation
+  - country_entry_id: AGO-SAN-57
+    source_category_code: no_sanitation
     national_label_en: No sanitation
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1090,7 +1176,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_none_available
+  - country_entry_id: AGO-SAN-58
+    source_category_code: no_none_available
     national_label_en: No, none available
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1100,7 +1187,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: AGO-SAN-59
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1110,7 +1198,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_type_of_sanitation
+  - country_entry_id: AGO-SAN-60
+    source_category_code: other_type_of_sanitation
     national_label_en: Other type of sanitation
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1120,7 +1209,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: others
+  - country_entry_id: AGO-SAN-61
+    source_category_code: others
     national_label_en: Others
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1130,7 +1220,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: outro
+  - country_entry_id: AGO-SAN-62
+    source_category_code: outro
     national_label_en: Outro
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1140,7 +1231,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: outros
+  - country_entry_id: AGO-SAN-63
+    source_category_code: outros
     national_label_en: Outros
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1150,7 +1242,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: AGO-SAN-64
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1170,7 +1263,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: cacimba_ou_nascente
+  - country_entry_id: AGO-WAS-01
+    source_category_code: cacimba_ou_nascente
     national_label_en: Cacimba ou nascente
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -1180,7 +1274,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: agua_de_nascente_fonte_protegida
+  - country_entry_id: AGO-WAS-02
+    source_category_code: agua_de_nascente_fonte_protegida
     national_label_en: 'Água de nascente: Fonte protegida'
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1190,7 +1285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: fonte_protegida
+  - country_entry_id: AGO-WAS-03
+    source_category_code: fonte_protegida
     national_label_en: Fonte protegida
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1200,7 +1296,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: nacente_protegida
+  - country_entry_id: AGO-WAS-04
+    source_category_code: nacente_protegida
     national_label_en: Nacente Protegida
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1210,7 +1307,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: nascente_protegida_protected_spring
+  - country_entry_id: AGO-WAS-05
+    source_category_code: nascente_protegida_protected_spring
     national_label_en: Nascente protegida (protected spring)
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1220,7 +1318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: AGO-WAS-06
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1230,7 +1329,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: cacimba_protegida
+  - country_entry_id: AGO-WAS-07
+    source_category_code: cacimba_protegida
     national_label_en: Cacimba Protegida
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1240,7 +1340,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: fonte_ou_poco_protegido_protected_well
+  - country_entry_id: AGO-WAS-08
+    source_category_code: fonte_ou_poco_protegido_protected_well
     national_label_en: Fonte ou poço protegido (protected well)
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1250,7 +1351,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: poco_cavado_protegido
+  - country_entry_id: AGO-WAS-09
+    source_category_code: poco_cavado_protegido
     national_label_en: Poco cavado protegido
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1260,7 +1362,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: poco_protegido
+  - country_entry_id: AGO-WAS-10
+    source_category_code: poco_protegido
     national_label_en: Poço protegido
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1270,7 +1373,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: poco_cacimba_poco_protegido
+  - country_entry_id: AGO-WAS-11
+    source_category_code: poco_cacimba_poco_protegido
     national_label_en: 'Poço/cacimba: Poço protegido'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1280,7 +1384,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: AGO-WAS-12
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1290,7 +1395,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: borehole_with_pump
+  - country_entry_id: AGO-WAS-13
+    source_category_code: borehole_with_pump
     national_label_en: Borehole with pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1300,7 +1406,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: cacimba_ou_chimpaca_ou_poco
+  - country_entry_id: AGO-WAS-14
+    source_category_code: cacimba_ou_chimpaca_ou_poco
     national_label_en: Cacimba ou Chimpaca ou Poco
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1310,7 +1417,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: furo_com_bomba
+  - country_entry_id: AGO-WAS-15
+    source_category_code: furo_com_bomba
     national_label_en: Furo com bomba
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1320,7 +1428,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: furo_com_bomba_well_with_handpump
+  - country_entry_id: AGO-WAS-16
+    source_category_code: furo_com_bomba_well_with_handpump
     national_label_en: Furo com bomba (well with handpump)
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1330,7 +1439,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: furo_protegido
+  - country_entry_id: AGO-WAS-17
+    source_category_code: furo_protegido
     national_label_en: Furo protegido
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1340,7 +1450,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: furu_com_bomba
+  - country_entry_id: AGO-WAS-18
+    source_category_code: furu_com_bomba
     national_label_en: Furu com Bomba
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1350,7 +1461,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: poco_cacimba_furo_com_bomba
+  - country_entry_id: AGO-WAS-19
+    source_category_code: poco_cacimba_furo_com_bomba
     national_label_en: 'Poço/cacimba: Furo com bomba'
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1360,7 +1472,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: AGO-WAS-20
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1370,7 +1483,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: agua_de_nascente_fonte_nao_protegida
+  - country_entry_id: AGO-WAS-21
+    source_category_code: agua_de_nascente_fonte_nao_protegida
     national_label_en: 'Água de nascente: Fonte não protegida'
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1380,7 +1494,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: fonte_desprotegida
+  - country_entry_id: AGO-WAS-22
+    source_category_code: fonte_desprotegida
     national_label_en: Fonte desprotegida
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1390,7 +1505,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: nascente_desprotegida
+  - country_entry_id: AGO-WAS-23
+    source_category_code: nascente_desprotegida
     national_label_en: Nascente Desprotegida
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1400,7 +1516,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: nascente_nao_protegida
+  - country_entry_id: AGO-WAS-24
+    source_category_code: nascente_nao_protegida
     national_label_en: Nascente não protegida
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1410,7 +1527,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: AGO-WAS-25
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1420,7 +1538,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: cacimba_desprotegida
+  - country_entry_id: AGO-WAS-26
+    source_category_code: cacimba_desprotegida
     national_label_en: Cacimba Desprotegida
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1430,7 +1549,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: poco_cavado_desprotegido
+  - country_entry_id: AGO-WAS-27
+    source_category_code: poco_cavado_desprotegido
     national_label_en: Poco cavado desprotegido
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1440,7 +1560,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: poco_nao_protegido
+  - country_entry_id: AGO-WAS-28
+    source_category_code: poco_nao_protegido
     national_label_en: Poço não protegido
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1450,7 +1571,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: poco_cacimba_poco_nao_protegido
+  - country_entry_id: AGO-WAS-29
+    source_category_code: poco_cacimba_poco_nao_protegido
     national_label_en: 'Poço/cacimba: Poço não protegido'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1460,7 +1582,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: AGO-WAS-30
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1470,7 +1593,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: camiao_cisterna
+  - country_entry_id: AGO-WAS-31
+    source_category_code: camiao_cisterna
     national_label_en: Camião cisterna
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1480,7 +1604,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: carroca_com_tanque_pequeno
+  - country_entry_id: AGO-WAS-32
+    source_category_code: carroca_com_tanque_pequeno
     national_label_en: Carroça com tanque pequeno
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1490,7 +1615,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: AGO-WAS-33
+    source_category_code: cart_with_small_tank
     national_label_en: cart with small tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1500,7 +1626,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: comprada_de_uma_carrinha_com_um_tanque_pequeno_ou_motocisterna
+  - country_entry_id: AGO-WAS-34
+    source_category_code: comprada_de_uma_carrinha_com_um_tanque_pequeno_ou_motocisterna
     national_label_en: Comprada de uma carrinha com um tanque pequeno ou motocisterna
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1510,7 +1637,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: moto_tres_rodas
+  - country_entry_id: AGO-WAS-35
+    source_category_code: moto_tres_rodas
     national_label_en: Moto (três rodas)
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1520,7 +1648,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: tanque
+  - country_entry_id: AGO-WAS-36
+    source_category_code: tanque
     national_label_en: Tanque
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1530,7 +1659,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: camiao_cistema
+  - country_entry_id: AGO-WAS-37
+    source_category_code: camiao_cistema
     national_label_en: Camião Cistema
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1540,7 +1670,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camiao_cisterna
+  - country_entry_id: AGO-WAS-38
+    source_category_code: camiao_cisterna
     national_label_en: Camião cisterna
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1550,7 +1681,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camiao_cisterna_de_distribuicao
+  - country_entry_id: AGO-WAS-39
+    source_category_code: camiao_cisterna_de_distribuicao
     national_label_en: Camião cisterna de distribuição
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1560,7 +1692,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: comprada_em_um_caminhao_cisterna
+  - country_entry_id: AGO-WAS-40
+    source_category_code: comprada_em_um_caminhao_cisterna
     national_label_en: Comprada em um caminhao-cisterna
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1570,7 +1703,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: AGO-WAS-41
+    source_category_code: tanker_truck
     national_label_en: Tanker Truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1580,7 +1714,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanque
+  - country_entry_id: AGO-WAS-42
+    source_category_code: tanque
     national_label_en: Tanque
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1590,7 +1725,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: AGO-WAS-43
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1600,7 +1736,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: outro
+  - country_entry_id: AGO-WAS-44
+    source_category_code: outro
     national_label_en: Outro
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1610,7 +1747,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: outro_especifique
+  - country_entry_id: AGO-WAS-45
+    source_category_code: outro_especifique
     national_label_en: Outro (Especifique)
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1620,7 +1758,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: nao_sabe
+  - country_entry_id: AGO-WAS-46
+    source_category_code: nao_sabe
     national_label_en: Nao sabe
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1630,7 +1769,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: tanque_do_vizinho
+  - country_entry_id: AGO-WAS-47
+    source_category_code: tanque_do_vizinho
     national_label_en: Tanque do Vizinho
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1640,7 +1780,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: agua_engarrafada
+  - country_entry_id: AGO-WAS-48
+    source_category_code: agua_engarrafada
     national_label_en: Água engarrafada
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1650,7 +1791,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: AGO-WAS-49
+    source_category_code: bottled_water
     national_label_en: bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1660,7 +1802,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_da_chuva_chimpacas
+  - country_entry_id: AGO-WAS-50
+    source_category_code: agua_da_chuva_chimpacas
     national_label_en: Água da chuva / chimpacas
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1670,7 +1813,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_da_chuva_chipacas
+  - country_entry_id: AGO-WAS-51
+    source_category_code: agua_da_chuva_chipacas
     national_label_en: Água da Chuva / Chipacas
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1680,7 +1824,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_da_chuva_ou_chimpacas
+  - country_entry_id: AGO-WAS-52
+    source_category_code: agua_da_chuva_ou_chimpacas
     national_label_en: Água da chuva ou chimpacas
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1690,7 +1835,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: coleta_de_aguas_das_chuvas
+  - country_entry_id: AGO-WAS-53
+    source_category_code: coleta_de_aguas_das_chuvas
     national_label_en: Coleta de aguas das chuvas
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1700,7 +1846,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: AGO-WAS-54
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1710,7 +1857,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: recolha_de_agua_da_chuva
+  - country_entry_id: AGO-WAS-55
+    source_category_code: recolha_de_agua_da_chuva
     national_label_en: recolha de agua da chuva
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1720,7 +1868,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: a_guas_superficiais_como_rio_represa_lago_lagoa_ca3rrego_canal_ou_canal_de_irrigaa_a_o
+  - country_entry_id: AGO-WAS-56
+    source_category_code: a_guas_superficiais_como_rio_represa_lago_lagoa_ca3rrego_canal_ou_canal_de_irrigaa_a_o
     national_label_en: "Ã\x81guas superficiais, como rio, represa, lago, lagoa, cÃ³rrego,
       canal ou canal de irrigaÃ§Ã£o"
     national_label_local: Surface water
@@ -1731,7 +1880,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: charco_rio_riacho
+  - country_entry_id: AGO-WAS-57
+    source_category_code: charco_rio_riacho
     national_label_en: Charco / Rio / Riacho
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1741,7 +1891,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: lago_lagoa_riacho_canal_canal_de_irrigacao
+  - country_entry_id: AGO-WAS-58
+    source_category_code: lago_lagoa_riacho_canal_canal_de_irrigacao
     national_label_en: Lago/lagoa/riacho/canal/canal de irrigação
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1751,7 +1902,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: lagoa_rio_ou_riacho
+  - country_entry_id: AGO-WAS-59
+    source_category_code: lagoa_rio_ou_riacho
     national_label_en: Lagoa, rio ou riacho
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1761,7 +1913,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: lagoa_rio_riacho
+  - country_entry_id: AGO-WAS-60
+    source_category_code: lagoa_rio_riacho
     national_label_en: Lagoa/rio/riacho
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1771,7 +1924,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: mire_river_or_stream
+  - country_entry_id: AGO-WAS-61
+    source_category_code: mire_river_or_stream
     national_label_en: Mire, river or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1781,7 +1935,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
+  - country_entry_id: AGO-WAS-62
+    source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irirgation channel
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1791,7 +1946,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: AGO-WAS-63
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1801,7 +1957,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: neighbourhood_tap
+  - country_entry_id: AGO-WAS-64
+    source_category_code: neighbourhood_tap
     national_label_en: Neighbourhood tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1811,7 +1968,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: torneira_do_vizinho_ou_predio_neighbours_tap
+  - country_entry_id: AGO-WAS-65
+    source_category_code: torneira_do_vizinho_ou_predio_neighbours_tap
     national_label_en: Torneira do vizinho ou prédio (neighbours tap)
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1821,7 +1979,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: torneira_na_casa_do_vizinho
+  - country_entry_id: AGO-WAS-66
+    source_category_code: torneira_na_casa_do_vizinho
     national_label_en: 'Torneira: Na casa do vizinho'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1831,7 +1990,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: agua_canalizada
+  - country_entry_id: AGO-WAS-67
+    source_category_code: agua_canalizada
     national_label_en: Agua canalizada
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1841,7 +2001,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: agua_canalizada
+  - country_entry_id: AGO-WAS-68
+    source_category_code: agua_canalizada
     national_label_en: Agua canalizada
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1851,7 +2012,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: agua_canalizada_em_casa
+  - country_entry_id: AGO-WAS-69
+    source_category_code: agua_canalizada_em_casa
     national_label_en: Agua canalizada em casa
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1861,7 +2023,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: domestic_connection_without_pump
+  - country_entry_id: AGO-WAS-70
+    source_category_code: domestic_connection_without_pump
     national_label_en: Domestic connection without pump
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1871,7 +2034,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: AGO-WAS-71
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1881,7 +2045,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: torneira_na_residencia_ligada_a_rede
+  - country_entry_id: AGO-WAS-72
+    source_category_code: torneira_na_residencia_ligada_a_rede
     national_label_en: Torneira na Residência Ligada á Rede
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1891,7 +2056,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: torneira_dentro_de_casa
+  - country_entry_id: AGO-WAS-73
+    source_category_code: torneira_dentro_de_casa
     national_label_en: 'Torneira: Dentro de casa'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1901,7 +2067,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: agua_canalizada_no_quintal
+  - country_entry_id: AGO-WAS-74
+    source_category_code: agua_canalizada_no_quintal
     national_label_en: Agua canalizada no quintal
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1911,7 +2078,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: agua_canalizada_no_quintal_yard_tap
+  - country_entry_id: AGO-WAS-75
+    source_category_code: agua_canalizada_no_quintal_yard_tap
     national_label_en: Agua canalizada no quintal (yard tap)
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1921,7 +2089,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: AGO-WAS-76
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1931,7 +2100,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: torneira_do_predio_vizinho
+  - country_entry_id: AGO-WAS-77
+    source_category_code: torneira_do_predio_vizinho
     national_label_en: Torneira do Prédio / Vizinho
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1941,7 +2111,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: torneira_dentro_do_quintal
+  - country_entry_id: AGO-WAS-78
+    source_category_code: torneira_dentro_do_quintal
     national_label_en: 'Torneira: Dentro do quintal'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1951,7 +2122,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: chafariz_ou_fontenario
+  - country_entry_id: AGO-WAS-79
+    source_category_code: chafariz_ou_fontenario
     national_label_en: Chafariz ou fontenário
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1961,7 +2133,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: chafariz_publico
+  - country_entry_id: AGO-WAS-80
+    source_category_code: chafariz_publico
     national_label_en: Chafariz Público
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1971,7 +2144,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: chafariz_fontenario
+  - country_entry_id: AGO-WAS-81
+    source_category_code: chafariz_fontenario
     national_label_en: Chafariz/Fontenário
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1981,7 +2155,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: AGO-WAS-82
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1991,7 +2166,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: AGO-WAS-83
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2001,7 +2177,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: torneir_a_publica_chafariz_fontenario_standpipe
+  - country_entry_id: AGO-WAS-84
+    source_category_code: torneir_a_publica_chafariz_fontenario_standpipe
     national_label_en: Torneir a publica (chafariz/fontenario) (standpipe)
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2011,7 +2188,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: torneira_chafariz_publico
+  - country_entry_id: AGO-WAS-85
+    source_category_code: torneira_chafariz_publico
     national_label_en: 'Torneira: Chafariz público'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Garderie
+  - country_entry_id: GNQ-EDU-01
+    national_label_en: Garderie
     national_label_local: Pre-escolar 1
     entry_age: 1
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primaire
+  - country_entry_id: GNQ-EDU-02
+    national_label_en: Pre-primaire
     national_label_local: Pre-escolar 2
     entry_age: 4
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primaire
+  - country_entry_id: GNQ-EDU-03
+    national_label_en: Primaire
     national_label_local: Primaria
     entry_age: 7
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Enseignement secondaire de base
+  - country_entry_id: GNQ-EDU-04
+    national_label_en: Enseignement secondaire de base
     national_label_local: Educación Secundaria Básica
     entry_age: 13
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Baccalauréat
+  - country_entry_id: GNQ-EDU-05
+    national_label_en: Baccalauréat
     national_label_local: Educación Secundaria Bachillerato
     entry_age: 17
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Formation professionnelle (niveau moyen)
+  - country_entry_id: GNQ-EDU-06
+    national_label_en: Formation professionnelle (niveau moyen)
     national_label_local: Educación Sec. Formación Profesional 1  (Técnico Medio)
     entry_age: 17
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Formation professionnelle (niveau supérieur)
+  - country_entry_id: GNQ-EDU-07
+    national_label_en: Formation professionnelle (niveau supérieur)
     national_label_local: |-
       Educación Sec. Formación Profesional 2
       (Técnico Superior)
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Diplôme universitaire court
+  - country_entry_id: GNQ-EDU-08
+    national_label_en: Diplôme universitaire court
     national_label_local: Educación Terciaria Grado Corto
     entry_age: 19
     duration_years: 3
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Licence
+  - country_entry_id: GNQ-EDU-09
+    national_label_en: Licence
     national_label_local: Graduado en Eduacación Terciaria (Licenciado)
     entry_age: 19
     duration_years: 3
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Licence
+  - country_entry_id: GNQ-EDU-10
+    national_label_en: Licence
     national_label_local: Graduado en Eduacación Terciaria (Licenciado)
     entry_age: 21
     duration_years: 5
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Master
+  - country_entry_id: GNQ-EDU-11
+    national_label_en: Master
     national_label_local: Master, Especialización o equivalente
     entry_age: 22
     duration_years: 1
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Doctorat
+  - country_entry_id: GNQ-EDU-12
+    national_label_en: Doctorat
     national_label_local: Doctor o equivalente
     entry_age: 23
     duration_years: 2
@@ -143,7 +155,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - AnnobóN
+  - country_entry_id: GNQ-SUBNAT-01
+    survey_labels: 1 - AnnobóN
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -163,7 +176,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Annobon
     source_row: 5818
-  - survey_labels: 2 - Bioko Norte
+  - country_entry_id: GNQ-SUBNAT-02
+    survey_labels: 2 - Bioko Norte
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -183,7 +197,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bioko Norte
     source_row: 5819
-  - survey_labels: 3 - Bioko Sur
+  - country_entry_id: GNQ-SUBNAT-03
+    survey_labels: 3 - Bioko Sur
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -203,7 +218,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bioko Sur
     source_row: 5820
-  - survey_labels: 4 - Centro Sur
+  - country_entry_id: GNQ-SUBNAT-04
+    survey_labels: 4 - Centro Sur
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -223,7 +239,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Centro Sur
     source_row: 5821
-  - survey_labels: 6 - Kie Ntem
+  - country_entry_id: GNQ-SUBNAT-05
+    survey_labels: 6 - Kie Ntem
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -243,7 +260,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kientem
     source_row: 5822
-  - survey_labels: 7 - Litoral
+  - country_entry_id: GNQ-SUBNAT-06
+    survey_labels: 7 - Litoral
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -263,7 +281,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Litoral
     source_row: 5823
-  - survey_labels: 8 - Wele Nzas
+  - country_entry_id: GNQ-SUBNAT-07
+    survey_labels: 8 - Wele Nzas
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -293,7 +312,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: sanitario_con_sistema_de_alcantarillado_pozo_negro_o_fosa
+  - country_entry_id: GNQ-SAN-01
+    source_category_code: sanitario_con_sistema_de_alcantarillado_pozo_negro_o_fosa
     national_label_en: Sanitario con sistema de alcantarillado, pozo negro o fosa
     national_label_local: Inodoros de arrastre hidráulico
     jmp_classification: Flush/toilets
@@ -303,7 +323,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: letrina_mejorada_ventilada
+  - country_entry_id: GNQ-SAN-02
+    source_category_code: letrina_mejorada_ventilada
     national_label_en: Letrina mejorada/ventilada
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -314,7 +335,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_tradicional
+  - country_entry_id: GNQ-SAN-03
+    source_category_code: letrina_tradicional
     national_label_en: Letrina tradicional
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -325,7 +347,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: no_tiene_sanitario
+  - country_entry_id: GNQ-SAN-04
+    source_category_code: no_tiene_sanitario
     national_label_en: No tiene sanitario
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -335,7 +358,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: GNQ-SAN-05
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -355,7 +379,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: GNQ-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -365,7 +390,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: GNQ-WAS-02
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -375,7 +401,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: GNQ-WAS-03
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: Tubewell/borehole with pump
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -385,7 +412,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: GNQ-WAS-04
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -395,7 +423,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: GNQ-WAS-05
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -405,7 +434,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: GNQ-WAS-06
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker truck vendor
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -415,7 +445,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: GNQ-WAS-07
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -425,7 +456,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: GNQ-WAS-08
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -435,7 +467,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rainwater_collection
+  - country_entry_id: GNQ-WAS-09
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -445,7 +478,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: pond_river_or_stream
+  - country_entry_id: GNQ-WAS-10
+    source_category_code: pond_river_or_stream
     national_label_en: Pond, river or stream
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -455,7 +489,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: GNQ-WAS-11
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -465,7 +500,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: GNQ-WAS-12
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -475,7 +511,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap
+  - country_entry_id: GNQ-WAS-13
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

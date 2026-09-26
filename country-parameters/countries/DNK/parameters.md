@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nurseries
+  - country_entry_id: DNK-EDU-01
+    national_label_en: Nurseries
     national_label_local: Vuggestuer
     entry_age: 0
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Family Daycare
+  - country_entry_id: DNK-EDU-02
+    national_label_en: Family Daycare
     national_label_local: Dagpleje
     entry_age: 0
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Kindergarten
+  - country_entry_id: DNK-EDU-03
+    national_label_en: Kindergarten
     national_label_local: Børnehave
     entry_age: 3
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-school class in primary school
+  - country_entry_id: DNK-EDU-04
+    national_label_en: Pre-school class in primary school
     national_label_local: Børnehaveklasse
     entry_age: 5
     duration_years: 1
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Primary school 1.-6. grade
+  - country_entry_id: DNK-EDU-05
+    national_label_en: Primary school 1.-6. grade
     national_label_local: Grundskole 1.-6. klasse
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Primary school 7th-9th grade
+  - country_entry_id: DNK-EDU-06
+    national_label_en: Primary school 7th-9th grade
     national_label_local: Grundskole 7.-9. klasse
     entry_age: 12
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Primary school 10th grade
+  - country_entry_id: DNK-EDU-07
+    national_label_en: Primary school 10th grade
     national_label_local: Grundskole 10. klasse
     entry_age: 15
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: HF higher prepatory examination, single subject
+  - country_entry_id: DNK-EDU-08
+    national_label_en: HF higher prepatory examination, single subject
     national_label_local: HF-enkeltfag
     entry_age: 18
     duration_years: 0
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: PRE-International Baccalaureate
+  - country_entry_id: DNK-EDU-09
+    national_label_en: PRE-International Baccalaureate
     national_label_local: PRE-IB
     entry_age: 16
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Special secondary education
+  - country_entry_id: DNK-EDU-10
+    national_label_en: Special secondary education
     national_label_local: Særlig ungdomsuddannelse
     entry_age: 16
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Upper secondary education
+  - country_entry_id: DNK-EDU-11
+    national_label_en: Upper secondary education
     national_label_local: Gymnasiale uddannelser, AGYM
     entry_age: 16
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Upper secondary education
+  - country_entry_id: DNK-EDU-12
+    national_label_en: Upper secondary education
     national_label_local: Gymnasiale uddannelser, EGYM
     entry_age: 16
     duration_years: 3
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Admittance examinations for engineering programmes
+  - country_entry_id: DNK-EDU-13
+    national_label_en: Admittance examinations for engineering programmes
     national_label_local: Adgangseksamen, ingeniøruddannelsen
     entry_age: 18
     duration_years: 1
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational educational training, basic course 1
+  - country_entry_id: DNK-EDU-14
+    national_label_en: Vocational educational training, basic course 1
     national_label_local: EUD, grundforløb
     entry_age: 15
     duration_years: 0
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Vocational educational training, basic course 2 and main course
+  - country_entry_id: DNK-EDU-15
+    national_label_en: Vocational educational training, basic course 2 and main course
     national_label_local: EUD, hovedforløb
     entry_age: 15
     duration_years: 3
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: Vocational educational training, others
+  - country_entry_id: DNK-EDU-16
+    national_label_en: Vocational educational training, others
     national_label_local: Øvrige erhvervsfaglige uddannelser
     entry_age: 15
     duration_years: 3
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: Vocational educational training, basic course 2 and main course
+  - country_entry_id: DNK-EDU-17
+    national_label_en: Vocational educational training, basic course 2 and main course
       (access to higher level)
     national_label_local: EUD, hovedforløb (access to higher level)
     entry_age: 15
@@ -181,7 +198,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: Academy programmes (Tertiary adult education programmes)
+  - country_entry_id: DNK-EDU-18
+    national_label_en: Academy programmes (Tertiary adult education programmes)
     national_label_local: Akademiuddannelser (Videregående voksenuddannelse (VVU))
     entry_age: 20
     duration_years: 1
@@ -191,7 +209,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Business academy programmes
+  - country_entry_id: DNK-EDU-19
+    national_label_en: Business academy programmes
     national_label_local: Erhvervsakademiuddannelser
     entry_age: 18
     duration_years: 2
@@ -201,7 +220,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Other short-cycle higher education
+  - country_entry_id: DNK-EDU-20
+    national_label_en: Other short-cycle higher education
     national_label_local: Øvrige korte videregående uddannelser
     entry_age: 18
     duration_years: 2
@@ -211,7 +231,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Bachelor programmes
+  - country_entry_id: DNK-EDU-21
+    national_label_en: Bachelor programmes
     national_label_local: Bachelor
     entry_age: 18
     duration_years: 2
@@ -221,7 +242,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Bachelor programmes, engineering
+  - country_entry_id: DNK-EDU-22
+    national_label_en: Bachelor programmes, engineering
     national_label_local: Diplomingeniør
     entry_age: 18
     duration_years: 3
@@ -231,7 +253,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Bachelor programmes, adult education
+  - country_entry_id: DNK-EDU-23
+    national_label_en: Bachelor programmes, adult education
     national_label_local: Diplomuddannelser, HD mv.
     entry_age: 20
     duration_years: 1
@@ -241,7 +264,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Officer (bachelor)
+  - country_entry_id: DNK-EDU-24
+    national_label_en: Officer (bachelor)
     national_label_local: Officer (prof.bach.)
     entry_age: 18
     duration_years: 4
@@ -251,7 +275,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Vocational bachelor programmes
+  - country_entry_id: DNK-EDU-25
+    national_label_en: Vocational bachelor programmes
     national_label_local: Professionsbachelor
     entry_age: 18
     duration_years: 3
@@ -261,7 +286,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Vocational bachelor programmes (Top up)
+  - country_entry_id: DNK-EDU-26
+    national_label_en: Vocational bachelor programmes (Top up)
     national_label_local: Professionsbachelor (Overbygning)
     entry_age: 25
     duration_years: 1
@@ -271,7 +297,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Other medium-cycle higher education
+  - country_entry_id: DNK-EDU-27
+    national_label_en: Other medium-cycle higher education
     national_label_local: Øvrige mellemlange videregående uddannelser
     entry_age: 18
     duration_years: 3
@@ -281,7 +308,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Masters programmes
+  - country_entry_id: DNK-EDU-28
+    national_label_en: Masters programmes
     national_label_local: Kandidatuddannelser
     entry_age: 21
     duration_years: 1
@@ -291,7 +319,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Masters programmes Buisness
+  - country_entry_id: DNK-EDU-29
+    national_label_en: Masters programmes Buisness
     national_label_local: Erhvervskandidat
     entry_age: 21
     duration_years: 2
@@ -301,7 +330,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: Masters programmes, adult education
+  - country_entry_id: DNK-EDU-30
+    national_label_en: Masters programmes, adult education
     national_label_local: Masteruddannelser
     entry_age: 25
     duration_years: 1
@@ -311,7 +341,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
-  - national_label_en: Doctoral programmes/PhD.
+  - country_entry_id: DNK-EDU-31
+    national_label_en: Doctoral programmes/PhD.
     national_label_local: Forskeruddannelser/ph.d.
     entry_age: 23
     duration_years: 3
@@ -321,7 +352,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
-  - national_label_en: Musical education (composer, instrumentalist, etc..)
+  - country_entry_id: DNK-EDU-32
+    national_label_en: Musical education (composer, instrumentalist, etc..)
     national_label_local: Musiske uddannelser (komponist, instrumentalist mv.)
     entry_age: 25
     duration_years: 2

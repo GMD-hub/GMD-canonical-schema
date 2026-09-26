@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood education - First cycle
+  - country_entry_id: ESP-EDU-01
+    national_label_en: Early childhood education - First cycle
     national_label_local: Educación Infantil Primer ciclo (0-2 años)
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Early childhood education - Second cycle
+  - country_entry_id: ESP-EDU-02
+    national_label_en: Early childhood education - Second cycle
     national_label_local: Educación Infantil Segundo ciclo (3+ años)
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Primary education
+  - country_entry_id: ESP-EDU-03
+    national_label_en: Primary education
     national_label_local: Educación Primaria
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
-  - national_label_en: Adult education - primary level
+  - country_entry_id: ESP-EDU-04
+    national_label_en: Adult education - primary level
     national_label_local: Enseñanzas Iniciales de Educación Básica para personas en
       edad adulta
     entry_age: 18
@@ -51,7 +55,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Compulsory-lower secondary education
+  - country_entry_id: ESP-EDU-05
+    national_label_en: Compulsory-lower secondary education
     national_label_local: Educación Secundaria Obligatoria - Primer ciclo (1º a 3º
       curso)
     entry_age: 12
@@ -62,7 +67,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Adult compulsory secondary education
+  - country_entry_id: ESP-EDU-06
+    national_label_en: Adult compulsory secondary education
     national_label_local: Educación Secundaria para Adultos
     entry_age: 18
     duration_years: 2
@@ -72,7 +78,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Pre-vocational - special education
+  - country_entry_id: ESP-EDU-07
+    national_label_en: Pre-vocational - special education
     national_label_local: Transición a la vida adulta
     entry_age: 16
     duration_years: 2
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Professional Certificate - level 1
+  - country_entry_id: ESP-EDU-08
+    national_label_en: Professional Certificate - level 1
     national_label_local: Certificados de Profesionalidad de nivel 1
     entry_age: 16
     duration_years: 0
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Other training programmes of basic level
+  - country_entry_id: ESP-EDU-09
+    national_label_en: Other training programmes of basic level
     national_label_local: Otros programas formativos de nivel básico
     entry_age: 15
     duration_years: 1
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Compulsory-upper secondary education
+  - country_entry_id: ESP-EDU-10
+    national_label_en: Compulsory-upper secondary education
     national_label_local: Educación Secundaria Obligatoria - Segundo ciclo (4º curso)
     entry_age: 15
     duration_years: 1
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: General upper secondary education
+  - country_entry_id: ESP-EDU-11
+    national_label_en: General upper secondary education
     national_label_local: Bachillerato
     entry_age: 16
     duration_years: 2
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: General upper secondary education (distance learning)
+  - country_entry_id: ESP-EDU-12
+    national_label_en: General upper secondary education (distance learning)
     national_label_local: Bachillerato (distancia)
     entry_age: 18
     duration_years: 2
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Vocational training -intermediate level
+  - country_entry_id: ESP-EDU-13
+    national_label_en: Vocational training -intermediate level
     national_label_local: Ciclos Formativos  de Grado Medio
     entry_age: 16
     duration_years: 2
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational training -intermediate level
+  - country_entry_id: ESP-EDU-14
+    national_label_en: Vocational training -intermediate level
     national_label_local: Ciclos Formativos  de Grado Medio
     entry_age: 16
     duration_years: 2
@@ -152,7 +166,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Vocational training - intermediate level (distance learning)
+  - country_entry_id: ESP-EDU-15
+    national_label_en: Vocational training - intermediate level (distance learning)
     national_label_local: Ciclos Formativos  de Grado Medio (distancia)
     entry_age: 18
     duration_years: 2
@@ -162,7 +177,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: Languages studies at the official school for languages
+  - country_entry_id: ESP-EDU-16
+    national_label_en: Languages studies at the official school for languages
     national_label_local: Escuelas Oficiales de Idiomas
     entry_age: 16
     duration_years: 2
@@ -172,7 +188,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: Dance and Music studies - intermediate level
+  - country_entry_id: ESP-EDU-17
+    national_label_en: Dance and Music studies - intermediate level
     national_label_local: E. Profesionales de Danza y de Música
     entry_age: 12
     duration_years: 2
@@ -182,7 +199,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: Professional Certificate - level 2
+  - country_entry_id: ESP-EDU-18
+    national_label_en: Professional Certificate - level 2
     national_label_local: Certificados de Profesionalidad de nivel 2
     entry_age: 16
     duration_years: 0
@@ -192,7 +210,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: Basic Vocational Training
+  - country_entry_id: ESP-EDU-19
+    national_label_en: Basic Vocational Training
     national_label_local: Formación Profesional Básica
     entry_age: 15
     duration_years: 2
@@ -202,7 +221,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Basic Vocational Training
+  - country_entry_id: ESP-EDU-20
+    national_label_en: Basic Vocational Training
     national_label_local: Formación Profesional Básica
     entry_age: 15
     duration_years: 2
@@ -212,7 +232,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
-  - national_label_en: Specific degrees of universities (less 2 years)
+  - country_entry_id: ESP-EDU-21
+    national_label_en: Specific degrees of universities (less 2 years)
     national_label_local: Títulos propios de Universidad (menos 2 años)
     entry_age: 18
     duration_years: 0
@@ -222,7 +243,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Professional Certificate - level 3
+  - country_entry_id: ESP-EDU-22
+    national_label_en: Professional Certificate - level 3
     national_label_local: Certificados de Profesionalidad de nivel 3
     entry_age: 18
     duration_years: 0
@@ -232,7 +254,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Specialization courses for Intermediate VET graduates
+  - country_entry_id: ESP-EDU-23
+    national_label_en: Specialization courses for Intermediate VET graduates
     national_label_local: Cursos de especialización de graduados de Formación Profesional
       de grado medio
     entry_age: 18
@@ -243,7 +266,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Specific vocational training - advanced level
+  - country_entry_id: ESP-EDU-24
+    national_label_en: Specific vocational training - advanced level
     national_label_local: Ciclos Formativos de Grado Superior
     entry_age: 18
     duration_years: 2
@@ -253,7 +277,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Specific vocational training - advanced level
+  - country_entry_id: ESP-EDU-25
+    national_label_en: Specific vocational training - advanced level
     national_label_local: Ciclos Formativos de Grado Superior
     entry_age: 18
     duration_years: 2
@@ -263,7 +288,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Specific vocational training  -advanced level(Distance learning)
+  - country_entry_id: ESP-EDU-26
+    national_label_en: Specific vocational training  -advanced level(Distance learning)
     national_label_local: Ciclos Formativos de Grado Superior-Distancia
     entry_age: 18
     duration_years: 2
@@ -273,7 +299,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Specific degrees of universities (2 and more years)
+  - country_entry_id: ESP-EDU-27
+    national_label_en: Specific degrees of universities (2 and more years)
     national_label_local: Títulos propios de Universidad (2 y más años)
     entry_age: 18
     duration_years: 2
@@ -283,7 +310,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Specialization courses for Higher VET graduates
+  - country_entry_id: ESP-EDU-28
+    national_label_en: Specialization courses for Higher VET graduates
     national_label_local: Cursos de especialización de graduados de Formación Profesional
       de grado superior
     entry_age: 20
@@ -294,7 +322,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Bachelor (4 years)
+  - country_entry_id: ESP-EDU-29
+    national_label_en: Bachelor (4 years)
     national_label_local: Grado (4 años)
     entry_age: 18
     duration_years: 4
@@ -304,7 +333,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: Short Post-grade degree
+  - country_entry_id: ESP-EDU-30
+    national_label_en: Short Post-grade degree
     national_label_local: Títulos propios universitarios de experto o especialista
       (menos de 60 créditos ECTS)
     entry_age: 22
@@ -315,7 +345,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
-  - national_label_en: Master degree
+  - country_entry_id: ESP-EDU-31
+    national_label_en: Master degree
     national_label_local: Máster oficial
     entry_age: 22
     duration_years: 1
@@ -325,7 +356,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
-  - national_label_en: Long Bachelor degree (5 and 6 years)
+  - country_entry_id: ESP-EDU-32
+    national_label_en: Long Bachelor degree (5 and 6 years)
     national_label_local: Grado (5 y 6 años)
     entry_age: 18
     duration_years: 5
@@ -335,7 +367,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
-  - national_label_en: Post-degree health studies  (specialist )
+  - country_entry_id: ESP-EDU-33
+    national_label_en: Post-degree health studies  (specialist )
     national_label_local: Especialidades Sanitarias
     entry_age: 24
     duration_years: 2
@@ -345,7 +378,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
-  - national_label_en: Specific master degrees of universities
+  - country_entry_id: ESP-EDU-34
+    national_label_en: Specific master degrees of universities
     national_label_local: Máster universitario y curso post-grado
     entry_age: 22
     duration_years: 1
@@ -355,7 +389,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
-  - national_label_en: University education - Doctorate
+  - country_entry_id: ESP-EDU-35
+    national_label_en: University education - Doctorate
     national_label_local: Doctorado
     entry_age: 23
     duration_years: 4
@@ -375,7 +410,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-ES11
+  - country_entry_id: ESP-SUBNAT-01
+    survey_labels: 1-ES11
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES11
     gmd_subnatid2: ''
@@ -395,7 +431,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Galicia
     source_row: 4323
-  - survey_labels: 10-ES42
+  - country_entry_id: ESP-SUBNAT-02
+    survey_labels: 10-ES42
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES42
     gmd_subnatid2: ''
@@ -415,7 +452,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Castilla-La Mancha
     source_row: 4324
-  - survey_labels: 11-ES43
+  - country_entry_id: ESP-SUBNAT-03
+    survey_labels: 11-ES43
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES43
     gmd_subnatid2: ''
@@ -435,7 +473,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Extremadura
     source_row: 4325
-  - survey_labels: 12-ES51
+  - country_entry_id: ESP-SUBNAT-04
+    survey_labels: 12-ES51
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES51
     gmd_subnatid2: ''
@@ -455,7 +494,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Cataluña
     source_row: 4326
-  - survey_labels: 13-ES52
+  - country_entry_id: ESP-SUBNAT-05
+    survey_labels: 13-ES52
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES52
     gmd_subnatid2: ''
@@ -475,7 +515,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Comunitat Valenciana
     source_row: 4327
-  - survey_labels: 14-ES53
+  - country_entry_id: ESP-SUBNAT-06
+    survey_labels: 14-ES53
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES53
     gmd_subnatid2: ''
@@ -495,7 +536,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Illes Balears
     source_row: 4328
-  - survey_labels: 15-ES61
+  - country_entry_id: ESP-SUBNAT-07
+    survey_labels: 15-ES61
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES61
     gmd_subnatid2: ''
@@ -515,7 +557,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Andalucía
     source_row: 4329
-  - survey_labels: 16-ES62
+  - country_entry_id: ESP-SUBNAT-08
+    survey_labels: 16-ES62
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES62
     gmd_subnatid2: ''
@@ -535,7 +578,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Región de Murcia
     source_row: 4330
-  - survey_labels: 17-ES63
+  - country_entry_id: ESP-SUBNAT-09
+    survey_labels: 17-ES63
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES63
     gmd_subnatid2: ''
@@ -555,7 +599,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Ciudad de Ceuta
     source_row: 4331
-  - survey_labels: 18-ES70 | 19-ES70
+  - country_entry_id: ESP-SUBNAT-10
+    survey_labels: 18-ES70 | 19-ES70
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES70
     gmd_subnatid2: ''
@@ -575,7 +620,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Canarias
     source_row: 4332
-  - survey_labels: 2-ES12
+  - country_entry_id: ESP-SUBNAT-11
+    survey_labels: 2-ES12
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES12
     gmd_subnatid2: ''
@@ -595,7 +641,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Principado de Asturias
     source_row: 4333
-  - survey_labels: 3-ES13
+  - country_entry_id: ESP-SUBNAT-12
+    survey_labels: 3-ES13
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES13
     gmd_subnatid2: ''
@@ -615,7 +662,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Cantabria
     source_row: 4334
-  - survey_labels: 4-ES21
+  - country_entry_id: ESP-SUBNAT-13
+    survey_labels: 4-ES21
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES21
     gmd_subnatid2: ''
@@ -635,7 +683,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: País Vasco
     source_row: 4335
-  - survey_labels: 5-ES22
+  - country_entry_id: ESP-SUBNAT-14
+    survey_labels: 5-ES22
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES22
     gmd_subnatid2: ''
@@ -655,7 +704,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Comunidad Foral de Navarra
     source_row: 4336
-  - survey_labels: 6-ES23
+  - country_entry_id: ESP-SUBNAT-15
+    survey_labels: 6-ES23
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES23
     gmd_subnatid2: ''
@@ -675,7 +725,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: La Rioja
     source_row: 4337
-  - survey_labels: 7-ES24
+  - country_entry_id: ESP-SUBNAT-16
+    survey_labels: 7-ES24
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES24
     gmd_subnatid2: ''
@@ -695,7 +746,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Aragón
     source_row: 4338
-  - survey_labels: 8-ES30
+  - country_entry_id: ESP-SUBNAT-17
+    survey_labels: 8-ES30
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES30
     gmd_subnatid2: ''
@@ -715,7 +767,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Comunidad de Madrid
     source_row: 4339
-  - survey_labels: 9-ES41
+  - country_entry_id: ESP-SUBNAT-18
+    survey_labels: 9-ES41
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES41
     gmd_subnatid2: ''
@@ -735,7 +788,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Castilla y León
     source_row: 4340
-  - survey_labels: 18-ES64
+  - country_entry_id: ESP-SUBNAT-19
+    survey_labels: 18-ES64
     survey_variables: subnatid
     gmd_subnatid1: ESP_2021_NUTS2_ES64
     gmd_subnatid2: ''
@@ -765,7 +819,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_to_piped_sewage_system
+  - country_entry_id: ESP-SAN-01
+    source_category_code: flush_to_piped_sewage_system
     national_label_en: Flush to piped sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -775,7 +830,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: ESP-SAN-02
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -785,7 +841,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: covered_dry_latrine_with_privacy
+  - country_entry_id: ESP-SAN-03
+    source_category_code: covered_dry_latrine_with_privacy
     national_label_en: Covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -796,7 +853,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pour_flush_latrine
+  - country_entry_id: ESP-SAN-04
+    source_category_code: pour_flush_latrine
     national_label_en: Pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico
     jmp_classification: Latrines > Pour flush latrines
@@ -806,7 +864,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: ESP-SAN-05
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -826,7 +885,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: ESP-WAS-01
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Pozos o manantiales protegidos
     jmp_classification: Ground water > Protected wells or springs
@@ -836,7 +896,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: ESP-WAS-02
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -846,7 +907,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: ESP-WAS-03
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Pozos o manantiales non protegidos
     jmp_classification: Ground water > Unprotected wells or springs
@@ -856,7 +918,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: ESP-WAS-04
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -866,7 +929,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: ESP-WAS-05
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -876,7 +940,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: ESP-WAS-06
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -886,7 +951,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: ESP-WAS-07
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -896,7 +962,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: public_standpipe
+  - country_entry_id: ESP-WAS-08
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - national_label_en: Enseignement préscolaire
+  - country_entry_id: COM-EDU-01
+    national_label_en: Enseignement préscolaire
     national_label_local: Enseignement préscolaire
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Enseignement primaire
+  - country_entry_id: COM-EDU-02
+    national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: "Enseignement secondaire \n(1 er cycle)"
+  - country_entry_id: COM-EDU-03
+    national_label_en: "Enseignement secondaire \n(1 er cycle)"
     national_label_local: "Enseignement secondaire \n(1 er  cycle)"
     entry_age: 12
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: 'Enseignement technique secondaire
+  - country_entry_id: COM-EDU-04
+    national_label_en: 'Enseignement technique secondaire
 
       (1er cycle)'
     national_label_local: "Enseignement technique secondaire \n(1er cycle)"
@@ -52,7 +56,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: "Enseignement secondaire \n(2 ème cycle)"
+  - country_entry_id: COM-EDU-05
+    national_label_en: "Enseignement secondaire \n(2 ème cycle)"
     national_label_local: "Enseignement secondaire \n(2 ème cycle)"
     entry_age: 16
     duration_years: 3
@@ -62,7 +67,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Enseignement secondaire technique et professionnel
+  - country_entry_id: COM-EDU-06
+    national_label_en: Enseignement secondaire technique et professionnel
     national_label_local: Enseignement secondaire technique et professionnel
     entry_age: 16
     duration_years: 3
@@ -72,7 +78,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: 'Enseignement secondaire technique
+  - country_entry_id: COM-EDU-07
+    national_label_en: 'Enseignement secondaire technique
 
       (2 e cycle)'
     national_label_local: 'Enseignement secondaire technique
@@ -86,7 +93,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: "Enseignement \npost -secondaire"
+  - country_entry_id: COM-EDU-08
+    national_label_en: "Enseignement \npost -secondaire"
     national_label_local: "Enseignement \npost -secondaire"
     entry_age: 19
     duration_years: 2
@@ -96,7 +104,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Enseignement supérieur technique
+  - country_entry_id: COM-EDU-09
+    national_label_en: Enseignement supérieur technique
     national_label_local: Enseignement supérieur technique
     entry_age: 19
     duration_years: 2
@@ -106,7 +115,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Enseignement supérieur de formation des instituteurs
+  - country_entry_id: COM-EDU-10
+    national_label_en: Enseignement supérieur de formation des instituteurs
     national_label_local: Enseignement supérieur de formation des instituteurs
     entry_age: 19
     duration_years: 3
@@ -116,7 +126,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Enseignement supérieur professionnel
+  - country_entry_id: COM-EDU-11
+    national_label_en: Enseignement supérieur professionnel
     national_label_local: Enseignement supérieur professsionnel
     entry_age: 19
     duration_years: 3
@@ -126,7 +137,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Enseignement supérieur (Licence)
+  - country_entry_id: COM-EDU-12
+    national_label_en: Enseignement supérieur (Licence)
     national_label_local: Enseignement supérieur (Licence)
     entry_age: 19
     duration_years: 3
@@ -136,7 +148,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Enseignement supérieur (Master)
+  - country_entry_id: COM-EDU-13
+    national_label_en: Enseignement supérieur (Master)
     national_label_local: Enseignement supérieur (Master)
     entry_age: 22
     duration_years: 2
@@ -156,7 +169,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - survey_labels: 1 - Mwali | 4 - Mwali
+  - country_entry_id: COM-SUBNAT-01
+    survey_labels: 1 - Mwali | 4 - Mwali
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: COM_2015_GAUL1_968
     gmd_subnatid2: ''
@@ -176,7 +190,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Moheli
     source_row: 3064
-  - survey_labels: 2 - Ndzouani | 3 - Ndzouani | 3 - Ndzuwani
+  - country_entry_id: COM-SUBNAT-02
+    survey_labels: 2 - Ndzouani | 3 - Ndzouani | 3 - Ndzuwani
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: COM_2015_GAUL1_967
     gmd_subnatid2: ''
@@ -196,7 +211,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Anjouan
     source_row: 3065
-  - survey_labels: 1 - Moroni | 3 - Ngazidja
+  - country_entry_id: COM-SUBNAT-03
+    survey_labels: 1 - Moroni | 3 - Ngazidja
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: COM_2015_GAUL1_969
     gmd_subnatid2: ''
@@ -227,7 +243,8 @@ parameters:
   selectors:
     geo_year: unknown
   value:
-  - survey_labels: 11 - FOMBONI | 12 - NIOUMACHOUA | 13 - DJANDO | 21 - MUTSAMUDU
+  - country_entry_id: COM-SUBNAT-01
+    survey_labels: 11 - FOMBONI | 12 - NIOUMACHOUA | 13 - DJANDO | 21 - MUTSAMUDU
       | 22 - OUANI | 23 - DOMONI | 24 - MREMANI | 25 - SIMA | 26 - MOYA | 31 - MORONI-BAMBAO
       | 32 - HAMBOU | 33 - MBADJINI OUEST | 34 - MBADJINI EST | 35 - OICHILI-DIMANI
       | 36 - HAMAHAMET-MBOINKOU | 37 - MITSAMIOULI | 38 - MBOUDE | 39 - ITSANDRA-HAMANVOU
@@ -260,7 +277,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: well
+  - country_entry_id: COM-WAS-01
+    source_category_code: well
     national_label_en: Well
     national_label_local: Tous les puits
     jmp_classification: Ground water > All wells
@@ -270,7 +288,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 54
-  - source_category_code: protected_spring
+  - country_entry_id: COM-WAS-02
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -280,7 +299,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: COM-WAS-03
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -290,7 +310,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: COM-WAS-04
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -300,7 +321,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: COM-WAS-05
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Puits ou sources protégées
     jmp_classification: Ground water > Protected wells or springs
@@ -310,7 +332,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 46
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: COM-WAS-06
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -320,7 +343,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: COM-WAS-07
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -330,7 +354,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: COM-WAS-08
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: Tubewell/borehole with pump
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -340,7 +365,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: COM-WAS-09
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -350,7 +376,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: COM-WAS-10
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -360,7 +387,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: COM-WAS-11
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -370,7 +398,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: COM-WAS-12
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Puits ou sources non protégées
     jmp_classification: Ground water > Unprotected wells or springs
@@ -380,7 +409,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 50
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: COM-WAS-13
+    source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
     national_label_local: Chariot avec petit réservoir/tambour
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -390,7 +420,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 101
-  - source_category_code: tanker_truck
+  - country_entry_id: COM-WAS-14
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -400,7 +431,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: COM-WAS-15
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker truck vendor
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -410,7 +442,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: COM-WAS-16
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -420,7 +453,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: autre_source
+  - country_entry_id: COM-WAS-17
+    source_category_code: autre_source
     national_label_en: Autre source
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -430,7 +464,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: COM-WAS-18
+    source_category_code: other
     national_label_en: Other
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -440,7 +475,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: COM-WAS-19
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Eau conditionnée
     jmp_classification: Packaged water
@@ -450,7 +486,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 89
-  - source_category_code: bottled_water
+  - country_entry_id: COM-WAS-20
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Sachet d'eau
     jmp_classification: Packaged water > Sachet water
@@ -460,7 +497,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 91
-  - source_category_code: eau_de_pluie
+  - country_entry_id: COM-WAS-21
+    source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -470,7 +508,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: COM-WAS-22
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -480,7 +519,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: COM-WAS-23
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -490,7 +530,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: COM-WAS-24
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -500,7 +541,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: tank_citerne
+  - country_entry_id: COM-WAS-25
+    source_category_code: tank_citerne
     national_label_en: Tank (citerne)
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -510,7 +552,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+  - country_entry_id: COM-WAS-26
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -520,7 +563,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: COM-WAS-27
+    source_category_code: surface_water
     national_label_en: Surface Water
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -530,7 +574,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: pond_river_or_stream
+  - country_entry_id: COM-WAS-28
+    source_category_code: pond_river_or_stream
     national_label_en: Pond river or stream
     national_label_local: Étang
     jmp_classification: Surface water > Pond
@@ -540,7 +585,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 96
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: COM-WAS-29
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Étang
     jmp_classification: Surface water > Pond
@@ -550,7 +596,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 96
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: COM-WAS-30
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -560,7 +607,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: tap_in_house_yard
+  - country_entry_id: COM-WAS-31
+    source_category_code: tap_in_house_yard
     national_label_en: Tap in House/Yard
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -570,7 +618,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: COM-WAS-32
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -580,7 +629,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: robinet_logt_ou_cour
+  - country_entry_id: COM-WAS-33
+    source_category_code: robinet_logt_ou_cour
     national_label_en: Robinet logt ou cour
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -590,7 +640,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: COM-WAS-34
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -600,7 +651,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: COM-WAS-35
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -610,7 +662,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: public_standpipe
+  - country_entry_id: COM-WAS-36
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -620,7 +673,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: COM-WAS-37
+    source_category_code: public_tap
     national_label_en: Public Tap
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -630,7 +684,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: COM-WAS-38
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -640,7 +695,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: robinet_exterieur
+  - country_entry_id: COM-WAS-39
+    source_category_code: robinet_exterieur
     national_label_en: Robinet extérieur
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe

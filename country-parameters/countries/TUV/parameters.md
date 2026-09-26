@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-school Education
+  - country_entry_id: TUV-EDU-01
+    national_label_en: Pre-school Education
     national_label_local: Pre-school Education
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary Education (Year 1- 6)
+  - country_entry_id: TUV-EDU-02
+    national_label_en: Primary Education (Year 1- 6)
     national_label_local: Primary Education (Year 1- 6)
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Primary Education (Year 7- 8)
+  - country_entry_id: TUV-EDU-03
+    national_label_en: Primary Education (Year 7- 8)
     national_label_local: Primary Education (Year 7- 8)
     entry_age: 12
     duration_years: 2
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Junior secondary school (form 3 and form 4)
+  - country_entry_id: TUV-EDU-04
+    national_label_en: Junior secondary school (form 3 and form 4)
     national_label_local: Junior secondary school (form 3 and form 4)
     entry_age: 14
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Senior secondary school (form 5 and form 6)
+  - country_entry_id: TUV-EDU-05
+    national_label_en: Senior secondary school (form 5 and form 6)
     national_label_local: Senior secondary school (form 5 and form 6)
     entry_age: 16
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Year 13 Academic
+  - country_entry_id: TUV-EDU-06
+    national_label_en: Year 13 Academic
     national_label_local: Year 13 Academic
     entry_age: 18
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Tuvalu Maritime Programme
+  - country_entry_id: TUV-EDU-07
+    national_label_en: Tuvalu Maritime Programme
     national_label_local: Tuvalu Maritime Programme
     entry_age: 15
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Year 13 Skills Development
+  - country_entry_id: TUV-EDU-08
+    national_label_en: Year 13 Skills Development
     national_label_local: Year 13 Skills Development
     entry_age: 18
     duration_years: 1
@@ -100,7 +108,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: TUV-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -110,7 +119,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_pour_flush_flush_to_open_drain
+  - country_entry_id: TUV-SAN-02
+    source_category_code: flush_pour_flush_flush_to_open_drain
     national_label_en: 'flush / pour flush: flush to open drain'
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -120,7 +130,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+  - country_entry_id: TUV-SAN-03
+    source_category_code: flush_pour_flush_flush_to_piped_sewer_system
     national_label_en: 'flush / pour flush: flush to piped sewer system'
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -130,7 +141,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+  - country_entry_id: TUV-SAN-04
+    source_category_code: flush_pour_flush_flush_to_pit_latrine
     national_label_en: 'flush / pour flush: flush to pit latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -140,7 +152,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_flush_to_septic_tank
+  - country_entry_id: TUV-SAN-05
+    source_category_code: flush_pour_flush_flush_to_septic_tank
     national_label_en: 'flush / pour flush: flush to septic tank'
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -150,7 +163,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: bucket
+  - country_entry_id: TUV-SAN-06
+    source_category_code: bucket
     national_label_en: bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -160,7 +174,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pit_latrine_pit_latrine_with_slab
+  - country_entry_id: TUV-SAN-07
+    source_category_code: pit_latrine_pit_latrine_with_slab
     national_label_en: 'pit latrine: pit latrine with slab'
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -171,7 +186,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
+  - country_entry_id: TUV-SAN-08
+    source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
     national_label_en: 'pit latrine: pit latrine without slab / open pit'
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -182,7 +198,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: TUV-SAN-09
+    source_category_code: no_facility_bush_field
     national_label_en: no facility / bush / field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -192,7 +209,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: TUV-SAN-10
+    source_category_code: other
     national_label_en: other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -212,7 +230,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: tube_well_borehole
+  - country_entry_id: TUV-WAS-01
+    source_category_code: tube_well_borehole
     national_label_en: tube well / borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -222,7 +241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: water_kiosk
+  - country_entry_id: TUV-WAS-02
+    source_category_code: water_kiosk
     national_label_en: Water kiosk
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -232,7 +252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: tanker_truck
+  - country_entry_id: TUV-WAS-03
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -242,7 +263,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: TUV-WAS-04
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -252,7 +274,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: rainwater
+  - country_entry_id: TUV-WAS-05
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -262,7 +285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: TUV-WAS-06
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'piped water: piped to neighbour'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -272,7 +296,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_piped_into_dwelling
+  - country_entry_id: TUV-WAS-07
+    source_category_code: piped_water_piped_into_dwelling
     national_label_en: 'piped water: piped into dwelling'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -282,7 +307,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_to_yard_plot
+  - country_entry_id: TUV-WAS-08
+    source_category_code: piped_water_piped_to_yard_plot
     national_label_en: 'piped water: piped to yard / plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot

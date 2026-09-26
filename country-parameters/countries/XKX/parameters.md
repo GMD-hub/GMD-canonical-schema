@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Gjakov | 1 - Gjakova | 1 -Gjakov | 1 -Gjakovע | 1-Gjakov |
+  - country_entry_id: XKX-SUBNAT-01
+    survey_labels: 1 - Gjakov | 1 - Gjakova | 1 -Gjakov | 1 -Gjakovע | 1-Gjakov |
       Gjakov�
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.1_1
@@ -31,7 +32,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Đakovica
     source_row: 18536
-  - survey_labels: 2 - Gjilan | 2 - Gjilani | 2-Gjilan | Gjilan
+  - country_entry_id: XKX-SUBNAT-02
+    survey_labels: 2 - Gjilan | 2 - Gjilani | 2-Gjilan | Gjilan
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.2_1
     gmd_subnatid2: ''
@@ -51,7 +53,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Gnjilane
     source_row: 18537
-  - survey_labels: 3 - Mitrovic | 3 - Mitrovica | 3-Mitrovic | Mitrovic�
+  - country_entry_id: XKX-SUBNAT-03
+    survey_labels: 3 - Mitrovic | 3 - Mitrovica | 3-Mitrovic | Mitrovic�
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.3_1
     gmd_subnatid2: ''
@@ -71,7 +74,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Kosovska Mitrovica
     source_row: 18538
-  - survey_labels: 4 - Pej | 4 - Peja | 4-Pej | Pej�
+  - country_entry_id: XKX-SUBNAT-04
+    survey_labels: 4 - Pej | 4 - Peja | 4-Pej | Pej�
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.4_1
     gmd_subnatid2: ''
@@ -91,7 +95,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Pećki
     source_row: 18539
-  - survey_labels: 5 - Prizren | 5 - Prizreni | 5-Prizren | Prizren
+  - country_entry_id: XKX-SUBNAT-05
+    survey_labels: 5 - Prizren | 5 - Prizreni | 5-Prizren | Prizren
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.6_1
     gmd_subnatid2: ''
@@ -111,7 +116,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Prizren
     source_row: 18540
-  - survey_labels: 6 - Prishtin | 6 - Prishtina | 6-Prishtin | Prishtin�
+  - country_entry_id: XKX-SUBNAT-06
+    survey_labels: 6 - Prishtin | 6 - Prishtina | 6-Prishtin | Prishtin�
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.5_1
     gmd_subnatid2: ''
@@ -131,7 +137,8 @@ parameters:
     geo_nvar: NAME_1
     geo_name: Pristina
     source_row: 18541
-  - survey_labels: 7 - Ferizaj | 7 - Ferizaji | 7-Ferizaj | Ferizaj
+  - country_entry_id: XKX-SUBNAT-07
+    survey_labels: 7 - Ferizaj | 7 - Ferizaji | 7-Ferizaj | Ferizaj
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: XKX_2022_GADM1_XKO.7_1
     gmd_subnatid2: ''

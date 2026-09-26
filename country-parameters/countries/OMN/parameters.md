@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nursery
+  - country_entry_id: OMN-EDU-01
+    national_label_en: Nursery
     national_label_local: الحضانة
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarten
+  - country_entry_id: OMN-EDU-02
+    national_label_en: Kindergarten
     national_label_local: رياض الأطفال
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Grades 1-4 of basic education
+  - country_entry_id: OMN-EDU-03
+    national_label_en: Grades 1-4 of basic education
     national_label_local: الصفوف 1-4 من التعليم الأساسي
     entry_age: 6
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Grades 5-10 of basic education
+  - country_entry_id: OMN-EDU-04
+    national_label_en: Grades 5-10 of basic education
     national_label_local: الصفوف 5-10 من التعليم الأساسي
     entry_age: 10
     duration_years: 6
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: "Grades 7-10 \nRoyal Guard of Oman Technical College"
+  - country_entry_id: OMN-EDU-05
+    national_label_en: "Grades 7-10 \nRoyal Guard of Oman Technical College"
     national_label_local: "الصفوف 7-10 \nكلية الحرس السلطاني العماني التقنية"
     entry_age: 12
     duration_years: 4
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Grades 11-12 after basic education
+  - country_entry_id: OMN-EDU-06
+    national_label_en: Grades 11-12 after basic education
     national_label_local: الصفان11-12 من التعليم بعد الأساسي
     entry_age: 16
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Vocational and Technical Education
+  - country_entry_id: OMN-EDU-07
+    national_label_en: Vocational and Technical Education
     national_label_local: نظام التعليم المهني والتقني
     entry_age: 16
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: 'Vocational education (1): Apprenticeship + short courses'
+  - country_entry_id: OMN-EDU-08
+    national_label_en: 'Vocational education (1): Apprenticeship + short courses'
     national_label_local: 'التعليم المهني (1) : التلمذة المهنية +الدورات التدريبية
       المهنية'
     entry_age: 15
@@ -91,7 +99,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: 'Vocational education (2): Apprenticeship + short courses'
+  - country_entry_id: OMN-EDU-09
+    national_label_en: 'Vocational education (2): Apprenticeship + short courses'
     national_label_local: 'التعليم المهني (2) : التلمذة المهنية +الدورات التدريبية
       المهنية'
     entry_age: 16
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: "Grades 11-12 \nRoyal Guard of Oman Technical College"
+  - country_entry_id: OMN-EDU-10
+    national_label_en: "Grades 11-12 \nRoyal Guard of Oman Technical College"
     national_label_local: الصفان (11-12) كلية الحرس السلطاني العماني التقنية
     entry_age: 16
     duration_years: 2
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Diploma programmes
+  - country_entry_id: OMN-EDU-11
+    national_label_en: Diploma programmes
     national_label_local: برامج الدبلوم
     entry_age: 18
     duration_years: 2
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Vocational diploma programmes
+  - country_entry_id: OMN-EDU-12
+    national_label_en: Vocational diploma programmes
     national_label_local: برامج الدبلوم المهني
     entry_age: 18
     duration_years: 3
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Bachelor's  programmes
+  - country_entry_id: OMN-EDU-13
+    national_label_en: Bachelor's  programmes
     national_label_local: برامج البكالوريوس
     entry_age: 18
     duration_years: 4
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Legal Accounting certificate
+  - country_entry_id: OMN-EDU-14
+    national_label_en: Legal Accounting certificate
     national_label_local: شهادة المحاسبة القانونية
     entry_age: 18
     duration_years: 3
@@ -152,7 +166,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Bachelor's programmes in engineering
+  - country_entry_id: OMN-EDU-15
+    national_label_en: Bachelor's programmes in engineering
     national_label_local: برنامج بكالوريوس في الهندسة
     entry_age: 18
     duration_years: 5
@@ -162,7 +177,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Higher diploma program
+  - country_entry_id: OMN-EDU-16
+    national_label_en: Higher diploma program
     national_label_local: برامج الدبلوم العالي
     entry_age: 22
     duration_years: 1
@@ -172,7 +188,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Diploma in Educational  Qualification
+  - country_entry_id: OMN-EDU-17
+    national_label_en: Diploma in Educational  Qualification
     national_label_local: دبلوم التأهيل التربوي
     entry_age: 22
     duration_years: 1
@@ -182,7 +199,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Bachelor's program in medicine
+  - country_entry_id: OMN-EDU-18
+    national_label_en: Bachelor's program in medicine
     national_label_local: برنامج البكالوريوس في الطب
     entry_age: 18
     duration_years: 6
@@ -192,7 +210,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Master's  programs
+  - country_entry_id: OMN-EDU-19
+    national_label_en: Master's  programs
     national_label_local: برامج الماجستير
     entry_age: 22
     duration_years: 2
@@ -202,7 +221,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Doctoral programs
+  - country_entry_id: OMN-EDU-20
+    national_label_en: Doctoral programs
     national_label_local: برامج الدكتوراه
     entry_age: 24
     duration_years: 3

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Day Care
+  - country_entry_id: BRB-EDU-01
+    national_label_en: Day Care
     national_label_local: Day Care
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Nursery and Reception
+  - country_entry_id: BRB-EDU-02
+    national_label_en: Nursery and Reception
     national_label_local: Nursery and Reception
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary
+  - country_entry_id: BRB-EDU-03
+    national_label_en: Primary
     national_label_local: Primary
     entry_age: 5
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Lower secondary (Forms 1-3)
+  - country_entry_id: BRB-EDU-04
+    national_label_en: Lower secondary (Forms 1-3)
     national_label_local: Lower secondary (Forms 1-3)
     entry_age: 11
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Upper secondary (Forms 4-5) - General
+  - country_entry_id: BRB-EDU-05
+    national_label_en: Upper secondary (Forms 4-5) - General
     national_label_local: Upper secondary (Forms 4-5) - General
     entry_age: 14
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Upper secondary (Forms 4-5) - Vocational
+  - country_entry_id: BRB-EDU-06
+    national_label_en: Upper secondary (Forms 4-5) - Vocational
     national_label_local: Upper secondary (Forms 4-5) - Vocational
     entry_age: 14
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Continuing Education Programmes - CSEC
+  - country_entry_id: BRB-EDU-07
+    national_label_en: Continuing Education Programmes - CSEC
     national_label_local: Continuing Education Programmes - CSEC
     entry_age: 16
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Continuing Education Programmes - CAPE
+  - country_entry_id: BRB-EDU-08
+    national_label_en: Continuing Education Programmes - CAPE
     national_label_local: Continuing Education Programmes - CAPE
     entry_age: 16
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: 6th Form / Caribbean Advanced Proficiency Examination (CAPE)
+  - country_entry_id: BRB-EDU-09
+    national_label_en: 6th Form / Caribbean Advanced Proficiency Examination (CAPE)
     national_label_local: 6th Form / Caribbean Advanced Proficiency Examination (CAPE)
     entry_age: 16
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Institute of Technology (Certificate programmes)
+  - country_entry_id: BRB-EDU-10
+    national_label_en: Institute of Technology (Certificate programmes)
     national_label_local: Institute of Technology (Certificate programmes)
     entry_age: 16
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Community College (Associate degree programme) - general
+  - country_entry_id: BRB-EDU-11
+    national_label_en: Community College (Associate degree programme) - general
     national_label_local: Community College (Associate degree programme) - general
     entry_age: 16
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Community college (Associate degree programme) - vocational
+  - country_entry_id: BRB-EDU-12
+    national_label_en: Community college (Associate degree programme) - vocational
     national_label_local: Community college (Associate degree programme) - vocational
     entry_age: 16
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Community college (Bachelor degree programme)
+  - country_entry_id: BRB-EDU-13
+    national_label_en: Community college (Bachelor degree programme)
     national_label_local: Community college (Bachelor degree programme)
     entry_age: 18
     duration_years: 3
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: University (Bachelor degree programme)
+  - country_entry_id: BRB-EDU-14
+    national_label_en: University (Bachelor degree programme)
     national_label_local: University (Bachelor degree programme)
     entry_age: 18
     duration_years: 3
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Teachers' College (Bachelor degree programme)
+  - country_entry_id: BRB-EDU-15
+    national_label_en: Teachers' College (Bachelor degree programme)
     national_label_local: Teachers' College (Bachelor degree programme)
     entry_age: 18
     duration_years: 4
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Teachers' college (Diploma programme)
+  - country_entry_id: BRB-EDU-16
+    national_label_en: Teachers' college (Diploma programme)
     national_label_local: Teachers' college (Diploma programme)
     entry_age: 21
     duration_years: 1
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: University (Master programme)
+  - country_entry_id: BRB-EDU-17
+    national_label_en: University (Master programme)
     national_label_local: University (Master programme)
     entry_age: 21
     duration_years: 2
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: University (Doctorate programme)
+  - country_entry_id: BRB-EDU-18
+    national_label_en: University (Doctorate programme)
     national_label_local: University (Doctorate programme)
     entry_age: 23
     duration_years: 3
@@ -200,7 +218,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: '581'
+  - country_entry_id: BRB-SUBNAT-01
+    survey_labels: '581'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -220,7 +239,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Christ Church
     source_row: 1872
-  - survey_labels: '582'
+  - country_entry_id: BRB-SUBNAT-02
+    survey_labels: '582'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -240,7 +260,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. Andrew
     source_row: 1873
-  - survey_labels: '583'
+  - country_entry_id: BRB-SUBNAT-03
+    survey_labels: '583'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -260,7 +281,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. George
     source_row: 1874
-  - survey_labels: '584'
+  - country_entry_id: BRB-SUBNAT-04
+    survey_labels: '584'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -280,7 +302,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. James
     source_row: 1875
-  - survey_labels: '585'
+  - country_entry_id: BRB-SUBNAT-05
+    survey_labels: '585'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -300,7 +323,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. John
     source_row: 1876
-  - survey_labels: '586'
+  - country_entry_id: BRB-SUBNAT-06
+    survey_labels: '586'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -320,7 +344,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. Joseph
     source_row: 1877
-  - survey_labels: '587'
+  - country_entry_id: BRB-SUBNAT-07
+    survey_labels: '587'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -340,7 +365,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. Lucy
     source_row: 1878
-  - survey_labels: '588'
+  - country_entry_id: BRB-SUBNAT-08
+    survey_labels: '588'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -360,7 +386,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. Michael
     source_row: 1879
-  - survey_labels: '589'
+  - country_entry_id: BRB-SUBNAT-09
+    survey_labels: '589'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -380,7 +407,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. Peter
     source_row: 1880
-  - survey_labels: '590'
+  - country_entry_id: BRB-SUBNAT-10
+    survey_labels: '590'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -400,7 +428,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: St. Phillip
     source_row: 1881
-  - survey_labels: '591'
+  - country_entry_id: BRB-SUBNAT-11
+    survey_labels: '591'
     survey_variables: gaul_adm1_code
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -430,7 +459,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: wc_flush_toilet_linked_to_sewer
+  - country_entry_id: BRB-SAN-01
+    source_category_code: wc_flush_toilet_linked_to_sewer
     national_label_en: WC (flush toilet linked to sewer)
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -440,7 +470,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: wc_flush_toilet_linked_to_well
+  - country_entry_id: BRB-SAN-02
+    source_category_code: wc_flush_toilet_linked_to_well
     national_label_en: WC (flush toilet linked to well)
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -450,7 +481,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: wc_flush_toilet_linked_to_septic_tank
+  - country_entry_id: BRB-SAN-03
+    source_category_code: wc_flush_toilet_linked_to_septic_tank
     national_label_en: WC (flush toilet linked to septic tank)
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -460,7 +492,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: wc_flush_toilet_linked_to_private_treatment_facility
+  - country_entry_id: BRB-SAN-04
+    source_category_code: wc_flush_toilet_linked_to_private_treatment_facility
     national_label_en: WC (flush toilet linked to private treatment facility)
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -470,7 +503,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_piped_sewer
+  - country_entry_id: BRB-SAN-05
+    source_category_code: flush_to_piped_sewer
     national_label_en: Flush to piped sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -480,7 +514,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_well_pit
+  - country_entry_id: BRB-SAN-06
+    source_category_code: flush_to_well_pit
     national_label_en: Flush to well/pit
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -490,7 +525,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: BRB-SAN-07
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -500,7 +536,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_to_unknown_place_not_sure_dk
+  - country_entry_id: BRB-SAN-08
+    source_category_code: flush_to_unknown_place_not_sure_dk
     national_label_en: Flush to unknown place/ not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -510,7 +547,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: BRB-SAN-09
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -521,7 +559,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine
+  - country_entry_id: BRB-SAN-10
+    source_category_code: pit_latrine
     national_label_en: Pit - latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -532,7 +571,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: BRB-SAN-11
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -543,7 +583,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: BRB-SAN-12
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -553,7 +594,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: BRB-SAN-13
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -573,7 +615,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: BRB-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -583,7 +626,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: other
+  - country_entry_id: BRB-WAS-02
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -593,7 +637,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bw_with_improved_sources
+  - country_entry_id: BRB-WAS-03
+    source_category_code: bw_with_improved_sources
     national_label_en: BW with improved sources
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -603,7 +648,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bw_with_unimproved_sources
+  - country_entry_id: BRB-WAS-04
+    source_category_code: bw_with_unimproved_sources
     national_label_en: BW with unimproved sources
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -613,7 +659,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: BRB-WAS-05
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -623,7 +670,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: BRB-WAS-06
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -633,7 +681,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: BRB-WAS-07
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -643,7 +692,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard
+  - country_entry_id: BRB-WAS-08
+    source_category_code: piped_into_yard
     national_label_en: Piped into yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -653,7 +703,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: BRB-WAS-09
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -663,7 +714,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_standpipe
+  - country_entry_id: BRB-WAS-10
+    source_category_code: public_standpipe
     national_label_en: Public Standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -673,7 +725,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: BRB-WAS-11
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

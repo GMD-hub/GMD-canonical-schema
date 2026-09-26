@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Kindergarten
+  - country_entry_id: LIE-EDU-01
+    national_label_en: Kindergarten
     national_label_local: Kindergarten
     entry_age: 4
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Nurseries / care services with partly pedagogical concepts
+  - country_entry_id: LIE-EDU-02
+    national_label_en: Nurseries / care services with partly pedagogical concepts
     national_label_local: Kindertagesstätten
     entry_age: 0
     duration_years: 0
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Primary education level
+  - country_entry_id: LIE-EDU-03
+    national_label_en: Primary education level
     national_label_local: Primarstufe
     entry_age: 6
     duration_years: 5
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 7
-  - national_label_en: Lower secondary education level
+  - country_entry_id: LIE-EDU-04
+    national_label_en: Lower secondary education level
     national_label_local: Sekundarstufe I (Oberschule, Realschule, Gymnasium Unterstufe)
     entry_age: 11
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 8
-  - national_label_en: Bridging program
+  - country_entry_id: LIE-EDU-05
+    national_label_en: Bridging program
     national_label_local: Brückenangebot (Freiwilliges 10. Schuljahr)
     entry_age: 15
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 9
-  - national_label_en: Uncertified apprenticeship in dual system
+  - country_entry_id: LIE-EDU-06
+    national_label_en: Uncertified apprenticeship in dual system
     national_label_local: Anlehre
     entry_age: 15
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Vocational education in dual system, 2 years
+  - country_entry_id: LIE-EDU-07
+    national_label_en: Vocational education in dual system, 2 years
     national_label_local: Berufliche Grundbildung mit Berufsattest (2 Jahre)
     entry_age: 15
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Vocational education in dual system, 2 years
+  - country_entry_id: LIE-EDU-08
+    national_label_en: Vocational education in dual system, 2 years
     national_label_local: Berufliche Grundbildung mit Fähigkeitszeugnis (2 Jahre)
     entry_age: 15
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Vocational education in dual system, 3-4 years
+  - country_entry_id: LIE-EDU-09
+    national_label_en: Vocational education in dual system, 3-4 years
     national_label_local: Berufliche Grundbildung mit Fähigkeitszeugnis (3-4 Jahre)
     entry_age: 15
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Vocational education in dual system, including a vocational
+  - country_entry_id: LIE-EDU-10
+    national_label_en: Vocational education in dual system, including a vocational
       baccalaureat
     national_label_local: Lehre mit Berufsmaturität
     entry_age: 15
@@ -111,7 +121,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Upper secondary education level / school preparing for the
+  - country_entry_id: LIE-EDU-11
+    national_label_en: Upper secondary education level / school preparing for the
       University enrance certificate
     national_label_local: Sekundarstufe II (Gymnasium Oberstufe)
     entry_age: 14
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Vocational baccalaureate after obtention of the certificat
+  - country_entry_id: LIE-EDU-12
+    national_label_en: Vocational baccalaureate after obtention of the certificat
       of vocational education, 1 year
     national_label_local: Berufsmittelschule
     entry_age: 17
@@ -133,7 +145,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Bachelor
+  - country_entry_id: LIE-EDU-13
+    national_label_en: Bachelor
     national_label_local: Hochschulen, Bachelor
     entry_age: 19
     duration_years: 3
@@ -143,7 +156,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Master
+  - country_entry_id: LIE-EDU-14
+    national_label_en: Master
     national_label_local: Hochschulen, Master
     entry_age: 22
     duration_years: 2
@@ -153,7 +167,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Post-graduate / further education degrees on higher education
+  - country_entry_id: LIE-EDU-15
+    national_label_en: Post-graduate / further education degrees on higher education
       level
     national_label_local: Hochschulen, Weiterbildungsmaster
     entry_age: 24
@@ -164,7 +179,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Doctorate
+  - country_entry_id: LIE-EDU-16
+    national_label_en: Doctorate
     national_label_local: Doktorat
     entry_age: 24
     duration_years: 3

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Educa a tu hijo vías no formales (0 a 2)
+  - country_entry_id: CUB-EDU-01
+    national_label_en: Educa a tu hijo vías no formales (0 a 2)
     national_label_local: Educate your child non-formal ways (0 to 2)
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Educa a tu hijo vías no formales (3 a 5)
+  - country_entry_id: CUB-EDU-02
+    national_label_en: Educa a tu hijo vías no formales (3 a 5)
     national_label_local: Educate your child non-formal ways (3 to 5)
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Educación Preescolar (0 a 2)
+  - country_entry_id: CUB-EDU-03
+    national_label_en: Educación Preescolar (0 a 2)
     national_label_local: Preschool Education (0 to 2)
     entry_age: 0
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Educación Preescolar (3 a 5)
+  - country_entry_id: CUB-EDU-04
+    national_label_en: Educación Preescolar (3 a 5)
     national_label_local: Preschool Education (3 to 5)
     entry_age: 3
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
-  - national_label_en: Educación Primaria
+  - country_entry_id: CUB-EDU-05
+    national_label_en: Educación Primaria
     national_label_local: Primary education
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Educación primaria de adultos 'Educación Obrero Campesina (EOC)'
+  - country_entry_id: CUB-EDU-06
+    national_label_en: Educación primaria de adultos 'Educación Obrero Campesina (EOC)'
     national_label_local: Adult primary education 'Peasant Worker Education (EOC)'
     entry_age: 17
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
-  - national_label_en: Educación Secundaria Básica
+  - country_entry_id: CUB-EDU-07
+    national_label_en: Educación Secundaria Básica
     national_label_local: Basic Secondary Education
     entry_age: 12
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Educación secundaria básica de adultos 'Secundaria Obrero Campesina
+  - country_entry_id: CUB-EDU-08
+    national_label_en: Educación secundaria básica de adultos 'Secundaria Obrero Campesina
       (SOC)'
     national_label_local: Adult basic secondary education 'Peasant Worker Secondary
       (SOC)'
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: Escuelas de Oficios
+  - country_entry_id: CUB-EDU-09
+    national_label_en: Escuelas de Oficios
     national_label_local: Ocupational Schools
     entry_age: 13
     duration_years: 4
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
-  - national_label_en: 'Nivel medio superior: Educación Preuniversitaria / Instructores
+  - country_entry_id: CUB-EDU-10
+    national_label_en: 'Nivel medio superior: Educación Preuniversitaria / Instructores
       de Arte'
     national_label_local: 'Upper secondary level: Pre-University Education / Art Instructors'
     entry_age: 15
@@ -113,7 +123,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Educación media superior de adultos 'Facultad Obrero Campesina
+  - country_entry_id: CUB-EDU-11
+    national_label_en: Educación media superior de adultos 'Facultad Obrero Campesina
       (FOC)'
     national_label_local: Upper secondary education for adults 'Peasant worker faculty
       (FOC)'
@@ -125,7 +136,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: 'Educación técnica y profesional: Obreros Calificados'
+  - country_entry_id: CUB-EDU-12
+    national_label_en: 'Educación técnica y profesional: Obreros Calificados'
     national_label_local: 'Technical and vocational education: Skilled Workers'
     entry_age: 15
     duration_years: 2
@@ -135,7 +147,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: 'Educación técnica y profesional: Técnicos Medio con ingreso
+  - country_entry_id: CUB-EDU-13
+    national_label_en: 'Educación técnica y profesional: Técnicos Medio con ingreso
       de 9º'
     national_label_local: 'Technical and professional education: (Middle Technicians
       with entry of 9th grade)'
@@ -147,7 +160,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: 'Educación técnica y profesional: Técnicos Medio con ingreso
+  - country_entry_id: CUB-EDU-14
+    national_label_en: 'Educación técnica y profesional: Técnicos Medio con ingreso
       de 12º'
     national_label_local: 'Technical and professional education: Middle Technicians
       with entry of 12th grade'
@@ -159,7 +173,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: 'Nivel superior - pregrado: Programas de formación de Educación
+  - country_entry_id: CUB-EDU-15
+    national_label_en: 'Nivel superior - pregrado: Programas de formación de Educación
       Superior de Ciclo Corto (ESCC)'
     national_label_local: 'Higher level - undergraduate: Short Cycle Higher Education
       Training Programs (ESCC)'
@@ -171,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: 'Nivel superior - pregrado: Formación de docentes'
+  - country_entry_id: CUB-EDU-16
+    national_label_en: 'Nivel superior - pregrado: Formación de docentes'
     national_label_local: 'Higher level - undergraduate: Teacher training'
     entry_age: 18
     duration_years: 4
@@ -181,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: 'Nivel superior - pregrado: Licenciatura'
+  - country_entry_id: CUB-EDU-17
+    national_label_en: 'Nivel superior - pregrado: Licenciatura'
     national_label_local: 'Higher level - undergraduate: Bachelor''s degree'
     entry_age: 18
     duration_years: 5
@@ -191,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: 'Nivel superior - pregrado: Ingeniería, Arquitectura'
+  - country_entry_id: CUB-EDU-18
+    national_label_en: 'Nivel superior - pregrado: Ingeniería, Arquitectura'
     national_label_local: 'Higher level - undergraduate: Engineering, Architecture'
     entry_age: 18
     duration_years: 5
@@ -201,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: 'Nivel superior - pregrado: Medicina'
+  - country_entry_id: CUB-EDU-19
+    national_label_en: 'Nivel superior - pregrado: Medicina'
     national_label_local: 'Higher level - undergraduate: Medicine'
     entry_age: 18
     duration_years: 6
@@ -211,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: 'Nivel superior -postgrado: Diplomado'
+  - country_entry_id: CUB-EDU-20
+    national_label_en: 'Nivel superior -postgrado: Diplomado'
     national_label_local: 'Higher-postgraduate level: Diploma'
     entry_age: 23
     duration_years: 1
@@ -221,7 +241,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: 'Nivel superior -postgrado: Maestría'
+  - country_entry_id: CUB-EDU-21
+    national_label_en: 'Nivel superior -postgrado: Maestría'
     national_label_local: 'Higher-postgraduate level: Master''s'
     entry_age: 23
     duration_years: 3
@@ -231,7 +252,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: 'Nivel superior -postgrado: Especialidad'
+  - country_entry_id: CUB-EDU-22
+    national_label_en: 'Nivel superior -postgrado: Especialidad'
     national_label_local: 'Higher-postgraduate level: Specialty'
     entry_age: 23
     duration_years: 3
@@ -241,7 +263,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: 'Nivel superior -postgrado: Doctor en Ciencia - I'
+  - country_entry_id: CUB-EDU-23
+    national_label_en: 'Nivel superior -postgrado: Doctor en Ciencia - I'
     national_label_local: 'Higher level -postgraduate: Doctor of Science - I'
     entry_age: 23
     duration_years: 4
@@ -251,7 +274,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: 'Nivel superior -postgrado: Doctor en Ciencias - II'
+  - country_entry_id: CUB-EDU-24
+    national_label_en: 'Nivel superior -postgrado: Doctor en Ciencias - II'
     national_label_local: 'Higher level -postgraduate: Doctor of Science - II'
     entry_age: 27
     duration_years: 4
@@ -271,7 +295,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: inodoro_de_compostaje
+  - country_entry_id: CUB-SAN-01
+    source_category_code: inodoro_de_compostaje
     national_label_en: Inodoro de compostaje
     national_label_local: Letrinas de compostaje
     jmp_classification: Composting toilets
@@ -281,7 +306,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: toilet_para_compostacion_fertilizante
+  - country_entry_id: CUB-SAN-02
+    source_category_code: toilet_para_compostacion_fertilizante
     national_label_en: Toilet para compostacion(fertilizante)
     national_label_local: Letrinas de compostaje
     jmp_classification: Composting toilets
@@ -291,7 +317,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: descarga_baldeo_con_agua_descarga_a_otro_sistema
+  - country_entry_id: CUB-SAN-03
+    source_category_code: descarga_baldeo_con_agua_descarga_a_otro_sistema
     national_label_en: 'DESCARGA/BALDEO CON AGUA: DESCARGA A OTRO SISTEMA'
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -301,7 +328,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: evacuacion_a_otro_lugar
+  - country_entry_id: CUB-SAN-04
+    source_category_code: evacuacion_a_otro_lugar
     national_label_en: Evacuacion a otro lugar
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -311,7 +339,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: inodoro_conectado_a_otro_sistema
+  - country_entry_id: CUB-SAN-05
+    source_category_code: inodoro_conectado_a_otro_sistema
     national_label_en: Inodoro conectado a otro sistema
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -321,7 +350,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: descarga_al_alcantarillado
+  - country_entry_id: CUB-SAN-06
+    source_category_code: descarga_al_alcantarillado
     national_label_en: Descarga al alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -331,7 +361,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: descarga_baldeo_con_agua_descarga_al_alcantarillado_inodoro
+  - country_entry_id: CUB-SAN-07
+    source_category_code: descarga_baldeo_con_agua_descarga_al_alcantarillado_inodoro
     national_label_en: 'DESCARGA/BALDEO CON AGUA: DESCARGA AL ALCANTARILLADO (INODORO)'
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -341,7 +372,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: inodoro_conectado_al_alcantarillado
+  - country_entry_id: CUB-SAN-08
+    source_category_code: inodoro_conectado_al_alcantarillado
     national_label_en: Inodoro conectado al alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -351,7 +383,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: descarga_a_letrina
+  - country_entry_id: CUB-SAN-09
+    source_category_code: descarga_a_letrina
     national_label_en: Descarga a letrina
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -361,7 +394,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: descarga_baldeo_con_agua_descarga_a_pozo_negro_hoyo
+  - country_entry_id: CUB-SAN-10
+    source_category_code: descarga_baldeo_con_agua_descarga_a_pozo_negro_hoyo
     national_label_en: 'DESCARGA/BALDEO CON AGUA: DESCARGA A POZO NEGRO, HOYO'
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -371,7 +405,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: inodoro_conectado_a_letrina_pozo_negro_hoyo
+  - country_entry_id: CUB-SAN-11
+    source_category_code: inodoro_conectado_a_letrina_pozo_negro_hoyo
     national_label_en: Inodoro conectado a letrina (pozo negro, hoyo)
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -381,7 +416,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: descarga_a_pozo_septico
+  - country_entry_id: CUB-SAN-12
+    source_category_code: descarga_a_pozo_septico
     national_label_en: Descarga a pozo Septico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -391,7 +427,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: descarga_baldeo_con_agua_descarga_a_tanque_sa_ptico_inodoro
+  - country_entry_id: CUB-SAN-13
+    source_category_code: descarga_baldeo_con_agua_descarga_a_tanque_sa_ptico_inodoro
     national_label_en: 'DESCARGA/BALDEO CON AGUA: DESCARGA A TANQUE SÃ‰PTICO (INODORO)'
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -401,7 +438,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_conectado_a_tanque_sa_ptico
+  - country_entry_id: CUB-SAN-14
+    source_category_code: inodoro_conectado_a_tanque_sa_ptico
     national_label_en: Inodoro conectado a tanque sÃ©ptico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -411,7 +449,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: descarga_baldeo_con_agua_descarga_a_no_sabe_da_nde
+  - country_entry_id: CUB-SAN-15
+    source_category_code: descarga_baldeo_con_agua_descarga_a_no_sabe_da_nde
     national_label_en: 'DESCARGA/BALDEO CON AGUA: DESCARGA A NO SABE DÃ“NDE'
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -421,7 +460,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: inodoro_conectado_a_sitio_desconocido_no_esta_seguro_donde_no_sabe_donde
+  - country_entry_id: CUB-SAN-16
+    source_category_code: inodoro_conectado_a_sitio_desconocido_no_esta_seguro_donde_no_sabe_donde
     national_label_en: Inodoro conectado a sitio desconocido/no esta seguro donde
       / No sabe donde
     national_label_local: no sabe donde
@@ -432,7 +472,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: inodoro_conectado_a_otro_sistema
+  - country_entry_id: CUB-SAN-17
+    source_category_code: inodoro_conectado_a_otro_sistema
     national_label_en: Inodoro conectado a otro sistema
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
@@ -442,7 +483,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: inodoro_conectado_al_alcantarillado
+  - country_entry_id: CUB-SAN-18
+    source_category_code: inodoro_conectado_al_alcantarillado
     national_label_en: Inodoro conectado al alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -452,7 +494,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: inodoro_letrina_conectado_a_pozo_hoyo_negro
+  - country_entry_id: CUB-SAN-19
+    source_category_code: inodoro_letrina_conectado_a_pozo_hoyo_negro
     national_label_en: Inodoro letrina conectado a pozo hoyo negro
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -462,7 +505,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: inodoro_conectado_pozo_septico
+  - country_entry_id: CUB-SAN-20
+    source_category_code: inodoro_conectado_pozo_septico
     national_label_en: Inodoro conectado pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -472,7 +516,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_conectado_a_sitio_desconocido_no_esta_seguro
+  - country_entry_id: CUB-SAN-21
+    source_category_code: inodoro_conectado_a_sitio_desconocido_no_esta_seguro
     national_label_en: Inodoro conectado a sitio desconocido/No está seguro
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -482,7 +527,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: balde
+  - country_entry_id: CUB-SAN-22
+    source_category_code: balde
     national_label_en: Balde
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -492,7 +538,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: balde_o_cubo
+  - country_entry_id: CUB-SAN-23
+    source_category_code: balde_o_cubo
     national_label_en: BALDE O CUBO
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -502,7 +549,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: balde_cubeta
+  - country_entry_id: CUB-SAN-24
+    source_category_code: balde_cubeta
     national_label_en: Balde/Cubeta
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -512,7 +560,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: inodoro_colgante_letrina_colgante
+  - country_entry_id: CUB-SAN-25
+    source_category_code: inodoro_colgante_letrina_colgante
     national_label_en: Inodoro colgante, Letrina colgante
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -523,7 +572,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: inodoro_colgante_letrina_colgante
+  - country_entry_id: CUB-SAN-26
+    source_category_code: inodoro_colgante_letrina_colgante
     national_label_en: Inodoro colgante/letrina colgante
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -534,7 +584,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: inodoro_o_letrina_colgante
+  - country_entry_id: CUB-SAN-27
+    source_category_code: inodoro_o_letrina_colgante
     national_label_en: INODORO O LETRINA COLGANTE
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -545,7 +596,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: toilet_colgante
+  - country_entry_id: CUB-SAN-28
+    source_category_code: toilet_colgante
     national_label_en: Toilet colgante
     national_label_local: Otro
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -555,7 +607,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: letrina_con_plataforma
+  - country_entry_id: CUB-SAN-29
+    source_category_code: letrina_con_plataforma
     national_label_en: Letrina con plataforma
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -566,7 +619,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_de_fosa_con_losa
+  - country_entry_id: CUB-SAN-30
+    source_category_code: letrina_de_fosa_con_losa
     national_label_en: LETRINA DE FOSA CON LOSA
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -577,7 +631,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrine_con_taza_excusado
+  - country_entry_id: CUB-SAN-31
+    source_category_code: letrine_con_taza_excusado
     national_label_en: Letrine con taza/excusado
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -588,7 +643,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_abierta
+  - country_entry_id: CUB-SAN-32
+    source_category_code: letrina_abierta
     national_label_en: Letrina abierta
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -599,7 +655,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_de_fosa_sin_losa_hoyo_abierto
+  - country_entry_id: CUB-SAN-33
+    source_category_code: letrina_de_fosa_sin_losa_hoyo_abierto
     national_label_en: LETRINA DE FOSA SIN LOSA/HOYO ABIERTO
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -610,7 +667,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_sin_plataforma_foso_abierto
+  - country_entry_id: CUB-SAN-34
+    source_category_code: letrina_sin_plataforma_foso_abierto
     national_label_en: Letrina sin plataforma /Foso abierto
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -621,7 +679,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_sin_plataforma_a_fosa_abierta
+  - country_entry_id: CUB-SAN-35
+    source_category_code: letrina_sin_plataforma_a_fosa_abierta
     national_label_en: Letrina sin plataforma a fosa abierta
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -632,7 +691,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_con_ventilacion
+  - country_entry_id: CUB-SAN-36
+    source_category_code: letrina_con_ventilacion
     national_label_en: Letrina con ventilación
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -643,7 +703,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: letrina_de_fosa_mejorada_con_ventilacia_n
+  - country_entry_id: CUB-SAN-37
+    source_category_code: letrina_de_fosa_mejorada_con_ventilacia_n
     national_label_en: LETRINA DE FOSA MEJORADA CON VENTILACIÃ“N
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -654,7 +715,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: letrina_mejorada_con_ventilacia3n
+  - country_entry_id: CUB-SAN-38
+    source_category_code: letrina_mejorada_con_ventilacia3n
     national_label_en: Letrina mejorada con ventilaciÃ³n
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -665,7 +727,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: letrina_ventilada_mejorada
+  - country_entry_id: CUB-SAN-39
+    source_category_code: letrina_ventilada_mejorada
     national_label_en: Letrina ventilada mejorada
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -676,7 +739,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_hay_instalacia_n_sanitaria_monte_campo
+  - country_entry_id: CUB-SAN-40
+    source_category_code: no_hay_instalacia_n_sanitaria_monte_campo
     national_label_en: NO HAY INSTALACIÃ“N SANITARIA / MONTE / CAMPO
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -686,7 +750,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_hay_instalacion
+  - country_entry_id: CUB-SAN-41
+    source_category_code: no_hay_instalacion
     national_label_en: No hay instalación
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -696,7 +761,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_hay_instalacion_sanitaria_va_al_monte_campo
+  - country_entry_id: CUB-SAN-42
+    source_category_code: no_hay_instalacion_sanitaria_va_al_monte_campo
     national_label_en: No hay instalacion sanitaria, va al monte, campo
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -706,7 +772,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: sin_toilet_campo
+  - country_entry_id: CUB-SAN-43
+    source_category_code: sin_toilet_campo
     national_label_en: Sin toilet/campo
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -716,7 +783,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: otro
+  - country_entry_id: CUB-SAN-44
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -726,7 +794,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otros
+  - country_entry_id: CUB-SAN-45
+    source_category_code: otros
     national_label_en: Otros
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -746,7 +815,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: manantial_protegido
+  - country_entry_id: CUB-WAS-01
+    source_category_code: manantial_protegido
     national_label_en: Manantial protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -756,7 +826,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: manantial_noria
+  - country_entry_id: CUB-WAS-02
+    source_category_code: manantial_noria
     national_label_en: Manantial/Noria
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -766,7 +837,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: pozo_protegido
+  - country_entry_id: CUB-WAS-03
+    source_category_code: pozo_protegido
     national_label_en: Pozo Protegido
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -776,7 +848,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: arroyo_protegido
+  - country_entry_id: CUB-WAS-04
+    source_category_code: arroyo_protegido
     national_label_en: Arroyo protegido
     national_label_local: Otro
     jmp_classification: Ground water > Protected well > Other
@@ -786,7 +859,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: pozo_protegido
+  - country_entry_id: CUB-WAS-05
+    source_category_code: pozo_protegido
     national_label_en: Pozo protegido
     national_label_local: Publico
     jmp_classification: Ground water > Protected well > Public
@@ -796,7 +870,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: pozo_con_tuberia
+  - country_entry_id: CUB-WAS-06
+    source_category_code: pozo_con_tuberia
     national_label_en: Pozo con Tubería
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -806,7 +881,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: manantial_no_protegido
+  - country_entry_id: CUB-WAS-07
+    source_category_code: manantial_no_protegido
     national_label_en: Manantial no protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -816,7 +892,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: mantial_no_protegido
+  - country_entry_id: CUB-WAS-08
+    source_category_code: mantial_no_protegido
     national_label_en: Mantial no protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -826,7 +903,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: pozo_no_protegido
+  - country_entry_id: CUB-WAS-09
+    source_category_code: pozo_no_protegido
     national_label_en: Pozo no protegido
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -836,7 +914,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: arroyo_sin_protego
+  - country_entry_id: CUB-WAS-10
+    source_category_code: arroyo_sin_protego
     national_label_en: Arroyo sin protego
     national_label_local: Otro
     jmp_classification: Ground water > Unprotected well > Other
@@ -846,7 +925,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 73
-  - source_category_code: pozo_sin_protego
+  - country_entry_id: CUB-WAS-11
+    source_category_code: pozo_sin_protego
     national_label_en: Pozo sin protego
     national_label_local: Publico
     jmp_classification: Ground water > Unprotected well > Public
@@ -856,7 +936,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 72
-  - source_category_code: carreta_con_tanque
+  - country_entry_id: CUB-WAS-12
+    source_category_code: carreta_con_tanque
     national_label_en: Carreta con tanque
     national_label_local: Carro con tanque / tambor pequeño
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -866,7 +947,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: carreta_con_tanque_pequeno
+  - country_entry_id: CUB-WAS-13
+    source_category_code: carreta_con_tanque_pequeno
     national_label_en: Carreta con tanque pequeno
     national_label_local: Carro con tanque / tambor pequeño
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -876,7 +958,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: carro_con_sifon
+  - country_entry_id: CUB-WAS-14
+    source_category_code: carro_con_sifon
     national_label_en: Carro con sifon
     national_label_local: Carro con tanque / tambor pequeño
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -886,7 +969,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: puesto_punto_casa_de_agua_purificada
+  - country_entry_id: CUB-WAS-15
+    source_category_code: puesto_punto_casa_de_agua_purificada
     national_label_en: PUESTO/PUNTO/CASA DE AGUA PURIFICADA
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -896,7 +980,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: camion
+  - country_entry_id: CUB-WAS-16
+    source_category_code: camion
     national_label_en: Camion
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -906,7 +991,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_cisterna_pipa
+  - country_entry_id: CUB-WAS-17
+    source_category_code: camion_cisterna_pipa
     national_label_en: Camion cisterna (pipa)
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -916,7 +1002,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_cisterna_pipa
+  - country_entry_id: CUB-WAS-18
+    source_category_code: camion_cisterna_pipa
     national_label_en: Camión cisterna(pipa)
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -926,7 +1013,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: otra
+  - country_entry_id: CUB-WAS-19
+    source_category_code: otra
     national_label_en: Otra
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -936,7 +1024,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otras
+  - country_entry_id: CUB-WAS-20
+    source_category_code: otras
     national_label_en: Otras
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -946,7 +1035,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: CUB-WAS-21
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -956,7 +1046,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: agua_embasada
+  - country_entry_id: CUB-WAS-22
+    source_category_code: agua_embasada
     national_label_en: Agua embasada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -966,7 +1057,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embotellada
+  - country_entry_id: CUB-WAS-23
+    source_category_code: agua_embotellada
     national_label_en: Agua embotellada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -976,7 +1068,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embotellada_envasada
+  - country_entry_id: CUB-WAS-24
+    source_category_code: agua_embotellada_envasada
     national_label_en: Agua embotellada/envasada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -986,7 +1079,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embasada
+  - country_entry_id: CUB-WAS-25
+    source_category_code: agua_embasada
     national_label_en: Agua embasada
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -996,7 +1090,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: agua_de_lluvia
+  - country_entry_id: CUB-WAS-26
+    source_category_code: agua_de_lluvia
     national_label_en: Agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1006,7 +1101,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: collection_the_agua_lluvia
+  - country_entry_id: CUB-WAS-27
+    source_category_code: collection_the_agua_lluvia
     national_label_en: Collection the agua lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1016,7 +1112,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: recogen_agua_de_lluvia
+  - country_entry_id: CUB-WAS-28
+    source_category_code: recogen_agua_de_lluvia
     national_label_en: Recogen agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1026,7 +1123,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_de_superficie
+  - country_entry_id: CUB-WAS-29
+    source_category_code: agua_de_superficie
     national_label_en: Agua de superficie
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1036,7 +1134,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_canal_de_irrigacion
+  - country_entry_id: CUB-WAS-30
+    source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_canal_de_irrigacion
     national_label_en: Agua de superficie (rio, arroyo, represa, lago, estanque, canal,
       canal de irrigacion)
     national_label_local: Agua superficial
@@ -1047,7 +1146,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal_canal_de_irrigacion
+  - country_entry_id: CUB-WAS-31
+    source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal_canal_de_irrigacion
     national_label_en: Agua de superficie (rio, represa, lago, estanque, arroyo, canal,
       canal de irrigacion)
     national_label_local: Agua superficial
@@ -1058,7 +1158,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_de_surperficie
+  - country_entry_id: CUB-WAS-32
+    source_category_code: agua_de_surperficie
     national_label_en: Agua de surperficie
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1068,7 +1169,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: tuberia_del_vecino
+  - country_entry_id: CUB-WAS-33
+    source_category_code: tuberia_del_vecino
     national_label_en: Tuberia del vecino
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1078,7 +1180,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: tuberia_en_la_vivienda_del_vecino
+  - country_entry_id: CUB-WAS-34
+    source_category_code: tuberia_en_la_vivienda_del_vecino
     national_label_en: Tuberia en la vivienda del vecino
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1088,7 +1191,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: dentro_de_la_vivienda
+  - country_entry_id: CUB-WAS-35
+    source_category_code: dentro_de_la_vivienda
     national_label_en: Dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1098,7 +1202,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberai_al_hogar
+  - country_entry_id: CUB-WAS-36
+    source_category_code: tuberai_al_hogar
     national_label_en: Tuberai al hogar
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1108,7 +1213,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_dentro_de_la_vivienda
+  - country_entry_id: CUB-WAS-37
+    source_category_code: tuberia_dentro_de_la_vivienda
     national_label_en: Tuberia dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1118,7 +1224,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: dentro_de_la_patio_parcela
+  - country_entry_id: CUB-WAS-38
+    source_category_code: dentro_de_la_patio_parcela
     national_label_en: Dentro de la patio/parcela
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1128,7 +1235,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_dentro_del_patio_o_parcela
+  - country_entry_id: CUB-WAS-39
+    source_category_code: tuberia_dentro_del_patio_o_parcela
     national_label_en: Tuberia dentro del patio o parcela
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1138,7 +1246,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_en_el_patio_parcela
+  - country_entry_id: CUB-WAS-40
+    source_category_code: tuberia_en_el_patio_parcela
     national_label_en: Tuberia en el patio/parcela
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1148,7 +1257,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: llave_publica
+  - country_entry_id: CUB-WAS-41
+    source_category_code: llave_publica
     national_label_en: Llave publica
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

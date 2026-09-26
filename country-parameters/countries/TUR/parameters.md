@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood care and education (ages 0-2)
+  - country_entry_id: TUR-EDU-01
+    national_label_en: Early childhood care and education (ages 0-2)
     national_label_local: Erken çocukluk bakımı ve eğitimi (0-2 yaş)
     entry_age: 0
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Pre-primary education (ages 3-5)
+  - country_entry_id: TUR-EDU-02
+    national_label_en: Pre-primary education (ages 3-5)
     national_label_local: Okul öncesi eğitim (3-5 yaş)
     entry_age: 3
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Primary education
+  - country_entry_id: TUR-EDU-03
+    national_label_en: Primary education
     national_label_local: İlkokul
     entry_age: 5
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
-  - national_label_en: Music and Ballet Primary School
+  - country_entry_id: TUR-EDU-04
+    national_label_en: Music and Ballet Primary School
     national_label_local: Müzik ve Bale İlkokulu
     entry_age: 5
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Special Education Practice School (Stage I - grades 1-4)
+  - country_entry_id: TUR-EDU-05
+    national_label_en: Special Education Practice School (Stage I - grades 1-4)
     national_label_local: Özel Eğitim Uygulama Okulu (I. Kademe - 1-4. sınıflar)
     entry_age: 5
     duration_years: 4
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Lower secondary education
+  - country_entry_id: TUR-EDU-06
+    national_label_en: Lower secondary education
     national_label_local: Ortaokul
     entry_age: 9
     duration_years: 4
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Open lower secondary education
+  - country_entry_id: TUR-EDU-07
+    national_label_en: Open lower secondary education
     national_label_local: AçıkÖğretim Ortaokulu
     entry_age: 15
     duration_years: 4
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Music and Ballet Lower Secondary School
+  - country_entry_id: TUR-EDU-08
+    national_label_en: Music and Ballet Lower Secondary School
     national_label_local: Müzik ve Bale Ortaokulu
     entry_age: 9
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Imam and Preacher Lower Secondary School
+  - country_entry_id: TUR-EDU-09
+    national_label_en: Imam and Preacher Lower Secondary School
     national_label_local: İmam Hatip Ortaokulu
     entry_age: 9
     duration_years: 4
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Special Education Practice School (Stage II - grades 5-8)
+  - country_entry_id: TUR-EDU-10
+    national_label_en: Special Education Practice School (Stage II - grades 5-8)
     national_label_local: Özel Eğitim Uygulama Okulu (II. Kademe - 5-8. sınıflar)
     entry_age: 9
     duration_years: 4
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 14
-  - national_label_en: General Upper Secondary School
+  - country_entry_id: TUR-EDU-11
+    national_label_en: General Upper Secondary School
     national_label_local: Genel Ortaöğretim
     entry_age: 13
     duration_years: 4
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Open High School
+  - country_entry_id: TUR-EDU-12
+    national_label_en: Open High School
     national_label_local: Açıköğretim Lisesi
     entry_age: 0
     duration_years: 4
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Music and Stage Arts High School
+  - country_entry_id: TUR-EDU-13
+    national_label_en: Music and Stage Arts High School
     national_label_local: Müzik ve Sahne Sanatları Lisesi
     entry_age: 13
     duration_years: 4
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational and Technical Upper Secondary School
+  - country_entry_id: TUR-EDU-14
+    national_label_en: Vocational and Technical Upper Secondary School
     national_label_local: Mesleki ve Teknik Ortaöğretim
     entry_age: 13
     duration_years: 4
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Vocational Education Centers
+  - country_entry_id: TUR-EDU-15
+    national_label_en: Vocational Education Centers
     national_label_local: Mesleki Eğitim Merkezleri
     entry_age: 13
     duration_years: 4
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: Anatolian Imam and Preacher High School
+  - country_entry_id: TUR-EDU-16
+    national_label_en: Anatolian Imam and Preacher High School
     national_label_local: Anadolu İmam Hatip Lisesi
     entry_age: 13
     duration_years: 4
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: Open Vocational High School
+  - country_entry_id: TUR-EDU-17
+    national_label_en: Open Vocational High School
     national_label_local: Mesleki Açık Öğretim Lisesi
     entry_age: 0
     duration_years: 4
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: Special Education Vocational School/ Special Education Practice
+  - country_entry_id: TUR-EDU-18
+    national_label_en: Special Education Vocational School/ Special Education Practice
       School (Stage III)
     national_label_local: Özel Eğitim Meslek Okulu
     entry_age: 13
@@ -191,7 +209,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: Special Education Practice School (Stage III)
+  - country_entry_id: TUR-EDU-19
+    national_label_en: Special Education Practice School (Stage III)
     national_label_local: Özel Eğitim Uygulama Okulu (III. Kademe)
     entry_age: 13
     duration_years: 4
@@ -201,7 +220,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Special Education Vocational High School
+  - country_entry_id: TUR-EDU-20
+    national_label_en: Special Education Vocational High School
     national_label_local: Özel Eğitim Meslek Lisesi
     entry_age: 13
     duration_years: 4
@@ -211,7 +231,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
-  - national_label_en: Imam and Preacher Open High School
+  - country_entry_id: TUR-EDU-21
+    national_label_en: Imam and Preacher Open High School
     national_label_local: Açık Öğretim İmam Hatip Lisesi
     entry_age: 0
     duration_years: 4
@@ -221,7 +242,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
-  - national_label_en: Associate Degree Programmes
+  - country_entry_id: TUR-EDU-22
+    national_label_en: Associate Degree Programmes
     national_label_local: Ön Lisans Programları
     entry_age: 18
     duration_years: 2
@@ -231,7 +253,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Bachelor's Programmes
+  - country_entry_id: TUR-EDU-23
+    national_label_en: Bachelor's Programmes
     national_label_local: Lisans Programları
     entry_age: 18
     duration_years: 4
@@ -241,7 +264,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Dentistry, Pharmacy and Veterinary Faculties
+  - country_entry_id: TUR-EDU-24
+    national_label_en: Dentistry, Pharmacy and Veterinary Faculties
     national_label_local: Diş Hekimliği, Eczacılık ve Veterinerlik Fakülteleri
     entry_age: 18
     duration_years: 5
@@ -251,7 +275,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Medicine Faculty
+  - country_entry_id: TUR-EDU-25
+    national_label_en: Medicine Faculty
     national_label_local: Tıp Fakültesi
     entry_age: 18
     duration_years: 6
@@ -261,7 +286,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Master's Programmes (with thesis)
+  - country_entry_id: TUR-EDU-26
+    national_label_en: Master's Programmes (with thesis)
     national_label_local: Yüksek Lisans Programları (Tezli)
     entry_age: 22
     duration_years: 2
@@ -271,7 +297,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Master's Programmes (without thesis)
+  - country_entry_id: TUR-EDU-27
+    national_label_en: Master's Programmes (without thesis)
     national_label_local: Yüksek Lisans Programları (Tezsiz)
     entry_age: 22
     duration_years: 1
@@ -291,7 +318,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: TR10 - Istanbul
+  - country_entry_id: TUR-SUBNAT-01
+    survey_labels: TR10 - Istanbul
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -311,7 +339,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: İstanbul
     source_row: 16664
-  - survey_labels: TR21 - Tekirdağ, Edirne, Kırklareli
+  - country_entry_id: TUR-SUBNAT-02
+    survey_labels: TR21 - Tekirdağ, Edirne, Kırklareli
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -331,7 +360,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Tekirdağ, Edirne, Kırklareli
     source_row: 16665
-  - survey_labels: TR22 - Balıkesir, Çanakkale
+  - country_entry_id: TUR-SUBNAT-03
+    survey_labels: TR22 - Balıkesir, Çanakkale
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -351,7 +381,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Balıkesir, Çanakkale
     source_row: 16666
-  - survey_labels: TR31 - İzmir
+  - country_entry_id: TUR-SUBNAT-04
+    survey_labels: TR31 - İzmir
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -371,7 +402,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: İzmir
     source_row: 16667
-  - survey_labels: TR32 - Aydın, Denizli, Muğla
+  - country_entry_id: TUR-SUBNAT-05
+    survey_labels: TR32 - Aydın, Denizli, Muğla
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -391,7 +423,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Aydın, Denizli, Muğla
     source_row: 16668
-  - survey_labels: TR33 - Manisa, Afyon, Kütahya, Uşak
+  - country_entry_id: TUR-SUBNAT-06
+    survey_labels: TR33 - Manisa, Afyon, Kütahya, Uşak
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -411,7 +444,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Manisa, Afyonkarahisar, Kütahya, Uşak
     source_row: 16669
-  - survey_labels: TR41 - Bursa, Eskişehir, Bilecik
+  - country_entry_id: TUR-SUBNAT-07
+    survey_labels: TR41 - Bursa, Eskişehir, Bilecik
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -431,7 +465,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Bursa, Eskişehir, Bilecik
     source_row: 16670
-  - survey_labels: TR42 - Kocaeli, Sakarya, Düzce, Bolu, Yalova
+  - country_entry_id: TUR-SUBNAT-08
+    survey_labels: TR42 - Kocaeli, Sakarya, Düzce, Bolu, Yalova
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -451,7 +486,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Kocaeli, Sakarya, Düzce, Bolu, Yalova
     source_row: 16671
-  - survey_labels: TR51 - Ankara
+  - country_entry_id: TUR-SUBNAT-09
+    survey_labels: TR51 - Ankara
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -471,7 +507,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Ankara
     source_row: 16672
-  - survey_labels: TR52 - Konya, Karaman
+  - country_entry_id: TUR-SUBNAT-10
+    survey_labels: TR52 - Konya, Karaman
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -491,7 +528,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Konya, Karaman
     source_row: 16673
-  - survey_labels: TR61 - Antalya, Isparta, Burdur
+  - country_entry_id: TUR-SUBNAT-11
+    survey_labels: TR61 - Antalya, Isparta, Burdur
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -511,7 +549,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Antalya, Isparta, Burdur
     source_row: 16674
-  - survey_labels: TR62 - Adana, Mersin
+  - country_entry_id: TUR-SUBNAT-12
+    survey_labels: TR62 - Adana, Mersin
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -531,7 +570,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Adana, Mersin
     source_row: 16675
-  - survey_labels: TR63 - Hatay, Kahramanmaraş, Osmaniye
+  - country_entry_id: TUR-SUBNAT-13
+    survey_labels: TR63 - Hatay, Kahramanmaraş, Osmaniye
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -551,7 +591,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Hatay, Kahramanmaraş, Osmaniye
     source_row: 16676
-  - survey_labels: TR71 - Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir
+  - country_entry_id: TUR-SUBNAT-14
+    survey_labels: TR71 - Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -571,7 +612,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir
     source_row: 16677
-  - survey_labels: TR72 - Kayseri, Sivas, Yozgat
+  - country_entry_id: TUR-SUBNAT-15
+    survey_labels: TR72 - Kayseri, Sivas, Yozgat
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -591,7 +633,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Kayseri, Sivas, Yozgat
     source_row: 16678
-  - survey_labels: TR81 - Zonguldak, Karabük, Bartın
+  - country_entry_id: TUR-SUBNAT-16
+    survey_labels: TR81 - Zonguldak, Karabük, Bartın
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -611,7 +654,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Zonguldak, Karabük, Bartın
     source_row: 16679
-  - survey_labels: TR82 - Kastamonu, Çankırı, Sinop
+  - country_entry_id: TUR-SUBNAT-17
+    survey_labels: TR82 - Kastamonu, Çankırı, Sinop
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -631,7 +675,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Kastamonu, Çankırı, Sinop
     source_row: 16680
-  - survey_labels: TR83 - Samsun, Tokat, Çorum, Amasya
+  - country_entry_id: TUR-SUBNAT-18
+    survey_labels: TR83 - Samsun, Tokat, Çorum, Amasya
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -651,7 +696,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Samsun, Tokat, Çorum, Amasya
     source_row: 16681
-  - survey_labels: TR90 - Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane
+  - country_entry_id: TUR-SUBNAT-19
+    survey_labels: TR90 - Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -671,7 +717,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane
     source_row: 16682
-  - survey_labels: TRA1 - Erzurum, Erzincan, Bayburt
+  - country_entry_id: TUR-SUBNAT-20
+    survey_labels: TRA1 - Erzurum, Erzincan, Bayburt
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -691,7 +738,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Erzurum, Erzincan, Bayburt
     source_row: 16683
-  - survey_labels: TRA2 - Ağrı, Kars, Iğdır, Ardahan
+  - country_entry_id: TUR-SUBNAT-21
+    survey_labels: TRA2 - Ağrı, Kars, Iğdır, Ardahan
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -711,7 +759,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Ağrı, Kars, Iğdır, Ardahan
     source_row: 16684
-  - survey_labels: TRB1 - Malatya, Elazığ, Bingöl, Tunceli
+  - country_entry_id: TUR-SUBNAT-22
+    survey_labels: TRB1 - Malatya, Elazığ, Bingöl, Tunceli
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -731,7 +780,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Malatya, Elazığ, Bingöl, Tunceli
     source_row: 16685
-  - survey_labels: TRB2 - Van, Muş, Bitlis, Hakkari
+  - country_entry_id: TUR-SUBNAT-23
+    survey_labels: TRB2 - Van, Muş, Bitlis, Hakkari
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -751,7 +801,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Van, Muş, Bitlis, Hakkari
     source_row: 16686
-  - survey_labels: TRC1 - Gaziantep, Adıyaman, Kilis
+  - country_entry_id: TUR-SUBNAT-24
+    survey_labels: TRC1 - Gaziantep, Adıyaman, Kilis
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -771,7 +822,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Gaziantep, Adıyaman, Kilis
     source_row: 16687
-  - survey_labels: TRC2 - Şanlıurfa, Diyarbakır
+  - country_entry_id: TUR-SUBNAT-25
+    survey_labels: TRC2 - Şanlıurfa, Diyarbakır
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -791,7 +843,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Şanlıurfa, Diyarbakır
     source_row: 16688
-  - survey_labels: TRC3 - Mardin, Batman, Şırnak, Siirt
+  - country_entry_id: TUR-SUBNAT-26
+    survey_labels: TRC3 - Mardin, Batman, Şırnak, Siirt
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -821,7 +874,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: connected_to_sewerage
+  - country_entry_id: TUR-SAN-01
+    source_category_code: connected_to_sewerage
     national_label_en: Connected to sewerage
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -831,7 +885,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: TUR-SAN-02
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -841,7 +896,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet
+  - country_entry_id: TUR-SAN-03
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -851,7 +907,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: own_flush_toilet
+  - country_entry_id: TUR-SAN-04
+    source_category_code: own_flush_toilet
     national_label_en: Own flush toilet
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -861,7 +918,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: flush_pour_flush_to_piped_sewer_system_private
+  - country_entry_id: TUR-SAN-05
+    source_category_code: flush_pour_flush_to_piped_sewer_system_private
     national_label_en: Flush/pour flush to piped sewer system, private
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -871,7 +929,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: closed_pit
+  - country_entry_id: TUR-SAN-06
+    source_category_code: closed_pit
     national_label_en: Closed pit
     national_label_local: to pit
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -881,7 +940,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 75
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: TUR-SAN-07
+    source_category_code: shared_flush_toilet
     national_label_en: Shared flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -891,7 +951,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: flush_pour_flush_to_piped_sewer_system_shared
+  - country_entry_id: TUR-SAN-08
+    source_category_code: flush_pour_flush_to_piped_sewer_system_shared
     national_label_en: Flush/pour flush to piped sewer system, shared
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -902,7 +963,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: closed_pit
+  - country_entry_id: TUR-SAN-09
+    source_category_code: closed_pit
     national_label_en: Closed pit
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -913,7 +975,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: closed_pit_toilet
+  - country_entry_id: TUR-SAN-10
+    source_category_code: closed_pit_toilet
     national_label_en: Closed pit toilet
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -924,7 +987,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: TUR-SAN-11
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -935,7 +999,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: TUR-SAN-12
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -946,7 +1011,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: open_pit_toilet
+  - country_entry_id: TUR-SAN-13
+    source_category_code: open_pit_toilet
     national_label_en: Open pit toilet
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -957,7 +1023,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: TUR-SAN-14
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -968,7 +1035,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_with_slab_closed_pit_private
+  - country_entry_id: TUR-SAN-15
+    source_category_code: pit_latrine_with_slab_closed_pit_private
     national_label_en: Pit latrine with slab/closed pit, private
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -979,7 +1047,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: open_pit
+  - country_entry_id: TUR-SAN-16
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
@@ -990,7 +1059,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 116
-  - source_category_code: pit_latrine_with_slab_closed_pit_shared
+  - country_entry_id: TUR-SAN-17
+    source_category_code: pit_latrine_with_slab_closed_pit_shared
     national_label_en: Pit latrine with slab/closed pit, shared
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1001,7 +1071,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: no_facility
+  - country_entry_id: TUR-SAN-18
+    source_category_code: no_facility
     national_label_en: No facility
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1011,7 +1082,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: TUR-SAN-19
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1021,7 +1093,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush
+  - country_entry_id: TUR-SAN-20
+    source_category_code: no_facility_bush
     national_label_en: No facility/bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1031,7 +1104,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field_public_toilet
+  - country_entry_id: TUR-SAN-21
+    source_category_code: no_facility_bush_field_public_toilet
     national_label_en: No facility/bush/ field/public toilet
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1041,7 +1115,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: TUR-SAN-22
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1051,7 +1126,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_toilet
+  - country_entry_id: TUR-SAN-23
+    source_category_code: no_toilet
     national_label_en: No toilet
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1061,7 +1137,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: TUR-SAN-24
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1081,7 +1158,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: TUR-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -1091,7 +1169,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: spring_public_fountain
+  - country_entry_id: TUR-WAS-02
+    source_category_code: spring_public_fountain
     national_label_en: Spring/public fountain
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -1101,7 +1180,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: well_in_house_garden
+  - country_entry_id: TUR-WAS-03
+    source_category_code: well_in_house_garden
     national_label_en: Well in house/garden
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -1111,7 +1191,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: well_in_residence
+  - country_entry_id: TUR-WAS-04
+    source_category_code: well_in_residence
     national_label_en: Well in residence
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -1121,7 +1202,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: well_in_residence_garden
+  - country_entry_id: TUR-WAS-05
+    source_category_code: well_in_residence_garden
     national_label_en: Well in residence/garden
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -1131,7 +1213,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: public_well
+  - country_entry_id: TUR-WAS-06
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Public
     jmp_classification: Ground water > All wells > Public
@@ -1141,7 +1224,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: protected_spring
+  - country_entry_id: TUR-WAS-07
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1151,7 +1235,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: TUR-WAS-08
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1161,7 +1246,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: TUR-WAS-09
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Private
     jmp_classification: Ground water > Protected well > Private
@@ -1171,7 +1257,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: shared_protected_well
+  - country_entry_id: TUR-WAS-10
+    source_category_code: shared_protected_well
     national_label_en: Shared protected well
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -1181,7 +1268,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: TUR-WAS-11
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1191,7 +1279,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: TUR-WAS-12
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1201,7 +1290,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: TUR-WAS-13
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1211,7 +1301,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: TUR-WAS-14
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1221,7 +1312,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: piped_surface_water_in_house_garden
+  - country_entry_id: TUR-WAS-15
+    source_category_code: piped_surface_water_in_house_garden
     national_label_en: Piped surface water in house/garden
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1231,7 +1323,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: water_station
+  - country_entry_id: TUR-WAS-16
+    source_category_code: water_station
     national_label_en: Water station
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1241,7 +1334,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: tanker
+  - country_entry_id: TUR-WAS-17
+    source_category_code: tanker
     national_label_en: Tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1251,7 +1345,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: TUR-WAS-18
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1261,7 +1356,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_provided
+  - country_entry_id: TUR-WAS-19
+    source_category_code: tanker_truck_provided
     national_label_en: Tanker truck provided
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1271,7 +1367,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_cart_with_drum
+  - country_entry_id: TUR-WAS-20
+    source_category_code: tanker_truck_cart_with_drum
     national_label_en: Tanker truck/cart with drum
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1281,7 +1378,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: TUR-WAS-21
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1291,7 +1389,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: stationary_tank_pool
+  - country_entry_id: TUR-WAS-22
+    source_category_code: stationary_tank_pool
     national_label_en: Stationary tank/pool
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1301,7 +1400,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: TUR-WAS-23
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1311,7 +1411,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_demi_john
+  - country_entry_id: TUR-WAS-24
+    source_category_code: bottled_water_demi_john
     national_label_en: Bottled water/Demi John
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1321,7 +1422,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater
+  - country_entry_id: TUR-WAS-25
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1331,7 +1433,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: river_spring_stream_lake
+  - country_entry_id: TUR-WAS-26
+    source_category_code: river_spring_stream_lake
     national_label_en: River, spring, stream, lake
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1341,7 +1444,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_stream_pond_lake_dam
+  - country_entry_id: TUR-WAS-27
+    source_category_code: river_stream_pond_lake_dam
     national_label_en: River/stream/pond/lake/dam
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1351,7 +1455,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: TUR-WAS-28
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1361,7 +1466,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: dam
+  - country_entry_id: TUR-WAS-29
+    source_category_code: dam
     national_label_en: Dam
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -1371,7 +1477,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: pond_lake
+  - country_entry_id: TUR-WAS-30
+    source_category_code: pond_lake
     national_label_en: Pond, lake
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -1381,7 +1488,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: river_stream
+  - country_entry_id: TUR-WAS-31
+    source_category_code: river_stream
     national_label_en: River, stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -1391,7 +1499,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: TUR-WAS-32
+    source_category_code: river_stream
     national_label_en: River/stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -1401,7 +1510,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: protected_springs_piped_into_dwelling_plot_or_yard
+  - country_entry_id: TUR-WAS-33
+    source_category_code: protected_springs_piped_into_dwelling_plot_or_yard
     national_label_en: Protected springs piped into dwelling, plot or yard
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1411,7 +1521,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_residence
+  - country_entry_id: TUR-WAS-34
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1421,7 +1532,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_residence_garden
+  - country_entry_id: TUR-WAS-35
+    source_category_code: piped_into_residence_garden
     national_label_en: Piped into residence/garden
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1431,7 +1543,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_in_house_garden
+  - country_entry_id: TUR-WAS-36
+    source_category_code: piped_water_in_house_garden
     national_label_en: Piped water in house/garden
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1441,7 +1554,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: TUR-WAS-37
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1451,7 +1565,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling_plot_or_yard
+  - country_entry_id: TUR-WAS-38
+    source_category_code: piped_into_dwelling_plot_or_yard
     national_label_en: Piped into dwelling plot or yard
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1461,7 +1576,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: TUR-WAS-39
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1471,7 +1587,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: shared_piped_water_with_neighbors
+  - country_entry_id: TUR-WAS-40
+    source_category_code: shared_piped_water_with_neighbors
     national_label_en: Shared piped water with neighbors
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1481,7 +1598,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_piped_water_outside_house_garden
+  - country_entry_id: TUR-WAS-41
+    source_category_code: public_piped_water_outside_house_garden
     national_label_en: Public piped water outside house/garden
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1491,7 +1609,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: TUR-WAS-42
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1501,7 +1620,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: TUR-WAS-43
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

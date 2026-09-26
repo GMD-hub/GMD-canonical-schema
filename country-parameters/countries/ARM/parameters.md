@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary
+  - country_entry_id: ARM-EDU-01
+    national_label_en: Pre-primary
     national_label_local: Նախադպրոցական կրթություն
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary general education
+  - country_entry_id: ARM-EDU-02
+    national_label_en: Primary general education
     national_label_local: Տարրական ընդհանուր կրթություն
     entry_age: 6
     duration_years: 4
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Basic general education (1st stage of secondary education)
+  - country_entry_id: ARM-EDU-03
+    national_label_en: Basic general education (1st stage of secondary education)
     national_label_local: Հիմնական ընդհանուր կրթություն (միջնակարգ կրթության 1-ին
       մակարդակ)
     entry_age: 10
@@ -41,7 +44,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Secondary general education (2nd stage of secondary education)
+  - country_entry_id: ARM-EDU-04
+    national_label_en: Secondary general education (2nd stage of secondary education)
     national_label_local: Միջնակարգ ընդհանուր կրթություն (միջնակարգ կրթության 2-րդ
       մակարդակ)
     entry_age: 15
@@ -52,7 +56,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Initial vocational (handicraft) training, long programme
+  - country_entry_id: ARM-EDU-05
+    national_label_en: Initial vocational (handicraft) training, long programme
     national_label_local: Նախնական մասնագիտական (արհեստագործական) կրթություն
     entry_age: 15
     duration_years: 3
@@ -62,7 +67,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Advanced vocational education on the basis of general basic
+  - country_entry_id: ARM-EDU-06
+    national_label_en: Advanced vocational education on the basis of general basic
       education (Grades 1-2)
     national_label_local: Միջին մասնագիտական կրթություն հիմնական կրթության հիմքի վրա
     entry_age: 15
@@ -73,7 +79,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Advanced vocational education on the basis of general basic
+  - country_entry_id: ARM-EDU-07
+    national_label_en: Advanced vocational education on the basis of general basic
       education (Grades 3-4/5)
     national_label_local: Միջին մասնագիտական կրթություն հիմնական կրթության հիմքի վրա
     entry_age: 17
@@ -84,7 +91,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Advanced vocational education on the basis of secondary general
+  - country_entry_id: ARM-EDU-08
+    national_label_en: Advanced vocational education on the basis of secondary general
       education
     national_label_local: Մասնագիտական կրթություն  միջնակարգ ընդհանուր կրթության հիման
       վրա
@@ -96,7 +104,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Bachelor’s degree education programme
+  - country_entry_id: ARM-EDU-09
+    national_label_en: Bachelor’s degree education programme
     national_label_local: Բակալավրի աստիճան կրթական ծրագիրը
     entry_age: 18
     duration_years: 4
@@ -106,7 +115,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Long first degree tertiary programme, leading to a specialist
+  - country_entry_id: ARM-EDU-10
+    national_label_en: Long first degree tertiary programme, leading to a specialist
       diploma
     national_label_local: Երրորդային ծրագրի երկար առաջին աստիճանը` դիպլոմավորված մասնագետ
     entry_age: 18
@@ -117,7 +127,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Master's degree
+  - country_entry_id: ARM-EDU-11
+    national_label_en: Master's degree
     national_label_local: Մագիստրոսի աստիճան
     entry_age: 22
     duration_years: 2
@@ -127,7 +138,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Postgraduate education, kandidat nauk programme
+  - country_entry_id: ARM-EDU-12
+    national_label_en: Postgraduate education, kandidat nauk programme
     national_label_local: Հետբուհական կրթություն, գիտությունների թեկնածու
     entry_age: 24
     duration_years: 3
@@ -137,7 +149,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Postgraduate education, doktor nauk programme
+  - country_entry_id: ARM-EDU-13
+    national_label_en: Postgraduate education, doktor nauk programme
     national_label_local: Հետբուհական կրթություն,  գիտությունների դոկտոր
     entry_age: 27
     duration_years: 3
@@ -157,7 +170,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Yerevan | 1-Yerevan
+  - country_entry_id: ARM-SUBNAT-01
+    survey_labels: 1 - Yerevan | 1-Yerevan
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_464
     gmd_subnatid2: ''
@@ -177,7 +191,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yerevan
     source_row: 267
-  - survey_labels: 10 - Vayots Dzor | 10-Vayots Dzor
+  - country_entry_id: ARM-SUBNAT-02
+    survey_labels: 10 - Vayots Dzor | 10-Vayots Dzor
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_463
     gmd_subnatid2: ''
@@ -197,7 +212,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Vayots Dzor
     source_row: 268
-  - survey_labels: 11 - Tavush | 11-Tavush
+  - country_entry_id: ARM-SUBNAT-03
+    survey_labels: 11 - Tavush | 11-Tavush
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_462
     gmd_subnatid2: ''
@@ -217,7 +233,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tavush
     source_row: 269
-  - survey_labels: 2 - Aragatsotn | 2-Aragatsotn
+  - country_entry_id: ARM-SUBNAT-04
+    survey_labels: 2 - Aragatsotn | 2-Aragatsotn
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_453
     gmd_subnatid2: ''
@@ -237,7 +254,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Aragatsotn
     source_row: 270
-  - survey_labels: 3 - Arara | 3 - Ararat | 3-Ararat
+  - country_entry_id: ARM-SUBNAT-05
+    survey_labels: 3 - Arara | 3 - Ararat | 3-Ararat
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_454
     gmd_subnatid2: ''
@@ -257,7 +275,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ararat
     source_row: 271
-  - survey_labels: 4 - Armavir | 4-Armavir
+  - country_entry_id: ARM-SUBNAT-06
+    survey_labels: 4 - Armavir | 4-Armavir
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_455
     gmd_subnatid2: ''
@@ -277,7 +296,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Armavir
     source_row: 272
-  - survey_labels: 5 - Gegharkunik | 5-Gegharkunik
+  - country_entry_id: ARM-SUBNAT-07
+    survey_labels: 5 - Gegharkunik | 5-Gegharkunik
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_456
     gmd_subnatid2: ''
@@ -297,7 +317,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gergharkunik
     source_row: 273
-  - survey_labels: 6 - Lori | 6-Lori
+  - country_entry_id: ARM-SUBNAT-08
+    survey_labels: 6 - Lori | 6-Lori
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_458
     gmd_subnatid2: ''
@@ -317,7 +338,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lori
     source_row: 274
-  - survey_labels: 7 - Kotayk | 7-Kotayk
+  - country_entry_id: ARM-SUBNAT-09
+    survey_labels: 7 - Kotayk | 7-Kotayk
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_457
     gmd_subnatid2: ''
@@ -337,7 +359,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kotayk
     source_row: 275
-  - survey_labels: 8 - Shirak | 8-Shirak
+  - country_entry_id: ARM-SUBNAT-10
+    survey_labels: 8 - Shirak | 8-Shirak
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_460
     gmd_subnatid2: ''
@@ -357,7 +380,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shirak
     source_row: 276
-  - survey_labels: 9 - Sjunik | 9-Sjunik
+  - country_entry_id: ARM-SUBNAT-11
+    survey_labels: 9 - Sjunik | 9-Sjunik
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: ARM_2015_GAUL1_461
     gmd_subnatid2: ''
@@ -387,7 +411,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_pour_type_toilet_connected_elsewhere_connection_unknown
+  - country_entry_id: ARM-SAN-01
+    source_category_code: flush_pour_type_toilet_connected_elsewhere_connection_unknown
     national_label_en: flush / pour type toilet connected elsewhere/ connection unknown
     national_label_local: куда-то в другое место
     jmp_classification: Flush and pour flush > to elsewhere
@@ -397,7 +422,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_type_toilet_connected_to_piped_sewer_system
+  - country_entry_id: ARM-SAN-02
+    source_category_code: flush_pour_type_toilet_connected_to_piped_sewer_system
     national_label_en: flush / pour type toilet connected to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -407,7 +433,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: sewerage_system
+  - country_entry_id: ARM-SAN-03
+    source_category_code: sewerage_system
     national_label_en: sewerage system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -417,7 +444,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_type_toilet_connected_to_pit_latrine
+  - country_entry_id: ARM-SAN-04
+    source_category_code: flush_pour_type_toilet_connected_to_pit_latrine
     national_label_en: flush / pour type toilet connected to pit latrine
     national_label_local: в выгребную яму
     jmp_classification: Flush and pour flush > to pit
@@ -427,7 +455,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_type_toilet_connected_to_septic_tank
+  - country_entry_id: ARM-SAN-05
+    source_category_code: flush_pour_type_toilet_connected_to_septic_tank
     national_label_en: flush / pour type toilet connected to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush and pour flush > to septic tank
@@ -437,7 +466,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: a_inside_house_and_exclusive
+  - country_entry_id: ARM-SAN-06
+    source_category_code: a_inside_house_and_exclusive
     national_label_en: Â Inside house and exclusive
     national_label_local: Собственный туалет со смывом
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -447,7 +477,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: own_flush_toilet
+  - country_entry_id: ARM-SAN-07
+    source_category_code: own_flush_toilet
     national_label_en: Own flush toilet
     national_label_local: Собственный туалет со смывом
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -457,7 +488,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: a_inside_house_and_shared
+  - country_entry_id: ARM-SAN-08
+    source_category_code: a_inside_house_and_shared
     national_label_en: Â Inside house and shared
     national_label_local: Общественный/совместного пользования туалет со смывом
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -467,7 +499,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: ARM-SAN-09
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: куда-то в другое место
     jmp_classification: Flush/toilets > to elsewhere
@@ -477,7 +510,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_pour_flush_not_to_sewer_septic_tank_pit_latrine
+  - country_entry_id: ARM-SAN-10
+    source_category_code: flush_pour_flush_not_to_sewer_septic_tank_pit_latrine
     national_label_en: Flush/pour flush not to sewer/septic tank/pit latrine
     national_label_local: куда-то в другое место
     jmp_classification: Flush/toilets > to elsewhere
@@ -487,7 +521,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: pour_flush_not_to_sewer_septic_tank_pit_latrine
+  - country_entry_id: ARM-SAN-11
+    source_category_code: pour_flush_not_to_sewer_septic_tank_pit_latrine
     national_label_en: Pour flush not to sewer, septic tank, pit latrine
     national_label_local: куда-то в другое место
     jmp_classification: Flush/toilets > to elsewhere
@@ -497,7 +532,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: ARM-SAN-12
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -507,7 +543,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: ARM-SAN-13
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -517,7 +554,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: ARM-SAN-14
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > to pit
@@ -527,7 +565,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_pour_flush_to_a_pit_latrine
+  - country_entry_id: ARM-SAN-15
+    source_category_code: flush_pour_flush_to_a_pit_latrine
     national_label_en: Flush/pour flush to a pit latrine
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > to pit
@@ -537,7 +576,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: ARM-SAN-16
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -547,7 +587,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: ARM-SAN-17
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -557,7 +598,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_to_do_not_know_where
+  - country_entry_id: ARM-SAN-18
+    source_category_code: flush_to_do_not_know_where
     national_label_en: Flush to do not know where
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -567,7 +609,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: ARM-SAN-19
+    source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -577,7 +620,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket
+  - country_entry_id: ARM-SAN-20
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -587,7 +631,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: ARM-SAN-21
+    source_category_code: bucket_toilet
     national_label_en: Bucket toilet
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -597,7 +642,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pit_latrine_with_a_slab
+  - country_entry_id: ARM-SAN-22
+    source_category_code: pit_latrine_with_a_slab
     national_label_en: Pit latrine with a slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -609,7 +655,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: ARM-SAN-23
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -621,7 +668,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: ARM-SAN-24
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -633,7 +681,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: ARM-SAN-25
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -645,7 +694,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pitlatrine_without_slab_open_pit
+  - country_entry_id: ARM-SAN-26
+    source_category_code: pitlatrine_without_slab_open_pit
     national_label_en: Pitlatrine without slab/open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -657,7 +707,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: ARM-SAN-27
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet
     national_label_local: Традиционная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -668,7 +719,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: ARM-SAN-28
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -679,7 +731,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: outside_house_and_exclusive
+  - country_entry_id: ARM-SAN-29
+    source_category_code: outside_house_and_exclusive
     national_label_en: Outside house and exclusive
     national_label_local: Собственные уборные
     jmp_classification: Latrines > Dry latrines > Private Latrines
@@ -689,7 +742,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 112
-  - source_category_code: outside_house_and_shared
+  - country_entry_id: ARM-SAN-30
+    source_category_code: outside_house_and_shared
     national_label_en: Outside house and shared
     national_label_local: Уборные общественные/совместного пользования
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines
@@ -699,7 +753,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 120
-  - source_category_code: no_facilities_or_bush_or_field
+  - country_entry_id: ARM-SAN-31
+    source_category_code: no_facilities_or_bush_or_field
     national_label_en: No facilities or bush or field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -709,7 +764,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: ARM-SAN-32
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -719,7 +775,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: any_facility_shared_with_others
+  - country_entry_id: ARM-SAN-33
+    source_category_code: any_facility_shared_with_others
     national_label_en: Any facility shared with others
     national_label_local: Другое
     jmp_classification: Other improved > Other
@@ -729,7 +786,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: other
+  - country_entry_id: ARM-SAN-34
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -739,7 +797,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_missing
+  - country_entry_id: ARM-SAN-35
+    source_category_code: other_missing
     national_label_en: Other/missing
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -749,7 +808,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: public_toilet
+  - country_entry_id: ARM-SAN-36
+    source_category_code: public_toilet
     national_label_en: Public toilet
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -759,7 +819,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: no_sewerage_system
+  - country_entry_id: ARM-SAN-37
+    source_category_code: no_sewerage_system
     national_label_en: No sewerage system
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -779,7 +840,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring_water_well
+  - country_entry_id: ARM-WAS-01
+    source_category_code: spring_water_well
     national_label_en: Spring water, well
     national_label_local: Грунтовые воды
     jmp_classification: Ground water
@@ -789,7 +851,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 43
-  - source_category_code: spring_water_wells
+  - country_entry_id: ARM-WAS-02
+    source_category_code: spring_water_wells
     national_label_en: Spring water, wells
     national_label_local: Грунтовые воды
     jmp_classification: Ground water
@@ -799,7 +862,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 43
-  - source_category_code: spring_water_wells
+  - country_entry_id: ARM-WAS-03
+    source_category_code: spring_water_wells
     national_label_en: Spring, water, wells
     national_label_local: Грунтовые воды
     jmp_classification: Ground water
@@ -809,7 +873,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 43
-  - source_category_code: spring_well
+  - country_entry_id: ARM-WAS-04
+    source_category_code: spring_well
     national_label_en: Spring/well
     national_label_local: Грунтовые воды
     jmp_classification: Ground water
@@ -819,7 +884,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 43
-  - source_category_code: springs_wells
+  - country_entry_id: ARM-WAS-05
+    source_category_code: springs_wells
     national_label_en: Springs, wells
     national_label_local: Грунтовые воды
     jmp_classification: Ground water
@@ -829,7 +895,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 43
-  - source_category_code: spring
+  - country_entry_id: ARM-WAS-06
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: Все родники
     jmp_classification: Ground water > All springs
@@ -839,7 +906,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: well
+  - country_entry_id: ARM-WAS-07
+    source_category_code: well
     national_label_en: Well
     national_label_local: Все колодцы
     jmp_classification: Ground water > All wells
@@ -849,7 +917,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: protected_spring
+  - country_entry_id: ARM-WAS-08
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Защищённый родник
     jmp_classification: Ground water > Protected spring
@@ -859,7 +928,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: ARM-WAS-09
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -869,7 +939,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: ARM-WAS-10
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -879,7 +950,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: ARM-WAS-11
+    source_category_code: tube_well_or_borehole
     national_label_en: tube well or borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -889,7 +961,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: ARM-WAS-12
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/ borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -899,7 +972,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: ARM-WAS-13
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Незащищённый родник
     jmp_classification: Ground water > Unprotected spring
@@ -909,7 +983,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: ARM-WAS-14
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -919,7 +994,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: open_well_in_yard_plot
+  - country_entry_id: ARM-WAS-15
+    source_category_code: open_well_in_yard_plot
     national_label_en: Open well in yard/plot
     national_label_local: Частный
     jmp_classification: Ground water > Unprotected well > Private
@@ -929,7 +1005,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: brought
+  - country_entry_id: ARM-WAS-16
+    source_category_code: brought
     national_label_en: Brought
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -939,7 +1016,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: delivered_imported_water
+  - country_entry_id: ARM-WAS-17
+    source_category_code: delivered_imported_water
     national_label_en: Delivered (imported) water
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -949,7 +1027,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: other_protected
+  - country_entry_id: ARM-WAS-18
+    source_category_code: other_protected
     national_label_en: other protected
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -959,7 +1038,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: own_system
+  - country_entry_id: ARM-WAS-19
+    source_category_code: own_system
     national_label_en: own system
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -969,7 +1049,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: own_system_of_water_supply
+  - country_entry_id: ARM-WAS-20
+    source_category_code: own_system_of_water_supply
     national_label_en: Own system of water supply
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -979,7 +1060,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: bought
+  - country_entry_id: ARM-WAS-21
+    source_category_code: bought
     national_label_en: Bought
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -989,7 +1071,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: delevered_water
+  - country_entry_id: ARM-WAS-22
+    source_category_code: delevered_water
     national_label_en: Delevered water
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -999,7 +1082,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: own_system
+  - country_entry_id: ARM-WAS-23
+    source_category_code: own_system
     national_label_en: Own system
     national_label_local: Другое
     jmp_classification: Other improved sources > Other
@@ -1009,7 +1093,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: delivered_imported_water
+  - country_entry_id: ARM-WAS-24
+    source_category_code: delivered_imported_water
     national_label_en: delivered (imported) water
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1019,7 +1104,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: delivered_water
+  - country_entry_id: ARM-WAS-25
+    source_category_code: delivered_water
     national_label_en: Delivered water
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1029,7 +1115,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: ARM-WAS-26
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1039,7 +1126,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_cart_with_drum
+  - country_entry_id: ARM-WAS-27
+    source_category_code: tanker_truck_cart_with_drum
     national_label_en: Tanker truck/cart with drum
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1049,7 +1137,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: vendor
+  - country_entry_id: ARM-WAS-28
+    source_category_code: vendor
     national_label_en: Vendor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1059,7 +1148,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_ven_dor
+  - country_entry_id: ARM-WAS-29
+    source_category_code: water_ven_dor
     national_label_en: water ven dor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1069,7 +1159,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_vendor
+  - country_entry_id: ARM-WAS-30
+    source_category_code: water_vendor
     national_label_en: water vendor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1079,7 +1170,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: ARM-WAS-31
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другие неулучшенные
     jmp_classification: Other non-improved
@@ -1089,7 +1181,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 105
-  - source_category_code: bought_water
+  - country_entry_id: ARM-WAS-32
+    source_category_code: bought_water
     national_label_en: bought water
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1099,7 +1192,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: ARM-WAS-33
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1109,7 +1203,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_sources
+  - country_entry_id: ARM-WAS-34
+    source_category_code: other_sources
     national_label_en: Other sources
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1119,7 +1214,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_unprotected
+  - country_entry_id: ARM-WAS-35
+    source_category_code: other_unprotected
     national_label_en: Other unprotected
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1129,7 +1225,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: ARM-WAS-36
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1139,7 +1236,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: other_sources
+  - country_entry_id: ARM-WAS-37
+    source_category_code: other_sources
     national_label_en: Other sources
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1149,7 +1247,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: secondary
+  - country_entry_id: ARM-WAS-38
+    source_category_code: secondary
     national_label_en: Secondary
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -1159,7 +1258,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: ARM-WAS-39
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Фасованная вода
     jmp_classification: Packaged water
@@ -1169,7 +1269,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 89
-  - source_category_code: bought_water
+  - country_entry_id: ARM-WAS-40
+    source_category_code: bought_water
     national_label_en: Bought water
     national_label_local: Фасованная вода
     jmp_classification: Packaged water
@@ -1179,7 +1280,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 89
-  - source_category_code: bottled_water
+  - country_entry_id: ARM-WAS-41
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -1189,7 +1291,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bought_water_noy_byuregh_etc
+  - country_entry_id: ARM-WAS-42
+    source_category_code: bought_water_noy_byuregh_etc
     national_label_en: Bought water (Noy, Byuregh, etc.)
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -1199,7 +1302,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: river
+  - country_entry_id: ARM-WAS-43
+    source_category_code: river
     national_label_en: River
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -1209,7 +1313,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: ARM-WAS-44
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -1219,7 +1324,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_stream
+  - country_entry_id: ARM-WAS-45
+    source_category_code: river_stream
     national_label_en: River/stream
     national_label_local: Река
     jmp_classification: Surface water > River
@@ -1229,7 +1335,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: pipe_into_dwelling_own_artesian
+  - country_entry_id: ARM-WAS-46
+    source_category_code: pipe_into_dwelling_own_artesian
     national_label_en: Pipe into dwelling (own artesian)
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -1239,7 +1346,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: water_pipe_outside_compound
+  - country_entry_id: ARM-WAS-47
+    source_category_code: water_pipe_outside_compound
     national_label_en: water pipe outside compound
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -1249,7 +1357,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: centralized_system
+  - country_entry_id: ARM-WAS-48
+    source_category_code: centralized_system
     national_label_en: Centralized system
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -1259,7 +1368,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: centralized_water_supply
+  - country_entry_id: ARM-WAS-49
+    source_category_code: centralized_water_supply
     national_label_en: centralized water supply
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -1269,7 +1379,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_into_dwelling_yard_plot
+  - country_entry_id: ARM-WAS-50
+    source_category_code: piped_water_into_dwelling_yard_plot
     national_label_en: Piped water into dwelling/yard/plot
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -1279,7 +1390,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: central_water_supply_inside_house
+  - country_entry_id: ARM-WAS-51
+    source_category_code: central_water_supply_inside_house
     national_label_en: Central water supply inside house
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1289,7 +1401,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: centralized_water_supply
+  - country_entry_id: ARM-WAS-52
+    source_category_code: centralized_water_supply
     national_label_en: centralized water supply
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1299,7 +1412,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_residence
+  - country_entry_id: ARM-WAS-53
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1309,7 +1423,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: ARM-WAS-54
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1319,7 +1434,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: water_pipe_into_dwelling
+  - country_entry_id: ARM-WAS-55
+    source_category_code: water_pipe_into_dwelling
     national_label_en: water pipe into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1329,7 +1445,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: central_water_supply_outside_house
+  - country_entry_id: ARM-WAS-56
+    source_category_code: central_water_supply_outside_house
     national_label_en: Central water supply outside house
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1339,7 +1456,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_plot
+  - country_entry_id: ARM-WAS-57
+    source_category_code: piped_into_yard_plot
     national_label_en: Piped into yard/plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1349,7 +1467,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: water_pipe_into_compound
+  - country_entry_id: ARM-WAS-58
+    source_category_code: water_pipe_into_compound
     national_label_en: water pipe into compound
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1359,7 +1478,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap
+  - country_entry_id: ARM-WAS-59
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -1369,7 +1489,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: ARM-WAS-60
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

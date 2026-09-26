@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Central | 1-Central
+  - country_entry_id: ZMB-SUBNAT-01
+    survey_labels: 1 - Central | 1-Central
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3426
     gmd_subnatid2: ''
@@ -30,7 +31,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Central
     source_row: 18722
-  - survey_labels: 2 - Copperbelt | 2-Copperbelt
+  - country_entry_id: ZMB-SUBNAT-02
+    survey_labels: 2 - Copperbelt | 2-Copperbelt
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3427
     gmd_subnatid2: ''
@@ -50,7 +52,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Copperbelt
     source_row: 18723
-  - survey_labels: 3 - Eastern | 3-Eastern
+  - country_entry_id: ZMB-SUBNAT-03
+    survey_labels: 3 - Eastern | 3-Eastern
     survey_variables: subnatid
     gmd_subnatid1: ZMB_2015_GAUL1_3428
     gmd_subnatid2: ''
@@ -70,7 +73,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Eastern
     source_row: 18724
-  - survey_labels: 4 - Luapula | 4-Luapula
+  - country_entry_id: ZMB-SUBNAT-04
+    survey_labels: 4 - Luapula | 4-Luapula
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3429
     gmd_subnatid2: ''
@@ -90,7 +94,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Luapula
     source_row: 18725
-  - survey_labels: 5 - Lusaka | 5-Lusaka
+  - country_entry_id: ZMB-SUBNAT-05
+    survey_labels: 5 - Lusaka | 5-Lusaka
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3430
     gmd_subnatid2: ''
@@ -110,7 +115,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lusaka
     source_row: 18726
-  - survey_labels: 6 - Northern | 6-Northern
+  - country_entry_id: ZMB-SUBNAT-06
+    survey_labels: 6 - Northern | 6-Northern
     survey_variables: subnatid
     gmd_subnatid1: ZMB_2015_GAUL1_3432
     gmd_subnatid2: ''
@@ -130,7 +136,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Northern
     source_row: 18727
-  - survey_labels: 7 - North Western | 7-North Western | 8 - North Western | 8-North
+  - country_entry_id: ZMB-SUBNAT-07
+    survey_labels: 7 - North Western | 7-North Western | 8 - North Western | 8-North
       Western
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3431
@@ -151,7 +158,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North-Western
     source_row: 18728
-  - survey_labels: 8 - Southern | 8-Southern | 9 - Southern | 9-Southern
+  - country_entry_id: ZMB-SUBNAT-08
+    survey_labels: 8 - Southern | 8-Southern | 9 - Southern | 9-Southern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3433
     gmd_subnatid2: ''
@@ -171,7 +179,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Southern
     source_row: 18729
-  - survey_labels: 10 - Western | 10-Western | 9 - Western | 9-Western
+  - country_entry_id: ZMB-SUBNAT-09
+    survey_labels: 10 - Western | 10-Western | 9 - Western | 9-Western
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAUL1_3434
     gmd_subnatid2: ''
@@ -191,7 +200,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Western
     source_row: 18730
-  - survey_labels: 3-Eastern
+  - country_entry_id: ZMB-SUBNAT-10
+    survey_labels: 3-Eastern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAULx_3428
     gmd_subnatid2: ''
@@ -211,7 +221,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Eastern
     source_row: 18752
-  - survey_labels: 6-Muchinga
+  - country_entry_id: ZMB-SUBNAT-11
+    survey_labels: 6-Muchinga
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAULx_6
     gmd_subnatid2: ''
@@ -231,7 +242,8 @@ parameters:
     geo_nvar: ADM2_NAME
     geo_name: Chama & ChinsaliIsoka & Mpika & Nakonde
     source_row: 18755
-  - survey_labels: 7-Northern
+  - country_entry_id: ZMB-SUBNAT-12
+    survey_labels: 7-Northern
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ZMB_2015_GAULx_3432
     gmd_subnatid2: ''
@@ -261,7 +273,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: ZMB-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -271,7 +284,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: ZMB-SAN-02
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -281,7 +295,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: ZMB-SAN-03
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -291,7 +306,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_sewage
+  - country_entry_id: ZMB-SAN-04
+    source_category_code: flush_to_sewage
     national_label_en: Flush to sewage
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -301,7 +317,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet_to_piped_sewer_system
+  - country_entry_id: ZMB-SAN-05
+    source_category_code: flush_toilet_to_piped_sewer_system
     national_label_en: Flush toilet to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -311,7 +328,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: ZMB-SAN-06
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -321,7 +339,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flushed_toilet_to_pit_latrine
+  - country_entry_id: ZMB-SAN-07
+    source_category_code: flushed_toilet_to_pit_latrine
     national_label_en: Flushed toilet to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -331,7 +350,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: ZMB-SAN-08
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -341,7 +361,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flushed_toilet_to_septic_tank
+  - country_entry_id: ZMB-SAN-09
+    source_category_code: flushed_toilet_to_septic_tank
     national_label_en: Flushed toilet to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -351,7 +372,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: ZMB-SAN-10
+    source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -361,7 +383,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_sewer_system_septic_tank
+  - country_entry_id: ZMB-SAN-11
+    source_category_code: flush_to_sewer_system_septic_tank
     national_label_en: Flush to sewer system/ septic tank
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -371,7 +394,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: flush_toilet
+  - country_entry_id: ZMB-SAN-12
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -381,7 +405,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: own_flush_toilet
+  - country_entry_id: ZMB-SAN-13
+    source_category_code: own_flush_toilet
     national_label_en: Own flush toilet
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -391,7 +416,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: own_flush_toilet_inside_outside_the_house
+  - country_entry_id: ZMB-SAN-14
+    source_category_code: own_flush_toilet_inside_outside_the_house
     national_label_en: OWN FLUSH TOILET INSIDE/OUTSIDE THE HOUSE
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -401,7 +427,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: flush_pour_flush_not_to_sewer_septic_tank_pit_latrine
+  - country_entry_id: ZMB-SAN-15
+    source_category_code: flush_pour_flush_not_to_sewer_septic_tank_pit_latrine
     national_label_en: Flush/pour flush not to sewer/septic tank/pit latrine
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > Private flush/toilet > to elsewhere
@@ -411,7 +438,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 77
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: ZMB-SAN-16
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -421,7 +449,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: ZMB-SAN-17
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -431,7 +460,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: flush_pour_flush_to_pit
+  - country_entry_id: ZMB-SAN-18
+    source_category_code: flush_pour_flush_to_pit
     national_label_en: Flush/pour flush to pit
     national_label_local: to pit
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -441,7 +471,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 75
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: ZMB-SAN-19
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -451,7 +482,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: ZMB-SAN-20
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -461,7 +493,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: communal_flush_toilet
+  - country_entry_id: ZMB-SAN-21
+    source_category_code: communal_flush_toilet
     national_label_en: Communal flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -471,7 +504,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: communal_shared_flush_toilet
+  - country_entry_id: ZMB-SAN-22
+    source_category_code: communal_shared_flush_toilet
     national_label_en: Communal shared flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -481,7 +515,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: communal_shared_flush_toilet
+  - country_entry_id: ZMB-SAN-23
+    source_category_code: communal_shared_flush_toilet
     national_label_en: COMMUNAL/SHARED FLUSH TOILET
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -491,7 +526,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: ZMB-SAN-24
+    source_category_code: shared_flush_toilet
     national_label_en: Shared flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -501,7 +537,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: ZMB-SAN-25
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -512,7 +549,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: ZMB-SAN-26
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -523,7 +561,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: flush_pour_flush_to_pit
+  - country_entry_id: ZMB-SAN-27
+    source_category_code: flush_pour_flush_to_pit
     national_label_en: Flush/pour flush to pit
     national_label_local: to pit
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to pit
@@ -533,7 +572,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 81
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: ZMB-SAN-28
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -543,7 +583,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: ZMB-SAN-29
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -553,7 +594,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: ZMB-SAN-30
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush - to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -563,7 +605,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: own_flush_toilet_to_other
+  - country_entry_id: ZMB-SAN-31
+    source_category_code: own_flush_toilet_to_other
     national_label_en: Own flush toilet to other
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -573,7 +616,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: ZMB-SAN-32
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush - to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -583,7 +627,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: own_flush_toilet_to_piped_sewer_system
+  - country_entry_id: ZMB-SAN-33
+    source_category_code: own_flush_toilet_to_piped_sewer_system
     national_label_en: Own flush toilet to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -593,7 +638,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: ZMB-SAN-34
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush - to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -603,7 +649,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: own_flush_toilet_to_pit_latrine
+  - country_entry_id: ZMB-SAN-35
+    source_category_code: own_flush_toilet_to_pit_latrine
     national_label_en: Own flush toilet to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -613,7 +660,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: ZMB-SAN-36
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush - to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -623,7 +671,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: own_flush_toilet_to_septic_tank
+  - country_entry_id: ZMB-SAN-37
+    source_category_code: own_flush_toilet_to_septic_tank
     national_label_en: Own flush toilet to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -633,7 +682,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: ZMB-SAN-38
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush - don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -643,7 +693,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: own_flush_toilet_to_dk_missing
+  - country_entry_id: ZMB-SAN-39
+    source_category_code: own_flush_toilet_to_dk_missing
     national_label_en: Own flush toilet to DK/Missing
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -653,7 +704,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket
+  - country_entry_id: ZMB-SAN-40
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -663,7 +715,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: ZMB-SAN-41
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -673,7 +726,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: ZMB-SAN-42
+    source_category_code: bucket_toilet
     national_label_en: bucket toilet
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -683,7 +737,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_pot
+  - country_entry_id: ZMB-SAN-43
+    source_category_code: bucket_pot
     national_label_en: Bucket/pot
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -693,7 +748,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_tin_other_container
+  - country_entry_id: ZMB-SAN-44
+    source_category_code: bucket_tin_other_container
     national_label_en: Bucket/tin/other container
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -703,7 +759,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet
+  - country_entry_id: ZMB-SAN-45
+    source_category_code: hanging_toilet
     national_label_en: Hanging toilet
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -714,7 +771,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: ZMB-SAN-46
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -725,7 +783,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: ZMB-SAN-47
+    source_category_code: hanging_toilet_latrine
     national_label_en: Hanging toilet/latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -736,7 +795,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: covered_pit_latrine
+  - country_entry_id: ZMB-SAN-48
+    source_category_code: covered_pit_latrine
     national_label_en: Covered pit latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -747,7 +807,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-49
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine - with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -758,7 +819,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-50
+    source_category_code: pit_latrine_with_slab
     national_label_en: pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -769,7 +831,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: ZMB-SAN-51
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine - without slab / open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -780,7 +843,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab
+  - country_entry_id: ZMB-SAN-52
+    source_category_code: pit_latrine_without_slab
     national_label_en: Pit latrine without slab
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -791,7 +855,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: ZMB-SAN-53
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -802,7 +867,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: ZMB-SAN-54
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -813,7 +879,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine
+  - country_entry_id: ZMB-SAN-55
+    source_category_code: pit_latrine
     national_label_en: Pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -824,7 +891,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: ZMB-SAN-56
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -835,7 +903,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: ZMB-SAN-57
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet*
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -846,7 +915,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: uncovered_pit_latrine
+  - country_entry_id: ZMB-SAN-58
+    source_category_code: uncovered_pit_latrine
     national_label_en: Uncovered pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -857,7 +927,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: improved_pit_latrine_eg_vip
+  - country_entry_id: ZMB-SAN-59
+    source_category_code: improved_pit_latrine_eg_vip
     national_label_en: Improved pit latrine (eg. VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -868,7 +939,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_ventilated_improved_pit_vip
+  - country_entry_id: ZMB-SAN-60
+    source_category_code: pit_latrine_ventilated_improved_pit_vip
     national_label_en: Pit latrine - ventilated improved pit (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -879,7 +951,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_vip_latrine
+  - country_entry_id: ZMB-SAN-61
+    source_category_code: ventilated_improved_pit_vip_latrine
     national_label_en: Ventilated improved pit (VIP) latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -890,7 +963,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: ZMB-SAN-62
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -901,7 +975,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: ZMB-SAN-63
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated improved pit latrine (vip)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -912,7 +987,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: vip_latrine
+  - country_entry_id: ZMB-SAN-64
+    source_category_code: vip_latrine
     national_label_en: VIP latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -923,7 +999,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: bucket_tin_other_container
+  - country_entry_id: ZMB-SAN-65
+    source_category_code: bucket_tin_other_container
     national_label_en: BUCKET/TIN/OTHER CONTAINER
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
@@ -933,7 +1010,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 118
-  - source_category_code: pit_latrine_without_slab
+  - country_entry_id: ZMB-SAN-66
+    source_category_code: pit_latrine_without_slab
     national_label_en: Pit latrine without slab
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Private Latrines > Other
@@ -943,7 +1021,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 119
-  - source_category_code: own_pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-67
+    source_category_code: own_pit_latrine_with_slab
     national_label_en: Own pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -954,7 +1033,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-68
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -965,7 +1045,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: ZMB-SAN-69
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -976,7 +1057,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: own_pit_latrine_without_slab
+  - country_entry_id: ZMB-SAN-70
+    source_category_code: own_pit_latrine_without_slab
     national_label_en: Own pit latrine without slab
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
@@ -987,7 +1069,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 116
-  - source_category_code: own_pit
+  - country_entry_id: ZMB-SAN-71
+    source_category_code: own_pit
     national_label_en: Own pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -997,7 +1080,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: own_pit_latrine
+  - country_entry_id: ZMB-SAN-72
+    source_category_code: own_pit_latrine
     national_label_en: OWN PIT LATRINE
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1007,7 +1091,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: own_pit_latrines
+  - country_entry_id: ZMB-SAN-73
+    source_category_code: own_pit_latrines
     national_label_en: Own pit latrines
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1017,7 +1102,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: ventilated_improved_pit_vip_latrine
+  - country_entry_id: ZMB-SAN-74
+    source_category_code: ventilated_improved_pit_vip_latrine
     national_label_en: Ventilated Improved Pit (VIP) latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -1028,7 +1114,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: bucket_other_container
+  - country_entry_id: ZMB-SAN-75
+    source_category_code: bucket_other_container
     national_label_en: Bucket/other container
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -1039,7 +1126,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: pail_bucket
+  - country_entry_id: ZMB-SAN-76
+    source_category_code: pail_bucket
     national_label_en: Pail/Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -1050,7 +1138,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: neighbors_pit_latrine
+  - country_entry_id: ZMB-SAN-77
+    source_category_code: neighbors_pit_latrine
     national_label_en: Neighbors pit latrine
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Other
@@ -1060,7 +1149,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 127
-  - source_category_code: neighbour_s_pit_latrine_without_slab
+  - country_entry_id: ZMB-SAN-78
+    source_category_code: neighbour_s_pit_latrine_without_slab
     national_label_en: Neighbour's pit latrine without slab
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Other
@@ -1070,7 +1160,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 127
-  - source_category_code: communal_pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-79
+    source_category_code: communal_pit_latrine_with_slab
     national_label_en: Communal pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1081,7 +1172,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: community_latrine
+  - country_entry_id: ZMB-SAN-80
+    source_category_code: community_latrine
     national_label_en: Community latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1092,7 +1184,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-81
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1103,7 +1196,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: ZMB-SAN-82
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1114,7 +1208,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: communal_pit_latrine_without_slab
+  - country_entry_id: ZMB-SAN-83
+    source_category_code: communal_pit_latrine_without_slab
     national_label_en: Communal pit latrine without slab
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1125,7 +1220,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 124
-  - source_category_code: communal_neighbours_pit_latrine
+  - country_entry_id: ZMB-SAN-84
+    source_category_code: communal_neighbours_pit_latrine
     national_label_en: Communal / neighbours pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1136,7 +1232,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: communal_pit
+  - country_entry_id: ZMB-SAN-85
+    source_category_code: communal_pit
     national_label_en: Communal pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1147,7 +1244,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: communal_pit_latrine
+  - country_entry_id: ZMB-SAN-86
+    source_category_code: communal_pit_latrine
     national_label_en: COMMUNAL PIT LATRINE
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1158,7 +1256,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: communal_shared_pit_latrine
+  - country_entry_id: ZMB-SAN-87
+    source_category_code: communal_shared_pit_latrine
     national_label_en: COMMUNAL/SHARED PIT LATRINE
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1169,7 +1268,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: ventilated_improved_pit_vip_latrine
+  - country_entry_id: ZMB-SAN-88
+    source_category_code: ventilated_improved_pit_vip_latrine
     national_label_en: Ventilated Improved Pit (VIP) latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -1180,7 +1280,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 121
-  - source_category_code: pour_flush_latrine_water_seal_type
+  - country_entry_id: ZMB-SAN-89
+    source_category_code: pour_flush_latrine_water_seal_type
     national_label_en: Pour flush latrine (water seal type)
     national_label_local: Pour flush latrines
     jmp_classification: Latrines > Pour flush latrines
@@ -1190,7 +1291,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: ZMB-SAN-90
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Private pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1200,7 +1302,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: ZMB-SAN-91
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Public/shared pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1211,7 +1314,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: aqua_privy
+  - country_entry_id: ZMB-SAN-92
+    source_category_code: aqua_privy
     national_label_en: Aqua privy
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > to septic tank
@@ -1221,7 +1325,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: ZMB-SAN-93
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1231,7 +1336,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility
+  - country_entry_id: ZMB-SAN-94
+    source_category_code: no_facility
     national_label_en: No facility
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1241,7 +1347,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush
+  - country_entry_id: ZMB-SAN-95
+    source_category_code: no_facility_bush
     national_label_en: No facility/ bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1251,7 +1358,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: ZMB-SAN-96
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1261,7 +1369,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_none_available
+  - country_entry_id: ZMB-SAN-97
+    source_category_code: no_none_available
     national_label_en: No, none available
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1271,7 +1380,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_pas_disponible
+  - country_entry_id: ZMB-SAN-98
+    source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1281,7 +1391,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_bush_field
+  - country_entry_id: ZMB-SAN-99
+    source_category_code: non_bush_field
     national_label_en: Non/ bush/ field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1291,7 +1402,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: ZMB-SAN-100
+    source_category_code: none
     national_label_en: NONE
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1301,7 +1413,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none_open_field
+  - country_entry_id: ZMB-SAN-101
+    source_category_code: none_open_field
     national_label_en: None (open field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1311,7 +1424,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation
+  - country_entry_id: ZMB-SAN-102
+    source_category_code: open_defecation
     national_label_en: Open defecation
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1321,7 +1435,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: aqua_privy
+  - country_entry_id: ZMB-SAN-103
+    source_category_code: aqua_privy
     national_label_en: Aqua privy
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1331,7 +1446,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: flush_bio_digester_biofil
+  - country_entry_id: ZMB-SAN-104
+    source_category_code: flush_bio_digester_biofil
     national_label_en: Flush, bio-digester (biofil)
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1341,7 +1457,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: neighbour_s_pit_latrine_with_slab
+  - country_entry_id: ZMB-SAN-105
+    source_category_code: neighbour_s_pit_latrine_with_slab
     national_label_en: Neighbour's pit latrine with slab
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1351,7 +1468,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: aqua_privy
+  - country_entry_id: ZMB-SAN-106
+    source_category_code: aqua_privy
     national_label_en: Aqua privy
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1361,7 +1479,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 133
-  - source_category_code: other
+  - country_entry_id: ZMB-SAN-107
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1371,7 +1490,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_specify
+  - country_entry_id: ZMB-SAN-108
+    source_category_code: other_specify
     national_label_en: Other (specify)
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1381,7 +1501,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_type_of_sanitation
+  - country_entry_id: ZMB-SAN-109
+    source_category_code: other_type_of_sanitation
     national_label_en: Other type of sanitation
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1391,7 +1512,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_specify
+  - country_entry_id: ZMB-SAN-110
+    source_category_code: other_specify
     national_label_en: Other, specify
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1401,7 +1523,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: ZMB-SAN-111
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1421,7 +1544,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: ZMB-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -1431,7 +1555,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: public_and_private_wells
+  - country_entry_id: ZMB-WAS-02
+    source_category_code: public_and_private_wells
     national_label_en: Public and private wells
     national_label_local: All wells
     jmp_classification: Ground water > All wells
@@ -1441,7 +1566,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: protected_spring
+  - country_entry_id: ZMB-WAS-03
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1451,7 +1577,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring_closed
+  - country_entry_id: ZMB-WAS-04
+    source_category_code: protected_spring_closed
     national_label_en: Protected spring (closed)
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1461,7 +1588,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: ZMB-WAS-05
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1471,7 +1599,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_closed_or_with_handpump
+  - country_entry_id: ZMB-WAS-06
+    source_category_code: protected_dug_well_closed_or_with_handpump
     national_label_en: Protected dug well (closed) or with handpump
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1481,7 +1610,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: ZMB-WAS-07
+    source_category_code: protected_well
     national_label_en: PROTECTED WELL
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1491,7 +1621,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: well_spring_protected
+  - country_entry_id: ZMB-WAS-08
+    source_category_code: well_spring_protected
     national_label_en: Well/spring protected
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1501,7 +1632,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well_in_yard_plot
+  - country_entry_id: ZMB-WAS-09
+    source_category_code: protected_well_in_yard_plot
     national_label_en: Protected well in yard/plot
     national_label_local: Private
     jmp_classification: Ground water > Protected well > Private
@@ -1511,7 +1643,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: protected_public_well
+  - country_entry_id: ZMB-WAS-10
+    source_category_code: protected_public_well
     national_label_en: Protected public well
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -1521,7 +1654,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: ZMB-WAS-11
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -1531,7 +1665,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: public_shallow_well
+  - country_entry_id: ZMB-WAS-12
+    source_category_code: public_shallow_well
     national_label_en: Public shallow well
     national_label_local: Other
     jmp_classification: Ground water > Traditional wells > Other
@@ -1541,7 +1676,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: well_in_residence
+  - country_entry_id: ZMB-WAS-13
+    source_category_code: well_in_residence
     national_label_en: Well in residence
     national_label_local: Private
     jmp_classification: Ground water > Traditional wells > Private
@@ -1551,7 +1687,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: public_traditional_well
+  - country_entry_id: ZMB-WAS-14
+    source_category_code: public_traditional_well
     national_label_en: Public traditional well
     national_label_local: Public
     jmp_classification: Ground water > Traditional wells > Public
@@ -1561,7 +1698,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: bore_hole_hand_pump
+  - country_entry_id: ZMB-WAS-15
+    source_category_code: bore_hole_hand_pump
     national_label_en: Bore hole/ hand pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1571,7 +1709,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole
+  - country_entry_id: ZMB-WAS-16
+    source_category_code: borehole
     national_label_en: Borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1581,7 +1720,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole_with_handpump_pump
+  - country_entry_id: ZMB-WAS-17
+    source_category_code: borehole_with_handpump_pump
     national_label_en: Borehole (with handpump/pump)
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1591,7 +1731,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: ZMB-WAS-18
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1601,7 +1742,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: ZMB-WAS-19
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1611,7 +1753,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: ZMB-WAS-20
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1621,7 +1764,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: ZMB-WAS-21
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1631,7 +1775,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: electric_water_pump
+  - country_entry_id: ZMB-WAS-22
+    source_category_code: electric_water_pump
     national_label_en: Electric water pump
     national_label_local: Other
     jmp_classification: Ground water > Tubewell, borehole > Other
@@ -1641,7 +1786,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: unprotected_spring
+  - country_entry_id: ZMB-WAS-23
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1651,7 +1797,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring_open
+  - country_entry_id: ZMB-WAS-24
+    source_category_code: unprotected_spring_open
     national_label_en: Unprotected spring (open)
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1661,7 +1808,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: ZMB-WAS-25
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1671,7 +1819,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_open
+  - country_entry_id: ZMB-WAS-26
+    source_category_code: unprotected_dug_well_open
     national_label_en: Unprotected dug well (open)
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1681,7 +1830,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: ZMB-WAS-27
+    source_category_code: unprotected_well
     national_label_en: UNPROTECTED WELL
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1691,7 +1841,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: well_spring_unprotected
+  - country_entry_id: ZMB-WAS-28
+    source_category_code: well_spring_unprotected
     national_label_en: Well/spring unprotected
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1701,7 +1852,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: open_well_at_neighbour
+  - country_entry_id: ZMB-WAS-29
+    source_category_code: open_well_at_neighbour
     national_label_en: open well at neighbour
     national_label_local: Other
     jmp_classification: Ground water > Unprotected well > Other
@@ -1711,7 +1863,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 73
-  - source_category_code: open_well_in_plot_yard
+  - country_entry_id: ZMB-WAS-30
+    source_category_code: open_well_in_plot_yard
     national_label_en: Open well in plot yard
     national_label_local: Private
     jmp_classification: Ground water > Unprotected well > Private
@@ -1721,7 +1874,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: open_public_well
+  - country_entry_id: ZMB-WAS-31
+    source_category_code: open_public_well
     national_label_en: Open public well
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
@@ -1731,7 +1885,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 72
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: ZMB-WAS-32
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1741,7 +1896,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: bought_from_vendor
+  - country_entry_id: ZMB-WAS-33
+    source_category_code: bought_from_vendor
     national_label_en: Bought from vendor
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1751,7 +1907,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: ZMB-WAS-34
+    source_category_code: cart_with_small_tank
     national_label_en: cart with small tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1761,7 +1918,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
+  - country_entry_id: ZMB-WAS-35
+    source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
     national_label_en: Purchased from a cart with a small tank or drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1771,7 +1929,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: vendor
+  - country_entry_id: ZMB-WAS-36
+    source_category_code: vendor
     national_label_en: Vendor
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1781,7 +1940,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: water_kiosk
+  - country_entry_id: ZMB-WAS-37
+    source_category_code: water_kiosk
     national_label_en: Water Kiosk
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1791,7 +1951,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: water_kiosk_or_other_vendor
+  - country_entry_id: ZMB-WAS-38
+    source_category_code: water_kiosk_or_other_vendor
     national_label_en: Water kiosk or other vendor
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1801,7 +1962,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: purchased_from_a_tanker_truck
+  - country_entry_id: ZMB-WAS-39
+    source_category_code: purchased_from_a_tanker_truck
     national_label_en: Purchased from a tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1811,7 +1973,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: ZMB-WAS-40
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1821,7 +1984,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: ZMB-WAS-41
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker truck vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1831,7 +1995,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_cart_with_small_tank
+  - country_entry_id: ZMB-WAS-42
+    source_category_code: tanker_truck_cart_with_small_tank
     national_label_en: Tanker truck/cart with small tank
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1841,7 +2006,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: ZMB-WAS-43
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1851,7 +2017,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: ZMB-WAS-44
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker/truck/vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1861,7 +2028,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_selling_cart_or_truck
+  - country_entry_id: ZMB-WAS-45
+    source_category_code: water_selling_cart_or_truck
     national_label_en: Water-selling cart or truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1871,7 +2039,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: nothing
+  - country_entry_id: ZMB-WAS-46
+    source_category_code: nothing
     national_label_en: nothing
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1881,7 +2050,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: ZMB-WAS-47
+    source_category_code: other
     national_label_en: OTHER
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1891,7 +2061,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_specify
+  - country_entry_id: ZMB-WAS-48
+    source_category_code: other_specify
     national_label_en: OTHER (SPECIFY)
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1901,7 +2072,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_specify
+  - country_entry_id: ZMB-WAS-49
+    source_category_code: other_specify
     national_label_en: other (specify)
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1911,7 +2083,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: others
+  - country_entry_id: ZMB-WAS-50
+    source_category_code: others
     national_label_en: Others
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1921,7 +2094,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: refused
+  - country_entry_id: ZMB-WAS-51
+    source_category_code: refused
     national_label_en: Refused
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1931,7 +2105,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottle_water
+  - country_entry_id: ZMB-WAS-52
+    source_category_code: bottle_water
     national_label_en: Bottle water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1941,7 +2116,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: ZMB-WAS-53
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1951,7 +2127,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: mineral_bottled_water
+  - country_entry_id: ZMB-WAS-54
+    source_category_code: mineral_bottled_water
     national_label_en: Mineral/bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -1961,7 +2138,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: ZMB-WAS-55
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -1971,7 +2149,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rain_water
+  - country_entry_id: ZMB-WAS-56
+    source_category_code: rain_water
     national_label_en: Rain water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1981,7 +2160,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: ZMB-WAS-57
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1991,7 +2171,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: ZMB-WAS-58
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2001,7 +2182,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: ZMB-WAS-59
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2011,7 +2193,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: directly_from_river_lake_stream_dam
+  - country_entry_id: ZMB-WAS-60
+    source_category_code: directly_from_river_lake_stream_dam
     national_label_en: Directly from river/ lake/ stream/dam
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2021,7 +2204,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: directly_from_river_lake_stream_dam
+  - country_entry_id: ZMB-WAS-61
+    source_category_code: directly_from_river_lake_stream_dam
     national_label_en: Directly from river/lake/ stream/ dam
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2031,7 +2215,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_lake
+  - country_entry_id: ZMB-WAS-62
+    source_category_code: river_lake
     national_label_en: RIVER, LAKE
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2041,7 +2226,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
+  - country_entry_id: ZMB-WAS-63
+    source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irirgation channel
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2051,7 +2237,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_spring_lake_reservoir
+  - country_entry_id: ZMB-WAS-64
+    source_category_code: river_spring_lake_reservoir
     national_label_en: River/spring + Lake/reservoir
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2061,7 +2248,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: ZMB-WAS-65
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2071,7 +2259,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_pond_river_stream
+  - country_entry_id: ZMB-WAS-66
+    source_category_code: surface_water_pond_river_stream
     national_label_en: Surface water (pond/river/stream)
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2081,7 +2270,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
+  - country_entry_id: ZMB-WAS-67
+    source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
     national_label_en: Surface water, like a river, dam, lake, pond, stream, canal
       or irrigation channel
     national_label_local: Surface water
@@ -2092,7 +2282,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: pond_lake_dam
+  - country_entry_id: ZMB-WAS-68
+    source_category_code: pond_lake_dam
     national_label_en: Pond lake dam
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -2102,7 +2293,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: lake_stream
+  - country_entry_id: ZMB-WAS-69
+    source_category_code: lake_stream
     national_label_en: Lake/stream
     national_label_local: Lake
     jmp_classification: Surface water > Lake
@@ -2112,7 +2304,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: pumped_piped_from_the_river
+  - country_entry_id: ZMB-WAS-70
+    source_category_code: pumped_piped_from_the_river
     national_label_en: Pumped (piped) from the river
     national_label_local: Other
     jmp_classification: Surface water > Other
@@ -2122,7 +2315,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 99
-  - source_category_code: pond_lake
+  - country_entry_id: ZMB-WAS-71
+    source_category_code: pond_lake
     national_label_en: Pond, lake
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -2132,7 +2326,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: pond_river_or_stream
+  - country_entry_id: ZMB-WAS-72
+    source_category_code: pond_river_or_stream
     national_label_en: Pond, river or stream
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -2142,7 +2337,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: pond_lake
+  - country_entry_id: ZMB-WAS-73
+    source_category_code: pond_lake
     national_label_en: Pond/ lake
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -2152,7 +2348,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: ZMB-WAS-74
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -2162,7 +2359,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: directly_from_the_river
+  - country_entry_id: ZMB-WAS-75
+    source_category_code: directly_from_the_river
     national_label_en: Directly from the river
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2172,7 +2370,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: ZMB-WAS-76
+    source_category_code: river_stream
     national_label_en: River, stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2182,7 +2381,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: ZMB-WAS-77
+    source_category_code: river_stream
     national_label_en: River/ stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2192,7 +2392,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: ZMB-WAS-78
+    source_category_code: river_stream
     national_label_en: River/Stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2202,7 +2403,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: other_tap
+  - country_entry_id: ZMB-WAS-79
+    source_category_code: other_tap
     national_label_en: OTHER TAP
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2212,7 +2414,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: other_tap_pumped_piped_water
+  - country_entry_id: ZMB-WAS-80
+    source_category_code: other_tap_pumped_piped_water
     national_label_en: Other tap & pumped (piped) water
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2222,7 +2425,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: other_tap_e_g_from_near_by_building
+  - country_entry_id: ZMB-WAS-81
+    source_category_code: other_tap_e_g_from_near_by_building
     national_label_en: OTHER TAP (E.G. FROM NEAR-BY BUILDING)
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2232,7 +2436,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbor
+  - country_entry_id: ZMB-WAS-82
+    source_category_code: piped_to_neighbor
     national_label_en: Piped to neighbor
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2242,7 +2447,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: ZMB-WAS-83
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2252,7 +2458,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: own_tap
+  - country_entry_id: ZMB-WAS-84
+    source_category_code: own_tap
     national_label_en: OWN TAP
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -2262,7 +2469,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: pipe_borne_water_treated_untreated
+  - country_entry_id: ZMB-WAS-85
+    source_category_code: pipe_borne_water_treated_untreated
     national_label_en: Pipe borne water treated + untreated
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -2272,7 +2480,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_dwelling_yard_plot
+  - country_entry_id: ZMB-WAS-86
+    source_category_code: piped_into_dwelling_yard_plot
     national_label_en: Piped into dwelling/yard/plot
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -2282,7 +2491,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: ZMB-WAS-87
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -2292,7 +2502,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: own_tap
+  - country_entry_id: ZMB-WAS-88
+    source_category_code: own_tap
     national_label_en: Own tap
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2302,7 +2513,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: ZMB-WAS-89
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2312,7 +2524,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_residence
+  - country_entry_id: ZMB-WAS-90
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2322,7 +2535,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: ZMB-WAS-91
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2332,7 +2546,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: ZMB-WAS-92
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2342,7 +2557,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_into_yard_plot
+  - country_entry_id: ZMB-WAS-93
+    source_category_code: piped_into_yard_plot
     national_label_en: Piped into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2352,7 +2568,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: ZMB-WAS-94
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2362,7 +2579,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard
+  - country_entry_id: ZMB-WAS-95
+    source_category_code: piped_water_into_yard
     national_label_en: Piped water into yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2372,7 +2590,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot_or_compound
+  - country_entry_id: ZMB-WAS-96
+    source_category_code: piped_water_into_yard_plot_or_compound
     national_label_en: Piped water into yard, plot or compound
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2382,7 +2601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: communal_tap
+  - country_entry_id: ZMB-WAS-97
+    source_category_code: communal_tap
     national_label_en: Communal tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2392,7 +2612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: ZMB-WAS-98
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2402,7 +2623,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: ZMB-WAS-99
+    source_category_code: public_tap
     national_label_en: PUBLIC TAP
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2412,7 +2634,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_or_standpipe
+  - country_entry_id: ZMB-WAS-100
+    source_category_code: public_tap_or_standpipe
     national_label_en: Public tap or standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2422,7 +2645,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: ZMB-WAS-101
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

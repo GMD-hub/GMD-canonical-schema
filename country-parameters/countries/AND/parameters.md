@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Education maternelle
+  - country_entry_id: AND-EDU-01
+    national_label_en: Education maternelle
     national_label_local: Educació maternal
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Enseignement primaire
+  - country_entry_id: AND-EDU-02
+    national_label_en: Enseignement primaire
     national_label_local: Primera ensenyança
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Enseignement secondaire (collège)
+  - country_entry_id: AND-EDU-03
+    national_label_en: Enseignement secondaire (collège)
     national_label_local: Segona ensenyança
     entry_age: 12
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Enseignement secondaire supérieur (Lycée)
+  - country_entry_id: AND-EDU-04
+    national_label_en: Enseignement secondaire supérieur (Lycée)
     national_label_local: Batxillerat
     entry_age: 16
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Enseignement professionnel
+  - country_entry_id: AND-EDU-05
+    national_label_en: Enseignement professionnel
     national_label_local: Ensenyament professional
     entry_age: 16
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Diplôme d'éducateur sportif
+  - country_entry_id: AND-EDU-06
+    national_label_en: Diplôme d'éducateur sportif
     national_label_local: Diploma d'educador esportiu
     entry_age: 16
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Baccalauréat professionnel
+  - country_entry_id: AND-EDU-07
+    national_label_en: Baccalauréat professionnel
     national_label_local: Batxillerat Professional
     entry_age: 18
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Enseignement professionnel supérieur
+  - country_entry_id: AND-EDU-08
+    national_label_en: Enseignement professionnel supérieur
     national_label_local: Diploma Professional Avançat
     entry_age: 18
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Bàtxelor / Premier cycle universitaire
+  - country_entry_id: AND-EDU-09
+    national_label_en: Bàtxelor / Premier cycle universitaire
     national_label_local: Bàtxelor / Primer cicle universitari
     entry_age: 18
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Bàtxelor en spécialisation
+  - country_entry_id: AND-EDU-10
+    national_label_en: Bàtxelor en spécialisation
     national_label_local: Bàtxelor d'especialització
     entry_age: 21
     duration_years: 1
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Master / Deuxième cycle universitaire
+  - country_entry_id: AND-EDU-11
+    national_label_en: Master / Deuxième cycle universitaire
     national_label_local: Màster / Segon cicle universitari
     entry_age: 21
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Doctorat / Troisième cycle universitaire
+  - country_entry_id: AND-EDU-12
+    national_label_en: Doctorat / Troisième cycle universitaire
     national_label_local: Doctorat / Tercer cicle universitari
     entry_age: 23
     duration_years: 3

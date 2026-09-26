@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education
+  - country_entry_id: FRA-EDU-01
+    national_label_en: Pre-primary education
     national_label_local: Enseignement préélémentaire
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Primary education
+  - country_entry_id: FRA-EDU-02
+    national_label_en: Primary education
     national_label_local: Enseignement primaire
     entry_age: 6
     duration_years: 5
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 6
-  - national_label_en: Secondary education (1st cycle)
+  - country_entry_id: FRA-EDU-03
+    national_label_en: Secondary education (1st cycle)
     national_label_local: Enseignement du premier cycle du second degré – Collège
     entry_age: 11
     duration_years: 4
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 7
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Certificat
+  - country_entry_id: FRA-EDU-04
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Certificat
       d'aptitude professionnelle (CAP)
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant au CAP
@@ -52,7 +56,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 8
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Certificat
+  - country_entry_id: FRA-EDU-05
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Certificat
       d'aptitude professionnelle (CAP)
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant au CAP
@@ -64,7 +69,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 9
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Mention
+  - country_entry_id: FRA-EDU-06
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Mention
       Complémentaire (MC)
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant à une mention complémentaire ou équivalent
@@ -76,7 +82,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Mention
+  - country_entry_id: FRA-EDU-07
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Mention
       Complémentaire (MC)
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant à une mention complémentaire ou équivalent
@@ -88,7 +95,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Vocational secondary education (2nd cycle) in health and social
+  - country_entry_id: FRA-EDU-08
+    national_label_en: Vocational secondary education (2nd cycle) in health and social
       services institutions, preparing to qualifications of child care assistants  and
       equivalents
     national_label_local: Enseignement de second cycle professionnel des écoles sanitaires
@@ -101,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Brevet
+  - country_entry_id: FRA-EDU-09
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Brevet
       Professionnel (BP)
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant au brevet professionnel
@@ -113,7 +122,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Bac
+  - country_entry_id: FRA-EDU-10
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Bac
       Professionnel or to an equivalent diploma
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant au Bacccalauréat Professionnel ou à un équivalent
@@ -125,7 +135,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Vocational secondary education (2nd cycle) preparing to Bac
+  - country_entry_id: FRA-EDU-11
+    national_label_en: Vocational secondary education (2nd cycle) preparing to Bac
       Professionnel or to an equivalent diploma
     national_label_local: Enseignement de second cycle professionnel du second degré
       conduisant au Bacccalauréat Professionnel ou à un équivalent
@@ -137,7 +148,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: General secondary education (2nd cycle), preparing to Bac général,
+  - country_entry_id: FRA-EDU-12
+    national_label_en: General secondary education (2nd cycle), preparing to Bac général,
       technologique and Brevet de technicien
     national_label_local: Enseignement de second cycle général du second degré conduisant
       au baccalauréat général ou technologique ou au brevet de technicien
@@ -149,7 +161,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Vocational secondary education (2nd cycle) in health and care
+  - country_entry_id: FRA-EDU-13
+    national_label_en: Vocational secondary education (2nd cycle) in health and care
       institutions preparing to qualifications of Moniteur éducateur (and equivalent)
     national_label_local: Enseignement de second cycle professionnel des écoles sociales
       conduisant aux diplômes de moniteurs éducateurs et équivalents
@@ -161,7 +174,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational secondary training programme (ISCED 3) preparing
+  - country_entry_id: FRA-EDU-14
+    national_label_en: Vocational secondary training programme (ISCED 3) preparing
       to Titre Habilité (TH)
     national_label_local: Formation de second cycle professionnel du second degré
       conduisant à un titre professionnel
@@ -173,7 +187,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Bridge programmes (university) to allow access to levels 5
+  - country_entry_id: FRA-EDU-15
+    national_label_en: Bridge programmes (university) to allow access to levels 5
       or 6
     national_label_local: Enseignement pré-universitaire
     entry_age: 20
@@ -184,7 +199,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Preparatory courses to competitive entrance examinations
+  - country_entry_id: FRA-EDU-16
+    national_label_en: Preparatory courses to competitive entrance examinations
     national_label_local: Classes de mise à niveau des STS, classes préparatoires
       aux écoles paramédicales, aux écoles d'arts et aux concours de la fonction publique
       niveau bac, diplômes d'université post secondaires et certificats d'écoles
@@ -196,7 +212,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: School certificates in arts, university degrees
+  - country_entry_id: FRA-EDU-17
+    national_label_en: School certificates in arts, university degrees
     national_label_local: Certificats d'école en arts, diplômes d'université bac à
       bac+1
     entry_age: 18
@@ -207,7 +224,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Professional tertiary education in universities (IUT)
+  - country_entry_id: FRA-EDU-18
+    national_label_en: Professional tertiary education in universities (IUT)
     national_label_local: Enseignement en institut universitaire de technologie (IUT)
     entry_age: 18
     duration_years: 2
@@ -217,7 +235,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Professional tertiary education preparing to Brevets de techniciens
+  - country_entry_id: FRA-EDU-19
+    national_label_en: Professional tertiary education preparing to Brevets de techniciens
       supérieurs (BTS)
     national_label_local: Enseignement conduisant aux Brevets de techniciens supérieurs
       et équivalent
@@ -229,7 +248,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Professional tertiary education in universities and other institutions
+  - country_entry_id: FRA-EDU-20
+    national_label_en: Professional tertiary education in universities and other institutions
       preparing to health and care qualifications and to few diploma in technics,
       law and arts
     national_label_local: Enseignement dispensé en écoles spécialisées ou à l'université
@@ -243,7 +263,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Academic tertiary education preparing students to the competitive
+  - country_entry_id: FRA-EDU-21
+    national_label_en: Academic tertiary education preparing students to the competitive
       entrance examinations for “grandes écoles”
     national_label_local: Enseignement des classes préparatoires aux grandes écoles
       (CPGE)
@@ -255,7 +276,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: University education, 1st graduation
+  - country_entry_id: FRA-EDU-22
+    national_label_en: University education, 1st graduation
     national_label_local: Enseignement universitaire de premier grade (LMD) conduisant
       à la Licence ou diplôme d'écoles privées ou grandes écoles, EHESS, Dauphine
       et IEP niveau licence
@@ -267,7 +289,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: University education, 1st graduation
+  - country_entry_id: FRA-EDU-23
+    national_label_en: University education, 1st graduation
     national_label_local: Enseignement universitaire de premier grade (LMD) conduisant
       à la Licence professionnelle
     entry_age: 18
@@ -278,7 +301,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Business schools in 3 years
+  - country_entry_id: FRA-EDU-24
+    national_label_en: Business schools in 3 years
     national_label_local: Enseignement en école de commerce conduisant au niveau bac+3
     entry_age: 18
     duration_years: 3
@@ -288,7 +312,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Professional tertiary education in 3 years in health (nurses
+  - country_entry_id: FRA-EDU-25
+    national_label_en: Professional tertiary education in 3 years in health (nurses
       from 2012), diploma in applied arts, accountability
     national_label_local: Formations paramédicales de grade Licence, d'arts appliqués,
       de comptabilité, diverses formations conduisant au niveau bac+3
@@ -300,7 +325,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Preparation for the entrance exam and training certificate
+  - country_entry_id: FRA-EDU-26
+    national_label_en: Preparation for the entrance exam and training certificate
       for lawyers, Preparation for the entrance exam to the National School of Magistracy,
       Preparation for administrative exams
     national_label_local: Préparation à l'examen d'entrée et certificat de formation
@@ -314,7 +340,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Academic tertiary education in universities and diverse institutions
+  - country_entry_id: FRA-EDU-27
+    national_label_en: Academic tertiary education in universities and diverse institutions
       leading to Master-type degrees
     national_label_local: Enseignements généraux d'écoles, de facultés privées et
       d'universités conduisant au niveau bac+5
@@ -326,7 +353,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Professional tertiary education preparing to an engineer degree
+  - country_entry_id: FRA-EDU-28
+    national_label_en: Professional tertiary education preparing to an engineer degree
     national_label_local: Enseignement conduisant à un diplôme d'ingénieur
     entry_age: 20
     duration_years: 3
@@ -336,7 +364,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Business schools in 5 years
+  - country_entry_id: FRA-EDU-29
+    national_label_en: Business schools in 5 years
     national_label_local: Enseignement en école de commerce conduisant  au niveau
       bac+5
     entry_age: 18
@@ -347,7 +376,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: Professional tertiary education in applied arts, veterinaries,
+  - country_entry_id: FRA-EDU-30
+    national_label_en: Professional tertiary education in applied arts, veterinaries,
       etc. leading to Master-type degrees
     national_label_local: Enseignement en école supérieure d'art, d'architecture,
       d'école vétérinaire conduisant au niveau bac+5
@@ -359,7 +389,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
-  - national_label_en: Programmes (universities) in medicine, pharmacy, odontology
+  - country_entry_id: FRA-EDU-31
+    national_label_en: Programmes (universities) in medicine, pharmacy, odontology
       and midwife studies.
     national_label_local: Enseignement en santé (médecine, pharmacie, chirurgie dentaire,
       kiné, osthéopathie, odontologie) dans les universités, études de sages-femmes.
@@ -371,7 +402,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
-  - national_label_en: University education, 2nd graduation
+  - country_entry_id: FRA-EDU-32
+    national_label_en: University education, 2nd graduation
     national_label_local: Enseignement universitaire de deuxieme grade conduisant
       au master
     entry_age: 21
@@ -382,7 +414,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
-  - national_label_en: Education for teachers in ESPE
+  - country_entry_id: FRA-EDU-33
+    national_label_en: Education for teachers in ESPE
     national_label_local: Enseignement des établissements de formation des professionnels
       de l'enseignement (ESPE)
     entry_age: 21
@@ -393,7 +426,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
-  - national_label_en: Second tertiary programmes in professional fields (law, accountability)
+  - country_entry_id: FRA-EDU-34
+    national_label_en: Second tertiary programmes in professional fields (law, accountability)
       leading to a master type degree
     national_label_local: Enseignements professionnels de droit, de comptabilité,
       d'affaires et diplômes d'université
@@ -405,7 +439,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
-  - national_label_en: Specialized tertiary professional degrees following a Master
+  - country_entry_id: FRA-EDU-35
+    national_label_en: Specialized tertiary professional degrees following a Master
     national_label_local: Enseignements conduisant aux diplômes complémentaires de
       santé (capacité,…) et diverses spécialisations
     entry_age: 22
@@ -416,7 +451,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
-  - national_label_en: University education, 3rd cycle, doctorate
+  - country_entry_id: FRA-EDU-36
+    national_label_en: University education, 3rd cycle, doctorate
     national_label_local: Enseignement de troisième cycle des études universitaires
       conduisant au Doctorat
     entry_age: 23
@@ -437,7 +473,8 @@ parameters:
   effective_to: 2013
   selectors: ~
   value:
-  - survey_labels: 1-FR10
+  - country_entry_id: FRA-SUBNAT-01
+    survey_labels: 1-FR10
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR10
     gmd_subnatid2: ''
@@ -457,7 +494,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Île de France
     source_row: 4862
-  - survey_labels: 10-FR42
+  - country_entry_id: FRA-SUBNAT-02
+    survey_labels: 10-FR42
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR42
     gmd_subnatid2: ''
@@ -477,7 +515,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Alsace
     source_row: 4863
-  - survey_labels: 11-FR43
+  - country_entry_id: FRA-SUBNAT-03
+    survey_labels: 11-FR43
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR43
     gmd_subnatid2: ''
@@ -497,7 +536,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Franche-Comté
     source_row: 4864
-  - survey_labels: 12-FR51
+  - country_entry_id: FRA-SUBNAT-04
+    survey_labels: 12-FR51
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR51
     gmd_subnatid2: ''
@@ -517,7 +557,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Pays de la Loire
     source_row: 4865
-  - survey_labels: 13-FR52
+  - country_entry_id: FRA-SUBNAT-05
+    survey_labels: 13-FR52
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR52
     gmd_subnatid2: ''
@@ -537,7 +578,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Bretagne
     source_row: 4866
-  - survey_labels: 14-FR53
+  - country_entry_id: FRA-SUBNAT-06
+    survey_labels: 14-FR53
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR53
     gmd_subnatid2: ''
@@ -557,7 +599,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Poitou-Charentes
     source_row: 4867
-  - survey_labels: 15-FR61
+  - country_entry_id: FRA-SUBNAT-07
+    survey_labels: 15-FR61
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR61
     gmd_subnatid2: ''
@@ -577,7 +620,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Aquitaine
     source_row: 4868
-  - survey_labels: 16-FR62
+  - country_entry_id: FRA-SUBNAT-08
+    survey_labels: 16-FR62
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR62
     gmd_subnatid2: ''
@@ -597,7 +641,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Midi-Pyrénées
     source_row: 4869
-  - survey_labels: 17-FR63
+  - country_entry_id: FRA-SUBNAT-09
+    survey_labels: 17-FR63
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR63
     gmd_subnatid2: ''
@@ -617,7 +662,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Limousin
     source_row: 4870
-  - survey_labels: 18-FR71
+  - country_entry_id: FRA-SUBNAT-10
+    survey_labels: 18-FR71
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR71
     gmd_subnatid2: ''
@@ -637,7 +683,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Rhône-Alpes
     source_row: 4871
-  - survey_labels: 19-FR72
+  - country_entry_id: FRA-SUBNAT-11
+    survey_labels: 19-FR72
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR72
     gmd_subnatid2: ''
@@ -657,7 +704,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Auvergne
     source_row: 4872
-  - survey_labels: 2-FR21
+  - country_entry_id: FRA-SUBNAT-12
+    survey_labels: 2-FR21
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR21
     gmd_subnatid2: ''
@@ -677,7 +725,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Champagne-Ardenne
     source_row: 4873
-  - survey_labels: 20-FR81
+  - country_entry_id: FRA-SUBNAT-13
+    survey_labels: 20-FR81
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR81
     gmd_subnatid2: ''
@@ -697,7 +746,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Languedoc-Roussillon
     source_row: 4874
-  - survey_labels: 21-FR82
+  - country_entry_id: FRA-SUBNAT-14
+    survey_labels: 21-FR82
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR82
     gmd_subnatid2: ''
@@ -717,7 +767,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Provence-Alpes-Côte d'Azur
     source_row: 4875
-  - survey_labels: 22-FR83
+  - country_entry_id: FRA-SUBNAT-15
+    survey_labels: 22-FR83
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR83
     gmd_subnatid2: ''
@@ -737,7 +788,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Corse
     source_row: 4876
-  - survey_labels: 3-FR22
+  - country_entry_id: FRA-SUBNAT-16
+    survey_labels: 3-FR22
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR22
     gmd_subnatid2: ''
@@ -757,7 +809,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Picardie
     source_row: 4877
-  - survey_labels: 4-FR23
+  - country_entry_id: FRA-SUBNAT-17
+    survey_labels: 4-FR23
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR23
     gmd_subnatid2: ''
@@ -777,7 +830,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Haute-Normandie
     source_row: 4878
-  - survey_labels: 5-FR24
+  - country_entry_id: FRA-SUBNAT-18
+    survey_labels: 5-FR24
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR24
     gmd_subnatid2: ''
@@ -797,7 +851,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Centre
     source_row: 4879
-  - survey_labels: 6-FR25
+  - country_entry_id: FRA-SUBNAT-19
+    survey_labels: 6-FR25
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR25
     gmd_subnatid2: ''
@@ -817,7 +872,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Basse-Normandie
     source_row: 4880
-  - survey_labels: 7-FR26
+  - country_entry_id: FRA-SUBNAT-20
+    survey_labels: 7-FR26
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR26
     gmd_subnatid2: ''
@@ -837,7 +893,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Bourgogne
     source_row: 4881
-  - survey_labels: 8-FR30
+  - country_entry_id: FRA-SUBNAT-21
+    survey_labels: 8-FR30
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR30
     gmd_subnatid2: ''
@@ -857,7 +914,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Nord - Pas-de-Calais
     source_row: 4882
-  - survey_labels: 9-FR41
+  - country_entry_id: FRA-SUBNAT-22
+    survey_labels: 9-FR41
     survey_variables: subnatid
     gmd_subnatid1: FRA_2013_NUTS2_FR41
     gmd_subnatid2: ''
@@ -887,7 +945,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-FR10
+  - country_entry_id: FRA-SUBNAT-01
+    survey_labels: 1-FR10
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FR10
     gmd_subnatid2: ''
@@ -907,7 +966,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Ile-de-France
     source_row: 5170
-  - survey_labels: 10-FRF2
+  - country_entry_id: FRA-SUBNAT-02
+    survey_labels: 10-FRF2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRF2
     gmd_subnatid2: ''
@@ -927,7 +987,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Champagne-Ardenne
     source_row: 5171
-  - survey_labels: 11-FRF3
+  - country_entry_id: FRA-SUBNAT-03
+    survey_labels: 11-FRF3
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRF3
     gmd_subnatid2: ''
@@ -947,7 +1008,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Lorraine
     source_row: 5172
-  - survey_labels: 12-FRG0
+  - country_entry_id: FRA-SUBNAT-04
+    survey_labels: 12-FRG0
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRG0
     gmd_subnatid2: ''
@@ -967,7 +1029,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Pays de la Loire
     source_row: 5173
-  - survey_labels: 13-FRH0
+  - country_entry_id: FRA-SUBNAT-05
+    survey_labels: 13-FRH0
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRH0
     gmd_subnatid2: ''
@@ -987,7 +1050,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Bretagne
     source_row: 5174
-  - survey_labels: 14-FRI1
+  - country_entry_id: FRA-SUBNAT-06
+    survey_labels: 14-FRI1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRI1
     gmd_subnatid2: ''
@@ -1007,7 +1071,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Aquitaine
     source_row: 5175
-  - survey_labels: 15-FRI2
+  - country_entry_id: FRA-SUBNAT-07
+    survey_labels: 15-FRI2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRI2
     gmd_subnatid2: ''
@@ -1027,7 +1092,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Limousin
     source_row: 5176
-  - survey_labels: 16-FRI3
+  - country_entry_id: FRA-SUBNAT-08
+    survey_labels: 16-FRI3
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRI3
     gmd_subnatid2: ''
@@ -1047,7 +1113,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Poitou-Charentes
     source_row: 5177
-  - survey_labels: 17-FRJ1
+  - country_entry_id: FRA-SUBNAT-09
+    survey_labels: 17-FRJ1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRJ1
     gmd_subnatid2: ''
@@ -1067,7 +1134,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Languedoc-Roussillon
     source_row: 5178
-  - survey_labels: 18-FRJ2
+  - country_entry_id: FRA-SUBNAT-10
+    survey_labels: 18-FRJ2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRJ2
     gmd_subnatid2: ''
@@ -1087,7 +1155,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Midi-Pyrénées
     source_row: 5179
-  - survey_labels: 19-FRK1
+  - country_entry_id: FRA-SUBNAT-11
+    survey_labels: 19-FRK1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRK1
     gmd_subnatid2: ''
@@ -1107,7 +1176,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Auvergne
     source_row: 5180
-  - survey_labels: 2-FRB0
+  - country_entry_id: FRA-SUBNAT-12
+    survey_labels: 2-FRB0
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRB0
     gmd_subnatid2: ''
@@ -1127,7 +1197,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Centre — Val de Loire
     source_row: 5181
-  - survey_labels: 20-FRK2
+  - country_entry_id: FRA-SUBNAT-13
+    survey_labels: 20-FRK2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRK2
     gmd_subnatid2: ''
@@ -1147,7 +1218,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Rhône-Alpes
     source_row: 5182
-  - survey_labels: 21-FRL0
+  - country_entry_id: FRA-SUBNAT-14
+    survey_labels: 21-FRL0
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRL0
     gmd_subnatid2: ''
@@ -1167,7 +1239,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Provence-Alpes-Côte d’Azur
     source_row: 5183
-  - survey_labels: 22-FRM0
+  - country_entry_id: FRA-SUBNAT-15
+    survey_labels: 22-FRM0
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRM0
     gmd_subnatid2: ''
@@ -1187,7 +1260,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Corse
     source_row: 5184
-  - survey_labels: 3-FRC1
+  - country_entry_id: FRA-SUBNAT-16
+    survey_labels: 3-FRC1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRC1
     gmd_subnatid2: ''
@@ -1207,7 +1281,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Bourgogne
     source_row: 5185
-  - survey_labels: 4-FRC2
+  - country_entry_id: FRA-SUBNAT-17
+    survey_labels: 4-FRC2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRC2
     gmd_subnatid2: ''
@@ -1227,7 +1302,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Franche-Comté
     source_row: 5186
-  - survey_labels: 5-FRD1
+  - country_entry_id: FRA-SUBNAT-18
+    survey_labels: 5-FRD1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRD1
     gmd_subnatid2: ''
@@ -1247,7 +1323,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Basse-Normandie
     source_row: 5187
-  - survey_labels: 6-FRD2
+  - country_entry_id: FRA-SUBNAT-19
+    survey_labels: 6-FRD2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRD2
     gmd_subnatid2: ''
@@ -1267,7 +1344,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Haute-Normandie
     source_row: 5188
-  - survey_labels: 7-FRE1
+  - country_entry_id: FRA-SUBNAT-20
+    survey_labels: 7-FRE1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRE1
     gmd_subnatid2: ''
@@ -1287,7 +1365,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Nord-Pas de Calais
     source_row: 5189
-  - survey_labels: 8-FRE2
+  - country_entry_id: FRA-SUBNAT-21
+    survey_labels: 8-FRE2
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRE2
     gmd_subnatid2: ''
@@ -1307,7 +1386,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Picardie
     source_row: 5190
-  - survey_labels: 9-FRF1
+  - country_entry_id: FRA-SUBNAT-22
+    survey_labels: 9-FRF1
     survey_variables: subnatid
     gmd_subnatid1: FRA_2021_NUTS2_FRF1
     gmd_subnatid2: ''

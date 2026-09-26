@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-school education
+  - country_entry_id: BHS-EDU-01
+    national_label_en: Pre-school education
     national_label_local: Pre-school
     entry_age: 3
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary education (or the first stage of basic education)
+  - country_entry_id: BHS-EDU-02
+    national_label_en: Primary education (or the first stage of basic education)
     national_label_local: Primary education (or the first stage of basic education)
     entry_age: 5
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Lower secondary education (or the second stage of basic education)
+  - country_entry_id: BHS-EDU-03
+    national_label_en: Lower secondary education (or the second stage of basic education)
     national_label_local: Lower secondary education (or the second stage of basic
       education)
     entry_age: 11
@@ -41,7 +44,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Upper secondary education
+  - country_entry_id: BHS-EDU-04
+    national_label_en: Upper secondary education
     national_label_local: Upper secondary education
     entry_age: 14
     duration_years: 3
@@ -51,7 +55,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Post-Secondary non-tertiary education
+  - country_entry_id: BHS-EDU-05
+    national_label_en: Post-Secondary non-tertiary education
     national_label_local: Post-Secondary non-tertiary education
     entry_age: 17
     duration_years: 1
@@ -61,7 +66,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 11
-  - national_label_en: Associate Degrees in Arts and Science
+  - country_entry_id: BHS-EDU-06
+    national_label_en: Associate Degrees in Arts and Science
     national_label_local: Associate Degrees in Arts and Science
     entry_age: 17
     duration_years: 2
@@ -71,7 +77,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Bachelor Degrees
+  - country_entry_id: BHS-EDU-07
+    national_label_en: Bachelor Degrees
     national_label_local: Bachelor Degrees
     entry_age: 17
     duration_years: 4
@@ -81,7 +88,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: BA, BSc, Bed
+  - country_entry_id: BHS-EDU-08
+    national_label_en: BA, BSc, Bed
     national_label_local: BA, BSc, Bed
     entry_age: 17
     duration_years: 4
@@ -91,7 +99,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Master Degrees
+  - country_entry_id: BHS-EDU-09
+    national_label_en: Master Degrees
     national_label_local: Master Degrees
     entry_age: 21
     duration_years: 2
@@ -111,7 +120,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: home_connected_to_sewerage_system
+  - country_entry_id: BHS-SAN-01
+    source_category_code: home_connected_to_sewerage_system
     national_label_en: Home connected to sewerage system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -121,7 +131,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: home_not_connected_to_sewerage_system
+  - country_entry_id: BHS-SAN-02
+    source_category_code: home_not_connected_to_sewerage_system
     national_label_en: Home not connected to sewerage system
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -141,7 +152,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: no_drinking_water_on_home
+  - country_entry_id: BHS-WAS-01
+    source_category_code: no_drinking_water_on_home
     national_label_en: No drinking water on home
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -151,7 +163,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: drinking_water_in_home
+  - country_entry_id: BHS-WAS-02
+    source_category_code: drinking_water_in_home
     national_label_en: Drinking water in Home
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises

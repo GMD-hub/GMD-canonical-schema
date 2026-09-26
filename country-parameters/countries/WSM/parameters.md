@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary Education
+  - country_entry_id: WSM-EDU-01
+    national_label_en: Pre-primary Education
     national_label_local: Pre-primary Education
     entry_age: 3
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary Education (Years 1 - 6)
+  - country_entry_id: WSM-EDU-02
+    national_label_en: Primary Education (Years 1 - 6)
     national_label_local: Primary Education (Years 1 - 6)
     entry_age: 5
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Primary Education (Years 7 & 8)
+  - country_entry_id: WSM-EDU-03
+    national_label_en: Primary Education (Years 7 & 8)
     national_label_local: Primary Education (Years 7 & 8)
     entry_age: 11
     duration_years: 2
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Secondary Education (Years 9-12)
+  - country_entry_id: WSM-EDU-04
+    national_label_en: Secondary Education (Years 9-12)
     national_label_local: Secondary Education (Years 9-12)
     entry_age: 13
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
-  - national_label_en: Secondary Education (Year 13)
+  - country_entry_id: WSM-EDU-05
+    national_label_en: Secondary Education (Year 13)
     national_label_local: Secondary Education (Year 13)
     entry_age: 17
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Certificate (Level 1)
+  - country_entry_id: WSM-EDU-06
+    national_label_en: Certificate (Level 1)
     national_label_local: Certificate (Level 1)
     entry_age: 17
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Certificate (Level 2)
+  - country_entry_id: WSM-EDU-07
+    national_label_en: Certificate (Level 2)
     national_label_local: Certificate (Level 2)
     entry_age: 17
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Certificate (Level 3)
+  - country_entry_id: WSM-EDU-08
+    national_label_en: Certificate (Level 3)
     national_label_local: Certificate (Level 3)
     entry_age: 17
     duration_years: 1
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Certificate (Level 4)
+  - country_entry_id: WSM-EDU-09
+    national_label_en: Certificate (Level 4)
     national_label_local: Certificate (Level 4)
     entry_age: 18
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Diploma (Level 5)
+  - country_entry_id: WSM-EDU-10
+    national_label_en: Diploma (Level 5)
     national_label_local: Diploma (Level 5)
     entry_age: 18
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Diploma (Level 6)
+  - country_entry_id: WSM-EDU-11
+    national_label_en: Diploma (Level 6)
     national_label_local: Diploma (Level 6)
     entry_age: 18
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Bachelor Degree (Level 7)
+  - country_entry_id: WSM-EDU-12
+    national_label_en: Bachelor Degree (Level 7)
     national_label_local: Bachelor Degree (Level 7)
     entry_age: 18
     duration_years: 3
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Graduate Certificate (Level 7)
+  - country_entry_id: WSM-EDU-13
+    national_label_en: Graduate Certificate (Level 7)
     national_label_local: Graduate Certificate (Level 7)
     entry_age: 21
     duration_years: 1
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Graduate Diploma (Level 7)
+  - country_entry_id: WSM-EDU-14
+    national_label_en: Graduate Diploma (Level 7)
     national_label_local: Graduate Diploma (Level 7)
     entry_age: 21
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Post-Graduate Certificate (Level 8)
+  - country_entry_id: WSM-EDU-15
+    national_label_en: Post-Graduate Certificate (Level 8)
     national_label_local: Post-Graduate Certificate (Level 8)
     entry_age: 21
     duration_years: 1
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Post-Graduate Diploma (Level 8)
+  - country_entry_id: WSM-EDU-16
+    national_label_en: Post-Graduate Diploma (Level 8)
     national_label_local: Post-Graduate Diploma (Level 8)
     entry_age: 21
     duration_years: 2
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Masters degree   (Level 9)
+  - country_entry_id: WSM-EDU-17
+    national_label_en: Masters degree   (Level 9)
     national_label_local: Masters degree   (Level 9)
     entry_age: 21
     duration_years: 2
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Doctorate Degree (Level 10)
+  - country_entry_id: WSM-EDU-18
+    national_label_en: Doctorate Degree (Level 10)
     national_label_local: Doctorate Degree (Level 10)
     entry_age: 23
     duration_years: 3
@@ -200,7 +218,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: Apia
+  - country_entry_id: WSM-SUBNAT-01
+    survey_labels: Apia
     survey_variables: strata
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -220,7 +239,8 @@ parameters:
     geo_nvar: r_name
     geo_name: Apia Urban Area
     source_row: 18528
-  - survey_labels: NWU
+  - country_entry_id: WSM-SUBNAT-02
+    survey_labels: NWU
     survey_variables: strata
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -240,7 +260,8 @@ parameters:
     geo_nvar: r_name
     geo_name: North West Upolu
     source_row: 18529
-  - survey_labels: RoU
+  - country_entry_id: WSM-SUBNAT-03
+    survey_labels: RoU
     survey_variables: strata
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -260,7 +281,8 @@ parameters:
     geo_nvar: r_name
     geo_name: Rest of Upolu
     source_row: 18530
-  - survey_labels: Savaii
+  - country_entry_id: WSM-SUBNAT-04
+    survey_labels: Savaii
     survey_variables: strata
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -280,7 +302,8 @@ parameters:
     geo_nvar: r_name
     geo_name: Savaii
     source_row: 18531
-  - survey_labels: 1-Apia Urban Areas
+  - country_entry_id: WSM-SUBNAT-05
+    survey_labels: 1-Apia Urban Areas
     survey_variables: subnatid1
     gmd_subnatid1: WSM_2011_NSO1_1
     gmd_subnatid2: ''
@@ -300,7 +323,8 @@ parameters:
     geo_nvar: r_name
     geo_name: Apia Urban Area
     source_row: 18532
-  - survey_labels: 2-North West Upolu
+  - country_entry_id: WSM-SUBNAT-06
+    survey_labels: 2-North West Upolu
     survey_variables: subnatid1
     gmd_subnatid1: WSM_2011_NSO1_2
     gmd_subnatid2: ''
@@ -320,7 +344,8 @@ parameters:
     geo_nvar: r_name
     geo_name: North West Upolu
     source_row: 18533
-  - survey_labels: 3-Rest of Upolu
+  - country_entry_id: WSM-SUBNAT-07
+    survey_labels: 3-Rest of Upolu
     survey_variables: subnatid1
     gmd_subnatid1: WSM_2011_NSO1_3
     gmd_subnatid2: ''
@@ -340,7 +365,8 @@ parameters:
     geo_nvar: r_name
     geo_name: Rest of Upolu
     source_row: 18534
-  - survey_labels: 4-Savali
+  - country_entry_id: WSM-SUBNAT-08
+    survey_labels: 4-Savali
     survey_variables: subnatid1
     gmd_subnatid1: WSM_2011_NSO1_4
     gmd_subnatid2: ''
@@ -370,7 +396,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+  - country_entry_id: WSM-SAN-01
+    source_category_code: flush_pour_flush_flush_to_piped_sewer_system
     national_label_en: 'flush / pour flush: flush to piped sewer system'
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -380,7 +407,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+  - country_entry_id: WSM-SAN-02
+    source_category_code: flush_pour_flush_flush_to_pit_latrine
     national_label_en: 'flush / pour flush: flush to pit latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -390,7 +418,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_flush_to_septic_tank
+  - country_entry_id: WSM-SAN-03
+    source_category_code: flush_pour_flush_flush_to_septic_tank
     national_label_en: 'flush / pour flush: flush to septic tank'
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -400,7 +429,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_flush_to_dk_where
+  - country_entry_id: WSM-SAN-04
+    source_category_code: flush_pour_flush_flush_to_dk_where
     national_label_en: 'flush / pour flush: flush to dk where'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -410,7 +440,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: pit_latrine_pit_latrine_with_slab
+  - country_entry_id: WSM-SAN-05
+    source_category_code: pit_latrine_pit_latrine_with_slab
     national_label_en: 'pit latrine: pit latrine with slab'
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -421,7 +452,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: WSM-SAN-06
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -432,7 +464,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_ventilated_improved_pit_latrine
+  - country_entry_id: WSM-SAN-07
+    source_category_code: pit_latrine_ventilated_improved_pit_latrine
     national_label_en: 'pit latrine: ventilated improved pit latrine'
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -443,7 +476,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: WSM-SAN-08
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -453,7 +487,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: WSM-SAN-09
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -473,7 +508,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: WSM-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -483,7 +519,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: spring_protected_spring
+  - country_entry_id: WSM-WAS-02
+    source_category_code: spring_protected_spring
     national_label_en: 'spring: protected spring'
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -493,7 +530,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: dug_well_protected_well
+  - country_entry_id: WSM-WAS-03
+    source_category_code: dug_well_protected_well
     national_label_en: 'dug well: protected well'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -503,7 +541,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: WSM-WAS-04
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -513,7 +552,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tube_well_borehole
+  - country_entry_id: WSM-WAS-05
+    source_category_code: tube_well_borehole
     national_label_en: tube well / borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -523,7 +563,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: WSM-WAS-06
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -533,7 +574,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: spring_unprotected_spring
+  - country_entry_id: WSM-WAS-07
+    source_category_code: spring_unprotected_spring
     national_label_en: 'spring: unprotected spring'
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -543,7 +585,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: WSM-WAS-08
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -553,7 +596,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: dug_well_unprotected_well
+  - country_entry_id: WSM-WAS-09
+    source_category_code: dug_well_unprotected_well
     national_label_en: 'dug well: unprotected well'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -563,7 +607,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: WSM-WAS-10
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -573,7 +618,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: water_kiosk
+  - country_entry_id: WSM-WAS-11
+    source_category_code: water_kiosk
     national_label_en: water kiosk
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -583,7 +629,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: tanker_truck
+  - country_entry_id: WSM-WAS-12
+    source_category_code: tanker_truck
     national_label_en: tanker-truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -593,7 +640,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: WSM-WAS-13
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -603,7 +651,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: WSM-WAS-14
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -613,7 +662,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: packaged_water_bottled_water
+  - country_entry_id: WSM-WAS-15
+    source_category_code: packaged_water_bottled_water
     national_label_en: 'packaged water: bottled water'
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -623,7 +673,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater
+  - country_entry_id: WSM-WAS-16
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Rainwater
     jmp_classification: Rainwater
@@ -633,7 +684,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: rainwater
+  - country_entry_id: WSM-WAS-17
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -643,7 +695,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+  - country_entry_id: WSM-WAS-18
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: surface water (river, dam, lake, pond, stream, canal, irrigation
       channel)
     national_label_local: Surface water
@@ -654,7 +707,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+  - country_entry_id: WSM-WAS-19
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: Surface water (river/dam/lake/pond/stream/canal/irrigation
       channel)
     national_label_local: Surface water
@@ -665,7 +719,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: WSM-WAS-20
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'piped water: piped to neighbour'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -675,7 +730,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: WSM-WAS-21
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -685,7 +741,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_into_dwelling
+  - country_entry_id: WSM-WAS-22
+    source_category_code: piped_water_piped_into_dwelling
     national_label_en: 'piped water: piped into dwelling'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -695,7 +752,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: WSM-WAS-23
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -705,7 +763,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_piped_to_yard_plot
+  - country_entry_id: WSM-WAS-24
+    source_category_code: piped_water_piped_to_yard_plot
     national_label_en: 'piped water: piped to yard / plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -715,7 +774,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_public_tap_standpipe
+  - country_entry_id: WSM-WAS-25
+    source_category_code: piped_water_public_tap_standpipe
     national_label_en: 'piped water: public tap / standpipe'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -725,7 +785,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: WSM-WAS-26
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

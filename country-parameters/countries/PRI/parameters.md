@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_toilet
+  - country_entry_id: PRI-SAN-01
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: Inodoros de arrastre hidráulico
     jmp_classification: Flush/toilets
@@ -20,7 +21,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: other
+  - country_entry_id: PRI-SAN-02
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -40,7 +42,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: running_water
+  - country_entry_id: PRI-WAS-01
+    source_category_code: running_water
     national_label_en: Running water
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -50,7 +53,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: without_running_water
+  - country_entry_id: PRI-WAS-02
+    source_category_code: without_running_water
     national_label_en: Without running water
     national_label_local: Otro
     jmp_classification: Other non-improved > Other

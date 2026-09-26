@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary
+  - country_entry_id: ECU-EDU-01
+    national_label_en: Pre-primary
     national_label_local: Educación Inicial 2
     entry_age: 3
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Basic General Educacion (Preparatory)
+  - country_entry_id: ECU-EDU-02
+    national_label_en: Basic General Educacion (Preparatory)
     national_label_local: Educación General Básica (Preparatoria)
     entry_age: 5
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Basic General Educacion (Elementary and middle)
+  - country_entry_id: ECU-EDU-03
+    national_label_en: Basic General Educacion (Elementary and middle)
     national_label_local: Educación General Básica (Elemental y media)
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Basic General Educacion for people with unfinished schooling,
+  - country_entry_id: ECU-EDU-04
+    national_label_en: Basic General Educacion for people with unfinished schooling,
       Sublevel Elementary - Post Literacy
     national_label_local: Educación General Básica para personas con escolaridad inconclusa,
       subnivel  Elemental- Alfabetización
@@ -52,7 +56,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Basic General Educacion for people with unfinished schooling,
+  - country_entry_id: ECU-EDU-05
+    national_label_en: Basic General Educacion for people with unfinished schooling,
       Sublevel Middle - Post Literacy
     national_label_local: Educación General Básica para personas con escolaridad inconclusa,
       subnivel  Medio- Post Alfabetización
@@ -64,7 +69,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Basic General Educacion (Higher)
+  - country_entry_id: ECU-EDU-06
+    national_label_en: Basic General Educacion (Higher)
     national_label_local: Educación General Básica (Superior)
     entry_age: 12
     duration_years: 3
@@ -74,7 +80,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Basic General Educacion for people with unfinished schooling,
+  - country_entry_id: ECU-EDU-07
+    national_label_en: Basic General Educacion for people with unfinished schooling,
       (Higher)
     national_label_local: Educación General Básica para personas con escolaridad inconclusa,
       subnivel Básico Superior
@@ -86,7 +93,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: High School of Science
+  - country_entry_id: ECU-EDU-08
+    national_label_en: High School of Science
     national_label_local: Bachillerato en Ciencias
     entry_age: 15
     duration_years: 3
@@ -96,7 +104,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: High school for people with unfinished schooling.
+  - country_entry_id: ECU-EDU-09
+    national_label_en: High school for people with unfinished schooling.
     national_label_local: Bachillerato para personas con escolaridad inconclusa
     entry_age: 18
     duration_years: 2
@@ -106,7 +115,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Technical High School
+  - country_entry_id: ECU-EDU-10
+    national_label_en: Technical High School
     national_label_local: Bachillerato Técnico
     entry_age: 15
     duration_years: 3
@@ -116,7 +126,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Upper Secondary - Artisan high school for people with unfinished
+  - country_entry_id: ECU-EDU-11
+    national_label_en: Upper Secondary - Artisan high school for people with unfinished
       schooling.
     national_label_local: Bachillerato Artesanal / Técnico para personas con escolaridad
       inconclusa
@@ -128,7 +139,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Post-Secondary non-tertiary - Technical production
+  - country_entry_id: ECU-EDU-12
+    national_label_en: Post-Secondary non-tertiary - Technical production
     national_label_local: Post-Bachillerato Artístico / Técnico-Productivo
     entry_age: 18
     duration_years: 2
@@ -138,7 +150,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Short cycle degree - Technical
+  - country_entry_id: ECU-EDU-13
+    national_label_en: Short cycle degree - Technical
     national_label_local: Técnico
     entry_age: 18
     duration_years: 2
@@ -148,7 +161,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Short cycle degree - Technological
+  - country_entry_id: ECU-EDU-14
+    national_label_en: Short cycle degree - Technological
     national_label_local: Tecnológico
     entry_age: 18
     duration_years: 3
@@ -158,7 +172,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Short cycle degree - Technological
+  - country_entry_id: ECU-EDU-15
+    national_label_en: Short cycle degree - Technological
     national_label_local: Tecnológico Superior Universitario
     entry_age: 18
     duration_years: 3
@@ -168,7 +183,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Bachelor's degree
+  - country_entry_id: ECU-EDU-16
+    national_label_en: Bachelor's degree
     national_label_local: Licenciatura y afines
     entry_age: 18
     duration_years: 4
@@ -178,7 +194,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: |-
+  - country_entry_id: ECU-EDU-17
+    national_label_en: |-
       Engineering
       Architecture
       Dentistry
@@ -192,7 +209,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: |-
+  - country_entry_id: ECU-EDU-18
+    national_label_en: |-
       Nursing
       Obstetrics
       Human nutrition
@@ -205,7 +223,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Medicine
+  - country_entry_id: ECU-EDU-19
+    national_label_en: Medicine
     national_label_local: Medicina humana
     entry_age: 18
     duration_years: 6
@@ -215,7 +234,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Specialization
+  - country_entry_id: ECU-EDU-20
+    national_label_en: Specialization
     national_label_local: Especialización
     entry_age: 23
     duration_years: 1
@@ -225,7 +245,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Technological Master's degree
+  - country_entry_id: ECU-EDU-21
+    national_label_en: Technological Master's degree
     national_label_local: Maestría tecnólogica
     entry_age: 22
     duration_years: 1
@@ -235,7 +256,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Master's degree
+  - country_entry_id: ECU-EDU-22
+    national_label_en: Master's degree
     national_label_local: Maestría
     entry_age: 22
     duration_years: 1
@@ -245,7 +267,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Odontological specialization
+  - country_entry_id: ECU-EDU-23
+    national_label_en: Odontological specialization
     national_label_local: Especialización odontológica y enfermería
     entry_age: 23
     duration_years: 3
@@ -255,7 +278,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Medical and odontological specialization
+  - country_entry_id: ECU-EDU-24
+    national_label_en: Medical and odontological specialization
     national_label_local: Especialización en médicina humana
     entry_age: 24
     duration_years: 3
@@ -265,7 +289,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Doctorate
+  - country_entry_id: ECU-EDU-25
+    national_label_en: Doctorate
     national_label_local: Doctorado
     entry_age: 25
     duration_years: 3
@@ -285,7 +310,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Azuay
+  - country_entry_id: ECU-SUBNAT-01
+    survey_labels: 1 - Azuay
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1135
@@ -305,7 +331,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Azuay
     source_row: 3807
-  - survey_labels: 10 - Imbabura
+  - country_entry_id: ECU-SUBNAT-02
+    survey_labels: 10 - Imbabura
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1145
@@ -325,7 +352,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Imbabura
     source_row: 3808
-  - survey_labels: 11 - Loja
+  - country_entry_id: ECU-SUBNAT-03
+    survey_labels: 11 - Loja
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1146
@@ -345,7 +373,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Loja
     source_row: 3809
-  - survey_labels: 12 - Los Ríos | 12 - Los R�os
+  - country_entry_id: ECU-SUBNAT-04
+    survey_labels: 12 - Los Ríos | 12 - Los R�os
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1147
@@ -365,7 +394,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Los Rios
     source_row: 3810
-  - survey_labels: 13 - Manabí | 13 - Manab�
+  - country_entry_id: ECU-SUBNAT-05
+    survey_labels: 13 - Manabí | 13 - Manab�
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1148
@@ -385,7 +415,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Manabi
     source_row: 3811
-  - survey_labels: 14 - Morona Santiago
+  - country_entry_id: ECU-SUBNAT-06
+    survey_labels: 14 - Morona Santiago
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1149
@@ -405,7 +436,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Morona Santiago
     source_row: 3812
-  - survey_labels: 15 - Napo
+  - country_entry_id: ECU-SUBNAT-07
+    survey_labels: 15 - Napo
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1150
@@ -425,7 +457,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Napo
     source_row: 3813
-  - survey_labels: 16 - Pastaza
+  - country_entry_id: ECU-SUBNAT-08
+    survey_labels: 16 - Pastaza
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1152
@@ -445,7 +478,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pastaza
     source_row: 3814
-  - survey_labels: 17 - Pichincha
+  - country_entry_id: ECU-SUBNAT-09
+    survey_labels: 17 - Pichincha
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_22006
@@ -465,7 +499,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pichincha
     source_row: 3815
-  - survey_labels: 18 - Tunguragua
+  - country_entry_id: ECU-SUBNAT-10
+    survey_labels: 18 - Tunguragua
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1155
@@ -485,7 +520,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tungurahua
     source_row: 3816
-  - survey_labels: 19 - Zamora Chinchipe
+  - country_entry_id: ECU-SUBNAT-11
+    survey_labels: 19 - Zamora Chinchipe
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1156
@@ -505,7 +541,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Zamora Chinchipe
     source_row: 3817
-  - survey_labels: 2 - Bolívar | 2 - Bol�var
+  - country_entry_id: ECU-SUBNAT-12
+    survey_labels: 2 - Bolívar | 2 - Bol�var
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1136
@@ -525,7 +562,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bolivar
     source_row: 3818
-  - survey_labels: 21 - Sucumbíos | 21 - Sucumb�os
+  - country_entry_id: ECU-SUBNAT-13
+    survey_labels: 21 - Sucumbíos | 21 - Sucumb�os
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1154
@@ -545,7 +583,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sucumbios
     source_row: 3819
-  - survey_labels: 22 - Orellana
+  - country_entry_id: ECU-SUBNAT-14
+    survey_labels: 22 - Orellana
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1151
@@ -565,7 +604,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Orellana
     source_row: 3820
-  - survey_labels: 3 - Cañar | 3 - Ca�ar
+  - country_entry_id: ECU-SUBNAT-15
+    survey_labels: 3 - Cañar | 3 - Ca�ar
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1137
@@ -585,7 +625,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Canar
     source_row: 3821
-  - survey_labels: 4 - Carchi
+  - country_entry_id: ECU-SUBNAT-16
+    survey_labels: 4 - Carchi
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1138
@@ -605,7 +646,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Carchi
     source_row: 3822
-  - survey_labels: 5 - Cotopaxi
+  - country_entry_id: ECU-SUBNAT-17
+    survey_labels: 5 - Cotopaxi
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1140
@@ -625,7 +667,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cotopaxi
     source_row: 3823
-  - survey_labels: 6 - Chimborazo
+  - country_entry_id: ECU-SUBNAT-18
+    survey_labels: 6 - Chimborazo
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1139
@@ -645,7 +688,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chimborazo
     source_row: 3824
-  - survey_labels: 7 - El Oro
+  - country_entry_id: ECU-SUBNAT-19
+    survey_labels: 7 - El Oro
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1141
@@ -665,7 +709,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: El Oro
     source_row: 3825
-  - survey_labels: 8 - Esmeraldas
+  - country_entry_id: ECU-SUBNAT-20
+    survey_labels: 8 - Esmeraldas
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1142
@@ -685,7 +730,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Esmeraldas
     source_row: 3826
-  - survey_labels: 9 - Guayas
+  - country_entry_id: ECU-SUBNAT-21
+    survey_labels: 9 - Guayas
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_22005
@@ -705,7 +751,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Guayas
     source_row: 3827
-  - survey_labels: 90 - Zonas no Delimitadas
+  - country_entry_id: ECU-SUBNAT-22
+    survey_labels: 90 - Zonas no Delimitadas
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1157
@@ -725,7 +772,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Zona No Delimitada
     source_row: 3828
-  - survey_labels: 23 - Santo Domingo de los Tsáchilas | 23 - Santo Domingo de los
+  - country_entry_id: ECU-SUBNAT-23
+    survey_labels: 23 - Santo Domingo de los Tsáchilas | 23 - Santo Domingo de los
       Ts�chilas
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
@@ -746,7 +794,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Santo Domingo de los Tsachilas
     source_row: 4041
-  - survey_labels: 24 - Santa Elena
+  - country_entry_id: ECU-SUBNAT-24
+    survey_labels: 24 - Santa Elena
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_22007
@@ -766,7 +815,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Santa Elena
     source_row: 4042
-  - survey_labels: 20 - Galápagos | 20 - Gal�pagos
+  - country_entry_id: ECU-SUBNAT-25
+    survey_labels: 20 - Galápagos | 20 - Gal�pagos
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ECU_2015_GAUL1_1143
@@ -796,7 +846,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: inodoro_o_escusado_conectado_a_biodigestor
+  - country_entry_id: ECU-SAN-01
+    source_category_code: inodoro_o_escusado_conectado_a_biodigestor
     national_label_en: Inodoro o escusado, conectado a biodigestor
     national_label_local: Letrinas de compostaje
     jmp_classification: Composting toilets
@@ -806,7 +857,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: inodoro_o_escusado_con_descarga_directa_al_mar_rio_lago_o_quebrada
+  - country_entry_id: ECU-SAN-02
+    source_category_code: inodoro_o_escusado_con_descarga_directa_al_mar_rio_lago_o_quebrada
     national_label_en: Inodoro o escusado, con descarga directa al mar, río, lago
       o quebrada
     national_label_local: a drenaje abierto
@@ -817,7 +869,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: excusado_y_alcantarillado
+  - country_entry_id: ECU-SAN-03
+    source_category_code: excusado_y_alcantarillado
     national_label_en: Excusado y alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -827,7 +880,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: inodoro_o_escusado_conectado_a_red_publica_de_alcantarillado
+  - country_entry_id: ECU-SAN-04
+    source_category_code: inodoro_o_escusado_conectado_a_red_publica_de_alcantarillado
     national_label_en: Inodoro o escusado, conectado a red pública de alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -837,7 +891,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: inodoro_y_alcantarillado
+  - country_entry_id: ECU-SAN-05
+    source_category_code: inodoro_y_alcantarillado
     national_label_en: Inodoro y alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -847,7 +902,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: excusado_y_pozo_ciego
+  - country_entry_id: ECU-SAN-06
+    source_category_code: excusado_y_pozo_ciego
     national_label_en: Excusado y pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -857,7 +913,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: inodoro_o_escusado_conectado_a_pozo_ciego
+  - country_entry_id: ECU-SAN-07
+    source_category_code: inodoro_o_escusado_conectado_a_pozo_ciego
     national_label_en: Inodoro o escusado, conectado a pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -867,7 +924,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: inodoro_y_pozo_ciego
+  - country_entry_id: ECU-SAN-08
+    source_category_code: inodoro_y_pozo_ciego
     national_label_en: Inodoro y pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -877,7 +935,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: excusado_y_pozo_septico
+  - country_entry_id: ECU-SAN-09
+    source_category_code: excusado_y_pozo_septico
     national_label_en: Excusado y pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -887,7 +946,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_o_escusado_conectado_a_pozo_septico
+  - country_entry_id: ECU-SAN-10
+    source_category_code: inodoro_o_escusado_conectado_a_pozo_septico
     national_label_en: Inodoro o escusado, conectado a pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -897,7 +957,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_y_pozo_septico
+  - country_entry_id: ECU-SAN-11
+    source_category_code: inodoro_y_pozo_septico
     national_label_en: Inodoro y pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -907,7 +968,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: ECU-SAN-12
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -917,7 +979,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: ECU-SAN-13
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -927,7 +990,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: ECU-SAN-14
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -938,7 +1002,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: ECU-SAN-15
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -948,7 +1013,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: con_descarga_directa_al_mar_rio_lago_quebrada
+  - country_entry_id: ECU-SAN-16
+    source_category_code: con_descarga_directa_al_mar_rio_lago_quebrada
     national_label_en: con descarga directa al mar, rio, lago, quebrada
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
@@ -958,7 +1024,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: conectado_a_red_publica_de_alcantarillado
+  - country_entry_id: ECU-SAN-17
+    source_category_code: conectado_a_red_publica_de_alcantarillado
     national_label_en: conectado a red pública de alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -968,7 +1035,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: excusado_y_alcantarillado
+  - country_entry_id: ECU-SAN-18
+    source_category_code: excusado_y_alcantarillado
     national_label_en: Excusado y alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -978,7 +1046,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: inodoro_y_alcantarillado
+  - country_entry_id: ECU-SAN-19
+    source_category_code: inodoro_y_alcantarillado
     national_label_en: Inodoro y alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -988,7 +1057,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: sanitation_with_domestic_connection
+  - country_entry_id: ECU-SAN-20
+    source_category_code: sanitation_with_domestic_connection
     national_label_en: Sanitation with domestic connection
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -998,7 +1068,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: conectado_a_pozo_ciego
+  - country_entry_id: ECU-SAN-21
+    source_category_code: conectado_a_pozo_ciego
     national_label_en: conectado a pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -1008,7 +1079,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: excusado_y_pozo_ciego
+  - country_entry_id: ECU-SAN-22
+    source_category_code: excusado_y_pozo_ciego
     national_label_en: Excusado y pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -1018,7 +1090,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: inodoro_y_pozo_ciego
+  - country_entry_id: ECU-SAN-23
+    source_category_code: inodoro_y_pozo_ciego
     national_label_en: Inodoro y pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -1028,7 +1101,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: conectado_a_pozo_septico
+  - country_entry_id: ECU-SAN-24
+    source_category_code: conectado_a_pozo_septico
     national_label_en: conectado a pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1038,7 +1112,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: excusado_y_pozo_septico
+  - country_entry_id: ECU-SAN-25
+    source_category_code: excusado_y_pozo_septico
     national_label_en: Excusado y pozo septico
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1048,7 +1123,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_y_pozo_septico
+  - country_entry_id: ECU-SAN-26
+    source_category_code: inodoro_y_pozo_septico
     national_label_en: Inodoro y pozo séptico
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1058,7 +1134,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: sanitation_with_septic_tank
+  - country_entry_id: ECU-SAN-27
+    source_category_code: sanitation_with_septic_tank
     national_label_en: Sanitation with septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1068,7 +1145,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: ECU-SAN-28
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1078,7 +1156,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: latine
+  - country_entry_id: ECU-SAN-29
+    source_category_code: latine
     national_label_en: Latine
     national_label_local: Otro
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -1088,7 +1167,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: letrina_hoyo_con_losa
+  - country_entry_id: ECU-SAN-30
+    source_category_code: letrina_hoyo_con_losa
     national_label_en: Letrina - hoyo con losa
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1099,7 +1179,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_hoyo_con_losa_recubierta_con_algun_material_como_cemento_madera_etc
+  - country_entry_id: ECU-SAN-31
+    source_category_code: letrina_hoyo_con_losa_recubierta_con_algun_material_como_cemento_madera_etc
     national_label_en: Letrina - hoyo con losa (recubierta con algún material como
       cemento, madera, etc.)
     national_label_local: Letrina simple con loza
@@ -1111,7 +1192,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_de_hoyo_con_losa_recubierta_con_algun_material_como_cemento_madera_etc
+  - country_entry_id: ECU-SAN-32
+    source_category_code: letrina_de_hoyo_con_losa_recubierta_con_algun_material_como_cemento_madera_etc
     national_label_en: Letrina de hoyo con losa (recubierta con algún material como
       cemento, madera, etc.)
     national_label_local: Letrina simple con loza
@@ -1123,7 +1205,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_de_hoyo_sin_losa_fosa_abierta_hoyo_rudimentario_en_el_suelo
+  - country_entry_id: ECU-SAN-33
+    source_category_code: letrina_de_hoyo_sin_losa_fosa_abierta_hoyo_rudimentario_en_el_suelo
     national_label_en: Letrina de hoyo sin losa / fosa abierta (hoyo rudimentario
       en el suelo)
     national_label_local: Letrina simple sin loza
@@ -1135,7 +1218,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_hoyo_sin_losa_fosa_abierta
+  - country_entry_id: ECU-SAN-34
+    source_category_code: letrina_hoyo_sin_losa_fosa_abierta
     national_label_en: Letrina – hoyo sin losa / fosa abierta
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1146,7 +1230,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_hoyo_sin_losa_fosa_abierta_hoyo_rudimentario_en_el_suelo
+  - country_entry_id: ECU-SAN-35
+    source_category_code: letrina_hoyo_sin_losa_fosa_abierta_hoyo_rudimentario_en_el_suelo
     national_label_en: Letrina – hoyo sin losa / fosa abierta (hoyo rudimentario en
       el suelo)
     national_label_local: Letrina simple sin loza
@@ -1158,7 +1243,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: ECU-SAN-36
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1169,7 +1255,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina
+  - country_entry_id: ECU-SAN-37
+    source_category_code: letrina
     national_label_en: Letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1180,7 +1267,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: simple_pit
+  - country_entry_id: ECU-SAN-38
+    source_category_code: simple_pit
     national_label_en: Simple pit
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1191,7 +1279,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: ECU-SAN-39
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -1202,7 +1291,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: ECU-SAN-40
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1213,7 +1303,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: ECU-SAN-41
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico (privado)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1223,7 +1314,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: ECU-SAN-42
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico (publico)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1234,7 +1326,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: no_facilities
+  - country_entry_id: ECU-SAN-43
+    source_category_code: no_facilities
     national_label_en: No facilities
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1244,7 +1337,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: ECU-SAN-44
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1254,7 +1348,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene
+  - country_entry_id: ECU-SAN-45
+    source_category_code: no_tiene
     national_label_en: No tiene
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1264,7 +1359,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: van_al_monte_campo_bota_la_basura_en_un_paquete
+  - country_entry_id: ECU-SAN-46
+    source_category_code: van_al_monte_campo_bota_la_basura_en_un_paquete
     national_label_en: van al monte, campo, bota la basura en un paquete
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1274,7 +1370,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_usan_una_instalacion_sanitaria_mejorada_cercana_y_o_prestada
+  - country_entry_id: ECU-SAN-47
+    source_category_code: no_tiene_usan_una_instalacion_sanitaria_mejorada_cercana_y_o_prestada
     national_label_en: 'no tiene: usan una instalación sanitaria mejorada cercana
       y/o prestada'
     national_label_local: Otro
@@ -1285,7 +1382,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: no_tiene_usan_una_instalacion_sanitaria_no_mejorada_cercana_y_o_prestada
+  - country_entry_id: ECU-SAN-48
+    source_category_code: no_tiene_usan_una_instalacion_sanitaria_no_mejorada_cercana_y_o_prestada
     national_label_en: 'no tiene: usan una instalación sanitaria no mejorada cercana
       y/o prestada'
     national_label_local: Otro
@@ -1296,7 +1394,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: no_tiene_usan_una_letrina
+  - country_entry_id: ECU-SAN-49
+    source_category_code: no_tiene_usan_una_letrina
     national_label_en: 'no tiene: usan una letrina'
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1306,7 +1405,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: ECU-SAN-50
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1326,7 +1426,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: de_pozo
+  - country_entry_id: ECU-WAS-01
+    source_category_code: de_pozo
     national_label_en: De pozo
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1336,7 +1437,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: pozo
+  - country_entry_id: ECU-WAS-02
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1346,7 +1448,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: manantial_vertiente_protegida
+  - country_entry_id: ECU-WAS-03
+    source_category_code: manantial_vertiente_protegida
     national_label_en: Manantial/vertiente protegida
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -1356,7 +1459,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: ECU-WAS-04
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -1366,7 +1470,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: manantial_vertiente_protegida_en_otro_lugar
+  - country_entry_id: ECU-WAS-05
+    source_category_code: manantial_vertiente_protegida_en_otro_lugar
     national_label_en: Manantial/vertiente protegida - En otro lugar
     national_label_local: Otro
     jmp_classification: Ground water > Protected spring > Other
@@ -1376,7 +1481,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 81
-  - source_category_code: manantial_vertiente_protegida_en_el_interior_de_la_vivienda
+  - country_entry_id: ECU-WAS-06
+    source_category_code: manantial_vertiente_protegida_en_el_interior_de_la_vivienda
     national_label_en: Manantial/vertiente protegida - En el interior de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Protected spring > Private
@@ -1386,7 +1492,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 79
-  - source_category_code: manantial_vertiente_protegida_en_el_edificio_patio_lote_de_la_vivienda
+  - country_entry_id: ECU-WAS-07
+    source_category_code: manantial_vertiente_protegida_en_el_edificio_patio_lote_de_la_vivienda
     national_label_en: Manantial/vertiente protegida - En el edificio/patio/lote de
       la vivienda
     national_label_local: Publico
@@ -1397,7 +1504,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: pozo_entubado_pozo_protegido
+  - country_entry_id: ECU-WAS-08
+    source_category_code: pozo_entubado_pozo_protegido
     national_label_en: Pozo entubado/pozo protegido
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -1407,7 +1515,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: ECU-WAS-09
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -1417,7 +1526,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: pozo_entubado_pozo_protegido_en_otro_lugar
+  - country_entry_id: ECU-WAS-10
+    source_category_code: pozo_entubado_pozo_protegido_en_otro_lugar
     national_label_en: Pozo  entubado/pozo protegido - En otro lugar
     national_label_local: Otro
     jmp_classification: Ground water > Protected well > Other
@@ -1427,7 +1537,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: pozo_entubado_pozo_protegido_en_el_interior_de_la_vivienda
+  - country_entry_id: ECU-WAS-11
+    source_category_code: pozo_entubado_pozo_protegido_en_el_interior_de_la_vivienda
     national_label_en: Pozo  entubado/pozo protegido - En el interior de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Protected well > Private
@@ -1437,7 +1548,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: pozo_entubado_pozo_protegido_en_el_edificio_patio_lote_de_la_vivienda
+  - country_entry_id: ECU-WAS-12
+    source_category_code: pozo_entubado_pozo_protegido_en_el_edificio_patio_lote_de_la_vivienda
     national_label_en: Pozo  entubado/pozo protegido - En el edificio/patio/lote de
       la vivienda
     national_label_local: Publico
@@ -1448,7 +1560,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: ECU-WAS-13
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Pozos o manantiales protegidos
     jmp_classification: Ground water > Protected wells or springs
@@ -1458,7 +1571,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: pozo
+  - country_entry_id: ECU-WAS-14
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1468,7 +1582,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_grieta
+  - country_entry_id: ECU-WAS-15
+    source_category_code: pozo_grieta
     national_label_en: Pozo, grieta
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1478,7 +1593,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_no_recibe_agua_por_tuberia_sino_por_otros_medios
+  - country_entry_id: ECU-WAS-16
+    source_category_code: pozo_no_recibe_agua_por_tuberia_sino_por_otros_medios
     national_label_en: Pozo - No recibe agua por tubería sino por otros medios
     national_label_local: Otro
     jmp_classification: Ground water > Traditional wells > Other
@@ -1488,7 +1604,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: ECU-WAS-17
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1498,7 +1615,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: pozo_por_tuberia_fuera_de_la_vivienda_lote_o_terreno
+  - country_entry_id: ECU-WAS-18
+    source_category_code: pozo_por_tuberia_fuera_de_la_vivienda_lote_o_terreno
     national_label_en: Pozo -  Por tubería fuera de la vivienda, lote o terreno
     national_label_local: Otro
     jmp_classification: Ground water > Tubewell, borehole > Other
@@ -1508,7 +1626,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: pozo_por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: ECU-WAS-19
+    source_category_code: pozo_por_tuberia_dentro_de_la_vivienda
     national_label_en: Pozo -  Por tubería dentro de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -1518,7 +1637,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: pozo_por_tuberia_fuera_de_la_vivienda_pero_en_el_lote
+  - country_entry_id: ECU-WAS-20
+    source_category_code: pozo_por_tuberia_fuera_de_la_vivienda_pero_en_el_lote
     national_label_en: Pozo -  Por tubería fuera de la vivienda pero en el lote
     national_label_local: Publico
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1528,7 +1648,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: manantial_vertiente_no_protegida
+  - country_entry_id: ECU-WAS-21
+    source_category_code: manantial_vertiente_no_protegida
     national_label_en: Manantial/vertiente no protegida
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -1538,7 +1659,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: ECU-WAS-22
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -1548,7 +1670,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: manantial_vertiente_no_protegida_en_otro_lugar
+  - country_entry_id: ECU-WAS-23
+    source_category_code: manantial_vertiente_no_protegida_en_otro_lugar
     national_label_en: Manantial/vertiente no protegida - En otro lugar
     national_label_local: Otro
     jmp_classification: Ground water > Unprotected spring > Other
@@ -1558,7 +1681,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: manantial_vertiente_no_protegida_en_el_interior_de_la_vivienda
+  - country_entry_id: ECU-WAS-24
+    source_category_code: manantial_vertiente_no_protegida_en_el_interior_de_la_vivienda
     national_label_en: Manantial/vertiente no protegida - En el interior de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Unprotected spring > Private
@@ -1568,7 +1692,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 83
-  - source_category_code: manantial_vertiente_no_protegida_en_el_edificio_patio_lote_de_la_vivienda
+  - country_entry_id: ECU-WAS-25
+    source_category_code: manantial_vertiente_no_protegida_en_el_edificio_patio_lote_de_la_vivienda
     national_label_en: Manantial/vertiente no protegida - En el edificio/patio/lote
       de la vivienda
     national_label_local: Publico
@@ -1579,7 +1704,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 84
-  - source_category_code: pozo_no_protegido
+  - country_entry_id: ECU-WAS-26
+    source_category_code: pozo_no_protegido
     national_label_en: Pozo no protegido
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -1589,7 +1715,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: ECU-WAS-27
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -1599,7 +1726,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: pozo_no_protegido_en_otro_lugar
+  - country_entry_id: ECU-WAS-28
+    source_category_code: pozo_no_protegido_en_otro_lugar
     national_label_en: Pozo no protegido - En otro lugar
     national_label_local: Otro
     jmp_classification: Ground water > Unprotected well > Other
@@ -1609,7 +1737,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 73
-  - source_category_code: pozo_no_protegido_en_el_interior_de_la_vivienda
+  - country_entry_id: ECU-WAS-29
+    source_category_code: pozo_no_protegido_en_el_interior_de_la_vivienda
     national_label_en: Pozo no protegido - En el interior de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Unprotected well > Private
@@ -1619,7 +1748,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: pozo_no_protegido_en_el_edificio_patio_lote_de_la_vivienda
+  - country_entry_id: ECU-WAS-30
+    source_category_code: pozo_no_protegido_en_el_edificio_patio_lote_de_la_vivienda
     national_label_en: Pozo no protegido - En el edificio/patio/lote de la vivienda
     national_label_local: Publico
     jmp_classification: Ground water > Unprotected well > Public
@@ -1629,7 +1759,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 72
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: ECU-WAS-31
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Pozos o manantiales non protegidos
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1639,7 +1770,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: carro_repartidor
+  - country_entry_id: ECU-WAS-32
+    source_category_code: carro_repartidor
     national_label_en: Carro repartidor
     national_label_local: Carro con tanque / tambor pequeño
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1649,7 +1781,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: piped_water_into_other
+  - country_entry_id: ECU-WAS-33
+    source_category_code: piped_water_into_other
     national_label_en: Piped water into other
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1659,7 +1792,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: red_publica_y_carro_repartidor
+  - country_entry_id: ECU-WAS-34
+    source_category_code: red_publica_y_carro_repartidor
     national_label_en: Red publica y carro repartidor
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1669,7 +1803,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: agua_en_funda
+  - country_entry_id: ECU-WAS-35
+    source_category_code: agua_en_funda
     national_label_en: Agua en funda
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1679,7 +1814,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: carro_repartidor_triciclo
+  - country_entry_id: ECU-WAS-36
+    source_category_code: carro_repartidor_triciclo
     national_label_en: Carro repartidor / triciclo
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1689,7 +1825,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carro_repartidor_triciclo
+  - country_entry_id: ECU-WAS-37
+    source_category_code: carro_repartidor_triciclo
     national_label_en: Carro repartidor, triciclo
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1699,7 +1836,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carro_repartidor_triciclo_tanquero
+  - country_entry_id: ECU-WAS-38
+    source_category_code: carro_repartidor_triciclo_tanquero
     national_label_en: Carro repartidor/ triciclo tanquero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1709,7 +1847,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carro_repartidor_triciclo_tanquero
+  - country_entry_id: ECU-WAS-39
+    source_category_code: carro_repartidor_triciclo_tanquero
     national_label_en: Carro repartidor/ triciclo/ tanquero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1719,7 +1858,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carro_repartidor_triciclo
+  - country_entry_id: ECU-WAS-40
+    source_category_code: carro_repartidor_triciclo
     national_label_en: Carro repartidor/triciclo
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1729,7 +1869,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carro_repartidor_triciclo_tanquero
+  - country_entry_id: ECU-WAS-41
+    source_category_code: carro_repartidor_triciclo_tanquero
     national_label_en: Carro repartidor/triciclo tanquero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1739,7 +1880,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_provided
+  - country_entry_id: ECU-WAS-42
+    source_category_code: tanker_truck_provided
     national_label_en: Tanker truck provided
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1749,7 +1891,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: ECU-WAS-43
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1759,7 +1902,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: no_recibe_agua_por_tuberia_sino_por_otros_medios
+  - country_entry_id: ECU-WAS-44
+    source_category_code: no_recibe_agua_por_tuberia_sino_por_otros_medios
     national_label_en: No recibe agua por tubería, sino por otros medios
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1769,7 +1913,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_non_improved
+  - country_entry_id: ECU-WAS-45
+    source_category_code: other_non_improved
     national_label_en: Other non-improved
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1779,7 +1924,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otra
+  - country_entry_id: ECU-WAS-46
+    source_category_code: otra
     national_label_en: Otra
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1789,7 +1935,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: ECU-WAS-47
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1799,7 +1946,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_no_recibe_agua_por_tuberia_sino_por_otros_medios
+  - country_entry_id: ECU-WAS-48
+    source_category_code: otro_no_recibe_agua_por_tuberia_sino_por_otros_medios
     national_label_en: Otro - No recibe agua por tubería sino por otros medios
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1809,7 +1957,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_cual
+  - country_entry_id: ECU-WAS-49
+    source_category_code: otro_cual
     national_label_en: Otro, cual
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1819,7 +1968,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: red_publica_no_recibe_agua_por_tuberia_sino_por_otros_medios
+  - country_entry_id: ECU-WAS-50
+    source_category_code: red_publica_no_recibe_agua_por_tuberia_sino_por_otros_medios
     national_label_en: 'Red publica: No recibe agua por tubería, sino por otros medios'
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1829,7 +1979,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: ECU-WAS-51
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1839,7 +1990,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: agua_embotellada_envasada
+  - country_entry_id: ECU-WAS-52
+    source_category_code: agua_embotellada_envasada
     national_label_en: Agua embotellada / envasada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1849,7 +2001,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embotellada_envasada
+  - country_entry_id: ECU-WAS-53
+    source_category_code: agua_embotellada_envasada
     national_label_en: Agua embotellada /envasada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1859,7 +2012,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: ECU-WAS-54
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1869,7 +2023,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: sachet_water
+  - country_entry_id: ECU-WAS-55
+    source_category_code: sachet_water
     national_label_en: Sachet water
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -1879,7 +2034,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: agua_lluvia
+  - country_entry_id: ECU-WAS-56
+    source_category_code: agua_lluvia
     national_label_en: Agua lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1889,7 +2045,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: ECU-WAS-57
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1899,7 +2056,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: ECU-WAS-58
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1909,7 +2067,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: recogen_agua_de_la_lluvia
+  - country_entry_id: ECU-WAS-59
+    source_category_code: recogen_agua_de_la_lluvia
     national_label_en: Recogen agua de la lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1919,7 +2078,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: de_rio_vertiente
+  - country_entry_id: ECU-WAS-60
+    source_category_code: de_rio_vertiente
     national_label_en: de río vertiente
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1929,7 +2089,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_o_acequia
+  - country_entry_id: ECU-WAS-61
+    source_category_code: rio_o_acequia
     national_label_en: Rio o acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1939,7 +2100,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_vertiente_o_acequia
+  - country_entry_id: ECU-WAS-62
+    source_category_code: rio_vertiente_o_acequia
     national_label_en: Río vertiente o acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1949,7 +2111,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_vertiente_o_acequia
+  - country_entry_id: ECU-WAS-63
+    source_category_code: rio_vertiente_o_acequia
     national_label_en: Río, vertiente o acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1959,7 +2122,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_vertiente_acequia
+  - country_entry_id: ECU-WAS-64
+    source_category_code: rio_vertiente_acequia
     national_label_en: Rio, vertiente, acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1969,7 +2133,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: ECU-WAS-65
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1979,7 +2144,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: ECU-WAS-66
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1989,7 +2155,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: other_piped_water
+  - country_entry_id: ECU-WAS-67
+    source_category_code: other_piped_water
     national_label_en: Other piped water
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1999,7 +2166,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: otra_fuente_por_tuberia
+  - country_entry_id: ECU-WAS-68
+    source_category_code: otra_fuente_por_tuberia
     national_label_en: Otra fuente por tubería
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2009,7 +2177,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: otra_fuente_por_tuberia_tratada_no_tratada
+  - country_entry_id: ECU-WAS-69
+    source_category_code: otra_fuente_por_tuberia_tratada_no_tratada
     national_label_en: Otra fuente por tubería (tratada + no tratada)
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2019,7 +2188,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: otra_fuente_por_tuberia_red_publica_en_otro_lugar
+  - country_entry_id: ECU-WAS-70
+    source_category_code: otra_fuente_por_tuberia_red_publica_en_otro_lugar
     national_label_en: Otra fuente por tuberia + Red publica -  En otro lugar
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2029,7 +2199,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: otra_fuente_por_tuberia_red_publica_por_tuberia_fuera_de_la_vivienda_lote_o_terreno
+  - country_entry_id: ECU-WAS-71
+    source_category_code: otra_fuente_por_tuberia_red_publica_por_tuberia_fuera_de_la_vivienda_lote_o_terreno
     national_label_en: Otra fuente por tuberia + Red publica -  Por tubería fuera
       de la vivienda, lote o terreno
     national_label_local: Otro
@@ -2040,7 +2211,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: por_tuberia_fuera_del_edificio_lote_o_terreno
+  - country_entry_id: ECU-WAS-72
+    source_category_code: por_tuberia_fuera_del_edificio_lote_o_terreno
     national_label_en: Por tubería, fuera del edificio, lote o terreno
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2050,7 +2222,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: ECU-WAS-73
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2060,7 +2233,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: por_tuberia_dentro_del_terreno_o_de_la_vivienda
+  - country_entry_id: ECU-WAS-74
+    source_category_code: por_tuberia_dentro_del_terreno_o_de_la_vivienda
     national_label_en: Por tubería dentro del terreno o de la vivienda
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2070,7 +2244,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: red_publica
+  - country_entry_id: ECU-WAS-75
+    source_category_code: red_publica
     national_label_en: Red pública
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2080,7 +2255,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: ECU-WAS-76
+    source_category_code: piped_water_into_dwelling
     national_label_en: piped water into dwelling
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2090,7 +2266,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: ECU-WAS-77
+    source_category_code: por_tuberia_dentro_de_la_vivienda
     national_label_en: Por tubería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2100,7 +2277,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: ECU-WAS-78
+    source_category_code: por_tuberia_dentro_de_la_vivienda
     national_label_en: Por tubería, dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2110,7 +2288,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica
+  - country_entry_id: ECU-WAS-79
+    source_category_code: red_publica
     national_label_en: Red publica
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2120,7 +2299,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_en_el_interior_de_la_vivienda
+  - country_entry_id: ECU-WAS-80
+    source_category_code: red_publica_en_el_interior_de_la_vivienda
     national_label_en: Red publica -  En el interior de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2130,7 +2310,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: ECU-WAS-81
+    source_category_code: red_publica_por_tuberia_dentro_de_la_vivienda
     national_label_en: Red publica -  Por tubería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2140,7 +2321,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: ECU-WAS-82
+    source_category_code: red_publica_por_tuberia_dentro_de_la_vivienda
     national_label_en: 'Red publica: Por tubería, dentro de la vivienda'
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2150,7 +2332,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: ECU-WAS-83
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2160,7 +2343,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: por_tuberia_fuera_de_la_vivienda_pero_en_el_lote_o_terreno
+  - country_entry_id: ECU-WAS-84
+    source_category_code: por_tuberia_fuera_de_la_vivienda_pero_en_el_lote_o_terreno
     national_label_en: Por tubería fuera de la vivienda pero en el lote o terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2170,7 +2354,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: por_tuberia_fuera_de_la_vivienda_pero_dentro_del_edificio_lote_o_terreno
+  - country_entry_id: ECU-WAS-85
+    source_category_code: por_tuberia_fuera_de_la_vivienda_pero_dentro_del_edificio_lote_o_terreno
     national_label_en: Por tubería, fuera de la vivienda pero dentro del edificio,
       lote o terreno
     national_label_local: Agua corriente al patio/parcela
@@ -2181,7 +2366,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_en_el_edificio_patio_lote_de_la_vivienda
+  - country_entry_id: ECU-WAS-86
+    source_category_code: red_publica_en_el_edificio_patio_lote_de_la_vivienda
     national_label_en: Red publica -  En el edificio/patio/lote de la vivienda
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2191,7 +2377,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_por_tuberia_fuera_de_la_vivienda_pero_en_el_lote
+  - country_entry_id: ECU-WAS-87
+    source_category_code: red_publica_por_tuberia_fuera_de_la_vivienda_pero_en_el_lote
     national_label_en: Red publica -  Por tubería fuera de la vivienda pero en el
       lote
     national_label_local: Agua corriente al patio/parcela
@@ -2202,7 +2389,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_por_tuberia_fuera_de_la_vivienda_pero_dentro_del_edificio_lote_o_terreno
+  - country_entry_id: ECU-WAS-88
+    source_category_code: red_publica_por_tuberia_fuera_de_la_vivienda_pero_dentro_del_edificio_lote_o_terreno
     national_label_en: 'Red publica: Por tubería, fuera de la vivienda pero dentro
       del edificio, lote o terreno'
     national_label_local: Agua corriente al patio/parcela
@@ -2213,7 +2401,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: pila_o_llave_publica
+  - country_entry_id: ECU-WAS-89
+    source_category_code: pila_o_llave_publica
     national_label_en: Pila o llave publica
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2223,7 +2412,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: pila_o_llave_publica_por_tuberia_fuera_de_la_vivienda_pero_en_el_lote
+  - country_entry_id: ECU-WAS-90
+    source_category_code: pila_o_llave_publica_por_tuberia_fuera_de_la_vivienda_pero_en_el_lote
     national_label_en: Pila o llave publica -  Por tubería fuera de la vivienda pero
       en el lote
     national_label_local: Fuentes públicas
@@ -2234,7 +2424,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: pila_pileta_o_llave_publica
+  - country_entry_id: ECU-WAS-91
+    source_category_code: pila_pileta_o_llave_publica
     national_label_en: Pila, pileta o llave pública
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2244,7 +2435,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: por_tuberia_fuera_de_la_vivieda_red_publica
+  - country_entry_id: ECU-WAS-92
+    source_category_code: por_tuberia_fuera_de_la_vivieda_red_publica
     national_label_en: Por tubería fuera de la vivieda/red pública
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2254,7 +2446,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: por_tuberia_fuera_de_la_vivienda_lote_o_terreno
+  - country_entry_id: ECU-WAS-93
+    source_category_code: por_tuberia_fuera_de_la_vivienda_lote_o_terreno
     national_label_en: Por tubería fuera de la vivienda, lote o terreno
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2264,7 +2457,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: ECU-WAS-94
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2274,7 +2468,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: ECU-WAS-95
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

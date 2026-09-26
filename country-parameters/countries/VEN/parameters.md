@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood education
+  - country_entry_id: VEN-EDU-01
+    national_label_en: Early childhood education
     national_label_local: Educación Inicial - Maternal
     entry_age: 0
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Special early childhood education
+  - country_entry_id: VEN-EDU-02
+    national_label_en: Special early childhood education
     national_label_local: Educación Especial Inicial - Maternal
     entry_age: 1
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Pre-school education
+  - country_entry_id: VEN-EDU-03
+    national_label_en: Pre-school education
     national_label_local: Educación Inicial - Preescolar
     entry_age: 3
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Special pre-school education
+  - country_entry_id: VEN-EDU-04
+    national_label_en: Special pre-school education
     national_label_local: Educación Especial Inicial - Preescolar
     entry_age: 3
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
-  - national_label_en: Primary education
+  - country_entry_id: VEN-EDU-05
+    national_label_en: Primary education
     national_label_local: Educación Primaria
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Special education - Primary
+  - country_entry_id: VEN-EDU-06
+    national_label_en: Special education - Primary
     national_label_local: Educación Especial - Primaria
     entry_age: 6
     duration_years: 6
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
-  - national_label_en: Adult and youth primary education
+  - country_entry_id: VEN-EDU-07
+    national_label_en: Adult and youth primary education
     national_label_local: Educación Primaria para jóvenes y adultos
     entry_age: 15
     duration_years: 6
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 13
-  - national_label_en: Lower-middle general  education
+  - country_entry_id: VEN-EDU-08
+    national_label_en: Lower-middle general  education
     national_label_local: Educación Media General Baja
     entry_age: 12
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: Lower-middle technical education
+  - country_entry_id: VEN-EDU-09
+    national_label_en: Lower-middle technical education
     national_label_local: Educación Media Técnica Baja
     entry_age: 12
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
-  - national_label_en: Special lower-middle general  education
+  - country_entry_id: VEN-EDU-10
+    national_label_en: Special lower-middle general  education
     national_label_local: Educación Especial Media General Baja
     entry_age: 12
     duration_years: 3
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 16
-  - national_label_en: Youth and adult lower-middle general  education
+  - country_entry_id: VEN-EDU-11
+    national_label_en: Youth and adult lower-middle general  education
     national_label_local: Educación Media General Baja para Jóvenes y Adultos
     entry_age: 15
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 17
-  - national_label_en: Upper-middle general education
+  - country_entry_id: VEN-EDU-12
+    national_label_en: Upper-middle general education
     national_label_local: Educación Media General Alta
     entry_age: 15
     duration_years: 2
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Upper-middle technical education
+  - country_entry_id: VEN-EDU-13
+    national_label_en: Upper-middle technical education
     national_label_local: Educación Media Técnica Alta
     entry_age: 15
     duration_years: 3
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: Special upper-middle  general education
+  - country_entry_id: VEN-EDU-14
+    national_label_en: Special upper-middle  general education
     national_label_local: Educación Especial Media General Alta
     entry_age: 15
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
-  - national_label_en: Youth and adult upper-middle general education
+  - country_entry_id: VEN-EDU-15
+    national_label_en: Youth and adult upper-middle general education
     national_label_local: Educación Media General Alta para Jóvenes y Adultos
     entry_age: 18
     duration_years: 2
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
-  - national_label_en: University higher technical education
+  - country_entry_id: VEN-EDU-16
+    national_label_en: University higher technical education
     national_label_local: Técnico Superior Universitario
     entry_age: 17
     duration_years: 3
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Technical specialization
+  - country_entry_id: VEN-EDU-17
+    national_label_en: Technical specialization
     national_label_local: Especialización Técnica
     entry_age: 20
     duration_years: 1
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Bachelor programmes
+  - country_entry_id: VEN-EDU-18
+    national_label_en: Bachelor programmes
     national_label_local: Licenciaturas
     entry_age: 17
     duration_years: 5
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Specialization
+  - country_entry_id: VEN-EDU-19
+    national_label_en: Specialization
     national_label_local: Especialización
     entry_age: 22
     duration_years: 1
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Master's programmes
+  - country_entry_id: VEN-EDU-20
+    national_label_en: Master's programmes
     national_label_local: Maestría
     entry_age: 22
     duration_years: 2
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Doctorate
+  - country_entry_id: VEN-EDU-21
+    national_label_en: Doctorate
     national_label_local: Doctorado
     entry_age: 22
     duration_years: 3
@@ -231,7 +252,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: manantial_protegido
+  - country_entry_id: VEN-WAS-01
+    source_category_code: manantial_protegido
     national_label_en: Manantial protegido
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -241,7 +263,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: pozo_protegido_cubierto
+  - country_entry_id: VEN-WAS-02
+    source_category_code: pozo_protegido_cubierto
     national_label_en: Pozo protegido/cubierto
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -251,7 +274,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: pozo_con_tuberia_con_bomba
+  - country_entry_id: VEN-WAS-03
+    source_category_code: pozo_con_tuberia_con_bomba
     national_label_en: Pozo con tuberia/ con bomba
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -261,7 +285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: manantial_no_protegido
+  - country_entry_id: VEN-WAS-04
+    source_category_code: manantial_no_protegido
     national_label_en: Manantial no protegido
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -271,7 +296,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: pozo_no_protegide_sin_cubierto
+  - country_entry_id: VEN-WAS-05
+    source_category_code: pozo_no_protegide_sin_cubierto
     national_label_en: Pozo no protegide/sin cubierto
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -281,7 +307,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: camiontanque_vendedor
+  - country_entry_id: VEN-WAS-06
+    source_category_code: camiontanque_vendedor
     national_label_en: Camiontanque, vendedor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -291,7 +318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: otra
+  - country_entry_id: VEN-WAS-07
+    source_category_code: otra
     national_label_en: Otra
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -301,7 +329,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: agua_embotellada
+  - country_entry_id: VEN-WAS-08
+    source_category_code: agua_embotellada
     national_label_en: Agua embotellada
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -311,7 +340,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: agua_lluvia
+  - country_entry_id: VEN-WAS-09
+    source_category_code: agua_lluvia
     national_label_en: Agua lluvia
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -321,7 +351,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: charca_estanque_rio_o_arroyo
+  - country_entry_id: VEN-WAS-10
+    source_category_code: charca_estanque_rio_o_arroyo
     national_label_en: Charca/estanque, rio o arroyo
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -331,7 +362,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: tuberia_dentro_de_vivienda
+  - country_entry_id: VEN-WAS-11
+    source_category_code: tuberia_dentro_de_vivienda
     national_label_en: Tuberia dentro de vivienda
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -341,7 +373,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_en_el_patio
+  - country_entry_id: VEN-WAS-12
+    source_category_code: tuberia_en_el_patio
     national_label_en: Tuberia en el patio
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -351,7 +384,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: llave_publica
+  - country_entry_id: VEN-WAS-13
+    source_category_code: llave_publica
     national_label_en: Llave publica
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: |-
+  - country_entry_id: BLR-EDU-01
+    national_label_en: |-
       Pre-primary education
        for young children
     national_label_local: Образовательная программа дошкольного образования для детей
@@ -23,7 +24,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: |-
+  - country_entry_id: BLR-EDU-02
+    national_label_en: |-
       Pre-primary education
        for young children
     national_label_local: Образовательная программа дошкольного образования
@@ -35,7 +37,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: General primary education
+  - country_entry_id: BLR-EDU-03
+    national_label_en: General primary education
     national_label_local: Образовательная программа начального образования
     entry_age: 6
     duration_years: 4
@@ -45,7 +48,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Basic general education
+  - country_entry_id: BLR-EDU-04
+    national_label_en: Basic general education
     national_label_local: Образовательная программа базового образования
     entry_age: 10
     duration_years: 5
@@ -55,7 +59,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: General secondary education
+  - country_entry_id: BLR-EDU-05
+    national_label_en: General secondary education
     national_label_local: Образовательная программа среднего образования
     entry_age: 15
     duration_years: 2
@@ -65,7 +70,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Technical-vocational education (worker qualification)
+  - country_entry_id: BLR-EDU-06
+    national_label_en: Technical-vocational education (worker qualification)
     national_label_local: Образовательная программа профессионально-технического образования,
       обеспечивающая получение квалификации рабочего
     entry_age: 15
@@ -76,7 +82,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Technical-vocational education combined with general secondary
+  - country_entry_id: BLR-EDU-07
+    national_label_en: Technical-vocational education combined with general secondary
       education
     national_label_local: Образовательная программа профессионально-технического образования,
       обеспечивающая получение квалификации рабочего (служащего) и общего среднего
@@ -89,7 +96,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Grades 1-2 of the secondary vocational education
+  - country_entry_id: BLR-EDU-08
+    national_label_en: Grades 1-2 of the secondary vocational education
     national_label_local: 1-2 курсы среднего профессионального образования обеспечивающего
       получение квалификации рабочего (служащего) и общего среднего образования
     entry_age: 15
@@ -100,7 +108,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Technical-vocational education (worker qualification)
+  - country_entry_id: BLR-EDU-09
+    national_label_en: Technical-vocational education (worker qualification)
     national_label_local: Образовательная программа профессионально-технического образования,
       обеспечивающая получение квалификации рабочего
     entry_age: 17
@@ -111,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Grades 3-4 of the secondary vocational education
+  - country_entry_id: BLR-EDU-10
+    national_label_en: Grades 3-4 of the secondary vocational education
     national_label_local: 3-4 курсы среднего профессионального образования обеспечивающее
       получение квалификации рабочего (служащего) и общего среднего образования
     entry_age: 17
@@ -122,7 +132,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: "Basic higher education \n(Bachelor)"
+  - country_entry_id: BLR-EDU-11
+    national_label_en: "Basic higher education \n(Bachelor)"
     national_label_local: Образовательная программа высшего образования I ступени,
       обеспечивающая получение квалификации специалиста с высшим образованием (диплом
       бакалавра)
@@ -134,7 +145,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: "Basic higher education \n(Specialist diploma)"
+  - country_entry_id: BLR-EDU-12
+    national_label_en: "Basic higher education \n(Specialist diploma)"
     national_label_local: Образовательная программа высшего образования I ступени,
       обеспечивающая получение квалификации специалиста с высшим образованием (диплом
       специалиста)
@@ -146,7 +158,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Master
+  - country_entry_id: BLR-EDU-13
+    national_label_en: Master
     national_label_local: Образовательная программа высшего образования II ступени
     entry_age: 21
     duration_years: 2
@@ -156,7 +169,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Aspirantura
+  - country_entry_id: BLR-EDU-14
+    national_label_en: Aspirantura
     national_label_local: Образовательная программа аспирантуры
     entry_age: 22
     duration_years: 3
@@ -166,7 +180,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Doctorantura
+  - country_entry_id: BLR-EDU-15
+    national_label_en: Doctorantura
     national_label_local: Образовательная программа докторантуры
     entry_age: 25
     duration_years: 3
@@ -186,7 +201,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Brest | 1 - Brest Oblast | 1 - Brest oblast | Brest
+  - country_entry_id: BLR-SUBNAT-01
+    survey_labels: 1 - Brest | 1 - Brest Oblast | 1 - Brest oblast | Brest
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_593
     gmd_subnatid2: ''
@@ -206,7 +222,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Brest
     source_row: 908
-  - survey_labels: 3 - Gomel | 3 - Gomel Oblast | 3 - Gomel oblast | Gomel
+  - country_entry_id: BLR-SUBNAT-02
+    survey_labels: 3 - Gomel | 3 - Gomel Oblast | 3 - Gomel oblast | Gomel
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_594
     gmd_subnatid2: ''
@@ -226,7 +243,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gomel
     source_row: 909
-  - survey_labels: 4 - Grodno | 4 - Grodno Oblast | 4 - Grodno oblast | Grodno
+  - country_entry_id: BLR-SUBNAT-03
+    survey_labels: 4 - Grodno | 4 - Grodno Oblast | 4 - Grodno oblast | Grodno
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_595
     gmd_subnatid2: ''
@@ -246,7 +264,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Grodno
     source_row: 910
-  - survey_labels: 5 - Minsk | 5 - Minsk city | Minsk
+  - country_entry_id: BLR-SUBNAT-04
+    survey_labels: 5 - Minsk | 5 - Minsk city | Minsk
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_597
     gmd_subnatid2: ''
@@ -266,7 +285,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Minsk City
     source_row: 911
-  - survey_labels: 6 - Minsk Oblast | 6 - Minsk oblast | 6 - Minsk-Oblast | Minsk-Oblast
+  - country_entry_id: BLR-SUBNAT-05
+    survey_labels: 6 - Minsk Oblast | 6 - Minsk oblast | 6 - Minsk-Oblast | Minsk-Oblast
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_596
     gmd_subnatid2: ''
@@ -286,7 +306,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Minsk
     source_row: 912
-  - survey_labels: 7 - Mogilev | 7 - Mogilev Oblast | 7 - Mogilev oblast | Mogilev
+  - country_entry_id: BLR-SUBNAT-06
+    survey_labels: 7 - Mogilev | 7 - Mogilev Oblast | 7 - Mogilev oblast | Mogilev
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_598
     gmd_subnatid2: ''
@@ -306,7 +327,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mogilev
     source_row: 913
-  - survey_labels: 2 - Vitebsk | 2 - Vitebsk Oblast | 2 - Vitebsk oblast | Vitebsk
+  - country_entry_id: BLR-SUBNAT-07
+    survey_labels: 2 - Vitebsk | 2 - Vitebsk Oblast | 2 - Vitebsk oblast | Vitebsk
     survey_variables: subnatid
     gmd_subnatid1: BLR_2015_GAUL1_599
     gmd_subnatid2: ''
@@ -336,7 +358,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: BLR-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Компостирующие туалеты
     jmp_classification: Composting toilets
@@ -346,7 +369,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: BLR-SAN-02
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -356,7 +380,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_toilet_connected_to_a_sewer_system
+  - country_entry_id: BLR-SAN-03
+    source_category_code: flush_toilet_connected_to_a_sewer_system
     national_label_en: flush toilet connected to a sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -366,7 +391,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: BLR-SAN-04
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit (latrine)
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > to pit
@@ -376,7 +402,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: BLR-SAN-05
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > to pit
@@ -386,7 +413,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_toilet_connected_to_a_cesspool
+  - country_entry_id: BLR-SAN-06
+    source_category_code: flush_toilet_connected_to_a_cesspool
     national_label_en: flush toilet connected to a cesspool
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > to pit
@@ -396,7 +424,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: BLR-SAN-07
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -406,7 +435,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_toilet_connected_to_a_septic_tank
+  - country_entry_id: BLR-SAN-08
+    source_category_code: flush_toilet_connected_to_a_septic_tank
     national_label_en: flush toilet connected to a Septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -416,7 +446,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_to_dk_where
+  - country_entry_id: BLR-SAN-09
+    source_category_code: flush_to_dk_where
     national_label_en: flush to DK where
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -426,7 +457,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket
+  - country_entry_id: BLR-SAN-10
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -436,7 +468,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: latrines_with_slab
+  - country_entry_id: BLR-SAN-11
+    source_category_code: latrines_with_slab
     national_label_en: Latrines with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -448,7 +481,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: BLR-SAN-12
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -460,7 +494,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: BLR-SAN-13
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -472,7 +507,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: latrines_wihout_slab
+  - country_entry_id: BLR-SAN-14
+    source_category_code: latrines_wihout_slab
     national_label_en: Latrines wihout slab
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -484,7 +520,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: BLR-SAN-15
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -496,7 +533,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: BLR-SAN-16
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -507,7 +545,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: BLR-SAN-17
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -518,7 +557,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: vip
+  - country_entry_id: BLR-SAN-18
+    source_category_code: vip
     national_label_en: VIP
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -529,7 +569,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: other
+  - country_entry_id: BLR-SAN-19
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -549,7 +590,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_well
+  - country_entry_id: BLR-WAS-01
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -559,7 +601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole
+  - country_entry_id: BLR-WAS-02
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -569,7 +612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_well
+  - country_entry_id: BLR-WAS-03
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -579,7 +623,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: other
+  - country_entry_id: BLR-WAS-04
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -589,7 +634,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: BLR-WAS-05
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -599,7 +645,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bw_with_improved_source
+  - country_entry_id: BLR-WAS-06
+    source_category_code: bw_with_improved_source
     national_label_en: BW with improved source
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -609,7 +656,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: BLR-WAS-07
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -619,7 +667,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: BLR-WAS-08
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -629,7 +678,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: BLR-WAS-09
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -639,7 +689,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: BLR-WAS-10
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -649,7 +700,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: BLR-WAS-11
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -659,7 +711,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: BLR-WAS-12
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -669,7 +722,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: BLR-WAS-13
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: 1989
   selectors: null
   value:
-  - national_label_en: Crêche
+  - country_entry_id: VNM-EDU-01
+    national_label_en: Crêche
     national_label_local: Nhà trẻ
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary education
+  - country_entry_id: VNM-EDU-02
+    national_label_en: Pre-primary education
     national_label_local: Mẫu giáo
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary school
+  - country_entry_id: VNM-EDU-03
+    national_label_en: Primary school
     national_label_local: Tiểu học
     entry_age: 6
     duration_years: 5
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Lower secondary
+  - country_entry_id: VNM-EDU-04
+    national_label_en: Lower secondary
     national_label_local: Trung học cơ sở
     entry_age: 11
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Upper secondary
+  - country_entry_id: VNM-EDU-05
+    national_label_en: Upper secondary
     national_label_local: Trung học phổ thông
     entry_age: 15
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Elementary vocational
+  - country_entry_id: VNM-EDU-06
+    national_label_en: Elementary vocational
     national_label_local: Sơ cấp nghề
     entry_age: 15
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Intermediate vocational
+  - country_entry_id: VNM-EDU-07
+    national_label_en: Intermediate vocational
     national_label_local: Trung cấp nghề
     entry_age: 15
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Professional technical secondary education
+  - country_entry_id: VNM-EDU-08
+    national_label_en: Professional technical secondary education
     national_label_local: Trung cấp chuyên nghiệp
     entry_age: 15
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Professional vocational secondary education
+  - country_entry_id: VNM-EDU-09
+    national_label_en: Professional vocational secondary education
     national_label_local: Trung cấp chuyên nghiệp
     entry_age: 18
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Higher education, Collegiate programmes
+  - country_entry_id: VNM-EDU-10
+    national_label_en: Higher education, Collegiate programmes
     national_label_local: Trình độ cao đẳng
     entry_age: 18
     duration_years: 3
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Collegiate vocational
+  - country_entry_id: VNM-EDU-11
+    national_label_en: Collegiate vocational
     national_label_local: Cao đẳng nghề
     entry_age: 18
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: 'Higher education, Bachelor of: economics, pedagogy, humanities,
+  - country_entry_id: VNM-EDU-12
+    national_label_en: 'Higher education, Bachelor of: economics, pedagogy, humanities,
       business, mathematics, physics, chemistry, fine arts'
     national_label_local: Trình độ đại học
     entry_age: 18
@@ -131,7 +143,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: 'Higher education, Bachelor of: construction, law, transport,
+  - country_entry_id: VNM-EDU-13
+    national_label_en: 'Higher education, Bachelor of: construction, law, transport,
       mining'
     national_label_local: Trình độ đại học
     entry_age: 18
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: 'Higher education, Bachelor of: engineering, architecture,
+  - country_entry_id: VNM-EDU-14
+    national_label_en: 'Higher education, Bachelor of: engineering, architecture,
       medicine, dentistry'
     national_label_local: Trình độ đại học
     entry_age: 18
@@ -153,7 +167,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Higher education, Master's
+  - country_entry_id: VNM-EDU-15
+    national_label_en: Higher education, Master's
     national_label_local: Trình độ thạc sĩ
     entry_age: 22
     duration_years: 2
@@ -163,7 +178,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Doctorate
+  - country_entry_id: VNM-EDU-16
+    national_label_en: Doctorate
     national_label_local: Trình độ tiến sĩ
     entry_age: 24
     duration_years: 3
@@ -183,7 +199,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - national_label_en: Crêche
+  - country_entry_id: VNM-EDU-01
+    national_label_en: Crêche
     national_label_local: Nhà trẻ
     entry_age: 0
     duration_years: 3
@@ -193,7 +210,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary education
+  - country_entry_id: VNM-EDU-02
+    national_label_en: Pre-primary education
     national_label_local: Mẫu giáo
     entry_age: 3
     duration_years: 3
@@ -203,7 +221,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary school
+  - country_entry_id: VNM-EDU-03
+    national_label_en: Primary school
     national_label_local: Tiểu học
     entry_age: 6
     duration_years: 5
@@ -213,7 +232,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Lower secondary
+  - country_entry_id: VNM-EDU-04
+    national_label_en: Lower secondary
     national_label_local: Trung học cơ sở
     entry_age: 11
     duration_years: 4
@@ -223,7 +243,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Upper secondary
+  - country_entry_id: VNM-EDU-05
+    national_label_en: Upper secondary
     national_label_local: Trung học phổ thông
     entry_age: 15
     duration_years: 3
@@ -233,7 +254,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Elementary vocational
+  - country_entry_id: VNM-EDU-06
+    national_label_en: Elementary vocational
     national_label_local: Sơ cấp nghề
     entry_age: 15
     duration_years: 1
@@ -243,7 +265,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
-  - national_label_en: Intermediate vocational
+  - country_entry_id: VNM-EDU-07
+    national_label_en: Intermediate vocational
     national_label_local: Trung cấp nghề
     entry_age: 15
     duration_years: 3
@@ -253,7 +276,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Professional technical secondary education
+  - country_entry_id: VNM-EDU-08
+    national_label_en: Professional technical secondary education
     national_label_local: Trung cấp chuyên nghiệp
     entry_age: 15
     duration_years: 3
@@ -263,7 +287,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Professional vocational secondary education
+  - country_entry_id: VNM-EDU-09
+    national_label_en: Professional vocational secondary education
     national_label_local: Trung cấp chuyên nghiệp
     entry_age: 18
     duration_years: 1
@@ -273,7 +298,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Higher education, Collegiate programmes
+  - country_entry_id: VNM-EDU-10
+    national_label_en: Higher education, Collegiate programmes
     national_label_local: Trình độ cao đẳng
     entry_age: 18
     duration_years: 3
@@ -283,7 +309,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Collegiate vocational
+  - country_entry_id: VNM-EDU-11
+    national_label_en: Collegiate vocational
     national_label_local: Cao đẳng nghề
     entry_age: 18
     duration_years: 2
@@ -293,7 +320,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: 'Higher education, Bachelor of: economics, pedagogy, humanities,
+  - country_entry_id: VNM-EDU-12
+    national_label_en: 'Higher education, Bachelor of: economics, pedagogy, humanities,
       business, mathematics, physics, chemistry, fine arts'
     national_label_local: Trình độ đại học
     entry_age: 18
@@ -304,7 +332,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: 'Higher education, Bachelor of: construction, law, transport,
+  - country_entry_id: VNM-EDU-13
+    national_label_en: 'Higher education, Bachelor of: construction, law, transport,
       mining'
     national_label_local: Trình độ đại học
     entry_age: 18
@@ -315,7 +344,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: 'Higher education, Bachelor of: engineering, architecture,
+  - country_entry_id: VNM-EDU-14
+    national_label_en: 'Higher education, Bachelor of: engineering, architecture,
       medicine, dentistry'
     national_label_local: Trình độ đại học
     entry_age: 18
@@ -326,7 +356,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Higher education, Master's
+  - country_entry_id: VNM-EDU-15
+    national_label_en: Higher education, Master's
     national_label_local: Trình độ thạc sĩ
     entry_age: 22
     duration_years: 2
@@ -336,7 +367,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Doctorate
+  - country_entry_id: VNM-EDU-16
+    national_label_en: Doctorate
     national_label_local: Trình độ tiến sĩ
     entry_age: 24
     duration_years: 3
@@ -356,7 +388,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: spring
+  - country_entry_id: VNM-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -366,7 +399,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 74
-  - source_category_code: other_well
+  - country_entry_id: VNM-WAS-02
+    source_category_code: other_well
     national_label_en: Other well
     national_label_local: Other
     jmp_classification: Ground water > All wells > Other
@@ -376,7 +410,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 57
-  - source_category_code: well_in_residence
+  - country_entry_id: VNM-WAS-03
+    source_category_code: well_in_residence
     national_label_en: Well in residence
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -386,7 +421,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 55
-  - source_category_code: well_into_residence_dwelling
+  - country_entry_id: VNM-WAS-04
+    source_category_code: well_into_residence_dwelling
     national_label_en: Well into residence/dwelling
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -396,7 +432,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 55
-  - source_category_code: public_well
+  - country_entry_id: VNM-WAS-05
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Public
     jmp_classification: Ground water > All wells > Public
@@ -406,7 +443,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 56
-  - source_category_code: filitered_spring_water
+  - country_entry_id: VNM-WAS-06
+    source_category_code: filitered_spring_water
     national_label_en: Filitered spring water
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -416,7 +454,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: filtered_spring_water
+  - country_entry_id: VNM-WAS-07
+    source_category_code: filtered_spring_water
     national_label_en: filtered spring water
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -426,7 +465,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: VNM-WAS-08
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -436,7 +476,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: protected_spring_sources
+  - country_entry_id: VNM-WAS-09
+    source_category_code: protected_spring_sources
     national_label_en: PrOTECTED SPRING SOURCES
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -446,7 +487,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: spring_protected_spring
+  - country_entry_id: VNM-WAS-10
+    source_category_code: spring_protected_spring
     national_label_en: 'spring: protected spring'
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -456,7 +498,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 78
-  - source_category_code: dug_well_protected_well
+  - country_entry_id: VNM-WAS-11
+    source_category_code: dug_well_protected_well
     national_label_en: 'dug well: protected well'
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -466,7 +509,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: hand_dugwell_constructed_well
+  - country_entry_id: VNM-WAS-12
+    source_category_code: hand_dugwell_constructed_well
     national_label_en: hand dugwell, constructed well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -476,7 +520,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: protected_dug_well
+  - country_entry_id: VNM-WAS-13
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -486,7 +531,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: VNM-WAS-14
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -496,7 +542,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: water_from_hang_dug_and_reinforced_wells
+  - country_entry_id: VNM-WAS-15
+    source_category_code: water_from_hang_dug_and_reinforced_wells
     national_label_en: Water from hang-dug and reinforced wells
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -506,7 +553,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: water_from_hand_dug_non_reinforced_and_covered_wells
+  - country_entry_id: VNM-WAS-16
+    source_category_code: water_from_hand_dug_non_reinforced_and_covered_wells
     national_label_en: Water from hand-dug, non-reinforced and covered wells
     national_label_local: Other
     jmp_classification: Ground water > Protected well > Other
@@ -516,7 +564,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 69
-  - source_category_code: water_from_hand_dug_and_reinforced_wells
+  - country_entry_id: VNM-WAS-17
+    source_category_code: water_from_hand_dug_and_reinforced_wells
     national_label_en: Water from hand-dug and reinforced wells
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -526,7 +575,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 68
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: VNM-WAS-18
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -536,7 +586,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 46
-  - source_category_code: deep_drill_well_with_pump
+  - country_entry_id: VNM-WAS-19
+    source_category_code: deep_drill_well_with_pump
     national_label_en: deep drill well with pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -546,7 +597,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: VNM-WAS-20
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -556,7 +608,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tube_well_borehole
+  - country_entry_id: VNM-WAS-21
+    source_category_code: tube_well_borehole
     national_label_en: tube well / borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -566,7 +619,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: VNM-WAS-22
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -576,7 +630,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: VNM-WAS-23
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -586,7 +641,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tubewell_bore_hole
+  - country_entry_id: VNM-WAS-24
+    source_category_code: tubewell_bore_hole
     national_label_en: Tubewell/bore-hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -596,7 +652,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: VNM-WAS-25
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: Tubewell/borehole with pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -606,7 +663,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: water_pumped_from_deep_drill_wells
+  - country_entry_id: VNM-WAS-26
+    source_category_code: water_pumped_from_deep_drill_wells
     national_label_en: Water pumped from deep drill wells
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -616,7 +674,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 58
-  - source_category_code: spring_unprotected_spring
+  - country_entry_id: VNM-WAS-27
+    source_category_code: spring_unprotected_spring
     national_label_en: 'spring: unprotected spring'
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -626,7 +685,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: unprocted_spring_sources
+  - country_entry_id: VNM-WAS-28
+    source_category_code: unprocted_spring_sources
     national_label_en: UNPROCTED SPRING SOURCES
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -636,7 +696,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: VNM-WAS-29
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -646,7 +707,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 82
-  - source_category_code: dug_well_unprotected_well
+  - country_entry_id: VNM-WAS-30
+    source_category_code: dug_well_unprotected_well
     national_label_en: 'dug well: unprotected well'
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -656,7 +718,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: VNM-WAS-31
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -666,7 +729,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: VNM-WAS-32
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -676,7 +740,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: water_from_hang_dug_non_reinforced_or_uncovered_wells
+  - country_entry_id: VNM-WAS-33
+    source_category_code: water_from_hang_dug_non_reinforced_or_uncovered_wells
     national_label_en: Water from hang-dug, non-reinforced or uncovered wells
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -686,7 +751,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: VNM-WAS-34
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -696,7 +762,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 50
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: VNM-WAS-35
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -706,7 +773,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 101
-  - source_category_code: small_water_tank
+  - country_entry_id: VNM-WAS-36
+    source_category_code: small_water_tank
     national_label_en: Small water tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -716,7 +784,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 101
-  - source_category_code: container_water
+  - country_entry_id: VNM-WAS-37
+    source_category_code: container_water
     national_label_en: container water
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -726,7 +795,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: VNM-WAS-38
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -736,7 +806,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_cart_with_tank_drum
+  - country_entry_id: VNM-WAS-39
+    source_category_code: tanker_truck_cart_with_tank_drum
     national_label_en: Tanker truck, cart with tank/ drum
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -746,7 +817,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: VNM-WAS-40
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -756,7 +828,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: VNM-WAS-41
+    source_category_code: tanker_truck
     national_label_en: tanker-truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -766,7 +839,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: VNM-WAS-42
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -776,7 +850,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: water_tank
+  - country_entry_id: VNM-WAS-43
+    source_category_code: water_tank
     national_label_en: Water tank
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -786,7 +861,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: VNM-WAS-44
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -796,7 +872,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: VNM-WAS-45
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -806,7 +883,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: bought_water_in_tank_bottle
+  - country_entry_id: VNM-WAS-46
+    source_category_code: bought_water_in_tank_bottle
     national_label_en: Bought water (in tank, bottle)
     national_label_local: Packaged water
     jmp_classification: Packaged water
@@ -816,7 +894,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 89
-  - source_category_code: bottled_water
+  - country_entry_id: VNM-WAS-47
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -826,7 +905,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: bottled_water_improved_source
+  - country_entry_id: VNM-WAS-48
+    source_category_code: bottled_water_improved_source
     national_label_en: Bottled water + improved source
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -836,7 +916,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: bought_water_in_tank_bottle
+  - country_entry_id: VNM-WAS-49
+    source_category_code: bought_water_in_tank_bottle
     national_label_en: Bought water (in tank, bottle)
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -846,7 +927,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: packaged_water_bottled_water
+  - country_entry_id: VNM-WAS-50
+    source_category_code: packaged_water_bottled_water
     national_label_en: 'packaged water: bottled water'
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -856,7 +938,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: VNM-WAS-51
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -866,7 +949,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 91
-  - source_category_code: packaged_water_sachet_water
+  - country_entry_id: VNM-WAS-52
+    source_category_code: packaged_water_sachet_water
     national_label_en: 'packaged water: sachet water'
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -876,7 +960,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 91
-  - source_category_code: rain_water
+  - country_entry_id: VNM-WAS-53
+    source_category_code: rain_water
     national_label_en: Rain water
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -886,7 +971,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rain_water_collection
+  - country_entry_id: VNM-WAS-54
+    source_category_code: rain_water_collection
     national_label_en: Rain water collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -896,7 +982,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rain_water_collection
+  - country_entry_id: VNM-WAS-55
+    source_category_code: rain_water_collection
     national_label_en: Rain-water collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -906,7 +993,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: VNM-WAS-56
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -916,7 +1004,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: VNM-WAS-57
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -926,7 +1015,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: pond_river_water
+  - country_entry_id: VNM-WAS-58
+    source_category_code: pond_river_water
     national_label_en: Pond, river water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -936,7 +1026,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: river_lake_pond
+  - country_entry_id: VNM-WAS-59
+    source_category_code: river_lake_pond
     national_label_en: River, lake, pond
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -946,7 +1037,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: river_stream
+  - country_entry_id: VNM-WAS-60
+    source_category_code: river_stream
     national_label_en: River, stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -956,7 +1048,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: VNM-WAS-61
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -966,7 +1059,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+  - country_entry_id: VNM-WAS-62
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: surface water (river, dam, lake, pond, stream, canal, irrigation
       channel)
     national_label_local: Surface water
@@ -977,7 +1071,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
+  - country_entry_id: VNM-WAS-63
+    source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
     national_label_en: Surface water (river, stream, dam, lake, pond, canal, irrigation
       channel)
     national_label_local: Surface water
@@ -988,7 +1083,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: VNM-WAS-64
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -998,7 +1094,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 92
-  - source_category_code: dam
+  - country_entry_id: VNM-WAS-65
+    source_category_code: dam
     national_label_en: Dam
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -1008,7 +1105,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 95
-  - source_category_code: pond_lake
+  - country_entry_id: VNM-WAS-66
+    source_category_code: pond_lake
     national_label_en: Pond lake
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -1018,7 +1116,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 96
-  - source_category_code: pond_lake
+  - country_entry_id: VNM-WAS-67
+    source_category_code: pond_lake
     national_label_en: Pond, lake
     national_label_local: Pond
     jmp_classification: Surface water > Pond
@@ -1028,7 +1127,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 96
-  - source_category_code: river_stream
+  - country_entry_id: VNM-WAS-68
+    source_category_code: river_stream
     national_label_en: River, stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -1038,7 +1138,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 93
-  - source_category_code: rivers_lakes_ponds
+  - country_entry_id: VNM-WAS-69
+    source_category_code: rivers_lakes_ponds
     national_label_en: Rivers, lakes, ponds
     national_label_local: River
     jmp_classification: Surface water > River
@@ -1048,7 +1149,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 93
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: VNM-WAS-70
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1058,7 +1160,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 42
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: VNM-WAS-71
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'piped water: piped to neighbour'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1068,7 +1171,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 42
-  - source_category_code: to_neighbour
+  - country_entry_id: VNM-WAS-72
+    source_category_code: to_neighbour
     national_label_en: To neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1078,7 +1182,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 42
-  - source_category_code: piped_into_residence
+  - country_entry_id: VNM-WAS-73
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1088,7 +1193,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: piped_into_residence_plot
+  - country_entry_id: VNM-WAS-74
+    source_category_code: piped_into_residence_plot
     national_label_en: Piped into residence/plot
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1098,7 +1204,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: VNM-WAS-75
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1108,7 +1215,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: private_tap_water
+  - country_entry_id: VNM-WAS-76
+    source_category_code: private_tap_water
     national_label_en: Private tap water
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1118,7 +1226,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 38
-  - source_category_code: inside_private_pipe
+  - country_entry_id: VNM-WAS-77
+    source_category_code: inside_private_pipe
     national_label_en: Inside private pipe
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1128,7 +1237,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_in_dwelling
+  - country_entry_id: VNM-WAS-78
+    source_category_code: piped_in_dwelling
     national_label_en: Piped in Dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1138,7 +1248,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: VNM-WAS-79
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1148,7 +1259,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: VNM-WAS-80
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1158,7 +1270,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_water_piped_into_dwelling
+  - country_entry_id: VNM-WAS-81
+    source_category_code: piped_water_piped_into_dwelling
     national_label_en: 'piped water: piped into dwelling'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1168,7 +1281,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: pipes_into_dwelling
+  - country_entry_id: VNM-WAS-82
+    source_category_code: pipes_into_dwelling
     national_label_en: Pipes into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1178,7 +1292,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: private_tap_water_inside_the_house
+  - country_entry_id: VNM-WAS-83
+    source_category_code: private_tap_water_inside_the_house
     national_label_en: Private tap water.inside the house
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1188,7 +1303,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: outside_private_tap
+  - country_entry_id: VNM-WAS-84
+    source_category_code: outside_private_tap
     national_label_en: Outside private tap
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1198,7 +1314,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: piped_into_compound_yard_or_plot
+  - country_entry_id: VNM-WAS-85
+    source_category_code: piped_into_compound_yard_or_plot
     national_label_en: Piped into compound, yard or plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1208,7 +1325,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: piped_into_yard_plot
+  - country_entry_id: VNM-WAS-86
+    source_category_code: piped_into_yard_plot
     national_label_en: piped into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1218,7 +1336,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot
+  - country_entry_id: VNM-WAS-87
+    source_category_code: piped_water_into_yard_plot
     national_label_en: Piped water into yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1228,7 +1347,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: piped_water_piped_to_yard_plot
+  - country_entry_id: VNM-WAS-88
+    source_category_code: piped_water_piped_to_yard_plot
     national_label_en: 'piped water: piped to yard / plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1238,7 +1358,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: private_tap_water_outside_the_house
+  - country_entry_id: VNM-WAS-89
+    source_category_code: private_tap_water_outside_the_house
     national_label_en: Private tap water.outside the house
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1248,7 +1369,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: piped_to_public_tap
+  - country_entry_id: VNM-WAS-90
+    source_category_code: piped_to_public_tap
     national_label_en: Piped to public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1258,7 +1380,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: piped_water_public_tap_standpipe
+  - country_entry_id: VNM-WAS-91
+    source_category_code: piped_water_public_tap_standpipe
     national_label_en: 'piped water: public tap / standpipe'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1268,7 +1391,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: VNM-WAS-92
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1278,7 +1402,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_stanpipe
+  - country_entry_id: VNM-WAS-93
+    source_category_code: public_stanpipe
     national_label_en: public stanpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1288,7 +1413,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: VNM-WAS-94
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1298,7 +1424,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap_water
+  - country_entry_id: VNM-WAS-95
+    source_category_code: public_tap_water
     national_label_en: Public tap water
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1308,7 +1435,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: VNM-WAS-96
+    source_category_code: public_tap_standpipe
     national_label_en: Public Tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1318,7 +1446,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap_stanpipe
+  - country_entry_id: VNM-WAS-97
+    source_category_code: public_tap_stanpipe
     national_label_en: Public tap/stanpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1338,7 +1467,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: VNM-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -1348,7 +1478,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 128
-  - source_category_code: double_vault_compost_latrine
+  - country_entry_id: VNM-SAN-02
+    source_category_code: double_vault_compost_latrine
     national_label_en: Double vault compost latrine
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -1358,7 +1489,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 128
-  - source_category_code: flush_pour_flush_flush_to_open_drain
+  - country_entry_id: VNM-SAN-03
+    source_category_code: flush_pour_flush_flush_to_open_drain
     national_label_en: 'flush / pour flush: flush to open drain'
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1368,7 +1500,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: VNM-SAN-04
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1378,7 +1511,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: flush_pour_flush_to_elsewhere
+  - country_entry_id: VNM-SAN-05
+    source_category_code: flush_pour_flush_to_elsewhere
     national_label_en: Flush/Pour flush to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1388,7 +1522,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: flush_pour_flush_to_somewhere_else
+  - country_entry_id: VNM-SAN-06
+    source_category_code: flush_pour_flush_to_somewhere_else
     national_label_en: Flush/pour flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -1398,7 +1533,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: flush_pour_flush_flush_to_piped_sewer_system
+  - country_entry_id: VNM-SAN-07
+    source_category_code: flush_pour_flush_flush_to_piped_sewer_system
     national_label_en: 'flush / pour flush: flush to piped sewer system'
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1408,7 +1544,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: VNM-SAN-08
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1418,7 +1555,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: flush_to_sewer_system
+  - country_entry_id: VNM-SAN-09
+    source_category_code: flush_to_sewer_system
     national_label_en: Flush to sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1428,7 +1566,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: VNM-SAN-10
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/Pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1438,7 +1577,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: flush_pour_flush_flush_to_pit_latrine
+  - country_entry_id: VNM-SAN-11
+    source_category_code: flush_pour_flush_flush_to_pit_latrine
     national_label_en: 'flush / pour flush: flush to pit latrine'
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1448,7 +1588,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 63
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: VNM-SAN-12
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit (latrine)
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1458,7 +1599,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 63
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: VNM-SAN-13
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1468,7 +1610,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 63
-  - source_category_code: flush_pour_flush_to_pit_latrine
+  - country_entry_id: VNM-SAN-14
+    source_category_code: flush_pour_flush_to_pit_latrine
     national_label_en: Flush/pour flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -1478,7 +1621,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 63
-  - source_category_code: flush_pour_flush_flush_to_septic_tank
+  - country_entry_id: VNM-SAN-15
+    source_category_code: flush_pour_flush_flush_to_septic_tank
     national_label_en: 'flush / pour flush: flush to septic tank'
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1488,7 +1632,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 62
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: VNM-SAN-16
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1498,7 +1643,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 62
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: VNM-SAN-17
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1508,7 +1654,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 62
-  - source_category_code: flush_pour_flush_flush_to_dk_where
+  - country_entry_id: VNM-SAN-18
+    source_category_code: flush_pour_flush_flush_to_dk_where
     national_label_en: 'flush / pour flush: flush to dk where'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1518,7 +1665,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 64
-  - source_category_code: flush_to_unknown_place_not_sure_dk_where
+  - country_entry_id: VNM-SAN-19
+    source_category_code: flush_to_unknown_place_not_sure_dk_where
     national_label_en: Flush to unknown place / not sure / DK where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1528,7 +1676,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 64
-  - source_category_code: flush_to_unknown_place_not_sure_dk
+  - country_entry_id: VNM-SAN-20
+    source_category_code: flush_to_unknown_place_not_sure_dk
     national_label_en: Flush to unknown place/not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -1538,7 +1687,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 64
-  - source_category_code: flush_to_sewage_septic_tank
+  - country_entry_id: VNM-SAN-21
+    source_category_code: flush_to_sewage_septic_tank
     national_label_en: Flush to sewage/septic tank
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -1548,7 +1698,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 66
-  - source_category_code: flush_toilet
+  - country_entry_id: VNM-SAN-22
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -1558,7 +1709,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 66
-  - source_category_code: flush_toilet_to_septic_tank_sewage_pipes
+  - country_entry_id: VNM-SAN-23
+    source_category_code: flush_toilet_to_septic_tank_sewage_pipes
     national_label_en: Flush toilet to septic tank/sewage pipes
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -1568,7 +1720,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 66
-  - source_category_code: own_flush_toilet
+  - country_entry_id: VNM-SAN-24
+    source_category_code: own_flush_toilet
     national_label_en: Own flush toilet
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -1578,7 +1731,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 72
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: VNM-SAN-25
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -1588,7 +1742,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: VNM-SAN-26
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -1598,7 +1753,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 74
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: VNM-SAN-27
+    source_category_code: shared_flush_toilet
     national_label_en: Shared flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -1608,7 +1764,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 78
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: VNM-SAN-28
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1619,7 +1776,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: VNM-SAN-29
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -1629,7 +1787,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 80
-  - source_category_code: bucket
+  - country_entry_id: VNM-SAN-30
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1639,7 +1798,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 110
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: VNM-SAN-31
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1649,7 +1809,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 110
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: VNM-SAN-32
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet, Hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1660,7 +1821,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 109
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: VNM-SAN-33
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1671,7 +1833,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 109
-  - source_category_code: toilet_directly_into_water
+  - country_entry_id: VNM-SAN-34
+    source_category_code: toilet_directly_into_water
     national_label_en: Toilet directly into water
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -1682,7 +1845,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 109
-  - source_category_code: other
+  - country_entry_id: VNM-SAN-35
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -1692,7 +1856,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 111
-  - source_category_code: improved_pit_latrine
+  - country_entry_id: VNM-SAN-36
+    source_category_code: improved_pit_latrine
     national_label_en: Improved pit latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1703,7 +1868,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: VNM-SAN-37
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1714,7 +1880,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 106
-  - source_category_code: pit_latrine_pit_latrine_with_slab
+  - country_entry_id: VNM-SAN-38
+    source_category_code: pit_latrine_pit_latrine_with_slab
     national_label_en: 'pit latrine: pit latrine with slab'
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1725,7 +1892,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: VNM-SAN-39
+    source_category_code: open_pit
     national_label_en: Open Pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1736,7 +1904,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: VNM-SAN-40
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab / open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1747,7 +1916,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: VNM-SAN-41
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1758,7 +1928,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: VNM-SAN-42
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1769,7 +1940,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: simple_toilet
+  - country_entry_id: VNM-SAN-43
+    source_category_code: simple_toilet
     national_label_en: Simple toilet
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1780,7 +1952,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: VNM-SAN-44
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1791,7 +1964,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: VNM-SAN-45
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1802,7 +1976,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: VNM-SAN-46
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet*
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1813,7 +1988,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: traditional_pit_toilet_latrine
+  - country_entry_id: VNM-SAN-47
+    source_category_code: traditional_pit_toilet_latrine
     national_label_en: Traditional pit toilet/latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1824,7 +2000,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: pit_latrine_ventilated_improved_pit_latrine
+  - country_entry_id: VNM-SAN-48
+    source_category_code: pit_latrine_ventilated_improved_pit_latrine
     national_label_en: 'pit latrine: ventilated improved pit latrine'
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1835,7 +2012,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: vent_imp_pit_toilet
+  - country_entry_id: VNM-SAN-49
+    source_category_code: vent_imp_pit_toilet
     national_label_en: Vent. Imp. Pit toilet
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1846,7 +2024,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: VNM-SAN-50
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1857,7 +2036,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: VNM-SAN-51
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated improved Pit latrine (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1868,7 +2048,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: VNM-SAN-52
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -1879,7 +2060,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 114
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: VNM-SAN-53
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1890,7 +2072,8 @@ parameters:
     improved_flag: true
     shared_flag: true
     source_row: 122
-  - source_category_code: poor_flush_latrine_water_seal_type
+  - country_entry_id: VNM-SAN-54
+    source_category_code: poor_flush_latrine_water_seal_type
     national_label_en: Poor flush latrine (water seal type)
     national_label_local: Pour flush latrines
     jmp_classification: Latrines > Pour flush latrines
@@ -1900,7 +2083,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 85
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: VNM-SAN-55
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Private pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1910,7 +2094,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: VNM-SAN-56
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Public/shared pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1921,7 +2106,8 @@ parameters:
     improved_flag: false
     shared_flag: true
     source_row: 97
-  - source_category_code: no_facilities
+  - country_entry_id: VNM-SAN-57
+    source_category_code: no_facilities
     national_label_en: No facilities
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1931,7 +2117,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: VNM-SAN-58
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1941,7 +2128,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_facility_bush
+  - country_entry_id: VNM-SAN-59
+    source_category_code: no_facility_bush
     national_label_en: No facility, bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1951,7 +2139,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: VNM-SAN-60
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1961,7 +2150,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_toilet
+  - country_entry_id: VNM-SAN-61
+    source_category_code: no_toilet
     national_label_en: No toilet
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1971,7 +2161,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: VNM-SAN-62
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1981,7 +2172,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: VNM-SAN-63
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1991,7 +2183,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: other_type
+  - country_entry_id: VNM-SAN-64
+    source_category_code: other_type
     national_label_en: Other type
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -2011,7 +2204,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - survey_labels: 1-Red River Delta | Red River Delta
+  - country_entry_id: VNM-SUBNAT-01
+    survey_labels: 1-Red River Delta | Red River Delta
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: VNM_2015_GAULx_1
     gmd_subnatid2: ''
@@ -2032,7 +2226,8 @@ parameters:
     geo_name: Bac Ninh & Ha Nam & Ha Noi City & Ha Tay & Hai Duong & Hai Phong City
       & Hung Yen & Nam Dinh & Ninh Binh & Quang Ninh & Thai Binh & Vinh Phuc
     source_row: 18450
-  - survey_labels: 2-Midlands and Northern Mountainous | 2-Midlands and Northern Mountainous
+  - country_entry_id: VNM-SUBNAT-02
+    survey_labels: 2-Midlands and Northern Mountainous | 2-Midlands and Northern Mountainous
       Areas | 2-Midlands and Northern Mountains
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: VNM_2015_GAULx_2
@@ -2055,7 +2250,8 @@ parameters:
       Chau & Lang Son & Lao Cai & Phu Tho & Son La & Thai Nguyen & Tuyen Quang & Yen
       Bai
     source_row: 18451
-  - survey_labels: 3-Northern and Coastal Central | 3-Northern and Coastal Central
+  - country_entry_id: VNM-SUBNAT-03
+    survey_labels: 3-Northern and Coastal Central | 3-Northern and Coastal Central
       Region
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: VNM_2015_GAULx_3
@@ -2078,7 +2274,8 @@ parameters:
       & Ninh Thuan & Phu Yen & Quang Binh & Quang Nam & Quang Ngai & Quang Tri & Thanh
       Hoa & Thua Thien - Hue
     source_row: 18452
-  - survey_labels: 4-Central Highlands
+  - country_entry_id: VNM-SUBNAT-04
+    survey_labels: 4-Central Highlands
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: VNM_2015_GAULx_4
     gmd_subnatid2: ''
@@ -2098,7 +2295,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Dak Lak & Dak Nong & Gia Lai & Kon Tum & Lam Dong
     source_row: 18453
-  - survey_labels: 5-Southeast | 5-Southeastern Area | Southeast
+  - country_entry_id: VNM-SUBNAT-05
+    survey_labels: 5-Southeast | 5-Southeastern Area | Southeast
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: VNM_2015_GAULx_5
     gmd_subnatid2: ''
@@ -2119,7 +2317,8 @@ parameters:
     geo_name: Ba Ria-Vung Tau & Binh Duong & Binh Phuoc & Dong Nai & Ho Chi Minh City
       & Tay Ninh
     source_row: 18454
-  - survey_labels: 6-Mekong Delta
+  - country_entry_id: VNM-SUBNAT-06
+    survey_labels: 6-Mekong Delta
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: VNM_2015_GAULx_6
     gmd_subnatid2: ''

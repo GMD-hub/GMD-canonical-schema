@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: wc_interieur_et_pas_fosse_septique
+  - country_entry_id: WLF-SAN-01
+    source_category_code: wc_interieur_et_pas_fosse_septique
     national_label_en: WC interieur et pas fosse septique
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -20,7 +21,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 75
-  - source_category_code: wc_interieur_et_fosse_septique
+  - country_entry_id: WLF-SAN-02
+    source_category_code: wc_interieur_et_fosse_septique
     national_label_en: WC interieur et fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -30,7 +32,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: pas_de_system
+  - country_entry_id: WLF-SAN-03
+    source_category_code: pas_de_system
     national_label_en: Pas de system
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -40,7 +43,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_wc_interieur_et_pas_fosse_septique
+  - country_entry_id: WLF-SAN-04
+    source_category_code: pas_wc_interieur_et_pas_fosse_septique
     national_label_en: pas WC interieur et pas fosse septique
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -50,7 +54,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: systeme_d_assainnissement_des_eaux_usees
+  - country_entry_id: WLF-SAN-05
+    source_category_code: systeme_d_assainnissement_des_eaux_usees
     national_label_en: |-
       système d'assainnissement des
       eaux usées
@@ -72,7 +77,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: autre
+  - country_entry_id: WLF-WAS-01
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -82,7 +88,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: WLF-WAS-02
+    source_category_code: other
     national_label_en: Other
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -92,7 +99,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: WLF-WAS-03
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -102,7 +110,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: reseau_public
+  - country_entry_id: WLF-WAS-04
+    source_category_code: reseau_public
     national_label_en: Reseau public
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises

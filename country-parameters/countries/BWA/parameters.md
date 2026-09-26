@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Gaborone | 1 – Gaborone
+  - country_entry_id: BWA-SUBNAT-01
+    survey_labels: 1 - Gaborone | 1 – Gaborone
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: BWA_2011_UN2_BW0101
     gmd_subnatid2: ''
@@ -30,7 +31,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: GABORONE
     source_row: 1983
-  - survey_labels: 2 - Francistown | 2 – Francistown
+  - country_entry_id: BWA-SUBNAT-02
+    survey_labels: 2 - Francistown | 2 – Francistown
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: BWA_2011_UN2_BW0201
     gmd_subnatid2: ''
@@ -50,7 +52,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: FRANCISTOWN
     source_row: 1984
-  - survey_labels: 3 - Other cities & towns
+  - country_entry_id: BWA-SUBNAT-03
+    survey_labels: 3 - Other cities & towns
     survey_variables: subnatid
     gmd_subnatid1: BWA_2011_UNx_3
     gmd_subnatid2: ''
@@ -70,7 +73,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: LOBATSE & SELIBE PHIKWE & ORAPA & JWANENG & SOWA TOWN
     source_row: 1985
-  - survey_labels: 4 - Rural South-East
+  - country_entry_id: BWA-SUBNAT-04
+    survey_labels: 4 - Rural South-East
     survey_variables: subnatid
     gmd_subnatid1: BWA_2011_UNx_4
     gmd_subnatid2: ''
@@ -90,7 +94,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: SOUTHERN & BAROLONG & SOUTH EAST & KWENENG EAST & KGATLENG
     source_row: 1986
-  - survey_labels: 5 - Rural North-East
+  - country_entry_id: BWA-SUBNAT-05
+    survey_labels: 5 - Rural North-East
     survey_variables: subnatid
     gmd_subnatid1: BWA_2011_UNx_5
     gmd_subnatid2: ''
@@ -110,7 +115,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: SEROWE PALAPYE & MAHALAPYE & BOBONONG & BOTETI & TUTUME & NORTH EAST
     source_row: 1987
-  - survey_labels: 6 - Rural North-West
+  - country_entry_id: BWA-SUBNAT-06
+    survey_labels: 6 - Rural North-West
     survey_variables: subnatid
     gmd_subnatid1: BWA_2011_UNx_6
     gmd_subnatid2: ''
@@ -130,7 +136,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: NGAMILAND EAST & NGAMILAND WEST & NGAMILAND DELTA & CHOBE
     source_row: 1988
-  - survey_labels: 7 - Rural South-West
+  - country_entry_id: BWA-SUBNAT-07
+    survey_labels: 7 - Rural South-West
     survey_variables: subnatid
     gmd_subnatid1: BWA_2011_UNx_7
     gmd_subnatid2: ''
@@ -151,7 +158,8 @@ parameters:
     geo_name: NGWAKETSE WEST & KWENENG WEST & GHANZI & CENTRAL KGALAGADI GAME RESERVE
       & KGALAGADI SOUTH & KGALAGADI NORTH
     source_row: 1989
-  - survey_labels: 3 – Other Towns
+  - country_entry_id: BWA-SUBNAT-08
+    survey_labels: 3 – Other Towns
     survey_variables: subnatid1
     gmd_subnatid1: BWA_2011_UNx_3
     gmd_subnatid2: ''
@@ -171,7 +179,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: LOBATSE & SELIBE PHIKWE & ORAPA & JWANENG & SOWA TOWN
     source_row: 1999
-  - survey_labels: 4 – South East
+  - country_entry_id: BWA-SUBNAT-09
+    survey_labels: 4 – South East
     survey_variables: subnatid1
     gmd_subnatid1: BWA_2011_UNx_4
     gmd_subnatid2: ''
@@ -191,7 +200,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: SOUTHERN & BAROLONG & SOUTH EAST & KWENENG EAST & KGATLENG
     source_row: 2000
-  - survey_labels: 5 – North East
+  - country_entry_id: BWA-SUBNAT-10
+    survey_labels: 5 – North East
     survey_variables: subnatid1
     gmd_subnatid1: BWA_2011_UNx_5
     gmd_subnatid2: ''
@@ -211,7 +221,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: SEROWE PALAPYE & MAHALAPYE & BOBONONG & BOTETI & TUTUME & NORTH EAST
     source_row: 2001
-  - survey_labels: 6 – North West
+  - country_entry_id: BWA-SUBNAT-11
+    survey_labels: 6 – North West
     survey_variables: subnatid1
     gmd_subnatid1: BWA_2011_UNx_6
     gmd_subnatid2: ''
@@ -231,7 +242,8 @@ parameters:
     geo_nvar: ADM2_EN
     geo_name: NGAMILAND EAST & NGAMILAND WEST & NGAMILAND DELTA & CHOBE
     source_row: 2002
-  - survey_labels: 7 – South West
+  - country_entry_id: BWA-SUBNAT-12
+    survey_labels: 7 – South West
     survey_variables: subnatid1
     gmd_subnatid1: BWA_2011_UNx_7
     gmd_subnatid2: ''
@@ -262,7 +274,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: own_enviro_loo
+  - country_entry_id: BWA-SAN-01
+    source_category_code: own_enviro_loo
     national_label_en: 'Own: Enviro-loo'
     national_label_local: Composting toilet (private)
     jmp_classification: Composting toilets > Composting toilet (private)
@@ -272,7 +285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 129
-  - source_category_code: flush_or_pour_flush_toilet
+  - country_entry_id: BWA-SAN-02
+    source_category_code: flush_or_pour_flush_toilet
     national_label_en: FLUSH OR POUR FLUSH TOILET
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -282,7 +296,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: own_flush_toilet
+  - country_entry_id: BWA-SAN-03
+    source_category_code: own_flush_toilet
     national_label_en: Own Flush Toilet
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -292,7 +307,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: own_flush_toilet
+  - country_entry_id: BWA-SAN-04
+    source_category_code: own_flush_toilet
     national_label_en: 'Own: Flush toilet'
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -302,7 +318,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: communal_flush_toilet
+  - country_entry_id: BWA-SAN-05
+    source_category_code: communal_flush_toilet
     national_label_en: 'Communal: Flush toilet'
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -312,7 +329,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: neighbour_or_communal_flush_toilet
+  - country_entry_id: BWA-SAN-06
+    source_category_code: neighbour_or_communal_flush_toilet
     national_label_en: Neighbour or communal flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -322,7 +340,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: neighbour_s_communal_toilet
+  - country_entry_id: BWA-SAN-07
+    source_category_code: neighbour_s_communal_toilet
     national_label_en: Neighbour's & communal toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -332,7 +351,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: bucket_latrine
+  - country_entry_id: BWA-SAN-08
+    source_category_code: bucket_latrine
     national_label_en: Bucket latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -342,7 +362,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: BWA-SAN-09
+    source_category_code: traditional_pit_latrine
     national_label_en: TRADITIONAL PIT LATRINE
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -353,7 +374,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: BWA-SAN-10
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: VENTILATED IMPROVED PIT LATRINE (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -364,7 +386,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pail_bucket_latrine
+  - country_entry_id: BWA-SAN-11
+    source_category_code: pail_bucket_latrine
     national_label_en: Pail/Bucket latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
@@ -374,7 +397,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 118
-  - source_category_code: own_pit_latrine
+  - country_entry_id: BWA-SAN-12
+    source_category_code: own_pit_latrine
     national_label_en: Own Pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -384,7 +408,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: own_pit_latrine
+  - country_entry_id: BWA-SAN-13
+    source_category_code: own_pit_latrine
     national_label_en: 'Own: Pit latrine'
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -394,7 +419,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: own_ventilated_improved_pit_latrine
+  - country_entry_id: BWA-SAN-14
+    source_category_code: own_ventilated_improved_pit_latrine
     national_label_en: 'Own: Ventilated Improved Pit Latrine'
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -405,7 +431,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: communal_neighbors_toilet
+  - country_entry_id: BWA-SAN-15
+    source_category_code: communal_neighbors_toilet
     national_label_en: 'Communal: Neighbors toilet'
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Other
@@ -415,7 +442,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 127
-  - source_category_code: communal_pit_latrine
+  - country_entry_id: BWA-SAN-16
+    source_category_code: communal_pit_latrine
     national_label_en: 'Communal: Pit latrine'
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -426,7 +454,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: neighbour_or_communal_pit_latrine
+  - country_entry_id: BWA-SAN-17
+    source_category_code: neighbour_or_communal_pit_latrine
     national_label_en: Neighbour or communal pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -437,7 +466,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: neighbour_s_communal_latrine
+  - country_entry_id: BWA-SAN-18
+    source_category_code: neighbour_s_communal_latrine
     national_label_en: Neighbour's & communal latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -448,7 +478,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: bush
+  - country_entry_id: BWA-SAN-19
+    source_category_code: bush
     national_label_en: Bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -458,7 +489,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: BWA-SAN-20
+    source_category_code: no_facility_bush_field
     national_label_en: NO FACILITY/BUSH/FIELD
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -468,7 +500,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_none_available
+  - country_entry_id: BWA-SAN-21
+    source_category_code: no_none_available
     national_label_en: No, none available
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -478,7 +511,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_pas_disponible
+  - country_entry_id: BWA-SAN-22
+    source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -488,7 +522,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: BWA-SAN-23
+    source_category_code: none
     national_label_en: None
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -498,7 +533,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: BWA-SAN-24
+    source_category_code: other
     national_label_en: OTHER
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -508,7 +544,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_unimproved
+  - country_entry_id: BWA-SAN-25
+    source_category_code: other_unimproved
     national_label_en: Other unimproved
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -528,7 +565,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: BWA-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -538,7 +576,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: protected_spring
+  - country_entry_id: BWA-WAS-02
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -548,7 +587,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: BWA-WAS-03
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -558,7 +598,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: BWA-WAS-04
+    source_category_code: protected_well
     national_label_en: PROTECTED WELL
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -568,7 +609,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: well
+  - country_entry_id: BWA-WAS-05
+    source_category_code: well
     national_label_en: Well
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
@@ -578,7 +620,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: borehole
+  - country_entry_id: BWA-WAS-06
+    source_category_code: borehole
     national_label_en: Borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -588,7 +631,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: BWA-WAS-07
+    source_category_code: tube_well_or_borehole
     national_label_en: TUBE WELL OR BOREHOLE
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -598,7 +642,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: BWA-WAS-08
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -608,7 +653,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole_with_pump
+  - country_entry_id: BWA-WAS-09
+    source_category_code: tubewell_borehole_with_pump
     national_label_en: Tubewell/borehole with pump
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -618,7 +664,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: protected_spring
+  - country_entry_id: BWA-WAS-10
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -628,7 +675,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: BWA-WAS-11
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -638,7 +686,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: BWA-WAS-12
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -648,7 +697,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
+  - country_entry_id: BWA-WAS-13
+    source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
     national_label_en: Purchased from a cart with a small tank or drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -658,7 +708,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: bouser_tanker
+  - country_entry_id: BWA-WAS-14
+    source_category_code: bouser_tanker
     national_label_en: Bouser/Tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -668,7 +719,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: bowser_tanker
+  - country_entry_id: BWA-WAS-15
+    source_category_code: bowser_tanker
     national_label_en: Bowser/tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -678,7 +730,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: purchased_from_a_tanker_truck
+  - country_entry_id: BWA-WAS-16
+    source_category_code: purchased_from_a_tanker_truck
     national_label_en: Purchased from a tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -688,7 +741,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: BWA-WAS-17
+    source_category_code: tanker_truck
     national_label_en: TANKER TRUCK
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -698,7 +752,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: BWA-WAS-18
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -708,7 +763,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: refused
+  - country_entry_id: BWA-WAS-19
+    source_category_code: refused
     national_label_en: Refused
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -718,7 +774,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: BWA-WAS-20
+    source_category_code: bottled_water
     national_label_en: BOTTLED WATER
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -728,7 +785,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_from_stores
+  - country_entry_id: BWA-WAS-21
+    source_category_code: bottled_water_from_stores
     national_label_en: Bottled water from stores
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -738,7 +796,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rain_water_tank
+  - country_entry_id: BWA-WAS-22
+    source_category_code: rain_water_tank
     national_label_en: Rain water tank
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -748,7 +807,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: BWA-WAS-23
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -758,7 +818,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_tank
+  - country_entry_id: BWA-WAS-24
+    source_category_code: rainwater_tank
     national_label_en: Rainwater tank
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -768,7 +829,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: flowing_river_sand_river_river_bed_dam_lake_pan
+  - country_entry_id: BWA-WAS-25
+    source_category_code: flowing_river_sand_river_river_bed_dam_lake_pan
     national_label_en: Flowing River, Sand River(River Bed), Dam/Lake/Pan
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -778,7 +840,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_dam_lake_pond_stream_canal
+  - country_entry_id: BWA-WAS-26
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal
     national_label_en: SURFACE WATER (RIVER/DAM/LAKE/POND/STREAM/CANAL)
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -788,7 +851,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
+  - country_entry_id: BWA-WAS-27
+    source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
     national_label_en: Surface water, like a river, dam, lake, pond, stream, canal
       or irrigation channel
     national_label_local: Surface water
@@ -799,7 +863,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: dam_lake_pan
+  - country_entry_id: BWA-WAS-28
+    source_category_code: dam_lake_pan
     national_label_en: Dam/ lake/ pan
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -809,7 +874,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: dam_pan
+  - country_entry_id: BWA-WAS-29
+    source_category_code: dam_pan
     national_label_en: Dam/Pan
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -819,7 +885,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: dam_pan_lake
+  - country_entry_id: BWA-WAS-30
+    source_category_code: dam_pan_lake
     national_label_en: Dam/Pan/Lake
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -829,7 +896,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: river_stream
+  - country_entry_id: BWA-WAS-31
+    source_category_code: river_stream
     national_label_en: River/ stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -839,7 +907,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: BWA-WAS-32
+    source_category_code: river_stream
     national_label_en: River/stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -849,7 +918,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: neighbour_s_tap
+  - country_entry_id: BWA-WAS-33
+    source_category_code: neighbour_s_tap
     national_label_en: Neighbour's Tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -859,7 +929,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_indoors
+  - country_entry_id: BWA-WAS-34
+    source_category_code: piped_indoors
     national_label_en: Piped indoors
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -869,7 +940,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: BWA-WAS-35
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -879,7 +951,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: BWA-WAS-36
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -889,7 +962,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: BWA-WAS-37
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -899,7 +973,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_outdoors
+  - country_entry_id: BWA-WAS-38
+    source_category_code: piped_outdoors
     national_label_en: Piped outdoors
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -909,7 +984,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot_or_compound
+  - country_entry_id: BWA-WAS-39
+    source_category_code: piped_water_into_yard_plot_or_compound
     national_label_en: Piped water into yard, plot or compound
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -919,7 +995,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: stand_pipe_within_plot
+  - country_entry_id: BWA-WAS-40
+    source_category_code: stand_pipe_within_plot
     national_label_en: Stand pipe within plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -929,7 +1006,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: stand_pipe_within_plot
+  - country_entry_id: BWA-WAS-41
+    source_category_code: stand_pipe_within_plot
     national_label_en: STAND-PIPE WITHIN PLOT
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -939,7 +1017,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tap_in_the_yard
+  - country_entry_id: BWA-WAS-42
+    source_category_code: tap_in_the_yard
     national_label_en: Tap in the yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -949,7 +1028,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: communal_tap
+  - country_entry_id: BWA-WAS-43
+    source_category_code: communal_tap
     national_label_en: Communal Tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -959,7 +1039,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: communal_tap_within_the_locality
+  - country_entry_id: BWA-WAS-44
+    source_category_code: communal_tap_within_the_locality
     national_label_en: Communal tap within the locality
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -969,7 +1050,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: BWA-WAS-45
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -979,7 +1061,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_or_standpipe
+  - country_entry_id: BWA-WAS-46
+    source_category_code: public_tap_or_standpipe
     national_label_en: Public tap or standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -989,7 +1072,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: BWA-WAS-47
+    source_category_code: public_tap_standpipe
     national_label_en: PUBLIC TAP/STANDPIPE
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early Childhood Care and Education (ECCE)
+  - country_entry_id: VUT-EDU-01
+    national_label_en: Early Childhood Care and Education (ECCE)
     national_label_local: Early Childhood Care and Education (ECCE)
     entry_age: 4
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarten
+  - country_entry_id: VUT-EDU-02
+    national_label_en: Kindergarten
     national_label_local: Kindergarten
     entry_age: 4
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Basic education year 1 to 6 / Primary Education
+  - country_entry_id: VUT-EDU-03
+    national_label_en: Basic education year 1 to 6 / Primary Education
     national_label_local: Basic education year 1 to 6 / Primary Education
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Basic education year 7 and 8
+  - country_entry_id: VUT-EDU-04
+    national_label_en: Basic education year 7 and 8
     national_label_local: Basic education year 7 and 8
     entry_age: 12
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: Lower Secondary (Yrs 9-10)
+  - country_entry_id: VUT-EDU-05
+    national_label_en: Lower Secondary (Yrs 9-10)
     national_label_local: Lower Secondary (Yrs 9-10)
     entry_age: 14
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Lower Secondary Vocational/ Technical School
+  - country_entry_id: VUT-EDU-06
+    national_label_en: Lower Secondary Vocational/ Technical School
     national_label_local: Lower Secondary Vocational/ Technical School
     entry_age: 14
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Rural Training Centres
+  - country_entry_id: VUT-EDU-07
+    national_label_en: Rural Training Centres
     national_label_local: Rural Training Centres
     entry_age: 16
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Upper  Secondary School (Yrs 11-12)
+  - country_entry_id: VUT-EDU-08
+    national_label_en: Upper  Secondary School (Yrs 11-12)
     national_label_local: Upper  Secondary School (Yrs 11-12)
     entry_age: 16
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Upper Secondary School Year 13
+  - country_entry_id: VUT-EDU-09
+    national_label_en: Upper Secondary School Year 13
     national_label_local: Upper Secondary School Year 13
     entry_age: 18
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Upper Secondary School (French system), DAEU
+  - country_entry_id: VUT-EDU-10
+    national_label_en: Upper Secondary School (French system), DAEU
     national_label_local: Upper Secondary School (French system), DAEU
     entry_age: 19
     duration_years: 1
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: USP Foundation Courses (Yr 13)
+  - country_entry_id: VUT-EDU-11
+    national_label_en: USP Foundation Courses (Yr 13)
     national_label_local: USP Foundation Courses (Yr 13)
     entry_age: 18
     duration_years: 1
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Technical/Vocational and life skills courses
+  - country_entry_id: VUT-EDU-12
+    national_label_en: Technical/Vocational and life skills courses
     national_label_local: Technical/Vocational and life skills courses
     entry_age: 18
     duration_years: 1
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Police College
+  - country_entry_id: VUT-EDU-13
+    national_label_en: Police College
     national_label_local: Police College
     entry_age: 18
     duration_years: 2
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Nursing College
+  - country_entry_id: VUT-EDU-14
+    national_label_en: Nursing College
     national_label_local: Nursing College
     entry_age: 18
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Maritime College
+  - country_entry_id: VUT-EDU-15
+    national_label_en: Maritime College
     national_label_local: Maritime College
     entry_age: 18
     duration_years: 2
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: APTC Tourism and Hospitality program
+  - country_entry_id: VUT-EDU-16
+    national_label_en: APTC Tourism and Hospitality program
     national_label_local: APTC Tourism and Hospitality program
     entry_age: 18
     duration_years: 2
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Vanuatu Instititute of Teaching Education
+  - country_entry_id: VUT-EDU-17
+    national_label_en: Vanuatu Instititute of Teaching Education
     national_label_local: Vanuatu Instititute of Teaching Education
     entry_age: 18
     duration_years: 2
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Vanuatu Institute of Technology (VIT/NTV), Accountability and
+  - country_entry_id: VUT-EDU-18
+    national_label_en: Vanuatu Institute of Technology (VIT/NTV), Accountability and
       secretariat diploma
     national_label_local: Vanuatu Institute of Technology (VIT/NTV), Accountability
       and secretariat diploma
@@ -192,7 +210,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: USP Bachelor Degrees (Economy and admin, law and admin, science
+  - country_entry_id: VUT-EDU-19
+    national_label_en: USP Bachelor Degrees (Economy and admin, law and admin, science
       and economics)
     national_label_local: USP Bachelor Degrees (Economy and admin, law and admin,
       science and economics)
@@ -204,7 +223,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: AUF Bachelor Degree (Economics and Social administration -
+  - country_entry_id: VUT-EDU-20
+    national_label_en: AUF Bachelor Degree (Economics and Social administration -
       French speaking)
     national_label_local: AUF Bachelor Degree (Economics and Social administration
       - French speaking)
@@ -216,7 +236,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Masters Degree by distance
+  - country_entry_id: VUT-EDU-21
+    national_label_en: Masters Degree by distance
     national_label_local: Masters Degree by distance
     entry_age: 22
     duration_years: 2
@@ -236,7 +257,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-Malampa
+  - country_entry_id: VUT-SUBNAT-01
+    survey_labels: 1-Malampa
     survey_variables: subnatid1
     gmd_subnatid1: VUT_2015_GAUL1_3296
     gmd_subnatid2: ''
@@ -256,7 +278,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Malampa
     source_row: 18516
-  - survey_labels: 2-Penama
+  - country_entry_id: VUT-SUBNAT-02
+    survey_labels: 2-Penama
     survey_variables: subnatid1
     gmd_subnatid1: VUT_2015_GAUL1_3297
     gmd_subnatid2: ''
@@ -276,7 +299,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Penama
     source_row: 18517
-  - survey_labels: 3-Sanma
+  - country_entry_id: VUT-SUBNAT-03
+    survey_labels: 3-Sanma
     survey_variables: subnatid1
     gmd_subnatid1: VUT_2015_GAUL1_3298
     gmd_subnatid2: ''
@@ -296,7 +320,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sanma
     source_row: 18518
-  - survey_labels: 4-Shefa
+  - country_entry_id: VUT-SUBNAT-04
+    survey_labels: 4-Shefa
     survey_variables: subnatid1
     gmd_subnatid1: VUT_2015_GAUL1_3299
     gmd_subnatid2: ''
@@ -316,7 +341,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shefa
     source_row: 18519
-  - survey_labels: 5-Tafea
+  - country_entry_id: VUT-SUBNAT-05
+    survey_labels: 5-Tafea
     survey_variables: subnatid1
     gmd_subnatid1: VUT_2015_GAUL1_3300
     gmd_subnatid2: ''
@@ -336,7 +362,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tafea
     source_row: 18520
-  - survey_labels: 6-Torba
+  - country_entry_id: VUT-SUBNAT-06
+    survey_labels: 6-Torba
     survey_variables: subnatid1
     gmd_subnatid1: VUT_2015_GAUL1_3301
     gmd_subnatid2: ''
@@ -366,7 +393,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet_private_toilet
+  - country_entry_id: VUT-SAN-01
+    source_category_code: composting_toilet_private_toilet
     national_label_en: Composting toilet - private toilet
     national_label_local: Composting toilet (private)
     jmp_classification: Composting toilets > Composting toilet (private)
@@ -376,7 +404,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 129
-  - source_category_code: composting_toilet_shared_toilet
+  - country_entry_id: VUT-SAN-02
+    source_category_code: composting_toilet_shared_toilet
     national_label_en: Composting toilet - shared toilet
     national_label_local: Composting toilet (shared)
     jmp_classification: Composting toilets > Composting toilet (shared)
@@ -386,7 +415,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 130
-  - source_category_code: flush_to_open_drain
+  - country_entry_id: VUT-SAN-03
+    source_category_code: flush_to_open_drain
     national_label_en: flush to open drain
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -396,7 +426,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: VUT-SAN-04
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -406,7 +437,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: VUT-SAN-05
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -416,7 +448,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_dk_where
+  - country_entry_id: VUT-SAN-06
+    source_category_code: flush_to_dk_where
     national_label_en: flush to DK where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -426,7 +459,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: sewerage
+  - country_entry_id: VUT-SAN-07
+    source_category_code: sewerage
     national_label_en: sewerage
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -436,7 +470,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: flush_to_pit_latrine_private
+  - country_entry_id: VUT-SAN-08
+    source_category_code: flush_to_pit_latrine_private
     national_label_en: Flush to pit latrine - private
     national_label_local: to pit
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -446,7 +481,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 75
-  - source_category_code: flush_to_septic_tank_private
+  - country_entry_id: VUT-SAN-09
+    source_category_code: flush_to_septic_tank_private
     national_label_en: Flush to septic tank - private
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -456,7 +492,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: flush_do_not_know_private_toilet
+  - country_entry_id: VUT-SAN-10
+    source_category_code: flush_do_not_know_private_toilet
     national_label_en: Flush do not know - private toilet
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > Private flush/toilet > to unknown place/ not
@@ -467,7 +504,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 76
-  - source_category_code: sewerage
+  - country_entry_id: VUT-SAN-11
+    source_category_code: sewerage
     national_label_en: sewerage
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -478,7 +516,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: flush_to_pit_latrine_shared
+  - country_entry_id: VUT-SAN-12
+    source_category_code: flush_to_pit_latrine_shared
     national_label_en: Flush to pit latrine - shared
     national_label_local: to pit
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to pit
@@ -488,7 +527,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 81
-  - source_category_code: flush_to_septic_tank_shared
+  - country_entry_id: VUT-SAN-13
+    source_category_code: flush_to_septic_tank_shared
     national_label_en: Flush to septic tank - shared
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -498,7 +538,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: flush_do_not_know_shared_toilet
+  - country_entry_id: VUT-SAN-14
+    source_category_code: flush_do_not_know_shared_toilet
     national_label_en: Flush do not know - shared toilet
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to unknown place/
@@ -509,7 +550,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 82
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: VUT-SAN-15
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -519,7 +561,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: VUT-SAN-16
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -529,7 +572,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket
+  - country_entry_id: VUT-SAN-17
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -539,7 +583,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: VUT-SAN-18
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -550,7 +595,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: VUT-SAN-19
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -561,7 +607,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: VUT-SAN-20
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -572,7 +619,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: VUT-SAN-21
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -583,7 +631,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_with_slab_private_toilet
+  - country_entry_id: VUT-SAN-22
+    source_category_code: pit_latrine_with_slab_private_toilet
     national_label_en: Pit latrine with slab - private toilet
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -594,7 +643,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: pit_latrine_without_slab_private_toilet
+  - country_entry_id: VUT-SAN-23
+    source_category_code: pit_latrine_without_slab_private_toilet
     national_label_en: Pit latrine without slab - private toilet
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
@@ -605,7 +655,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 116
-  - source_category_code: vip_private
+  - country_entry_id: VUT-SAN-24
+    source_category_code: vip_private
     national_label_en: VIP private
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -616,7 +667,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: pit_latrine_with_slab_shared_toilet
+  - country_entry_id: VUT-SAN-25
+    source_category_code: pit_latrine_with_slab_shared_toilet
     national_label_en: Pit latrine with slab - shared toilet
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -627,7 +679,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: pit_latrine_without_slab_shared_toilet
+  - country_entry_id: VUT-SAN-26
+    source_category_code: pit_latrine_without_slab_shared_toilet
     national_label_en: Pit latrine without slab - shared toilet
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -638,7 +691,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 124
-  - source_category_code: vip_shared
+  - country_entry_id: VUT-SAN-27
+    source_category_code: vip_shared
     national_label_en: VIP shared
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -649,7 +703,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 121
-  - source_category_code: bush
+  - country_entry_id: VUT-SAN-28
+    source_category_code: bush
     national_label_en: Bush
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -659,7 +714,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_bush_or_field
+  - country_entry_id: VUT-SAN-29
+    source_category_code: no_facilities_bush_or_field
     national_label_en: No facilities, bush or field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -669,7 +725,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field_creek_ocean
+  - country_entry_id: VUT-SAN-30
+    source_category_code: no_facility_bush_field_creek_ocean
     national_label_en: no facility / bush / field/creek/ocean
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -679,7 +736,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: VUT-SAN-31
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -699,7 +757,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: ground_water_protected_borehole_tube_well_protected_spring
+  - country_entry_id: VUT-WAS-01
+    source_category_code: ground_water_protected_borehole_tube_well_protected_spring
     national_label_en: Ground water protected (Borehole, tube-well, protected spring)
     national_label_local: Protected ground water
     jmp_classification: Ground water > Protected ground water
@@ -709,7 +768,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 44
-  - source_category_code: protected_spring
+  - country_entry_id: VUT-WAS-02
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -719,7 +779,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: VUT-WAS-03
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -729,7 +790,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: unprotected_tube_well_borehole
+  - country_entry_id: VUT-WAS-04
+    source_category_code: unprotected_tube_well_borehole
     national_label_en: Unprotected tube well/borehole
     national_label_local: Private
     jmp_classification: Ground water > Traditional wells > Private
@@ -739,7 +801,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: protected_tube_well_borehole
+  - country_entry_id: VUT-WAS-05
+    source_category_code: protected_tube_well_borehole
     national_label_en: Protected tube well/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -749,7 +812,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: VUT-WAS-06
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -759,7 +823,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: VUT-WAS-07
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -769,7 +834,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: VUT-WAS-08
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -779,7 +845,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: ground_water_unprotected_unprotected_well_spring
+  - country_entry_id: VUT-WAS-09
+    source_category_code: ground_water_unprotected_unprotected_well_spring
     national_label_en: Ground water unprotected (unprotected well, spring)
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -789,7 +856,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: other
+  - country_entry_id: VUT-WAS-10
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -799,7 +867,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: unprotected_rainwater
+  - country_entry_id: VUT-WAS-11
+    source_category_code: unprotected_rainwater
     national_label_en: Unprotected rainwater
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -809,7 +878,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: VUT-WAS-12
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -819,7 +889,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: VUT-WAS-13
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -829,7 +900,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_with_improved
+  - country_entry_id: VUT-WAS-14
+    source_category_code: bottled_water_with_improved
     national_label_en: Bottled water with improved
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -839,7 +911,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_without_improved
+  - country_entry_id: VUT-WAS-15
+    source_category_code: bottled_water_without_improved
     national_label_en: Bottled water without improved
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -849,7 +922,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: protected_rainwater
+  - country_entry_id: VUT-WAS-16
+    source_category_code: protected_rainwater
     national_label_en: Protected rainwater
     national_label_local: Rainwater
     jmp_classification: Rainwater
@@ -859,7 +933,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: rain_water_collection
+  - country_entry_id: VUT-WAS-17
+    source_category_code: rain_water_collection
     national_label_en: Rain water collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -869,7 +944,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_protected_private_public
+  - country_entry_id: VUT-WAS-18
+    source_category_code: rainwater_protected_private_public
     national_label_en: Rainwater protected (private+public)
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -879,7 +955,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_unprotected_private_public
+  - country_entry_id: VUT-WAS-19
+    source_category_code: rainwater_unprotected_private_public
     national_label_en: Rainwater unprotected (private+public)
     national_label_local: Uncovered cistern/tank
     jmp_classification: Rainwater > Uncovered cistern/tank
@@ -889,7 +966,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: surface_water
+  - country_entry_id: VUT-WAS-20
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -899,7 +977,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_lake_dam_pond_stream_canal_irrigation_channels
+  - country_entry_id: VUT-WAS-21
+    source_category_code: surface_water_river_lake_dam_pond_stream_canal_irrigation_channels
     national_label_en: Surface water (river, lake, dam, pond, stream, canal, irrigation,
       channels)
     national_label_local: Surface water
@@ -910,7 +989,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: VUT-WAS-22
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'piped water: piped to neighbour'
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -920,7 +1000,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: VUT-WAS-23
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -930,7 +1011,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_piped_into_dwelling
+  - country_entry_id: VUT-WAS-24
+    source_category_code: piped_water_piped_into_dwelling
     national_label_en: 'piped water: piped into dwelling'
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -940,7 +1022,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_in_yard_plot
+  - country_entry_id: VUT-WAS-25
+    source_category_code: piped_in_yard_plot
     national_label_en: Piped in yard / plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -950,7 +1033,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: VUT-WAS-26
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -960,7 +1044,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_piped_to_yard_plot
+  - country_entry_id: VUT-WAS-27
+    source_category_code: piped_water_piped_to_yard_plot
     national_label_en: 'piped water: piped to yard / plot'
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -970,7 +1055,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_public_tap_standpipe
+  - country_entry_id: VUT-WAS-28
+    source_category_code: piped_water_public_tap_standpipe
     national_label_en: 'piped water: public tap / standpipe'
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -980,7 +1066,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe_shared_tap
+  - country_entry_id: VUT-WAS-29
+    source_category_code: public_tap_standpipe_shared_tap
     national_label_en: Public tap / standpipe / shared tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -990,7 +1077,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: VUT-WAS-30
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood development programmes
+  - country_entry_id: CAN-EDU-01
+    national_label_en: Early childhood development programmes
     national_label_local: Early learning programs
     entry_age: 0
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Pre-primary
+  - country_entry_id: CAN-EDU-02
+    national_label_en: Pre-primary
     national_label_local: Preschool programs
     entry_age: 3
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Pre-primary
+  - country_entry_id: CAN-EDU-03
+    national_label_en: Pre-primary
     national_label_local: Kindergarten or maternelle or Grade Primary
     entry_age: 3
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Elementary education or equivalent
+  - country_entry_id: CAN-EDU-04
+    national_label_en: Elementary education or equivalent
     national_label_local: Elementary
     entry_age: 6
     duration_years: 6
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: Lower secondary or equivalent
+  - country_entry_id: CAN-EDU-05
+    national_label_en: Lower secondary or equivalent
     national_label_local: Junior High/Middle School
     entry_age: 12
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: Upper secondary education or equivalent - General
+  - country_entry_id: CAN-EDU-06
+    national_label_en: Upper secondary education or equivalent - General
     national_label_local: High School/Secondary School/Senior Secondary
     entry_age: 15
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
-  - national_label_en: Upper secondary education or equivalent - Vocational/Technical
+  - country_entry_id: CAN-EDU-07
+    national_label_en: Upper secondary education or equivalent - Vocational/Technical
     national_label_local: Vocational/Technical High School/Formation Professionnelle
     entry_age: 15
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Postsecondary short general, career or  technical education
+  - country_entry_id: CAN-EDU-08
+    national_label_en: Postsecondary short general, career or  technical education
       or equivalent- General or Equivalent
     national_label_local: Upgrading Program
     entry_age: 18
@@ -91,7 +99,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Postsecondary short general, career or  technical education
+  - country_entry_id: CAN-EDU-09
+    national_label_en: Postsecondary short general, career or  technical education
       or equivalent -Career, Technical or Professional or equivalent
     national_label_local: |-
       Trade certificate/
@@ -104,7 +113,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Postsecondary short general, career or  technical education
+  - country_entry_id: CAN-EDU-10
+    national_label_en: Postsecondary short general, career or  technical education
       or equivalent  - Apprenticeship or equivalent
     national_label_local: Apprenticeship program
     entry_age: 18
@@ -115,7 +125,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: |-
+  - country_entry_id: CAN-EDU-11
+    national_label_en: |-
       Postsecondary general, career or  technical education or equivalent
       - General or equivalent
     national_label_local: Undergraduate diploma/certificate program
@@ -127,7 +138,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Postsecondary general, career or  technical education or equivalent
+  - country_entry_id: CAN-EDU-12
+    national_label_en: Postsecondary general, career or  technical education or equivalent
       - Career or technical or equivalent
     national_label_local: College Diploma program
     entry_age: 18
@@ -138,7 +150,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: "Postsecondary general, career or  technical education or equivalent
+  - country_entry_id: CAN-EDU-13
+    national_label_en: "Postsecondary general, career or  technical education or equivalent
       \n-Above career or technical certificate or diploma or equivalent"
     national_label_local: Post career, technical or professional training program
     entry_age: 21
@@ -149,7 +162,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Bachelor's degree education or equivalent
+  - country_entry_id: CAN-EDU-14
+    national_label_en: Bachelor's degree education or equivalent
     national_label_local: Bachelor's degree education or equivalent
     entry_age: 18
     duration_years: 3
@@ -159,7 +173,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Above bachelor’s degree credential or equivalent
+  - country_entry_id: CAN-EDU-15
+    national_label_en: Above bachelor’s degree credential or equivalent
     national_label_local: Above bachelor’s degree credential or equivalent
     entry_age: 21
     duration_years: 1
@@ -169,7 +184,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Professional degree
+  - country_entry_id: CAN-EDU-16
+    national_label_en: Professional degree
     national_label_local: Professional degree
     entry_age: 18
     duration_years: 5
@@ -179,7 +195,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Master's degree education or equivalent
+  - country_entry_id: CAN-EDU-17
+    national_label_en: Master's degree education or equivalent
     national_label_local: Master's degree education or equivalent
     entry_age: 21
     duration_years: 1
@@ -189,7 +206,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Above master's degree credential or equivalent
+  - country_entry_id: CAN-EDU-18
+    national_label_en: Above master's degree credential or equivalent
     national_label_local: Above master's degree credential or equivalent
     entry_age: 23
     duration_years: 1
@@ -199,7 +217,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Doctorate degree education or equivalent
+  - country_entry_id: CAN-EDU-19
+    national_label_en: Doctorate degree education or equivalent
     national_label_local: Doctorate degree education or equivalent
     entry_age: 25
     duration_years: 3
@@ -219,7 +238,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: '[10]Newfoundland and Labrador'
+  - country_entry_id: CAN-SUBNAT-01
+    survey_labels: '[10]Newfoundland and Labrador'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -239,7 +259,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Newfoundland and Labrador / Terre-Neuve-et-Labrador
     source_row: 2018
-  - survey_labels: '[11]Prince Edward Island'
+  - country_entry_id: CAN-SUBNAT-02
+    survey_labels: '[11]Prince Edward Island'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -259,7 +280,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Prince Edward Island / Île-du-Prince-Édouard
     source_row: 2019
-  - survey_labels: '[12]Nova Scotia'
+  - country_entry_id: CAN-SUBNAT-03
+    survey_labels: '[12]Nova Scotia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -279,7 +301,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nova Scotia / Nouvelle-Écosse
     source_row: 2020
-  - survey_labels: '[13]New Brunswick'
+  - country_entry_id: CAN-SUBNAT-04
+    survey_labels: '[13]New Brunswick'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -299,7 +322,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: New Brunswick / Nouveau-Brunswick
     source_row: 2021
-  - survey_labels: '[24]Quebec'
+  - country_entry_id: CAN-SUBNAT-05
+    survey_labels: '[24]Quebec'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -319,7 +343,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Quebec / Québec
     source_row: 2022
-  - survey_labels: '[35]Ontario'
+  - country_entry_id: CAN-SUBNAT-06
+    survey_labels: '[35]Ontario'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -339,7 +364,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ontario
     source_row: 2023
-  - survey_labels: '[46]Manitoba'
+  - country_entry_id: CAN-SUBNAT-07
+    survey_labels: '[46]Manitoba'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -359,7 +385,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Manitoba
     source_row: 2024
-  - survey_labels: '[47]Saskatchewan'
+  - country_entry_id: CAN-SUBNAT-08
+    survey_labels: '[47]Saskatchewan'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -379,7 +406,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Saskatchewan
     source_row: 2025
-  - survey_labels: '[48]Alberta'
+  - country_entry_id: CAN-SUBNAT-09
+    survey_labels: '[48]Alberta'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -399,7 +427,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alberta
     source_row: 2026
-  - survey_labels: '[59]British Columbia'
+  - country_entry_id: CAN-SUBNAT-10
+    survey_labels: '[59]British Columbia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -429,7 +458,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: the_sewer_system_of_your_city_town_or_municipality
+  - country_entry_id: CAN-SAN-01
+    source_category_code: the_sewer_system_of_your_city_town_or_municipality
     national_label_en: The sewer system of your city, town or  municipality
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -439,7 +469,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: a_private_or_communal_septic_system_including_holding_tanks
+  - country_entry_id: CAN-SAN-02
+    source_category_code: a_private_or_communal_septic_system_including_holding_tanks
     national_label_en: A private or communal septic system, including holding tanks
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -449,7 +480,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: don_t_know
+  - country_entry_id: CAN-SAN-03
+    source_category_code: don_t_know
     national_label_en: Don't know
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -459,7 +491,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: other
+  - country_entry_id: CAN-SAN-04
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -479,7 +512,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring_water
+  - country_entry_id: CAN-WAS-01
+    source_category_code: spring_water
     national_label_en: Spring water
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -489,7 +523,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: other
+  - country_entry_id: CAN-WAS-02
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -499,7 +534,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: CAN-WAS-03
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -509,7 +545,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_including_purchased_water_in_a_water_cooler
+  - country_entry_id: CAN-WAS-04
+    source_category_code: bottled_water_including_purchased_water_in_a_water_cooler
     national_label_en: Bottled water including purchased water in a water cooler
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -519,7 +556,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_including_purchased_water_in_a_water_cooler_t
+  - country_entry_id: CAN-WAS-05
+    source_category_code: bottled_water_including_purchased_water_in_a_water_cooler_t
     national_label_en: Bottled water including purchased water in a water cooler,
       t
     national_label_local: Bottled water
@@ -530,7 +568,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: both_tap_water_and_bottled_water
+  - country_entry_id: CAN-WAS-06
+    source_category_code: both_tap_water_and_bottled_water
     national_label_en: Both tap water and bottled water
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -540,7 +579,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: tap_water
+  - country_entry_id: CAN-WAS-07
+    source_category_code: tap_water
     national_label_en: Tap water
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises

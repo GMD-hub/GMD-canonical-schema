@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Babies, Nursery I, Nursery II and Interactive I (regular education)
+  - country_entry_id: CRI-EDU-01
+    national_label_en: Babies, Nursery I, Nursery II and Interactive I (regular education)
     national_label_local: Bebés, Maternal I, Maternal II e Interactivo I (Educación
       regular)
     entry_age: 0
@@ -21,7 +22,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Early stimulation, Nursery, Pre-kindergarten (special education)
+  - country_entry_id: CRI-EDU-02
+    national_label_en: Early stimulation, Nursery, Pre-kindergarten (special education)
     national_label_local: |-
       Estimulación Temprana, Maternal, Prekinder
       (Educación Especial)
@@ -33,7 +35,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Interactive II and Transition cycle (regular education)
+  - country_entry_id: CRI-EDU-03
+    national_label_en: Interactive II and Transition cycle (regular education)
     national_label_local: Interactivo II y Ciclo de Transición (Educación regular)
     entry_age: 4
     duration_years: 2
@@ -43,7 +46,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Kindergarten, Preparatory (special education)
+  - country_entry_id: CRI-EDU-04
+    national_label_en: Kindergarten, Preparatory (special education)
     national_label_local: |-
       Kinder, Preparatoria
       (Educación  Especial)
@@ -55,7 +59,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
-  - national_label_en: General Basic Education - Cycles I and II
+  - country_entry_id: CRI-EDU-05
+    national_label_en: General Basic Education - Cycles I and II
     national_label_local: I y II Ciclos de la Educación General Básica (EGB)
     entry_age: 6
     duration_years: 6
@@ -65,7 +70,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Special education - Cycles I and II
+  - country_entry_id: CRI-EDU-06
+    national_label_en: Special education - Cycles I and II
     national_label_local: I y II Ciclos  en Educación Especial
     entry_age: 7
     duration_years: 7
@@ -75,7 +81,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
-  - national_label_en: Age classroom
+  - country_entry_id: CRI-EDU-07
+    national_label_en: Age classroom
     national_label_local: Aula Edad
     entry_age: 10
     duration_years: 3
@@ -85,7 +92,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 13
-  - national_label_en: Youth and adult education
+  - country_entry_id: CRI-EDU-08
+    national_label_en: Youth and adult education
     national_label_local: Educación de jóvenes y adultos
     entry_age: 14
     duration_years: 2
@@ -95,7 +103,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 14
-  - national_label_en: General Basic Education - Cycle III - Academic daytime
+  - country_entry_id: CRI-EDU-09
+    national_label_en: General Basic Education - Cycle III - Academic daytime
     national_label_local: III Ciclo de la Educación General Básica (EGB) - Académica
       Diurna
     entry_age: 12
@@ -106,7 +115,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
-  - national_label_en: Special education - Cycle III (Special education centres)
+  - country_entry_id: CRI-EDU-10
+    national_label_en: Special education - Cycle III (Special education centres)
     national_label_local: III Ciclo de la Educación Especial (Centros de Educación
       Especial)
     entry_age: 14
@@ -117,7 +127,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 16
-  - national_label_en: Youth and adult education
+  - country_entry_id: CRI-EDU-11
+    national_label_en: Youth and adult education
     national_label_local: Educación de Personas Jóvenes y Adultas
     entry_age: 14
     duration_years: 3
@@ -127,7 +138,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 17
-  - national_label_en: General Basic Education - Cycle III - Technical daytime
+  - country_entry_id: CRI-EDU-12
+    national_label_en: General Basic Education - Cycle III - Technical daytime
     national_label_local: III Ciclo de la Educación General Básica (EGB) - Técnica
       Diurna
     entry_age: 12
@@ -138,7 +150,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 18
-  - national_label_en: Vocational - Cycle III (National Plan)
+  - country_entry_id: CRI-EDU-13
+    national_label_en: Vocational - Cycle III (National Plan)
     national_label_local: "III Ciclo \nVocacional (Plan Nacional)"
     entry_age: 14
     duration_years: 3
@@ -148,7 +161,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 19
-  - national_label_en: Diversified education - Academic daytime
+  - country_entry_id: CRI-EDU-14
+    national_label_en: Diversified education - Academic daytime
     national_label_local: Educación Diversificada - Académica diurna
     entry_age: 15
     duration_years: 2
@@ -158,7 +172,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
-  - national_label_en: Special education - Cycle IV (Special education centres)
+  - country_entry_id: CRI-EDU-15
+    national_label_en: Special education - Cycle IV (Special education centres)
     national_label_local: IV Ciclo de la Educación Especial (Centros de Educación
       Especial)
     entry_age: 17
@@ -169,7 +184,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
-  - national_label_en: Youth and adult education
+  - country_entry_id: CRI-EDU-16
+    national_label_en: Youth and adult education
     national_label_local: Educación de jóvenes y adultos
     entry_age: 15
     duration_years: 2
@@ -179,7 +195,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 22
-  - national_label_en: Diversified education - Technical daytime
+  - country_entry_id: CRI-EDU-17
+    national_label_en: Diversified education - Technical daytime
     national_label_local: Educación Diversificada - Técnica diurna
     entry_age: 15
     duration_years: 3
@@ -189,7 +206,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 23
-  - national_label_en: Diversified education -Vocational (National Plan)
+  - country_entry_id: CRI-EDU-18
+    national_label_en: Diversified education -Vocational (National Plan)
     national_label_local: Educación Diversificada -  Vocacional (Plan Nacional)
     entry_age: 17
     duration_years: 3
@@ -199,7 +217,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 24
-  - national_label_en: Higher technical education (first level - undergraduate)
+  - country_entry_id: CRI-EDU-19
+    national_label_en: Higher technical education (first level - undergraduate)
     national_label_local: Educación parauniversitaria (primer nivel - pregrado)
     entry_age: 17
     duration_years: 2
@@ -209,7 +228,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: University education (first level - undergraduate)
+  - country_entry_id: CRI-EDU-20
+    national_label_en: University education (first level - undergraduate)
     national_label_local: Educación universitaria-(primer nivel-pregrado)
     entry_age: 17
     duration_years: 3
@@ -219,7 +239,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: University bachellor
+  - country_entry_id: CRI-EDU-21
+    national_label_en: University bachellor
     national_label_local: Bachilerato universitario
     entry_age: 17
     duration_years: 4
@@ -229,7 +250,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Licentiate (6 years)
+  - country_entry_id: CRI-EDU-22
+    national_label_en: Licentiate (6 years)
     national_label_local: Licenciatura (6 años)
     entry_age: 17
     duration_years: 6
@@ -239,7 +261,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Licentiate (+2 years)
+  - country_entry_id: CRI-EDU-23
+    national_label_en: Licentiate (+2 years)
     national_label_local: Licenciatura (+2 años)
     entry_age: 21
     duration_years: 2
@@ -249,7 +272,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: 'Licentiate with high degree of specialization: medicine and
+  - country_entry_id: CRI-EDU-24
+    national_label_en: 'Licentiate with high degree of specialization: medicine and
       surgery, veterinary medicine, dentistry, engineering, law'
     national_label_local: 'Licenciatura con alto grado de especialización: medicina
       y cirugía, veterinaria, odontología, ingeniería, derecho'
@@ -261,7 +285,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Master's
+  - country_entry_id: CRI-EDU-25
+    national_label_en: Master's
     national_label_local: Programa de Maestría
     entry_age: 21
     duration_years: 2
@@ -271,7 +296,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Specialization in law
+  - country_entry_id: CRI-EDU-26
+    national_label_en: Specialization in law
     national_label_local: Especialización en derecho
     entry_age: 23
     duration_years: 1
@@ -281,7 +307,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Specialization in medicine
+  - country_entry_id: CRI-EDU-27
+    national_label_en: Specialization in medicine
     national_label_local: Especialización en medicina
     entry_age: 23
     duration_years: 3
@@ -291,7 +318,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
-  - national_label_en: Doctorate
+  - country_entry_id: CRI-EDU-28
+    national_label_en: Doctorate
     national_label_local: Doctorado
     entry_age: 23
     duration_years: 3
@@ -311,7 +339,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Central
+  - country_entry_id: CRI-SUBNAT-01
+    survey_labels: 1 - Central
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: CRI_2022_NSO1_1
     gmd_subnatid2: ''
@@ -331,7 +360,8 @@ parameters:
     geo_nvar: NOMB_UGER
     geo_name: CENTRAL
     source_row: 3165
-  - survey_labels: 2 - Chorotega
+  - country_entry_id: CRI-SUBNAT-02
+    survey_labels: 2 - Chorotega
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: CRI_2022_NSO1_2
     gmd_subnatid2: ''
@@ -351,7 +381,8 @@ parameters:
     geo_nvar: NOMB_UGER
     geo_name: CHOROTEGA
     source_row: 3166
-  - survey_labels: 3 - Pac�fico Central
+  - country_entry_id: CRI-SUBNAT-03
+    survey_labels: 3 - Pac�fico Central
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: CRI_2022_NSO1_3
     gmd_subnatid2: ''
@@ -371,7 +402,8 @@ parameters:
     geo_nvar: NOMB_UGER
     geo_name: PACIFICO CENTRAL
     source_row: 3167
-  - survey_labels: 4 - Brunca
+  - country_entry_id: CRI-SUBNAT-04
+    survey_labels: 4 - Brunca
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: CRI_2022_NSO1_4
     gmd_subnatid2: ''
@@ -391,7 +423,8 @@ parameters:
     geo_nvar: NOMB_UGER
     geo_name: BRUNCA
     source_row: 3168
-  - survey_labels: 5 - Huetar Atl�ntica
+  - country_entry_id: CRI-SUBNAT-05
+    survey_labels: 5 - Huetar Atl�ntica
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: CRI_2022_NSO1_5
     gmd_subnatid2: ''
@@ -411,7 +444,8 @@ parameters:
     geo_nvar: NOMB_UGER
     geo_name: HUETAR CARIBE
     source_row: 3169
-  - survey_labels: 6 - Huetar Norte
+  - country_entry_id: CRI-SUBNAT-06
+    survey_labels: 6 - Huetar Norte
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: CRI_2022_NSO1_6
     gmd_subnatid2: ''
@@ -441,7 +475,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: inodoro_de_compostaje
+  - country_entry_id: CRI-SAN-01
+    source_category_code: inodoro_de_compostaje
     national_label_en: Inodoro de compostaje
     national_label_local: Letrinas de compostaje
     jmp_classification: Composting toilets
@@ -451,7 +486,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: con_salida_directa_a_acequia_zanja_ri_o_o_estero
+  - country_entry_id: CRI-SAN-02
+    source_category_code: con_salida_directa_a_acequia_zanja_ri_o_o_estero
     national_label_en: Con salida directa a acequia, zanja, ri­o o estero
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -461,7 +497,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: descarga_a_drenaje_abierto
+  - country_entry_id: CRI-SAN-03
+    source_category_code: descarga_a_drenaje_abierto
     national_label_en: descarga a drenaje abierto
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -471,7 +508,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: inodoro_con_salida_directa_a_acequia_zanja_rio_o_estero
+  - country_entry_id: CRI-SAN-04
+    source_category_code: inodoro_con_salida_directa_a_acequia_zanja_rio_o_estero
     national_label_en: Inodoro con salida directa a acequia, zanja, río o estero
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -481,7 +519,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: tiene_salida_directa_a_acequia_zanja_rio_o_estero
+  - country_entry_id: CRI-SAN-05
+    source_category_code: tiene_salida_directa_a_acequia_zanja_rio_o_estero
     national_label_en: Tiene salida directa a acequia, zanja, rio o estero
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -491,7 +530,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: conectado_a_alcantarilla_o_cloaca
+  - country_entry_id: CRI-SAN-06
+    source_category_code: conectado_a_alcantarilla_o_cloaca
     national_label_en: Conectado a alcantarilla o cloaca
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -501,7 +541,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: descarga_al_alcantarillado_inodoro
+  - country_entry_id: CRI-SAN-07
+    source_category_code: descarga_al_alcantarillado_inodoro
     national_label_en: descarga al alcantarillado (inodoro)
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -511,7 +552,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: inodoro_conectado_al_alcantarillado
+  - country_entry_id: CRI-SAN-08
+    source_category_code: inodoro_conectado_al_alcantarillado
     national_label_en: Inodoro conectado al alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -521,7 +563,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: conectado_a_tanque_septico_con_tratamiento
+  - country_entry_id: CRI-SAN-09
+    source_category_code: conectado_a_tanque_septico_con_tratamiento
     national_label_en: Conectado a tanque séptico con tratamiento
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -531,7 +574,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: conectado_a_tanque_septico_con_tratamiento_fosa_biologica
+  - country_entry_id: CRI-SAN-10
+    source_category_code: conectado_a_tanque_septico_con_tratamiento_fosa_biologica
     national_label_en: Conectado a tanque séptico con tratamiento (fosa biológica)
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -541,7 +585,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: descarga_a_pozo
+  - country_entry_id: CRI-SAN-11
+    source_category_code: descarga_a_pozo
     national_label_en: descarga a pozo
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -551,7 +596,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: letrina_pozo_negro_hueco_con_descarga_de_agua
+  - country_entry_id: CRI-SAN-12
+    source_category_code: letrina_pozo_negro_hueco_con_descarga_de_agua
     national_label_en: Letrina (pozo negro, hueco con descarga de agua)
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -561,7 +607,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: conectado_a_tanque_septico_comun
+  - country_entry_id: CRI-SAN-13
+    source_category_code: conectado_a_tanque_septico_comun
     national_label_en: Conectado a tanque séptico común
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -571,7 +618,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: descarga_a_tanque_septico_inodoro
+  - country_entry_id: CRI-SAN-14
+    source_category_code: descarga_a_tanque_septico_inodoro
     national_label_en: descarga a tanque séptico (inodoro)
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -581,7 +629,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_conectado_al_tanque_septico
+  - country_entry_id: CRI-SAN-15
+    source_category_code: inodoro_conectado_al_tanque_septico
     national_label_en: Inodoro conectado al tanque séptico
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -591,7 +640,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: no_sabe_donde_descarga
+  - country_entry_id: CRI-SAN-16
+    source_category_code: no_sabe_donde_descarga
     national_label_en: no sabe dónde descarga
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -601,7 +651,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: has_flush_toilet
+  - country_entry_id: CRI-SAN-17
+    source_category_code: has_flush_toilet
     national_label_en: Has flush toilet
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -611,7 +662,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: balde
+  - country_entry_id: CRI-SAN-18
+    source_category_code: balde
     national_label_en: balde
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -621,7 +673,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: inodoro_colgante_letrina_colgante
+  - country_entry_id: CRI-SAN-19
+    source_category_code: inodoro_colgante_letrina_colgante
     national_label_en: Inodoro colgante, Letrina colgante
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -632,7 +685,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: letrina_de_fosa_con_losa
+  - country_entry_id: CRI-SAN-20
+    source_category_code: letrina_de_fosa_con_losa
     national_label_en: Letrina de fosa con losa
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -643,7 +697,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_de_fosa_sin_losa
+  - country_entry_id: CRI-SAN-21
+    source_category_code: letrina_de_fosa_sin_losa
     national_label_en: letrina de fosa sin losa
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -654,7 +709,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_de_fosa_sin_losa_foso_abierto
+  - country_entry_id: CRI-SAN-22
+    source_category_code: letrina_de_fosa_sin_losa_foso_abierto
     national_label_en: Letrina de fosa sin losa / Foso abierto
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -665,7 +721,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: de_hueco_de_pozo_negro_o_letrina
+  - country_entry_id: CRI-SAN-23
+    source_category_code: de_hueco_de_pozo_negro_o_letrina
     national_label_en: De hueco, de pozo negro o letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -676,7 +733,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: de_hueco_de_pozo_negro_o_letrina
+  - country_entry_id: CRI-SAN-24
+    source_category_code: de_hueco_de_pozo_negro_o_letrina
     national_label_en: de “hueco”, de pozo negro o letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -687,7 +745,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_de_fosa_mejorada_con_ventilacion
+  - country_entry_id: CRI-SAN-25
+    source_category_code: letrina_de_fosa_mejorada_con_ventilacion
     national_label_en: Letrina de fosa mejorada con ventilación
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -698,7 +757,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_hay_instalacion_sanitaria_va_al_monte_o_al_campo
+  - country_entry_id: CRI-SAN-26
+    source_category_code: no_hay_instalacion_sanitaria_va_al_monte_o_al_campo
     national_label_en: no hay instalación sanitaria / va al monte o al campo
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -708,7 +768,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_hay_instalacion_sanitaria_va_al_monte_campo
+  - country_entry_id: CRI-SAN-27
+    source_category_code: no_hay_instalacion_sanitaria_va_al_monte_campo
     national_label_en: No hay instalación sanitaria, va al monte, campo
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -718,7 +779,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene
+  - country_entry_id: CRI-SAN-28
+    source_category_code: no_tiene
     national_label_en: No tiene
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -728,7 +790,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_flush_toilets
+  - country_entry_id: CRI-SAN-29
+    source_category_code: no_flush_toilets
     national_label_en: No flush toilets
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -738,7 +801,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro
+  - country_entry_id: CRI-SAN-30
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -748,7 +812,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro_sistema
+  - country_entry_id: CRI-SAN-31
+    source_category_code: otro_sistema
     national_label_en: Otro sistema
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -768,7 +833,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: agua_de_manantial_protegido
+  - country_entry_id: CRI-WAS-01
+    source_category_code: agua_de_manantial_protegido
     national_label_en: agua de manantial protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -778,7 +844,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: manantial_protegido
+  - country_entry_id: CRI-WAS-02
+    source_category_code: manantial_protegido
     national_label_en: Manantial protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -788,7 +855,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: pozo_cavado_protegido
+  - country_entry_id: CRI-WAS-03
+    source_category_code: pozo_cavado_protegido
     national_label_en: pozo cavado protegido
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -798,7 +866,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: pozo_protegido
+  - country_entry_id: CRI-WAS-04
+    source_category_code: pozo_protegido
     national_label_en: Pozo protegido
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -808,7 +877,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: pozo
+  - country_entry_id: CRI-WAS-05
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -818,7 +888,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_con_tuberia
+  - country_entry_id: CRI-WAS-06
+    source_category_code: pozo_con_tuberia
     national_label_en: Pozo con tubería
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -828,7 +899,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: agua_de_manantial_no_protegido
+  - country_entry_id: CRI-WAS-07
+    source_category_code: agua_de_manantial_no_protegido
     national_label_en: agua de manantial no protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -838,7 +910,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: manantial_no_protegido
+  - country_entry_id: CRI-WAS-08
+    source_category_code: manantial_no_protegido
     national_label_en: Manantial no protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -848,7 +921,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: pozo_cavado_no_protegido
+  - country_entry_id: CRI-WAS-09
+    source_category_code: pozo_cavado_no_protegido
     national_label_en: pozo cavado no protegido
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -858,7 +932,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: pozo_no_protegido
+  - country_entry_id: CRI-WAS-10
+    source_category_code: pozo_no_protegido
     national_label_en: Pozo no protegido
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -868,7 +943,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: acueducto_del_a_y_a
+  - country_entry_id: CRI-WAS-11
+    source_category_code: acueducto_del_a_y_a
     national_label_en: Acueducto del A y A
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -878,7 +954,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: acueducto_municipal
+  - country_entry_id: CRI-WAS-12
+    source_category_code: acueducto_municipal
     national_label_en: Acueducto municipal
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -888,7 +965,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: otra_fuente_lluvia_camion_citerna_hidrante
+  - country_entry_id: CRI-WAS-13
+    source_category_code: otra_fuente_lluvia_camion_citerna_hidrante
     national_label_en: Otra fuente (lluvia, camion citerna, hidrante)
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -898,7 +976,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: acueducto_municipal
+  - country_entry_id: CRI-WAS-14
+    source_category_code: acueducto_municipal
     national_label_en: Acueducto municipal
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -908,7 +987,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: acueducto_rural
+  - country_entry_id: CRI-WAS-15
+    source_category_code: acueducto_rural
     national_label_en: Acueducto rural
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -918,7 +998,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: camion_cisterna
+  - country_entry_id: CRI-WAS-16
+    source_category_code: camion_cisterna
     national_label_en: camión cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -928,7 +1009,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: carrotanque_camion_cisterna
+  - country_entry_id: CRI-WAS-17
+    source_category_code: carrotanque_camion_cisterna
     national_label_en: Carrotanque/ camión cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -938,7 +1020,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: el_agua_le_no_llega_por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: CRI-WAS-18
+    source_category_code: el_agua_le_no_llega_por_tuberia_dentro_de_la_vivienda
     national_label_en: El agua le no llega por tubería dentro de la vivienda
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -948,7 +1031,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: lluvia_u_otro
+  - country_entry_id: CRI-WAS-19
+    source_category_code: lluvia_u_otro
     national_label_en: lluvia u otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -958,7 +1042,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otra_fuente_lluvia_camion_citerna_hidrante
+  - country_entry_id: CRI-WAS-20
+    source_category_code: otra_fuente_lluvia_camion_citerna_hidrante
     national_label_en: Otra fuente (lluvia, camion citerna, hidrante)
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -968,7 +1053,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: CRI-WAS-21
+    source_category_code: otro
     national_label_en: otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -978,7 +1064,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: agua_embotellada
+  - country_entry_id: CRI-WAS-22
+    source_category_code: agua_embotellada
     national_label_en: agua embotellada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -988,7 +1075,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embotellada_envasada
+  - country_entry_id: CRI-WAS-23
+    source_category_code: agua_embotellada_envasada
     national_label_en: Agua embotellada/envasada
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -998,7 +1086,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: agua_de_lluvia
+  - country_entry_id: CRI-WAS-24
+    source_category_code: agua_de_lluvia
     national_label_en: agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1008,7 +1097,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: lluvia_u_otro
+  - country_entry_id: CRI-WAS-25
+    source_category_code: lluvia_u_otro
     national_label_en: Lluvia u otro
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1018,7 +1108,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: recogen_agua_de_lluvia
+  - country_entry_id: CRI-WAS-26
+    source_category_code: recogen_agua_de_lluvia
     national_label_en: Recogen agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1028,7 +1119,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal_canal_de_irrigacion
+  - country_entry_id: CRI-WAS-27
+    source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal_canal_de_irrigacion
     national_label_en: agua de superficie (río, represa, lago, estanque, arroyo, canal,
       canal de irrigación)
     national_label_local: Agua superficial
@@ -1039,7 +1131,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_canal_de_irrigacion
+  - country_entry_id: CRI-WAS-28
+    source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_canal_de_irrigacion
     national_label_en: Agua de superficie(río, arroyo, represa, lago, estanque, canal,
       canal de irrigación)
     national_label_local: Agua superficial
@@ -1050,7 +1143,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_quebrada_o_naciente
+  - country_entry_id: CRI-WAS-29
+    source_category_code: rio_quebrada_o_naciente
     national_label_en: Río, quebrada o naciente
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1060,7 +1154,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: acueducto_del_a_y_a
+  - country_entry_id: CRI-WAS-30
+    source_category_code: acueducto_del_a_y_a
     national_label_en: Acueducto del A y A
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1070,7 +1165,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: acueducto_rural
+  - country_entry_id: CRI-WAS-31
+    source_category_code: acueducto_rural
     national_label_en: Acueducto rural
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1080,7 +1176,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: agua_de_tuberia_del_vecino_a
+  - country_entry_id: CRI-WAS-32
+    source_category_code: agua_de_tuberia_del_vecino_a
     national_label_en: agua de tubería del vecino/a
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1090,7 +1187,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: tuberia_al_vecino
+  - country_entry_id: CRI-WAS-33
+    source_category_code: tuberia_al_vecino
     national_label_en: Tubería al vecino
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1100,7 +1198,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: tuberia_otro
+  - country_entry_id: CRI-WAS-34
+    source_category_code: tuberia_otro
     national_label_en: Tubería otro
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1110,7 +1209,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: agua_de_tuberia_dentro_de_la_vivienda
+  - country_entry_id: CRI-WAS-35
+    source_category_code: agua_de_tuberia_dentro_de_la_vivienda
     national_label_en: agua de tubería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1120,7 +1220,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: el_agua_le_llega_por_tuberia_dentro_de_la_vivienda
+  - country_entry_id: CRI-WAS-36
+    source_category_code: el_agua_le_llega_por_tuberia_dentro_de_la_vivienda
     national_label_en: El agua le llega por tubería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1130,7 +1231,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_dentro_de_la_vivienda
+  - country_entry_id: CRI-WAS-37
+    source_category_code: tuberia_dentro_de_la_vivienda
     national_label_en: Tubería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1140,7 +1242,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: agua_de_tuberia_dentro_del_terreno_lote
+  - country_entry_id: CRI-WAS-38
+    source_category_code: agua_de_tuberia_dentro_del_terreno_lote
     national_label_en: agua de tubería  dentro del terreno/ lote
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1150,7 +1253,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_dentro_del_terreno_patio_o_lote
+  - country_entry_id: CRI-WAS-39
+    source_category_code: tuberia_dentro_del_terreno_patio_o_lote
     national_label_en: Tubería dentro del terreno, patio o lote
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1160,7 +1264,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_fuera_de_la_vivienda
+  - country_entry_id: CRI-WAS-40
+    source_category_code: tuberia_fuera_de_la_vivienda
     national_label_en: Tubería fuera de la vivienda
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1170,7 +1275,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: agua_de_tuberia_de_llave_grifo_publico
+  - country_entry_id: CRI-WAS-41
+    source_category_code: agua_de_tuberia_de_llave_grifo_publico
     national_label_en: agua de tuberia de llave/grifo público
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1180,7 +1286,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: llave_grifo_publico
+  - country_entry_id: CRI-WAS-42
+    source_category_code: llave_grifo_publico
     national_label_en: Llave/ grifo público
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1190,7 +1297,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: tuberia_fuera_del_lote_o_edificio
+  - country_entry_id: CRI-WAS-43
+    source_category_code: tuberia_fuera_del_lote_o_edificio
     national_label_en: Tubería fuera del lote o edificio
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

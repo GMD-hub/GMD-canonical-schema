@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education programmes (part of the programme up
+  - country_entry_id: LVA-EDU-01
+    national_label_en: Pre-primary education programmes (part of the programme up
       until the age of 3 years) (early childhood education)
     national_label_local: Pirmskolas izglitibas programmas (līdz 3 gadu vecumam)
     entry_age: 0
@@ -21,7 +22,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Pre-primary education programmes (part of the programme from
+  - country_entry_id: LVA-EDU-02
+    national_label_en: Pre-primary education programmes (part of the programme from
       the age of 3 years on)
     national_label_local: Pirmskolas izglitibas programmas (no 3 gadu vecuma)
     entry_age: 3
@@ -32,7 +34,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: General basic education, first stage (grades 1-6)
+  - country_entry_id: LVA-EDU-03
+    national_label_en: General basic education, first stage (grades 1-6)
     national_label_local: Vispārējā izglītība, pamatizglītības pirmā posma (1.-6.
       klase)  programmas
     entry_age: 7
@@ -43,7 +46,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
-  - national_label_en: General basic education, offered as 9 years long programme
+  - country_entry_id: LVA-EDU-04
+    national_label_en: General basic education, offered as 9 years long programme
       (grades 1-9), spanning two ISCED 2011 levels. This part of the programme covers
       grades 1-6, corresponding to ISCED Level 1
     national_label_local: Vispārējā izglītība, pamatizglītības (1.-9.klase) programmas
@@ -56,7 +60,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
-  - national_label_en: General basic education  (grades 1-9), special education programmes
+  - country_entry_id: LVA-EDU-05
+    national_label_en: General basic education  (grades 1-9), special education programmes
       for students with mental development disorders; special education programmes
       for students with grave mental development disorders or multiple grave development
       disorders;  This part of th
@@ -72,7 +77,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
-  - national_label_en: General basic education, offered as 9 years long programme
+  - country_entry_id: LVA-EDU-06
+    national_label_en: General basic education, offered as 9 years long programme
       (grades 1-9), spanning two ISCED 2011 levels. This part of the programme covers
       grades 7-9, corresponding to ISCED Level 2
     national_label_local: Vispārējā izglītība, pamatizglītības (1.-9.klase) programmas
@@ -85,7 +91,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
-  - national_label_en: General basic education, second stage (grades7-9)
+  - country_entry_id: LVA-EDU-07
+    national_label_en: General basic education, second stage (grades7-9)
     national_label_local: Vispārējā izglītība, pamatizglītības otrā posma (7.-9. klase)
       programmas
     entry_age: 13
@@ -96,7 +103,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Vocational basic education, implemented without limitations
+  - country_entry_id: LVA-EDU-08
+    national_label_en: Vocational basic education, implemented without limitations
       to previous educational attainment
     national_label_local: Profesionālā pamatizglītība, īstenojama bez iepriekšējās
       izglītības ierobežojuma
@@ -108,7 +116,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Vocational education (acquisition of 2nd level professional
+  - country_entry_id: LVA-EDU-09
+    national_label_en: Vocational education (acquisition of 2nd level professional
       qualification), for children who have not completed full basic education. Duration
       of programme 3 years.
     national_label_local: Arodizglītība (2.līmeņa profesionālā kvalifikācija), īstenojama
@@ -121,7 +130,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Secondary (upper secondary) General Education implemented after
+  - country_entry_id: LVA-EDU-10
+    national_label_en: Secondary (upper secondary) General Education implemented after
       acquisition of basic education
     national_label_local: Vispārējā vidējā izglītība, īstenojama pēc pamatizglītības
       ieguves
@@ -133,7 +143,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Upper Secondary General education, acquisition of full upper
+  - country_entry_id: LVA-EDU-11
+    national_label_en: Upper Secondary General education, acquisition of full upper
       secondary level education, following vocational education prog.32.00(1). Duration
       of programme 1 year.
     national_label_local: Vispārējā vidējā izglītība, turpinājums izglītības programmai
@@ -146,7 +157,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Vocational education (acquisition of 2nd level professional
+  - country_entry_id: LVA-EDU-12
+    national_label_en: Vocational education (acquisition of 2nd level professional
       qualification), implemented after acquisition of basic education. Duration of
       programme 1 year.
     national_label_local: Arodizglītība (2.līmeņa profesionālā kvalifikācija), īstenojama
@@ -159,7 +171,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Vocational education (acquisition of 2nd level professional
+  - country_entry_id: LVA-EDU-13
+    national_label_en: Vocational education (acquisition of 2nd level professional
       qualification), implemented after acquisition of basic education. Duration of
       programme 3 years.
     national_label_local: Arodizglītība (2.līmeņa profesionālā kvalifikācija), īstenojama
@@ -172,7 +185,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Upper-secondary vocational education (acquisition of 3rd level
+  - country_entry_id: LVA-EDU-14
+    national_label_en: Upper-secondary vocational education (acquisition of 3rd level
       professional qualification), implemented after acquisition of basic education.
       Duration of programme 4 years.
     national_label_local: Profesionālā vidējā izglītība (3.līmeņa profesionālā kvalifikācija),
@@ -185,7 +199,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Upper-secondary vocational education(acquisition of 3rd level
+  - country_entry_id: LVA-EDU-15
+    national_label_en: Upper-secondary vocational education(acquisition of 3rd level
       professional qualification) following vocational education prog.32.00(1) and
       32.00(2). Duration of programme 2 years.
     national_label_local: Profesionālā vidējā izglītība (3. līmeņa profesionālā kvalifikācija),
@@ -199,7 +214,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: Vocational education (acquisition of 2nd level professional
+  - country_entry_id: LVA-EDU-16
+    national_label_en: Vocational education (acquisition of 2nd level professional
       qualification), implemented after acquisition of general or vocational secondary
       education. Duration of programme 1 year.
     national_label_local: Arodizglītība (2.līmeņa profesionālā kvalifikācija), īstenojama
@@ -213,7 +229,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Upper-secondary vocational education(acquisition of 3rd level
+  - country_entry_id: LVA-EDU-17
+    national_label_en: Upper-secondary vocational education(acquisition of 3rd level
       professional qualification) implemented  after acquisition of general secondary
       education. Duration of programme 1,5-3 years.
     national_label_local: Profesionālā vidējā izglītība (3. līmeņa profesionālā kvalifikācija),
@@ -226,7 +243,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: First level of professional higher (college) education  (acquisition
+  - country_entry_id: LVA-EDU-18
+    national_label_en: First level of professional higher (college) education  (acquisition
       of 4th level professional qualification), implemented after acquisition of general
       or vocational secondary education. Duration of programme 2-3 years (short cycle).
     national_label_local: 1.līmeņa profesionālā augstākā (koledžas) izglītība (4.līmeņa
@@ -240,7 +258,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Academic higher education (bachelor degree) implemented after
+  - country_entry_id: LVA-EDU-19
+    national_label_en: Academic higher education (bachelor degree) implemented after
       acquisition of general or vocational scondary education. Duration of programme
       34 years.
     national_label_local: Akadēmiskā izglītība (bakalaura grāds), īstenojama pēc vispārējās
@@ -254,7 +273,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Second level of professional higher education (acquisition
+  - country_entry_id: LVA-EDU-20
+    national_label_en: Second level of professional higher education (acquisition
       of 5th level professional qualification and a degree of professional bachelor)
       or second level of professional higher education (acquisition of 5th level professional
       qualification) implemented af
@@ -270,7 +290,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Second level of professional higher education (acquisition
+  - country_entry_id: LVA-EDU-21
+    national_label_en: Second level of professional higher education (acquisition
       of 5th level professional qualification) continuation of college (short cycle)
       education. Duration of programme 1-2 years.  Cumulative duration in higher education
       at least 4 years.
@@ -285,7 +306,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Second level of professional higher education (acquisition
+  - country_entry_id: LVA-EDU-22
+    national_label_en: Second level of professional higher education (acquisition
       of 5th level professional qualification and a degree of professional bachelor)
       or second level of professional higher education (acquisition of 5th level professional
       qualification) implemented af
@@ -301,7 +323,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Second level of professional higher education (acquisition
+  - country_entry_id: LVA-EDU-23
+    national_label_en: Second level of professional higher education (acquisition
       of 5th level professional qualification), implemented after acquisition of bachelor's
       degree. Duration of programme at least 1 year. Cumulative duration in higher
       education at least 4 years.
@@ -317,7 +340,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Academic higher education (Master's degree), implemented after
+  - country_entry_id: LVA-EDU-24
+    national_label_en: Academic higher education (Master's degree), implemented after
       acquisition of bachelor's degree. Duration of programme 12 years. Cumulative
       duration in higher education at least 5 years.
     national_label_local: Akadēmiskā izglītība (maģistra grāds), īstenojama pēc bakalaura
@@ -331,7 +355,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: "Second level of professional higher education (acquisition
+  - country_entry_id: LVA-EDU-25
+    national_label_en: "Second level of professional higher education (acquisition
       of 5th level professional qualification), implemented after  acquisition of
       general or vocational secondary education. Duration of programme at least 5
       years. \n (Medical doctor, pharmacist, dentis"
@@ -347,7 +372,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Second level of professional higher education (professional
+  - country_entry_id: LVA-EDU-26
+    national_label_en: Second level of professional higher education (professional
       Master's degree or  5th level professional qualification), implemented after
       acquisition bachelor's or professional bachelor's degree. Duration of programme
       at least 1 year. Cumulative duration i
@@ -363,7 +389,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Doctorate (Doctor's degree), implemented after master's or
+  - country_entry_id: LVA-EDU-27
+    national_label_en: Doctorate (Doctor's degree), implemented after master's or
       professional master's degree or after acquisition of programme 49. Duration
       of programme 3-4 years.
     national_label_local: Doktora studijas (doktora grāds), īstenojama pēc maģistra
@@ -387,7 +414,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: LVA-SAN-01
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -397,7 +425,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: LVA-SAN-02
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -407,7 +436,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: LVA-SAN-03
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -418,7 +448,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: LVA-SAN-04
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -428,7 +459,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: LVA-SAN-05
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -438,7 +470,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: LVA-SAN-06
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -449,7 +482,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: LVA-SAN-07
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -460,7 +494,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: LVA-SAN-08
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -471,7 +506,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: LVA-SAN-09
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Private pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -481,7 +517,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: LVA-SAN-10
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Public/shared pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -492,7 +529,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: LVA-SAN-11
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -512,7 +550,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: LVA-WAS-01
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -522,7 +561,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: LVA-WAS-02
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -532,7 +572,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: LVA-WAS-03
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -542,7 +583,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: LVA-WAS-04
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -552,7 +594,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: LVA-WAS-05
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -562,7 +605,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: LVA-WAS-06
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -572,7 +616,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: public_standpipe
+  - country_entry_id: LVA-WAS-07
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

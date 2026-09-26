@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre primary school education (Early childhood education) crèche
+  - country_entry_id: MNE-EDU-01
+    national_label_en: Pre primary school education (Early childhood education) crèche
     national_label_local: Predskolsko obrazovanje -Jaslice
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre primary school education kindergarten
+  - country_entry_id: MNE-EDU-02
+    national_label_en: Pre primary school education kindergarten
     national_label_local: Predskolsko obrazovanje -vrtići
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Regulary primary school - lower grades (I-V)
+  - country_entry_id: MNE-EDU-03
+    national_label_en: Regulary primary school - lower grades (I-V)
     national_label_local: Osnovno obrazovanje i vaspitanje Osnovne škole - niži razredi
       (I-V)
     entry_age: 6
@@ -41,7 +44,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Primary education of children with special educational needs
+  - country_entry_id: MNE-EDU-04
+    national_label_en: Primary education of children with special educational needs
       - Resource centers - lower grades (I-V)
     national_label_local: Osnovno obrazovanje i vaspitanje djece sa posebnim obrazovnim
       potrebama -Resursni centri - niži razredi (I-V)
@@ -53,7 +57,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Primary education of adults - lower grades (I-V)
+  - country_entry_id: MNE-EDU-05
+    national_label_en: Primary education of adults - lower grades (I-V)
     national_label_local: Osnovno obrazovanje Osnovne škole za obrazovanje odraslih
       - niži razredi (I-V)
     entry_age: 15
@@ -64,7 +69,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Primary education of adults - higher grades (VI-IX)
+  - country_entry_id: MNE-EDU-06
+    national_label_en: Primary education of adults - higher grades (VI-IX)
     national_label_local: Osnovno obrazovanje Osnovne škole za obrazovanje odraslih
       - viši razredi (VI-IX)
     entry_age: 15
@@ -75,7 +81,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Lower secondary school - higher grades (VI-IX)
+  - country_entry_id: MNE-EDU-07
+    national_label_en: Lower secondary school - higher grades (VI-IX)
     national_label_local: Osnovno obrazovanje i vaspitanje Osnovne škole - viši razredi
       (VI-IX)
     entry_age: 11
@@ -86,7 +93,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Primary education of children with special educational needs
+  - country_entry_id: MNE-EDU-08
+    national_label_en: Primary education of children with special educational needs
       - Resource centers - higher grades (VI-IX)
     national_label_local: Osnovno obrazovanje i vaspitanje djece sa posebnim obrazovnim
       potrebama - Resursni centri - viši razredi (VI-IX)
@@ -98,7 +106,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: Upper Secondary education - vocational programme (3 years)
+  - country_entry_id: MNE-EDU-09
+    national_label_en: Upper Secondary education - vocational programme (3 years)
     national_label_local: Srednje obrazovanje - Trogodišnje stručne škole
     entry_age: 15
     duration_years: 3
@@ -108,7 +117,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: Upper Secondary education - vocational programme (4 years)
+  - country_entry_id: MNE-EDU-10
+    national_label_en: Upper Secondary education - vocational programme (4 years)
     national_label_local: Srednje obrazovanje - Četvorogodišnje stručne škole
     entry_age: 15
     duration_years: 4
@@ -118,7 +128,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Secondary education - upper secondary general (Gymnasium)
+  - country_entry_id: MNE-EDU-11
+    national_label_en: Secondary education - upper secondary general (Gymnasium)
     national_label_local: Srednje obrazovanje - Gimnazije
     entry_age: 15
     duration_years: 4
@@ -128,7 +139,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Secundary education of children with special educational needs
+  - country_entry_id: MNE-EDU-12
+    national_label_en: Secundary education of children with special educational needs
       - Resource centers
     national_label_local: Srednje obrazovanje i vaspitanje djece sa posebnim obrazovnim
       potrebama -Resursni centri - trogodišnje stručno obrazovanje
@@ -140,7 +152,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Secundary education of children with special educational needs
+  - country_entry_id: MNE-EDU-13
+    national_label_en: Secundary education of children with special educational needs
       - Resource centers - four year vocational education
     national_label_local: Srednje obrazovanje i vaspitanje djece sa posebnim obrazovnim
       potrebama -Resursni centri četvorogodišnje stručno obrazovanje
@@ -152,7 +165,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: Secondary education for children with special educational needs
+  - country_entry_id: MNE-EDU-14
+    national_label_en: Secondary education for children with special educational needs
       - Resource centers - gimnasium
     national_label_local: Srednje obrazovanje i vaspitanje djece sa posebnim obrazovnim
       potrebama -Resursni centri - gimnazija
@@ -164,7 +178,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
-  - national_label_en: Higer vocational school
+  - country_entry_id: MNE-EDU-15
+    national_label_en: Higer vocational school
     national_label_local: Više stručne škole
     entry_age: 18
     duration_years: 2
@@ -174,7 +189,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Basic academic studies 3 years
+  - country_entry_id: MNE-EDU-16
+    national_label_en: Basic academic studies 3 years
     national_label_local: Osnovne akademske studije 3 godine
     entry_age: 18
     duration_years: 3
@@ -184,7 +200,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Basic academic studies 4 years
+  - country_entry_id: MNE-EDU-17
+    national_label_en: Basic academic studies 4 years
     national_label_local: Osnovne akademske studije 4 godine
     entry_age: 18
     duration_years: 4
@@ -194,7 +211,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Basic profesional studies
+  - country_entry_id: MNE-EDU-18
+    national_label_en: Basic profesional studies
     national_label_local: Osnovne primjenjene studije
     entry_age: 18
     duration_years: 3
@@ -204,7 +222,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Postgraduated academic studies
+  - country_entry_id: MNE-EDU-19
+    national_label_en: Postgraduated academic studies
     national_label_local: Postdiplomske  specijalističke studije (akademske)
     entry_age: 21
     duration_years: 1
@@ -214,7 +233,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Postgraduated profesional studies
+  - country_entry_id: MNE-EDU-20
+    national_label_en: Postgraduated profesional studies
     national_label_local: Postdiplomske  specijalističke studije (primijenjene)
     entry_age: 21
     duration_years: 1
@@ -224,7 +244,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Basic academic studies 5 years
+  - country_entry_id: MNE-EDU-21
+    national_label_en: Basic academic studies 5 years
     national_label_local: Osnovne akademske studije 5 godina
     entry_age: 18
     duration_years: 5
@@ -234,7 +255,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Basic academic studies 6 years
+  - country_entry_id: MNE-EDU-22
+    national_label_en: Basic academic studies 6 years
     national_label_local: Osnovne akademske studije 6 godina
     entry_age: 18
     duration_years: 6
@@ -244,7 +266,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: postgraduated masters academic studies
+  - country_entry_id: MNE-EDU-23
+    national_label_en: postgraduated masters academic studies
     national_label_local: Postdiplomske magistarke/master studije (akademske)
     entry_age: 21
     duration_years: 2
@@ -254,7 +277,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Postgraduated masters academic studies
+  - country_entry_id: MNE-EDU-24
+    national_label_en: Postgraduated masters academic studies
     national_label_local: Postdiplomske magistarske studije akademske
     entry_age: 22
     duration_years: 1
@@ -264,7 +288,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Postgraduated masters profesional studies
+  - country_entry_id: MNE-EDU-25
+    national_label_en: Postgraduated masters profesional studies
     national_label_local: Postdiplomske magistarske/master studije (primijenjene)
     entry_age: 21
     duration_years: 2
@@ -274,7 +299,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Postgraduated masters profesional studies
+  - country_entry_id: MNE-EDU-26
+    national_label_en: Postgraduated masters profesional studies
     national_label_local: Postdiplomske magistarke studije (primjenjene)
     entry_age: 22
     duration_years: 1
@@ -284,7 +310,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Doctors studies
+  - country_entry_id: MNE-EDU-27
+    national_label_en: Doctors studies
     national_label_local: Doktorske studije
     entry_age: 23
     duration_years: 3
@@ -304,7 +331,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 – North | 1-North
+  - country_entry_id: MNE-SUBNAT-01
+    survey_labels: 1 – North | 1-North
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MNE_2015_GAULx_1
     gmd_subnatid2: ''
@@ -325,7 +353,8 @@ parameters:
     geo_name: Mojkovac & Kolasin & Plav & Bijelo Polje & Pljevlja & Pluzine & Zabljak
       & Berane & Savnik & Rozaj & Andrijevica
     source_row: 10168
-  - survey_labels: 2 – Central | 2-Central
+  - country_entry_id: MNE-SUBNAT-02
+    survey_labels: 2 – Central | 2-Central
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MNE_2015_GAULx_2a
     gmd_subnatid2: ''
@@ -345,7 +374,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cetinje & Danilovgrad & Niksic & Podgorica
     source_row: 10169
-  - survey_labels: 3 – South | 3-South
+  - country_entry_id: MNE-SUBNAT-03
+    survey_labels: 3 – South | 3-South
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MNE_2015_GAULx_3
     gmd_subnatid2: ''
@@ -365,7 +395,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Herceg Novi & Kotor & Budva & Tivat & Ulcinj & Bar
     source_row: 10170
-  - survey_labels: 2 – Center
+  - country_entry_id: MNE-SUBNAT-04
+    survey_labels: 2 – Center
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MNE_2015_GAULx_2
     gmd_subnatid2: ''
@@ -385,7 +416,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Cetinje & Danilovgrad & Niksic
     source_row: 10172
-  - survey_labels: 4 – Podgorica
+  - country_entry_id: MNE-SUBNAT-05
+    survey_labels: 4 – Podgorica
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MNE_2015_GAUL1_25365
     gmd_subnatid2: ''
@@ -415,7 +447,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: MNE-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -425,7 +458,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_pour_flush_to_open_drain
+  - country_entry_id: MNE-SAN-02
+    source_category_code: flush_pour_flush_to_open_drain
     national_label_en: Flush/pour flush to open drain
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -435,7 +469,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_to_somewhere_else
+  - country_entry_id: MNE-SAN-03
+    source_category_code: flush_pour_flush_to_somewhere_else
     national_label_en: Flush/Pour flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -445,7 +480,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: MNE-SAN-04
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -455,7 +491,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_to_pit
+  - country_entry_id: MNE-SAN-05
+    source_category_code: flush_pour_flush_to_pit
     national_label_en: Flush/pour flush to pit
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -465,7 +502,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: MNE-SAN-06
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: Flush/pour flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -475,7 +513,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_to_do_not_know_where
+  - country_entry_id: MNE-SAN-07
+    source_category_code: flush_pour_flush_to_do_not_know_where
     national_label_en: Flush/pour flush to do not know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -485,7 +524,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: MNE-SAN-08
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -495,7 +535,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: MNE-SAN-09
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -505,7 +546,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: MNE-SAN-10
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -516,7 +558,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: MNE-SAN-11
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -527,7 +570,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_watertight_tank
+  - country_entry_id: MNE-SAN-12
+    source_category_code: pit_latrine_with_watertight_tank
     national_label_en: Pit latrine with watertight tank
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -538,7 +582,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: MNE-SAN-13
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/ open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -549,7 +594,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: MNE-SAN-14
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -560,7 +606,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: MNE-SAN-15
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -571,7 +618,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: MNE-SAN-16
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -582,7 +630,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facilities
+  - country_entry_id: MNE-SAN-17
+    source_category_code: no_facilities
     national_label_en: No facilities
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -592,7 +641,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: MNE-SAN-18
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -602,7 +652,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_no_facility_bush_field
+  - country_entry_id: MNE-SAN-19
+    source_category_code: open_defecation_no_facility_bush_field
     national_label_en: Open defecation (no facility, bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -612,7 +663,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: MNE-SAN-20
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -632,7 +684,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: MNE-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -642,7 +695,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: MNE-WAS-02
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -652,7 +706,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole
+  - country_entry_id: MNE-WAS-03
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -662,7 +717,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: MNE-WAS-04
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -672,7 +728,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: MNE-WAS-05
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -682,7 +739,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: MNE-WAS-06
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -692,7 +750,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well_or_spring
+  - country_entry_id: MNE-WAS-07
+    source_category_code: unprotected_well_or_spring
     national_label_en: Unprotected well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -702,7 +761,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: tanker_truck
+  - country_entry_id: MNE-WAS-08
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -712,7 +772,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: MNE-WAS-09
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -722,7 +783,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: MNE-WAS-10
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -732,7 +794,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: MNE-WAS-11
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -742,7 +805,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_with_other_improved
+  - country_entry_id: MNE-WAS-12
+    source_category_code: bottled_water_with_other_improved
     national_label_en: Bottled water with other improved
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -752,7 +816,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater
+  - country_entry_id: MNE-WAS-13
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Rainwater
     jmp_classification: Rainwater
@@ -762,7 +827,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: rainwater_collection
+  - country_entry_id: MNE-WAS-14
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -772,7 +838,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water
+  - country_entry_id: MNE-WAS-15
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -782,7 +849,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_to_neichbour
+  - country_entry_id: MNE-WAS-16
+    source_category_code: piped_to_neichbour
     national_label_en: Piped to neichbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -792,7 +860,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: MNE-WAS-17
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -802,7 +871,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: MNE-WAS-18
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -812,7 +882,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: public_water_supply
+  - country_entry_id: MNE-WAS-19
+    source_category_code: public_water_supply
     national_label_en: Public water supply
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -822,7 +893,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: local_water_supply
+  - country_entry_id: MNE-WAS-20
+    source_category_code: local_water_supply
     national_label_en: Local water supply
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -832,7 +904,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: MNE-WAS-21
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -842,7 +915,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MNE-WAS-22
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -852,7 +926,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MNE-WAS-23
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

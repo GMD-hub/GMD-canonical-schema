@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood educational development
+  - country_entry_id: ARG-EDU-01
+    national_label_en: Early childhood educational development
     national_label_local: Jardin maternal
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarden - Pre-primary
+  - country_entry_id: ARG-EDU-02
+    national_label_en: Kindergarden - Pre-primary
     national_label_local: Jardín de Infantes
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary education
+  - country_entry_id: ARG-EDU-03
+    national_label_en: Primary education
     national_label_local: Educación Primaria
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Adults primary education
+  - country_entry_id: ARG-EDU-04
+    national_label_en: Adults primary education
     national_label_local: Primaria de Adultos
     entry_age: 15
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Basic cycle. Secondary education
+  - country_entry_id: ARG-EDU-05
+    national_label_en: Basic cycle. Secondary education
     national_label_local: Ciclo Básico Educación Secundaria
     entry_age: 12
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Basic cycle. Adults secondary education
+  - country_entry_id: ARG-EDU-06
+    national_label_en: Basic cycle. Adults secondary education
     national_label_local: Ciclo Básico Secundaria de Adultos
     entry_age: 18
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Secondary education - oriented cycle
+  - country_entry_id: ARG-EDU-07
+    national_label_en: Secondary education - oriented cycle
     national_label_local: Educación secundaria - ciclo orientado.
     entry_age: 15
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Oriented cycle. Adults secondary education
+  - country_entry_id: ARG-EDU-08
+    national_label_en: Oriented cycle. Adults secondary education
     national_label_local: Ciclo Orientado Secundaria de Adultos
     entry_age: 18
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Short cycle higher non-university education
+  - country_entry_id: ARG-EDU-09
+    national_label_en: Short cycle higher non-university education
     national_label_local: Superior no Universitario de ciclo corto
     entry_age: 18
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Short cycle higher university education
+  - country_entry_id: ARG-EDU-10
+    national_label_en: Short cycle higher university education
     national_label_local: Superior Universitario - de Ciclo Corto
     entry_age: 18
     duration_years: 3
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Higher non-university education  (teacher training)
+  - country_entry_id: ARG-EDU-11
+    national_label_en: Higher non-university education  (teacher training)
     national_label_local: Superior no Universitario (Formación pedagógica)
     entry_age: 18
     duration_years: 4
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Higher university education - Bachelor
+  - country_entry_id: ARG-EDU-12
+    national_label_en: Higher university education - Bachelor
     national_label_local: Superior Universitario
     entry_age: 18
     duration_years: 5
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: University programme in law
+  - country_entry_id: ARG-EDU-13
+    national_label_en: University programme in law
     national_label_local: Abogacía
     entry_age: 18
     duration_years: 5
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: University programme in engineering
+  - country_entry_id: ARG-EDU-14
+    national_label_en: University programme in engineering
     national_label_local: Ingeniero
     entry_age: 18
     duration_years: 5
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: University programme in architecture
+  - country_entry_id: ARG-EDU-15
+    national_label_en: University programme in architecture
     national_label_local: Arquitectura
     entry_age: 18
     duration_years: 5
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: University complementation cycle
+  - country_entry_id: ARG-EDU-16
+    national_label_en: University complementation cycle
     national_label_local: Ciclo de complementación universitaria
     entry_age: 22
     duration_years: 2
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Dentistry
+  - country_entry_id: ARG-EDU-17
+    national_label_en: Dentistry
     national_label_local: Odontología
     entry_age: 18
     duration_years: 6
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Medicine
+  - country_entry_id: ARG-EDU-18
+    national_label_en: Medicine
     national_label_local: Medicina
     entry_age: 18
     duration_years: 6
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Post degree - Specialization
+  - country_entry_id: ARG-EDU-19
+    national_label_en: Post degree - Specialization
     national_label_local: Formación de Posgrado (Especialidad)
     entry_age: 22
     duration_years: 2
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Post degree - Master
+  - country_entry_id: ARG-EDU-20
+    national_label_en: Post degree - Master
     national_label_local: Formación de Posgrado (Maestría)
     entry_age: 22
     duration_years: 2
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Post degree - Doctorate
+  - country_entry_id: ARG-EDU-21
+    national_label_en: Post degree - Doctorate
     national_label_local: Formación de Posgrado (Doctorado)
     entry_age: 22
     duration_years: 4
@@ -230,7 +251,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Gran Buenos Aires
+  - country_entry_id: ARG-SUBNAT-01
+    survey_labels: 1 - Gran Buenos Aires
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ARG_2015_GAULx_1
     gmd_subnatid2: ''
@@ -250,7 +272,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Buenos Aires D.f. & Entre Rios
     source_row: 141
-  - survey_labels: 2 - Pampeana
+  - country_entry_id: ARG-SUBNAT-02
+    survey_labels: 2 - Pampeana
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ARG_2015_GAULx_2
     gmd_subnatid2: ''
@@ -270,7 +293,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Buenos Aires & Cordoba & Entre Rios & La Pampa & Santa Fe
     source_row: 142
-  - survey_labels: 3 - Cuyo
+  - country_entry_id: ARG-SUBNAT-03
+    survey_labels: 3 - Cuyo
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ARG_2015_GAULx_3
     gmd_subnatid2: ''
@@ -290,7 +314,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mendoza & San Juan & San Luis
     source_row: 143
-  - survey_labels: 4 - Noroeste Argentino
+  - country_entry_id: ARG-SUBNAT-04
+    survey_labels: 4 - Noroeste Argentino
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ARG_2015_GAULx_4
     gmd_subnatid2: ''
@@ -310,7 +335,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Catamarca & Jujuy & La Rioja & Salta & Santiago Del Estero & Tucuman
     source_row: 144
-  - survey_labels: 5 - Patagonia
+  - country_entry_id: ARG-SUBNAT-05
+    survey_labels: 5 - Patagonia
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ARG_2015_GAULx_5
     gmd_subnatid2: ''
@@ -330,7 +356,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chubut & Neuquen & Rio Negro & Santa Cruz & Tierra Del Fuego
     source_row: 145
-  - survey_labels: 6 - Noreste Argentino
+  - country_entry_id: ARG-SUBNAT-06
+    survey_labels: 6 - Noreste Argentino
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: ARG_2015_GAULx_6
     gmd_subnatid2: ''
@@ -360,7 +387,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: inodoro_de_compostaje
+  - country_entry_id: ARG-SAN-01
+    source_category_code: inodoro_de_compostaje
     national_label_en: Inodoro De Compostaje
     national_label_local: Letrinas de compostaje
     jmp_classification: Composting toilets
@@ -370,7 +398,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: bano_o_letrina_con_desague_a_hoyo_excavaciion_en_la_tierra_etc
+  - country_entry_id: ARG-SAN-02
+    source_category_code: bano_o_letrina_con_desague_a_hoyo_excavaciion_en_la_tierra_etc
     national_label_en: Bano o letrina con desague a hoyo, excavaciïon en la tierra,
       etc
     national_label_local: a drenaje abierto
@@ -381,7 +410,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: descarga_drenaje_abierto_excavacion_en_la_tierra
+  - country_entry_id: ARG-SAN-03
+    source_category_code: descarga_drenaje_abierto_excavacion_en_la_tierra
     national_label_en: 'Descarga: Drenaje Abierto, Excavación En La Tierra'
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -391,7 +421,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: bano_o_letrina_con_desague_a_red_publica_cloaca
+  - country_entry_id: ARG-SAN-04
+    source_category_code: bano_o_letrina_con_desague_a_red_publica_cloaca
     national_label_en: Bano o letrina con desague a red publica (cloaca)
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -401,7 +432,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: descarga_red_publica
+  - country_entry_id: ARG-SAN-05
+    source_category_code: descarga_red_publica
     national_label_en: 'Descarga: Red Pública'
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -411,7 +443,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: bano_o_letrina_con_desague_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-06
+    source_category_code: bano_o_letrina_con_desague_solo_a_pozo_ciego
     national_label_en: Bano o letrina con desague solo a pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -421,7 +454,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: descarga_pozo_ciego
+  - country_entry_id: ARG-SAN-07
+    source_category_code: descarga_pozo_ciego
     national_label_en: 'Descarga: Pozo Ciego'
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -431,7 +465,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: bano_o_letrina_con_desague_a_camara_septica_y_pozo_ciego
+  - country_entry_id: ARG-SAN-08
+    source_category_code: bano_o_letrina_con_desague_a_camara_septica_y_pozo_ciego
     national_label_en: Bano o letrina con desague a camara septica y pozo ciego
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -441,7 +476,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: descarga_camara_septica
+  - country_entry_id: ARG-SAN-09
+    source_category_code: descarga_camara_septica
     national_label_en: 'Descarga: Cámara Séptica'
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -451,7 +487,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: bano_o_letrina_con_desague_a_nr
+  - country_entry_id: ARG-SAN-10
+    source_category_code: bano_o_letrina_con_desague_a_nr
     national_label_en: Bano o letrina con desague a NR
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -461,7 +498,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: descarga_no_sabe_donde
+  - country_entry_id: ARG-SAN-11
+    source_category_code: descarga_no_sabe_donde
     national_label_en: 'Descarga: No Sabe Dónde'
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -471,7 +509,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: has_flush_toilet
+  - country_entry_id: ARG-SAN-12
+    source_category_code: has_flush_toilet
     national_label_en: Has flush toilet
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -481,7 +520,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: inodoro_a_hoyo_excavacion_en_tierra
+  - country_entry_id: ARG-SAN-13
+    source_category_code: inodoro_a_hoyo_excavacion_en_tierra
     national_label_en: Inodoro a hoyo, excavación en tierra
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
@@ -491,7 +531,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_hoyo_excavacion_en_tierra
+  - country_entry_id: ARG-SAN-14
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_hoyo_excavacion_en_tierra
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua a hoyo,
       excavación en tierra
     national_label_local: a drenaje abierto
@@ -502,7 +543,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_solo_a_otros
+  - country_entry_id: ARG-SAN-15
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_solo_a_otros
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua sólo a
       otros
     national_label_local: a drenaje abierto
@@ -513,7 +555,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_red_publica
+  - country_entry_id: ARG-SAN-16
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_red_publica
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua a red publica
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -523,7 +566,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_red_publica_cloaca
+  - country_entry_id: ARG-SAN-17
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_red_publica_cloaca
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua a red pública
       (cloaca)
     national_label_local: al alcantarillado
@@ -534,7 +578,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: inodoro_con_desague_a_red_publica_cloaca
+  - country_entry_id: ARG-SAN-18
+    source_category_code: inodoro_con_desague_a_red_publica_cloaca
     national_label_en: Inodoro con desague a red pública(cloaca)
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -544,7 +589,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-19
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_solo_a_pozo_ciego
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua sólo a
       pozo ciego
     national_label_local: a letrina con cierre hidraulico
@@ -555,7 +601,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: inodoro_con_desague_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-20
+    source_category_code: inodoro_con_desague_solo_a_pozo_ciego
     national_label_en: Inodoro con desague sólo a pozo ciego
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
@@ -565,7 +612,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_camara_septica_y_pozo_ciego
+  - country_entry_id: ARG-SAN-21
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_a_camara_septica_y_pozo_ciego
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua a cámara
       séptica y pozo ciego
     national_label_local: a pozo septico
@@ -576,7 +624,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_con_desague_a_camara_septica_y_pozo_ciego
+  - country_entry_id: ARG-SAN-22
+    source_category_code: inodoro_con_desague_a_camara_septica_y_pozo_ciego
     national_label_en: Inodoro con desague a cámara séptica y pozo ciego
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -586,7 +635,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_ns_nr
+  - country_entry_id: ARG-SAN-23
+    source_category_code: inodoro_con_boton_mochila_cadena_y_arrastre_de_agua_ns_nr
     national_label_en: Inodoro con botón/mochila/cadena y arrastre de agua Ns/nr
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -596,7 +646,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: inodoro_con_desague_a_ns_nr
+  - country_entry_id: ARG-SAN-24
+    source_category_code: inodoro_con_desague_a_ns_nr
     national_label_en: Inodoro con desague a Ns/Nr
     national_label_local: no sabe donde
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -606,7 +657,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: letrina_con_losa
+  - country_entry_id: ARG-SAN-25
+    source_category_code: letrina_con_losa
     national_label_en: 'Letrina: Con Losa'
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -617,7 +669,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_sin_arrastre_de_agua_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-26
+    source_category_code: letrina_sin_arrastre_de_agua_solo_a_pozo_ciego
     national_label_en: Letrina (sin arrastre de agua) solo a pozo ciego
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -628,7 +681,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_sin_losa_pozo_abierto
+  - country_entry_id: ARG-SAN-27
+    source_category_code: letrina_sin_losa_pozo_abierto
     national_label_en: 'Letrina: Sin Losa/Pozo Abierto'
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -639,7 +693,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: letrina_sin_arrastre_de_agua_a_hoyo_excavacion_en_tierra
+  - country_entry_id: ARG-SAN-28
+    source_category_code: letrina_sin_arrastre_de_agua_a_hoyo_excavacion_en_tierra
     national_label_en: Letrina (sin arrastre de agua) a hoyo/excavación en tierra
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -650,7 +705,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_sin_arrastre_de_agua
+  - country_entry_id: ARG-SAN-29
+    source_category_code: letrina_sin_arrastre_de_agua
     national_label_en: Letrina sin arrastre de agua
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -661,7 +717,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: no_tiene_bano_equipado_con_inodoro_con_arrastre_de_agua
+  - country_entry_id: ARG-SAN-30
+    source_category_code: no_tiene_bano_equipado_con_inodoro_con_arrastre_de_agua
     national_label_en: No tiene bano equipado con inodoro con arrastre de agua
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -672,7 +729,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_a_hoyo_excavacion_en_tierra
+  - country_entry_id: ARG-SAN-31
+    source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_a_hoyo_excavacion_en_tierra
     national_label_en: Inodoro sin botón/cadena y con arrastre de agua (a balde) a
       hoyo, excavación en tierra
     national_label_local: a drenaje abierto
@@ -683,7 +741,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 90
-  - source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_hoyo_excavacion_en_la_tierra_etc
+  - country_entry_id: ARG-SAN-32
+    source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_hoyo_excavacion_en_la_tierra_etc
     national_label_en: Inodoro sin botón/mochila/cadena y arrastre de agua/a hoyo,
       excavación en la tierra, etc.
     national_label_local: a drenaje abierto
@@ -694,7 +753,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 90
-  - source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_a_red_publica_cloaca
+  - country_entry_id: ARG-SAN-33
+    source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_a_red_publica_cloaca
     national_label_en: Inodoro sin botón/cadena y con arrastre de agua (a balde) a
       red pública (cloaca)
     national_label_local: al alcantarillado
@@ -705,7 +765,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_red_publica_cloaca
+  - country_entry_id: ARG-SAN-34
+    source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_red_publica_cloaca
     national_label_en: Inodoro sin botón/mochila/cadena y arrastre de agua/a red pública
       (cloaca)
     national_label_local: al alcantarillado
@@ -716,7 +777,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-35
+    source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_solo_a_pozo_ciego
     national_label_en: Inodoro sin botón/cadena y con arrastre de agua (a balde) sólo
       a pozo ciego
     national_label_local: a letrina con cierre hidraulico
@@ -727,7 +789,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-36
+    source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_solo_a_pozo_ciego
     national_label_en: Inodoro sin botón/cadena y con arrastre de agua (a balde)sólo
       a pozo ciego
     national_label_local: a letrina con cierre hidraulico
@@ -738,7 +801,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_solo_a_pozo_ciego
+  - country_entry_id: ARG-SAN-37
+    source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_solo_a_pozo_ciego
     national_label_en: Inodoro sin botón/mochila/cadena y arrastre de agua/a sólo
       a pozo ciego
     national_label_local: a letrina con cierre hidraulico
@@ -749,7 +813,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 88
-  - source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_a_camara_septica_y_pozo_ciego
+  - country_entry_id: ARG-SAN-38
+    source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_a_camara_septica_y_pozo_ciego
     national_label_en: Inodoro sin botón/cadena y con arrastre de agua (a balde) a
       cámara séptica y pozo ciego
     national_label_local: a pozo septico
@@ -760,7 +825,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_camara_septica_y_pozo_ciego
+  - country_entry_id: ARG-SAN-39
+    source_category_code: inodoro_sin_boton_mochila_cadena_y_arrastre_de_agua_a_camara_septica_y_pozo_ciego
     national_label_en: Inodoro sin botón/mochila/cadena y arrastre de agua/a cámara
       séptica y pozo ciego
     national_label_local: a pozo septico
@@ -771,7 +837,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_ns_nr
+  - country_entry_id: ARG-SAN-40
+    source_category_code: inodoro_sin_boton_cadena_y_con_arrastre_de_agua_a_balde_ns_nr
     national_label_en: Inodoro sin botón/cadena y con arrastre de agua (a balde) Ns/nr
     national_label_local: no sabe donde
     jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
@@ -781,7 +848,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 89
-  - source_category_code: no_hay_instalacion_sanitaria_monte_campo
+  - country_entry_id: ARG-SAN-41
+    source_category_code: no_hay_instalacion_sanitaria_monte_campo
     national_label_en: No Hay Instalación Sanitaria / Monte / Campo
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -791,7 +859,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_bano
+  - country_entry_id: ARG-SAN-42
+    source_category_code: no_tiene_bano
     national_label_en: No tiene bano
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -801,7 +870,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_bano_o_letrina
+  - country_entry_id: ARG-SAN-43
+    source_category_code: no_tiene_bano_o_letrina
     national_label_en: No tiene baño o letrina
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -811,7 +881,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_letrina_o_bano
+  - country_entry_id: ARG-SAN-44
+    source_category_code: no_tiene_letrina_o_bano
     national_label_en: No tiene letrina o bano
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -821,7 +892,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_flush_toilet
+  - country_entry_id: ARG-SAN-45
+    source_category_code: no_flush_toilet
     national_label_en: No flush toilet
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -831,7 +903,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro_especifique
+  - country_entry_id: ARG-SAN-46
+    source_category_code: otro_especifique
     national_label_en: Otro (Especifique)
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -851,7 +924,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: aljibe_o_pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-01
+    source_category_code: aljibe_o_pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Aljibe o pozo fuera de la vivienda pero dentro del terreno
     national_label_local: Otro
     jmp_classification: Ground water > All springs > Other
@@ -861,7 +935,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 77
-  - source_category_code: pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-02
+    source_category_code: pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Pozo fuera de la vivienda pero dentro del terreno
     national_label_local: Otro
     jmp_classification: Ground water > All springs > Other
@@ -871,7 +946,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 77
-  - source_category_code: aljibe_o_pozo_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-03
+    source_category_code: aljibe_o_pozo_por_caneria_dentro_de_la_vivienda
     national_label_en: Aljibe o pozo por cañería dentro de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > All springs > Private
@@ -881,7 +957,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 75
-  - source_category_code: pozo_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-04
+    source_category_code: pozo_por_caneria_dentro_de_la_vivienda
     national_label_en: Pozo por cañería dentro de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > All springs > Private
@@ -891,7 +968,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 75
-  - source_category_code: aljibe_o_pozo_fuera_del_terreno
+  - country_entry_id: ARG-WAS-05
+    source_category_code: aljibe_o_pozo_fuera_del_terreno
     national_label_en: Aljibe o pozo fuera del terreno
     national_label_local: Publico
     jmp_classification: Ground water > All springs > Public
@@ -901,7 +979,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 76
-  - source_category_code: pozo_fuera_del_terreno
+  - country_entry_id: ARG-WAS-06
+    source_category_code: pozo_fuera_del_terreno
     national_label_en: Pozo fuera del terreno
     national_label_local: Publico
     jmp_classification: Ground water > All springs > Public
@@ -911,7 +990,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 76
-  - source_category_code: pozo_protegido
+  - country_entry_id: ARG-WAS-07
+    source_category_code: pozo_protegido
     national_label_en: Pozo Protegido
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -921,7 +1001,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: perforacion_con_bomba_manual_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-08
+    source_category_code: perforacion_con_bomba_manual_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Perforación con bomba manual fuera de la vivienda pero dentro
       del terreno
     national_label_local: Otro
@@ -932,7 +1013,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: perforacion_con_bomba_manual_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-09
+    source_category_code: perforacion_con_bomba_manual_por_caneria_dentro_de_la_vivienda
     national_label_en: Perforación con bomba manual por cañería dentro de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Protected well > Private
@@ -942,7 +1024,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: perforacion_con_bomba_manual_fuera_del_terreno
+  - country_entry_id: ARG-WAS-10
+    source_category_code: perforacion_con_bomba_manual_fuera_del_terreno
     national_label_en: Perforación con bomba manual fuera del terreno
     national_label_local: Publico
     jmp_classification: Ground water > Protected well > Public
@@ -952,7 +1035,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-11
+    source_category_code: pozo_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Pozo fuera de la vivienda pero dentro del terreno
     national_label_local: Otro
     jmp_classification: Ground water > Traditional wells > Other
@@ -962,7 +1046,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: pozo_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-12
+    source_category_code: pozo_por_caneria_dentro_de_la_vivienda
     national_label_en: Pozo por cañería dentro de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Traditional wells > Private
@@ -972,7 +1057,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: pozo_fuera_del_terreno
+  - country_entry_id: ARG-WAS-13
+    source_category_code: pozo_fuera_del_terreno
     national_label_en: Pozo fuera del terreno
     national_label_local: Publico
     jmp_classification: Ground water > Traditional wells > Public
@@ -982,7 +1068,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: pozo_con_tuberia
+  - country_entry_id: ARG-WAS-14
+    source_category_code: pozo_con_tuberia
     national_label_en: Pozo Con Tubería
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -992,7 +1079,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: perforacion_con_bomba_a_motor_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-15
+    source_category_code: perforacion_con_bomba_a_motor_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Perforación con bomba a motor fuera de la vivienda pero dentro
       del terreno
     national_label_local: Otro
@@ -1003,7 +1091,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: perforacion_con_bomba_a_motor_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-16
+    source_category_code: perforacion_con_bomba_a_motor_por_caneria_dentro_de_la_vivienda
     national_label_en: Perforación con bomba a motor por cañería dentro de la vivienda
     national_label_local: Privado
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -1013,7 +1102,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: perforacion_con_bomba_a_motor_fuera_del_terreno
+  - country_entry_id: ARG-WAS-17
+    source_category_code: perforacion_con_bomba_a_motor_fuera_del_terreno
     national_label_en: Perforación con bomba a motor fuera del terreno
     national_label_local: Publico
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1023,7 +1113,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: pozo_no_protegido
+  - country_entry_id: ARG-WAS-18
+    source_category_code: pozo_no_protegido
     national_label_en: Pozo No Protegido
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
@@ -1033,7 +1124,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: otras_fuentes_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-19
+    source_category_code: otras_fuentes_por_caneria_dentro_de_la_vivienda
     national_label_en: otras fuentes por cañería dentro de la vivienda
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1043,7 +1135,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: camion_cisterna
+  - country_entry_id: ARG-WAS-20
+    source_category_code: camion_cisterna
     national_label_en: Camión Cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1053,7 +1146,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: transporte_por_cisterna
+  - country_entry_id: ARG-WAS-21
+    source_category_code: transporte_por_cisterna
     national_label_en: Transporte por cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1063,7 +1157,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: otras_fuentes_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-22
+    source_category_code: otras_fuentes_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: otras fuentes fuera de la vivienda, pero dentro del terreno
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1073,7 +1168,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otras_fuentes_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-23
+    source_category_code: otras_fuentes_por_caneria_dentro_de_la_vivienda
     national_label_en: Otras fuentes por cañería dentro de la vivienda
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1083,7 +1179,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_especifique
+  - country_entry_id: ARG-WAS-24
+    source_category_code: otro_especifique
     national_label_en: Otro (Especifique)
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1093,7 +1190,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_por_caneria_dentro_de_la_vivienda_o_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-25
+    source_category_code: otro_por_caneria_dentro_de_la_vivienda_o_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Otro por cañería dentro de la vivienda o fuera de la vivienda
       pero dentro del terreno
     national_label_local: Otro
@@ -1104,7 +1202,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otras
+  - country_entry_id: ARG-WAS-26
+    source_category_code: otras
     national_label_en: Otras
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1114,7 +1213,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: otras_fuentes_fuera_de_la_vivienda_o_del_terreno
+  - country_entry_id: ARG-WAS-27
+    source_category_code: otras_fuentes_fuera_de_la_vivienda_o_del_terreno
     national_label_en: Otras fuentes fuera de la vivienda o del terreno
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1124,7 +1224,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: otras_fuentes_fuera_del_terreno
+  - country_entry_id: ARG-WAS-28
+    source_category_code: otras_fuentes_fuera_del_terreno
     national_label_en: otras fuentes fuera del terreno
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1134,7 +1235,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: agua_embotellada
+  - country_entry_id: ARG-WAS-29
+    source_category_code: agua_embotellada
     national_label_en: Agua Embotellada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1144,7 +1246,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bolsa_de_agua
+  - country_entry_id: ARG-WAS-30
+    source_category_code: bolsa_de_agua
     national_label_en: Bolsa De Agua
     national_label_local: Agua en bolsita
     jmp_classification: Packaged water > Sachet water
@@ -1154,7 +1257,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: agua_de_lluvia
+  - country_entry_id: ARG-WAS-31
+    source_category_code: agua_de_lluvia
     national_label_en: Agua De Lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1164,7 +1268,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_de_lluvia_rio_canal_arroyo
+  - country_entry_id: ARG-WAS-32
+    source_category_code: agua_de_lluvia_rio_canal_arroyo
     national_label_en: Agua de lluvia, rio, canal, arroyo
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1174,7 +1279,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_de_lluvia_rio_canal_arroyo_o_acequia
+  - country_entry_id: ARG-WAS-33
+    source_category_code: agua_de_lluvia_rio_canal_arroyo_o_acequia
     national_label_en: Agua de lluvia, río, canal, arroyo o acequia
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1184,7 +1290,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal
+  - country_entry_id: ARG-WAS-34
+    source_category_code: agua_de_superficie_rio_represa_lago_estanque_arroyo_canal
     national_label_en: Agua De Superficie (Río, Represa, Lago, Estanque, Arroyo, Canal)
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -1194,7 +1301,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: caneria_conectada_al_vecino
+  - country_entry_id: ARG-WAS-35
+    source_category_code: caneria_conectada_al_vecino
     national_label_en: Cañería Conectada Al Vecino
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -1204,7 +1312,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: agua_de_red_publica_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-36
+    source_category_code: agua_de_red_publica_por_caneria_dentro_de_la_vivienda
     national_label_en: Agua de red pública, por cañería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1214,7 +1323,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-37
+    source_category_code: caneria_dentro_de_la_vivienda
     national_label_en: Cañería Dentro De La Vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1224,7 +1334,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_agua_corriente_por_caneria_dentro_de_la_vivienda
+  - country_entry_id: ARG-WAS-38
+    source_category_code: red_publica_agua_corriente_por_caneria_dentro_de_la_vivienda
     national_label_en: Red pública (agua corriente) por cañería dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1234,7 +1345,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: agua_de_red_publica_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-39
+    source_category_code: agua_de_red_publica_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Agua de red pública, fuera de la vivienda pero dentro del terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1244,7 +1356,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: caneria_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-40
+    source_category_code: caneria_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Cañería Fuera De La Vivienda, Pero Dentro Del Terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1254,7 +1367,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: red_publica_agua_corriente_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: ARG-WAS-41
+    source_category_code: red_publica_agua_corriente_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Red pública (agua corriente) fuera de la vivienda pero dentro
       del terreno
     national_label_local: Agua corriente al patio/parcela
@@ -1265,7 +1379,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: agua_de_red_publica_fuera_del_terreno
+  - country_entry_id: ARG-WAS-42
+    source_category_code: agua_de_red_publica_fuera_del_terreno
     national_label_en: Agua de red pública, fuera del terreno
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1275,7 +1390,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: canilla_grifo_publico
+  - country_entry_id: ARG-WAS-43
+    source_category_code: canilla_grifo_publico
     national_label_en: Canilla/Grifo Público
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -1285,7 +1401,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: red_publica_agua_corriente_fuera_del_terreno
+  - country_entry_id: ARG-WAS-44
+    source_category_code: red_publica_agua_corriente_fuera_del_terreno
     national_label_en: Red pública (agua corriente) fuera del terreno
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

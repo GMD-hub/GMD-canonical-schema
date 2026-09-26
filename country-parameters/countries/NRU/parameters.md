@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Playcentre
+  - country_entry_id: NRU-EDU-01
+    national_label_en: Playcentre
     national_label_local: Playcentre
     entry_age: 3
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-School
+  - country_entry_id: NRU-EDU-02
+    national_label_en: Pre-School
     national_label_local: Pre-School
     entry_age: 4
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Prep
+  - country_entry_id: NRU-EDU-03
+    national_label_en: Prep
     national_label_local: Prep
     entry_age: 5
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Primary Y1-Y6
+  - country_entry_id: NRU-EDU-04
+    national_label_en: Primary Y1-Y6
     national_label_local: Primary
     entry_age: 6
     duration_years: 6
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Primary Y7-Y8
+  - country_entry_id: NRU-EDU-05
+    national_label_en: Primary Y7-Y8
     national_label_local: Primary
     entry_age: 12
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Secondary Y9-Y10
+  - country_entry_id: NRU-EDU-06
+    national_label_en: Secondary Y9-Y10
     national_label_local: Secondary
     entry_age: 14
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Secondary Y11-Y12
+  - country_entry_id: NRU-EDU-07
+    national_label_en: Secondary Y11-Y12
     national_label_local: Secondary
     entry_age: 16
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Secondary Y11-Y12
+  - country_entry_id: NRU-EDU-08
+    national_label_en: Secondary Y11-Y12
     national_label_local: Secondary
     entry_age: 16
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: TVET
+  - country_entry_id: NRU-EDU-09
+    national_label_en: TVET
     national_label_local: TVET
     entry_age: 18
     duration_years: 1
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Foundation USP
+  - country_entry_id: NRU-EDU-10
+    national_label_en: Foundation USP
     national_label_local: Foundation USP
     entry_age: 18
     duration_years: 1
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Cert/Dip USP
+  - country_entry_id: NRU-EDU-11
+    national_label_en: Cert/Dip USP
     national_label_local: Cert/Dip USP
     entry_age: 19
     duration_years: 1
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Bachelor
+  - country_entry_id: NRU-EDU-12
+    national_label_en: Bachelor
     national_label_local: Bachelor degree + Post-graduate Dip/Cert
     entry_age: 19
     duration_years: 3
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Masters
+  - country_entry_id: NRU-EDU-13
+    national_label_en: Masters
     national_label_local: Masters
     entry_age: 22
     duration_years: 2
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Phd
+  - country_entry_id: NRU-EDU-14
+    national_label_en: Phd
     national_label_local: Phd
     entry_age: 24
     duration_years: 5
@@ -160,7 +174,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: to_open_drain
+  - country_entry_id: NRU-SAN-01
+    source_category_code: to_open_drain
     national_label_en: to open drain
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -170,7 +185,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: NRU-SAN-02
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -180,7 +196,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: to_pit
+  - country_entry_id: NRU-SAN-03
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -190,7 +207,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: to_septic_tank
+  - country_entry_id: NRU-SAN-04
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -200,7 +218,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: to_dk_where
+  - country_entry_id: NRU-SAN-05
+    source_category_code: to_dk_where
     national_label_en: to DK where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -210,7 +229,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: bucket
+  - country_entry_id: NRU-SAN-06
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
@@ -220,7 +240,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 118
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: NRU-SAN-07
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -231,7 +252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: NRU-SAN-08
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -242,7 +264,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: NRU-SAN-09
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush,field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -252,7 +275,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: NRU-SAN-10
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -272,7 +296,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_well
+  - country_entry_id: NRU-WAS-01
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -282,7 +307,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tanker_truck_desalination
+  - country_entry_id: NRU-WAS-02
+    source_category_code: tanker_truck_desalination
     national_label_en: Tanker truck/desalination
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -292,7 +318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: community_tank
+  - country_entry_id: NRU-WAS-03
+    source_category_code: community_tank
     national_label_en: Community tank
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -302,7 +329,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: other
+  - country_entry_id: NRU-WAS-04
+    source_category_code: other
     national_label_en: other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -312,7 +340,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: NRU-WAS-05
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -322,7 +351,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater
+  - country_entry_id: NRU-WAS-06
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Rainwater
     jmp_classification: Rainwater
@@ -332,7 +362,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 86
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: NRU-WAS-07
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -342,7 +373,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: NRU-WAS-08
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -352,7 +384,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: NRU-WAS-09
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot

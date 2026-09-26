@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Programme d'éveil de la petite enfance
+  - country_entry_id: GIN-EDU-01
+    national_label_en: Programme d'éveil de la petite enfance
     national_label_local: Programme d'éveil de la petite enfance
     entry_age: 2
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Programme pré primaire
+  - country_entry_id: GIN-EDU-02
+    national_label_en: Programme pré primaire
     national_label_local: Programme Pré primaire
     entry_age: 4
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primaire
+  - country_entry_id: GIN-EDU-03
+    national_label_en: Primaire
     national_label_local: Primaire
     entry_age: 7
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Collège
+  - country_entry_id: GIN-EDU-04
+    national_label_en: Collège
     national_label_local: Collège
     entry_age: 13
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Formation professionnelle post primaire
+  - country_entry_id: GIN-EDU-05
+    national_label_en: Formation professionnelle post primaire
     national_label_local: Formation professionnelle post primaire
     entry_age: 13
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
-  - national_label_en: Lycée
+  - country_entry_id: GIN-EDU-06
+    national_label_en: Lycée
     national_label_local: Lycée
     entry_age: 17
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Formation profesionnelle A
+  - country_entry_id: GIN-EDU-07
+    national_label_en: Formation profesionnelle A
     national_label_local: Formation profesionnelle A
     entry_age: 17
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Formation profesionnelle B
+  - country_entry_id: GIN-EDU-08
+    national_label_en: Formation profesionnelle B
     national_label_local: Formation profesionnelle B
     entry_age: 20
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Enseignement supérieur, licence
+  - country_entry_id: GIN-EDU-09
+    national_label_en: Enseignement supérieur, licence
     national_label_local: Enseignement supérieur, licence
     entry_age: 20
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Enseignement supérieur, master 1
+  - country_entry_id: GIN-EDU-10
+    national_label_en: Enseignement supérieur, master 1
     national_label_local: Enseignement supérieur, master 1
     entry_age: 23
     duration_years: 1
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Formation d'ingénieurs
+  - country_entry_id: GIN-EDU-11
+    national_label_en: Formation d'ingénieurs
     national_label_local: Formation d'ingénieurs
     entry_age: 20
     duration_years: 5
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Enseignement supérieur, études de médecine et apparentés
+  - country_entry_id: GIN-EDU-12
+    national_label_en: Enseignement supérieur, études de médecine et apparentés
     national_label_local: Enseignement supérieur, études de médecine et apparentés
     entry_age: 20
     duration_years: 6
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Enseignement supérieur, marster 2
+  - country_entry_id: GIN-EDU-13
+    national_label_en: Enseignement supérieur, marster 2
     national_label_local: Enseignement supérieur, marster 2
     entry_age: 24
     duration_years: 1
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Formation doctorale
+  - country_entry_id: GIN-EDU-14
+    national_label_en: Formation doctorale
     national_label_local: Formation doctorale
     entry_age: 25
     duration_years: 3
@@ -161,7 +175,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Boké | 1 – Boké
+  - country_entry_id: GIN-SUBNAT-01
+    survey_labels: 1 - Boké | 1 – Boké
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40700
     gmd_subnatid2: ''
@@ -181,7 +196,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Boke
     source_row: 5685
-  - survey_labels: 2 - Conakry | 2 – Conakry
+  - country_entry_id: GIN-SUBNAT-02
+    survey_labels: 2 - Conakry | 2 – Conakry
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40701
     gmd_subnatid2: ''
@@ -201,7 +217,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Conakry
     source_row: 5686
-  - survey_labels: 3 - Faranah | 3 – Faranah
+  - country_entry_id: GIN-SUBNAT-03
+    survey_labels: 3 - Faranah | 3 – Faranah
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40702
     gmd_subnatid2: ''
@@ -221,7 +238,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Faranah
     source_row: 5687
-  - survey_labels: 4 - Kankan | 4 – Kankan
+  - country_entry_id: GIN-SUBNAT-04
+    survey_labels: 4 - Kankan | 4 – Kankan
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40703
     gmd_subnatid2: ''
@@ -241,7 +259,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kankan
     source_row: 5688
-  - survey_labels: 5 - Kindia | 5 – Kindia
+  - country_entry_id: GIN-SUBNAT-05
+    survey_labels: 5 - Kindia | 5 – Kindia
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40704
     gmd_subnatid2: ''
@@ -261,7 +280,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kindia
     source_row: 5689
-  - survey_labels: 6 - Labé | 6 – Labé
+  - country_entry_id: GIN-SUBNAT-06
+    survey_labels: 6 - Labé | 6 – Labé
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40705
     gmd_subnatid2: ''
@@ -281,7 +301,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Labe
     source_row: 5690
-  - survey_labels: 7 - Mamou | 7 – Mamou
+  - country_entry_id: GIN-SUBNAT-07
+    survey_labels: 7 - Mamou | 7 – Mamou
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40706
     gmd_subnatid2: ''
@@ -301,7 +322,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mamou
     source_row: 5691
-  - survey_labels: 8 - N'Zérékoré | 8 - Nzérékoré | 8 – Nzérékoré
+  - country_entry_id: GIN-SUBNAT-08
+    survey_labels: 8 - N'Zérékoré | 8 - Nzérékoré | 8 – Nzérékoré
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: GIN_2015_GAUL1_40707
     gmd_subnatid2: ''
@@ -331,7 +353,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: GIN-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
@@ -341,7 +364,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: toilettes_a_compostage
+  - country_entry_id: GIN-SAN-02
+    source_category_code: toilettes_a_compostage
     national_label_en: Toilettes a compostage
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
@@ -351,7 +375,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: toilettes_a_compostage
+  - country_entry_id: GIN-SAN-03
+    source_category_code: toilettes_a_compostage
     national_label_en: Toilettes à compostage
     national_label_local: Toilettes a compostage (privées)
     jmp_classification: Composting toilets > Composting toilet (private)
@@ -361,7 +386,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 129
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: GIN-SAN-04
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: reliée al'air libre
     jmp_classification: Flush and pour flush > to elsewhere
@@ -371,7 +397,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: chasse_connectee_a_systeme_d_egouts
+  - country_entry_id: GIN-SAN-05
+    source_category_code: chasse_connectee_a_systeme_d_egouts
     national_label_en: Chasse connectee a  systeme d'egouts
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -381,7 +408,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: GIN-SAN-06
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -391,7 +419,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: chasse_reliee_a_des_latrines
+  - country_entry_id: GIN-SAN-07
+    source_category_code: chasse_reliee_a_des_latrines
     national_label_en: Chasse reliee a des latrines
     national_label_local: reliée aux latrine
     jmp_classification: Flush and pour flush > to pit
@@ -401,7 +430,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: GIN-SAN-08
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
     national_label_local: reliée aux latrine
     jmp_classification: Flush and pour flush > to pit
@@ -411,7 +441,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: chasse_connectee_a_fosse_septique
+  - country_entry_id: GIN-SAN-09
+    source_category_code: chasse_connectee_a_fosse_septique
     national_label_en: Chasse connectee a fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush and pour flush > to septic tank
@@ -421,7 +452,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: GIN-SAN-10
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: reliée a fosse septique
     jmp_classification: Flush and pour flush > to septic tank
@@ -431,7 +463,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: GIN-SAN-11
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
     national_label_local: reliée a autre chose
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -441,7 +474,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: ne_sait_pas_ou
+  - country_entry_id: GIN-SAN-12
+    source_category_code: ne_sait_pas_ou
     national_label_en: Ne sait pas ou
     national_label_local: reliée a autre chose
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -451,7 +485,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: chasse_d_eau
+  - country_entry_id: GIN-SAN-13
+    source_category_code: chasse_d_eau
     national_label_en: Chasse d'eau
     national_label_local: Toilette à chasse d'eau
     jmp_classification: Flush/toilets
@@ -461,7 +496,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
+  - country_entry_id: GIN-SAN-14
+    source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
     national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -471,7 +507,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
+  - country_entry_id: GIN-SAN-15
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse d'aisances
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
@@ -481,7 +518,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 75
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
+  - country_entry_id: GIN-SAN-16
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -491,7 +529,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
+  - country_entry_id: GIN-SAN-17
+    source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
     national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -502,7 +541,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
+  - country_entry_id: GIN-SAN-18
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse d'aisances
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to pit
@@ -512,7 +552,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 81
-  - source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
+  - country_entry_id: GIN-SAN-19
+    source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
     national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -522,7 +563,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: GIN-SAN-20
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: reliée al'air libre
     jmp_classification: Flush/toilets > to elsewhere
@@ -532,7 +574,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: chasse_d_eau_avec_egout
+  - country_entry_id: GIN-SAN-21
+    source_category_code: chasse_d_eau_avec_egout
     national_label_en: Chasse d'eau avec égout
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > to piped sewer system
@@ -542,7 +585,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: GIN-SAN-22
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: reliée a systeme d'egouts
     jmp_classification: Flush/toilets > to piped sewer system
@@ -552,7 +596,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: GIN-SAN-23
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: reliée aux latrine
     jmp_classification: Flush/toilets > to pit
@@ -562,7 +607,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: chasse_d_eau_avec_fosse_septique
+  - country_entry_id: GIN-SAN-24
+    source_category_code: chasse_d_eau_avec_fosse_septique
     national_label_en: Chasse d'eau avec fosse septique
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > to septic tank
@@ -572,7 +618,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: GIN-SAN-25
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: reliée a fosse septique
     jmp_classification: Flush/toilets > to septic tank
@@ -582,7 +629,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: GIN-SAN-26
+    source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
     national_label_local: reliée a autre chose
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -592,7 +640,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket_toilet
+  - country_entry_id: GIN-SAN-27
+    source_category_code: bucket_toilet
     national_label_en: Bucket toilet
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -602,7 +651,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: cuvette_seau
+  - country_entry_id: GIN-SAN-28
+    source_category_code: cuvette_seau
     national_label_en: Cuvette/seau
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -612,7 +662,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: seau
+  - country_entry_id: GIN-SAN-29
+    source_category_code: seau
     national_label_en: Seau
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -622,7 +673,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: seaux
+  - country_entry_id: GIN-SAN-30
+    source_category_code: seaux
     national_label_en: Seaux
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -632,7 +684,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: GIN-SAN-31
+    source_category_code: hanging_toilet_latrine
     national_label_en: Hanging toilet/latrine
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -643,7 +696,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: toilettes_latrines_suspendues
+  - country_entry_id: GIN-SAN-32
+    source_category_code: toilettes_latrines_suspendues
     national_label_en: Toilettes / Latrines suspendues
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -654,7 +708,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: toilettes_latrines_suspendues
+  - country_entry_id: GIN-SAN-33
+    source_category_code: toilettes_latrines_suspendues
     national_label_en: Toilettes/latrines suspendues
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -665,7 +720,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: fosse_amelioree_latrine
+  - country_entry_id: GIN-SAN-34
+    source_category_code: fosse_amelioree_latrine
     national_label_en: Fosse Amelioree/latrine
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -676,7 +732,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: fosse_latrine_couvertes
+  - country_entry_id: GIN-SAN-35
+    source_category_code: fosse_latrine_couvertes
     national_label_en: Fosse/Latrine couvertes
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -687,7 +744,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: latrines_a_fosse_avec_dalle
+  - country_entry_id: GIN-SAN-36
+    source_category_code: latrines_a_fosse_avec_dalle
     national_label_en: Latrines a fosse avec dalle
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -698,7 +756,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: latrines_couvertes
+  - country_entry_id: GIN-SAN-37
+    source_category_code: latrines_couvertes
     national_label_en: Latrines couvertes
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -709,7 +768,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: GIN-SAN-38
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -720,7 +780,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: fosse_d_aisances_sans_dalle_trou_ouvert
+  - country_entry_id: GIN-SAN-39
+    source_category_code: fosse_d_aisances_sans_dalle_trou_ouvert
     national_label_en: Fosse d'aisances sans dalle/trou ouvert
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -731,7 +792,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: fosse_sommaire
+  - country_entry_id: GIN-SAN-40
+    source_category_code: fosse_sommaire
     national_label_en: Fosse Sommaire
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -742,7 +804,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: fosse_latrine_non_couvertes
+  - country_entry_id: GIN-SAN-41
+    source_category_code: fosse_latrine_non_couvertes
     national_label_en: Fosse/Latrine non couvertes
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -753,7 +816,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrine_non_amelioree
+  - country_entry_id: GIN-SAN-42
+    source_category_code: latrine_non_amelioree
     national_label_en: Latrine Non amelioree
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -764,7 +828,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrines_a_fosse_sans_dalle_trou_ouvert
+  - country_entry_id: GIN-SAN-43
+    source_category_code: latrines_a_fosse_sans_dalle_trou_ouvert
     national_label_en: Latrines a fosse sans dalle / trou ouvert
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -775,7 +840,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrines_non_couvertes
+  - country_entry_id: GIN-SAN-44
+    source_category_code: latrines_non_couvertes
     national_label_en: Latrines non couvertes
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -786,7 +852,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: GIN-SAN-45
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -797,7 +864,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrine_amelioree
+  - country_entry_id: GIN-SAN-46
+    source_category_code: latrine_amelioree
     national_label_en: Latrine Amelioree
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -808,7 +876,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: fosse_latrine_ventilee_ameliorees
+  - country_entry_id: GIN-SAN-47
+    source_category_code: fosse_latrine_ventilee_ameliorees
     national_label_en: Fosse/Latrine ventilee ameliorees
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -819,7 +888,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: latrines_ameliorees_ventilees_lav
+  - country_entry_id: GIN-SAN-48
+    source_category_code: latrines_ameliorees_ventilees_lav
     national_label_en: Latrines ameliorees ventilees (LAV)
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -830,7 +900,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: latrines_ventilees_ameliorees
+  - country_entry_id: GIN-SAN-49
+    source_category_code: latrines_ventilees_ameliorees
     national_label_en: Latrines ventilées améliorées
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -841,7 +912,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: GIN-SAN-50
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated improved pit latrine (vip)
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -852,7 +924,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: fosses_d_aisances_avec_dalle
+  - country_entry_id: GIN-SAN-51
+    source_category_code: fosses_d_aisances_avec_dalle
     national_label_en: Fosses d'aisances avec dalle
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -863,7 +936,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: fosse_d_aisances_ameliore_auto_aere
+  - country_entry_id: GIN-SAN-52
+    source_category_code: fosse_d_aisances_ameliore_auto_aere
     national_label_en: Fosse d'aisances amélioré auto-aéré
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -874,7 +948,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: bucket_toilet
+  - country_entry_id: GIN-SAN-53
+    source_category_code: bucket_toilet
     national_label_en: bucket toilet
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -885,7 +960,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: GIN-SAN-54
+    source_category_code: hanging_toilet_latrine
     national_label_en: hanging toilet/latrine
     national_label_local: Toilette sospendues
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Hanging
@@ -896,7 +972,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 125
-  - source_category_code: fosses_d_aisances_avec_dalle
+  - country_entry_id: GIN-SAN-55
+    source_category_code: fosses_d_aisances_avec_dalle
     national_label_en: Fosses d'aisances avec dalle
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -907,7 +984,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: fosse_d_aisances_ameliore_auto_aere
+  - country_entry_id: GIN-SAN-56
+    source_category_code: fosse_d_aisances_ameliore_auto_aere
     national_label_en: Fosse d'aisances amélioré auto-aéré
     national_label_local: Latrine a fosse ameliorée ventilée
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -918,7 +996,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 121
-  - source_category_code: aucun
+  - country_entry_id: GIN-SAN-57
+    source_category_code: aucun
     national_label_en: Aucun
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -928,7 +1007,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: nature
+  - country_entry_id: GIN-SAN-58
+    source_category_code: nature
     national_label_en: nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -938,7 +1018,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: GIN-SAN-59
+    source_category_code: no_facility_bush_field
     national_label_en: No facility/bush/field
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -948,7 +1029,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_pas_disponible
+  - country_entry_id: GIN-SAN-60
+    source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -958,7 +1040,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilette_nature
+  - country_entry_id: GIN-SAN-61
+    source_category_code: pas_de_toilette_nature
     national_label_en: Pas de toilette/nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -968,7 +1051,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilettes
+  - country_entry_id: GIN-SAN-62
+    source_category_code: pas_de_toilettes
     national_label_en: Pas de toilettes
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -978,7 +1062,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilettes_ou_brousse_ou_champ
+  - country_entry_id: GIN-SAN-63
+    source_category_code: pas_de_toilettes_ou_brousse_ou_champ
     national_label_en: Pas de toilettes ou brousse ou champ
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -988,7 +1073,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilettes_brousse_nature
+  - country_entry_id: GIN-SAN-64
+    source_category_code: pas_de_toilettes_brousse_nature
     national_label_en: Pas de toilettes, brousse, nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -998,7 +1084,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: pas_de_toilettes_nature
+  - country_entry_id: GIN-SAN-65
+    source_category_code: pas_de_toilettes_nature
     national_label_en: Pas de toilettes/nature
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
@@ -1008,7 +1095,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: autre
+  - country_entry_id: GIN-SAN-66
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
@@ -1028,7 +1116,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: puits
+  - country_entry_id: GIN-WAS-01
+    source_category_code: puits
     national_label_en: Puits
     national_label_local: Tous les puits
     jmp_classification: Ground water > All wells
@@ -1038,7 +1127,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: eau_de_source_protegee
+  - country_entry_id: GIN-WAS-02
+    source_category_code: eau_de_source_protegee
     national_label_en: Eau de source protégée
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1048,7 +1138,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_spring
+  - country_entry_id: GIN-WAS-03
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1058,7 +1149,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: source_amenagee
+  - country_entry_id: GIN-WAS-04
+    source_category_code: source_amenagee
     national_label_en: Source aménagée
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1068,7 +1160,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: source_protege
+  - country_entry_id: GIN-WAS-05
+    source_category_code: source_protege
     national_label_en: Source protégé
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1078,7 +1171,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: source_protegee
+  - country_entry_id: GIN-WAS-06
+    source_category_code: source_protegee
     national_label_en: Source protegée
     national_label_local: Source protégées
     jmp_classification: Ground water > Protected spring
@@ -1088,7 +1182,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: GIN-WAS-07
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1098,7 +1193,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: puits_ameliore
+  - country_entry_id: GIN-WAS-08
+    source_category_code: puits_ameliore
     national_label_en: Puits amélioré
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1108,7 +1204,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: puits_amenages
+  - country_entry_id: GIN-WAS-09
+    source_category_code: puits_amenages
     national_label_en: puits aménagés
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1118,7 +1215,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: puits_protege
+  - country_entry_id: GIN-WAS-10
+    source_category_code: puits_protege
     national_label_en: Puits protégé
     national_label_local: Puits protegées
     jmp_classification: Ground water > Protected well
@@ -1128,7 +1226,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: puits_protege_dans_le_logement_cour
+  - country_entry_id: GIN-WAS-11
+    source_category_code: puits_protege_dans_le_logement_cour
     national_label_en: Puits protégé dans le logement / cour
     national_label_local: Privé
     jmp_classification: Ground water > Protected well > Private
@@ -1138,7 +1237,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: puits_protege_d_ailleurs
+  - country_entry_id: GIN-WAS-12
+    source_category_code: puits_protege_d_ailleurs
     national_label_en: Puits protégé d'ailleurs
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
@@ -1148,7 +1248,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 68
-  - source_category_code: puits_prive
+  - country_entry_id: GIN-WAS-13
+    source_category_code: puits_prive
     national_label_en: Puits privé
     national_label_local: Privé
     jmp_classification: Ground water > Traditional wells > Private
@@ -1158,7 +1259,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 63
-  - source_category_code: forage
+  - country_entry_id: GIN-WAS-14
+    source_category_code: forage
     national_label_en: Forage
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1168,7 +1270,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_a_pompe_forages
+  - country_entry_id: GIN-WAS-15
+    source_category_code: puits_a_pompe_forages
     national_label_en: Puits a pompe forages
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1178,7 +1281,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_a_pompe_forage
+  - country_entry_id: GIN-WAS-16
+    source_category_code: puits_a_pompe_forage
     national_label_en: Puits a pompe, forage
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1188,7 +1292,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_a_pompe_forage
+  - country_entry_id: GIN-WAS-17
+    source_category_code: puits_a_pompe_forage
     national_label_en: Puits à pompe/forage
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1198,7 +1303,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_tubulaire_ou_forage
+  - country_entry_id: GIN-WAS-18
+    source_category_code: puits_tubulaire_ou_forage
     national_label_en: Puits tubulaire ou forage
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1208,7 +1314,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: GIN-WAS-19
+    source_category_code: tube_well_or_borehole
     national_label_en: Tube well or borehole
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
@@ -1218,7 +1325,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: puits_public_forages
+  - country_entry_id: GIN-WAS-20
+    source_category_code: puits_public_forages
     national_label_en: Puits public/forages
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1228,7 +1336,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: eau_de_source_non_protegee
+  - country_entry_id: GIN-WAS-21
+    source_category_code: eau_de_source_non_protegee
     national_label_en: Eau de source non protégée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1238,7 +1347,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: source_non_amenagee
+  - country_entry_id: GIN-WAS-22
+    source_category_code: source_non_amenagee
     national_label_en: Source non aménagée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1248,7 +1358,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: source_non_protege
+  - country_entry_id: GIN-WAS-23
+    source_category_code: source_non_protege
     national_label_en: Source non protégé
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1258,7 +1369,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: source_non_protegee
+  - country_entry_id: GIN-WAS-24
+    source_category_code: source_non_protegee
     national_label_en: Source non protégée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1268,7 +1380,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: source_non_protegee
+  - country_entry_id: GIN-WAS-25
+    source_category_code: source_non_protegee
     national_label_en: Source non-protégée
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1278,7 +1391,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_spring
+  - country_entry_id: GIN-WAS-26
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Source non-protégées
     jmp_classification: Ground water > Unprotected spring
@@ -1288,7 +1402,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: puits_non_amenages
+  - country_entry_id: GIN-WAS-27
+    source_category_code: puits_non_amenages
     national_label_en: puits non aménagés
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1298,7 +1413,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: puits_non_protege
+  - country_entry_id: GIN-WAS-28
+    source_category_code: puits_non_protege
     national_label_en: Puits non protégé
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1308,7 +1424,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: puits_non_protege
+  - country_entry_id: GIN-WAS-29
+    source_category_code: puits_non_protege
     national_label_en: Puits non-protégé
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1318,7 +1435,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: puits_ordinaire
+  - country_entry_id: GIN-WAS-30
+    source_category_code: puits_ordinaire
     national_label_en: Puits ordinaire
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1328,7 +1446,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: GIN-WAS-31
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Puits non-protegées
     jmp_classification: Ground water > Unprotected well
@@ -1338,7 +1457,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: puits_ouvert_dans_le_logement_cour
+  - country_entry_id: GIN-WAS-32
+    source_category_code: puits_ouvert_dans_le_logement_cour
     national_label_en: Puits ouvert dans le logement / cour
     national_label_local: Privé
     jmp_classification: Ground water > Unprotected well > Private
@@ -1348,7 +1468,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: puits_ouvert_d_ailleurs
+  - country_entry_id: GIN-WAS-33
+    source_category_code: puits_ouvert_d_ailleurs
     national_label_en: Puits ouvert d'ailleurs
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
@@ -1358,7 +1479,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 72
-  - source_category_code: achetee_d_un_chariot_avec_un_petit_reservoir_ou_tambour
+  - country_entry_id: GIN-WAS-34
+    source_category_code: achetee_d_un_chariot_avec_un_petit_reservoir_ou_tambour
     national_label_en: Achetée d’un chariot avec un petit réservoir ou tambour
     national_label_local: Chariot avec petit réservoir/tambour
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1368,7 +1490,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: camion_citerne_charrette_avec_petite_citerne
+  - country_entry_id: GIN-WAS-35
+    source_category_code: camion_citerne_charrette_avec_petite_citerne
     national_label_en: Camion-citerne/charrette avec petite citerne
     national_label_local: Chariot avec petit réservoir/tambour
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1378,7 +1501,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: GIN-WAS-36
+    source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
     national_label_local: Chariot avec petit réservoir/tambour
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1388,7 +1512,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: charrette_avec_petite_citerne_tonneau
+  - country_entry_id: GIN-WAS-37
+    source_category_code: charrette_avec_petite_citerne_tonneau
     national_label_en: Charrette avec petite citerne / tonneau
     national_label_local: Chariot avec petit réservoir/tambour
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1398,7 +1523,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: achetee_d_une_citerne
+  - country_entry_id: GIN-WAS-38
+    source_category_code: achetee_d_une_citerne
     national_label_en: Achetée d’une citerne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1408,7 +1534,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_citerne
+  - country_entry_id: GIN-WAS-39
+    source_category_code: camion_citerne
     national_label_en: Camion citerne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1418,7 +1545,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: citerne_vendeaur_d_eau
+  - country_entry_id: GIN-WAS-40
+    source_category_code: citerne_vendeaur_d_eau
     national_label_en: Citerne vendeaur d'eau
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1428,7 +1556,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: GIN-WAS-41
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1438,7 +1567,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: vendeur_camion_citerne
+  - country_entry_id: GIN-WAS-42
+    source_category_code: vendeur_camion_citerne
     national_label_en: Vendeur, camion citerne
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1448,7 +1578,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: autre
+  - country_entry_id: GIN-WAS-43
+    source_category_code: autre
     national_label_en: Autre
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1458,7 +1589,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: autre_source
+  - country_entry_id: GIN-WAS-44
+    source_category_code: autre_source
     national_label_en: Autre source
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
@@ -1468,7 +1600,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: GIN-WAS-45
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1478,7 +1611,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_bag_water
+  - country_entry_id: GIN-WAS-46
+    source_category_code: bottled_bag_water
     national_label_en: bottled/bag water
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1488,7 +1622,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: eau_en_bouteille
+  - country_entry_id: GIN-WAS-47
+    source_category_code: eau_en_bouteille
     national_label_en: Eau en bouteille
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1498,7 +1633,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: eau_en_bouteille_sachet
+  - country_entry_id: GIN-WAS-48
+    source_category_code: eau_en_bouteille_sachet
     national_label_en: Eau en bouteille/sachet
     national_label_local: Eau en bouteille
     jmp_classification: Packaged water > Bottled water
@@ -1508,7 +1644,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: eau_en_sachet
+  - country_entry_id: GIN-WAS-49
+    source_category_code: eau_en_sachet
     national_label_en: Eau en sachet
     national_label_local: Sachet d'eau
     jmp_classification: Packaged water > Sachet water
@@ -1518,7 +1655,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: collecte_d_eau_de_pluie
+  - country_entry_id: GIN-WAS-50
+    source_category_code: collecte_d_eau_de_pluie
     national_label_en: Collecte d’eau de pluie
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1528,7 +1666,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: eau_de_pluie
+  - country_entry_id: GIN-WAS-51
+    source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1538,7 +1677,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: GIN-WAS-52
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Citerne/réservoir couvert
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1548,7 +1688,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: eau_de_surface
+  - country_entry_id: GIN-WAS-53
+    source_category_code: eau_de_surface
     national_label_en: eau de surface
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1558,7 +1699,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: eau_de_surface_rivia_re_fleuve_barrage_lac_mare_canal_canal_d_irrigation
+  - country_entry_id: GIN-WAS-54
+    source_category_code: eau_de_surface_rivia_re_fleuve_barrage_lac_mare_canal_canal_d_irrigation
     national_label_en: Eau de surface (riviÃ¨re, fleuve, barrage, lac, mare, canal,
       canal d'irrigation)
     national_label_local: Eau de surface
@@ -1569,7 +1711,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: eau_de_surface_telle_que_riviere_barrage_lac_etang_ruisseau_canal_ou_canaux_d_irrigation
+  - country_entry_id: GIN-WAS-55
+    source_category_code: eau_de_surface_telle_que_riviere_barrage_lac_etang_ruisseau_canal_ou_canaux_d_irrigation
     national_label_en: Eau de surface, telle que rivière, barrage, lac, étang, ruisseau,
       canal ou canaux d’irrigation
     national_label_local: Eau de surface
@@ -1580,7 +1723,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: mare_ruisseau_ou_fleuve
+  - country_entry_id: GIN-WAS-56
+    source_category_code: mare_ruisseau_ou_fleuve
     national_label_en: Mare, ruisseau ou fleuve
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1590,7 +1734,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+  - country_entry_id: GIN-WAS-57
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1600,7 +1745,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: riviere_lac_source
+  - country_entry_id: GIN-WAS-58
+    source_category_code: riviere_lac_source
     national_label_en: Riviére/lac/source
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1610,7 +1756,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: riviere_lacs_mares_fleuve
+  - country_entry_id: GIN-WAS-59
+    source_category_code: riviere_lacs_mares_fleuve
     national_label_en: Rivière/lacs/mares/ fleuve
     national_label_local: Eau de surface
     jmp_classification: Surface water
@@ -1620,7 +1767,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: barrage
+  - country_entry_id: GIN-WAS-60
+    source_category_code: barrage
     national_label_en: Barrage
     national_label_local: Endiguer
     jmp_classification: Surface water > Dam
@@ -1630,7 +1778,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: mare_lac_barrage
+  - country_entry_id: GIN-WAS-61
+    source_category_code: mare_lac_barrage
     national_label_en: Mare, lac, barrage
     national_label_local: Étang
     jmp_classification: Surface water > Pond
@@ -1640,7 +1789,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: mare_lac
+  - country_entry_id: GIN-WAS-62
+    source_category_code: mare_lac
     national_label_en: Mare,lac
     national_label_local: Étang
     jmp_classification: Surface water > Pond
@@ -1650,7 +1800,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: fleuve_riviere
+  - country_entry_id: GIN-WAS-63
+    source_category_code: fleuve_riviere
     national_label_en: Fleuve/riviere
     national_label_local: Fleuve
     jmp_classification: Surface water > River
@@ -1660,7 +1811,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: riviere_fleuve
+  - country_entry_id: GIN-WAS-64
+    source_category_code: riviere_fleuve
     national_label_en: Rivière, fleuve
     national_label_local: Fleuve
     jmp_classification: Surface water > River
@@ -1670,7 +1822,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: robinet
+  - country_entry_id: GIN-WAS-65
+    source_category_code: robinet
     national_label_en: Robinet
     national_label_local: Eau du robinet
     jmp_classification: Tap water
@@ -1680,7 +1833,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: piped_to_neighbor
+  - country_entry_id: GIN-WAS-66
+    source_category_code: piped_to_neighbor
     national_label_en: Piped to neighbor
     national_label_local: Autre
     jmp_classification: Tap water > Other
@@ -1690,7 +1844,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: robinet_chez_le_voisin
+  - country_entry_id: GIN-WAS-67
+    source_category_code: robinet_chez_le_voisin
     national_label_en: Robinet chez le voisin
     national_label_local: Autre
     jmp_classification: Tap water > Other
@@ -1700,7 +1855,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: robinet_dans_la_cour_chez_le_voisin
+  - country_entry_id: GIN-WAS-68
+    source_category_code: robinet_dans_la_cour_chez_le_voisin
     national_label_en: Robinet dans la cour, chez le voisin
     national_label_local: Autre
     jmp_classification: Tap water > Other
@@ -1710,7 +1866,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: robinet_du_voisin
+  - country_entry_id: GIN-WAS-69
+    source_category_code: robinet_du_voisin
     national_label_en: Robinet du voisin
     national_label_local: Autre
     jmp_classification: Tap water > Other
@@ -1720,7 +1877,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: robinet_dans_logement_concession
+  - country_entry_id: GIN-WAS-70
+    source_category_code: robinet_dans_logement_concession
     national_label_en: Robinet dans logement/concession
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
@@ -1730,7 +1888,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: eau_du_robinet_dans_le_logement
+  - country_entry_id: GIN-WAS-71
+    source_category_code: eau_du_robinet_dans_le_logement
     national_label_en: Eau du robinet dans le logement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1740,7 +1899,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: GIN-WAS-72
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1750,7 +1910,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: robinet_dans_la_maison
+  - country_entry_id: GIN-WAS-73
+    source_category_code: robinet_dans_la_maison
     national_label_en: Robinet dans la maison
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1760,7 +1921,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: robinet_dans_le_logement
+  - country_entry_id: GIN-WAS-74
+    source_category_code: robinet_dans_le_logement
     national_label_en: Robinet dans le logement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1770,7 +1932,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: robinet_dans_lelogement
+  - country_entry_id: GIN-WAS-75
+    source_category_code: robinet_dans_lelogement
     national_label_en: Robinet dans lelogement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1780,7 +1943,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: robinet_dans_logement
+  - country_entry_id: GIN-WAS-76
+    source_category_code: robinet_dans_logement
     national_label_en: Robinet dans logement
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1790,7 +1954,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: robinet_du_menage
+  - country_entry_id: GIN-WAS-77
+    source_category_code: robinet_du_menage
     national_label_en: robinet du ménage
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1800,7 +1965,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: eau_du_robinet_dans_la_cour_concession
+  - country_entry_id: GIN-WAS-78
+    source_category_code: eau_du_robinet_dans_la_cour_concession
     national_label_en: Eau du robinet dans la cour/concession
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1810,7 +1976,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: GIN-WAS-79
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1820,7 +1987,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: robinet_dans_concession
+  - country_entry_id: GIN-WAS-80
+    source_category_code: robinet_dans_concession
     national_label_en: Robinet dans concession
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1830,7 +1998,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: robinet_dans_concession_cour_ou_parcelle
+  - country_entry_id: GIN-WAS-81
+    source_category_code: robinet_dans_concession_cour_ou_parcelle
     national_label_en: Robinet dans concession, cour ou parcelle
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1840,7 +2009,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: robinet_dans_la_cour_dans_la_parcelle_ou_dans_la_concession
+  - country_entry_id: GIN-WAS-82
+    source_category_code: robinet_dans_la_cour_dans_la_parcelle_ou_dans_la_concession
     national_label_en: Robinet dans la cour, dans la parcelle, ou dans la concession
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1850,7 +2020,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: robinet_dans_la_cour_parcelle
+  - country_entry_id: GIN-WAS-83
+    source_category_code: robinet_dans_la_cour_parcelle
     national_label_en: Robinet dans la cour/parcelle
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1860,7 +2031,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: borne_fontaine
+  - country_entry_id: GIN-WAS-84
+    source_category_code: borne_fontaine
     national_label_en: Borne fontaine
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1870,7 +2042,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: eau_du_robinet_d_ailleurs
+  - country_entry_id: GIN-WAS-85
+    source_category_code: eau_du_robinet_d_ailleurs
     national_label_en: Eau du robinet d'ailleurs
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1880,7 +2053,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: fontaine_publique
+  - country_entry_id: GIN-WAS-86
+    source_category_code: fontaine_publique
     national_label_en: fontaine publique
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1890,7 +2064,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: GIN-WAS-87
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1900,7 +2075,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: robinet_ou_fontaine_publique
+  - country_entry_id: GIN-WAS-88
+    source_category_code: robinet_ou_fontaine_publique
     national_label_en: Robinet ou fontaine publique
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1910,7 +2086,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: robinet_public
+  - country_entry_id: GIN-WAS-89
+    source_category_code: robinet_public
     national_label_en: Robinet public
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1920,7 +2097,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: robinet_public_borne_fontaine
+  - country_entry_id: GIN-WAS-90
+    source_category_code: robinet_public_borne_fontaine
     national_label_en: Robinet public / borne fontaine
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
@@ -1930,7 +2108,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: robinet_public_borne_fontaine
+  - country_entry_id: GIN-WAS-91
+    source_category_code: robinet_public_borne_fontaine
     national_label_en: Robinet public/borne fontaine
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe

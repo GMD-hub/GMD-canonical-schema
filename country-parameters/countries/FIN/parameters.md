@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Centre-based ECEC activities (0 to 2-year-old children), including
+  - country_entry_id: FIN-EDU-01
+    national_label_en: Centre-based ECEC activities (0 to 2-year-old children), including
       special education programmes
     national_label_local: Päiväkotitoiminta (0-2-v. lapset)
     entry_age: 0
@@ -21,7 +22,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Family day care (0 to 2-year-old children), including special
+  - country_entry_id: FIN-EDU-02
+    national_label_en: Family day care (0 to 2-year-old children), including special
       education programmes
     national_label_local: Perhepäivähoito (0-2-v. lapset)
     entry_age: 0
@@ -32,7 +34,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Centre-based ECEC activities (3 to 5-year-old children), including
+  - country_entry_id: FIN-EDU-03
+    national_label_en: Centre-based ECEC activities (3 to 5-year-old children), including
       special education programmes.
     national_label_local: Päiväkotitoiminta (3-5-v. lapset)
     entry_age: 3
@@ -43,7 +46,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Family day care (3 to 5-year-old children), including special
+  - country_entry_id: FIN-EDU-04
+    national_label_en: Family day care (3 to 5-year-old children), including special
       education programmes
     national_label_local: Perhepäivähoito (3-5-v. lapset)
     entry_age: 3
@@ -54,7 +58,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Pre-primary education for 6-year-old children in ECEC centres
+  - country_entry_id: FIN-EDU-05
+    national_label_en: Pre-primary education for 6-year-old children in ECEC centres
       and comprehensive schools, including special education programmes
     national_label_local: Esiopetus (6-v. lapset)
     entry_age: 6
@@ -65,7 +70,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Comprehensive school grades 1-6, including special education
+  - country_entry_id: FIN-EDU-06
+    national_label_en: Comprehensive school grades 1-6, including special education
       programmes
     national_label_local: Peruskoulun luokat 1-6
     entry_age: 7
@@ -76,7 +82,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Comprehensive school programmes for adults (leading to the
+  - country_entry_id: FIN-EDU-07
+    national_label_en: Comprehensive school programmes for adults (leading to the
       leaving certificate from comprehensive school)
     national_label_local: Peruskoulun koko oppimäärän suorittamiseen tähtäävä koulutus
       aikuisopiskelijoille
@@ -88,7 +95,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: Comprehensive school grades 7-9 (10), including special education
+  - country_entry_id: FIN-EDU-08
+    national_label_en: Comprehensive school grades 7-9 (10), including special education
       programmes
     national_label_local: Peruskoulun luokat 7-9 (10)
     entry_age: 13
@@ -99,7 +107,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Comprehensive school programmes for adults (leading to the
+  - country_entry_id: FIN-EDU-09
+    national_label_en: Comprehensive school programmes for adults (leading to the
       leaving certificate from comprehensive school)
     national_label_local: Peruskoulun koko oppimäärän suorittamiseen tähtäävä koulutus
       aikuisopiskelijoille
@@ -111,7 +120,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Vocational upper secondary programmes leading to vocational
+  - country_entry_id: FIN-EDU-10
+    national_label_en: Vocational upper secondary programmes leading to vocational
       upper secondary qualifications (initial vocational qualifications)
     national_label_local: Ammatillinen perustutkinto
     entry_age: 16
@@ -122,7 +132,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Vocational programmes leading to further vocational qualifications
+  - country_entry_id: FIN-EDU-11
+    national_label_en: Vocational programmes leading to further vocational qualifications
     national_label_local: Ammattitutkinto
     entry_age: 18
     duration_years: 2
@@ -132,7 +143,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
-  - national_label_en: General upper secondary programmes
+  - country_entry_id: FIN-EDU-12
+    national_label_en: General upper secondary programmes
     national_label_local: Lukiokoulutus (ylioppilastutkinto)
     entry_age: 16
     duration_years: 3
@@ -142,7 +154,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: General upper secondary programmes for adults (leading to the
+  - country_entry_id: FIN-EDU-13
+    national_label_en: General upper secondary programmes for adults (leading to the
       matriculation examination)
     national_label_local: Lukion koko oppimäärän suorittamiseen tähtäävä koulutus
       aikuisopiskelijoille
@@ -154,7 +167,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Vocational programmes leading to specialist vocational qualifications
+  - country_entry_id: FIN-EDU-14
+    national_label_en: Vocational programmes leading to specialist vocational qualifications
     national_label_local: Erikoisammattitutkinto
     entry_age: 19
     duration_years: 1
@@ -164,7 +178,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Lower university programmes (Bachelor's degree programmes)
+  - country_entry_id: FIN-EDU-15
+    national_label_en: Lower university programmes (Bachelor's degree programmes)
     national_label_local: Alemmat korkeakoulututkinnot, kandidaatin tutkinnot
     entry_age: 19
     duration_years: 3
@@ -174,7 +189,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: University of applied sciences Bachelor's degree programmes
+  - country_entry_id: FIN-EDU-16
+    national_label_en: University of applied sciences Bachelor's degree programmes
       (daytime programmes)
     national_label_local: Ammattikorkeakoulututkinnot (AMK), päivätoteutus
     entry_age: 19
@@ -185,7 +201,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: University of applied sciences Bachelor's degree programmes
+  - country_entry_id: FIN-EDU-17
+    national_label_en: University of applied sciences Bachelor's degree programmes
       (multiform programmes)
     national_label_local: Ammattikorkeakoulututkinnot (AMK), monimuotototeutus
     entry_age: 19
@@ -196,7 +213,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Higher university programmes (Master's degree programmes)
+  - country_entry_id: FIN-EDU-18
+    national_label_en: Higher university programmes (Master's degree programmes)
     national_label_local: Ylemmät korkeakoulututkinnot, maisterin tutkinnot
     entry_age: 19
     duration_years: 5
@@ -206,7 +224,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Higher university programmes (Master's degree programmes)
+  - country_entry_id: FIN-EDU-19
+    national_label_en: Higher university programmes (Master's degree programmes)
     national_label_local: Ylemmät korkeakoulututkinnot, maisterin tutkinnot
     entry_age: 22
     duration_years: 2
@@ -216,7 +235,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: University of applied sciences Master's degree programmes
+  - country_entry_id: FIN-EDU-20
+    national_label_en: University of applied sciences Master's degree programmes
     national_label_local: Ylemmät ammattikorkeakoulututkinnot
     entry_age: 25
     duration_years: 1
@@ -226,7 +246,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Specialists in (medicine, dentistry), veterinary medicine
+  - country_entry_id: FIN-EDU-21
+    national_label_en: Specialists in (medicine, dentistry), veterinary medicine
     national_label_local: Erikoislääkärit, erikoishammaslääkärit, erikoiseläinlääkärit
     entry_age: 30
     duration_years: 4
@@ -236,7 +257,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: 'Doctorate programmes: Doctor/Licentiate'
+  - country_entry_id: FIN-EDU-22
+    national_label_en: 'Doctorate programmes: Doctor/Licentiate'
     national_label_local: Tohtori/Lisensiaatti
     entry_age: 24
     duration_years: 4
@@ -256,7 +278,8 @@ parameters:
   effective_to: 2006
   selectors: ~
   value:
-  - survey_labels: 1-FI13
+  - country_entry_id: FIN-SUBNAT-01
+    survey_labels: 1-FI13
     survey_variables: subnatid
     gmd_subnatid1: FIN_2006_NUTS2_FI13
     gmd_subnatid2: ''
@@ -276,7 +299,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Itä-Suomi
     source_row: 4762
-  - survey_labels: 2-FI18
+  - country_entry_id: FIN-SUBNAT-02
+    survey_labels: 2-FI18
     survey_variables: subnatid
     gmd_subnatid1: FIN_2006_NUTS2_FI18
     gmd_subnatid2: ''
@@ -296,7 +320,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Etelä-Suomi
     source_row: 4763
-  - survey_labels: 3-FI19
+  - country_entry_id: FIN-SUBNAT-03
+    survey_labels: 3-FI19
     survey_variables: subnatid
     gmd_subnatid1: FIN_2006_NUTS2_FI19
     gmd_subnatid2: ''
@@ -316,7 +341,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Länsi-Suomi
     source_row: 4764
-  - survey_labels: 4-FI1A
+  - country_entry_id: FIN-SUBNAT-04
+    survey_labels: 4-FI1A
     survey_variables: subnatid
     gmd_subnatid1: FIN_2006_NUTS2_FI1A
     gmd_subnatid2: ''
@@ -346,7 +372,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-FI19 | 2-FI19
+  - country_entry_id: FIN-SUBNAT-01
+    survey_labels: 1-FI19 | 2-FI19
     survey_variables: subnatid
     gmd_subnatid1: FIN_2021_NUTS2_FI19
     gmd_subnatid2: ''
@@ -366,7 +393,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Länsi-Suomi
     source_row: 4778
-  - survey_labels: 2-FI1B | 3-FI1B
+  - country_entry_id: FIN-SUBNAT-02
+    survey_labels: 2-FI1B | 3-FI1B
     survey_variables: subnatid
     gmd_subnatid1: FIN_2021_NUTS2_FI1B
     gmd_subnatid2: ''
@@ -386,7 +414,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Helsinki-Uusimaa
     source_row: 4779
-  - survey_labels: 3-FI1C | 4-FI1C
+  - country_entry_id: FIN-SUBNAT-03
+    survey_labels: 3-FI1C | 4-FI1C
     survey_variables: subnatid
     gmd_subnatid1: FIN_2021_NUTS2_FI1C
     gmd_subnatid2: ''
@@ -406,7 +435,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Etelä-Suomi
     source_row: 4780
-  - survey_labels: 4-FI1D | 5-FI1D
+  - country_entry_id: FIN-SUBNAT-04
+    survey_labels: 4-FI1D | 5-FI1D
     survey_variables: subnatid
     gmd_subnatid1: FIN_2021_NUTS2_FI1D
     gmd_subnatid2: ''

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nursery
+  - country_entry_id: MSR-EDU-01
+    national_label_en: Nursery
     national_label_local: Nursery
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Nursery
+  - country_entry_id: MSR-EDU-02
+    national_label_en: Nursery
     national_label_local: Nursery
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary
+  - country_entry_id: MSR-EDU-03
+    national_label_en: Primary
     national_label_local: Primary
     entry_age: 5
     duration_years: 7
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Lower secondary
+  - country_entry_id: MSR-EDU-04
+    national_label_en: Lower secondary
     national_label_local: Lower secondary
     entry_age: 12
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Upper secondary
+  - country_entry_id: MSR-EDU-05
+    national_label_en: Upper secondary
     national_label_local: Upper secondary
     entry_age: 15
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Advanced level programme
+  - country_entry_id: MSR-EDU-06
+    national_label_en: Advanced level programme
     national_label_local: Advanced level programme
     entry_age: 17
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Associate Degree in Science
+  - country_entry_id: MSR-EDU-07
+    national_label_en: Associate Degree in Science
     national_label_local: Associate Degree in Science
     entry_age: 17
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Education Programme
+  - country_entry_id: MSR-EDU-08
+    national_label_en: Education Programme
     national_label_local: Education Programme
     entry_age: 17
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Master
+  - country_entry_id: MSR-EDU-09
+    national_label_en: Master
     national_label_local: Master
     entry_age: 21
     duration_years: 2

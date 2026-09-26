@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: well_or_protected_spring
+  - country_entry_id: DMA-WAS-01
+    source_category_code: well_or_protected_spring
     national_label_en: Well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -20,7 +21,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: perforated_or_tubolar_well
+  - country_entry_id: DMA-WAS-02
+    source_category_code: perforated_or_tubolar_well
     national_label_en: Perforated or tubolar well
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -30,7 +32,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: well_or_spring_not_protected
+  - country_entry_id: DMA-WAS-03
+    source_category_code: well_or_spring_not_protected
     national_label_en: Well or spring not protected
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -40,7 +43,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: cart_tank_small_tank_drum_or_tank_truck
+  - country_entry_id: DMA-WAS-04
+    source_category_code: cart_tank_small_tank_drum_or_tank_truck
     national_label_en: Cart tank small tank /drum or tank truck
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -50,7 +54,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: water_kiosks_water_stations
+  - country_entry_id: DMA-WAS-05
+    source_category_code: water_kiosks_water_stations
     national_label_en: Water kiosks/water stations
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -60,7 +65,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: other
+  - country_entry_id: DMA-WAS-06
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -70,7 +76,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water_water_in_bags_garrafones
+  - country_entry_id: DMA-WAS-07
+    source_category_code: bottled_water_water_in_bags_garrafones
     national_label_en: Bottled water, water in bags, garrafones
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -80,7 +87,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: surface_water
+  - country_entry_id: DMA-WAS-08
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -90,7 +98,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_inside_the_house
+  - country_entry_id: DMA-WAS-09
+    source_category_code: piped_inside_the_house
     national_label_en: Piped inside the house
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -100,7 +109,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_inside_the_ground_lot
+  - country_entry_id: DMA-WAS-10
+    source_category_code: piped_inside_the_ground_lot
     national_label_en: Piped inside the ground/lot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -110,7 +120,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap
+  - country_entry_id: DMA-WAS-11
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

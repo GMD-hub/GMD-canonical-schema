@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nursery
+  - country_entry_id: SRB-EDU-01
+    national_label_en: Nursery
     national_label_local: Jaslice
     entry_age: 0
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarten
+  - country_entry_id: SRB-EDU-02
+    national_label_en: Kindergarten
     national_label_local: Vrtić
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Preschool preparatory programme
+  - country_entry_id: SRB-EDU-03
+    national_label_en: Preschool preparatory programme
     national_label_local: Pripremni predškolski program
     entry_age: 6
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: First stage of basic education (primary)
+  - country_entry_id: SRB-EDU-04
+    national_label_en: First stage of basic education (primary)
     national_label_local: Osnovna skola - prvi ciklus (I-IV razred)
     entry_age: 7
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Elementary school - second cycle (V-VIII grade)
+  - country_entry_id: SRB-EDU-05
+    national_label_en: Elementary school - second cycle (V-VIII grade)
     national_label_local: Osnovno obrazovanje - drugi ciklus osnovnog obrazovanja
       i vaspitanja (V-VIII razred)
     entry_age: 11
@@ -61,7 +66,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Primary education for adults
+  - country_entry_id: SRB-EDU-06
+    national_label_en: Primary education for adults
     national_label_local: Osnovno obrazovanje odraslih / Funkcionalno osnovno obrazovanje
       odraslih
     entry_age: 15
@@ -72,7 +78,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
-  - national_label_en: Primary musical education
+  - country_entry_id: SRB-EDU-07
+    national_label_en: Primary musical education
     national_label_local: Osnovno muzičko  obrazovanje i vaspitanje
     entry_age: 6
     duration_years: 4
@@ -82,7 +89,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 13
-  - national_label_en: Secondary musical education
+  - country_entry_id: SRB-EDU-08
+    national_label_en: Secondary musical education
     national_label_local: Srednje muzičko  obrazovanje i vaspitanje
     entry_age: 15
     duration_years: 2
@@ -92,7 +100,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: High school programme
+  - country_entry_id: SRB-EDU-09
+    national_label_en: High school programme
     national_label_local: Četvorogodišnje srednje obrazovanje/ gimnazije
     entry_age: 15
     duration_years: 4
@@ -102,7 +111,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Vocational education programmes (4 years)
+  - country_entry_id: SRB-EDU-10
+    national_label_en: Vocational education programmes (4 years)
     national_label_local: Četvorogodišnje srednje stručno obrazovanje
     entry_age: 15
     duration_years: 4
@@ -112,7 +122,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Art education
+  - country_entry_id: SRB-EDU-11
+    national_label_en: Art education
     national_label_local: Četvorogodišnje umetničko obrazovanje
     entry_age: 15
     duration_years: 4
@@ -122,7 +133,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Vocational education programmes (3 years)
+  - country_entry_id: SRB-EDU-12
+    national_label_en: Vocational education programmes (3 years)
     national_label_local: Trogodišnje srednje stručno obrazovanje
     entry_age: 15
     duration_years: 3
@@ -132,7 +144,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Vocational training programmes (2 years)
+  - country_entry_id: SRB-EDU-13
+    national_label_en: Vocational training programmes (2 years)
     national_label_local: Programi strukovnog obrazovanja za rad (2)
     entry_age: 15
     duration_years: 2
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: Vocational training programmes for adult
+  - country_entry_id: SRB-EDU-14
+    national_label_en: Vocational training programmes for adult
     national_label_local: Programi stručnog obrazovanja za odrasle
     entry_age: 18
     duration_years: 1
@@ -152,7 +166,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 20
-  - national_label_en: Vocational training programmes (120-360 h)
+  - country_entry_id: SRB-EDU-15
+    national_label_en: Vocational training programmes (120-360 h)
     national_label_local: Programi obuke za odrasle (120-360 sati)
     entry_age: 18
     duration_years: 1
@@ -162,7 +177,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
-  - national_label_en: Vocational training programmes (minimum 960 h)
+  - country_entry_id: SRB-EDU-16
+    national_label_en: Vocational training programmes (minimum 960 h)
     national_label_local: Programi obuke za odrasle (minimum 960 sati)
     entry_age: 18
     duration_years: 3
@@ -172,7 +188,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 22
-  - national_label_en: Post secondary adult education programmes
+  - country_entry_id: SRB-EDU-17
+    national_label_en: Post secondary adult education programmes
     national_label_local: Programi obrazovanja odraslih - specijalizacija
     entry_age: 18
     duration_years: 1
@@ -182,7 +199,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Undergraduate University studies (academic studies)
+  - country_entry_id: SRB-EDU-18
+    national_label_en: Undergraduate University studies (academic studies)
     national_label_local: Osnovne univerzitetske studije prvog stepena (akademske
       studije)
     entry_age: 19
@@ -193,7 +211,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Undergraduate Professional studies
+  - country_entry_id: SRB-EDU-19
+    national_label_en: Undergraduate Professional studies
     national_label_local: Osnovne strukovne studije
     entry_age: 19
     duration_years: 3
@@ -203,7 +222,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Specialist graduate professional study
+  - country_entry_id: SRB-EDU-20
+    national_label_en: Specialist graduate professional study
     national_label_local: Specijalističke strukovne studije
     entry_age: 22
     duration_years: 1
@@ -213,7 +233,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Integrated Undergraduate and Graduate University studies
+  - country_entry_id: SRB-EDU-21
+    national_label_en: Integrated Undergraduate and Graduate University studies
     national_label_local: Integrisane  preddiplomske i diplomske akademske studije
     entry_age: 18
     duration_years: 6
@@ -223,7 +244,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Graduate University studies (academic studies) Master
+  - country_entry_id: SRB-EDU-22
+    national_label_en: Graduate University studies (academic studies) Master
     national_label_local: |-
       Diplomske akademske studije -master
       Master akademske studije
@@ -235,7 +257,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Master (appl.) professional of a second degree vocational studies
+  - country_entry_id: SRB-EDU-23
+    national_label_en: Master (appl.) professional of a second degree vocational studies
     national_label_local: Master strukovne studuje
     entry_age: 22
     duration_years: 2
@@ -245,7 +268,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Postgraduate specialist studies
+  - country_entry_id: SRB-EDU-24
+    national_label_en: Postgraduate specialist studies
     national_label_local: Specijalističke akademske studije
     entry_age: 24
     duration_years: 1
@@ -255,7 +279,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Postgraduate university Doctoral studies
+  - country_entry_id: SRB-EDU-25
+    national_label_en: Postgraduate university Doctoral studies
     national_label_local: Doktorske akademske studije
     entry_age: 24
     duration_years: 3
@@ -275,7 +300,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 -  Beogradski region | 1 - Belgrade | 1 - Beograd | 1 - Beogradski
+  - country_entry_id: SRB-SUBNAT-01
+    survey_labels: 1 -  Beogradski region | 1 - Belgrade | 1 - Beograd | 1 - Beogradski
       | 1 - belgrade | Beogradski region
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: SRB_2021_NUTS2_RS11
@@ -296,7 +322,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: City of Belgrade
     source_row: 14968
-  - survey_labels: 2 - Region Vojvodine | 2 - Vojvodina | 2 - Vojvodine | 2 - vojvodina
+  - country_entry_id: SRB-SUBNAT-02
+    survey_labels: 2 - Region Vojvodine | 2 - Vojvodina | 2 - Vojvodine | 2 - vojvodina
       | 2 - vojvoidina | 3 - Vojvodina | Region Vojvodine
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: SRB_2021_NUTS2_RS12
@@ -317,7 +344,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Autonomous Province of Vojvodina
     source_row: 14969
-  - survey_labels: 2 - Central Serbia | 2 - Centralna | 3 -  Centralna | 3 - Central
+  - country_entry_id: SRB-SUBNAT-03
+    survey_labels: 2 - Central Serbia | 2 - Centralna | 3 -  Centralna | 3 - Central
       Serbia | 3 - central serbia
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: SRB_2021_NUTSx_3
@@ -338,7 +366,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Region Južne i Istočne Srbije & Region Šumadije i Zapadne Srbije
     source_row: 14970
-  - survey_labels: 3 - Region Sumadije i zapadne Srbije | 3 - Šumadije i Zapadne Srbije
+  - country_entry_id: SRB-SUBNAT-04
+    survey_labels: 3 - Region Sumadije i zapadne Srbije | 3 - Šumadije i Zapadne Srbije
       | Region Sumadije i zapadne Srbije
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: SRB_2021_NUTS2_RS21
@@ -359,7 +388,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Region Šumadije i Zapadne Srbije
     source_row: 14991
-  - survey_labels: 4 - Južne i Istočne Srbije | 4 - Region juzne i istocne Srbije
+  - country_entry_id: SRB-SUBNAT-05
+    survey_labels: 4 - Južne i Istočne Srbije | 4 - Region juzne i istocne Srbije
       | Region juzne i istocne Srbije
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: SRB_2021_NUTS2_RS22
@@ -380,7 +410,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Region Južne i Istočne Srbije
     source_row: 14992
-  - survey_labels: 1-RS1
+  - country_entry_id: SRB-SUBNAT-06
+    survey_labels: 1-RS1
     survey_variables: subnatid
     gmd_subnatid1: SRB_2021_NUTS1_RS1
     gmd_subnatid2: ''
@@ -400,7 +431,8 @@ parameters:
     geo_nvar: NAME_LATN
     geo_name: Serbia - sever
     source_row: 14996
-  - survey_labels: 2-RS2
+  - country_entry_id: SRB-SUBNAT-07
+    survey_labels: 2-RS2
     survey_variables: subnatid
     gmd_subnatid1: SRB_2021_NUTS1_RS2
     gmd_subnatid2: ''
@@ -430,7 +462,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: flush_pour_flush_to_open_drain
+  - country_entry_id: SRB-SAN-01
+    source_category_code: flush_pour_flush_to_open_drain
     national_label_en: Flush/Pour flush to open drain
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -440,7 +473,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_to_somehwere_else
+  - country_entry_id: SRB-SAN-02
+    source_category_code: flush_pour_flush_to_somehwere_else
     national_label_en: Flush/Pour flush to somehwere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -450,7 +484,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_pour_flush_to_piped_sewer_system
+  - country_entry_id: SRB-SAN-03
+    source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/Pour flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -460,7 +495,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_pour_flush_to_pit_latrine
+  - country_entry_id: SRB-SAN-04
+    source_category_code: flush_pour_flush_to_pit_latrine
     national_label_en: Flush/Pour flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -470,7 +506,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_pour_flush_to_septic_tank
+  - country_entry_id: SRB-SAN-05
+    source_category_code: flush_pour_flush_to_septic_tank
     national_label_en: |-
       Flush/Pour flush to septic
       tank
@@ -482,7 +519,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_to_uknown_not_sure_dk
+  - country_entry_id: SRB-SAN-06
+    source_category_code: flush_pour_flush_to_uknown_not_sure_dk
     national_label_en: Flush/Pour flush to uknown/not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -492,7 +530,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_pour_flush_connected_to_a_piped_sewer_system
+  - country_entry_id: SRB-SAN-07
+    source_category_code: flush_pour_flush_connected_to_a_piped_sewer_system
     national_label_en: flush/pour-flush connected to a piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -502,7 +541,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: flush_pour_flush_connected_to_a_septic_tank
+  - country_entry_id: SRB-SAN-08
+    source_category_code: flush_pour_flush_connected_to_a_septic_tank
     national_label_en: flush/pour-flush connected to a septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -512,7 +552,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: flush_pour_flush_connected_to_a_piped_sewer_system_shared
+  - country_entry_id: SRB-SAN-09
+    source_category_code: flush_pour_flush_connected_to_a_piped_sewer_system_shared
     national_label_en: flush/pour-flush connected to a piped sewer system - shared
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -523,7 +564,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: flush_pour_flush_connected_to_a_septic_tank_shared
+  - country_entry_id: SRB-SAN-10
+    source_category_code: flush_pour_flush_connected_to_a_septic_tank_shared
     national_label_en: flush/pour-flush connected to a septic tank - shared
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -533,7 +575,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: to_elsewhere
+  - country_entry_id: SRB-SAN-11
+    source_category_code: to_elsewhere
     national_label_en: to elsewhere
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -543,7 +586,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: SRB-SAN-12
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -553,7 +597,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: SRB-SAN-13
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -563,7 +608,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: toilet_within_the_house_connected_to_sewage_sys
+  - country_entry_id: SRB-SAN-14
+    source_category_code: toilet_within_the_house_connected_to_sewage_sys
     national_label_en: Toilet within the house connected to sewage sys
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -573,7 +619,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: to_pit
+  - country_entry_id: SRB-SAN-15
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -583,7 +630,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: SRB-SAN-16
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -593,7 +641,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: to_septic_tank
+  - country_entry_id: SRB-SAN-17
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -603,7 +652,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: toilet_within_the_house_not_connected_to_sewage_sys_but_other_type_of_sewage
+  - country_entry_id: SRB-SAN-18
+    source_category_code: toilet_within_the_house_not_connected_to_sewage_sys_but_other_type_of_sewage
     national_label_en: Toilet within the house not connected to sewage sys/ but other
       type of sewage
     national_label_local: to septic tank
@@ -614,7 +664,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: to_unknown_place_not_sure_dk
+  - country_entry_id: SRB-SAN-19
+    source_category_code: to_unknown_place_not_sure_dk
     national_label_en: to unknown place/ not sure/DK
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -624,7 +675,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket
+  - country_entry_id: SRB-SAN-20
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -634,7 +686,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: SRB-SAN-21
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -645,7 +698,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: SRB-SAN-22
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -656,7 +710,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_watertight_tank
+  - country_entry_id: SRB-SAN-23
+    source_category_code: pit_latrine_with_watertight_tank
     national_label_en: Pit latrine with watertight tank
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -667,7 +722,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: SRB-SAN-24
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -678,7 +734,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: SRB-SAN-25
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -689,7 +746,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: SRB-SAN-26
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -700,7 +758,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine
+  - country_entry_id: SRB-SAN-27
+    source_category_code: pit_latrine
     national_label_en: pit latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -710,7 +769,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: pit_latrine_shared
+  - country_entry_id: SRB-SAN-28
+    source_category_code: pit_latrine_shared
     national_label_en: pit latrine - shared
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -721,7 +781,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: latrine_connected_to_a_septic_tank
+  - country_entry_id: SRB-SAN-29
+    source_category_code: latrine_connected_to_a_septic_tank
     national_label_en: latrine connected to a septic tank
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > to septic tank
@@ -731,7 +792,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: no_facilities
+  - country_entry_id: SRB-SAN-30
+    source_category_code: no_facilities
     national_label_en: No facilities
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -741,7 +803,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: SRB-SAN-31
+    source_category_code: none
     national_label_en: None
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -751,7 +814,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_no_facility
+  - country_entry_id: SRB-SAN-32
+    source_category_code: open_defecation_no_facility
     national_label_en: Open defecation (no facility)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -761,7 +825,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_toilet_with_in_the_house
+  - country_entry_id: SRB-SAN-33
+    source_category_code: no_toilet_with_in_the_house
     national_label_en: No toilet with in the house
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -771,7 +836,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: SRB-SAN-34
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -781,7 +847,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: SRB-SAN-35
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -801,7 +868,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: SRB-WAS-01
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -811,7 +879,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_well
+  - country_entry_id: SRB-WAS-02
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -821,7 +890,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_or_spring_dug_well
+  - country_entry_id: SRB-WAS-03
+    source_category_code: protected_dug_well_or_spring_dug_well
     national_label_en: '"protected, dug well or spring"+"dug well"'
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -831,7 +901,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: protected_well_or_spring
+  - country_entry_id: SRB-WAS-04
+    source_category_code: protected_well_or_spring
     national_label_en: Protected well or spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -841,7 +912,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: tube_well_borehole
+  - country_entry_id: SRB-WAS-05
+    source_category_code: tube_well_borehole
     national_label_en: Tube-well/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -851,7 +923,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: SRB-WAS-06
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -861,7 +934,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: SRB-WAS-07
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -871,7 +945,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: SRB-WAS-08
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -881,7 +956,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_well
+  - country_entry_id: SRB-WAS-09
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -891,7 +967,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: SRB-WAS-10
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -901,7 +978,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: unprotected_well_or_spring
+  - country_entry_id: SRB-WAS-11
+    source_category_code: unprotected_well_or_spring
     national_label_en: Unprotected well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -911,7 +989,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: tanker_truck
+  - country_entry_id: SRB-WAS-12
+    source_category_code: tanker_truck
     national_label_en: Tanker Truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -921,7 +1000,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: SRB-WAS-13
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -931,7 +1011,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: household_not_connected_to_water_supply
+  - country_entry_id: SRB-WAS-14
+    source_category_code: household_not_connected_to_water_supply
     national_label_en: Household not connected to water supply
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -941,7 +1022,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: SRB-WAS-15
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -951,7 +1033,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: SRB-WAS-16
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -961,7 +1044,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: SRB-WAS-17
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -971,7 +1055,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_with_improved
+  - country_entry_id: SRB-WAS-18
+    source_category_code: bottled_water_with_improved
     national_label_en: Bottled water with improved
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -981,7 +1066,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water_with_other_improved
+  - country_entry_id: SRB-WAS-19
+    source_category_code: bottled_water_with_other_improved
     national_label_en: Bottled water with other improved
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -991,7 +1077,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: SRB-WAS-20
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -1001,7 +1088,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: bottled_water_without_improved
+  - country_entry_id: SRB-WAS-21
+    source_category_code: bottled_water_without_improved
     national_label_en: Bottled water without improved
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -1011,7 +1099,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: bottled_water_without_other_improved
+  - country_entry_id: SRB-WAS-22
+    source_category_code: bottled_water_without_other_improved
     national_label_en: Bottled water without other improved
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -1021,7 +1110,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: lake_river_stream
+  - country_entry_id: SRB-WAS-23
+    source_category_code: lake_river_stream
     national_label_en: lake, river, stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1031,7 +1121,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: SRB-WAS-24
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -1041,7 +1132,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: household_connected_to_water_supply
+  - country_entry_id: SRB-WAS-25
+    source_category_code: household_connected_to_water_supply
     national_label_en: Household connected to water supply
     national_label_local: Tap water
     jmp_classification: Tap water
@@ -1051,7 +1143,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: piped_water_to_neighbour
+  - country_entry_id: SRB-WAS-26
+    source_category_code: piped_water_to_neighbour
     national_label_en: Piped water to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1061,7 +1154,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: to_neighbour
+  - country_entry_id: SRB-WAS-27
+    source_category_code: to_neighbour
     national_label_en: To neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -1071,7 +1165,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: urban_plumbing_rural_9local_plumbing
+  - country_entry_id: SRB-WAS-28
+    source_category_code: urban_plumbing_rural_9local_plumbing
     national_label_en: '"urban plumbing"+"rural 9local) plumbing"'
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -1081,7 +1176,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: SRB-WAS-29
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1091,7 +1187,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: public_watersupply
+  - country_entry_id: SRB-WAS-30
+    source_category_code: public_watersupply
     national_label_en: Public watersupply
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1101,7 +1198,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: local_watersupply
+  - country_entry_id: SRB-WAS-31
+    source_category_code: local_watersupply
     national_label_en: Local watersupply
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1111,7 +1209,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: SRB-WAS-32
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1121,7 +1220,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: SRB-WAS-33
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -1131,7 +1231,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: SRB-WAS-34
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

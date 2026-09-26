@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood development
+  - country_entry_id: ZAF-EDU-01
+    national_label_en: Early childhood development
     national_label_local: Early childhood development
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Early childhood development
+  - country_entry_id: ZAF-EDU-02
+    national_label_en: Early childhood development
     national_label_local: Early childhood development
     entry_age: 3
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Pre Grade R
+  - country_entry_id: ZAF-EDU-03
+    national_label_en: Pre Grade R
     national_label_local: Pre Grade R
     entry_age: 5
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Grade R
+  - country_entry_id: ZAF-EDU-04
+    national_label_en: Grade R
     national_label_local: Grade R
     entry_age: 6
     duration_years: 1
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
-  - national_label_en: Primary education (Grades 1 to 7)
+  - country_entry_id: ZAF-EDU-05
+    national_label_en: Primary education (Grades 1 to 7)
     national_label_local: Primary education (Grades 1 to 7)
     entry_age: 7
     duration_years: 7
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: AET Levels 1 - 3
+  - country_entry_id: ZAF-EDU-06
+    national_label_en: AET Levels 1 - 3
     national_label_local: AET Levels 1 - 3
     entry_age: 16
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
-  - national_label_en: Lower secondary education (Grades 8 to 9)
+  - country_entry_id: ZAF-EDU-07
+    national_label_en: Lower secondary education (Grades 8 to 9)
     national_label_local: Lower secondary education (Grades 8 to 9)
     entry_age: 14
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: AET Level 4
+  - country_entry_id: ZAF-EDU-08
+    national_label_en: AET Level 4
     national_label_local: AET Level 4
     entry_age: 16
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: 'Upper secondary education: Grades 10-12'
+  - country_entry_id: ZAF-EDU-09
+    national_label_en: 'Upper secondary education: Grades 10-12'
     national_label_local: 'Upper secondary education: Grades 10-12'
     entry_age: 16
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: National Certificate (Vocational) - NC(V) Level 2
+  - country_entry_id: ZAF-EDU-10
+    national_label_en: National Certificate (Vocational) - NC(V) Level 2
     national_label_local: National Certificate (Vocational) - NC(V) Level 2
     entry_age: 16
     duration_years: 1
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: National Certificate (Vocational) - NC(V) Level 3
+  - country_entry_id: ZAF-EDU-11
+    national_label_en: National Certificate (Vocational) - NC(V) Level 3
     national_label_local: National Certificate (Vocational) - NC(V) Level 3
     entry_age: 17
     duration_years: 1
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: National Certificate (Vocational) - NC(V) Level 4
+  - country_entry_id: ZAF-EDU-12
+    national_label_en: National Certificate (Vocational) - NC(V) Level 4
     national_label_local: National Certificate (Vocational) - NC(V) Level 4
     entry_age: 18
     duration_years: 1
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Nated N1
+  - country_entry_id: ZAF-EDU-13
+    national_label_en: Nated N1
     national_label_local: NATED Level 1
     entry_age: 16
     duration_years: 0
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: Nated N2
+  - country_entry_id: ZAF-EDU-14
+    national_label_en: Nated N2
     national_label_local: NATED Level 2
     entry_age: 16
     duration_years: 0
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: Nated N3
+  - country_entry_id: ZAF-EDU-15
+    national_label_en: Nated N3
     national_label_local: NATED Level  3
     entry_age: 16
     duration_years: 0
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
-  - national_label_en: Nated N4
+  - country_entry_id: ZAF-EDU-16
+    national_label_en: Nated N4
     national_label_local: Nated N4
     entry_age: 17
     duration_years: 0
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: Nated N5
+  - country_entry_id: ZAF-EDU-17
+    national_label_en: Nated N5
     national_label_local: Nated N5
     entry_age: 18
     duration_years: 0
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Nated N6
+  - country_entry_id: ZAF-EDU-18
+    national_label_en: Nated N6
     national_label_local: Nated N6
     entry_age: 19
     duration_years: 0
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Higher certificate
+  - country_entry_id: ZAF-EDU-19
+    national_label_en: Higher certificate
     national_label_local: Higher certificate
     entry_age: 19
     duration_years: 1
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Advanced certificate
+  - country_entry_id: ZAF-EDU-20
+    national_label_en: Advanced certificate
     national_label_local: Advanced certificate
     entry_age: 20
     duration_years: 1
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Diploma
+  - country_entry_id: ZAF-EDU-21
+    national_label_en: Diploma
     national_label_local: Diploma
     entry_age: 19
     duration_years: 3
@@ -220,7 +241,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Bachelor's degree
+  - country_entry_id: ZAF-EDU-22
+    national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree
     entry_age: 19
     duration_years: 3
@@ -230,7 +252,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Advanced diploma (AD)
+  - country_entry_id: ZAF-EDU-23
+    national_label_en: Advanced diploma (AD)
     national_label_local: Advanced diploma (AD)
     entry_age: 22
     duration_years: 1
@@ -240,7 +263,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Bachelor Honours degree
+  - country_entry_id: ZAF-EDU-24
+    national_label_en: Bachelor Honours degree
     national_label_local: Bachelor Honours degree
     entry_age: 22
     duration_years: 1
@@ -250,7 +274,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Post graduate diploma (PGD)
+  - country_entry_id: ZAF-EDU-25
+    national_label_en: Post graduate diploma (PGD)
     national_label_local: Post graduate diploma (PGD)
     entry_age: 22
     duration_years: 1
@@ -260,7 +285,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Master's degree
+  - country_entry_id: ZAF-EDU-26
+    national_label_en: Master's degree
     national_label_local: Master's degree
     entry_age: 23
     duration_years: 1
@@ -270,7 +296,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
-  - national_label_en: Doctorate degree / Laureatus in Technology (Universities of
+  - country_entry_id: ZAF-EDU-27
+    national_label_en: Doctorate degree / Laureatus in Technology (Universities of
       Technology)
     national_label_local: "Doctorate degree / \nLaureatus in Technology (Technikon)"
     entry_age: 24
@@ -292,7 +319,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1.Western Cape
+  - country_entry_id: ZAF-SUBNAT-01
+    survey_labels: 1.Western Cape
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_2714
     gmd_subnatid2: ''
@@ -312,7 +340,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Western Cape
     source_row: 18677
-  - survey_labels: 2.Eastern Cape
+  - country_entry_id: ZAF-SUBNAT-02
+    survey_labels: 2.Eastern Cape
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_77310
     gmd_subnatid2: ''
@@ -332,7 +361,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Eastern Cape
     source_row: 18678
-  - survey_labels: 3.Northern Cape
+  - country_entry_id: ZAF-SUBNAT-03
+    survey_labels: 3.Northern Cape
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_77315
     gmd_subnatid2: ''
@@ -352,7 +382,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Northern Cape
     source_row: 18679
-  - survey_labels: 4.Free State
+  - country_entry_id: ZAF-SUBNAT-04
+    survey_labels: 4.Free State
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_2707
     gmd_subnatid2: ''
@@ -372,7 +403,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Free State
     source_row: 18680
-  - survey_labels: 5.KwaZulu-Natal
+  - country_entry_id: ZAF-SUBNAT-05
+    survey_labels: 5.KwaZulu-Natal
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_77311
     gmd_subnatid2: ''
@@ -392,7 +424,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: KwaZulu-Natal
     source_row: 18681
-  - survey_labels: 6.North West
+  - country_entry_id: ZAF-SUBNAT-06
+    survey_labels: 6.North West
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_77314
     gmd_subnatid2: ''
@@ -412,7 +445,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North West
     source_row: 18682
-  - survey_labels: 7.Gauteng
+  - country_entry_id: ZAF-SUBNAT-07
+    survey_labels: 7.Gauteng
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_2708
     gmd_subnatid2: ''
@@ -432,7 +466,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gauteng
     source_row: 18683
-  - survey_labels: 8.Mpumalanga
+  - country_entry_id: ZAF-SUBNAT-08
+    survey_labels: 8.Mpumalanga
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_77313
     gmd_subnatid2: ''
@@ -452,7 +487,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mpumalanga
     source_row: 18684
-  - survey_labels: 9.Limpopo
+  - country_entry_id: ZAF-SUBNAT-09
+    survey_labels: 9.Limpopo
     survey_variables: subnatid1
     gmd_subnatid1: ZAF_2015_GAUL1_77312
     gmd_subnatid2: ''
@@ -482,7 +518,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: ZAF-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -492,7 +529,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: ecological_sanitation_system
+  - country_entry_id: ZAF-SAN-02
+    source_category_code: ecological_sanitation_system
     national_label_en: Ecological Sanitation System
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -502,7 +540,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: ecological_sanitation_system_e_g_composting_toilet
+  - country_entry_id: ZAF-SAN-03
+    source_category_code: ecological_sanitation_system_e_g_composting_toilet
     national_label_en: Ecological sanitation system (e.g. composting toilet)
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -512,7 +551,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: ecological_sanitation_system_e_g_urine_diversion
+  - country_entry_id: ZAF-SAN-04
+    source_category_code: ecological_sanitation_system_e_g_urine_diversion
     national_label_en: Ecological Sanitation System (e.g. urine diversion)
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -522,7 +562,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: ecological_sanitation_systems
+  - country_entry_id: ZAF-SAN-05
+    source_category_code: ecological_sanitation_systems
     national_label_en: Ecological sanitation systems
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -532,7 +573,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: ecological_toilet
+  - country_entry_id: ZAF-SAN-06
+    source_category_code: ecological_toilet
     national_label_en: Ecological toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -542,7 +584,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: ZAF-SAN-07
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -552,7 +595,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: ZAF-SAN-08
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -562,7 +606,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet_connected_to_sewerage_system
+  - country_entry_id: ZAF-SAN-09
+    source_category_code: flush_toilet_connected_to_sewerage_system
     national_label_en: Flush toilet (connected to sewerage system)
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -572,7 +617,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet_connected_to_a_public_sewage_system
+  - country_entry_id: ZAF-SAN-10
+    source_category_code: flush_toilet_connected_to_a_public_sewage_system
     national_label_en: Flush toilet connected to a public sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -582,7 +628,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet_connected_to_a_public_sewerage_system
+  - country_entry_id: ZAF-SAN-11
+    source_category_code: flush_toilet_connected_to_a_public_sewerage_system
     national_label_en: Flush toilet connected to a public sewerage system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -592,7 +639,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_toilet_with_offsite_disposal
+  - country_entry_id: ZAF-SAN-12
+    source_category_code: flush_toilet_with_offsite_disposal
     national_label_en: Flush toilet with offsite disposal
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -602,7 +650,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: ZAF-SAN-13
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -612,7 +661,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: ZAF-SAN-14
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -622,7 +672,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_toilet_with_septic_tank
+  - country_entry_id: ZAF-SAN-15
+    source_category_code: flush_toilet_with_septic_tank
     national_label_en: Flush toilet (with septic tank)
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -632,7 +683,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_toilet_connected_to_a_septic_tank
+  - country_entry_id: ZAF-SAN-16
+    source_category_code: flush_toilet_connected_to_a_septic_tank
     national_label_en: Flush toilet connected to a septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -642,7 +694,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_toilet_connected_to_a_septic_tank_or_conservancy_tank
+  - country_entry_id: ZAF-SAN-17
+    source_category_code: flush_toilet_connected_to_a_septic_tank_or_conservancy_tank
     national_label_en: Flush toilet connected to a septic tank or conservancy tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -652,7 +705,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_toilet_connected_to_septic_tank
+  - country_entry_id: ZAF-SAN-18
+    source_category_code: flush_toilet_connected_to_septic_tank
     national_label_en: Flush toilet connected to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -662,7 +716,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_toilet_with_on_site_disposal
+  - country_entry_id: ZAF-SAN-19
+    source_category_code: flush_toilet_with_on_site_disposal
     national_label_en: Flush toilet with on site disposal
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -672,7 +727,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_toilet_with_onsite_disposal_septic_tank_soak_away
+  - country_entry_id: ZAF-SAN-20
+    source_category_code: flush_toilet_with_onsite_disposal_septic_tank_soak_away
     national_label_en: Flush toilet with onsite disposal (septic tank / soak-away)
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -682,7 +738,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_pour_flush_toilet_connected_to_a_septic_tank
+  - country_entry_id: ZAF-SAN-21
+    source_category_code: flush_pour_flush_toilet_connected_to_a_septic_tank
     national_label_en: Flush/pour flush toilet connected to a septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -692,7 +749,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: ZAF-SAN-22
+    source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -702,7 +760,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_toilet
+  - country_entry_id: ZAF-SAN-23
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -712,7 +771,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: own_flush_toilet
+  - country_entry_id: ZAF-SAN-24
+    source_category_code: own_flush_toilet
     national_label_en: Own flush toilet
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -722,7 +782,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: flush_tolet_with_offsite_disposal_in_dwelling_or_onsite
+  - country_entry_id: ZAF-SAN-25
+    source_category_code: flush_tolet_with_offsite_disposal_in_dwelling_or_onsite
     national_label_en: flush tolet with offsite disposal in dwelling or onsite
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -732,7 +793,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: ZAF-SAN-26
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -742,7 +804,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: flush_toilet_with_onsite_disposal_septc_in_dwelling_or_onsite
+  - country_entry_id: ZAF-SAN-27
+    source_category_code: flush_toilet_with_onsite_disposal_septc_in_dwelling_or_onsite
     national_label_en: flush toilet with onsite disposal (septc) in dwelling or onsite
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -752,7 +815,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: ZAF-SAN-28
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -762,7 +826,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: ZAF-SAN-29
+    source_category_code: shared_flush_toilet
     national_label_en: Shared Flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -772,7 +837,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: flush_toilet_with_offsite_disposal_offsite
+  - country_entry_id: ZAF-SAN-30
+    source_category_code: flush_toilet_with_offsite_disposal_offsite
     national_label_en: flush toilet with offsite disposal offsite
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -783,7 +849,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: ZAF-SAN-31
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -794,7 +861,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: ZAF-SAN-32
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -804,7 +872,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: flush_pour_to_other_location
+  - country_entry_id: ZAF-SAN-33
+    source_category_code: flush_pour_to_other_location
     national_label_en: Flush/pour to other location
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -814,7 +883,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_toilet_connected_to_a_public_sewerage_system
+  - country_entry_id: ZAF-SAN-34
+    source_category_code: flush_toilet_connected_to_a_public_sewerage_system
     national_label_en: Flush toilet connected to a public sewerage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -824,7 +894,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_toilet_with_offsite_disposal
+  - country_entry_id: ZAF-SAN-35
+    source_category_code: flush_toilet_with_offsite_disposal
     national_label_en: flush toilet with offsite disposal
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -834,7 +905,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_pour_to_piped_sewage_system
+  - country_entry_id: ZAF-SAN-36
+    source_category_code: flush_pour_to_piped_sewage_system
     national_label_en: Flush/pour to piped sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -844,7 +916,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_pour_to_pit_latrine
+  - country_entry_id: ZAF-SAN-37
+    source_category_code: flush_pour_to_pit_latrine
     national_label_en: Flush/pour to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -854,7 +927,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_toilet_connected_to_a_septic_tank_or_conservancy_tank
+  - country_entry_id: ZAF-SAN-38
+    source_category_code: flush_toilet_connected_to_a_septic_tank_or_conservancy_tank
     national_label_en: Flush toilet connected to a septic tank or conservancy tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -864,7 +938,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_tolet_with_onsite_disposal_septic_soak_away
+  - country_entry_id: ZAF-SAN-39
+    source_category_code: flush_tolet_with_onsite_disposal_septic_soak_away
     national_label_en: flush tolet with onsite disposal (septic/soak away)
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -874,7 +949,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_pour_to_septic_tank
+  - country_entry_id: ZAF-SAN-40
+    source_category_code: flush_pour_to_septic_tank
     national_label_en: Flush/pour to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -884,7 +960,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: flush_pour_to_unknown
+  - country_entry_id: ZAF-SAN-41
+    source_category_code: flush_pour_to_unknown
     national_label_en: Flush/pour to unknown
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -894,7 +971,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: bucket
+  - country_entry_id: ZAF-SAN-42
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -904,7 +982,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_latrine
+  - country_entry_id: ZAF-SAN-43
+    source_category_code: bucket_latrine
     national_label_en: Bucket latrine
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -914,7 +993,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: ZAF-SAN-44
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -924,7 +1004,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet
+  - country_entry_id: ZAF-SAN-45
+    source_category_code: bucket_toilet
     national_label_en: Bucket toilet
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -934,7 +1015,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet_collected_by_municipality
+  - country_entry_id: ZAF-SAN-46
+    source_category_code: bucket_toilet_collected_by_municipality
     national_label_en: Bucket toilet (collected by municipality)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -944,7 +1026,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet_collected_by_municipality_bucket_toilet_emptied_by_household
+  - country_entry_id: ZAF-SAN-47
+    source_category_code: bucket_toilet_collected_by_municipality_bucket_toilet_emptied_by_household
     national_label_en: Bucket toilet (collected by municipality) + Bucket toilet (emptied
       by household)
     national_label_local: Bucket latrine
@@ -955,7 +1038,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet_emptied_by_household
+  - country_entry_id: ZAF-SAN-48
+    source_category_code: bucket_toilet_emptied_by_household
     national_label_en: Bucket toilet (emptied by household)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -965,7 +1049,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_toilet_system
+  - country_entry_id: ZAF-SAN-49
+    source_category_code: bucket_toilet_system
     national_label_en: Bucket toilet system
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -975,7 +1060,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: ZAF-SAN-50
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -986,7 +1072,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: bucket_toilet_emptied_by_household
+  - country_entry_id: ZAF-SAN-51
+    source_category_code: bucket_toilet_emptied_by_household
     national_label_en: Bucket toilet (emptied by household)
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -996,7 +1083,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: dry_toilet_facility
+  - country_entry_id: ZAF-SAN-52
+    source_category_code: dry_toilet_facility
     national_label_en: Dry toilet facility
     national_label_local: Other
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -1006,7 +1094,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: pit_with_slab
+  - country_entry_id: ZAF-SAN-53
+    source_category_code: pit_with_slab
     national_label_en: Pit with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1017,7 +1106,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: ZAF-SAN-54
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1028,7 +1118,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_ventilation_pipe
+  - country_entry_id: ZAF-SAN-55
+    source_category_code: pit_latrine_without_ventilation_pipe
     national_label_en: pit latrine without ventilation pipe
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1039,7 +1130,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: ZAF-SAN-56
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1050,7 +1142,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_with_ventilation_pipe_but_no_gauze_mesh
+  - country_entry_id: ZAF-SAN-57
+    source_category_code: pit_latrine_with_ventilation_pipe_but_no_gauze_mesh
     national_label_en: pit latrine with ventilation pipe but no gauze/mesh
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1061,7 +1154,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_without_ventilation
+  - country_entry_id: ZAF-SAN-58
+    source_category_code: pit_latrine_without_ventilation
     national_label_en: Pit latrine without ventilation
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1072,7 +1166,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_without_ventilation_pipe
+  - country_entry_id: ZAF-SAN-59
+    source_category_code: pit_latrine_without_ventilation_pipe
     national_label_en: Pit latrine without ventilation pipe
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1083,7 +1178,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_toilet_without_ventilation_pipe
+  - country_entry_id: ZAF-SAN-60
+    source_category_code: pit_latrine_toilet_without_ventilation_pipe
     national_label_en: Pit latrine/toilet without ventilation pipe
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1094,7 +1190,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_latrine
+  - country_entry_id: ZAF-SAN-61
+    source_category_code: traditional_latrine
     national_label_en: traditional latrine
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1105,7 +1202,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: pit_latrine_with_ventilation
+  - country_entry_id: ZAF-SAN-62
+    source_category_code: pit_latrine_with_ventilation
     national_label_en: Pit latrine with ventilation
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1116,7 +1214,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_with_ventilation_pipe
+  - country_entry_id: ZAF-SAN-63
+    source_category_code: pit_latrine_with_ventilation_pipe
     national_label_en: Pit latrine with ventilation pipe
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1127,7 +1226,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_with_ventilation_pipe_vip
+  - country_entry_id: ZAF-SAN-64
+    source_category_code: pit_latrine_with_ventilation_pipe_vip
     national_label_en: Pit latrine with ventilation pipe (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1138,7 +1238,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_latrine_toilet_with_ventilation_pipe
+  - country_entry_id: ZAF-SAN-65
+    source_category_code: pit_latrine_toilet_with_ventilation_pipe
     national_label_en: Pit latrine/toilet with ventilation pipe
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1149,7 +1250,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pit_toilet_with_ventilation_vip
+  - country_entry_id: ZAF-SAN-66
+    source_category_code: pit_toilet_with_ventilation_vip
     national_label_en: Pit toilet with ventilation (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1160,7 +1262,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: ZAF-SAN-67
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: ventilated improved pit latrine (vip)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1171,7 +1274,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilation_improved_pit_latrine
+  - country_entry_id: ZAF-SAN-68
+    source_category_code: ventilation_improved_pit_latrine
     national_label_en: Ventilation improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1182,7 +1286,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: vip
+  - country_entry_id: ZAF-SAN-69
+    source_category_code: vip
     national_label_en: VIP
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1193,7 +1298,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: bucket_toilet_collected_by_municipality
+  - country_entry_id: ZAF-SAN-70
+    source_category_code: bucket_toilet_collected_by_municipality
     national_label_en: Bucket toilet (collected by municipality)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
@@ -1203,7 +1309,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 118
-  - source_category_code: bucket_toilet_onsite
+  - country_entry_id: ZAF-SAN-71
+    source_category_code: bucket_toilet_onsite
     national_label_en: bucket toilet onsite
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
@@ -1213,7 +1320,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 118
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: ZAF-SAN-72
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -1224,7 +1332,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: pit_latrine_without_ventilation_pipe_onsite
+  - country_entry_id: ZAF-SAN-73
+    source_category_code: pit_latrine_without_ventilation_pipe_onsite
     national_label_en: pit latrine without ventilation pipe onsite
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1234,7 +1343,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: pit_latrine_with_ventilation_pipe_onsite
+  - country_entry_id: ZAF-SAN-74
+    source_category_code: pit_latrine_with_ventilation_pipe_onsite
     national_label_en: pit latrine with ventilation pipe onsite
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
@@ -1245,7 +1355,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 113
-  - source_category_code: bucket_toilet_emptied_by_household
+  - country_entry_id: ZAF-SAN-75
+    source_category_code: bucket_toilet_emptied_by_household
     national_label_en: Bucket toilet (emptied by household)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -1256,7 +1367,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: bucket_toilet_offsite
+  - country_entry_id: ZAF-SAN-76
+    source_category_code: bucket_toilet_offsite
     national_label_en: bucket toilet offsite
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
@@ -1267,7 +1379,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 126
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: ZAF-SAN-77
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1278,7 +1391,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: pit_latrine_without_ventilation_pipe_offsite
+  - country_entry_id: ZAF-SAN-78
+    source_category_code: pit_latrine_without_ventilation_pipe_offsite
     national_label_en: pit latrine without ventilation pipe offsite
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1289,7 +1403,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: pit_latrine_with_ventilation_pipe_offsite
+  - country_entry_id: ZAF-SAN-79
+    source_category_code: pit_latrine_with_ventilation_pipe_offsite
     national_label_en: pit latrine with ventilation pipe offsite
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
@@ -1300,7 +1415,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 121
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: ZAF-SAN-80
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Private pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1310,7 +1426,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: ZAF-SAN-81
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Public/shared pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1321,7 +1438,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: pour_bucket_flush_toilet_connected_to_a_septic_tank_or_septic_pit
+  - country_entry_id: ZAF-SAN-82
+    source_category_code: pour_bucket_flush_toilet_connected_to_a_septic_tank_or_septic_pit
     national_label_en: Pour bucket-flush toilet connected to a septic tank (or septic
       pit)
     national_label_local: to septic tank
@@ -1332,7 +1450,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: pour_flush_toilet_connected_to_a_septic_tank_or_septage_pit
+  - country_entry_id: ZAF-SAN-83
+    source_category_code: pour_flush_toilet_connected_to_a_septic_tank_or_septage_pit
     national_label_en: Pour flush toilet connected to a septic tank (or septage pit)
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > to septic tank
@@ -1342,7 +1461,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: no_facilities_bush_field
+  - country_entry_id: ZAF-SAN-84
+    source_category_code: no_facilities_bush_field
     national_label_en: No facilities (bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1352,7 +1472,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: ZAF-SAN-85
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1362,7 +1483,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility
+  - country_entry_id: ZAF-SAN-86
+    source_category_code: no_facility
     national_label_en: No Facility
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1372,7 +1494,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: ZAF-SAN-87
+    source_category_code: no_facility_bush_field
     national_label_en: no facility/bush/field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1382,7 +1505,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: non_pas_disponible
+  - country_entry_id: ZAF-SAN-88
+    source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1392,7 +1516,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: ZAF-SAN-89
+    source_category_code: none
     national_label_en: None
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1402,7 +1527,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none_no_toilet
+  - country_entry_id: ZAF-SAN-90
+    source_category_code: none_no_toilet
     national_label_en: None - no toilet
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1412,7 +1538,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: open_defecation_e_g_no_facilities_field_bush
+  - country_entry_id: ZAF-SAN-91
+    source_category_code: open_defecation_e_g_no_facilities_field_bush
     national_label_en: Open defecation (e.g. no facilities, field, bush)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1422,7 +1549,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: toilet_facility_none
+  - country_entry_id: ZAF-SAN-92
+    source_category_code: toilet_facility_none
     national_label_en: Toilet facility None
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -1432,7 +1560,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: chemical_toilet
+  - country_entry_id: ZAF-SAN-93
+    source_category_code: chemical_toilet
     national_label_en: Chemical toilet
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1442,7 +1571,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: chemical_toilet_onsite
+  - country_entry_id: ZAF-SAN-94
+    source_category_code: chemical_toilet_onsite
     national_label_en: chemical toilet onsite
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1452,7 +1582,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: chemical_toilet_shared
+  - country_entry_id: ZAF-SAN-95
+    source_category_code: chemical_toilet_shared
     national_label_en: Chemical toilet, shared
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1462,7 +1593,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: chemical_toilet_portable_toilet
+  - country_entry_id: ZAF-SAN-96
+    source_category_code: chemical_toilet_portable_toilet
     national_label_en: Chemical toilet/portable toilet
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1472,7 +1604,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: toilet_facility_chemical
+  - country_entry_id: ZAF-SAN-97
+    source_category_code: toilet_facility_chemical
     national_label_en: Toilet facility Chemical
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1482,7 +1615,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 132
-  - source_category_code: chemical_toilet_offsite
+  - country_entry_id: ZAF-SAN-98
+    source_category_code: chemical_toilet_offsite
     national_label_en: chemical toilet offsite
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1492,7 +1626,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 133
-  - source_category_code: chemical_toilet_not_shared
+  - country_entry_id: ZAF-SAN-99
+    source_category_code: chemical_toilet_not_shared
     national_label_en: Chemical toilet, not shared
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1502,7 +1637,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 133
-  - source_category_code: portable_flush_toilet
+  - country_entry_id: ZAF-SAN-100
+    source_category_code: portable_flush_toilet
     national_label_en: Portable flush toilet
     national_label_local: Other
     jmp_classification: Other improved > Other
@@ -1512,7 +1648,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 133
-  - source_category_code: bucket_toilet_collected_by_municipality
+  - country_entry_id: ZAF-SAN-101
+    source_category_code: bucket_toilet_collected_by_municipality
     national_label_en: Bucket toilet (collected by municipality)
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1522,7 +1659,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: ZAF-SAN-102
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1532,7 +1670,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_toilet_facility
+  - country_entry_id: ZAF-SAN-103
+    source_category_code: other_toilet_facility
     national_label_en: Other toilet facility
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1542,7 +1681,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: unspecified
+  - country_entry_id: ZAF-SAN-104
+    source_category_code: unspecified
     national_label_en: unspecified
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1552,7 +1692,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: ZAF-SAN-105
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1562,7 +1703,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 137
-  - source_category_code: other_specify
+  - country_entry_id: ZAF-SAN-106
+    source_category_code: other_specify
     national_label_en: Other, specify
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1572,7 +1714,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 137
-  - source_category_code: toilet_facility_other
+  - country_entry_id: ZAF-SAN-107
+    source_category_code: toilet_facility_other
     national_label_en: Toilet facility Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1582,7 +1725,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 137
-  - source_category_code: unspecified
+  - country_entry_id: ZAF-SAN-108
+    source_category_code: unspecified
     national_label_en: Unspecified
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1602,7 +1746,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: ZAF-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -1612,7 +1757,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: springs
+  - country_entry_id: ZAF-WAS-02
+    source_category_code: springs
     national_label_en: Springs
     national_label_local: All springs
     jmp_classification: Ground water > All springs
@@ -1622,7 +1768,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: protected_spring
+  - country_entry_id: ZAF-WAS-03
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -1632,7 +1779,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: ZAF-WAS-04
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1642,7 +1790,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: ZAF-WAS-05
+    source_category_code: protected_well
     national_label_en: protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -1652,7 +1801,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: ZAF-WAS-06
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -1662,7 +1812,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: well
+  - country_entry_id: ZAF-WAS-07
+    source_category_code: well
     national_label_en: Well
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
@@ -1672,7 +1823,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: wells
+  - country_entry_id: ZAF-WAS-08
+    source_category_code: wells
     national_label_en: Wells
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
@@ -1682,7 +1834,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: borehole_on_site_borehole_offsite_communal
+  - country_entry_id: ZAF-WAS-09
+    source_category_code: borehole_on_site_borehole_offsite_communal
     national_label_en: '"Borehole on site"+"Borehole offsite/communal"'
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1692,7 +1845,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole
+  - country_entry_id: ZAF-WAS-10
+    source_category_code: borehole
     national_label_en: Borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1702,7 +1856,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole_well
+  - country_entry_id: ZAF-WAS-11
+    source_category_code: borehole_well
     national_label_en: Borehole/well
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1712,7 +1867,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: ZAF-WAS-12
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1722,7 +1878,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tube_well_or_borehole
+  - country_entry_id: ZAF-WAS-13
+    source_category_code: tube_well_or_borehole
     national_label_en: tube well or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1732,7 +1889,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_or_borehole
+  - country_entry_id: ZAF-WAS-14
+    source_category_code: tubewell_or_borehole
     national_label_en: Tubewell or borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1742,7 +1900,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: ZAF-WAS-15
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -1752,7 +1911,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: borehole_in_the_yard
+  - country_entry_id: ZAF-WAS-16
+    source_category_code: borehole_in_the_yard
     national_label_en: Borehole in the yard
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -1762,7 +1922,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: borehole_on_sit
+  - country_entry_id: ZAF-WAS-17
+    source_category_code: borehole_on_sit
     national_label_en: Borehole on sit
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -1772,7 +1933,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: borehole_on_site
+  - country_entry_id: ZAF-WAS-18
+    source_category_code: borehole_on_site
     national_label_en: Borehole on site
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -1782,7 +1944,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: borehole_off_site_communal
+  - country_entry_id: ZAF-WAS-19
+    source_category_code: borehole_off_site_communal
     national_label_en: Borehole off site/communal
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1792,7 +1955,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: borehole_outside_the_yard
+  - country_entry_id: ZAF-WAS-20
+    source_category_code: borehole_outside_the_yard
     national_label_en: Borehole outside the yard
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1802,7 +1966,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: borehole_outside_yard
+  - country_entry_id: ZAF-WAS-21
+    source_category_code: borehole_outside_yard
     national_label_en: Borehole outside yard
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
@@ -1812,7 +1977,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 60
-  - source_category_code: unprotected_spring
+  - country_entry_id: ZAF-WAS-22
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -1822,7 +1988,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: ZAF-WAS-23
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1832,7 +1999,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: ZAF-WAS-24
+    source_category_code: unprotected_well
     national_label_en: unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -1842,7 +2010,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: ZAF-WAS-25
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1852,7 +2021,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: ZAF-WAS-26
+    source_category_code: cart_with_small_tank
     national_label_en: cart with small tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1862,7 +2032,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
+  - country_entry_id: ZAF-WAS-27
+    source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
     national_label_en: Purchased from a cart with a small tank or drum
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1872,7 +2043,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: water_carrier_tanker
+  - country_entry_id: ZAF-WAS-28
+    source_category_code: water_carrier_tanker
     national_label_en: Water carrier/tanker
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -1882,7 +2054,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: water_vendor
+  - country_entry_id: ZAF-WAS-29
+    source_category_code: water_vendor
     national_label_en: Water vendor
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -1892,7 +2065,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: purchased_from_a_tanker_truck
+  - country_entry_id: ZAF-WAS-30
+    source_category_code: purchased_from_a_tanker_truck
     national_label_en: Purchased from a tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1902,7 +2076,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: ZAF-WAS-31
+    source_category_code: tanker_truck
     national_label_en: tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1912,7 +2087,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: ZAF-WAS-32
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1922,7 +2098,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_lorry
+  - country_entry_id: ZAF-WAS-33
+    source_category_code: tanker_truck_lorry
     national_label_en: Tanker-truck/lorry
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1932,7 +2109,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_carrier_tanker
+  - country_entry_id: ZAF-WAS-34
+    source_category_code: water_carrier_tanker
     national_label_en: Water carrier/ tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1942,7 +2120,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_carrier_tanker
+  - country_entry_id: ZAF-WAS-35
+    source_category_code: water_carrier_tanker
     national_label_en: Water carrier/tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1952,7 +2131,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_vendor
+  - country_entry_id: ZAF-WAS-36
+    source_category_code: water_vendor
     national_label_en: Water vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1962,7 +2142,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: water_carrier_tanker
+  - country_entry_id: ZAF-WAS-37
+    source_category_code: water_carrier_tanker
     national_label_en: Water-carrier/tanker
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1972,7 +2153,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: from_neighbours
+  - country_entry_id: ZAF-WAS-38
+    source_category_code: from_neighbours
     national_label_en: from neighbours
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1982,7 +2164,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other
+  - country_entry_id: ZAF-WAS-39
+    source_category_code: other
     national_label_en: other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1992,7 +2175,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: small_scale_vendor
+  - country_entry_id: ZAF-WAS-40
+    source_category_code: small_scale_vendor
     national_label_en: Small scale vendor
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -2002,7 +2186,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_specify
+  - country_entry_id: ZAF-WAS-41
+    source_category_code: other_specify
     national_label_en: Other, specify
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -2012,7 +2197,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: refused
+  - country_entry_id: ZAF-WAS-42
+    source_category_code: refused
     national_label_en: Refused
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -2022,7 +2208,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: unspecified
+  - country_entry_id: ZAF-WAS-43
+    source_category_code: unspecified
     national_label_en: unspecified
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -2032,7 +2219,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: bottled_water
+  - country_entry_id: ZAF-WAS-44
+    source_category_code: bottled_water
     national_label_en: bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -2042,7 +2230,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: ZAF-WAS-45
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
@@ -2052,7 +2241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rain_water_tank
+  - country_entry_id: ZAF-WAS-46
+    source_category_code: rain_water_tank
     national_label_en: Rain water tank
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2062,7 +2252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water_tank_on_site
+  - country_entry_id: ZAF-WAS-47
+    source_category_code: rain_water_tank_on_site
     national_label_en: Rain water tank on site
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2072,7 +2263,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water_tank_in_yard
+  - country_entry_id: ZAF-WAS-48
+    source_category_code: rain_water_tank_in_yard
     national_label_en: Rain-water tank in yard
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2082,7 +2274,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rain_water_tank_on_site
+  - country_entry_id: ZAF-WAS-49
+    source_category_code: rain_water_tank_on_site
     national_label_en: Rain-water tank on site
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2092,7 +2285,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: ZAF-WAS-50
+    source_category_code: rainwater
     national_label_en: rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2102,7 +2296,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: ZAF-WAS-51
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2112,7 +2307,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: ZAF-WAS-52
+    source_category_code: rainwater_collection
     national_label_en: Rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2122,7 +2318,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_tank_on_site
+  - country_entry_id: ZAF-WAS-53
+    source_category_code: rainwater_tank_on_site
     national_label_en: Rainwater tank on site
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2132,7 +2329,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: flowing_water_stream_dam_pool_stagnant_water
+  - country_entry_id: ZAF-WAS-54
+    source_category_code: flowing_water_stream_dam_pool_stagnant_water
     national_label_en: '"Flowing water/stream"+"Dam/pool/stagnant water"'
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2142,7 +2340,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: flowing_water_stream_river_stagnant_water_dam_pool
+  - country_entry_id: ZAF-WAS-55
+    source_category_code: flowing_water_stream_river_stagnant_water_dam_pool
     national_label_en: '"Flowing water/stream/river "+"Stagnant water/Dam/Pool "'
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2152,7 +2351,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: dam_river_tream_spring
+  - country_entry_id: ZAF-WAS-56
+    source_category_code: dam_river_tream_spring
     national_label_en: Dam/river/tream/spring
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2162,7 +2362,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: flowing_water_stream_dam_pool_stagnant_water
+  - country_entry_id: ZAF-WAS-57
+    source_category_code: flowing_water_stream_dam_pool_stagnant_water
     national_label_en: flowing water/stream+dam/pool/stagnant water
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2172,7 +2373,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: flowing_water_stream_river
+  - country_entry_id: ZAF-WAS-58
+    source_category_code: flowing_water_stream_river
     national_label_en: Flowing water/stream/river
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2182,7 +2384,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+  - country_entry_id: ZAF-WAS-59
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: river/dam/lake/ponds/stream/canal/irrigation channel
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2192,7 +2395,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_river_lake_etc
+  - country_entry_id: ZAF-WAS-60
+    source_category_code: surface_water_river_lake_etc
     national_label_en: Surface water (river, lake, etc)
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2202,7 +2406,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
+  - country_entry_id: ZAF-WAS-61
+    source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
     national_label_en: Surface water, like a river, dam, lake, pond, stream, canal
       or irrigation channel
     national_label_local: Surface water
@@ -2213,7 +2418,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: ZAF-WAS-62
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -2223,7 +2429,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: dam_pool
+  - country_entry_id: ZAF-WAS-63
+    source_category_code: dam_pool
     national_label_en: Dam/pool
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -2233,7 +2440,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: dam_pool_stagnant_water
+  - country_entry_id: ZAF-WAS-64
+    source_category_code: dam_pool_stagnant_water
     national_label_en: Dam/Pool/Stagnant water
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -2243,7 +2451,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: stagnant_water_dam_pool
+  - country_entry_id: ZAF-WAS-65
+    source_category_code: stagnant_water_dam_pool
     national_label_en: Stagnant water/dam/pool
     national_label_local: Dam
     jmp_classification: Surface water > Dam
@@ -2253,7 +2462,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 95
-  - source_category_code: flowing_water_river_stream
+  - country_entry_id: ZAF-WAS-66
+    source_category_code: flowing_water_river_stream
     national_label_en: Flowing water/river/stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2263,7 +2473,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: flowing_water_stream
+  - country_entry_id: ZAF-WAS-67
+    source_category_code: flowing_water_stream
     national_label_en: Flowing water/stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2273,7 +2484,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: flowing_water_stream_river
+  - country_entry_id: ZAF-WAS-68
+    source_category_code: flowing_water_stream_river
     national_label_en: Flowing water/Stream/River
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2283,7 +2495,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: river_stream
+  - country_entry_id: ZAF-WAS-69
+    source_category_code: river_stream
     national_label_en: River/stream
     national_label_local: River
     jmp_classification: Surface water > River
@@ -2293,7 +2506,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: neighbors_tap
+  - country_entry_id: ZAF-WAS-70
+    source_category_code: neighbors_tap
     national_label_en: Neighbors tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2303,7 +2517,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: neighbour_s_tap
+  - country_entry_id: ZAF-WAS-71
+    source_category_code: neighbour_s_tap
     national_label_en: Neighbour's tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2313,7 +2528,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: neighbours_tap
+  - country_entry_id: ZAF-WAS-72
+    source_category_code: neighbours_tap
     national_label_en: neighbours tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2323,7 +2539,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: neighbour_s_tap
+  - country_entry_id: ZAF-WAS-73
+    source_category_code: neighbour_s_tap
     national_label_en: Neighbour’s tap
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2333,7 +2550,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbor
+  - country_entry_id: ZAF-WAS-74
+    source_category_code: piped_to_neighbor
     national_label_en: piped to neighbor
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -2343,7 +2561,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: ZAF-WAS-75
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -2353,7 +2572,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: pipe_in_dwelling
+  - country_entry_id: ZAF-WAS-76
+    source_category_code: pipe_in_dwelling
     national_label_en: Pipe in dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2363,7 +2583,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_tap_water_in_dwelling
+  - country_entry_id: ZAF-WAS-77
+    source_category_code: piped_tap_water_in_dwelling
     national_label_en: Piped (Tap) water in dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2373,7 +2594,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_tap_water_in_dwelling_house
+  - country_entry_id: ZAF-WAS-78
+    source_category_code: piped_tap_water_in_dwelling_house
     national_label_en: Piped (tap) water in dwelling/house
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2383,7 +2605,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: ZAF-WAS-79
+    source_category_code: piped_into_dwelling
     national_label_en: piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2393,7 +2616,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_residence
+  - country_entry_id: ZAF-WAS-80
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2403,7 +2627,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_private
+  - country_entry_id: ZAF-WAS-81
+    source_category_code: piped_private
     national_label_en: Piped private
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2413,7 +2638,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_in_dwelling
+  - country_entry_id: ZAF-WAS-82
+    source_category_code: piped_water_in_dwelling
     national_label_en: Piped water in dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2423,7 +2649,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_inside_the_dwelling
+  - country_entry_id: ZAF-WAS-83
+    source_category_code: piped_water_inside_the_dwelling
     national_label_en: Piped water inside the dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2433,7 +2660,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_inside_the_dwelling_house
+  - country_entry_id: ZAF-WAS-84
+    source_category_code: piped_water_inside_the_dwelling_house
     national_label_en: Piped water inside the dwelling/house
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2443,7 +2671,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: ZAF-WAS-85
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2453,7 +2682,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: pipe_on_site_in_yard
+  - country_entry_id: ZAF-WAS-86
+    source_category_code: pipe_on_site_in_yard
     national_label_en: Pipe on site/in yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2463,7 +2693,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_tap_water_on_site_or_in_yard
+  - country_entry_id: ZAF-WAS-87
+    source_category_code: piped_tap_water_on_site_or_in_yard
     national_label_en: Piped (Tap) water on site or in yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2473,7 +2704,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_tap_water_onsite_or_in_yard
+  - country_entry_id: ZAF-WAS-88
+    source_category_code: piped_tap_water_onsite_or_in_yard
     national_label_en: piped (tap) water onsite or in yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2483,7 +2715,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: ZAF-WAS-89
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2493,7 +2726,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_in_site_yard
+  - country_entry_id: ZAF-WAS-90
+    source_category_code: piped_water_in_site_yard
     national_label_en: Piped water in site/yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2503,7 +2737,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_inside_the_yard
+  - country_entry_id: ZAF-WAS-91
+    source_category_code: piped_water_inside_the_yard
     national_label_en: Piped water inside the yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2513,7 +2748,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_inside_yard
+  - country_entry_id: ZAF-WAS-92
+    source_category_code: piped_water_inside_yard
     national_label_en: Piped water inside yard
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2523,7 +2759,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_into_yard_plot_or_compound
+  - country_entry_id: ZAF-WAS-93
+    source_category_code: piped_water_into_yard_plot_or_compound
     national_label_en: Piped water into yard, plot or compound
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2533,7 +2770,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_on_site
+  - country_entry_id: ZAF-WAS-94
+    source_category_code: piped_water_on_site
     national_label_en: Piped water on site
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2543,7 +2781,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_from_access_point_outside_the_yard
+  - country_entry_id: ZAF-WAS-95
+    source_category_code: piped_water_from_access_point_outside_the_yard
     national_label_en: Piped water from access point outside the yard
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2553,7 +2792,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: piped_water_on_community_stand_public_communal_tap
+  - country_entry_id: ZAF-WAS-96
+    source_category_code: piped_water_on_community_stand_public_communal_tap
     national_label_en: Piped water on community stand/public/communal tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2563,7 +2803,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: ZAF-WAS-97
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2573,7 +2814,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: ZAF-WAS-98
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2583,7 +2825,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_or_standpipe
+  - country_entry_id: ZAF-WAS-99
+    source_category_code: public_tap_or_standpipe
     national_label_en: Public tap or standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2593,7 +2836,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: ZAF-WAS-100
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -2603,7 +2847,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_communal_tap
+  - country_entry_id: ZAF-WAS-101
+    source_category_code: public_communal_tap
     national_label_en: Public/communal tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

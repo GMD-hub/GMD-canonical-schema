@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary
+  - country_entry_id: AIA-EDU-01
+    national_label_en: Pre-primary
     national_label_local: Pre-primary
     entry_age: 3
     duration_years: 2
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary education
+  - country_entry_id: AIA-EDU-02
+    national_label_en: Primary education
     national_label_local: Primary education
     entry_age: 5
     duration_years: 7
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Lower secondary
+  - country_entry_id: AIA-EDU-03
+    national_label_en: Lower secondary
     national_label_local: Lower secondary
     entry_age: 12
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Upper secondary
+  - country_entry_id: AIA-EDU-04
+    national_label_en: Upper secondary
     national_label_local: Upper secondary
     entry_age: 15
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Upper secondary TVET
+  - country_entry_id: AIA-EDU-05
+    national_label_en: Upper secondary TVET
     national_label_local: Upper secondary TVET
     entry_age: 15
     duration_years: 2
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: 'Sixth Form: Post-secondary Non-tertiary'
+  - country_entry_id: AIA-EDU-06
+    national_label_en: 'Sixth Form: Post-secondary Non-tertiary'
     national_label_local: 'Sixth Form: Post-secondary Non-tertiary'
     entry_age: 17
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: 'Sixth Form: Associate degree'
+  - country_entry_id: AIA-EDU-07
+    national_label_en: 'Sixth Form: Associate degree'
     national_label_local: 'Sixth Form: Associate degree'
     entry_age: 17
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: B.Sc in Business Management
+  - country_entry_id: AIA-EDU-08
+    national_label_en: B.Sc in Business Management
     national_label_local: B.Sc in Business Management
     entry_age: 18
     duration_years: 4
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: B. ED.
+  - country_entry_id: AIA-EDU-09
+    national_label_en: B. ED.
     national_label_local: B. ED.
     entry_age: 18
     duration_years: 4
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Certificate in Education - secondary
+  - country_entry_id: AIA-EDU-10
+    national_label_en: Certificate in Education - secondary
     national_label_local: Certificate in Education - secondary
     entry_age: 22
     duration_years: 2

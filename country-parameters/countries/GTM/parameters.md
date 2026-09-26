@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early childhood educational development
+  - country_entry_id: GTM-EDU-01
+    national_label_en: Early childhood educational development
     national_label_local: Nivel inicial
     entry_age: 0
     duration_years: 4
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary, Infant 1, 2 and 3
+  - country_entry_id: GTM-EDU-02
+    national_label_en: Pre-primary, Infant 1, 2 and 3
     national_label_local: Pre-primaria. Párvulo 1, 2 y 3
     entry_age: 4
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Community Training Centers in Preschool Education (CENACEP)
+  - country_entry_id: GTM-EDU-03
+    national_label_en: Community Training Centers in Preschool Education (CENACEP)
     national_label_local: Centros de Aprestamiento Comunitario en Educación Preescolar
       (CENACEP)
     entry_age: 6
@@ -41,7 +44,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Primary education
+  - country_entry_id: GTM-EDU-04
+    national_label_en: Primary education
     national_label_local: Educación Primaria
     entry_age: 7
     duration_years: 6
@@ -51,7 +55,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Accelerated primary education for adults - Stages 1 to 4
+  - country_entry_id: GTM-EDU-05
+    national_label_en: Accelerated primary education for adults - Stages 1 to 4
     national_label_local: Educación (primaria) acelearada para adultos - Etapas 1º
       a 4º
     entry_age: 14
@@ -62,7 +67,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Basic cycle of secondary education
+  - country_entry_id: GTM-EDU-06
+    national_label_en: Basic cycle of secondary education
     national_label_local: 'Educación Media: Ciclo básico'
     entry_age: 13
     duration_years: 3
@@ -72,7 +78,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Secondary Education Extension and Improvement Programme
+  - country_entry_id: GTM-EDU-07
+    national_label_en: Secondary Education Extension and Improvement Programme
     national_label_local: |-
       PEMEM
       Programa de extensión y mejoramiento de la enseñanza media
@@ -84,7 +91,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Educational family nucleus for development
+  - country_entry_id: GTM-EDU-08
+    national_label_en: Educational family nucleus for development
     national_label_local: |-
       NUFED
       Núcleos familiares educativos para el desarrollo
@@ -96,7 +104,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
-  - national_label_en: Telesecondary, Televised secondary education.
+  - country_entry_id: GTM-EDU-09
+    national_label_en: Telesecondary, Televised secondary education.
     national_label_local: |-
       Telesecundaria
       Educación media televisada.
@@ -108,7 +117,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
-  - national_label_en: 'Secondary Education: High school'
+  - country_entry_id: GTM-EDU-10
+    national_label_en: 'Secondary Education: High school'
     national_label_local: 'Educación Media: Bachillerato'
     entry_age: 16
     duration_years: 2
@@ -118,7 +128,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: 'Secondary Education: Diversified cycle'
+  - country_entry_id: GTM-EDU-11
+    national_label_en: 'Secondary Education: Diversified cycle'
     national_label_local: 'Educación Media: Ciclo Diversificado'
     entry_age: 16
     duration_years: 3
@@ -128,7 +139,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Technical University careers
+  - country_entry_id: GTM-EDU-12
+    national_label_en: Technical University careers
     national_label_local: Carreras de técnico universitario
     entry_age: 18
     duration_years: 3
@@ -138,7 +150,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Teacher training
+  - country_entry_id: GTM-EDU-13
+    national_label_en: Teacher training
     national_label_local: Profesorado
     entry_age: 18
     duration_years: 3
@@ -148,7 +161,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: Intermediate careers (undergraduate)
+  - country_entry_id: GTM-EDU-14
+    national_label_en: Intermediate careers (undergraduate)
     national_label_local: Carreras  intermedias (nivel pregrado)
     entry_age: 18
     duration_years: 3
@@ -158,7 +172,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Bachelor's
+  - country_entry_id: GTM-EDU-15
+    national_label_en: Bachelor's
     national_label_local: Licenciaturas
     entry_age: 18
     duration_years: 5
@@ -168,7 +183,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Engineering
+  - country_entry_id: GTM-EDU-16
+    national_label_en: Engineering
     national_label_local: Ingenierías
     entry_age: 18
     duration_years: 5
@@ -178,7 +194,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Veterinarian sciences
+  - country_entry_id: GTM-EDU-17
+    national_label_en: Veterinarian sciences
     national_label_local: Medicina veterinaria
     entry_age: 18
     duration_years: 6
@@ -188,7 +205,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Odontological
+  - country_entry_id: GTM-EDU-18
+    national_label_en: Odontological
     national_label_local: Odontología
     entry_age: 18
     duration_years: 6
@@ -198,7 +216,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Medical sciences
+  - country_entry_id: GTM-EDU-19
+    national_label_en: Medical sciences
     national_label_local: Medicina y Cirujía
     entry_age: 18
     duration_years: 7
@@ -208,7 +227,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Specialization
+  - country_entry_id: GTM-EDU-20
+    national_label_en: Specialization
     national_label_local: Especialidades
     entry_age: 23
     duration_years: 2
@@ -218,7 +238,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Master's
+  - country_entry_id: GTM-EDU-21
+    national_label_en: Master's
     national_label_local: Maestrías
     entry_age: 23
     duration_years: 2
@@ -228,7 +249,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Doctorate
+  - country_entry_id: GTM-EDU-22
+    national_label_en: Doctorate
     national_label_local: Doctorados
     entry_age: 25
     duration_years: 3
@@ -248,7 +270,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1 - Guatemala | 1 - Metropolitana | 1 - metropolitana
+  - country_entry_id: GTM-SUBNAT-01
+    survey_labels: 1 - Guatemala | 1 - Metropolitana | 1 - metropolitana
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAUL1_64821
@@ -268,7 +291,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Guatemala
     source_row: 5909
-  - survey_labels: 2 - Norte | 2 - norte
+  - country_entry_id: GTM-SUBNAT-02
+    survey_labels: 2 - Norte | 2 - norte
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAULx_2
@@ -288,7 +312,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Baja Verapaz & Alta Verapaz
     source_row: 5910
-  - survey_labels: 3 - Nororiente | 3 - nororiente
+  - country_entry_id: GTM-SUBNAT-03
+    survey_labels: 3 - Nororiente | 3 - nororiente
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAULx_3
@@ -308,7 +333,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chiquimula & El Progreso & Izabal & Zacapa
     source_row: 5911
-  - survey_labels: 4 - Suroriente | 4 - suroriente
+  - country_entry_id: GTM-SUBNAT-04
+    survey_labels: 4 - Suroriente | 4 - suroriente
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAULx_4
@@ -328,7 +354,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Jutiapa & Jalapa & Santa Rosa
     source_row: 5912
-  - survey_labels: 5 - Central | 5 - central
+  - country_entry_id: GTM-SUBNAT-05
+    survey_labels: 5 - Central | 5 - central
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAULx_5
@@ -348,7 +375,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sacatepéquez & Escuintla & Chimaltenango
     source_row: 5913
-  - survey_labels: 6 - Suroccidente | 6 - suroccidente
+  - country_entry_id: GTM-SUBNAT-06
+    survey_labels: 6 - Suroccidente | 6 - suroccidente
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAULx_6
@@ -369,7 +397,8 @@ parameters:
     geo_name: Sololá & Quetzaltenango & San Marcos & Retalhuleu & Suchitepéquez &
       Totonicapán
     source_row: 5914
-  - survey_labels: 7 - Noroccidente | 7 - noroccidente
+  - country_entry_id: GTM-SUBNAT-07
+    survey_labels: 7 - Noroccidente | 7 - noroccidente
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAULx_7
@@ -389,7 +418,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Quiché & Huehuetenango
     source_row: 5915
-  - survey_labels: 17 - Peten | 8 - Peten | 8 - peten
+  - country_entry_id: GTM-SUBNAT-08
+    survey_labels: 17 - Peten | 8 - Peten | 8 - peten
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: GTM_2015_GAUL1_64837
@@ -409,7 +439,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Petén
     source_row: 5916
-  - survey_labels: 10 - Suchitepequez
+  - country_entry_id: GTM-SUBNAT-09
+    survey_labels: 10 - Suchitepequez
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -429,7 +460,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Suchitepéquez
     source_row: 5926
-  - survey_labels: 11 - Retalhuleu
+  - country_entry_id: GTM-SUBNAT-10
+    survey_labels: 11 - Retalhuleu
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -449,7 +481,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Retalhuleu
     source_row: 5927
-  - survey_labels: 12 - San Marcos
+  - country_entry_id: GTM-SUBNAT-11
+    survey_labels: 12 - San Marcos
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -469,7 +502,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: San Marcos
     source_row: 5928
-  - survey_labels: 13 - Huehuetenango
+  - country_entry_id: GTM-SUBNAT-12
+    survey_labels: 13 - Huehuetenango
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -489,7 +523,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Huehuetenango
     source_row: 5929
-  - survey_labels: 14 - Quiche
+  - country_entry_id: GTM-SUBNAT-13
+    survey_labels: 14 - Quiche
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -509,7 +544,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Quiché
     source_row: 5930
-  - survey_labels: 15 - Baja Verapaz
+  - country_entry_id: GTM-SUBNAT-14
+    survey_labels: 15 - Baja Verapaz
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -529,7 +565,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Baja Verapaz
     source_row: 5931
-  - survey_labels: 16 - Alta Verapaz
+  - country_entry_id: GTM-SUBNAT-15
+    survey_labels: 16 - Alta Verapaz
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -549,7 +586,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alta Verapaz
     source_row: 5932
-  - survey_labels: 18 - Izabal
+  - country_entry_id: GTM-SUBNAT-16
+    survey_labels: 18 - Izabal
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -569,7 +607,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Izabal
     source_row: 5934
-  - survey_labels: 19 - Zacapa
+  - country_entry_id: GTM-SUBNAT-17
+    survey_labels: 19 - Zacapa
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -589,7 +628,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Zacapa
     source_row: 5935
-  - survey_labels: 2 - El Progreso
+  - country_entry_id: GTM-SUBNAT-18
+    survey_labels: 2 - El Progreso
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -609,7 +649,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: El Progreso
     source_row: 5936
-  - survey_labels: 20 - Chiquimula
+  - country_entry_id: GTM-SUBNAT-19
+    survey_labels: 20 - Chiquimula
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -629,7 +670,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chiquimula
     source_row: 5937
-  - survey_labels: 21 - Jalapa
+  - country_entry_id: GTM-SUBNAT-20
+    survey_labels: 21 - Jalapa
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -649,7 +691,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Jalapa
     source_row: 5938
-  - survey_labels: 22 - Jutiapa
+  - country_entry_id: GTM-SUBNAT-21
+    survey_labels: 22 - Jutiapa
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -669,7 +712,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Jutiapa
     source_row: 5939
-  - survey_labels: 3 - Sacatepequez
+  - country_entry_id: GTM-SUBNAT-22
+    survey_labels: 3 - Sacatepequez
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -689,7 +733,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sacatepéquez
     source_row: 5940
-  - survey_labels: 4 - Chimaltenango
+  - country_entry_id: GTM-SUBNAT-23
+    survey_labels: 4 - Chimaltenango
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -709,7 +754,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chimaltenango
     source_row: 5941
-  - survey_labels: 5 - Escuintla
+  - country_entry_id: GTM-SUBNAT-24
+    survey_labels: 5 - Escuintla
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -729,7 +775,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Escuintla
     source_row: 5942
-  - survey_labels: 6 - Santa Rosa
+  - country_entry_id: GTM-SUBNAT-25
+    survey_labels: 6 - Santa Rosa
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -749,7 +796,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Santa Rosa
     source_row: 5943
-  - survey_labels: 7 - Solola
+  - country_entry_id: GTM-SUBNAT-26
+    survey_labels: 7 - Solola
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -769,7 +817,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sololá
     source_row: 5944
-  - survey_labels: 8 - Totonicapan
+  - country_entry_id: GTM-SUBNAT-27
+    survey_labels: 8 - Totonicapan
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -789,7 +838,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Totonicapán
     source_row: 5945
-  - survey_labels: 9 - Quetzaltenango
+  - country_entry_id: GTM-SUBNAT-28
+    survey_labels: 9 - Quetzaltenango
     survey_variables: subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -819,7 +869,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: abonera
+  - country_entry_id: GTM-SAN-01
+    source_category_code: abonera
     national_label_en: Abonera
     national_label_local: Letrinas de compostaje (privado)
     jmp_classification: Composting toilets > Composting toilet (private)
@@ -829,7 +880,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 129
-  - source_category_code: inodoro_conectado_a_drenaje_o_fosa_septica
+  - country_entry_id: GTM-SAN-02
+    source_category_code: inodoro_conectado_a_drenaje_o_fosa_septica
     national_label_en: Inodoro conectado a drenaje o fosa septica
     national_label_local: Descarga/baldeo con agua
     jmp_classification: Flush and pour flush
@@ -839,7 +891,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 60
-  - source_category_code: inodoro_de_arrastre_no_sabe_a_que_esta_conectado
+  - country_entry_id: GTM-SAN-03
+    source_category_code: inodoro_de_arrastre_no_sabe_a_que_esta_conectado
     national_label_en: 'Inodoro de arrastre: no sabe a que esta conectado'
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
@@ -849,7 +902,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: inodoro_conectado_a_red_de_drenaje
+  - country_entry_id: GTM-SAN-04
+    source_category_code: inodoro_conectado_a_red_de_drenaje
     national_label_en: Inodoro conectado a red de drenaje
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -859,7 +913,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: inodoro_conectado_a_red_de_drenajes
+  - country_entry_id: GTM-SAN-05
+    source_category_code: inodoro_conectado_a_red_de_drenajes
     national_label_en: Inodoro conectado a red de drenajes
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -869,7 +924,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: inodoro_de_arrastre_conectado_a_alcantarillado
+  - country_entry_id: GTM-SAN-06
+    source_category_code: inodoro_de_arrastre_conectado_a_alcantarillado
     national_label_en: 'Inodoro de arrastre: conectado a alcantarillado'
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -879,7 +935,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: excusado_lavable
+  - country_entry_id: GTM-SAN-07
+    source_category_code: excusado_lavable
     national_label_en: Excusado lavable
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
@@ -889,7 +946,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: inodoro_conectado_a_fosa_sa_ptica
+  - country_entry_id: GTM-SAN-08
+    source_category_code: inodoro_conectado_a_fosa_sa_ptica
     national_label_en: Inodoro conectado a fosa sÃ©ptica
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -899,7 +957,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-09
+    source_category_code: inodoro_conectado_a_fosa_septica
     national_label_en: Inodoro conectado a fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -909,7 +968,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_de_arrastre_conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-10
+    source_category_code: inodoro_de_arrastre_conectado_a_fosa_septica
     national_label_en: 'Inodoro de arrastre: conectado a fosa septica'
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
@@ -919,7 +979,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: inodoro_de_arrastre_conectado_a_no_sabe_donde
+  - country_entry_id: GTM-SAN-11
+    source_category_code: inodoro_de_arrastre_conectado_a_no_sabe_donde
     national_label_en: 'Inodoro de arrastre: conectado a no sabe donde'
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -929,7 +990,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: inodoro_private
+  - country_entry_id: GTM-SAN-12
+    source_category_code: inodoro_private
     national_label_en: Inodoro, private*
     national_label_local: Inodoros de arrastre hidráulico (privado)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -939,7 +1001,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: private_toilet
+  - country_entry_id: GTM-SAN-13
+    source_category_code: private_toilet
     national_label_en: Private toilet
     national_label_local: Inodoros de arrastre hidráulico (privado)
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -949,7 +1012,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: drenaje_al_rio_o_mar
+  - country_entry_id: GTM-SAN-14
+    source_category_code: drenaje_al_rio_o_mar
     national_label_en: Drenaje al río o mar
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > Private flush/toilet > to elsewhere
@@ -959,7 +1023,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 77
-  - source_category_code: inodoro_de_uso_exclusivo
+  - country_entry_id: GTM-SAN-15
+    source_category_code: inodoro_de_uso_exclusivo
     national_label_en: Inodoro de uso exclusivo
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -969,7 +1034,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: inodoro_privado
+  - country_entry_id: GTM-SAN-16
+    source_category_code: inodoro_privado
     national_label_en: Inodoro privado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -979,7 +1045,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: inodoro_privado_conectado_al_alcantarillado
+  - country_entry_id: GTM-SAN-17
+    source_category_code: inodoro_privado_conectado_al_alcantarillado
     national_label_en: Inodoro Privado conectado al alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -989,7 +1056,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: privado_conectado
+  - country_entry_id: GTM-SAN-18
+    source_category_code: privado_conectado
     national_label_en: Privado conectado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -999,7 +1067,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: GTM-SAN-19
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -1009,7 +1078,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: uso_exclusivo_inodoro_conectado_a_red
+  - country_entry_id: GTM-SAN-20
+    source_category_code: uso_exclusivo_inodoro_conectado_a_red
     national_label_en: Uso exclusivo inodoro conectado a red
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -1019,7 +1089,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: inodoro_conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-21
+    source_category_code: inodoro_conectado_a_fosa_septica
     national_label_en: Inodoro conectado a fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -1029,7 +1100,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: GTM-SAN-22
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -1039,7 +1111,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: uso_exclusivo_inodoro_conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-23
+    source_category_code: uso_exclusivo_inodoro_conectado_a_fosa_septica
     national_label_en: Uso exclusivo inodoro conectado a fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -1049,7 +1122,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: inodoro_shared
+  - country_entry_id: GTM-SAN-24
+    source_category_code: inodoro_shared
     national_label_en: Inodoro, shared*
     national_label_local: Inodoros de arrastre hidráulico (publico)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -1059,7 +1133,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: shared_toilet_inodoro_compartido
+  - country_entry_id: GTM-SAN-25
+    source_category_code: shared_toilet_inodoro_compartido
     national_label_en: Shared toilet (Inodoro compartido)
     national_label_local: Inodoros de arrastre hidráulico (publico)
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -1069,7 +1144,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: inodoro_compartido
+  - country_entry_id: GTM-SAN-26
+    source_category_code: inodoro_compartido
     national_label_en: Inodoro compartido
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1080,7 +1156,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: inodoro_compartido_conectado_al_alcantarillado
+  - country_entry_id: GTM-SAN-27
+    source_category_code: inodoro_compartido_conectado_al_alcantarillado
     national_label_en: Inodoro Compartido  conectado al alcantarillado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1091,7 +1168,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: inodoro_para_varios_hogares
+  - country_entry_id: GTM-SAN-28
+    source_category_code: inodoro_para_varios_hogares
     national_label_en: Inodoro para varios hogares
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1102,7 +1180,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: publico_conectado
+  - country_entry_id: GTM-SAN-29
+    source_category_code: publico_conectado
     national_label_en: Publico conectado
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1113,7 +1192,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: GTM-SAN-30
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1124,7 +1204,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: varios_hogares_inodoro_conectado_a_red_de_drenajes
+  - country_entry_id: GTM-SAN-31
+    source_category_code: varios_hogares_inodoro_conectado_a_red_de_drenajes
     national_label_en: Varios hogares inodoro conectado a red de drenajes
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -1135,7 +1216,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: GTM-SAN-32
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -1145,7 +1227,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: varios_hogares_inodoro_conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-33
+    source_category_code: varios_hogares_inodoro_conectado_a_fosa_septica
     national_label_en: Varios hogares inodoro conectado a fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -1155,7 +1238,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: inodoro_conectado_a_la_red_de_drenaje
+  - country_entry_id: GTM-SAN-34
+    source_category_code: inodoro_conectado_a_la_red_de_drenaje
     national_label_en: Inodoro conectado a la red de drenaje
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1165,7 +1249,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: inodoro_conectado_a_red_de_drenajes
+  - country_entry_id: GTM-SAN-35
+    source_category_code: inodoro_conectado_a_red_de_drenajes
     national_label_en: Inodoro conectado a red de drenajes
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1175,7 +1260,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-36
+    source_category_code: conectado_a_fosa_septica
     national_label_en: Conectado a fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1185,7 +1271,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_conectado_a_fosa_septica
+  - country_entry_id: GTM-SAN-37
+    source_category_code: inodoro_conectado_a_fosa_septica
     national_label_en: Inodoro conectado a fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1195,7 +1282,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_o_fosa_septica
+  - country_entry_id: GTM-SAN-38
+    source_category_code: inodoro_o_fosa_septica
     national_label_en: Inodoro o fosa septica
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1205,7 +1293,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: inodoro_septico
+  - country_entry_id: GTM-SAN-39
+    source_category_code: inodoro_septico
     national_label_en: Inodoro septico
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1215,7 +1304,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: toilet_with_connection_to_septic_tank
+  - country_entry_id: GTM-SAN-40
+    source_category_code: toilet_with_connection_to_septic_tank
     national_label_en: Toilet with connection to septic tank
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
@@ -1225,7 +1315,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: GTM-SAN-41
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Letrina de cubeta
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -1235,7 +1326,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: pozo_ciego
+  - country_entry_id: GTM-SAN-42
+    source_category_code: pozo_ciego
     national_label_en: Pozo ciego
     national_label_local: Otro
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
@@ -1245,7 +1337,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 111
-  - source_category_code: excusado_lavable
+  - country_entry_id: GTM-SAN-43
+    source_category_code: excusado_lavable
     national_label_en: Excusado lavable
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1256,7 +1349,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: letrina_sin_cierre_abierta
+  - country_entry_id: GTM-SAN-44
+    source_category_code: letrina_sin_cierre_abierta
     national_label_en: Letrina sin cierre/abierta
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1267,7 +1361,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: GTM-SAN-45
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -1278,7 +1373,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: latrine
+  - country_entry_id: GTM-SAN-46
+    source_category_code: latrine
     national_label_en: Latrine
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1289,7 +1385,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina
+  - country_entry_id: GTM-SAN-47
+    source_category_code: letrina
     national_label_en: Letrina
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1300,7 +1397,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_o_pozo_ciego
+  - country_entry_id: GTM-SAN-48
+    source_category_code: letrina_o_pozo_ciego
     national_label_en: Letrina o pozo ciego
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1311,7 +1409,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_pozo_ciego
+  - country_entry_id: GTM-SAN-49
+    source_category_code: letrina_pozo_ciego
     national_label_en: Letrina, pozo ciego
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1322,7 +1421,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_pozo_ciego_escusado
+  - country_entry_id: GTM-SAN-50
+    source_category_code: letrina_pozo_ciego_escusado
     national_label_en: Letrina, pozo ciego, escusado
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1333,7 +1433,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_pozo_ciego_excusado
+  - country_entry_id: GTM-SAN-51
+    source_category_code: letrina_pozo_ciego_excusado
     national_label_en: Letrina, Pozo ciego, excusado
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1344,7 +1445,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_excusado
+  - country_entry_id: GTM-SAN-52
+    source_category_code: letrina_excusado
     national_label_en: Letrina/excusado
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -1355,7 +1457,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: letrina_mejorada_ventilada
+  - country_entry_id: GTM-SAN-53
+    source_category_code: letrina_mejorada_ventilada
     national_label_en: Letrina mejorada ventilada
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -1366,7 +1469,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: GTM-SAN-54
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -1377,7 +1481,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: uso_exclusivo_letrina_o_pozo_ciego
+  - country_entry_id: GTM-SAN-55
+    source_category_code: uso_exclusivo_letrina_o_pozo_ciego
     national_label_en: Uso exclusivo letrina o pozo ciego
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
@@ -1387,7 +1492,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 115
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: GTM-SAN-56
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -1398,7 +1504,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: varios_hogares_letrina_o_pozo_ciego
+  - country_entry_id: GTM-SAN-57
+    source_category_code: varios_hogares_letrina_o_pozo_ciego
     national_label_en: Varios hogares letrina o pozo ciego
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
@@ -1409,7 +1516,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 123
-  - source_category_code: excusado_lavable
+  - country_entry_id: GTM-SAN-58
+    source_category_code: excusado_lavable
     national_label_en: Excusado lavable
     national_label_local: Letrinas de arrastre hidráulico
     jmp_classification: Latrines > Pour flush latrines
@@ -1419,7 +1527,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: GTM-SAN-59
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico (privado)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1429,7 +1538,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: uso_exclusivo_excusado_lavable
+  - country_entry_id: GTM-SAN-60
+    source_category_code: uso_exclusivo_excusado_lavable
     national_label_en: Uso exclusivo excusado lavable
     national_label_local: Letrinas de arrastre hidráulico (privado)
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -1439,7 +1549,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: GTM-SAN-61
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Letrinas de arrastre hidráulico (publico)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1450,7 +1561,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: varios_hogares_excusado_lavable
+  - country_entry_id: GTM-SAN-62
+    source_category_code: varios_hogares_excusado_lavable
     national_label_en: Varios hogares excusado lavable
     national_label_local: Letrinas de arrastre hidráulico (publico)
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -1461,7 +1573,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: excusado_lavable
+  - country_entry_id: GTM-SAN-63
+    source_category_code: excusado_lavable
     national_label_en: Excusado lavable
     national_label_local: no sabe donde
     jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
@@ -1471,7 +1584,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 89
-  - source_category_code: no_facilities
+  - country_entry_id: GTM-SAN-64
+    source_category_code: no_facilities
     national_label_en: No facilities
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1481,7 +1595,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: GTM-SAN-65
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1491,7 +1606,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene
+  - country_entry_id: GTM-SAN-66
+    source_category_code: no_tiene
     national_label_en: No tiene
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1501,7 +1617,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_sanitar
+  - country_entry_id: GTM-SAN-67
+    source_category_code: no_tiene_sanitar
     national_label_en: No tiene sanitar
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1511,7 +1628,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_tiene_sanitario
+  - country_entry_id: GTM-SAN-68
+    source_category_code: no_tiene_sanitario
     national_label_en: No tiene sanitario
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
@@ -1521,7 +1639,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: GTM-SAN-69
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1531,7 +1650,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: otro
+  - country_entry_id: GTM-SAN-70
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
@@ -1551,7 +1671,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: manantial_o_nacimiento
+  - country_entry_id: GTM-WAS-01
+    source_category_code: manantial_o_nacimiento
     national_label_en: Manantial o nacimiento
     national_label_local: Todos los manantiales
     jmp_classification: Ground water > All springs
@@ -1561,7 +1682,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: pozo
+  - country_entry_id: GTM-WAS-02
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1571,7 +1693,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: well_or_cistern
+  - country_entry_id: GTM-WAS-03
+    source_category_code: well_or_cistern
     national_label_en: Well or cistern
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
@@ -1581,7 +1704,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 54
-  - source_category_code: manatial_protegido
+  - country_entry_id: GTM-WAS-04
+    source_category_code: manatial_protegido
     national_label_en: Manatial protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Protected spring
@@ -1591,7 +1715,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: agua_de_pozo_pozo_mecanico_o_manual_brocal
+  - country_entry_id: GTM-WAS-05
+    source_category_code: agua_de_pozo_pozo_mecanico_o_manual_brocal
     national_label_en: 'Agua de pozo: Pozo mecanico o manual (brocal)'
     national_label_local: Pozos protegidos
     jmp_classification: Ground water > Protected well
@@ -1601,7 +1726,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: GTM-WAS-06
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Pozos o manantiales protegidos
     jmp_classification: Ground water > Protected wells or springs
@@ -1611,7 +1737,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: pozo
+  - country_entry_id: GTM-WAS-07
+    source_category_code: pozo
     national_label_en: Pozo
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1621,7 +1748,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_mecanica
+  - country_entry_id: GTM-WAS-08
+    source_category_code: pozo_mecanica
     national_label_en: Pozo mecanica
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1631,7 +1759,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: well_with_pump
+  - country_entry_id: GTM-WAS-09
+    source_category_code: well_with_pump
     national_label_en: Well with pump
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
@@ -1641,7 +1770,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: pozo_mecanico_manual
+  - country_entry_id: GTM-WAS-10
+    source_category_code: pozo_mecanico_manual
     national_label_en: Pozo mecánico/manual
     national_label_local: Otro
     jmp_classification: Ground water > Traditional wells > Other
@@ -1651,7 +1781,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: pila_tanque_publico
+  - country_entry_id: GTM-WAS-11
+    source_category_code: pila_tanque_publico
     national_label_en: Pila, tanque público
     national_label_local: Publico
     jmp_classification: Ground water > Traditional wells > Public
@@ -1661,7 +1792,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: pozo_publico
+  - country_entry_id: GTM-WAS-12
+    source_category_code: pozo_publico
     national_label_en: Pozo publico
     national_label_local: Publico
     jmp_classification: Ground water > Traditional wells > Public
@@ -1671,7 +1803,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: pozo_perforado
+  - country_entry_id: GTM-WAS-13
+    source_category_code: pozo_perforado
     national_label_en: Pozo perforado
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1681,7 +1814,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: pozo_perforado_publico_o_privado
+  - country_entry_id: GTM-WAS-14
+    source_category_code: pozo_perforado_publico_o_privado
     national_label_en: Pozo perforado publico o privado
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1691,7 +1825,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: GTM-WAS-15
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
@@ -1701,7 +1836,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: manatial_no_protegido
+  - country_entry_id: GTM-WAS-16
+    source_category_code: manatial_no_protegido
     national_label_en: Manatial no protegido
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
@@ -1711,7 +1847,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: GTM-WAS-17
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Pozos o manantiales non protegidos
     jmp_classification: Ground water > Unprotected wells or springs
@@ -1721,7 +1858,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: agua_de_pozo_pila_publico_tanque_publico
+  - country_entry_id: GTM-WAS-18
+    source_category_code: agua_de_pozo_pila_publico_tanque_publico
     national_label_en: 'Agua de pozo: Pila publico/tanque publico'
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1731,7 +1869,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: la_obtiene_de_un_vecino_o_familiar
+  - country_entry_id: GTM-WAS-19
+    source_category_code: la_obtiene_de_un_vecino_o_familiar
     national_label_en: La obtiene de un vecino o familiar
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1741,7 +1880,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: pila_publica
+  - country_entry_id: GTM-WAS-20
+    source_category_code: pila_publica
     national_label_en: Pila publica
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1751,7 +1891,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: se_la_regala_el_vecino
+  - country_entry_id: GTM-WAS-21
+    source_category_code: se_la_regala_el_vecino
     national_label_en: Se la regala el vecino
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
@@ -1761,7 +1902,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: camion_cisterna
+  - country_entry_id: GTM-WAS-22
+    source_category_code: camion_cisterna
     national_label_en: Camion cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1771,7 +1913,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_o_aguatero
+  - country_entry_id: GTM-WAS-23
+    source_category_code: camion_o_aguatero
     national_label_en: Camion o aguatero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1781,7 +1924,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_o_tanque
+  - country_entry_id: GTM-WAS-24
+    source_category_code: camion_o_tanque
     national_label_en: Camion o tanque
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1791,7 +1935,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_o_tanque_aguatero
+  - country_entry_id: GTM-WAS-25
+    source_category_code: camion_o_tanque_aguatero
     national_label_en: Camion o tanque aguatero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1801,7 +1946,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_o_tonel
+  - country_entry_id: GTM-WAS-26
+    source_category_code: camion_o_tonel
     national_label_en: Camion o tonel
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1811,7 +1957,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_tanque_aguatero
+  - country_entry_id: GTM-WAS-27
+    source_category_code: camion_tanque_aguatero
     national_label_en: Camion tanque aguatero
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1821,7 +1968,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camion_cisterna_tonel
+  - country_entry_id: GTM-WAS-28
+    source_category_code: camion_cisterna_tonel
     national_label_en: Camion, cisterna, tonel.
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1831,7 +1979,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: camoin_cisterna
+  - country_entry_id: GTM-WAS-29
+    source_category_code: camoin_cisterna
     national_label_en: Camoin cisterna
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1841,7 +1990,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: GTM-WAS-30
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1851,7 +2001,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: truck_water_carrier
+  - country_entry_id: GTM-WAS-31
+    source_category_code: truck_water_carrier
     national_label_en: Truck, water carrier
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1861,7 +2012,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: truckborne
+  - country_entry_id: GTM-WAS-32
+    source_category_code: truckborne
     national_label_en: Truckborne
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
@@ -1871,7 +2023,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other_source
+  - country_entry_id: GTM-WAS-33
+    source_category_code: other_source
     national_label_en: Other source
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1881,7 +2034,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro
+  - country_entry_id: GTM-WAS-34
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1891,7 +2045,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_agua_del_vecino_o_de_un_familiar
+  - country_entry_id: GTM-WAS-35
+    source_category_code: otro_agua_del_vecino_o_de_un_familiar
     national_label_en: Otro & Agua del Vecino o de un Familiar
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1901,7 +2056,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_fuente
+  - country_entry_id: GTM-WAS-36
+    source_category_code: otro_fuente
     national_label_en: Otro fuente
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1911,7 +2067,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: otro_cual
+  - country_entry_id: GTM-WAS-37
+    source_category_code: otro_cual
     national_label_en: Otro, Cuál
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1921,7 +2078,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: pila_tanque_aguateria
+  - country_entry_id: GTM-WAS-38
+    source_category_code: pila_tanque_aguateria
     national_label_en: Pila/tanque aguateria
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1931,7 +2089,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: public_trough
+  - country_entry_id: GTM-WAS-39
+    source_category_code: public_trough
     national_label_en: Public trough
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1941,7 +2100,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: agua_filtrada
+  - country_entry_id: GTM-WAS-40
+    source_category_code: agua_filtrada
     national_label_en: Agua Filtrada
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1951,7 +2111,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: other
+  - country_entry_id: GTM-WAS-41
+    source_category_code: other
     national_label_en: Other
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1961,7 +2122,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: otra_fuente
+  - country_entry_id: GTM-WAS-42
+    source_category_code: otra_fuente
     national_label_en: Otra fuente
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1971,7 +2133,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: otro
+  - country_entry_id: GTM-WAS-43
+    source_category_code: otro
     national_label_en: Otro
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
@@ -1981,7 +2144,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: agua_embotellada
+  - country_entry_id: GTM-WAS-44
+    source_category_code: agua_embotellada
     national_label_en: Agua embotellada
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -1991,7 +2155,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_embotellada
+  - country_entry_id: GTM-WAS-45
+    source_category_code: agua_embotellada
     national_label_en: Agua embotellada*
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -2001,7 +2166,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: GTM-WAS-46
+    source_category_code: bottled_water
     national_label_en: Bottled water*
     national_label_local: Agua embotellada
     jmp_classification: Packaged water > Bottled water
@@ -2011,7 +2177,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: agua_de_lluvia
+  - country_entry_id: GTM-WAS-47
+    source_category_code: agua_de_lluvia
     national_label_en: Agua de lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2021,7 +2188,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: agua_lluvia
+  - country_entry_id: GTM-WAS-48
+    source_category_code: agua_lluvia
     national_label_en: Agua lluvia
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2031,7 +2199,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: GTM-WAS-49
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2041,7 +2210,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: GTM-WAS-50
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Cisterna/tanque cubierto
     jmp_classification: Rainwater > Covered cistern/tank
@@ -2051,7 +2221,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rio_lago_o_manantial
+  - country_entry_id: GTM-WAS-51
+    source_category_code: rio_lago_o_manantial
     national_label_en: Rio, lago o manantial
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2061,7 +2232,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_lago_manantial
+  - country_entry_id: GTM-WAS-52
+    source_category_code: rio_lago_manantial
     national_label_en: Río, lago, manantial
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2071,7 +2243,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: rio_acequia_manantial
+  - country_entry_id: GTM-WAS-53
+    source_category_code: rio_acequia_manantial
     national_label_en: Rio/acequia/manantial
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2081,7 +2254,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_irrigated_channel_or_spring
+  - country_entry_id: GTM-WAS-54
+    source_category_code: river_irrigated_channel_or_spring
     national_label_en: River, irrigated channel or spring
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2091,7 +2265,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: river_irrigation_channel_spring
+  - country_entry_id: GTM-WAS-55
+    source_category_code: river_irrigation_channel_spring
     national_label_en: River, irrigation channel, spring
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2101,7 +2276,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: GTM-WAS-56
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Agua superficial
     jmp_classification: Surface water
@@ -2111,7 +2287,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: lago
+  - country_entry_id: GTM-WAS-57
+    source_category_code: lago
     national_label_en: Lago
     national_label_local: Lago
     jmp_classification: Surface water > Lake
@@ -2121,7 +2298,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: lago_o_arroyo
+  - country_entry_id: GTM-WAS-58
+    source_category_code: lago_o_arroyo
     national_label_en: Lago o arroyo
     national_label_local: Lago
     jmp_classification: Surface water > Lake
@@ -2131,7 +2309,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 94
-  - source_category_code: rio
+  - country_entry_id: GTM-WAS-59
+    source_category_code: rio
     national_label_en: Rio
     national_label_local: Río
     jmp_classification: Surface water > River
@@ -2141,7 +2320,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: rio_lago_o_manantial
+  - country_entry_id: GTM-WAS-60
+    source_category_code: rio_lago_o_manantial
     national_label_en: Rio, lago o manantial
     national_label_local: Río
     jmp_classification: Surface water > River
@@ -2151,7 +2331,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: rio_acequia
+  - country_entry_id: GTM-WAS-61
+    source_category_code: rio_acequia
     national_label_en: Rio/acequia
     national_label_local: Río
     jmp_classification: Surface water > River
@@ -2161,7 +2342,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: agua_por_tuberia
+  - country_entry_id: GTM-WAS-62
+    source_category_code: agua_por_tuberia
     national_label_en: Agua por tuberia
     national_label_local: Agua del grifo
     jmp_classification: Tap water
@@ -2171,7 +2353,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: red_publica_varios_hogares_red_privada_varios_hogares
+  - country_entry_id: GTM-WAS-63
+    source_category_code: red_publica_varios_hogares_red_privada_varios_hogares
     national_label_en: '"Red publica varios hogares"+"Red privada varios hogares"'
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2181,7 +2364,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: chorro_para_varios_hogares
+  - country_entry_id: GTM-WAS-64
+    source_category_code: chorro_para_varios_hogares
     national_label_en: chorro para varios hogares
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2191,7 +2375,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: other_piped_source
+  - country_entry_id: GTM-WAS-65
+    source_category_code: other_piped_source
     national_label_en: Other piped source
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2201,7 +2386,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: otra_fuente_por_tuberia
+  - country_entry_id: GTM-WAS-66
+    source_category_code: otra_fuente_por_tuberia
     national_label_en: Otra fuente por tuberia
     national_label_local: Otro
     jmp_classification: Tap water > Other
@@ -2211,7 +2397,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: domestic_connection
+  - country_entry_id: GTM-WAS-67
+    source_category_code: domestic_connection
     national_label_en: Domestic connection
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2221,7 +2408,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: domestic_connection_to_network_acueducto
+  - country_entry_id: GTM-WAS-68
+    source_category_code: domestic_connection_to_network_acueducto
     national_label_en: Domestic connection to network (Acueducto)
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2231,7 +2419,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: GTM-WAS-69
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2241,7 +2430,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: red_publica
+  - country_entry_id: GTM-WAS-70
+    source_category_code: red_publica
     national_label_en: Red publica
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2251,7 +2441,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: red_publica_acueducto
+  - country_entry_id: GTM-WAS-71
+    source_category_code: red_publica_acueducto
     national_label_en: Red publica (acueducto)
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
@@ -2261,7 +2452,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: red_publica_uso_exclusivo_red_privada_uso_exclusivo
+  - country_entry_id: GTM-WAS-72
+    source_category_code: red_publica_uso_exclusivo_red_privada_uso_exclusivo
     national_label_en: '"Red publica uso exclusivo"+"Red privada uso exclusivo"'
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2271,7 +2463,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: agua_entubada_en_la_vivienda
+  - country_entry_id: GTM-WAS-73
+    source_category_code: agua_entubada_en_la_vivienda
     national_label_en: Agua entubada en la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2281,7 +2474,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: chorro_de_uso_exclusivo
+  - country_entry_id: GTM-WAS-74
+    source_category_code: chorro_de_uso_exclusivo
     national_label_en: Chorro de uso exclusivo
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2291,7 +2485,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_acueducto
+  - country_entry_id: GTM-WAS-75
+    source_category_code: red_publica_acueducto
     national_label_en: Red publica acueducto
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2301,7 +2496,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_red_dentro_de_la_vivienda
+  - country_entry_id: GTM-WAS-76
+    source_category_code: tuberia_red_dentro_de_la_vivienda
     national_label_en: Tuberia (red) dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2311,7 +2507,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_dentro_de_la_vivienda
+  - country_entry_id: GTM-WAS-77
+    source_category_code: tuberia_dentro_de_la_vivienda
     national_label_en: Tuberia dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2321,7 +2518,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: tuberia_red_dentro_de_la_vivienda
+  - country_entry_id: GTM-WAS-78
+    source_category_code: tuberia_red_dentro_de_la_vivienda
     national_label_en: Tubería red dentro de la vivienda
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -2331,7 +2529,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: red_publica_fuera_del_local_red_publica_pozo_con_red_uso_del_hogar
+  - country_entry_id: GTM-WAS-79
+    source_category_code: red_publica_fuera_del_local_red_publica_pozo_con_red_uso_del_hogar
     national_label_en: '"Red publica fuera del local" +"Red publica pozo con red uso
       del hogar"'
     national_label_local: Agua corriente al patio/parcela
@@ -2342,7 +2541,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: agua_entubada_en_el_patio
+  - country_entry_id: GTM-WAS-80
+    source_category_code: agua_entubada_en_el_patio
     national_label_en: Agua entubada en el patio
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2352,7 +2552,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_red_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: GTM-WAS-81
+    source_category_code: tuberia_red_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Tubería (red) fuera de la vivienda pero dentro del terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2362,7 +2563,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_red_fuera_de_la_vivienda_pero_en_el_tereno
+  - country_entry_id: GTM-WAS-82
+    source_category_code: tuberia_red_fuera_de_la_vivienda_pero_en_el_tereno
     national_label_en: Tuberia (red) fuera de la vivienda pero en el tereno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2372,7 +2574,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_fuera_de_la_vivienda
+  - country_entry_id: GTM-WAS-83
+    source_category_code: tuberia_fuera_de_la_vivienda
     national_label_en: Tubería fuera de la vivienda
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2382,7 +2585,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: GTM-WAS-84
+    source_category_code: tuberia_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Tuberia fuera de la vivienda, pero dentro del terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2392,7 +2596,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_red_fuera_de_la_vivienda_pero_dentro_del_terreno
+  - country_entry_id: GTM-WAS-85
+    source_category_code: tuberia_red_fuera_de_la_vivienda_pero_dentro_del_terreno
     national_label_en: Tubería red fuera de la vivienda pero dentro del terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2402,7 +2607,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: tuberia_red_fuera_de_la_vivienda_pero_en_el_terreno
+  - country_entry_id: GTM-WAS-86
+    source_category_code: tuberia_red_fuera_de_la_vivienda_pero_en_el_terreno
     national_label_en: Tubería red fuera de la vivienda, pero en el terreno
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -2412,7 +2618,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: chorro_publico
+  - country_entry_id: GTM-WAS-87
+    source_category_code: chorro_publico
     national_label_en: Chorro publico
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2422,7 +2629,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: chorro_publico_fuera_de_la_vivienda
+  - country_entry_id: GTM-WAS-88
+    source_category_code: chorro_publico_fuera_de_la_vivienda
     national_label_en: Chorro publico fuera de la vivienda
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2432,7 +2640,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpipe
+  - country_entry_id: GTM-WAS-89
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2442,7 +2651,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_standpoint
+  - country_entry_id: GTM-WAS-90
+    source_category_code: public_standpoint
     national_label_en: Public standpoint
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2452,7 +2662,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap
+  - country_entry_id: GTM-WAS-91
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe
@@ -2462,7 +2673,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: tuberia_par_chorro_publico
+  - country_entry_id: GTM-WAS-92
+    source_category_code: tuberia_par_chorro_publico
     national_label_en: Tuberia par chorro publico
     national_label_local: Fuentes públicas
     jmp_classification: Tap water > Public tap, standpipe

@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Nursery
+  - country_entry_id: QAT-EDU-01
+    national_label_en: Nursery
     national_label_local: الحضانة
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarten
+  - country_entry_id: QAT-EDU-02
+    national_label_en: Kindergarten
     national_label_local: رياض الأطفال
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary stage
+  - country_entry_id: QAT-EDU-03
+    national_label_en: Primary stage
     national_label_local: المرحلة الابتدائية
     entry_age: 6
     duration_years: 6
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Primary stage - Adult education
+  - country_entry_id: QAT-EDU-04
+    national_label_en: Primary stage - Adult education
     national_label_local: المرحلة الابتدائية - تعليم الكبار
     entry_age: 12
     duration_years: 4
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Preparatory stage
+  - country_entry_id: QAT-EDU-05
+    national_label_en: Preparatory stage
     national_label_local: المرحلة الإعدادية
     entry_age: 12
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
-  - national_label_en: Preparatory stage - Adult education
+  - country_entry_id: QAT-EDU-06
+    national_label_en: Preparatory stage - Adult education
     national_label_local: المرحلة الإعدادية - تعليم الكبار
     entry_age: 15
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Specialized preparatory stage - Science and technology
+  - country_entry_id: QAT-EDU-07
+    national_label_en: Specialized preparatory stage - Science and technology
     national_label_local: المرحلة الإعدادية التخصصية -  العلوم والتكنولوجيا
     entry_age: 12
     duration_years: 3
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Secondary stage
+  - country_entry_id: QAT-EDU-08
+    national_label_en: Secondary stage
     national_label_local: المرحلة الثانوية
     entry_age: 15
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Secondary stage - Adult education
+  - country_entry_id: QAT-EDU-09
+    national_label_en: Secondary stage - Adult education
     national_label_local: المرحلة الثانوية- تعليم الكبار
     entry_age: 18
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Specialized secondary stage - Adult education
+  - country_entry_id: QAT-EDU-10
+    national_label_en: Specialized secondary stage - Adult education
     national_label_local: المرحلة الثانوية التخصصية- تعليم الكبار
     entry_age: 18
     duration_years: 3
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Technical secondary
+  - country_entry_id: QAT-EDU-11
+    national_label_en: Technical secondary
     national_label_local: الثانوية التقنية
     entry_age: 15
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Commercial secondary - Banking studies and business administration
+  - country_entry_id: QAT-EDU-12
+    national_label_en: Commercial secondary - Banking studies and business administration
     national_label_local: ثانوية العلوم المصرفية وادارة الاعمال
     entry_age: 15
     duration_years: 3
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Science and technology secondary
+  - country_entry_id: QAT-EDU-13
+    national_label_en: Science and technology secondary
     national_label_local: ثانوية العلوم والتكنولوجيا
     entry_age: 15
     duration_years: 3
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: Foundation programme
+  - country_entry_id: QAT-EDU-14
+    national_label_en: Foundation programme
     national_label_local: البرنامج التأسيسي
     entry_age: 18
     duration_years: 1
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Diploma
+  - country_entry_id: QAT-EDU-15
+    national_label_en: Diploma
     national_label_local: دبلوم
     entry_age: 18
     duration_years: 2
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Diploma
+  - country_entry_id: QAT-EDU-16
+    national_label_en: Diploma
     national_label_local: دبلوم
     entry_age: 18
     duration_years: 2
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Bachelor
+  - country_entry_id: QAT-EDU-17
+    national_label_en: Bachelor
     national_label_local: بكالوريوس
     entry_age: 18
     duration_years: 4
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Bachelor in pharmacy / architecture / engineering
+  - country_entry_id: QAT-EDU-18
+    national_label_en: Bachelor in pharmacy / architecture / engineering
     national_label_local: بكالوريوس في الصيدلة / الهندسة / الهندسة المعمارية
     entry_age: 18
     duration_years: 5
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: Higher diploma
+  - country_entry_id: QAT-EDU-19
+    national_label_en: Higher diploma
     national_label_local: دبلوم عالي
     entry_age: 22
     duration_years: 1
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: Bachelor in medicine
+  - country_entry_id: QAT-EDU-20
+    national_label_en: Bachelor in medicine
     national_label_local: بكالوريوس في الطب
     entry_age: 18
     duration_years: 6
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: Master
+  - country_entry_id: QAT-EDU-21
+    national_label_en: Master
     national_label_local: الماجستير
     entry_age: 22
     duration_years: 2
@@ -220,7 +241,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Doctoral
+  - country_entry_id: QAT-EDU-22
+    national_label_en: Doctoral
     national_label_local: دكتوراه
     entry_age: 24
     duration_years: 3

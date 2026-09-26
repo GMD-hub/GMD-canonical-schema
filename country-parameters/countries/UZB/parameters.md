@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: pre-school education
+  - country_entry_id: UZB-EDU-01
+    national_label_en: pre-school education
     national_label_local: Maktabgacha ta'lim va tarbiya
     entry_age: 3
     duration_years: 4
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: primary education
+  - country_entry_id: UZB-EDU-02
+    national_label_en: primary education
     national_label_local: Boshlang'ich ta'lim
     entry_age: 7
     duration_years: 4
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Lower secondary education
+  - country_entry_id: UZB-EDU-03
+    national_label_en: Lower secondary education
     national_label_local: Tayanch o‘rta ta’lim
     entry_age: 11
     duration_years: 5
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: General secondary education
+  - country_entry_id: UZB-EDU-04
+    national_label_en: General secondary education
     national_label_local: Umumiy o‘rta
     entry_age: 16
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Secondary technical and vocational education and initial vocational
+  - country_entry_id: UZB-EDU-05
+    national_label_en: Secondary technical and vocational education and initial vocational
       education (Academic Lyceum, Vocational School)
     national_label_local: O‘rta maxsus ta’lim va boshlang‘ich professional ta'lim
     entry_age: 16
@@ -61,7 +66,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Secondary vocational education (College)
+  - country_entry_id: UZB-EDU-06
+    national_label_en: Secondary vocational education (College)
     national_label_local: O'rta professional ta'lim
     entry_age: 18
     duration_years: 2
@@ -71,7 +77,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Secondary technical-vocational education (Technical College)
+  - country_entry_id: UZB-EDU-07
+    national_label_en: Secondary technical-vocational education (Technical College)
     national_label_local: O'rta maxsus professional ta'lim
     entry_age: 18
     duration_years: 2
@@ -81,7 +88,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Bachelor
+  - country_entry_id: UZB-EDU-08
+    national_label_en: Bachelor
     national_label_local: Bakalavriat
     entry_age: 18
     duration_years: 3
@@ -91,7 +99,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Bachelor
+  - country_entry_id: UZB-EDU-09
+    national_label_en: Bachelor
     national_label_local: Bakalavriat
     entry_age: 18
     duration_years: 4
@@ -101,7 +110,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Master
+  - country_entry_id: UZB-EDU-10
+    national_label_en: Master
     national_label_local: Magistratura
     entry_age: 22
     duration_years: 2
@@ -111,7 +121,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Master
+  - country_entry_id: UZB-EDU-11
+    national_label_en: Master
     national_label_local: Magistratura
     entry_age: 22
     duration_years: 2
@@ -121,7 +132,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Postgraduate education
+  - country_entry_id: UZB-EDU-12
+    national_label_en: Postgraduate education
     national_label_local: Oliy ta'limdan keyingi ta'lim
     entry_age: 24
     duration_years: 3
@@ -141,7 +153,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-Karakalpakstan | 101 -  Karakalpakstan | 1735 -  Karakalpakstan
+  - country_entry_id: UZB-SUBNAT-01
+    survey_labels: 1-Karakalpakstan | 101 -  Karakalpakstan | 1735 -  Karakalpakstan
       | Karakalpakstan -  Karakalpakstan
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3287
@@ -162,7 +175,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Karakalpakstan
     source_row: 18366
-  - survey_labels: 10-Syrdarya | 106 -  Navoi region | 1712 -  Navoi | 1724 -  Syrdarya
+  - country_entry_id: UZB-SUBNAT-02
+    survey_labels: 10-Syrdarya | 106 -  Navoi region | 1712 -  Navoi | 1724 -  Syrdarya
       | Navoi -  Navoi
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_39697
@@ -183,7 +197,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Navoiy
     source_row: 18367
-  - survey_labels: 11-Tashkent | 111 -  Tashkent region | Tashkent (Region) -  Tashkent
+  - country_entry_id: UZB-SUBNAT-03
+    survey_labels: 11-Tashkent | 111 -  Tashkent region | Tashkent (Region) -  Tashkent
       (Region)
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3295
@@ -204,7 +219,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tashkent
     source_row: 18368
-  - survey_labels: 112 -  Fergana region | 12-Fergana | 1730 -  Fergana | Fergana
+  - country_entry_id: UZB-SUBNAT-04
+    survey_labels: 112 -  Fergana region | 12-Fergana | 1730 -  Fergana | Fergana
       -  Fergana
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3286
@@ -225,7 +241,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Fergana
     source_row: 18369
-  - survey_labels: 113 -  Khorezm region | 13-Khorezm | Khorasm -  Khorasm
+  - country_entry_id: UZB-SUBNAT-05
+    survey_labels: 113 -  Khorezm region | 13-Khorezm | Khorasm -  Khorasm
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3289
     gmd_subnatid2: ''
@@ -245,7 +262,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Khorezm
     source_row: 18370
-  - survey_labels: 114 -  Tashkent city | 14-Tashkent city | 1726 -  Tashkent (city)
+  - country_entry_id: UZB-SUBNAT-06
+    survey_labels: 114 -  Tashkent city | 14-Tashkent city | 1726 -  Tashkent (city)
       | Tashkent (City) -  Tashkent (City)
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_39698
@@ -266,7 +284,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tashkent city
     source_row: 18371
-  - survey_labels: 102 -  Andijan region | 1703 -  Andijan | 2-Andijan | Andijan -  Andijan
+  - country_entry_id: UZB-SUBNAT-07
+    survey_labels: 102 -  Andijan region | 1703 -  Andijan | 2-Andijan | Andijan -  Andijan
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3284
     gmd_subnatid2: ''
@@ -286,7 +305,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Andijan
     source_row: 18372
-  - survey_labels: 103 -  Bukhara region | 1706 -  Bukhara | 3-Bukhara | Bukhara -  Bukhara
+  - country_entry_id: UZB-SUBNAT-08
+    survey_labels: 103 -  Bukhara region | 1706 -  Bukhara | 3-Bukhara | Bukhara -  Bukhara
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3285
     gmd_subnatid2: ''
@@ -306,7 +326,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Bukhara
     source_row: 18373
-  - survey_labels: 104 -  Jizzakh region | 4-Jizzak | Jizzakh -  Jizzakh
+  - country_entry_id: UZB-SUBNAT-09
+    survey_labels: 104 -  Jizzakh region | 4-Jizzak | Jizzakh -  Jizzakh
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_39696
     gmd_subnatid2: ''
@@ -326,7 +347,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Jizzakh
     source_row: 18374
-  - survey_labels: 105 -  Kashkadarya region | 1710 -  Kashkadarya | 5-Kashkadarya
+  - country_entry_id: UZB-SUBNAT-10
+    survey_labels: 105 -  Kashkadarya region | 1710 -  Kashkadarya | 5-Kashkadarya
       | Kashkadarya -  Kashkadarya
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3288
@@ -347,7 +369,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kashkadarya
     source_row: 18375
-  - survey_labels: 110 -  Syrdarya region | 1712 -  Navoi | 1724 -  Syrdarya | 6-Navoi
+  - country_entry_id: UZB-SUBNAT-11
+    survey_labels: 110 -  Syrdarya region | 1712 -  Navoi | 1724 -  Syrdarya | 6-Navoi
       | Syrdarya -  Syrdarya
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3294
@@ -368,7 +391,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sirdarya
     source_row: 18376
-  - survey_labels: 107 -  Namangan region | 1714 -  Namangan | 7-Namangan | Namangan
+  - country_entry_id: UZB-SUBNAT-12
+    survey_labels: 107 -  Namangan region | 1714 -  Namangan | 7-Namangan | Namangan
       -  Namangan
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3291
@@ -389,7 +413,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Namangan
     source_row: 18377
-  - survey_labels: 108 -  Samarkand region | 1718 -  Samarkand | 8-Samarkand | Samarkand
+  - country_entry_id: UZB-SUBNAT-13
+    survey_labels: 108 -  Samarkand region | 1718 -  Samarkand | 8-Samarkand | Samarkand
       -  Samarkand
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3292
@@ -410,7 +435,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Samarkand
     source_row: 18378
-  - survey_labels: 109 -  Surkhandarya region | 1722 -  Surkhandarya | 9-Surkhandarya
+  - country_entry_id: UZB-SUBNAT-14
+    survey_labels: 109 -  Surkhandarya region | 1722 -  Surkhandarya | 9-Surkhandarya
       | Surkhandarya -  Surkhandarya
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: UZB_2015_GAUL1_3293
@@ -441,7 +467,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: UZB-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Компостирующие туалеты
     jmp_classification: Composting toilets
@@ -451,7 +478,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: to_open_drain
+  - country_entry_id: UZB-SAN-02
+    source_category_code: to_open_drain
     national_label_en: to open drain
     national_label_local: куда-то в другое место
     jmp_classification: Flush and pour flush > to elsewhere
@@ -461,7 +489,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: UZB-SAN-03
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -471,7 +500,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: to_pit
+  - country_entry_id: UZB-SAN-04
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: в выгребную яму
     jmp_classification: Flush and pour flush > to pit
@@ -481,7 +511,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: to_septic_tank
+  - country_entry_id: UZB-SAN-05
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush and pour flush > to septic tank
@@ -491,7 +522,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: to_dk_where
+  - country_entry_id: UZB-SAN-06
+    source_category_code: to_dk_where
     national_label_en: to DK where
     national_label_local: в неизвестное место/не знаю/не уверен(а)
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -501,7 +533,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: flush_to_sewage_system_or_septic_tank
+  - country_entry_id: UZB-SAN-07
+    source_category_code: flush_to_sewage_system_or_septic_tank
     national_label_en: Flush to sewage system or septic tank
     national_label_local: Туалеты со смывом
     jmp_classification: Flush/toilets
@@ -511,7 +544,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: flush_toilet
+  - country_entry_id: UZB-SAN-08
+    source_category_code: flush_toilet
     national_label_en: Flush toilet
     national_label_local: Туалеты со смывом
     jmp_classification: Flush/toilets
@@ -521,7 +555,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 66
-  - source_category_code: own_flush_toilet
+  - country_entry_id: UZB-SAN-09
+    source_category_code: own_flush_toilet
     national_label_en: Own flush toilet
     national_label_local: Собственный туалет со смывом
     jmp_classification: Flush/toilets > Private flush/toilet
@@ -531,7 +566,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 72
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: UZB-SAN-10
+    source_category_code: shared_flush_toilet
     national_label_en: Shared flush toilet
     national_label_local: Общественный/совместного пользования туалет со смывом
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -541,7 +577,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: UZB-SAN-11
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
     national_label_local: куда-то в другое место
     jmp_classification: Flush/toilets > to elsewhere
@@ -551,7 +588,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: UZB-SAN-12
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
     national_label_local: в трубопроводную канализационную систему
     jmp_classification: Flush/toilets > to piped sewer system
@@ -561,7 +599,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: UZB-SAN-13
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit (latrine)
     national_label_local: в выгребную яму
     jmp_classification: Flush/toilets > to pit
@@ -571,7 +610,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: UZB-SAN-14
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
     national_label_local: в септиктенк
     jmp_classification: Flush/toilets > to septic tank
@@ -581,7 +621,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket
+  - country_entry_id: UZB-SAN-15
+    source_category_code: bucket
     national_label_en: Bucket
     national_label_local: Уборная с отхожим ведром
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -591,7 +632,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: UZB-SAN-16
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Подвесной туалет/подвесная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -602,7 +644,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: UZB-SAN-17
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine with slab
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -614,7 +657,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: UZB-SAN-18
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Уборная с выгребной ямой с напольной плитой/с крытой выгребной
       ямой
@@ -626,7 +670,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: open_pit
+  - country_entry_id: UZB-SAN-19
+    source_category_code: open_pit
     national_label_en: Open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -638,7 +683,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: UZB-SAN-20
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Уборная с выгребной ямой без напольной плиты/с открытой
       выгребной ямой
@@ -650,7 +696,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: traditional_pit_latrine
+  - country_entry_id: UZB-SAN-21
+    source_category_code: traditional_pit_latrine
     national_label_en: Traditional pit latrine
     national_label_local: Традиционная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -661,7 +708,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: UZB-SAN-22
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet
     national_label_local: Традиционная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -672,7 +720,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: traditional_pit_toilet
+  - country_entry_id: UZB-SAN-23
+    source_category_code: traditional_pit_toilet
     national_label_en: Traditional pit toilet*
     national_label_local: Традиционная уборная
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -683,7 +732,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: improved_pit_latrine_vip
+  - country_entry_id: UZB-SAN-24
+    source_category_code: improved_pit_latrine_vip
     national_label_en: Improved pit latrine (VIP)
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -694,7 +744,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: UZB-SAN-25
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -705,7 +756,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: UZB-SAN-26
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -716,7 +768,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: vip_latrine
+  - country_entry_id: UZB-SAN-27
+    source_category_code: vip_latrine
     national_label_en: VIP latrine
     national_label_local: Вентилируемые улучшенные уборные с выгребной ямой
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -727,7 +780,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: pour_flush_latrine_water_seal_type
+  - country_entry_id: UZB-SAN-28
+    source_category_code: pour_flush_latrine_water_seal_type
     national_label_en: Pour flush latrine (water seal type)
     national_label_local: Уборные со смывом
     jmp_classification: Latrines > Pour flush latrines
@@ -737,7 +791,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 85
-  - source_category_code: no_facilities_bush_field
+  - country_entry_id: UZB-SAN-29
+    source_category_code: no_facilities_bush_field
     national_label_en: No facilities/ bush/ field
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -747,7 +802,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facility_bush
+  - country_entry_id: UZB-SAN-30
+    source_category_code: no_facility_bush
     national_label_en: No facility/bush
     national_label_local: Сооружений нет, кусты, поле
     jmp_classification: No facility, bush, field
@@ -757,7 +813,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: UZB-SAN-31
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other unimproved > Other
@@ -777,7 +834,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: spring
+  - country_entry_id: UZB-WAS-01
+    source_category_code: spring
     national_label_en: Spring
     national_label_local: Все родники
     jmp_classification: Ground water > All springs
@@ -787,7 +845,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 74
-  - source_category_code: well_in_residence
+  - country_entry_id: UZB-WAS-02
+    source_category_code: well_in_residence
     national_label_en: Well in residence
     national_label_local: Частный
     jmp_classification: Ground water > All wells > Private
@@ -797,7 +856,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: public_well
+  - country_entry_id: UZB-WAS-03
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Общественный
     jmp_classification: Ground water > All wells > Public
@@ -807,7 +867,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: protected_spring
+  - country_entry_id: UZB-WAS-04
+    source_category_code: protected_spring
     national_label_en: Protected spring
     national_label_local: Защищённый родник
     jmp_classification: Ground water > Protected spring
@@ -817,7 +878,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: UZB-WAS-05
+    source_category_code: protected_dug_well
     national_label_en: Protected dug well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -827,7 +889,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well
+  - country_entry_id: UZB-WAS-06
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Защищённый колодец
     jmp_classification: Ground water > Protected well
@@ -837,7 +900,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_well_in_residence
+  - country_entry_id: UZB-WAS-07
+    source_category_code: protected_well_in_residence
     national_label_en: Protected well in residence
     national_label_local: Частный
     jmp_classification: Ground water > Protected well > Private
@@ -847,7 +911,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: public_well
+  - country_entry_id: UZB-WAS-08
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Общественный
     jmp_classification: Ground water > Traditional wells > Public
@@ -857,7 +922,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 64
-  - source_category_code: tube_well_bore_hole_with_pump
+  - country_entry_id: UZB-WAS-09
+    source_category_code: tube_well_bore_hole_with_pump
     national_label_en: Tube well/ bore hole with pump
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -867,7 +933,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: UZB-WAS-10
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -877,7 +944,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: UZB-WAS-11
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
     national_label_local: Трубчатый колодец, скважина
     jmp_classification: Ground water > Tubewell, borehole
@@ -887,7 +955,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: UZB-WAS-12
+    source_category_code: unprotected_spring
     national_label_en: Unprotected spring
     national_label_local: Незащищённый родник
     jmp_classification: Ground water > Unprotected spring
@@ -897,7 +966,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: UZB-WAS-13
+    source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -907,7 +977,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_well
+  - country_entry_id: UZB-WAS-14
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Незащищённый колодец
     jmp_classification: Ground water > Unprotected well
@@ -917,7 +988,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: open_well_in_residence
+  - country_entry_id: UZB-WAS-15
+    source_category_code: open_well_in_residence
     national_label_en: Open well in residence
     national_label_local: Частный
     jmp_classification: Ground water > Unprotected well > Private
@@ -927,7 +999,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: cart_with_small_tank_drum
+  - country_entry_id: UZB-WAS-16
+    source_category_code: cart_with_small_tank_drum
     national_label_en: Cart with small tank/drum
     national_label_local: Тележка с небольшим баком/бочкой
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -937,7 +1010,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: tanker_truck
+  - country_entry_id: UZB-WAS-17
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -947,7 +1021,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck
+  - country_entry_id: UZB-WAS-18
+    source_category_code: tanker_truck
     national_label_en: Tanker-truck
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -957,7 +1032,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: UZB-WAS-19
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker/ truck/ vendor
     national_label_local: Доставляется автоцистерной
     jmp_classification: Other improved sources > Tanker truck provided
@@ -967,7 +1043,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: UZB-WAS-20
+    source_category_code: other
     national_label_en: Other
     national_label_local: Другое
     jmp_classification: Other non-improved > Other
@@ -977,7 +1054,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: UZB-WAS-21
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Бутилированная вода
     jmp_classification: Packaged water > Bottled water
@@ -987,7 +1065,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: bottled_water
+  - country_entry_id: UZB-WAS-22
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Вода в пакетах
     jmp_classification: Packaged water > Sachet water
@@ -997,7 +1076,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: sachet_water
+  - country_entry_id: UZB-WAS-23
+    source_category_code: sachet_water
     national_label_en: Sachet water
     national_label_local: Вода в пакетах
     jmp_classification: Packaged water > Sachet water
@@ -1007,7 +1087,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 91
-  - source_category_code: rain_water_collection
+  - country_entry_id: UZB-WAS-24
+    source_category_code: rain_water_collection
     national_label_en: Rain water collection
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1017,7 +1098,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: UZB-WAS-25
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Крытая цистерна/резервуар
     jmp_classification: Rainwater > Covered cistern/tank
@@ -1027,7 +1109,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: pond_river_or_stream
+  - country_entry_id: UZB-WAS-26
+    source_category_code: pond_river_or_stream
     national_label_en: Pond, river or stream
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -1037,7 +1120,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: surface_water
+  - country_entry_id: UZB-WAS-27
+    source_category_code: surface_water
     national_label_en: Surface water
     national_label_local: Поверхностная вода
     jmp_classification: Surface water
@@ -1047,7 +1131,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: pond_lake
+  - country_entry_id: UZB-WAS-28
+    source_category_code: pond_lake
     national_label_en: Pond/lake
     national_label_local: Пруд
     jmp_classification: Surface water > Pond
@@ -1057,7 +1142,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: pond_lake_dam
+  - country_entry_id: UZB-WAS-29
+    source_category_code: pond_lake_dam
     national_label_en: Pond/lake/dam
     national_label_local: Пруд
     jmp_classification: Surface water > Pond
@@ -1067,7 +1153,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 96
-  - source_category_code: river_stream
+  - country_entry_id: UZB-WAS-30
+    source_category_code: river_stream
     national_label_en: River/stream
     national_label_local: Река
     jmp_classification: Surface water > River
@@ -1077,7 +1164,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 93
-  - source_category_code: piped_water_piped_to_neighbour
+  - country_entry_id: UZB-WAS-31
+    source_category_code: piped_water_piped_to_neighbour
     national_label_en: 'Piped water: piped to neighbour'
     national_label_local: Другое
     jmp_classification: Tap water > Other
@@ -1087,7 +1175,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_residence
+  - country_entry_id: UZB-WAS-32
+    source_category_code: piped_into_residence
     national_label_en: Piped into residence
     national_label_local: Подключения к дому
     jmp_classification: Tap water > Piped on premises
@@ -1097,7 +1186,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: UZB-WAS-33
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1107,7 +1197,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: UZB-WAS-34
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Водопроводная вода подается в жилище
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -1117,7 +1208,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_into_yard_or_plot
+  - country_entry_id: UZB-WAS-35
+    source_category_code: piped_into_yard_or_plot
     national_label_en: Piped into yard or plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1127,7 +1219,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: UZB-WAS-36
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Водопроводная вода подается во двор/на участок
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -1137,7 +1230,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap
+  - country_entry_id: UZB-WAS-37
+    source_category_code: public_tap
     national_label_en: Public tap
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -1147,7 +1241,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: UZB-WAS-38
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe
@@ -1157,7 +1252,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: UZB-WAS-39
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Общественный кран, колонка
     jmp_classification: Tap water > Public tap, standpipe

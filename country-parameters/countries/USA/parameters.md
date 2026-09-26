@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Head Start
+  - country_entry_id: USA-EDU-01
+    national_label_en: Head Start
     national_label_local: Head Start
     entry_age: 3
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Private Preschool
+  - country_entry_id: USA-EDU-02
+    national_label_en: Private Preschool
     national_label_local: Private Preschool
     entry_age: 3
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Public preschool or pre-kindergarten
+  - country_entry_id: USA-EDU-03
+    national_label_en: Public preschool or pre-kindergarten
     national_label_local: Public preschool or pre-kindergarten
     entry_age: 3
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Kindergarten
+  - country_entry_id: USA-EDU-04
+    national_label_en: Kindergarten
     national_label_local: Kindergarten
     entry_age: 4
     duration_years: 1
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Elementary education (grades 1-6)
+  - country_entry_id: USA-EDU-05
+    national_label_en: Elementary education (grades 1-6)
     national_label_local: Elementary education (grades 1-6)
     entry_age: 5
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: Middle education (grades 7-9)
+  - country_entry_id: USA-EDU-06
+    national_label_en: Middle education (grades 7-9)
     national_label_local: Middle education (grades 7-9)
     entry_age: 11
     duration_years: 3
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: GED or High School Equivalency Programme
+  - country_entry_id: USA-EDU-07
+    national_label_en: GED or High School Equivalency Programme
     national_label_local: GED or High school equivalency Programme
     entry_age: 16
     duration_years: 0
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Secondary/High School education (grades 10-12)
+  - country_entry_id: USA-EDU-08
+    national_label_en: Secondary/High School education (grades 10-12)
     national_label_local: Secondary/High school education (grades 10-12)
     entry_age: 14
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: Certificate Program
+  - country_entry_id: USA-EDU-09
+    national_label_en: Certificate Program
     national_label_local: Certificate Program
     entry_age: 18
     duration_years: 0
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Associate's Degree Programme
+  - country_entry_id: USA-EDU-10
+    national_label_en: Associate's Degree Programme
     national_label_local: Associate's Degree Programme
     entry_age: 18
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Bachelor's Degree Programme
+  - country_entry_id: USA-EDU-11
+    national_label_en: Bachelor's Degree Programme
     national_label_local: Bachelor's Degree Programme
     entry_age: 18
     duration_years: 4
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Post-bachelor's certificate programme (e.g. teaching)
+  - country_entry_id: USA-EDU-12
+    national_label_en: Post-bachelor's certificate programme (e.g. teaching)
     national_label_local: Post-bachelor's certificate programme (e.g. teaching)
     entry_age: 22
     duration_years: 1
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Master's degree programme
+  - country_entry_id: USA-EDU-13
+    national_label_en: Master's degree programme
     national_label_local: Master's degree programme
     entry_age: 22
     duration_years: 2
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: First Professional Degree Programme
+  - country_entry_id: USA-EDU-14
+    national_label_en: First Professional Degree Programme
     national_label_local: First Professional Degree Programme
     entry_age: 22
     duration_years: 3
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: 1st Professional Degree Programme – Medical
+  - country_entry_id: USA-EDU-15
+    national_label_en: 1st Professional Degree Programme – Medical
     national_label_local: First Professional Degree Programme – Medical
     entry_age: 22
     duration_years: 4
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Doctorate (Ph.D. – Research)
+  - country_entry_id: USA-EDU-16
+    national_label_en: Doctorate (Ph.D. – Research)
     national_label_local: Doctorate (Ph.D. – Research)
     entry_age: 22
     duration_years: 5
@@ -180,7 +196,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: '[11]Maine'
+  - country_entry_id: USA-SUBNAT-01
+    survey_labels: '[11]Maine'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -200,7 +217,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Maine
     source_row: 17601
-  - survey_labels: '[12]New Hampshire'
+  - country_entry_id: USA-SUBNAT-02
+    survey_labels: '[12]New Hampshire'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -220,7 +238,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: New Hampshire
     source_row: 17602
-  - survey_labels: '[13]Vermont'
+  - country_entry_id: USA-SUBNAT-03
+    survey_labels: '[13]Vermont'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -240,7 +259,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Vermont
     source_row: 17603
-  - survey_labels: '[14]Massachusetts'
+  - country_entry_id: USA-SUBNAT-04
+    survey_labels: '[14]Massachusetts'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -260,7 +280,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Massachusetts
     source_row: 17604
-  - survey_labels: '[15]Rhode Island'
+  - country_entry_id: USA-SUBNAT-05
+    survey_labels: '[15]Rhode Island'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -280,7 +301,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Rhode Island
     source_row: 17605
-  - survey_labels: '[16]Connecticut'
+  - country_entry_id: USA-SUBNAT-06
+    survey_labels: '[16]Connecticut'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -300,7 +322,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Connecticut
     source_row: 17606
-  - survey_labels: '[21]New York'
+  - country_entry_id: USA-SUBNAT-07
+    survey_labels: '[21]New York'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -320,7 +343,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: New York
     source_row: 17607
-  - survey_labels: '[22]New Jersey'
+  - country_entry_id: USA-SUBNAT-08
+    survey_labels: '[22]New Jersey'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -340,7 +364,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: New Jersey
     source_row: 17608
-  - survey_labels: '[23]Pennsylvania'
+  - country_entry_id: USA-SUBNAT-09
+    survey_labels: '[23]Pennsylvania'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -360,7 +385,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Pennsylvania
     source_row: 17609
-  - survey_labels: '[31]Ohio'
+  - country_entry_id: USA-SUBNAT-10
+    survey_labels: '[31]Ohio'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -380,7 +406,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ohio
     source_row: 17610
-  - survey_labels: '[32]Indiana'
+  - country_entry_id: USA-SUBNAT-11
+    survey_labels: '[32]Indiana'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -400,7 +427,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Indiana
     source_row: 17611
-  - survey_labels: '[33]Illinois'
+  - country_entry_id: USA-SUBNAT-12
+    survey_labels: '[33]Illinois'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -420,7 +448,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Illinois
     source_row: 17612
-  - survey_labels: '[34]Michigan'
+  - country_entry_id: USA-SUBNAT-13
+    survey_labels: '[34]Michigan'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -440,7 +469,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Michigan
     source_row: 17613
-  - survey_labels: '[35]Wisconsin'
+  - country_entry_id: USA-SUBNAT-14
+    survey_labels: '[35]Wisconsin'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -460,7 +490,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Wisconsin
     source_row: 17614
-  - survey_labels: '[41]Minnesota'
+  - country_entry_id: USA-SUBNAT-15
+    survey_labels: '[41]Minnesota'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -480,7 +511,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Minnesota
     source_row: 17615
-  - survey_labels: '[42]Iowa'
+  - country_entry_id: USA-SUBNAT-16
+    survey_labels: '[42]Iowa'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -500,7 +532,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Iowa
     source_row: 17616
-  - survey_labels: '[43]Missouri'
+  - country_entry_id: USA-SUBNAT-17
+    survey_labels: '[43]Missouri'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -520,7 +553,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Missouri
     source_row: 17617
-  - survey_labels: '[44]North Dakota'
+  - country_entry_id: USA-SUBNAT-18
+    survey_labels: '[44]North Dakota'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -540,7 +574,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North Dakota
     source_row: 17618
-  - survey_labels: '[45]South Dakota'
+  - country_entry_id: USA-SUBNAT-19
+    survey_labels: '[45]South Dakota'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -560,7 +595,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: South Dakota
     source_row: 17619
-  - survey_labels: '[46]Nebraska'
+  - country_entry_id: USA-SUBNAT-20
+    survey_labels: '[46]Nebraska'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -580,7 +616,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nebraska
     source_row: 17620
-  - survey_labels: '[47]Kansas'
+  - country_entry_id: USA-SUBNAT-21
+    survey_labels: '[47]Kansas'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -600,7 +637,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kansas
     source_row: 17621
-  - survey_labels: '[51]Delaware'
+  - country_entry_id: USA-SUBNAT-22
+    survey_labels: '[51]Delaware'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -620,7 +658,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Delaware
     source_row: 17622
-  - survey_labels: '[52]Maryland'
+  - country_entry_id: USA-SUBNAT-23
+    survey_labels: '[52]Maryland'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -640,7 +679,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Maryland
     source_row: 17623
-  - survey_labels: '[53]District of Columbia'
+  - country_entry_id: USA-SUBNAT-24
+    survey_labels: '[53]District of Columbia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -660,7 +700,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: District of Columbia
     source_row: 17624
-  - survey_labels: '[54]Virginia'
+  - country_entry_id: USA-SUBNAT-25
+    survey_labels: '[54]Virginia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -680,7 +721,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Virginia
     source_row: 17625
-  - survey_labels: '[55]West Virginia'
+  - country_entry_id: USA-SUBNAT-26
+    survey_labels: '[55]West Virginia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -700,7 +742,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: West Virginia
     source_row: 17626
-  - survey_labels: '[56]North Carolina'
+  - country_entry_id: USA-SUBNAT-27
+    survey_labels: '[56]North Carolina'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -720,7 +763,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: North Carolina
     source_row: 17627
-  - survey_labels: '[57]South Carolina'
+  - country_entry_id: USA-SUBNAT-28
+    survey_labels: '[57]South Carolina'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -740,7 +784,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: South Carolina
     source_row: 17628
-  - survey_labels: '[58]Georgia'
+  - country_entry_id: USA-SUBNAT-29
+    survey_labels: '[58]Georgia'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -760,7 +805,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Georgia
     source_row: 17629
-  - survey_labels: '[59]Florida'
+  - country_entry_id: USA-SUBNAT-30
+    survey_labels: '[59]Florida'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -780,7 +826,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Florida
     source_row: 17630
-  - survey_labels: '[61]Kentucky'
+  - country_entry_id: USA-SUBNAT-31
+    survey_labels: '[61]Kentucky'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -800,7 +847,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kentucky
     source_row: 17631
-  - survey_labels: '[62]Tennessee'
+  - country_entry_id: USA-SUBNAT-32
+    survey_labels: '[62]Tennessee'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -820,7 +868,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Tennessee
     source_row: 17632
-  - survey_labels: '[63]Alabama'
+  - country_entry_id: USA-SUBNAT-33
+    survey_labels: '[63]Alabama'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -840,7 +889,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alabama
     source_row: 17633
-  - survey_labels: '[64]Mississippi'
+  - country_entry_id: USA-SUBNAT-34
+    survey_labels: '[64]Mississippi'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -860,7 +910,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Mississippi
     source_row: 17634
-  - survey_labels: '[71]Arkansas'
+  - country_entry_id: USA-SUBNAT-35
+    survey_labels: '[71]Arkansas'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -880,7 +931,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Arkansas
     source_row: 17635
-  - survey_labels: '[72]Louisiana'
+  - country_entry_id: USA-SUBNAT-36
+    survey_labels: '[72]Louisiana'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -900,7 +952,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Louisiana
     source_row: 17636
-  - survey_labels: '[73]Oklahoma'
+  - country_entry_id: USA-SUBNAT-37
+    survey_labels: '[73]Oklahoma'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -920,7 +973,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Oklahoma
     source_row: 17637
-  - survey_labels: '[74]Texas'
+  - country_entry_id: USA-SUBNAT-38
+    survey_labels: '[74]Texas'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -940,7 +994,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Texas
     source_row: 17638
-  - survey_labels: '[81]Montana'
+  - country_entry_id: USA-SUBNAT-39
+    survey_labels: '[81]Montana'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -960,7 +1015,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Montana
     source_row: 17639
-  - survey_labels: '[82]Idaho'
+  - country_entry_id: USA-SUBNAT-40
+    survey_labels: '[82]Idaho'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -980,7 +1036,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Idaho
     source_row: 17640
-  - survey_labels: '[83]Wyoming'
+  - country_entry_id: USA-SUBNAT-41
+    survey_labels: '[83]Wyoming'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1000,7 +1057,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Wyoming
     source_row: 17641
-  - survey_labels: '[84]Colorado'
+  - country_entry_id: USA-SUBNAT-42
+    survey_labels: '[84]Colorado'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1020,7 +1078,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Colorado
     source_row: 17642
-  - survey_labels: '[85]New Mexico'
+  - country_entry_id: USA-SUBNAT-43
+    survey_labels: '[85]New Mexico'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1040,7 +1099,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: New Mexico
     source_row: 17643
-  - survey_labels: '[86]Arizona'
+  - country_entry_id: USA-SUBNAT-44
+    survey_labels: '[86]Arizona'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1060,7 +1120,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Arizona
     source_row: 17644
-  - survey_labels: '[87]Utah'
+  - country_entry_id: USA-SUBNAT-45
+    survey_labels: '[87]Utah'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1080,7 +1141,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Utah
     source_row: 17645
-  - survey_labels: '[88]Nevada'
+  - country_entry_id: USA-SUBNAT-46
+    survey_labels: '[88]Nevada'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1100,7 +1162,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Nevada
     source_row: 17646
-  - survey_labels: '[91]Washington'
+  - country_entry_id: USA-SUBNAT-47
+    survey_labels: '[91]Washington'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1120,7 +1183,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Washington
     source_row: 17647
-  - survey_labels: '[92]Oregon'
+  - country_entry_id: USA-SUBNAT-48
+    survey_labels: '[92]Oregon'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1140,7 +1204,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Oregon
     source_row: 17648
-  - survey_labels: '[93]California'
+  - country_entry_id: USA-SUBNAT-49
+    survey_labels: '[93]California'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1160,7 +1225,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: California
     source_row: 17649
-  - survey_labels: '[94]Alaska'
+  - country_entry_id: USA-SUBNAT-50
+    survey_labels: '[94]Alaska'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1180,7 +1246,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alaska
     source_row: 17650
-  - survey_labels: '[95]Hawaii'
+  - country_entry_id: USA-SUBNAT-51
+    survey_labels: '[95]Hawaii'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1210,7 +1277,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: public_sewer
+  - country_entry_id: USA-SAN-01
+    source_category_code: public_sewer
     national_label_en: Public sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -1220,7 +1288,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: septic_tank_or_cesspool
+  - country_entry_id: USA-SAN-02
+    source_category_code: septic_tank_or_cesspool
     national_label_en: Septic tank or cesspool
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -1230,7 +1299,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: public_sewer
+  - country_entry_id: USA-SAN-03
+    source_category_code: public_sewer
     national_label_en: Public sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -1240,7 +1310,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: septic_tank_or_cesspool
+  - country_entry_id: USA-SAN-04
+    source_category_code: septic_tank_or_cesspool
     national_label_en: Septic tank or cesspool
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -1250,7 +1321,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: other_not_reported
+  - country_entry_id: USA-SAN-05
+    source_category_code: other_not_reported
     national_label_en: Other/Not reported
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -1270,7 +1342,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: individual_well
+  - country_entry_id: USA-WAS-01
+    source_category_code: individual_well
     national_label_en: Individual well
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
@@ -1280,7 +1353,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 62
-  - source_category_code: individual_well_dug
+  - country_entry_id: USA-WAS-02
+    source_category_code: individual_well_dug
     national_label_en: Individual well & dug
     national_label_local: Other
     jmp_classification: Ground water > Traditional wells > Other
@@ -1290,7 +1364,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: individual_well_drilled
+  - country_entry_id: USA-WAS-03
+    source_category_code: individual_well_drilled
     national_label_en: Individual well & drilled
     national_label_local: Private
     jmp_classification: Ground water > Tubewell, borehole > Private
@@ -1300,7 +1375,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 59
-  - source_category_code: other
+  - country_entry_id: USA-WAS-04
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -1310,7 +1386,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: public_or_private_system
+  - country_entry_id: USA-WAS-05
+    source_category_code: public_or_private_system
     national_label_en: Public or private system
     national_label_local: Tap water
     jmp_classification: Tap water
@@ -1320,7 +1397,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 37
-  - source_category_code: public_or_private_system
+  - country_entry_id: USA-WAS-06
+    source_category_code: public_or_private_system
     national_label_en: Public or private system
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises

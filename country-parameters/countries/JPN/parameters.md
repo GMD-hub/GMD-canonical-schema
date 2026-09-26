@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Integrated centre for early childhood education and care
+  - country_entry_id: JPN-EDU-01
+    national_label_en: Integrated centre for early childhood education and care
     national_label_local: Yohorenkeigata-Nintei-Kodomo-En
     entry_age: 3
     duration_years: 1
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
-  - national_label_en: Kindergarten
+  - country_entry_id: JPN-EDU-02
+    national_label_en: Kindergarten
     national_label_local: Yochien
     entry_age: 3
     duration_years: 1
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
-  - national_label_en: Kindergarten Department of Special Needs Education School
+  - country_entry_id: JPN-EDU-03
+    national_label_en: Kindergarten Department of Special Needs Education School
     national_label_local: Tokubetsu-shien-gakko Yochi-bu
     entry_age: 3
     duration_years: 1
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Day care centre
+  - country_entry_id: JPN-EDU-04
+    national_label_en: Day care centre
     national_label_local: Hoikusho
     entry_age: 3
     duration_years: 1
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Elementary school
+  - country_entry_id: JPN-EDU-05
+    national_label_en: Elementary school
     national_label_local: Shogakko
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
-  - national_label_en: Compulsory Education School
+  - country_entry_id: JPN-EDU-06
+    national_label_en: Compulsory Education School
     national_label_local: Gimu-kyoiku-gakko (Zenki-katei)
     entry_age: 6
     duration_years: 6
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
-  - national_label_en: Elementary Department of Special Needs Education School
+  - country_entry_id: JPN-EDU-07
+    national_label_en: Elementary Department of Special Needs Education School
     national_label_local: Tokubetsu-shien-gakko Shogaku-bu
     entry_age: 6
     duration_years: 6
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: Lower secondary school
+  - country_entry_id: JPN-EDU-08
+    national_label_en: Lower secondary school
     national_label_local: Chugakko
     entry_age: 12
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
-  - national_label_en: Compulsory Education School
+  - country_entry_id: JPN-EDU-09
+    national_label_en: Compulsory Education School
     national_label_local: Gimu-kyoiku-gakko (Koki-katei)
     entry_age: 12
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
-  - national_label_en: Secondary education school (lower division)
+  - country_entry_id: JPN-EDU-10
+    national_label_en: Secondary education school (lower division)
     national_label_local: Chuto-kyoiku-gakko （Zenki-katei）
     entry_age: 12
     duration_years: 3
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 14
-  - national_label_en: Lower secondary department of special needs education school
+  - country_entry_id: JPN-EDU-11
+    national_label_en: Lower secondary department of special needs education school
     national_label_local: Tokubetsu-shien-gakko Chugaku-bu
     entry_age: 12
     duration_years: 3
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 15
-  - national_label_en: Upper secondary school, (full day school), short-term course
+  - country_entry_id: JPN-EDU-12
+    national_label_en: Upper secondary school, (full day school), short-term course
       (general)
     national_label_local: Koto-gakko Zennichisei Bekka　(Futsu)
     entry_age: 15
@@ -131,7 +143,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
-  - national_label_en: Upper secondary school, (day/evening school), short-term course
+  - country_entry_id: JPN-EDU-13
+    national_label_en: Upper secondary school, (day/evening school), short-term course
       (general)
     national_label_local: Koto-gakko Teijisei Bekka　(Futsu)
     entry_age: 15
@@ -142,7 +155,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: Upper secondary school, (full day school), short-term course
+  - country_entry_id: JPN-EDU-14
+    national_label_en: Upper secondary school, (full day school), short-term course
       (integrated)
     national_label_local: Koto-gakko Zennichisei Bekka　(Sogo)
     entry_age: 15
@@ -153,7 +167,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: Upper secondary school, (day/evening school), short-term course
+  - country_entry_id: JPN-EDU-15
+    national_label_en: Upper secondary school, (day/evening school), short-term course
       (integrated)
     national_label_local: Koto-gakko Teijisei Bekka　(Sogo)
     entry_age: 15
@@ -164,7 +179,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
-  - national_label_en: Secondary education school (upper division), full day short-term
+  - country_entry_id: JPN-EDU-16
+    national_label_en: Secondary education school (upper division), full day short-term
       course (general)
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Zennichisei Bekka (Futsu)
     entry_age: 15
@@ -175,7 +191,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
-  - national_label_en: Secondary education school (upper division), day/evening short-term
+  - country_entry_id: JPN-EDU-17
+    national_label_en: Secondary education school (upper division), day/evening short-term
       course (general)
     national_label_local: Chuto-kyoiku-gakko （Koki-katei) Teijisei Bekka (Futsu)
     entry_age: 15
@@ -186,7 +203,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
-  - national_label_en: Secondary education school (upper division), full day short-term
+  - country_entry_id: JPN-EDU-18
+    national_label_en: Secondary education school (upper division), full day short-term
       course (integrated)
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Zennichisei Bekka (Sogo)
     entry_age: 15
@@ -197,7 +215,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
-  - national_label_en: "Secondary education school (upper division), \nday/evening
+  - country_entry_id: JPN-EDU-19
+    national_label_en: "Secondary education school (upper division), \nday/evening
       course  (integrated)"
     national_label_local: |-
       Chuto-kyoiku-gakko （Koki-katei）
@@ -210,7 +229,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
-  - national_label_en: Upper Secondary Department of  Special Needs Education School,
+  - country_entry_id: JPN-EDU-20
+    national_label_en: Upper Secondary Department of  Special Needs Education School,
       Short-term Course (general)
     national_label_local: Tokubetsu-shien-gakko Koto-bu　Bekka (Futsu)
     entry_age: 15
@@ -221,7 +241,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
-  - national_label_en: Upper secondary school, (full day school), short-term course
+  - country_entry_id: JPN-EDU-21
+    national_label_en: Upper secondary school, (full day school), short-term course
       (specialized)
     national_label_local: Koto-gakko Zennichisei Bekka　(Senmon)
     entry_age: 15
@@ -232,7 +253,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
-  - national_label_en: Upper secondary school, (day/evening school), short-term course
+  - country_entry_id: JPN-EDU-22
+    national_label_en: Upper secondary school, (day/evening school), short-term course
       (specialized)
     national_label_local: Koto-gakko Teijisei Bekka　(Senmon)
     entry_age: 15
@@ -243,7 +265,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
-  - national_label_en: Secondary education school (upper division), full day short-term
+  - country_entry_id: JPN-EDU-23
+    national_label_en: Secondary education school (upper division), full day short-term
       course (specialized)
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Zennichisei  Bekka (Senmon)
     entry_age: 15
@@ -254,7 +277,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
-  - national_label_en: Secondary education school (upper division), day/evening short-term
+  - country_entry_id: JPN-EDU-24
+    national_label_en: Secondary education school (upper division), day/evening short-term
       course (specialized)
     national_label_local: Chuto-kyoiku-gakko （Koki-katei） Teijisei Bekka (Senmon)
     entry_age: 15
@@ -265,7 +289,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 28
-  - national_label_en: Upper Secondary Department of  Special Needs Education School,
+  - country_entry_id: JPN-EDU-25
+    national_label_en: Upper Secondary Department of  Special Needs Education School,
       Short-term Course (specialized)
     national_label_local: Tokubetsu-shien-gakko Koto-bu　Bekka (Senmon)
     entry_age: 15
@@ -276,7 +301,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 29
-  - national_label_en: Upper secondary school, full day general course
+  - country_entry_id: JPN-EDU-26
+    national_label_en: Upper secondary school, full day general course
     national_label_local: Koto-gakko Zennichisei Honka Futsu
     entry_age: 15
     duration_years: 3
@@ -286,7 +312,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 30
-  - national_label_en: Upper secondary school, day/evening general course
+  - country_entry_id: JPN-EDU-27
+    national_label_en: Upper secondary school, day/evening general course
     national_label_local: Koto-gakko Teijisei Honka Futsu
     entry_age: 15
     duration_years: 3
@@ -296,7 +323,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 31
-  - national_label_en: Upper secondary school, correspondence general course
+  - country_entry_id: JPN-EDU-28
+    national_label_en: Upper secondary school, correspondence general course
     national_label_local: Koto-gakko Tsushinsei Futsu
     entry_age: 15
     duration_years: 3
@@ -306,7 +334,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 32
-  - national_label_en: Upper secondary school, full day integrated course
+  - country_entry_id: JPN-EDU-29
+    national_label_en: Upper secondary school, full day integrated course
     national_label_local: Koto-gakko Zennichisei Honka Sogo
     entry_age: 15
     duration_years: 3
@@ -316,7 +345,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 33
-  - national_label_en: Upper secondary school, day/evening integrated course
+  - country_entry_id: JPN-EDU-30
+    national_label_en: Upper secondary school, day/evening integrated course
     national_label_local: Koto-gakko Teijisei Honka Sogo
     entry_age: 15
     duration_years: 3
@@ -326,7 +356,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 34
-  - national_label_en: Secondary education school (upper division), full day general
+  - country_entry_id: JPN-EDU-31
+    national_label_en: Secondary education school (upper division), full day general
       course
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Zennichisei Honka Futsu
     entry_age: 15
@@ -337,7 +368,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 35
-  - national_label_en: Secondary education school (upper division), day/evening general
+  - country_entry_id: JPN-EDU-32
+    national_label_en: Secondary education school (upper division), day/evening general
       course
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Teijisei Honka Futsu
     entry_age: 15
@@ -348,7 +380,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 36
-  - national_label_en: Secondary education school (upper division), full day integrated
+  - country_entry_id: JPN-EDU-33
+    national_label_en: Secondary education school (upper division), full day integrated
       course
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Zennichisei Honka Sogo
     entry_age: 15
@@ -359,7 +392,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 37
-  - national_label_en: Secondary education school (upper division), day/evening integrated
+  - country_entry_id: JPN-EDU-34
+    national_label_en: Secondary education school (upper division), day/evening integrated
       course
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Teijisei Honka Sogo
     entry_age: 15
@@ -370,7 +404,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 38
-  - national_label_en: Upper Secondary Department of  Special Needs Education School,
+  - country_entry_id: JPN-EDU-35
+    national_label_en: Upper Secondary Department of  Special Needs Education School,
       general course
     national_label_local: Tokubetsu-shien-gakko Koto-bu Honka Futsu
     entry_age: 15
@@ -381,7 +416,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 39
-  - national_label_en: Specialized Training College, Upper Secondary Course (Upper
+  - country_entry_id: JPN-EDU-36
+    national_label_en: Specialized Training College, Upper Secondary Course (Upper
       Secondary Specialized Training School)
     national_label_local: Senshu-gakko Koto-katei（Koto-senshu-gakko）
     entry_age: 15
@@ -392,7 +428,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 40
-  - national_label_en: Upper secondary school, full day specialized course
+  - country_entry_id: JPN-EDU-37
+    national_label_en: Upper secondary school, full day specialized course
     national_label_local: Koto-gakko Zennichisei  Honka Senmon
     entry_age: 15
     duration_years: 3
@@ -402,7 +439,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 41
-  - national_label_en: Upper secondary school, day/evening specialized course
+  - country_entry_id: JPN-EDU-38
+    national_label_en: Upper secondary school, day/evening specialized course
     national_label_local: Koto-gakko Teijisei Honka Senmon
     entry_age: 15
     duration_years: 3
@@ -412,7 +450,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 42
-  - national_label_en: Upper secondary school, correspondence specialized course
+  - country_entry_id: JPN-EDU-39
+    national_label_en: Upper secondary school, correspondence specialized course
     national_label_local: Koto-gakko Tsushinsei Senmon
     entry_age: 15
     duration_years: 3
@@ -422,7 +461,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 43
-  - national_label_en: Secondary education school (upper division),full day specialized
+  - country_entry_id: JPN-EDU-40
+    national_label_en: Secondary education school (upper division),full day specialized
       course
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Zennichisei Honka Senmon
     entry_age: 15
@@ -433,7 +473,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 44
-  - national_label_en: Secondary education school (upper division), day/evening specialized
+  - country_entry_id: JPN-EDU-41
+    national_label_en: Secondary education school (upper division), day/evening specialized
       course
     national_label_local: Chuto-kyoiku-gakko （Koki-katei）Teijisei Honka Senmon
     entry_age: 15
@@ -444,7 +485,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 45
-  - national_label_en: Upper Secondary Department of Special Needs Education School,
+  - country_entry_id: JPN-EDU-42
+    national_label_en: Upper Secondary Department of Special Needs Education School,
       specialized course
     national_label_local: Tokubetsu-shien-gakko Koto-bu Honka Senmon
     entry_age: 15
@@ -455,7 +497,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 46
-  - national_label_en: "College of technology, regular course \n1st to 3rd Grade"
+  - country_entry_id: JPN-EDU-43
+    national_label_en: "College of technology, regular course \n1st to 3rd Grade"
     national_label_local: Koto-senmon-gakko Honka
     entry_age: 15
     duration_years: 3
@@ -465,7 +508,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 47
-  - national_label_en: Specialized Training College, Upper Secondary Course (Upper
+  - country_entry_id: JPN-EDU-44
+    national_label_en: Specialized Training College, Upper Secondary Course (Upper
       Secondary Specialized Training School)
     national_label_local: Senshu-gakko Koto-katei（Koto-senshu-gakko）
     entry_age: 15
@@ -476,7 +520,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 48
-  - national_label_en: Upper secondary school, full day, advanced course (general)
+  - country_entry_id: JPN-EDU-45
+    national_label_en: Upper secondary school, full day, advanced course (general)
     national_label_local: Koto-gakko Zennichisei　Senkoka (Futsu)
     entry_age: 18
     duration_years: 1
@@ -486,7 +531,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 49
-  - national_label_en: Upper secondary school, day/evening, advanced course (general)
+  - country_entry_id: JPN-EDU-46
+    national_label_en: Upper secondary school, day/evening, advanced course (general)
     national_label_local: Koto-gakko Teijisei　Senkoka (Futsu)
     entry_age: 18
     duration_years: 1
@@ -496,7 +542,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 50
-  - national_label_en: Upper secondary school, full day,advanced course (integrated)
+  - country_entry_id: JPN-EDU-47
+    national_label_en: Upper secondary school, full day,advanced course (integrated)
     national_label_local: Koto-gakko Zennichisei　Senkoka (Sogo)
     entry_age: 18
     duration_years: 1
@@ -506,7 +553,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 51
-  - national_label_en: Upper secondary school, day/evening, advanced course (integrated)
+  - country_entry_id: JPN-EDU-48
+    national_label_en: Upper secondary school, day/evening, advanced course (integrated)
     national_label_local: Koto-gakko Teijisei　Senkoka (Sogo)
     entry_age: 18
     duration_years: 1
@@ -516,7 +564,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 52
-  - national_label_en: Secondary education school (upper division), full day, advanced
+  - country_entry_id: JPN-EDU-49
+    national_label_en: Secondary education school (upper division), full day, advanced
       course (general)
     national_label_local: Chuto-kyoiku-gakko （Koki katei）Zennichisei Senkoka (Futsu)
     entry_age: 18
@@ -527,7 +576,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 53
-  - national_label_en: Secondary education school (upper division), day/evening, advanced
+  - country_entry_id: JPN-EDU-50
+    national_label_en: Secondary education school (upper division), day/evening, advanced
       course (general)
     national_label_local: Chuto-kyoiku-gakko （Koki katei）　Teijisei Senkoka (Futsu)
     entry_age: 18
@@ -538,7 +588,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 54
-  - national_label_en: Secondary education school (upper division), full day, advanced
+  - country_entry_id: JPN-EDU-51
+    national_label_en: Secondary education school (upper division), full day, advanced
       course (integrated)
     national_label_local: Chuto-kyoiku-gakko （Koki katei）Zennichisei Senkoka (Sogo)
     entry_age: 18
@@ -549,7 +600,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 55
-  - national_label_en: Secondary education school (upper division), day/evening, advanced
+  - country_entry_id: JPN-EDU-52
+    national_label_en: Secondary education school (upper division), day/evening, advanced
       course (integrated)
     national_label_local: Chuto-kyoiku-gakko （Koki katei）Teijisei Senkoka (Sogo)
     entry_age: 18
@@ -560,7 +612,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 56
-  - national_label_en: Upper Secondary Department of  Special Needs Education School,
+  - country_entry_id: JPN-EDU-53
+    national_label_en: Upper Secondary Department of  Special Needs Education School,
       Advanced Course (general)
     national_label_local: Tokubetsu-shien-gakko Koto-bu　Senkoka (Futsu)
     entry_age: 18
@@ -571,7 +624,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 57
-  - national_label_en: Upper secondary school, full day, advanced course (specialized)
+  - country_entry_id: JPN-EDU-54
+    national_label_en: Upper secondary school, full day, advanced course (specialized)
     national_label_local: Koto-gakko Zennichisei　Senkoka (Senmon)
     entry_age: 18
     duration_years: 1
@@ -581,7 +635,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 58
-  - national_label_en: Upper secondary school, day/evening, advanced course (specialized)
+  - country_entry_id: JPN-EDU-55
+    national_label_en: Upper secondary school, day/evening, advanced course (specialized)
     national_label_local: Koto-gakko Teijisei　Senkoka (Senmon)
     entry_age: 18
     duration_years: 1
@@ -591,7 +646,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 59
-  - national_label_en: Secondary education school (upper division), full day, advanced
+  - country_entry_id: JPN-EDU-56
+    national_label_en: Secondary education school (upper division), full day, advanced
       course (specialized)
     national_label_local: Chuto-kyoiku-gakko （Koki katei）Zennichisei Senkoka (Senmon)
     entry_age: 18
@@ -602,7 +658,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 60
-  - national_label_en: Secondary education school (upper division), day/evening, advanced
+  - country_entry_id: JPN-EDU-57
+    national_label_en: Secondary education school (upper division), day/evening, advanced
       course (specialized)
     national_label_local: Chuto-kyoiku-gakko （Koki katei）Teijisei Senkoka (Senmon)
     entry_age: 18
@@ -613,7 +670,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 61
-  - national_label_en: Upper Secondary Department of  Special Needs Education School,
+  - country_entry_id: JPN-EDU-58
+    national_label_en: Upper Secondary Department of  Special Needs Education School,
       Advanced Course (specialized)
     national_label_local: Tokubetsu-shien-gakko Koto-bu　Senkoka (Senmon)
     entry_age: 18
@@ -624,7 +682,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 62
-  - national_label_en: Junior college, short-term course
+  - country_entry_id: JPN-EDU-59
+    national_label_en: Junior college, short-term course
     national_label_local: Tanki-daigaku Bekka
     entry_age: 18
     duration_years: 1
@@ -634,7 +693,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 63
-  - national_label_en: University, short-term course
+  - country_entry_id: JPN-EDU-60
+    national_label_en: University, short-term course
     national_label_local: Daigaku Gakubu Bekka
     entry_age: 18
     duration_years: 1
@@ -644,7 +704,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 64
-  - national_label_en: Junior college, regular course
+  - country_entry_id: JPN-EDU-61
+    national_label_en: Junior college, regular course
     national_label_local: Tanki-daigaku Honka
     entry_age: 18
     duration_years: 2
@@ -654,7 +715,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 65
-  - national_label_en: Junior college, advanced course
+  - country_entry_id: JPN-EDU-62
+    national_label_en: Junior college, advanced course
     national_label_local: Tanki-daigaku Senkoka
     entry_age: 20
     duration_years: 1
@@ -664,7 +726,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 66
-  - national_label_en: Junior college, correspondence course
+  - country_entry_id: JPN-EDU-63
+    national_label_en: Junior college, correspondence course
     national_label_local: Tanki-daigaku Tsushinsei
     entry_age: 18
     duration_years: 2
@@ -674,7 +737,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 67
-  - national_label_en: Professional and vocational junior college, regular course
+  - country_entry_id: JPN-EDU-64
+    national_label_en: Professional and vocational junior college, regular course
     national_label_local: Senmonshoku-tanki-daigaku Honka
     entry_age: 18
     duration_years: 2
@@ -684,7 +748,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 68
-  - national_label_en: Professional and vocational junior college, advanced course
+  - country_entry_id: JPN-EDU-65
+    national_label_en: Professional and vocational junior college, advanced course
     national_label_local: Senmonshoku-tanki-daigaku Senkoka
     entry_age: 20
     duration_years: 1
@@ -694,7 +759,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 69
-  - national_label_en: "College of technology, regular course \n4th to 5th Grade"
+  - country_entry_id: JPN-EDU-66
+    national_label_en: "College of technology, regular course \n4th to 5th Grade"
     national_label_local: Koto-senmon-gakko Honka
     entry_age: 18
     duration_years: 2
@@ -704,7 +770,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 70
-  - national_label_en: College of technology, advanced course
+  - country_entry_id: JPN-EDU-67
+    national_label_en: College of technology, advanced course
     national_label_local: Koto-senmon-gakko Senkoka
     entry_age: 20
     duration_years: 2
@@ -714,7 +781,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 71
-  - national_label_en: Specialized Training College, Post-secondary Course (Professional
+  - country_entry_id: JPN-EDU-68
+    national_label_en: Specialized Training College, Post-secondary Course (Professional
       Training College)
     national_label_local: Senshu-gakko Senmon-katei　(Senmon-gakko)
     entry_age: 18
@@ -725,7 +793,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 72
-  - national_label_en: Specialized Training College, Post-secondary Course (Professional
+  - country_entry_id: JPN-EDU-69
+    national_label_en: Specialized Training College, Post-secondary Course (Professional
       Training College)
     national_label_local: Senshu-gakko Senmon-katei　(Senmon-gakko)
     entry_age: 18
@@ -736,7 +805,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 73
-  - national_label_en: University, undergraduate
+  - country_entry_id: JPN-EDU-70
+    national_label_en: University, undergraduate
     national_label_local: Daigaku Gakubu
     entry_age: 18
     duration_years: 4
@@ -746,7 +816,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 74
-  - national_label_en: Professional and vocational university, undergraduate
+  - country_entry_id: JPN-EDU-71
+    national_label_en: Professional and vocational university, undergraduate
     national_label_local: Senmonshoku-daigaku Gakubu
     entry_age: 18
     duration_years: 4
@@ -756,7 +827,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 75
-  - national_label_en: University, advanced course
+  - country_entry_id: JPN-EDU-72
+    national_label_en: University, advanced course
     national_label_local: Daigaku Senkoka
     entry_age: 22
     duration_years: 1
@@ -766,7 +838,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 76
-  - national_label_en: University, undergraduate, correspondence course
+  - country_entry_id: JPN-EDU-73
+    national_label_en: University, undergraduate, correspondence course
     national_label_local: Daigaku Gakubu Tsushinsei-katei
     entry_age: 18
     duration_years: 4
@@ -776,7 +849,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 77
-  - national_label_en: Professional and vocational university, advanced course
+  - country_entry_id: JPN-EDU-74
+    national_label_en: Professional and vocational university, advanced course
     national_label_local: Senmonshoku-daigaku Senkoka
     entry_age: 22
     duration_years: 1
@@ -786,7 +860,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 78
-  - national_label_en: Junior college, NIAD-QE validated advanced course
+  - country_entry_id: JPN-EDU-75
+    national_label_en: Junior college, NIAD-QE validated advanced course
     national_label_local: Tanki-daigaku Senkoka (Tokurei-tekiyo Senko-ka)
     entry_age: 20
     duration_years: 1
@@ -796,7 +871,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 79
-  - national_label_en: College of technology, NIAD-QE validated advanced course
+  - country_entry_id: JPN-EDU-76
+    national_label_en: College of technology, NIAD-QE validated advanced course
     national_label_local: Koto-senmon-gakko Senkoka (Tokurei-tekiyo Senko-ka)
     entry_age: 20
     duration_years: 2
@@ -806,7 +882,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 80
-  - national_label_en: bachelor's degree awarded to those who have successfully completed
+  - country_entry_id: JPN-EDU-77
+    national_label_en: bachelor's degree awarded to those who have successfully completed
       programs at those educational institutions operated by a government ministry
       or agency which are approved by NIAD-QE
     national_label_local: Gakkyohou dai 104 jou 7 kou 2 gou ni motoduku NIAD no nintei
@@ -819,7 +896,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 81
-  - national_label_en: University, undergraduate of medicine, dentistry, pharmacy
+  - country_entry_id: JPN-EDU-78
+    national_label_en: University, undergraduate of medicine, dentistry, pharmacy
       (only practical course) and veterinary medicine
     national_label_local: Daigaku Igaku, Shigaku,Yakugaku,Juigaku
     entry_age: 18
@@ -830,7 +908,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 82
-  - national_label_en: University, graduate school, Master's course correspondence
+  - country_entry_id: JPN-EDU-79
+    national_label_en: University, graduate school, Master's course correspondence
       course
     national_label_local: Daigakuin Shushi-katei Tsushinsei-katei
     entry_age: 22
@@ -841,7 +920,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 83
-  - national_label_en: University, professional graduate school, professional course
+  - country_entry_id: JPN-EDU-80
+    national_label_en: University, professional graduate school, professional course
       correspondence course
     national_label_local: Daigakuin Senmonshoku-gakui-katei Tsushinsei-katei
     entry_age: 22
@@ -852,7 +932,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 84
-  - national_label_en: University, graduate school, master's course
+  - country_entry_id: JPN-EDU-81
+    national_label_en: University, graduate school, master's course
     national_label_local: Daigakuin Shushi-katei
     entry_age: 22
     duration_years: 2
@@ -862,7 +943,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 85
-  - national_label_en: University, professional graduate school, professional course
+  - country_entry_id: JPN-EDU-82
+    national_label_en: University, professional graduate school, professional course
     national_label_local: Daigakuin Senmonshoku-gakui-katei
     entry_age: 22
     duration_years: 2
@@ -872,7 +954,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 86
-  - national_label_en: University, professional graduate school, graduate law school
+  - country_entry_id: JPN-EDU-83
+    national_label_en: University, professional graduate school, graduate law school
     national_label_local: Daigakuin Senmonshoku-gakui-katei Hokadaigakuin
     entry_age: 22
     duration_years: 3
@@ -882,7 +965,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 87
-  - national_label_en: master's degree awarded to those who have successfully completed
+  - country_entry_id: JPN-EDU-84
+    national_label_en: master's degree awarded to those who have successfully completed
       programs at those educational institutions operated by a government ministry
       or agency which are approved by NIAD-QE
     national_label_local: Gakkyohou dai 104 jou 7 kou 2 gou ni motoduku NIAD no nintei
@@ -895,7 +979,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 88
-  - national_label_en: University, graduate school, doctor's course
+  - country_entry_id: JPN-EDU-85
+    national_label_en: University, graduate school, doctor's course
     national_label_local: Daigakuin Hakushi katei
     entry_age: 24
     duration_years: 3
@@ -905,7 +990,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 89
-  - national_label_en: University, graduate school, doctor's course of  medicine,
+  - country_entry_id: JPN-EDU-86
+    national_label_en: University, graduate school, doctor's course of  medicine,
       dentistry,pharmacy (only practical course),and veterinary medicine
     national_label_local: Daigakuin Hakushi-katei　Igaku,Shigaku,Yakugaku,Juigaku
     entry_age: 24
@@ -916,7 +1002,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 90
-  - national_label_en: University, graduate school, doctor's course correspondence
+  - country_entry_id: JPN-EDU-87
+    national_label_en: University, graduate school, doctor's course correspondence
       course
     national_label_local: Daigakuin Hakushi-katei Tsushinsei-katei
     entry_age: 24
@@ -927,7 +1014,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 91
-  - national_label_en: doctoral degree awarded to those who have successfully completed
+  - country_entry_id: JPN-EDU-88
+    national_label_en: doctoral degree awarded to those who have successfully completed
       programs at those educational institutions operated by a government ministry
       or agency which are approved by NIAD-QE
     national_label_local: Gakkyohou dai 104 jou 7 kou 2 gou ni motoduku NIAD no nintei
@@ -950,7 +1038,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: '[1]Hokkaido'
+  - country_entry_id: JPN-SUBNAT-01
+    survey_labels: '[1]Hokkaido'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -970,7 +1059,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hokkaidoo
     source_row: 8121
-  - survey_labels: '[2]Tohoku'
+  - country_entry_id: JPN-SUBNAT-02
+    survey_labels: '[2]Tohoku'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -990,7 +1080,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Akita & Aomori & Hukusima & Iwate & Miyagi & Yamagata
     source_row: 8122
-  - survey_labels: '[3]Kanto'
+  - country_entry_id: JPN-SUBNAT-03
+    survey_labels: '[3]Kanto'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1010,7 +1101,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gunma & Ibaraki & Kanagawa & Saitama & Totigi & Tookyoo & Tiba
     source_row: 8123
-  - survey_labels: '[4]Chubu'
+  - country_entry_id: JPN-SUBNAT-04
+    survey_labels: '[4]Chubu'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1031,7 +1123,8 @@ parameters:
     geo_name: Aiti & Hukui & Gifu & Isikawa & Nagano & Niigata & Sizuoka & Toyama
       & Yamanasi
     source_row: 8124
-  - survey_labels: '[5]Kinki'
+  - country_entry_id: JPN-SUBNAT-05
+    survey_labels: '[5]Kinki'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1051,7 +1144,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hyoogo & Kyooto & Mie & Nara & Oosaka & Siga & Wakayama
     source_row: 8125
-  - survey_labels: '[6]Chugoku'
+  - country_entry_id: JPN-SUBNAT-06
+    survey_labels: '[6]Chugoku'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1071,7 +1165,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hirosima & Okayama & Simane & Tottori & Yamaguti
     source_row: 8126
-  - survey_labels: '[7]Shikoku'
+  - country_entry_id: JPN-SUBNAT-07
+    survey_labels: '[7]Shikoku'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1091,7 +1186,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Ehime & Kagawa & Kooti & Tokusima
     source_row: 8127
-  - survey_labels: '[8]Kyushu'
+  - country_entry_id: JPN-SUBNAT-08
+    survey_labels: '[8]Kyushu'
     survey_variables: region_c
     gmd_subnatid1: ''
     gmd_subnatid2: ''

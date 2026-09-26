@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Early Childhood educational development
+  - country_entry_id: SMR-EDU-01
+    national_label_en: Early Childhood educational development
     national_label_local: Asilo Nido
     entry_age: 0
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Pre-primary School
+  - country_entry_id: SMR-EDU-02
+    national_label_en: Pre-primary School
     national_label_local: Scuola dell'Infanzia
     entry_age: 3
     duration_years: 3
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Primary School
+  - country_entry_id: SMR-EDU-03
+    national_label_en: Primary School
     national_label_local: Scuola Elementare
     entry_age: 6
     duration_years: 5
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
-  - national_label_en: Lower secondary education
+  - country_entry_id: SMR-EDU-04
+    national_label_en: Lower secondary education
     national_label_local: Scuola Media
     entry_age: 11
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
-  - national_label_en: Educational and vocational training
+  - country_entry_id: SMR-EDU-05
+    national_label_en: Educational and vocational training
     national_label_local: Centro Formazione Professionale
     entry_age: 14
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Liceo Education (Classical, Linguistic, Scientific and Economic)
+  - country_entry_id: SMR-EDU-06
+    national_label_en: Liceo Education (Classical, Linguistic, Scientific and Economic)
     national_label_local: Liceo (Classico, Linguistico, Scientifico, Economico)
     entry_age: 14
     duration_years: 5
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Technical Institute
+  - country_entry_id: SMR-EDU-07
+    national_label_en: Technical Institute
     national_label_local: Istituto Tecnico Industriale
     entry_age: 14
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
-  - national_label_en: Bachelor's degree
+  - country_entry_id: SMR-EDU-08
+    national_label_en: Bachelor's degree
     national_label_local: Corso di laurea triennale
     entry_age: 19
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Master I level
+  - country_entry_id: SMR-EDU-09
+    national_label_en: Master I level
     national_label_local: Master I livello
     entry_age: 22
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Master's degree
+  - country_entry_id: SMR-EDU-10
+    national_label_en: Master's degree
     national_label_local: Corso di laurea magistrale
     entry_age: 22
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: Master II level
+  - country_entry_id: SMR-EDU-11
+    national_label_en: Master II level
     national_label_local: Master II livello
     entry_age: 24
     duration_years: 1
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: PhD in Historical Sciences
+  - country_entry_id: SMR-EDU-12
+    national_label_en: PhD in Historical Sciences
     national_label_local: Dottorato di ricerca in scienze storiche
     entry_age: 24
     duration_years: 3

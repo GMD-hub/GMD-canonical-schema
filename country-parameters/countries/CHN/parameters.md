@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Pre-primary education
+  - country_entry_id: CHN-EDU-01
+    national_label_en: Pre-primary education
     national_label_local: 学前教育
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary education
+  - country_entry_id: CHN-EDU-02
+    national_label_en: Primary education
     national_label_local: 小学
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Junior secondary education
+  - country_entry_id: CHN-EDU-03
+    national_label_en: Junior secondary education
     national_label_local: 普通初中
     entry_age: 12
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Senior secondary education
+  - country_entry_id: CHN-EDU-04
+    national_label_en: Senior secondary education
     national_label_local: 普通高中
     entry_age: 15
     duration_years: 3
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
-  - national_label_en: Vocational high school education
+  - country_entry_id: CHN-EDU-05
+    national_label_en: Vocational high school education
     national_label_local: 职业高中
     entry_age: 15
     duration_years: 3
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
-  - national_label_en: Post-secondary non-tertiary education (general)
+  - country_entry_id: CHN-EDU-06
+    national_label_en: Post-secondary non-tertiary education (general)
     national_label_local: 高中后非高等教育
     entry_age: 18
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
-  - national_label_en: Post-secondary non-tertiary education (vocational)
+  - country_entry_id: CHN-EDU-07
+    national_label_en: Post-secondary non-tertiary education (vocational)
     national_label_local: 高中后非高等教育
     entry_age: 18
     duration_years: 0
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
-  - national_label_en: Short-cycle tertiary education
+  - country_entry_id: CHN-EDU-08
+    national_label_en: Short-cycle tertiary education
     national_label_local: 大专、高职
     entry_age: 18
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
-  - national_label_en: Bachelor' s or equivalent level
+  - country_entry_id: CHN-EDU-09
+    national_label_en: Bachelor' s or equivalent level
     national_label_local: 大学本科
     entry_age: 18
     duration_years: 4
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
-  - national_label_en: Bachelor's or equivalent level
+  - country_entry_id: CHN-EDU-10
+    national_label_en: Bachelor's or equivalent level
     national_label_local: 大学本科
     entry_age: 18
     duration_years: 5
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
-  - national_label_en: |-
+  - country_entry_id: CHN-EDU-11
+    national_label_en: |-
       Bachelor’s or
       equivalent level,
       professional
@@ -123,7 +134,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
-  - national_label_en: Master‘s or equivalent level
+  - country_entry_id: CHN-EDU-12
+    national_label_en: Master‘s or equivalent level
     national_label_local: 硕士研究生
     entry_age: 22
     duration_years: 2
@@ -133,7 +145,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
-  - national_label_en: Doctor's degree or equivalent level
+  - country_entry_id: CHN-EDU-13
+    national_label_en: Doctor's degree or equivalent level
     national_label_local: 博士研究生
     entry_age: 25
     duration_years: 3
@@ -153,7 +166,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: Beijing | [11]Beijing, North China (municipality
+  - country_entry_id: CHN-SUBNAT-01
+    survey_labels: Beijing | [11]Beijing, North China (municipality
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_899
     gmd_subnatid2: ''
@@ -173,7 +187,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Beijing Shi
     source_row: 2333
-  - survey_labels: Shanxi | [14]Shanxi, North China
+  - country_entry_id: CHN-SUBNAT-02
+    survey_labels: Shanxi | [14]Shanxi, North China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_923
     gmd_subnatid2: ''
@@ -193,7 +208,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shanxi Sheng
     source_row: 2334
-  - survey_labels: Liaoning | [21]Liaoning, Northeast China
+  - country_entry_id: CHN-SUBNAT-03
+    survey_labels: Liaoning | [21]Liaoning, Northeast China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_916
     gmd_subnatid2: ''
@@ -213,7 +229,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Liaoning Sheng
     source_row: 2335
-  - survey_labels: Jiangsu | [32]Jiangsu, East China
+  - country_entry_id: CHN-SUBNAT-04
+    survey_labels: Jiangsu | [32]Jiangsu, East China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_913
     gmd_subnatid2: ''
@@ -233,7 +250,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Jiangsu Sheng
     source_row: 2336
-  - survey_labels: Anhui | [34]Anhui, East China
+  - country_entry_id: CHN-SUBNAT-05
+    survey_labels: Anhui | [34]Anhui, East China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_898
     gmd_subnatid2: ''
@@ -253,7 +271,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Anhui Sheng
     source_row: 2337
-  - survey_labels: Shandong | [37]Shandong, East China
+  - country_entry_id: CHN-SUBNAT-06
+    survey_labels: Shandong | [37]Shandong, East China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_921
     gmd_subnatid2: ''
@@ -273,7 +292,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shandong Sheng
     source_row: 2338
-  - survey_labels: Henan | [41]Henan, South Central China
+  - country_entry_id: CHN-SUBNAT-07
+    survey_labels: Henan | [41]Henan, South Central China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_909
     gmd_subnatid2: ''
@@ -293,7 +313,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Henan Sheng
     source_row: 2339
-  - survey_labels: Hubei | [42]Hubei, South Central China
+  - country_entry_id: CHN-SUBNAT-08
+    survey_labels: Hubei | [42]Hubei, South Central China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_911
     gmd_subnatid2: ''
@@ -313,7 +334,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hubei Sheng
     source_row: 2340
-  - survey_labels: Hunan | [43]Hunan, South Central China
+  - country_entry_id: CHN-SUBNAT-09
+    survey_labels: Hunan | [43]Hunan, South Central China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_912
     gmd_subnatid2: ''
@@ -333,7 +355,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Hunan Sheng
     source_row: 2341
-  - survey_labels: Guangdong | [44]Guangdong, South Central China
+  - country_entry_id: CHN-SUBNAT-10
+    survey_labels: Guangdong | [44]Guangdong, South Central China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_903
     gmd_subnatid2: ''
@@ -353,7 +376,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Guangdong Sheng
     source_row: 2342
-  - survey_labels: Chongqing | [50]Chongqing, Southwest China (municip
+  - country_entry_id: CHN-SUBNAT-11
+    survey_labels: Chongqing | [50]Chongqing, Southwest China (municip
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_900
     gmd_subnatid2: ''
@@ -373,7 +397,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Chongqing Shi
     source_row: 2343
-  - survey_labels: Sichuan | [51]Sichuan, Southwest China
+  - country_entry_id: CHN-SUBNAT-12
+    survey_labels: Sichuan | [51]Sichuan, Southwest China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_924
     gmd_subnatid2: ''
@@ -393,7 +418,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Sichuan Sheng
     source_row: 2344
-  - survey_labels: Yunnan | [53]Yunnan, Southwest China
+  - country_entry_id: CHN-SUBNAT-13
+    survey_labels: Yunnan | [53]Yunnan, Southwest China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_929
     gmd_subnatid2: ''
@@ -413,7 +439,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Yunnan Sheng
     source_row: 2345
-  - survey_labels: Gansu | [62]Gansu, Northwest China
+  - country_entry_id: CHN-SUBNAT-14
+    survey_labels: Gansu | [62]Gansu, Northwest China
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_902
     gmd_subnatid2: ''
@@ -433,7 +460,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gansu Sheng
     source_row: 2346
-  - survey_labels: Inner Mongolia
+  - country_entry_id: CHN-SUBNAT-15
+    survey_labels: Inner Mongolia
     survey_variables: subnatid
     gmd_subnatid1: CHN_2015_GAUL1_917
     gmd_subnatid2: ''
@@ -463,7 +491,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: CHN-SAN-01
+    source_category_code: composting_toilet
     national_label_en: composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -473,7 +502,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: private_domestic_connection_to_sewage_system
+  - country_entry_id: CHN-SAN-02
+    source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
@@ -483,7 +513,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 73
-  - source_category_code: private_flush_to_septic_tank
+  - country_entry_id: CHN-SAN-03
+    source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -493,7 +524,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_domestic_connection_to_sewage_system
+  - country_entry_id: CHN-SAN-04
+    source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
@@ -504,7 +536,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 79
-  - source_category_code: shared_flush_to_septic_tank
+  - country_entry_id: CHN-SAN-05
+    source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
@@ -514,7 +547,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 80
-  - source_category_code: flush_pour_to_other_location
+  - country_entry_id: CHN-SAN-06
+    source_category_code: flush_pour_to_other_location
     national_label_en: flush/pour to other location
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -524,7 +558,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 71
-  - source_category_code: flush_pour_to_piped_sewage_system
+  - country_entry_id: CHN-SAN-07
+    source_category_code: flush_pour_to_piped_sewage_system
     national_label_en: flush/pour to piped sewage system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -534,7 +569,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: flush_pour_to_pit_latrine
+  - country_entry_id: CHN-SAN-08
+    source_category_code: flush_pour_to_pit_latrine
     national_label_en: flush/pour to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -544,7 +580,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 69
-  - source_category_code: flush_pour_to_septic_tank
+  - country_entry_id: CHN-SAN-09
+    source_category_code: flush_pour_to_septic_tank
     national_label_en: flush/pour to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -554,7 +591,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 68
-  - source_category_code: bucket
+  - country_entry_id: CHN-SAN-10
+    source_category_code: bucket
     national_label_en: bucket
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -564,7 +602,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+  - country_entry_id: CHN-SAN-11
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
     national_label_en: Bucket latrine (where fresh excreta are manually removed)
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
@@ -574,7 +613,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 110
-  - source_category_code: hanging_toilet_latrine
+  - country_entry_id: CHN-SAN-12
+    source_category_code: hanging_toilet_latrine
     national_label_en: hanging toilet/latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -585,7 +625,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: pit_with_slab
+  - country_entry_id: CHN-SAN-13
+    source_category_code: pit_with_slab
     national_label_en: pit with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -596,7 +637,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_without_slab_open
+  - country_entry_id: CHN-SAN-14
+    source_category_code: pit_without_slab_open
     national_label_en: pit without slab/open
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -607,7 +649,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: uncovered_dry_latrine_without_privacy
+  - country_entry_id: CHN-SAN-15
+    source_category_code: uncovered_dry_latrine_without_privacy
     national_label_en: Uncovered dry latrine (without privacy)
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -618,7 +661,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: ventilation_improved_pit_latrine
+  - country_entry_id: CHN-SAN-16
+    source_category_code: ventilation_improved_pit_latrine
     national_label_en: ventilation improved pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -629,7 +673,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: private_covered_dry_latrine_with_privacy
+  - country_entry_id: CHN-SAN-17
+    source_category_code: private_covered_dry_latrine_with_privacy
     national_label_en: Private covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
@@ -640,7 +685,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 114
-  - source_category_code: shared_covered_dry_latrine_with_privacy
+  - country_entry_id: CHN-SAN-18
+    source_category_code: shared_covered_dry_latrine_with_privacy
     national_label_en: Shared covered dry latrine (with privacy)
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
@@ -651,7 +697,8 @@ parameters:
     improved_flag: yes
     shared_flag: yes
     source_row: 122
-  - source_category_code: private_pour_flush_latrine
+  - country_entry_id: CHN-SAN-19
+    source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
     national_label_local: Private pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
@@ -661,7 +708,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 91
-  - source_category_code: shared_pour_flush_latrine
+  - country_entry_id: CHN-SAN-20
+    source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
     national_label_local: Public/shared pour flush latrine
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
@@ -672,7 +720,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 97
-  - source_category_code: no_facilities_bush_field
+  - country_entry_id: CHN-SAN-21
+    source_category_code: no_facilities_bush_field
     national_label_en: no facilities (bush, field)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -682,7 +731,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: no_facilities_open_defecation
+  - country_entry_id: CHN-SAN-22
+    source_category_code: no_facilities_open_defecation
     national_label_en: No facilities (open defecation)
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -692,7 +742,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: CHN-SAN-23
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -702,7 +753,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 136
-  - source_category_code: other_specify
+  - country_entry_id: CHN-SAN-24
+    source_category_code: other_specify
     national_label_en: other, specify
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -722,7 +774,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: protected_spring
+  - country_entry_id: CHN-WAS-01
+    source_category_code: protected_spring
     national_label_en: protected spring
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
@@ -732,7 +785,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 78
-  - source_category_code: protected_dug_well
+  - country_entry_id: CHN-WAS-02
+    source_category_code: protected_dug_well
     national_label_en: protected dug well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -742,7 +796,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: protected_dug_well_or_protected_spring
+  - country_entry_id: CHN-WAS-03
+    source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
@@ -752,7 +807,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 46
-  - source_category_code: protected_tube_well_or_bore_hole
+  - country_entry_id: CHN-WAS-04
+    source_category_code: protected_tube_well_or_bore_hole
     national_label_en: Protected tube well or bore hole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -762,7 +818,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: tubewell_borehole
+  - country_entry_id: CHN-WAS-05
+    source_category_code: tubewell_borehole
     national_label_en: tubewell/borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -772,7 +829,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_spring
+  - country_entry_id: CHN-WAS-06
+    source_category_code: unprotected_spring
     national_label_en: unprotected spring
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
@@ -782,7 +840,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 82
-  - source_category_code: unprotected_dug_well
+  - country_entry_id: CHN-WAS-07
+    source_category_code: unprotected_dug_well
     national_label_en: unprotected dug well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -792,7 +851,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: unprotected_dug_well_or_spring
+  - country_entry_id: CHN-WAS-08
+    source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
@@ -802,7 +862,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 50
-  - source_category_code: tanker_truck_vendor
+  - country_entry_id: CHN-WAS-09
+    source_category_code: tanker_truck_vendor
     national_label_en: Tanker-truck, vendor
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -812,7 +873,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other_specify
+  - country_entry_id: CHN-WAS-10
+    source_category_code: other_specify
     national_label_en: other, specify
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -822,7 +884,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: CHN-WAS-11
+    source_category_code: bottled_water
     national_label_en: bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -832,7 +895,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rainwater_into_tank_or_cistern
+  - country_entry_id: CHN-WAS-12
+    source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -842,7 +906,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater_collection
+  - country_entry_id: CHN-WAS-13
+    source_category_code: rainwater_collection
     national_label_en: rainwater collection
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -852,7 +917,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: surface_water_river_lake_etc
+  - country_entry_id: CHN-WAS-14
+    source_category_code: surface_water_river_lake_etc
     national_label_en: surface water (river, lake, etc)
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -862,7 +928,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: water_taken_directly_from_pond_water_or_stream
+  - country_entry_id: CHN-WAS-15
+    source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
     national_label_local: Surface water
     jmp_classification: Surface water
@@ -872,7 +939,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 92
-  - source_category_code: piped_water_through_house_connection_or_yard
+  - country_entry_id: CHN-WAS-16
+    source_category_code: piped_water_through_house_connection_or_yard
     national_label_en: Piped water through house connection or yard
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
@@ -882,7 +950,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 38
-  - source_category_code: piped_private
+  - country_entry_id: CHN-WAS-17
+    source_category_code: piped_private
     national_label_en: piped private
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -892,7 +961,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: CHN-WAS-18
+    source_category_code: piped_to_yard_plot
     national_label_en: piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -902,7 +972,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_standpipe
+  - country_entry_id: CHN-WAS-19
+    source_category_code: public_standpipe
     national_label_en: Public standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -912,7 +983,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: CHN-WAS-20
+    source_category_code: public_tap_standpipe
     national_label_en: public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

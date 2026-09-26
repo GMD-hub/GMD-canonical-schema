@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: Preschool
+  - country_entry_id: KIR-EDU-01
+    national_label_en: Preschool
     national_label_local: Preschool
     entry_age: 3
     duration_years: 3
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Primary
+  - country_entry_id: KIR-EDU-02
+    national_label_en: Primary
     national_label_local: Primary Education (years 1-6)
     entry_age: 6
     duration_years: 6
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
-  - national_label_en: Junior Secondary (Year 7 to 9)
+  - country_entry_id: KIR-EDU-03
+    national_label_en: Junior Secondary (Year 7 to 9)
     national_label_local: Junior Secondary (Year 7 to 9)
     entry_age: 12
     duration_years: 3
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
-  - national_label_en: Senior Secondary (Year 10 and 11)
+  - country_entry_id: KIR-EDU-04
+    national_label_en: Senior Secondary (Year 10 and 11)
     national_label_local: Senior Secondary (Year 10 and 11)
     entry_age: 15
     duration_years: 2
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
-  - national_label_en: Senior Secondary Year 12
+  - country_entry_id: KIR-EDU-05
+    national_label_en: Senior Secondary Year 12
     national_label_local: Senior Secondary Year 12
     entry_age: 17
     duration_years: 1
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
-  - national_label_en: Senior Secondary Year 13 (SPBEA)
+  - country_entry_id: KIR-EDU-06
+    national_label_en: Senior Secondary Year 13 (SPBEA)
     national_label_local: Senior Secondary Year 13 (SPBEA)
     entry_age: 18
     duration_years: 1
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
-  - national_label_en: Senior Secondary Year 13 Foundation (USP)
+  - country_entry_id: KIR-EDU-07
+    national_label_en: Senior Secondary Year 13 Foundation (USP)
     national_label_local: Senior Secondary Year 13 Foundation (USP)
     entry_age: 18
     duration_years: 1
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
-  - national_label_en: Technical, Colleges and Vocational (TVET)
+  - country_entry_id: KIR-EDU-08
+    national_label_en: Technical, Colleges and Vocational (TVET)
     national_label_local: Technical, Colleges and Vocational (TVET)
     entry_age: 17
     duration_years: 3
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Pastoral/Theological Institutes
+  - country_entry_id: KIR-EDU-09
+    national_label_en: Pastoral/Theological Institutes
     national_label_local: Pastoral/Theological Institutes
     entry_age: 17
     duration_years: 3
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: University of South Pacific Bachelor degree
+  - country_entry_id: KIR-EDU-10
+    national_label_en: University of South Pacific Bachelor degree
     national_label_local: University of South Pacific Bachelor degree
     entry_age: 19
     duration_years: 3
@@ -120,7 +130,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - survey_labels: 1-South Tarawa
+  - country_entry_id: KIR-SUBNAT-01
+    survey_labels: 1-South Tarawa
     survey_variables: subnatid1
     gmd_subnatid1: KIR_2024_GAUL1_4002
     gmd_subnatid2: ''
@@ -140,7 +151,8 @@ parameters:
     geo_nvar: gaul1_name
     geo_name: South Tarawa
     source_row: 8897
-  - survey_labels: 2-Northern
+  - country_entry_id: KIR-SUBNAT-02
+    survey_labels: 2-Northern
     survey_variables: subnatid1
     gmd_subnatid1: KIR_2024_GAUL1_4001
     gmd_subnatid2: ''
@@ -160,7 +172,8 @@ parameters:
     geo_nvar: gaul1_name
     geo_name: Northern
     source_row: 8898
-  - survey_labels: 3-Central
+  - country_entry_id: KIR-SUBNAT-03
+    survey_labels: 3-Central
     survey_variables: subnatid1
     gmd_subnatid1: KIR_2024_GAUL1_3999
     gmd_subnatid2: ''
@@ -180,7 +193,8 @@ parameters:
     geo_nvar: gaul1_name
     geo_name: Central
     source_row: 8899
-  - survey_labels: 4-Southern
+  - country_entry_id: KIR-SUBNAT-04
+    survey_labels: 4-Southern
     survey_variables: subnatid1
     gmd_subnatid1: KIR_2024_GAUL1_4003
     gmd_subnatid2: ''
@@ -200,7 +214,8 @@ parameters:
     geo_nvar: gaul1_name
     geo_name: Southern
     source_row: 8900
-  - survey_labels: 5-Linix
+  - country_entry_id: KIR-SUBNAT-05
+    survey_labels: 5-Linix
     survey_variables: subnatid1
     gmd_subnatid1: KIR_2024_GAUL1_4000
     gmd_subnatid2: ''
@@ -230,7 +245,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: composting_toilet
+  - country_entry_id: KIR-SAN-01
+    source_category_code: composting_toilet
     national_label_en: Composting toilet
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
@@ -240,7 +256,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 128
-  - source_category_code: to_open_drain
+  - country_entry_id: KIR-SAN-02
+    source_category_code: to_open_drain
     national_label_en: to open drain
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -250,7 +267,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 65
-  - source_category_code: to_piped_sewer_system
+  - country_entry_id: KIR-SAN-03
+    source_category_code: to_piped_sewer_system
     national_label_en: to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -260,7 +278,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 61
-  - source_category_code: to_pit
+  - country_entry_id: KIR-SAN-04
+    source_category_code: to_pit
     national_label_en: to pit
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -270,7 +289,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 63
-  - source_category_code: to_septic_tank
+  - country_entry_id: KIR-SAN-05
+    source_category_code: to_septic_tank
     national_label_en: to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -280,7 +300,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 62
-  - source_category_code: to_do_not_know_where
+  - country_entry_id: KIR-SAN-06
+    source_category_code: to_do_not_know_where
     national_label_en: to do not know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -290,7 +311,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 64
-  - source_category_code: own_flush_septic_tank
+  - country_entry_id: KIR-SAN-07
+    source_category_code: own_flush_septic_tank
     national_label_en: Own flush septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
@@ -300,7 +322,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 74
-  - source_category_code: shared_flush_toilet
+  - country_entry_id: KIR-SAN-08
+    source_category_code: shared_flush_toilet
     national_label_en: Shared flush toilet
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
@@ -310,7 +333,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 78
-  - source_category_code: public_sewege_system
+  - country_entry_id: KIR-SAN-09
+    source_category_code: public_sewege_system
     national_label_en: Public sewege system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -320,7 +344,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 67
-  - source_category_code: closet_over_sea_or_water_long_drop
+  - country_entry_id: KIR-SAN-10
+    source_category_code: closet_over_sea_or_water_long_drop
     national_label_en: Closet over sea or water (long drop)
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -331,7 +356,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: hanging_toilet_hanging_latrine
+  - country_entry_id: KIR-SAN-11
+    source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
     national_label_local: Hanging toilet/hanging latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
@@ -342,7 +368,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 109
-  - source_category_code: pit_latrine_with_slab_covered_latrine
+  - country_entry_id: KIR-SAN-12
+    source_category_code: pit_latrine_with_slab_covered_latrine
     national_label_en: Pit latrine with slab/covered latrine
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -353,7 +380,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: KIR-SAN-13
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -364,7 +392,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 108
-  - source_category_code: household_pit
+  - country_entry_id: KIR-SAN-14
+    source_category_code: household_pit
     national_label_en: Household pit
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -375,7 +404,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 107
-  - source_category_code: ventilated_improved_pit_latrine
+  - country_entry_id: KIR-SAN-15
+    source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated Improved Pit latrine
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -386,7 +416,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 105
-  - source_category_code: no_facility_bush_field_beach
+  - country_entry_id: KIR-SAN-16
+    source_category_code: no_facility_bush_field_beach
     national_label_en: No facility/bush/field/beach
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -396,7 +427,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: none
+  - country_entry_id: KIR-SAN-17
+    source_category_code: none
     national_label_en: None
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -406,7 +438,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 134
-  - source_category_code: other
+  - country_entry_id: KIR-SAN-18
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -426,7 +459,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - source_category_code: well_in_yard
+  - country_entry_id: KIR-WAS-01
+    source_category_code: well_in_yard
     national_label_en: Well in yard
     national_label_local: Private
     jmp_classification: Ground water > All wells > Private
@@ -436,7 +470,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 55
-  - source_category_code: public_well
+  - country_entry_id: KIR-WAS-02
+    source_category_code: public_well
     national_label_en: Public well
     national_label_local: Public
     jmp_classification: Ground water > All wells > Public
@@ -446,7 +481,8 @@ parameters:
     improved_flag: no
     shared_flag: yes
     source_row: 56
-  - source_category_code: protected_well
+  - country_entry_id: KIR-WAS-03
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -456,7 +492,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 66
-  - source_category_code: tubewell_borehole
+  - country_entry_id: KIR-WAS-04
+    source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
@@ -466,7 +503,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 58
-  - source_category_code: unprotected_well
+  - country_entry_id: KIR-WAS-05
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -476,7 +514,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 70
-  - source_category_code: cart_with_small_tank
+  - country_entry_id: KIR-WAS-06
+    source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
@@ -486,7 +525,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 101
-  - source_category_code: water_kiosk
+  - country_entry_id: KIR-WAS-07
+    source_category_code: water_kiosk
     national_label_en: Water kiosk
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -496,7 +536,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 103
-  - source_category_code: desalination_plant_water
+  - country_entry_id: KIR-WAS-08
+    source_category_code: desalination_plant_water
     national_label_en: Desalination plant water
     national_label_local: Other
     jmp_classification: Other improved sources > Other
@@ -506,7 +547,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 104
-  - source_category_code: tanker_truck
+  - country_entry_id: KIR-WAS-09
+    source_category_code: tanker_truck
     national_label_en: Tanker truck
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
@@ -516,7 +558,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 102
-  - source_category_code: other
+  - country_entry_id: KIR-WAS-10
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -526,7 +569,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: other_including_tanker_truck
+  - country_entry_id: KIR-WAS-11
+    source_category_code: other_including_tanker_truck
     national_label_en: Other (including tanker truck)
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -536,7 +580,8 @@ parameters:
     improved_flag: no
     shared_flag: no
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: KIR-WAS-12
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -546,7 +591,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 90
-  - source_category_code: rain_water_tank
+  - country_entry_id: KIR-WAS-13
+    source_category_code: rain_water_tank
     national_label_en: Rain water tank
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -556,7 +602,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: KIR-WAS-14
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -566,7 +613,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 87
-  - source_category_code: piped_into_neighbourhood_or_outside_neighbourhood
+  - country_entry_id: KIR-WAS-15
+    source_category_code: piped_into_neighbourhood_or_outside_neighbourhood
     national_label_en: Piped into neighbourhood or outside neighbourhood
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -576,7 +624,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_to_neighbour
+  - country_entry_id: KIR-WAS-16
+    source_category_code: piped_to_neighbour
     national_label_en: Piped to neighbour
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -586,7 +635,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 42
-  - source_category_code: piped_into_household_yard
+  - country_entry_id: KIR-WAS-17
+    source_category_code: piped_into_household_yard
     national_label_en: Piped into household/yard
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -596,7 +646,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: KIR-WAS-18
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -606,7 +657,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 39
-  - source_category_code: piped_water_to_yard_plot
+  - country_entry_id: KIR-WAS-19
+    source_category_code: piped_water_to_yard_plot
     national_label_en: Piped water to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -616,7 +668,8 @@ parameters:
     improved_flag: yes
     shared_flag: no
     source_row: 40
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: KIR-WAS-20
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

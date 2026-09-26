@@ -10,7 +10,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - survey_labels: 2 - Atolls | Atolls
+  - country_entry_id: MDV-SUBNAT-01
+    survey_labels: 2 - Atolls | Atolls
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MDV_2015_GAULx_2
     gmd_subnatid2: ''
@@ -32,7 +33,8 @@ parameters:
       Dhaalu & Haa Alifu & Haa Dhaalu & Kaafu & Laamu & Lhaviyani & Meemu & Noonu
       & Raa & Seenu & Shaviyani & Thaa & Vaavu
     source_row: 9413
-  - survey_labels: 1 - Male | 14 - Male ' | 14 - Malé | Male
+  - country_entry_id: MDV-SUBNAT-02
+    survey_labels: 1 - Male | 14 - Male ' | 14 - Malé | Male
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MDV_2015_GAUL1_1918
     gmd_subnatid2: ''
@@ -52,7 +54,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Male'
     source_row: 9414
-  - survey_labels: 1 - Alif Alif
+  - country_entry_id: MDV-SUBNAT-03
+    survey_labels: 1 - Alif Alif
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1905
     gmd_subnatid2: ''
@@ -72,7 +75,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alifu Alifu
     source_row: 9417
-  - survey_labels: 10 - Haa Dhaalu
+  - country_entry_id: MDV-SUBNAT-04
+    survey_labels: 10 - Haa Dhaalu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1914
     gmd_subnatid2: ''
@@ -92,7 +96,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Haa Dhaalu
     source_row: 9418
-  - survey_labels: 11 - Kaafu
+  - country_entry_id: MDV-SUBNAT-05
+    survey_labels: 11 - Kaafu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1915
     gmd_subnatid2: ''
@@ -112,7 +117,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Kaafu
     source_row: 9419
-  - survey_labels: 12 - Laamu
+  - country_entry_id: MDV-SUBNAT-06
+    survey_labels: 12 - Laamu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1916
     gmd_subnatid2: ''
@@ -132,7 +138,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Laamu
     source_row: 9420
-  - survey_labels: 13 - Lhaviyani
+  - country_entry_id: MDV-SUBNAT-07
+    survey_labels: 13 - Lhaviyani
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1917
     gmd_subnatid2: ''
@@ -152,7 +159,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Lhaviyani
     source_row: 9421
-  - survey_labels: 15 - Meemu
+  - country_entry_id: MDV-SUBNAT-08
+    survey_labels: 15 - Meemu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1919
     gmd_subnatid2: ''
@@ -172,7 +180,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Meemu
     source_row: 9423
-  - survey_labels: 16 - Noonu
+  - country_entry_id: MDV-SUBNAT-09
+    survey_labels: 16 - Noonu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1920
     gmd_subnatid2: ''
@@ -192,7 +201,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Noonu
     source_row: 9424
-  - survey_labels: 17 - Raa
+  - country_entry_id: MDV-SUBNAT-10
+    survey_labels: 17 - Raa
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1921
     gmd_subnatid2: ''
@@ -212,7 +222,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Raa
     source_row: 9425
-  - survey_labels: 18 - Seenu/Addu
+  - country_entry_id: MDV-SUBNAT-11
+    survey_labels: 18 - Seenu/Addu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1922
     gmd_subnatid2: ''
@@ -232,7 +243,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Seenu
     source_row: 9426
-  - survey_labels: 19 - Shaviyani
+  - country_entry_id: MDV-SUBNAT-12
+    survey_labels: 19 - Shaviyani
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1923
     gmd_subnatid2: ''
@@ -252,7 +264,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Shaviyani
     source_row: 9427
-  - survey_labels: 2 - Alif Dhaal
+  - country_entry_id: MDV-SUBNAT-13
+    survey_labels: 2 - Alif Dhaal
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1906
     gmd_subnatid2: ''
@@ -272,7 +285,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Alifu Dhaalu
     source_row: 9428
-  - survey_labels: 20 - Thaa
+  - country_entry_id: MDV-SUBNAT-14
+    survey_labels: 20 - Thaa
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1924
     gmd_subnatid2: ''
@@ -292,7 +306,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Thaa
     source_row: 9429
-  - survey_labels: 21 - Vaavu
+  - country_entry_id: MDV-SUBNAT-15
+    survey_labels: 21 - Vaavu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1925
     gmd_subnatid2: ''
@@ -312,7 +327,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Vaavu
     source_row: 9430
-  - survey_labels: 3 - Baa
+  - country_entry_id: MDV-SUBNAT-16
+    survey_labels: 3 - Baa
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1907
     gmd_subnatid2: ''
@@ -332,7 +348,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Baa
     source_row: 9431
-  - survey_labels: 4 - Dhaalu
+  - country_entry_id: MDV-SUBNAT-17
+    survey_labels: 4 - Dhaalu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1908
     gmd_subnatid2: ''
@@ -352,7 +369,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Dhaalu
     source_row: 9432
-  - survey_labels: 5 - Faafu
+  - country_entry_id: MDV-SUBNAT-18
+    survey_labels: 5 - Faafu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1909
     gmd_subnatid2: ''
@@ -372,7 +390,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Faafu
     source_row: 9433
-  - survey_labels: 6 - Gaafu Alif
+  - country_entry_id: MDV-SUBNAT-19
+    survey_labels: 6 - Gaafu Alif
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1910
     gmd_subnatid2: ''
@@ -392,7 +411,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gaafu Alifu
     source_row: 9434
-  - survey_labels: 7 - Gaafu Dhaalu
+  - country_entry_id: MDV-SUBNAT-20
+    survey_labels: 7 - Gaafu Dhaalu
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1911
     gmd_subnatid2: ''
@@ -412,7 +432,8 @@ parameters:
     geo_nvar: ADM1_NAME
     geo_name: Gaafu Dhaalu
     source_row: 9435
-  - survey_labels: 9 - Haa Alif
+  - country_entry_id: MDV-SUBNAT-21
+    survey_labels: 9 - Haa Alif
     survey_variables: subnatid
     gmd_subnatid1: MDV_2015_GAUL1_1913
     gmd_subnatid2: ''
@@ -443,7 +464,8 @@ parameters:
   selectors:
     geo_year: unknown
   value:
-  - survey_labels: 8 - Gnaviyani
+  - country_entry_id: MDV-SUBNAT-01
+    survey_labels: 8 - Gnaviyani
     survey_variables: subnatid
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -473,7 +495,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: MDV-SAN-01
+    source_category_code: flush_to_somewhere_else
     national_label_en: Flush - to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -483,7 +506,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: toilet_connected_to_sea
+  - country_entry_id: MDV-SAN-02
+    source_category_code: toilet_connected_to_sea
     national_label_en: toilet connected to sea
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -493,7 +517,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: toilet_connected_to_the_sea
+  - country_entry_id: MDV-SAN-03
+    source_category_code: toilet_connected_to_the_sea
     national_label_en: Toilet connected to the sea
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
@@ -503,7 +528,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 65
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: MDV-SAN-04
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush - to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -513,7 +539,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: toilet_connected_to_sewer
+  - country_entry_id: MDV-SAN-05
+    source_category_code: toilet_connected_to_sewer
     national_label_en: toilet connected to sewer
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
@@ -523,7 +550,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 61
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: MDV-SAN-06
+    source_category_code: flush_to_pit_latrine
     national_label_en: Flush - to pit latrine
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
@@ -533,7 +561,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 63
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: MDV-SAN-07
+    source_category_code: flush_to_septic_tank
     national_label_en: Flush - to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -543,7 +572,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 62
-  - source_category_code: toilet_connected_to_septic_tank
+  - country_entry_id: MDV-SAN-08
+    source_category_code: toilet_connected_to_septic_tank
     national_label_en: toilet connected to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
@@ -553,7 +583,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 62
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: MDV-SAN-09
+    source_category_code: flush_don_t_know_where
     national_label_en: Flush - don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
@@ -563,7 +594,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 64
-  - source_category_code: flush_toilet_inside
+  - country_entry_id: MDV-SAN-10
+    source_category_code: flush_toilet_inside
     national_label_en: Flush toilet inside
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
@@ -573,7 +605,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 66
-  - source_category_code: flush_to_somewhere_else
+  - country_entry_id: MDV-SAN-11
+    source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
     national_label_local: to elsewhere
     jmp_classification: Flush/toilets > to elsewhere
@@ -583,7 +616,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 71
-  - source_category_code: flush_to_piped_sewer_system
+  - country_entry_id: MDV-SAN-12
+    source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
     national_label_local: to piped sewer system
     jmp_classification: Flush/toilets > to piped sewer system
@@ -593,7 +627,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 67
-  - source_category_code: flush_to_pit_latrine
+  - country_entry_id: MDV-SAN-13
+    source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
@@ -603,7 +638,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 69
-  - source_category_code: flush_to_septic_tank
+  - country_entry_id: MDV-SAN-14
+    source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
@@ -613,7 +649,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 68
-  - source_category_code: flush_don_t_know_where
+  - country_entry_id: MDV-SAN-15
+    source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
@@ -623,7 +660,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: MDV-SAN-16
+    source_category_code: pit_latrine_with_slab
     national_label_en: Pit latrine - with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -634,7 +672,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 106
-  - source_category_code: pit_latrine_with_slab
+  - country_entry_id: MDV-SAN-17
+    source_category_code: pit_latrine_with_slab
     national_label_en: pit latrine with slab
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -645,7 +684,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 106
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: MDV-SAN-18
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine - without slab /open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -656,7 +696,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: pit_latrine_without_slab_open_pit
+  - country_entry_id: MDV-SAN-19
+    source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: Pit latrine without slab/open pit
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
@@ -667,7 +708,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 108
-  - source_category_code: gifili
+  - country_entry_id: MDV-SAN-20
+    source_category_code: gifili
     national_label_en: Gifili
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
@@ -678,7 +720,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 107
-  - source_category_code: pit_latrine_ventilated_improved_pit_vip
+  - country_entry_id: MDV-SAN-21
+    source_category_code: pit_latrine_ventilated_improved_pit_vip
     national_label_en: Pit latrine - ventilated improved pit (VIP)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -689,7 +732,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: ventilated_improved_pit_latrine_vip
+  - country_entry_id: MDV-SAN-22
+    source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: ventilated improved pit latrine (vip)
     national_label_local: Ventilated Improved Pit latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
@@ -700,7 +744,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 105
-  - source_category_code: no_facility_bush_field
+  - country_entry_id: MDV-SAN-23
+    source_category_code: no_facility_bush_field
     national_label_en: No facility, bush, field
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -710,7 +755,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_facility_bush_field_beach
+  - country_entry_id: MDV-SAN-24
+    source_category_code: no_facility_bush_field_beach
     national_label_en: No facility/bush/field/beach
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
@@ -720,7 +766,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 134
-  - source_category_code: no_toilet_inside_the_dwelling
+  - country_entry_id: MDV-SAN-25
+    source_category_code: no_toilet_inside_the_dwelling
     national_label_en: No toilet inside the dwelling
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -730,7 +777,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 136
-  - source_category_code: other
+  - country_entry_id: MDV-SAN-26
+    source_category_code: other
     national_label_en: OTHER
     national_label_local: Other
     jmp_classification: Other unimproved > Other
@@ -750,7 +798,8 @@ parameters:
   effective_to: null
   selectors: null
   value:
-  - source_category_code: protected_well
+  - country_entry_id: MDV-WAS-01
+    source_category_code: protected_well
     national_label_en: Protected well
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
@@ -760,7 +809,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 66
-  - source_category_code: unprotected_well
+  - country_entry_id: MDV-WAS-02
+    source_category_code: unprotected_well
     national_label_en: Unprotected well
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
@@ -770,7 +820,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 70
-  - source_category_code: other
+  - country_entry_id: MDV-WAS-03
+    source_category_code: other
     national_label_en: Other
     national_label_local: Other
     jmp_classification: Other non-improved > Other
@@ -780,7 +831,8 @@ parameters:
     improved_flag: false
     shared_flag: false
     source_row: 106
-  - source_category_code: bottled_water
+  - country_entry_id: MDV-WAS-04
+    source_category_code: bottled_water
     national_label_en: Bottled water
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
@@ -790,7 +842,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 90
-  - source_category_code: rainwater_tank_in_compound_rainwater_public_or_community
+  - country_entry_id: MDV-WAS-05
+    source_category_code: rainwater_tank_in_compound_rainwater_public_or_community
     national_label_en: '"Rainwater - tank in compound"+"Rainwater - public or community'
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -800,7 +853,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater
+  - country_entry_id: MDV-WAS-06
+    source_category_code: rainwater
     national_label_en: Rainwater
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -810,7 +864,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_tank_in_compound_rainwater_public_or_community_tank
+  - country_entry_id: MDV-WAS-07
+    source_category_code: rainwater_tank_in_compound_rainwater_public_or_community_tank
     national_label_en: rainwater (tank in compound)+rainwater (public or community
       tank)
     national_label_local: Covered cistern/tank
@@ -821,7 +876,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_tank_in_compound
+  - country_entry_id: MDV-WAS-08
+    source_category_code: rainwater_tank_in_compound
     national_label_en: Rainwater - tank in compound
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
@@ -831,7 +887,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 87
-  - source_category_code: rainwater_public_or_community_tank
+  - country_entry_id: MDV-WAS-09
+    source_category_code: rainwater_public_or_community_tank
     national_label_en: Rainwater - public or community tank
     national_label_local: Uncovered cistern/tank
     jmp_classification: Rainwater > Uncovered cistern/tank
@@ -841,7 +898,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 88
-  - source_category_code: other
+  - country_entry_id: MDV-WAS-10
+    source_category_code: other
     national_label_en: other
     national_label_local: Other
     jmp_classification: Tap water > Other
@@ -851,7 +909,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 42
-  - source_category_code: desalinated_water_piped_into_dwelling
+  - country_entry_id: MDV-WAS-11
+    source_category_code: desalinated_water_piped_into_dwelling
     national_label_en: Desalinated water-piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -861,7 +920,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_into_dwelling
+  - country_entry_id: MDV-WAS-12
+    source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -871,7 +931,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_water_into_dwelling
+  - country_entry_id: MDV-WAS-13
+    source_category_code: piped_water_into_dwelling
     national_label_en: Piped water into dwelling
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
@@ -881,7 +942,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 39
-  - source_category_code: piped_to_yard_plot
+  - country_entry_id: MDV-WAS-14
+    source_category_code: piped_to_yard_plot
     national_label_en: Piped to yard/plot
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
@@ -891,7 +953,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 40
-  - source_category_code: desalinated_water_public_tap
+  - country_entry_id: MDV-WAS-15
+    source_category_code: desalinated_water_public_tap
     national_label_en: Desalinated water-public tap
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -901,7 +964,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MDV-WAS-16
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
@@ -911,7 +975,8 @@ parameters:
     improved_flag: true
     shared_flag: false
     source_row: 41
-  - source_category_code: public_tap_standpipe
+  - country_entry_id: MDV-WAS-17
+    source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe

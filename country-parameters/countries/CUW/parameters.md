@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: High scope
+  - country_entry_id: CUW-EDU-01
+    national_label_en: High scope
     national_label_local: Kresh
     entry_age: 0
     duration_years: 4
@@ -20,7 +21,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Foundation Based Education
+  - country_entry_id: CUW-EDU-02
+    national_label_en: Foundation Based Education
     national_label_local: Funderend Onderwijs
     entry_age: 4
     duration_years: 2
@@ -30,7 +32,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Special Educational Needs
+  - country_entry_id: CUW-EDU-03
+    national_label_en: Special Educational Needs
     national_label_local: Speciaal onderwijs
     entry_age: 4
     duration_years: 2
@@ -40,7 +43,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Foundation Based Education
+  - country_entry_id: CUW-EDU-04
+    national_label_en: Foundation Based Education
     national_label_local: Funderend Onderwijs
     entry_age: 6
     duration_years: 6
@@ -50,7 +54,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
-  - national_label_en: Special Educational Needs
+  - country_entry_id: CUW-EDU-05
+    national_label_en: Special Educational Needs
     national_label_local: Speciaal onderwijs
     entry_age: 6
     duration_years: 6
@@ -60,7 +65,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
-  - national_label_en: Academic Basic Secondary Education
+  - country_entry_id: CUW-EDU-06
+    national_label_en: Academic Basic Secondary Education
     national_label_local: Basisvorming HAVO/VWO
     entry_age: 12
     duration_years: 2
@@ -70,7 +76,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
-  - national_label_en: Preparatory Vocational Education Basic Secondary Education
+  - country_entry_id: CUW-EDU-07
+    national_label_en: Preparatory Vocational Education Basic Secondary Education
     national_label_local: VSBO Basisvorming
     entry_age: 12
     duration_years: 2
@@ -80,7 +87,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: Preparatory Vocational Education Theoretical Stream
+  - country_entry_id: CUW-EDU-08
+    national_label_en: Preparatory Vocational Education Theoretical Stream
     national_label_local: VSBO  TKL
     entry_age: 14
     duration_years: 2
@@ -90,7 +98,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
-  - national_label_en: Preparatory Vocational Education Practical Theoretical Stream
+  - country_entry_id: CUW-EDU-09
+    national_label_en: Preparatory Vocational Education Practical Theoretical Stream
     national_label_local: VSBO PKL
     entry_age: 14
     duration_years: 2
@@ -100,7 +109,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: Preparatory Vocational Education Practical Stream
+  - country_entry_id: CUW-EDU-10
+    national_label_en: Preparatory Vocational Education Practical Stream
     national_label_local: VSBO PBL
     entry_age: 14
     duration_years: 2
@@ -110,7 +120,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: Preparatory Vocational Education Labor Market Orientation
+  - country_entry_id: CUW-EDU-11
+    national_label_en: Preparatory Vocational Education Labor Market Orientation
     national_label_local: VSBO AGO
     entry_age: 14
     duration_years: 2
@@ -120,7 +131,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
-  - national_label_en: Academic Secondary Education
+  - country_entry_id: CUW-EDU-12
+    national_label_en: Academic Secondary Education
     national_label_local: HAVO 3 - 5
     entry_age: 14
     duration_years: 0
@@ -130,7 +142,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
-  - national_label_en: Pre-Univeristy Secondary Education
+  - country_entry_id: CUW-EDU-13
+    national_label_en: Pre-Univeristy Secondary Education
     national_label_local: VWO 3 - 6
     entry_age: 14
     duration_years: 4
@@ -140,7 +153,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
-  - national_label_en: Pre-Univeristy Secondary Education
+  - country_entry_id: CUW-EDU-14
+    national_label_en: Pre-Univeristy Secondary Education
     national_label_local: VWO 5 + 6
     entry_age: 14
     duration_years: 2
@@ -150,7 +164,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
-  - national_label_en: Secondary Vocational Education Level 1
+  - country_entry_id: CUW-EDU-15
+    national_label_en: Secondary Vocational Education Level 1
     national_label_local: SBO niveau 1
     entry_age: 16
     duration_years: 1
@@ -160,7 +175,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Secondary Vocational Education Level 2
+  - country_entry_id: CUW-EDU-16
+    national_label_en: Secondary Vocational Education Level 2
     national_label_local: SBO niveau 2
     entry_age: 17
     duration_years: 2
@@ -170,7 +186,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Secondary Vocational Education Level 3
+  - country_entry_id: CUW-EDU-17
+    national_label_en: Secondary Vocational Education Level 3
     national_label_local: SBO niveau 3
     entry_age: 17
     duration_years: 3
@@ -180,7 +197,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: MBO Diploma  (middle-level applied education)
+  - country_entry_id: CUW-EDU-18
+    national_label_en: MBO Diploma  (middle-level applied education)
     national_label_local: MBO Diploma  (middelbaar beroepsonderwijs)
     entry_age: 18
     duration_years: 1
@@ -190,7 +208,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
-  - national_label_en: MBO Diploma  (middle-level applied education)
+  - country_entry_id: CUW-EDU-19
+    national_label_en: MBO Diploma  (middle-level applied education)
     national_label_local: MBO Diploma  (middelbaar beroepsonderwijs)
     entry_age: 18
     duration_years: 2
@@ -200,7 +219,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
-  - national_label_en: MBO Diploma  (middle-level applied education)
+  - country_entry_id: CUW-EDU-20
+    national_label_en: MBO Diploma  (middle-level applied education)
     national_label_local: MBO Diploma  (middelbaar beroepsonderwijs)
     entry_age: 18
     duration_years: 0
@@ -210,7 +230,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
-  - national_label_en: MBO Diploma  (middle-level applied education)
+  - country_entry_id: CUW-EDU-21
+    national_label_en: MBO Diploma  (middle-level applied education)
     national_label_local: MBO Diploma  (middelbaar beroepsonderwijs)
     entry_age: 18
     duration_years: 4
@@ -220,7 +241,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
-  - national_label_en: Secondary Vocational Education Level 4
+  - country_entry_id: CUW-EDU-22
+    national_label_en: Secondary Vocational Education Level 4
     national_label_local: SBO niveau 4
     entry_age: 17
     duration_years: 4
@@ -230,7 +252,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
-  - national_label_en: Bachelor Academic (research)
+  - country_entry_id: CUW-EDU-23
+    national_label_en: Bachelor Academic (research)
     national_label_local: WO Bachelor
     entry_age: 18
     duration_years: 4
@@ -240,7 +263,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
-  - national_label_en: Bachelor Professional (applied sciences)
+  - country_entry_id: CUW-EDU-24
+    national_label_en: Bachelor Professional (applied sciences)
     national_label_local: HBO Bachelor
     entry_age: 18
     duration_years: 4
@@ -250,7 +274,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
-  - national_label_en: Masters Academic (research)
+  - country_entry_id: CUW-EDU-25
+    national_label_en: Masters Academic (research)
     national_label_local: WO Masters
     entry_age: 22
     duration_years: 2
@@ -260,7 +285,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
-  - national_label_en: Masters Professional (applied sciences)
+  - country_entry_id: CUW-EDU-26
+    national_label_en: Masters Professional (applied sciences)
     national_label_local: HBO Masters
     entry_age: 22
     duration_years: 2

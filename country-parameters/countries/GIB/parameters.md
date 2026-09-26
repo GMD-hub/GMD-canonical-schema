@@ -10,7 +10,8 @@ parameters:
   effective_to: ~
   selectors: ~
   value:
-  - national_label_en: |-
+  - country_entry_id: GIB-EDU-01
+    national_label_en: |-
       Nursery (Private)
       Early Childhood Educational Development
     national_label_local: |-
@@ -24,7 +25,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
-  - national_label_en: Nursery (Private)
+  - country_entry_id: GIB-EDU-02
+    national_label_en: Nursery (Private)
     national_label_local: Nursery (Private)
     entry_age: 3
     duration_years: 1
@@ -34,7 +36,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
-  - national_label_en: Nursery (Government)
+  - country_entry_id: GIB-EDU-03
+    national_label_en: Nursery (Government)
     national_label_local: Nursery (Government)
     entry_age: 3
     duration_years: 1
@@ -44,7 +47,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
-  - national_label_en: Reception
+  - country_entry_id: GIB-EDU-04
+    national_label_en: Reception
     national_label_local: Reception
     entry_age: 4
     duration_years: 1
@@ -54,7 +58,8 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
-  - national_label_en: Key Stage 1 (KS1)
+  - country_entry_id: GIB-EDU-05
+    national_label_en: Key Stage 1 (KS1)
     national_label_local: Key Stage 1
     entry_age: 5
     duration_years: 2
@@ -64,7 +69,8 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
-  - national_label_en: Key Stage 2 (KS2)
+  - country_entry_id: GIB-EDU-06
+    national_label_en: Key Stage 2 (KS2)
     national_label_local: Key Stage 2
     entry_age: 7
     duration_years: 4
@@ -74,7 +80,8 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
-  - national_label_en: Key Stage 3 (KS3)
+  - country_entry_id: GIB-EDU-07
+    national_label_en: Key Stage 3 (KS3)
     national_label_local: Key Stage 3
     entry_age: 11
     duration_years: 3
@@ -84,7 +91,8 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
-  - national_label_en: GCSE
+  - country_entry_id: GIB-EDU-08
+    national_label_en: GCSE
     national_label_local: GCSE (General Certificate of Secondary Education)
     entry_age: 14
     duration_years: 2
@@ -94,7 +102,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
-  - national_label_en: AS Level
+  - country_entry_id: GIB-EDU-09
+    national_label_en: AS Level
     national_label_local: AS Level
     entry_age: 16
     duration_years: 1
@@ -104,7 +113,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
-  - national_label_en: A Level
+  - country_entry_id: GIB-EDU-10
+    national_label_en: A Level
     national_label_local: A Level
     entry_age: 16
     duration_years: 2
@@ -114,7 +124,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
-  - national_label_en: NVQ Level 1
+  - country_entry_id: GIB-EDU-11
+    national_label_en: NVQ Level 1
     national_label_local: NVQ Level 1
     entry_age: 15
     duration_years: 1
@@ -124,7 +135,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
-  - national_label_en: NVQ Level 2
+  - country_entry_id: GIB-EDU-12
+    national_label_en: NVQ Level 2
     national_label_local: NVQ Level 2
     entry_age: 16
     duration_years: 1
@@ -134,7 +146,8 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
-  - national_label_en: NVQ Level 3
+  - country_entry_id: GIB-EDU-13
+    national_label_en: NVQ Level 3
     national_label_local: NVQ Level 3
     entry_age: 18
     duration_years: 1
@@ -144,7 +157,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
-  - national_label_en: NVQ Level 4
+  - country_entry_id: GIB-EDU-14
+    national_label_en: NVQ Level 4
     national_label_local: NVQ Level 4
     entry_age: 20
     duration_years: 1
@@ -154,7 +168,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
-  - national_label_en: Bachelor's Degree
+  - country_entry_id: GIB-EDU-15
+    national_label_en: Bachelor's Degree
     national_label_local: Bachelor's Degree
     entry_age: 18
     duration_years: 3
@@ -164,7 +179,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
-  - national_label_en: Post -graduate diplomas and certificates
+  - country_entry_id: GIB-EDU-16
+    national_label_en: Post -graduate diplomas and certificates
     national_label_local: Post -graduate diplomas and certificates
     entry_age: 21
     duration_years: 1
@@ -174,7 +190,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
-  - national_label_en: Master's  Degree
+  - country_entry_id: GIB-EDU-17
+    national_label_en: Master's  Degree
     national_label_local: Master's  Degree
     entry_age: 21
     duration_years: 1
@@ -184,7 +201,8 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
-  - national_label_en: Doctorate
+  - country_entry_id: GIB-EDU-18
+    national_label_en: Doctorate
     national_label_local: Doctorate
     entry_age: 23
     duration_years: 3
