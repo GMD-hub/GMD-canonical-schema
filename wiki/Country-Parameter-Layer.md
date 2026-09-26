@@ -11,6 +11,21 @@ This separation keeps `knowledge/` universal and makes country evidence
 explicit, effective dated, reviewable, and replaceable without changing a
 variable's structural contract.
 
+## Row entry IDs
+
+For row-based crosswalk parameters, each row carries a stable
+`country_entry_id`. The ID is required by schema validation and must follow
+the parameter-specific segment format:
+
+- `ISO3-EDU-NN` for `PARAM-EDU-LEVEL-CROSSWALK`
+- `ISO3-SUBNAT-NN` for `PARAM-GEO-GMD-CROSSWALK`
+- `ISO3-SAN-NN` for `PARAM-WASH-SANITATION-CROSSWALK`
+- `ISO3-WAS-NN` for `PARAM-WASH-WATER-CROSSWALK`
+
+`country_entry_id` is intended for canonical row traceability across review
+and promotion stages. It does not replace provenance fields such as
+`source_row`.
+
 ## Mandatory loading algorithm
 
 For every run and every variable:
@@ -216,6 +231,10 @@ Country-input extraction flows (for example, ISCED and JMP workbook adapters)
 may stage draft parameter contracts under
 `extraction/20_drafts/runs/country-parameters/contracts/` so draft payloads
 can be validated before promotion.
+
+Extraction runs automatically assign `country_entry_id` values for EDU, GEO,
+SAN, and WAS crosswalk rows. Manual edits in country artifacts must preserve
+these IDs and maintain format validity.
 
 These staged contracts are implementation scaffolding for draft validation.
 They are not canonical parameter registry entries and never replace governed

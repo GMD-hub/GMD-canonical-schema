@@ -68,6 +68,18 @@ crosswalks) when the universal parameter definition explicitly allows it.
 The country layer owns the country-year values; the universal layer owns the
 field contract and allowed row schema.
 
+For crosswalk tables, each row must include a stable `country_entry_id`.
+Current governed formats are:
+
+- `ISO3-EDU-NN` for `PARAM-EDU-LEVEL-CROSSWALK`
+- `ISO3-SUBNAT-NN` for `PARAM-GEO-GMD-CROSSWALK`
+- `ISO3-SAN-NN` for `PARAM-WASH-SANITATION-CROSSWALK`
+- `ISO3-WAS-NN` for `PARAM-WASH-WATER-CROSSWALK`
+
+`country_entry_id` is a canonical row identifier for traceability and review.
+It is distinct from source row numbers and remains in the country artifact even
+when labels are normalized.
+
 ## Country exceptions
 
 Exceptions express country-specific conditional logic that cannot be reduced
@@ -111,3 +123,4 @@ governed parameter or exception inputs belong in this layer.
 |---|---|---|
 | Country layer | `CTY-` + uppercase ISO3 | `CTY-PER` |
 | Country exception | `EXC-` + ISO3 + sequence | `EXC-PER-001` |
+| Crosswalk row entry | `ISO3-<SEGMENT>-NN` | `PER-EDU-01` |
