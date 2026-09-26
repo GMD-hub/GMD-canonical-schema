@@ -10,6 +10,13 @@ from schema.parameter import ParameterDefinition
 
 ISO3_PATTERN = re.compile(r"^[A-Z]{3}$")
 
+ENTRY_ID_SEGMENT_BY_PARAMETER = {
+    "PARAM-EDU-LEVEL-CROSSWALK": "EDU",
+    "PARAM-WASH-WATER-CROSSWALK": "WAS",
+    "PARAM-WASH-SANITATION-CROSSWALK": "SAN",
+    "PARAM-GEO-GMD-CROSSWALK": "SUBNAT",
+}
+
 
 class CountryValueProvenance(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -69,11 +76,16 @@ class CountryParameterFile(BaseModel):
             definition = registry.get(record.parameter_id)
             if definition is None:
                 raise ValueError(f"unknown parameter_id: {record.parameter_id}")
-            self._validate_value(record.value, definition)
+            self._validate_value(record.value, definition, self.iso3, record.parameter_id)
         return self
 
     @staticmethod
-    def _validate_value(value: Any, definition: ParameterDefinition) -> None:
+    def _validate_value(
+        value: Any,
+        definition: ParameterDefinition,
+        iso3: str,
+        parameter_id: str,
+    ) -> None:
         if definition.value_type == "integer":
             if isinstance(value, bool) or not isinstance(value, int):
                 raise ValueError(f"{definition.parameter_id} value must be an integer")
@@ -85,6 +97,8 @@ class CountryParameterFile(BaseModel):
 
             schema = definition.row_schema or {}
             expected = set(schema.keys())
+            expected_entry_segment = ENTRY_ID_SEGMENT_BY_PARAMETER.get(parameter_id)
+            seen_entry_ids: set[str] = set()
             for index, row in enumerate(value):
                 if not isinstance(row, dict):
                     raise ValueError(
@@ -111,6 +125,25 @@ class CountryParameterFile(BaseModel):
                             raise ValueError(
                                 f"{definition.parameter_id} row {index} field {key} must be a boolean"
                             )
+
+                if expected_entry_segment is None:
+                    continue
+
+                entry_id = row.get("country_entry_id")
+                if not isinstance(entry_id, str) or not entry_id:
+                    raise ValueError(
+                        f"{definition.parameter_id} row {index} field country_entry_id must be a non-empty string"
+                    )
+
+                expected_pattern = rf"^{iso3}-{expected_entry_segment}-\d{{2,}}$"
+                if not re.fullmatch(expected_pattern, entry_id):
+                    raise ValueError(
+                        f"{definition.parameter_id} row {index} country_entry_id must match {iso3}-{expected_entry_segment}-NN"
+                    )
+
+                if entry_id in seen_entry_ids:
+                    raise ValueError(f"{definition.parameter_id} duplicate country_entry_id: {entry_id}")
+                seen_entry_ids.add(entry_id)
             return
 
         if not isinstance(value, dict):

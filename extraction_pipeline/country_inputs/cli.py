@@ -221,6 +221,16 @@ def _variant_tokens(value: Any) -> set[str]:
     return {part.strip() for part in text.split("|") if part.strip()}
 
 
+def _assign_country_entry_ids(
+    rows: list[dict[str, Any]],
+    iso3: str,
+    segment: str,
+) -> list[dict[str, Any]]:
+    for index, row in enumerate(rows, start=1):
+        row["country_entry_id"] = f"{iso3}-{segment}-{index:02d}"
+    return rows
+
+
 def _dedupe_geo_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     # Uniqueness is anchored on geo_code identity and structural scope, not survey_label text.
     # This allows multiple survey_label spellings/variants for the same geo_code without
@@ -481,6 +491,7 @@ def extract_geo_rows(iso3: str, limit: int) -> tuple[list[dict[str, Any]], str]:
         rows.append(row)
 
     rows = _dedupe_geo_rows(rows)
+    rows = _assign_country_entry_ids(rows, iso3, "SUBNAT")
     if limit > 0:
         rows = rows[:limit]
 
@@ -656,6 +667,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 }
             )
             continue
+        rows = _assign_country_entry_ids(rows, iso3, "EDU")
         edu_out = DRAFT_ROOT / iso3 / "PARAM-EDU-LEVEL-CROSSWALK.yaml"
         edu_sig = _signature(
             _file_sha256(source),
@@ -736,6 +748,9 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 }
             )
             continue
+
+        water_rows = _assign_country_entry_ids(water_rows, iso3, "WAS")
+        sanitation_rows = _assign_country_entry_ids(sanitation_rows, iso3, "SAN")
 
         if water_rows:
             water_out = DRAFT_ROOT / iso3 / "PARAM-WASH-WATER-CROSSWALK.yaml"

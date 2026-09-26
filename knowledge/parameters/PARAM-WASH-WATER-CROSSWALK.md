@@ -14,6 +14,7 @@ kind: construction
 value_type: table
 value_schema: null
 row_schema:
+  country_entry_id: string
   source_category_code: string
   national_label_en: string
   national_label_local: string

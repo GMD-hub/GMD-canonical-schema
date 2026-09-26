@@ -43,6 +43,7 @@ def _write_contract(path: Path) -> None:
         "kind": "construction",
         "value_type": "table",
         "row_schema": {
+            "country_entry_id": "string",
             "national_label_en": "string",
             "national_label_local": "string",
             "entry_age": "integer",
@@ -84,6 +85,7 @@ def _write_valid_draft(path: Path) -> None:
                 "selectors": None,
                 "value": [
                     {
+                        "country_entry_id": "VNM-EDU-01",
                         "national_label_en": "Primary",
                         "national_label_local": "Tieu hoc",
                         "entry_age": 6,

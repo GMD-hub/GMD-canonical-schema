@@ -14,6 +14,7 @@ kind: construction
 value_type: table
 value_schema: null
 row_schema:
+  country_entry_id: string
   survey_labels: string
   survey_variables: string
   gmd_subnatid1: string
