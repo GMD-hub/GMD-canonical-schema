@@ -6,13 +6,13 @@ status: draft
 country_name: BDI
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BDI-EDU-01
-    national_label_en: Enseignement préscolaire
-    national_label_local: Enseignement préscolaire
+    national_label_en: "Enseignement pr\xE9scolaire"
+    national_label_local: "Enseignement pr\xE9scolaire"
     entry_age: 4
     duration_years: 3
     isced_level: '0'
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BDI-EDU-02
     national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BDI-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: BDI-EDU-03
-    national_label_en: 4ème cycle du fondamental
-    national_label_local: 4ème cycle du fondamental
+    national_label_en: "4\xE8me cycle du fondamental"
+    national_label_local: "4\xE8me cycle du fondamental"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - BDI-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BDI-EDU-04
     national_label_en: Enseignement professionnel
     national_label_local: Enseignement professionnel
@@ -54,9 +74,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - BDI-EDU-02
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BDI-EDU-05
-    national_label_en: Enseignement post fondamental général
-    national_label_local: Enseignement post fondamental général
+    national_label_en: "Enseignement post fondamental g\xE9n\xE9ral"
+    national_label_local: "Enseignement post fondamental g\xE9n\xE9ral"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -65,9 +93,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - BDI-EDU-03
+    - BDI-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
   - country_entry_id: BDI-EDU-06
-    national_label_en: Enseignement post fondamental pédagogique
-    national_label_local: Enseignement post fondamental pédagogique
+    national_label_en: "Enseignement post fondamental p\xE9dagogique"
+    national_label_local: "Enseignement post fondamental p\xE9dagogique"
     entry_age: 16
     duration_years: 4
     isced_level: '3'
@@ -76,6 +115,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - BDI-EDU-03
+    - BDI-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
   - country_entry_id: BDI-EDU-07
     national_label_en: Enseignement post fondamental technique
     national_label_local: Enseignement post fondamental technique
@@ -87,6 +137,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - BDI-EDU-03
+    - BDI-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
   - country_entry_id: BDI-EDU-08
     national_label_en: Enseignement post secondaire professionnel
     national_label_local: Enseignement post secondaire professionnel
@@ -98,11 +159,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-09
-    national_label_en: Enseignement supérieur pour la Formation des enseignants du
-      4eme cycle fondamental
-    national_label_local: Enseignement supérieur pour la Formation des enseignants
-      du 4eme cycle fondamental
+    national_label_en: "Enseignement sup\xE9rieur pour la Formation des enseignants\
+      \ du 4eme cycle fondamental"
+    national_label_local: "Enseignement sup\xE9rieur pour la Formation des enseignants\
+      \ du 4eme cycle fondamental"
     entry_age: 19
     duration_years: 3
     isced_level: '5'
@@ -111,11 +186,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-10
-    national_label_en: Enseignement supérieur pour la Formation des enseignants du
-      post fondamental(Cycle2 du secondaire)
-    national_label_local: Enseignement supérieur pour la Formation des enseignants
-      du post fondamental(Cycle2 du secondaire)
+    national_label_en: "Enseignement sup\xE9rieur pour la Formation des enseignants\
+      \ du post fondamental(Cycle2 du secondaire)"
+    national_label_local: "Enseignement sup\xE9rieur pour la Formation des enseignants\
+      \ du post fondamental(Cycle2 du secondaire)"
     entry_age: 22
     duration_years: 2
     isced_level: '6'
@@ -124,9 +213,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-11
-    national_label_en: "Enseignement supérieur \n(1 e cycle)"
-    national_label_local: "Enseignement supérieur \n(1 e cycle)"
+    national_label_en: "Enseignement sup\xE9rieur \n(1 e cycle)"
+    national_label_local: "Enseignement sup\xE9rieur \n(1 e cycle)"
     entry_age: 18
     duration_years: 2
     isced_level: '6'
@@ -135,9 +238,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-12
-    national_label_en: Enseignement supérieur (Ingéniorat technique)
-    national_label_local: Enseignement supérieur (Ingéniorat technique)
+    national_label_en: "Enseignement sup\xE9rieur (Ing\xE9niorat technique)"
+    national_label_local: "Enseignement sup\xE9rieur (Ing\xE9niorat technique)"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -146,9 +263,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-13
-    national_label_en: Enseignement supérieur (cycle long)
-    national_label_local: Enseignement supérieur (cycle long)
+    national_label_en: "Enseignement sup\xE9rieur (cycle long)"
+    national_label_local: "Enseignement sup\xE9rieur (cycle long)"
     entry_age: 21
     duration_years: 2
     isced_level: '6'
@@ -157,9 +288,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-14
-    national_label_en: Enseignement superieur (Baccalauréat)
-    national_label_local: Enseignement superieur (Baccalauréat)
+    national_label_en: "Enseignement superieur (Baccalaur\xE9at)"
+    national_label_local: "Enseignement superieur (Baccalaur\xE9at)"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -168,9 +313,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-15
-    national_label_en: Enseignement supérieur (Ingéniorat)
-    national_label_local: Enseignement supérieur (Ingéniorat)
+    national_label_en: "Enseignement sup\xE9rieur (Ing\xE9niorat)"
+    national_label_local: "Enseignement sup\xE9rieur (Ing\xE9niorat)"
     entry_age: 23
     duration_years: 3
     isced_level: '6'
@@ -179,9 +338,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-16
-    national_label_en: Enseignement supérieur (médecine)
-    national_label_local: Enseignement supérieur (médecine)
+    national_label_en: "Enseignement sup\xE9rieur (m\xE9decine)"
+    national_label_local: "Enseignement sup\xE9rieur (m\xE9decine)"
     entry_age: 21
     duration_years: 7
     isced_level: '7'
@@ -190,11 +363,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-17
-    national_label_en: "Enseignement supérieur \n(Diplôme d'études supérieures spécialisées
-      (DESS))"
-    national_label_local: "Enseignement supérieur \n(Diplôme d'études supérieures
-      spécialisées (DESS))"
+    national_label_en: "Enseignement sup\xE9rieur \n(Dipl\xF4me d'\xE9tudes sup\xE9\
+      rieures sp\xE9cialis\xE9es (DESS))"
+    national_label_local: "Enseignement sup\xE9rieur \n(Dipl\xF4me d'\xE9tudes sup\xE9\
+      rieures sp\xE9cialis\xE9es (DESS))"
     entry_age: 25
     duration_years: 1
     isced_level: '7'
@@ -203,10 +390,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-18
-    national_label_en: "Enseignement supérieur \n(Diplôme d'études approfondies (DEA))"
-    national_label_local: "Enseignement supérieur \n(Diplôme d'études approfondies
-      (DEA))"
+    national_label_en: "Enseignement sup\xE9rieur \n(Dipl\xF4me d'\xE9tudes approfondies\
+      \ (DEA))"
+    national_label_local: "Enseignement sup\xE9rieur \n(Dipl\xF4me d'\xE9tudes approfondies\
+      \ (DEA))"
     entry_age: 25
     duration_years: 2
     isced_level: '7'
@@ -215,9 +417,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - BDI-EDU-05
+    - BDI-EDU-06
+    - BDI-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
   - country_entry_id: BDI-EDU-19
-    national_label_en: Enseignement supérieur (Spécialisation en médecine)
-    national_label_local: Enseignement supérieur (Spécialisation en médecine)
+    national_label_en: "Enseignement sup\xE9rieur (Sp\xE9cialisation en m\xE9decine)"
+    national_label_local: "Enseignement sup\xE9rieur (Sp\xE9cialisation en m\xE9decine)"
     entry_age: 28
     duration_years: 5
     isced_level: '8'
@@ -226,15 +442,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - BDI-EDU-16
+    - BDI-EDU-17
+    - BDI-EDU-18
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BDI-EDU-02
+    - BDI-EDU-04
+    - BDI-EDU-05
+    - BDI-EDU-17
+    - BDI-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BDI-EDU-03, BDI-EDU-04'
+    - 'minimum parent path selected from: BDI-EDU-05, BDI-EDU-06, BDI-EDU-07'
+    - 'minimum parent path selected from: BDI-EDU-16, BDI-EDU-17, BDI-EDU-18'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Burundi.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BDI-SUBNAT-01
     survey_labels: 1 -  Bubanza | 1 - Bubanza
@@ -243,10 +475,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40542
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40542
     geo_year: '2015'
@@ -264,10 +496,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40551
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40551
     geo_year: '2015'
@@ -285,10 +517,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40552
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40552
     geo_year: '2015'
@@ -306,10 +538,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40553
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40553
     geo_year: '2015'
@@ -327,10 +559,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40554
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40554
     geo_year: '2015'
@@ -348,10 +580,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40555
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40555
     geo_year: '2015'
@@ -369,10 +601,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40556
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40556
     geo_year: '2015'
@@ -390,10 +622,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40557
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40557
     geo_year: '2015'
@@ -411,10 +643,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40558
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40558
     geo_year: '2015'
@@ -432,10 +664,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40543
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40543
     geo_year: '2015'
@@ -453,10 +685,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40544
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40544
     geo_year: '2015'
@@ -474,10 +706,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40545
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40545
     geo_year: '2015'
@@ -495,10 +727,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40546
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40546
     geo_year: '2015'
@@ -516,10 +748,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40547
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40547
     geo_year: '2015'
@@ -537,10 +769,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40548
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40548
     geo_year: '2015'
@@ -558,10 +790,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40549
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40549
     geo_year: '2015'
@@ -579,10 +811,10 @@ parameters:
     gmd_subnatid2: BDI_2015_GAUL1_40550
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BDI_2015_GAUL1_40550
     geo_year: '2015'
@@ -600,10 +832,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BDI_2015_GAULx_18
     geo_year: '2015'
@@ -621,10 +853,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BDI_2015_GAULx_40544
     geo_year: '2015'
@@ -642,10 +874,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BDI_2015_GAULx_40545
     geo_year: '2015'
@@ -658,13 +890,13 @@ parameters:
     source_row: 592
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BDI-SAN-01
     source_category_code: composting_toilet
@@ -674,8 +906,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BDI-SAN-02
     source_category_code: toilettes_a_compostage
@@ -685,184 +917,184 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BDI-SAN-03
     source_category_code: composting_toilet
     national_label_en: Composting toilet
-    national_label_local: Toilettes a compostage (privées)
+    national_label_local: "Toilettes a compostage (priv\xE9es)"
     jmp_classification: Composting toilets > Composting toilet (private)
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: BDI-SAN-04
     source_category_code: flush_to_somewhere_else
     national_label_en: Flush To Somewhere Else
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BDI-SAN-05
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush To Piped Sewer System
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BDI-SAN-06
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush To Pit Latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BDI-SAN-07
     source_category_code: flush_to_septic_tank
     national_label_en: Flush To Septic Tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BDI-SAN-08
     source_category_code: flush_don_t_know_where
     national_label_en: Flush, Don't Know Where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BDI-SAN-09
     source_category_code: outdoor_private_connection_with_cistern
     national_label_en: Outdoor Private Connection with Cistern
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: BDI-SAN-10
     source_category_code: outdoor_communal_connection_with_cistern
     national_label_en: Outdoor Communal Connection with Cistern
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: BDI-SAN-11
     source_category_code: chasse_branchee_a_l_egout
     national_label_en: Chasse branchee a l'egout
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BDI-SAN-12
     source_category_code: chasse_eau_avec_egout
     national_label_en: Chasse eau avec egout
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BDI-SAN-13
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BDI-SAN-14
     source_category_code: indoor_connection
     national_label_en: Indoor Connection
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BDI-SAN-15
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BDI-SAN-16
     source_category_code: chasse_branchee_a_fosse_septique
     national_label_en: Chasse branchee a fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BDI-SAN-17
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BDI-SAN-18
     source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BDI-SAN-19
     source_category_code: bucket_toilet
@@ -872,8 +1104,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BDI-SAN-20
     source_category_code: hanging_toilet_latrine
@@ -884,8 +1116,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BDI-SAN-21
     source_category_code: pit_latrine_with_slab_no_washable
@@ -895,8 +1127,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: BDI-SAN-22
     source_category_code: latrines_couvertes
@@ -907,8 +1139,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BDI-SAN-23
     source_category_code: pit_latrine_with_slab
@@ -919,8 +1151,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BDI-SAN-24
     source_category_code: pit_latrine_with_washable_slab
@@ -931,8 +1163,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BDI-SAN-25
     source_category_code: latrines_a_fosses_trou_ouvert
@@ -943,8 +1175,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BDI-SAN-26
     source_category_code: pit_latrine_without_slab_open_pit
@@ -955,8 +1187,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BDI-SAN-27
     source_category_code: trou_ouvert
@@ -967,8 +1199,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BDI-SAN-28
     source_category_code: latrines_traditionelles
@@ -979,44 +1211,44 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BDI-SAN-29
     source_category_code: latrines_ameliorees
     national_label_en: Latrines ameliorees
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BDI-SAN-30
     source_category_code: latrines_ameliorees_auto_aerees_laa
     national_label_en: Latrines ameliorees auto aerees (LAA)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BDI-SAN-31
     source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BDI-SAN-32
     source_category_code: outdoor_private_connection_without_cistern
@@ -1026,8 +1258,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: BDI-SAN-33
     source_category_code: latrines_publiques
@@ -1038,8 +1270,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: BDI-SAN-34
     source_category_code: outdoor_communal_connection_without_cistern
@@ -1050,19 +1282,19 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: BDI-SAN-35
     source_category_code: latrines_a_evacuation
     national_label_en: Latrines a evacuation
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
     jmp_id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 89
   - country_entry_id: BDI-SAN-36
     source_category_code: no_facilities
@@ -1072,8 +1304,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BDI-SAN-37
     source_category_code: no_facility_bush_field
@@ -1083,8 +1315,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BDI-SAN-38
     source_category_code: non_pas_disponible
@@ -1094,8 +1326,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BDI-SAN-39
     source_category_code: pas_de_toilette
@@ -1105,8 +1337,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BDI-SAN-40
     source_category_code: pas_de_toilettes_ou_brousse_ou_champ
@@ -1116,8 +1348,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BDI-SAN-41
     source_category_code: autre
@@ -1127,8 +1359,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BDI-SAN-42
     source_category_code: autres
@@ -1138,8 +1370,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BDI-SAN-43
     source_category_code: other
@@ -1149,18 +1381,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BDI_Burundi_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BDI-WAS-01
     source_category_code: well
@@ -1170,63 +1402,63 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: BDI-WAS-02
     source_category_code: protected_spring
     national_label_en: Protected Spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BDI-WAS-03
     source_category_code: source_amenagee
     national_label_en: Source amenagee
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BDI-WAS-04
     source_category_code: source_protegee
     national_label_en: Source protegee
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BDI-WAS-05
     source_category_code: protected_well
     national_label_en: Protected well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BDI-WAS-06
     source_category_code: puits_protege
-    national_label_en: Puits protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BDI-WAS-07
     source_category_code: puits_a_pompe
@@ -1236,8 +1468,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BDI-WAS-08
     source_category_code: tube_well_or_borehole
@@ -1247,85 +1479,85 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BDI-WAS-09
     source_category_code: source_non_protege
-    national_label_en: Source non protégé
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BDI-WAS-10
     source_category_code: source_non_protegee
     national_label_en: Source non protegee
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BDI-WAS-11
     source_category_code: unprotected_spring
     national_label_en: Unprotected Spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BDI-WAS-12
     source_category_code: puit_non_protege
-    national_label_en: Puit non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puit non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BDI-WAS-13
     source_category_code: puits_non_protege
     national_label_en: Puits non protege
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BDI-WAS-14
     source_category_code: unprotected_well
     national_label_en: Unprotected well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BDI-WAS-15
     source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BDI-WAS-16
     source_category_code: camion_citerne
@@ -1335,8 +1567,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BDI-WAS-17
     source_category_code: tanker_truck
@@ -1346,8 +1578,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BDI-WAS-18
     source_category_code: other
@@ -1357,19 +1589,19 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BDI-WAS-19
     source_category_code: bottled_water
     national_label_en: Bottled water
-    national_label_local: Eau conditionnée
+    national_label_local: "Eau conditionn\xE9e"
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: BDI-WAS-20
     source_category_code: bottled_water
@@ -1379,8 +1611,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BDI-WAS-21
     source_category_code: eau_en_bouteille
@@ -1390,30 +1622,30 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BDI-WAS-22
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BDI-WAS-23
     source_category_code: rainwater
     national_label_en: Rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BDI-WAS-24
     source_category_code: eau_de_surface
@@ -1423,8 +1655,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BDI-WAS-25
     source_category_code: mare_riviere_lac
@@ -1434,8 +1666,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BDI-WAS-26
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -1445,8 +1677,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BDI-WAS-27
     source_category_code: lake
@@ -1456,8 +1688,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: BDI-WAS-28
     source_category_code: river
@@ -1467,8 +1699,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BDI-WAS-29
     source_category_code: autre
@@ -1478,8 +1710,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BDI-WAS-30
     source_category_code: other
@@ -1489,8 +1721,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BDI-WAS-31
     source_category_code: piped_to_neighbor
@@ -1500,8 +1732,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BDI-WAS-32
     source_category_code: private_tap_neighbor
@@ -1511,8 +1743,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BDI-WAS-33
     source_category_code: eau_de_robinet_dans_le_logement
@@ -1522,8 +1754,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BDI-WAS-34
     source_category_code: eau_de_robinet_dns_le_logement
@@ -1533,8 +1765,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BDI-WAS-35
     source_category_code: household_connection
@@ -1544,8 +1776,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BDI-WAS-36
     source_category_code: piped_into_dwelling
@@ -1555,8 +1787,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BDI-WAS-37
     source_category_code: dans_la_cour_parcelle
@@ -1566,8 +1798,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BDI-WAS-38
     source_category_code: eau_de_robinet_dans_la_parcelle
@@ -1577,8 +1809,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BDI-WAS-39
     source_category_code: outdoor_connection
@@ -1588,8 +1820,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BDI-WAS-40
     source_category_code: piped_to_yard_plot
@@ -1599,8 +1831,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BDI-WAS-41
     source_category_code: borne_fontaine
@@ -1610,8 +1842,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BDI-WAS-42
     source_category_code: public_tap_standpipe
@@ -1621,8 +1853,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BDI-WAS-43
     source_category_code: robinet_public_borne_fontaine
@@ -1632,8 +1864,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BDI-WAS-44
     source_category_code: standpipe
@@ -1643,13 +1875,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BDI_Burundi_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -11,6 +11,7 @@ import yaml
 
 from .emit import emit_benchmark, emit_parameter_draft
 from ..hashing import hash_file
+from .education_pathways import enrich_rows
 from .legacy import ROOT, load_edu_module, load_wash_module
 from .transform import (
     to_benchmark_payload,
@@ -668,6 +669,7 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             )
             continue
         rows = _assign_country_entry_ids(rows, iso3, "EDU")
+        rows = enrich_rows(rows)
         edu_out = DRAFT_ROOT / iso3 / "PARAM-EDU-LEVEL-CROSSWALK.yaml"
         edu_sig = _signature(
             _file_sha256(source),

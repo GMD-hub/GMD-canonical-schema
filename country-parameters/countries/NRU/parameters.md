@@ -6,9 +6,9 @@ status: draft
 country_name: NRU
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NRU-EDU-01
     national_label_en: Playcentre
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NRU-EDU-02
     national_label_en: Pre-School
     national_label_local: Pre-School
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NRU-EDU-03
     national_label_en: Prep
     national_label_local: Prep
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NRU-EDU-04
     national_label_en: Primary Y1-Y6
     national_label_local: Primary
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - NRU-EDU-04
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: NRU-EDU-05
     national_label_en: Primary Y7-Y8
     national_label_local: Primary
@@ -65,6 +89,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - NRU-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NRU-EDU-06
     national_label_en: Secondary Y9-Y10
     national_label_local: Secondary
@@ -76,6 +108,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - NRU-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NRU-EDU-07
     national_label_en: Secondary Y11-Y12
     national_label_local: Secondary
@@ -87,6 +127,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - NRU-EDU-05
+    - NRU-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NRU-EDU-05, NRU-EDU-06'
   - country_entry_id: NRU-EDU-08
     national_label_en: Secondary Y11-Y12
     national_label_local: Secondary
@@ -98,6 +149,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - NRU-EDU-05
+    - NRU-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NRU-EDU-05, NRU-EDU-06'
   - country_entry_id: NRU-EDU-09
     national_label_en: TVET
     national_label_local: TVET
@@ -109,6 +171,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - NRU-EDU-07
+    - NRU-EDU-08
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    - NRU-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NRU-EDU-05, NRU-EDU-06'
+    - 'minimum parent path selected from: NRU-EDU-07, NRU-EDU-08'
   - country_entry_id: NRU-EDU-10
     national_label_en: Foundation USP
     national_label_local: Foundation USP
@@ -120,6 +195,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - NRU-EDU-07
+    - NRU-EDU-08
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    - NRU-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NRU-EDU-05, NRU-EDU-06'
+    - 'minimum parent path selected from: NRU-EDU-07, NRU-EDU-08'
   - country_entry_id: NRU-EDU-11
     national_label_en: Cert/Dip USP
     national_label_local: Cert/Dip USP
@@ -131,6 +219,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - NRU-EDU-07
+    - NRU-EDU-08
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    - NRU-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NRU-EDU-05, NRU-EDU-06'
+    - 'minimum parent path selected from: NRU-EDU-07, NRU-EDU-08'
   - country_entry_id: NRU-EDU-12
     national_label_en: Bachelor
     national_label_local: Bachelor degree + Post-graduate Dip/Cert
@@ -142,6 +243,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - NRU-EDU-07
+    - NRU-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    - NRU-EDU-12
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: NRU-EDU-05, NRU-EDU-06'
+    - 'minimum parent path selected from: NRU-EDU-07, NRU-EDU-08'
   - country_entry_id: NRU-EDU-13
     national_label_en: Masters
     national_label_local: Masters
@@ -153,6 +267,17 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - NRU-EDU-12
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    - NRU-EDU-12
+    - NRU-EDU-13
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: NRU-EDU-14
     national_label_en: Phd
     national_label_local: Phd
@@ -164,15 +289,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - NRU-EDU-13
+    cum_years_schooling: 20
+    cum_years_computation_path:
+    - NRU-EDU-04
+    - NRU-EDU-05
+    - NRU-EDU-07
+    - NRU-EDU-12
+    - NRU-EDU-13
+    - NRU-EDU-14
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Nauru.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NRU-SAN-01
     source_category_code: to_open_drain
@@ -182,8 +319,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: NRU-SAN-02
     source_category_code: to_piped_sewer_system
@@ -193,8 +330,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: NRU-SAN-03
     source_category_code: to_pit
@@ -204,8 +341,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: NRU-SAN-04
     source_category_code: to_septic_tank
@@ -215,8 +352,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: NRU-SAN-05
     source_category_code: to_dk_where
@@ -226,8 +363,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: NRU-SAN-06
     source_category_code: bucket
@@ -237,8 +374,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 118
   - country_entry_id: NRU-SAN-07
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -249,8 +386,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: NRU-SAN-08
     source_category_code: ventilated_improved_pit_latrine
@@ -261,8 +398,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 113
   - country_entry_id: NRU-SAN-09
     source_category_code: no_facility_bush_field
@@ -272,8 +409,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NRU-SAN-10
     source_category_code: other
@@ -283,18 +420,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NRU_Nauru_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NRU-WAS-01
     source_category_code: protected_well
@@ -304,8 +441,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: NRU-WAS-02
     source_category_code: tanker_truck_desalination
@@ -315,8 +452,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: NRU-WAS-03
     source_category_code: community_tank
@@ -326,8 +463,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: NRU-WAS-04
     source_category_code: other
@@ -337,8 +474,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: NRU-WAS-05
     source_category_code: bottled_water
@@ -348,8 +485,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: NRU-WAS-06
     source_category_code: rainwater
@@ -359,8 +496,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: NRU-WAS-07
     source_category_code: piped_to_neighbour
@@ -370,8 +507,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NRU-WAS-08
     source_category_code: piped_water_into_dwelling
@@ -381,8 +518,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: NRU-WAS-09
     source_category_code: piped_water_to_yard_plot
@@ -392,13 +529,13 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NRU_Nauru_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

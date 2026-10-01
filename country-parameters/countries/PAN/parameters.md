@@ -6,9 +6,9 @@ status: draft
 country_name: PAN
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PAN-EDU-01
     national_label_en: Early childhood education 1 and 2
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: PAN-EDU-02
     national_label_en: Early childhood education 3 or "Preschool"
     national_label_local: Parvularia 3 o "Preescolar"
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: PAN-EDU-03
     national_label_en: Primary
     national_label_local: Primaria
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - PAN-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: PAN-EDU-04
     national_label_en: Lower secondary
     national_label_local: Premedia
@@ -54,9 +72,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - PAN-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-05
     national_label_en: Upper secondary, academic orientation
-    national_label_local: Educación Media Académica
+    national_label_local: "Educaci\xF3n Media Acad\xE9mica"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -65,9 +91,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - PAN-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-06
     national_label_en: Upper secondary, professional and technical orientation
-    national_label_local: Educación Media Profesional y Técnica
+    national_label_local: "Educaci\xF3n Media Profesional y T\xE9cnica"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -76,6 +111,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - PAN-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-07
     national_label_en: Third level
     national_label_local: Tercer nivel
@@ -87,6 +131,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-08
     national_label_en: Higher education, non-university
     national_label_local: Superior no universitaria
@@ -98,9 +152,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-09
     national_label_en: Technical diploma
-    national_label_local: Técnicos
+    national_label_local: "T\xE9cnicos"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -109,6 +173,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-10
     national_label_en: Licentiate
     national_label_local: Licenciaturas
@@ -120,9 +194,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-11
     national_label_en: Dentistry
-    national_label_local: Odontología
+    national_label_local: "Odontolog\xEDa"
     entry_age: 18
     duration_years: 5
     isced_level: '7'
@@ -131,6 +215,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-12
     national_label_en: Veterinary medicine
     national_label_local: Medicina Veterinaria
@@ -142,6 +236,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-13
     national_label_en: Medicine
     national_label_local: Medicina
@@ -153,9 +257,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - PAN-EDU-05
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-14
     national_label_en: Masters
-    national_label_local: Maestrías
+    national_label_local: "Maestr\xEDas"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -164,6 +278,17 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - PAN-EDU-10
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-10
+    - PAN-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: PAN-EDU-15
     national_label_en: Doctorate
     national_label_local: Doctorado
@@ -175,15 +300,30 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - PAN-EDU-11
+    - PAN-EDU-12
+    - PAN-EDU-13
+    - PAN-EDU-14
+    cum_years_schooling: 20
+    cum_years_computation_path:
+    - PAN-EDU-03
+    - PAN-EDU-04
+    - PAN-EDU-05
+    - PAN-EDU-11
+    - PAN-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PAN-EDU-11, PAN-EDU-12, PAN-EDU-13, PAN-EDU-14'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Panama.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PAN-SUBNAT-01
     survey_labels: 1 - Bocas del Toro
@@ -192,10 +332,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_93668
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_93668
     geo_year: '2015'
@@ -213,10 +353,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_2282
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_2282
     geo_year: '2015'
@@ -225,7 +365,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2282'
     geo_nvar: ADM1_NAME
-    geo_name: Coclé
+    geo_name: "Cocl\xE9"
     source_row: 11005
   - country_entry_id: PAN-SUBNAT-03
     survey_labels: 3 - Colon
@@ -234,10 +374,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_2283
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_2283
     geo_year: '2015'
@@ -246,7 +386,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2283'
     geo_nvar: ADM1_NAME
-    geo_name: Colón
+    geo_name: "Col\xF3n"
     source_row: 11006
   - country_entry_id: PAN-SUBNAT-04
     survey_labels: 4 - Chiriqui
@@ -255,10 +395,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_93669
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_93669
     geo_year: '2015'
@@ -267,7 +407,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '93669'
     geo_nvar: ADM1_NAME
-    geo_name: Chiriquí
+    geo_name: "Chiriqu\xED"
     source_row: 11007
   - country_entry_id: PAN-SUBNAT-05
     survey_labels: 5 - Darien
@@ -276,10 +416,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_93670
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_93670
     geo_year: '2015'
@@ -288,7 +428,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '93670'
     geo_nvar: ADM1_NAME
-    geo_name: Darién
+    geo_name: "Dari\xE9n"
     source_row: 11008
   - country_entry_id: PAN-SUBNAT-06
     survey_labels: 6 - Herrera
@@ -297,10 +437,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_2286
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_2286
     geo_year: '2015'
@@ -318,10 +458,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_2287
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_2287
     geo_year: '2015'
@@ -339,10 +479,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_2288
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -351,7 +491,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2288'
     geo_nvar: ADM1_NAME
-    geo_name: Panamá
+    geo_name: "Panam\xE1"
     source_row: 11011
   - country_entry_id: PAN-SUBNAT-09
     survey_labels: 9 - Veraguas
@@ -360,10 +500,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_93673
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_93673
     geo_year: '2015'
@@ -381,10 +521,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_2284
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_2284
     geo_year: '2015'
@@ -402,10 +542,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_93671
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_93671
     geo_year: '2015'
@@ -414,7 +554,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '93671'
     geo_nvar: ADM1_NAME
-    geo_name: Emberá
+    geo_name: "Ember\xE1"
     source_row: 11015
   - country_entry_id: PAN-SUBNAT-12
     survey_labels: 12 - Comarca Ngobe-Bugle
@@ -423,10 +563,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAUL1_93672
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAUL1_93672
     geo_year: '2015'
@@ -435,7 +575,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '93672'
     geo_nvar: ADM1_NAME
-    geo_name: Ngöbe Buglé
+    geo_name: "Ng\xF6be Bugl\xE9"
     source_row: 11016
   - country_entry_id: PAN-SUBNAT-13
     survey_labels: 13 - Panama-Oeste
@@ -444,10 +584,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAULx_13
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAULx_13
     geo_year: '2015'
@@ -456,7 +596,7 @@ parameters:
     geo_idvar: sample
     geo_id: '13'
     geo_nvar: ADM2_NAME
-    geo_name: Capira & Chame & San Carlos & Arraiján & La Chorrera
+    geo_name: "Capira & Chame & San Carlos & Arraij\xE1n & La Chorrera"
     source_row: 11185
   - country_entry_id: PAN-SUBNAT-14
     survey_labels: 8 - Panama
@@ -465,10 +605,10 @@ parameters:
     gmd_subnatid2: PAN_2015_GAULx_8
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PAN_2015_GAULx_8
     geo_year: '2015'
@@ -477,18 +617,18 @@ parameters:
     geo_idvar: sample
     geo_id: '8'
     geo_nvar: ADM2_NAME
-    geo_name: Balboa & Chimán & San Miguelito & Taboga & Chepo & Panamá & Kuna de
-      Madungandí
+    geo_name: "Balboa & Chim\xE1n & San Miguelito & Taboga & Chepo & Panam\xE1 & Kuna\
+      \ de Madungand\xED"
     source_row: 11192
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PAN-SAN-01
     source_category_code: letrina_de_compostaje
@@ -498,30 +638,31 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: PAN-SAN-02
     source_category_code: conectado_a_alcantarillado_o_tanque_septico
-    national_label_en: Conectado a alcantarillado o tanque séptico
+    national_label_en: "Conectado a alcantarillado o tanque s\xE9ptico"
     national_label_local: Descarga/baldeo con agua
     jmp_classification: Flush and pour flush
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: PAN-SAN-03
     source_category_code: servicio_con_conexion_al_mar_rio_o_quebrada_u_otro_lugar_circundante
-    national_label_en: Servicio con conexión al mar, río o quebrada u otro lugar circundante
+    national_label_en: "Servicio con conexi\xF3n al mar, r\xEDo o quebrada u otro\
+      \ lugar circundante"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PAN-SAN-04
     source_category_code: conectado_a_alcantarillado
@@ -531,8 +672,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PAN-SAN-05
     source_category_code: servicio_conectado_al_alcantarillado
@@ -542,8 +683,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PAN-SAN-06
     source_category_code: letrina_de_arrastre
@@ -553,8 +694,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: PAN-SAN-07
     source_category_code: conectado_a_tanque_septico
@@ -564,19 +705,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PAN-SAN-08
     source_category_code: servicio_conectado_a_tanque_septico_o_a_fosa_septica
-    national_label_en: Servicio conectado a tanque séptico o a fosa séptica
+    national_label_en: "Servicio conectado a tanque s\xE9ptico o a fosa s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PAN-SAN-09
     source_category_code: connection_to_sewer_private
@@ -586,8 +727,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: PAN-SAN-10
     source_category_code: connection_to_septic_tank_private
@@ -597,8 +738,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: PAN-SAN-11
     source_category_code: connection_to_sewer_shared
@@ -609,8 +750,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: PAN-SAN-12
     source_category_code: connection_to_septic_tank_shared
@@ -620,8 +761,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: PAN-SAN-13
     source_category_code: conectado_a_alcantarillado
@@ -631,8 +772,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PAN-SAN-14
     source_category_code: conectado_a_alcantarillado_sanitario
@@ -642,8 +783,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PAN-SAN-15
     source_category_code: conectado_a_tanque_septico
@@ -653,20 +794,20 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: PAN-SAN-16
     source_category_code: servicio_colgante_sobre_el_rio_o_el_mar
-    national_label_en: Servicio colgante sobre el río o el mar
+    national_label_en: "Servicio colgante sobre el r\xEDo o el mar"
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: PAN-SAN-17
     source_category_code: letrina_o_servicio_hueco_sin_piso
@@ -677,8 +818,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: PAN-SAN-18
     source_category_code: de_hueco_o_letrina
@@ -689,8 +830,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PAN-SAN-19
     source_category_code: hueco_hole_o_letrina
@@ -701,32 +842,32 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PAN-SAN-20
     source_category_code: letrina_o_servicio_de_hueco_sin_ventilacion
-    national_label_en: Letrina o servicio de hueco sin ventilación
+    national_label_en: "Letrina o servicio de hueco sin ventilaci\xF3n"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PAN-SAN-21
     source_category_code: letrina_o_servicio_de_hueco_con_ventilacion
-    national_label_en: Letrina o servicio de hueco con ventilación
+    national_label_en: "Letrina o servicio de hueco con ventilaci\xF3n"
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PAN-SAN-22
     source_category_code: private_latrine
@@ -736,8 +877,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: PAN-SAN-23
     source_category_code: shared_latrine
@@ -748,8 +889,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PAN-SAN-24
     source_category_code: no_hay_servicio_sanitario_va_al_monte_campo
@@ -759,8 +900,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PAN-SAN-25
     source_category_code: no_tiene
@@ -770,8 +911,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PAN-SAN-26
     source_category_code: no_tiene_no_usa_el_servicio_sanitario_del_vecino
@@ -781,8 +922,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PAN-SAN-27
     source_category_code: usa_servicio_sanitario_del_vecino
@@ -792,8 +933,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: PAN-SAN-28
     source_category_code: otro
@@ -803,18 +944,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PAN_Panama_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PAN-WAS-01
     source_category_code: pozo_privado
@@ -824,8 +965,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: PAN-WAS-02
     source_category_code: pozo_publico
@@ -835,8 +976,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: PAN-WAS-03
     source_category_code: manantial_protegido
@@ -846,8 +987,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: PAN-WAS-04
     source_category_code: pozo_artesanal_protegido
@@ -857,8 +998,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: PAN-WAS-05
     source_category_code: pozo_brocal_protegido
@@ -868,8 +1009,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: PAN-WAS-06
     source_category_code: pozo_sanitario
@@ -879,8 +1020,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: PAN-WAS-07
     source_category_code: pozo_o_manantial_protegido
@@ -890,8 +1031,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: PAN-WAS-08
     source_category_code: pozo_superficial
@@ -901,8 +1042,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: PAN-WAS-09
     source_category_code: pozo_brocal_protegido
@@ -912,8 +1053,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PAN-WAS-10
     source_category_code: pozo_perforado_o_tubular
@@ -923,8 +1064,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PAN-WAS-11
     source_category_code: manantial_no_protegido
@@ -934,8 +1075,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: PAN-WAS-12
     source_category_code: pozo_artesanal_no_protegido
@@ -945,8 +1086,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: PAN-WAS-13
     source_category_code: pozo_brocal_no_protegido
@@ -956,8 +1097,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: PAN-WAS-14
     source_category_code: pozo_o_manantial_no_protegido
@@ -967,19 +1108,19 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: PAN-WAS-15
     source_category_code: carro_con_tanque_o_bidon_pequea_o_camion_cisterna
-    national_label_en: Carro con tanque o bidon pequeã‘o / camion cisterna
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_en: "Carro con tanque o bidon peque\xE3\u2018o / camion cisterna"
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: PAN-WAS-16
     source_category_code: carro_cisterna
@@ -989,19 +1130,19 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PAN-WAS-17
     source_category_code: carro_tanque_camion_cisterna
-    national_label_en: Carro-tanque / camión cisterna
+    national_label_en: "Carro-tanque / cami\xF3n cisterna"
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PAN-WAS-18
     source_category_code: otra
@@ -1011,8 +1152,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PAN-WAS-19
     source_category_code: otro
@@ -1022,8 +1163,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PAN-WAS-20
     source_category_code: agua_embotellada_agua_en_bolsitas_garrafones
@@ -1033,8 +1174,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PAN-WAS-21
     source_category_code: agua_embotellada_envasada
@@ -1044,8 +1185,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PAN-WAS-22
     source_category_code: agua_de_lluvia
@@ -1055,8 +1196,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PAN-WAS-23
     source_category_code: recogen_agua_de_lluvia
@@ -1066,8 +1207,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PAN-WAS-24
     source_category_code: agua_de_superficie
@@ -1077,8 +1218,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PAN-WAS-25
     source_category_code: aguas_de_superficie_rio_arroyo_presa_lago_charca_canal_o_acequia
@@ -1089,19 +1230,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PAN-WAS-26
     source_category_code: rio_quebrada_o_lago
-    national_label_en: Río, quebrada o lago
+    national_label_en: "R\xEDo, quebrada o lago"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PAN-WAS-27
     source_category_code: rio_vertiente_o_quebrada
@@ -1111,19 +1252,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PAN-WAS-28
     source_category_code: rio_vertiente_quebrada_lluvia
-    national_label_en: Río, vertiente, quebrada, lluvia
+    national_label_en: "R\xEDo, vertiente, quebrada, lluvia"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PAN-WAS-29
     source_category_code: acueducto_conexion_o_pluma_del_vecino_llave_o_grifo_publico
@@ -1133,8 +1274,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PAN-WAS-30
     source_category_code: acueducto_particular
@@ -1144,8 +1285,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PAN-WAS-31
     source_category_code: acueducto_conexion_o_pluma_del_vecino
@@ -1155,8 +1296,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PAN-WAS-32
     source_category_code: conexion_o_pluma_del_vecino
@@ -1166,8 +1307,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PAN-WAS-33
     source_category_code: acueducto_dentro_de_la_vivienda_o_dentro_del_terreno_patio_o_lote
@@ -1178,8 +1319,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: PAN-WAS-34
     source_category_code: acqueducto_dentro_la_vivienda_y_el_patio
@@ -1189,8 +1330,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-35
     source_category_code: acueducto_dentro_de_la_vivienda
@@ -1200,30 +1341,30 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-36
     source_category_code: acueducto_publico
-    national_label_en: Acueducto público
+    national_label_en: "Acueducto p\xFAblico"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-37
     source_category_code: acueducto_publico_del_idaan
-    national_label_en: Acueducto público del IDAAN
+    national_label_en: "Acueducto p\xFAblico del IDAAN"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-38
     source_category_code: acueducto_dentro_de_la_vivienda
@@ -1233,8 +1374,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-39
     source_category_code: dentro_de_la_vivienda
@@ -1244,8 +1385,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-40
     source_category_code: tuberia_dentro_de_la_vivienda
@@ -1255,8 +1396,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PAN-WAS-41
     source_category_code: acqueducto_en_el_patio
@@ -1266,8 +1407,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-42
     source_category_code: acueducto_de_la_comunidad
@@ -1277,8 +1418,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-43
     source_category_code: acueducto_en_al_patio_de_la_vivienda
@@ -1288,19 +1429,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-44
     source_category_code: acueducto_publico_de_la_comunidad
-    national_label_en: Acueducto público de la comunidad
+    national_label_en: "Acueducto p\xFAblico de la comunidad"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-45
     source_category_code: acueducto_dentro_del_terreno_patio_o_lote
@@ -1310,8 +1451,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-46
     source_category_code: dentro_del_terreno_patio_o_lote
@@ -1321,8 +1462,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-47
     source_category_code: tuberia_dentro_del_terreno_lote
@@ -1332,68 +1473,68 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PAN-WAS-48
     source_category_code: acqueducto_fuera_de_la_vivienda
     national_label_en: Acqueducto fuera de la vivienda
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PAN-WAS-49
     source_category_code: acueducto_fuera_de_la_vivienda_y_del_patio
     national_label_en: Acueducto fuera de la vivienda y del patio
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PAN-WAS-50
     source_category_code: acueducto_llave_o_grifo_publico
     national_label_en: 'Acueducto: Llave o grifo publico'
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PAN-WAS-51
     source_category_code: llave_o_grifo_publico
     national_label_en: Llave o grifo publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PAN-WAS-52
     source_category_code: llave_grifo_publico
     national_label_en: Llave/grifo publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PAN_Panama_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

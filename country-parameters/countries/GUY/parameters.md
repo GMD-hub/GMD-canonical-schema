@@ -6,9 +6,9 @@ status: draft
 country_name: GUY
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GUY-EDU-01
     national_label_en: Pre-primary
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GUY-EDU-02
     national_label_en: Primary
     national_label_local: Primary
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GUY-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: GUY-EDU-03
     national_label_en: Secondary department of primary
     national_label_local: Secondary department of primary
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - GUY-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GUY-EDU-04
     national_label_en: General secondary (grades 7-9 / Form I-III)
     national_label_local: General secondary (grades 7-9 / Form I-III)
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - GUY-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GUY-EDU-05
     national_label_en: Carnegie school of home economics
     national_label_local: Carnegie school of home economics
@@ -65,6 +93,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - GUY-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GUY-EDU-06
     national_label_en: Guyana industrial training center
     national_label_local: Guyana industrial training center
@@ -76,6 +112,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - GUY-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GUY-EDU-07
     national_label_en: General secondary (grades 10-11 / Form IV-V)
     national_label_local: General secondary (grades 10-11 / Form IV-V)
@@ -87,6 +131,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - GUY-EDU-03
+    - GUY-EDU-04
+    - GUY-EDU-05
+    - GUY-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: GUY-EDU-03, GUY-EDU-04, GUY-EDU-05, GUY-EDU-06'
   - country_entry_id: GUY-EDU-08
     national_label_en: Caribbean advance proficiency examination - CAPE
     national_label_local: Caribbean advance proficiency examination - CAPE
@@ -98,6 +155,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-08
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-09
     national_label_en: General secondary (A- Level)
     national_label_local: General secondary (A- Level)
@@ -109,6 +176,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-09
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-10
     national_label_en: 'Technical vocational programmes: Secretarial science, Business,
       Commerce, Computer science'
@@ -122,6 +199,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-10
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-11
     national_label_en: 'Technical vocational programmes: GTEE technician certificate'
     national_label_local: 'Technical vocational programmes: GTEE technician certificate'
@@ -133,6 +220,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-12
     national_label_en: Certificate in Forestry/ Agriculture/ Agro-processing/ Fisheries
     national_label_local: Certificate in Forestry/ Agriculture/ Agro-processing/ Fisheries
@@ -144,6 +241,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-12
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-13
     national_label_en: Diploma in Agriculture, Animal Health and Veterinary Public
       Health/ Livestock Production and Management
@@ -157,6 +264,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-13
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-14
     national_label_en: Associate degree in education
     national_label_local: Associate degree in education
@@ -168,6 +285,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-14
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-15
     national_label_en: Teacher training certificate
     national_label_local: Teacher training certificate
@@ -179,6 +306,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-15
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-16
     national_label_en: Associate programme
     national_label_local: Associate programme
@@ -190,6 +327,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-16
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-17
     national_label_en: Nursing programmes at Schools of Nursing
     national_label_local: Nursing programmes at Schools of Nursing
@@ -201,6 +348,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-17
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-18
     national_label_en: Nursing at University of Guyana
     national_label_local: Nursing at University of Guyana
@@ -212,6 +369,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-18
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-19
     national_label_en: Bachelor programme
     national_label_local: Bachelor programme
@@ -223,6 +390,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-19
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-20
     national_label_en: Doctor of Dentistry
     national_label_local: Doctor of Dentistry
@@ -234,6 +411,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-20
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-21
     national_label_en: Doctor of Medicine
     national_label_local: Doctor of Medicine
@@ -245,6 +432,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - GUY-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-21
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: GUY-EDU-22
     national_label_en: Master
     national_label_local: Master
@@ -256,15 +453,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - GUY-EDU-18
+    - GUY-EDU-19
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - GUY-EDU-02
+    - GUY-EDU-05
+    - GUY-EDU-07
+    - GUY-EDU-18
+    - GUY-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GUY-EDU-03, GUY-EDU-04, GUY-EDU-05, GUY-EDU-06'
+    - 'minimum parent path selected from: GUY-EDU-18, GUY-EDU-19'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Guyana.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GUY-SAN-01
     source_category_code: composting_toilet
@@ -274,8 +485,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: GUY-SAN-02
     source_category_code: flush_to_somewhere_else
@@ -285,8 +496,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: GUY-SAN-03
     source_category_code: flush_pour_flush_flush_to_open_drain
@@ -296,8 +507,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: GUY-SAN-04
     source_category_code: flush_to_somewhere_else
@@ -307,8 +518,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: GUY-SAN-05
     source_category_code: flush_to_piped_sewer_system
@@ -318,8 +529,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: GUY-SAN-06
     source_category_code: flush_pour_flush_flush_to_piped_sewer_system
@@ -329,8 +540,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: GUY-SAN-07
     source_category_code: flush_to_piped_sewer_system
@@ -340,8 +551,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: GUY-SAN-08
     source_category_code: flush_to_pit_latrine
@@ -351,8 +562,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: GUY-SAN-09
     source_category_code: flush_pour_flush_flush_to_pit_latrine
@@ -362,8 +573,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: GUY-SAN-10
     source_category_code: flush_to_pit_latrine
@@ -373,8 +584,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: GUY-SAN-11
     source_category_code: flush_to_septic_tank
@@ -384,8 +595,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: GUY-SAN-12
     source_category_code: flush_pour_flush_flush_to_septic_tank
@@ -395,8 +606,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: GUY-SAN-13
     source_category_code: flush_to_septic_tank
@@ -406,8 +617,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: GUY-SAN-14
     source_category_code: flush_don_t_know_where
@@ -417,8 +628,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: GUY-SAN-15
     source_category_code: flush_pour_flush_flush_to_dk_where
@@ -428,8 +639,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: GUY-SAN-16
     source_category_code: flush_to_sewage_system_septic_tank
@@ -439,8 +650,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: GUY-SAN-17
     source_category_code: own_flush_toilet
@@ -450,8 +661,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: GUY-SAN-18
     source_category_code: flush_toilet_shared
@@ -461,8 +672,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: GUY-SAN-19
     source_category_code: flush_to_elsewhere
@@ -472,8 +683,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: GUY-SAN-20
     source_category_code: flush_to_piped_sewer
@@ -483,8 +694,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: GUY-SAN-21
     source_category_code: flush_to_piped_sewer_system
@@ -494,8 +705,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: GUY-SAN-22
     source_category_code: wc_connected_to_sw
@@ -505,8 +716,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: GUY-SAN-23
     source_category_code: flush_to_pit_latrine
@@ -516,8 +727,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: GUY-SAN-24
     source_category_code: flush_to_septic_tank
@@ -527,8 +738,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: GUY-SAN-25
     source_category_code: wc_connected_to_cesspool_or_septic_tank
@@ -538,8 +749,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: GUY-SAN-26
     source_category_code: flush_to_don_t_know_where
@@ -549,8 +760,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GUY-SAN-27
     source_category_code: pit_latrine
@@ -560,8 +771,8 @@ parameters:
     jmp_id: latrines.dry_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 103
   - country_entry_id: GUY-SAN-28
     source_category_code: bucket
@@ -571,8 +782,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: GUY-SAN-29
     source_category_code: bucket_toilet
@@ -582,8 +793,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: GUY-SAN-30
     source_category_code: hanging_toilet
@@ -594,8 +805,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GUY-SAN-31
     source_category_code: hanging_toilet_hanging_latrine
@@ -606,8 +817,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GUY-SAN-32
     source_category_code: hanging_toilet_hanging_latrine
@@ -618,8 +829,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GUY-SAN-33
     source_category_code: hanging_toilet_hanging_latrine
@@ -630,8 +841,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GUY-SAN-34
     source_category_code: hanging_toilet_latrine
@@ -642,8 +853,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GUY-SAN-35
     source_category_code: improved_pit_latrine
@@ -654,8 +865,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GUY-SAN-36
     source_category_code: pit_latrine_with_slab
@@ -666,8 +877,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GUY-SAN-37
     source_category_code: pit_latrine_with_slab
@@ -678,8 +889,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GUY-SAN-38
     source_category_code: pit_latrine_pit_latrine_with_slab
@@ -690,8 +901,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GUY-SAN-39
     source_category_code: open_pit
@@ -702,8 +913,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: GUY-SAN-40
     source_category_code: pit_latrine_without_slab_open_pit
@@ -714,8 +925,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: GUY-SAN-41
     source_category_code: pit_latrine_without_slab
@@ -726,8 +937,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: GUY-SAN-42
     source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
@@ -738,8 +949,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: GUY-SAN-43
     source_category_code: pit_latrine_without_slab_open_pit
@@ -750,8 +961,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GUY-SAN-44
     source_category_code: pit_latrines
@@ -762,8 +973,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GUY-SAN-45
     source_category_code: traditional_pit_latrine
@@ -774,8 +985,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GUY-SAN-46
     source_category_code: pit_latrine_ventilated_improved_pit_vip
@@ -786,8 +997,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: GUY-SAN-47
     source_category_code: pit_latrine_ventilated_improved_pit_latrine
@@ -798,8 +1009,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: GUY-SAN-48
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -810,8 +1021,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: GUY-SAN-49
     source_category_code: pour_flush_latrine
@@ -821,8 +1032,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: GUY-SAN-50
     source_category_code: no_facilities_bush_field
@@ -832,8 +1043,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-51
     source_category_code: no_facility_bush_field
@@ -843,8 +1054,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-52
     source_category_code: no_facility_bush_field
@@ -854,8 +1065,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-53
     source_category_code: no_facility_bush_or_field
@@ -865,8 +1076,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-54
     source_category_code: no_facility_bush_field
@@ -876,8 +1087,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-55
     source_category_code: no_toilet_use_bush_or_field
@@ -887,8 +1098,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-56
     source_category_code: none
@@ -898,8 +1109,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GUY-SAN-57
     source_category_code: pottie
@@ -909,8 +1120,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: GUY-SAN-58
     source_category_code: other
@@ -920,8 +1131,8 @@ parameters:
     jmp_id: other_unimproved
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 135
   - country_entry_id: GUY-SAN-59
     source_category_code: other
@@ -931,18 +1142,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_GUY_Guyana_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GUY-WAS-01
     source_category_code: protected_spring
@@ -952,8 +1163,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: GUY-WAS-02
     source_category_code: spring_protected_spring
@@ -963,8 +1174,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: GUY-WAS-03
     source_category_code: dug_well_protected_well
@@ -974,8 +1185,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GUY-WAS-04
     source_category_code: protected_dug_well
@@ -985,8 +1196,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GUY-WAS-05
     source_category_code: protected_well
@@ -996,8 +1207,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GUY-WAS-06
     source_category_code: well_or_protected_spring
@@ -1007,8 +1218,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: GUY-WAS-07
     source_category_code: public_well_or_tank
@@ -1018,8 +1229,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: GUY-WAS-08
     source_category_code: perforated_or_tubolar_well
@@ -1029,8 +1240,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-09
     source_category_code: tube_well_borehole
@@ -1040,8 +1251,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-10
     source_category_code: tube_well_or_borehole
@@ -1051,8 +1262,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-11
     source_category_code: tube_well_borehole
@@ -1062,8 +1273,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-12
     source_category_code: tubewell_borehole
@@ -1073,8 +1284,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-13
     source_category_code: tubewell_borehole_with_hand_pump
@@ -1084,8 +1295,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-14
     source_category_code: tubewell_borehole_with_pump
@@ -1095,8 +1306,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GUY-WAS-15
     source_category_code: spring_unprotected_spring
@@ -1106,8 +1317,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: GUY-WAS-16
     source_category_code: unprotected_spring
@@ -1117,8 +1328,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: GUY-WAS-17
     source_category_code: dug_well_unprotected_well
@@ -1128,8 +1339,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GUY-WAS-18
     source_category_code: unprotected_dug_well
@@ -1139,8 +1350,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GUY-WAS-19
     source_category_code: unprotected_well
@@ -1150,8 +1361,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GUY-WAS-20
     source_category_code: well_or_spring_not_protected
@@ -1161,8 +1372,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: GUY-WAS-21
     source_category_code: cart_tank_or_small_drum_tank_truck
@@ -1172,8 +1383,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: GUY-WAS-22
     source_category_code: cart_with_small_tank
@@ -1183,8 +1394,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: GUY-WAS-23
     source_category_code: cart_with_small_tank_drum
@@ -1194,8 +1405,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: GUY-WAS-24
     source_category_code: cart_with_small_tank_drum
@@ -1205,8 +1416,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: GUY-WAS-25
     source_category_code: purchase_water_from_a_private_company
@@ -1216,8 +1427,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: GUY-WAS-26
     source_category_code: purified_water
@@ -1227,8 +1438,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: GUY-WAS-27
     source_category_code: water_kiosk
@@ -1238,8 +1449,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: GUY-WAS-28
     source_category_code: water_refill_facility
@@ -1249,8 +1460,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: GUY-WAS-29
     source_category_code: tanker_truck
@@ -1260,8 +1471,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: GUY-WAS-30
     source_category_code: tanker_truck_vendor
@@ -1271,8 +1482,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: GUY-WAS-31
     source_category_code: tanker_truck
@@ -1282,8 +1493,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: GUY-WAS-32
     source_category_code: truck_tanker_distributor
@@ -1293,8 +1504,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: GUY-WAS-33
     source_category_code: other
@@ -1304,8 +1515,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GUY-WAS-34
     source_category_code: spring_river_well_pond
@@ -1315,8 +1526,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GUY-WAS-35
     source_category_code: missing
@@ -1326,8 +1537,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GUY-WAS-36
     source_category_code: other
@@ -1337,8 +1548,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GUY-WAS-37
     source_category_code: bottled_water
@@ -1348,8 +1559,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GUY-WAS-38
     source_category_code: bottled_water_with_improved_source
@@ -1359,8 +1570,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GUY-WAS-39
     source_category_code: bottled_water_water_in_bags_garrafones
@@ -1370,8 +1581,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GUY-WAS-40
     source_category_code: packaged_water_bottled_water
@@ -1381,8 +1592,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GUY-WAS-41
     source_category_code: bottled_water_with_non_improved_source
@@ -1392,8 +1603,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: GUY-WAS-42
     source_category_code: packaged_water_water_in_plastic_bag
@@ -1403,8 +1614,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: GUY-WAS-43
     source_category_code: private_catchment_not_piped
@@ -1414,8 +1625,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GUY-WAS-44
     source_category_code: rain_water
@@ -1425,8 +1636,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GUY-WAS-45
     source_category_code: rainwater
@@ -1436,8 +1647,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GUY-WAS-46
     source_category_code: rainwater_collection
@@ -1447,8 +1658,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GUY-WAS-47
     source_category_code: pond_river_or_stream
@@ -1458,8 +1669,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GUY-WAS-48
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -1469,8 +1680,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GUY-WAS-49
     source_category_code: surface_water
@@ -1480,8 +1691,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GUY-WAS-50
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
@@ -1492,8 +1703,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GUY-WAS-51
     source_category_code: surface_water_river_stream_lake_pond_canal_creek_irrigation_channel
@@ -1504,8 +1715,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GUY-WAS-52
     source_category_code: surface_water_river_stream_creek_lake_pond_canal
@@ -1515,8 +1726,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GUY-WAS-53
     source_category_code: piped_to_neighbour
@@ -1526,8 +1737,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GUY-WAS-54
     source_category_code: piped_water_piped_to_neighbour
@@ -1537,8 +1748,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GUY-WAS-55
     source_category_code: private_piped_into_dwelling
@@ -1548,8 +1759,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GUY-WAS-56
     source_category_code: piped_inside_the_house
@@ -1559,8 +1770,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GUY-WAS-57
     source_category_code: piped_into_dwelling
@@ -1570,8 +1781,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GUY-WAS-58
     source_category_code: piped_water_piped_into_dwelling
@@ -1581,8 +1792,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GUY-WAS-59
     source_category_code: public_piped_into_dwelling
@@ -1592,8 +1803,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GUY-WAS-60
     source_category_code: tap_piped_into_dwelling
@@ -1603,8 +1814,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GUY-WAS-61
     source_category_code: piped_inside_the_ground_lot
@@ -1614,8 +1825,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-62
     source_category_code: piped_into_compound_yard_or_plot
@@ -1625,8 +1836,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-63
     source_category_code: piped_into_yard_or_plot
@@ -1636,8 +1847,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-64
     source_category_code: piped_to_yard_plot
@@ -1647,8 +1858,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-65
     source_category_code: piped_water_piped_to_yard_plot
@@ -1658,8 +1869,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-66
     source_category_code: pipedinto_yard_plot
@@ -1669,8 +1880,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-67
     source_category_code: public_piped_into_yard
@@ -1680,8 +1891,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GUY-WAS-68
     source_category_code: piped_water_public_tap_standpipe
@@ -1691,8 +1902,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GUY-WAS-69
     source_category_code: public_standpipe
@@ -1702,8 +1913,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GUY-WAS-70
     source_category_code: public_tap
@@ -1713,8 +1924,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GUY-WAS-71
     source_category_code: public_tap_standpipe
@@ -1724,8 +1935,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GUY-WAS-72
     source_category_code: public_tap_standpipe
@@ -1735,13 +1946,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_GUY_Guyana_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -125,6 +125,18 @@ class CountryParameterFile(BaseModel):
                             raise ValueError(
                                 f"{definition.parameter_id} row {index} field {key} must be a boolean"
                             )
+                    elif expected_type == "integer_or_null":
+                        if item is not None and (isinstance(item, bool) or not isinstance(item, int)):
+                            raise ValueError(
+                                f"{definition.parameter_id} row {index} field {key} must be an integer or null"
+                            )
+                    elif expected_type == "array_of_string":
+                        if not isinstance(item, list) or not all(
+                            isinstance(entry, str) for entry in item
+                        ):
+                            raise ValueError(
+                                f"{definition.parameter_id} row {index} field {key} must be a list of strings"
+                            )
 
                 if expected_entry_segment is None:
                     continue

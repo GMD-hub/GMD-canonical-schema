@@ -6,9 +6,9 @@ schema_version: '0.1'
 status: draft
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TZA-EDU-01
     national_label_en: Pre primary
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: TZA-EDU-02
     national_label_en: Primary
     national_label_local: Primary education
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - TZA-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: TZA-EDU-03
     national_label_en: Lower secondary
     national_label_local: Ordinary level secondary education
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - TZA-EDU-02
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TZA-EDU-04
     national_label_en: National Vocational and Training Level 1 (NVTA 1)
     national_label_local: National Vocational and Training Level 1 (NVTA 1)
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - TZA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TZA-EDU-05
     national_label_en: National Vocational and Training Level 2 (NVTA 2)
     national_label_local: National Vocational and Training Level 2 (NVTA 2)
@@ -65,6 +93,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - TZA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TZA-EDU-06
     national_label_en: National Vocational and Training Level 3  (NVTA 3)
     national_label_local: National Vocational and Training Level 3  (NVTA 3)
@@ -76,6 +112,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - TZA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TZA-EDU-07
     national_label_en: University Certificate
     national_label_local: University Certificate
@@ -87,6 +131,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-08
     national_label_en: University Certificate
     national_label_local: University Certificate
@@ -98,6 +155,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-09
     national_label_en: Upper secondary
     national_label_local: Advanced level secondary education
@@ -109,6 +179,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-10
     national_label_en: National Technical Award Level 4 (NTA 4)
     national_label_local: National Technical Award Level 4 (NTA 4)
@@ -120,6 +203,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-11
     national_label_en: National Technical Award Level 4 (NTA 4)
     national_label_local: National Technical Award Level 4 (NTA 4)
@@ -131,6 +227,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-12
     national_label_en: Teacher Training (Certificate)
     national_label_local: Teacher Training (Certificate)
@@ -142,6 +251,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-13
     national_label_en: National Technical Award Level 5 (NTA 5)
     national_label_local: National Technical Award Level 5 (NTA 5)
@@ -153,6 +275,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - TZA-EDU-03
+    - TZA-EDU-04
+    - TZA-EDU-05
+    - TZA-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
   - country_entry_id: TZA-EDU-14
     national_label_en: University Diploma
     national_label_local: University Diploma
@@ -164,6 +299,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-15
     national_label_en: University Diploma
     national_label_local: University Diploma
@@ -175,13 +325,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-16
-    national_label_en: |-
-      Teacher Training
-      (Diploma)
-    national_label_local: |-
-      Teacher Training
-      (Diploma)
+    national_label_en: 'Teacher Training
+
+      (Diploma)'
+    national_label_local: 'Teacher Training
+
+      (Diploma)'
     entry_age: 20
     duration_years: 2
     isced_level: '4'
@@ -190,6 +355,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-17
     national_label_en: National Technical Award Level 6 (NTA 6)
     national_label_local: National Technical Award Level 6 (NTA 6)
@@ -201,6 +381,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-18
     national_label_en: National Technical Award Level 7 (NTA 7)
     national_label_local: National Technical Award Level 7 (NTA 7)
@@ -212,6 +407,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-19
     national_label_en: Advanced Diploma
     national_label_local: Advanced Diploma
@@ -223,6 +433,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-20
     national_label_en: Post Graduate Certificate (PGC)
     national_label_local: Post Graduate Certificate (PGC)
@@ -234,6 +459,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-21
     national_label_en: Undergraduate
     national_label_local: Undergraduate
@@ -245,6 +485,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-22
     national_label_en: University Bachelor Degree
     national_label_local: University Bachelor Degree
@@ -256,6 +511,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-23
     national_label_en: National Technical Award Level 8 (NTA 8)
     national_label_local: National Technical Award Level 8 (NTA 8)
@@ -267,6 +537,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-24
     national_label_en: University Bachelor Degree (Medicine, Nursing, Pharmacy)
     national_label_local: University Bachelor Degree (Medicine, Nursing, Pharmacy)
@@ -278,6 +563,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-25
     national_label_en: Post Graduate Certificate (PGC)
     national_label_local: Post Graduate Certificate (PGC)
@@ -289,6 +589,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-26
     national_label_en: Post Graduate Diploma (PGD)
     national_label_local: Post Graduate Diploma (PGD)
@@ -300,6 +615,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-27
     national_label_en: Masters
     national_label_local: Masters
@@ -311,6 +641,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - TZA-EDU-21
+    - TZA-EDU-22
+    - TZA-EDU-23
+    - TZA-EDU-24
+    - TZA-EDU-25
+    - TZA-EDU-26
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-25
+    - TZA-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
+    - 'minimum parent path selected from: TZA-EDU-21, TZA-EDU-22, TZA-EDU-23, TZA-EDU-24,
+      TZA-EDU-25, TZA-EDU-26'
   - country_entry_id: TZA-EDU-28
     national_label_en: National Technical Award Level 9 (NTA 9)
     national_label_local: National Technical Award Level 9 (NTA 9)
@@ -322,6 +672,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - TZA-EDU-07
+    - TZA-EDU-08
+    - TZA-EDU-09
+    - TZA-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
   - country_entry_id: TZA-EDU-29
     national_label_en: PhD courses
     national_label_local: PhD courses
@@ -333,6 +698,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - TZA-EDU-27
+    - TZA-EDU-28
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-28
+    - TZA-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
+    - 'minimum parent path selected from: TZA-EDU-27, TZA-EDU-28'
   - country_entry_id: TZA-EDU-30
     national_label_en: National Technical Award Level 10 (NTA 10)
     national_label_local: National Technical Award Level 10 (NTA 10)
@@ -344,27 +724,42 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - TZA-EDU-27
+    - TZA-EDU-28
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - TZA-EDU-02
+    - TZA-EDU-04
+    - TZA-EDU-08
+    - TZA-EDU-28
+    - TZA-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TZA-EDU-03, TZA-EDU-04, TZA-EDU-05, TZA-EDU-06'
+    - 'minimum parent path selected from: TZA-EDU-07, TZA-EDU-08, TZA-EDU-09, TZA-EDU-12'
+    - 'minimum parent path selected from: TZA-EDU-27, TZA-EDU-28'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_United_Republic_of_Tanzania.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
   effective_to: 2015
-  selectors: ~
+  selectors: null
   value:
   - country_entry_id: TZA-SUBNAT-01
-    survey_labels: 1 - Dodoma | 1 – Dodoma
+    survey_labels: "1 - Dodoma | 1 \u2013 Dodoma"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48359
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48359
     geo_year: '2015'
@@ -376,16 +771,16 @@ parameters:
     geo_name: Dodoma
     source_row: 17011
   - country_entry_id: TZA-SUBNAT-02
-    survey_labels: 10 - Ruvuma | 10 – Ruvuma
+    survey_labels: "10 - Ruvuma | 10 \u2013 Ruvuma"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48375
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48375
     geo_year: '2015'
@@ -397,16 +792,16 @@ parameters:
     geo_name: Ruvuma
     source_row: 17012
   - country_entry_id: TZA-SUBNAT-03
-    survey_labels: 11 - Iringa | 11 – Iringa
+    survey_labels: "11 - Iringa | 11 \u2013 Iringa"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAULx_11
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAULx_11
     geo_year: '2015'
@@ -418,16 +813,16 @@ parameters:
     geo_name: Iringa
     source_row: 17013
   - country_entry_id: TZA-SUBNAT-04
-    survey_labels: 12 - Mbeya | 12 – Mbeya
+    survey_labels: "12 - Mbeya | 12 \u2013 Mbeya"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48367
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48367
     geo_year: '2015'
@@ -439,16 +834,16 @@ parameters:
     geo_name: Mbeya
     source_row: 17014
   - country_entry_id: TZA-SUBNAT-05
-    survey_labels: 13 - Singida | 13 – Singida
+    survey_labels: "13 - Singida | 13 \u2013 Singida"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48377
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48377
     geo_year: '2015'
@@ -460,16 +855,16 @@ parameters:
     geo_name: Singida
     source_row: 17015
   - country_entry_id: TZA-SUBNAT-06
-    survey_labels: 14 - Tabora | 14 – Tabora
+    survey_labels: "14 - Tabora | 14 \u2013 Tabora"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48380
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48380
     geo_year: '2015'
@@ -481,16 +876,16 @@ parameters:
     geo_name: Tabora
     source_row: 17016
   - country_entry_id: TZA-SUBNAT-07
-    survey_labels: 15 - Rukwa | 15 – Rukwa
+    survey_labels: "15 - Rukwa | 15 \u2013 Rukwa"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAULx_15
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAULx_15
     geo_year: '2015'
@@ -502,16 +897,16 @@ parameters:
     geo_name: Rukwa
     source_row: 17017
   - country_entry_id: TZA-SUBNAT-08
-    survey_labels: 16 - Kigoma | 16 – Kigoma
+    survey_labels: "16 - Kigoma | 16 \u2013 Kigoma"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48362
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48362
     geo_year: '2015'
@@ -523,16 +918,16 @@ parameters:
     geo_name: Kigoma
     source_row: 17018
   - country_entry_id: TZA-SUBNAT-09
-    survey_labels: 17 - Shinyanga | 17 – Shinyanga
+    survey_labels: "17 - Shinyanga | 17 \u2013 Shinyanga"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAULx_17
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAULx_17
     geo_year: '2015'
@@ -544,16 +939,16 @@ parameters:
     geo_name: Shinyanga
     source_row: 17019
   - country_entry_id: TZA-SUBNAT-10
-    survey_labels: 18 - Kagera | 18 – Kagera
+    survey_labels: "18 - Kagera | 18 \u2013 Kagera"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAULx_18
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAULx_18
     geo_year: '2015'
@@ -565,16 +960,16 @@ parameters:
     geo_name: Kagera
     source_row: 17020
   - country_entry_id: TZA-SUBNAT-11
-    survey_labels: 19 - Mwanza | 19 – Mwanza
+    survey_labels: "19 - Mwanza | 19 \u2013 Mwanza"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAULx_19
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAULx_19
     geo_year: '2015'
@@ -586,16 +981,16 @@ parameters:
     geo_name: Mwanza
     source_row: 17021
   - country_entry_id: TZA-SUBNAT-12
-    survey_labels: 2 - Arusha | 2 – Arusha
+    survey_labels: "2 - Arusha | 2 \u2013 Arusha"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48357
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48357
     geo_year: '2015'
@@ -607,16 +1002,16 @@ parameters:
     geo_name: Arusha
     source_row: 17022
   - country_entry_id: TZA-SUBNAT-13
-    survey_labels: 20 - Mara | 20 – Mara
+    survey_labels: "20 - Mara | 20 \u2013 Mara"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48366
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48366
     geo_year: '2015'
@@ -628,16 +1023,16 @@ parameters:
     geo_name: Mara
     source_row: 17023
   - country_entry_id: TZA-SUBNAT-14
-    survey_labels: 3 - Kilimanjaro | 3 – Kilimanjaro
+    survey_labels: "3 - Kilimanjaro | 3 \u2013 Kilimanjaro"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48363
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48363
     geo_year: '2015'
@@ -649,16 +1044,16 @@ parameters:
     geo_name: Kilimanjaro
     source_row: 17024
   - country_entry_id: TZA-SUBNAT-15
-    survey_labels: 4 - Tanga | 4 – Tanga
+    survey_labels: "4 - Tanga | 4 \u2013 Tanga"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48381
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48381
     geo_year: '2015'
@@ -670,16 +1065,16 @@ parameters:
     geo_name: Tanga
     source_row: 17025
   - country_entry_id: TZA-SUBNAT-16
-    survey_labels: 5 - Morogoro | 5 – Morogoro
+    survey_labels: "5 - Morogoro | 5 \u2013 Morogoro"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48368
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48368
     geo_year: '2015'
@@ -691,16 +1086,16 @@ parameters:
     geo_name: Morogoro
     source_row: 17026
   - country_entry_id: TZA-SUBNAT-17
-    survey_labels: 6 - Pwani | 6 – Pwani
+    survey_labels: "6 - Pwani | 6 \u2013 Pwani"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48373
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48373
     geo_year: '2015'
@@ -712,16 +1107,16 @@ parameters:
     geo_name: Pwani
     source_row: 17027
   - country_entry_id: TZA-SUBNAT-18
-    survey_labels: 7 - Dar es Salaam | 7 – Dar-es-Salaam
+    survey_labels: "7 - Dar es Salaam | 7 \u2013 Dar-es-Salaam"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48358
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48358
     geo_year: '2015'
@@ -733,16 +1128,16 @@ parameters:
     geo_name: Dar-es-salaam
     source_row: 17028
   - country_entry_id: TZA-SUBNAT-19
-    survey_labels: 8 - Lindi | 8 – Lindi
+    survey_labels: "8 - Lindi | 8 \u2013 Lindi"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48364
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48364
     geo_year: '2015'
@@ -754,16 +1149,16 @@ parameters:
     geo_name: Lindi
     source_row: 17029
   - country_entry_id: TZA-SUBNAT-20
-    survey_labels: 9 - Mtwara | 9 – Mtwara
+    survey_labels: "9 - Mtwara | 9 \u2013 Mtwara"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: TZA_2015_GAUL1_48369
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48369
     geo_year: '2015'
@@ -781,10 +1176,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: TZA_2015_GAUL1_48365
     geo_year: '2015'
@@ -797,13 +1192,13 @@ parameters:
     source_row: 17031
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2022
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TZA-SUBNAT-01
     survey_labels: 1 - Dodoma
@@ -812,10 +1207,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.3_1
     geo_year: '2022'
@@ -833,10 +1228,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.22_1
     geo_year: '2022'
@@ -854,10 +1249,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.5_1
     geo_year: '2022'
@@ -875,10 +1270,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.13_1
     geo_year: '2022'
@@ -896,10 +1291,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.25_1
     geo_year: '2022'
@@ -917,10 +1312,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.26_1
     geo_year: '2022'
@@ -938,10 +1333,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.21_1
     geo_year: '2022'
@@ -959,10 +1354,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.8_1
     geo_year: '2022'
@@ -980,10 +1375,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.23_1
     geo_year: '2022'
@@ -1001,10 +1396,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.6_1
     geo_year: '2022'
@@ -1022,10 +1417,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.16_1
     geo_year: '2022'
@@ -1043,10 +1438,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.1_1
     geo_year: '2022'
@@ -1064,10 +1459,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.12_1
     geo_year: '2022'
@@ -1085,10 +1480,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.11_1
     geo_year: '2022'
@@ -1106,10 +1501,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.17_1
     geo_year: '2022'
@@ -1127,10 +1522,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.7_1
     geo_year: '2022'
@@ -1148,10 +1543,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.24_1
     geo_year: '2022'
@@ -1169,10 +1564,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.4_1
     geo_year: '2022'
@@ -1190,10 +1585,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.31_1
     geo_year: '2022'
@@ -1211,10 +1606,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.9_1
     geo_year: '2022'
@@ -1232,10 +1627,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.27_1
     geo_year: '2022'
@@ -1253,10 +1648,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.14_1
     geo_year: '2022'
@@ -1274,10 +1669,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.20_1
     geo_year: '2022'
@@ -1295,10 +1690,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.2_1
     geo_year: '2022'
@@ -1316,10 +1711,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.10_1
     geo_year: '2022'
@@ -1337,10 +1732,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: TZA_2022_GADM1_TZA.15_1
     geo_year: '2022'
@@ -1353,13 +1748,13 @@ parameters:
     source_row: 17099
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TZA-SAN-01
     source_category_code: composting_toilet
@@ -1369,8 +1764,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: TZA-SAN-02
     source_category_code: composting_toilet_ecosan_latrine
@@ -1380,8 +1775,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: TZA-SAN-03
     source_category_code: composting_toilet_ecosan
@@ -1391,8 +1786,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: TZA-SAN-04
     source_category_code: composting_toilet_ecosan_latrine
@@ -1402,8 +1797,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: TZA-SAN-05
     source_category_code: ecosan
@@ -1413,8 +1808,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: TZA-SAN-06
     source_category_code: flush_pour_flush
@@ -1424,8 +1819,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: TZA-SAN-07
     source_category_code: flush_to_somewhere_else
@@ -1435,8 +1830,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: TZA-SAN-08
     source_category_code: pour_flush_flush_toilet_to_open_drain
@@ -1446,8 +1841,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: TZA-SAN-09
     source_category_code: flush_or_pour_flush_toilet
@@ -1457,8 +1852,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TZA-SAN-10
     source_category_code: flush_to_piped_sewer
@@ -1468,8 +1863,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TZA-SAN-11
     source_category_code: flush_to_piped_sewer_system
@@ -1479,8 +1874,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TZA-SAN-12
     source_category_code: pour_flush_flush_toilet_to_piped_sewer_system
@@ -1490,8 +1885,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TZA-SAN-13
     source_category_code: flush_to_pit_latrine
@@ -1501,8 +1896,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: TZA-SAN-14
     source_category_code: flush_toilet_with_cistern
@@ -1512,8 +1907,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: TZA-SAN-15
     source_category_code: pour_flush_flush_toilet_to_pit_latrine
@@ -1523,8 +1918,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: TZA-SAN-16
     source_category_code: flush_to_septic_tank
@@ -1534,8 +1929,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: TZA-SAN-17
     source_category_code: pour_flush_flush_toilet_to_in_own_septic_tank
@@ -1545,8 +1940,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: TZA-SAN-18
     source_category_code: flush_toilet
@@ -1556,8 +1951,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: TZA-SAN-19
     source_category_code: flush_don_t_know_where
@@ -1567,8 +1962,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: TZA-SAN-20
     source_category_code: pour_flush_flush_toilet_to_don_t_know
@@ -1578,8 +1973,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: TZA-SAN-21
     source_category_code: pour_flush_toilet
@@ -1589,8 +1984,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: TZA-SAN-22
     source_category_code: flush_toilet
@@ -1600,8 +1995,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-SAN-23
     source_category_code: flush_toilet_with_cistern
@@ -1611,8 +2006,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-SAN-24
     source_category_code: own_flush_toilet
@@ -1622,8 +2017,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: TZA-SAN-25
     source_category_code: shared_flush_toilet
@@ -1633,8 +2028,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: TZA-SAN-26
     source_category_code: flush_to_somewhere_else
@@ -1644,8 +2039,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-SAN-27
     source_category_code: flush_to_somewhere_else
@@ -1655,8 +2050,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-SAN-28
     source_category_code: flush_to_piped_sewer_system
@@ -1666,8 +2061,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: TZA-SAN-29
     source_category_code: flush_to_piped_sewer_system
@@ -1677,8 +2072,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: TZA-SAN-30
     source_category_code: flush_to_pit_latrine
@@ -1688,8 +2083,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: TZA-SAN-31
     source_category_code: flush_to_pit_latrine
@@ -1699,8 +2094,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: TZA-SAN-32
     source_category_code: flush_to_septic_tank
@@ -1710,8 +2105,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: TZA-SAN-33
     source_category_code: flush_to_septic_tank
@@ -1721,8 +2116,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: TZA-SAN-34
     source_category_code: flush_don_t_know_where
@@ -1732,8 +2127,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-SAN-35
     source_category_code: has_a_flush_toilet
@@ -1743,8 +2138,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-SAN-36
     source_category_code: bucket_toilet
@@ -1754,8 +2149,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: TZA-SAN-37
     source_category_code: pan_bucket
@@ -1765,8 +2160,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: TZA-SAN-38
     source_category_code: hanging_toilet_hanging_latrine
@@ -1777,8 +2172,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: TZA-SAN-39
     source_category_code: hanging_toilet_latrine
@@ -1789,8 +2184,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: TZA-SAN-40
     source_category_code: pit_latrine_with_slab_not_washable
@@ -1800,8 +2195,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: TZA-SAN-41
     source_category_code: improved_pit_latrine_slab_washable
@@ -1812,8 +2207,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-SAN-42
     source_category_code: pit_latrine_with_slab
@@ -1824,8 +2219,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-SAN-43
     source_category_code: pit_latrine_with_slab
@@ -1836,8 +2231,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-SAN-44
     source_category_code: pit_latrine_with_slab_washable_or_not_washable
@@ -1848,8 +2243,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-SAN-45
     source_category_code: pit_latrine_with_slab_washable
@@ -1860,8 +2255,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-SAN-46
     source_category_code: pit_latrine_with_slab_washable
@@ -1872,8 +2267,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-SAN-47
     source_category_code: open_pit_without_slab
@@ -1884,8 +2279,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: TZA-SAN-48
     source_category_code: open_pit_without_slab_open_pit
@@ -1896,8 +2291,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: TZA-SAN-49
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1908,8 +2303,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: TZA-SAN-50
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1920,8 +2315,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: TZA-SAN-51
     source_category_code: pit_latrine
@@ -1932,8 +2327,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-52
     source_category_code: pit_latrine_traditional
@@ -1944,8 +2339,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-53
     source_category_code: pit_latrine_with_slab_non_washable
@@ -1956,8 +2351,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-54
     source_category_code: pit_latrine_with_slab_not_washable
@@ -1968,8 +2363,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-55
     source_category_code: pit_latrine_with_slab_non_washable
@@ -1980,8 +2375,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-56
     source_category_code: pit_latrines
@@ -1992,8 +2387,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-57
     source_category_code: traditional_pit_latrine
@@ -2004,8 +2399,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-58
     source_category_code: traditional_pit_toilet
@@ -2016,8 +2411,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-59
     source_category_code: unimproved_pit_latrine_slab_not_washable
@@ -2028,8 +2423,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-SAN-60
     source_category_code: improved_pit_latrine
@@ -2040,8 +2435,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-61
     source_category_code: pit_latrine_ventilated_improved_pit_vip
@@ -2052,8 +2447,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-62
     source_category_code: pit_latrine_with_a_suction_pump_vip
@@ -2064,8 +2459,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-63
     source_category_code: ventilated_improved_pit_latrine
@@ -2076,8 +2471,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-64
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -2088,8 +2483,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-65
     source_category_code: vip
@@ -2100,8 +2495,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-66
     source_category_code: vip_latrine
@@ -2112,8 +2507,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TZA-SAN-67
     source_category_code: flush_toilet
@@ -2123,8 +2518,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: TZA-SAN-68
     source_category_code: pour_flush
@@ -2134,8 +2529,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: TZA-SAN-69
     source_category_code: pour_flush_toilet
@@ -2145,8 +2540,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: TZA-SAN-70
     source_category_code: flush_toilet
@@ -2156,8 +2551,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: TZA-SAN-71
     source_category_code: no_facilities_bush
@@ -2167,8 +2562,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-72
     source_category_code: no_facility_bush_field
@@ -2178,8 +2573,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-73
     source_category_code: no_facility_bush
@@ -2189,8 +2584,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-74
     source_category_code: no_facility_bush_field
@@ -2200,8 +2595,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-75
     source_category_code: no_latrine
@@ -2211,8 +2606,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-76
     source_category_code: no_toilet
@@ -2222,8 +2617,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-77
     source_category_code: no_toilet_bush
@@ -2233,8 +2628,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-78
     source_category_code: no_toilet_bush_field
@@ -2244,8 +2639,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-79
     source_category_code: no_toilet_bush_field
@@ -2255,8 +2650,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-80
     source_category_code: no_none_available
@@ -2266,8 +2661,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-81
     source_category_code: non_pas_disponible
@@ -2277,8 +2672,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-82
     source_category_code: none_in_the_bush_in_the_farm
@@ -2288,8 +2683,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TZA-SAN-83
     source_category_code: oter_type
@@ -2299,8 +2694,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TZA-SAN-84
     source_category_code: other
@@ -2310,8 +2705,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TZA-SAN-85
     source_category_code: other_specify
@@ -2321,8 +2716,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TZA-SAN-86
     source_category_code: other_type_of_sanitation
@@ -2332,8 +2727,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TZA-SAN-87
     source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
@@ -2343,8 +2738,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TZA-SAN-88
     source_category_code: unknown
@@ -2354,18 +2749,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TZA_Tanzania_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TZA-WAS-01
     source_category_code: spring
@@ -2375,8 +2770,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: TZA-WAS-02
     source_category_code: well_in_house_yard
@@ -2386,8 +2781,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: TZA-WAS-03
     source_category_code: well_in_residence
@@ -2397,8 +2792,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: TZA-WAS-04
     source_category_code: public_well
@@ -2408,8 +2803,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: TZA-WAS-05
     source_category_code: protected_spring
@@ -2419,8 +2814,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: TZA-WAS-06
     source_category_code: spring_protected
@@ -2430,8 +2825,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: TZA-WAS-07
     source_category_code: protected_dug_well
@@ -2441,8 +2836,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-WAS-08
     source_category_code: protected_dugwell
@@ -2452,8 +2847,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-WAS-09
     source_category_code: protected_well
@@ -2463,8 +2858,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-WAS-10
     source_category_code: protected_well_without_pump
@@ -2474,8 +2869,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-WAS-11
     source_category_code: protected_covered_well
@@ -2485,8 +2880,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-WAS-12
     source_category_code: well_with_pump
@@ -2496,8 +2891,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TZA-WAS-13
     source_category_code: protected_well_in_yard_plot
@@ -2507,8 +2902,8 @@ parameters:
     jmp_id: ground_water.protected_well.other
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: TZA-WAS-14
     source_category_code: a_well_that_has_a_cover_at_home_compound
@@ -2518,8 +2913,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: TZA-WAS-15
     source_category_code: private_well_protected
@@ -2529,8 +2924,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: TZA-WAS-16
     source_category_code: protected_well_in_dwelling
@@ -2540,8 +2935,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: TZA-WAS-17
     source_category_code: protected_well_in_dwelling_yard_plot
@@ -2551,20 +2946,20 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: TZA-WAS-18
     source_category_code: community_well_which_has_a_cover_a_neighbor_s_well_that_is_dug
-    national_label_en: COMMUNITY WELL WHICH HAS A COVER / A NEIGHBOR’S WELL THAT IS
-      DUG
+    national_label_en: "COMMUNITY WELL WHICH HAS A COVER / A NEIGHBOR\u2019S WELL\
+      \ THAT IS DUG"
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: TZA-WAS-19
     source_category_code: protected_public_well
@@ -2574,8 +2969,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: TZA-WAS-20
     source_category_code: public_well_protected
@@ -2585,8 +2980,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: TZA-WAS-21
     source_category_code: well_without_pump
@@ -2596,8 +2991,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: TZA-WAS-22
     source_category_code: borehole
@@ -2607,8 +3002,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-23
     source_category_code: borehole_or_tube_well
@@ -2618,8 +3013,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-24
     source_category_code: tube_well_or_bore_hole
@@ -2629,8 +3024,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-25
     source_category_code: tube_well_or_borehole
@@ -2640,8 +3035,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-26
     source_category_code: tube_well_or_borehole
@@ -2651,8 +3046,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-27
     source_category_code: tubewell_borehole
@@ -2662,8 +3057,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-28
     source_category_code: tubewell_or_borehole
@@ -2673,8 +3068,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-29
     source_category_code: tubewell_borehole
@@ -2684,8 +3079,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-30
     source_category_code: well_with_pump
@@ -2695,8 +3090,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TZA-WAS-31
     source_category_code: neighbor_s_borehole
@@ -2706,8 +3101,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.other
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TZA-WAS-32
     source_category_code: a_well_with_a_pump_at_home
@@ -2717,20 +3112,20 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: TZA-WAS-33
     source_category_code: a_community_well_with_a_pump_a_well_with_a_pump_at_the_neighbor_s_home
-    national_label_en: A COMMUNITY WELL WITH A PUMP / A WELL WITH A PUMP AT THE NEIGHBOR’S
-      HOME
+    national_label_en: "A COMMUNITY WELL WITH A PUMP / A WELL WITH A PUMP AT THE NEIGHBOR\u2019\
+      S HOME"
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: TZA-WAS-34
     source_category_code: protected_spring
@@ -2740,8 +3135,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: TZA-WAS-35
     source_category_code: spring_un_protected
@@ -2751,8 +3146,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: TZA-WAS-36
     source_category_code: spring_unprotected
@@ -2762,8 +3157,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: TZA-WAS-37
     source_category_code: unprotected_spring
@@ -2773,8 +3168,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: TZA-WAS-38
     source_category_code: unprotected_dug_well
@@ -2784,8 +3179,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-WAS-39
     source_category_code: unprotected_dugwell
@@ -2795,8 +3190,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-WAS-40
     source_category_code: unprotected_well
@@ -2806,8 +3201,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-WAS-41
     source_category_code: water_from_open_well
@@ -2817,8 +3212,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-WAS-42
     source_category_code: well_without_pump
@@ -2828,8 +3223,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: TZA-WAS-43
     source_category_code: neighbors_open_well
@@ -2839,8 +3234,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: TZA-WAS-44
     source_category_code: open_well_in_yard_plot_neighbors_open_well
@@ -2850,8 +3245,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: TZA-WAS-45
     source_category_code: open_well_in_yard_plot_neighbour
@@ -2861,8 +3256,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: TZA-WAS-46
     source_category_code: unprotected_well_with_pump
@@ -2872,8 +3267,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: TZA-WAS-47
     source_category_code: an_open_well_within_the_homestead
@@ -2883,8 +3278,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-WAS-48
     source_category_code: open_well_in_dwelling
@@ -2894,8 +3289,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-WAS-49
     source_category_code: open_well_in_dwelling_yard_plot
@@ -2905,8 +3300,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-WAS-50
     source_category_code: private_well_un_protected
@@ -2916,8 +3311,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-WAS-51
     source_category_code: private_well_unprotected
@@ -2927,19 +3322,20 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: TZA-WAS-52
     source_category_code: an_open_community_well_an_open_well_at_the_neighbor_s_compound
-    national_label_en: AN OPEN COMMUNITY WELL /AN OPEN WELL AT THE NEIGHBOR’S COMPOUND
+    national_label_en: "AN OPEN COMMUNITY WELL /AN OPEN WELL AT THE NEIGHBOR\u2019\
+      S COMPOUND"
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: TZA-WAS-53
     source_category_code: open_public_well
@@ -2949,8 +3345,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: TZA-WAS-54
     source_category_code: public_well_un_protected
@@ -2960,8 +3356,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: TZA-WAS-55
     source_category_code: public_well_unprotected
@@ -2971,8 +3367,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: TZA-WAS-56
     source_category_code: unprotected_well_without_pump
@@ -2982,8 +3378,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: TZA-WAS-57
     source_category_code: cart_with_small_tank
@@ -2993,8 +3389,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TZA-WAS-58
     source_category_code: cart_with_small_tank_drum
@@ -3004,8 +3400,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TZA-WAS-59
     source_category_code: cart_with_small_tank_or_drum
@@ -3015,8 +3411,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TZA-WAS-60
     source_category_code: cart_with_small_tank_drum
@@ -3026,8 +3422,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TZA-WAS-61
     source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
@@ -3037,8 +3433,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TZA-WAS-62
     source_category_code: water_vendor
@@ -3048,8 +3444,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TZA-WAS-63
     source_category_code: other
@@ -3059,8 +3455,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TZA-WAS-64
     source_category_code: retailers
@@ -3070,8 +3466,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TZA-WAS-65
     source_category_code: water_kiosk_domestic_points
@@ -3081,8 +3477,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TZA-WAS-66
     source_category_code: purchased_from_a_tanker_truck
@@ -3092,8 +3488,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-67
     source_category_code: retailers_in_vans
@@ -3103,8 +3499,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-68
     source_category_code: tanker_truck
@@ -3114,8 +3510,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-69
     source_category_code: tanker_truck
@@ -3125,8 +3521,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-70
     source_category_code: tanker_truck
@@ -3136,8 +3532,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-71
     source_category_code: water_truck_tanker_service
@@ -3147,8 +3543,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-72
     source_category_code: water_vendor
@@ -3158,8 +3554,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-73
     source_category_code: water_vendor_person_selling_water
@@ -3169,8 +3565,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TZA-WAS-74
     source_category_code: another
@@ -3180,8 +3576,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-WAS-75
     source_category_code: other
@@ -3191,8 +3587,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-WAS-76
     source_category_code: other_specify
@@ -3202,8 +3598,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-WAS-77
     source_category_code: other_specify
@@ -3213,8 +3609,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-WAS-78
     source_category_code: water_vendor
@@ -3224,8 +3620,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TZA-WAS-79
     source_category_code: other
@@ -3235,8 +3631,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-WAS-80
     source_category_code: refused_don_t_know
@@ -3246,8 +3642,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-WAS-81
     source_category_code: subsidized_water_vending_station
@@ -3257,8 +3653,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-WAS-82
     source_category_code: unknown
@@ -3268,8 +3664,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TZA-WAS-83
     source_category_code: bottled_water
@@ -3279,8 +3675,8 @@ parameters:
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: TZA-WAS-84
     source_category_code: bottled_water
@@ -3290,8 +3686,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: TZA-WAS-85
     source_category_code: sachet_water
@@ -3301,8 +3697,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: TZA-WAS-86
     source_category_code: rainwater_collection
@@ -3312,8 +3708,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: TZA-WAS-87
     source_category_code: rain_catchment_tank
@@ -3323,8 +3719,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TZA-WAS-88
     source_category_code: rain_water
@@ -3334,8 +3730,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TZA-WAS-89
     source_category_code: rainwater
@@ -3345,8 +3741,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TZA-WAS-90
     source_category_code: rainwater_collection
@@ -3356,8 +3752,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TZA-WAS-91
     source_category_code: pond_river_stream
@@ -3367,8 +3763,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-92
     source_category_code: river_dam_lake_etc
@@ -3378,8 +3774,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-93
     source_category_code: river_dam_lake_and_so_on
@@ -3389,8 +3785,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-94
     source_category_code: river_lake_spring_pond
@@ -3400,8 +3796,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-95
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -3411,8 +3807,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-96
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -3422,8 +3818,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-97
     source_category_code: spring_in_the_river_pond_lake_dam
@@ -3433,8 +3829,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-98
     source_category_code: surface_water
@@ -3444,8 +3840,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-99
     source_category_code: surface_water_river_dam_lake_pond_stream_canal
@@ -3455,8 +3851,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-100
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channels
@@ -3467,8 +3863,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-101
     source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
@@ -3479,8 +3875,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: TZA-WAS-102
     source_category_code: dam
@@ -3490,8 +3886,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: TZA-WAS-103
     source_category_code: irrigation_ditch
@@ -3501,8 +3897,8 @@ parameters:
     jmp_id: surface_water.irrigation_channel
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 98
   - country_entry_id: TZA-WAS-104
     source_category_code: pond_lake_dam
@@ -3512,8 +3908,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: TZA-WAS-105
     source_category_code: pond_lake
@@ -3523,8 +3919,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: TZA-WAS-106
     source_category_code: pond_lake
@@ -3534,8 +3930,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: TZA-WAS-107
     source_category_code: pond_lake_dam
@@ -3545,8 +3941,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: TZA-WAS-108
     source_category_code: river_stream
@@ -3556,8 +3952,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: TZA-WAS-109
     source_category_code: river_stream
@@ -3567,8 +3963,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: TZA-WAS-110
     source_category_code: river_stream
@@ -3578,8 +3974,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: TZA-WAS-111
     source_category_code: piped_water
@@ -3589,8 +3985,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: TZA-WAS-112
     source_category_code: neighbor_s_tap
@@ -3600,8 +3996,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TZA-WAS-113
     source_category_code: neighboring_household
@@ -3611,8 +4007,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TZA-WAS-114
     source_category_code: neighbors_tap
@@ -3622,8 +4018,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TZA-WAS-115
     source_category_code: neighbouring_household
@@ -3633,8 +4029,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TZA-WAS-116
     source_category_code: piped_to_neighbor
@@ -3644,8 +4040,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TZA-WAS-117
     source_category_code: piped_water_on_neighbour_s_housing_unit
@@ -3655,8 +4051,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TZA-WAS-118
     source_category_code: piped_in_house_yard
@@ -3666,8 +4062,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: TZA-WAS-119
     source_category_code: piped_into_dwelling_yard_plot
@@ -3677,8 +4073,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: TZA-WAS-120
     source_category_code: piped_water
@@ -3688,8 +4084,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: TZA-WAS-121
     source_category_code: indoor_plumbing
@@ -3699,8 +4095,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-122
     source_category_code: piped_into_dwelling
@@ -3710,8 +4106,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-123
     source_category_code: piped_into_residence
@@ -3721,8 +4117,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-124
     source_category_code: piped_water_inside_dwelling
@@ -3732,8 +4128,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-125
     source_category_code: piped_water_into_dwelling
@@ -3743,8 +4139,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-126
     source_category_code: private_piped_tap_water_in_housing_unit
@@ -3754,8 +4150,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-127
     source_category_code: private_piped_water_in_housing_unit
@@ -3765,8 +4161,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TZA-WAS-128
     source_category_code: inside_standpipe
@@ -3776,8 +4172,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-129
     source_category_code: piped_into_yard
@@ -3787,8 +4183,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-130
     source_category_code: piped_into_yard_plot
@@ -3798,8 +4194,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-131
     source_category_code: piped_to_yard_plot
@@ -3809,8 +4205,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-132
     source_category_code: piped_water_into_yard_plot_or_compound
@@ -3820,8 +4216,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-133
     source_category_code: piped_water_to_yard_plot
@@ -3831,8 +4227,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-134
     source_category_code: private_outside_standpipe_tap
@@ -3842,8 +4238,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-135
     source_category_code: private_piped_tap_water_outside_housing_unit
@@ -3853,8 +4249,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-136
     source_category_code: private_piped_water_outside_housing_unit
@@ -3864,8 +4260,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TZA-WAS-137
     source_category_code: piped_water_on_community_supply
@@ -3875,8 +4271,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-138
     source_category_code: private_public_standpipe_tap
@@ -3886,8 +4282,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-139
     source_category_code: public_standpipe_tap
@@ -3897,8 +4293,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-140
     source_category_code: public_tap
@@ -3908,8 +4304,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-141
     source_category_code: public_tap_standpipe
@@ -3919,8 +4315,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-142
     source_category_code: public_tap_or_standpipe
@@ -3930,8 +4326,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-143
     source_category_code: public_tap_standpipe
@@ -3941,8 +4337,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TZA-WAS-144
     source_category_code: public_tap_standpipe
@@ -3952,23 +4348,15 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TZA_Tanzania_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
-
-
-
-
-
-
-
-
 
 No country-specific content has been supplied yet. The regional focal point
 must be consulted before harmonization relies on this country layer.

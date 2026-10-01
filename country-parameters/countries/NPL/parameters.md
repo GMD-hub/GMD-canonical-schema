@@ -6,9 +6,9 @@ status: draft
 country_name: NPL
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NPL-EDU-01
     national_label_en: Early Childhood Development (ECD)
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NPL-EDU-02
     national_label_en: Pre-Primary Classes (PPCs)
     national_label_local: ''
@@ -32,10 +38,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NPL-EDU-03
-    national_label_en: |-
-      Lower Basic Level
-      (Grade 1- 5)
+    national_label_en: 'Lower Basic Level
+
+      (Grade 1- 5)'
     national_label_local: ''
     entry_age: 5
     duration_years: 5
@@ -45,10 +57,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - NPL-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: NPL-EDU-04
-    national_label_en: |-
-      Upper Basic Level
-      (Grade 6 - 8)
+    national_label_en: 'Upper Basic Level
+
+      (Grade 6 - 8)'
     national_label_local: ''
     entry_age: 10
     duration_years: 3
@@ -58,10 +76,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - NPL-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NPL-EDU-05
-    national_label_en: |-
-      Secondary Level
-      (Grade 9 - 10)
+    national_label_en: 'Secondary Level
+
+      (Grade 9 - 10)'
     national_label_local: ''
     entry_age: 13
     duration_years: 2
@@ -71,6 +97,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NPL-EDU-06
     national_label_en: Secondary Education (Grade 11-12)
     national_label_local: ''
@@ -82,6 +117,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NPL-EDU-07
     national_label_en: Technical and Vocational Secondary
     national_label_local: ''
@@ -93,6 +137,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NPL-EDU-08
     national_label_en: Vocational Secondary
     national_label_local: ''
@@ -104,6 +157,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NPL-EDU-09
     national_label_en: Annex Programme
     national_label_local: ''
@@ -115,6 +177,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NPL-EDU-10
     national_label_en: Bachelor's Degree
     national_label_local: ''
@@ -126,6 +197,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - NPL-EDU-05
+    - NPL-EDU-06
+    - NPL-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
   - country_entry_id: NPL-EDU-11
     national_label_en: Bachelor's Degree
     national_label_local: ''
@@ -137,6 +221,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - NPL-EDU-05
+    - NPL-EDU-06
+    - NPL-EDU-09
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
   - country_entry_id: NPL-EDU-12
     national_label_en: Master's Degree
     national_label_local: ''
@@ -148,6 +245,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - NPL-EDU-10
+    - NPL-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-10
+    - NPL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+    - 'minimum parent path selected from: NPL-EDU-10, NPL-EDU-11'
   - country_entry_id: NPL-EDU-13
     national_label_en: M. Phil
     national_label_local: ''
@@ -159,6 +270,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - NPL-EDU-05
+    - NPL-EDU-06
+    - NPL-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
   - country_entry_id: NPL-EDU-14
     national_label_en: Ph. D
     national_label_local: ''
@@ -170,15 +294,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - NPL-EDU-12
+    - NPL-EDU-13
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-13
+    - NPL-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+    - 'minimum parent path selected from: NPL-EDU-12, NPL-EDU-13'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Nepal.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
   effective_to: 2015
-  selectors: ~
+  selectors: null
   value:
   - country_entry_id: NPL-SUBNAT-01
     survey_labels: 1 - Eastern | 1-Eastern
@@ -187,10 +325,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -208,10 +346,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -229,10 +367,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -250,10 +388,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -271,10 +409,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -287,13 +425,13 @@ parameters:
     source_row: 10946
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2022
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NPL-SUBNAT-01
     survey_labels: 1 - Koshi
@@ -302,10 +440,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -323,10 +461,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -344,10 +482,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -365,10 +503,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -386,10 +524,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -407,10 +545,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -428,10 +566,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -444,13 +582,13 @@ parameters:
     source_row: 10963
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NPL-SAN-01
     source_category_code: composting_toilet
@@ -460,8 +598,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: NPL-SAN-02
     source_category_code: composting_toilets
@@ -471,8 +609,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: NPL-SAN-03
     source_category_code: composting_toilet_with_slab
@@ -482,8 +620,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: NPL-SAN-04
     source_category_code: composting_toilet_without_slab
@@ -493,8 +631,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_shared
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 130
   - country_entry_id: NPL-SAN-05
     source_category_code: flush_to_somewhere_else
@@ -504,8 +642,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: NPL-SAN-06
     source_category_code: to_elsewhere
@@ -515,8 +653,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: NPL-SAN-07
     source_category_code: to_open_drain
@@ -526,8 +664,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: NPL-SAN-08
     source_category_code: flush_to_piped_sewer
@@ -537,8 +675,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: NPL-SAN-09
     source_category_code: to_piped_sewer_system
@@ -548,8 +686,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: NPL-SAN-10
     source_category_code: flush_to_pit_latrine
@@ -559,8 +697,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: NPL-SAN-11
     source_category_code: to_pit
@@ -570,8 +708,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: NPL-SAN-12
     source_category_code: flush_to_septic_tank
@@ -581,8 +719,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: NPL-SAN-13
     source_category_code: to_septic_tank
@@ -592,8 +730,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: NPL-SAN-14
     source_category_code: flush_to_unknown_place
@@ -603,8 +741,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: NPL-SAN-15
     source_category_code: to_do_not_know_where
@@ -614,8 +752,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: NPL-SAN-16
     source_category_code: to_unknown_place_not_sure_dk
@@ -625,8 +763,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: NPL-SAN-17
     source_category_code: flush_toilet
@@ -636,8 +774,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: NPL-SAN-18
     source_category_code: private_domestic_connection_to_sewage_system
@@ -647,8 +785,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: NPL-SAN-19
     source_category_code: private_flush_to_septic_tank
@@ -658,8 +796,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: NPL-SAN-20
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -670,8 +808,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: NPL-SAN-21
     source_category_code: shared_flush_to_septic_tank
@@ -681,8 +819,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: NPL-SAN-22
     source_category_code: flush_not_to_sewer_septic_tank_pit_latrine
@@ -692,8 +830,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: NPL-SAN-23
     source_category_code: flush_to_elsewhere
@@ -703,8 +841,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: NPL-SAN-24
     source_category_code: flush_to_somewhere_else
@@ -714,8 +852,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: NPL-SAN-25
     source_category_code: flush_municipal
@@ -725,8 +863,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: NPL-SAN-26
     source_category_code: flush_to_piped_sewer
@@ -736,8 +874,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: NPL-SAN-27
     source_category_code: flush_to_piped_sewer_system
@@ -747,8 +885,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: NPL-SAN-28
     source_category_code: flush_to_pit
@@ -758,8 +896,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: NPL-SAN-29
     source_category_code: flush_to_pit_latrine
@@ -769,8 +907,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: NPL-SAN-30
     source_category_code: flush_septic_tank
@@ -780,8 +918,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: NPL-SAN-31
     source_category_code: flush_to_septic_tank
@@ -791,8 +929,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: NPL-SAN-32
     source_category_code: flush_to_don_t_know
@@ -802,8 +940,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: NPL-SAN-33
     source_category_code: flush_don_t_know_where
@@ -813,8 +951,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: NPL-SAN-34
     source_category_code: bucket_latrine
@@ -824,8 +962,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: NPL-SAN-35
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -835,8 +973,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: NPL-SAN-36
     source_category_code: bucket_toilet
@@ -846,8 +984,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: NPL-SAN-37
     source_category_code: hanging_toilet_latrine
@@ -858,8 +996,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: NPL-SAN-38
     source_category_code: pan
@@ -870,8 +1008,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: NPL-SAN-39
     source_category_code: pit_latrine_with_slab
@@ -882,8 +1020,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: NPL-SAN-40
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -894,8 +1032,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: NPL-SAN-41
     source_category_code: pit_latrine_without_slab
@@ -906,8 +1044,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: NPL-SAN-42
     source_category_code: pit_latrine_without_slab
@@ -918,8 +1056,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: NPL-SAN-43
     source_category_code: pit_latrine_without_slab_open_pit
@@ -930,8 +1068,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: NPL-SAN-44
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -942,8 +1080,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: NPL-SAN-45
     source_category_code: traditional_pit_latrine
@@ -954,8 +1092,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: NPL-SAN-46
     source_category_code: traditional_pit_toilet
@@ -966,8 +1104,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: NPL-SAN-47
     source_category_code: ventilated_improved_pit
@@ -978,8 +1116,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: NPL-SAN-48
     source_category_code: ventilated_improved_pit_vip_latrine
@@ -990,8 +1128,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: NPL-SAN-49
     source_category_code: ventilated_improved_pit_latrine
@@ -1002,8 +1140,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: NPL-SAN-50
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -1014,8 +1152,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: NPL-SAN-51
     source_category_code: ventilated_improved_pit_latrine
@@ -1026,8 +1164,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: NPL-SAN-52
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -1038,8 +1176,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: NPL-SAN-53
     source_category_code: non_flush
@@ -1049,8 +1187,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: NPL-SAN-54
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -1061,8 +1199,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: NPL-SAN-55
     source_category_code: communal_latrine
@@ -1073,8 +1211,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: NPL-SAN-56
     source_category_code: private_pour_flush_latrine
@@ -1084,8 +1222,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: NPL-SAN-57
     source_category_code: shared_pour_flush_latrine
@@ -1096,8 +1234,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: NPL-SAN-58
     source_category_code: no_facilities
@@ -1107,8 +1245,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NPL-SAN-59
     source_category_code: no_facilities_open_defecation
@@ -1118,8 +1256,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NPL-SAN-60
     source_category_code: no_facility_bush_field
@@ -1129,8 +1267,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NPL-SAN-61
     source_category_code: no_facility_bush_field
@@ -1140,8 +1278,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NPL-SAN-62
     source_category_code: no_toilet
@@ -1151,8 +1289,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NPL-SAN-63
     source_category_code: open_defecation_no_facility_bush_field
@@ -1162,8 +1300,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: NPL-SAN-64
     source_category_code: biogas_attached_toilet
@@ -1173,8 +1311,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: NPL-SAN-65
     source_category_code: other
@@ -1184,18 +1322,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NPL_Nepal_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NPL-WAS-01
     source_category_code: spring_water
@@ -1205,8 +1343,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: NPL-WAS-02
     source_category_code: sprong_kuwa
@@ -1216,8 +1354,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: NPL-WAS-03
     source_category_code: protected_spring
@@ -1227,8 +1365,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: NPL-WAS-04
     source_category_code: covered_well
@@ -1238,8 +1376,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: NPL-WAS-05
     source_category_code: protected_dug_well
@@ -1249,8 +1387,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: NPL-WAS-06
     source_category_code: protected_well
@@ -1260,8 +1398,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: NPL-WAS-07
     source_category_code: protected_dug_well_or_protected_spring
@@ -1271,8 +1409,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: NPL-WAS-08
     source_category_code: well_spring_protected
@@ -1282,8 +1420,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: NPL-WAS-09
     source_category_code: well_in_house_yard_plot
@@ -1293,8 +1431,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: NPL-WAS-10
     source_category_code: well_in_residence
@@ -1304,8 +1442,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: NPL-WAS-11
     source_category_code: public_well
@@ -1315,8 +1453,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: NPL-WAS-12
     source_category_code: public_neighbor_s_well
@@ -1326,8 +1464,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: NPL-WAS-13
     source_category_code: bore_hole_hand_pump
@@ -1337,8 +1475,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: NPL-WAS-14
     source_category_code: protected_tube_well_or_bore_hole
@@ -1348,8 +1486,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: NPL-WAS-15
     source_category_code: tube_well_or_borehole
@@ -1359,8 +1497,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: NPL-WAS-16
     source_category_code: tubewell_borehole
@@ -1370,8 +1508,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: NPL-WAS-17
     source_category_code: tubewell_handpump_with_platform
@@ -1381,8 +1519,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.other
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: NPL-WAS-18
     source_category_code: handpump_in_residence
@@ -1392,8 +1530,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: NPL-WAS-19
     source_category_code: tubewell_in_yard_plot
@@ -1403,8 +1541,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: NPL-WAS-20
     source_category_code: public_handpump
@@ -1414,8 +1552,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: NPL-WAS-21
     source_category_code: public_neighbor_s_tubewell
@@ -1425,8 +1563,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: NPL-WAS-22
     source_category_code: tubewell_handpump_without_platform
@@ -1436,8 +1574,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: NPL-WAS-23
     source_category_code: unprotected_spring
@@ -1447,8 +1585,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: NPL-WAS-24
     source_category_code: open_well
@@ -1458,8 +1596,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: NPL-WAS-25
     source_category_code: unprotected_dug_well
@@ -1469,8 +1607,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: NPL-WAS-26
     source_category_code: unprotected_well
@@ -1480,8 +1618,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: NPL-WAS-27
     source_category_code: unprotected_dug_well_or_spring
@@ -1491,8 +1629,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: NPL-WAS-28
     source_category_code: well_spring_unprotected
@@ -1502,8 +1640,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: NPL-WAS-29
     source_category_code: cart_with_small_tank
@@ -1513,8 +1651,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: NPL-WAS-30
     source_category_code: cart_with_small_tank_drum_cane
@@ -1524,8 +1662,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: NPL-WAS-31
     source_category_code: stone_tap_dhara_is_kind_of_spring
@@ -1535,8 +1673,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: NPL-WAS-32
     source_category_code: stone_tap_dhara
@@ -1546,8 +1684,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: NPL-WAS-33
     source_category_code: tanker_truck
@@ -1557,8 +1695,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: NPL-WAS-34
     source_category_code: tanker_truck_provided
@@ -1568,8 +1706,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: NPL-WAS-35
     source_category_code: tanker_truck_vendor
@@ -1579,8 +1717,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: NPL-WAS-36
     source_category_code: tanker_truck_vendor
@@ -1590,8 +1728,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: NPL-WAS-37
     source_category_code: other
@@ -1601,8 +1739,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: NPL-WAS-38
     source_category_code: other_sources
@@ -1612,8 +1750,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: NPL-WAS-39
     source_category_code: boottled_jar_water
@@ -1623,8 +1761,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: NPL-WAS-40
     source_category_code: bottled_water
@@ -1634,8 +1772,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: NPL-WAS-41
     source_category_code: bottled_water_improved_source_for_cooking_washing
@@ -1645,8 +1783,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: NPL-WAS-42
     source_category_code: bottled_with_improved
@@ -1656,8 +1794,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: NPL-WAS-43
     source_category_code: packaged_water_bottled_water
@@ -1667,8 +1805,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: NPL-WAS-44
     source_category_code: bottled_water_nonimproved_source_for_cooking_washing
@@ -1678,8 +1816,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: NPL-WAS-45
     source_category_code: bottled_without_improved
@@ -1689,8 +1827,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: NPL-WAS-46
     source_category_code: packaged_water_jar_water
@@ -1700,8 +1838,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: NPL-WAS-47
     source_category_code: rain_water
@@ -1711,8 +1849,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: NPL-WAS-48
     source_category_code: rainwater
@@ -1722,8 +1860,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: NPL-WAS-49
     source_category_code: rainwater_into_tank_or_cistern
@@ -1733,8 +1871,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: NPL-WAS-50
     source_category_code: rainwater_collection
@@ -1744,8 +1882,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: NPL-WAS-51
     source_category_code: rainwater_collection_harvesting
@@ -1755,8 +1893,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: NPL-WAS-52
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -1766,8 +1904,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: NPL-WAS-53
     source_category_code: river_stream_pond_lake
@@ -1777,8 +1915,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: NPL-WAS-54
     source_category_code: surface_water
@@ -1788,8 +1926,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: NPL-WAS-55
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
@@ -1800,8 +1938,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: NPL-WAS-56
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -1811,8 +1949,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: NPL-WAS-57
     source_category_code: lake_reservoir
@@ -1822,8 +1960,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: NPL-WAS-58
     source_category_code: river_stream
@@ -1833,8 +1971,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: NPL-WAS-59
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -1844,8 +1982,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: NPL-WAS-60
     source_category_code: river_spring
@@ -1855,8 +1993,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: NPL-WAS-61
     source_category_code: pipe_borne_water_untreated
@@ -1866,8 +2004,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NPL-WAS-62
     source_category_code: piped_to_neighbor
@@ -1877,8 +2015,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NPL-WAS-63
     source_category_code: piped_to_neighbour
@@ -1888,8 +2026,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NPL-WAS-64
     source_category_code: piped_to_neighbours
@@ -1899,8 +2037,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NPL-WAS-65
     source_category_code: piped_water_to_neighbour
@@ -1910,8 +2048,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NPL-WAS-66
     source_category_code: public_nieghbor_s_tap
@@ -1921,8 +2059,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: NPL-WAS-67
     source_category_code: piped_into_house_yard_plot
@@ -1932,8 +2070,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: NPL-WAS-68
     source_category_code: piped_into_residence
@@ -1943,8 +2081,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: NPL-WAS-69
     source_category_code: piped_to_house
@@ -1954,8 +2092,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: NPL-WAS-70
     source_category_code: piped_water_into_house_yard_plot
@@ -1965,8 +2103,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: NPL-WAS-71
     source_category_code: piped_water_through_house_connection_or_yard
@@ -1976,8 +2114,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: NPL-WAS-72
     source_category_code: piped_into_dwelling
@@ -1987,8 +2125,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: NPL-WAS-73
     source_category_code: piped_water_into_dwelling
@@ -1998,8 +2136,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: NPL-WAS-74
     source_category_code: piped_to_yard_plot
@@ -2009,8 +2147,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: NPL-WAS-75
     source_category_code: piped_water_to_yard_plot
@@ -2020,8 +2158,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: NPL-WAS-76
     source_category_code: pipe_borne_water_treated
@@ -2031,8 +2169,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: NPL-WAS-77
     source_category_code: piped_outside_of_house
@@ -2042,8 +2180,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: NPL-WAS-78
     source_category_code: public_standpipe
@@ -2053,8 +2191,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: NPL-WAS-79
     source_category_code: public_tap
@@ -2064,8 +2202,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: NPL-WAS-80
     source_category_code: public_tap_standpipe
@@ -2075,8 +2213,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: NPL-WAS-81
     source_category_code: public_tap_standpipe
@@ -2086,13 +2224,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NPL_Nepal_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

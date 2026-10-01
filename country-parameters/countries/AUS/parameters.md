@@ -6,9 +6,9 @@ status: draft
 country_name: AUS
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AUS-EDU-01
     national_label_en: Family Day Care and Centre Based Day Care
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: AUS-EDU-02
     national_label_en: Quality early childhood education program
     national_label_local: Quality early childhood education program
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: AUS-EDU-03
     national_label_en: Preschool
     national_label_local: Preschool
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: AUS-EDU-04
     national_label_en: Primary School
     national_label_local: Primary School
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - AUS-EDU-04
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: AUS-EDU-05
     national_label_en: Secondary School
     national_label_local: Secondary School
@@ -65,6 +89,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - AUS-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: AUS-EDU-06
     national_label_en: Certificate I
     national_label_local: Certificate I
@@ -76,6 +108,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - AUS-EDU-04
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: AUS-EDU-07
     national_label_en: Certificate II
     national_label_local: Certificate II
@@ -87,6 +127,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - AUS-EDU-04
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: AUS-EDU-08
     national_label_en: Senior Secondary School
     national_label_local: Senior Secondary School
@@ -98,6 +146,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - AUS-EDU-05
+    - AUS-EDU-06
+    - AUS-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
   - country_entry_id: AUS-EDU-09
     national_label_en: Enabling course
     national_label_local: Enabling course
@@ -109,6 +169,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - AUS-EDU-05
+    - AUS-EDU-06
+    - AUS-EDU-07
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
   - country_entry_id: AUS-EDU-10
     national_label_en: Certificate III
     national_label_local: Certificate III
@@ -120,6 +192,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - AUS-EDU-05
+    - AUS-EDU-06
+    - AUS-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
   - country_entry_id: AUS-EDU-11
     national_label_en: Certificate IV
     national_label_local: Certificate IV
@@ -131,6 +215,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-12
     national_label_en: Diploma
     national_label_local: Diploma
@@ -142,6 +240,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-13
     national_label_en: Advanced Diploma
     national_label_local: Advanced Diploma
@@ -153,6 +265,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-14
     national_label_en: Associate Degree
     national_label_local: Associate Degree
@@ -164,6 +290,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-15
     national_label_en: Bachelor Degree
     national_label_local: Bachelor Degree
@@ -175,6 +315,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-16
     national_label_en: Bachelor Degree
     national_label_local: Bachelor Degree
@@ -186,6 +340,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-17
     national_label_en: Bachelor Honours Degree
     national_label_local: Bachelor Honours Degree
@@ -197,6 +365,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-18
     national_label_en: Graduate Certificate
     national_label_local: Graduate Certificate
@@ -208,6 +390,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-19
     national_label_en: Graduate Diploma
     national_label_local: Graduate Diploma
@@ -219,6 +415,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - AUS-EDU-08
+    - AUS-EDU-09
+    - AUS-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
   - country_entry_id: AUS-EDU-20
     national_label_en: Masters Degree (Coursework)
     national_label_local: Masters Degree (Coursework)
@@ -230,6 +440,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - AUS-EDU-15
+    - AUS-EDU-16
+    - AUS-EDU-17
+    - AUS-EDU-18
+    - AUS-EDU-19
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-18
+    - AUS-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
+    - 'minimum parent path selected from: AUS-EDU-15, AUS-EDU-16, AUS-EDU-17, AUS-EDU-18,
+      AUS-EDU-19'
   - country_entry_id: AUS-EDU-21
     national_label_en: Masters Degree (Research)
     national_label_local: Masters Degree (Research)
@@ -241,6 +470,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - AUS-EDU-15
+    - AUS-EDU-16
+    - AUS-EDU-17
+    - AUS-EDU-18
+    - AUS-EDU-19
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-18
+    - AUS-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
+    - 'minimum parent path selected from: AUS-EDU-15, AUS-EDU-16, AUS-EDU-17, AUS-EDU-18,
+      AUS-EDU-19'
   - country_entry_id: AUS-EDU-22
     national_label_en: Masters Degree (Extended)
     national_label_local: Masters Degree (Extended)
@@ -252,6 +500,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - AUS-EDU-15
+    - AUS-EDU-16
+    - AUS-EDU-17
+    - AUS-EDU-18
+    - AUS-EDU-19
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-18
+    - AUS-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
+    - 'minimum parent path selected from: AUS-EDU-15, AUS-EDU-16, AUS-EDU-17, AUS-EDU-18,
+      AUS-EDU-19'
   - country_entry_id: AUS-EDU-23
     national_label_en: Doctoral Degree (Professional)
     national_label_local: Doctoral Degree (Professional)
@@ -263,6 +530,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - AUS-EDU-20
+    - AUS-EDU-21
+    - AUS-EDU-22
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-18
+    - AUS-EDU-20
+    - AUS-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
+    - 'minimum parent path selected from: AUS-EDU-15, AUS-EDU-16, AUS-EDU-17, AUS-EDU-18,
+      AUS-EDU-19'
+    - 'minimum parent path selected from: AUS-EDU-20, AUS-EDU-21, AUS-EDU-22'
   - country_entry_id: AUS-EDU-24
     national_label_en: Doctoral Degree (Research)
     national_label_local: Doctoral Degree (Research)
@@ -274,15 +560,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - AUS-EDU-20
+    - AUS-EDU-21
+    - AUS-EDU-22
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - AUS-EDU-04
+    - AUS-EDU-06
+    - AUS-EDU-09
+    - AUS-EDU-18
+    - AUS-EDU-20
+    - AUS-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AUS-EDU-05, AUS-EDU-06, AUS-EDU-07'
+    - 'minimum parent path selected from: AUS-EDU-08, AUS-EDU-09, AUS-EDU-10'
+    - 'minimum parent path selected from: AUS-EDU-15, AUS-EDU-16, AUS-EDU-17, AUS-EDU-18,
+      AUS-EDU-19'
+    - 'minimum parent path selected from: AUS-EDU-20, AUS-EDU-21, AUS-EDU-22'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Australia.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AUS-SUBNAT-01
     survey_labels: '[1]New South Wales'
@@ -291,10 +596,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -312,10 +617,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -333,10 +638,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -354,10 +659,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -375,10 +680,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -396,10 +701,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -417,10 +722,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -438,10 +743,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -459,10 +764,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -475,8 +780,8 @@ parameters:
     source_row: 431
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

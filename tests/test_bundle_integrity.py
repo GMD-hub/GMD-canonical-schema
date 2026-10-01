@@ -38,7 +38,11 @@ def test_compiled_bundle_applies_selectors(temp_repository: Path) -> None:
         / "parameters.md"
     )
     data, body = load_markdown(path)
-    target = data["parameters"][0]
+    target = next(
+        record
+        for record in data["parameters"]
+        if record["parameter_id"] == "PARAM-DEM-MIN-MARRIAGE-AGE"
+    )
     target["selectors"] = {"survey_type": "income"}
     write_markdown(path, data, body)
 
@@ -61,4 +65,4 @@ def test_compiled_bundle_applies_selectors(temp_repository: Path) -> None:
 
     assert bundle["selectors"] == {"survey_type": "consumption"}
     parameter_ids = [item["parameter_id"] for item in bundle["country"]["parameters"]]
-    assert "PARAM-EDU-YEARS-BY-LEVEL" not in parameter_ids
+    assert "PARAM-DEM-MIN-MARRIAGE-AGE" not in parameter_ids

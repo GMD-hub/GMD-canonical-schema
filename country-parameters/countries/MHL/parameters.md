@@ -6,9 +6,9 @@ status: draft
 country_name: MHL
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MHL-EDU-01
     national_label_en: Pre-kindergarten
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: MHL-EDU-02
     national_label_en: Kindergarten
     national_label_local: Kindergarten
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: MHL-EDU-03
     national_label_en: Elementary School Gr1-Gr6
     national_label_local: Elementary School Gr1-Gr6
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - MHL-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: MHL-EDU-04
     national_label_en: Middle School Gr7-Gr8
     national_label_local: Middle School Gr7-Gr8
@@ -54,6 +72,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - MHL-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: MHL-EDU-05
     national_label_en: Grade Pre-9
     national_label_local: Grade Pre-9
@@ -65,6 +91,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - MHL-EDU-03
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: MHL-EDU-06
     national_label_en: "High School \nGr9-Gr12"
     national_label_local: "High School \nGr9-Gr12"
@@ -76,6 +110,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - MHL-EDU-04
+    - MHL-EDU-05
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
   - country_entry_id: MHL-EDU-07
     national_label_en: USP prelim
     national_label_local: USP prelim
@@ -87,6 +132,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - MHL-EDU-04
+    - MHL-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
   - country_entry_id: MHL-EDU-08
     national_label_en: USP Form 7
     national_label_local: USP Form 7
@@ -98,6 +154,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - MHL-EDU-04
+    - MHL-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
   - country_entry_id: MHL-EDU-09
     national_label_en: College of Marshall Islands Diploma - Adult Basic Education
     national_label_local: College of Marshall Islands Diploma - Adult Basic Education
@@ -109,6 +176,12 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids: []
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - MHL-EDU-09
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: MHL-EDU-10
     national_label_en: "Life skills academy \nGr. Pre 9-Gr12"
     national_label_local: "Life skills academy \nGr. Pre 9-Gr12"
@@ -120,6 +193,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - MHL-EDU-04
+    - MHL-EDU-05
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
   - country_entry_id: MHL-EDU-11
     national_label_en: USP Campus - Certificate
     national_label_local: USP Campus - Certificate
@@ -131,6 +215,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - MHL-EDU-06
+    - MHL-EDU-07
+    - MHL-EDU-08
+    - MHL-EDU-10
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    - MHL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
+    - 'minimum parent path selected from: MHL-EDU-06, MHL-EDU-07, MHL-EDU-08, MHL-EDU-10'
   - country_entry_id: MHL-EDU-12
     national_label_en: College of Marshall Islands Diploma
     national_label_local: College of Marshall Islands Diploma
@@ -142,6 +241,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - MHL-EDU-06
+    - MHL-EDU-07
+    - MHL-EDU-08
+    - MHL-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    - MHL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
+    - 'minimum parent path selected from: MHL-EDU-06, MHL-EDU-07, MHL-EDU-08, MHL-EDU-10'
   - country_entry_id: MHL-EDU-13
     national_label_en: USP Campus - Vocational
     national_label_local: USP Campus - Vocational
@@ -153,6 +267,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - MHL-EDU-06
+    - MHL-EDU-07
+    - MHL-EDU-08
+    - MHL-EDU-10
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    - MHL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
+    - 'minimum parent path selected from: MHL-EDU-06, MHL-EDU-07, MHL-EDU-08, MHL-EDU-10'
   - country_entry_id: MHL-EDU-14
     national_label_en: USP Campus - Diploma
     national_label_local: USP Campus - Diploma
@@ -164,6 +293,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - MHL-EDU-06
+    - MHL-EDU-07
+    - MHL-EDU-08
+    - MHL-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    - MHL-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
+    - 'minimum parent path selected from: MHL-EDU-06, MHL-EDU-07, MHL-EDU-08, MHL-EDU-10'
   - country_entry_id: MHL-EDU-15
     national_label_en: College of Marshall Islands - Associate Degrees in Science
       and Arts
@@ -177,6 +321,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - MHL-EDU-06
+    - MHL-EDU-07
+    - MHL-EDU-08
+    - MHL-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    - MHL-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
+    - 'minimum parent path selected from: MHL-EDU-06, MHL-EDU-07, MHL-EDU-08, MHL-EDU-10'
   - country_entry_id: MHL-EDU-16
     national_label_en: College of Marshall Islands - Bachelor Degree
     national_label_local: College of Marshall Islands - Bachelor Degree
@@ -188,16 +347,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - MHL-EDU-06
+    - MHL-EDU-07
+    - MHL-EDU-08
+    - MHL-EDU-10
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MHL-EDU-03
+    - MHL-EDU-05
+    - MHL-EDU-07
+    - MHL-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MHL-EDU-04, MHL-EDU-05'
+    - 'minimum parent path selected from: MHL-EDU-06, MHL-EDU-07, MHL-EDU-08, MHL-EDU-10'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Marshall
       Islands.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MHL-SAN-01
     source_category_code: flush_to_seomewhere_else
@@ -207,8 +381,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: MHL-SAN-02
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -218,8 +392,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MHL-SAN-03
     source_category_code: flush_pour_flush_to_pit_latrine
@@ -229,8 +403,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: MHL-SAN-04
     source_category_code: flush_pour_flush_to_septic_tank
@@ -240,8 +414,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MHL-SAN-05
     source_category_code: pit_latrine_with_slab
@@ -252,8 +426,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MHL-SAN-06
     source_category_code: open_defecation_no_facility_bush_field
@@ -263,18 +437,18 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MHL_Marshall_Islands_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MHL-WAS-01
     source_category_code: protected_well
@@ -284,8 +458,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MHL-WAS-02
     source_category_code: tubewell_borehole
@@ -295,8 +469,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MHL-WAS-03
     source_category_code: unprotected_well
@@ -306,8 +480,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MHL-WAS-04
     source_category_code: other
@@ -317,8 +491,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MHL-WAS-05
     source_category_code: unimproved_water_source
@@ -328,8 +502,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MHL-WAS-06
     source_category_code: bottle_of_water
@@ -339,8 +513,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MHL-WAS-07
     source_category_code: bottled_water
@@ -350,8 +524,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MHL-WAS-08
     source_category_code: rainwater_collection
@@ -361,8 +535,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MHL-WAS-09
     source_category_code: rainwater_tank
@@ -372,8 +546,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MHL-WAS-10
     source_category_code: piped_water_to_neighbour
@@ -383,8 +557,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MHL-WAS-11
     source_category_code: public_piped_water_supply_to_yard_plot_or_to_neighbor
@@ -394,8 +568,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MHL-WAS-12
     source_category_code: piped_water_into_dwelling
@@ -405,8 +579,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MHL-WAS-13
     source_category_code: piped_water_into_yard_plot
@@ -416,8 +590,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MHL-WAS-14
     source_category_code: public_tap_standpipe
@@ -427,8 +601,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MHL-WAS-15
     source_category_code: public_shared_tap
@@ -438,13 +612,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MHL_Marshall_Islands_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

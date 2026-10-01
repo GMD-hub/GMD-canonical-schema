@@ -6,13 +6,14 @@ schema_version: '0.1'
 status: draft
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EGY-EDU-01
     national_label_en: Pre-primary education
-    national_label_local: التعليم ما قبل الابتدائي
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0645\u0627\
+      \ \u0642\u0628\u0644 \u0627\u0644\u0627\u0628\u062A\u062F\u0627\u0626\u064A"
     entry_age: 4
     duration_years: 2
     isced_level: '0'
@@ -21,9 +22,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: EGY-EDU-02
     national_label_en: Primary education
-    national_label_local: التعليم الابتدائي
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0627\u0628\u062A\u062F\u0627\u0626\u064A"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -32,9 +40,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EGY-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: EGY-EDU-03
     national_label_en: Community education
-    national_label_local: التعليم المجتمعي
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0645\u062C\u062A\u0645\u0639\u064A"
     entry_age: 9
     duration_years: 6
     isced_level: '1'
@@ -43,9 +58,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EGY-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: EGY-EDU-04
     national_label_en: Preparatory education
-    national_label_local: التعليم الإعدادي
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0625\u0639\u062F\u0627\u062F\u064A"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -54,9 +76,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - EGY-EDU-02
+    - EGY-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
   - country_entry_id: EGY-EDU-05
     national_label_en: Vocational school
-    national_label_local: المدرسة المهنية
+    national_label_local: "\u0627\u0644\u0645\u062F\u0631\u0633\u0629 \u0627\u0644\
+      \u0645\u0647\u0646\u064A\u0629"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -65,9 +98,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - EGY-EDU-02
+    - EGY-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
   - country_entry_id: EGY-EDU-06
     national_label_en: General secondary  education
-    national_label_local: التعليم الثانوي العام
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u062B\u0627\u0646\u0648\u064A \u0627\u0644\u0639\u0627\u0645"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -76,9 +120,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - EGY-EDU-04
+    - EGY-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    cum_years_status: computed
+    review_flags: &id001
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
+    - 'minimum parent path selected from: EGY-EDU-04, EGY-EDU-05'
   - country_entry_id: EGY-EDU-07
     national_label_en: Technical secondary education
-    national_label_local: التعليم الثانوي التقني
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u062B\u0627\u0646\u0648\u064A \u0627\u0644\u062A\u0642\u0646\u064A"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -87,11 +144,26 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - EGY-EDU-04
+    - EGY-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
+    - 'minimum parent path selected from: EGY-EDU-04, EGY-EDU-05'
   - country_entry_id: EGY-EDU-08
     national_label_en: First 3 years of the advanced technical school programmes (5
       years long)
-    national_label_local: السنوات الثلاث الأولى من يرامج المدارس الفنية المتقدمة (5
-      سنوات)
+    national_label_local: "\u0627\u0644\u0633\u0646\u0648\u0627\u062A \u0627\u0644\
+      \u062B\u0644\u0627\u062B \u0627\u0644\u0623\u0648\u0644\u0649 \u0645\u0646 \u064A\
+      \u0631\u0627\u0645\u062C \u0627\u0644\u0645\u062F\u0627\u0631\u0633 \u0627\u0644\
+      \u0641\u0646\u064A\u0629 \u0627\u0644\u0645\u062A\u0642\u062F\u0645\u0629 (5\
+      \ \u0633\u0646\u0648\u0627\u062A)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -100,10 +172,26 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - EGY-EDU-04
+    - EGY-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
+    - 'minimum parent path selected from: EGY-EDU-04, EGY-EDU-05'
   - country_entry_id: EGY-EDU-09
     national_label_en: Last 2 years of the advanced technical schools' programmes
       (5 years long)
-    national_label_local: السنتين الأخيرتين من يرامج المدارس الفنية المتقدمة (5 سنوات)
+    national_label_local: "\u0627\u0644\u0633\u0646\u062A\u064A\u0646 \u0627\u0644\
+      \u0623\u062E\u064A\u0631\u062A\u064A\u0646 \u0645\u0646 \u064A\u0631\u0627\u0645\
+      \u062C \u0627\u0644\u0645\u062F\u0627\u0631\u0633 \u0627\u0644\u0641\u0646\u064A\
+      \u0629 \u0627\u0644\u0645\u062A\u0642\u062F\u0645\u0629 (5 \u0633\u0646\u0648\
+      \u0627\u062A)"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -112,11 +200,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-10
     national_label_en: Industrial, commercial, technical, medical and nursing institutes.
       2-year  programmes
-    national_label_local: برامج التعليم الفني فوق المتوسط ( معاهد صناعية، تجارية وفنية،
-      صحيّة وتمريض). برامج السنتين
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062A\u0639\
+      \u0644\u064A\u0645 \u0627\u0644\u0641\u0646\u064A \u0641\u0648\u0642 \u0627\u0644\
+      \u0645\u062A\u0648\u0633\u0637 ( \u0645\u0639\u0627\u0647\u062F \u0635\u0646\
+      \u0627\u0639\u064A\u0629\u060C \u062A\u062C\u0627\u0631\u064A\u0629 \u0648\u0641\
+      \u0646\u064A\u0629\u060C \u0635\u062D\u064A\u0651\u0629 \u0648\u062A\u0645\u0631\
+      \u064A\u0636). \u0628\u0631\u0627\u0645\u062C \u0627\u0644\u0633\u0646\u062A\
+      \u064A\u0646"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -125,9 +228,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-11
     national_label_en: Above-middle diploma vocational programmes (3-year programmes)
-    national_label_local: برامج التعليم الفني فوق المتوسط (برامج 3 سنوات)
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062A\u0639\
+      \u0644\u064A\u0645 \u0627\u0644\u0641\u0646\u064A \u0641\u0648\u0642 \u0627\u0644\
+      \u0645\u062A\u0648\u0633\u0637 (\u0628\u0631\u0627\u0645\u062C 3 \u0633\u0646\
+      \u0648\u0627\u062A)"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -136,9 +252,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-12
     national_label_en: Licence and Bachelor's programmes
-    national_label_local: برامج البكالوريوس والليسانس
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u0628\u0643\
+      \u0627\u0644\u0648\u0631\u064A\u0648\u0633 \u0648\u0627\u0644\u0644\u064A\u0633\
+      \u0627\u0646\u0633"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -147,9 +275,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-13
     national_label_en: Long Bachelor's programmes (5 years)
-    national_label_local: برامج البكالوريوس الطويل (5 سنوات)
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u0628\u0643\
+      \u0627\u0644\u0648\u0631\u064A\u0648\u0633 \u0627\u0644\u0637\u0648\u064A\u0644\
+      \ (5 \u0633\u0646\u0648\u0627\u062A)"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -158,9 +298,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-14
     national_label_en: Diploma programmes
-    national_label_local: برامج الدبلوم
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062F\u0628\
+      \u0644\u0648\u0645"
     entry_age: 22
     duration_years: 1
     isced_level: '6'
@@ -169,9 +320,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-15
     national_label_en: "Bachelor's in \nmedicine"
-    national_label_local: بكالوريوس في الطب
+    national_label_local: "\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0648\u0633\
+      \ \u0641\u064A \u0627\u0644\u0637\u0628"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -180,9 +342,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - EGY-EDU-06
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-15
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EGY-EDU-16
     national_label_en: Master's programmes
-    national_label_local: برامج الماجستير
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u0645\u0627\
+      \u062C\u0633\u062A\u064A\u0631"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -191,9 +364,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - EGY-EDU-12
+    - EGY-EDU-13
+    - EGY-EDU-14
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-14
+    - EGY-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
+    - 'minimum parent path selected from: EGY-EDU-04, EGY-EDU-05'
+    - 'minimum parent path selected from: EGY-EDU-12, EGY-EDU-13, EGY-EDU-14'
   - country_entry_id: EGY-EDU-17
     national_label_en: Doctoral
-    national_label_local: برامج الدكتوراه
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062F\u0643\
+      \u062A\u0648\u0631\u0627\u0647"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -202,15 +392,32 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - EGY-EDU-15
+    - EGY-EDU-16
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - EGY-EDU-02
+    - EGY-EDU-04
+    - EGY-EDU-06
+    - EGY-EDU-14
+    - EGY-EDU-16
+    - EGY-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EGY-EDU-02, EGY-EDU-03'
+    - 'minimum parent path selected from: EGY-EDU-04, EGY-EDU-05'
+    - 'minimum parent path selected from: EGY-EDU-12, EGY-EDU-13, EGY-EDU-14'
+    - 'minimum parent path selected from: EGY-EDU-15, EGY-EDU-16'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Egypt.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EGY-SUBNAT-01
     survey_labels: 1-Metropolitan
@@ -219,10 +426,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: EGY_2015_GAULx_1
     geo_year: '2015'
@@ -240,10 +447,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: EGY_2015_GAULx_2
     geo_year: '2015'
@@ -262,10 +469,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: EGY_2015_GAULx_4
     geo_year: '2015'
@@ -284,10 +491,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: EGY_2015_GAULx_6
     geo_year: '2015'
@@ -305,10 +512,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61510
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61510
     geo_year: '2015'
@@ -326,10 +533,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61512
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61512
     geo_year: '2015'
@@ -347,10 +554,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61511
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61511
     geo_year: '2015'
@@ -368,10 +575,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61513
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61513
     geo_year: '2015'
@@ -389,10 +596,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61514
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61514
     geo_year: '2015'
@@ -410,10 +617,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61515
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61515
     geo_year: '2015'
@@ -431,10 +638,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61516
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61516
     geo_year: '2015'
@@ -452,10 +659,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61517
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61517
     geo_year: '2015'
@@ -473,10 +680,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61518
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61518
     geo_year: '2015'
@@ -494,10 +701,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61519
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61519
     geo_year: '2015'
@@ -515,10 +722,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61520
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61520
     geo_year: '2015'
@@ -536,10 +743,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61521
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61521
     geo_year: '2015'
@@ -557,10 +764,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61522
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61522
     geo_year: '2015'
@@ -578,10 +785,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61523
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61523
     geo_year: '2015'
@@ -599,10 +806,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61524
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61524
     geo_year: '2015'
@@ -620,10 +827,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61526
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61526
     geo_year: '2015'
@@ -641,10 +848,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61527
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61527
     geo_year: '2015'
@@ -662,10 +869,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61530
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61530
     geo_year: '2015'
@@ -683,10 +890,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61531
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61531
     geo_year: '2015'
@@ -704,10 +911,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61533
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61533
     geo_year: '2015'
@@ -725,10 +932,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61536
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61536
     geo_year: '2015'
@@ -746,10 +953,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61535
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: EGY_2015_GAUL1_61535
     geo_year: '2015'
@@ -767,10 +974,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61532
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -788,10 +995,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61528
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -809,10 +1016,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61525
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -830,10 +1037,10 @@ parameters:
     gmd_subnatid2: EGY_2015_GAUL1_61534
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -846,1586 +1053,1723 @@ parameters:
     source_row: 4292
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EGY-SAN-01
     source_category_code: composting_toilet
     national_label_en: Composting toilet
-    national_label_local: مراحيض التسميد
+    national_label_local: "\u0645\u0631\u0627\u062D\u064A\u0636 \u0627\u0644\u062A\
+      \u0633\u0645\u064A\u062F"
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: EGY-SAN-02
     source_category_code: toilet_connected_to_stream
     national_label_en: Toilet connected to stream
-    national_label_local: إلى مكان آخر
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u0622\u062E\
+      \u0631"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: EGY-SAN-03
     source_category_code: local_or_public_network
     national_label_en: Local or public network
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: EGY-SAN-04
     source_category_code: toilet_connected_to_public_or_private_sewage_system
     national_label_en: Toilet connected to public or private sewage system
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: EGY-SAN-05
     source_category_code: yes_and_connected_to_sewage
     national_label_en: Yes and connected to sewage
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: EGY-SAN-06
     source_category_code: toilet_connected_to_tank
     national_label_en: Toilet connected to tank
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: EGY-SAN-07
     source_category_code: tranch
     national_label_en: Tranch
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: EGY-SAN-08
     source_category_code: toilet_connected_to_dk_or_unspecified
     national_label_en: Toilet connected to DK or unspecified
-    national_label_local: إلى مكان غير معروف / لست متأكدًا / لا أعرف
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u063A\u064A\
+      \u0631 \u0645\u0639\u0631\u0648\u0641 / \u0644\u0633\u062A \u0645\u062A\u0623\
+      \u0643\u062F\u064B\u0627 / \u0644\u0627 \u0623\u0639\u0631\u0641"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: EGY-SAN-09
     source_category_code: yes_and_not_connected_to_sewage
     national_label_en: Yes and not connected to sewage
-    national_label_local: إلى مكان غير معروف / لست متأكدًا / لا أعرف
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u063A\u064A\
+      \u0631 \u0645\u0639\u0631\u0648\u0641 / \u0644\u0633\u062A \u0645\u062A\u0623\
+      \u0643\u062F\u064B\u0627 / \u0644\u0627 \u0623\u0639\u0631\u0641"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: EGY-SAN-10
     source_category_code: into_canal
     national_label_en: into canal
-    national_label_local: إلى مكان آخر
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u0622\u062E\
+      \u0631"
     jmp_classification: Flush/toilets > Private flush/toilet > to elsewhere
     jmp_id: flush_toilets.private_flush_toilet.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 77
   - country_entry_id: EGY-SAN-11
     source_category_code: private_toilet_to_public_or_private_network
     national_label_en: Private toilet to public or private network
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: EGY-SAN-12
     source_category_code: private_toilet_yes_and_connected_to_sewage
     national_label_en: private toilet yes and connected to sewage
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: EGY-SAN-13
     source_category_code: toilet_connected_to_public_network_inside_house
     national_label_en: toilet connected to public network - inside house
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: EGY-SAN-14
     source_category_code: toilet_connected_to_public_network_inside_house
     national_label_en: toilet connected to public network inside house
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: EGY-SAN-15
     source_category_code: flush_to_vailt_bayara
     national_label_en: Flush to vailt (bayara)
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: EGY-SAN-16
     source_category_code: private_toilet_septic_tank
     national_label_en: Private toilet Septic tank
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: EGY-SAN-17
     source_category_code: private_toilet_yes_and_not_connected_to_sewage
     national_label_en: private toilet yes and not connected to sewage
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: EGY-SAN-18
     source_category_code: toilet_connected_to_tank_inside_house
     national_label_en: toilet connected to tank- inside house
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: EGY-SAN-19
     source_category_code: shared_toilet_connected_to_public_network_inside_building
     national_label_en: shared  toilet connected to public network - inside building
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: EGY-SAN-20
     source_category_code: shared_toilet_connected_to_public_network_inside_building
     national_label_en: shared toilet connected to public network inside building
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: EGY-SAN-21
     source_category_code: shared_toilet_to_public_or_private_network
     national_label_en: Shared toilet to public or private network
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: EGY-SAN-22
     source_category_code: shared_toilet_yes_and_connected_to_sewage
     national_label_en: shared toilet yes and connected to sewage
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: EGY-SAN-23
     source_category_code: shared_toilet_connected_to_tank_inside_building
     national_label_en: shared toilet connected to tank - inside building
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: EGY-SAN-24
     source_category_code: shared_toilet_connected_to_tank_inside_building
     national_label_en: shared toilet connected to tank inside building
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: EGY-SAN-25
     source_category_code: shared_toilet_septic_tank
     national_label_en: Shared toilet Septic tank
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: EGY-SAN-26
     source_category_code: shared_toilet_yes_and_not_connected_to_sewage
     national_label_en: shared toilet yes and not connected to sewage
-    national_label_local: إلى مكان غير معروف / لست متأكدًا / لا أعرف
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u063A\u064A\
+      \u0631 \u0645\u0639\u0631\u0648\u0641 / \u0644\u0633\u062A \u0645\u062A\u0623\
+      \u0643\u062F\u064B\u0627 / \u0644\u0627 \u0623\u0639\u0631\u0641"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to unknown place/
       not sure/DK
     jmp_id: flush_toilets.public_shared_flush_toilet.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 82
   - country_entry_id: EGY-SAN-27
     source_category_code: flush_to_pipe_connected_to_canal_flush_to_pipe_connected_to_ground_water_flush_to_somewhere_else
     national_label_en: Flush to pipe connected to canal + Flush to pipe connected
       to Ground water + Flush to somewhere else
-    national_label_local: إلى مكان آخر
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u0622\u062E\
+      \u0631"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: EGY-SAN-28
     source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
-    national_label_local: إلى مكان آخر
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u0622\u062E\
+      \u0631"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: EGY-SAN-29
     source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: EGY-SAN-30
     source_category_code: modern_flush_toilet
     national_label_en: Modern flush toilet
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: EGY-SAN-31
     source_category_code: modern_toilet
     national_label_en: Modern toilet
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: EGY-SAN-32
     source_category_code: yes_and_connected_to_sewage
     national_label_en: Yes and connected to sewage
-    national_label_local: إلى نظام الصرف الصحي بالأنابيب
+    national_label_local: "\u0625\u0644\u0649 \u0646\u0638\u0627\u0645 \u0627\u0644\
+      \u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A \u0628\u0627\u0644\u0623\u0646\
+      \u0627\u0628\u064A\u0628"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: EGY-SAN-33
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: EGY-SAN-34
     source_category_code: flush_to_septic_tank_including_bayara
     national_label_en: flush to septic tank (including bayara)
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: EGY-SAN-35
     source_category_code: traditional_with_tank_flush
     national_label_en: Traditional with tank flush
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: EGY-SAN-36
     source_category_code: yes_and_not_connected_to_sewage
     national_label_en: Yes and not connected to sewage
-    national_label_local: لخزان الصرف الصحي
+    national_label_local: "\u0644\u062E\u0632\u0627\u0646 \u0627\u0644\u0635\u0631\
+      \u0641 \u0627\u0644\u0635\u062D\u064A"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: EGY-SAN-37
     source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
-    national_label_local: إلى مكان غير معروف / لست متأكدًا / لا أعرف
+    national_label_local: "\u0625\u0644\u0649 \u0645\u0643\u0627\u0646 \u063A\u064A\
+      \u0631 \u0645\u0639\u0631\u0648\u0641 / \u0644\u0633\u062A \u0645\u062A\u0623\
+      \u0643\u062F\u064B\u0627 / \u0644\u0627 \u0623\u0639\u0631\u0641"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: EGY-SAN-38
     source_category_code: bucket
     national_label_en: Bucket
-    national_label_local: مرحاض دلو
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062F\u0644\u0648"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: EGY-SAN-39
     source_category_code: bucket_toilet
     national_label_en: bucket toilet
-    national_label_local: مرحاض دلو
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062F\u0644\u0648"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: EGY-SAN-40
     source_category_code: barrel_tank
     national_label_en: Barrel/tank
-    national_label_local: دورة مياه معلقة / مرحاض معلق
+    national_label_local: "\u062F\u0648\u0631\u0629 \u0645\u064A\u0627\u0647 \u0645\
+      \u0639\u0644\u0642\u0629 / \u0645\u0631\u062D\u0627\u0636 \u0645\u0639\u0644\
+      \u0642"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: EGY-SAN-41
     source_category_code: hanging_toilet_hanging_latrine
     national_label_en: Hanging toilet/hanging latrine
-    national_label_local: دورة مياه معلقة / مرحاض معلق
+    national_label_local: "\u062F\u0648\u0631\u0629 \u0645\u064A\u0627\u0647 \u0645\
+      \u0639\u0644\u0642\u0629 / \u0645\u0631\u062D\u0627\u0636 \u0645\u0639\u0644\
+      \u0642"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: EGY-SAN-42
     source_category_code: pit_latrine_with_slab
     national_label_en: pit latrine with slab
-    national_label_local: مرحاض حفرة مع بلاطة / مرحاض مغطى
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0645\u0639 \u0628\u0644\u0627\u0637\u0629 / \u0645\u0631\u062D\u0627\u0636\
+      \ \u0645\u063A\u0637\u0649"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: EGY-SAN-43
     source_category_code: pit
     national_label_en: Pit
-    national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0628\u062F\u0648\u0646 \u0628\u0644\u0627\u0637\u0629 / \u062D\u0641\u0631\
+      \u0629 \u0645\u0641\u062A\u0648\u062D\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: EGY-SAN-44
     source_category_code: pit_latrine_toilet_bucket_latrine
     national_label_en: Pit latrine toilet/bucket latrine
-    national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0628\u062F\u0648\u0646 \u0628\u0644\u0627\u0637\u0629 / \u062D\u0641\u0631\
+      \u0629 \u0645\u0641\u062A\u0648\u062D\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: EGY-SAN-45
     source_category_code: pit_latrine_without_slab_open_pit
     national_label_en: pit latrine without slab/open pit
-    national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0628\u062F\u0648\u0646 \u0628\u0644\u0627\u0637\u0629 / \u062D\u0641\u0631\
+      \u0629 \u0645\u0641\u062A\u0648\u062D\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: EGY-SAN-46
     source_category_code: pit_toilet_latrine
     national_label_en: Pit toilet/ latrine
-    national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0628\u062F\u0648\u0646 \u0628\u0644\u0627\u0637\u0629 / \u062D\u0641\u0631\
+      \u0629 \u0645\u0641\u062A\u0648\u062D\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: EGY-SAN-47
     source_category_code: pit_toilte_latrine
     national_label_en: Pit toilte, latrine
-    national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0628\u062F\u0648\u0646 \u0628\u0644\u0627\u0637\u0629 / \u062D\u0641\u0631\
+      \u0629 \u0645\u0641\u062A\u0648\u062D\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: EGY-SAN-48
     source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated improved pit latrine
-    national_label_local: مراحيض حفرة محسنة جيدة التهوية
+    national_label_local: "\u0645\u0631\u0627\u062D\u064A\u0636 \u062D\u0641\u0631\
+      \u0629 \u0645\u062D\u0633\u0646\u0629 \u062C\u064A\u062F\u0629 \u0627\u0644\u062A\
+      \u0647\u0648\u064A\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: EGY-SAN-49
     source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: ventilated improved pit latrine (vip)
-    national_label_local: مراحيض حفرة محسنة جيدة التهوية
+    national_label_local: "\u0645\u0631\u0627\u062D\u064A\u0636 \u062D\u0641\u0631\
+      \u0629 \u0645\u062D\u0633\u0646\u0629 \u062C\u064A\u062F\u0629 \u0627\u0644\u062A\
+      \u0647\u0648\u064A\u0629"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: EGY-SAN-50
     source_category_code: pit_toilet_latrine
     national_label_en: Pit toilet/ latrine
-    national_label_local: مرحاض حفرة بدون بلاطة / حفرة مفتوحة
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062D\u0641\u0631\u0629\
+      \ \u0628\u062F\u0648\u0646 \u0628\u0644\u0627\u0637\u0629 / \u062D\u0641\u0631\
+      \u0629 \u0645\u0641\u062A\u0648\u062D\u0629"
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
       slab/open pit
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 116
   - country_entry_id: EGY-SAN-51
     source_category_code: bucket_toilet
     national_label_en: Bucket toilet
-    national_label_local: مرحاض دلو
+    national_label_local: "\u0645\u0631\u062D\u0627\u0636 \u062F\u0644\u0648"
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Bucket
       latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 126
   - country_entry_id: EGY-SAN-52
     source_category_code: traditional_with_bucket_flush
     national_label_en: Traditional with bucket flush
-    national_label_local: صب المراحيض المتدفقة
+    national_label_local: "\u0635\u0628 \u0627\u0644\u0645\u0631\u0627\u062D\u064A\
+      \u0636 \u0627\u0644\u0645\u062A\u062F\u0641\u0642\u0629"
     jmp_classification: Latrines > Pour flush latrines
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: EGY-SAN-53
     source_category_code: no_facilities
     national_label_en: No facilities
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-54
     source_category_code: no_facility
     national_label_en: No facility
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-55
     source_category_code: no_facility_bush_field
     national_label_en: no facility/bush/field
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-56
     source_category_code: no_toilet
     national_label_en: No toilet
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-57
     source_category_code: no_toilet_facility
     national_label_en: No toilet facility
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-58
     source_category_code: no_toilet_facility_no_facility
     national_label_en: no toilet facility no facility
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-59
     source_category_code: non_pas_disponible
     national_label_en: Non, pas disponible
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-60
     source_category_code: none
     national_label_en: None
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-61
     source_category_code: not_available
     national_label_en: Not available
-    national_label_local: لا توجد منشأة ، شجيرة ، حقل
+    national_label_local: "\u0644\u0627 \u062A\u0648\u062C\u062F \u0645\u0646\u0634\
+      \u0623\u0629 \u060C \u0634\u062C\u064A\u0631\u0629 \u060C \u062D\u0642\u0644"
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EGY-SAN-62
     source_category_code: pblic_toilet
     national_label_en: pblic toilet
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: EGY-SAN-63
     source_category_code: public_toilet
     national_label_en: Public toilet
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: EGY-SAN-64
     source_category_code: biara
     national_label_en: Biara
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: EGY-SAN-65
     source_category_code: toilet_drainage_connector_civil_network
     national_label_en: toilet drainage connector/civil network
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: EGY-SAN-66
     source_category_code: barrel
     national_label_en: barrel
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EGY-SAN-67
     source_category_code: flush_to_pipe_connected_to_canal
     national_label_en: flush to pipe connected to canal
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EGY-SAN-68
     source_category_code: other
     national_label_en: Other
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EGY-SAN-69
     source_category_code: private_toilet_no_facility
     national_label_en: Private toilet No facility
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EGY-SAN-70
     source_category_code: toilet_connected_to_hole_ground_absorbency
     national_label_en: Toilet connected to hole/ground absorbency
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EGY-SAN-71
     source_category_code: toilet_not_connected_to_sewage_facility_or_septic_tank
     national_label_en: Toilet not connected to sewage facility or septic tank
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EGY-SAN-72
     source_category_code: flush_to_pipe_connected_to_ground_water
     national_label_en: flush to pipe connected to ground water
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_EGY_Egypt_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EGY-WAS-01
     source_category_code: pump
     national_label_en: Pump
-    national_label_local: كل الآبار
+    national_label_local: "\u0643\u0644 \u0627\u0644\u0622\u0628\u0627\u0631"
     jmp_classification: Ground water > All wells
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: EGY-WAS-02
     source_category_code: well
     national_label_en: Well
-    national_label_local: كل الآبار
+    national_label_local: "\u0643\u0644 \u0627\u0644\u0622\u0628\u0627\u0631"
     jmp_classification: Ground water > All wells
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: EGY-WAS-03
     source_category_code: well_in_residence
     national_label_en: Well in residence
-    national_label_local: خاص
+    national_label_local: "\u062E\u0627\u0635"
     jmp_classification: Ground water > All wells > Private
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: EGY-WAS-04
     source_category_code: public_well
     national_label_en: Public well
-    national_label_local: عام
+    national_label_local: "\u0639\u0627\u0645"
     jmp_classification: Ground water > All wells > Public
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: EGY-WAS-05
     source_category_code: protected_spring
     national_label_en: Protected spring
-    national_label_local: ينبوع المحمي
+    national_label_local: "\u064A\u0646\u0628\u0648\u0639 \u0627\u0644\u0645\u062D\
+      \u0645\u064A"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: EGY-WAS-06
     source_category_code: covered_well
     national_label_en: Covered well
-    national_label_local: محمي بشكل جيد
+    national_label_local: "\u0645\u062D\u0645\u064A \u0628\u0634\u0643\u0644 \u062C\
+      \u064A\u062F"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: EGY-WAS-07
     source_category_code: protected_well
     national_label_en: Protected well
-    national_label_local: محمي بشكل جيد
+    national_label_local: "\u0645\u062D\u0645\u064A \u0628\u0634\u0643\u0644 \u062C\
+      \u064A\u062F"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: EGY-WAS-08
     source_category_code: pump_closed_well
     national_label_en: pump/ closed well
-    national_label_local: محمي بشكل جيد
+    national_label_local: "\u0645\u062D\u0645\u064A \u0628\u0634\u0643\u0644 \u062C\
+      \u064A\u062F"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: EGY-WAS-09
     source_category_code: covered_well_in_residence_plot
     national_label_en: Covered well in residence/ plot
-    national_label_local: خاص
+    national_label_local: "\u062E\u0627\u0635"
     jmp_classification: Ground water > Protected well > Private
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: EGY-WAS-10
     source_category_code: covered_public_well
     national_label_en: Covered public well
-    national_label_local: عام
+    national_label_local: "\u0639\u0627\u0645"
     jmp_classification: Ground water > Protected well > Public
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: EGY-WAS-11
     source_category_code: protected_well_spring
     national_label_en: Protected well/spring
-    national_label_local: آبار أو ينابيع محمية
+    national_label_local: "\u0622\u0628\u0627\u0631 \u0623\u0648 \u064A\u0646\u0627\
+      \u0628\u064A\u0639 \u0645\u062D\u0645\u064A\u0629"
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: EGY-WAS-12
     source_category_code: well_without_pump
     national_label_en: Well without pump
-    national_label_local: الآبار التقليدية
+    national_label_local: "\u0627\u0644\u0622\u0628\u0627\u0631 \u0627\u0644\u062A\
+      \u0642\u0644\u064A\u062F\u064A\u0629"
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: EGY-WAS-13
     source_category_code: bore_hole_tubewell
     national_label_en: Bore-hole tubewell
-    national_label_local: بئر أنبوبي ، بئر
+    national_label_local: "\u0628\u0626\u0631 \u0623\u0646\u0628\u0648\u0628\u064A\
+      \ \u060C \u0628\u0626\u0631"
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EGY-WAS-14
     source_category_code: pump_closed_well
     national_label_en: pump/ closed well
-    national_label_local: بئر أنبوبي ، بئر
+    national_label_local: "\u0628\u0626\u0631 \u0623\u0646\u0628\u0648\u0628\u064A\
+      \ \u060C \u0628\u0626\u0631"
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EGY-WAS-15
     source_category_code: tube_well_or_borehole
     national_label_en: tube well or borehole
-    national_label_local: بئر أنبوبي ، بئر
+    national_label_local: "\u0628\u0626\u0631 \u0623\u0646\u0628\u0648\u0628\u064A\
+      \ \u060C \u0628\u0626\u0631"
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EGY-WAS-16
     source_category_code: tubewell_borehole
     national_label_en: Tubewell, borehole
-    national_label_local: بئر أنبوبي ، بئر
+    national_label_local: "\u0628\u0626\u0631 \u0623\u0646\u0628\u0648\u0628\u064A\
+      \ \u060C \u0628\u0626\u0631"
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EGY-WAS-17
     source_category_code: tubewell_borehole
     national_label_en: Tubewell/borehole
-    national_label_local: بئر أنبوبي ، بئر
+    national_label_local: "\u0628\u0626\u0631 \u0623\u0646\u0628\u0648\u0628\u064A\
+      \ \u060C \u0628\u0626\u0631"
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EGY-WAS-18
     source_category_code: well_with_pump
     national_label_en: Well with pump
-    national_label_local: بئر أنبوبي ، بئر
+    national_label_local: "\u0628\u0626\u0631 \u0623\u0646\u0628\u0648\u0628\u064A\
+      \ \u060C \u0628\u0626\u0631"
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EGY-WAS-19
     source_category_code: unprotected_spring
     national_label_en: Unprotected spring
-    national_label_local: ينبوع غير المحمي
+    national_label_local: "\u064A\u0646\u0628\u0648\u0639 \u063A\u064A\u0631 \u0627\
+      \u0644\u0645\u062D\u0645\u064A"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: EGY-WAS-20
     source_category_code: open_well
     national_label_en: Open well
-    national_label_local: بئر غير محمي
+    national_label_local: "\u0628\u0626\u0631 \u063A\u064A\u0631 \u0645\u062D\u0645\
+      \u064A"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: EGY-WAS-21
     source_category_code: open_well_ex_sinai
     national_label_en: open well (ex. sinai)
-    national_label_local: بئر غير محمي
+    national_label_local: "\u0628\u0626\u0631 \u063A\u064A\u0631 \u0645\u062D\u0645\
+      \u064A"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: EGY-WAS-22
     source_category_code: unprotected_well
     national_label_en: Unprotected well
-    national_label_local: بئر غير محمي
+    national_label_local: "\u0628\u0626\u0631 \u063A\u064A\u0631 \u0645\u062D\u0645\
+      \u064A"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: EGY-WAS-23
     source_category_code: well
     national_label_en: Well
-    national_label_local: بئر غير محمي
+    national_label_local: "\u0628\u0626\u0631 \u063A\u064A\u0631 \u0645\u062D\u0645\
+      \u064A"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: EGY-WAS-24
     source_category_code: open_well_in_residence_plot
     national_label_en: Open well in residence/plot
-    national_label_local: خاص
+    national_label_local: "\u062E\u0627\u0635"
     jmp_classification: Ground water > Unprotected well > Private
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: EGY-WAS-25
     source_category_code: open_public_well
     national_label_en: Open public well
-    national_label_local: عام
+    national_label_local: "\u0639\u0627\u0645"
     jmp_classification: Ground water > Unprotected well > Public
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: EGY-WAS-26
     source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
-    national_label_local: عربة مع خزان صغير / أسطوانة
+    national_label_local: "\u0639\u0631\u0628\u0629 \u0645\u0639 \u062E\u0632\u0627\
+      \u0646 \u0635\u063A\u064A\u0631 / \u0623\u0633\u0637\u0648\u0627\u0646\u0629"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: EGY-WAS-27
     source_category_code: water_seller
     national_label_en: water seller
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other improved sources > Other
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: EGY-WAS-28
     source_category_code: purchased_water_from_truck
     national_label_en: Purchased water from truck
-    national_label_local: يتم توفير شاحنة صهريج
+    national_label_local: "\u064A\u062A\u0645 \u062A\u0648\u0641\u064A\u0631 \u0634\
+      \u0627\u062D\u0646\u0629 \u0635\u0647\u0631\u064A\u062C"
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: EGY-WAS-29
     source_category_code: tanker_service
     national_label_en: Tanker service
-    national_label_local: يتم توفير شاحنة صهريج
+    national_label_local: "\u064A\u062A\u0645 \u062A\u0648\u0641\u064A\u0631 \u0634\
+      \u0627\u062D\u0646\u0629 \u0635\u0647\u0631\u064A\u062C"
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: EGY-WAS-30
     source_category_code: tanker_truck
     national_label_en: Tanker truck
-    national_label_local: يتم توفير شاحنة صهريج
+    national_label_local: "\u064A\u062A\u0645 \u062A\u0648\u0641\u064A\u0631 \u0634\
+      \u0627\u062D\u0646\u0629 \u0635\u0647\u0631\u064A\u062C"
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: EGY-WAS-31
     source_category_code: other
     national_label_en: Other
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: EGY-WAS-32
     source_category_code: others
     national_label_en: Others
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: EGY-WAS-33
     source_category_code: bottled_water
     national_label_en: Bottled water
-    national_label_local: المياه المعبأة
+    national_label_local: "\u0627\u0644\u0645\u064A\u0627\u0647 \u0627\u0644\u0645\
+      \u0639\u0628\u0623\u0629"
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: EGY-WAS-34
     source_category_code: bottled_water
     national_label_en: bottled water
-    national_label_local: مياه معبأة
+    national_label_local: "\u0645\u064A\u0627\u0647 \u0645\u0639\u0628\u0623\u0629"
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: EGY-WAS-35
     source_category_code: mineral_water
     national_label_en: mineral water
-    national_label_local: مياه معبأة
+    national_label_local: "\u0645\u064A\u0627\u0647 \u0645\u0639\u0628\u0623\u0629"
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: EGY-WAS-36
     source_category_code: purchased_bottled_water
     national_label_en: Purchased bottled water
-    national_label_local: كيس ماء
+    national_label_local: "\u0643\u064A\u0633 \u0645\u0627\u0621"
     jmp_classification: Packaged water > Sachet water
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: EGY-WAS-37
     source_category_code: river_or_stream
     national_label_en: river or stream
-    national_label_local: سطح الماء
+    national_label_local: "\u0633\u0637\u062D \u0627\u0644\u0645\u0627\u0621"
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EGY-WAS-38
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
     national_label_en: river/dam/lake/ponds/stream/canal/irrigation channel
-    national_label_local: سطح الماء
+    national_label_local: "\u0633\u0637\u062D \u0627\u0644\u0645\u0627\u0621"
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EGY-WAS-39
     source_category_code: river_lake_dam_pond_stream_canal_irrigation_channel
     national_label_en: River/lake/dam/pond/stream/canal/irrigation channel
-    national_label_local: سطح الماء
+    national_label_local: "\u0633\u0637\u062D \u0627\u0644\u0645\u0627\u0621"
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EGY-WAS-40
     source_category_code: river_stream
     national_label_en: River/stream
-    national_label_local: سطح الماء
+    national_label_local: "\u0633\u0637\u062D \u0627\u0644\u0645\u0627\u0621"
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EGY-WAS-41
     source_category_code: surface_water
     national_label_en: Surface water
-    national_label_local: سطح الماء
+    national_label_local: "\u0633\u0637\u062D \u0627\u0644\u0645\u0627\u0621"
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EGY-WAS-42
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
     national_label_en: Surface water (river/dam/lake/pond/stream/canal/irrigation
       channel)
-    national_label_local: سطح الماء
+    national_label_local: "\u0633\u0637\u062D \u0627\u0644\u0645\u0627\u0621"
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EGY-WAS-43
     source_category_code: nile_canal
     national_label_en: Nile/canal
-    national_label_local: نهر
+    national_label_local: "\u0646\u0647\u0631"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: EGY-WAS-44
     source_category_code: nile_canals
     national_label_en: Nile/Canals
-    national_label_local: نهر
+    national_label_local: "\u0646\u0647\u0631"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: EGY-WAS-45
     source_category_code: piped
     national_label_en: Piped
-    national_label_local: ماء الصنبور
+    national_label_local: "\u0645\u0627\u0621 \u0627\u0644\u0635\u0646\u0628\u0648\
+      \u0631"
     jmp_classification: Tap water
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: EGY-WAS-46
     source_category_code: tap
     national_label_en: Tap
-    national_label_local: ماء الصنبور
+    national_label_local: "\u0645\u0627\u0621 \u0627\u0644\u0635\u0646\u0628\u0648\
+      \u0631"
     jmp_classification: Tap water
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: EGY-WAS-47
     source_category_code: tap_water
     national_label_en: tap water
-    national_label_local: ماء الصنبور
+    national_label_local: "\u0645\u0627\u0621 \u0627\u0644\u0635\u0646\u0628\u0648\
+      \u0631"
     jmp_classification: Tap water
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: EGY-WAS-48
     source_category_code: piped_to_neighbor
     national_label_en: Piped to neighbor
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: EGY-WAS-49
     source_category_code: public_tap_not_connected_to_public_network
     national_label_en: Public tap not connected to public network
-    national_label_local: آخر
+    national_label_local: "\u0622\u062E\u0631"
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: EGY-WAS-50
     source_category_code: piped_into_house_plot
     national_label_en: Piped into house/plot
-    national_label_local: اتصالات المنزل
+    national_label_local: "\u0627\u062A\u0635\u0627\u0644\u0627\u062A \u0627\u0644\
+      \u0645\u0646\u0632\u0644"
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: EGY-WAS-51
     source_category_code: piped_supply
     national_label_en: piped supply
-    national_label_local: اتصالات المنزل
+    national_label_local: "\u0627\u062A\u0635\u0627\u0644\u0627\u062A \u0627\u0644\
+      \u0645\u0646\u0632\u0644"
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: EGY-WAS-52
     source_category_code: piped_water_residence
     national_label_en: Piped water- residence
-    national_label_local: اتصالات المنزل
+    national_label_local: "\u0627\u062A\u0635\u0627\u0644\u0627\u062A \u0627\u0644\
+      \u0645\u0646\u0632\u0644"
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: EGY-WAS-53
     source_category_code: public_network
     national_label_en: Public network
-    national_label_local: اتصالات المنزل
+    national_label_local: "\u0627\u062A\u0635\u0627\u0644\u0627\u062A \u0627\u0644\
+      \u0645\u0646\u0632\u0644"
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: EGY-WAS-54
     source_category_code: pipe_borne_inside_house
     national_label_en: Pipe-borne inside house
-    national_label_local: الماء بالأنابيب في المسكن
+    national_label_local: "\u0627\u0644\u0645\u0627\u0621 \u0628\u0627\u0644\u0623\
+      \u0646\u0627\u0628\u064A\u0628 \u0641\u064A \u0627\u0644\u0645\u0633\u0643\u0646"
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: EGY-WAS-55
     source_category_code: piped_into_dwelling
     national_label_en: Piped into dwelling
-    national_label_local: الماء بالأنابيب في المسكن
+    national_label_local: "\u0627\u0644\u0645\u0627\u0621 \u0628\u0627\u0644\u0623\
+      \u0646\u0627\u0628\u064A\u0628 \u0641\u064A \u0627\u0644\u0645\u0633\u0643\u0646"
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: EGY-WAS-56
     source_category_code: piped_supply
     national_label_en: Piped supply
-    national_label_local: الماء بالأنابيب في المسكن
+    national_label_local: "\u0627\u0644\u0645\u0627\u0621 \u0628\u0627\u0644\u0623\
+      \u0646\u0627\u0628\u064A\u0628 \u0641\u064A \u0627\u0644\u0645\u0633\u0643\u0646"
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: EGY-WAS-57
     source_category_code: tap_water_inside_the_dwelling
     national_label_en: tap water inside the dwelling
-    national_label_local: الماء بالأنابيب في المسكن
+    national_label_local: "\u0627\u0644\u0645\u0627\u0621 \u0628\u0627\u0644\u0623\
+      \u0646\u0627\u0628\u064A\u0628 \u0641\u064A \u0627\u0644\u0645\u0633\u0643\u0646"
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: EGY-WAS-58
     source_category_code: pipe_borne_outside_house
     national_label_en: Pipe-borne outside house
-    national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
+    national_label_local: "\u0627\u0644\u0645\u064A\u0627\u0647 \u0627\u0644\u0645\
+      \u0646\u0642\u0648\u0644\u0629 \u0628\u0627\u0644\u0623\u0646\u0627\u0628\u064A\
+      \u0628 \u0625\u0644\u0649 \u0633\u0627\u062D\u0629 / \u0642\u0637\u0639\u0629\
+      \ \u0623\u0631\u0636"
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: EGY-WAS-59
     source_category_code: piped_into_yard_plot
     national_label_en: Piped into yard/plot
-    national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
+    national_label_local: "\u0627\u0644\u0645\u064A\u0627\u0647 \u0627\u0644\u0645\
+      \u0646\u0642\u0648\u0644\u0629 \u0628\u0627\u0644\u0623\u0646\u0627\u0628\u064A\
+      \u0628 \u0625\u0644\u0649 \u0633\u0627\u062D\u0629 / \u0642\u0637\u0639\u0629\
+      \ \u0623\u0631\u0636"
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: EGY-WAS-60
     source_category_code: piped_to_yard_plot
     national_label_en: piped to yard/plot
-    national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
+    national_label_local: "\u0627\u0644\u0645\u064A\u0627\u0647 \u0627\u0644\u0645\
+      \u0646\u0642\u0648\u0644\u0629 \u0628\u0627\u0644\u0623\u0646\u0627\u0628\u064A\
+      \u0628 \u0625\u0644\u0649 \u0633\u0627\u062D\u0629 / \u0642\u0637\u0639\u0629\
+      \ \u0623\u0631\u0636"
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: EGY-WAS-61
     source_category_code: tap_water_outside_the_dwelling
     national_label_en: tap water outside the dwelling
-    national_label_local: المياه المنقولة بالأنابيب إلى ساحة / قطعة أرض
+    national_label_local: "\u0627\u0644\u0645\u064A\u0627\u0647 \u0627\u0644\u0645\
+      \u0646\u0642\u0648\u0644\u0629 \u0628\u0627\u0644\u0623\u0646\u0627\u0628\u064A\
+      \u0628 \u0625\u0644\u0649 \u0633\u0627\u062D\u0629 / \u0642\u0637\u0639\u0629\
+      \ \u0623\u0631\u0636"
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: EGY-WAS-62
     source_category_code: outside_tap
     national_label_en: outside tap
-    national_label_local: الحنفية العامة والصنبور الرأسي
+    national_label_local: "\u0627\u0644\u062D\u0646\u0641\u064A\u0629 \u0627\u0644\
+      \u0639\u0627\u0645\u0629 \u0648\u0627\u0644\u0635\u0646\u0628\u0648\u0631 \u0627\
+      \u0644\u0631\u0623\u0633\u064A"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: EGY-WAS-63
     source_category_code: public_pipe
     national_label_en: Public Pipe
-    national_label_local: الحنفية العامة والصنبور الرأسي
+    national_label_local: "\u0627\u0644\u062D\u0646\u0641\u064A\u0629 \u0627\u0644\
+      \u0639\u0627\u0645\u0629 \u0648\u0627\u0644\u0635\u0646\u0628\u0648\u0631 \u0627\
+      \u0644\u0631\u0623\u0633\u064A"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: EGY-WAS-64
     source_category_code: public_tap
     national_label_en: Public tap
-    national_label_local: الحنفية العامة والصنبور الرأسي
+    national_label_local: "\u0627\u0644\u062D\u0646\u0641\u064A\u0629 \u0627\u0644\
+      \u0639\u0627\u0645\u0629 \u0648\u0627\u0644\u0635\u0646\u0628\u0648\u0631 \u0627\
+      \u0644\u0631\u0623\u0633\u064A"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: EGY-WAS-65
     source_category_code: public_tap_connected_to_public_network
     national_label_en: Public tap connected to public network
-    national_label_local: الحنفية العامة والصنبور الرأسي
+    national_label_local: "\u0627\u0644\u062D\u0646\u0641\u064A\u0629 \u0627\u0644\
+      \u0639\u0627\u0645\u0629 \u0648\u0627\u0644\u0635\u0646\u0628\u0648\u0631 \u0627\
+      \u0644\u0631\u0623\u0633\u064A"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: EGY-WAS-66
     source_category_code: public_tap_standpipe
     national_label_en: Public tap, standpipe
-    national_label_local: الحنفية العامة والصنبور الرأسي
+    national_label_local: "\u0627\u0644\u062D\u0646\u0641\u064A\u0629 \u0627\u0644\
+      \u0639\u0627\u0645\u0629 \u0648\u0627\u0644\u0635\u0646\u0628\u0648\u0631 \u0627\
+      \u0644\u0631\u0623\u0633\u064A"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: EGY-WAS-67
     source_category_code: public_tap_standpipe
     national_label_en: public tap/standpipe
-    national_label_local: الحنفية العامة والصنبور الرأسي
+    national_label_local: "\u0627\u0644\u062D\u0646\u0641\u064A\u0629 \u0627\u0644\
+      \u0639\u0627\u0645\u0629 \u0648\u0627\u0644\u0635\u0646\u0628\u0648\u0631 \u0627\
+      \u0644\u0631\u0623\u0633\u064A"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_EGY_Egypt_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
-
-
-
-
-
-
-
-
 
 No country-specific content has been supplied yet. The regional focal point
 must be consulted before harmonization relies on this country layer.

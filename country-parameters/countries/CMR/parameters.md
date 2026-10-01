@@ -6,13 +6,13 @@ status: draft
 country_name: CMR
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: CMR-EDU-01
-    national_label_en: Éducation préprimaire
-    national_label_local: Éducation préprimaire
+    national_label_en: "\xC9ducation pr\xE9primaire"
+    national_label_local: "\xC9ducation pr\xE9primaire"
     entry_age: 4
     duration_years: 2
     isced_level: '0'
@@ -21,11 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: CMR-EDU-02
-    national_label_en: Éducation primaire
-    national_label_local: |-
-      Éducation primaire
-      (Système francophone)
+    national_label_en: "\xC9ducation primaire"
+    national_label_local: "\xC9ducation primaire\n(Syst\xE8me francophone)"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -34,9 +38,15 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CMR-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: CMR-EDU-03
-    national_label_en: Éducation primaire
-    national_label_local: "Primary education \n(Système anglophone)"
+    national_label_en: "\xC9ducation primaire"
+    national_label_local: "Primary education \n(Syst\xE8me anglophone)"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -45,11 +55,16 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CMR-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: CMR-EDU-04
-    national_label_en: Premier cycle de l'enseignement secondaire général
-    national_label_local: |-
-      Premier cycle de l'enseignement secondaire général
-      (Système francophone)
+    national_label_en: "Premier cycle de l'enseignement secondaire g\xE9n\xE9ral"
+    national_label_local: "Premier cycle de l'enseignement secondaire g\xE9n\xE9ral\n\
+      (Syst\xE8me francophone)"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -58,11 +73,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - CMR-EDU-02
+    - CMR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
   - country_entry_id: CMR-EDU-05
-    national_label_en: Premier cycle de l'enseignement secondaire général
-    national_label_local: |-
-      Premier cycle de l'enseignement secondaire général
-      (Système anglophone)
+    national_label_en: "Premier cycle de l'enseignement secondaire g\xE9n\xE9ral"
+    national_label_local: "Premier cycle de l'enseignement secondaire g\xE9n\xE9ral\n\
+      (Syst\xE8me anglophone)"
     entry_age: 12
     duration_years: 5
     isced_level: '2'
@@ -71,6 +95,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - CMR-EDU-02
+    - CMR-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
   - country_entry_id: CMR-EDU-06
     national_label_en: Formation professionnelle
     national_label_local: Formation professionnelle
@@ -82,11 +116,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - CMR-EDU-02
+    - CMR-EDU-03
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
   - country_entry_id: CMR-EDU-07
     national_label_en: Premier cycle de l'enseignement secondaire technique et professionnel
-    national_label_local: |-
-      Premier cycle de l'enseignement secondaire technique et professionnel
-      (Système francophone)
+    national_label_local: "Premier cycle de l'enseignement secondaire technique et\
+      \ professionnel\n(Syst\xE8me francophone)"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -95,11 +138,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - CMR-EDU-02
+    - CMR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
   - country_entry_id: CMR-EDU-08
     national_label_en: Premier cycle de l'enseignement secondaire technique et professionnel
-    national_label_local: |-
-      Premier cycle de l'enseignement secondaire technique et professionnel
-      (Système anglophone)
+    national_label_local: "Premier cycle de l'enseignement secondaire technique et\
+      \ professionnel\n(Syst\xE8me anglophone)"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -108,6 +160,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - CMR-EDU-02
+    - CMR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
   - country_entry_id: CMR-EDU-09
     national_label_en: Formation professionnelle
     national_label_local: Formation professionnelle
@@ -119,11 +181,27 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-10
-    national_label_en: Deuxième cycle de l'enseignement secondaire général
-    national_label_local: |-
-      Deuxième cycle de l'enseignement secondaire général
-      (Système francophone)
+    national_label_en: "Deuxi\xE8me cycle de l'enseignement secondaire g\xE9n\xE9\
+      ral"
+    national_label_local: "Deuxi\xE8me cycle de l'enseignement secondaire g\xE9n\xE9\
+      ral\n(Syst\xE8me francophone)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -132,11 +210,27 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-11
-    national_label_en: Deuxième cycle de l'enseignement secondaire général
-    national_label_local: |-
-      Deuxième cycle de l'enseignement secondaire général
-      (Système anglophone)
+    national_label_en: "Deuxi\xE8me cycle de l'enseignement secondaire g\xE9n\xE9\
+      ral"
+    national_label_local: "Deuxi\xE8me cycle de l'enseignement secondaire g\xE9n\xE9\
+      ral\n(Syst\xE8me anglophone)"
     entry_age: 17
     duration_years: 2
     isced_level: '3'
@@ -145,11 +239,27 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-12
-    national_label_en: Deuxième cycle de l'enseignement secondaire général probatoire
-      pour l'enseignement général et technique
-    national_label_local: Deuxième cycle de l'enseignement secondaire général probatoire
-      pour l'enseignement général et technique
+    national_label_en: "Deuxi\xE8me cycle de l'enseignement secondaire g\xE9n\xE9\
+      ral probatoire pour l'enseignement g\xE9n\xE9ral et technique"
+    national_label_local: "Deuxi\xE8me cycle de l'enseignement secondaire g\xE9n\xE9\
+      ral probatoire pour l'enseignement g\xE9n\xE9ral et technique"
     entry_age: 16
     duration_years: 1
     isced_level: '3'
@@ -158,6 +268,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-13
     national_label_en: Formation professionnelle
     national_label_local: Formation professionnelle
@@ -169,6 +295,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-14
     national_label_en: Formation des instituteurs d'enseignement Technique
     national_label_local: Formation des instituteurs d'enseignement Technique
@@ -180,6 +322,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-15
     national_label_en: Formation des instituteurs
     national_label_local: Formation des instituteurs
@@ -191,9 +349,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-16
-    national_label_en: Deuxième cycle du secondaire technique et professionnel
-    national_label_local: Deuxième cycle du secondaire technique et professionnel
+    national_label_en: "Deuxi\xE8me cycle du secondaire technique et professionnel"
+    national_label_local: "Deuxi\xE8me cycle du secondaire technique et professionnel"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -202,9 +376,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 22
+    parent_country_entry_ids:
+    - CMR-EDU-04
+    - CMR-EDU-05
+    - CMR-EDU-06
+    - CMR-EDU-07
+    - CMR-EDU-08
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
   - country_entry_id: CMR-EDU-17
-    national_label_en: Capacité en droit
-    national_label_local: Capacité en droit
+    national_label_en: "Capacit\xE9 en droit"
+    national_label_local: "Capacit\xE9 en droit"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -213,6 +403,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-18
     national_label_en: Formation en administration publique
     national_label_local: Formation en administration publique
@@ -224,11 +436,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-19
-    national_label_en: Premiers diplômes de l'enseignement supérieur professionnel
-      court
-    national_label_local: Premiers diplômes de l'enseignement supérieur professionnel
-      court
+    national_label_en: "Premiers dipl\xF4mes de l'enseignement sup\xE9rieur professionnel\
+      \ court"
+    national_label_local: "Premiers dipl\xF4mes de l'enseignement sup\xE9rieur professionnel\
+      \ court"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -237,9 +471,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-20
-    national_label_en: Premier cycle de l'enseignment supérieur court
-    national_label_local: Premier cycle de l'enseignment supérieur court
+    national_label_en: "Premier cycle de l'enseignment sup\xE9rieur court"
+    national_label_local: "Premier cycle de l'enseignment sup\xE9rieur court"
     entry_age: 19
     duration_years: 2
     isced_level: '6'
@@ -248,11 +504,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-21
-    national_label_en: Deuxième diplômes de l'enseignement supérieur professionnel
-      courts
-    national_label_local: Deuxième diplômes de l'enseignement supérieur professionnel
-      courts
+    national_label_en: "Deuxi\xE8me dipl\xF4mes de l'enseignement sup\xE9rieur professionnel\
+      \ courts"
+    national_label_local: "Deuxi\xE8me dipl\xF4mes de l'enseignement sup\xE9rieur\
+      \ professionnel courts"
     entry_age: 21
     duration_years: 1
     isced_level: '6'
@@ -261,9 +539,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-22
-    national_label_en: Premier cycle de l'enseignement supérieur long
-    national_label_local: Premier cycle de l'enseignement supérieur long
+    national_label_en: "Premier cycle de l'enseignement sup\xE9rieur long"
+    national_label_local: "Premier cycle de l'enseignement sup\xE9rieur long"
     entry_age: 19
     duration_years: 1
     isced_level: '6'
@@ -272,11 +572,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-23
-    national_label_en: Formation des professeurs - de Collège enseignement général
-      (CEG), Collège d'enseignement technique (CET)
-    national_label_local: Formation des professeurs - de Collège enseignement général
-      (CEG), Collège d'enseignement technique (CET)
+    national_label_en: "Formation des professeurs - de Coll\xE8ge enseignement g\xE9\
+      n\xE9ral (CEG), Coll\xE8ge d'enseignement technique (CET)"
+    national_label_local: "Formation des professeurs - de Coll\xE8ge enseignement\
+      \ g\xE9n\xE9ral (CEG), Coll\xE8ge d'enseignement technique (CET)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -285,9 +607,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-24
-    national_label_en: Deuxième cycle de l'enseignement supérieur
-    national_label_local: Deuxième cycle de l'enseignement supérieur
+    national_label_en: "Deuxi\xE8me cycle de l'enseignement sup\xE9rieur"
+    national_label_local: "Deuxi\xE8me cycle de l'enseignement sup\xE9rieur"
     entry_age: 22
     duration_years: 1
     isced_level: '6'
@@ -296,13 +640,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-25
-    national_label_en: |-
-      Programme d'ingénieurs
-      (Après BAC)
-    national_label_local: |-
-      Programme d'ingénieurs
-      (Après BAC)
+    national_label_en: "Programme d'ing\xE9nieurs\n(Apr\xE8s BAC)"
+    national_label_local: "Programme d'ing\xE9nieurs\n(Apr\xE8s BAC)"
     entry_age: 19
     duration_years: 5
     isced_level: '7'
@@ -311,13 +673,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-26
-    national_label_en: |-
-      Médecine
-      (Après BAC)
-    national_label_local: |-
-      Médecine
-      (Après BAC)
+    national_label_en: "M\xE9decine\n(Apr\xE8s BAC)"
+    national_label_local: "M\xE9decine\n(Apr\xE8s BAC)"
     entry_age: 19
     duration_years: 7
     isced_level: '7'
@@ -326,13 +706,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-27
-    national_label_en: |-
-      Programme d'ingénieurs
-      (Après licence)
-    national_label_local: |-
-      Programme d'ingénieurs
-      (Après licence)
+    national_label_en: "Programme d'ing\xE9nieurs\n(Apr\xE8s licence)"
+    national_label_local: "Programme d'ing\xE9nieurs\n(Apr\xE8s licence)"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -341,13 +739,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-28
-    national_label_en: |-
-      Médecine
-      (Après Licence)
-    national_label_local: |-
-      Médecine
-      (Après Licence)
+    national_label_en: "M\xE9decine\n(Apr\xE8s Licence)"
+    national_label_local: "M\xE9decine\n(Apr\xE8s Licence)"
     entry_age: 22
     duration_years: 5
     isced_level: '7'
@@ -356,6 +772,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-29
     national_label_en: Formation en administration publique
     national_label_local: Formation en administration publique
@@ -367,11 +805,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-30
-    national_label_en: "Enseignement supérieur professionnel (DESS/ DEA / \nMaster
-      II)"
-    national_label_local: "Enseignement supérieur professionnel (DESS/ DEA / \nMaster
-      II)"
+    national_label_en: "Enseignement sup\xE9rieur professionnel (DESS/ DEA / \nMaster\
+      \ II)"
+    national_label_local: "Enseignement sup\xE9rieur professionnel (DESS/ DEA / \n\
+      Master II)"
     entry_age: 23
     duration_years: 1
     isced_level: '7'
@@ -380,11 +840,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - CMR-EDU-20
+    - CMR-EDU-21
+    - CMR-EDU-22
+    - CMR-EDU-23
+    - CMR-EDU-24
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-21
+    - CMR-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
+    - 'minimum parent path selected from: CMR-EDU-20, CMR-EDU-21, CMR-EDU-22, CMR-EDU-23,
+      CMR-EDU-24'
   - country_entry_id: CMR-EDU-31
-    national_label_en: Formation des conseillers d'orientation scolaire et universitaire
-      et Formation des enseignants du second cycle de l'enseignaement général et technique
-    national_label_local: Formation des conseillers d'orientation scolaire et universitaire
-      et Formation des enseignants de Lycée
+    national_label_en: "Formation des conseillers d'orientation scolaire et universitaire\
+      \ et Formation des enseignants du second cycle de l'enseignaement g\xE9n\xE9\
+      ral et technique"
+    national_label_local: "Formation des conseillers d'orientation scolaire et universitaire\
+      \ et Formation des enseignants de Lyc\xE9e"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -393,6 +876,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
+    parent_country_entry_ids:
+    - CMR-EDU-09
+    - CMR-EDU-10
+    - CMR-EDU-11
+    - CMR-EDU-12
+    - CMR-EDU-13
+    - CMR-EDU-14
+    - CMR-EDU-15
+    - CMR-EDU-16
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
   - country_entry_id: CMR-EDU-32
     national_label_en: Programme de doctorat
     national_label_local: Programme de doctorat
@@ -404,15 +909,39 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
+    parent_country_entry_ids:
+    - CMR-EDU-25
+    - CMR-EDU-26
+    - CMR-EDU-27
+    - CMR-EDU-28
+    - CMR-EDU-29
+    - CMR-EDU-30
+    - CMR-EDU-31
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - CMR-EDU-02
+    - CMR-EDU-06
+    - CMR-EDU-09
+    - CMR-EDU-27
+    - CMR-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CMR-EDU-02, CMR-EDU-03'
+    - 'minimum parent path selected from: CMR-EDU-04, CMR-EDU-05, CMR-EDU-06, CMR-EDU-07,
+      CMR-EDU-08'
+    - 'minimum parent path selected from: CMR-EDU-09, CMR-EDU-10, CMR-EDU-11, CMR-EDU-12,
+      CMR-EDU-13, CMR-EDU-14, CMR-EDU-15, CMR-EDU-16'
+    - 'minimum parent path selected from: CMR-EDU-25, CMR-EDU-26, CMR-EDU-27, CMR-EDU-28,
+      CMR-EDU-29, CMR-EDU-30, CMR-EDU-31'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Cameroon.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: CMR-SUBNAT-01
     survey_labels: 1 - Adamaoua | 1 - adamaoua
@@ -421,10 +950,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_815
     geo_year: '2015'
@@ -442,10 +971,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_824
     geo_year: '2015'
@@ -463,10 +992,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_816
     geo_year: '2015'
@@ -484,10 +1013,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_817
     geo_year: '2015'
@@ -499,16 +1028,16 @@ parameters:
     geo_name: Est
     source_row: 2437
   - country_entry_id: CMR-SUBNAT-05
-    survey_labels: 4 - Extreme-Nord | 5 - extr�me-nord
+    survey_labels: "4 - Extreme-Nord | 5 - extr\uFFFDme-nord"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: CMR_2015_GAUL1_818
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_818
     geo_year: '2015'
@@ -517,7 +1046,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '818'
     geo_nvar: ADM1_NAME
-    geo_name: Extrême - Nord
+    geo_name: "Extr\xEAme - Nord"
     source_row: 2438
   - country_entry_id: CMR-SUBNAT-06
     survey_labels: 5 - Littoral
@@ -526,10 +1055,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_819
     geo_year: '2015'
@@ -547,10 +1076,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_820
     geo_year: '2015'
@@ -568,10 +1097,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_821
     geo_year: '2015'
@@ -589,10 +1118,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_822
     geo_year: '2015'
@@ -610,10 +1139,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: CMR_2015_GAUL1_823
     geo_year: '2015'
@@ -626,279 +1155,282 @@ parameters:
     source_row: 2443
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: CMR-SAN-01
     source_category_code: toilettes_a_compostage
-    national_label_en: Toilettes à compostage
+    national_label_en: "Toilettes \xE0 compostage"
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: CMR-SAN-02
     source_category_code: chasse_d_eau
     national_label_en: Chasse d eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-SAN-03
     source_category_code: chasse_d_eau
     national_label_en: Chasse d'eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-SAN-04
     source_category_code: chasse_eau_avec_egouts_ou_fosse
-    national_label_en: Chasse eau avec égouts ou fosse
-    national_label_local: Toilette à chasse d'eau
+    national_label_en: "Chasse eau avec \xE9gouts ou fosse"
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-SAN-05
     source_category_code: wc_avec_chasse_d_eau
     national_label_en: wc avec chasse d'eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-SAN-06
     source_category_code: wc_avec_chasse_eau
     national_label_en: WC AVEC CHASSE EAU
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-SAN-07
     source_category_code: chasse_branchee_a_autre_chose
     national_label_en: Chasse branchee a autre chose
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: CMR-SAN-08
     source_category_code: chasse_d_eau_branchee_quelque_part_d_autre
-    national_label_en: Chasse d'eau branchée quelque part d'autre
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d'eau branch\xE9e quelque part d'autre"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: CMR-SAN-09
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_non_reliee_a_des_egouts_fosse_septiques_fosses_d_aisances
-    national_label_en: Chasse d’eau/chasse d’eau manuelle non reliée à des égouts/fosse
-      septiques/fosses d’aisances
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d\u2019eau/chasse d\u2019eau manuelle non reli\xE9\
+      e \xE0 des \xE9gouts/fosse septiques/fosses d\u2019aisances"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: CMR-SAN-10
     source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: CMR-SAN-11
     source_category_code: chasse_branchee_a_egout
     national_label_en: Chasse branchee a egout
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: CMR-SAN-12
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_connectee_a_un_systeme_d_egout
-    national_label_en: Chasse d'eau/chasse d'eau manuelle connectée à un système d’égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau/chasse d'eau manuelle connect\xE9e \xE0 un syst\xE8\
+      me d\u2019\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: CMR-SAN-13
     source_category_code: chasse_d_eau_manuelle_branchee_a_egout
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Egout'
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Egout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: CMR-SAN-14
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: CMR-SAN-15
     source_category_code: chasse_branchee_aux_latrines
     national_label_en: Chasse branchee aux latrines
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: CMR-SAN-16
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_reliee_a_une_fosse_d_aisances
-    national_label_en: Chasse d'eau/chasse d'eau manuelle reliée à une Fosse d'aisances
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/chasse d'eau manuelle reli\xE9e \xE0 une Fosse\
+      \ d'aisances"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: CMR-SAN-17
     source_category_code: chasse_d_eau_manuelle_branchee_a_latrine_a_fosse
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Latrine à fosse'
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Latrine \xE0 fosse"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: CMR-SAN-18
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: CMR-SAN-19
     source_category_code: chasse_branchee_a_fosse_septique
     national_label_en: Chasse branchee a fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: CMR-SAN-20
     source_category_code: chasse_d_eau_manuelle_branchee_a_fosse_septique
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Fosse septique'
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: CMR-SAN-21
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_reliee_a_une_fosse_septique
-    national_label_en: Chasse d’eau/chasse d’eau manuelle reliée à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d\u2019eau/chasse d\u2019eau manuelle reli\xE9e \xE0\
+      \ une fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: CMR-SAN-22
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: CMR-SAN-23
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_mais_ne_sait_pas_ou
-    national_label_en: Chasse d'eau/chasse d'eau manuelle, mais ne sait pas où
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d'eau/chasse d'eau manuelle, mais ne sait pas o\xF9"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-SAN-24
     source_category_code: chasse_d_eau_manuelle_branchee_a_endroit_inconnu_pas_sur_nsp_ou
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Endroit inconnu/pas sûr/
-      NSP où'
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Endroit inconnu/pas\
+      \ s\xFBr/ NSP o\xF9"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-SAN-25
     source_category_code: bucket_latrine
@@ -908,8 +1440,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: CMR-SAN-26
     source_category_code: seau
@@ -919,8 +1451,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: CMR-SAN-27
     source_category_code: seaux_tinettes
@@ -930,8 +1462,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: CMR-SAN-28
     source_category_code: hanging_toilet_latrine
@@ -942,8 +1474,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: CMR-SAN-29
     source_category_code: toilettes_suspendues
@@ -954,8 +1486,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: CMR-SAN-30
     source_category_code: toilettes_latrines_suspendues
@@ -966,8 +1498,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: CMR-SAN-31
     source_category_code: latrine_sommair
@@ -977,8 +1509,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: CMR-SAN-32
     source_category_code: latrine_sommaire
@@ -988,8 +1520,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: CMR-SAN-33
     source_category_code: latrines_rudimentaires
@@ -999,32 +1531,32 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: CMR-SAN-34
     source_category_code: fosses_d_aisances_avec_dalle
-    national_label_en: Fosses d’aisances avec dalle
+    national_label_en: "Fosses d\u2019aisances avec dalle"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: CMR-SAN-35
     source_category_code: latrine_a_fosse_avec_dalle
-    national_label_en: Latrine à fosse avec dalle
+    national_label_en: "Latrine \xE0 fosse avec dalle"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: CMR-SAN-36
     source_category_code: pit_latrine_with_slab
@@ -1035,8 +1567,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: CMR-SAN-37
     source_category_code: fosses_d_aisances_sans_dalle_trou_ouvert
@@ -1047,20 +1579,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-38
     source_category_code: latrine_a_fosse_sans_dalle
-    national_label_en: Latrine à fosse sans dalle
+    national_label_en: "Latrine \xE0 fosse sans dalle"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-39
     source_category_code: latrine_non_amenagee
@@ -1071,8 +1603,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-40
     source_category_code: latrines_a_fosses_trou_ouvert
@@ -1083,20 +1615,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-41
     source_category_code: latrines_non_amenagees
-    national_label_en: latrines non aménagées
+    national_label_en: "latrines non am\xE9nag\xE9es"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-42
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1107,8 +1639,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-43
     source_category_code: trou_ouvert
@@ -1119,20 +1651,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: CMR-SAN-44
     source_category_code: latrine_a_fosse
-    national_label_en: Latrine à fosse
+    national_label_en: "Latrine \xE0 fosse"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-45
     source_category_code: latrine_ameliorees
@@ -1143,8 +1675,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-46
     source_category_code: latrine_amenage
@@ -1155,8 +1687,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-47
     source_category_code: latrine_amenagee
@@ -1167,32 +1699,32 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-48
     source_category_code: latrine_amenagees
-    national_label_en: latrine aménagées
+    national_label_en: "latrine am\xE9nag\xE9es"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-49
     source_category_code: latrines_ameliorees
-    national_label_en: Latrines améliorées
+    national_label_en: "Latrines am\xE9lior\xE9es"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-50
     source_category_code: latrines_couvertes
@@ -1203,8 +1735,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-51
     source_category_code: latrines_traditionelles
@@ -1215,79 +1747,79 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: CMR-SAN-52
     source_category_code: fosse_d_aisances_ameliorees_ventilees
-    national_label_en: Fosse d’aisances améliorées ventilées
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d\u2019aisances am\xE9lior\xE9es ventil\xE9es"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: CMR-SAN-53
     source_category_code: latrine_amelioree_ventilee
-    national_label_en: Latrine améliorée ventilée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrine am\xE9lior\xE9e ventil\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: CMR-SAN-54
     source_category_code: latrines_ameliorees_a_ventilation
-    national_label_en: Latrines améliorées à ventilation
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrines am\xE9lior\xE9es \xE0 ventilation"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: CMR-SAN-55
     source_category_code: latrines_ameliorees_auto_aerees_laa
     national_label_en: Latrines ameliorees auto aerees (LAA)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: CMR-SAN-56
     source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: CMR-SAN-57
     source_category_code: latrines_aves_evacuation
-    national_label_en: Latrines aves évacuation
-    national_label_local: reliée a autre chose
+    national_label_en: "Latrines aves \xE9vacuation"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Latrines > Pour flush latrines > to unknown place/ not sure/DK
     jmp_id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 89
   - country_entry_id: CMR-SAN-58
     source_category_code: ciel_ouvert
@@ -1297,30 +1829,31 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-59
     source_category_code: defecation_a_l_air_libre_pas_de_toilettes_brousse_champs
-    national_label_en: Défécation à l'air libre (pas de toilettes, brousse, champs..)
+    national_label_en: "D\xE9f\xE9cation \xE0 l'air libre (pas de toilettes, brousse,\
+      \ champs..)"
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-60
     source_category_code: defecation_en_plein_air_pas_de_toilettes_nature
-    national_label_en: Défécation en plein air (pas de toilettes/nature)
+    national_label_en: "D\xE9f\xE9cation en plein air (pas de toilettes/nature)"
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-61
     source_category_code: no_facility_bush_field
@@ -1330,8 +1863,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-62
     source_category_code: non_pas_disponible
@@ -1341,8 +1874,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-63
     source_category_code: pas_de_toilette_nature
@@ -1352,8 +1885,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-64
     source_category_code: pas_de_toilettes_ou_brousse_ou_champ
@@ -1363,8 +1896,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-65
     source_category_code: pas_de_toilettes_nature
@@ -1374,8 +1907,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-66
     source_category_code: pas_de_wc
@@ -1385,8 +1918,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: CMR-SAN-67
     source_category_code: autre
@@ -1396,8 +1929,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: CMR-SAN-68
     source_category_code: autres
@@ -1407,8 +1940,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: CMR-SAN-69
     source_category_code: no_classification
@@ -1418,8 +1951,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: CMR-SAN-70
     source_category_code: other
@@ -1429,8 +1962,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: CMR-SAN-71
     source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
@@ -1440,150 +1973,150 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_CMR_Cameroon_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: CMR-WAS-01
     source_category_code: eau_de_source_protegee
-    national_label_en: Eau de source protégée
-    national_label_local: Source protégées
+    national_label_en: "Eau de source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: CMR-WAS-02
     source_category_code: protected_spring
     national_label_en: Protected spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: CMR-WAS-03
     source_category_code: puits_source_amenagee
-    national_label_en: puits/source aménagée
-    national_label_local: Source protégées
+    national_label_en: "puits/source am\xE9nag\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: CMR-WAS-04
     source_category_code: source_d_eau_protegee
-    national_label_en: Source d’eau protégée
-    national_label_local: Source protégées
+    national_label_en: "Source d\u2019eau prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: CMR-WAS-05
     source_category_code: source_protegee
-    national_label_en: Source protégée
-    national_label_local: Source protégées
+    national_label_en: "Source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: CMR-WAS-06
     source_category_code: protected_well
     national_label_en: Protected well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-WAS-07
     source_category_code: puit_a_pompe
-    national_label_en: puit à pompe
-    national_label_local: Puits protegées
+    national_label_en: "puit \xE0 pompe"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-WAS-08
     source_category_code: puits_creuse_protege
-    national_label_en: Puits creusé protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits creus\xE9 prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-WAS-09
     source_category_code: puits_protege
     national_label_en: Puits protege
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-WAS-10
     source_category_code: puits_proteges
-    national_label_en: Puits protégés
-    national_label_local: Puits protegées
+    national_label_en: "Puits prot\xE9g\xE9s"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-WAS-11
     source_category_code: puits_sans_pompe_protege
-    national_label_en: Puits sans pompe protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits sans pompe prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: CMR-WAS-12
     source_category_code: puits_source_amenagee
     national_label_en: PUITS/SOURCE AMENAGEE
-    national_label_local: Puits ou sources protégées
+    national_label_local: "Puits ou sources prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: CMR-WAS-13
     source_category_code: puits
@@ -1593,8 +2126,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: CMR-WAS-14
     source_category_code: puits_sans_pompe
@@ -1604,8 +2137,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: CMR-WAS-15
     source_category_code: puits_sans_pompe_man
@@ -1615,8 +2148,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: CMR-WAS-16
     source_category_code: forage
@@ -1626,8 +2159,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-17
     source_category_code: forage_pompe
@@ -1637,8 +2170,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-18
     source_category_code: pompe_publique
@@ -1648,19 +2181,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-19
     source_category_code: puits_a_pompe
-    national_label_en: Puits à pompe
+    national_label_en: "Puits \xE0 pompe"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-20
     source_category_code: puits_a_pompe_manuel
@@ -1670,8 +2203,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-21
     source_category_code: puits_a_pompe_manuelle
@@ -1681,19 +2214,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-22
     source_category_code: puits_a_pompe_forage
-    national_label_en: Puits à pompe/ forage
+    national_label_en: "Puits \xE0 pompe/ forage"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-23
     source_category_code: puits_a_pompe_forage
@@ -1703,8 +2236,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-24
     source_category_code: puits_tubulaire_ou_forage
@@ -1714,8 +2247,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-25
     source_category_code: tube_well_or_borehole
@@ -1725,162 +2258,163 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: CMR-WAS-26
     source_category_code: eau_de_source_non_protegee
-    national_label_en: Eau de source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Eau de source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: CMR-WAS-27
     source_category_code: source_d_eau_non_protegee
-    national_label_en: Source d’eau non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Source d\u2019eau non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: CMR-WAS-28
     source_category_code: source_non_protegee
-    national_label_en: Source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: CMR-WAS-29
     source_category_code: unprotected_spring
     national_label_en: Unprotected spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: CMR-WAS-30
     source_category_code: puits_creuse_non_protege
-    national_label_en: Puits creusé non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits creus\xE9 non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-WAS-31
     source_category_code: puits_non_protege
     national_label_en: Puits non protege
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-WAS-32
     source_category_code: puits_non_protegees
-    national_label_en: Puits non protégées
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non prot\xE9g\xE9es"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-WAS-33
     source_category_code: puits_non_protege
-    national_label_en: Puits non-protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non-prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-WAS-34
     source_category_code: unprotected_well
     national_label_en: Unprotected well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: CMR-WAS-35
     source_category_code: achetee_d_un_chariot_avec_un_petit_reservoir_ou_tambour
-    national_label_en: Achetée d’un chariot avec un petit réservoir ou tambour
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_en: "Achet\xE9e d\u2019un chariot avec un petit r\xE9servoir ou\
+      \ tambour"
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: CMR-WAS-36
     source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: CMR-WAS-37
     source_category_code: charette_avec_bidons
     national_label_en: Charette avec bidons
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: CMR-WAS-38
     source_category_code: charrette_avec_petite_citerne
     national_label_en: Charrette avec petite citerne
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: CMR-WAS-39
     source_category_code: charrette_avec_petite_citerne_tonneau
     national_label_en: Charrette avec petite citerne/tonneau
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: CMR-WAS-40
     source_category_code: revendeur_d_eau
@@ -1890,8 +2424,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: CMR-WAS-41
     source_category_code: revendeur_d_eau_de_robinet
@@ -1901,8 +2435,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: CMR-WAS-42
     source_category_code: revendeur_d_eau_de_robinet_snec_camwater
@@ -1912,19 +2446,19 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: CMR-WAS-43
     source_category_code: achetee_d_une_citerne
-    national_label_en: Achetée d’une citerne
+    national_label_en: "Achet\xE9e d\u2019une citerne"
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-44
     source_category_code: camion_citerne
@@ -1934,8 +2468,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-45
     source_category_code: camion_citerne_vendeur_eau
@@ -1945,8 +2479,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-46
     source_category_code: camion_d_eau
@@ -1956,8 +2490,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-47
     source_category_code: camion_citerne
@@ -1967,8 +2501,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-48
     source_category_code: eau_achete
@@ -1978,8 +2512,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-49
     source_category_code: tanker_truck
@@ -1989,8 +2523,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: CMR-WAS-50
     source_category_code: autre
@@ -2000,8 +2534,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: CMR-WAS-51
     source_category_code: eau_de_pluie_autre
@@ -2011,8 +2545,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: CMR-WAS-52
     source_category_code: other
@@ -2022,8 +2556,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: CMR-WAS-53
     source_category_code: bw_with_improved_source
@@ -2033,8 +2567,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: CMR-WAS-54
     source_category_code: eau_en_bouteille
@@ -2044,8 +2578,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: CMR-WAS-55
     source_category_code: bw_without_improved_source
@@ -2055,8 +2589,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: CMR-WAS-56
     source_category_code: eau_en_sachet
@@ -2066,19 +2600,19 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: CMR-WAS-57
     source_category_code: eau_minerale
-    national_label_en: Eau minérale
+    national_label_en: "Eau min\xE9rale"
     national_label_local: Sachet d'eau
     jmp_classification: Packaged water > Sachet water
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: CMR-WAS-58
     source_category_code: eau_minerale_eau_de_table
@@ -2088,52 +2622,52 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: CMR-WAS-59
     source_category_code: collecte_d_eau_de_pluie
     national_label_en: Collecte d'eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: CMR-WAS-60
     source_category_code: collecte_d_eau_de_pluie
-    national_label_en: Collecte d’eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_en: "Collecte d\u2019eau de pluie"
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: CMR-WAS-61
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: CMR-WAS-62
     source_category_code: rainwater
     national_label_en: Rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: CMR-WAS-63
     source_category_code: eau_de_surface
@@ -2143,20 +2677,20 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-64
     source_category_code: eau_de_surface_telle_que_riviere_barrage_lac_etang_ruisseau_canal_ou_canaux_d_irrigation
-    national_label_en: Eau de surface, telle que rivière, barrage, lac, étang, ruisseau,
-      canal ou canaux d’irrigation
+    national_label_en: "Eau de surface, telle que rivi\xE8re, barrage, lac, \xE9tang,\
+      \ ruisseau, canal ou canaux d\u2019irrigation"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-65
     source_category_code: mare_fleuve_ou_ruisseau
@@ -2166,19 +2700,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-66
     source_category_code: puits_riviere_lac_marigot_source_non_amenage_e
-    national_label_en: puits/rivière/lac/marigot/source non aménagé(e)
+    national_label_en: "puits/rivi\xE8re/lac/marigot/source non am\xE9nag\xE9(e)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-67
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -2188,30 +2722,30 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-68
     source_category_code: riviere_lac_source_ou_marigot
-    national_label_en: Rivière, lac, source ou marigot
+    national_label_en: "Rivi\xE8re, lac, source ou marigot"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-69
     source_category_code: riviere_fleuve_marigot
-    national_label_en: Rivière/fleuve/marigot
+    national_label_en: "Rivi\xE8re/fleuve/marigot"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-70
     source_category_code: riviere_marigot_lac
@@ -2221,8 +2755,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-71
     source_category_code: riviere_source_marigot
@@ -2232,8 +2766,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: CMR-WAS-72
     source_category_code: autre_robinet_collectif
@@ -2243,8 +2777,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: CMR-WAS-73
     source_category_code: eau_du_robinet_chez_les_voisins
@@ -2254,8 +2788,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: CMR-WAS-74
     source_category_code: robinet_chez_le_voisin
@@ -2265,8 +2799,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: CMR-WAS-75
     source_category_code: robinet_commun
@@ -2276,8 +2810,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: CMR-WAS-76
     source_category_code: robinet_du_voisin
@@ -2287,8 +2821,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: CMR-WAS-77
     source_category_code: robinet_voisin
@@ -2298,8 +2832,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: CMR-WAS-78
     source_category_code: robinet_individuel
@@ -2309,8 +2843,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: CMR-WAS-79
     source_category_code: eau_de_robinet_dans_le_logement
@@ -2320,8 +2854,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-80
     source_category_code: eau_du_robinet_dans_le_logement
@@ -2331,8 +2865,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-81
     source_category_code: piped_into_dwelling
@@ -2342,8 +2876,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-82
     source_category_code: robinet_dans_la_maison
@@ -2353,8 +2887,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-83
     source_category_code: robinet_dans_le_logement
@@ -2364,8 +2898,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-84
     source_category_code: robinet_dans_logement
@@ -2375,8 +2909,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-85
     source_category_code: robinet_individuel
@@ -2386,8 +2920,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-86
     source_category_code: robinet_logement
@@ -2397,19 +2931,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-87
     source_category_code: robinet_prive
-    national_label_en: Robinet privé
+    national_label_en: "Robinet priv\xE9"
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: CMR-WAS-88
     source_category_code: dans_la_cour_parcelle
@@ -2419,8 +2953,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-89
     source_category_code: eau_du_robinet_dans_la_cour_jardin
@@ -2430,8 +2964,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-90
     source_category_code: piped_to_yard_plot
@@ -2441,8 +2975,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-91
     source_category_code: robinet_collectif_snec_camwater
@@ -2452,8 +2986,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-92
     source_category_code: robinet_dans_cour_ou_parcelle
@@ -2463,8 +2997,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-93
     source_category_code: robinet_dans_la_concession
@@ -2474,8 +3008,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-94
     source_category_code: robinet_dans_la_cour
@@ -2485,8 +3019,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-95
     source_category_code: robinet_dans_la_cour_dans_la_parcelle_ou_dans_la_concession
@@ -2496,8 +3030,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: CMR-WAS-96
     source_category_code: borne_fontaine
@@ -2507,8 +3041,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-97
     source_category_code: borne_fontaine_publique
@@ -2518,8 +3052,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-98
     source_category_code: borne_publique
@@ -2529,8 +3063,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-99
     source_category_code: public_tap_standpipe
@@ -2540,8 +3074,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-100
     source_category_code: robinet_commun
@@ -2551,8 +3085,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-101
     source_category_code: robinet_ou_fontaine_publique
@@ -2562,8 +3096,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-102
     source_category_code: robinet_public_borne_fontaine
@@ -2573,8 +3107,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: CMR-WAS-103
     source_category_code: robinet_public_fontaine
@@ -2584,13 +3118,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_CMR_Cameroon_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -11,8 +11,8 @@ parameters:
   selectors: null
   value:
   - country_entry_id: VNM-EDU-01
-    national_label_en: Crêche
-    national_label_local: Nhà trẻ
+    national_label_en: "Cr\xEAche"
+    national_label_local: "Nh\xE0 tr\u1EBB"
     entry_age: 0
     duration_years: 3
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: VNM-EDU-02
     national_label_en: Pre-primary education
-    national_label_local: Mẫu giáo
+    national_label_local: "M\u1EABu gi\xE1o"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: VNM-EDU-03
     national_label_en: Primary school
-    national_label_local: Tiểu học
+    national_label_local: "Ti\u1EC3u h\u1ECDc"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - VNM-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: VNM-EDU-04
     national_label_en: Lower secondary
-    national_label_local: Trung học cơ sở
+    national_label_local: "Trung h\u1ECDc c\u01A1 s\u1EDF"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -54,9 +72,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - VNM-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-05
     national_label_en: Upper secondary
-    national_label_local: Trung học phổ thông
+    national_label_local: "Trung h\u1ECDc ph\u1ED5 th\xF4ng"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -65,9 +91,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-06
     national_label_en: Elementary vocational
-    national_label_local: Sơ cấp nghề
+    national_label_local: "S\u01A1 c\u1EA5p ngh\u1EC1"
     entry_age: 15
     duration_years: 1
     isced_level: '3'
@@ -76,9 +111,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-07
     national_label_en: Intermediate vocational
-    national_label_local: Trung cấp nghề
+    national_label_local: "Trung c\u1EA5p ngh\u1EC1"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -87,9 +131,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-08
     national_label_en: Professional technical secondary education
-    national_label_local: Trung cấp chuyên nghiệp
+    national_label_local: "Trung c\u1EA5p chuy\xEAn nghi\u1EC7p"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -98,9 +151,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-09
     national_label_en: Professional vocational secondary education
-    national_label_local: Trung cấp chuyên nghiệp
+    national_label_local: "Trung c\u1EA5p chuy\xEAn nghi\u1EC7p"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -109,9 +171,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-10
     national_label_en: Higher education, Collegiate programmes
-    national_label_local: Trình độ cao đẳng
+    national_label_local: "Tr\xECnh \u0111\u1ED9 cao \u0111\u1EB3ng"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -120,9 +192,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-11
     national_label_en: Collegiate vocational
-    national_label_local: Cao đẳng nghề
+    national_label_local: "Cao \u0111\u1EB3ng ngh\u1EC1"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -131,10 +213,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-12
     national_label_en: 'Higher education, Bachelor of: economics, pedagogy, humanities,
       business, mathematics, physics, chemistry, fine arts'
-    national_label_local: Trình độ đại học
+    national_label_local: "Tr\xECnh \u0111\u1ED9 \u0111\u1EA1i h\u1ECDc"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -143,10 +235,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-13
     national_label_en: 'Higher education, Bachelor of: construction, law, transport,
       mining'
-    national_label_local: Trình độ đại học
+    national_label_local: "Tr\xECnh \u0111\u1ED9 \u0111\u1EA1i h\u1ECDc"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -155,10 +257,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-14
     national_label_en: 'Higher education, Bachelor of: engineering, architecture,
       medicine, dentistry'
-    national_label_local: Trình độ đại học
+    national_label_local: "Tr\xECnh \u0111\u1ED9 \u0111\u1EA1i h\u1ECDc"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -167,9 +279,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: VNM-EDU-15
     national_label_en: Higher education, Master's
-    national_label_local: Trình độ thạc sĩ
+    national_label_local: "Tr\xECnh \u0111\u1ED9 th\u1EA1c s\u0129"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -178,9 +300,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - VNM-EDU-12
+    - VNM-EDU-13
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-12
+    - VNM-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: VNM-EDU-12, VNM-EDU-13'
   - country_entry_id: VNM-EDU-16
     national_label_en: Doctorate
-    national_label_local: Trình độ tiến sĩ
+    national_label_local: "Tr\xECnh \u0111\u1ED9 ti\u1EBFn s\u0129"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -189,6 +324,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - VNM-EDU-14
+    - VNM-EDU-15
+    cum_years_schooling: 21
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-14
+    - VNM-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: VNM-EDU-14, VNM-EDU-15'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Viet_Nam.xlsx
     verified_on: null
@@ -200,8 +348,8 @@ parameters:
   selectors: null
   value:
   - country_entry_id: VNM-EDU-01
-    national_label_en: Crêche
-    national_label_local: Nhà trẻ
+    national_label_en: "Cr\xEAche"
+    national_label_local: "Nh\xE0 tr\u1EBB"
     entry_age: 0
     duration_years: 3
     isced_level: '0'
@@ -210,9 +358,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: VNM-EDU-02
     national_label_en: Pre-primary education
-    national_label_local: Mẫu giáo
+    national_label_local: "M\u1EABu gi\xE1o"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -221,9 +375,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: VNM-EDU-03
     national_label_en: Primary school
-    national_label_local: Tiểu học
+    national_label_local: "Ti\u1EC3u h\u1ECDc"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -232,9 +392,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - VNM-EDU-03
+    cum_years_status: computed
+    review_flags: &id002 []
   - country_entry_id: VNM-EDU-04
     national_label_en: Lower secondary
-    national_label_local: Trung học cơ sở
+    national_label_local: "Trung h\u1ECDc c\u01A1 s\u1EDF"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -243,9 +409,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - VNM-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-05
     national_label_en: Upper secondary
-    national_label_local: Trung học phổ thông
+    national_label_local: "Trung h\u1ECDc ph\u1ED5 th\xF4ng"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -254,9 +428,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-06
     national_label_en: Elementary vocational
-    national_label_local: Sơ cấp nghề
+    national_label_local: "S\u01A1 c\u1EA5p ngh\u1EC1"
     entry_age: 15
     duration_years: 1
     isced_level: '3'
@@ -265,9 +448,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-06
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-07
     national_label_en: Intermediate vocational
-    national_label_local: Trung cấp nghề
+    national_label_local: "Trung c\u1EA5p ngh\u1EC1"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -276,9 +468,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-07
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-08
     national_label_en: Professional technical secondary education
-    national_label_local: Trung cấp chuyên nghiệp
+    national_label_local: "Trung c\u1EA5p chuy\xEAn nghi\u1EC7p"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -287,9 +488,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - VNM-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-08
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-09
     national_label_en: Professional vocational secondary education
-    national_label_local: Trung cấp chuyên nghiệp
+    national_label_local: "Trung c\u1EA5p chuy\xEAn nghi\u1EC7p"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -298,9 +508,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-09
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-10
     national_label_en: Higher education, Collegiate programmes
-    national_label_local: Trình độ cao đẳng
+    national_label_local: "Tr\xECnh \u0111\u1ED9 cao \u0111\u1EB3ng"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -309,9 +529,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-10
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-11
     national_label_en: Collegiate vocational
-    national_label_local: Cao đẳng nghề
+    national_label_local: "Cao \u0111\u1EB3ng ngh\u1EC1"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -320,10 +550,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-12
     national_label_en: 'Higher education, Bachelor of: economics, pedagogy, humanities,
       business, mathematics, physics, chemistry, fine arts'
-    national_label_local: Trình độ đại học
+    national_label_local: "Tr\xECnh \u0111\u1ED9 \u0111\u1EA1i h\u1ECDc"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -332,10 +572,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-12
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-13
     national_label_en: 'Higher education, Bachelor of: construction, law, transport,
       mining'
-    national_label_local: Trình độ đại học
+    national_label_local: "Tr\xECnh \u0111\u1ED9 \u0111\u1EA1i h\u1ECDc"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -344,10 +594,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-13
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-14
     national_label_en: 'Higher education, Bachelor of: engineering, architecture,
       medicine, dentistry'
-    national_label_local: Trình độ đại học
+    national_label_local: "Tr\xECnh \u0111\u1ED9 \u0111\u1EA1i h\u1ECDc"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -356,9 +616,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - VNM-EDU-05
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-14
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: VNM-EDU-15
     national_label_en: Higher education, Master's
-    national_label_local: Trình độ thạc sĩ
+    national_label_local: "Tr\xECnh \u0111\u1ED9 th\u1EA1c s\u0129"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -367,9 +637,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - VNM-EDU-12
+    - VNM-EDU-13
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-12
+    - VNM-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: VNM-EDU-12, VNM-EDU-13'
   - country_entry_id: VNM-EDU-16
     national_label_en: Doctorate
-    national_label_local: Trình độ tiến sĩ
+    national_label_local: "Tr\xECnh \u0111\u1ED9 ti\u1EBFn s\u0129"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -378,6 +661,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - VNM-EDU-14
+    - VNM-EDU-15
+    cum_years_schooling: 21
+    cum_years_computation_path:
+    - VNM-EDU-03
+    - VNM-EDU-04
+    - VNM-EDU-05
+    - VNM-EDU-14
+    - VNM-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: VNM-EDU-14, VNM-EDU-15'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Viet_Nam.xlsx
     verified_on: null

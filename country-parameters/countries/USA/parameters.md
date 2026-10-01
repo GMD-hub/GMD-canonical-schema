@@ -6,9 +6,9 @@ status: draft
 country_name: USA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: USA-EDU-01
     national_label_en: Head Start
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: USA-EDU-02
     national_label_en: Private Preschool
     national_label_local: Private Preschool
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: USA-EDU-03
     national_label_en: Public preschool or pre-kindergarten
     national_label_local: Public preschool or pre-kindergarten
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: USA-EDU-04
     national_label_en: Kindergarten
     national_label_local: Kindergarten
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: USA-EDU-05
     national_label_en: Elementary education (grades 1-6)
     national_label_local: Elementary education (grades 1-6)
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - USA-EDU-05
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: USA-EDU-06
     national_label_en: Middle education (grades 7-9)
     national_label_local: Middle education (grades 7-9)
@@ -76,6 +106,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - USA-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: USA-EDU-07
     national_label_en: GED or High School Equivalency Programme
     national_label_local: GED or High school equivalency Programme
@@ -87,6 +125,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - USA-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: USA-EDU-08
     national_label_en: Secondary/High School education (grades 10-12)
     national_label_local: Secondary/High school education (grades 10-12)
@@ -98,6 +145,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - USA-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: USA-EDU-09
     national_label_en: Certificate Program
     national_label_local: Certificate Program
@@ -109,6 +165,18 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - USA-EDU-07
+    - USA-EDU-08
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
   - country_entry_id: USA-EDU-10
     national_label_en: Associate's Degree Programme
     national_label_local: Associate's Degree Programme
@@ -120,6 +188,18 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - USA-EDU-07
+    - USA-EDU-08
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
   - country_entry_id: USA-EDU-11
     national_label_en: Bachelor's Degree Programme
     national_label_local: Bachelor's Degree Programme
@@ -131,6 +211,18 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - USA-EDU-07
+    - USA-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
   - country_entry_id: USA-EDU-12
     national_label_en: Post-bachelor's certificate programme (e.g. teaching)
     national_label_local: Post-bachelor's certificate programme (e.g. teaching)
@@ -142,6 +234,18 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - USA-EDU-07
+    - USA-EDU-08
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
   - country_entry_id: USA-EDU-13
     national_label_en: Master's degree programme
     national_label_local: Master's degree programme
@@ -153,6 +257,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - USA-EDU-11
+    - USA-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-12
+    - USA-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
+    - 'minimum parent path selected from: USA-EDU-11, USA-EDU-12'
   - country_entry_id: USA-EDU-14
     national_label_en: First Professional Degree Programme
     national_label_local: First Professional Degree Programme
@@ -164,9 +282,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - USA-EDU-07
+    - USA-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
   - country_entry_id: USA-EDU-15
-    national_label_en: 1st Professional Degree Programme – Medical
-    national_label_local: First Professional Degree Programme – Medical
+    national_label_en: "1st Professional Degree Programme \u2013 Medical"
+    national_label_local: "First Professional Degree Programme \u2013 Medical"
     entry_age: 22
     duration_years: 4
     isced_level: '7'
@@ -175,9 +305,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - USA-EDU-07
+    - USA-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
   - country_entry_id: USA-EDU-16
-    national_label_en: Doctorate (Ph.D. – Research)
-    national_label_local: Doctorate (Ph.D. – Research)
+    national_label_en: "Doctorate (Ph.D. \u2013 Research)"
+    national_label_local: "Doctorate (Ph.D. \u2013 Research)"
     entry_age: 22
     duration_years: 5
     isced_level: '8'
@@ -186,15 +328,32 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - USA-EDU-13
+    - USA-EDU-14
+    - USA-EDU-15
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - USA-EDU-05
+    - USA-EDU-06
+    - USA-EDU-07
+    - USA-EDU-12
+    - USA-EDU-13
+    - USA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: USA-EDU-07, USA-EDU-08'
+    - 'minimum parent path selected from: USA-EDU-11, USA-EDU-12'
+    - 'minimum parent path selected from: USA-EDU-13, USA-EDU-14, USA-EDU-15'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_United_States_of_America.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: USA-SUBNAT-01
     survey_labels: '[11]Maine'
@@ -203,10 +362,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -224,10 +383,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -245,10 +404,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -266,10 +425,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -287,10 +446,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -308,10 +467,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -329,10 +488,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -350,10 +509,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -371,10 +530,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -392,10 +551,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -413,10 +572,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -434,10 +593,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -455,10 +614,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -476,10 +635,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -497,10 +656,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -518,10 +677,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -539,10 +698,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -560,10 +719,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -581,10 +740,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -602,10 +761,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -623,10 +782,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -644,10 +803,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -665,10 +824,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -686,10 +845,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -707,10 +866,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -728,10 +887,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -749,10 +908,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -770,10 +929,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -791,10 +950,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -812,10 +971,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -833,10 +992,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -854,10 +1013,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -875,10 +1034,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -896,10 +1055,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -917,10 +1076,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -938,10 +1097,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -959,10 +1118,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -980,10 +1139,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1001,10 +1160,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1022,10 +1181,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1043,10 +1202,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1064,10 +1223,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1085,10 +1244,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1106,10 +1265,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1127,10 +1286,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1148,10 +1307,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1169,10 +1328,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1190,10 +1349,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1211,10 +1370,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1232,10 +1391,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1253,10 +1412,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1269,35 +1428,35 @@ parameters:
     source_row: 17651
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: USA-SAN-01
     source_category_code: public_sewer
-    national_label_en: Public sewer
+    national_label_en: "Public\_sewer"
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: USA-SAN-02
     source_category_code: septic_tank_or_cesspool
-    national_label_en: Septic tank or cesspool
+    national_label_en: "Septic\_tank\_or\_cesspool"
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: USA-SAN-03
     source_category_code: public_sewer
@@ -1307,8 +1466,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: USA-SAN-04
     source_category_code: septic_tank_or_cesspool
@@ -1318,8 +1477,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: USA-SAN-05
     source_category_code: other_not_reported
@@ -1329,29 +1488,29 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_USA_United_States_of_America_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: USA-WAS-01
     source_category_code: individual_well
-    national_label_en: Individual well
+    national_label_en: "Individual\_well"
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: USA-WAS-02
     source_category_code: individual_well_dug
@@ -1361,8 +1520,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.other
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: USA-WAS-03
     source_category_code: individual_well_drilled
@@ -1372,8 +1531,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: USA-WAS-04
     source_category_code: other
@@ -1383,19 +1542,19 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: USA-WAS-05
     source_category_code: public_or_private_system
-    national_label_en: Public or private system
+    national_label_en: "Public\_or\_private\_system"
     national_label_local: Tap water
     jmp_classification: Tap water
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: USA-WAS-06
     source_category_code: public_or_private_system
@@ -1405,13 +1564,13 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_USA_United_States_of_America_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

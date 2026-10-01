@@ -6,9 +6,9 @@ status: draft
 country_name: TCA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TCA-EDU-01
     national_label_en: Kindergarten 1 and 2
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: TCA-EDU-02
     national_label_en: Primary
     national_label_local: Primary
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - TCA-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: TCA-EDU-03
     national_label_en: Forms 1-3
     national_label_local: Forms 1-3
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - TCA-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TCA-EDU-02
+    - TCA-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TCA-EDU-04
     national_label_en: Forms 4 and 5
     national_label_local: Forms 4 and 5
@@ -54,6 +74,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - TCA-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TCA-EDU-02
+    - TCA-EDU-03
+    - TCA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TCA-EDU-05
     national_label_en: Sixth form
     national_label_local: Sixth form
@@ -65,6 +94,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 11
+    parent_country_entry_ids:
+    - TCA-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TCA-EDU-02
+    - TCA-EDU-03
+    - TCA-EDU-04
+    - TCA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TCA-EDU-06
     national_label_en: Associate degree
     national_label_local: Associate degree
@@ -76,6 +115,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
+    parent_country_entry_ids:
+    - TCA-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - TCA-EDU-02
+    - TCA-EDU-03
+    - TCA-EDU-04
+    - TCA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TCA-EDU-07
     national_label_en: Bachelor Degrees
     national_label_local: Bachelor Degrees
@@ -87,15 +136,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
+    parent_country_entry_ids:
+    - TCA-EDU-04
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - TCA-EDU-02
+    - TCA-EDU-03
+    - TCA-EDU-04
+    - TCA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Turks_and_Caicos.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TCA-SAN-01
     source_category_code: composting_toilet
@@ -105,8 +164,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: TCA-SAN-02
     source_category_code: flush_pour_flush_flush_to_open_drain
@@ -116,8 +175,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: TCA-SAN-03
     source_category_code: flush_to_sewer
@@ -127,8 +186,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TCA-SAN-04
     source_category_code: flush_pour_flush_flush_to_pit_latrine
@@ -138,8 +197,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: TCA-SAN-05
     source_category_code: flush_pour_flush_flush_to_septic_tank
@@ -149,8 +208,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: TCA-SAN-06
     source_category_code: flush_pour_flush_flush_to_dk_where
@@ -160,8 +219,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: TCA-SAN-07
     source_category_code: bucket
@@ -171,8 +230,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: TCA-SAN-08
     source_category_code: hanging_toilet_hanging_latrine
@@ -183,8 +242,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: TCA-SAN-09
     source_category_code: pit_latrine_pit_latrine_with_slab
@@ -195,8 +254,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: TCA-SAN-10
     source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
@@ -207,8 +266,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: TCA-SAN-11
     source_category_code: pit_latrine_ventilated_improved_pit_latrine
@@ -219,8 +278,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TCA-SAN-12
     source_category_code: no_facility_bush_field
@@ -230,8 +289,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: TCA-SAN-13
     source_category_code: other
@@ -241,18 +300,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TCA_Turks_and_Caicos_Islands_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TCA-WAS-01
     source_category_code: spring_protected_spring
@@ -262,8 +321,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: TCA-WAS-02
     source_category_code: dug_well_protected_well
@@ -273,8 +332,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TCA-WAS-03
     source_category_code: tube_well_borehole
@@ -284,8 +343,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: TCA-WAS-04
     source_category_code: cart_with_small_tank
@@ -295,8 +354,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: TCA-WAS-05
     source_category_code: water_fountain
@@ -306,8 +365,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TCA-WAS-06
     source_category_code: tanker_truck
@@ -317,8 +376,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: TCA-WAS-07
     source_category_code: other
@@ -328,8 +387,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TCA-WAS-08
     source_category_code: packaged_water_bottled_water
@@ -339,8 +398,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: TCA-WAS-09
     source_category_code: packaged_water_sachet_water
@@ -350,8 +409,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: TCA-WAS-10
     source_category_code: rainwater
@@ -361,8 +420,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TCA-WAS-11
     source_category_code: piped_water_piped_to_neighbour
@@ -372,8 +431,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TCA-WAS-12
     source_category_code: piped_water_piped_into_dwelling
@@ -383,8 +442,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TCA-WAS-13
     source_category_code: piped_water_piped_to_yard_plot
@@ -394,8 +453,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TCA-WAS-14
     source_category_code: piped_water_public_tap_standpipe
@@ -405,13 +464,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TCA_Turks_and_Caicos_Islands_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

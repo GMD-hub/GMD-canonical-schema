@@ -6,13 +6,14 @@ status: draft
 country_name: IRN
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: IRN-EDU-01
     national_label_en: Pre-primary level
-    national_label_local: پیش دبستانی عادی
+    national_label_local: "\u067E\u06CC\u0634 \u062F\u0628\u0633\u062A\u0627\u0646\
+      \u06CC \u0639\u0627\u062F\u06CC"
     entry_age: 5
     duration_years: 1
     isced_level: '0'
@@ -21,9 +22,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IRN-EDU-02
     national_label_en: Special pre-primary
-    national_label_local: پیش دبستانی
+    national_label_local: "\u067E\u06CC\u0634 \u062F\u0628\u0633\u062A\u0627\u0646\
+      \u06CC"
     entry_age: 4
     duration_years: 2
     isced_level: '0'
@@ -32,9 +40,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IRN-EDU-03
     national_label_en: Primary level
-    national_label_local: عادی ابتدایی
+    national_label_local: "\u0639\u0627\u062F\u06CC \u0627\u0628\u062A\u062F\u0627\
+      \u06CC\u06CC"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -43,9 +58,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - IRN-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: IRN-EDU-04
     national_label_en: Special primary
-    national_label_local: ابتدایی استثنایی
+    national_label_local: "\u0627\u0628\u062A\u062F\u0627\u06CC\u06CC \u0627\u0633\
+      \u062A\u062B\u0646\u0627\u06CC\u06CC"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -54,9 +76,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - IRN-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: IRN-EDU-05
     national_label_en: Lower secondary
-    national_label_local: راهنمایی عادی
+    national_label_local: "\u0631\u0627\u0647\u0646\u0645\u0627\u06CC\u06CC \u0639\
+      \u0627\u062F\u06CC"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -65,9 +94,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - IRN-EDU-03
+    - IRN-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
   - country_entry_id: IRN-EDU-06
     national_label_en: Lower secondary special need students
-    national_label_local: راهنمایی استثنایی
+    national_label_local: "\u0631\u0627\u0647\u0646\u0645\u0627\u06CC\u06CC \u0627\
+      \u0633\u062A\u062B\u0646\u0627\u06CC\u06CC"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -76,10 +116,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - IRN-EDU-03
+    - IRN-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
   - country_entry_id: IRN-EDU-07
     national_label_en: Lower secondary pre-vocational for exceptional mentally retarded
       students
-    national_label_local: راهنمايي پيش حرفه اي استثنایی
+    national_label_local: "\u0631\u0627\u0647\u0646\u0645\u0627\u064A\u064A \u067E\
+      \u064A\u0634 \u062D\u0631\u0641\u0647 \u0627\u064A \u0627\u0633\u062A\u062B\u0646\
+      \u0627\u06CC\u06CC"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -88,9 +140,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - IRN-EDU-03
+    - IRN-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
   - country_entry_id: IRN-EDU-08
     national_label_en: Upper secondary
-    national_label_local: "متوسطه نظری عادی \n دوره پيش دانشگاهي"
+    national_label_local: "\u0645\u062A\u0648\u0633\u0637\u0647 \u0646\u0638\u0631\
+      \u06CC \u0639\u0627\u062F\u06CC \n \u062F\u0648\u0631\u0647 \u067E\u064A\u0634\
+      \ \u062F\u0627\u0646\u0634\u06AF\u0627\u0647\u064A"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -99,9 +163,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - IRN-EDU-05
+    - IRN-EDU-06
+    - IRN-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    cum_years_status: computed
+    review_flags: &id001
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
+    - 'minimum parent path selected from: IRN-EDU-05, IRN-EDU-06, IRN-EDU-07'
   - country_entry_id: IRN-EDU-09
     national_label_en: Upper secondary technical/vocational
-    national_label_local: متوسطه فنی و حرفه ای عادی
+    national_label_local: "\u0645\u062A\u0648\u0633\u0637\u0647 \u0641\u0646\u06CC\
+      \ \u0648 \u062D\u0631\u0641\u0647 \u0627\u06CC \u0639\u0627\u062F\u06CC"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -110,9 +188,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - IRN-EDU-05
+    - IRN-EDU-06
+    - IRN-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
+    - 'minimum parent path selected from: IRN-EDU-05, IRN-EDU-06, IRN-EDU-07'
   - country_entry_id: IRN-EDU-10
     national_label_en: Upper secondary special vocational
-    national_label_local: متوسطه   حرفه ای استثنايي
+    national_label_local: "\u0645\u062A\u0648\u0633\u0637\u0647   \u062D\u0631\u0641\
+      \u0647 \u0627\u06CC \u0627\u0633\u062A\u062B\u0646\u0627\u064A\u064A"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -121,9 +213,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - IRN-EDU-05
+    - IRN-EDU-06
+    - IRN-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
+    - 'minimum parent path selected from: IRN-EDU-05, IRN-EDU-06, IRN-EDU-07'
   - country_entry_id: IRN-EDU-11
     national_label_en: Associate degree
-    national_label_local: کاردانی
+    national_label_local: "\u06A9\u0627\u0631\u062F\u0627\u0646\u06CC"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -132,9 +237,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - IRN-EDU-08
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: IRN-EDU-12
     national_label_en: Technician Associate Degree
-    national_label_local: / کاردانی / کاردان فنی
+    national_label_local: "/ \u06A9\u0627\u0631\u062F\u0627\u0646\u06CC / \u06A9\u0627\
+      \u0631\u062F\u0627\u0646 \u0641\u0646\u06CC"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -143,9 +259,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - IRN-EDU-08
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: IRN-EDU-13
     national_label_en: Continuous Bachelor's
-    national_label_local: کارشناسی پیوسته
+    national_label_local: "\u06A9\u0627\u0631\u0634\u0646\u0627\u0633\u06CC \u067E\
+      \u06CC\u0648\u0633\u062A\u0647"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -154,9 +281,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - IRN-EDU-08
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: IRN-EDU-14
     national_label_en: Non-continuous Bachelor's
-    national_label_local: کارشناسی ناپیوسته
+    national_label_local: "\u06A9\u0627\u0631\u0634\u0646\u0627\u0633\u06CC \u0646\
+      \u0627\u067E\u06CC\u0648\u0633\u062A\u0647"
     entry_age: 20
     duration_years: 2
     isced_level: '6'
@@ -165,9 +303,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - IRN-EDU-08
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: IRN-EDU-15
     national_label_en: Continuous Master's degree
-    national_label_local: کارشناسی ارشد پیوسته
+    national_label_local: "\u06A9\u0627\u0631\u0634\u0646\u0627\u0633\u06CC \u0627\
+      \u0631\u0634\u062F \u067E\u06CC\u0648\u0633\u062A\u0647"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -176,9 +325,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - IRN-EDU-13
+    - IRN-EDU-14
+    cum_years_schooling: 20
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-14
+    - IRN-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
+    - 'minimum parent path selected from: IRN-EDU-05, IRN-EDU-06, IRN-EDU-07'
+    - 'minimum parent path selected from: IRN-EDU-13, IRN-EDU-14'
   - country_entry_id: IRN-EDU-16
     national_label_en: Master's degree
-    national_label_local: کارشناسی ارشد ناپیوسته
+    national_label_local: "\u06A9\u0627\u0631\u0634\u0646\u0627\u0633\u06CC \u0627\
+      \u0631\u0634\u062F \u0646\u0627\u067E\u06CC\u0648\u0633\u062A\u0647"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -187,9 +352,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - IRN-EDU-13
+    - IRN-EDU-14
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-14
+    - IRN-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
+    - 'minimum parent path selected from: IRN-EDU-05, IRN-EDU-06, IRN-EDU-07'
+    - 'minimum parent path selected from: IRN-EDU-13, IRN-EDU-14'
   - country_entry_id: IRN-EDU-17
     national_label_en: Professional doctorate
-    national_label_local: دکترای حرفه ای
+    national_label_local: "\u062F\u06A9\u062A\u0631\u0627\u06CC \u062D\u0631\u0641\
+      \u0647 \u0627\u06CC"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -198,9 +379,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - IRN-EDU-08
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-17
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: IRN-EDU-18
     national_label_en: Doctorate
-    national_label_local: دکترای تخصصی
+    national_label_local: "\u062F\u06A9\u062A\u0631\u0627\u06CC \u062A\u062E\u0635\
+      \u0635\u06CC"
     entry_age: 24
     duration_years: 4
     isced_level: '8'
@@ -209,15 +401,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - IRN-EDU-15
+    - IRN-EDU-16
+    - IRN-EDU-17
+    cum_years_schooling: 20
+    cum_years_computation_path:
+    - IRN-EDU-03
+    - IRN-EDU-05
+    - IRN-EDU-08
+    - IRN-EDU-14
+    - IRN-EDU-16
+    - IRN-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IRN-EDU-03, IRN-EDU-04'
+    - 'minimum parent path selected from: IRN-EDU-05, IRN-EDU-06, IRN-EDU-07'
+    - 'minimum parent path selected from: IRN-EDU-13, IRN-EDU-14'
+    - 'minimum parent path selected from: IRN-EDU-15, IRN-EDU-16, IRN-EDU-17'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Iran.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: IRN-SUBNAT-01
     survey_labels: 0 - Markazi | 1 - Markazi
@@ -226,10 +436,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1556
     geo_year: '2015'
@@ -247,10 +457,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1545
     geo_year: '2015'
@@ -268,10 +478,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1543
     geo_year: '2015'
@@ -289,10 +499,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1559
     geo_year: '2015'
@@ -310,10 +520,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1553
     geo_year: '2015'
@@ -331,10 +541,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1546
     geo_year: '2015'
@@ -352,10 +562,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1541
     geo_year: '2015'
@@ -373,10 +583,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1555
     geo_year: '2015'
@@ -394,10 +604,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1549
     geo_year: '2015'
@@ -415,10 +625,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1552
     geo_year: '2015'
@@ -436,10 +646,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1540
     geo_year: '2015'
@@ -457,10 +667,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1563
     geo_year: '2015'
@@ -478,10 +688,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1557
     geo_year: '2015'
@@ -499,10 +709,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1558
     geo_year: '2015'
@@ -520,10 +730,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1562
     geo_year: '2015'
@@ -541,10 +751,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1548
     geo_year: '2015'
@@ -562,10 +772,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1560
     geo_year: '2015'
@@ -583,10 +793,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_33110
     geo_year: '2015'
@@ -604,10 +814,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_33113
     geo_year: '2015'
@@ -625,10 +835,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_33112
     geo_year: '2015'
@@ -646,10 +856,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_33111
     geo_year: '2015'
@@ -667,10 +877,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAULx_28
     geo_year: '2015'
@@ -688,10 +898,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAULx_29
     geo_year: '2015'
@@ -709,10 +919,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1542
     geo_year: '2015'
@@ -730,10 +940,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1561
     geo_year: '2015'
@@ -751,10 +961,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1539
     geo_year: '2015'
@@ -772,10 +982,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1551
     geo_year: '2015'
@@ -793,10 +1003,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1544
     geo_year: '2015'
@@ -814,10 +1024,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAUL1_1550
     geo_year: '2015'
@@ -835,10 +1045,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAULx_10
     geo_year: '2015'
@@ -858,10 +1068,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAULx_24
     geo_year: '2015'
@@ -880,10 +1090,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: IRN_2015_GAULx_31
     geo_year: '2015'
@@ -896,8 +1106,8 @@ parameters:
     source_row: 7467
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

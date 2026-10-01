@@ -6,9 +6,9 @@ status: draft
 country_name: SMR
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SMR-EDU-01
     national_label_en: Early Childhood educational development
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SMR-EDU-02
     national_label_en: Pre-primary School
     national_label_local: Scuola dell'Infanzia
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SMR-EDU-03
     national_label_en: Primary School
     national_label_local: Scuola Elementare
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - SMR-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: SMR-EDU-04
     national_label_en: Lower secondary education
     national_label_local: Scuola Media
@@ -54,6 +72,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - SMR-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SMR-EDU-05
     national_label_en: Educational and vocational training
     national_label_local: Centro Formazione Professionale
@@ -65,6 +91,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - SMR-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SMR-EDU-06
     national_label_en: Liceo Education (Classical, Linguistic, Scientific and Economic)
     national_label_local: Liceo (Classico, Linguistico, Scientifico, Economico)
@@ -76,6 +111,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - SMR-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SMR-EDU-07
     national_label_en: Technical Institute
     national_label_local: Istituto Tecnico Industriale
@@ -87,6 +131,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - SMR-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SMR-EDU-08
     national_label_en: Bachelor's degree
     national_label_local: Corso di laurea triennale
@@ -98,6 +151,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - SMR-EDU-06
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-06
+    - SMR-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SMR-EDU-09
     national_label_en: Master I level
     national_label_local: Master I livello
@@ -109,6 +172,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - SMR-EDU-08
+    - SMR-EDU-09
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-06
+    - SMR-EDU-08
+    - SMR-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SMR-EDU-08, SMR-EDU-09'
   - country_entry_id: SMR-EDU-10
     national_label_en: Master's degree
     national_label_local: Corso di laurea magistrale
@@ -120,6 +196,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - SMR-EDU-08
+    - SMR-EDU-09
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-06
+    - SMR-EDU-08
+    - SMR-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SMR-EDU-08, SMR-EDU-09'
   - country_entry_id: SMR-EDU-11
     national_label_en: Master II level
     national_label_local: Master II livello
@@ -131,6 +220,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - SMR-EDU-08
+    - SMR-EDU-09
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-06
+    - SMR-EDU-08
+    - SMR-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SMR-EDU-08, SMR-EDU-09'
   - country_entry_id: SMR-EDU-12
     national_label_en: PhD in Historical Sciences
     national_label_local: Dottorato di ricerca in scienze storiche
@@ -142,11 +244,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - SMR-EDU-10
+    - SMR-EDU-11
+    cum_years_schooling: 20
+    cum_years_computation_path:
+    - SMR-EDU-03
+    - SMR-EDU-04
+    - SMR-EDU-06
+    - SMR-EDU-08
+    - SMR-EDU-11
+    - SMR-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SMR-EDU-08, SMR-EDU-09'
+    - 'minimum parent path selected from: SMR-EDU-10, SMR-EDU-11'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_San
       Marino.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -6,13 +6,13 @@ status: draft
 country_name: GNB
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GNB-EDU-01
-    national_label_en: Enseignement préscolaire
-    national_label_local: Ensino pré-primário
+    national_label_en: "Enseignement pr\xE9scolaire"
+    national_label_local: "Ensino pr\xE9-prim\xE1rio"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GNB-EDU-02
-    national_label_en: Enseignement de base – Premier cycle
-    national_label_local: Ensino básico - primeiro ciclo
+    national_label_en: "Enseignement de base \u2013 Premier cycle"
+    national_label_local: "Ensino b\xE1sico - primeiro ciclo"
     entry_age: 6
     duration_years: 4
     isced_level: '1'
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - GNB-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: GNB-EDU-03
-    national_label_en: Enseignement de base – Deuxième cycle
-    national_label_local: Ensino básico - segundo ciclo
+    national_label_en: "Enseignement de base \u2013 Deuxi\xE8me cycle"
+    national_label_local: "Ensino b\xE1sico - segundo ciclo"
     entry_age: 10
     duration_years: 2
     isced_level: '1'
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - GNB-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: GNB-EDU-04
-    national_label_en: Enseignement de base – Troisième cycle
-    national_label_local: Ensino básico – terceiro ciclo
+    national_label_en: "Enseignement de base \u2013 Troisi\xE8me cycle"
+    national_label_local: "Ensino b\xE1sico \u2013 terceiro ciclo"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -54,9 +72,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - GNB-EDU-02
+    - GNB-EDU-03
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
   - country_entry_id: GNB-EDU-05
     national_label_en: Formation professionnelle
-    national_label_local: Formaçao profissional
+    national_label_local: "Forma\xE7ao profissional"
     entry_age: 12
     duration_years: 0
     isced_level: '2'
@@ -65,9 +93,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - GNB-EDU-02
+    - GNB-EDU-03
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
   - country_entry_id: GNB-EDU-06
     national_label_en: Enseignement secondaire
-    national_label_local: Ensino secundário
+    national_label_local: "Ensino secund\xE1rio"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -76,9 +114,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - GNB-EDU-04
+    - GNB-EDU-05
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
   - country_entry_id: GNB-EDU-07
     national_label_en: Enseignement technique et professionnel
-    national_label_local: Ensino técnico e profissional
+    national_label_local: "Ensino t\xE9cnico e profissional"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -87,9 +137,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - GNB-EDU-04
+    - GNB-EDU-05
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
   - country_entry_id: GNB-EDU-08
     national_label_en: Formation des enseignants
-    national_label_local: Treinamento (formação) de professores
+    national_label_local: "Treinamento (forma\xE7\xE3o) de professores"
     entry_age: 18
     duration_years: 3
     isced_level: '4'
@@ -98,9 +160,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-09
-    national_label_en: Formation aux métiers de la santé
-    national_label_local: Treinamento (formação) de nas profissões de saúde
+    national_label_en: "Formation aux m\xE9tiers de la sant\xE9"
+    national_label_local: "Treinamento (forma\xE7\xE3o) de nas profiss\xF5es de sa\xFA\
+      de"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -109,9 +186,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-10
-    national_label_en: Formation des enseignants de troisème cycle
-    national_label_local: Treinamento (formaçao) de professores EB3
+    national_label_en: "Formation des enseignants de trois\xE8me cycle"
+    national_label_local: "Treinamento (forma\xE7ao) de professores EB3"
     entry_age: 18
     duration_years: 3
     isced_level: '4'
@@ -120,6 +211,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-11
     national_label_en: Professionnelle
     national_label_local: Professional
@@ -131,9 +236,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-12
-    national_label_en: Formation en administration et comptabilité
-    national_label_local: Treinamento (formação) em administração e contabilidade
+    national_label_en: "Formation en administration et comptabilit\xE9"
+    national_label_local: "Treinamento (forma\xE7\xE3o) em administra\xE7\xE3o e contabilidade"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -142,8 +261,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-13
-    national_label_en: Enseignement supérieur (3 ans)
+    national_label_en: "Enseignement sup\xE9rieur (3 ans)"
     national_label_local: Ensino superior (3 anos)
     entry_age: 18
     duration_years: 3
@@ -153,9 +286,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-14
     national_label_en: Formation en administration
-    national_label_local: Treinamento (formação) em administração
+    national_label_local: "Treinamento (forma\xE7\xE3o) em administra\xE7\xE3o"
     entry_age: 21
     duration_years: 2
     isced_level: '6'
@@ -164,8 +311,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-15
-    national_label_en: Enseignement supérieur (4 ans)
+    national_label_en: "Enseignement sup\xE9rieur (4 ans)"
     national_label_local: Ensino superior (4 anos)
     entry_age: 18
     duration_years: 4
@@ -175,8 +336,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-16
-    national_label_en: Enseignement supérieur (5ans)
+    national_label_en: "Enseignement sup\xE9rieur (5ans)"
     national_label_local: Ensino superior Direito (5 anos)
     entry_age: 18
     duration_years: 5
@@ -186,9 +361,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   - country_entry_id: GNB-EDU-17
-    national_label_en: Formation supérieure aux métiers de la santé
-    national_label_local: Treinamento (formaçao) superior en medicina
+    national_label_en: "Formation sup\xE9rieure aux m\xE9tiers de la sant\xE9"
+    national_label_local: "Treinamento (forma\xE7ao) superior en medicina"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -197,15 +386,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - GNB-EDU-06
+    - GNB-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GNB-EDU-03
+    - GNB-EDU-05
+    - GNB-EDU-06
+    - GNB-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GNB-EDU-02, GNB-EDU-03'
+    - 'minimum parent path selected from: GNB-EDU-04, GNB-EDU-05'
+    - 'minimum parent path selected from: GNB-EDU-06, GNB-EDU-07'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Guinea_Bissau.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GNB-SUBNAT-01
     survey_labels: 1 - TOMBALI | 1 - Tombali
@@ -214,10 +417,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1393
     geo_year: '2015'
@@ -235,10 +438,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1392
     geo_year: '2015'
@@ -256,10 +459,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1391
     geo_year: '2015'
@@ -277,10 +480,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1390
     geo_year: '2015'
@@ -298,10 +501,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1386
     geo_year: '2015'
@@ -313,16 +516,16 @@ parameters:
     geo_name: Biombo
     source_row: 5795
   - country_entry_id: GNB-SUBNAT-06
-    survey_labels: 5 - BOLAMA_BIJAGOS | 5 - Bolama/Bijag | 5 - Bolama/Bijagós
+    survey_labels: "5 - BOLAMA_BIJAGOS | 5 - Bolama/Bijag | 5 - Bolama/Bijag\xF3s"
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: GNB_2015_GAUL1_1387
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1387
     geo_year: '2015'
@@ -334,16 +537,16 @@ parameters:
     geo_name: Bolama/bijagos
     source_row: 5796
   - country_entry_id: GNB-SUBNAT-07
-    survey_labels: 6 - BAFATA | 6 - Bafata | 6 - Bafatá
+    survey_labels: "6 - BAFATA | 6 - Bafata | 6 - Bafat\xE1"
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: GNB_2015_GAUL1_1385
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1385
     geo_year: '2015'
@@ -355,16 +558,16 @@ parameters:
     geo_name: Bafata
     source_row: 5797
   - country_entry_id: GNB-SUBNAT-08
-    survey_labels: 7 - GABU | 7 - Gabou | 7 - Gabú
+    survey_labels: "7 - GABU | 7 - Gabou | 7 - Gab\xFA"
     survey_variables: subnatid | subnatid1 | subnatidsurvey
     gmd_subnatid1: GNB_2015_GAUL1_1389
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1389
     geo_year: '2015'
@@ -382,10 +585,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: GNB_2015_GAUL1_1388
     geo_year: '2015'
@@ -398,13 +601,13 @@ parameters:
     source_row: 5799
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GNB-SAN-01
     source_category_code: casa_de_banho_a_compostagem
@@ -414,8 +617,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: GNB-SAN-02
     source_category_code: toilettes_a_compostage
@@ -425,8 +628,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: GNB-SAN-03
     source_category_code: casa_de_banho_ligado_a_canal_de_drenagem
@@ -436,8 +639,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: GNB-SAN-04
     source_category_code: conetado_ao_ar_livre
@@ -447,8 +650,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: GNB-SAN-05
     source_category_code: casa_de_banho_ligado_ao_esgoto
@@ -458,8 +661,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: GNB-SAN-06
     source_category_code: conetado_ao_sistema_de_esgoto
@@ -469,8 +672,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: GNB-SAN-07
     source_category_code: conetada_as_latrinas
@@ -480,8 +683,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: GNB-SAN-08
     source_category_code: casa_de_banho_ligado_a_fossa_septica
@@ -491,8 +694,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: GNB-SAN-09
     source_category_code: conetado_a_fossa_septica
@@ -502,8 +705,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: GNB-SAN-10
     source_category_code: conetado_a_um_lugar_o_desconhecido
@@ -513,8 +716,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: GNB-SAN-11
     source_category_code: retrete_melhorada
@@ -524,19 +727,19 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: GNB-SAN-12
     source_category_code: sistema_de_esgoto_ou_fossa_septica
-    national_label_en: Sistema de esgoto ou fossa séptica
+    national_label_en: "Sistema de esgoto ou fossa s\xE9ptica"
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: GNB-SAN-13
     source_category_code: chasse_branchee_a_l_egout
@@ -546,8 +749,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: GNB-SAN-14
     source_category_code: wc_avec_egout
@@ -557,8 +760,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: GNB-SAN-15
     source_category_code: chasse_branchee_a_latrines
@@ -568,8 +771,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: GNB-SAN-16
     source_category_code: chasse_branchee_a_fosse_septique
@@ -579,8 +782,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: GNB-SAN-17
     source_category_code: wc_avec_fosse
@@ -590,8 +793,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: GNB-SAN-18
     source_category_code: balde
@@ -601,8 +804,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: GNB-SAN-19
     source_category_code: balde_bacia
@@ -612,8 +815,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: GNB-SAN-20
     source_category_code: casa_de_banho_suspenso_latrina_suspensa
@@ -624,8 +827,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GNB-SAN-21
     source_category_code: toilette_suspendues_latrines_suspendues
@@ -636,8 +839,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: GNB-SAN-22
     source_category_code: latrina_melhorada
@@ -648,8 +851,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-SAN-23
     source_category_code: latrinas_melhoradas_coberta
@@ -660,8 +863,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-SAN-24
     source_category_code: latrinas_melhoradas_com_tampa_ligada_a_fossa
@@ -672,8 +875,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-SAN-25
     source_category_code: latrines_couvertes
@@ -684,8 +887,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-SAN-26
     source_category_code: latrines_non_couvertes
@@ -696,20 +899,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: GNB-SAN-27
     source_category_code: valas_a_ceu_aberto
-    national_label_en: Valas a céu aberto
+    national_label_en: "Valas a c\xE9u aberto"
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: GNB-SAN-28
     source_category_code: chasse_branchee_a_autre_chose
@@ -720,8 +923,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GNB-SAN-29
     source_category_code: latrina_tradicionais_retrete
@@ -732,8 +935,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GNB-SAN-30
     source_category_code: latrina_tradicional_ou_cerco
@@ -744,8 +947,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GNB-SAN-31
     source_category_code: latrinas_tradicionais_retrete
@@ -756,8 +959,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GNB-SAN-32
     source_category_code: retrete_tradicional
@@ -768,8 +971,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: GNB-SAN-33
     source_category_code: latrinas_melhoradas_com_tampa_ligada_a_fossa_e_ventilada
@@ -780,8 +983,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: GNB-SAN-34
     source_category_code: latrines_ameliorees_auto_aerees_laa
@@ -792,8 +995,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: GNB-SAN-35
     source_category_code: latrina_com_autoclismo
@@ -803,19 +1006,19 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: GNB-SAN-36
     source_category_code: latrine_com_descarga_de_agua
-    national_label_en: Latrine com descarga de água
+    national_label_en: "Latrine com descarga de \xE1gua"
     national_label_local: Pour flush latrines
     jmp_classification: Latrines > Pour flush latrines
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: GNB-SAN-37
     source_category_code: aucun
@@ -825,8 +1028,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GNB-SAN-38
     source_category_code: nao_tem_casa_de_banho
@@ -836,8 +1039,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GNB-SAN-39
     source_category_code: nao_tem_casa_de_banho_mato
@@ -847,8 +1050,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GNB-SAN-40
     source_category_code: no_mato_natureza_o_enterra_as_fezes
@@ -858,19 +1061,19 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GNB-SAN-41
     source_category_code: no_mato_ou_ar_livre_rios_ribeiros_e_linha_de_agua
-    national_label_en: No mato ou ar livre & Rios, ribeiros e linha de água
+    national_label_en: "No mato ou ar livre & Rios, ribeiros e linha de \xE1gua"
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GNB-SAN-42
     source_category_code: pas_de_toilettes_ou_brousse_ou_champ
@@ -880,8 +1083,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: GNB-SAN-43
     source_category_code: autre
@@ -891,8 +1094,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: GNB-SAN-44
     source_category_code: autres
@@ -902,8 +1105,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: GNB-SAN-45
     source_category_code: latrina_sem_autoclismo
@@ -913,8 +1116,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: GNB-SAN-46
     source_category_code: outro
@@ -924,8 +1127,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: GNB-SAN-47
     source_category_code: outro
@@ -935,18 +1138,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_GNB_Guinea_Bissau_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GNB-WAS-01
     source_category_code: nascente_protegida
@@ -956,8 +1159,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: GNB-WAS-02
     source_category_code: nascente_fonte_protegido
@@ -967,8 +1170,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: GNB-WAS-03
     source_category_code: source_protegee
@@ -978,8 +1181,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: GNB-WAS-04
     source_category_code: poco_moderno
@@ -989,30 +1192,30 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GNB-WAS-05
     source_category_code: poco_protegido
-    national_label_en: Poço protegido
+    national_label_en: "Po\xE7o protegido"
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GNB-WAS-06
     source_category_code: poco_fonte_protegido
-    national_label_en: Poço/fonte protegido
+    national_label_en: "Po\xE7o/fonte protegido"
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GNB-WAS-07
     source_category_code: puits_protege
@@ -1022,19 +1225,19 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: GNB-WAS-08
     source_category_code: poco_a_bomba_forragem_furo
-    national_label_en: '"POÇO A BOMBA/FORRAGEM" + "furo"'
+    national_label_en: "\"PO\xC7O A BOMBA/FORRAGEM\" + \"furo\""
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GNB-WAS-09
     source_category_code: furo
@@ -1044,8 +1247,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GNB-WAS-10
     source_category_code: poco_com_bomba
@@ -1055,8 +1258,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GNB-WAS-11
     source_category_code: puits_a_pompe_forage
@@ -1066,8 +1269,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: GNB-WAS-12
     source_category_code: nascente_desprotegida
@@ -1077,19 +1280,19 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: GNB-WAS-13
     source_category_code: nascente_fonte_nao_protegido
-    national_label_en: NASCENTE FONTE NÃO PROTEGIDO
+    national_label_en: "NASCENTE FONTE N\xC3O PROTEGIDO"
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: GNB-WAS-14
     source_category_code: source_non_protegee
@@ -1099,19 +1302,19 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: GNB-WAS-15
     source_category_code: poco_nao_protegido
-    national_label_en: Poço não protegido
+    national_label_en: "Po\xE7o n\xE3o protegido"
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GNB-WAS-16
     source_category_code: poco_tradicional_de_balde
@@ -1121,8 +1324,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GNB-WAS-17
     source_category_code: poco_traditional
@@ -1132,19 +1335,19 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GNB-WAS-18
     source_category_code: poco_fonte_nao_protegido
-    national_label_en: Poço/fonte nao protegido
+    national_label_en: "Po\xE7o/fonte nao protegido"
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GNB-WAS-19
     source_category_code: puits_non_protege
@@ -1154,8 +1357,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: GNB-WAS-20
     source_category_code: agua_com_pequena_cisterna
@@ -1165,8 +1368,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: GNB-WAS-21
     source_category_code: quiosque_de_agua
@@ -1176,8 +1379,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: GNB-WAS-22
     source_category_code: camiao_cisterna
@@ -1187,8 +1390,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: GNB-WAS-23
     source_category_code: autre
@@ -1198,8 +1401,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-WAS-24
     source_category_code: outra_especificar
@@ -1209,8 +1412,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-WAS-25
     source_category_code: outras
@@ -1220,8 +1423,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-WAS-26
     source_category_code: outro
@@ -1231,8 +1434,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-WAS-27
     source_category_code: outros
@@ -1242,8 +1445,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: GNB-WAS-28
     source_category_code: agua_engarafada
@@ -1253,8 +1456,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GNB-WAS-29
     source_category_code: agua_engarrafada
@@ -1264,19 +1467,19 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GNB-WAS-30
     source_category_code: agua_mineral_de_garrafa
-    national_label_en: ÁGUA MINERAL (DE GARRAFA)
+    national_label_en: "\xC1GUA MINERAL (DE GARRAFA)"
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: GNB-WAS-31
     source_category_code: agua_empacotada
@@ -1286,8 +1489,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: GNB-WAS-32
     source_category_code: agua_engarrafada
@@ -1297,8 +1500,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: GNB-WAS-33
     source_category_code: eau_en_bouteille
@@ -1308,8 +1511,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: GNB-WAS-34
     source_category_code: agua_chuva
@@ -1319,8 +1522,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GNB-WAS-35
     source_category_code: agua_da_chuva
@@ -1330,8 +1533,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GNB-WAS-36
     source_category_code: cisterna
@@ -1341,8 +1544,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: GNB-WAS-37
     source_category_code: agua_de_superficie
@@ -1352,8 +1555,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-38
     source_category_code: agua_do_rio_lago
@@ -1363,19 +1566,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-39
     source_category_code: agua_superficial_rio_lagoa_canal_etc
-    national_label_en: ÁGUA SUPERFICIAL (RIO/LAGOA/CANAL ETC.)
+    national_label_en: "\xC1GUA SUPERFICIAL (RIO/LAGOA/CANAL ETC.)"
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-40
     source_category_code: eau_de_surface
@@ -1385,8 +1588,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-41
     source_category_code: lagoa_rio_ribeiro
@@ -1396,8 +1599,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-42
     source_category_code: rio_ribeiro_ou_lagoa
@@ -1407,8 +1610,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-43
     source_category_code: rio_ribeiro_lagoa
@@ -1418,8 +1621,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-44
     source_category_code: rio_ribeira_lago
@@ -1429,8 +1632,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: GNB-WAS-45
     source_category_code: agua_canalizada_fora_casa
@@ -1440,8 +1643,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GNB-WAS-46
     source_category_code: canalizada_ao_vizinho
@@ -1451,8 +1654,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GNB-WAS-47
     source_category_code: canalizada_exterior_100_metros
@@ -1462,8 +1665,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GNB-WAS-48
     source_category_code: na_casa_do_vizinho
@@ -1473,8 +1676,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GNB-WAS-49
     source_category_code: no_quintal_do_vizinho
@@ -1484,8 +1687,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: GNB-WAS-50
     source_category_code: rede_publica
@@ -1495,19 +1698,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: GNB-WAS-51
     source_category_code: torneira_no_interior_da_habitacao
-    national_label_en: Torneira no interior da habitação
+    national_label_en: "Torneira no interior da habita\xE7\xE3o"
     national_label_local: Piped on premises
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: GNB-WAS-52
     source_category_code: canalizada_interior_rede_publica_canalizada_interior_rede_privada
@@ -1518,8 +1721,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GNB-WAS-53
     source_category_code: agua_canalizada_casa
@@ -1529,8 +1732,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GNB-WAS-54
     source_category_code: canalizada_dentro_da_casa
@@ -1540,8 +1743,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GNB-WAS-55
     source_category_code: eau_de_robinet_dans_le_logement
@@ -1551,8 +1754,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GNB-WAS-56
     source_category_code: no_interior_da_casa
@@ -1562,8 +1765,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: GNB-WAS-57
     source_category_code: agua_canalizada_patio_quinta
@@ -1573,19 +1776,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GNB-WAS-58
     source_category_code: canalizada_fora_da_casa_patio_quiuntal
-    national_label_en: CANALIZADA FORA DA CASA (PÁTIO/QUIUNTAL)
+    national_label_en: "CANALIZADA FORA DA CASA (P\xC1TIO/QUIUNTAL)"
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GNB-WAS-59
     source_category_code: dans_la_cour_parcelle
@@ -1595,8 +1798,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GNB-WAS-60
     source_category_code: no_quintal
@@ -1606,8 +1809,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GNB-WAS-61
     source_category_code: no_quintal_jardim_parcela
@@ -1617,8 +1820,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: GNB-WAS-62
     source_category_code: fonte_ou_chafariz
@@ -1628,8 +1831,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GNB-WAS-63
     source_category_code: fontenario
@@ -1639,8 +1842,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GNB-WAS-64
     source_category_code: fontenario_publico
@@ -1650,8 +1853,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GNB-WAS-65
     source_category_code: fontenario_publico_boca_do_incendio
@@ -1661,8 +1864,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GNB-WAS-66
     source_category_code: robinet_public_borne_fontaine
@@ -1672,8 +1875,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GNB-WAS-67
     source_category_code: torneira_publica
@@ -1683,24 +1886,24 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: GNB-WAS-68
     source_category_code: torneira_publica_natural_fontanario
-    national_label_en: TORNEIRA PÚBLICA/NATURAL FONTANÁRIO
+    national_label_en: "TORNEIRA P\xDABLICA/NATURAL FONTAN\xC1RIO"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_GNB_Guinea_Bissau_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

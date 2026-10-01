@@ -6,9 +6,9 @@ status: draft
 country_name: BEN
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BEN-EDU-01
     national_label_en: Enseignement maternel
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BEN-EDU-02
     national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BEN-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: BEN-EDU-03
-    national_label_en: Enseignement secondaire général 1er cycle
-    national_label_local: Enseignement secondaire général 1er cycle
+    national_label_en: "Enseignement secondaire g\xE9n\xE9ral 1er cycle"
+    national_label_local: "Enseignement secondaire g\xE9n\xE9ral 1er cycle"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - BEN-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEN-EDU-04
     national_label_en: Enseignement technique et professionnel 1er cycle
     national_label_local: Enseignement technique et professionnel 1er cycle
@@ -54,9 +74,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - BEN-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEN-EDU-05
-    national_label_en: Enseignement secondaire général 2ème cycle
-    national_label_local: Enseignement secondaire général 2ème cycle
+    national_label_en: "Enseignement secondaire g\xE9n\xE9ral 2\xE8me cycle"
+    national_label_local: "Enseignement secondaire g\xE9n\xE9ral 2\xE8me cycle"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -65,11 +93,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - BEN-EDU-03
+    - BEN-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
   - country_entry_id: BEN-EDU-06
-    national_label_en: Formation professionnelle des enseignants de la maternelle
-      et du primaire (Après BEPC)
-    national_label_local: Formation professionnelle des enseignants de la maternelle
-      et du primaire (Après BEPC)
+    national_label_en: "Formation professionnelle des enseignants de la maternelle\
+      \ et du primaire (Apr\xE8s BEPC)"
+    national_label_local: "Formation professionnelle des enseignants de la maternelle\
+      \ et du primaire (Apr\xE8s BEPC)"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -78,9 +117,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - BEN-EDU-03
+    - BEN-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
   - country_entry_id: BEN-EDU-07
-    national_label_en: Enseignement technique et professionnel 2ème cycle  (3 ans)
-    national_label_local: Enseignement technique et professionnel 2ème cycle (3 ans)
+    national_label_en: "Enseignement technique et professionnel 2\xE8me cycle  (3\
+      \ ans)"
+    national_label_local: "Enseignement technique et professionnel 2\xE8me cycle (3\
+      \ ans)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -89,9 +141,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - BEN-EDU-03
+    - BEN-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
   - country_entry_id: BEN-EDU-08
-    national_label_en: Enseignement technique et professionnel 2ème cycle  (4 ans)
-    national_label_local: Enseignement technique et professionnel 2ème cycle (4 ans)
+    national_label_en: "Enseignement technique et professionnel 2\xE8me cycle  (4\
+      \ ans)"
+    national_label_local: "Enseignement technique et professionnel 2\xE8me cycle (4\
+      \ ans)"
     entry_age: 16
     duration_years: 4
     isced_level: '3'
@@ -100,11 +165,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - BEN-EDU-03
+    - BEN-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
   - country_entry_id: BEN-EDU-09
-    national_label_en: Formation professionnelle des enseignants de la maternelle
-      et du primaire (Après BAC)
-    national_label_local: Formation professionnelle des enseignants de la maternelle
-      et du primaire (Après BAC)
+    national_label_en: "Formation professionnelle des enseignants de la maternelle\
+      \ et du primaire (Apr\xE8s BAC)"
+    national_label_local: "Formation professionnelle des enseignants de la maternelle\
+      \ et du primaire (Apr\xE8s BAC)"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -113,9 +189,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-10
-    national_label_en: Enseignement supérieur (DTS)
-    national_label_local: Enseignement supérieur (DTS)
+    national_label_en: "Enseignement sup\xE9rieur (DTS)"
+    national_label_local: "Enseignement sup\xE9rieur (DTS)"
     entry_age: 19
     duration_years: 1
     isced_level: '5'
@@ -124,9 +215,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-11
-    national_label_en: Enseignement supérieur (BTS)
-    national_label_local: Enseignement supérieur (BTS)
+    national_label_en: "Enseignement sup\xE9rieur (BTS)"
+    national_label_local: "Enseignement sup\xE9rieur (BTS)"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -135,9 +241,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-12
-    national_label_en: Formation professionnelle des conseillers pédagogiques
-    national_label_local: Formation professionnelle des conseillers pédagogiques
+    national_label_en: "Formation professionnelle des conseillers p\xE9dagogiques"
+    national_label_local: "Formation professionnelle des conseillers p\xE9dagogiques"
     entry_age: 25
     duration_years: 2
     isced_level: '5'
@@ -146,6 +267,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-13
     national_label_en: Formation professionnelle des inspecteurs
     national_label_local: Formation professionnelle des inspecteurs
@@ -157,9 +293,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-14
-    national_label_en: Enseignement supérieur (DEUG/DEUL)
-    national_label_local: Enseignement supérieur (DEUG/DEUL)
+    national_label_en: "Enseignement sup\xE9rieur (DEUG/DEUL)"
+    national_label_local: "Enseignement sup\xE9rieur (DEUG/DEUL)"
     entry_age: 19
     duration_years: 2
     isced_level: '6'
@@ -168,9 +319,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-15
-    national_label_en: Enseignement supérieur (Licence)
-    national_label_local: Enseignement supérieur (Licence)
+    national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: "Enseignement sup\xE9rieur (Licence)"
     entry_age: 19
     duration_years: 1
     isced_level: '6'
@@ -179,9 +345,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-16
-    national_label_en: Enseignement supérieur (DEAT)
-    national_label_local: Enseignement supérieur (DEAT)
+    national_label_en: "Enseignement sup\xE9rieur (DEAT)"
+    national_label_local: "Enseignement sup\xE9rieur (DEAT)"
     entry_age: 20
     duration_years: 4
     isced_level: '6'
@@ -190,9 +371,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-17
-    national_label_en: Enseignement supérieur (BAPET et BAPES)
-    national_label_local: Enseignement supérieur (BAPET et BAPES)
+    national_label_en: "Enseignement sup\xE9rieur (BAPET et BAPES)"
+    national_label_local: "Enseignement sup\xE9rieur (BAPET et BAPES)"
     entry_age: 19
     duration_years: 1
     isced_level: '6'
@@ -201,9 +397,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-18
-    national_label_en: Enseignement supérieur (Maîtrise)
-    national_label_local: Enseignement supérieur (Maîtrise)
+    national_label_en: "Enseignement sup\xE9rieur (Ma\xEEtrise)"
+    national_label_local: "Enseignement sup\xE9rieur (Ma\xEEtrise)"
     entry_age: 22
     duration_years: 1
     isced_level: '6'
@@ -212,9 +423,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-19
-    national_label_en: Enseignement supérieur (Ingéniorat)
-    national_label_local: Enseignement supérieur (Ingéniorat)
+    national_label_en: "Enseignement sup\xE9rieur (Ing\xE9niorat)"
+    national_label_local: "Enseignement sup\xE9rieur (Ing\xE9niorat)"
     entry_age: 19
     duration_years: 5
     isced_level: '7'
@@ -223,9 +449,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-20
-    national_label_en: Enseignement supérieur (CAPET et CAPES)
-    national_label_local: Enseignement supérieur (CAPET et CAPES)
+    national_label_en: "Enseignement sup\xE9rieur (CAPET et CAPES)"
+    national_label_local: "Enseignement sup\xE9rieur (CAPET et CAPES)"
     entry_age: 19
     duration_years: 2
     isced_level: '7'
@@ -234,9 +475,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-21
-    national_label_en: Enseignement supérieur (DESS)
-    national_label_local: Enseignement supérieur (DESS)
+    national_label_en: "Enseignement sup\xE9rieur (DESS)"
+    national_label_local: "Enseignement sup\xE9rieur (DESS)"
     entry_age: 23
     duration_years: 1
     isced_level: '7'
@@ -245,9 +501,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - BEN-EDU-05
+    - BEN-EDU-06
+    - BEN-EDU-07
+    - BEN-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
   - country_entry_id: BEN-EDU-22
-    national_label_en: Enseignement supérieur (DEA)
-    national_label_local: Enseignement supérieur (DEA)
+    national_label_en: "Enseignement sup\xE9rieur (DEA)"
+    national_label_local: "Enseignement sup\xE9rieur (DEA)"
     entry_age: 23
     duration_years: 1
     isced_level: '8'
@@ -256,9 +527,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - BEN-EDU-19
+    - BEN-EDU-20
+    - BEN-EDU-21
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-21
+    - BEN-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
+    - 'minimum parent path selected from: BEN-EDU-19, BEN-EDU-20, BEN-EDU-21'
   - country_entry_id: BEN-EDU-23
-    national_label_en: Enseignement supérieur (Doctorat)
-    national_label_local: Enseignement supérieur (Doctorat)
+    national_label_en: "Enseignement sup\xE9rieur (Doctorat)"
+    national_label_local: "Enseignement sup\xE9rieur (Doctorat)"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -267,15 +554,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - BEN-EDU-19
+    - BEN-EDU-20
+    - BEN-EDU-21
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BEN-EDU-02
+    - BEN-EDU-04
+    - BEN-EDU-06
+    - BEN-EDU-21
+    - BEN-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEN-EDU-03, BEN-EDU-04'
+    - 'minimum parent path selected from: BEN-EDU-05, BEN-EDU-06, BEN-EDU-07, BEN-EDU-08'
+    - 'minimum parent path selected from: BEN-EDU-19, BEN-EDU-20, BEN-EDU-21'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Benin.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BEN-SUBNAT-01
     survey_labels: 1 - ALIBORI | 1 - Alibori | 1 - alibori
@@ -284,10 +587,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_609
     geo_year: '2015'
@@ -299,16 +602,16 @@ parameters:
     geo_name: Alibori
     source_row: 662
   - country_entry_id: BEN-SUBNAT-02
-    survey_labels: 10 - OUEME | 10 - Oueme | 10 - Ouémé | 10 - oueme
+    survey_labels: "10 - OUEME | 10 - Oueme | 10 - Ou\xE9m\xE9 | 10 - oueme"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BEN_2015_GAUL1_618
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_618
     geo_year: '2015'
@@ -326,10 +629,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_619
     geo_year: '2015'
@@ -347,10 +650,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_620
     geo_year: '2015'
@@ -368,10 +671,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_610
     geo_year: '2015'
@@ -389,10 +692,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_611
     geo_year: '2015'
@@ -410,10 +713,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_612
     geo_year: '2015'
@@ -431,10 +734,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_613
     geo_year: '2015'
@@ -452,10 +755,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_614
     geo_year: '2015'
@@ -473,10 +776,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_615
     geo_year: '2015'
@@ -494,10 +797,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_616
     geo_year: '2015'
@@ -515,10 +818,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEN_2015_GAUL1_617
     geo_year: '2015'
@@ -531,13 +834,13 @@ parameters:
     source_row: 673
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BEN-SAN-01
     source_category_code: composting_toilet
@@ -547,8 +850,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BEN-SAN-02
     source_category_code: toilette_a_compostage
@@ -558,351 +861,354 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BEN-SAN-03
     source_category_code: toilettes_a_compostage
-    national_label_en: Toilettes à compostage
+    national_label_en: "Toilettes \xE0 compostage"
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BEN-SAN-04
     source_category_code: chasse_d_eau_branchee_quelque_part_d_autre
-    national_label_en: Chasse d'eau branchée quelque part d'autre
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d'eau branch\xE9e quelque part d'autre"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BEN-SAN-05
     source_category_code: chasse_d_eau_connectee_a_quelque_chose_d_autre
-    national_label_en: Chasse d'eau connectée à quelque chose d'autre
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d'eau connect\xE9e \xE0 quelque chose d'autre"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BEN-SAN-06
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_non_reliee_a_des_egouts_fosse_septiques_fosses_d_aisances
-    national_label_en: Chasse d’eau/chasse d’eau manuelle non reliée à des égouts/fosse
-      septiques/fosses d’aisances
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d\u2019eau/chasse d\u2019eau manuelle non reli\xE9\
+      e \xE0 des \xE9gouts/fosse septiques/fosses d\u2019aisances"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BEN-SAN-07
     source_category_code: flush_toilet_not_connected_to_sewer_system
     national_label_en: flush toilet not connected to sewer system
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BEN-SAN-08
     source_category_code: chasse_d_eau_connectee_a_un_systeme_d_egout
-    national_label_en: Chasse d'eau connectée à un système d'égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau connect\xE9e \xE0 un syst\xE8me d'\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BEN-SAN-09
     source_category_code: chasse_d_eau_manuelle_branchee_a_egout
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Egout'
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Egout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BEN-SAN-10
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_connectee_a_un_systeme_d_egout
-    national_label_en: Chasse d’eau/chasse d’eau manuelle connectée à un système d’égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d\u2019eau/chasse d\u2019eau manuelle connect\xE9e\
+      \ \xE0 un syst\xE8me d\u2019\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BEN-SAN-11
     source_category_code: flush_toilet_connected_to_sewer_system
     national_label_en: flush toilet connected to sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BEN-SAN-12
     source_category_code: toilette_a_chasse_reseau_d_egout
-    national_label_en: Toilette à chasse / Réseau d'égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Toilette \xE0 chasse / R\xE9seau d'\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BEN-SAN-13
     source_category_code: chasse_d_eau_connectee_a_des_latrines
-    national_label_en: Chasse d'eau connectée à des latrines
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau connect\xE9e \xE0 des latrines"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BEN-SAN-14
     source_category_code: chasse_d_eau_manuelle_branchee_a_latrine_a_fosse
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Latrine à fosse'
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Latrine \xE0 fosse"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BEN-SAN-15
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_reliee_a_une_fosse_d_aisances
-    national_label_en: Chasse d’eau/chasse d’eau manuelle reliée à une fosse d’aisances
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d\u2019eau/chasse d\u2019eau manuelle reli\xE9e \xE0\
+      \ une fosse d\u2019aisances"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BEN-SAN-16
     source_category_code: chasse_d_eau_connectee_a_une_fosse_septique
-    national_label_en: Chasse d'eau connectée à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau connect\xE9e \xE0 une fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BEN-SAN-17
     source_category_code: chasse_d_eau_manuelle_branchee_a_fosse_septique
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Fosse septique'
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BEN-SAN-18
     source_category_code: chasse_d_eau_chasse_d_eau_manuelle_reliee_a_une_fosse_septique
-    national_label_en: Chasse d’eau/chasse d’eau manuelle reliée à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d\u2019eau/chasse d\u2019eau manuelle reli\xE9e \xE0\
+      \ une fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BEN-SAN-19
     source_category_code: chasse_d_eau_connectee_a_ne_sait_pas_ou
-    national_label_en: Chasse d'eau connectée à ne sait pas où
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d'eau connect\xE9e \xE0 ne sait pas o\xF9"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BEN-SAN-20
     source_category_code: chasse_d_eau_manuelle_branchee_a_endroit_inconnu_pas_sur_nsp_ou
-    national_label_en: 'Chasse d''eau/manuelle branchée à : Endroit inconnu/pas sûr/NSP
-      où'
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d'eau/manuelle branch\xE9e \xE0 : Endroit inconnu/pas\
+      \ s\xFBr/NSP o\xF9"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BEN-SAN-21
     source_category_code: toilette_a_chasse
-    national_label_en: Toilette à chasse
-    national_label_local: Toilette à chasse d'eau
+    national_label_en: "Toilette \xE0 chasse"
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-SAN-22
     source_category_code: toilette_chasse_d_eau
     national_label_en: Toilette, chasse d'eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-SAN-23
     source_category_code: chasse_d_eau_reliee_a_l_air_libre
     national_label_en: 'CHASSE D''EAU: RELIEE A L''AIR LIBRE'
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BEN-SAN-24
     source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BEN-SAN-25
     source_category_code: chasse_d_eau_reliee_a_un_systeme_d_egout
     national_label_en: 'CHASSE D''EAU: RELIEE A UN SYSTEME D''EGOUT'
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BEN-SAN-26
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BEN-SAN-27
     source_category_code: toilette_a_chasse_reseau_d_egout
     national_label_en: Toilette a chasse/reseau d'egout
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BEN-SAN-28
     source_category_code: chasse_d_eau_reliee_aux_latrines
     national_label_en: 'CHASSE D''EAU: RELIEE AUX LATRINES'
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BEN-SAN-29
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BEN-SAN-30
     source_category_code: chasse_d_eau_reliee_a_fosse_septique
     national_label_en: 'CHASSE D''EAU: RELIEE A FOSSE SEPTIQUE'
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BEN-SAN-31
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BEN-SAN-32
     source_category_code: chasse_d_eau_reliee_a_lieu_inconnu
     national_label_en: 'CHASSE D''EAU: RELIEE A LIEU INCONNU'
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-SAN-33
     source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-SAN-34
     source_category_code: bucket_toilet
@@ -912,19 +1218,19 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BEN-SAN-35
     source_category_code: latrine_a_tinette
-    national_label_en: Latrine à tinette
+    national_label_en: "Latrine \xE0 tinette"
     national_label_local: Seau
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BEN-SAN-36
     source_category_code: seau
@@ -934,8 +1240,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BEN-SAN-37
     source_category_code: seau_tinette
@@ -945,8 +1251,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BEN-SAN-38
     source_category_code: hanging_toilet_latrine
@@ -957,8 +1263,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BEN-SAN-39
     source_category_code: latrine_suspendue_sur_pilotis
@@ -969,8 +1275,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BEN-SAN-40
     source_category_code: latrine_suspendue_sur_pilotis
@@ -981,8 +1287,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BEN-SAN-41
     source_category_code: toilettes_suspendues
@@ -993,8 +1299,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BEN-SAN-42
     source_category_code: toilettes_suspendues_latrines_suspendues
@@ -1005,8 +1311,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BEN-SAN-43
     source_category_code: toilettes_latrines_suspendues
@@ -1017,8 +1323,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BEN-SAN-44
     source_category_code: fosse_etanche
@@ -1028,20 +1334,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: BEN-SAN-45
     source_category_code: fosse_d_aisances_avec_dalle
-    national_label_en: Fosse d’aisances avec dalle
+    national_label_en: "Fosse d\u2019aisances avec dalle"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-46
     source_category_code: fosses_latrines_avec_dalle
@@ -1052,20 +1358,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-47
     source_category_code: latrine_a_fosse_avec_dalle
-    national_label_en: Latrine à fosse avec dalle
+    national_label_en: "Latrine \xE0 fosse avec dalle"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-48
     source_category_code: latrine_a_fosse_latrine_a_fosse_avec_dalle
@@ -1076,8 +1382,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-49
     source_category_code: latrine_couverte
@@ -1088,8 +1394,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-50
     source_category_code: latrines_couvertes
@@ -1100,8 +1406,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-51
     source_category_code: pit_latrine_with_slab
@@ -1112,20 +1418,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-SAN-52
     source_category_code: fosse_d_aisances_sans_dalle_trou_ouvert
-    national_label_en: Fosse d’aisances sans dalle/trou ouvert
+    national_label_en: "Fosse d\u2019aisances sans dalle/trou ouvert"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-53
     source_category_code: fosses_latrines_sans_dalle_trou_ouvert
@@ -1136,20 +1442,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-54
     source_category_code: latrine_a_fosse_sans_dalle
-    national_label_en: Latrine à fosse sans dalle
+    national_label_en: "Latrine \xE0 fosse sans dalle"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-55
     source_category_code: latrine_a_fosse_sans_dalle_fosse_ouverte
@@ -1160,8 +1466,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-56
     source_category_code: latrine_non_couverte
@@ -1172,8 +1478,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-57
     source_category_code: latrines_non_couvertes
@@ -1184,8 +1490,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-58
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1196,32 +1502,32 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BEN-SAN-59
     source_category_code: latrine_a_fosse_non_ventilee
-    national_label_en: Latrine à fosse non ventilée
+    national_label_en: "Latrine \xE0 fosse non ventil\xE9e"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BEN-SAN-60
     source_category_code: non_ventilee
-    national_label_en: Non ventilée
+    national_label_en: "Non ventil\xE9e"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BEN-SAN-61
     source_category_code: non_ventilated_pit_latrine
@@ -1232,115 +1538,115 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BEN-SAN-62
     source_category_code: fosse_d_aisances_ameliorees_ventilee
-    national_label_en: Fosse d’aisances améliorées ventilée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d\u2019aisances am\xE9lior\xE9es ventil\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-63
     source_category_code: fosses_latrines_ventilees_ameliorees
-    national_label_en: Fosses-latrines ventilées améliorées
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosses-latrines ventil\xE9es am\xE9lior\xE9es"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-64
     source_category_code: latrine_a_fosse_ventilee
-    national_label_en: Latrine à fosse ventilée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrine \xE0 fosse ventil\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-65
     source_category_code: latrine_a_fosse_amelioree_ventilee
     national_label_en: 'LATRINE A FOSSE: AMELIOREE VENTILEE'
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-66
     source_category_code: latrine_amelioree_ventilee
-    national_label_en: Latrine améliorée ventilée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrine am\xE9lior\xE9e ventil\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-67
     source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-68
     source_category_code: ventilated_pit_latrine
     national_label_en: ventilated pit latrine
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-69
     source_category_code: ventilee
-    national_label_en: Ventilée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Ventil\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BEN-SAN-70
     source_category_code: latrine_publique
     national_label_en: Latrine publique
-    national_label_local: Latrines publiques/partagées
+    national_label_local: "Latrines publiques/partag\xE9es"
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines
     jmp_id: latrines.dry_latrines.public_shared_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 120
   - country_entry_id: BEN-SAN-71
     source_category_code: aucun_dans_la_nature
@@ -1350,8 +1656,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-72
     source_category_code: brousse_nature
@@ -1361,8 +1667,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-73
     source_category_code: brousse_nature
@@ -1372,19 +1678,20 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-74
     source_category_code: defecation_a_l_air_libre_pas_de_toilettes_brousse_champs
-    national_label_en: Défécation à l'air libre (pas de toilettes, brousse, champs.)
+    national_label_en: "D\xE9f\xE9cation \xE0 l'air libre (pas de toilettes, brousse,\
+      \ champs.)"
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-75
     source_category_code: nature
@@ -1394,8 +1701,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-76
     source_category_code: no_facility_bush_field
@@ -1405,8 +1712,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-77
     source_category_code: no_toilet_in_nature
@@ -1416,8 +1723,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-78
     source_category_code: non_pas_disponible
@@ -1427,8 +1734,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-79
     source_category_code: pas_de_toilette_nature
@@ -1438,8 +1745,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-80
     source_category_code: pas_de_toilettes
@@ -1449,8 +1756,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-81
     source_category_code: pas_de_toilettes_nature_champs
@@ -1460,8 +1767,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-82
     source_category_code: pas_de_toilettes_nature
@@ -1471,8 +1778,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BEN-SAN-83
     source_category_code: latrine_publique
@@ -1482,8 +1789,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: BEN-SAN-84
     source_category_code: autre
@@ -1493,8 +1800,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BEN-SAN-85
     source_category_code: other
@@ -1504,8 +1811,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BEN-SAN-86
     source_category_code: other_type_of_sanitation
@@ -1515,40 +1822,40 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BEN-SAN-87
     source_category_code: oui_a_l_interieur_de_la_maison
-    national_label_en: Oui, à l’intérieur de la maison
+    national_label_en: "Oui, \xE0 l\u2019int\xE9rieur de la maison"
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BEN-SAN-88
     source_category_code: oui_a_l_interieur_de_la_concession
-    national_label_en: Oui, à l’intérieur de la concession
+    national_label_en: "Oui, \xE0 l\u2019int\xE9rieur de la concession"
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BEN_Benin_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BEN-WAS-01
     source_category_code: source
@@ -1558,118 +1865,118 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: BEN-WAS-02
     source_category_code: eau_de_source_protegee
-    national_label_en: Eau de source protégée
-    national_label_local: Source protégées
+    national_label_en: "Eau de source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BEN-WAS-03
     source_category_code: protected_spring
     national_label_en: protected spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BEN-WAS-04
     source_category_code: source_protegee
-    national_label_en: Source protégée
-    national_label_local: Source protégées
+    national_label_en: "Source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BEN-WAS-05
     source_category_code: source_source_protegee
     national_label_en: 'SOURCE: SOURCE PROTEGEE'
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BEN-WAS-06
     source_category_code: protected_well
     national_label_en: protected well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-WAS-07
     source_category_code: puit_protege
-    national_label_en: Puit protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puit prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-WAS-08
     source_category_code: puits_buse_ou_protege
-    national_label_en: Puits busé ou protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits bus\xE9 ou prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-WAS-09
     source_category_code: puits_creuse_protege
-    national_label_en: Puits creusé protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits creus\xE9 prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-WAS-10
     source_category_code: puits_creuse_protege
     national_label_en: 'PUITS CREUSE: PROTEGE'
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-WAS-11
     source_category_code: puits_protege
-    national_label_en: Puits protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BEN-WAS-12
     source_category_code: forage
@@ -1679,19 +1986,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-13
     source_category_code: forage_equipe_de_pompe_manuelle
-    national_label_en: Forage équipé de pompe manuelle
+    national_label_en: "Forage \xE9quip\xE9 de pompe manuelle"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-14
     source_category_code: forage_pompe
@@ -1701,8 +2008,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-15
     source_category_code: forage_pump
@@ -1712,30 +2019,30 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-16
     source_category_code: puits_a_pompe_ou_forage
-    national_label_en: Puits à pompe ou forage
+    national_label_en: "Puits \xE0 pompe ou forage"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-17
     source_category_code: puits_a_pompe_forage
-    national_label_en: Puits à pompe/forage
+    national_label_en: "Puits \xE0 pompe/forage"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-18
     source_category_code: puits_tubulaire_ou_forage
@@ -1745,8 +2052,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-19
     source_category_code: tube_well_or_borehole
@@ -1756,173 +2063,174 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BEN-WAS-20
     source_category_code: eau_de_source_non_protegee
-    national_label_en: Eau de source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Eau de source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BEN-WAS-21
     source_category_code: source_non_protegee
-    national_label_en: Source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BEN-WAS-22
     source_category_code: source_source_non_protegee
     national_label_en: 'SOURCE: SOURCE NON PROTEGEE'
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BEN-WAS-23
     source_category_code: unprotected_spring
     national_label_en: Unprotected spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BEN-WAS-24
     source_category_code: puit_non_protege
-    national_label_en: Puit non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puit non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-25
     source_category_code: puits_creuse_non_protege
-    national_label_en: Puits creusé non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits creus\xE9 non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-26
     source_category_code: puits_creuse_pas_protege
     national_label_en: 'PUITS CREUSE: PAS PROTEGE'
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-27
     source_category_code: puits_non_protege
-    national_label_en: Puits non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-28
     source_category_code: puits_non_protege
-    national_label_en: Puits non-protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non-prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-29
     source_category_code: puits_traditionnel_non_protege
-    national_label_en: Puits traditionnel (non protégé)
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits traditionnel (non prot\xE9g\xE9)"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-30
     source_category_code: unprotected_well
     national_label_en: unprotected well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BEN-WAS-31
     source_category_code: achetee_d_un_chariot_avec_un_petit_reservoir_ou_tambour
-    national_label_en: Achetée d’un chariot avec un petit réservoir ou tambour
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_en: "Achet\xE9e d\u2019un chariot avec un petit r\xE9servoir ou\
+      \ tambour"
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BEN-WAS-32
     source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BEN-WAS-33
     source_category_code: charette_avec_bidons
     national_label_en: Charette avec bidons
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BEN-WAS-34
     source_category_code: charrette_avec_petite_citerne_tonneau
     national_label_en: Charrette avec petite citerne/tonneau
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BEN-WAS-35
     source_category_code: autre_eau_de_pluie
@@ -1932,8 +2240,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BEN-WAS-36
     source_category_code: other_rainwater
@@ -1943,19 +2251,19 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BEN-WAS-37
     source_category_code: achetee_d_une_citerne
-    national_label_en: Achetée d’une citerne
+    national_label_en: "Achet\xE9e d\u2019une citerne"
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BEN-WAS-38
     source_category_code: camion_citerne
@@ -1965,8 +2273,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BEN-WAS-39
     source_category_code: camion_d_eau
@@ -1976,8 +2284,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BEN-WAS-40
     source_category_code: camion_citerne
@@ -1987,8 +2295,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BEN-WAS-41
     source_category_code: tanker_truck
@@ -1998,8 +2306,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BEN-WAS-42
     source_category_code: autre
@@ -2009,8 +2317,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-WAS-43
     source_category_code: other
@@ -2020,8 +2328,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BEN-WAS-44
     source_category_code: a_refuse
@@ -2031,19 +2339,19 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BEN-WAS-45
     source_category_code: eau_minerale_bouteille_sachet
-    national_label_en: Eau minérale (bouteille/sachet)
-    national_label_local: Eau conditionnée
+    national_label_en: "Eau min\xE9rale (bouteille/sachet)"
+    national_label_local: "Eau conditionn\xE9e"
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: BEN-WAS-46
     source_category_code: bottled_water
@@ -2053,8 +2361,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BEN-WAS-47
     source_category_code: eau_conditionnee_eau_en_bouteille
@@ -2064,8 +2372,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BEN-WAS-48
     source_category_code: eau_en_bouteille
@@ -2075,8 +2383,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BEN-WAS-49
     source_category_code: eau_minerale_bouteille_sachet
@@ -2086,8 +2394,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BEN-WAS-50
     source_category_code: bottled_water
@@ -2097,8 +2405,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BEN-WAS-51
     source_category_code: eau_conditionnee_eau_en_sachet
@@ -2108,8 +2416,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BEN-WAS-52
     source_category_code: eau_en_sachet
@@ -2119,96 +2427,96 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BEN-WAS-53
     source_category_code: collecte_d_eau_de_pluie
     national_label_en: Collecte d'eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-54
     source_category_code: collecte_d_eau_de_pluie
-    national_label_en: Collecte d’eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_en: "Collecte d\u2019eau de pluie"
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-55
     source_category_code: cterne
     national_label_en: Cterne
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-56
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-57
     source_category_code: eau_de_pluie_citerne
     national_label_en: Eau de pluie citerne
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-58
     source_category_code: eau_de_pluie_dans_la_citerne
     national_label_en: Eau de pluie dans la citerne
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-59
     source_category_code: rainwater
     national_label_en: Rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-60
     source_category_code: rainwater_collected_in_tank
     national_label_en: rainwater collected in tank
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BEN-WAS-61
     source_category_code: eau_de_surface
@@ -2218,8 +2526,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-62
     source_category_code: eau_de_surface_marigot_riviere_lac_pluies
@@ -2229,44 +2537,44 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-63
     source_category_code: eau_de_surface_riviere_barrage_lac_mare_courant_d_eau_canal_systeme_da_tmirrigation
-    national_label_en: EAU DE SURFACE (RIVIERE, BARRAGE, LAC, MARE, COURANT D'EAU,
-      CANAL, SYSTEME Dâ€™IRRIGATION)
+    national_label_en: "EAU DE SURFACE (RIVIERE, BARRAGE, LAC, MARE, COURANT D'EAU,\
+      \ CANAL, SYSTEME D\xE2\u20AC\u2122IRRIGATION)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-64
     source_category_code: eau_de_surface_riviere_barrages_lacs_mares_fleuves_canaux_d_irrigation
-    national_label_en: Eau de surface (rivière/barrages/lacs/mares/fleuves/canaux
-      d'irrigation)
+    national_label_en: "Eau de surface (rivi\xE8re/barrages/lacs/mares/fleuves/canaux\
+      \ d'irrigation)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-65
     source_category_code: eau_de_surface_telle_que_riviere_barrage_lac_etang_ruisseau_canal_ou_canaux_d_irrigation
-    national_label_en: Eau de surface, telle que rivière, barrage, lac, étang, ruisseau,
-      canal ou canaux d’irrigation
+    national_label_en: "Eau de surface, telle que rivi\xE8re, barrage, lac, \xE9tang,\
+      \ ruisseau, canal ou canaux d\u2019irrigation"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-66
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -2276,8 +2584,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-67
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -2287,19 +2595,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-68
     source_category_code: riviere_marigot_marre
-    national_label_en: Rivière, marigot, marre
+    national_label_en: "Rivi\xE8re, marigot, marre"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-69
     source_category_code: riviere_mare_marigot
@@ -2309,30 +2617,30 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-70
     source_category_code: riviere_marigot_mare
-    national_label_en: Rivière/marigot/mare
+    national_label_en: "Rivi\xE8re/marigot/mare"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BEN-WAS-71
     source_category_code: riviere
-    national_label_en: Rivière
+    national_label_en: "Rivi\xE8re"
     national_label_local: Fleuve
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BEN-WAS-72
     source_category_code: eau_courante_ailleurs
@@ -2342,8 +2650,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BEN-WAS-73
     source_category_code: eau_courante_sbee_ailleurs
@@ -2353,8 +2661,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BEN-WAS-74
     source_category_code: piped_to_yard_plot
@@ -2364,8 +2672,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BEN-WAS-75
     source_category_code: robinet_chez_le_voisin
@@ -2375,8 +2683,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BEN-WAS-76
     source_category_code: robinet_chez_les_voisins
@@ -2386,8 +2694,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BEN-WAS-77
     source_category_code: robinet_chez_le_voisin
@@ -2397,30 +2705,30 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BEN-WAS-78
     source_category_code: eau_courante_sbee_a_la_maison
-    national_label_en: Eau courante SBEE à la maison
+    national_label_en: "Eau courante SBEE \xE0 la maison"
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BEN-WAS-79
     source_category_code: eau_courante_a_la_maison
-    national_label_en: Eau courante à la maison
+    national_label_en: "Eau courante \xE0 la maison"
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-80
     source_category_code: eau_courante_dans_le_logement
@@ -2430,8 +2738,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-81
     source_category_code: piped_into_dwelling
@@ -2441,8 +2749,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-82
     source_category_code: robinet_dans_la_maison
@@ -2452,8 +2760,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-83
     source_category_code: robinet_dans_le_logement
@@ -2463,8 +2771,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-84
     source_category_code: robinet_dans_logement
@@ -2474,8 +2782,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-85
     source_category_code: robinet_dans_le_logement
@@ -2485,8 +2793,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BEN-WAS-86
     source_category_code: piped_to_yard_plot
@@ -2496,8 +2804,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BEN-WAS-87
     source_category_code: robinet_dans_cour_parcelle
@@ -2507,8 +2815,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BEN-WAS-88
     source_category_code: robinet_dans_la_cour_dans_la_parcelle_ou_dans_la_concession
@@ -2518,8 +2826,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BEN-WAS-89
     source_category_code: robinet_dans_la_cour_jardin
@@ -2529,8 +2837,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BEN-WAS-90
     source_category_code: robinet_dans_le_cour_parcelle
@@ -2540,8 +2848,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BEN-WAS-91
     source_category_code: robinet_dans_la_concession_jardin_parcelle
@@ -2551,8 +2859,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BEN-WAS-92
     source_category_code: borne_fontaine_robinet_public
@@ -2562,8 +2870,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-93
     source_category_code: borne_fontaine_robinet_public_voisin
@@ -2573,8 +2881,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-94
     source_category_code: public_tap_standpipe
@@ -2584,8 +2892,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-95
     source_category_code: robinet_ou_fontaine_publique
@@ -2595,8 +2903,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-96
     source_category_code: robinet_public
@@ -2606,8 +2914,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-97
     source_category_code: robinet_public_borne_fontaine
@@ -2617,8 +2925,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-98
     source_category_code: robinet_public_fontaine
@@ -2628,8 +2936,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BEN-WAS-99
     source_category_code: robinet_robinet_public_borne_fontaine
@@ -2639,13 +2947,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BEN_Benin_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

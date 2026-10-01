@@ -6,9 +6,9 @@ status: draft
 country_name: KIR
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KIR-EDU-01
     national_label_en: Preschool
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: KIR-EDU-02
     national_label_en: Primary
     national_label_local: Primary Education (years 1-6)
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - KIR-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: KIR-EDU-03
     national_label_en: Junior Secondary (Year 7 to 9)
     national_label_local: Junior Secondary (Year 7 to 9)
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - KIR-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-04
     national_label_en: Senior Secondary (Year 10 and 11)
     national_label_local: Senior Secondary (Year 10 and 11)
@@ -54,6 +74,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - KIR-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-05
     national_label_en: Senior Secondary Year 12
     national_label_local: Senior Secondary Year 12
@@ -65,6 +94,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - KIR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-06
     national_label_en: Senior Secondary Year 13 (SPBEA)
     national_label_local: Senior Secondary Year 13 (SPBEA)
@@ -76,6 +114,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - KIR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-07
     national_label_en: Senior Secondary Year 13 Foundation (USP)
     national_label_local: Senior Secondary Year 13 Foundation (USP)
@@ -87,6 +134,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - KIR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-08
     national_label_en: Technical, Colleges and Vocational (TVET)
     national_label_local: Technical, Colleges and Vocational (TVET)
@@ -98,6 +154,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - KIR-EDU-03
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-09
     national_label_en: Pastoral/Theological Institutes
     national_label_local: Pastoral/Theological Institutes
@@ -109,6 +174,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - KIR-EDU-03
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: KIR-EDU-10
     national_label_en: University of South Pacific Bachelor degree
     national_label_local: University of South Pacific Bachelor degree
@@ -120,15 +194,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - KIR-EDU-04
+    - KIR-EDU-05
+    - KIR-EDU-06
+    - KIR-EDU-07
+    - KIR-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - KIR-EDU-02
+    - KIR-EDU-03
+    - KIR-EDU-05
+    - KIR-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KIR-EDU-04, KIR-EDU-05, KIR-EDU-06, KIR-EDU-07,
+      KIR-EDU-09'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Kiribati.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2024
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KIR-SUBNAT-01
     survey_labels: 1-South Tarawa
@@ -137,10 +227,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2024'
@@ -158,10 +248,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2024'
@@ -179,10 +269,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2024'
@@ -200,10 +290,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2024'
@@ -221,10 +311,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2024'
@@ -237,13 +327,13 @@ parameters:
     source_row: 8901
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KIR-SAN-01
     source_category_code: composting_toilet
@@ -253,8 +343,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: KIR-SAN-02
     source_category_code: to_open_drain
@@ -264,8 +354,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: KIR-SAN-03
     source_category_code: to_piped_sewer_system
@@ -275,8 +365,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KIR-SAN-04
     source_category_code: to_pit
@@ -286,8 +376,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KIR-SAN-05
     source_category_code: to_septic_tank
@@ -297,8 +387,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: KIR-SAN-06
     source_category_code: to_do_not_know_where
@@ -308,8 +398,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KIR-SAN-07
     source_category_code: own_flush_septic_tank
@@ -319,8 +409,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: KIR-SAN-08
     source_category_code: shared_flush_toilet
@@ -330,8 +420,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: KIR-SAN-09
     source_category_code: public_sewege_system
@@ -341,8 +431,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KIR-SAN-10
     source_category_code: closet_over_sea_or_water_long_drop
@@ -353,8 +443,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KIR-SAN-11
     source_category_code: hanging_toilet_hanging_latrine
@@ -365,8 +455,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KIR-SAN-12
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -377,8 +467,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KIR-SAN-13
     source_category_code: pit_latrine_without_slab_open_pit
@@ -389,8 +479,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KIR-SAN-14
     source_category_code: household_pit
@@ -401,8 +491,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KIR-SAN-15
     source_category_code: ventilated_improved_pit_latrine
@@ -413,8 +503,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KIR-SAN-16
     source_category_code: no_facility_bush_field_beach
@@ -424,8 +514,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KIR-SAN-17
     source_category_code: none
@@ -435,8 +525,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KIR-SAN-18
     source_category_code: other
@@ -446,18 +536,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_KIR_Kiribati_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KIR-WAS-01
     source_category_code: well_in_yard
@@ -467,8 +557,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: KIR-WAS-02
     source_category_code: public_well
@@ -478,8 +568,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: KIR-WAS-03
     source_category_code: protected_well
@@ -489,8 +579,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KIR-WAS-04
     source_category_code: tubewell_borehole
@@ -500,8 +590,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KIR-WAS-05
     source_category_code: unprotected_well
@@ -511,8 +601,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KIR-WAS-06
     source_category_code: cart_with_small_tank
@@ -522,8 +612,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KIR-WAS-07
     source_category_code: water_kiosk
@@ -533,8 +623,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: KIR-WAS-08
     source_category_code: desalination_plant_water
@@ -544,8 +634,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: KIR-WAS-09
     source_category_code: tanker_truck
@@ -555,8 +645,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KIR-WAS-10
     source_category_code: other
@@ -566,8 +656,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KIR-WAS-11
     source_category_code: other_including_tanker_truck
@@ -577,8 +667,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KIR-WAS-12
     source_category_code: bottled_water
@@ -588,8 +678,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KIR-WAS-13
     source_category_code: rain_water_tank
@@ -599,8 +689,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KIR-WAS-14
     source_category_code: rainwater
@@ -610,8 +700,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KIR-WAS-15
     source_category_code: piped_into_neighbourhood_or_outside_neighbourhood
@@ -621,8 +711,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: KIR-WAS-16
     source_category_code: piped_to_neighbour
@@ -632,8 +722,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: KIR-WAS-17
     source_category_code: piped_into_household_yard
@@ -643,8 +733,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KIR-WAS-18
     source_category_code: piped_water_into_dwelling
@@ -654,8 +744,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KIR-WAS-19
     source_category_code: piped_water_to_yard_plot
@@ -665,8 +755,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KIR-WAS-20
     source_category_code: public_tap_standpipe
@@ -676,13 +766,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_KIR_Kiribati_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

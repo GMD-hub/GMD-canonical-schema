@@ -6,9 +6,9 @@ status: draft
 country_name: BEL
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BEL-EDU-01
     national_label_en: Child care
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BEL-EDU-02
     national_label_en: European School - regular nursery education
     national_label_local: Europese School - gewoon kleuter
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BEL-EDU-03
     national_label_en: Regular nursery education
     national_label_local: Gewoon kleuteronderwijs
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BEL-EDU-04
     national_label_en: Special nursery education
     national_label_local: Buitengewoon kleuteronderwijs
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BEL-EDU-05
     national_label_en: Regular primary education
     national_label_local: Gewoon lager onderwijs
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BEL-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BEL-EDU-06
     national_label_en: European School - regular primary education
     national_label_local: Europese School - gewoon lager
@@ -76,6 +106,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BEL-EDU-06
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BEL-EDU-07
     national_label_en: Special primary education
     national_label_local: Buitengewoon lager onderwijs
@@ -87,6 +123,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BEL-EDU-07
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BEL-EDU-08
     national_label_en: Reception class for immigrants
     national_label_local: Onthaalklas voor anderstalige nieuwkomers
@@ -98,6 +140,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - BEL-EDU-05
+    - BEL-EDU-06
+    - BEL-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
   - country_entry_id: BEL-EDU-09
     national_label_en: Regular secondary education - 1st stage
     national_label_local: Gewoon secundair onderwijs - 1ste graad
@@ -109,6 +162,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - BEL-EDU-05
+    - BEL-EDU-06
+    - BEL-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
   - country_entry_id: BEL-EDU-10
     national_label_en: European School - 1st stage
     national_label_local: Europese School - 1ste graad
@@ -120,6 +184,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - BEL-EDU-05
+    - BEL-EDU-06
+    - BEL-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
   - country_entry_id: BEL-EDU-11
     national_label_en: Special secondary education - training form 4 - 1st stage
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 4 - 1ste
@@ -132,6 +207,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - BEL-EDU-05
+    - BEL-EDU-06
+    - BEL-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
   - country_entry_id: BEL-EDU-12
     national_label_en: Special secondary education - training form 1 and 2
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 1 en 2
@@ -143,6 +229,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - BEL-EDU-05
+    - BEL-EDU-06
+    - BEL-EDU-07
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
   - country_entry_id: BEL-EDU-13
     national_label_en: Special secondary education - training form 3
     national_label_local: Buitengewoon secundair onderwijs - opleidingsvorm 3
@@ -154,6 +251,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - BEL-EDU-05
+    - BEL-EDU-06
+    - BEL-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
   - country_entry_id: BEL-EDU-14
     national_label_en: Secondary adult education - language courses (foreign languages
       and Dutch for non-native speakers) - content specification of level 1
@@ -167,6 +275,12 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 18
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: BEL-EDU-15
     national_label_en: Regular secondary education - 2nd stage ASO (ASO= general secondary
       education)
@@ -179,6 +293,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-16
     national_label_en: European School - regular secondary education - 2nd stage
     national_label_local: Europese School - 2de graad
@@ -190,6 +321,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-17
     national_label_en: European School - regular secondary education - 1st & 2nd year
       of the 3rd stage
@@ -202,6 +350,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-18
     national_label_en: Regular secondary education - 2nd stage KSO (KSO= artistic
       secondary education)
@@ -214,6 +379,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-19
     national_label_en: Special secondary education - training form 4 - 2nd stage ASO
       (ASO= general secondary education; KSO = artistic secondary education)
@@ -227,6 +409,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-20
     national_label_en: Secondary adult education - language courses (foreign languages
       and Dutch for non-native speakers) - content specification of level 2 and 3
@@ -240,6 +439,14 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
+    parent_country_entry_ids:
+    - BEL-EDU-14
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-20
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEL-EDU-21
     national_label_en: Regular secondary education - 2nd stage TSO (= technical secondary
       education) and BSO (= vocational secondary education; including modular education).
@@ -252,6 +459,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-22
     national_label_en: Special secondary education - training form 4 - 2nd stage TSO
       (= technical secondary education) and BSO (= vocational secondary education;
@@ -266,6 +490,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-23
     national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - ASO (general secondary education)
@@ -279,6 +520,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-24
     national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - KSO (artistic secondary education)
@@ -292,6 +550,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 28
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-25
     national_label_en: Special secondary education - training form 4 - 1st and 2nd
       year of the 3rd stage ASO and KSO
@@ -305,6 +580,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 29
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-26
     national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs (isc2 GEN)
@@ -316,6 +608,14 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 30
+    parent_country_entry_ids:
+    - BEL-EDU-14
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-26
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEL-EDU-27
     national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs (isc3 VOC)
@@ -327,6 +627,14 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 31
+    parent_country_entry_ids:
+    - BEL-EDU-14
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-27
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEL-EDU-28
     national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - BSO (vocational secondary education; including modular education)
@@ -340,6 +648,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 32
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-29
     national_label_en: Special secondary education - training form 4 - 3rd stage -
       1st and 2nd year of 3rd stage BSO (vocational secondary education)
@@ -353,6 +678,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 33
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-30
     national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs
@@ -364,6 +706,14 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 34
+    parent_country_entry_ids:
+    - BEL-EDU-14
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-30
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEL-EDU-31
     national_label_en: Regular secondary education - 3rd stage - 1st and 2nd year
       of the 3rd stage - TSO (technical secondary education)
@@ -377,6 +727,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 35
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-32
     national_label_en: Special secondary education training form 4 - 3rd stage - 1st
       and 2nd year of the 3rd stage - TSO (technical secondary education)
@@ -390,6 +757,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 36
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-33
     national_label_en: Regular secondary education - 3rd stage - 3rd year of the 3rd
       stage - BSO (vocational secondary education; including modular education)
@@ -403,6 +787,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 37
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-34
     national_label_en: Special secondary education - training form 4 - 3rd stage -
       3rd year of the 3rd stage - BSO (vocational secondary education)
@@ -416,6 +817,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 38
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-35
     national_label_en: Part-time vocational secondary education
     national_label_local: Deeltijds beroepssecundair onderwijs
@@ -427,6 +845,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 39
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-36
     national_label_en: Apprenticeship (organised by 'SYNTRA' - Flemish Agency for
       Entrepreneural Training).
@@ -439,6 +874,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 40
+    parent_country_entry_ids:
+    - BEL-EDU-08
+    - BEL-EDU-09
+    - BEL-EDU-10
+    - BEL-EDU-11
+    - BEL-EDU-12
+    - BEL-EDU-13
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-36
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
   - country_entry_id: BEL-EDU-37
     national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs
@@ -450,6 +902,14 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 41
+    parent_country_entry_ids:
+    - BEL-EDU-14
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-37
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BEL-EDU-38
     national_label_en: Secondary adult education - language courses (foreign languages
       and Dutch for non-native speakers) - content specification of level 4
@@ -463,6 +923,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
+    parent_country_entry_ids:
+    - BEL-EDU-20
+    - BEL-EDU-26
+    - BEL-EDU-27
+    - BEL-EDU-30
+    - BEL-EDU-37
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-20
+    - BEL-EDU-38
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-20, BEL-EDU-26, BEL-EDU-27, BEL-EDU-30,
+      BEL-EDU-37'
   - country_entry_id: BEL-EDU-39
     national_label_en: Regular secondary education - 3rd year of the 3rd stage ASO
       and KSO (ASO = general secondary education; KSO= artistic secondary education)
@@ -476,6 +951,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 43
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-39
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-40
     national_label_en: Special education - 3rd year of the 3rd stage ASO and KSO (ASO
       = general secondary education; KSO= artistic secondary education)
@@ -489,6 +987,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 44
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-40
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-41
     national_label_en: Entrepreneurial training courses (organised by 'SYNTRA' - Flemish
       Agency for Entrepreneural Training)
@@ -501,6 +1022,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 45
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-41
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-42
     national_label_en: Advanced secondary education (KSO and TSO; KSO = artistic secondary
       education and TSO = technical secondary education)
@@ -513,6 +1057,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 46
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-42
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-43
     national_label_en: Secondary adult education
     national_label_local: Secundair volwassenenonderwijs
@@ -524,6 +1091,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 47
+    parent_country_entry_ids:
+    - BEL-EDU-20
+    - BEL-EDU-26
+    - BEL-EDU-27
+    - BEL-EDU-30
+    - BEL-EDU-37
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - BEL-EDU-14
+    - BEL-EDU-20
+    - BEL-EDU-43
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-20, BEL-EDU-26, BEL-EDU-27, BEL-EDU-30,
+      BEL-EDU-37'
   - country_entry_id: BEL-EDU-44
     national_label_en: Associate degree programmes of higher education
     national_label_local: Hogerberoepsonderwijs (HBO5 - verpleegkunde)
@@ -535,6 +1117,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 48
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-44
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-45
     national_label_en: Associate degree programmes of higher education
     national_label_local: Graduaatsopleidingen
@@ -546,6 +1151,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 49
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-45
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-46
     national_label_en: Academic Bachelor's programmes
     national_label_local: Academisch gerichte bachelor
@@ -557,8 +1185,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 50
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-46
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-47
-    national_label_en: Professional Bachelor’s programmes
+    national_label_en: "Professional Bachelor\u2019s programmes"
     national_label_local: Professioneel gerichte bachelor
     entry_age: 18
     duration_years: 3
@@ -568,6 +1219,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 51
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-47
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-48
     national_label_en: Advanced Bachelor's programmes
     national_label_local: Bachelor na bachelor
@@ -579,6 +1253,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 52
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-48
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-49
     national_label_en: Specific teacher training
     national_label_local: Specifieke lerarenopleidingen
@@ -590,6 +1287,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 53
+    parent_country_entry_ids:
+    - BEL-EDU-15
+    - BEL-EDU-16
+    - BEL-EDU-17
+    - BEL-EDU-18
+    - BEL-EDU-19
+    - BEL-EDU-23
+    - BEL-EDU-24
+    - BEL-EDU-25
+    - BEL-EDU-36
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-49
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
   - country_entry_id: BEL-EDU-50
     national_label_en: Master's programmes
     national_label_local: Master na professionele bachelor
@@ -601,6 +1321,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 54
+    parent_country_entry_ids:
+    - BEL-EDU-46
+    - BEL-EDU-47
+    - BEL-EDU-48
+    - BEL-EDU-49
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-48
+    - BEL-EDU-50
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
+    - 'minimum parent path selected from: BEL-EDU-46, BEL-EDU-47, BEL-EDU-48, BEL-EDU-49'
   - country_entry_id: BEL-EDU-51
     national_label_en: Master's programmes
     national_label_local: Master
@@ -612,8 +1352,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 55
+    parent_country_entry_ids:
+    - BEL-EDU-46
+    - BEL-EDU-47
+    - BEL-EDU-48
+    - BEL-EDU-49
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-48
+    - BEL-EDU-51
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
+    - 'minimum parent path selected from: BEL-EDU-46, BEL-EDU-47, BEL-EDU-48, BEL-EDU-49'
   - country_entry_id: BEL-EDU-52
-    national_label_en: Advanced Master’s programme
+    national_label_en: "Advanced Master\u2019s programme"
     national_label_local: Master na master
     entry_age: 21
     duration_years: 0
@@ -623,6 +1383,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 56
+    parent_country_entry_ids:
+    - BEL-EDU-46
+    - BEL-EDU-47
+    - BEL-EDU-48
+    - BEL-EDU-49
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-48
+    - BEL-EDU-52
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
+    - 'minimum parent path selected from: BEL-EDU-46, BEL-EDU-47, BEL-EDU-48, BEL-EDU-49'
   - country_entry_id: BEL-EDU-53
     national_label_en: Doctorate
     national_label_local: Doctoraat
@@ -634,15 +1414,36 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 57
+    parent_country_entry_ids:
+    - BEL-EDU-50
+    - BEL-EDU-51
+    - BEL-EDU-52
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BEL-EDU-05
+    - BEL-EDU-08
+    - BEL-EDU-25
+    - BEL-EDU-48
+    - BEL-EDU-52
+    - BEL-EDU-53
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BEL-EDU-05, BEL-EDU-06, BEL-EDU-07'
+    - 'minimum parent path selected from: BEL-EDU-08, BEL-EDU-09, BEL-EDU-10, BEL-EDU-11,
+      BEL-EDU-12, BEL-EDU-13'
+    - 'minimum parent path selected from: BEL-EDU-15, BEL-EDU-16, BEL-EDU-17, BEL-EDU-18,
+      BEL-EDU-19, BEL-EDU-23, BEL-EDU-24, BEL-EDU-25, BEL-EDU-36'
+    - 'minimum parent path selected from: BEL-EDU-46, BEL-EDU-47, BEL-EDU-48, BEL-EDU-49'
+    - 'minimum parent path selected from: BEL-EDU-50, BEL-EDU-51, BEL-EDU-52'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Belgium_Flemish.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2021
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BEL-SUBNAT-01
     survey_labels: 1-BE1
@@ -651,10 +1452,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEL_2021_NUTS1_BE1
     geo_year: '2021'
@@ -663,7 +1464,7 @@ parameters:
     geo_idvar: NUTS_ID
     geo_id: BE1
     geo_nvar: NAME_LATN
-    geo_name: Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest
+    geo_name: "R\xE9gion de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest"
     source_row: 599
   - country_entry_id: BEL-SUBNAT-02
     survey_labels: 2-BE2
@@ -672,10 +1473,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEL_2021_NUTS1_BE2
     geo_year: '2021'
@@ -693,10 +1494,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BEL_2021_NUTS1_BE3
     geo_year: '2021'
@@ -705,12 +1506,12 @@ parameters:
     geo_idvar: NUTS_ID
     geo_id: BE3
     geo_nvar: NAME_LATN
-    geo_name: Région wallonne
+    geo_name: "R\xE9gion wallonne"
     source_row: 601
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -6,9 +6,9 @@ status: draft
 country_name: GBR
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GBR-EDU-01
     national_label_en: Day nurseries
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GBR-EDU-02
     national_label_en: Children's Centres (including Sure Start centres, England)
     national_label_local: Children's Centres (including Sure Start centres, England)
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GBR-EDU-03
     national_label_en: Registered childminders
     national_label_local: Registered childminders
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GBR-EDU-04
     national_label_en: Reception and nursery classes in schools
     national_label_local: Reception and nursery classes in schools
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GBR-EDU-05
     national_label_en: Preschool or pre-kindergarten
     national_label_local: Preschool or pre-kindergarten
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: GBR-EDU-06
     national_label_en: Primary school (Keystage 1-2)
     national_label_local: Primary school (Keystage 1-2)
@@ -76,6 +106,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: GBR-EDU-07
     national_label_en: Adult literacy, numeracy and language
     national_label_local: Adult literacy, numeracy and language
@@ -87,6 +123,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - GBR-EDU-07
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: GBR-EDU-08
     national_label_en: Secondary school  (KeyStage 3) (England, Wales and Northern
       Ireland)
@@ -100,6 +142,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-09
     national_label_en: Secondary school (National 1-4 /  Intermediate 1) (Scotland)
     national_label_local: Secondary school (National 1-4 /  Intermediate 1) (Scotland)
@@ -111,6 +161,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-10
     national_label_en: Traineeship
     national_label_local: Traineeship
@@ -122,6 +180,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-11
     national_label_en: Award Level 1
     national_label_local: Award Level 1
@@ -133,6 +199,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-12
     national_label_en: Functional Skills Level 1
     national_label_local: Functional Skills Level 1
@@ -144,6 +218,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-13
     national_label_en: Certificate Level 1
     national_label_local: Certificate Level 1
@@ -155,6 +237,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-14
     national_label_en: Diploma Level 1
     national_label_local: Diploma Level 1
@@ -166,6 +256,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 18
+    parent_country_entry_ids:
+    - GBR-EDU-06
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: GBR-EDU-15
     national_label_en: General Certificate of Secondary Education
     national_label_local: General Certificate of Secondary Education
@@ -177,6 +275,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-16
     national_label_en: Secondary School (National 5 / Intermediate 2) (Scotland)
     national_label_local: Secondary School (National 5 / Intermediate 2) (Scotland)
@@ -188,6 +303,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-17
     national_label_en: Secondary School  (Keystage 4) (England, Wales and Northern
       Ireland)
@@ -201,6 +333,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-18
     national_label_en: Advanced Subsidiary level
     national_label_local: Advanced Subsidiary level
@@ -212,6 +361,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-19
     national_label_en: AS Level (England, Wales and Northern Ireland)
     national_label_local: AS Level (England, Wales and Northern Ireland)
@@ -223,6 +389,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-20
     national_label_en: Higher (Scotland)
     national_label_local: Higher (Scotland)
@@ -234,6 +417,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-21
     national_label_en: Advanced Level
     national_label_local: Advanced Level
@@ -245,6 +445,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-22
     national_label_en: A Level (England, Wales and Northern Ireland)
     national_label_local: A Level (England, Wales and Northern Ireland)
@@ -256,6 +473,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-23
     national_label_en: T Level (England)
     national_label_local: T Level (England)
@@ -267,6 +501,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-24
     national_label_en: Advanced Higher (Scotland)
     national_label_local: Advanced Higher (Scotland)
@@ -278,6 +529,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 28
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-25
     national_label_en: Functional Skills Level 2
     national_label_local: Functional Skills Level 2
@@ -289,6 +557,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 29
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-26
     national_label_en: Award Level 2
     national_label_local: Award Level 2
@@ -300,6 +585,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 30
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-27
     national_label_en: Certificate Level 2
     national_label_local: Certificate Level 2
@@ -311,6 +613,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 31
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-28
     national_label_en: Diploma Level 2
     national_label_local: Diploma Level 2
@@ -322,6 +641,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 32
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-29
     national_label_en: Intermediate Apprenticeship
     national_label_local: Intermediate Apprenticeship (Level 2)
@@ -333,6 +669,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 33
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-30
     national_label_en: Award Level 3
     national_label_local: Award Level 3
@@ -344,6 +697,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 34
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-31
     national_label_en: Certificate Level 3
     national_label_local: Certificate Level 3
@@ -355,6 +725,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 35
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-32
     national_label_en: Access to Higher Education Diploma
     national_label_local: Access to Higher Education Diploma
@@ -366,6 +753,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 36
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-33
     national_label_en: Diploma Level 3
     national_label_local: Diploma Level 3
@@ -377,6 +781,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 37
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-34
     national_label_en: Advanced Apprenticeship
     national_label_local: Advanced Apprenticeship (Level 3)
@@ -388,6 +809,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 38
+    parent_country_entry_ids:
+    - GBR-EDU-08
+    - GBR-EDU-09
+    - GBR-EDU-10
+    - GBR-EDU-11
+    - GBR-EDU-12
+    - GBR-EDU-13
+    - GBR-EDU-14
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
   - country_entry_id: GBR-EDU-35
     national_label_en: Award Level 4
     national_label_local: Award Level 4
@@ -399,6 +837,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-36
     national_label_en: Certificate Level 4
     national_label_local: Certificate Level 4
@@ -410,6 +883,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 40
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-36
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-37
     national_label_en: Diploma Level 4
     national_label_local: Diploma Level 4
@@ -421,6 +929,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 41
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-37
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-38
     national_label_en: Higher National Certificate (HNC)/ Higher National Diploma(HND)
     national_label_local: Higher National Certificate (HNC)/ Higher National Diploma(HND)
@@ -432,6 +975,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-38
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-39
     national_label_en: Foundation Degree
     national_label_local: Foundation Degree
@@ -443,6 +1021,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 43
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-39
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-40
     national_label_en: Higher Apprenticeship
     national_label_local: Higher Apprenticeship (Level 4)
@@ -454,6 +1067,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 44
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-40
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-41
     national_label_en: Short HE courses (CertHE, DipHE, Foundation Degrees etc)
     national_label_local: Short HE courses (CertHE, DipHE, Foundation Degrees etc)
@@ -465,6 +1113,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 45
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-41
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-42
     national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree
@@ -476,6 +1159,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 46
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-42
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-43
     national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree
@@ -487,6 +1205,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 47
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-43
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-44
     national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree
@@ -498,6 +1251,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 48
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-44
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-45
     national_label_en: Master's degree
     national_label_local: Master's degree
@@ -509,6 +1297,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 50
+    parent_country_entry_ids:
+    - GBR-EDU-42
+    - GBR-EDU-43
+    - GBR-EDU-44
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-42
+    - GBR-EDU-45
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
+    - 'minimum parent path selected from: GBR-EDU-42, GBR-EDU-43, GBR-EDU-44'
   - country_entry_id: GBR-EDU-46
     national_label_en: Master's degree
     national_label_local: Master's degree
@@ -520,6 +1328,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 51
+    parent_country_entry_ids:
+    - GBR-EDU-42
+    - GBR-EDU-43
+    - GBR-EDU-44
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-42
+    - GBR-EDU-46
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
+    - 'minimum parent path selected from: GBR-EDU-42, GBR-EDU-43, GBR-EDU-44'
   - country_entry_id: GBR-EDU-47
     national_label_en: Post-graduate diplomas and certificates
     national_label_local: Post-graduate diplomas and certificates
@@ -531,6 +1359,41 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 52
+    parent_country_entry_ids:
+    - GBR-EDU-15
+    - GBR-EDU-16
+    - GBR-EDU-17
+    - GBR-EDU-18
+    - GBR-EDU-19
+    - GBR-EDU-20
+    - GBR-EDU-21
+    - GBR-EDU-22
+    - GBR-EDU-23
+    - GBR-EDU-24
+    - GBR-EDU-25
+    - GBR-EDU-26
+    - GBR-EDU-27
+    - GBR-EDU-28
+    - GBR-EDU-29
+    - GBR-EDU-30
+    - GBR-EDU-31
+    - GBR-EDU-32
+    - GBR-EDU-33
+    - GBR-EDU-34
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-47
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
   - country_entry_id: GBR-EDU-48
     national_label_en: Doctorate
     national_label_local: Doctorate
@@ -542,15 +1405,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 53
+    parent_country_entry_ids:
+    - GBR-EDU-45
+    - GBR-EDU-46
+    - GBR-EDU-47
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - GBR-EDU-06
+    - GBR-EDU-10
+    - GBR-EDU-25
+    - GBR-EDU-47
+    - GBR-EDU-48
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: GBR-EDU-08, GBR-EDU-09, GBR-EDU-10, GBR-EDU-11,
+      GBR-EDU-12, GBR-EDU-13, GBR-EDU-14'
+    - 'minimum parent path selected from: GBR-EDU-15, GBR-EDU-16, GBR-EDU-17, GBR-EDU-18,
+      GBR-EDU-19, GBR-EDU-20, GBR-EDU-21, GBR-EDU-22, GBR-EDU-23, GBR-EDU-24, GBR-EDU-25,
+      GBR-EDU-26, GBR-EDU-27, GBR-EDU-28, GBR-EDU-29, GBR-EDU-30, GBR-EDU-31, GBR-EDU-32,
+      GBR-EDU-33, GBR-EDU-34'
+    - 'minimum parent path selected from: GBR-EDU-45, GBR-EDU-46, GBR-EDU-47'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_United_Kingdom.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2021
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: GBR-SUBNAT-01
     survey_labels: '[1]UKC - North East'
@@ -559,10 +1442,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -580,10 +1463,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -601,10 +1484,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -622,10 +1505,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -643,10 +1526,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -664,10 +1547,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -685,10 +1568,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -706,10 +1589,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -727,10 +1610,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -748,10 +1631,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -769,10 +1652,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -790,10 +1673,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2021'
@@ -806,8 +1689,8 @@ parameters:
     source_row: 5281
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

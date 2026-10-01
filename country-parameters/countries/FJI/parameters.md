@@ -6,9 +6,9 @@ status: draft
 country_name: FJI
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: FJI-EDU-01
     national_label_en: Pre School
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: FJI-EDU-02
     national_label_en: Primary (Year 1 to 6)
     national_label_local: Primary (Year 1 to 6)
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - FJI-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: FJI-EDU-03
     national_label_en: Primary (Year 7 and 8)
     national_label_local: Primary (Year 7 and 8)
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - FJI-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: FJI-EDU-04
     national_label_en: Secondary (Year 9 to 10)
     national_label_local: Secondary (Year 9 to 10)
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - FJI-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: FJI-EDU-05
     national_label_en: Secondary (Year 11 to 12)
     national_label_local: Secondary (Year 11 to 12)
@@ -65,6 +93,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - FJI-EDU-03
+    - FJI-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
   - country_entry_id: FJI-EDU-06
     national_label_en: Secondary (Year 13)
     national_label_local: Secondary (Year 13)
@@ -76,6 +115,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - FJI-EDU-03
+    - FJI-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
   - country_entry_id: FJI-EDU-07
     national_label_en: Technical vocational education (TVET)
     national_label_local: Technical vocational education (TVET)
@@ -87,6 +137,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - FJI-EDU-03
+    - FJI-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
   - country_entry_id: FJI-EDU-08
     national_label_en: Vocational Certificate
     national_label_local: Vocational Certificate
@@ -98,6 +159,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - FJI-EDU-05
+    - FJI-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    - FJI-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
+    - 'minimum parent path selected from: FJI-EDU-05, FJI-EDU-06'
   - country_entry_id: FJI-EDU-09
     national_label_en: Vocational Diploma
     national_label_local: Vocational Diploma
@@ -109,6 +183,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - FJI-EDU-05
+    - FJI-EDU-06
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    - FJI-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
+    - 'minimum parent path selected from: FJI-EDU-05, FJI-EDU-06'
   - country_entry_id: FJI-EDU-10
     national_label_en: Vocational Degree
     national_label_local: Vocational Degree
@@ -120,6 +207,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - FJI-EDU-05
+    - FJI-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    - FJI-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
+    - 'minimum parent path selected from: FJI-EDU-05, FJI-EDU-06'
   - country_entry_id: FJI-EDU-11
     national_label_en: Bachelor
     national_label_local: Bachelor
@@ -131,6 +231,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - FJI-EDU-05
+    - FJI-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    - FJI-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
+    - 'minimum parent path selected from: FJI-EDU-05, FJI-EDU-06'
   - country_entry_id: FJI-EDU-12
     national_label_en: Master
     national_label_local: Master
@@ -142,6 +255,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - FJI-EDU-10
+    - FJI-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    - FJI-EDU-11
+    - FJI-EDU-12
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: FJI-EDU-03, FJI-EDU-04'
+    - 'minimum parent path selected from: FJI-EDU-05, FJI-EDU-06'
+    - 'minimum parent path selected from: FJI-EDU-10, FJI-EDU-11'
   - country_entry_id: FJI-EDU-13
     national_label_en: Doctorate
     national_label_local: Doctorate
@@ -153,15 +281,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - FJI-EDU-12
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - FJI-EDU-02
+    - FJI-EDU-03
+    - FJI-EDU-06
+    - FJI-EDU-11
+    - FJI-EDU-12
+    - FJI-EDU-13
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Fiji.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: FJI-SUBNAT-01
     survey_labels: 1-Central
@@ -170,10 +310,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -191,10 +331,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -212,10 +352,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -233,10 +373,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -254,10 +394,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -275,10 +415,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -296,10 +436,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -317,10 +457,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -333,13 +473,13 @@ parameters:
     source_row: 4861
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: FJI-SAN-01
     source_category_code: composting_toilet
@@ -349,8 +489,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: FJI-SAN-02
     source_category_code: flush_pour_flush_flush_to_open_drain
@@ -360,8 +500,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: FJI-SAN-03
     source_category_code: flush_pour_flush_flush_to_piped_sewer_system
@@ -371,8 +511,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: FJI-SAN-04
     source_category_code: flush_pour_flush_flush_to_pit_latrine
@@ -382,8 +522,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: FJI-SAN-05
     source_category_code: flush_pour_flush_flush_to_septic_tank
@@ -393,8 +533,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: FJI-SAN-06
     source_category_code: flush_pour_flush_flush_to_dk_where
@@ -404,8 +544,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: FJI-SAN-07
     source_category_code: bucket
@@ -415,8 +555,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: FJI-SAN-08
     source_category_code: pit_latrine_pit_latrine_with_slab
@@ -427,8 +567,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: FJI-SAN-09
     source_category_code: pit_latrine_pit_latrine_without_slab_open_pit
@@ -439,8 +579,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: FJI-SAN-10
     source_category_code: pit_latrine_ventilated_improved_pit_latrine
@@ -451,8 +591,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: FJI-SAN-11
     source_category_code: no_facility_bush_field
@@ -462,8 +602,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: FJI-SAN-12
     source_category_code: other
@@ -473,18 +613,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_FJI_Fiji_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: FJI-WAS-01
     source_category_code: spring_protected_spring
@@ -494,8 +634,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: FJI-WAS-02
     source_category_code: dug_well_protected_well
@@ -505,8 +645,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: FJI-WAS-03
     source_category_code: tube_well_borehole
@@ -516,8 +656,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: FJI-WAS-04
     source_category_code: spring_unprotected_spring
@@ -527,8 +667,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: FJI-WAS-05
     source_category_code: dug_well_unprotected_well
@@ -538,8 +678,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: FJI-WAS-06
     source_category_code: cart_with_small_tank
@@ -549,8 +689,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: FJI-WAS-07
     source_category_code: tanker_truck
@@ -560,8 +700,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: FJI-WAS-08
     source_category_code: other
@@ -571,8 +711,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: FJI-WAS-09
     source_category_code: packaged_water_bottled_water
@@ -582,8 +722,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: FJI-WAS-10
     source_category_code: rainwater
@@ -593,8 +733,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: FJI-WAS-11
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
@@ -605,8 +745,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: FJI-WAS-12
     source_category_code: piped_water_piped_to_neighbour
@@ -616,8 +756,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: FJI-WAS-13
     source_category_code: piped_water_piped_into_dwelling
@@ -627,8 +767,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: FJI-WAS-14
     source_category_code: piped_water_piped_to_yard_plot
@@ -638,8 +778,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: FJI-WAS-15
     source_category_code: piped_water_public_tap_standpipe
@@ -649,13 +789,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_FJI_Fiji_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

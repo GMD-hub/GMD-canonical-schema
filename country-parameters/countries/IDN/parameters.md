@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IDN-EDU-02
     national_label_en: Other ECE programme
     national_label_local: Satuan Paud Sejenis
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IDN-EDU-03
     national_label_en: Playgroup
     national_label_local: Kelompok Bermain (KB)
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IDN-EDU-04
     national_label_en: Kindergarten
     national_label_local: Taman Kanak-kanak (TK)
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IDN-EDU-05
     national_label_en: Islamic kindergarten
     national_label_local: Raudlatul/Bustanul Athfal (RA/BA)
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IDN-EDU-06
     national_label_en: Special Kindergarten
     national_label_local: TK Luar Biasa
@@ -76,6 +106,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: IDN-EDU-07
     national_label_en: Primary school (PS)
     national_label_local: Sekolah Dasar (SD)
@@ -87,6 +123,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 13
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - IDN-EDU-07
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: IDN-EDU-08
     national_label_en: Islamic primary school
     national_label_local: Madrasah Ibtidaiyah (MI)
@@ -98,6 +140,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 14
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - IDN-EDU-08
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: IDN-EDU-09
     national_label_en: Special primary school
     national_label_local: SD Luar Biasa
@@ -109,6 +157,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 15
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - IDN-EDU-09
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: IDN-EDU-10
     national_label_en: Junior secondary school (JSS)
     national_label_local: Sekolah Menengah Pertama (SMP)
@@ -120,6 +174,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - IDN-EDU-07
+    - IDN-EDU-08
+    - IDN-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
   - country_entry_id: IDN-EDU-11
     national_label_en: Islamic junior secondary school
     national_label_local: Madrasah Tsanawiyah (MTs)
@@ -131,6 +196,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - IDN-EDU-07
+    - IDN-EDU-08
+    - IDN-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
   - country_entry_id: IDN-EDU-12
     national_label_en: Special junior secondary school
     national_label_local: SMP Luar Biasa
@@ -142,6 +218,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - IDN-EDU-07
+    - IDN-EDU-08
+    - IDN-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
   - country_entry_id: IDN-EDU-13
     national_label_en: General senior secondary school (GSSS)
     national_label_local: Sekolah Menengah Atas (SMA)
@@ -153,6 +240,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - IDN-EDU-10
+    - IDN-EDU-11
+    - IDN-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
   - country_entry_id: IDN-EDU-14
     national_label_en: Islamic general senior secondary school
     national_label_local: Madrasah Aliyah (MA)
@@ -164,6 +264,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - IDN-EDU-10
+    - IDN-EDU-11
+    - IDN-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
   - country_entry_id: IDN-EDU-15
     national_label_en: Special senior secondary school
     national_label_local: SM Luar Biasa
@@ -175,6 +288,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
+    parent_country_entry_ids:
+    - IDN-EDU-10
+    - IDN-EDU-11
+    - IDN-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
   - country_entry_id: IDN-EDU-16
     national_label_en: Vocational senior secondary school (VSSS)
     national_label_local: Sekolah Menengah Kejuruan (SMK)
@@ -186,6 +312,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 22
+    parent_country_entry_ids:
+    - IDN-EDU-10
+    - IDN-EDU-11
+    - IDN-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
   - country_entry_id: IDN-EDU-17
     national_label_en: Diploma 1 programme
     national_label_local: Program Diploma 1
@@ -197,6 +336,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-18
     national_label_en: Diploma 2 programme
     national_label_local: Program Diploma 2
@@ -208,6 +362,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-19
     national_label_en: Diploma 3 programme
     national_label_local: Program Diploma 3
@@ -219,6 +388,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-20
     national_label_en: Diploma 4 programme
     national_label_local: Program Diploma 4
@@ -230,6 +414,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-21
     national_label_en: Bachelor's programme
     national_label_local: Program Sarjana
@@ -241,6 +440,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-22
     national_label_en: Doctor professional programme
     national_label_local: Program Profesi Dokter
@@ -252,6 +466,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-23
     national_label_en: Specialist 1 programme
     national_label_local: Program Spesialis 1
@@ -263,6 +492,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - IDN-EDU-13
+    - IDN-EDU-14
+    - IDN-EDU-15
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
   - country_entry_id: IDN-EDU-24
     national_label_en: Master programme
     national_label_local: Program  Magister
@@ -274,6 +518,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - IDN-EDU-20
+    - IDN-EDU-21
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-20
+    - IDN-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
+    - 'minimum parent path selected from: IDN-EDU-20, IDN-EDU-21'
   - country_entry_id: IDN-EDU-25
     national_label_en: Specialist 2 programme
     national_label_local: Program Spesialis 2
@@ -285,6 +545,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - IDN-EDU-22
+    - IDN-EDU-23
+    - IDN-EDU-24
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-22
+    - IDN-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
+    - 'minimum parent path selected from: IDN-EDU-22, IDN-EDU-23, IDN-EDU-24'
   - country_entry_id: IDN-EDU-26
     national_label_en: Doctorate programme
     national_label_local: Program Doktor
@@ -296,6 +573,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - IDN-EDU-22
+    - IDN-EDU-23
+    - IDN-EDU-24
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - IDN-EDU-07
+    - IDN-EDU-10
+    - IDN-EDU-13
+    - IDN-EDU-22
+    - IDN-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: IDN-EDU-07, IDN-EDU-08, IDN-EDU-09'
+    - 'minimum parent path selected from: IDN-EDU-10, IDN-EDU-11, IDN-EDU-12'
+    - 'minimum parent path selected from: IDN-EDU-13, IDN-EDU-14, IDN-EDU-15'
+    - 'minimum parent path selected from: IDN-EDU-22, IDN-EDU-23, IDN-EDU-24'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Indonesia.xlsx
     verified_on: null

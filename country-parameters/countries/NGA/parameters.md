@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NGA-EDU-02
     national_label_en: Pre-primary education
     national_label_local: Pre-primary education
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NGA-EDU-03
     national_label_en: Primary education
     national_label_local: Primary education
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - NGA-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: NGA-EDU-04
     national_label_en: Junior secondary
     national_label_local: Junior secondary
@@ -54,6 +72,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - NGA-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NGA-EDU-05
     national_label_en: Vocational enterprise institutions programmes
     national_label_local: Vocational enterprise institutions programmes
@@ -65,6 +91,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - NGA-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NGA-EDU-06
     national_label_en: Innovative enterprise institute
     national_label_local: Innovative enterprise institute
@@ -76,6 +110,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - NGA-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NGA-EDU-07
     national_label_en: Senior secondary
     national_label_local: Senior secondary
@@ -87,6 +129,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - NGA-EDU-04
+    - NGA-EDU-05
+    - NGA-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
   - country_entry_id: NGA-EDU-08
     national_label_en: Interim joint matriculation board (IJMB) A - level course
     national_label_local: Interim joint matriculation board (IJMB) A - level course
@@ -98,6 +152,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - NGA-EDU-04
+    - NGA-EDU-05
+    - NGA-EDU-06
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
   - country_entry_id: NGA-EDU-09
     national_label_en: Secondary technical schools programmes
     national_label_local: Secondary technical schools programmes
@@ -109,6 +175,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - NGA-EDU-04
+    - NGA-EDU-05
+    - NGA-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
   - country_entry_id: NGA-EDU-10
     national_label_en: Nigerian certificate in education (NCE)
     national_label_local: Nigerian certificate in education (NCE)
@@ -120,6 +198,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-11
     national_label_en: National diploma (ND) programme
     national_label_local: National diploma (ND) programme
@@ -131,6 +222,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-12
     national_label_en: Higher national diploma (HND) programme
     national_label_local: Higher national diploma (HND) programme
@@ -142,6 +246,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-13
     national_label_en: School of Nursing
     national_label_local: School of Nursing
@@ -153,6 +270,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-14
     national_label_en: Bachelor's in Nursing
     national_label_local: Bachelor's in Nursing
@@ -164,6 +294,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-15
     national_label_en: Bachelor's programme
     national_label_local: Bachelor's programme
@@ -175,6 +318,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-16
     national_label_en: Post Graduate Diploma Programme
     national_label_local: Post Graduate Diploma Programme
@@ -186,6 +342,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - NGA-EDU-07
+    - NGA-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
   - country_entry_id: NGA-EDU-17
     national_label_en: Master's programmes
     national_label_local: Master's programmes
@@ -197,6 +366,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - NGA-EDU-14
+    - NGA-EDU-15
+    - NGA-EDU-16
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-16
+    - NGA-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
+    - 'minimum parent path selected from: NGA-EDU-14, NGA-EDU-15, NGA-EDU-16'
   - country_entry_id: NGA-EDU-18
     national_label_en: Master's of philosophy
     national_label_local: Master's of philosophy
@@ -208,6 +393,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - NGA-EDU-14
+    - NGA-EDU-15
+    - NGA-EDU-16
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-16
+    - NGA-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
+    - 'minimum parent path selected from: NGA-EDU-14, NGA-EDU-15, NGA-EDU-16'
   - country_entry_id: NGA-EDU-19
     national_label_en: Ph.D
     national_label_local: Ph.D
@@ -219,6 +420,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - NGA-EDU-17
+    - NGA-EDU-18
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - NGA-EDU-03
+    - NGA-EDU-04
+    - NGA-EDU-08
+    - NGA-EDU-16
+    - NGA-EDU-17
+    - NGA-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NGA-EDU-04, NGA-EDU-05, NGA-EDU-06'
+    - 'minimum parent path selected from: NGA-EDU-07, NGA-EDU-08'
+    - 'minimum parent path selected from: NGA-EDU-14, NGA-EDU-15, NGA-EDU-16'
+    - 'minimum parent path selected from: NGA-EDU-17, NGA-EDU-18'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Nigeria.xlsx
     verified_on: null
@@ -1844,7 +2062,7 @@ parameters:
     source_row: 106
   - country_entry_id: NGA-SAN-72
     source_category_code: latrine_a_fosse_couverte
-    national_label_en: Latrine a  fosse couverte
+    national_label_en: "Latrine a\_ fosse couverte"
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
@@ -1976,7 +2194,7 @@ parameters:
     source_row: 107
   - country_entry_id: NGA-SAN-83
     source_category_code: latrine_a_fosse_non_couverte
-    national_label_en: Latrine a  fosse non couverte
+    national_label_en: "Latrine a\_ fosse non couverte"
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
@@ -4366,3 +4584,4 @@ parameters:
     human_reviewed: false
     reviewer: null
 ---
+

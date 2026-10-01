@@ -6,9 +6,9 @@ status: draft
 country_name: SOM
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SOM-EDU-01
     national_label_en: Integrated Quaranic schools (IQSs)
@@ -21,15 +21,23 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SOM-EDU-02
-    national_label_en: |-
-      Kindergarten
+    national_label_en: 'Kindergarten
+
       (early childhood
-      education)
-    national_label_local: |-
-      Kindergarten
+
+      education)'
+    national_label_local: 'Kindergarten
+
       (early childhood
-      education)
+
+      education)'
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -38,10 +46,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SOM-EDU-03
-    national_label_en: |-
-      Lower primary
-      education
+    national_label_en: 'Lower primary
+
+      education'
     national_label_local: Lower primary education
     entry_age: 6
     duration_years: 4
@@ -51,6 +65,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - SOM-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: SOM-EDU-04
     national_label_en: Upper primary education
     national_label_local: Upper primary education
@@ -62,6 +82,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - SOM-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SOM-EDU-05
     national_label_en: Vocational Training Institute
     national_label_local: Vocational Training Institutes Courses
@@ -73,6 +101,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - SOM-EDU-03
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SOM-EDU-06
     national_label_en: Alternative basic education (ABE)
     national_label_local: Alternative basic education (ABE)
@@ -84,6 +120,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - SOM-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SOM-EDU-07
     national_label_en: General Secondary Education
     national_label_local: General Secondary Education
@@ -95,13 +139,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - SOM-EDU-04
+    - SOM-EDU-05
+    - SOM-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
   - country_entry_id: SOM-EDU-08
-    national_label_en: |-
-      Level 2: Islamic
-      institutes
-    national_label_local: |-
-      Level 2: Islamic
-      institutes
+    national_label_en: 'Level 2: Islamic
+
+      institutes'
+    national_label_local: 'Level 2: Islamic
+
+      institutes'
     entry_age: 14
     duration_years: 4
     isced_level: '3'
@@ -110,6 +166,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - SOM-EDU-04
+    - SOM-EDU-05
+    - SOM-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
   - country_entry_id: SOM-EDU-09
     national_label_en: Professional education
     national_label_local: Professional education
@@ -121,6 +189,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - SOM-EDU-04
+    - SOM-EDU-05
+    - SOM-EDU-06
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
   - country_entry_id: SOM-EDU-10
     national_label_en: Technical secondary education
     national_label_local: Technical secondary education
@@ -132,13 +212,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - SOM-EDU-04
+    - SOM-EDU-05
+    - SOM-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
   - country_entry_id: SOM-EDU-11
-    national_label_en: |-
-      Pre-service teacher
-      training (Primary)
-    national_label_local: |-
-      Pre-service teacher
-      training (Primary)
+    national_label_en: 'Pre-service teacher
+
+      training (Primary)'
+    national_label_local: 'Pre-service teacher
+
+      training (Primary)'
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -147,6 +239,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - SOM-EDU-07
+    - SOM-EDU-08
+    - SOM-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    - SOM-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
+    - 'minimum parent path selected from: SOM-EDU-07, SOM-EDU-08, SOM-EDU-09'
   - country_entry_id: SOM-EDU-12
     national_label_en: 'Level 3: Diploma'
     national_label_local: 'Level 3: Diploma'
@@ -158,6 +264,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - SOM-EDU-07
+    - SOM-EDU-08
+    - SOM-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    - SOM-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
+    - 'minimum parent path selected from: SOM-EDU-07, SOM-EDU-08, SOM-EDU-09'
   - country_entry_id: SOM-EDU-13
     national_label_en: 'Level 3: Diploma'
     national_label_local: 'Level 3: Diploma'
@@ -169,6 +289,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - SOM-EDU-07
+    - SOM-EDU-08
+    - SOM-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    - SOM-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
+    - 'minimum parent path selected from: SOM-EDU-07, SOM-EDU-08, SOM-EDU-09'
   - country_entry_id: SOM-EDU-14
     national_label_en: Education Bachelor
     national_label_local: Education Bachelor
@@ -180,6 +314,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - SOM-EDU-07
+    - SOM-EDU-08
+    - SOM-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    - SOM-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
+    - 'minimum parent path selected from: SOM-EDU-07, SOM-EDU-08, SOM-EDU-09'
   - country_entry_id: SOM-EDU-15
     national_label_en: Higher Education
     national_label_local: Higher Education
@@ -191,13 +339,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - SOM-EDU-07
+    - SOM-EDU-08
+    - SOM-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    - SOM-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
+    - 'minimum parent path selected from: SOM-EDU-07, SOM-EDU-08, SOM-EDU-09'
   - country_entry_id: SOM-EDU-16
-    national_label_en: |-
-      Level 3: Postgraduate
-      diploma
-    national_label_local: |-
-      Level 3: Postgraduate
-      diploma
+    national_label_en: 'Level 3: Postgraduate
+
+      diploma'
+    national_label_local: 'Level 3: Postgraduate
+
+      diploma'
     entry_age: 22
     duration_years: 1
     isced_level: '7'
@@ -206,15 +368,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - SOM-EDU-07
+    - SOM-EDU-08
+    - SOM-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - SOM-EDU-03
+    - SOM-EDU-05
+    - SOM-EDU-09
+    - SOM-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SOM-EDU-04, SOM-EDU-05, SOM-EDU-06'
+    - 'minimum parent path selected from: SOM-EDU-07, SOM-EDU-08, SOM-EDU-09'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Som.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SOM-SAN-01
     source_category_code: composite_toilet
@@ -224,8 +400,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: SOM-SAN-02
     source_category_code: composting_toilet
@@ -235,8 +411,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: SOM-SAN-03
     source_category_code: water_closet_flush
@@ -246,8 +422,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: SOM-SAN-04
     source_category_code: flush_to_somewhere_else
@@ -257,8 +433,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: SOM-SAN-05
     source_category_code: flush_pour_flush_to_elsewhere
@@ -268,8 +444,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: SOM-SAN-06
     source_category_code: flush_to_piped_sewer_system
@@ -279,8 +455,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: SOM-SAN-07
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -290,8 +466,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: SOM-SAN-08
     source_category_code: flush_to_pit_latrine
@@ -301,8 +477,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: SOM-SAN-09
     source_category_code: flush_pour_flush_to_pit_latrine
@@ -312,8 +488,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: SOM-SAN-10
     source_category_code: flush_to_septic_tank
@@ -323,8 +499,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: SOM-SAN-11
     source_category_code: flush_pour_flush_to_septic_tank
@@ -334,8 +510,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: SOM-SAN-12
     source_category_code: flush_flush_to_don_t_know_where
@@ -345,8 +521,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: SOM-SAN-13
     source_category_code: flush_pour_flush_to_unknown_place_not_sure_don_t_know_where
@@ -356,8 +532,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: SOM-SAN-14
     source_category_code: flush_toilet
@@ -367,8 +543,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: SOM-SAN-15
     source_category_code: flush_to_somewhere_else
@@ -378,8 +554,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: SOM-SAN-16
     source_category_code: flush_to_piped_sewer_system
@@ -389,8 +565,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: SOM-SAN-17
     source_category_code: flushed_to_piped_sewer_system
@@ -400,8 +576,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: SOM-SAN-18
     source_category_code: flush_to_pit_latrine
@@ -411,8 +587,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: SOM-SAN-19
     source_category_code: flush_to_septic_tank
@@ -422,8 +598,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: SOM-SAN-20
     source_category_code: flush_don_t_know_where
@@ -433,8 +609,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: SOM-SAN-21
     source_category_code: bucket
@@ -444,8 +620,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: SOM-SAN-22
     source_category_code: bucket_or_container
@@ -455,8 +631,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: SOM-SAN-23
     source_category_code: bucket_toilet
@@ -466,8 +642,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: SOM-SAN-24
     source_category_code: hanging_toilet_hanging_latrine
@@ -478,8 +654,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: SOM-SAN-25
     source_category_code: open_hole
@@ -489,8 +665,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: SOM-SAN-26
     source_category_code: pit_latrine_with_a_slab
@@ -501,8 +677,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: SOM-SAN-27
     source_category_code: pit_latrine_with_slab
@@ -513,8 +689,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: SOM-SAN-28
     source_category_code: pit_latrine_without_a_slab
@@ -525,8 +701,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: SOM-SAN-29
     source_category_code: pit_latrine_without_slab_open_latrine
@@ -537,8 +713,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: SOM-SAN-30
     source_category_code: pit_latrine_without_slab_open_pit
@@ -549,8 +725,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: SOM-SAN-31
     source_category_code: pit_latrine
@@ -561,8 +737,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SOM-SAN-32
     source_category_code: ventilated_improved_pit_vip_latrine
@@ -573,8 +749,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: SOM-SAN-33
     source_category_code: ventilated_improved_pit_latrine
@@ -585,8 +761,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: SOM-SAN-34
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -597,8 +773,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: SOM-SAN-35
     source_category_code: flush_to_pit_latrine
@@ -608,8 +784,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: SOM-SAN-36
     source_category_code: no_facilities_or_bush_or_field
@@ -619,8 +795,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SOM-SAN-37
     source_category_code: no_facilities_uses_bush_or_field
@@ -630,8 +806,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SOM-SAN-38
     source_category_code: no_facility_bush_field
@@ -641,8 +817,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SOM-SAN-39
     source_category_code: no_facility_bush_field
@@ -652,8 +828,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SOM-SAN-40
     source_category_code: none
@@ -663,8 +839,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SOM-SAN-41
     source_category_code: open_space
@@ -674,8 +850,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SOM-SAN-42
     source_category_code: other
@@ -685,8 +861,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: SOM-SAN-43
     source_category_code: other_specify
@@ -696,8 +872,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: SOM-SAN-44
     source_category_code: others
@@ -707,8 +883,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: SOM-SAN-45
     source_category_code: others_specify
@@ -718,8 +894,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: SOM-SAN-46
     source_category_code: public_toilet
@@ -729,8 +905,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: SOM-SAN-47
     source_category_code: other
@@ -740,18 +916,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SOM_Somalia_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SOM-WAS-01
     source_category_code: protected_spring
@@ -761,8 +937,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: SOM-WAS-02
     source_category_code: protected_dug_well
@@ -772,8 +948,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: SOM-WAS-03
     source_category_code: protected_well
@@ -783,8 +959,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: SOM-WAS-04
     source_category_code: borehole_handpump
@@ -794,8 +970,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SOM-WAS-05
     source_category_code: tube_well_or_borehole
@@ -805,8 +981,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SOM-WAS-06
     source_category_code: tube_well_borehole
@@ -816,8 +992,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SOM-WAS-07
     source_category_code: tubewell_borehole
@@ -827,8 +1003,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SOM-WAS-08
     source_category_code: tubewell_borehole
@@ -838,8 +1014,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SOM-WAS-09
     source_category_code: unprotected_spring
@@ -849,8 +1025,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: SOM-WAS-10
     source_category_code: unprotected_dug_well
@@ -860,8 +1036,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: SOM-WAS-11
     source_category_code: unprotected_well
@@ -871,8 +1047,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: SOM-WAS-12
     source_category_code: cart_with_small_tank
@@ -882,8 +1058,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SOM-WAS-13
     source_category_code: cart_with_small_tank_or_drum
@@ -893,8 +1069,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SOM-WAS-14
     source_category_code: cart_with_small_tank_drum
@@ -904,8 +1080,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SOM-WAS-15
     source_category_code: cart_with_tank
@@ -915,8 +1091,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SOM-WAS-16
     source_category_code: donkey_carts_carts_with_small_tank_or_drum
@@ -926,8 +1102,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SOM-WAS-17
     source_category_code: water_kiosk
@@ -937,8 +1113,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: SOM-WAS-18
     source_category_code: water_seller
@@ -948,8 +1124,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: SOM-WAS-19
     source_category_code: tanker_truck
@@ -959,8 +1135,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: SOM-WAS-20
     source_category_code: tanker_truck
@@ -970,8 +1146,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: SOM-WAS-21
     source_category_code: tanker_truck
@@ -981,8 +1157,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: SOM-WAS-22
     source_category_code: natural_water_catchment_balley
@@ -992,8 +1168,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SOM-WAS-23
     source_category_code: other
@@ -1003,8 +1179,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SOM-WAS-24
     source_category_code: other_specify
@@ -1014,8 +1190,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SOM-WAS-25
     source_category_code: others
@@ -1025,8 +1201,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SOM-WAS-26
     source_category_code: berkad
@@ -1036,8 +1212,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SOM-WAS-27
     source_category_code: berkad_bali_rain_water_catchment_from_run_off
@@ -1047,8 +1223,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SOM-WAS-28
     source_category_code: water_catchment
@@ -1058,8 +1234,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SOM-WAS-29
     source_category_code: bottled_water
@@ -1069,8 +1245,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: SOM-WAS-30
     source_category_code: rainwater
@@ -1080,8 +1256,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: SOM-WAS-31
     source_category_code: rainwater
@@ -1091,8 +1267,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SOM-WAS-32
     source_category_code: rainwater_collection
@@ -1102,8 +1278,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SOM-WAS-33
     source_category_code: roof_top
@@ -1113,8 +1289,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SOM-WAS-34
     source_category_code: rooftop
@@ -1124,8 +1300,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SOM-WAS-35
     source_category_code: surface_dam
@@ -1135,8 +1311,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SOM-WAS-36
     source_category_code: surface_water
@@ -1146,8 +1322,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SOM-WAS-37
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channels
@@ -1158,8 +1334,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SOM-WAS-38
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_mugsiid
@@ -1169,8 +1345,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SOM-WAS-39
     source_category_code: surface_water_river_stream_dam_lake_canal_etc
@@ -1180,8 +1356,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SOM-WAS-40
     source_category_code: piped_to_neighbor
@@ -1191,8 +1367,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SOM-WAS-41
     source_category_code: piped_to_neighbour
@@ -1202,8 +1378,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SOM-WAS-42
     source_category_code: piped_into_dwelling
@@ -1213,8 +1389,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SOM-WAS-43
     source_category_code: piped_water_in_house
@@ -1224,8 +1400,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SOM-WAS-44
     source_category_code: piped_water_into_the_home
@@ -1235,8 +1411,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SOM-WAS-45
     source_category_code: piped_into_compound_yard_or_plot
@@ -1246,8 +1422,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SOM-WAS-46
     source_category_code: piped_into_yard_or_plot
@@ -1257,8 +1433,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SOM-WAS-47
     source_category_code: piped_into_yard_plot
@@ -1268,8 +1444,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SOM-WAS-48
     source_category_code: piped_water_in_compound
@@ -1279,8 +1455,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SOM-WAS-49
     source_category_code: piped_water_into_compound
@@ -1290,8 +1466,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SOM-WAS-50
     source_category_code: public_tap
@@ -1301,8 +1477,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SOM-WAS-51
     source_category_code: public_tap_stand_pipe
@@ -1312,8 +1488,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SOM-WAS-52
     source_category_code: public_tap_standpipe
@@ -1323,13 +1499,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SOM_Somalia_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

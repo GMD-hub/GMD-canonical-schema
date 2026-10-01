@@ -6,9 +6,9 @@ status: draft
 country_name: KEN
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KEN-EDU-01
     national_label_en: Early Childhood Development (ECD) - Baby class
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: KEN-EDU-02
     national_label_en: Early Childhood Development (ECD) - Nursery
     national_label_local: Early Childhood Development (ECD) - Nursery
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: KEN-EDU-03
     national_label_en: Early Childhood Development (ECD) - Pre-unit
     national_label_local: Early Childhood Development (ECD) - Pre-unit
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: KEN-EDU-04
     national_label_en: First stage of primary education (Standards 1 to 3)
     national_label_local: First stage of primary education (Standards 1 to 3)
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - KEN-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: KEN-EDU-05
     national_label_en: Second stage of primary education (Standards 4 to 6)
     national_label_local: Second stage of primary education (Standards 4 to 6)
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - KEN-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: KEN-EDU-06
     national_label_en: Second stage of primary education (Standards 7 and 8)
     national_label_local: Second stage of primary education (Standards 7 and 8)
@@ -76,6 +106,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - KEN-EDU-04
+    - KEN-EDU-05
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
   - country_entry_id: KEN-EDU-07
     national_label_en: Youth polytechnics
     national_label_local: Youth polytechnics
@@ -87,6 +127,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - KEN-EDU-04
+    - KEN-EDU-05
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
   - country_entry_id: KEN-EDU-08
     national_label_en: Secondary education
     national_label_local: Secondary education
@@ -98,6 +148,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - KEN-EDU-06
+    - KEN-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
   - country_entry_id: KEN-EDU-09
     national_label_en: Youth polytechnics
     national_label_local: Youth polytechnics
@@ -109,6 +171,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - KEN-EDU-06
+    - KEN-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
   - country_entry_id: KEN-EDU-10
     national_label_en: Technical Vocational Education and Training (TVET)
     national_label_local: Technical Vocational Education and Training (TVET)
@@ -120,6 +194,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-11
     national_label_en: Pre-Primary Teacher training
     national_label_local: Pre-Primary Teacher training
@@ -131,6 +219,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-12
     national_label_en: Primary teacher training college
     national_label_local: Primary teacher training college
@@ -142,6 +244,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-13
     national_label_en: Teacher training college diploma
     national_label_local: Teacher training college diploma
@@ -153,6 +269,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-14
     national_label_en: National polytechnics (certificate and diploma)
     national_label_local: National polytechnics (certificate and diploma)
@@ -164,6 +294,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-15
     national_label_en: National polytechnics (Higher diploma)
     national_label_local: National polytechnics (Higher diploma)
@@ -175,6 +319,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-16
     national_label_en: Bachelor's degree (Science, Education, Education Science, Arts,
       Law, Commerce...)
@@ -188,9 +346,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-17
     national_label_en: Bachelor's degree
-    national_label_local: Bachelor's degree (Engineering, Medicine….)
+    national_label_local: "Bachelor's degree (Engineering, Medicine\u2026.)"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -199,6 +371,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-18
     national_label_en: Bachelor's degree (Architecture)
     national_label_local: Bachelor's degree (Architecture)
@@ -210,6 +396,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - KEN-EDU-08
+    - KEN-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
   - country_entry_id: KEN-EDU-19
     national_label_en: Master's degree
     national_label_local: Master's degree
@@ -221,6 +421,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - KEN-EDU-15
+    - KEN-EDU-16
+    - KEN-EDU-17
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-15
+    - KEN-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
+    - 'minimum parent path selected from: KEN-EDU-15, KEN-EDU-16, KEN-EDU-17'
   - country_entry_id: KEN-EDU-20
     national_label_en: Doctorate
     national_label_local: Doctorate
@@ -232,27 +449,45 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - KEN-EDU-18
+    - KEN-EDU-19
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - KEN-EDU-04
+    - KEN-EDU-07
+    - KEN-EDU-09
+    - KEN-EDU-15
+    - KEN-EDU-19
+    - KEN-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: KEN-EDU-04, KEN-EDU-05'
+    - 'minimum parent path selected from: KEN-EDU-06, KEN-EDU-07'
+    - 'minimum parent path selected from: KEN-EDU-08, KEN-EDU-09'
+    - 'minimum parent path selected from: KEN-EDU-15, KEN-EDU-16, KEN-EDU-17'
+    - 'minimum parent path selected from: KEN-EDU-18, KEN-EDU-19'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Kenya.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
   effective_to: 2015
-  selectors: ~
+  selectors: null
   value:
   - country_entry_id: KEN-SUBNAT-01
-    survey_labels: 1 - Nairobi | 1 – Nairobi | 1-Central
+    survey_labels: "1 - Nairobi | 1 \u2013 Nairobi | 1-Central"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51328
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51328
     geo_year: '2015'
@@ -264,16 +499,16 @@ parameters:
     geo_name: Nairobi
     source_row: 8548
   - country_entry_id: KEN-SUBNAT-02
-    survey_labels: 2 - Central | 2 – Central | 2-Coast
+    survey_labels: "2 - Central | 2 \u2013 Central | 2-Coast"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51325
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51325
     geo_year: '2015'
@@ -285,16 +520,16 @@ parameters:
     geo_name: Central
     source_row: 8549
   - country_entry_id: KEN-SUBNAT-03
-    survey_labels: 3 - Coast | 3 – Coast | 3-Eastern
+    survey_labels: "3 - Coast | 3 \u2013 Coast | 3-Eastern"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51326
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51326
     geo_year: '2015'
@@ -306,16 +541,16 @@ parameters:
     geo_name: Coast
     source_row: 8550
   - country_entry_id: KEN-SUBNAT-04
-    survey_labels: 4 - Eastern | 4 – Eastern | 4-Nairobi
+    survey_labels: "4 - Eastern | 4 \u2013 Eastern | 4-Nairobi"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51327
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51327
     geo_year: '2015'
@@ -327,16 +562,16 @@ parameters:
     geo_name: Eastern
     source_row: 8551
   - country_entry_id: KEN-SUBNAT-05
-    survey_labels: 5 - North Eastern | 5 – North Eastern | 5-North Eastern
+    survey_labels: "5 - North Eastern | 5 \u2013 North Eastern | 5-North Eastern"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51329
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51329
     geo_year: '2015'
@@ -348,16 +583,16 @@ parameters:
     geo_name: North Eastern
     source_row: 8552
   - country_entry_id: KEN-SUBNAT-06
-    survey_labels: 6 - Nyanza | 6 – Nyanza | 6-Nyanza
+    survey_labels: "6 - Nyanza | 6 \u2013 Nyanza | 6-Nyanza"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51330
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51330
     geo_year: '2015'
@@ -369,16 +604,16 @@ parameters:
     geo_name: Nyanza
     source_row: 8553
   - country_entry_id: KEN-SUBNAT-07
-    survey_labels: 7 - Rift Valley | 7 – Rift Valley | 7-Rift Valley
+    survey_labels: "7 - Rift Valley | 7 \u2013 Rift Valley | 7-Rift Valley"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51331
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51331
     geo_year: '2015'
@@ -390,16 +625,16 @@ parameters:
     geo_name: Rift Valley
     source_row: 8554
   - country_entry_id: KEN-SUBNAT-08
-    survey_labels: 8 - Western | 8 – Western | 8-Western
+    survey_labels: "8 - Western | 8 \u2013 Western | 8-Western"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: KEN_2015_GAUL1_51332
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: KEN_2015_GAUL1_51332
     geo_year: '2015'
@@ -412,13 +647,13 @@ parameters:
     source_row: 8555
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2022
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KEN-SUBNAT-01
     survey_labels: 1 - Mombasa | 1-Mombasa
@@ -427,10 +662,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.28_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.28_1
     geo_year: '2022'
@@ -448,10 +683,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.25_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.25_1
     geo_year: '2022'
@@ -469,10 +704,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.9_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.9_1
     geo_year: '2022'
@@ -490,10 +725,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.26_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.26_1
     geo_year: '2022'
@@ -511,10 +746,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.41_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.41_1
     geo_year: '2022'
@@ -532,10 +767,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.6_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.6_1
     geo_year: '2022'
@@ -553,10 +788,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.18_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.18_1
     geo_year: '2022'
@@ -574,10 +809,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.22_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.22_1
     geo_year: '2022'
@@ -595,10 +830,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.23_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.23_1
     geo_year: '2022'
@@ -616,10 +851,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.35_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.35_1
     geo_year: '2022'
@@ -637,10 +872,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.36_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.36_1
     geo_year: '2022'
@@ -658,10 +893,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.19_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.19_1
     geo_year: '2022'
@@ -679,10 +914,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.15_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.15_1
     geo_year: '2022'
@@ -700,10 +935,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.29_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.29_1
     geo_year: '2022'
@@ -721,10 +956,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.13_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.13_1
     geo_year: '2022'
@@ -742,10 +977,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.43_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.43_1
     geo_year: '2022'
@@ -763,10 +998,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.47_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.47_1
     geo_year: '2022'
@@ -784,10 +1019,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.37_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.37_1
     geo_year: '2022'
@@ -805,10 +1040,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.42_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.42_1
     geo_year: '2022'
@@ -826,10 +1061,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.44_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.44_1
     geo_year: '2022'
@@ -847,10 +1082,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.5_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.5_1
     geo_year: '2022'
@@ -868,10 +1103,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.32_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.32_1
     geo_year: '2022'
@@ -889,10 +1124,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.14_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.14_1
     geo_year: '2022'
@@ -910,10 +1145,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.1_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.1_1
     geo_year: '2022'
@@ -931,10 +1166,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.20_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.20_1
     geo_year: '2022'
@@ -952,10 +1187,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.31_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.31_1
     geo_year: '2022'
@@ -973,10 +1208,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.33_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.33_1
     geo_year: '2022'
@@ -994,10 +1229,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.10_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.10_1
     geo_year: '2022'
@@ -1015,10 +1250,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.12_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.12_1
     geo_year: '2022'
@@ -1036,10 +1271,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.2_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.2_1
     geo_year: '2022'
@@ -1057,10 +1292,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.11_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.11_1
     geo_year: '2022'
@@ -1078,10 +1313,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.45_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.45_1
     geo_year: '2022'
@@ -1099,10 +1334,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.3_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.3_1
     geo_year: '2022'
@@ -1120,10 +1355,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.40_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.40_1
     geo_year: '2022'
@@ -1141,10 +1376,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.4_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.4_1
     geo_year: '2022'
@@ -1162,10 +1397,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.38_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.38_1
     geo_year: '2022'
@@ -1183,10 +1418,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.17_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.17_1
     geo_year: '2022'
@@ -1204,10 +1439,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.8_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.8_1
     geo_year: '2022'
@@ -1225,10 +1460,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.27_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.27_1
     geo_year: '2022'
@@ -1246,10 +1481,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.16_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.16_1
     geo_year: '2022'
@@ -1267,10 +1502,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.34_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.34_1
     geo_year: '2022'
@@ -1288,10 +1523,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.30_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.30_1
     geo_year: '2022'
@@ -1309,10 +1544,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.21_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.21_1
     geo_year: '2022'
@@ -1330,10 +1565,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.39_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.39_1
     geo_year: '2022'
@@ -1351,10 +1586,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.7_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.7_1
     geo_year: '2022'
@@ -1372,10 +1607,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.46_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.46_1
     geo_year: '2022'
@@ -1393,10 +1628,10 @@ parameters:
     gmd_subnatid2: KEN_2022_GADM1_KEN.24_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: KEN_2022_GADM1_KEN.24_1
     geo_year: '2022'
@@ -1409,13 +1644,13 @@ parameters:
     source_row: 8626
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KEN-SAN-01
     source_category_code: 5_compositing_toilet
@@ -1425,8 +1660,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: KEN-SAN-02
     source_category_code: 8_composting_toilet
@@ -1436,8 +1671,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: KEN-SAN-03
     source_category_code: 9_composting_toilet
@@ -1447,8 +1682,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: KEN-SAN-04
     source_category_code: composting_toilet
@@ -1458,8 +1693,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: KEN-SAN-05
     source_category_code: flush_or_pour_flush_toilet
@@ -1469,8 +1704,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: KEN-SAN-06
     source_category_code: 3_flush_pour_flush_toilets_connected_to_elsewhere
@@ -1480,8 +1715,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: KEN-SAN-07
     source_category_code: 4_flush_pour_flush_toilets_connected_to_elsewhere
@@ -1491,8 +1726,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: KEN-SAN-08
     source_category_code: flush_to_somewhere_else
@@ -1502,8 +1737,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: KEN-SAN-09
     source_category_code: flush_to_somewhere_else
@@ -1513,8 +1748,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: KEN-SAN-10
     source_category_code: flushed_toilet_to_elsewhere
@@ -1524,8 +1759,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: KEN-SAN-11
     source_category_code: 1_flush_pour_flush_toilets_connected_to_piped_sewer_system
@@ -1535,8 +1770,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KEN-SAN-12
     source_category_code: flush_to_piped_sewer_system
@@ -1546,8 +1781,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KEN-SAN-13
     source_category_code: flush_to_piped_sewer_system
@@ -1557,8 +1792,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KEN-SAN-14
     source_category_code: flush_to_sewage
@@ -1568,8 +1803,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KEN-SAN-15
     source_category_code: flush_to_sewer
@@ -1579,8 +1814,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KEN-SAN-16
     source_category_code: flush_toilet_to_piped_sewer_system
@@ -1590,8 +1825,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: KEN-SAN-17
     source_category_code: 13_flush_pour_flush_toilets_connected_to_pit_latrine
@@ -1601,8 +1836,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-SAN-18
     source_category_code: 3_flush_pour_flush_toilets_connected_to_pit_latrine
@@ -1612,8 +1847,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-SAN-19
     source_category_code: flush_to_pit_latrine
@@ -1623,8 +1858,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-SAN-20
     source_category_code: flush_to_pit_latrine
@@ -1634,8 +1869,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-SAN-21
     source_category_code: flush_to_pit_latrine
@@ -1645,8 +1880,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-SAN-22
     source_category_code: flushed_toilet_to_pit_latrine
@@ -1656,8 +1891,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-SAN-23
     source_category_code: 2_flush_pour_flush_toilets_connected_to_septic_tank
@@ -1667,8 +1902,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: KEN-SAN-24
     source_category_code: flush_to_septic_tank
@@ -1678,8 +1913,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: KEN-SAN-25
     source_category_code: flush_to_septic_tank
@@ -1689,8 +1924,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: KEN-SAN-26
     source_category_code: flushed_toilet_to_septic_tank
@@ -1700,8 +1935,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: KEN-SAN-27
     source_category_code: 1_flush_toilet
@@ -1711,8 +1946,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KEN-SAN-28
     source_category_code: 4_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
@@ -1723,8 +1958,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KEN-SAN-29
     source_category_code: 5_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
@@ -1735,8 +1970,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KEN-SAN-30
     source_category_code: flush_don_t_know_where
@@ -1746,8 +1981,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KEN-SAN-31
     source_category_code: flush_to_unknown_place_not_sure_dk_where
@@ -1757,8 +1992,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KEN-SAN-32
     source_category_code: flush_don_t_know_where
@@ -1768,8 +2003,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: KEN-SAN-33
     source_category_code: flush_toilet
@@ -1779,8 +2014,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-SAN-34
     source_category_code: flush_toilet
@@ -1790,8 +2025,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-SAN-35
     source_category_code: w_c
@@ -1801,8 +2036,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-SAN-36
     source_category_code: own_flush_toilet
@@ -1812,8 +2047,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: KEN-SAN-37
     source_category_code: private_domestic_connection_to_sewage_system
@@ -1823,8 +2058,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: KEN-SAN-38
     source_category_code: private_flush_to_septic_tank
@@ -1834,8 +2069,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: KEN-SAN-39
     source_category_code: shared_flush_toilet
@@ -1845,8 +2080,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: KEN-SAN-40
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -1857,8 +2092,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: KEN-SAN-41
     source_category_code: shared_flush_to_septic_tank
@@ -1868,8 +2103,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: KEN-SAN-42
     source_category_code: 3_flush_elsewhere
@@ -1879,8 +2114,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: KEN-SAN-43
     source_category_code: flush_to_somewhere_else
@@ -1890,8 +2125,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: KEN-SAN-44
     source_category_code: 1_flush_pour_type_toilet_connected_to_piped_sewer_system
@@ -1901,8 +2136,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KEN-SAN-45
     source_category_code: 1_flush_sewer
@@ -1912,8 +2147,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KEN-SAN-46
     source_category_code: flush_to_main_sewer
@@ -1923,8 +2158,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KEN-SAN-47
     source_category_code: flush_to_piped_sewer_system
@@ -1934,8 +2169,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KEN-SAN-48
     source_category_code: flush_to_cess_pool
@@ -1945,8 +2180,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: KEN-SAN-49
     source_category_code: flush_to_pit_latrine
@@ -1956,8 +2191,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: KEN-SAN-50
     source_category_code: 2_flush_pour_type_toilet_connected_to_septic_tank
@@ -1967,8 +2202,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: KEN-SAN-51
     source_category_code: 2_flush_septic
@@ -1978,8 +2213,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: KEN-SAN-52
     source_category_code: flush_to_septic_tank
@@ -1989,8 +2224,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: KEN-SAN-53
     source_category_code: 4_flush_unknown
@@ -2000,8 +2235,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-SAN-54
     source_category_code: flush_to_sewage_system_septic_tank
@@ -2011,8 +2246,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-SAN-55
     source_category_code: flush_toilet
@@ -2022,8 +2257,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-SAN-56
     source_category_code: flush_don_t_know_where
@@ -2033,8 +2268,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-SAN-57
     source_category_code: flush_don_t_know_where
@@ -2044,8 +2279,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-SAN-58
     source_category_code: 10_bucket
@@ -2055,8 +2290,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-59
     source_category_code: 6_bucket_toilet
@@ -2066,8 +2301,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-60
     source_category_code: 7_bucket_latrine
@@ -2077,8 +2312,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-61
     source_category_code: bucket
@@ -2088,8 +2323,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-62
     source_category_code: bucket_latrine
@@ -2099,8 +2334,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-63
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -2110,8 +2345,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-64
     source_category_code: bucket_toilet
@@ -2121,8 +2356,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-65
     source_category_code: bucket_pot
@@ -2132,8 +2367,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-66
     source_category_code: pan_bucket
@@ -2143,8 +2378,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: KEN-SAN-67
     source_category_code: 10_hanging_toilet_hanging_latrine
@@ -2155,8 +2390,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KEN-SAN-68
     source_category_code: 11_hanging_toilet_hanging_latrine
@@ -2167,8 +2402,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KEN-SAN-69
     source_category_code: 7_hanging_toilet_hanging_latrine
@@ -2179,8 +2414,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KEN-SAN-70
     source_category_code: hanging_toilet
@@ -2191,8 +2426,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KEN-SAN-71
     source_category_code: hanging_toilet_hanging_latrine
@@ -2203,8 +2438,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KEN-SAN-72
     source_category_code: hanging_toilet_latrine
@@ -2215,8 +2450,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: KEN-SAN-73
     source_category_code: 12_other
@@ -2226,8 +2461,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: KEN-SAN-74
     source_category_code: 6_cess_pool
@@ -2237,8 +2472,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: KEN-SAN-75
     source_category_code: 3_pit_latrine_with_slab
@@ -2249,8 +2484,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-76
     source_category_code: 4_pit_latrine_covered
@@ -2261,8 +2496,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-77
     source_category_code: 6_pit_latrine_with_slab
@@ -2273,8 +2508,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-78
     source_category_code: 6_pit_with_slab
@@ -2285,8 +2520,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-79
     source_category_code: 7_pit_latrine_with_slab
@@ -2297,8 +2532,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-80
     source_category_code: covered_pit_latrine
@@ -2309,8 +2544,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-81
     source_category_code: improved_pit_latrine
@@ -2321,8 +2556,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-82
     source_category_code: pit_latrine_with_slab
@@ -2333,8 +2568,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-83
     source_category_code: pit_latrine_with_slab
@@ -2345,8 +2580,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-SAN-84
     source_category_code: 4_pit_latrine_without_slab_open_pit
@@ -2357,8 +2592,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-85
     source_category_code: 5_pit_latrine_uncovered
@@ -2369,8 +2604,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-86
     source_category_code: 7_pit_latrine_without_slab_open_pit
@@ -2381,8 +2616,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-87
     source_category_code: 7_pit_no_slab
@@ -2393,8 +2628,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-88
     source_category_code: 8_pit_latrine_without_slab_open_pit
@@ -2405,8 +2640,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-89
     source_category_code: open_pit
@@ -2417,8 +2652,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-90
     source_category_code: pit_latrine_without_slab_open_pit
@@ -2429,8 +2664,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-91
     source_category_code: pit_latrine_without_slab
@@ -2441,8 +2676,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-92
     source_category_code: pit_latrine_without_slab_open_pit
@@ -2453,8 +2688,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-93
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -2465,8 +2700,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-94
     source_category_code: uncovered_pit_latrine
@@ -2477,8 +2712,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: KEN-SAN-95
     source_category_code: pit
@@ -2489,8 +2724,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-96
     source_category_code: pit_latrine
@@ -2501,8 +2736,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-97
     source_category_code: pit_latrine
@@ -2513,8 +2748,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-98
     source_category_code: traditional_pit_latrine
@@ -2525,8 +2760,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-99
     source_category_code: traditional_pit_toilet
@@ -2537,8 +2772,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-100
     source_category_code: traditional_pit_toilet
@@ -2549,8 +2784,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-101
     source_category_code: uncovered_pit_latrine
@@ -2561,8 +2796,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-SAN-102
     source_category_code: 2_pit_latrine_ventilated
@@ -2573,8 +2808,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-103
     source_category_code: 3_ventilated_improved_pit_latrine_vip
@@ -2585,8 +2820,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-104
     source_category_code: 5_ventilated_improved_pit_latrine
@@ -2597,8 +2832,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-105
     source_category_code: 5_vip
@@ -2609,8 +2844,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-106
     source_category_code: 6_ventilated_improved_pit_latrine
@@ -2621,8 +2856,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-107
     source_category_code: pit_latrine_ventilated_improved_pit_vip
@@ -2633,8 +2868,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-108
     source_category_code: v_i_p_latrine
@@ -2645,8 +2880,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-109
     source_category_code: ventilated_improved_pit
@@ -2657,8 +2892,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-110
     source_category_code: ventilated_improved_pit_vip_latrine
@@ -2669,8 +2904,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-111
     source_category_code: ventilated_improved_pit_latrine
@@ -2681,8 +2916,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-112
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -2693,8 +2928,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-113
     source_category_code: vip
@@ -2705,8 +2940,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-114
     source_category_code: vip_latrine
@@ -2717,8 +2952,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: KEN-SAN-115
     source_category_code: bucket_latrine
@@ -2728,8 +2963,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 118
   - country_entry_id: KEN-SAN-116
     source_category_code: pit_latrine_covered
@@ -2740,8 +2975,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: KEN-SAN-117
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -2752,8 +2987,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: KEN-SAN-118
     source_category_code: pit_latrine_uncovered
@@ -2764,8 +2999,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 116
   - country_entry_id: KEN-SAN-119
     source_category_code: vip_pit_latrin
@@ -2776,8 +3011,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 113
   - country_entry_id: KEN-SAN-120
     source_category_code: 9_bucket
@@ -2788,8 +3023,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 126
   - country_entry_id: KEN-SAN-121
     source_category_code: bucket_toilet
@@ -2800,8 +3035,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 126
   - country_entry_id: KEN-SAN-122
     source_category_code: pail_bucket
@@ -2812,8 +3047,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 126
   - country_entry_id: KEN-SAN-123
     source_category_code: hanging_toilet_hanging_latrine
@@ -2824,8 +3059,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 125
   - country_entry_id: KEN-SAN-124
     source_category_code: hanging_toilet_latrine
@@ -2836,8 +3071,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 125
   - country_entry_id: KEN-SAN-125
     source_category_code: community_latrine
@@ -2848,8 +3083,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: KEN-SAN-126
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -2860,8 +3095,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: KEN-SAN-127
     source_category_code: pour_flush
@@ -2871,8 +3106,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: KEN-SAN-128
     source_category_code: private_pour_flush_latrine
@@ -2882,8 +3117,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: KEN-SAN-129
     source_category_code: shared_pour_flush_latrine
@@ -2894,8 +3129,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: KEN-SAN-130
     source_category_code: pour_flush_latrine
@@ -2905,8 +3140,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 89
   - country_entry_id: KEN-SAN-131
     source_category_code: 12_bush
@@ -2916,8 +3151,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-132
     source_category_code: 12_no_facility_bush_field
@@ -2927,8 +3162,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-133
     source_category_code: 13_no_facility_bush_field
@@ -2938,8 +3173,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-134
     source_category_code: 8_no_faciliity_bush_field
@@ -2949,8 +3184,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-135
     source_category_code: 8_no_facility_bush_field_etc
@@ -2960,8 +3195,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-136
     source_category_code: bush_or_field
@@ -2971,8 +3206,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-137
     source_category_code: no_facilities
@@ -2982,8 +3217,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-138
     source_category_code: no_facilities_open_defecation
@@ -2993,8 +3228,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-139
     source_category_code: no_facilities_bush
@@ -3004,8 +3239,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-140
     source_category_code: no_facilities_bush_field
@@ -3015,8 +3250,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-141
     source_category_code: no_facility_bush_field
@@ -3026,8 +3261,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-142
     source_category_code: no_facility_bush_field
@@ -3037,8 +3272,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-143
     source_category_code: no_facility_bush_field
@@ -3048,8 +3283,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-144
     source_category_code: no_latrine
@@ -3059,8 +3294,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-145
     source_category_code: non_pas_disponible
@@ -3070,8 +3305,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-146
     source_category_code: none
@@ -3081,8 +3316,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-147
     source_category_code: open
@@ -3092,8 +3327,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-148
     source_category_code: open_defecation
@@ -3103,8 +3338,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: KEN-SAN-149
     source_category_code: access_to_sanitation
@@ -3114,8 +3349,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: KEN-SAN-150
     source_category_code: community_latrines
@@ -3125,8 +3360,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: KEN-SAN-151
     source_category_code: flush_to_bio_septic_tank
@@ -3136,8 +3371,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: KEN-SAN-152
     source_category_code: 11_other
@@ -3147,8 +3382,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-153
     source_category_code: non_access_to_sanitation
@@ -3158,8 +3393,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-154
     source_category_code: other
@@ -3169,8 +3404,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-155
     source_category_code: other_type_of_sanitation
@@ -3180,8 +3415,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-156
     source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
@@ -3191,8 +3426,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-157
     source_category_code: other_specify
@@ -3202,8 +3437,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-158
     source_category_code: other_unknown
@@ -3213,8 +3448,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-159
     source_category_code: others
@@ -3224,8 +3459,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: KEN-SAN-160
     source_category_code: 97_other
@@ -3235,18 +3470,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_KEN_Kenya_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: KEN-WAS-01
     source_category_code: spring
@@ -3256,8 +3491,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: KEN-WAS-02
     source_category_code: spring_water
@@ -3267,8 +3502,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: KEN-WAS-03
     source_category_code: tubewell_dug_well_borehole
@@ -3278,8 +3513,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: KEN-WAS-04
     source_category_code: 6_protected_spring
@@ -3289,8 +3524,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-05
     source_category_code: 7_protected_spring
@@ -3300,8 +3535,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-06
     source_category_code: 7_water_from_spring_protected_spring
@@ -3311,8 +3546,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-07
     source_category_code: protected_spring
@@ -3322,8 +3557,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-08
     source_category_code: protected_spring_closed
@@ -3333,8 +3568,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-09
     source_category_code: protected_spring_41
@@ -3344,8 +3579,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-10
     source_category_code: water_from_spring_protected_spring
@@ -3355,8 +3590,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: KEN-WAS-11
     source_category_code: protected_spring
@@ -3366,8 +3601,8 @@ parameters:
     jmp_id: ground_water.protected_spring.private
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 79
   - country_entry_id: KEN-WAS-12
     source_category_code: 3_protected_dug_well
@@ -3377,8 +3612,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-13
     source_category_code: 4_protected_well
@@ -3388,8 +3623,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-14
     source_category_code: 5_dug_well_protected_well
@@ -3399,8 +3634,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-15
     source_category_code: 5_protected_dug_well
@@ -3410,8 +3645,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-16
     source_category_code: dug_well_protected_well
@@ -3421,8 +3656,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-17
     source_category_code: protected_dug_well
@@ -3432,8 +3667,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-18
     source_category_code: protected_dug_well_closed_or_with_handpump
@@ -3443,8 +3678,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-19
     source_category_code: protected_well
@@ -3454,8 +3689,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-20
     source_category_code: protected_well_31
@@ -3465,8 +3700,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: KEN-WAS-21
     source_category_code: covered_well_in_compound_plot
@@ -3476,8 +3711,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KEN-WAS-22
     source_category_code: protected_dug_well
@@ -3487,8 +3722,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: KEN-WAS-23
     source_category_code: covered_public_well
@@ -3498,8 +3733,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: KEN-WAS-24
     source_category_code: public_well
@@ -3509,8 +3744,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: KEN-WAS-25
     source_category_code: protected_dug_well_or_protected_spring
@@ -3520,8 +3755,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: KEN-WAS-26
     source_category_code: well_without_handpump
@@ -3531,8 +3766,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: KEN-WAS-27
     source_category_code: well_in_residence
@@ -3542,8 +3777,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: KEN-WAS-28
     source_category_code: public_well
@@ -3553,8 +3788,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: KEN-WAS-29
     source_category_code: 10_borehole
@@ -3564,8 +3799,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-30
     source_category_code: 2_tube_well
@@ -3575,8 +3810,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-31
     source_category_code: 4_tube_well_or_borehole
@@ -3586,8 +3821,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-32
     source_category_code: 4_tubewell
@@ -3597,8 +3832,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-33
     source_category_code: bore_hole_well
@@ -3608,8 +3843,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-34
     source_category_code: borehole
@@ -3619,8 +3854,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-35
     source_category_code: borehole_with_handpump_pump
@@ -3630,8 +3865,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-36
     source_category_code: borehole_tube_well
@@ -3641,8 +3876,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-37
     source_category_code: protected_tube_well_or_bore_hole
@@ -3652,8 +3887,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-38
     source_category_code: tube_well_or_borehole
@@ -3663,8 +3898,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-39
     source_category_code: tube_well_or_borehole_21
@@ -3674,8 +3909,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-40
     source_category_code: tube_well_borehole_with_pump
@@ -3685,8 +3920,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-41
     source_category_code: tubewell_or_borehole
@@ -3696,8 +3931,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-42
     source_category_code: tubewell_borehole_with_pump
@@ -3707,8 +3942,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-43
     source_category_code: well_with_handpump
@@ -3718,8 +3953,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: KEN-WAS-44
     source_category_code: borehole_with_pump
@@ -3729,8 +3964,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: KEN-WAS-45
     source_category_code: 7_unprotected_spring
@@ -3740,8 +3975,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-46
     source_category_code: 8_unprotected_spring
@@ -3751,8 +3986,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-47
     source_category_code: 8_water_from_spring_unprotected_spring
@@ -3762,8 +3997,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-48
     source_category_code: protected_spring
@@ -3773,8 +4008,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-49
     source_category_code: unprotected_spring
@@ -3784,8 +4019,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-50
     source_category_code: unprotected_spring_open
@@ -3795,8 +4030,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-51
     source_category_code: unprotected_spring_42
@@ -3806,8 +4041,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-52
     source_category_code: water_from_spring_unprotected_spring
@@ -3817,8 +4052,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: KEN-WAS-53
     source_category_code: 4_unprotected_dug_well
@@ -3828,8 +4063,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-54
     source_category_code: 5_unprotected_well
@@ -3839,8 +4074,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-55
     source_category_code: 6_dug_well_unprotected_well
@@ -3850,8 +4085,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-56
     source_category_code: 6_unprotected_dug_well
@@ -3861,8 +4096,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-57
     source_category_code: dug_well_unprotected_well
@@ -3872,8 +4107,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-58
     source_category_code: unprotected_dug_well
@@ -3883,8 +4118,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-59
     source_category_code: unprotected_dug_well_open
@@ -3894,8 +4129,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-60
     source_category_code: unprotected_dug_well_springs
@@ -3905,8 +4140,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-61
     source_category_code: unprotected_well
@@ -3916,8 +4151,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-62
     source_category_code: unprotected_well_32
@@ -3927,8 +4162,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-63
     source_category_code: unprotected_well_rain_water
@@ -3938,8 +4173,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: KEN-WAS-64
     source_category_code: well_on_residence_plot
@@ -3949,8 +4184,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: KEN-WAS-65
     source_category_code: unprotected_dug_well_or_spring
@@ -3960,8 +4195,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: KEN-WAS-66
     source_category_code: unprotected_dug_well_unprotected_spring
@@ -3971,8 +4206,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: KEN-WAS-67
     source_category_code: open_well_in_compound_plot
@@ -3982,8 +4217,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs.private
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 51
   - country_entry_id: KEN-WAS-68
     source_category_code: unprotected_dug_wells_springs
@@ -3993,8 +4228,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs.private
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 51
   - country_entry_id: KEN-WAS-69
     source_category_code: open_public_well
@@ -4004,8 +4239,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs.public
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 52
   - country_entry_id: KEN-WAS-70
     source_category_code: 11_cart
@@ -4015,8 +4250,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-71
     source_category_code: 11_cart_with_small_tank
@@ -4026,8 +4261,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-72
     source_category_code: 8_cart_with_small_tank
@@ -4037,8 +4272,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-73
     source_category_code: cart_with_small_tank
@@ -4048,8 +4283,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-74
     source_category_code: cart_with_small_tank_71
@@ -4059,8 +4294,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-75
     source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
@@ -4070,8 +4305,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-76
     source_category_code: vendors_cart_with_small_tank_drum_buckets
@@ -4081,8 +4316,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: KEN-WAS-77
     source_category_code: access_to_safe_water
@@ -4092,8 +4327,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: KEN-WAS-78
     source_category_code: vendors_bicycles_with_buckets
@@ -4103,8 +4338,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: KEN-WAS-79
     source_category_code: water_vendor
@@ -4114,8 +4349,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: KEN-WAS-80
     source_category_code: 10_tanker
@@ -4125,8 +4360,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-81
     source_category_code: 10_tanker_truck
@@ -4136,8 +4371,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-82
     source_category_code: 7_tanker_water
@@ -4147,8 +4382,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-83
     source_category_code: purchased_from_a_tanker_truck
@@ -4158,8 +4393,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-84
     source_category_code: tanker_truck
@@ -4169,8 +4404,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-85
     source_category_code: tanker_truck_61
@@ -4180,8 +4415,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-86
     source_category_code: tanker_truck_vendor
@@ -4191,8 +4426,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-87
     source_category_code: tanker_truck_vendor
@@ -4202,8 +4437,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-88
     source_category_code: tanker_truck_vendor
@@ -4213,8 +4448,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-89
     source_category_code: tanker_truck_vendor
@@ -4224,8 +4459,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-90
     source_category_code: tankers_truck_vendor
@@ -4235,8 +4470,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-91
     source_category_code: vendor_truck
@@ -4246,8 +4481,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-92
     source_category_code: vendors_tankers_truck
@@ -4257,8 +4492,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-93
     source_category_code: water_selling_cart_or_truck
@@ -4268,8 +4503,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: KEN-WAS-94
     source_category_code: non_access_to_safe_water
@@ -4279,8 +4514,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-WAS-95
     source_category_code: other
@@ -4290,8 +4525,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-WAS-96
     source_category_code: other_96
@@ -4301,8 +4536,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-WAS-97
     source_category_code: other_source
@@ -4312,8 +4547,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-WAS-98
     source_category_code: others
@@ -4323,8 +4558,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-WAS-99
     source_category_code: rock_catchments
@@ -4334,8 +4569,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: KEN-WAS-100
     source_category_code: other
@@ -4345,8 +4580,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-WAS-101
     source_category_code: refused_don_t_know
@@ -4356,8 +4591,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: KEN-WAS-102
     source_category_code: bottled_water
@@ -4367,8 +4602,8 @@ parameters:
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: KEN-WAS-103
     source_category_code: 10_bottled_water
@@ -4378,8 +4613,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-104
     source_category_code: 12_bottled_water
@@ -4389,8 +4624,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-105
     source_category_code: 13_bottled
@@ -4400,8 +4635,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-106
     source_category_code: 13_bottled_water
@@ -4411,8 +4646,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-107
     source_category_code: bottle_water
@@ -4422,8 +4657,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-108
     source_category_code: bottled_water
@@ -4433,8 +4668,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-109
     source_category_code: bottled_water_91
@@ -4444,8 +4679,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: KEN-WAS-110
     source_category_code: '0'
@@ -4455,8 +4690,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: KEN-WAS-111
     source_category_code: 14_sachet
@@ -4466,8 +4701,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: KEN-WAS-112
     source_category_code: 14_sachet_water
@@ -4477,8 +4712,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: KEN-WAS-113
     source_category_code: sachet_water
@@ -4488,8 +4723,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: KEN-WAS-114
     source_category_code: 9_rainwater
@@ -4499,8 +4734,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: KEN-WAS-115
     source_category_code: 6_rainwater
@@ -4510,8 +4745,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-116
     source_category_code: 9_rain_harvested
@@ -4521,8 +4756,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-117
     source_category_code: 9_rainwater
@@ -4532,8 +4767,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-118
     source_category_code: rain_water
@@ -4543,8 +4778,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-119
     source_category_code: rain_water_collection
@@ -4554,8 +4789,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-120
     source_category_code: rain_harvested_water
@@ -4565,8 +4800,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-121
     source_category_code: rainwater
@@ -4576,8 +4811,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-122
     source_category_code: rainwater_into_tank_or_cistern
@@ -4587,8 +4822,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-123
     source_category_code: rainwater_51
@@ -4598,8 +4833,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-124
     source_category_code: rainwater_collection
@@ -4609,8 +4844,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-125
     source_category_code: roof_catchment
@@ -4620,8 +4855,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: KEN-WAS-126
     source_category_code: 12_surface_water
@@ -4631,8 +4866,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-127
     source_category_code: 12_surface_water
@@ -4642,8 +4877,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-128
     source_category_code: 8_surface_water
@@ -4653,8 +4888,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-129
     source_category_code: 9_surface_water
@@ -4664,8 +4899,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-130
     source_category_code: river_lake_ponds_streams
@@ -4675,8 +4910,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-131
     source_category_code: river_lake_pond
@@ -4686,8 +4921,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-132
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -4697,8 +4932,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-133
     source_category_code: river_ponds_stream
@@ -4708,8 +4943,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-134
     source_category_code: river_spring_lake_reservoir
@@ -4719,8 +4954,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-135
     source_category_code: surface_water
@@ -4730,8 +4965,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-136
     source_category_code: surface_water_pond_river_stream
@@ -4741,8 +4976,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-137
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_81
@@ -4752,8 +4987,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-138
     source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_c
@@ -4764,8 +4999,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-139
     source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
@@ -4776,8 +5011,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-140
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -4787,8 +5022,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: KEN-WAS-141
     source_category_code: dam
@@ -4798,8 +5033,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: KEN-WAS-142
     source_category_code: lake
@@ -4809,8 +5044,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: KEN-WAS-143
     source_category_code: lake_pond
@@ -4820,8 +5055,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: KEN-WAS-144
     source_category_code: lake_pond_dam
@@ -4831,8 +5066,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: KEN-WAS-145
     source_category_code: pond_lake
@@ -4842,8 +5077,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: KEN-WAS-146
     source_category_code: pond_lake_dam
@@ -4853,8 +5088,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: KEN-WAS-147
     source_category_code: pond_river_or_stream
@@ -4864,8 +5099,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: KEN-WAS-148
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -4875,8 +5110,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: KEN-WAS-149
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -4886,8 +5121,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: KEN-WAS-150
     source_category_code: pond
@@ -4897,8 +5132,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: KEN-WAS-151
     source_category_code: pond_lake
@@ -4908,8 +5143,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: KEN-WAS-152
     source_category_code: pond_water_pan
@@ -4919,8 +5154,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: KEN-WAS-153
     source_category_code: river
@@ -4930,8 +5165,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: KEN-WAS-154
     source_category_code: river_stream
@@ -4941,8 +5176,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: KEN-WAS-155
     source_category_code: river_stream
@@ -4952,8 +5187,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: KEN-WAS-156
     source_category_code: stream_river
@@ -4963,8 +5198,8 @@ parameters:
     jmp_id: surface_water.stream
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 97
   - country_entry_id: KEN-WAS-157
     source_category_code: piped_water
@@ -4974,8 +5209,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: KEN-WAS-158
     source_category_code: piped_to_neighbor
@@ -4985,8 +5220,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: KEN-WAS-159
     source_category_code: piped_to_neighbour
@@ -4996,8 +5231,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: KEN-WAS-160
     source_category_code: public_to_neighborhood
@@ -5007,8 +5242,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: KEN-WAS-161
     source_category_code: 1_piped_water
@@ -5018,8 +5253,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: KEN-WAS-162
     source_category_code: piped_in_the_dwelling_compound
@@ -5029,8 +5264,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: KEN-WAS-163
     source_category_code: piped_into_house
@@ -5040,8 +5275,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: KEN-WAS-164
     source_category_code: piped_into_residence
@@ -5051,8 +5286,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: KEN-WAS-165
     source_category_code: piped_water
@@ -5062,8 +5297,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: KEN-WAS-166
     source_category_code: piped_water_through_house_connection_or_yard
@@ -5073,8 +5308,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: KEN-WAS-167
     source_category_code: 1_piped_water_piped_into_dwelling_indoor
@@ -5084,8 +5319,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-168
     source_category_code: 1_piped_indoor
@@ -5095,8 +5330,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-169
     source_category_code: 1_water_pipe_into_dwelling
@@ -5106,8 +5341,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-170
     source_category_code: piped_into_dwelling
@@ -5117,8 +5352,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-171
     source_category_code: piped_into_dwelling_11
@@ -5128,8 +5363,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-172
     source_category_code: piped_into_dwelling_compound
@@ -5139,8 +5374,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-173
     source_category_code: piped_into_residence_compound_or_plot
@@ -5150,8 +5385,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-174
     source_category_code: piped_water_piped_into_dwelling
@@ -5161,8 +5396,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-175
     source_category_code: piped_water_into_dwelling
@@ -5172,8 +5407,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: KEN-WAS-176
     source_category_code: 2_piped_water_pipe_to_yard_plot
@@ -5183,8 +5418,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-177
     source_category_code: 2_piped_yard
@@ -5194,8 +5429,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-178
     source_category_code: 2_water_pipe_into_compound
@@ -5205,8 +5440,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-179
     source_category_code: piped_into_compound_plot
@@ -5216,8 +5451,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-180
     source_category_code: piped_into_plot_yard
@@ -5227,8 +5462,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-181
     source_category_code: piped_into_yard_or_plot
@@ -5238,8 +5473,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-182
     source_category_code: piped_into_yard_plot
@@ -5249,8 +5484,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-183
     source_category_code: piped_to_yard_plot
@@ -5260,8 +5495,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-184
     source_category_code: piped_to_yard_plot_12
@@ -5271,8 +5506,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-185
     source_category_code: piped_water_piped_into_plot_yard
@@ -5282,8 +5517,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-186
     source_category_code: piped_water_into_yard
@@ -5293,8 +5528,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-187
     source_category_code: piped_water_into_yard_plot_or_compound
@@ -5304,8 +5539,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: KEN-WAS-188
     source_category_code: 3_piped_water_public_tap_standpipe
@@ -5315,8 +5550,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-189
     source_category_code: 3_piped_public
@@ -5326,8 +5561,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-190
     source_category_code: 3_water_pipe_outside_compound
@@ -5337,8 +5572,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-191
     source_category_code: piped_water_public_tap_stand_pipe
@@ -5348,8 +5583,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-192
     source_category_code: public_out_door_tap_borehole
@@ -5359,8 +5594,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-193
     source_category_code: public_standpipe
@@ -5370,8 +5605,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-194
     source_category_code: public_tap
@@ -5381,8 +5616,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-195
     source_category_code: public_tap_or_standpipe
@@ -5392,8 +5627,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-196
     source_category_code: public_tap_standpipe
@@ -5403,8 +5638,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: KEN-WAS-197
     source_category_code: public_tap_standpipe_13
@@ -5414,13 +5649,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_KEN_Kenya_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

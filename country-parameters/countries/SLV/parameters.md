@@ -6,13 +6,13 @@ status: draft
 country_name: SLV
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SLV-EDU-01
     national_label_en: Initial education
-    national_label_local: Educación Inicial
+    national_label_local: "Educaci\xF3n Inicial"
     entry_age: 0
     duration_years: 4
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SLV-EDU-02
     national_label_en: Pre-primary Education
-    national_label_local: Educación Parvularia
+    national_label_local: "Educaci\xF3n Parvularia"
     entry_age: 4
     duration_years: 3
     isced_level: '0'
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SLV-EDU-03
     national_label_en: Special Pre-primary Education
-    national_label_local: Educación Parvularia Especial
+    national_label_local: "Educaci\xF3n Parvularia Especial"
     entry_age: 4
     duration_years: 3
     isced_level: '0'
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SLV-EDU-04
     national_label_en: Cycles I and II of Basic Education (Primary)
-    national_label_local: I y II Ciclo de Educación Básica (Primaria)
+    national_label_local: "I y II Ciclo de Educaci\xF3n B\xE1sica (Primaria)"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -54,9 +72,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - SLV-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: SLV-EDU-05
     national_label_en: Cycles I and II of Special Education (Primary)
-    national_label_local: I y II Ciclo de Educación Especial (Primaria)
+    national_label_local: "I y II Ciclo de Educaci\xF3n Especial (Primaria)"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -65,9 +89,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - SLV-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: SLV-EDU-06
     national_label_en: Adult education
-    national_label_local: Educación de Adultos
+    national_label_local: "Educaci\xF3n de Adultos"
     entry_age: 15
     duration_years: 1
     isced_level: '1'
@@ -76,9 +106,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - SLV-EDU-06
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: SLV-EDU-07
     national_label_en: Cycle III of Basic Education (Lower Secondary)
-    national_label_local: III Ciclo de Educación Básica (secundaria baja)
+    national_label_local: "III Ciclo de Educaci\xF3n B\xE1sica (secundaria baja)"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -87,11 +123,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - SLV-EDU-04
+    - SLV-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
   - country_entry_id: SLV-EDU-08
     national_label_en: 'Cycle III of Basic Education (Lower Secondary) flexible  modalities:
       accelerated, distance, evening, virtual'
-    national_label_local: 'III Ciclo de Educación Básica (secundaria baja) modalidades
-      flexibles: acelerada, semipresencial, distancia, nocturna, virtual'
+    national_label_local: "III Ciclo de Educaci\xF3n B\xE1sica (secundaria baja) modalidades\
+      \ flexibles: acelerada, semipresencial, distancia, nocturna, virtual"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -100,9 +146,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - SLV-EDU-04
+    - SLV-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
   - country_entry_id: SLV-EDU-09
     national_label_en: Upper secondary general
-    national_label_local: Educación Media Bachillerato General
+    national_label_local: "Educaci\xF3n Media Bachillerato General"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -111,9 +167,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - SLV-EDU-07
+    - SLV-EDU-08
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
   - country_entry_id: SLV-EDU-10
     national_label_en: Upper secondary technical-vocational
-    national_label_local: Educación Media Bachillerato Técnico-Vocacional
+    national_label_local: "Educaci\xF3n Media Bachillerato T\xE9cnico-Vocacional"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -122,11 +190,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - SLV-EDU-07
+    - SLV-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
   - country_entry_id: SLV-EDU-11
     national_label_en: 'Upper secondary flexible: accelerated, semi-distance, distance,
       evening, virtual'
-    national_label_local: 'Educación Media Bachillerato, modalidades flexibles: acelerada,
-      semipresencial, distancia, nocturna, virtual'
+    national_label_local: "Educaci\xF3n Media Bachillerato, modalidades flexibles:\
+      \ acelerada, semipresencial, distancia, nocturna, virtual"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -135,9 +215,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - SLV-EDU-07
+    - SLV-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
   - country_entry_id: SLV-EDU-12
     national_label_en: Technician
-    national_label_local: Técnico
+    national_label_local: "T\xE9cnico"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -146,6 +238,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-13
     national_label_en: Professor
     national_label_local: Profesor
@@ -157,9 +263,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-14
     national_label_en: Technologist
-    national_label_local: Tecnólogo
+    national_label_local: "Tecn\xF3logo"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -168,6 +288,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-15
     national_label_en: Licentiate
     national_label_local: Licenciado
@@ -179,6 +313,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-16
     national_label_en: Engineer
     national_label_local: Ingeniero
@@ -190,6 +338,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-17
     national_label_en: Architect
     national_label_local: Arquitecto
@@ -201,9 +363,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-18
     national_label_en: Doctor in Medicine or in  Odontology
-    national_label_local: Doctor en medicina u odontología
+    national_label_local: "Doctor en medicina u odontolog\xEDa"
     entry_age: 18
     duration_years: 8
     isced_level: '7'
@@ -212,6 +388,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-19
     national_label_en: Master's
     national_label_local: Maestro
@@ -223,9 +413,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - SLV-EDU-13
+    - SLV-EDU-14
+    - SLV-EDU-15
+    - SLV-EDU-16
+    - SLV-EDU-17
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-13
+    - SLV-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
+    - 'minimum parent path selected from: SLV-EDU-13, SLV-EDU-14, SLV-EDU-15, SLV-EDU-16,
+      SLV-EDU-17'
   - country_entry_id: SLV-EDU-20
     national_label_en: Specialist in medicine or odontology
-    national_label_local: Especialista en medicina u odontología
+    national_label_local: "Especialista en medicina u odontolog\xEDa"
     entry_age: 26
     duration_years: 3
     isced_level: '7'
@@ -234,6 +444,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - SLV-EDU-09
+    - SLV-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
   - country_entry_id: SLV-EDU-21
     national_label_en: Doctor
     national_label_local: Doctor
@@ -245,16 +469,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - SLV-EDU-18
+    - SLV-EDU-19
+    - SLV-EDU-20
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - SLV-EDU-04
+    - SLV-EDU-07
+    - SLV-EDU-09
+    - SLV-EDU-20
+    - SLV-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SLV-EDU-04, SLV-EDU-05'
+    - 'minimum parent path selected from: SLV-EDU-07, SLV-EDU-08'
+    - 'minimum parent path selected from: SLV-EDU-09, SLV-EDU-11'
+    - 'minimum parent path selected from: SLV-EDU-18, SLV-EDU-19, SLV-EDU-20'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_El
       Salvador.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SLV-SUBNAT-01
     survey_labels: 1 - Ahuachapan
@@ -263,10 +504,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1184
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -284,10 +525,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1194
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -305,10 +546,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1197
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -326,10 +567,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1192
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -347,10 +588,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1191
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -368,10 +609,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1190
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -389,10 +630,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1195
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -410,10 +651,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1196
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -431,10 +672,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1186
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -452,10 +693,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1188
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -473,10 +714,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1193
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -494,10 +735,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1187
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -515,10 +756,10 @@ parameters:
     gmd_subnatid2: SLV_2015_GAUL1_1189
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -530,16 +771,16 @@ parameters:
     geo_name: La Paz
     source_row: 14658
   - country_entry_id: SLV-SUBNAT-14
-    survey_labels: 9 - Cabañas | 9 - Caba�as
+    survey_labels: "9 - Caba\xF1as | 9 - Caba\uFFFDas"
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: SLV_2015_GAUL1_1185
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -552,13 +793,13 @@ parameters:
     source_row: 14659
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SLV-SAN-01
     source_category_code: letrina_abonera
@@ -568,8 +809,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: SLV-SAN-02
     source_category_code: letrina_abonera_seca_sin_con_plataforma_para_sentarse
@@ -579,8 +820,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: SLV-SAN-03
     source_category_code: letrina_de_composta_abonera
@@ -590,8 +831,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: SLV-SAN-04
     source_category_code: letrina_abonera
@@ -601,8 +842,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: SLV-SAN-05
     source_category_code: letrina_abonera_privada
@@ -612,8 +853,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: SLV-SAN-06
     source_category_code: letrina_abonera_comun
@@ -623,8 +864,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_shared
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 130
   - country_entry_id: SLV-SAN-07
     source_category_code: inodoro_a_alcantarillado_o_a_fosa_septica
@@ -634,8 +875,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: SLV-SAN-08
     source_category_code: chorro_baldeo_a_otro_lugar
@@ -645,8 +886,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: SLV-SAN-09
     source_category_code: chorro_baldeo_a_sistema_de_alcantarillado
@@ -656,8 +897,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: SLV-SAN-10
     source_category_code: inodoro_conectado_al_alcantarillado
@@ -667,8 +908,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: SLV-SAN-11
     source_category_code: chorro_baldeo_a_pozo_negro
@@ -678,41 +919,41 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: SLV-SAN-12
     source_category_code: inodoro_letrina_sin_conexion
-    national_label_en: Inodoro/letrina sin conexión
+    national_label_en: "Inodoro/letrina sin conexi\xF3n"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: SLV-SAN-13
     source_category_code: chorro_baldeo_a_tanque_septico
-    national_label_en: 'Chorro/baldeo a:: Tanque séptico'
+    national_label_en: "Chorro/baldeo a:: Tanque s\xE9ptico"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: SLV-SAN-14
     source_category_code: inodoro_conectado_a_fosa_septica_resumidero
-    national_label_en: Inodoro conectado a fosa séptica/ resumidero
+    national_label_en: "Inodoro conectado a fosa s\xE9ptica/ resumidero"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: SLV-SAN-15
     source_category_code: chorro_baldeo_a_sitio_desconocido_ns
@@ -722,8 +963,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: SLV-SAN-16
     source_category_code: inodoro_lavable
@@ -733,19 +974,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: SLV-SAN-17
     source_category_code: inodoro_propio
     national_label_en: Inodoro propio
-    national_label_local: Inodoros de arrastre hidráulico (privado)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: SLV-SAN-18
     source_category_code: inodoro_a_alcantarillado
@@ -755,8 +996,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: SLV-SAN-19
     source_category_code: inodoro_privado_a_alcantarillado
@@ -766,8 +1007,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: SLV-SAN-20
     source_category_code: inodoro_a_fosa_septica
@@ -777,8 +1018,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: SLV-SAN-21
     source_category_code: inodoro_privado_a_fosa_septica
@@ -788,19 +1029,19 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: SLV-SAN-22
     source_category_code: inodoro_publico
-    national_label_en: Inodoro público
-    national_label_local: Inodoros de arrastre hidráulico (publico)
+    national_label_en: "Inodoro p\xFAblico"
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: SLV-SAN-23
     source_category_code: inodoro_comun_a_alcantarillado
@@ -811,8 +1052,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: SLV-SAN-24
     source_category_code: inodoro_comun_a_fosa_septica
@@ -822,8 +1063,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: SLV-SAN-25
     source_category_code: inodoro_a_alcantarillado
@@ -833,19 +1074,19 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: SLV-SAN-26
     source_category_code: inodoro_con_conexion_a_alcantarillado
-    national_label_en: Inodoro con conexión a alcantarillado
+    national_label_en: "Inodoro con conexi\xF3n a alcantarillado"
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: SLV-SAN-27
     source_category_code: inodoro_o_alcantarillado
@@ -855,8 +1096,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: SLV-SAN-28
     source_category_code: inodoro_a_fosa_septica
@@ -866,8 +1107,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: SLV-SAN-29
     source_category_code: letrina_de_hoyo_o_pozo_negro_sin_plataforma_para_sentarse
@@ -877,8 +1118,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: SLV-SAN-30
     source_category_code: letrina_con_plataforma
@@ -889,8 +1130,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: SLV-SAN-31
     source_category_code: letrina_de_pozo_con_losa
@@ -901,8 +1142,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: SLV-SAN-32
     source_category_code: letrina_sin_plataforma_hueco_abierto
@@ -913,20 +1154,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: SLV-SAN-33
     source_category_code: letrina_comun
-    national_label_en: Letrina común
+    national_label_en: "Letrina com\xFAn"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-SAN-34
     source_category_code: letrina_de_hoyo_con_o_sin_plataforma
@@ -937,8 +1178,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-SAN-35
     source_category_code: letrina_de_hoyo_o_pozo_negro_con_plataforma_para_sentarse
@@ -949,8 +1190,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-SAN-36
     source_category_code: letrina_de_pozo_sin_losa_pozo_abierto_pozo_simple
@@ -961,20 +1202,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-SAN-37
     source_category_code: letrina_mejorada_con_ventilacion
-    national_label_en: Letrina mejorada con ventilación
+    national_label_en: "Letrina mejorada con ventilaci\xF3n"
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: SLV-SAN-38
     source_category_code: letrina_abonera_solar_propia
@@ -984,8 +1225,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 112
   - country_entry_id: SLV-SAN-39
     source_category_code: letrina_privada
@@ -995,19 +1236,19 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: SLV-SAN-40
     source_category_code: letrina_publica
-    national_label_en: Letrina pública
+    national_label_en: "Letrina p\xFAblica"
     national_label_local: Letrina publica/compartida
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines
     jmp_id: latrines.dry_latrines.public_shared_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 120
   - country_entry_id: SLV-SAN-41
     source_category_code: letrina_comun
@@ -1018,31 +1259,31 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: SLV-SAN-42
     source_category_code: letrina_de_pozo_ventilada_hidraulica
-    national_label_en: Letrina de pozo ventilada/hidráulica
+    national_label_en: "Letrina de pozo ventilada/hidr\xE1ulica"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Latrines > Pour flush latrines > to pit
     jmp_id: latrines.pour_flush_latrines.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: SLV-SAN-43
     source_category_code: defecacion_al_aire_libre_no_hay_instalacion_campo_abierto_matorrales
-    national_label_en: Defecación al aire libre (no hay instalación, campo abierto,
-      matorrales)
+    national_label_en: "Defecaci\xF3n al aire libre (no hay instalaci\xF3n, campo\
+      \ abierto, matorrales)"
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SLV-SAN-44
     source_category_code: ninguno_arbustos_campo
@@ -1052,8 +1293,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SLV-SAN-45
     source_category_code: no_tiene
@@ -1063,8 +1304,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SLV-SAN-46
     source_category_code: otro
@@ -1074,8 +1315,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: SLV-SAN-47
     source_category_code: inodoro_de_compostaje
@@ -1085,8 +1326,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: SLV-SAN-48
     source_category_code: instalaciones_mejoradas_de_saneamiento_forma_a
@@ -1096,8 +1337,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: SLV-SAN-49
     source_category_code: letrina_solar
@@ -1107,8 +1348,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: SLV-SAN-50
     source_category_code: letrina_solar_privada
@@ -1118,8 +1359,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: SLV-SAN-51
     source_category_code: letrina_solar_sin_con_plataforma_para_sentarse
@@ -1129,8 +1370,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: SLV-SAN-52
     source_category_code: letrina_solar_comun
@@ -1140,8 +1381,8 @@ parameters:
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: SLV-SAN-53
     source_category_code: otro
@@ -1151,18 +1392,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SLV_El_Salvador_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SLV-WAS-01
     source_category_code: arroyo_manantial_nacimiento
@@ -1172,8 +1413,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: SLV-WAS-02
     source_category_code: manantial_protegido_o_no_protegido
@@ -1183,8 +1424,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: SLV-WAS-03
     source_category_code: pozo
@@ -1194,8 +1435,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: SLV-WAS-04
     source_category_code: pozo_privado_o_comun
@@ -1205,8 +1446,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: SLV-WAS-05
     source_category_code: pozo_colectivo
@@ -1216,8 +1457,8 @@ parameters:
     jmp_id: ground_water.all_wells.other
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 57
   - country_entry_id: SLV-WAS-06
     source_category_code: pozo_privado
@@ -1227,8 +1468,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: SLV-WAS-07
     source_category_code: pozo_publicado
@@ -1238,8 +1479,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: SLV-WAS-08
     source_category_code: pozo_publico
@@ -1249,8 +1490,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: SLV-WAS-09
     source_category_code: manantial_protegido
@@ -1260,8 +1501,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: SLV-WAS-10
     source_category_code: manatial_protegido
@@ -1271,8 +1512,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: SLV-WAS-11
     source_category_code: pozo_protegido
@@ -1282,8 +1523,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: SLV-WAS-12
     source_category_code: pozo_protegido_cubierto
@@ -1293,8 +1534,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: SLV-WAS-13
     source_category_code: pozo_protegido_cubierto
@@ -1304,8 +1545,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: SLV-WAS-14
     source_category_code: pozo_o_manantial_protegido
@@ -1315,19 +1556,19 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: SLV-WAS-15
     source_category_code: pozo_privado_o_publico
-    national_label_en: Pozo (privado o público)
+    national_label_en: "Pozo (privado o p\xFAblico)"
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: SLV-WAS-16
     source_category_code: pozo_sin_bomba
@@ -1337,8 +1578,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: SLV-WAS-17
     source_category_code: pozo_con_bomba
@@ -1348,8 +1589,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SLV-WAS-18
     source_category_code: pozo_con_tuberia
@@ -1359,8 +1600,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SLV-WAS-19
     source_category_code: pozo_perforado_o_tubular
@@ -1370,8 +1611,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: SLV-WAS-20
     source_category_code: manantial_no_protegido
@@ -1381,8 +1622,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: SLV-WAS-21
     source_category_code: manatial_no_protegido
@@ -1392,8 +1633,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: SLV-WAS-22
     source_category_code: pozo_no_protegido
@@ -1403,8 +1644,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: SLV-WAS-23
     source_category_code: pozo_o_manantial_no_protegido
@@ -1414,52 +1655,52 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: SLV-WAS-24
     source_category_code: camion_cisterna_carro_tanque
-    national_label_en: Camión cisterna/carro tanque
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_en: "Cami\xF3n cisterna/carro tanque"
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SLV-WAS-25
     source_category_code: camion_carreta_o_pipa
     national_label_en: Camion, carreta o pipa
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SLV-WAS-26
     source_category_code: carreta_con_tanque
     national_label_en: Carreta con tanque
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SLV-WAS-27
     source_category_code: carro_con_tanque_o_bidon_pequea_o_camion_cisterna
-    national_label_en: Carro con tanque o bidon pequeã‘o / camion cisterna
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_en: "Carro con tanque o bidon peque\xE3\u2018o / camion cisterna"
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: SLV-WAS-28
     source_category_code: chorro_comun
@@ -1469,8 +1710,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: SLV-WAS-29
     source_category_code: quiosco_de_agua_puesto_de_agua
@@ -1480,8 +1721,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: SLV-WAS-30
     source_category_code: acarreo_caneria_del_vecino
@@ -1491,8 +1732,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: SLV-WAS-31
     source_category_code: camion_carreta_o_pipa
@@ -1502,8 +1743,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: SLV-WAS-32
     source_category_code: carro_tanque
@@ -1513,8 +1754,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: SLV-WAS-33
     source_category_code: tanque_cisterna
@@ -1524,8 +1765,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: SLV-WAS-34
     source_category_code: otra
@@ -1535,8 +1776,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SLV-WAS-35
     source_category_code: otro
@@ -1546,8 +1787,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SLV-WAS-36
     source_category_code: otros
@@ -1557,8 +1798,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SLV-WAS-37
     source_category_code: otros_medios
@@ -1568,8 +1809,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: SLV-WAS-38
     source_category_code: otra
@@ -1579,8 +1820,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-WAS-39
     source_category_code: otro_medio
@@ -1590,8 +1831,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-WAS-40
     source_category_code: otros
@@ -1601,8 +1842,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-WAS-41
     source_category_code: otros_medios
@@ -1612,8 +1853,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: SLV-WAS-42
     source_category_code: agua_embotellada_agua_en_bolsitas_garrafones
@@ -1623,8 +1864,8 @@ parameters:
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: SLV-WAS-43
     source_category_code: agua_envasada
@@ -1634,8 +1875,8 @@ parameters:
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: SLV-WAS-44
     source_category_code: agua_embotellada
@@ -1645,8 +1886,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: SLV-WAS-45
     source_category_code: agua_embotellada_en_bolsa
@@ -1656,8 +1897,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: SLV-WAS-46
     source_category_code: agua_envasada
@@ -1667,8 +1908,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: SLV-WAS-47
     source_category_code: agua_de_lluvia
@@ -1678,8 +1919,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SLV-WAS-48
     source_category_code: agua_de_lluvia_recolectada
@@ -1689,8 +1930,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SLV-WAS-49
     source_category_code: agua_lluvia
@@ -1700,8 +1941,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SLV-WAS-50
     source_category_code: colecta_agua_de_lluvia
@@ -1711,8 +1952,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SLV-WAS-51
     source_category_code: colecta_agua_lluvia
@@ -1722,8 +1963,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SLV-WAS-52
     source_category_code: collecta_agua_lluvia
@@ -1733,8 +1974,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: SLV-WAS-53
     source_category_code: agua_superficie
@@ -1744,19 +1985,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-54
     source_category_code: aguas_de_rio_superficiales_rio_represa_lago
-    national_label_en: Aguas de río superficiales (río/represa/lago/)
+    national_label_en: "Aguas de r\xEDo superficiales (r\xEDo/represa/lago/)"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-55
     source_category_code: aguas_de_superficie_rio_arroyo_presa_lago_charca_canal_o_acequia
@@ -1767,8 +2008,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-56
     source_category_code: cuo_de_agua_rio_o_quebrada
@@ -1778,8 +2019,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-57
     source_category_code: ojo_de_agua_rio_o_quebrada
@@ -1789,8 +2030,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-58
     source_category_code: rio_o_quebrada_u_ojo_de_agua
@@ -1800,8 +2041,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-59
     source_category_code: rio_estanque
@@ -1811,8 +2052,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-60
     source_category_code: rio_lago_o_manantial
@@ -1822,8 +2063,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-61
     source_category_code: rio_quebrada_lago_o_manatial
@@ -1833,74 +2074,74 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-62
     source_category_code: rio_quebrada_lago_ojo_de_agua_o_manantial
-    national_label_en: Río, quebrada, lago, ojo de agua o manantial
+    national_label_en: "R\xEDo, quebrada, lago, ojo de agua o manantial"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: SLV-WAS-63
     source_category_code: abastecimiento_de_agua_por_caneria
-    national_label_en: Abastecimiento de agua por cañería
+    national_label_en: "Abastecimiento de agua por ca\xF1er\xEDa"
     national_label_local: Agua del grifo
     jmp_classification: Tap water
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: SLV-WAS-64
     source_category_code: acarreo_de_caneria_del_vecino_a
-    national_label_en: Acarreo de cañeria del vecino/a
+    national_label_en: "Acarreo de ca\xF1eria del vecino/a"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-65
     source_category_code: agua_de_tuberia_del_vecino
-    national_label_en: 'Agua de tubería: Del vecino'
+    national_label_en: "Agua de tuber\xEDa: Del vecino"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-66
     source_category_code: caneria_chorro_del_vecino
-    national_label_en: Cañeria (Chorro) del vecino
+    national_label_en: "Ca\xF1eria (Chorro) del vecino"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-67
     source_category_code: caneria_de_vecino
-    national_label_en: Cañería de Vecino
+    national_label_en: "Ca\xF1er\xEDa de Vecino"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-68
     source_category_code: caneria_del_vecino
@@ -1910,8 +2151,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-69
     source_category_code: caneria_del_vecino_a
@@ -1921,19 +2162,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-70
     source_category_code: caneria_del_vecino_a
-    national_label_en: Cañería del vecino(a)
+    national_label_en: "Ca\xF1er\xEDa del vecino(a)"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-71
     source_category_code: caneria_publica
@@ -1943,8 +2184,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-72
     source_category_code: canerio_del_vecino_neighbor
@@ -1954,8 +2195,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-73
     source_category_code: chorro_de_vecino
@@ -1965,8 +2206,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-74
     source_category_code: por_caneria_de_viviendas_vecinas
@@ -1976,8 +2217,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-75
     source_category_code: servicio_local_comunitario_municipal_de_agua
@@ -1987,20 +2228,20 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: SLV-WAS-76
     source_category_code: a_traves_de_caneria_o_pozo_propio_anda_o_cualquier_servicio_de_agua_domiciliar
-    national_label_en: A través de cañeria o pozo propio (ANDA o cualquier servicio
-      de agua domiciliar)
+    national_label_en: "A trav\xE9s de ca\xF1eria o pozo propio (ANDA o cualquier\
+      \ servicio de agua domiciliar)"
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: SLV-WAS-77
     source_category_code: caneria_dentro_y_fuera_de_la_vivienda
@@ -2010,19 +2251,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: SLV-WAS-78
     source_category_code: caneria_propia
-    national_label_en: Cañería propia
+    national_label_en: "Ca\xF1er\xEDa propia"
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: SLV-WAS-79
     source_category_code: canerio_dentro_y_fuera_de_la_vivienda
@@ -2032,8 +2273,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: SLV-WAS-80
     source_category_code: servicio_intradomiciliar
@@ -2043,41 +2284,41 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: SLV-WAS-81
     source_category_code: agua_de_tuberia_dentro_de_la_vivienda
-    national_label_en: 'Agua de tubería: Dentro de la vivienda'
+    national_label_en: "Agua de tuber\xEDa: Dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-82
     source_category_code: anda_o_acueducto_publico_tuberia_domiciliaria
-    national_label_en: Anda o acueducto público/tubería domiciliaria
+    national_label_en: "Anda o acueducto p\xFAblico/tuber\xEDa domiciliaria"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-83
     source_category_code: caneria_chorro_dentro_de_la_vivienda
-    national_label_en: Cañeria (Chorro) dentro de la vivienda
+    national_label_en: "Ca\xF1eria (Chorro) dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-84
     source_category_code: caneria_dentro_de_la_vivienda
@@ -2087,8 +2328,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-85
     source_category_code: caneria_dentro_y_fuera_de_la_vivienda
@@ -2098,8 +2339,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-86
     source_category_code: caneria_privada
@@ -2109,8 +2350,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-87
     source_category_code: chorro_en_casa
@@ -2120,8 +2361,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-88
     source_category_code: tuberia_dentro_de_la_vivienda
@@ -2131,30 +2372,31 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: SLV-WAS-89
     source_category_code: agua_de_tuberia_en_el_patio_parcela
-    national_label_en: 'Agua de tubería: En el patio/ parcela'
+    national_label_en: "Agua de tuber\xEDa: En el patio/ parcela"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SLV-WAS-90
     source_category_code: caneria_chorro_fuera_de_la_vivienda_pero_dentro_de_la_prop
-    national_label_en: Cañeria (Chorro) fuera de la vivienda pero dentro de la prop
+    national_label_en: "Ca\xF1eria (Chorro) fuera de la vivienda pero dentro de la\
+      \ prop"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SLV-WAS-91
     source_category_code: chorro_en_patio
@@ -2164,8 +2406,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SLV-WAS-92
     source_category_code: tuberia_dentro_del_terreno_lote
@@ -2175,123 +2417,123 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: SLV-WAS-93
     source_category_code: caneria_colectiva
     national_label_en: Caneria colectiva
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-94
     source_category_code: chorro_publico
     national_label_en: Chorro publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-95
     source_category_code: llave_publica
-    national_label_en: Llave pública
-    national_label_local: Fuentes públicas
+    national_label_en: "Llave p\xFAblica"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-96
     source_category_code: llave_grifo_publico
     national_label_en: Llave/grifo publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-97
     source_category_code: pila_o_chorro_publica_incl_chorro_comun
     national_label_en: Pila o Chorro publica incl. Chorro comun
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-98
     source_category_code: pila_o_chorro_publico
     national_label_en: Pila o chorro publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-99
     source_category_code: pila_o_chorro_publico_o_cantarera
     national_label_en: Pila o chorro publico o cantarera
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-100
     source_category_code: pila_chorro_comun_o_publico_cantarera
-    national_label_en: Pila, chorro común o público, cantarera
-    national_label_local: Fuentes públicas
+    national_label_en: "Pila, chorro com\xFAn o p\xFAblico, cantarera"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-101
     source_category_code: pila_chorro_publico_o_cantarera
-    national_label_en: Pila, chorro público o cantarera
-    national_label_local: Fuentes públicas
+    national_label_en: "Pila, chorro p\xFAblico o cantarera"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: SLV-WAS-102
     source_category_code: pila_chorro_publico
-    national_label_en: Pila/chorro público
-    national_label_local: Fuentes públicas
+    national_label_en: "Pila/chorro p\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SLV_El_Salvador_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

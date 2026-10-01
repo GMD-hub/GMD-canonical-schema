@@ -6,9 +6,9 @@ status: draft
 country_name: AGO
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AGO-EDU-01
     national_label_en: Prescolaire
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: AGO-EDU-02
     national_label_en: Enseignement primaire
-    national_label_local: Ensino Primário
+    national_label_local: "Ensino Prim\xE1rio"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -32,11 +38,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - AGO-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: AGO-EDU-03
-    national_label_en: Iº cycle de l'enseignement secondaire général
-    national_label_local: |-
-      Ensino secundario Primeiro ciclo
-      (Geral)
+    national_label_en: "I\xBA cycle de l'enseignement secondaire g\xE9n\xE9ral"
+    national_label_local: 'Ensino secundario Primeiro ciclo
+
+      (Geral)'
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -45,11 +57,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - AGO-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: AGO-EDU-04
-    national_label_en: Enseignement du 1º Cycle de l´Enseignement secondaire téchnique
-    national_label_local: |-
-      Ensino secundario Primeiro ciclo
-      (Técnico)
+    national_label_en: "Enseignement du 1\xBA Cycle de l\xB4Enseignement secondaire\
+      \ t\xE9chnique"
+    national_label_local: "Ensino secundario Primeiro ciclo\n(T\xE9cnico)"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -58,11 +77,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - AGO-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: AGO-EDU-05
-    national_label_en: IIº cycle de l'enseignement secondaire général
-    national_label_local: |-
-      Ensino secundario segundo ciclo
-      (Geral)
+    national_label_en: "II\xBA cycle de l'enseignement secondaire g\xE9n\xE9ral"
+    national_label_local: 'Ensino secundario segundo ciclo
+
+      (Geral)'
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -71,9 +98,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - AGO-EDU-03
+    - AGO-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AGO-EDU-03, AGO-EDU-04'
   - country_entry_id: AGO-EDU-06
-    national_label_en: IIº cycle de l'enseignement secondaire, Formation des enseignants
-    national_label_local: Ensino secundario segundo ciclo, Formação de Professor
+    national_label_en: "II\xBA cycle de l'enseignement secondaire, Formation des enseignants"
+    national_label_local: "Ensino secundario segundo ciclo, Forma\xE7\xE3o de Professor"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -82,9 +120,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - AGO-EDU-03
+    - AGO-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AGO-EDU-03, AGO-EDU-04'
   - country_entry_id: AGO-EDU-07
-    national_label_en: Ll´Enseignement´du Iiº cycle du  secondaire téchnique et Professionnel
-    national_label_local: Ensino secundário do IIº ciclo, Formação Técnica Profissional
+    national_label_en: "Ll\xB4Enseignement\xB4du Ii\xBA cycle du  secondaire t\xE9\
+      chnique et Professionnel"
+    national_label_local: "Ensino secund\xE1rio do II\xBA ciclo, Forma\xE7\xE3o T\xE9\
+      cnica Profissional"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -93,8 +144,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - AGO-EDU-03
+    - AGO-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AGO-EDU-03, AGO-EDU-04'
   - country_entry_id: AGO-EDU-08
-    national_label_en: Enseignement supérieur
+    national_label_en: "Enseignement sup\xE9rieur"
     national_label_local: Ensino Superior (Bacharelato)
     entry_age: 18
     duration_years: 3
@@ -104,9 +166,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - AGO-EDU-05
+    - AGO-EDU-06
+    - AGO-EDU-07
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-05
+    - AGO-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AGO-EDU-03, AGO-EDU-04'
+    - 'minimum parent path selected from: AGO-EDU-05, AGO-EDU-06, AGO-EDU-07'
   - country_entry_id: AGO-EDU-09
-    national_label_en: Enseignement supérieur graduation (Licence )
-    national_label_local: Ensino Superior-Graduação (Licenciatura)
+    national_label_en: "Enseignement sup\xE9rieur graduation (Licence )"
+    national_label_local: "Ensino Superior-Gradua\xE7\xE3o (Licenciatura)"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -115,9 +191,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - AGO-EDU-05
+    - AGO-EDU-06
+    - AGO-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-05
+    - AGO-EDU-09
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: AGO-EDU-03, AGO-EDU-04'
+    - 'minimum parent path selected from: AGO-EDU-05, AGO-EDU-06, AGO-EDU-07'
   - country_entry_id: AGO-EDU-10
-    national_label_en: Enseignement supérieur (Master)
-    national_label_local: Ensino Superior             Pós-Graduação (Mestrado)
+    national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: "Ensino Superior             P\xF3s-Gradua\xE7\xE3o (Mestrado)"
     entry_age: 24
     duration_years: 2
     isced_level: '7'
@@ -126,9 +216,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - AGO-EDU-09
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-05
+    - AGO-EDU-09
+    - AGO-EDU-10
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: AGO-EDU-11
-    national_label_en: Enseignement supérieur Niveau doctorat
-    national_label_local: Ensino Superior, Nível do Doutoramento
+    national_label_en: "Enseignement sup\xE9rieur Niveau doctorat"
+    national_label_local: "Ensino Superior, N\xEDvel do Doutoramento"
     entry_age: 24
     duration_years: 4
     isced_level: '8'
@@ -137,15 +238,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - AGO-EDU-10
+    cum_years_schooling: 22
+    cum_years_computation_path:
+    - AGO-EDU-02
+    - AGO-EDU-03
+    - AGO-EDU-05
+    - AGO-EDU-09
+    - AGO-EDU-10
+    - AGO-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Angola.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AGO-SUBNAT-01
     survey_labels: 1 - Cabinda | 1-Cabinda
@@ -154,10 +267,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_401
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_401
     geo_year: '2015'
@@ -175,10 +288,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_413
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_413
     geo_year: '2015'
@@ -190,16 +303,16 @@ parameters:
     geo_name: Namibe
     source_row: 3
   - country_entry_id: AGO-SUBNAT-03
-    survey_labels: 15 - Huila | 15-Huíla
+    survey_labels: "15 - Huila | 15-Hu\xEDla"
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_406
     gmd_subnatid2: AGO_2015_GAUL1_406
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_406
     geo_year: '2015'
@@ -217,10 +330,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_404
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_404
     geo_year: '2015'
@@ -238,10 +351,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_408
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_408
     geo_year: '2015'
@@ -259,10 +372,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_409
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_409
     geo_year: '2015'
@@ -280,10 +393,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_399
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_399
     geo_year: '2015'
@@ -301,10 +414,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_405
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_405
     geo_year: '2015'
@@ -316,16 +429,16 @@ parameters:
     geo_name: Huambo
     source_row: 10
   - country_entry_id: AGO-SUBNAT-09
-    survey_labels: 11 - Bié | 11-Bié
+    survey_labels: "11 - Bi\xE9 | 11-Bi\xE9"
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_400
     gmd_subnatid2: AGO_2015_GAUL1_400
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_400
     geo_year: '2015'
@@ -337,16 +450,16 @@ parameters:
     geo_name: Bie
     source_row: 11
   - country_entry_id: AGO-SUBNAT-10
-    survey_labels: 12 - Moxico | 12-Móxico
+    survey_labels: "12 - Moxico | 12-M\xF3xico"
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_412
     gmd_subnatid2: AGO_2015_GAUL1_412
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_412
     geo_year: '2015'
@@ -364,10 +477,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_402
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_402
     geo_year: '2015'
@@ -385,10 +498,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_410
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_410
     geo_year: '2015'
@@ -406,10 +519,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_398
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_398
     geo_year: '2015'
@@ -427,10 +540,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_415
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_415
     geo_year: '2015'
@@ -442,16 +555,16 @@ parameters:
     geo_name: Zaire
     source_row: 19
   - country_entry_id: AGO-SUBNAT-15
-    survey_labels: 3 - Uige | 3-Uíge
+    survey_labels: "3 - Uige | 3-U\xEDge"
     survey_variables: subnatid | subnatid2
     gmd_subnatid1: AGO_2015_GAUL1_414
     gmd_subnatid2: AGO_2015_GAUL1_414
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_414
     geo_year: '2015'
@@ -469,10 +582,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_407
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_407
     geo_year: '2015'
@@ -490,10 +603,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_403
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_403
     geo_year: '2015'
@@ -511,10 +624,10 @@ parameters:
     gmd_subnatid2: AGO_2015_GAUL1_411
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: AGO_2015_GAUL1_411
     geo_year: '2015'
@@ -527,13 +640,13 @@ parameters:
     source_row: 24
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AGO-SAN-01
     source_category_code: composting_toilet
@@ -543,8 +656,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: AGO-SAN-02
     source_category_code: directo_ao_rio_no_mar_ou_lago
@@ -554,8 +667,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: AGO-SAN-03
     source_category_code: casa_de_banho_c_sistema_de_esgoto
@@ -565,8 +678,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AGO-SAN-04
     source_category_code: sistema_de_esgoto_pia_sanita
@@ -576,52 +689,52 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AGO-SAN-05
     source_category_code: poco_roto_somente
-    national_label_en: Poço roto somente
+    national_label_en: "Po\xE7o roto somente"
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: AGO-SAN-06
     source_category_code: poco_roto_somente_pour_flush_latrine
-    national_label_en: Poço roto somente (pour flush latrine)
+    national_label_en: "Po\xE7o roto somente (pour flush latrine)"
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: AGO-SAN-07
     source_category_code: casa_de_banho_c_fossa_septica
-    national_label_en: Casa de banho c/ fossa séptica
+    national_label_en: "Casa de banho c/ fossa s\xE9ptica"
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: AGO-SAN-08
     source_category_code: com_fosse_septica_e_poco_roto
-    national_label_en: Com fosse séptica e poço roto
+    national_label_en: "Com fosse s\xE9ptica e po\xE7o roto"
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: AGO-SAN-09
     source_category_code: flush_to_somewhere_else
@@ -631,8 +744,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AGO-SAN-10
     source_category_code: other_place
@@ -642,8 +755,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AGO-SAN-11
     source_category_code: sanita_ligada_a_fossa_aberta_vala_ou_rio
@@ -653,8 +766,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AGO-SAN-12
     source_category_code: flush_to_piped_sewer_system
@@ -664,8 +777,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AGO-SAN-13
     source_category_code: piped_sewage_system
@@ -675,8 +788,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AGO-SAN-14
     source_category_code: sanita_ligada_a_rede_publica_de_esgotos
@@ -686,8 +799,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AGO-SAN-15
     source_category_code: sanitation_through_connection_to_sewer_system
@@ -697,8 +810,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AGO-SAN-16
     source_category_code: sistema_de_esgotos_pia_ou_sanita
@@ -708,19 +821,19 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AGO-SAN-17
     source_category_code: apenas_poco_roto
-    national_label_en: Apenas poço roto
+    national_label_en: "Apenas po\xE7o roto"
     national_label_local: to pit
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: AGO-SAN-18
     source_category_code: flush_to_pit_latrine
@@ -730,8 +843,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: AGO-SAN-19
     source_category_code: pit_latrine
@@ -741,8 +854,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: AGO-SAN-20
     source_category_code: flush_to_septic_tank
@@ -752,19 +865,19 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: AGO-SAN-21
     source_category_code: fossa_septica_ou_poco_roto
-    national_label_en: Fossa séptica ou poço roto
+    national_label_en: "Fossa s\xE9ptica ou po\xE7o roto"
     national_label_local: to septic tank
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: AGO-SAN-22
     source_category_code: sanita_ligada_a_fossa_septica
@@ -774,8 +887,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: AGO-SAN-23
     source_category_code: sanitation_through_connection_to_septic_tank_and_soakaway
@@ -785,8 +898,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: AGO-SAN-24
     source_category_code: septic_tank
@@ -796,8 +909,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: AGO-SAN-25
     source_category_code: water_flow_do_not_know_where
@@ -807,8 +920,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AGO-SAN-26
     source_category_code: latrina_seca
@@ -818,8 +931,8 @@ parameters:
     jmp_id: latrines.dry_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 103
   - country_entry_id: AGO-SAN-27
     source_category_code: balde_bucket
@@ -829,8 +942,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AGO-SAN-28
     source_category_code: balde_bacio_outro_recipiente
@@ -840,8 +953,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AGO-SAN-29
     source_category_code: bucket
@@ -851,8 +964,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AGO-SAN-30
     source_category_code: bucket_toilet
@@ -862,30 +975,30 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AGO-SAN-31
     source_category_code: lata_balde_ou_saco_plastico
-    national_label_en: Lata, balde ou saco plástico
+    national_label_en: "Lata, balde ou saco pl\xE1stico"
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AGO-SAN-32
     source_category_code: lata_balde_saco_plastico
-    national_label_en: Lata/Balde/Saco plástico
+    national_label_en: "Lata/Balde/Saco pl\xE1stico"
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AGO-SAN-33
     source_category_code: hanging_toilet_latrine
@@ -896,8 +1009,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: AGO-SAN-34
     source_category_code: cemented_with_sink
@@ -908,8 +1021,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AGO-SAN-35
     source_category_code: pit_latrine_with_slab
@@ -920,8 +1033,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AGO-SAN-36
     source_category_code: open_ditch
@@ -932,8 +1045,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AGO-SAN-37
     source_category_code: pit_latrine_without_slab_open_pit
@@ -944,8 +1057,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AGO-SAN-38
     source_category_code: vala_aberta_open_trench
@@ -956,8 +1069,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AGO-SAN-39
     source_category_code: without_cement_sink
@@ -968,8 +1081,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AGO-SAN-40
     source_category_code: latrina
@@ -980,8 +1093,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AGO-SAN-41
     source_category_code: latrina_seca_ou_latrina_c_descarga_manual_pit_latrine_or_pour_flush
@@ -993,8 +1106,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AGO-SAN-42
     source_category_code: latrina_seca_ou_latrina_com_descarga_manual
@@ -1005,8 +1118,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AGO-SAN-43
     source_category_code: simple_pit
@@ -1017,8 +1130,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AGO-SAN-44
     source_category_code: ventilated_improved_vip
@@ -1029,8 +1142,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AGO-SAN-45
     source_category_code: ventilated_improved_pit_latrine
@@ -1041,8 +1154,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AGO-SAN-46
     source_category_code: retrete_latrina_ligada_a_fossa_aberta_vala_ou_rio
@@ -1052,8 +1165,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 90
   - country_entry_id: AGO-SAN-47
     source_category_code: retrete_latrina_ligada_a_rede_publica_de_esgotos
@@ -1063,8 +1176,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: AGO-SAN-48
     source_category_code: soakaway
@@ -1074,19 +1187,19 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: AGO-SAN-49
     source_category_code: retrete_latrina_ligada_a_fossa_septica
-    national_label_en: Retrete/latrina ligada a fossa séptica
+    national_label_en: "Retrete/latrina ligada a fossa s\xE9ptica"
     national_label_local: to septic tank
     jmp_classification: Latrines > Pour flush latrines > to septic tank
     jmp_id: latrines.pour_flush_latrines.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-SAN-50
     source_category_code: capim_ou_mato_ou_ar_livre
@@ -1096,8 +1209,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-51
     source_category_code: capim_mato_ou_ar_livre_e_rio_mar_ou_lago
@@ -1107,8 +1220,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-52
     source_category_code: capim_mato_ou_ar_livre_open_defecation
@@ -1118,8 +1231,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-53
     source_category_code: capim_mato_e_ar_livre
@@ -1129,19 +1242,19 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-54
     source_category_code: nenhum_sanitario_ar_livre_mato
-    national_label_en: Nenhum sanitário / ar livre/mato
+    national_label_en: "Nenhum sanit\xE1rio / ar livre/mato"
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-55
     source_category_code: no_facility_bush
@@ -1151,8 +1264,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-56
     source_category_code: no_facility_bush_field
@@ -1162,8 +1275,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-57
     source_category_code: no_sanitation
@@ -1173,8 +1286,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-58
     source_category_code: no_none_available
@@ -1184,8 +1297,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AGO-SAN-59
     source_category_code: other
@@ -1195,8 +1308,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AGO-SAN-60
     source_category_code: other_type_of_sanitation
@@ -1206,8 +1319,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AGO-SAN-61
     source_category_code: others
@@ -1217,8 +1330,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AGO-SAN-62
     source_category_code: outro
@@ -1228,8 +1341,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AGO-SAN-63
     source_category_code: outros
@@ -1239,8 +1352,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AGO-SAN-64
     source_category_code: other
@@ -1250,18 +1363,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_AGO_Angola_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AGO-WAS-01
     source_category_code: cacimba_ou_nascente
@@ -1271,19 +1384,19 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: AGO-WAS-02
     source_category_code: agua_de_nascente_fonte_protegida
-    national_label_en: 'Água de nascente: Fonte protegida'
+    national_label_en: "\xC1gua de nascente: Fonte protegida"
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AGO-WAS-03
     source_category_code: fonte_protegida
@@ -1293,8 +1406,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AGO-WAS-04
     source_category_code: nacente_protegida
@@ -1304,8 +1417,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AGO-WAS-05
     source_category_code: nascente_protegida_protected_spring
@@ -1315,8 +1428,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AGO-WAS-06
     source_category_code: protected_spring
@@ -1326,8 +1439,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AGO-WAS-07
     source_category_code: cacimba_protegida
@@ -1337,19 +1450,19 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AGO-WAS-08
     source_category_code: fonte_ou_poco_protegido_protected_well
-    national_label_en: Fonte ou poço protegido (protected well)
+    national_label_en: "Fonte ou po\xE7o protegido (protected well)"
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AGO-WAS-09
     source_category_code: poco_cavado_protegido
@@ -1359,30 +1472,30 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AGO-WAS-10
     source_category_code: poco_protegido
-    national_label_en: Poço protegido
+    national_label_en: "Po\xE7o protegido"
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AGO-WAS-11
     source_category_code: poco_cacimba_poco_protegido
-    national_label_en: 'Poço/cacimba: Poço protegido'
+    national_label_en: "Po\xE7o/cacimba: Po\xE7o protegido"
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AGO-WAS-12
     source_category_code: protected_well
@@ -1392,8 +1505,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AGO-WAS-13
     source_category_code: borehole_with_pump
@@ -1403,8 +1516,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-14
     source_category_code: cacimba_ou_chimpaca_ou_poco
@@ -1414,8 +1527,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-15
     source_category_code: furo_com_bomba
@@ -1425,8 +1538,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-16
     source_category_code: furo_com_bomba_well_with_handpump
@@ -1436,8 +1549,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-17
     source_category_code: furo_protegido
@@ -1447,8 +1560,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-18
     source_category_code: furu_com_bomba
@@ -1458,19 +1571,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-19
     source_category_code: poco_cacimba_furo_com_bomba
-    national_label_en: 'Poço/cacimba: Furo com bomba'
+    national_label_en: "Po\xE7o/cacimba: Furo com bomba"
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-20
     source_category_code: tube_well_or_borehole
@@ -1480,19 +1593,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AGO-WAS-21
     source_category_code: agua_de_nascente_fonte_nao_protegida
-    national_label_en: 'Água de nascente: Fonte não protegida'
+    national_label_en: "\xC1gua de nascente: Fonte n\xE3o protegida"
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AGO-WAS-22
     source_category_code: fonte_desprotegida
@@ -1502,8 +1615,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AGO-WAS-23
     source_category_code: nascente_desprotegida
@@ -1513,19 +1626,19 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AGO-WAS-24
     source_category_code: nascente_nao_protegida
-    national_label_en: Nascente não protegida
+    national_label_en: "Nascente n\xE3o protegida"
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AGO-WAS-25
     source_category_code: unprotected_spring
@@ -1535,8 +1648,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AGO-WAS-26
     source_category_code: cacimba_desprotegida
@@ -1546,8 +1659,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AGO-WAS-27
     source_category_code: poco_cavado_desprotegido
@@ -1557,30 +1670,30 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AGO-WAS-28
     source_category_code: poco_nao_protegido
-    national_label_en: Poço não protegido
+    national_label_en: "Po\xE7o n\xE3o protegido"
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AGO-WAS-29
     source_category_code: poco_cacimba_poco_nao_protegido
-    national_label_en: 'Poço/cacimba: Poço não protegido'
+    national_label_en: "Po\xE7o/cacimba: Po\xE7o n\xE3o protegido"
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AGO-WAS-30
     source_category_code: unprotected_well
@@ -1590,30 +1703,30 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AGO-WAS-31
     source_category_code: camiao_cisterna
-    national_label_en: Camião cisterna
+    national_label_en: "Cami\xE3o cisterna"
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AGO-WAS-32
     source_category_code: carroca_com_tanque_pequeno
-    national_label_en: Carroça com tanque pequeno
+    national_label_en: "Carro\xE7a com tanque pequeno"
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AGO-WAS-33
     source_category_code: cart_with_small_tank
@@ -1623,8 +1736,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AGO-WAS-34
     source_category_code: comprada_de_uma_carrinha_com_um_tanque_pequeno_ou_motocisterna
@@ -1634,19 +1747,19 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AGO-WAS-35
     source_category_code: moto_tres_rodas
-    national_label_en: Moto (três rodas)
+    national_label_en: "Moto (tr\xEAs rodas)"
     national_label_local: Other
     jmp_classification: Other improved sources > Other
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AGO-WAS-36
     source_category_code: tanque
@@ -1656,41 +1769,41 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AGO-WAS-37
     source_category_code: camiao_cistema
-    national_label_en: Camião Cistema
+    national_label_en: "Cami\xE3o Cistema"
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AGO-WAS-38
     source_category_code: camiao_cisterna
-    national_label_en: Camião cisterna
+    national_label_en: "Cami\xE3o cisterna"
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AGO-WAS-39
     source_category_code: camiao_cisterna_de_distribuicao
-    national_label_en: Camião cisterna de distribuição
+    national_label_en: "Cami\xE3o cisterna de distribui\xE7\xE3o"
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AGO-WAS-40
     source_category_code: comprada_em_um_caminhao_cisterna
@@ -1700,8 +1813,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AGO-WAS-41
     source_category_code: tanker_truck
@@ -1711,8 +1824,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AGO-WAS-42
     source_category_code: tanque
@@ -1722,8 +1835,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AGO-WAS-43
     source_category_code: other
@@ -1733,8 +1846,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AGO-WAS-44
     source_category_code: outro
@@ -1744,8 +1857,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AGO-WAS-45
     source_category_code: outro_especifique
@@ -1755,8 +1868,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AGO-WAS-46
     source_category_code: nao_sabe
@@ -1766,8 +1879,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AGO-WAS-47
     source_category_code: tanque_do_vizinho
@@ -1777,19 +1890,19 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AGO-WAS-48
     source_category_code: agua_engarrafada
-    national_label_en: Água engarrafada
+    national_label_en: "\xC1gua engarrafada"
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: AGO-WAS-49
     source_category_code: bottled_water
@@ -1799,41 +1912,41 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: AGO-WAS-50
     source_category_code: agua_da_chuva_chimpacas
-    national_label_en: Água da chuva / chimpacas
+    national_label_en: "\xC1gua da chuva / chimpacas"
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-WAS-51
     source_category_code: agua_da_chuva_chipacas
-    national_label_en: Água da Chuva / Chipacas
+    national_label_en: "\xC1gua da Chuva / Chipacas"
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-WAS-52
     source_category_code: agua_da_chuva_ou_chimpacas
-    national_label_en: Água da chuva ou chimpacas
+    national_label_en: "\xC1gua da chuva ou chimpacas"
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-WAS-53
     source_category_code: coleta_de_aguas_das_chuvas
@@ -1843,8 +1956,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-WAS-54
     source_category_code: rainwater
@@ -1854,8 +1967,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-WAS-55
     source_category_code: recolha_de_agua_da_chuva
@@ -1865,20 +1978,20 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AGO-WAS-56
     source_category_code: a_guas_superficiais_como_rio_represa_lago_lagoa_ca3rrego_canal_ou_canal_de_irrigaa_a_o
-    national_label_en: "Ã\x81guas superficiais, como rio, represa, lago, lagoa, cÃ³rrego,
-      canal ou canal de irrigaÃ§Ã£o"
+    national_label_en: "\xC3\x81guas superficiais, como rio, represa, lago, lagoa,\
+      \ c\xC3\xB3rrego, canal ou canal de irriga\xC3\xA7\xC3\xA3o"
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-57
     source_category_code: charco_rio_riacho
@@ -1888,19 +2001,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-58
     source_category_code: lago_lagoa_riacho_canal_canal_de_irrigacao
-    national_label_en: Lago/lagoa/riacho/canal/canal de irrigação
+    national_label_en: "Lago/lagoa/riacho/canal/canal de irriga\xE7\xE3o"
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-59
     source_category_code: lagoa_rio_ou_riacho
@@ -1910,8 +2023,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-60
     source_category_code: lagoa_rio_riacho
@@ -1921,8 +2034,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-61
     source_category_code: mire_river_or_stream
@@ -1932,8 +2045,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-62
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -1943,8 +2056,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-63
     source_category_code: surface_water
@@ -1954,8 +2067,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AGO-WAS-64
     source_category_code: neighbourhood_tap
@@ -1965,19 +2078,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AGO-WAS-65
     source_category_code: torneira_do_vizinho_ou_predio_neighbours_tap
-    national_label_en: Torneira do vizinho ou prédio (neighbours tap)
+    national_label_en: "Torneira do vizinho ou pr\xE9dio (neighbours tap)"
     national_label_local: Other
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AGO-WAS-66
     source_category_code: torneira_na_casa_do_vizinho
@@ -1987,8 +2100,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AGO-WAS-67
     source_category_code: agua_canalizada
@@ -1998,8 +2111,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: AGO-WAS-68
     source_category_code: agua_canalizada
@@ -2009,8 +2122,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AGO-WAS-69
     source_category_code: agua_canalizada_em_casa
@@ -2020,8 +2133,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AGO-WAS-70
     source_category_code: domestic_connection_without_pump
@@ -2031,8 +2144,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AGO-WAS-71
     source_category_code: piped_into_dwelling
@@ -2042,19 +2155,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AGO-WAS-72
     source_category_code: torneira_na_residencia_ligada_a_rede
-    national_label_en: Torneira na Residência Ligada á Rede
+    national_label_en: "Torneira na Resid\xEAncia Ligada \xE1 Rede"
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AGO-WAS-73
     source_category_code: torneira_dentro_de_casa
@@ -2064,8 +2177,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AGO-WAS-74
     source_category_code: agua_canalizada_no_quintal
@@ -2075,8 +2188,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AGO-WAS-75
     source_category_code: agua_canalizada_no_quintal_yard_tap
@@ -2086,8 +2199,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AGO-WAS-76
     source_category_code: piped_to_yard_plot
@@ -2097,19 +2210,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AGO-WAS-77
     source_category_code: torneira_do_predio_vizinho
-    national_label_en: Torneira do Prédio / Vizinho
+    national_label_en: "Torneira do Pr\xE9dio / Vizinho"
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AGO-WAS-78
     source_category_code: torneira_dentro_do_quintal
@@ -2119,41 +2232,41 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AGO-WAS-79
     source_category_code: chafariz_ou_fontenario
-    national_label_en: Chafariz ou fontenário
+    national_label_en: "Chafariz ou fonten\xE1rio"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AGO-WAS-80
     source_category_code: chafariz_publico
-    national_label_en: Chafariz Público
+    national_label_en: "Chafariz P\xFAblico"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AGO-WAS-81
     source_category_code: chafariz_fontenario
-    national_label_en: Chafariz/Fontenário
+    national_label_en: "Chafariz/Fonten\xE1rio"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AGO-WAS-82
     source_category_code: public_standpipe
@@ -2163,8 +2276,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AGO-WAS-83
     source_category_code: public_tap_standpipe
@@ -2174,8 +2287,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AGO-WAS-84
     source_category_code: torneir_a_publica_chafariz_fontenario_standpipe
@@ -2185,24 +2298,24 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AGO-WAS-85
     source_category_code: torneira_chafariz_publico
-    national_label_en: 'Torneira: Chafariz público'
+    national_label_en: "Torneira: Chafariz p\xFAblico"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_AGO_Angola_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

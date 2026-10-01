@@ -6,13 +6,13 @@ status: draft
 country_name: ISL
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: ISL-EDU-01
     national_label_en: Pre-primary schools I
-    national_label_local: Leikskóli I
+    national_label_local: "Leiksk\xF3li I"
     entry_age: 0
     duration_years: 0
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: ISL-EDU-02
     national_label_en: Pre-primary schools II
-    national_label_local: Leikskóli II
+    national_label_local: "Leiksk\xF3li II"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: ISL-EDU-03
     national_label_en: Primary school (1st section compulsory education)
-    national_label_local: Grunnskóli I
+    national_label_local: "Grunnsk\xF3li I"
     entry_age: 6
     duration_years: 7
     isced_level: '1'
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ISL-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: ISL-EDU-04
     national_label_en: Lower-secondary school (2nd section compulsory education)
-    national_label_local: Grunnskóli II
+    national_label_local: "Grunnsk\xF3li II"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -54,9 +72,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
+    parent_country_entry_ids:
+    - ISL-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-05
     national_label_en: 1-year upper secondary level vocational programmes
-    national_label_local: Eins árs starfsnámsbrautir framhaldsskólastigs
+    national_label_local: "Eins \xE1rs starfsn\xE1msbrautir framhaldssk\xF3lastigs"
     entry_age: 16
     duration_years: 0
     isced_level: '3'
@@ -65,9 +91,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-06
     national_label_en: Marine engineering programmes, 2nd grade
-    national_label_local: Vélstjórn 2. stig
+    national_label_local: "V\xE9lstj\xF3rn 2. stig"
     entry_age: 17
     duration_years: 1
     isced_level: '3'
@@ -76,9 +111,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-07
     national_label_en: Upper secondary level vocational 2-year programmes
-    national_label_local: Tveggja ára starfsnámsbrautir framhaldsskólastigs
+    national_label_local: "Tveggja \xE1ra starfsn\xE1msbrautir framhaldssk\xF3lastigs"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -87,10 +131,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-08
     national_label_en: Vocational programmes at upper secondary level with a general
       programme prerequisite
-    national_label_local: Starfsnám á framhaldsskólastigi með bóknám sem forkröfu
+    national_label_local: "Starfsn\xE1m \xE1 framhaldssk\xF3lastigi me\xF0 b\xF3kn\xE1\
+      m sem forkr\xF6fu"
     entry_age: 17
     duration_years: 1
     isced_level: '3'
@@ -99,9 +153,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-09
     national_label_en: Upper secondary level vocational 3-year programmes
-    national_label_local: 3ja ára starfsnámsbrautir framhaldsskólastigs
+    national_label_local: "3ja \xE1ra starfsn\xE1msbrautir framhaldssk\xF3lastigs"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -110,9 +173,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-10
     national_label_en: Certified indentured trades, 3-year contract time
-    national_label_local: Löggilt iðngrein 3ja ára
+    national_label_local: "L\xF6ggilt i\xF0ngrein 3ja \xE1ra"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -121,9 +193,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-11
     national_label_en: Certified indentured trades, 4-year contract time
-    national_label_local: Löggilt iðngrein 4ra ára
+    national_label_local: "L\xF6ggilt i\xF0ngrein 4ra \xE1ra"
     entry_age: 16
     duration_years: 4
     isced_level: '3'
@@ -132,9 +213,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-12
     national_label_en: Vocational 4-year programmes at upper secondary level
-    national_label_local: Starfsnám 4 ár á framhaldsskólastigi
+    national_label_local: "Starfsn\xE1m 4 \xE1r \xE1 framhaldssk\xF3lastigi"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -143,9 +233,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-13
     national_label_en: Vocational 5-year programmes at upper secondary level
-    national_label_local: Starfsnám 5 ár á framhaldsskólastigi
+    national_label_local: "Starfsn\xE1m 5 \xE1r \xE1 framhaldssk\xF3lastigi"
     entry_age: 16
     duration_years: 4
     isced_level: '3'
@@ -154,9 +253,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-14
     national_label_en: Special education programmes for the mentally handicapped
-    national_label_local: Sérdeildir fatlaðra
+    national_label_local: "S\xE9rdeildir fatla\xF0ra"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -165,10 +273,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-15
     national_label_en: General programmes at the start of upper secondary level, shorter
       than 2 years
-    national_label_local: Almenn námsbraut framhaldsskóla, styttri en 2 ár
+    national_label_local: "Almenn n\xE1msbraut framhaldssk\xF3la, styttri en 2 \xE1\
+      r"
     entry_age: 16
     duration_years: 1
     isced_level: '3'
@@ -177,9 +295,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-15
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-16
     national_label_en: Fine and applied arts at upper secondary level
-    national_label_local: Listnám á framhaldsskólastigi, framhaldsstig
+    national_label_local: "Listn\xE1m \xE1 framhaldssk\xF3lastigi, framhaldsstig"
     entry_age: 16
     duration_years: 4
     isced_level: '3'
@@ -188,9 +315,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-16
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-17
     national_label_en: Preparatory programme for fine and applied arts
-    national_label_local: Fornám myndlistar á framhaldsskólastigi
+    national_label_local: "Forn\xE1m myndlistar \xE1 framhaldssk\xF3lastigi"
     entry_age: 19
     duration_years: 1
     isced_level: '3'
@@ -199,10 +335,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-17
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-18
     national_label_en: General programmes leading to matriculation examination at
       upper secondary level, 4 years
-    national_label_local: Bóknámsbrautir til stúdentsprófs, 4ra ára
+    national_label_local: "B\xF3kn\xE1msbrautir til st\xFAdentspr\xF3fs, 4ra \xE1\
+      ra"
     entry_age: 16
     duration_years: 4
     isced_level: '3'
@@ -211,10 +357,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 22
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-18
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-19
     national_label_en: Matriculation examination at upper secondary level after completion
       of vocational programmes
-    national_label_local: Stúdentspróf að loknu starfsnámi
+    national_label_local: "St\xFAdentspr\xF3f a\xF0 loknu starfsn\xE1mi"
     entry_age: 19
     duration_years: 1
     isced_level: '3'
@@ -223,10 +378,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 23
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-19
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-20
     national_label_en: General programmes leading to matriculation examination at
       upper secondary level, 3-3.5 years
-    national_label_local: Bóknámsbrautir til stúdentsprófs, 3-3,5 ára
+    national_label_local: "B\xF3kn\xE1msbrautir til st\xFAdentspr\xF3fs, 3-3,5 \xE1\
+      ra"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -235,10 +400,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 24
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-20
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-21
     national_label_en: General programmes at the start of upper secondary level, 2-3
       years
-    national_label_local: Bóknámsbrautir framhaldsskóla, 2-3 ár
+    national_label_local: "B\xF3kn\xE1msbrautir framhaldssk\xF3la, 2-3 \xE1r"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -247,9 +421,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 25
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-21
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-22
     national_label_en: Fine and applied arts at upper secondary level, level 6
-    national_label_local: Listnám á framhaldsskólastigi, 6. stig
+    national_label_local: "Listn\xE1m \xE1 framhaldssk\xF3lastigi, 6. stig"
     entry_age: 16
     duration_years: 1
     isced_level: '3'
@@ -258,9 +441,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 26
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-22
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-23
     national_label_en: Fine and applied arts at upper secondary level, level 7
-    national_label_local: Listnám á framhaldsskólastigi,7. stig
+    national_label_local: "Listn\xE1m \xE1 framhaldssk\xF3lastigi,7. stig"
     entry_age: 17
     duration_years: 1
     isced_level: '3'
@@ -269,9 +461,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 27
+    parent_country_entry_ids:
+    - ISL-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-23
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ISL-EDU-24
     national_label_en: One year programmes at post-secondary level
-    national_label_local: Eins árs nám á viðbótarstigi
+    national_label_local: "Eins \xE1rs n\xE1m \xE1 vi\xF0b\xF3tarstigi"
     entry_age: 21
     duration_years: 1
     isced_level: '4'
@@ -280,10 +481,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-25
     national_label_en: Marine captain and engineering programmes at post-secondary
       level, 4th grade
-    national_label_local: Skip- og vélstjórn 4. stig
+    national_label_local: "Skip- og v\xE9lstj\xF3rn 4. stig"
     entry_age: 20
     duration_years: 0
     isced_level: '4'
@@ -292,10 +517,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-26
     national_label_en: Trade master's programmes at post-secondary level in a certified
       indentured trade
-    national_label_local: Meistaranám í löggiltri iðngrein
+    national_label_local: "Meistaran\xE1m \xED l\xF6ggiltri i\xF0ngrein"
     entry_age: 21
     duration_years: 0
     isced_level: '4'
@@ -304,9 +553,30 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - ISL-EDU-36
+    - ISL-EDU-37
+    - ISL-EDU-38
+    - ISL-EDU-39
+    - ISL-EDU-40
+    - ISL-EDU-41
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-38
+    - ISL-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
+    - 'minimum parent path selected from: ISL-EDU-36, ISL-EDU-37, ISL-EDU-38, ISL-EDU-39,
+      ISL-EDU-40, ISL-EDU-41'
   - country_entry_id: ISL-EDU-27
     national_label_en: Vocational programmes at post-secondary level, 1.5-2 years
-    national_label_local: Starfsnám, 1,5-2 ár á viðbótarstigi
+    national_label_local: "Starfsn\xE1m, 1,5-2 \xE1r \xE1 vi\xF0b\xF3tarstigi"
     entry_age: 20
     duration_years: 1
     isced_level: '4'
@@ -315,9 +585,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-28
     national_label_en: One year general programmes at post-secondary level
-    national_label_local: Eins árs almennt nám á viðbótarstigi
+    national_label_local: "Eins \xE1rs almennt n\xE1m \xE1 vi\xF0b\xF3tarstigi"
     entry_age: 20
     duration_years: 1
     isced_level: '4'
@@ -326,10 +620,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-29
     national_label_en: Vocational programmes at post-secondary level, 1.5-2 years,
       giving access to the tertiary level
-    national_label_local: Starfsnám, 1,5-2 ár á viðbótarstigi með aðgang að háskólastigi
+    national_label_local: "Starfsn\xE1m, 1,5-2 \xE1r \xE1 vi\xF0b\xF3tarstigi me\xF0\
+      \ a\xF0gang a\xF0 h\xE1sk\xF3lastigi"
     entry_age: 20
     duration_years: 1
     isced_level: '4'
@@ -338,9 +657,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-30
     national_label_en: Tertiary programmes 2 years not leading to a university degree
-    national_label_local: Æðra nám í 2 ár án háskólagráðu
+    national_label_local: "\xC6\xF0ra n\xE1m \xED 2 \xE1r \xE1n h\xE1sk\xF3lagr\xE1\
+      \xF0u"
     entry_age: 20
     duration_years: 2
     isced_level: '5'
@@ -349,9 +693,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-31
     national_label_en: Tertiary programmes 3 years not leading to a university degree
-    national_label_local: Æðra nám í 3 ár án háskólagráðu
+    national_label_local: "\xC6\xF0ra n\xE1m \xED 3 \xE1r \xE1n h\xE1sk\xF3lagr\xE1\
+      \xF0u"
     entry_age: 20
     duration_years: 3
     isced_level: '5'
@@ -360,9 +729,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-32
     national_label_en: Teacher's qualification programme, no degree
-    national_label_local: Nám til kennsluréttinda án háskólagráðu
+    national_label_local: "N\xE1m til kennslur\xE9ttinda \xE1n h\xE1sk\xF3lagr\xE1\
+      \xF0u"
     entry_age: 23
     duration_years: 0
     isced_level: '5'
@@ -371,9 +765,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-33
     national_label_en: Short practical programmes at the tertiary level
-    national_label_local: Stuttar hagnýtar námsbrautir í háskólum
+    national_label_local: "Stuttar hagn\xFDtar n\xE1msbrautir \xED h\xE1sk\xF3lum"
     entry_age: 20
     duration_years: 1
     isced_level: '5'
@@ -382,9 +800,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-34
     national_label_en: Basic diploma at the tertiary level, 0.5-1 year
-    national_label_local: Grunndiplóma í háskólum, 0,5-1 ár
+    national_label_local: "Grunndipl\xF3ma \xED h\xE1sk\xF3lum, 0,5-1 \xE1r"
     entry_age: 20
     duration_years: 0
     isced_level: '5'
@@ -393,10 +835,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-35
     national_label_en: Tertiary programmes 1-1.5 years not leading to a university
       degree
-    national_label_local: Æðra nám í 1-1,5 ár án háskólagráðu
+    national_label_local: "\xC6\xF0ra n\xE1m \xED 1-1,5 \xE1r \xE1n h\xE1sk\xF3lagr\xE1\
+      \xF0u"
     entry_age: 20
     duration_years: 1
     isced_level: '5'
@@ -405,9 +872,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-36
     national_label_en: Tertiary programmes 3 years, first university degree
-    national_label_local: Háskólanám 3ja ára til fyrstu gráðu
+    national_label_local: "H\xE1sk\xF3lan\xE1m 3ja \xE1ra til fyrstu gr\xE1\xF0u"
     entry_age: 20
     duration_years: 3
     isced_level: '6'
@@ -416,9 +907,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 40
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-36
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-37
     national_label_en: Tertiary programmes 4 years, first university degree
-    national_label_local: Háskólanám 4ra ára til fyrstu gráðu
+    national_label_local: "H\xE1sk\xF3lan\xE1m 4ra \xE1ra til fyrstu gr\xE1\xF0u"
     entry_age: 20
     duration_years: 3
     isced_level: '6'
@@ -427,10 +942,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 41
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-37
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-38
     national_label_en: Tertiary programmes, 0.5-1 year in addition to 3-4 year studies,
       not leading to a second degree
-    national_label_local: Háskólanám, 0,5-1 viðbótarár ofan á 3-4 ár, ekki viðbótargráða
+    national_label_local: "H\xE1sk\xF3lan\xE1m, 0,5-1 vi\xF0b\xF3tar\xE1r ofan \xE1\
+      \ 3-4 \xE1r, ekki vi\xF0b\xF3targr\xE1\xF0a"
     entry_age: 23
     duration_years: 0
     isced_level: '6'
@@ -439,10 +979,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-38
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-39
     national_label_en: Tertiary programmes 2 years in addition to 3-4 years studies,
       not leading to a second degree
-    national_label_local: Háskólanám, 2 viðbótarár ofan á 3-4 ár, ekki viðbótargráða
+    national_label_local: "H\xE1sk\xF3lan\xE1m, 2 vi\xF0b\xF3tar\xE1r ofan \xE1 3-4\
+      \ \xE1r, ekki vi\xF0b\xF3targr\xE1\xF0a"
     entry_age: 23
     duration_years: 2
     isced_level: '6'
@@ -451,9 +1016,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 43
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-39
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-40
     national_label_en: Tertiary programmes, exchange students
-    national_label_local: Háskólanám, skiptinemar
+    national_label_local: "H\xE1sk\xF3lan\xE1m, skiptinemar"
     entry_age: 20
     duration_years: 0
     isced_level: '6'
@@ -462,10 +1051,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 44
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-40
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-41
     national_label_en: Tertiary programmes, continuing education after first tertiary
       degree
-    national_label_local: Háskólanám, símenntun eftir fyrstu háskólagráðu
+    national_label_local: "H\xE1sk\xF3lan\xE1m, s\xEDmenntun eftir fyrstu h\xE1sk\xF3\
+      lagr\xE1\xF0u"
     entry_age: 23
     duration_years: 0
     isced_level: '6'
@@ -474,9 +1088,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 45
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-41
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-42
     national_label_en: Tertiary programmes, 6 years, first university degree
-    national_label_local: Háskólanám 6 ára til fyrstu gráðu
+    national_label_local: "H\xE1sk\xF3lan\xE1m 6 \xE1ra til fyrstu gr\xE1\xF0u"
     entry_age: 20
     duration_years: 6
     isced_level: '7'
@@ -485,10 +1123,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 46
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-42
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-43
     national_label_en: Tertiary programmes, 2 years in addition to 3-4 year studies,
       leading to a second degree
-    national_label_local: Háskólanám, 2 viðbótarár eftir 3-4 ár, tekin viðbótargráða
+    national_label_local: "H\xE1sk\xF3lan\xE1m, 2 vi\xF0b\xF3tar\xE1r eftir 3-4 \xE1\
+      r, tekin vi\xF0b\xF3targr\xE1\xF0a"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -497,10 +1160,35 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 47
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-43
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-44
     national_label_en: Tertiary programmes, 1,5 years in addition to 3 year studies,
       leading to a second degree
-    national_label_local: Háskólanám, 1,5 viðbótarár eftir 3 ár, tekin viðbótargráða
+    national_label_local: "H\xE1sk\xF3lan\xE1m, 1,5 vi\xF0b\xF3tar\xE1r eftir 3 \xE1\
+      r, tekin vi\xF0b\xF3targr\xE1\xF0a"
     entry_age: 23
     duration_years: 1
     isced_level: '7'
@@ -509,9 +1197,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 48
+    parent_country_entry_ids:
+    - ISL-EDU-06
+    - ISL-EDU-10
+    - ISL-EDU-11
+    - ISL-EDU-14
+    - ISL-EDU-15
+    - ISL-EDU-16
+    - ISL-EDU-17
+    - ISL-EDU-18
+    - ISL-EDU-20
+    - ISL-EDU-21
+    - ISL-EDU-22
+    - ISL-EDU-23
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-44
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
   - country_entry_id: ISL-EDU-45
     national_label_en: Tertiary programmes, exchange students at the Master's level
-    national_label_local: Háskólanám, skiptinemar á meistarastigi
+    national_label_local: "H\xE1sk\xF3lan\xE1m, skiptinemar \xE1 meistarastigi"
     entry_age: 23
     duration_years: 0
     isced_level: '7'
@@ -520,9 +1232,30 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 49
+    parent_country_entry_ids:
+    - ISL-EDU-36
+    - ISL-EDU-37
+    - ISL-EDU-38
+    - ISL-EDU-39
+    - ISL-EDU-40
+    - ISL-EDU-41
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-38
+    - ISL-EDU-45
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
+    - 'minimum parent path selected from: ISL-EDU-36, ISL-EDU-37, ISL-EDU-38, ISL-EDU-39,
+      ISL-EDU-40, ISL-EDU-41'
   - country_entry_id: ISL-EDU-46
     national_label_en: Doctoral programme, Ph.D.
-    national_label_local: Doktorsnám
+    national_label_local: "Doktorsn\xE1m"
     entry_age: 25
     duration_years: 3
     isced_level: '8'
@@ -531,10 +1264,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 50
+    parent_country_entry_ids:
+    - ISL-EDU-42
+    - ISL-EDU-43
+    - ISL-EDU-44
+    - ISL-EDU-45
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ISL-EDU-03
+    - ISL-EDU-04
+    - ISL-EDU-06
+    - ISL-EDU-38
+    - ISL-EDU-45
+    - ISL-EDU-46
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ISL-EDU-06, ISL-EDU-10, ISL-EDU-11, ISL-EDU-14,
+      ISL-EDU-15, ISL-EDU-16, ISL-EDU-17, ISL-EDU-18, ISL-EDU-20, ISL-EDU-21, ISL-EDU-22,
+      ISL-EDU-23'
+    - 'minimum parent path selected from: ISL-EDU-36, ISL-EDU-37, ISL-EDU-38, ISL-EDU-39,
+      ISL-EDU-40, ISL-EDU-41'
+    - 'minimum parent path selected from: ISL-EDU-42, ISL-EDU-43, ISL-EDU-44, ISL-EDU-45'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Iceland.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

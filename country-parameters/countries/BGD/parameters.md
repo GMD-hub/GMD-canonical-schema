@@ -6,9 +6,9 @@ schema_version: '0.1'
 status: draft
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BGD-EDU-01
     national_label_en: Pre-primary education
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BGD-EDU-02
     national_label_en: Primary education
     national_label_local: Prathomik Shikkha
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - BGD-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BGD-EDU-03
     national_label_en: Primary education (Madrasah)
     national_label_local: Ebtedayee Shikkha
@@ -43,10 +55,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - BGD-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BGD-EDU-04
-    national_label_en: |-
-      Junior secondary school
-      (Grades 6-8)
+    national_label_en: 'Junior secondary school
+
+      (Grades 6-8)'
     national_label_local: Nimno Madhyamik Shikkha
     entry_age: 11
     duration_years: 3
@@ -56,10 +74,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - BGD-EDU-02
+    - BGD-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
   - country_entry_id: BGD-EDU-05
-    national_label_en: |-
-      Junior Dakhil Madrasah
-      (Grades 6-8)
+    national_label_en: 'Junior Dakhil Madrasah
+
+      (Grades 6-8)'
     national_label_local: Nimno Madhyamik Shikkha (Madrasah)
     entry_age: 11
     duration_years: 3
@@ -69,10 +97,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - BGD-EDU-02
+    - BGD-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
   - country_entry_id: BGD-EDU-06
-    national_label_en: |-
-      Secondary school
-      (Grades 9-10)
+    national_label_en: 'Secondary school
+
+      (Grades 9-10)'
     national_label_local: Madhyamik Shikkha
     entry_age: 14
     duration_years: 2
@@ -82,10 +120,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-07
-    national_label_en: |-
-      Dakhil Madrasah
-      (Grades 9-10)
+    national_label_en: 'Dakhil Madrasah
+
+      (Grades 9-10)'
     national_label_local: Dakhil
     entry_age: 14
     duration_years: 2
@@ -95,10 +145,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-08
-    national_label_en: |-
-      Higher secondary college
-      (Grades 11-12)
+    national_label_en: 'Higher secondary college
+
+      (Grades 11-12)'
     national_label_local: Uchcha Madhyamik Shikkha
     entry_age: 16
     duration_years: 2
@@ -108,10 +170,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-09
-    national_label_en: |-
-      Alim Madrasah
-      (Grades 11-12)
+    national_label_en: 'Alim Madrasah
+
+      (Grades 11-12)'
     national_label_local: Alim
     entry_age: 16
     duration_years: 2
@@ -121,10 +195,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-10
-    national_label_en: |-
-      Vocational secondary school/
-      trade course
+    national_label_en: 'Vocational secondary school/
+
+      trade course'
     national_label_local: SSC (Vocational)
     entry_age: 14
     duration_years: 2
@@ -134,10 +220,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-11
-    national_label_en: |-
-      Vocational secondary Madrasah/
-      trade course
+    national_label_en: 'Vocational secondary Madrasah/
+
+      trade course'
     national_label_local: Dakhil (Vocational)
     entry_age: 14
     duration_years: 2
@@ -147,10 +245,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-12
-    national_label_en: |-
-      Higher Secondary Certificate (HSC)
-      (Business Management)
+    national_label_en: 'Higher Secondary Certificate (HSC)
+
+      (Business Management)'
     national_label_local: HSC (Business management)
     entry_age: 16
     duration_years: 2
@@ -160,6 +270,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-13
     national_label_en: "HSC (Higher Secondary Certificate) \n(Vocational)(Grade 11-12)"
     national_label_local: HSC (Vocational)
@@ -171,6 +293,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-14
     national_label_en: Diploma in commerce
     national_label_local: Diploma in Commerce
@@ -182,6 +316,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - BGD-EDU-04
+    - BGD-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
   - country_entry_id: BGD-EDU-15
     national_label_en: Certificate in education
     national_label_local: Certificate in Education
@@ -193,6 +339,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-16
     national_label_en: Diploma in Homeo-Pathic Medicine & Surgery (DHMS)
     national_label_local: Diploma in Homeo-Pathic Medicine & Surgery (DHMS)
@@ -204,6 +369,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-17
     national_label_en: Diploma in Agriculture, Diploma in Ayurvedic & Unani Medicine
     national_label_local: Diploma in Agriculture, Diploma in Ayurvedic & Unani Medicine
@@ -215,6 +399,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-18
     national_label_en: 'Diploma in: Textiles, Health Technology, Surveying, Ceramics,
       Nursing, Graphic Arts'
@@ -228,6 +431,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-19
     national_label_en: Diploma in Engineering
     national_label_local: Diploma in Engineering
@@ -239,6 +461,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-20
     national_label_en: B.Sc. Nursing, Fine Arts, Music, Unani Medicine & Surgery
     national_label_local: B.Sc. Nursing, Fine Arts, Music, Unani Medicine & Surgery
@@ -250,6 +491,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-21
     national_label_en: Bachelor of Homeopathic Medicine & Surgery (BHMS)
     national_label_local: Bachelor of Homeopathic Medicine & Surgery (BHMS)
@@ -261,6 +521,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-22
     national_label_en: Bachelor's Degree (Pass)
     national_label_local: Snatok(Pass)
@@ -272,6 +551,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-23
     national_label_en: B.Sc. Eng. (Leather & Textile)
     national_label_local: B.Sc. Eng. (Leather & Textile)
@@ -283,6 +581,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-24
     national_label_en: Bachelor's Degree Honours
     national_label_local: 'Snatok (Sanman): Social Science, Science, Humanities, Business
@@ -295,6 +612,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-25
     national_label_en: Fazil Degree in Madrasah (Pass)
     national_label_local: Fazil Degree (Pass) in Madrasah
@@ -306,6 +642,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-26
     national_label_en: Honours Fazil Degree in Madrasah
     national_label_local: Fazil (Sanman) /Degree (Honours) in Madrasah
@@ -317,6 +672,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-27
     national_label_en: Bachelor of Education
     national_label_local: Bachelor of Education
@@ -328,6 +702,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-28
     national_label_en: Bachelor of Physical Education (BPEd)
     national_label_local: Sharirik Shikkha(Snatok)
@@ -339,6 +732,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-29
     national_label_en: Bachelor of Medicine & Surgery (MBBS), Bachelor of Dental Surgery
       (BDS)
@@ -352,6 +764,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-30
     national_label_en: Master's Degree
     national_label_local: Snatokottor
@@ -363,6 +794,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - BGD-EDU-22
+    - BGD-EDU-23
+    - BGD-EDU-24
+    - BGD-EDU-25
+    - BGD-EDU-26
+    - BGD-EDU-27
+    - BGD-EDU-28
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-27
+    - BGD-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
+    - 'minimum parent path selected from: BGD-EDU-22, BGD-EDU-23, BGD-EDU-24, BGD-EDU-25,
+      BGD-EDU-26, BGD-EDU-27, BGD-EDU-28'
   - country_entry_id: BGD-EDU-31
     national_label_en: Kamil Degree in Madrasah
     national_label_local: Kamil Degree in Madrasah
@@ -374,6 +828,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-32
     national_label_en: Master in education
     national_label_local: Shikkhay Snatokottor
@@ -385,6 +858,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
+    parent_country_entry_ids:
+    - BGD-EDU-22
+    - BGD-EDU-23
+    - BGD-EDU-24
+    - BGD-EDU-25
+    - BGD-EDU-26
+    - BGD-EDU-27
+    - BGD-EDU-28
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-27
+    - BGD-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
+    - 'minimum parent path selected from: BGD-EDU-22, BGD-EDU-23, BGD-EDU-24, BGD-EDU-25,
+      BGD-EDU-26, BGD-EDU-27, BGD-EDU-28'
   - country_entry_id: BGD-EDU-33
     national_label_en: M.Sc. in Engineering and Agriculture
     national_label_local: M.Sc. in Engineering and Agriculture
@@ -396,6 +892,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-34
     national_label_en: Post Graduate Diploma (PGD) in Health, M.Phil Degree, and M.S.
       Degree
@@ -408,6 +923,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 40
+    parent_country_entry_ids:
+    - BGD-EDU-06
+    - BGD-EDU-07
+    - BGD-EDU-08
+    - BGD-EDU-09
+    - BGD-EDU-12
+    - BGD-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
   - country_entry_id: BGD-EDU-35
     national_label_en: Ph.D
     national_label_local: Ph.D
@@ -419,15 +953,37 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 41
+    parent_country_entry_ids:
+    - BGD-EDU-29
+    - BGD-EDU-30
+    - BGD-EDU-31
+    - BGD-EDU-32
+    - BGD-EDU-33
+    - BGD-EDU-34
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BGD-EDU-02
+    - BGD-EDU-04
+    - BGD-EDU-06
+    - BGD-EDU-31
+    - BGD-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BGD-EDU-02, BGD-EDU-03'
+    - 'minimum parent path selected from: BGD-EDU-04, BGD-EDU-05'
+    - 'minimum parent path selected from: BGD-EDU-06, BGD-EDU-07, BGD-EDU-08, BGD-EDU-09,
+      BGD-EDU-12, BGD-EDU-14'
+    - 'minimum parent path selected from: BGD-EDU-29, BGD-EDU-30, BGD-EDU-31, BGD-EDU-32,
+      BGD-EDU-33, BGD-EDU-34'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_mapping_Bangladesh.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BGD-SUBNAT-01
     survey_labels: 10 - Barisal | 10-Barisal | Barisal
@@ -436,10 +992,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_575
     geo_year: '2015'
@@ -457,10 +1013,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_576
     geo_year: '2015'
@@ -478,10 +1034,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_577
     geo_year: '2015'
@@ -499,10 +1055,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_578
     geo_year: '2015'
@@ -520,10 +1076,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_61362
     geo_year: '2015'
@@ -541,10 +1097,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_61363
     geo_year: '2015'
@@ -562,10 +1118,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BGD_2015_GAUL1_580
     geo_year: '2015'
@@ -578,13 +1134,13 @@ parameters:
     source_row: 793
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BGD-SAN-01
     source_category_code: compositing_toilet
@@ -594,8 +1150,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BGD-SAN-02
     source_category_code: composting_toilet
@@ -605,8 +1161,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BGD-SAN-03
     source_category_code: composting_latrines
@@ -616,8 +1172,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: BGD-SAN-04
     source_category_code: flash_to_open_drainage
@@ -627,8 +1183,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BGD-SAN-05
     source_category_code: flush_latrine_connected_to_open_drain
@@ -638,8 +1194,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BGD-SAN-06
     source_category_code: flush_to_open_drain
@@ -649,8 +1205,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BGD-SAN-07
     source_category_code: flush_to_somewhere_else
@@ -660,8 +1216,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BGD-SAN-08
     source_category_code: flash_to_sewerage_system
@@ -671,8 +1227,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BGD-SAN-09
     source_category_code: flush_to_piped_sewage_system
@@ -682,8 +1238,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BGD-SAN-10
     source_category_code: flush_to_piped_sewer_system
@@ -693,8 +1249,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BGD-SAN-11
     source_category_code: sewer_connection
@@ -704,8 +1260,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BGD-SAN-12
     source_category_code: flash_to_protected_pit
@@ -715,8 +1271,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BGD-SAN-13
     source_category_code: flush_to_pit_latrine
@@ -726,8 +1282,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BGD-SAN-14
     source_category_code: falsh_to_safety_tank
@@ -737,8 +1293,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BGD-SAN-15
     source_category_code: flash_to_safety_tank
@@ -748,8 +1304,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BGD-SAN-16
     source_category_code: flush_to_septic_tank
@@ -759,8 +1315,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BGD-SAN-17
     source_category_code: septic_tank
@@ -770,8 +1326,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BGD-SAN-18
     source_category_code: flash_to_unidentified_area
@@ -781,8 +1337,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BGD-SAN-19
     source_category_code: flush_to_do_not_know_where
@@ -792,8 +1348,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BGD-SAN-20
     source_category_code: flush_to_unknown_place_not_sure_don_t_know
@@ -803,8 +1359,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BGD-SAN-21
     source_category_code: flush_don_t_know_where
@@ -814,8 +1370,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BGD-SAN-22
     source_category_code: flush_to_somewhere_else
@@ -825,8 +1381,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BGD-SAN-23
     source_category_code: flush_to_somewhere_else
@@ -836,8 +1392,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BGD-SAN-24
     source_category_code: flush_to_piped_sewer_system
@@ -847,8 +1403,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BGD-SAN-25
     source_category_code: flush_to_piped_sewer_system
@@ -858,8 +1414,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BGD-SAN-26
     source_category_code: flush_to_pit_latrine
@@ -869,8 +1425,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BGD-SAN-27
     source_category_code: flush_to_pit_latrine
@@ -880,8 +1436,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BGD-SAN-28
     source_category_code: flush_to_pit_latrine
@@ -891,8 +1447,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BGD-SAN-29
     source_category_code: flush_to_septic_tank
@@ -902,8 +1458,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BGD-SAN-30
     source_category_code: flush_to_septic_tank
@@ -913,8 +1469,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BGD-SAN-31
     source_category_code: septic_tank_modern
@@ -924,8 +1480,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BGD-SAN-32
     source_category_code: septic_tank_modern_toilet
@@ -935,8 +1491,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BGD-SAN-33
     source_category_code: flush_don_t_know_where
@@ -946,8 +1502,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-SAN-34
     source_category_code: flush_to_unknown_place_not_sure_dk_where
@@ -957,8 +1513,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-SAN-35
     source_category_code: flush_to_unknown_place_not_sure_dk_where
@@ -968,8 +1524,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-SAN-36
     source_category_code: flush_don_t_know_where
@@ -979,8 +1535,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-SAN-37
     source_category_code: bucket
@@ -990,8 +1546,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BGD-SAN-38
     source_category_code: bucket_or_tub_or_bucket_latrine
@@ -1001,8 +1557,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BGD-SAN-39
     source_category_code: bucket_toilet
@@ -1012,8 +1568,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BGD-SAN-40
     source_category_code: hanging
@@ -1024,8 +1580,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-41
     source_category_code: hanging_latrine
@@ -1036,8 +1592,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-42
     source_category_code: hanging_toilet
@@ -1048,8 +1604,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-43
     source_category_code: hanging_toilet_hanging_latrine
@@ -1060,8 +1616,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-44
     source_category_code: hanging_toilet_hanging_latrine
@@ -1072,8 +1628,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-45
     source_category_code: hanging_toilet_latrine
@@ -1084,8 +1640,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-46
     source_category_code: open_or_hanging_latrine
@@ -1096,8 +1652,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-47
     source_category_code: open_hanging_latrine
@@ -1108,8 +1664,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BGD-SAN-48
     source_category_code: pit_latrine_with_slab_and_water_seal_pit_latrine_with_slab_lid_pit_latrine_with_slab_but_no_lid_no_water_seal_pit_latrine_with_slab_and_flap_no_water_seal
@@ -1122,8 +1678,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-SAN-49
     source_category_code: covered_dry_latrine_with_privacy
@@ -1134,8 +1690,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-SAN-50
     source_category_code: pit_latrine_with_slab
@@ -1146,8 +1702,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-SAN-51
     source_category_code: pit_latrine_with_slab
@@ -1158,8 +1714,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-SAN-52
     source_category_code: single_pit_with_slab
@@ -1170,8 +1726,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-SAN-53
     source_category_code: open_latrine
@@ -1182,8 +1738,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BGD-SAN-54
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1194,8 +1750,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BGD-SAN-55
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1206,8 +1762,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BGD-SAN-56
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1218,8 +1774,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BGD-SAN-57
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -1230,8 +1786,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BGD-SAN-58
     source_category_code: pit
@@ -1242,8 +1798,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BGD-SAN-59
     source_category_code: pit_latrine
@@ -1254,8 +1810,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BGD-SAN-60
     source_category_code: traditional_pit_latrine
@@ -1266,8 +1822,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BGD-SAN-61
     source_category_code: ventilated_improved_pit_latrine
@@ -1278,8 +1834,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BGD-SAN-62
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -1290,8 +1846,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BGD-SAN-63
     source_category_code: vip_latrine
@@ -1302,8 +1858,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BGD-SAN-64
     source_category_code: pit_latrine_slab_and_water_seal
@@ -1314,8 +1870,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: BGD-SAN-65
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -1326,8 +1882,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 126
   - country_entry_id: BGD-SAN-66
     source_category_code: pit_latrine_slab_lib_but_no_water_seal_slab_and_sealed_flaps_but_nothere_is_no_water_slab_but_no_water_seal
@@ -1339,8 +1895,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: BGD-SAN-67
     source_category_code: pour_flush_latrine
@@ -1350,8 +1906,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BGD-SAN-68
     source_category_code: water_seal
@@ -1361,8 +1917,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BGD-SAN-69
     source_category_code: water_sealed_slab_latrine
@@ -1372,8 +1928,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BGD-SAN-70
     source_category_code: water_sealed_slab_latrines
@@ -1383,8 +1939,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BGD-SAN-71
     source_category_code: water_sealed_slab_latrine
@@ -1394,8 +1950,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: BGD-SAN-72
     source_category_code: no_facilities_open_defecation
@@ -1405,8 +1961,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-73
     source_category_code: no_facilities_or_bush_or_field
@@ -1416,8 +1972,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-74
     source_category_code: no_facility
@@ -1427,8 +1983,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-75
     source_category_code: no_facility_bush_field
@@ -1438,8 +1994,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-76
     source_category_code: no_facility_bush
@@ -1449,8 +2005,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-77
     source_category_code: no_facility_bush_field
@@ -1460,8 +2016,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-78
     source_category_code: no_latrine_open_space
@@ -1471,8 +2027,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-79
     source_category_code: open_defecation
@@ -1482,8 +2038,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BGD-SAN-80
     source_category_code: composting_toilet
@@ -1493,8 +2049,8 @@ parameters:
     jmp_id: other_improved
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 131
   - country_entry_id: BGD-SAN-81
     source_category_code: twin_pit_with_slab
@@ -1504,8 +2060,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: BGD-SAN-82
     source_category_code: other
@@ -1515,8 +2071,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BGD-SAN-83
     source_category_code: others
@@ -1526,18 +2082,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BGD_Bangladesh_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BGD-WAS-01
     source_category_code: spring_charha_jhiri
@@ -1547,8 +2103,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: BGD-WAS-02
     source_category_code: protected_spring
@@ -1558,8 +2114,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BGD-WAS-03
     source_category_code: dug_well_protected_well
@@ -1569,8 +2125,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BGD-WAS-04
     source_category_code: protected_dug_well_or_protected_spring
@@ -1580,8 +2136,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BGD-WAS-05
     source_category_code: protected_well
@@ -1591,8 +2147,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BGD-WAS-06
     source_category_code: surface_well
@@ -1602,8 +2158,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: BGD-WAS-07
     source_category_code: surface_well_other_well
@@ -1613,8 +2169,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: BGD-WAS-08
     source_category_code: shallow_tube_well_500feet_deep_tube_well_500_feet
@@ -1624,8 +2180,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-09
     source_category_code: protected_tube_well_or_bore_hole
@@ -1635,8 +2191,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-10
     source_category_code: shallow_tubewell_less_than_250_feet
@@ -1646,8 +2202,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-11
     source_category_code: tube_well
@@ -1657,8 +2213,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-12
     source_category_code: tube_well_or_borehole
@@ -1668,8 +2224,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-13
     source_category_code: tube_well_borehole
@@ -1679,8 +2235,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-14
     source_category_code: tubewell
@@ -1690,8 +2246,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-15
     source_category_code: tubewell_deep_shallow
@@ -1701,8 +2257,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-16
     source_category_code: tubewell_borehole
@@ -1712,8 +2268,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BGD-WAS-17
     source_category_code: deep_tara_pump
@@ -1723,8 +2279,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.other
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BGD-WAS-18
     source_category_code: deep_tubewell_more_than_250_feet
@@ -1734,8 +2290,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: BGD-WAS-19
     source_category_code: tubewell_deep
@@ -1745,8 +2301,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: BGD-WAS-20
     source_category_code: shallow_tara_pump
@@ -1756,8 +2312,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: BGD-WAS-21
     source_category_code: tubewell_shallow
@@ -1767,8 +2323,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: BGD-WAS-22
     source_category_code: unprotected_spring
@@ -1778,8 +2334,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BGD-WAS-23
     source_category_code: dug_well_unprotected_well
@@ -1789,8 +2345,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-WAS-24
     source_category_code: unprotected_dug_well_or_spring
@@ -1800,8 +2356,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-WAS-25
     source_category_code: unprotected_well
@@ -1811,8 +2367,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BGD-WAS-26
     source_category_code: tubewell_tap_ringwell
@@ -1822,8 +2378,8 @@ parameters:
     jmp_id: other_improved_sources
     gmd_target: ''
     gmd_spans: tanker|other
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 100
   - country_entry_id: BGD-WAS-27
     source_category_code: cart_with_small_tank
@@ -1833,8 +2389,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BGD-WAS-28
     source_category_code: cart_with_small_tank_drum
@@ -1844,8 +2400,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BGD-WAS-29
     source_category_code: filter_arsenic_filter
@@ -1855,8 +2411,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BGD-WAS-30
     source_category_code: reverse_osmosis_plant_psf
@@ -1866,8 +2422,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BGD-WAS-31
     source_category_code: water_kiosk_water_selling_plant
@@ -1877,8 +2433,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BGD-WAS-32
     source_category_code: arsenic_removal_plant
@@ -1888,8 +2444,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: BGD-WAS-33
     source_category_code: pond_sand_filter
@@ -1899,8 +2455,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: BGD-WAS-34
     source_category_code: water_atm_booth
@@ -1910,8 +2466,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: BGD-WAS-35
     source_category_code: tanker_truck
@@ -1921,8 +2477,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BGD-WAS-36
     source_category_code: tanker_truck
@@ -1932,8 +2488,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BGD-WAS-37
     source_category_code: disinfection_water_from_rivers_dams_lakes_ponds_irrigation_canals
@@ -1944,8 +2500,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-WAS-38
     source_category_code: other
@@ -1955,8 +2511,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-WAS-39
     source_category_code: others
@@ -1966,8 +2522,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BGD-WAS-40
     source_category_code: other
@@ -1977,8 +2533,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BGD-WAS-41
     source_category_code: bottled_water
@@ -1988,8 +2544,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BGD-WAS-42
     source_category_code: bottled_jar
@@ -1999,8 +2555,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BGD-WAS-43
     source_category_code: packaged_water_bottled_water
@@ -2010,8 +2566,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BGD-WAS-44
     source_category_code: bottled_water
@@ -2021,8 +2577,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BGD-WAS-45
     source_category_code: packaged_water_sachet_water
@@ -2032,8 +2588,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BGD-WAS-46
     source_category_code: rainwater
@@ -2043,8 +2599,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: BGD-WAS-47
     source_category_code: rain_water
@@ -2054,8 +2610,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BGD-WAS-48
     source_category_code: rainwater
@@ -2065,8 +2621,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BGD-WAS-49
     source_category_code: rainwater_into_tank_or_cistern
@@ -2076,8 +2632,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BGD-WAS-50
     source_category_code: rainwater_collection
@@ -2087,8 +2643,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BGD-WAS-51
     source_category_code: pond_river_other
@@ -2098,8 +2654,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BGD-WAS-52
     source_category_code: pond_river_canal_lake
@@ -2109,8 +2665,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BGD-WAS-53
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -2120,8 +2676,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BGD-WAS-54
     source_category_code: surface_water
@@ -2131,8 +2687,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BGD-WAS-55
     source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
@@ -2143,8 +2699,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BGD-WAS-56
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -2154,8 +2710,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BGD-WAS-57
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -2165,8 +2721,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: BGD-WAS-58
     source_category_code: water_collected_directly_from_rivers_dams_lakes_ponds_irrigation_canals
@@ -2177,8 +2733,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: BGD-WAS-59
     source_category_code: pond_lake
@@ -2188,8 +2744,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: BGD-WAS-60
     source_category_code: pond_tank_lake
@@ -2199,8 +2755,8 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: BGD-WAS-61
     source_category_code: river_stream
@@ -2210,8 +2766,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BGD-WAS-62
     source_category_code: piped_to_neighbor
@@ -2221,8 +2777,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BGD-WAS-63
     source_category_code: piped_to_neighbour
@@ -2232,8 +2788,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BGD-WAS-64
     source_category_code: tap_piped_supply
@@ -2243,8 +2799,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BGD-WAS-65
     source_category_code: piped_inside_dwelling
@@ -2254,8 +2810,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BGD-WAS-66
     source_category_code: piped_into_residence
@@ -2265,8 +2821,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BGD-WAS-67
     source_category_code: piped_into_dwelling
@@ -2276,8 +2832,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BGD-WAS-68
     source_category_code: piped_into_residence
@@ -2287,8 +2843,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BGD-WAS-69
     source_category_code: piped_water_through_house_connection_or_yard
@@ -2298,8 +2854,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BGD-WAS-70
     source_category_code: pped_into_dwelling
@@ -2309,8 +2865,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BGD-WAS-71
     source_category_code: tap_or_pipe_water_inside_the_house
@@ -2320,8 +2876,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BGD-WAS-72
     source_category_code: piped_into_compound_yard_or_plot
@@ -2331,8 +2887,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BGD-WAS-73
     source_category_code: piped_into_yard_or_plot
@@ -2342,8 +2898,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BGD-WAS-74
     source_category_code: piped_to_yard_plot
@@ -2353,8 +2909,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BGD-WAS-75
     source_category_code: public_standpipe
@@ -2364,8 +2920,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BGD-WAS-76
     source_category_code: tap_or_pipe_water_in_the_yard
@@ -2375,8 +2931,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BGD-WAS-77
     source_category_code: piped_outside_dwelling
@@ -2386,8 +2942,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BGD-WAS-78
     source_category_code: piped_outside_residence
@@ -2397,8 +2953,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BGD-WAS-79
     source_category_code: public_tap
@@ -2408,8 +2964,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BGD-WAS-80
     source_category_code: public_tap_standpipe
@@ -2419,8 +2975,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BGD-WAS-81
     source_category_code: public_tap_stabndpipe
@@ -2430,8 +2986,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BGD-WAS-82
     source_category_code: public_tap_stand_pipe
@@ -2441,8 +2997,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BGD-WAS-83
     source_category_code: public_tap_standpipe
@@ -2452,23 +3008,15 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BGD_Bangladesh_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
-
-
-
-
-
-
-
-
 
 No country-specific content has been supplied yet. The regional focal point
 must be consulted before harmonization relies on this country layer.

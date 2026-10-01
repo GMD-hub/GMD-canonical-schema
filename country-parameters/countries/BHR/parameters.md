@@ -6,13 +6,13 @@ status: draft
 country_name: BHR
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BHR-EDU-01
     national_label_en: Nursery
-    national_label_local: الحضانة
+    national_label_local: "\u0627\u0644\u062D\u0636\u0627\u0646\u0629"
     entry_age: 0
     duration_years: 3
     isced_level: '0'
@@ -21,9 +21,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BHR-EDU-02
     national_label_en: Kindergarten
-    national_label_local: رياض الأطفال
+    national_label_local: "\u0631\u064A\u0627\u0636 \u0627\u0644\u0623\u0637\u0641\
+      \u0627\u0644"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -32,9 +39,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BHR-EDU-03
     national_label_en: General primary education
-    national_label_local: التعليم الابتدائي العام
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0627\u0628\u062A\u062F\u0627\u0626\u064A \u0627\u0644\u0639\u0627\u0645"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -43,9 +57,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BHR-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BHR-EDU-04
     national_label_en: Religious primary education
-    national_label_local: التعليم الابتدائي الديني
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0627\u0628\u062A\u062F\u0627\u0626\u064A \u0627\u0644\u062F\u064A\u0646\u064A"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -54,9 +75,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BHR-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BHR-EDU-05
     national_label_en: Literacy stage
-    national_label_local: مرحلة محو الأميّة
+    national_label_local: "\u0645\u0631\u062D\u0644\u0629 \u0645\u062D\u0648 \u0627\
+      \u0644\u0623\u0645\u064A\u0651\u0629"
     entry_age: 15
     duration_years: 2
     isced_level: '1'
@@ -65,9 +93,16 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - BHR-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BHR-EDU-06
     national_label_en: Follow-up stage
-    national_label_local: مرحلة المتابعة
+    national_label_local: "\u0645\u0631\u062D\u0644\u0629 \u0627\u0644\u0645\u062A\
+      \u0627\u0628\u0639\u0629"
     entry_age: 15
     duration_years: 2
     isced_level: '1'
@@ -76,9 +111,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - BHR-EDU-06
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BHR-EDU-07
     national_label_en: General preparatory education
-    national_label_local: التعليم الإعدادي العام
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0625\u0639\u062F\u0627\u062F\u064A \u0627\u0644\u0639\u0627\u0645"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -87,9 +129,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - BHR-EDU-03
+    - BHR-EDU-04
+    - BHR-EDU-05
+    - BHR-EDU-06
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
   - country_entry_id: BHR-EDU-08
     national_label_en: Religious preparatory education
-    national_label_local: التعليم الإعدادي الديني
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u0625\u0639\u062F\u0627\u062F\u064A \u0627\u0644\u062F\u064A\u0646\u064A"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -98,9 +153,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - BHR-EDU-03
+    - BHR-EDU-04
+    - BHR-EDU-05
+    - BHR-EDU-06
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
   - country_entry_id: BHR-EDU-09
     national_label_en: Consolidation stage
-    national_label_local: مرحلة التقوية
+    national_label_local: "\u0645\u0631\u062D\u0644\u0629 \u0627\u0644\u062A\u0642\
+      \u0648\u064A\u0629"
     entry_age: 15
     duration_years: 2
     isced_level: '2'
@@ -109,11 +177,24 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - BHR-EDU-03
+    - BHR-EDU-04
+    - BHR-EDU-05
+    - BHR-EDU-06
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
   - country_entry_id: BHR-EDU-10
     national_label_en: General secondary education (unified system)
-    national_label_local: |-
-      التعليم الثانوي العام
-       (نظام توحيد المسارات)
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u062B\u0627\u0646\u0648\u064A \u0627\u0644\u0639\u0627\u0645\n (\u0646\u0638\
+      \u0627\u0645 \u062A\u0648\u062D\u064A\u062F \u0627\u0644\u0645\u0633\u0627\u0631\
+      \u0627\u062A)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -122,9 +203,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - BHR-EDU-07
+    - BHR-EDU-08
+    - BHR-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
   - country_entry_id: BHR-EDU-11
     national_label_en: Religious secondary education
-    national_label_local: التعليم الثانوي الديني
+    national_label_local: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\
+      \u062B\u0627\u0646\u0648\u064A \u0627\u0644\u062F\u064A\u0646\u064A"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -133,9 +228,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - BHR-EDU-07
+    - BHR-EDU-08
+    - BHR-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
   - country_entry_id: BHR-EDU-12
     national_label_en: Developed  system for technical and vocational  education
-    national_label_local: النظام المطور للتعليم الفني والمهني
+    national_label_local: "\u0627\u0644\u0646\u0638\u0627\u0645 \u0627\u0644\u0645\
+      \u0637\u0648\u0631 \u0644\u0644\u062A\u0639\u0644\u064A\u0645 \u0627\u0644\u0641\
+      \u0646\u064A \u0648\u0627\u0644\u0645\u0647\u0646\u064A"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -144,9 +254,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - BHR-EDU-07
+    - BHR-EDU-08
+    - BHR-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
   - country_entry_id: BHR-EDU-13
     national_label_en: Vocational training
-    national_label_local: التدريب المهني
+    national_label_local: "\u0627\u0644\u062A\u062F\u0631\u064A\u0628 \u0627\u0644\
+      \u0645\u0647\u0646\u064A"
     entry_age: 15
     duration_years: 2
     isced_level: '3'
@@ -155,9 +279,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - BHR-EDU-07
+    - BHR-EDU-08
+    - BHR-EDU-09
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
   - country_entry_id: BHR-EDU-14
     national_label_en: Diploma programme, 1 year  (general)
-    national_label_local: برنامج الدبلوم، سنة واحدة (عام)
+    national_label_local: "\u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u062F\
+      \u0628\u0644\u0648\u0645\u060C \u0633\u0646\u0629 \u0648\u0627\u062D\u062F\u0629\
+      \ (\u0639\u0627\u0645)"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -166,9 +305,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-15
     national_label_en: Post-secondary  training programs
-    national_label_local: برامج التدريب بعد الثانوي
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062A\u062F\
+      \u0631\u064A\u0628 \u0628\u0639\u062F \u0627\u0644\u062B\u0627\u0646\u0648\u064A"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -177,9 +331,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-16
     national_label_en: Diploma programme, 1 year (vocational)
-    national_label_local: برنامج الدبلوم، سنة واحدة ( مهني)
+    national_label_local: "\u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u062F\
+      \u0628\u0644\u0648\u0645\u060C \u0633\u0646\u0629 \u0648\u0627\u062D\u062F\u0629\
+      \ ( \u0645\u0647\u0646\u064A)"
     entry_age: 18
     duration_years: 1
     isced_level: '5'
@@ -188,9 +358,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-17
     national_label_en: Advanced Diploma
-    national_label_local: الدبلوم المتقدم
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645 \u0627\u0644\
+      \u0645\u062A\u0642\u062F\u0645"
     entry_age: 18
     duration_years: 1
     isced_level: '5'
@@ -199,9 +384,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-18
     national_label_en: Extended diploma
-    national_label_local: الدبلوم المطورة
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645 \u0627\u0644\
+      \u0645\u0637\u0648\u0631\u0629"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -210,9 +410,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-19
     national_label_en: National Diploma
-    national_label_local: الدبلوم الوطني
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645 \u0627\u0644\
+      \u0648\u0637\u0646\u064A"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -221,9 +436,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-20
     national_label_en: Diploma (2 years-general)
-    national_label_local: الدبلوم  (سنتين - عام)
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645  (\u0633\u0646\
+      \u062A\u064A\u0646 - \u0639\u0627\u0645)"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -232,9 +462,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-21
     national_label_en: Associate diploma/ Associate degree
-    national_label_local: الدبلوم المشارك/درجة مشارك
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645 \u0627\u0644\
+      \u0645\u0634\u0627\u0631\u0643/\u062F\u0631\u062C\u0629 \u0645\u0634\u0627\u0631\
+      \u0643"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -243,9 +489,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-22
     national_label_en: Higher national diploma
-    national_label_local: الدبلوم الوطنية العليا
+    national_label_local: "\u0627\u0644\u062F\u0628\u0644\u0648\u0645 \u0627\u0644\
+      \u0648\u0637\u0646\u064A\u0629 \u0627\u0644\u0639\u0644\u064A\u0627"
     entry_age: 20
     duration_years: 2
     isced_level: '5'
@@ -254,9 +515,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-23
     national_label_en: Bachelor's
-    national_label_local: البكالوريوس
+    national_label_local: "\u0627\u0644\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0648\
+      \u0633"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -265,9 +541,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-24
     national_label_en: Bachelor in engineering and architecture
-    national_label_local: بكالوريوس في الهندسة والهندسة المعمارية
+    national_label_local: "\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0648\u0633\
+      \ \u0641\u064A \u0627\u0644\u0647\u0646\u062F\u0633\u0629 \u0648\u0627\u0644\
+      \u0647\u0646\u062F\u0633\u0629 \u0627\u0644\u0645\u0639\u0645\u0627\u0631\u064A\
+      \u0629"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -276,9 +569,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-25
     national_label_en: Higher diploma programmes
-    national_label_local: برامج الدبلوم العالي
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062F\u0628\
+      \u0644\u0648\u0645 \u0627\u0644\u0639\u0627\u0644\u064A"
     entry_age: 23
     duration_years: 1
     isced_level: '6'
@@ -287,9 +595,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-26
     national_label_en: Bachelor in medicine
-    national_label_local: بكالوريوس في الطب
+    national_label_local: "\u0628\u0643\u0627\u0644\u0648\u0631\u064A\u0648\u0633\
+      \ \u0641\u064A \u0627\u0644\u0637\u0628"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -298,9 +621,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - BHR-EDU-10
+    - BHR-EDU-11
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
   - country_entry_id: BHR-EDU-27
     national_label_en: Master's  programmes
-    national_label_local: برامج الماجستير
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u0645\u0627\
+      \u062C\u0633\u062A\u064A\u0631"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -309,9 +647,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - BHR-EDU-23
+    - BHR-EDU-24
+    - BHR-EDU-25
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-25
+    - BHR-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
+    - 'minimum parent path selected from: BHR-EDU-23, BHR-EDU-24, BHR-EDU-25'
   - country_entry_id: BHR-EDU-28
     national_label_en: Doctoral  programmes
-    national_label_local: برامج الدكتوراه
+    national_label_local: "\u0628\u0631\u0627\u0645\u062C \u0627\u0644\u062F\u0643\
+      \u062A\u0648\u0631\u0627\u0647"
     entry_age: 26
     duration_years: 3
     isced_level: '8'
@@ -320,10 +676,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - BHR-EDU-26
+    - BHR-EDU-27
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BHR-EDU-05
+    - BHR-EDU-09
+    - BHR-EDU-10
+    - BHR-EDU-25
+    - BHR-EDU-27
+    - BHR-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHR-EDU-03, BHR-EDU-04, BHR-EDU-05, BHR-EDU-06'
+    - 'minimum parent path selected from: BHR-EDU-07, BHR-EDU-08, BHR-EDU-09'
+    - 'minimum parent path selected from: BHR-EDU-10, BHR-EDU-11'
+    - 'minimum parent path selected from: BHR-EDU-23, BHR-EDU-24, BHR-EDU-25'
+    - 'minimum parent path selected from: BHR-EDU-26, BHR-EDU-27'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Bahrain.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

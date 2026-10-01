@@ -6,9 +6,9 @@ status: draft
 country_name: COK
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: COK-EDU-01
     national_label_en: Early Childhood Education
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: COK-EDU-02
     national_label_en: Primary Education
     national_label_local: Primary Education
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - COK-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: COK-EDU-03
     national_label_en: Secondary Education (Year 7 to Year 10)
     national_label_local: Secondary Education (Year 7 to Year 10)
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - COK-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COK-EDU-04
     national_label_en: Senior Secondary Education (Year 11)
     national_label_local: Senior Secondary Education (Year 11)
@@ -54,6 +74,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - COK-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COK-EDU-05
     national_label_en: Senior Secondary Education (Year 12 )
     national_label_local: Senior Secondary Education (Year 12 )
@@ -65,6 +94,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - COK-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COK-EDU-06
     national_label_en: Senior Secondary Educaiton (Year 13)
     national_label_local: Senior Secondary Educaiton (Year 13)
@@ -76,6 +114,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - COK-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COK-EDU-07
     national_label_en: Certificate
     national_label_local: Faculty of hospitality & tourism, food & beverage
@@ -87,6 +134,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
+    parent_country_entry_ids:
+    - COK-EDU-04
+    - COK-EDU-05
+    - COK-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-04
+    - COK-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COK-EDU-04, COK-EDU-05, COK-EDU-06'
   - country_entry_id: COK-EDU-08
     national_label_en: Certificate
     national_label_local: Faculty of  Trade and Technology
@@ -98,6 +158,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - COK-EDU-04
+    - COK-EDU-05
+    - COK-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-04
+    - COK-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COK-EDU-04, COK-EDU-05, COK-EDU-06'
   - country_entry_id: COK-EDU-09
     national_label_en: University Diploma  distance courses (in various fields)
     national_label_local: University Diploma distance courses (in various fields)
@@ -109,6 +182,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - COK-EDU-04
+    - COK-EDU-05
+    - COK-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-04
+    - COK-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COK-EDU-04, COK-EDU-05, COK-EDU-06'
   - country_entry_id: COK-EDU-10
     national_label_en: University Education - Bachelor distance courses (in various
       fields)
@@ -121,6 +207,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - COK-EDU-04
+    - COK-EDU-05
+    - COK-EDU-06
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-04
+    - COK-EDU-10
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: COK-EDU-04, COK-EDU-05, COK-EDU-06'
   - country_entry_id: COK-EDU-11
     national_label_en: University Master Distance courses (in various fields)
     national_label_local: University Master Distance courses (various fields)
@@ -132,11 +231,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - COK-EDU-10
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - COK-EDU-02
+    - COK-EDU-03
+    - COK-EDU-04
+    - COK-EDU-10
+    - COK-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Cook
       Islands.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

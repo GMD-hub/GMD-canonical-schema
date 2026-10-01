@@ -38,7 +38,7 @@ class ParameterDefinition(BaseModel):
     kind: ParameterKind
     value_type: Literal["integer", "mapping", "table"]
     value_schema: dict[str, Literal["integer"]] | None = None
-    row_schema: dict[str, Literal["integer", "string", "boolean"]] | None = None
+    row_schema: dict[str, Literal["integer", "string", "boolean", "integer_or_null", "array_of_string"]] | None = None
     applies_to_variables: list[str]
     fallback_policy: FallbackPolicy
     global_default: Any = None

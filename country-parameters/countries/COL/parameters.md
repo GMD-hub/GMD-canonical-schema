@@ -6,9 +6,9 @@ schema_version: '0.1'
 status: draft
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: COL-EDU-01
     national_label_en: Early childhood educational development
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: COL-EDU-02
     national_label_en: Early childhood educational development
     national_label_local: Primera infancia
@@ -32,11 +38,17 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: COL-EDU-03
     national_label_en: 'Pre-primary level: grades of pre-K, Kindergarten, and transition
       (or grade zero)'
-    national_label_local: 'Nivel preescolar: grados prejardín, jardín y transición
-      (o grado cero)'
+    national_label_local: "Nivel preescolar: grados prejard\xEDn, jard\xEDn y transici\xF3\
+      n (o grado cero)"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -45,9 +57,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: COL-EDU-04
     national_label_en: Basic Primary
-    national_label_local: Básica Primaria
+    national_label_local: "B\xE1sica Primaria"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -56,9 +74,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: COL-EDU-05
     national_label_en: Basic Primary - New School methodology
-    national_label_local: Básica Primaria - metodología Escuela nueva
+    national_label_local: "B\xE1sica Primaria - metodolog\xEDa Escuela nueva"
     entry_age: 7
     duration_years: 5
     isced_level: '1'
@@ -67,9 +91,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: COL-EDU-06
     national_label_en: Basic Primary - Learning Circles
-    national_label_local: Básica Primaria  - Círculos de aprendizaje
+    national_label_local: "B\xE1sica Primaria  - C\xEDrculos de aprendizaje"
     entry_age: 7
     duration_years: 5
     isced_level: '1'
@@ -78,9 +108,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-06
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: COL-EDU-07
     national_label_en: Basic Primary - Accelerated learning
-    national_label_local: Básica Primaria  -  Aceleración del aprendizaje
+    national_label_local: "B\xE1sica Primaria  -  Aceleraci\xF3n del aprendizaje"
     entry_age: 10
     duration_years: 1
     isced_level: '1'
@@ -89,9 +125,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 13
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - COL-EDU-07
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: COL-EDU-08
     national_label_en: Basic - Adult education, cycles 1 and 2
-    national_label_local: Básica - Educación de adultos, Ciclos 1 y 2
+    national_label_local: "B\xE1sica - Educaci\xF3n de adultos, Ciclos 1 y 2"
     entry_age: 13
     duration_years: 1
     isced_level: '1'
@@ -100,9 +142,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 14
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - COL-EDU-08
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: COL-EDU-09
     national_label_en: Basic secondary
-    national_label_local: Básica secundaria
+    national_label_local: "B\xE1sica secundaria"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -111,9 +159,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - COL-EDU-04
+    - COL-EDU-05
+    - COL-EDU-06
+    - COL-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
   - country_entry_id: COL-EDU-10
     national_label_en: Basic Post-primary
-    national_label_local: Básica postprimaria
+    national_label_local: "B\xE1sica postprimaria"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -122,6 +182,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - COL-EDU-04
+    - COL-EDU-05
+    - COL-EDU-06
+    - COL-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
   - country_entry_id: COL-EDU-11
     national_label_en: Active secondary
     national_label_local: Secundaria Activa
@@ -133,9 +205,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - COL-EDU-04
+    - COL-EDU-05
+    - COL-EDU-06
+    - COL-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
   - country_entry_id: COL-EDU-12
     national_label_en: Basic Post-primary - New School methodology
-    national_label_local: Básica postprimaria - metodología escuela nueva
+    national_label_local: "B\xE1sica postprimaria - metodolog\xEDa escuela nueva"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -144,9 +228,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - COL-EDU-04
+    - COL-EDU-05
+    - COL-EDU-06
+    - COL-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
   - country_entry_id: COL-EDU-13
     national_label_en: Basic - cultivating peace (at-home)
-    national_label_local: Básica - Bachiller Pacicultor (o "a domicilio")
+    national_label_local: "B\xE1sica - Bachiller Pacicultor (o \"a domicilio\")"
     entry_age: 15
     duration_years: 2
     isced_level: '2'
@@ -155,9 +251,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - COL-EDU-04
+    - COL-EDU-05
+    - COL-EDU-06
+    - COL-EDU-07
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
   - country_entry_id: COL-EDU-14
     national_label_en: Basic - creative youth groups
-    national_label_local: Básica - Grupos Juveniles Creativos
+    national_label_local: "B\xE1sica - Grupos Juveniles Creativos"
     entry_age: 15
     duration_years: 2
     isced_level: '2'
@@ -166,9 +274,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - COL-EDU-04
+    - COL-EDU-05
+    - COL-EDU-06
+    - COL-EDU-07
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
   - country_entry_id: COL-EDU-15
     national_label_en: Basic - Adult education, cycles 3 and 4
-    national_label_local: Básica - Educación de adultos, Ciclos 3 y 4
+    national_label_local: "B\xE1sica - Educaci\xF3n de adultos, Ciclos 3 y 4"
     entry_age: 15
     duration_years: 1
     isced_level: '2'
@@ -177,6 +297,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 21
+    parent_country_entry_ids:
+    - COL-EDU-08
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - COL-EDU-08
+    - COL-EDU-15
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COL-EDU-16
     national_label_en: Upper secondary
     national_label_local: Media
@@ -188,11 +316,28 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 22
+    parent_country_entry_ids:
+    - COL-EDU-09
+    - COL-EDU-10
+    - COL-EDU-11
+    - COL-EDU-12
+    - COL-EDU-13
+    - COL-EDU-14
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
   - country_entry_id: COL-EDU-17
     national_label_en: Upper secondary - deepened labour market orientation and New
       School methodology
-    national_label_local: Media - Modelo de Educación con profundización para el trabajo,
-      con metodología Escuela nueva
+    national_label_local: "Media - Modelo de Educaci\xF3n con profundizaci\xF3n para\
+      \ el trabajo, con metodolog\xEDa Escuela nueva"
     entry_age: 15
     duration_years: 2
     isced_level: '3'
@@ -201,9 +346,26 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 23
+    parent_country_entry_ids:
+    - COL-EDU-09
+    - COL-EDU-10
+    - COL-EDU-11
+    - COL-EDU-12
+    - COL-EDU-13
+    - COL-EDU-14
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
   - country_entry_id: COL-EDU-18
     national_label_en: Upper secondary -  academic rural modality
-    national_label_local: Modelo de educación media académica rural - "MEMA"
+    national_label_local: "Modelo de educaci\xF3n media acad\xE9mica rural - \"MEMA\""
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -212,9 +374,26 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 24
+    parent_country_entry_ids:
+    - COL-EDU-09
+    - COL-EDU-10
+    - COL-EDU-11
+    - COL-EDU-12
+    - COL-EDU-13
+    - COL-EDU-14
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
   - country_entry_id: COL-EDU-19
     national_label_en: Upper secondary - Adult education, cycles 5 and 6
-    national_label_local: Media - Educación de adultos. Ciclos 5 Y 6
+    national_label_local: "Media - Educaci\xF3n de adultos. Ciclos 5 Y 6"
     entry_age: 18
     duration_years: 1
     isced_level: '3'
@@ -223,9 +402,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 25
+    parent_country_entry_ids:
+    - COL-EDU-15
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - COL-EDU-08
+    - COL-EDU-15
+    - COL-EDU-19
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COL-EDU-20
     national_label_en: Technical upper secondary
-    national_label_local: Media técnica
+    national_label_local: "Media t\xE9cnica"
     entry_age: 15
     duration_years: 2
     isced_level: '3'
@@ -234,6 +422,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 26
+    parent_country_entry_ids:
+    - COL-EDU-09
+    - COL-EDU-10
+    - COL-EDU-11
+    - COL-EDU-12
+    - COL-EDU-13
+    - COL-EDU-14
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
   - country_entry_id: COL-EDU-21
     national_label_en: Upper secondary - cultivating peace (at-home)
     national_label_local: Media - Bachiller Pacicultor (o "a domicilio")
@@ -245,6 +450,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 27
+    parent_country_entry_ids:
+    - COL-EDU-09
+    - COL-EDU-10
+    - COL-EDU-11
+    - COL-EDU-12
+    - COL-EDU-13
+    - COL-EDU-14
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
   - country_entry_id: COL-EDU-22
     national_label_en: Upper secondary -  creative youth groups
     national_label_local: Media - Grupos Juveniles Creativos
@@ -256,6 +478,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 28
+    parent_country_entry_ids:
+    - COL-EDU-09
+    - COL-EDU-10
+    - COL-EDU-11
+    - COL-EDU-12
+    - COL-EDU-13
+    - COL-EDU-14
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
   - country_entry_id: COL-EDU-23
     national_label_en: Teacher training
     national_label_local: Normalista
@@ -267,9 +506,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-24
     national_label_en: 'Undergraduate: technical professional programme'
-    national_label_local: 'Pregrado: Programa Técnico Profesional'
+    national_label_local: "Pregrado: Programa T\xE9cnico Profesional"
     entry_age: 17
     duration_years: 2
     isced_level: '5'
@@ -278,9 +536,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-25
     national_label_en: 'Undergraduate: technological programme'
-    national_label_local: 'Pregrado: Programa Tecnológico'
+    national_label_local: "Pregrado: Programa Tecnol\xF3gico"
     entry_age: 17
     duration_years: 3
     isced_level: '5'
@@ -289,9 +566,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-26
     national_label_en: Technical professional specialization
-    national_label_local: Especialización Técnica Profesional
+    national_label_local: "Especializaci\xF3n T\xE9cnica Profesional"
     entry_age: 19
     duration_years: 1
     isced_level: '5'
@@ -300,9 +596,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-27
     national_label_en: Technological specialization
-    national_label_local: Especialización Tecnológica
+    national_label_local: "Especializaci\xF3n Tecnol\xF3gica"
     entry_age: 19
     duration_years: 1
     isced_level: '5'
@@ -311,6 +626,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-28
     national_label_en: University undergraduate programme
     national_label_local: Pregrado universitario
@@ -322,9 +656,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-29
     national_label_en: University undergraduate programme in engineering
-    national_label_local: Pregrado en ingeniería
+    national_label_local: "Pregrado en ingenier\xEDa"
     entry_age: 17
     duration_years: 4
     isced_level: '6'
@@ -333,6 +686,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-30
     national_label_en: University undergraduate programme in law
     national_label_local: Pregrado en derecho
@@ -344,6 +716,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-31
     national_label_en: University undergraduate programme in veterinary and zootechnics
     national_label_local: Pregrado en medicina veterinaria y zootecnia
@@ -355,9 +746,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-32
     national_label_en: University undergraduate programme in medicine and dentistry
-    national_label_local: Pregrado en medicina y odontología
+    national_label_local: "Pregrado en medicina y odontolog\xEDa"
     entry_age: 17
     duration_years: 6
     isced_level: '6'
@@ -366,9 +776,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-33
     national_label_en: Specialization
-    national_label_local: Especialización
+    national_label_local: "Especializaci\xF3n"
     entry_age: 22
     duration_years: 1
     isced_level: '7'
@@ -377,9 +806,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 39
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-34
     national_label_en: Master's
-    national_label_local: Maestría
+    national_label_local: "Maestr\xEDa"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -388,9 +836,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 40
+    parent_country_entry_ids:
+    - COL-EDU-28
+    - COL-EDU-29
+    - COL-EDU-30
+    - COL-EDU-31
+    - COL-EDU-32
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-28
+    - COL-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
+    - 'minimum parent path selected from: COL-EDU-28, COL-EDU-29, COL-EDU-30, COL-EDU-31,
+      COL-EDU-32'
   - country_entry_id: COL-EDU-35
     national_label_en: Medical-surgical Specializations
-    national_label_local: Especializaciones Médico quirúrgicas
+    national_label_local: "Especializaciones M\xE9dico quir\xFArgicas"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -399,6 +869,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 41
+    parent_country_entry_ids:
+    - COL-EDU-16
+    - COL-EDU-17
+    - COL-EDU-18
+    - COL-EDU-21
+    - COL-EDU-22
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
   - country_entry_id: COL-EDU-36
     national_label_en: Doctorate
     national_label_local: Doctorado
@@ -410,27 +899,46 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 42
+    parent_country_entry_ids:
+    - COL-EDU-33
+    - COL-EDU-34
+    - COL-EDU-35
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COL-EDU-07
+    - COL-EDU-13
+    - COL-EDU-21
+    - COL-EDU-33
+    - COL-EDU-36
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COL-EDU-04, COL-EDU-05, COL-EDU-06, COL-EDU-07'
+    - 'minimum parent path selected from: COL-EDU-09, COL-EDU-10, COL-EDU-11, COL-EDU-12,
+      COL-EDU-13, COL-EDU-14'
+    - 'minimum parent path selected from: COL-EDU-16, COL-EDU-17, COL-EDU-18, COL-EDU-21,
+      COL-EDU-22'
+    - 'minimum parent path selected from: COL-EDU-33, COL-EDU-34, COL-EDU-35'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Colombia.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: COL-SUBNAT-01
-    survey_labels: 11 - Bogota D.C. | 11 - Bogotá D.C. | 11 - Bogot� D.C.
+    survey_labels: "11 - Bogota D.C. | 11 - Bogot\xE1 D.C. | 11 - Bogot\uFFFD D.C."
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL2_13914
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL2_13914
     geo_year: '2015'
@@ -442,16 +950,16 @@ parameters:
     geo_name: Santafe De Bogota D.c.
     source_row: 2539
   - country_entry_id: COL-SUBNAT-02
-    survey_labels: 13 - Bolivar | 13 - BolíVar | 13 - Bol�var
+    survey_labels: "13 - Bolivar | 13 - Bol\xEDVar | 13 - Bol\uFFFDvar"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_938
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_938
     geo_year: '2015'
@@ -463,16 +971,16 @@ parameters:
     geo_name: Bolivar
     source_row: 2540
   - country_entry_id: COL-SUBNAT-03
-    survey_labels: 15 - Boyaca | 15 - Boyacá | 15 - Boyac�
+    survey_labels: "15 - Boyaca | 15 - Boyac\xE1 | 15 - Boyac\uFFFD"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_939
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_939
     geo_year: '2015'
@@ -490,10 +998,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_941
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_941
     geo_year: '2015'
@@ -511,10 +1019,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_944
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_944
     geo_year: '2015'
@@ -532,10 +1040,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_945
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_945
     geo_year: '2015'
@@ -547,16 +1055,16 @@ parameters:
     geo_name: Cesar
     source_row: 2544
   - country_entry_id: COL-SUBNAT-07
-    survey_labels: 23 - Cordoba | 23 - CóRdoba | 23 - C�rdoba
+    survey_labels: "23 - Cordoba | 23 - C\xF3Rdoba | 23 - C\uFFFDrdoba"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_947
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_947
     geo_year: '2015'
@@ -574,10 +1082,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAULx_948
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAULx_948
     geo_year: '2015'
@@ -589,16 +1097,16 @@ parameters:
     geo_name: Cundinamarca
     source_row: 2546
   - country_entry_id: COL-SUBNAT-09
-    survey_labels: 27 - Choco | 27 - Chocó | 27 - Choc�
+    survey_labels: "27 - Choco | 27 - Choc\xF3 | 27 - Choc\uFFFD"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_946
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_946
     geo_year: '2015'
@@ -616,10 +1124,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_952
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_952
     geo_year: '2015'
@@ -637,10 +1145,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_950
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_950
     geo_year: '2015'
@@ -658,10 +1166,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_953
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_953
     geo_year: '2015'
@@ -679,10 +1187,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_935
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_935
     geo_year: '2015'
@@ -700,10 +1208,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_954
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_954
     geo_year: '2015'
@@ -715,16 +1223,16 @@ parameters:
     geo_name: Meta
     source_row: 2552
   - country_entry_id: COL-SUBNAT-15
-    survey_labels: 52 - NariñO | 52 - Nari�o
+    survey_labels: "52 - Nari\xF1O | 52 - Nari\uFFFDo"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_955
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_955
     geo_year: '2015'
@@ -742,10 +1250,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_956
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_956
     geo_year: '2015'
@@ -763,10 +1271,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_959
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_959
     geo_year: '2015'
@@ -784,10 +1292,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_961
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_961
     geo_year: '2015'
@@ -805,10 +1313,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_962
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_962
     geo_year: '2015'
@@ -826,10 +1334,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_963
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_963
     geo_year: '2015'
@@ -847,10 +1355,10 @@ parameters:
     gmd_subnatid2: COL_2015_GAUL1_964
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_964
     geo_year: '2015'
@@ -862,16 +1370,16 @@ parameters:
     geo_name: Valle Del Cauca
     source_row: 2559
   - country_entry_id: COL-SUBNAT-22
-    survey_labels: 8 - AtláNtico | 8 - Atl�ntico
+    survey_labels: "8 - Atl\xE1Ntico | 8 - Atl\uFFFDntico"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_937
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_937
     geo_year: '2015'
@@ -883,16 +1391,16 @@ parameters:
     geo_name: Atlantico
     source_row: 2560
   - country_entry_id: COL-SUBNAT-23
-    survey_labels: 63 - Quindio | 63 - QuindíO | 63 - Quind�o
+    survey_labels: "63 - Quindio | 63 - Quind\xEDO | 63 - Quind\uFFFDo"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_958
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_958
     geo_year: '2015'
@@ -904,16 +1412,16 @@ parameters:
     geo_name: Quindio
     source_row: 2577
   - country_entry_id: COL-SUBNAT-24
-    survey_labels: 18 - Caqueta | 18 - Caquetá | 18 - Caquet�
+    survey_labels: "18 - Caqueta | 18 - Caquet\xE1 | 18 - Caquet\uFFFD"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: COL_2015_GAUL1_942
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: COL_2015_GAUL1_942
     geo_year: '2015'
@@ -926,13 +1434,13 @@ parameters:
     source_row: 2588
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: COL-SAN-01
     source_category_code: bajamar
@@ -942,8 +1450,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: COL-SAN-02
     source_category_code: traditional_toilet_to_sea_river_low_tide
@@ -953,8 +1461,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: COL-SAN-03
     source_category_code: inodoro_a_alcantarillado
@@ -964,8 +1472,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: COL-SAN-04
     source_category_code: inodoro_conectado_a_alcantarillado
@@ -975,8 +1483,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: COL-SAN-05
     source_category_code: inodoro_conectado_al_alcantarillado
@@ -986,8 +1494,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: COL-SAN-06
     source_category_code: toilet_connected_to_sewer
@@ -997,19 +1505,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: COL-SAN-07
     source_category_code: inodoro_sin_conexion
-    national_label_en: Inodoro sin conexión
+    national_label_en: "Inodoro sin conexi\xF3n"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: COL-SAN-08
     source_category_code: inodoro_sin_connexion
@@ -1019,8 +1527,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: COL-SAN-09
     source_category_code: toilet_connected_to_plot_yard
@@ -1030,8 +1538,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: COL-SAN-10
     source_category_code: inodoro_a_pozo_septico
@@ -1041,19 +1549,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-SAN-11
     source_category_code: inodoro_conectado_a_pozo_septico
-    national_label_en: Inodoro conectado a pozo séptico
+    national_label_en: "Inodoro conectado a pozo s\xE9ptico"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-SAN-12
     source_category_code: inodoro_conectao_al_pozo_septico
@@ -1063,8 +1571,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-SAN-13
     source_category_code: toilet_connected_to_septic_well
@@ -1074,8 +1582,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-SAN-14
     source_category_code: bajamar
@@ -1085,8 +1593,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: COL-SAN-15
     source_category_code: inodoro_a_otros
@@ -1096,8 +1604,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: COL-SAN-16
     source_category_code: inodoro_a_quebrada_campo_abierto
@@ -1107,8 +1615,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: COL-SAN-17
     source_category_code: inodoro_con_descarga_directa_a_fuentes_de_agua_bajamar
@@ -1118,8 +1626,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: COL-SAN-18
     source_category_code: indoro_alcantarillad
@@ -1129,8 +1637,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: COL-SAN-19
     source_category_code: inodoro_alcantarilla
@@ -1140,8 +1648,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: COL-SAN-20
     source_category_code: inodoro_a_alcantarillado
@@ -1151,8 +1659,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: COL-SAN-21
     source_category_code: inodoro_conectado_a_alcantarillado
@@ -1162,8 +1670,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: COL-SAN-22
     source_category_code: inodoro_conectado_al_alcantarillado
@@ -1173,8 +1681,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: COL-SAN-23
     source_category_code: inodoro_alcantarillado
@@ -1184,19 +1692,19 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: COL-SAN-24
     source_category_code: inodoro_sin_conexion
-    national_label_en: Inodoro sin conexión
+    national_label_en: "Inodoro sin conexi\xF3n"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: COL-SAN-25
     source_category_code: indoro_pozo_septico
@@ -1206,8 +1714,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: COL-SAN-26
     source_category_code: inodoro_pozo_septico
@@ -1217,8 +1725,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: COL-SAN-27
     source_category_code: inodoro_a_pozo_septico
@@ -1228,19 +1736,19 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: COL-SAN-28
     source_category_code: inodoro_conectado_a_pozo_septico
-    national_label_en: Inodoro conectado a pozo séptico
+    national_label_en: "Inodoro conectado a pozo s\xE9ptico"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: COL-SAN-29
     source_category_code: inodoro_pozo_septico
@@ -1250,8 +1758,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: COL-SAN-30
     source_category_code: letrina
@@ -1262,8 +1770,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: COL-SAN-31
     source_category_code: letrina_pozo_negro_hoyo
@@ -1274,8 +1782,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: COL-SAN-32
     source_category_code: traditional_pit_toilet
@@ -1286,8 +1794,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: COL-SAN-33
     source_category_code: no_tiene_sanitario
@@ -1297,8 +1805,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: COL-SAN-34
     source_category_code: no_tiene_servicio_sanitario
@@ -1308,8 +1816,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: COL-SAN-35
     source_category_code: no_toilet_facility
@@ -1319,8 +1827,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: COL-SAN-36
     source_category_code: otro
@@ -1330,8 +1838,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: COL-SAN-37
     source_category_code: otro_no_sabe
@@ -1341,8 +1849,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: COL-SAN-38
     source_category_code: other
@@ -1352,8 +1860,8 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   - country_entry_id: COL-SAN-39
     source_category_code: otro
@@ -1363,18 +1871,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_COL_Colombia_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: COL-WAS-01
     source_category_code: pozo_o_aljibe
@@ -1384,30 +1892,30 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: COL-WAS-02
     source_category_code: de_pozo_sin_bomba_aljibe_jaguey_o_barreno
-    national_label_en: De pozo sin bomba, aljibe, jagüey o barreno
+    national_label_en: "De pozo sin bomba, aljibe, jag\xFCey o barreno"
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-WAS-03
     source_category_code: de_pozo_sin_bomba_aljibe_jaguey_o_barreno
-    national_label_en: DE POZO SIN BOMBA, ALJIBE, JAGÜEY, O BARRENO
+    national_label_en: "DE POZO SIN BOMBA, ALJIBE, JAG\xDCEY, O BARRENO"
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-WAS-04
     source_category_code: open_well_without_sump_pump
@@ -1417,30 +1925,30 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-WAS-05
     source_category_code: pozo_sin_bomba_aljibe_jaguey_o_barren
-    national_label_en: Pozo sin bomba, aljibe, jagüey o barren
+    national_label_en: "Pozo sin bomba, aljibe, jag\xFCey o barren"
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-WAS-06
     source_category_code: pozo_sin_bomba_jaguey
-    national_label_en: Pozo sin bomba, jagüey
+    national_label_en: "Pozo sin bomba, jag\xFCey"
     national_label_local: Pozos tradicionales
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: COL-WAS-07
     source_category_code: de_pozo_con_bomba
@@ -1450,8 +1958,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: COL-WAS-08
     source_category_code: open_well_with_sump_pump
@@ -1461,8 +1969,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: COL-WAS-09
     source_category_code: pozo_con_bomba
@@ -1472,52 +1980,52 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: COL-WAS-10
     source_category_code: aguatero
     national_label_en: Aguatero
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: COL-WAS-11
     source_category_code: carro_tanque
     national_label_en: Carro tanque
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: COL-WAS-12
     source_category_code: carrotanque
     national_label_en: Carrotanque
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: COL-WAS-13
     source_category_code: water_in_drums_big_cans
     national_label_en: Water in drums/big cans
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: COL-WAS-14
     source_category_code: piped_water_from_rural_system_on_premises
@@ -1527,8 +2035,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: COL-WAS-15
     source_category_code: aguatero
@@ -1538,8 +2046,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-16
     source_category_code: camion
@@ -1549,8 +2057,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-17
     source_category_code: camion_tanque_aguatero
@@ -1560,8 +2068,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-18
     source_category_code: camion_tanque_aguatero
@@ -1571,19 +2079,19 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-19
     source_category_code: cami_n_tanque_agua
-    national_label_en: cami¢n, tanque agua
+    national_label_en: "cami\xA2n, tanque agua"
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-20
     source_category_code: carro_tanque
@@ -1593,8 +2101,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-21
     source_category_code: carrotanque
@@ -1604,8 +2112,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-22
     source_category_code: tanker_truck
@@ -1615,8 +2123,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: COL-WAS-23
     source_category_code: aguatero
@@ -1626,8 +2134,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: COL-WAS-24
     source_category_code: other
@@ -1637,8 +2145,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: COL-WAS-25
     source_category_code: otro
@@ -1648,8 +2156,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: COL-WAS-26
     source_category_code: otro
@@ -1659,8 +2167,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: COL-WAS-27
     source_category_code: agua_embotallada_o_en_bolsa
@@ -1670,8 +2178,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: COL-WAS-28
     source_category_code: agua_embotellada_o_en_bolsa
@@ -1681,8 +2189,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: COL-WAS-29
     source_category_code: bottled_water
@@ -1692,8 +2200,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: COL-WAS-30
     source_category_code: agua_lluvia
@@ -1703,8 +2211,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: COL-WAS-31
     source_category_code: aguas_lluvias
@@ -1714,8 +2222,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: COL-WAS-32
     source_category_code: rain_water
@@ -1725,8 +2233,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: COL-WAS-33
     source_category_code: rio_acequia_manant
@@ -1736,8 +2244,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-34
     source_category_code: rio_acqeuia_manantial
@@ -1747,8 +2255,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-35
     source_category_code: rio_quebrada_manantial_o_nacimiento
@@ -1758,30 +2266,30 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-36
     source_category_code: rio_quebrada_manantial_nacimiento
-    national_label_en: Río, quebrada, manantial, nacimiento
+    national_label_en: "R\xEDo, quebrada, manantial, nacimiento"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-37
     source_category_code: rio_quebrada_nacimiento_o_manantial
-    national_label_en: Río, quebrada, nacimiento ó manantial
+    national_label_en: "R\xEDo, quebrada, nacimiento \xF3 manantial"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-38
     source_category_code: rio_quebrada_nacimiento_manantial
@@ -1791,8 +2299,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-39
     source_category_code: river_stream_spring
@@ -1802,8 +2310,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: COL-WAS-40
     source_category_code: acueducto_comunal_o_veredal
@@ -1813,19 +2321,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: COL-WAS-41
     source_category_code: de_otra_fuente_por_tuberia
-    national_label_en: De otra fuente por tubería
+    national_label_en: "De otra fuente por tuber\xEDa"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: COL-WAS-42
     source_category_code: otra_fuente_con_tuberia
@@ -1835,19 +2343,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: COL-WAS-43
     source_category_code: otro_fuente_tiber_a
-    national_label_en: otro fuente, tiber¡a
+    national_label_en: "otro fuente, tiber\xA1a"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: COL-WAS-44
     source_category_code: acueducto
@@ -1857,8 +2365,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: COL-WAS-45
     source_category_code: acueducto_publico
@@ -1868,8 +2376,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: COL-WAS-46
     source_category_code: acueducto_publico_comunal_o_veredal
@@ -1879,8 +2387,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: COL-WAS-47
     source_category_code: piped_water_from_utility_company_on_premises
@@ -1890,8 +2398,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: COL-WAS-48
     source_category_code: red_publica_acueducto
@@ -1901,8 +2409,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: COL-WAS-49
     source_category_code: red_publica_acueducto_veredal
@@ -1912,30 +2420,30 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: COL-WAS-50
     source_category_code: acueducto_publico
-    national_label_en: Acueducto público
+    national_label_en: "Acueducto p\xFAblico"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: COL-WAS-51
     source_category_code: de_acueducto_por_tuberia
-    national_label_en: De acueducto por tubería
+    national_label_en: "De acueducto por tuber\xEDa"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: COL-WAS-52
     source_category_code: red_publica_acqed
@@ -1945,8 +2453,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: COL-WAS-53
     source_category_code: acqueducto_veredal
@@ -1956,8 +2464,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: COL-WAS-54
     source_category_code: acueducto_comunal_o_veredal
@@ -1967,56 +2475,48 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: COL-WAS-55
     source_category_code: de_pila_publica
-    national_label_en: De pila pública
-    national_label_local: Fuentes públicas
+    national_label_en: "De pila p\xFAblica"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: COL-WAS-56
     source_category_code: pila_publica
     national_label_en: pila publica
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: COL-WAS-57
     source_category_code: public_tap
     national_label_en: Public tap
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_COL_Colombia_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
-
-
-
-
-
-
-
-
 
 No country-specific content has been supplied yet. The regional focal point
 must be consulted before harmonization relies on this country layer.

@@ -6,13 +6,13 @@ status: draft
 country_name: LAO
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LAO-EDU-01
     national_label_en: Nursery
-    national_label_local: ລ້ຽງເດັກ
+    national_label_local: "\u0EA5\u0EC9\u0EBD\u0E87\u0EC0\u0E94\u0EB1\u0E81"
     entry_age: 0
     duration_years: 3
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LAO-EDU-02
     national_label_en: Kindergarten
-    national_label_local: ອະນຸບານ
+    national_label_local: "\u0EAD\u0EB0\u0E99\u0EB8\u0E9A\u0EB2\u0E99"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LAO-EDU-03
     national_label_en: Pre-primary
-    national_label_local: ຫ້ອງກຽມ
+    national_label_local: "\u0EAB\u0EC9\u0EAD\u0E87\u0E81\u0EBD\u0EA1"
     entry_age: 5
     duration_years: 1
     isced_level: '0'
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LAO-EDU-04
     national_label_en: Primary education
-    national_label_local: ປະຖົມ
+    national_label_local: "\u0E9B\u0EB0\u0E96\u0EBB\u0EA1"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -54,9 +72,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - LAO-EDU-04
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: LAO-EDU-05
     national_label_en: Lower secondary
-    national_label_local: ມັດທະຍົມຕອນຕົ້ນ
+    national_label_local: "\u0EA1\u0EB1\u0E94\u0E97\u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\
+      \u0E99\u0E95\u0EBB\u0EC9\u0E99"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -65,9 +90,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - LAO-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LAO-EDU-06
     national_label_en: Vocational education of Dance and Music
-    national_label_local: ອາຊີວະສຶກສາ ດົນຕຣີ ແລະ ເຕັ້ນລໍາ
+    national_label_local: "\u0EAD\u0EB2\u0E8A\u0EB5\u0EA7\u0EB0\u0EAA\u0EB6\u0E81\u0EAA\
+      \u0EB2 \u0E94\u0EBB\u0E99\u0E95\u0EA3\u0EB5 \u0EC1\u0EA5\u0EB0 \u0EC0\u0E95\u0EB1\
+      \u0EC9\u0E99\u0EA5\u0ECD\u0EB2"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -76,9 +111,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - LAO-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LAO-EDU-07
     national_label_en: Upper secondary
-    national_label_local: ມັດທະຍົມຕອນປາຍ
+    national_label_local: "\u0EA1\u0EB1\u0E94\u0E97\u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\
+      \u0E99\u0E9B\u0EB2\u0E8D"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -87,11 +131,28 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - LAO-EDU-05
+    - LAO-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
   - country_entry_id: LAO-EDU-08
     national_label_en: Dance and music teacher training/ Technical education of Dance
       and Music (after "Brevet")
-    national_label_local: ສ້າງຄູວິຊາດົນຕຣີ ແລະ ເຕັ້ນລໍາ  /ເຕັກນິກສຶກສາວິຊາ ດົນຕຣີ
-      ແລະ ເຕັ້ນລໍາ (ຫລັງຈາກຈົບຊັ້ນມັດທະຍົມຕອນຕົ້ນ)
+    national_label_local: "\u0EAA\u0EC9\u0EB2\u0E87\u0E84\u0EB9\u0EA7\u0EB4\u0E8A\u0EB2\
+      \u0E94\u0EBB\u0E99\u0E95\u0EA3\u0EB5 \u0EC1\u0EA5\u0EB0 \u0EC0\u0E95\u0EB1\u0EC9\
+      \u0E99\u0EA5\u0ECD\u0EB2  /\u0EC0\u0E95\u0EB1\u0E81\u0E99\u0EB4\u0E81\u0EAA\u0EB6\
+      \u0E81\u0EAA\u0EB2\u0EA7\u0EB4\u0E8A\u0EB2 \u0E94\u0EBB\u0E99\u0E95\u0EA3\u0EB5\
+      \ \u0EC1\u0EA5\u0EB0 \u0EC0\u0E95\u0EB1\u0EC9\u0E99\u0EA5\u0ECD\u0EB2 (\u0EAB\
+      \u0EA5\u0EB1\u0E87\u0E88\u0EB2\u0E81\u0E88\u0EBB\u0E9A\u0E8A\u0EB1\u0EC9\u0E99\
+      \u0EA1\u0EB1\u0E94\u0E97\u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\u0E99\u0E95\u0EBB\
+      \u0EC9\u0E99)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -100,9 +161,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - LAO-EDU-05
+    - LAO-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
   - country_entry_id: LAO-EDU-09
     national_label_en: Upper secondary vocational education
-    national_label_local: ການສຶກສາຊັ້ນມັດທະຍົມຕອນປາຍ, ອາຊີວະສຶກສາ
+    national_label_local: "\u0E81\u0EB2\u0E99\u0EAA\u0EB6\u0E81\u0EAA\u0EB2\u0E8A\u0EB1\
+      \u0EC9\u0E99\u0EA1\u0EB1\u0E94\u0E97\u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\u0E99\
+      \u0E9B\u0EB2\u0E8D, \u0EAD\u0EB2\u0E8A\u0EB5\u0EA7\u0EB0\u0EAA\u0EB6\u0E81\u0EAA\
+      \u0EB2"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -111,9 +186,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - LAO-EDU-05
+    - LAO-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
   - country_entry_id: LAO-EDU-10
     national_label_en: Pre-primary teacher training (remote areas)
-    national_label_local: ຄູອະນຸບານສຶກສາ (ເຂດຫ່າງໄກສອກຫຼີກ)
+    national_label_local: "\u0E84\u0EB9\u0EAD\u0EB0\u0E99\u0EB8\u0E9A\u0EB2\u0E99\u0EAA\
+      \u0EB6\u0E81\u0EAA\u0EB2 (\u0EC0\u0E82\u0E94\u0EAB\u0EC8\u0EB2\u0E87\u0EC4\u0E81\
+      \u0EAA\u0EAD\u0E81\u0EAB\u0EBC\u0EB5\u0E81)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -122,9 +210,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - LAO-EDU-05
+    - LAO-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
   - country_entry_id: LAO-EDU-11
     national_label_en: "Primary teacher training \n(remote areas)"
-    national_label_local: ຄູປະຖົມສຶກສາ (ເຂດຫ່າງໄກສອກຫຼີກ)
+    national_label_local: "\u0E84\u0EB9\u0E9B\u0EB0\u0E96\u0EBB\u0EA1\u0EAA\u0EB6\u0E81\
+      \u0EAA\u0EB2 (\u0EC0\u0E82\u0E94\u0EAB\u0EC8\u0EB2\u0E87\u0EC4\u0E81\u0EAA\u0EAD\
+      \u0E81\u0EAB\u0EBC\u0EB5\u0E81)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -133,9 +234,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - LAO-EDU-05
+    - LAO-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
   - country_entry_id: LAO-EDU-12
-    national_label_en: Technical education of Dance and Music (after "Baccalauréat")
-    national_label_local: ເຕັກນິກສາຍວິຊາເຕັ້ນລໍາ ແລະ ດົນຕຣີ (ຫຼັງຈາກຈົບຊັ້ນມັດທະຍົມຕອນປາຍ)
+    national_label_en: "Technical education of Dance and Music (after \"Baccalaur\xE9\
+      at\")"
+    national_label_local: "\u0EC0\u0E95\u0EB1\u0E81\u0E99\u0EB4\u0E81\u0EAA\u0EB2\u0E8D\
+      \u0EA7\u0EB4\u0E8A\u0EB2\u0EC0\u0E95\u0EB1\u0EC9\u0E99\u0EA5\u0ECD\u0EB2 \u0EC1\
+      \u0EA5\u0EB0 \u0E94\u0EBB\u0E99\u0E95\u0EA3\u0EB5 (\u0EAB\u0EBC\u0EB1\u0E87\u0E88\
+      \u0EB2\u0E81\u0E88\u0EBB\u0E9A\u0E8A\u0EB1\u0EC9\u0E99\u0EA1\u0EB1\u0E94\u0E97\
+      \u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\u0E99\u0E9B\u0EB2\u0E8D)"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -144,9 +261,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-13
     national_label_en: Technical education
-    national_label_local: ເຕັກນິກສຶກສາ
+    national_label_local: "\u0EC0\u0E95\u0EB1\u0E81\u0E99\u0EB4\u0E81\u0EAA\u0EB6\u0E81\
+      \u0EAA\u0EB2"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -155,9 +287,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-14
     national_label_en: Higher Technical and Vocational Education (TVE) Diploma
-    national_label_local: ເຕັກນິກຊັ້ນສູງ ແລະ ອາຊີວະສຶກສາ ( ເຕັກນິກວິຊາຊີບ ປະກາດສະນີຍະບັດ
+    national_label_local: "\u0EC0\u0E95\u0EB1\u0E81\u0E99\u0EB4\u0E81\u0E8A\u0EB1\u0EC9\
+      \u0E99\u0EAA\u0EB9\u0E87 \u0EC1\u0EA5\u0EB0 \u0EAD\u0EB2\u0E8A\u0EB5\u0EA7\u0EB0\
+      \u0EAA\u0EB6\u0E81\u0EAA\u0EB2 ( \u0EC0\u0E95\u0EB1\u0E81\u0E99\u0EB4\u0E81\u0EA7\
+      \u0EB4\u0E8A\u0EB2\u0E8A\u0EB5\u0E9A \u0E9B\u0EB0\u0E81\u0EB2\u0E94\u0EAA\u0EB0\
+      \u0E99\u0EB5\u0E8D\u0EB0\u0E9A\u0EB1\u0E94"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -166,9 +316,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-15
-    national_label_en: Dance and music teacher training (12+2) (after "Baccalauréat")
-    national_label_local: ຄູສອນສອນ ດົນຕຣີ ແລະ ເຕັ້ນລຳ (12+2) ( ຫຼັງຈາກປະກາດສະນີຍະບັດຊັ້ນມັດທະຍົມຕອນປາຍ)
+    national_label_en: "Dance and music teacher training (12+2) (after \"Baccalaur\xE9\
+      at\")"
+    national_label_local: "\u0E84\u0EB9\u0EAA\u0EAD\u0E99\u0EAA\u0EAD\u0E99 \u0E94\
+      \u0EBB\u0E99\u0E95\u0EA3\u0EB5 \u0EC1\u0EA5\u0EB0 \u0EC0\u0E95\u0EB1\u0EC9\u0E99\
+      \u0EA5\u0EB3 (12+2) ( \u0EAB\u0EBC\u0EB1\u0E87\u0E88\u0EB2\u0E81\u0E9B\u0EB0\
+      \u0E81\u0EB2\u0E94\u0EAA\u0EB0\u0E99\u0EB5\u0E8D\u0EB0\u0E9A\u0EB1\u0E94\u0E8A\
+      \u0EB1\u0EC9\u0E99\u0EA1\u0EB1\u0E94\u0E97\u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\
+      \u0E99\u0E9B\u0EB2\u0E8D)"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -177,11 +347,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-16
-    national_label_en: |-
-      Sports teacher training
-      (Higher diploma, 12+2)
-    national_label_local: ສ້າງຄູກິລາ ( ໃບປະກາດຊັ້ນສູງ ) ( 12+2)
+    national_label_en: 'Sports teacher training
+
+      (Higher diploma, 12+2)'
+    national_label_local: "\u0EAA\u0EC9\u0EB2\u0E87\u0E84\u0EB9\u0E81\u0EB4\u0EA5\u0EB2\
+      \ ( \u0EC3\u0E9A\u0E9B\u0EB0\u0E81\u0EB2\u0E94\u0E8A\u0EB1\u0EC9\u0E99\u0EAA\
+      \u0EB9\u0E87 ) ( 12+2)"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -190,9 +376,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-17
     national_label_en: Pre-primary / Primary / Lower secondary teacher training
-    national_label_local: ໃບຢັ້ງຢືນຜ່ານສ້າງຄູອະນຸບານ/ປະຖົມ/ມັດທະຍົມຕອນຕົ້ນ
+    national_label_local: "\u0EC3\u0E9A\u0EA2\u0EB1\u0EC9\u0E87\u0EA2\u0EB7\u0E99\u0E9C\
+      \u0EC8\u0EB2\u0E99\u0EAA\u0EC9\u0EB2\u0E87\u0E84\u0EB9\u0EAD\u0EB0\u0E99\u0EB8\
+      \u0E9A\u0EB2\u0E99/\u0E9B\u0EB0\u0E96\u0EBB\u0EA1/\u0EA1\u0EB1\u0E94\u0E97\u0EB0\
+      \u0E8D\u0EBB\u0EA1\u0E95\u0EAD\u0E99\u0E95\u0EBB\u0EC9\u0E99"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -201,11 +404,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-18
-    national_label_en: |-
-      Vocational teacher training
-      (12+2+2)
-    national_label_local: ຄູອາຊີວະສຶກສາ  (12+2)
+    national_label_en: 'Vocational teacher training
+
+      (12+2+2)'
+    national_label_local: "\u0E84\u0EB9\u0EAD\u0EB2\u0E8A\u0EB5\u0EA7\u0EB0\u0EAA\u0EB6\
+      \u0E81\u0EAA\u0EB2  (12+2)"
     entry_age: 20
     duration_years: 2
     isced_level: '5'
@@ -214,9 +432,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-19
     national_label_en: Bachelor's degree
-    national_label_local: ປະລິຍາຕຣີ
+    national_label_local: "\u0E9B\u0EB0\u0EA5\u0EB4\u0E8D\u0EB2\u0E95\u0EA3\u0EB5"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -225,11 +457,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-20
-    national_label_en: |-
-      Sports teacher training
-      (Bachelor's degree, 12+4)
-    national_label_local: ສ້າງຄູກິລາ ( ໃບປະກາດປະລິຍາຕຣີ ) ( 12+4)
+    national_label_en: 'Sports teacher training
+
+      (Bachelor''s degree, 12+4)'
+    national_label_local: "\u0EAA\u0EC9\u0EB2\u0E87\u0E84\u0EB9\u0E81\u0EB4\u0EA5\u0EB2\
+      \ ( \u0EC3\u0E9A\u0E9B\u0EB0\u0E81\u0EB2\u0E94\u0E9B\u0EB0\u0EA5\u0EB4\u0E8D\
+      \u0EB2\u0E95\u0EA3\u0EB5 ) ( 12+4)"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -238,9 +486,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-21
     national_label_en: Upper secondary teacher training
-    national_label_local: ສ້າງຄູມັດທະຍົມຕອນປາຍ
+    national_label_local: "\u0EAA\u0EC9\u0EB2\u0E87\u0E84\u0EB9\u0EA1\u0EB1\u0E94\u0E97\
+      \u0EB0\u0E8D\u0EBB\u0EA1\u0E95\u0EAD\u0E99\u0E9B\u0EB2\u0E8D"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -249,11 +512,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-22
-    national_label_en: |-
-      Vocational teacher training
-      (12+2+2+2)
-    national_label_local: ສ້າງຄູອາຊີວະ (12+2+2+2)
+    national_label_en: 'Vocational teacher training
+
+      (12+2+2+2)'
+    national_label_local: "\u0EAA\u0EC9\u0EB2\u0E87\u0E84\u0EB9\u0EAD\u0EB2\u0E8A\u0EB5\
+      \u0EA7\u0EB0 (12+2+2+2)"
     entry_age: 22
     duration_years: 2
     isced_level: '6'
@@ -262,9 +540,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-23
     national_label_en: Bachelor's degree in medicine
-    national_label_local: ປະລິຍາຕຣີສາຍການແພດ
+    national_label_local: "\u0E9B\u0EB0\u0EA5\u0EB4\u0E8D\u0EB2\u0E95\u0EA3\u0EB5\u0EAA\
+      \u0EB2\u0E8D\u0E81\u0EB2\u0E99\u0EC1\u0E9E\u0E94"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -273,9 +566,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - LAO-EDU-07
+    - LAO-EDU-10
+    - LAO-EDU-11
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
   - country_entry_id: LAO-EDU-24
     national_label_en: University, Master's degree
-    national_label_local: ມະຫາວິທະຍາໄລ, ປະກາດສະນີຍະບັດ ປະລິຍາໂທ
+    national_label_local: "\u0EA1\u0EB0\u0EAB\u0EB2\u0EA7\u0EB4\u0E97\u0EB0\u0E8D\u0EB2\
+      \u0EC4\u0EA5, \u0E9B\u0EB0\u0E81\u0EB2\u0E94\u0EAA\u0EB0\u0E99\u0EB5\u0E8D\u0EB0\
+      \u0E9A\u0EB1\u0E94 \u0E9B\u0EB0\u0EA5\u0EB4\u0E8D\u0EB2\u0EC2\u0E97"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -284,9 +593,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - LAO-EDU-19
+    - LAO-EDU-20
+    - LAO-EDU-21
+    - LAO-EDU-22
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-22
+    - LAO-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
+    - 'minimum parent path selected from: LAO-EDU-19, LAO-EDU-20, LAO-EDU-21, LAO-EDU-22'
   - country_entry_id: LAO-EDU-25
     national_label_en: University, Doctorate degree
-    national_label_local: ມະຫາວິທະຍາໄລ, ປະກາດສະນີຍະບັດ ປະລິຍາເອກ
+    national_label_local: "\u0EA1\u0EB0\u0EAB\u0EB2\u0EA7\u0EB4\u0E97\u0EB0\u0E8D\u0EB2\
+      \u0EC4\u0EA5, \u0E9B\u0EB0\u0E81\u0EB2\u0E94\u0EAA\u0EB0\u0E99\u0EB5\u0E8D\u0EB0\
+      \u0E9A\u0EB1\u0E94 \u0E9B\u0EB0\u0EA5\u0EB4\u0E8D\u0EB2\u0EC0\u0EAD\u0E81"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -295,16 +623,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - LAO-EDU-23
+    - LAO-EDU-24
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - LAO-EDU-04
+    - LAO-EDU-05
+    - LAO-EDU-07
+    - LAO-EDU-22
+    - LAO-EDU-24
+    - LAO-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LAO-EDU-05, LAO-EDU-06'
+    - 'minimum parent path selected from: LAO-EDU-07, LAO-EDU-10, LAO-EDU-11'
+    - 'minimum parent path selected from: LAO-EDU-19, LAO-EDU-20, LAO-EDU-21, LAO-EDU-22'
+    - 'minimum parent path selected from: LAO-EDU-23, LAO-EDU-24'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Lao
       Pdr.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
   effective_to: 2015
-  selectors: ~
+  selectors: null
   value:
   - country_entry_id: LAO-SUBNAT-01
     survey_labels: 1-Vientiane | 1-Vientiane capital
@@ -313,10 +658,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1768
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -334,10 +679,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -356,10 +701,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -377,10 +722,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -398,10 +743,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_74346
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -419,10 +764,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1755
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -440,10 +785,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1758
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -461,10 +806,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1764
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -482,10 +827,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1763
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -503,10 +848,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1766
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -524,10 +869,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1756
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -545,10 +890,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1753
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -566,10 +911,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1762
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -587,10 +932,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1760
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -608,10 +953,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1761
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -629,10 +974,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1754
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -650,10 +995,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1759
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -671,10 +1016,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1757
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -692,10 +1037,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_1765
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -713,10 +1058,10 @@ parameters:
     gmd_subnatid2: LAO_2015_GAUL1_74347
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -729,13 +1074,13 @@ parameters:
     source_row: 8930
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2022
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LAO-SUBNAT-01
     survey_labels: 1-Vientiane Cap. | 1-Vientiane capital
@@ -744,10 +1089,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.13_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -765,10 +1110,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.14_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -786,10 +1131,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.3_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -807,10 +1152,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.6_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -828,10 +1173,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.12_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -840,7 +1185,7 @@ parameters:
     geo_idvar: GID_1
     geo_id: LAO.12_1
     geo_nvar: NAME_1
-    geo_name: Savannakhét
+    geo_name: "Savannakh\xE9t"
     source_row: 8939
   - country_entry_id: LAO-SUBNAT-06
     survey_labels: 14-Salavan
@@ -849,10 +1194,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.11_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -870,10 +1215,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.17_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -882,7 +1227,7 @@ parameters:
     geo_idvar: GID_1
     geo_id: LAO.17_1
     geo_nvar: NAME_1
-    geo_name: Xékong
+    geo_name: "X\xE9kong"
     source_row: 8941
   - country_entry_id: LAO-SUBNAT-08
     survey_labels: 16-Champasack | 16-Champasak
@@ -891,10 +1236,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.4_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -912,10 +1257,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.1_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -933,10 +1278,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.16_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -945,7 +1290,7 @@ parameters:
     geo_idvar: GID_1
     geo_id: LAO.16_1
     geo_nvar: NAME_1
-    geo_name: Xaisômboun
+    geo_name: "Xais\xF4mboun"
     source_row: 8944
   - country_entry_id: LAO-SUBNAT-11
     survey_labels: 2-Phongsali | 2-Phongsaly
@@ -954,10 +1299,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.10_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -966,7 +1311,7 @@ parameters:
     geo_idvar: GID_1
     geo_id: LAO.10_1
     geo_nvar: NAME_1
-    geo_name: Phôngsali
+    geo_name: "Ph\xF4ngsali"
     source_row: 8945
   - country_entry_id: LAO-SUBNAT-12
     survey_labels: 3-Louang-Namtha | 3-Luangnamtha
@@ -975,10 +1320,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.7_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -996,10 +1341,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.9_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -1008,7 +1353,7 @@ parameters:
     geo_idvar: GID_1
     geo_id: LAO.9_1
     geo_nvar: NAME_1
-    geo_name: Oudômxai
+    geo_name: "Oud\xF4mxai"
     source_row: 8947
   - country_entry_id: LAO-SUBNAT-14
     survey_labels: 5-Bokeo
@@ -1017,10 +1362,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.2_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -1038,10 +1383,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.8_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -1059,10 +1404,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.5_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -1080,10 +1425,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.15_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -1101,10 +1446,10 @@ parameters:
     gmd_subnatid2: LAO_2022_GADM1_LAO.18_1
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -1117,13 +1462,13 @@ parameters:
     source_row: 8952
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LAO-SAN-01
     source_category_code: composting_toilet
@@ -1133,8 +1478,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: LAO-SAN-02
     source_category_code: composting_toilets
@@ -1144,8 +1489,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: LAO-SAN-03
     source_category_code: flush_pour_flush_to_open_drain
@@ -1155,8 +1500,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: LAO-SAN-04
     source_category_code: flush_pour_type_toilet_connected_elsewhere_connection_unkno
@@ -1166,8 +1511,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: LAO-SAN-05
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -1177,8 +1522,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: LAO-SAN-06
     source_category_code: flush_pour_flush_ot_pit_latrine
@@ -1188,8 +1533,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: LAO-SAN-07
     source_category_code: flush_pour_flush_to_pit_latrine
@@ -1199,8 +1544,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: LAO-SAN-08
     source_category_code: flush_pour_type_toilet_connected_to_pit_latrine
@@ -1210,8 +1555,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: LAO-SAN-09
     source_category_code: flush_pour_flush_to_septic_tank
@@ -1221,8 +1566,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: LAO-SAN-10
     source_category_code: flush_pour_type_toilet_connected_to_septic_tank
@@ -1232,8 +1577,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: LAO-SAN-11
     source_category_code: flush_pour_flush_to_dk_where
@@ -1243,8 +1588,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: LAO-SAN-12
     source_category_code: flush_to_sewage_system_or_septic_tank
@@ -1254,8 +1599,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: LAO-SAN-13
     source_category_code: modern_toilet
@@ -1265,8 +1610,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: LAO-SAN-14
     source_category_code: private_domestic_connection_to_sewage_system
@@ -1276,8 +1621,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: LAO-SAN-15
     source_category_code: private_flush_to_septic_tank
@@ -1287,8 +1632,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: LAO-SAN-16
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -1299,8 +1644,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: LAO-SAN-17
     source_category_code: shared_flush_to_septic_tank
@@ -1310,8 +1655,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: LAO-SAN-18
     source_category_code: flush_to_somewhere_else
@@ -1321,8 +1666,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: LAO-SAN-19
     source_category_code: to_elsewhere
@@ -1332,8 +1677,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: LAO-SAN-20
     source_category_code: flush_or_pour_flush_to_piped_sewer_system
@@ -1343,8 +1688,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LAO-SAN-21
     source_category_code: flush_to_piped_sewer_system
@@ -1354,8 +1699,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LAO-SAN-22
     source_category_code: flush_or_pour_flush_to_pit
@@ -1365,8 +1710,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: LAO-SAN-23
     source_category_code: flush_to_pit_latrine
@@ -1376,8 +1721,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: LAO-SAN-24
     source_category_code: flush_or_pour_flush_to_septic_tank
@@ -1387,8 +1732,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: LAO-SAN-25
     source_category_code: flush_to_septic_tank
@@ -1398,8 +1743,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: LAO-SAN-26
     source_category_code: flush_or_pour_flush_to_unknown_place_not_sure_dk
@@ -1409,8 +1754,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LAO-SAN-27
     source_category_code: flush_to_unknown_place_not_sure_dk_where
@@ -1420,8 +1765,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LAO-SAN-28
     source_category_code: bucket
@@ -1431,8 +1776,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LAO-SAN-29
     source_category_code: bucket_latrine
@@ -1442,8 +1787,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LAO-SAN-30
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -1453,8 +1798,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LAO-SAN-31
     source_category_code: hanging_toilet_hanging_latrine
@@ -1465,8 +1810,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: LAO-SAN-32
     source_category_code: hanging_toilet_latrine
@@ -1477,8 +1822,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: LAO-SAN-33
     source_category_code: pit_latrine_with_slab
@@ -1489,8 +1834,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LAO-SAN-34
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -1501,8 +1846,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LAO-SAN-35
     source_category_code: open_pit
@@ -1513,8 +1858,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LAO-SAN-36
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1525,8 +1870,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LAO-SAN-37
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -1537,8 +1882,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LAO-SAN-38
     source_category_code: dry_toilet
@@ -1549,8 +1894,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: LAO-SAN-39
     source_category_code: traditional_pit_latrine
@@ -1561,8 +1906,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: LAO-SAN-40
     source_category_code: ventilated_improved_pit_latrine
@@ -1573,8 +1918,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: LAO-SAN-41
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -1585,8 +1930,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: LAO-SAN-42
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -1597,8 +1942,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: LAO-SAN-43
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -1609,8 +1954,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: LAO-SAN-44
     source_category_code: normal_toilet
@@ -1620,8 +1965,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: LAO-SAN-45
     source_category_code: pour_flush_latrine_water_seal_type
@@ -1631,8 +1976,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: LAO-SAN-46
     source_category_code: private_pour_flush_latrine
@@ -1642,8 +1987,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: LAO-SAN-47
     source_category_code: shared_pour_flush_latrine
@@ -1654,8 +1999,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: LAO-SAN-48
     source_category_code: no_facilities_open_defecation
@@ -1665,8 +2010,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-49
     source_category_code: no_facilities_or_bush_or_field
@@ -1676,8 +2021,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-50
     source_category_code: no_facilities_bush_field
@@ -1687,8 +2032,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-51
     source_category_code: no_facility_bush_field_etc
@@ -1698,8 +2043,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-52
     source_category_code: no_facility_bush_field
@@ -1709,8 +2054,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-53
     source_category_code: none
@@ -1720,8 +2065,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-54
     source_category_code: open_defecation_no_facility_bush_field
@@ -1731,8 +2076,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-55
     source_category_code: open_defecation_no_facility_bush_field
@@ -1742,8 +2087,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LAO-SAN-56
     source_category_code: other
@@ -1753,18 +2098,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LAO_Lao_Peoples_Democratic_Republic_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LAO-WAS-01
     source_category_code: spring
@@ -1774,8 +2119,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: LAO-WAS-02
     source_category_code: protected_spring
@@ -1785,8 +2130,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: LAO-WAS-03
     source_category_code: protected_well
@@ -1796,8 +2141,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: LAO-WAS-04
     source_category_code: well_borehole_protected
@@ -1807,8 +2152,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: LAO-WAS-05
     source_category_code: protected_dug_well_or_protected_spring
@@ -1818,8 +2163,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: LAO-WAS-06
     source_category_code: well_borehole
@@ -1829,8 +2174,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: LAO-WAS-07
     source_category_code: protected_tube_well_or_bore_hole
@@ -1840,8 +2185,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LAO-WAS-08
     source_category_code: tubewell_borehole
@@ -1851,8 +2196,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LAO-WAS-09
     source_category_code: tubewell_borehole_with_pump
@@ -1862,8 +2207,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LAO-WAS-10
     source_category_code: tubewell_borehole
@@ -1873,8 +2218,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LAO-WAS-11
     source_category_code: unprotected_spring
@@ -1884,8 +2229,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: LAO-WAS-12
     source_category_code: unprotected_well
@@ -1895,8 +2240,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LAO-WAS-13
     source_category_code: well_borehole_unprotected
@@ -1906,8 +2251,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LAO-WAS-14
     source_category_code: unprotected_dug_well_or_spring
@@ -1917,8 +2262,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: LAO-WAS-15
     source_category_code: cart_with_small_tank_drum
@@ -1928,8 +2273,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: LAO-WAS-16
     source_category_code: gravity_fed_system_gfs
@@ -1939,8 +2284,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: LAO-WAS-17
     source_category_code: tanker_truck
@@ -1950,8 +2295,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LAO-WAS-18
     source_category_code: tanker_truck_provided
@@ -1961,8 +2306,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LAO-WAS-19
     source_category_code: tanker_truck_vendor
@@ -1972,8 +2317,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LAO-WAS-20
     source_category_code: tanker_truck
@@ -1983,8 +2328,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LAO-WAS-21
     source_category_code: tanker_truck_vendor
@@ -1994,8 +2339,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LAO-WAS-22
     source_category_code: other
@@ -2005,8 +2350,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: LAO-WAS-23
     source_category_code: bottled_water
@@ -2016,8 +2361,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: LAO-WAS-24
     source_category_code: bw_with_improved_sources
@@ -2027,8 +2372,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: LAO-WAS-25
     source_category_code: bw_without_improved_sources
@@ -2038,8 +2383,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: LAO-WAS-26
     source_category_code: sachet_water
@@ -2049,8 +2394,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: LAO-WAS-27
     source_category_code: rainwater_collection
@@ -2060,8 +2405,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: LAO-WAS-28
     source_category_code: rain
@@ -2071,8 +2416,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LAO-WAS-29
     source_category_code: rain_water_collection
@@ -2082,8 +2427,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LAO-WAS-30
     source_category_code: rainwater
@@ -2093,8 +2438,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LAO-WAS-31
     source_category_code: rainwater_into_tank_or_cistern
@@ -2104,8 +2449,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LAO-WAS-32
     source_category_code: rainwater_collection
@@ -2115,8 +2460,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LAO-WAS-33
     source_category_code: rainwater_from_tank_jar
@@ -2126,8 +2471,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LAO-WAS-34
     source_category_code: pond_river_or_stream
@@ -2137,8 +2482,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LAO-WAS-35
     source_category_code: surface_water
@@ -2148,8 +2493,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LAO-WAS-36
     source_category_code: surface_water_stream_lake_etc
@@ -2159,8 +2504,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LAO-WAS-37
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -2170,8 +2515,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LAO-WAS-38
     source_category_code: river_dam_lake_etc
@@ -2181,8 +2526,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: LAO-WAS-39
     source_category_code: piped_to_neighbour
@@ -2192,8 +2537,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LAO-WAS-40
     source_category_code: piped_water_to_neighbour
@@ -2203,8 +2548,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LAO-WAS-41
     source_category_code: water_pipe_outside_compound
@@ -2214,8 +2559,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LAO-WAS-42
     source_category_code: piped_water_in_outside
@@ -2225,8 +2570,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: LAO-WAS-43
     source_category_code: piped_water_through_house_connection_or_yard
@@ -2236,8 +2581,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: LAO-WAS-44
     source_category_code: piped_into_dwelling
@@ -2247,8 +2592,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LAO-WAS-45
     source_category_code: piped_water_into_dwelling
@@ -2258,8 +2603,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LAO-WAS-46
     source_category_code: water_pipe_into_dwelling
@@ -2269,8 +2614,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LAO-WAS-47
     source_category_code: piped_into_yard_or_plot
@@ -2280,8 +2625,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LAO-WAS-48
     source_category_code: piped_water_into_yard_plot
@@ -2291,8 +2636,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LAO-WAS-49
     source_category_code: piped_water_to_yard_plot
@@ -2302,8 +2647,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LAO-WAS-50
     source_category_code: water_pipe_into_compound
@@ -2313,8 +2658,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LAO-WAS-51
     source_category_code: public_standpipe
@@ -2324,8 +2669,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LAO-WAS-52
     source_category_code: public_tap
@@ -2335,8 +2680,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LAO-WAS-53
     source_category_code: public_tap_standpipe
@@ -2346,8 +2691,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LAO-WAS-54
     source_category_code: public_tap_standpipe
@@ -2357,13 +2702,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LAO_Lao_Peoples_Democratic_Republic_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

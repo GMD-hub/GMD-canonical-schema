@@ -11,8 +11,8 @@ parameters:
   selectors: null
   value:
   - country_entry_id: COM-EDU-01
-    national_label_en: Enseignement préscolaire
-    national_label_local: Enseignement préscolaire
+    national_label_en: "Enseignement pr\xE9scolaire"
+    national_label_local: "Enseignement pr\xE9scolaire"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: COM-EDU-02
     national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - COM-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: COM-EDU-03
     national_label_en: "Enseignement secondaire \n(1 er cycle)"
     national_label_local: "Enseignement secondaire \n(1 er  cycle)"
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - COM-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COM-EDU-04
     national_label_en: 'Enseignement technique secondaire
 
@@ -56,9 +76,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - COM-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COM-EDU-05
-    national_label_en: "Enseignement secondaire \n(2 ème cycle)"
-    national_label_local: "Enseignement secondaire \n(2 ème cycle)"
+    national_label_en: "Enseignement secondaire \n(2 \xE8me cycle)"
+    national_label_local: "Enseignement secondaire \n(2 \xE8me cycle)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -67,6 +95,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - COM-EDU-03
+    - COM-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
   - country_entry_id: COM-EDU-06
     national_label_en: Enseignement secondaire technique et professionnel
     national_label_local: Enseignement secondaire technique et professionnel
@@ -78,13 +117,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - COM-EDU-03
+    - COM-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
   - country_entry_id: COM-EDU-07
     national_label_en: 'Enseignement secondaire technique
 
       (2 e cycle)'
-    national_label_local: 'Enseignement secondaire technique
-
-      (2 ème cycle)'
+    national_label_local: "Enseignement secondaire technique\n(2 \xE8me cycle)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -93,6 +141,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - COM-EDU-03
+    - COM-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
   - country_entry_id: COM-EDU-08
     national_label_en: "Enseignement \npost -secondaire"
     national_label_local: "Enseignement \npost -secondaire"
@@ -104,9 +163,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - COM-EDU-05
+    - COM-EDU-06
+    - COM-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    - COM-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
+    - 'minimum parent path selected from: COM-EDU-05, COM-EDU-06, COM-EDU-07'
   - country_entry_id: COM-EDU-09
-    national_label_en: Enseignement supérieur technique
-    national_label_local: Enseignement supérieur technique
+    national_label_en: "Enseignement sup\xE9rieur technique"
+    national_label_local: "Enseignement sup\xE9rieur technique"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -115,9 +188,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - COM-EDU-05
+    - COM-EDU-06
+    - COM-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    - COM-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
+    - 'minimum parent path selected from: COM-EDU-05, COM-EDU-06, COM-EDU-07'
   - country_entry_id: COM-EDU-10
-    national_label_en: Enseignement supérieur de formation des instituteurs
-    national_label_local: Enseignement supérieur de formation des instituteurs
+    national_label_en: "Enseignement sup\xE9rieur de formation des instituteurs"
+    national_label_local: "Enseignement sup\xE9rieur de formation des instituteurs"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -126,9 +213,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - COM-EDU-05
+    - COM-EDU-06
+    - COM-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    - COM-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
+    - 'minimum parent path selected from: COM-EDU-05, COM-EDU-06, COM-EDU-07'
   - country_entry_id: COM-EDU-11
-    national_label_en: Enseignement supérieur professionnel
-    national_label_local: Enseignement supérieur professsionnel
+    national_label_en: "Enseignement sup\xE9rieur professionnel"
+    national_label_local: "Enseignement sup\xE9rieur professsionnel"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -137,9 +238,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - COM-EDU-05
+    - COM-EDU-06
+    - COM-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    - COM-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
+    - 'minimum parent path selected from: COM-EDU-05, COM-EDU-06, COM-EDU-07'
   - country_entry_id: COM-EDU-12
-    national_label_en: Enseignement supérieur (Licence)
-    national_label_local: Enseignement supérieur (Licence)
+    national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: "Enseignement sup\xE9rieur (Licence)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -148,9 +263,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - COM-EDU-05
+    - COM-EDU-06
+    - COM-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    - COM-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
+    - 'minimum parent path selected from: COM-EDU-05, COM-EDU-06, COM-EDU-07'
   - country_entry_id: COM-EDU-13
-    national_label_en: Enseignement supérieur (Master)
-    national_label_local: Enseignement supérieur (Master)
+    national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: "Enseignement sup\xE9rieur (Master)"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -159,6 +288,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - COM-EDU-10
+    - COM-EDU-11
+    - COM-EDU-12
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - COM-EDU-02
+    - COM-EDU-04
+    - COM-EDU-05
+    - COM-EDU-10
+    - COM-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COM-EDU-03, COM-EDU-04'
+    - 'minimum parent path selected from: COM-EDU-05, COM-EDU-06, COM-EDU-07'
+    - 'minimum parent path selected from: COM-EDU-10, COM-EDU-11, COM-EDU-12'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Comoros.xlsx
     verified_on: null
@@ -291,7 +436,7 @@ parameters:
   - country_entry_id: COM-WAS-02
     source_category_code: protected_spring
     national_label_en: Protected spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
@@ -302,7 +447,7 @@ parameters:
   - country_entry_id: COM-WAS-03
     source_category_code: protected_dug_well
     national_label_en: Protected dug well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
@@ -313,7 +458,7 @@ parameters:
   - country_entry_id: COM-WAS-04
     source_category_code: protected_well
     national_label_en: Protected well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
@@ -324,7 +469,7 @@ parameters:
   - country_entry_id: COM-WAS-05
     source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
-    national_label_local: Puits ou sources protégées
+    national_label_local: "Puits ou sources prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
@@ -368,7 +513,7 @@ parameters:
   - country_entry_id: COM-WAS-09
     source_category_code: unprotected_spring
     national_label_en: Unprotected spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
@@ -379,7 +524,7 @@ parameters:
   - country_entry_id: COM-WAS-10
     source_category_code: unprotected_dug_well
     national_label_en: Unprotected dug well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
@@ -390,7 +535,7 @@ parameters:
   - country_entry_id: COM-WAS-11
     source_category_code: unprotected_well
     national_label_en: Unprotected well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
@@ -401,7 +546,7 @@ parameters:
   - country_entry_id: COM-WAS-12
     source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
-    national_label_local: Puits ou sources non protégées
+    national_label_local: "Puits ou sources non prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected wells or springs
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
@@ -412,7 +557,7 @@ parameters:
   - country_entry_id: COM-WAS-13
     source_category_code: cart_with_small_tank
     national_label_en: Cart with small tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
@@ -478,7 +623,7 @@ parameters:
   - country_entry_id: COM-WAS-19
     source_category_code: bottled_water
     national_label_en: Bottled water
-    national_label_local: Eau conditionnée
+    national_label_local: "Eau conditionn\xE9e"
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
@@ -500,7 +645,7 @@ parameters:
   - country_entry_id: COM-WAS-21
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -511,7 +656,7 @@ parameters:
   - country_entry_id: COM-WAS-22
     source_category_code: rainwater
     national_label_en: Rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -522,7 +667,7 @@ parameters:
   - country_entry_id: COM-WAS-23
     source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -533,7 +678,7 @@ parameters:
   - country_entry_id: COM-WAS-24
     source_category_code: rainwater_collection
     national_label_en: Rainwater collection
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -544,7 +689,7 @@ parameters:
   - country_entry_id: COM-WAS-25
     source_category_code: tank_citerne
     national_label_en: Tank (citerne)
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -577,7 +722,7 @@ parameters:
   - country_entry_id: COM-WAS-28
     source_category_code: pond_river_or_stream
     national_label_en: Pond river or stream
-    national_label_local: Étang
+    national_label_local: "\xC9tang"
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
     gmd_target: surface
@@ -588,7 +733,7 @@ parameters:
   - country_entry_id: COM-WAS-29
     source_category_code: water_taken_directly_from_pond_water_or_stream
     national_label_en: Water taken directly from pond-water or stream
-    national_label_local: Étang
+    national_label_local: "\xC9tang"
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
     gmd_target: surface
@@ -697,7 +842,7 @@ parameters:
     source_row: 41
   - country_entry_id: COM-WAS-39
     source_category_code: robinet_exterieur
-    national_label_en: Robinet extérieur
+    national_label_en: "Robinet ext\xE9rieur"
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
@@ -712,3 +857,4 @@ parameters:
     human_reviewed: false
     reviewer: null
 ---
+

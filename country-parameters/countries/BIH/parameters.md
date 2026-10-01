@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BIH-EDU-02
     national_label_en: Early childhood education in kindergartens
-    national_label_local: Programi u vrtićima
+    national_label_local: "Programi u vrti\u0107ima"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BIH-EDU-03
     national_label_en: Pre-school compulsory programmes
-    national_label_local: Predškolski obavezni programi
+    national_label_local: "Pred\u0161kolski obavezni programi"
     entry_age: 5
     duration_years: 0
     isced_level: '0'
@@ -43,11 +55,17 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BIH-EDU-04
     national_label_en: Primary education or first stage of the basic education (9
       years programmes, 1-5 grades)
-    national_label_local: Osnovno obrazovanje-prva faza (devetogodišnji program-razredi
-      1-5)
+    national_label_local: "Osnovno obrazovanje-prva faza (devetogodi\u0161nji program-razredi\
+      \ 1-5)"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -56,11 +74,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - BIH-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BIH-EDU-05
     national_label_en: Primary education or first stage of the basic education (9
       years programmes, 6-9 grades)
-    national_label_local: Osnovno obrazovanje-druga faza (devetogodišnji program-razredi
-      6-9)
+    national_label_local: "Osnovno obrazovanje-druga faza (devetogodi\u0161nji program-razredi\
+      \ 6-9)"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -69,11 +93,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - BIH-EDU-04
+    - BIH-EDU-06
+    - BIH-EDU-08
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
   - country_entry_id: BIH-EDU-06
     national_label_en: Primary education or first stage of the basic education for
       children with special needs (9 years programmes, 1-5 grades)
-    national_label_local: Osnovno obrazovanje za djecu sa posebnim potrebama-prva
-      faza (devetogodišnji program-razredi 1-5)
+    national_label_local: "Osnovno obrazovanje za djecu sa posebnim potrebama-prva\
+      \ faza (devetogodi\u0161nji program-razredi 1-5)"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -82,11 +117,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - BIH-EDU-06
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BIH-EDU-07
     national_label_en: Lower secondary or second stage of the basic education for
       children with special needs (6-9 grades)
-    national_label_local: Osnovno obrazovanje za djecu sa posebnim potrebama-druga
-      faza (devetogodišnjiprogram-razredi 6-9)
+    national_label_local: "Osnovno obrazovanje za djecu sa posebnim potrebama-druga\
+      \ faza (devetogodi\u0161njiprogram-razredi 6-9)"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -95,11 +136,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - BIH-EDU-04
+    - BIH-EDU-06
+    - BIH-EDU-08
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
   - country_entry_id: BIH-EDU-08
     national_label_en: Education in art (music education, ballet education, etc.)
       (1-3)
-    national_label_local: Umjetničko obrazovanje i vaspitanje (muzičko, baletsko i
-      sl.) (1-3)
+    national_label_local: "Umjetni\u010Dko obrazovanje i vaspitanje (muzi\u010Dko,\
+      \ baletsko i sl.) (1-3)"
     entry_age: 8
     duration_years: 3
     isced_level: '1'
@@ -108,11 +160,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 14
+    parent_country_entry_ids: []
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - BIH-EDU-08
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BIH-EDU-09
     national_label_en: Education in art (music education, ballet education, etc.)
       (4-6)
-    national_label_local: Umjetničko obrazovanje i vaspitanje (muzičko, baletsko i
-      sl.) (4-6)
+    national_label_local: "Umjetni\u010Dko obrazovanje i vaspitanje (muzi\u010Dko,\
+      \ baletsko i sl.) (4-6)"
     entry_age: 11
     duration_years: 3
     isced_level: '2'
@@ -121,9 +179,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - BIH-EDU-04
+    - BIH-EDU-06
+    - BIH-EDU-08
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
   - country_entry_id: BIH-EDU-10
     national_label_en: General secondary education-not profiled
-    national_label_local: Srednje opšte obrazovanje
+    national_label_local: "Srednje op\u0161te obrazovanje"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -132,9 +201,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - BIH-EDU-05
+    - BIH-EDU-07
+    - BIH-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
   - country_entry_id: BIH-EDU-11
     national_label_en: VET programmes  (duration 3 years)
-    national_label_local: Srednje stručno obrazovanje      (trajanje 3 godine)
+    national_label_local: "Srednje stru\u010Dno obrazovanje      (trajanje 3 godine)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -143,9 +225,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - BIH-EDU-05
+    - BIH-EDU-07
+    - BIH-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
   - country_entry_id: BIH-EDU-12
     national_label_en: VET programmes  (duration 4 years)
-    national_label_local: Srednje tehničko obrazovanje     (trajanje 4 godine)
+    national_label_local: "Srednje tehni\u010Dko obrazovanje     (trajanje 4 godine)"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -154,9 +249,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - BIH-EDU-05
+    - BIH-EDU-07
+    - BIH-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
   - country_entry_id: BIH-EDU-13
     national_label_en: Secondary education in art schools
-    national_label_local: Srednje obrazovanje u umjetničkim školama
+    national_label_local: "Srednje obrazovanje u umjetni\u010Dkim \u0161kolama"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -165,9 +273,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - BIH-EDU-05
+    - BIH-EDU-07
+    - BIH-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
   - country_entry_id: BIH-EDU-14
     national_label_en: Secondary education in religious schools
-    national_label_local: Srednje obrazovanje u   vjerskim školama
+    national_label_local: "Srednje obrazovanje u   vjerskim \u0161kolama"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -176,10 +297,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - BIH-EDU-05
+    - BIH-EDU-07
+    - BIH-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
   - country_entry_id: BIH-EDU-15
     national_label_en: Vocational training programmes after secondary vocational education
-    national_label_local: Postsekundarno obrazovanje-programi za kvalifikaciju "majstor"
-      po završenom srednjem stručnom obrazovanju
+    national_label_local: "Postsekundarno obrazovanje-programi za kvalifikaciju \"\
+      majstor\" po zavr\u0161enom srednjem stru\u010Dnom obrazovanju"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -188,10 +322,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-16
     national_label_en: Vocational training programmes after secondary technical education
-    national_label_local: Postsekundarno obrazovanje-programi za kvalifikaciju "specijalist"
-      po završenom srednjem tehničkom obrazovanju
+    national_label_local: "Postsekundarno obrazovanje-programi za kvalifikaciju \"\
+      specijalist\" po zavr\u0161enom srednjem tehni\u010Dkom obrazovanju"
     entry_age: 19
     duration_years: 1
     isced_level: '4'
@@ -200,9 +352,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-17
     national_label_en: Higer education, qualification degree professional specialist
-    national_label_local: Visoko obrazovanje kvalifikacioni stepen stručni specijalista
+    national_label_local: "Visoko obrazovanje kvalifikacioni stepen stru\u010Dni specijalista"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -211,6 +381,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-18
     national_label_en: Tertiary education -old programmes relevant to Bachelor degree
       (duration 4 - 6 years)
@@ -223,10 +411,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-19
     national_label_en: Tertiary education - Bachelor degree (duration 3 years)
-    national_label_local: Visoko obrazovanje, kvalifikacioni stepen Bacelor  (3 godišnji
-      programi)
+    national_label_local: "Visoko obrazovanje, kvalifikacioni stepen Bacelor  (3 godi\u0161\
+      nji programi)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -235,10 +441,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-20
     national_label_en: Tertiary education - Bachelor degree (duration 4 years)
-    national_label_local: Visoko obrazovanje,kvalifikacioni stepen Bacelor  (4 godišnji
-      programi)
+    national_label_local: "Visoko obrazovanje,kvalifikacioni stepen Bacelor  (4 godi\u0161\
+      nji programi)"
     entry_age: 19
     duration_years: 4
     isced_level: '6'
@@ -247,10 +471,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-21
     national_label_en: Tertiary education -old programmes relevant to Master degree
       (duration 5-6 years)
-    national_label_local: Visoko obrazovanje VII - stepen (stari 5-6 godišnji programi)
+    national_label_local: "Visoko obrazovanje VII - stepen (stari 5-6 godi\u0161nji\
+      \ programi)"
     entry_age: 19
     duration_years: 5
     isced_level: '7'
@@ -259,11 +502,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - BIH-EDU-18
+    - BIH-EDU-19
+    - BIH-EDU-20
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-19
+    - BIH-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
+    - 'minimum parent path selected from: BIH-EDU-18, BIH-EDU-19, BIH-EDU-20'
   - country_entry_id: BIH-EDU-22
     national_label_en: Tertiary education - Master university programmes (duration
       5-6 years)
-    national_label_local: Visoko obrazovanje, kvalifikacioni stepen Master  (5-6 godišnji
-      integrisani programi)
+    national_label_local: "Visoko obrazovanje, kvalifikacioni stepen Master  (5-6\
+      \ godi\u0161nji integrisani programi)"
     entry_age: 19
     duration_years: 5
     isced_level: '7'
@@ -272,11 +533,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - BIH-EDU-18
+    - BIH-EDU-19
+    - BIH-EDU-20
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-19
+    - BIH-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
+    - 'minimum parent path selected from: BIH-EDU-18, BIH-EDU-19, BIH-EDU-20'
   - country_entry_id: BIH-EDU-23
     national_label_en: Tertiary education - Master university programmes following
       bachelor degree (duration 2 year)
-    national_label_local: Visoko obrazovanje, kvalifikacioni stepen Master  (2 godišnji
-      programi)
+    national_label_local: "Visoko obrazovanje, kvalifikacioni stepen Master  (2 godi\u0161\
+      nji programi)"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -285,11 +564,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - BIH-EDU-18
+    - BIH-EDU-19
+    - BIH-EDU-20
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-19
+    - BIH-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
+    - 'minimum parent path selected from: BIH-EDU-18, BIH-EDU-19, BIH-EDU-20'
   - country_entry_id: BIH-EDU-24
     national_label_en: Tertiary education - Master university programmes following
       bachelor degree (duration 1 year)
-    national_label_local: Visoko obrazovanje, kvalifikacioni stepen Master  (1 godišnji
-      programi)
+    national_label_local: "Visoko obrazovanje, kvalifikacioni stepen Master  (1 godi\u0161\
+      nji programi)"
     entry_age: 23
     duration_years: 1
     isced_level: '7'
@@ -298,6 +595,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - BIH-EDU-18
+    - BIH-EDU-19
+    - BIH-EDU-20
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-19
+    - BIH-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
+    - 'minimum parent path selected from: BIH-EDU-18, BIH-EDU-19, BIH-EDU-20'
   - country_entry_id: BIH-EDU-25
     national_label_en: Old programmes for acquisition of degree Master of Science
     national_label_local: Stari programi za sticanje kvalifikacije Magistar nauka
@@ -309,6 +624,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - BIH-EDU-18
+    - BIH-EDU-19
+    - BIH-EDU-20
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-19
+    - BIH-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
+    - 'minimum parent path selected from: BIH-EDU-18, BIH-EDU-19, BIH-EDU-20'
   - country_entry_id: BIH-EDU-26
     national_label_en: Programmes for Qualification Specialist
     national_label_local: Programi za sticanje kvalifikacije Specijalist
@@ -320,6 +653,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - BIH-EDU-10
+    - BIH-EDU-11
+    - BIH-EDU-12
+    - BIH-EDU-13
+    - BIH-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
   - country_entry_id: BIH-EDU-27
     national_label_en: Doctorate programmes
     national_label_local: Doktorat
@@ -331,6 +682,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - BIH-EDU-21
+    - BIH-EDU-22
+    - BIH-EDU-23
+    - BIH-EDU-24
+    - BIH-EDU-25
+    - BIH-EDU-26
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BIH-EDU-08
+    - BIH-EDU-09
+    - BIH-EDU-11
+    - BIH-EDU-26
+    - BIH-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BIH-EDU-04, BIH-EDU-06, BIH-EDU-08'
+    - 'minimum parent path selected from: BIH-EDU-05, BIH-EDU-07, BIH-EDU-09'
+    - 'minimum parent path selected from: BIH-EDU-10, BIH-EDU-11, BIH-EDU-12, BIH-EDU-13,
+      BIH-EDU-14'
+    - 'minimum parent path selected from: BIH-EDU-21, BIH-EDU-22, BIH-EDU-23, BIH-EDU-24,
+      BIH-EDU-25, BIH-EDU-26'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Bosnia
       And Herzegovina.xlsx
@@ -343,7 +716,7 @@ parameters:
   selectors: null
   value:
   - country_entry_id: BIH-SUBNAT-01
-    survey_labels: 1 – Federation of BH
+    survey_labels: "1 \u2013 Federation of BH"
     survey_variables: subnatid1
     gmd_subnatid1: BIH_2015_GAUL1_652
     gmd_subnatid2: ''
@@ -364,7 +737,7 @@ parameters:
     geo_name: Federacija Bosne I Hercegovine
     source_row: 856
   - country_entry_id: BIH-SUBNAT-02
-    survey_labels: 2 – Republika Srpska
+    survey_labels: "2 \u2013 Republika Srpska"
     survey_variables: subnatid1
     gmd_subnatid1: BIH_2015_GAULx_653
     gmd_subnatid2: ''
@@ -385,7 +758,7 @@ parameters:
     geo_name: Republika Srpska
     source_row: 857
   - country_entry_id: BIH-SUBNAT-03
-    survey_labels: 3 – Brcko
+    survey_labels: "3 \u2013 Brcko"
     survey_variables: subnatid1
     gmd_subnatid1: BIH_2015_GAUL2_6262
     gmd_subnatid2: ''
@@ -417,9 +790,10 @@ parameters:
     geo_year: unknown
   value:
   - country_entry_id: BIH-SUBNAT-01
-    survey_labels: 1 – Unsko-Sanski | 10 – Hercegbosanski | 2 – Posavski | 3 – Tuzlanski
-      | 4 – Zenicko-Bobojski | 5 – Bosansko-Podrinjski | 6 – Srednjebosanski | 7 –
-      Hercegovacko-Neretvanski | 8 – Zapadno-Hercegovacki | 9 – Sarajevo
+    survey_labels: "1 \u2013 Unsko-Sanski | 10 \u2013 Hercegbosanski | 2 \u2013 Posavski\
+      \ | 3 \u2013 Tuzlanski | 4 \u2013 Zenicko-Bobojski | 5 \u2013 Bosansko-Podrinjski\
+      \ | 6 \u2013 Srednjebosanski | 7 \u2013 Hercegovacko-Neretvanski | 8 \u2013\
+      \ Zapadno-Hercegovacki | 9 \u2013 Sarajevo"
     survey_variables: subnatid2
     gmd_subnatid1: ''
     gmd_subnatid2: ''
@@ -1483,3 +1857,4 @@ parameters:
     human_reviewed: false
     reviewer: null
 ---
+

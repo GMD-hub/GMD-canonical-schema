@@ -6,9 +6,9 @@ status: draft
 country_name: MUS
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MUS-EDU-01
     national_label_en: Early Childhood Education
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: MUS-EDU-02
     national_label_en: Primary Education
     national_label_local: Primary Education
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - MUS-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: MUS-EDU-03
     national_label_en: Lower Secondary Education (Grades 7, 8, 9)
     national_label_local: Lower Secondary Education (Grades 7, 8, 9)
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - MUS-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: MUS-EDU-04
     national_label_en: Extended Programme (Grades 7, 8, 9, 9+)
     national_label_local: Extended Programme (Grades 7, 8, 9, 9+)
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - MUS-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: MUS-EDU-05
     national_label_en: National Certificate (NC) Level 2
     national_label_local: National Certificate (NC) Level 2
@@ -65,6 +93,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - MUS-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: MUS-EDU-06
     national_label_en: Upper Secondary Education ( Grades 10 & 11)
     national_label_local: Upper Secondary Education ( Grades 10 & 11)
@@ -76,6 +112,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - MUS-EDU-03
+    - MUS-EDU-04
+    - MUS-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
   - country_entry_id: MUS-EDU-07
     national_label_en: Upper Secondary Education (Grades 12 & 13;  )
     national_label_local: Upper Secondary Education (Grades 12 & 13;  )
@@ -87,6 +135,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - MUS-EDU-03
+    - MUS-EDU-04
+    - MUS-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
   - country_entry_id: MUS-EDU-08
     national_label_en: National Certificate (NC) Level 3.
     national_label_local: National Certificate (NC) Level 3.
@@ -98,6 +158,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - MUS-EDU-03
+    - MUS-EDU-04
+    - MUS-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
   - country_entry_id: MUS-EDU-09
     national_label_en: National  Certificate  (NC) Level 4
     national_label_local: National  Certificate  (NC) Level 4.
@@ -109,6 +181,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - MUS-EDU-03
+    - MUS-EDU-04
+    - MUS-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
   - country_entry_id: MUS-EDU-10
     national_label_en: National Certificate (NC) Level 5
     national_label_local: National Certificate (NC) Level 5
@@ -120,6 +204,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-11
     national_label_en: Brevet de Technicien (BT)
     national_label_local: Brevet de Technicien (BT)
@@ -131,6 +230,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-12
     national_label_en: Foundation programme
     national_label_local: Foundation programme
@@ -142,6 +256,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-13
     national_label_en: Certificate of Proficiency in Early Childhood Education Programme
     national_label_local: Certificate of Proficiency in Early Childhood Education
@@ -154,6 +283,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-14
     national_label_en: Certificate Programme (Education)
     national_label_local: Certificate (Early childhood Education)
@@ -165,6 +309,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-15
     national_label_en: Teacher's Diploma (Early Childhood Education)
     national_label_local: Diploma (Early Childhood Education)
@@ -176,6 +335,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-16
     national_label_en: National Diploma/ Diploma/ Higher National Diploma programme
     national_label_local: National Diploma/ Diploma/ Higher National Diploma programme
@@ -187,6 +361,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-17
     national_label_en: Diploma (academic oriented)
     national_label_local: Diploma (academic oriented)
@@ -198,6 +387,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-18
     national_label_en: Bachelor's Degree
     national_label_local: Bachelor's Degree
@@ -209,6 +413,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-19
     national_label_en: PGC/PGCE (Post Graduate Certificate of Education)
     national_label_local: PGC/PGCE (Post Graduate Certificate of Education)
@@ -220,6 +439,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-20
     national_label_en: Post Graduate Diploma
     national_label_local: Post Graduate Diploma (Education)
@@ -231,6 +465,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-21
     national_label_en: MBBS/MBCHB /MD (Medicine)
     national_label_local: Bachelor's Degree (Medicine)
@@ -242,6 +491,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-22
     national_label_en: Master's Degree (Master's, Master's of Sciences)
     national_label_local: Master's Degree
@@ -253,6 +517,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - MUS-EDU-18
+    - MUS-EDU-19
+    - MUS-EDU-20
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-19
+    - MUS-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
+    - 'minimum parent path selected from: MUS-EDU-18, MUS-EDU-19, MUS-EDU-20'
   - country_entry_id: MUS-EDU-23
     national_label_en: MPhil
     national_label_local: MPhil (Research)
@@ -264,6 +544,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - MUS-EDU-06
+    - MUS-EDU-07
+    - MUS-EDU-08
+    - MUS-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
   - country_entry_id: MUS-EDU-24
     national_label_en: PhD
     national_label_local: PhD (Research)
@@ -275,27 +570,45 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - MUS-EDU-21
+    - MUS-EDU-22
+    - MUS-EDU-23
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - MUS-EDU-02
+    - MUS-EDU-05
+    - MUS-EDU-08
+    - MUS-EDU-19
+    - MUS-EDU-22
+    - MUS-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MUS-EDU-03, MUS-EDU-04, MUS-EDU-05'
+    - 'minimum parent path selected from: MUS-EDU-06, MUS-EDU-07, MUS-EDU-08, MUS-EDU-09'
+    - 'minimum parent path selected from: MUS-EDU-18, MUS-EDU-19, MUS-EDU-20'
+    - 'minimum parent path selected from: MUS-EDU-21, MUS-EDU-22, MUS-EDU-23'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Mauritius.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MUS-SUBNAT-01
-    survey_labels: 11 - Port Louis | 11 – Port Louis
+    survey_labels: "11 - Port Louis | 11 \u2013 Port Louis"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2024
     gmd_subnatid2: MUS_2015_GAUL1_2024
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -307,16 +620,16 @@ parameters:
     geo_name: Port Louis
     source_row: 10435
   - country_entry_id: MUS-SUBNAT-02
-    survey_labels: 12 - Pamplemousses | 12 – Pamplemousses
+    survey_labels: "12 - Pamplemousses | 12 \u2013 Pamplemousses"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2022
     gmd_subnatid2: MUS_2015_GAUL1_2022
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -328,16 +641,16 @@ parameters:
     geo_name: Pamplemousses
     source_row: 10436
   - country_entry_id: MUS-SUBNAT-03
-    survey_labels: 13 - Riviere du Rempart | 13 – Riviere du Rempart
+    survey_labels: "13 - Riviere du Rempart | 13 \u2013 Riviere du Rempart"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2025
     gmd_subnatid2: MUS_2015_GAUL1_2025
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -349,16 +662,16 @@ parameters:
     geo_name: Riviere Du Rempart
     source_row: 10437
   - country_entry_id: MUS-SUBNAT-04
-    survey_labels: 14 - Flacq | 14 – Flacq
+    survey_labels: "14 - Flacq | 14 \u2013 Flacq"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2019
     gmd_subnatid2: MUS_2015_GAUL1_2019
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -370,16 +683,16 @@ parameters:
     geo_name: Flacq
     source_row: 10438
   - country_entry_id: MUS-SUBNAT-05
-    survey_labels: 15 - Grand Port | 15 – Grand Port
+    survey_labels: "15 - Grand Port | 15 \u2013 Grand Port"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2020
     gmd_subnatid2: MUS_2015_GAUL1_2020
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -391,16 +704,16 @@ parameters:
     geo_name: Grand Port
     source_row: 10439
   - country_entry_id: MUS-SUBNAT-06
-    survey_labels: 16 - Savanne | 16 – Savanne
+    survey_labels: "16 - Savanne | 16 \u2013 Savanne"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2026
     gmd_subnatid2: MUS_2015_GAUL1_2026
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -412,16 +725,16 @@ parameters:
     geo_name: Savanne
     source_row: 10440
   - country_entry_id: MUS-SUBNAT-07
-    survey_labels: 17 - Plaines Wilhems | 17 – Plaines Wilhems
+    survey_labels: "17 - Plaines Wilhems | 17 \u2013 Plaines Wilhems"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2023
     gmd_subnatid2: MUS_2015_GAUL1_2023
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -433,16 +746,16 @@ parameters:
     geo_name: Plaines Wilhems
     source_row: 10441
   - country_entry_id: MUS-SUBNAT-08
-    survey_labels: 18 - Moka | 18 – Moka
+    survey_labels: "18 - Moka | 18 \u2013 Moka"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2021
     gmd_subnatid2: MUS_2015_GAUL1_2021
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -454,16 +767,16 @@ parameters:
     geo_name: Moka
     source_row: 10442
   - country_entry_id: MUS-SUBNAT-09
-    survey_labels: 19 - Black River | 19 – Black River
+    survey_labels: "19 - Black River | 19 \u2013 Black River"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2018
     gmd_subnatid2: MUS_2015_GAUL1_2018
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -475,16 +788,16 @@ parameters:
     geo_name: Black River
     source_row: 10443
   - country_entry_id: MUS-SUBNAT-10
-    survey_labels: 21 - Rodrigues | 21 – Rodrigues
+    survey_labels: "21 - Rodrigues | 21 \u2013 Rodrigues"
     survey_variables: subnatid1 | subnatid2
     gmd_subnatid1: MUS_2015_GAUL1_2017
     gmd_subnatid2: MUS_2015_GAUL1_2017
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -497,13 +810,13 @@ parameters:
     source_row: 10444
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MUS-SAN-01
     source_category_code: no_latrine
@@ -513,8 +826,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MUS-SAN-02
     source_category_code: no_none_available
@@ -524,8 +837,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MUS-SAN-03
     source_category_code: non_pas_disponible
@@ -535,8 +848,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MUS-SAN-04
     source_category_code: other_unimproved_we_don_t_know_the_type_of_facilities
@@ -546,18 +859,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MUS_Mauritius_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MUS-WAS-01
     source_category_code: purchased_from_a_tanker_truck
@@ -567,8 +880,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MUS-WAS-02
     source_category_code: bottled_water
@@ -578,19 +891,19 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MUS-WAS-03
     source_category_code: rainwater_collection
     national_label_en: Rainwater collection
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MUS-WAS-04
     source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
@@ -601,8 +914,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MUS-WAS-05
     source_category_code: piped_water_into_dwelling
@@ -612,8 +925,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MUS-WAS-06
     source_category_code: piped_water_into_yard_plot_or_compound
@@ -623,13 +936,13 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MUS_Mauritius_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

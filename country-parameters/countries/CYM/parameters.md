@@ -6,9 +6,9 @@ status: draft
 country_name: CYM
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: CYM-EDU-01
     national_label_en: Early Childhood Pre-School
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: CYM-EDU-02
     national_label_en: Early Childhood Care and Education
     national_label_local: Early Childhood Care and Education
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: CYM-EDU-03
     national_label_en: Reception programme
     national_label_local: Reception programme
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: CYM-EDU-04
     national_label_en: Primary education
     national_label_local: Primary education
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CYM-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: CYM-EDU-05
     national_label_en: Special Educational Needs Primary
     national_label_local: Special Educational Needs Primary
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CYM-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: CYM-EDU-06
     national_label_en: Lower secondary (Middle schooling)
     national_label_local: Lower secondary (Middle schooling)
@@ -76,6 +106,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - CYM-EDU-04
+    - CYM-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
   - country_entry_id: CYM-EDU-07
     national_label_en: Special needs Lower Secondary
     national_label_local: Special needs Lower Secondary
@@ -87,6 +127,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - CYM-EDU-04
+    - CYM-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
   - country_entry_id: CYM-EDU-08
     national_label_en: Upper secondary
     national_label_local: Upper secondary
@@ -98,6 +148,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - CYM-EDU-06
+    - CYM-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    - CYM-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
+    - 'minimum parent path selected from: CYM-EDU-06, CYM-EDU-07'
   - country_entry_id: CYM-EDU-09
     national_label_en: Special Educational Needs - upper secondary
     national_label_local: Special Educational Needs - upper secondary
@@ -109,6 +171,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - CYM-EDU-06
+    - CYM-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    - CYM-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
+    - 'minimum parent path selected from: CYM-EDU-06, CYM-EDU-07'
   - country_entry_id: CYM-EDU-10
     national_label_en: Special Needs Adult Training Centre
     national_label_local: Special Needs Adult Training Centre
@@ -120,6 +194,12 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids: []
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - CYM-EDU-10
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: CYM-EDU-11
     national_label_en: Advanced level programme
     national_label_local: Advanced level programme
@@ -131,6 +211,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - CYM-EDU-08
+    - CYM-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    - CYM-EDU-08
+    - CYM-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
+    - 'minimum parent path selected from: CYM-EDU-06, CYM-EDU-07'
+    - 'minimum parent path selected from: CYM-EDU-08, CYM-EDU-09'
   - country_entry_id: CYM-EDU-12
     national_label_en: Associates programme
     national_label_local: Associates programme
@@ -142,6 +236,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - CYM-EDU-08
+    - CYM-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    - CYM-EDU-08
+    - CYM-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
+    - 'minimum parent path selected from: CYM-EDU-06, CYM-EDU-07'
+    - 'minimum parent path selected from: CYM-EDU-08, CYM-EDU-09'
   - country_entry_id: CYM-EDU-13
     national_label_en: Tertiary education
     national_label_local: Tertiary education
@@ -153,6 +261,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - CYM-EDU-08
+    - CYM-EDU-09
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    - CYM-EDU-08
+    - CYM-EDU-13
+    cum_years_status: computed
+    review_flags: &id001
+    - 'minimum parent path selected from: CYM-EDU-04, CYM-EDU-05'
+    - 'minimum parent path selected from: CYM-EDU-06, CYM-EDU-07'
+    - 'minimum parent path selected from: CYM-EDU-08, CYM-EDU-09'
   - country_entry_id: CYM-EDU-14
     national_label_en: Post degree - Master
     national_label_local: Post degree - Master
@@ -164,11 +286,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - CYM-EDU-13
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - CYM-EDU-04
+    - CYM-EDU-06
+    - CYM-EDU-08
+    - CYM-EDU-13
+    - CYM-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Cayman
       Islands.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -6,9 +6,9 @@ status: draft
 country_name: LIE
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LIE-EDU-01
     national_label_en: Kindergarten
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LIE-EDU-02
     national_label_en: Nurseries / care services with partly pedagogical concepts
-    national_label_local: Kindertagesstätten
+    national_label_local: "Kindertagesst\xE4tten"
     entry_age: 0
     duration_years: 0
     isced_level: '0'
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LIE-EDU-03
     national_label_en: Primary education level
     national_label_local: Primarstufe
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - LIE-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: LIE-EDU-04
     national_label_en: Lower secondary education level
     national_label_local: Sekundarstufe I (Oberschule, Realschule, Gymnasium Unterstufe)
@@ -54,9 +72,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 8
+    parent_country_entry_ids:
+    - LIE-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-05
     national_label_en: Bridging program
-    national_label_local: Brückenangebot (Freiwilliges 10. Schuljahr)
+    national_label_local: "Br\xFCckenangebot (Freiwilliges 10. Schuljahr)"
     entry_age: 15
     duration_years: 1
     isced_level: '3'
@@ -65,6 +91,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-06
     national_label_en: Uncertified apprenticeship in dual system
     national_label_local: Anlehre
@@ -76,6 +111,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-07
     national_label_en: Vocational education in dual system, 2 years
     national_label_local: Berufliche Grundbildung mit Berufsattest (2 Jahre)
@@ -87,9 +131,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-08
     national_label_en: Vocational education in dual system, 2 years
-    national_label_local: Berufliche Grundbildung mit Fähigkeitszeugnis (2 Jahre)
+    national_label_local: "Berufliche Grundbildung mit F\xE4higkeitszeugnis (2 Jahre)"
     entry_age: 15
     duration_years: 2
     isced_level: '3'
@@ -98,9 +151,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-09
     national_label_en: Vocational education in dual system, 3-4 years
-    national_label_local: Berufliche Grundbildung mit Fähigkeitszeugnis (3-4 Jahre)
+    national_label_local: "Berufliche Grundbildung mit F\xE4higkeitszeugnis (3-4 Jahre)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -109,10 +171,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-10
     national_label_en: Vocational education in dual system, including a vocational
       baccalaureat
-    national_label_local: Lehre mit Berufsmaturität
+    national_label_local: "Lehre mit Berufsmaturit\xE4t"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -121,6 +192,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-11
     national_label_en: Upper secondary education level / school preparing for the
       University enrance certificate
@@ -133,6 +213,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-12
     national_label_en: Vocational baccalaureate after obtention of the certificat
       of vocational education, 1 year
@@ -145,6 +234,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - LIE-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LIE-EDU-13
     national_label_en: Bachelor
     national_label_local: Hochschulen, Bachelor
@@ -156,6 +254,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - LIE-EDU-05
+    - LIE-EDU-06
+    - LIE-EDU-11
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-05
+    - LIE-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LIE-EDU-05, LIE-EDU-06, LIE-EDU-11'
   - country_entry_id: LIE-EDU-14
     national_label_en: Master
     national_label_local: Hochschulen, Master
@@ -167,6 +278,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - LIE-EDU-13
+    - LIE-EDU-15
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-05
+    - LIE-EDU-13
+    - LIE-EDU-14
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: LIE-EDU-05, LIE-EDU-06, LIE-EDU-11'
+    - 'minimum parent path selected from: LIE-EDU-13, LIE-EDU-15'
   - country_entry_id: LIE-EDU-15
     national_label_en: Post-graduate / further education degrees on higher education
       level
@@ -179,6 +304,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - LIE-EDU-05
+    - LIE-EDU-06
+    - LIE-EDU-11
+    cum_years_schooling: 70
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-05
+    - LIE-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LIE-EDU-05, LIE-EDU-06, LIE-EDU-11'
   - country_entry_id: LIE-EDU-16
     national_label_en: Doctorate
     national_label_local: Doktorat
@@ -190,10 +328,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - LIE-EDU-14
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - LIE-EDU-03
+    - LIE-EDU-04
+    - LIE-EDU-05
+    - LIE-EDU-13
+    - LIE-EDU-14
+    - LIE-EDU-16
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Liechtenstein.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

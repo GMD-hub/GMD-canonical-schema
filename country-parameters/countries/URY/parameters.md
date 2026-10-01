@@ -6,13 +6,13 @@ status: draft
 country_name: URY
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: URY-EDU-01
     national_label_en: Early childhood education development
-    national_label_local: Educación de la primera infancia
+    national_label_local: "Educaci\xF3n de la primera infancia"
     entry_age: 0
     duration_years: 3
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: URY-EDU-02
     national_label_en: Initial education
-    national_label_local: Educación Inicial
+    national_label_local: "Educaci\xF3n Inicial"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: URY-EDU-03
     national_label_en: Primary
     national_label_local: Primaria
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - URY-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: URY-EDU-04
     national_label_en: Adult primary education
-    national_label_local: Educación Primaria Adultos
+    national_label_local: "Educaci\xF3n Primaria Adultos"
     entry_age: 15
     duration_years: 2
     isced_level: '1'
@@ -54,9 +72,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - URY-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: URY-EDU-05
     national_label_en: Basic cycle of middle education
-    national_label_local: Ciclo Básico de Educación Media Básica
+    national_label_local: "Ciclo B\xE1sico de Educaci\xF3n Media B\xE1sica"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -65,9 +89,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - URY-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: URY-EDU-06
     national_label_en: Rural basic cycle
-    national_label_local: Ciclo Básico Rural
+    national_label_local: "Ciclo B\xE1sico Rural"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -76,9 +108,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - URY-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: URY-EDU-07
     national_label_en: Agrarian / Technological / Rural Technological basic cycle
-    national_label_local: Ciclo Básico Agrario / Tecnológico / Tecnológico Rural
+    national_label_local: "Ciclo B\xE1sico Agrario / Tecnol\xF3gico / Tecnol\xF3gico\
+      \ Rural"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -87,9 +128,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - URY-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: URY-EDU-08
     national_label_en: Basic Vocational Training Plan 2007 and other programs
-    national_label_local: Formación Profesional Básica Plan 2007 y otros programas
+    national_label_local: "Formaci\xF3n Profesional B\xE1sica Plan 2007 y otros programas"
     entry_age: 12
     duration_years: 2
     isced_level: '2'
@@ -98,9 +147,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - URY-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: URY-EDU-09
     national_label_en: Articulation of Basic Secondary Education (EMB) and other modalities
-    national_label_local: Articulación de Educación Media Básica (EMB) y otras modalidades
+    national_label_local: "Articulaci\xF3n de Educaci\xF3n Media B\xE1sica (EMB) y\
+      \ otras modalidades"
     entry_age: 18
     duration_years: 1
     isced_level: '2'
@@ -109,6 +167,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - URY-EDU-03
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: URY-EDU-10
     national_label_en: Diversified high school
     national_label_local: Bachillerato Diversificado
@@ -120,9 +186,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-11
     national_label_en: Technological middle education
-    national_label_local: Educación Media Tecnológica
+    national_label_local: "Educaci\xF3n Media Tecnol\xF3gica"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -131,6 +212,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-12
     national_label_en: Figari high school
     national_label_local: Bachillerato Figari
@@ -142,6 +238,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-13
     national_label_en: Professional high school
     national_label_local: Bachillerato Profesional
@@ -153,9 +264,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-14
     national_label_en: Technical Course (Clothing)
-    national_label_local: Curso Técnico (Vestimenta)
+    national_label_local: "Curso T\xE9cnico (Vestimenta)"
     entry_age: 15
     duration_years: 4
     isced_level: '3'
@@ -164,10 +290,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-15
     national_label_en: Final technological middle education (FINEST)
-    national_label_local: Programa Finalización de la Educación Media Tecnológica
-      (FINEST)
+    national_label_local: "Programa Finalizaci\xF3n de la Educaci\xF3n Media Tecnol\xF3\
+      gica (FINEST)"
     entry_age: 17
     duration_years: 2
     isced_level: '3'
@@ -176,6 +317,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-16
     national_label_en: Professional high school Trayectos
     national_label_local: Bachillerato Profesional Trayectos
@@ -187,9 +343,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 22
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-17
     national_label_en: Articulation of Upper Secondary Education (EMS)
-    national_label_local: Articulación Educación Media Superior (EMS)
+    national_label_local: "Articulaci\xF3n Educaci\xF3n Media Superior (EMS)"
     entry_age: 18
     duration_years: 1
     isced_level: '3'
@@ -198,6 +369,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 23
+    parent_country_entry_ids:
+    - URY-EDU-05
+    - URY-EDU-06
+    - URY-EDU-07
+    - URY-EDU-08
+    - URY-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
   - country_entry_id: URY-EDU-18
     national_label_en: Technical careers
     national_label_local: Tecnicaturas
@@ -209,9 +395,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-19
     national_label_en: Technical and technological careers
-    national_label_local: Carreras técnicas y tecnológicas
+    national_label_local: "Carreras t\xE9cnicas y tecnol\xF3gicas"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -220,9 +426,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-20
     national_label_en: Education training
-    national_label_local: Carreras de formación en educación
+    national_label_local: "Carreras de formaci\xF3n en educaci\xF3n"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -231,9 +457,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-21
     national_label_en: Bachelor's (4 years)
-    national_label_local: Licenciatura corta (4 años)
+    national_label_local: "Licenciatura corta (4 a\xF1os)"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -242,11 +488,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-22
     national_label_en: Long bachelor's (Chemistry, Clinical Biochemistry, Pharmaceutical
       Chemistry, Engineering, among others)
-    national_label_local: Licenciatura (larga) en Química, Bioquímica Clínica, Química
-      Farmacéutica, Ingeniería, entre otras
+    national_label_local: "Licenciatura (larga) en Qu\xEDmica, Bioqu\xEDmica Cl\xED\
+      nica, Qu\xEDmica Farmac\xE9utica, Ingenier\xEDa, entre otras"
     entry_age: 18
     duration_years: 5
     isced_level: '7'
@@ -255,11 +521,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-23
     national_label_en: Long bachelor's (Nursing, Doctor of Dentistry, Doctor of Veterinary
       Sciences, among others)
-    national_label_local: Licenciatura (larga) en Enfermería, Doctor en Odontología,
-      Doctor en Ciencias Veterinarias (a nivel de grado)
+    national_label_local: "Licenciatura (larga) en Enfermer\xEDa, Doctor en Odontolog\xED\
+      a, Doctor en Ciencias Veterinarias (a nivel de grado)"
     entry_age: 18
     duration_years: 5
     isced_level: '7'
@@ -268,6 +554,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-24
     national_label_en: Long bachelor's in Arts
     national_label_local: Licenciatura (larga) en Artes
@@ -279,10 +585,30 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-25
     national_label_en: Long bachelor's (Architecture, Laws, Public notary)
-    national_label_local: Licenciatura (larga) en Arquitectura, Doctor en Derecho,
-      Escribanía Pública
+    national_label_local: "Licenciatura (larga) en Arquitectura, Doctor en Derecho,\
+      \ Escriban\xEDa P\xFAblica"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -291,6 +617,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-26
     national_label_en: Medicine
     national_label_local: Doctor en medicina (a nivel de grado)
@@ -302,6 +648,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-27
     national_label_en: Diploma / Post-graduate programmes
     national_label_local: Diploma / Postgrado / Certificado
@@ -313,9 +679,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-28
     national_label_en: Medical specialization
-    national_label_local: Especialización médica
+    national_label_local: "Especializaci\xF3n m\xE9dica"
     entry_age: 25
     duration_years: 3
     isced_level: '7'
@@ -324,9 +710,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - URY-EDU-10
+    - URY-EDU-11
+    - URY-EDU-12
+    - URY-EDU-13
+    - URY-EDU-15
+    - URY-EDU-16
+    - URY-EDU-17
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
   - country_entry_id: URY-EDU-29
     national_label_en: Master's
-    national_label_local: Maestría
+    national_label_local: "Maestr\xEDa"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -335,6 +741,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - URY-EDU-20
+    - URY-EDU-21
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-20
+    - URY-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
+    - 'minimum parent path selected from: URY-EDU-20, URY-EDU-21'
   - country_entry_id: URY-EDU-30
     national_label_en: Doctorate
     national_label_local: Doctorado
@@ -346,15 +769,39 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - URY-EDU-22
+    - URY-EDU-23
+    - URY-EDU-24
+    - URY-EDU-25
+    - URY-EDU-26
+    - URY-EDU-27
+    - URY-EDU-28
+    - URY-EDU-29
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - URY-EDU-03
+    - URY-EDU-09
+    - URY-EDU-16
+    - URY-EDU-27
+    - URY-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: URY-EDU-05, URY-EDU-06, URY-EDU-07, URY-EDU-08,
+      URY-EDU-09'
+    - 'minimum parent path selected from: URY-EDU-10, URY-EDU-11, URY-EDU-12, URY-EDU-13,
+      URY-EDU-15, URY-EDU-16, URY-EDU-17'
+    - 'minimum parent path selected from: URY-EDU-22, URY-EDU-23, URY-EDU-24, URY-EDU-25,
+      URY-EDU-26, URY-EDU-27, URY-EDU-28, URY-EDU-29'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Uruguay.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: URY-SUBNAT-01
     survey_labels: 1 - Montevideo Metropolitano
@@ -363,10 +810,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: URY_2015_GAULx_1
     geo_year: '2015'
@@ -384,10 +831,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: URY_2015_GAULx_2
     geo_year: '2015'
@@ -405,10 +852,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: URY_2015_GAULx_3
     geo_year: '2015'
@@ -427,10 +874,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: URY_2015_GAULx_4
     geo_year: '2015'
@@ -448,10 +895,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: URY_2015_GAULx_5
     geo_year: '2015'
@@ -464,13 +911,13 @@ parameters:
     source_row: 17460
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: URY-SAN-01
     source_category_code: otro_superficie_etc
@@ -480,8 +927,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: URY-SAN-02
     source_category_code: red_general
@@ -491,19 +938,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: URY-SAN-03
     source_category_code: fosa_septica_pozo_negro
-    national_label_en: Fosa séptica, pozo negro
+    national_label_en: "Fosa s\xE9ptica, pozo negro"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: URY-SAN-04
     source_category_code: private_domestic_connection_to_sewage_system
@@ -513,8 +960,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: URY-SAN-05
     source_category_code: private_flush_to_septic_tank
@@ -524,8 +971,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: URY-SAN-06
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -536,8 +983,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: URY-SAN-07
     source_category_code: shared_flush_to_septic_tank
@@ -547,8 +994,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: URY-SAN-08
     source_category_code: baldeo_a_otra_parte
@@ -558,8 +1005,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: URY-SAN-09
     source_category_code: servicio_sanitario_entubado_hacia_el_arroyo
@@ -569,8 +1016,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: URY-SAN-10
     source_category_code: inodoro_conectado_a_red_de_saneamiento
@@ -580,8 +1027,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: URY-SAN-11
     source_category_code: servicio_sanitario_evacuado_a_red_general
@@ -591,8 +1038,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: URY-SAN-12
     source_category_code: inodoro_o_taza_turca_letrina_conectado_a_a_pozo_permeable_perdedor
@@ -603,30 +1050,30 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: URY-SAN-13
     source_category_code: inodoro_conectado_a_fosa_sa_ptica_o_pozo_impermeable
-    national_label_en: Inodoro conectado a fosa sÃ©ptica o pozo impermeable
+    national_label_en: "Inodoro conectado a fosa s\xC3\xA9ptica o pozo impermeable"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: URY-SAN-14
     source_category_code: servicio_sanitario_a_fosa_septica_o_pozo_negro
-    national_label_en: Servicio sanitario a fosa séptica o pozo negro
+    national_label_en: "Servicio sanitario a fosa s\xE9ptica o pozo negro"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: URY-SAN-15
     source_category_code: balde
@@ -636,8 +1083,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: URY-SAN-16
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -647,8 +1094,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: URY-SAN-17
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -659,8 +1106,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: URY-SAN-18
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -671,8 +1118,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: URY-SAN-19
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -683,31 +1130,31 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: URY-SAN-20
     source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
-    national_label_local: Letrinas de arrastre hidráulico (privado)
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: URY-SAN-21
     source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
-    national_label_local: Letrinas de arrastre hidráulico (publico)
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
       latrine
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: URY-SAN-22
     source_category_code: no_hay_instalacion_sanitaria_va_al_monte_campo
@@ -717,8 +1164,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: URY-SAN-23
     source_category_code: no_tiene
@@ -728,8 +1175,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: URY-SAN-24
     source_category_code: sin_cisterna_fosa_septica_pozo_negro
@@ -739,8 +1186,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: URY-SAN-25
     source_category_code: sin_cisterna_red_general
@@ -750,8 +1197,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: URY-SAN-26
     source_category_code: sin_cisterna_fosa_septica_pozo_negro
@@ -761,8 +1208,8 @@ parameters:
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: URY-SAN-27
     source_category_code: sin_cisterna_red_general
@@ -772,8 +1219,8 @@ parameters:
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: URY-SAN-28
     source_category_code: entubado_hacia_el_arroyo
@@ -783,8 +1230,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: URY-SAN-29
     source_category_code: otro
@@ -794,8 +1241,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: URY-SAN-30
     source_category_code: otros_superficie_etc
@@ -805,8 +1252,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: URY-SAN-31
     source_category_code: sin_cisterna_otro
@@ -816,18 +1263,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_URY_Uruguay_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: URY-WAS-01
     source_category_code: manantial_o_pozo_surgente_protegido
@@ -837,8 +1284,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: URY-WAS-02
     source_category_code: pozo_protegido
@@ -848,8 +1295,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: URY-WAS-03
     source_category_code: pozo_surgente_protegido
@@ -859,8 +1306,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: URY-WAS-04
     source_category_code: pozo_o_manantial_protegido
@@ -870,8 +1317,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: URY-WAS-05
     source_category_code: protected_dug_well_or_protected_spring
@@ -881,8 +1328,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: URY-WAS-06
     source_category_code: pozo_surgente
@@ -892,8 +1339,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: URY-WAS-07
     source_category_code: pozo_con_tuberia
@@ -903,8 +1350,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: URY-WAS-08
     source_category_code: pozo_perforado_o_tubular
@@ -914,8 +1361,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: URY-WAS-09
     source_category_code: protected_tube_well_or_bore_hole
@@ -925,8 +1372,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: URY-WAS-10
     source_category_code: manantial_o_pozo_surgente_no_protegido
@@ -936,8 +1383,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: URY-WAS-11
     source_category_code: pozo_no_protegido
@@ -947,8 +1394,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: URY-WAS-12
     source_category_code: pozo_surgente_no_protegido
@@ -958,8 +1405,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: URY-WAS-13
     source_category_code: pozo_o_manantial_no_protegido
@@ -969,8 +1416,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: URY-WAS-14
     source_category_code: unprotected_dug_well_or_spring
@@ -980,30 +1427,30 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: URY-WAS-15
     source_category_code: carro_con_tanque_o_bidon_pequea_o_camion_cisterna
-    national_label_en: Carro con tanque o bidon pequeã‘o / camion cisterna
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_en: "Carro con tanque o bidon peque\xE3\u2018o / camion cisterna"
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: URY-WAS-16
     source_category_code: carrotanque_camion_cisterna
     national_label_en: Carrotanque / camion cisterna
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: URY-WAS-17
     source_category_code: aljibe
@@ -1013,8 +1460,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: URY-WAS-18
     source_category_code: tanker_truck_vendor
@@ -1024,8 +1471,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: URY-WAS-19
     source_category_code: otra
@@ -1035,8 +1482,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: URY-WAS-20
     source_category_code: otro
@@ -1046,8 +1493,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: URY-WAS-21
     source_category_code: otros
@@ -1057,8 +1504,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: URY-WAS-22
     source_category_code: agua_embotellada_agua_en_bolsitas_garrafones
@@ -1068,8 +1515,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: URY-WAS-23
     source_category_code: agua_embotellada_envasada
@@ -1079,8 +1526,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: URY-WAS-24
     source_category_code: agua_de_lluvia
@@ -1090,8 +1537,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: URY-WAS-25
     source_category_code: rainwater_into_tank_or_cistern
@@ -1101,8 +1548,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: URY-WAS-26
     source_category_code: recogen_agua_de_lluvia
@@ -1112,8 +1559,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: URY-WAS-27
     source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_canal_de_irrigacion
@@ -1124,8 +1571,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: URY-WAS-28
     source_category_code: aguas_de_superficie_rio_arroyo_presa_lago_charca_canal_o_acequia
@@ -1136,19 +1583,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: URY-WAS-29
     source_category_code: arroyo_rio
-    national_label_en: Arroyo río
+    national_label_en: "Arroyo r\xEDo"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: URY-WAS-30
     source_category_code: arroyo_rio
@@ -1158,8 +1605,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: URY-WAS-31
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -1169,8 +1616,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: URY-WAS-32
     source_category_code: red_general_por_otros_medios
@@ -1180,8 +1627,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: URY-WAS-33
     source_category_code: tuberia_otro
@@ -1191,8 +1638,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: URY-WAS-34
     source_category_code: tuberia_al_vecino
@@ -1202,8 +1649,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: URY-WAS-35
     source_category_code: piped_water_through_house_connection_or_yard
@@ -1213,19 +1660,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: URY-WAS-36
     source_category_code: por_caneria_dentro_de_la_vivienda
-    national_label_en: Por cañería dentro de la vivienda
+    national_label_en: "Por ca\xF1er\xEDa dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: URY-WAS-37
     source_category_code: red_general_dentro_de_la_vivienda
@@ -1235,8 +1682,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: URY-WAS-38
     source_category_code: tuberia_dentro_de_la_vivienda
@@ -1246,19 +1693,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: URY-WAS-39
     source_category_code: por_caneria_fuera_de_la_vivienda_menos_de_100_m
-    national_label_en: Por cañería fuera de la vivienda (menos de 100 m)
+    national_label_en: "Por ca\xF1er\xEDa fuera de la vivienda (menos de 100 m)"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: URY-WAS-40
     source_category_code: red_general_fuera_de_la_vivienda_a_100m
@@ -1268,8 +1715,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: URY-WAS-41
     source_category_code: tuberia_dentro_del_terreno_patio_o_lote
@@ -1279,8 +1726,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: URY-WAS-42
     source_category_code: tuberia_dentro_del_terreno_lote
@@ -1290,57 +1737,57 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: URY-WAS-43
     source_category_code: canilla_o_grifo_publico
     national_label_en: Canilla o grifo publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: URY-WAS-44
     source_category_code: llave_grifo_publico
     national_label_en: Llave/grifo publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: URY-WAS-45
     source_category_code: por_caneria_fuera_de_la_vivienda_mas_de_100_m
-    national_label_en: Por cañería fuera de la vivienda (más de 100 m)
-    national_label_local: Fuentes públicas
+    national_label_en: "Por ca\xF1er\xEDa fuera de la vivienda (m\xE1s de 100 m)"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: URY-WAS-46
     source_category_code: public_standpipe
     national_label_en: Public standpipe
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_URY_Uruguay_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

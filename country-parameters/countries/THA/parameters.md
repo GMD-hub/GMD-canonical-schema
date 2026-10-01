@@ -6,13 +6,14 @@ status: draft
 country_name: THA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: THA-EDU-01
     national_label_en: Learning and childcare
-    national_label_local: การศึกษาระดับปฐมวัย
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E1B\u0E10\u0E21\u0E27\u0E31\u0E22"
     entry_age: 1
     duration_years: 1
     isced_level: '0'
@@ -21,9 +22,17 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: THA-EDU-02
     national_label_en: Pre-primary
-    national_label_local: การศึกษาระดับก่อนประถมศึกษา
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E01\u0E48\u0E2D\u0E19\u0E1B\u0E23\u0E30\u0E16\u0E21\u0E28\
+      \u0E36\u0E01\u0E29\u0E32"
     entry_age: 3
     duration_years: 2
     isced_level: '0'
@@ -32,9 +41,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: THA-EDU-03
     national_label_en: Primary education
-    national_label_local: การศึกษาระดับประถมศึกษา
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E1B\u0E23\u0E30\u0E16\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -43,9 +59,18 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - THA-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: THA-EDU-04
     national_label_en: Primary Basic Education for Adults
-    national_label_local: การศึกษานอกระบบ หลักสูตรชั้นประถมศึกษา
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E19\u0E2D\
+      \u0E01\u0E23\u0E30\u0E1A\u0E1A \u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\
+      \u0E0A\u0E31\u0E49\u0E19\u0E1B\u0E23\u0E30\u0E16\u0E21\u0E28\u0E36\u0E01\u0E29\
+      \u0E32"
     entry_age: 15
     duration_years: 0
     isced_level: '1'
@@ -54,9 +79,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - THA-EDU-04
+    cum_years_status: computed
+    review_flags: &id002 []
   - country_entry_id: THA-EDU-05
     national_label_en: Lower Secondary education (Grades 7-9)
-    national_label_local: การศึกษาระดับมัธยมศึกษาตอนต้น
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\
+      \u0E15\u0E2D\u0E19\u0E15\u0E49\u0E19"
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -65,9 +98,20 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - THA-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: THA-EDU-06
     national_label_en: Lower Secondary  Basic Education for Adults
-    national_label_local: การศึกษานอกระบบ หลักสูตรชั้นมัธยมศึกษาตอนต้น
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E19\u0E2D\
+      \u0E01\u0E23\u0E30\u0E1A\u0E1A \u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\
+      \u0E0A\u0E31\u0E49\u0E19\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\
+      \u0E32\u0E15\u0E2D\u0E19\u0E15\u0E49\u0E19"
     entry_age: 15
     duration_years: 0
     isced_level: '2'
@@ -76,9 +120,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - THA-EDU-04
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - THA-EDU-04
+    - THA-EDU-06
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: THA-EDU-07
     national_label_en: Upper Secondary education (Grades 10-12)
-    national_label_local: "การศึกษาระดับมัธยมศึกษาตอนปลาย \nประเภทสายสามัญ/วิชาการ"
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\
+      \u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22 \n\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\
+      \u0E2A\u0E32\u0E22\u0E2A\u0E32\u0E21\u0E31\u0E0D/\u0E27\u0E34\u0E0A\u0E32\u0E01\
+      \u0E32\u0E23"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -87,9 +143,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - THA-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: THA-EDU-08
     national_label_en: Upper Secondary  Basic Education for Adults
-    national_label_local: การศึกษานอกระบบ หลักสูตรชั้นมัธยมศึกษาตอนปลาย
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E19\u0E2D\
+      \u0E01\u0E23\u0E30\u0E1A\u0E1A \u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\
+      \u0E0A\u0E31\u0E49\u0E19\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\
+      \u0E32\u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22"
     entry_age: 15
     duration_years: 0
     isced_level: '3'
@@ -98,11 +166,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - THA-EDU-06
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - THA-EDU-04
+    - THA-EDU-06
+    - THA-EDU-08
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: THA-EDU-09
     national_label_en: Upper Secondary, Vocational Education and Training
-    national_label_local: |-
-      การศึกษาระดับมัธยมศึกษาตอนปลาย
-      ประเภทอาชีวศึกษา
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E21\u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\
+      \u0E15\u0E2D\u0E19\u0E1B\u0E25\u0E32\u0E22\n\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\
+      \u0E2D\u0E32\u0E0A\u0E35\u0E27\u0E28\u0E36\u0E01\u0E29\u0E32"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -111,9 +189,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - THA-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: THA-EDU-10
     national_label_en: Education provided by other agencies in Upper Secondary
-    national_label_local: การจัดการศึกษาเฉพาะทาง หลักสูตรระดับมัธยมศึกษาตอนปลาย สายอาชีพ(ปวช.
+    national_label_local: "\u0E01\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E28\
+      \u0E36\u0E01\u0E29\u0E32\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E17\u0E32\u0E07 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E21\
+      \u0E31\u0E18\u0E22\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32\u0E15\u0E2D\u0E19\u0E1B\
+      \u0E25\u0E32\u0E22 \u0E2A\u0E32\u0E22\u0E2D\u0E32\u0E0A\u0E35\u0E1E(\u0E1B\u0E27\
+      \u0E0A."
     entry_age: 14
     duration_years: 3
     isced_level: '3'
@@ -122,9 +214,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - THA-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: THA-EDU-11
     national_label_en: Diploma in other types of education
-    national_label_local: หลักสูตรอนุปริญญา
+    national_label_local: "\u0E2B\u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E2D\u0E19\
+      \u0E38\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -133,9 +235,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-12
     national_label_en: Diploma in Technical education
-    national_label_local: "การศึกษาระดับอุดมศึกษา \nหลักสูตรต่ำกว่าปริญญาตรี ประเภทอาชีวศึกษา"
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \n\u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E15\u0E48\u0E33\u0E01\u0E27\u0E48\
+      \u0E32\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\u0E15\u0E23\u0E35 \u0E1B\u0E23\u0E30\
+      \u0E40\u0E20\u0E17\u0E2D\u0E32\u0E0A\u0E35\u0E27\u0E28\u0E36\u0E01\u0E29\u0E32"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -144,9 +262,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-13
     national_label_en: Diploma in Vocational education
-    national_label_local: 'การศึกษาระดับอุดมศึกษา ระดับต่ำกว่าปริญญา : ประกาศนียบัตรวิชาชีพชั้นสูง'
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E23\
+      \u0E30\u0E14\u0E31\u0E1A\u0E15\u0E48\u0E33\u0E01\u0E27\u0E48\u0E32\u0E1B\u0E23\
+      \u0E34\u0E0D\u0E0D\u0E32 : \u0E1B\u0E23\u0E30\u0E01\u0E32\u0E28\u0E19\u0E35\u0E22\
+      \u0E1A\u0E31\u0E15\u0E23\u0E27\u0E34\u0E0A\u0E32\u0E0A\u0E35\u0E1E\u0E0A\u0E31\
+      \u0E49\u0E19\u0E2A\u0E39\u0E07"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -155,9 +290,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-14
-    national_label_en: Bachelor’s or equivalent Level, Vocational Education and Training
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรีต่อเนื่อง ประเภทอาชีวศึกษา
+    national_label_en: "Bachelor\u2019s or equivalent Level, Vocational Education\
+      \ and Training"
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\u0E15\u0E48\u0E2D\u0E40\u0E19\u0E37\u0E48\u0E2D\u0E07 \u0E1B\
+      \u0E23\u0E30\u0E40\u0E20\u0E17\u0E2D\u0E32\u0E0A\u0E35\u0E27\u0E28\u0E36\u0E01\
+      \u0E29\u0E32"
     entry_age: 20
     duration_years: 2
     isced_level: '6'
@@ -166,9 +319,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-15
-    national_label_en: Bachelor’s or equivalent Level, General Education and Training
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรีต่อเนื่อง ประเภทสามัญศึกษา
+    national_label_en: "Bachelor\u2019s or equivalent Level, General Education and\
+      \ Training"
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\u0E15\u0E48\u0E2D\u0E40\u0E19\u0E37\u0E48\u0E2D\u0E07 \u0E1B\
+      \u0E23\u0E30\u0E40\u0E20\u0E17\u0E2A\u0E32\u0E21\u0E31\u0E0D\u0E28\u0E36\u0E01\
+      \u0E29\u0E32"
     entry_age: 20
     duration_years: 2
     isced_level: '6'
@@ -177,9 +348,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-16
     national_label_en: Bachelor's Degree - academic
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรี สายวิชาการ
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35 \u0E2A\u0E32\u0E22\u0E27\u0E34\u0E0A\u0E32\u0E01\u0E32\u0E23"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -188,9 +374,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-17
     national_label_en: Bachelor's Degree - professional
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรี สายวิชาชีพ
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35 \u0E2A\u0E32\u0E22\u0E27\u0E34\u0E0A\u0E32\u0E0A\u0E35\u0E1E"
     entry_age: 18
     duration_years: 4
     isced_level: '6'
@@ -199,12 +400,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-18
-    national_label_en: |-
-      Bachelor's Degree - teachers
+    national_label_en: 'Bachelor''s Degree - teachers
+
       - architecture
-      - engineer
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรีสายวิชาชีพ
+
+      - engineer'
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\u0E2A\u0E32\u0E22\u0E27\u0E34\u0E0A\u0E32\u0E0A\u0E35\u0E1E"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -213,9 +430,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-19
     national_label_en: Education provided by other agencies in Bachelor's Degree
-    national_label_local: การจัดการศึกษาเฉพาะทาง หลักสูตรระดับปริญญาตรี
+    national_label_local: "\u0E01\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E28\
+      \u0E36\u0E01\u0E29\u0E32\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E17\u0E32\u0E07 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E1B\
+      \u0E23\u0E34\u0E0D\u0E0D\u0E32\u0E15\u0E23\u0E35"
     entry_age: 0
     duration_years: 4
     isced_level: '6'
@@ -224,9 +456,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-20
     national_label_en: Graduate Diploma
-    national_label_local: ประกาศนียบัตรบัณฑิต
+    national_label_local: "\u0E1B\u0E23\u0E30\u0E01\u0E32\u0E28\u0E19\u0E35\u0E22\u0E1A\
+      \u0E31\u0E15\u0E23\u0E1A\u0E31\u0E13\u0E11\u0E34\u0E15"
     entry_age: 22
     duration_years: 1
     isced_level: '6'
@@ -235,11 +480,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-21
     national_label_en: Bachelor's Degree - medical
-    national_label_local: |-
-      การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาตรี
-      -สายแพทศาสตร์
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E15\u0E23\u0E35\n-\u0E2A\u0E32\u0E22\u0E41\u0E1E\u0E17\u0E28\u0E32\u0E2A\u0E15\
+      \u0E23\u0E4C"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -248,9 +507,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-22
     national_label_en: Master's Degree
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาโท
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E42\u0E17"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -259,9 +533,32 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - THA-EDU-14
+    - THA-EDU-15
+    - THA-EDU-16
+    - THA-EDU-17
+    - THA-EDU-18
+    - THA-EDU-19
+    - THA-EDU-20
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-20
+    - THA-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
+    - 'minimum parent path selected from: THA-EDU-14, THA-EDU-15, THA-EDU-16, THA-EDU-17,
+      THA-EDU-18, THA-EDU-19, THA-EDU-20'
   - country_entry_id: THA-EDU-23
     national_label_en: Education provided by other agencies in Master's Degree
-    national_label_local: การจัดการศึกษาเฉพาะทาง หลักสูตรระดับปริญญาโท
+    national_label_local: "\u0E01\u0E32\u0E23\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E28\
+      \u0E36\u0E01\u0E29\u0E32\u0E40\u0E09\u0E1E\u0E32\u0E30\u0E17\u0E32\u0E07 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E23\u0E30\u0E14\u0E31\u0E1A\u0E1B\
+      \u0E23\u0E34\u0E0D\u0E0D\u0E32\u0E42\u0E17"
     entry_age: 0
     duration_years: 2
     isced_level: '7'
@@ -270,9 +567,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - THA-EDU-14
+    - THA-EDU-15
+    - THA-EDU-16
+    - THA-EDU-17
+    - THA-EDU-18
+    - THA-EDU-19
+    - THA-EDU-20
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-20
+    - THA-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
+    - 'minimum parent path selected from: THA-EDU-14, THA-EDU-15, THA-EDU-16, THA-EDU-17,
+      THA-EDU-18, THA-EDU-19, THA-EDU-20'
   - country_entry_id: THA-EDU-24
     national_label_en: Higher Graduate Diploma
-    national_label_local: ประกาศนียบัตรบัณฑิตชั้นสูง
+    national_label_local: "\u0E1B\u0E23\u0E30\u0E01\u0E32\u0E28\u0E19\u0E35\u0E22\u0E1A\
+      \u0E31\u0E15\u0E23\u0E1A\u0E31\u0E13\u0E11\u0E34\u0E15\u0E0A\u0E31\u0E49\u0E19\
+      \u0E2A\u0E39\u0E07"
     entry_age: 24
     duration_years: 1
     isced_level: '7'
@@ -281,9 +600,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - THA-EDU-07
+    - THA-EDU-10
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
   - country_entry_id: THA-EDU-25
     national_label_en: Doctorate Degree
-    national_label_local: การศึกษาระดับอุดมศึกษา หลักสูตรปริญญาเอก
+    national_label_local: "\u0E01\u0E32\u0E23\u0E28\u0E36\u0E01\u0E29\u0E32\u0E23\u0E30\
+      \u0E14\u0E31\u0E1A\u0E2D\u0E38\u0E14\u0E21\u0E28\u0E36\u0E01\u0E29\u0E32 \u0E2B\
+      \u0E25\u0E31\u0E01\u0E2A\u0E39\u0E15\u0E23\u0E1B\u0E23\u0E34\u0E0D\u0E0D\u0E32\
+      \u0E40\u0E2D\u0E01"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -292,15 +626,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - THA-EDU-21
+    - THA-EDU-22
+    - THA-EDU-23
+    - THA-EDU-24
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - THA-EDU-03
+    - THA-EDU-05
+    - THA-EDU-07
+    - THA-EDU-24
+    - THA-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: THA-EDU-07, THA-EDU-10'
+    - 'minimum parent path selected from: THA-EDU-21, THA-EDU-22, THA-EDU-23, THA-EDU-24'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Thailand.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: THA-SUBNAT-01
     survey_labels: 1-Bangkok Metropolis
@@ -309,10 +659,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: THA_2015_GAULx_1
     geo_year: '2015'
@@ -331,10 +681,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: THA_2015_GAULx_2
     geo_year: '2015'
@@ -355,10 +705,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: THA_2015_GAULx_3
     geo_year: '2015'
@@ -378,10 +728,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: THA_2015_GAULx_4
     geo_year: '2015'
@@ -402,10 +752,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: THA_2015_GAULx_5
     geo_year: '2015'
@@ -424,10 +774,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2853
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -445,10 +795,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2906
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -466,10 +816,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2885
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -487,10 +837,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2886
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -508,10 +858,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2896
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -529,10 +879,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2852
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -550,10 +900,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2871
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -571,10 +921,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2912
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -592,10 +942,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2856
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -613,10 +963,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2909
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -634,10 +984,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2861
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -655,10 +1005,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2902
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -676,10 +1026,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2858
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -697,10 +1047,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2919
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -718,10 +1068,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2855
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -739,10 +1089,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2899
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -760,10 +1110,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2875
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -781,10 +1131,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2904
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -802,10 +1152,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2878
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -823,10 +1173,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2854
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -844,10 +1194,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2917
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -865,10 +1215,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2911
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -886,10 +1236,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2921
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -907,10 +1257,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2926
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -928,10 +1278,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2857
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -949,10 +1299,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2851
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -970,10 +1320,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2883
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -991,10 +1341,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2866
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1012,10 +1362,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2922
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1033,10 +1383,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2870
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1054,10 +1404,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2884
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1075,10 +1425,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2873
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1096,10 +1446,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2903
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1117,10 +1467,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2863
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1138,10 +1488,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2905
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1159,10 +1509,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2877
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1180,10 +1530,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2874
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1201,10 +1551,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2859
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1222,10 +1572,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2869
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1243,10 +1593,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2868
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1264,10 +1614,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2924
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1285,10 +1635,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2897
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1306,10 +1656,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2881
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1327,10 +1677,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2891
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1348,10 +1698,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2860
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1369,10 +1719,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2872
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1390,10 +1740,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2879
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1411,10 +1761,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2923
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1432,10 +1782,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2864
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1453,10 +1803,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2918
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1474,10 +1824,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2914
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1495,10 +1845,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2895
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1516,10 +1866,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2894
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1537,10 +1887,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2892
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1558,10 +1908,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2901
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1579,10 +1929,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2865
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1600,10 +1950,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2915
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1621,10 +1971,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2876
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1642,10 +1992,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2907
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1663,10 +2013,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2908
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1684,10 +2034,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2893
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1705,10 +2055,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2888
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1726,10 +2076,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2880
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1747,10 +2097,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2867
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1768,10 +2118,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2889
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1789,10 +2139,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2898
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1810,10 +2160,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2916
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1831,10 +2181,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2900
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1852,10 +2202,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2862
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1873,10 +2223,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2913
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1894,10 +2244,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2910
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1915,10 +2265,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2920
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1936,10 +2286,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2890
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1957,10 +2307,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2887
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1978,10 +2328,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2925
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1999,10 +2349,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAUL1_2882
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -2020,10 +2370,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAULx_38
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -2042,10 +2392,10 @@ parameters:
     gmd_subnatid2: THA_2015_GAULx_43
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -2058,13 +2408,13 @@ parameters:
     source_row: 15665
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: THA-SAN-01
     source_category_code: flush_pour_flush_flush_to_elsewhere
@@ -2074,8 +2424,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: THA-SAN-02
     source_category_code: flush_pour_flush_to_elsewhere
@@ -2085,8 +2435,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: THA-SAN-03
     source_category_code: to_elsewhere
@@ -2096,8 +2446,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: THA-SAN-04
     source_category_code: flush_pour_flush_flush_to_piped_sewer_system
@@ -2107,8 +2457,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: THA-SAN-05
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -2118,8 +2468,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: THA-SAN-06
     source_category_code: flush_pour_flush_flush_to_pit_latrine
@@ -2129,8 +2479,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: THA-SAN-07
     source_category_code: flush_pour_flush_to_pit_latrine
@@ -2140,8 +2490,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: THA-SAN-08
     source_category_code: flush_pour_flush_flush_to_sewage_tank_septic_tank
@@ -2151,8 +2501,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: THA-SAN-09
     source_category_code: flush_pour_flush_to_septic_tank
@@ -2162,8 +2512,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: THA-SAN-10
     source_category_code: flush_pour_flush_to_sewage_tank_septic_tank
@@ -2173,8 +2523,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: THA-SAN-11
     source_category_code: flush_pour_flush_flush_to_dk_where
@@ -2184,8 +2534,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: THA-SAN-12
     source_category_code: flush_pour_flush_to_do_not_know_where
@@ -2195,8 +2545,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: THA-SAN-13
     source_category_code: to_unknown_place_not_sure_dk
@@ -2206,8 +2556,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: THA-SAN-14
     source_category_code: flush_septic_tank
@@ -2217,8 +2567,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: THA-SAN-15
     source_category_code: moulded_latrine_private_flush_latrine_private
@@ -2228,8 +2578,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: THA-SAN-16
     source_category_code: flush_latrine_shared_flush_and_moulded_shared
@@ -2239,8 +2589,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: THA-SAN-17
     source_category_code: flush_to_somewhere_else
@@ -2250,8 +2600,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: THA-SAN-18
     source_category_code: to_elsewhere
@@ -2261,8 +2611,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: THA-SAN-19
     source_category_code: flush_to_piped_sewer_system
@@ -2272,8 +2622,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: THA-SAN-20
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -2283,8 +2633,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: THA-SAN-21
     source_category_code: flush_to_pit_latrine
@@ -2294,8 +2644,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: THA-SAN-22
     source_category_code: flush_pour_flush_to_pit
@@ -2305,8 +2655,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: THA-SAN-23
     source_category_code: flush_to_septic_tank
@@ -2316,8 +2666,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: THA-SAN-24
     source_category_code: flush_pour_flush_to_septic_tank
@@ -2327,21 +2677,21 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: THA-SAN-25
     source_category_code: flush_pour_flush_to_unknown_place_pit_latrine
-    national_label_en: |-
-      Flush/pour flush
-      to unknown place, pit latrine
+    national_label_en: 'Flush/pour flush
+
+      to unknown place, pit latrine'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: THA-SAN-26
     source_category_code: bucket_latrine
@@ -2351,8 +2701,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: THA-SAN-27
     source_category_code: hanging_toilet_hanging_latrine
@@ -2363,8 +2713,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: THA-SAN-28
     source_category_code: pit_latrine_with_slab
@@ -2375,8 +2725,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: THA-SAN-29
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -2387,8 +2737,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: THA-SAN-30
     source_category_code: pit_latrine_without_slab_open_pit
@@ -2399,8 +2749,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: THA-SAN-31
     source_category_code: pit_or_hole_in_ground
@@ -2411,8 +2761,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: THA-SAN-32
     source_category_code: pit
@@ -2423,8 +2773,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: THA-SAN-33
     source_category_code: ventilated_improved_pit_latrine
@@ -2435,8 +2785,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: THA-SAN-34
     source_category_code: public_latrine
@@ -2447,8 +2797,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: THA-SAN-35
     source_category_code: flush_latrine_or_moulded_latrine_private
@@ -2459,8 +2809,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 93
   - country_entry_id: THA-SAN-36
     source_category_code: moulded_latrine_private
@@ -2471,8 +2821,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 93
   - country_entry_id: THA-SAN-37
     source_category_code: to_unknown_place_not_sure_dk
@@ -2483,8 +2833,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: THA-SAN-38
     source_category_code: flush_latrine_or_moulded_latrine_shared
@@ -2495,8 +2845,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 99
   - country_entry_id: THA-SAN-39
     source_category_code: moulded_latrine_shared
@@ -2507,8 +2857,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 99
   - country_entry_id: THA-SAN-40
     source_category_code: no_facilities_nearby
@@ -2518,8 +2868,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: THA-SAN-41
     source_category_code: no_facility
@@ -2529,8 +2879,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: THA-SAN-42
     source_category_code: no_facility_or_bush_or_field
@@ -2540,8 +2890,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: THA-SAN-43
     source_category_code: no_toilet
@@ -2551,8 +2901,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: THA-SAN-44
     source_category_code: open_defecation_no_facility_bush_field
@@ -2562,8 +2912,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: THA-SAN-45
     source_category_code: flush_into_river_sea
@@ -2573,8 +2923,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: THA-SAN-46
     source_category_code: other
@@ -2584,18 +2934,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_THA_Thailand_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: THA-WAS-01
     source_category_code: neighbors_well_pond
@@ -2605,8 +2955,8 @@ parameters:
     jmp_id: ground_water.all_wells.other
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 57
   - country_entry_id: THA-WAS-02
     source_category_code: private_well_pond
@@ -2616,8 +2966,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: THA-WAS-03
     source_category_code: public_well_pond
@@ -2627,8 +2977,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: THA-WAS-04
     source_category_code: protected_spring
@@ -2638,8 +2988,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: THA-WAS-05
     source_category_code: dug_well_protected_e_g_roof_well_lid_etc
@@ -2649,8 +2999,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: THA-WAS-06
     source_category_code: dug_well_protected_e_g_roof_well_lid_etc
@@ -2660,8 +3010,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: THA-WAS-07
     source_category_code: protected_well
@@ -2671,8 +3021,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: THA-WAS-08
     source_category_code: well_or_public_tap
@@ -2682,8 +3032,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: THA-WAS-09
     source_category_code: tube_well
@@ -2693,8 +3043,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: THA-WAS-10
     source_category_code: tube_well_bore_hole
@@ -2704,8 +3054,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: THA-WAS-11
     source_category_code: tubewell_borehole
@@ -2715,8 +3065,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: THA-WAS-12
     source_category_code: tubewell_borehole
@@ -2726,8 +3076,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: THA-WAS-13
     source_category_code: inside_piped_underground_water_private
@@ -2737,8 +3087,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: THA-WAS-14
     source_category_code: inside_piped_underground_water_shared
@@ -2748,8 +3098,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: THA-WAS-15
     source_category_code: unprotected_spring
@@ -2759,8 +3109,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: THA-WAS-16
     source_category_code: dug_well_unprotected
@@ -2770,8 +3120,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: THA-WAS-17
     source_category_code: unprotected_well
@@ -2781,8 +3131,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: THA-WAS-18
     source_category_code: uprotected_well
@@ -2792,8 +3142,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: THA-WAS-19
     source_category_code: cart_with_small_tank_drum
@@ -2803,8 +3153,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: THA-WAS-20
     source_category_code: coin_operated_water_dispenser
@@ -2814,8 +3164,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: THA-WAS-21
     source_category_code: packaged_water_glass_cup_water
@@ -2825,8 +3175,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: THA-WAS-22
     source_category_code: water_supply_piped
@@ -2836,8 +3186,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: THA-WAS-23
     source_category_code: coin_operated_water_dispenser
@@ -2847,8 +3197,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: THA-WAS-24
     source_category_code: tanker_truck
@@ -2858,8 +3208,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: THA-WAS-25
     source_category_code: tanker_truck_other_vendor
@@ -2869,8 +3219,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: THA-WAS-26
     source_category_code: tanker_truck
@@ -2880,8 +3230,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: THA-WAS-27
     source_category_code: water_tank_truck
@@ -2891,8 +3241,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: THA-WAS-28
     source_category_code: other
@@ -2902,8 +3252,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: THA-WAS-29
     source_category_code: bottled_water
@@ -2913,8 +3263,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: THA-WAS-30
     source_category_code: bottled_water_users_with_unimproved_source
@@ -2924,8 +3274,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: THA-WAS-31
     source_category_code: packaged_water_bottled_water
@@ -2935,8 +3285,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: THA-WAS-32
     source_category_code: packaged_water_bottled_water_gallon_sized
@@ -2946,8 +3296,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: THA-WAS-33
     source_category_code: packaged_water_gallon_sized_water
@@ -2957,8 +3307,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: THA-WAS-34
     source_category_code: packaged_water_glass_cup_water
@@ -2968,8 +3318,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: THA-WAS-35
     source_category_code: rainwater
@@ -2979,8 +3329,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: THA-WAS-36
     source_category_code: rain_water
@@ -2990,21 +3340,21 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: THA-WAS-37
     source_category_code: rain_water_collection
-    national_label_en: |-
-      Rain-water
-      collection
+    national_label_en: 'Rain-water
+
+      collection'
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: THA-WAS-38
     source_category_code: rainwater
@@ -3014,8 +3364,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: THA-WAS-39
     source_category_code: rainwater_collection
@@ -3025,8 +3375,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: THA-WAS-40
     source_category_code: river_spring_surface_water
@@ -3036,8 +3386,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: THA-WAS-41
     source_category_code: surface_water
@@ -3047,8 +3397,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: THA-WAS-42
     source_category_code: river_stream_etc
@@ -3058,8 +3408,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: THA-WAS-43
     source_category_code: outside_piped_or_public_tap
@@ -3069,8 +3419,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: THA-WAS-44
     source_category_code: piped_to_neighbour
@@ -3080,8 +3430,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: THA-WAS-45
     source_category_code: piped_water_to_neighbour
@@ -3091,8 +3441,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: THA-WAS-46
     source_category_code: piped_water_piped_hosed_to_neighbouroughs_house
@@ -3102,8 +3452,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: THA-WAS-47
     source_category_code: piped_hosed_to_neighbour_s_house
@@ -3113,8 +3463,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: THA-WAS-48
     source_category_code: water_supply_piped
@@ -3124,8 +3474,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: THA-WAS-49
     source_category_code: piped_into_residence
@@ -3135,8 +3485,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: THA-WAS-50
     source_category_code: inside_piped_water_supply_private
@@ -3146,8 +3496,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: THA-WAS-51
     source_category_code: piped_into_dwelling
@@ -3157,8 +3507,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: THA-WAS-52
     source_category_code: piped_water_into_dwelling
@@ -3168,8 +3518,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: THA-WAS-53
     source_category_code: piped_water_piped_hosed_into_dwelling
@@ -3179,8 +3529,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: THA-WAS-54
     source_category_code: piped_hosed_into_dwelling
@@ -3190,8 +3540,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: THA-WAS-55
     source_category_code: inside_piped_water_supply_shared
@@ -3201,8 +3551,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: THA-WAS-56
     source_category_code: piped_into_plot_or_yard
@@ -3212,8 +3562,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: THA-WAS-57
     source_category_code: piped_into_yard_plot
@@ -3223,8 +3573,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: THA-WAS-58
     source_category_code: piped_water_into_yard_plot
@@ -3234,8 +3584,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: THA-WAS-59
     source_category_code: piped_water_piped_hosed_into_compound
@@ -3245,8 +3595,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: THA-WAS-60
     source_category_code: piped_hosed_into_compound
@@ -3256,8 +3606,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: THA-WAS-61
     source_category_code: outside_piped_or_public_tap
@@ -3267,8 +3617,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: THA-WAS-62
     source_category_code: piped_water_public_tap
@@ -3278,8 +3628,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: THA-WAS-63
     source_category_code: public_tap
@@ -3289,8 +3639,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: THA-WAS-64
     source_category_code: public_tap_stand_pipe
@@ -3300,8 +3650,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: THA-WAS-65
     source_category_code: public_tap_standpipe
@@ -3311,13 +3661,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_THA_Thailand_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

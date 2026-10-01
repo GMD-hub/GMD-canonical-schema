@@ -6,9 +6,9 @@ status: draft
 country_name: BLZ
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BLZ-EDU-01
     national_label_en: Pre-school education
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BLZ-EDU-02
     national_label_en: Primary education (Infant 1-2 and Standards I-IV)
     national_label_local: Primary education (Infant 1-2 and Standards I-IV)
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BLZ-EDU-03
     national_label_en: Special education at the primary level
     national_label_local: Special education at the primary level
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BLZ-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: BLZ-EDU-04
     national_label_en: Primary education (Standards V-VI)
     national_label_local: Primary education (Standards V-VI)
@@ -54,6 +72,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - BLZ-EDU-02
+    - BLZ-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BLZ-EDU-02, BLZ-EDU-03'
   - country_entry_id: BLZ-EDU-05
     national_label_en: Secondary education (Forms 1-2)
     national_label_local: Secondary education (Forms 1-2)
@@ -65,6 +93,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - BLZ-EDU-02
+    - BLZ-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BLZ-EDU-02, BLZ-EDU-03'
   - country_entry_id: BLZ-EDU-06
     national_label_en: Vocational technical education
     national_label_local: Vocational technical education
@@ -76,6 +114,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - BLZ-EDU-02
+    - BLZ-EDU-03
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BLZ-EDU-02, BLZ-EDU-03'
   - country_entry_id: BLZ-EDU-07
     national_label_en: Secondary education - general (Forms 3-4)
     national_label_local: Secondary education - general (Forms 3-4)
@@ -87,6 +135,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - BLZ-EDU-04
+    - BLZ-EDU-05
+    - BLZ-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-07
+    cum_years_status: computed
+    review_flags: &id001
+    - 'minimum parent path selected from: BLZ-EDU-02, BLZ-EDU-03'
+    - 'minimum parent path selected from: BLZ-EDU-04, BLZ-EDU-05, BLZ-EDU-06'
   - country_entry_id: BLZ-EDU-08
     national_label_en: Secondary education - technical vocational (Forms 3-4)
     national_label_local: Secondary education - technical vocational (Forms 3-4)
@@ -98,6 +159,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - BLZ-EDU-04
+    - BLZ-EDU-05
+    - BLZ-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BLZ-EDU-02, BLZ-EDU-03'
+    - 'minimum parent path selected from: BLZ-EDU-04, BLZ-EDU-05, BLZ-EDU-06'
   - country_entry_id: BLZ-EDU-09
     national_label_en: Sixth form
     national_label_local: Sixth form
@@ -109,6 +183,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - BLZ-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-07
+    - BLZ-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BLZ-EDU-10
     national_label_en: Post-secondary certificate programme
     national_label_local: Post-secondary certificate programme
@@ -120,6 +204,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - BLZ-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-07
+    - BLZ-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BLZ-EDU-11
     national_label_en: Associate degree programme
     national_label_local: Associate degree programme
@@ -131,6 +225,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - BLZ-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-07
+    - BLZ-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BLZ-EDU-12
     national_label_en: Bachelor's programme
     national_label_local: Bachelor's programme
@@ -142,6 +246,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - BLZ-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-07
+    - BLZ-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BLZ-EDU-13
     national_label_en: Master's programme
     national_label_local: Master's programme
@@ -153,15 +267,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - BLZ-EDU-12
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BLZ-EDU-02
+    - BLZ-EDU-06
+    - BLZ-EDU-07
+    - BLZ-EDU-12
+    - BLZ-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Belize.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BLZ-SUBNAT-01
     survey_labels: Belize
@@ -170,10 +295,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: BLZ_2015_GAUL1_603
     geo_year: '2015'
@@ -191,10 +316,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: BLZ_2015_GAUL1_604
     geo_year: '2015'
@@ -212,10 +337,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: BLZ_2015_GAUL1_605
     geo_year: '2015'
@@ -233,10 +358,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: BLZ_2015_GAUL1_606
     geo_year: '2015'
@@ -254,10 +379,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: BLZ_2015_GAUL1_607
     geo_year: '2015'
@@ -275,10 +400,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: BLZ_2015_GAUL1_608
     geo_year: '2015'
@@ -291,13 +416,13 @@ parameters:
     source_row: 1074
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BLZ-SAN-01
     source_category_code: composting_toilet
@@ -307,8 +432,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BLZ-SAN-02
     source_category_code: pit_latrine_ventilated_compost
@@ -318,8 +443,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BLZ-SAN-03
     source_category_code: pit_latrine_ventilated_compost
@@ -329,8 +454,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: BLZ-SAN-04
     source_category_code: flush_to_somewhere_else
@@ -340,8 +465,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BLZ-SAN-05
     source_category_code: flush_to_piped_sewer_system
@@ -351,8 +476,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BLZ-SAN-06
     source_category_code: inodoro_conectado_al_alcantarillado
@@ -362,8 +487,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BLZ-SAN-07
     source_category_code: w_c_linked_to_sewer
@@ -373,8 +498,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BLZ-SAN-08
     source_category_code: flush_to_pit
@@ -384,8 +509,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BLZ-SAN-09
     source_category_code: flush_to_pit_latrine
@@ -395,8 +520,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BLZ-SAN-10
     source_category_code: flush_to_septic_tank
@@ -406,19 +531,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BLZ-SAN-11
     source_category_code: inodoro_conectado_a_un_septico
-    national_label_en: Inodoro conectado a un séptico
+    national_label_en: "Inodoro conectado a un s\xE9ptico"
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BLZ-SAN-12
     source_category_code: w_c_cesspit_or_septic_tank
@@ -428,8 +553,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BLZ-SAN-13
     source_category_code: flush_to_unknown_place_not_sure_dk_where
@@ -439,8 +564,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BLZ-SAN-14
     source_category_code: flush_to_somewhere_else
@@ -450,8 +575,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BLZ-SAN-15
     source_category_code: flush_to_piped_sewer_system
@@ -461,8 +586,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BLZ-SAN-16
     source_category_code: w_c_linked_to_wasa_sewer_system
@@ -472,8 +597,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BLZ-SAN-17
     source_category_code: water_closet_linked_to_sewer_system_septic_tank
@@ -483,8 +608,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BLZ-SAN-18
     source_category_code: flush_to_pit_latrine
@@ -494,8 +619,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BLZ-SAN-19
     source_category_code: flush_to_septic_tank
@@ -505,8 +630,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BLZ-SAN-20
     source_category_code: w_c_linked_to_septic_tank
@@ -516,8 +641,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BLZ-SAN-21
     source_category_code: bucket
@@ -527,8 +652,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BLZ-SAN-22
     source_category_code: bucket_latrine
@@ -538,8 +663,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BLZ-SAN-23
     source_category_code: hanging_toilet_hanging_latrine
@@ -550,8 +675,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BLZ-SAN-24
     source_category_code: hanging_toilet_hanging_latrine
@@ -562,8 +687,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BLZ-SAN-25
     source_category_code: pit_latrine_with_slab
@@ -574,8 +699,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BLZ-SAN-26
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -586,8 +711,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BLZ-SAN-27
     source_category_code: pit_latrine_ventilated_and_elevated
@@ -598,8 +723,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BLZ-SAN-28
     source_category_code: pit_latrine_without_slab_open_pit
@@ -610,8 +735,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BLZ-SAN-29
     source_category_code: pit_latrine_without_slab_open_pit
@@ -622,8 +747,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BLZ-SAN-30
     source_category_code: letrina_no_ventilada
@@ -634,8 +759,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BLZ-SAN-31
     source_category_code: pit_latrine_not_ventilated
@@ -646,8 +771,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BLZ-SAN-32
     source_category_code: pit_latrine
@@ -658,8 +783,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BLZ-SAN-33
     source_category_code: letrina_ventilada_todas
@@ -670,8 +795,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BLZ-SAN-34
     source_category_code: pit_latrine_ventilated_and_not_elevated
@@ -682,8 +807,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BLZ-SAN-35
     source_category_code: ventilated_improved_pit_latrine
@@ -694,8 +819,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BLZ-SAN-36
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -706,8 +831,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BLZ-SAN-37
     source_category_code: ventilated_pit_latrine
@@ -718,8 +843,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BLZ-SAN-38
     source_category_code: no_facilities_or_bush_or_field
@@ -729,8 +854,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BLZ-SAN-39
     source_category_code: no_facility_bush_field
@@ -740,8 +865,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BLZ-SAN-40
     source_category_code: none
@@ -751,8 +876,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BLZ-SAN-41
     source_category_code: other
@@ -762,8 +887,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BLZ-SAN-42
     source_category_code: otro
@@ -773,8 +898,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BLZ-SAN-43
     source_category_code: no_sabe
@@ -784,8 +909,8 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   - country_entry_id: BLZ-SAN-44
     source_category_code: other
@@ -795,18 +920,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BLZ_Belize_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BLZ-WAS-01
     source_category_code: private_vat_drum_well_not_piped
@@ -816,8 +941,8 @@ parameters:
     jmp_id: ground_water.all_wells.other
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 57
   - country_entry_id: BLZ-WAS-02
     source_category_code: private_catchment_not_piped
@@ -827,19 +952,19 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: BLZ-WAS-03
     source_category_code: pozo_publico
-    national_label_en: Pozo público
+    national_label_en: "Pozo p\xFAblico"
     national_label_local: Public
     jmp_classification: Ground water > All wells > Public
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: BLZ-WAS-04
     source_category_code: public_well
@@ -849,8 +974,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: BLZ-WAS-05
     source_category_code: protected_spring
@@ -860,8 +985,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BLZ-WAS-06
     source_category_code: covered_vat_drum_well
@@ -871,8 +996,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BLZ-WAS-07
     source_category_code: protected_well
@@ -882,8 +1007,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BLZ-WAS-08
     source_category_code: public_well_or_tank
@@ -893,8 +1018,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: BLZ-WAS-09
     source_category_code: well_or_protected_spring
@@ -904,8 +1029,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: BLZ-WAS-10
     source_category_code: private_catchment_not_piped
@@ -915,8 +1040,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: BLZ-WAS-11
     source_category_code: hand_pump
@@ -926,8 +1051,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BLZ-WAS-12
     source_category_code: handpump
@@ -937,8 +1062,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BLZ-WAS-13
     source_category_code: perforated_or_tubolar_well
@@ -948,8 +1073,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BLZ-WAS-14
     source_category_code: private_catchment_not_piped
@@ -959,8 +1084,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BLZ-WAS-15
     source_category_code: tube_well_borehole_hand_pump
@@ -970,8 +1095,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BLZ-WAS-16
     source_category_code: tubewell_borehole
@@ -981,8 +1106,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BLZ-WAS-17
     source_category_code: unprotected_spring
@@ -992,8 +1117,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BLZ-WAS-18
     source_category_code: uncovered_vat_drum_well
@@ -1003,8 +1128,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BLZ-WAS-19
     source_category_code: unprotected_well
@@ -1014,8 +1139,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BLZ-WAS-20
     source_category_code: well_or_spring_not_protected
@@ -1025,8 +1150,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: BLZ-WAS-21
     source_category_code: cart_tank_or_small_drum_tank_truck
@@ -1036,8 +1161,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BLZ-WAS-22
     source_category_code: cart_with_small_tank_drum
@@ -1047,8 +1172,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BLZ-WAS-23
     source_category_code: cart_with_small_tank_drum
@@ -1058,8 +1183,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BLZ-WAS-24
     source_category_code: water_kiosk_water_station
@@ -1069,8 +1194,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BLZ-WAS-25
     source_category_code: tanker_truck
@@ -1080,8 +1205,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BLZ-WAS-26
     source_category_code: other
@@ -1091,8 +1216,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BLZ-WAS-27
     source_category_code: otro
@@ -1102,8 +1227,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BLZ-WAS-28
     source_category_code: no_sabe_no_dijo
@@ -1113,8 +1238,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BLZ-WAS-29
     source_category_code: agua_purificada_piped
@@ -1124,8 +1249,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-30
     source_category_code: bottled_water
@@ -1135,8 +1260,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-31
     source_category_code: bottled_water_with_other_improved
@@ -1146,8 +1271,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-32
     source_category_code: bottled_water_water_in_bags_garrafones
@@ -1157,8 +1282,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-33
     source_category_code: bw_with_other_improved
@@ -1168,8 +1293,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-34
     source_category_code: purified_water
@@ -1179,8 +1304,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-35
     source_category_code: purified_bottled_water_with_other_improved
@@ -1190,8 +1315,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BLZ-WAS-36
     source_category_code: agua_purificada
@@ -1201,8 +1326,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BLZ-WAS-37
     source_category_code: bottled_water_without_other_improved
@@ -1212,8 +1337,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BLZ-WAS-38
     source_category_code: bw_without_other_improved
@@ -1223,8 +1348,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BLZ-WAS-39
     source_category_code: purified_bottled_water_without_other_improved
@@ -1234,8 +1359,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BLZ-WAS-40
     source_category_code: covered_cistern_tank
@@ -1245,8 +1370,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BLZ-WAS-41
     source_category_code: rain_water
@@ -1256,8 +1381,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BLZ-WAS-42
     source_category_code: rainwater_collection
@@ -1267,19 +1392,19 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BLZ-WAS-43
     source_category_code: rio_arroyo_estanque_manantial
-    national_label_en: Río, arroyo, estanque, manantial
+    national_label_en: "R\xEDo, arroyo, estanque, manantial"
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BLZ-WAS-44
     source_category_code: river_stream_creek
@@ -1289,8 +1414,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BLZ-WAS-45
     source_category_code: river_stream_creek_pond_spring
@@ -1300,8 +1425,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BLZ-WAS-46
     source_category_code: surface_water
@@ -1311,8 +1436,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BLZ-WAS-47
     source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
@@ -1323,8 +1448,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BLZ-WAS-48
     source_category_code: surface_water_river_stream_dam_lake_pond_canal_irrigation_channel
@@ -1335,8 +1460,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BLZ-WAS-49
     source_category_code: piped_to_neighbour
@@ -1346,19 +1471,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BLZ-WAS-50
     source_category_code: privada_en_la_vivienda_por_tuberia
-    national_label_en: Privada en la vivienda por tubería
+    national_label_en: "Privada en la vivienda por tuber\xEDa"
     national_label_local: Other
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BLZ-WAS-51
     source_category_code: piped_inside_the_house
@@ -1368,8 +1493,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BLZ-WAS-52
     source_category_code: piped_into_dwelling
@@ -1379,8 +1504,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BLZ-WAS-53
     source_category_code: piped_water_into_dwelling
@@ -1390,19 +1515,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BLZ-WAS-54
     source_category_code: publica_en_la_vivienda_por_tuberia
-    national_label_en: Pública en la vivienda por tubería
+    national_label_en: "P\xFAblica en la vivienda por tuber\xEDa"
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BLZ-WAS-55
     source_category_code: water_piped_into_dwelling
@@ -1412,8 +1537,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BLZ-WAS-56
     source_category_code: piped_into_compound_yard_or_plot
@@ -1423,8 +1548,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-57
     source_category_code: piped_into_yard_or_plot
@@ -1434,8 +1559,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-58
     source_category_code: piped_water_to_compound_yard_plot
@@ -1445,8 +1570,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-59
     source_category_code: pipeline_inside_the_ground_lot
@@ -1456,8 +1581,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-60
     source_category_code: public_piped_into_yard
@@ -1467,8 +1592,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-61
     source_category_code: public_piped_into_yard
@@ -1478,19 +1603,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-62
     source_category_code: publica_en_el_patio_por_tuberia
-    national_label_en: Pública en el patio por tubería
+    national_label_en: "P\xFAblica en el patio por tuber\xEDa"
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-63
     source_category_code: water_piped_into_yard_only
@@ -1500,19 +1625,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BLZ-WAS-64
     source_category_code: bomba_publica_manual
-    national_label_en: Bomba pública(manual)
+    national_label_en: "Bomba p\xFAblica(manual)"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-65
     source_category_code: public_pipe_standpipe
@@ -1522,8 +1647,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-66
     source_category_code: public_standpipe
@@ -1533,8 +1658,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-67
     source_category_code: public_standpipe_or_hand_pump
@@ -1544,8 +1669,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-68
     source_category_code: public_tap
@@ -1555,8 +1680,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-69
     source_category_code: public_tap_standpipe
@@ -1566,8 +1691,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-70
     source_category_code: public_tap_standpipe
@@ -1577,8 +1702,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BLZ-WAS-71
     source_category_code: standpipe
@@ -1588,13 +1713,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BLZ_Belize_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

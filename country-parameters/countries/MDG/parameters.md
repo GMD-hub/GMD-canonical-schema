@@ -6,13 +6,13 @@ status: draft
 country_name: MDG
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MDG-EDU-01
-    national_label_en: Éducation pré-primaire
-    national_label_local: Éducation pré-primaire
+    national_label_en: "\xC9ducation pr\xE9-primaire"
+    national_label_local: "\xC9ducation pr\xE9-primaire"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: MDG-EDU-02
-    national_label_en: Éducation fondamentale du 1er cycle (enseignement primaire)
-    national_label_local: Éducation fondamentale du 1er cycle (enseignement primaire)
+    national_label_en: "\xC9ducation fondamentale du 1er cycle (enseignement primaire)"
+    national_label_local: "\xC9ducation fondamentale du 1er cycle (enseignement primaire)"
     entry_age: 6
     duration_years: 5
     isced_level: '1'
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MDG-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: MDG-EDU-03
     national_label_en: Action scolaire d'appoint pour malgaches adolescents (ASAMA)
     national_label_local: Action scolaire d'appoint pour malgaches adolescents (ASAMA)
@@ -43,11 +55,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - MDG-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: MDG-EDU-04
-    national_label_en: Éducation fondamentale du 2ième cycle (ou le premier cycle
-      du secondaire)
-    national_label_local: Éducation fondamentale du 2ième cycle (ou le premier cycle
-      du secondaire)
+    national_label_en: "\xC9ducation fondamentale du 2i\xE8me cycle (ou le premier\
+      \ cycle du secondaire)"
+    national_label_local: "\xC9ducation fondamentale du 2i\xE8me cycle (ou le premier\
+      \ cycle du secondaire)"
     entry_age: 11
     duration_years: 4
     isced_level: '2'
@@ -56,6 +74,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - MDG-EDU-02
+    - MDG-EDU-03
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
   - country_entry_id: MDG-EDU-05
     national_label_en: Formation initiale des enseignants du primaire
     national_label_local: Formation initiale des enseignants du primaire
@@ -67,13 +95,23 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - MDG-EDU-02
+    - MDG-EDU-03
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
   - country_entry_id: MDG-EDU-06
-    national_label_en: |-
-      Formation professionnelle et technique initiale
-      Niveau 2
-    national_label_local: |-
-      Formation professionnelle et technique initiale
-      Niveau 2
+    national_label_en: 'Formation professionnelle et technique initiale
+
+      Niveau 2'
+    national_label_local: 'Formation professionnelle et technique initiale
+
+      Niveau 2'
     entry_age: 11
     duration_years: 2
     isced_level: '2'
@@ -82,13 +120,23 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - MDG-EDU-02
+    - MDG-EDU-03
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
   - country_entry_id: MDG-EDU-07
-    national_label_en: |-
-      Formation professionnelle et technique initiale
-      Niveau 2
-    national_label_local: |-
-      Formation professionnelle et technique initiale
-      Niveau 2
+    national_label_en: 'Formation professionnelle et technique initiale
+
+      Niveau 2'
+    national_label_local: 'Formation professionnelle et technique initiale
+
+      Niveau 2'
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -97,11 +145,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - MDG-EDU-02
+    - MDG-EDU-03
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
   - country_entry_id: MDG-EDU-08
-    national_label_en: Enseignement secondaire (ou enseignement secondaire du 2ième
-      cycle)
-    national_label_local: Enseignement secondaire (ou enseignement secondaire du 2ième
-      cycle)
+    national_label_en: "Enseignement secondaire (ou enseignement secondaire du 2i\xE8\
+      me cycle)"
+    national_label_local: "Enseignement secondaire (ou enseignement secondaire du\
+      \ 2i\xE8me cycle)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -110,9 +168,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - MDG-EDU-04
+    - MDG-EDU-05
+    - MDG-EDU-06
+    - MDG-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
   - country_entry_id: MDG-EDU-09
-    national_label_en: Formation technologique générale (FTG)
-    national_label_local: Formation technologique générale (FTG)
+    national_label_en: "Formation technologique g\xE9n\xE9rale (FTG)"
+    national_label_local: "Formation technologique g\xE9n\xE9rale (FTG)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -121,6 +193,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - MDG-EDU-04
+    - MDG-EDU-05
+    - MDG-EDU-06
+    - MDG-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
   - country_entry_id: MDG-EDU-10
     national_label_en: Formation professionnelle et technique initiale Niveau 3
     national_label_local: Formation professionnelle et technique initiale Niveau 3
@@ -132,6 +218,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - MDG-EDU-04
+    - MDG-EDU-05
+    - MDG-EDU-06
+    - MDG-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
   - country_entry_id: MDG-EDU-11
     national_label_en: Formation professionnelle et technique
     national_label_local: Formation professionnelle et technique
@@ -143,6 +243,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-12
     national_label_en: Formation professionnelle et technique
     national_label_local: Formation professionnelle et technique
@@ -154,9 +269,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-13
-    national_label_en: Enseignement supérieur Public (Technicien supérieur)
-    national_label_local: Enseignement supérieur (Technicien supérieur)
+    national_label_en: "Enseignement sup\xE9rieur Public (Technicien sup\xE9rieur)"
+    national_label_local: "Enseignement sup\xE9rieur (Technicien sup\xE9rieur)"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -165,13 +295,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-14
-    national_label_en: |-
-      Enseignement supérieur  Public et Privé
-      (Licence)
-    national_label_local: |-
-      Enseignement supérieur  Public et Privé
-      (Licence)
+    national_label_en: "Enseignement sup\xE9rieur  Public et Priv\xE9\n(Licence)"
+    national_label_local: "Enseignement sup\xE9rieur  Public et Priv\xE9\n(Licence)"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -180,9 +321,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-15
-    national_label_en: "Enseignement supérieur Public \n(Licence professionnalisante)"
-    national_label_local: "Enseignement supérieur Public \n(Licence professionnalisante)"
+    national_label_en: "Enseignement sup\xE9rieur Public \n(Licence professionnalisante)"
+    national_label_local: "Enseignement sup\xE9rieur Public \n(Licence professionnalisante)"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -191,9 +347,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-16
-    national_label_en: Formation des Professeurs du Collège d'Enseignement Général
-    national_label_local: Formation des Professeurs du Collège d'Enseignement Général
+    national_label_en: "Formation des Professeurs du Coll\xE8ge d'Enseignement G\xE9\
+      n\xE9ral"
+    national_label_local: "Formation des Professeurs du Coll\xE8ge d'Enseignement\
+      \ G\xE9n\xE9ral"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -202,10 +375,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-17
-    national_label_en: 'Enseignement Supérieur Public et Privé : formation des Paramédicaux'
-    national_label_local: 'Enseignement Supérieur Public et Privé : formation des
-      Paramédicaux'
+    national_label_en: "Enseignement Sup\xE9rieur Public et Priv\xE9 : formation des\
+      \ Param\xE9dicaux"
+    national_label_local: "Enseignement Sup\xE9rieur Public et Priv\xE9 : formation\
+      \ des Param\xE9dicaux"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -214,9 +403,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-18
-    national_label_en: Formation d'ingénieur
-    national_label_local: Formation d'ingénieur
+    national_label_en: "Formation d'ing\xE9nieur"
+    national_label_local: "Formation d'ing\xE9nieur"
     entry_age: 18
     duration_years: 5
     isced_level: '7'
@@ -225,9 +429,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-19
-    national_label_en: Enseignement supérieur Public (Médecine)
-    national_label_local: Enseignement supérieur Public (Médecine)
+    national_label_en: "Enseignement sup\xE9rieur Public (M\xE9decine)"
+    national_label_local: "Enseignement sup\xE9rieur Public (M\xE9decine)"
     entry_age: 18
     duration_years: 6
     isced_level: '7'
@@ -236,13 +455,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-20
-    national_label_en: |-
-      Enseignement supérieur Public et Privé
-      (Master)
-    national_label_local: |-
-      Enseignement supérieur Public et Privé
-      (Master)
+    national_label_en: "Enseignement sup\xE9rieur Public et Priv\xE9\n(Master)"
+    national_label_local: "Enseignement sup\xE9rieur Public et Priv\xE9\n(Master)"
     entry_age: 21
     duration_years: 1
     isced_level: '7'
@@ -251,9 +481,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - MDG-EDU-14
+    - MDG-EDU-15
+    - MDG-EDU-16
+    - MDG-EDU-17
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-14
+    - MDG-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
+    - 'minimum parent path selected from: MDG-EDU-14, MDG-EDU-15, MDG-EDU-16, MDG-EDU-17'
   - country_entry_id: MDG-EDU-21
-    national_label_en: "Enseignement supérieur Public \n(Master Professionnalisante)"
-    national_label_local: "Enseignement supérieur Public \n(Master Professionnalisante)"
+    national_label_en: "Enseignement sup\xE9rieur Public \n(Master Professionnalisante)"
+    national_label_local: "Enseignement sup\xE9rieur Public \n(Master Professionnalisante)"
     entry_age: 21
     duration_years: 2
     isced_level: '7'
@@ -262,9 +510,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - MDG-EDU-14
+    - MDG-EDU-15
+    - MDG-EDU-16
+    - MDG-EDU-17
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-14
+    - MDG-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
+    - 'minimum parent path selected from: MDG-EDU-14, MDG-EDU-15, MDG-EDU-16, MDG-EDU-17'
   - country_entry_id: MDG-EDU-22
-    national_label_en: Formation des professeurs de lycée
-    national_label_local: Formation des professeurs de lycée
+    national_label_en: "Formation des professeurs de lyc\xE9e"
+    national_label_local: "Formation des professeurs de lyc\xE9e"
     entry_age: 21
     duration_years: 2
     isced_level: '7'
@@ -273,9 +539,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-23
-    national_label_en: Formation d'ingénieur
-    national_label_local: Formation d'ingénieur
+    national_label_en: "Formation d'ing\xE9nieur"
+    national_label_local: "Formation d'ing\xE9nieur"
     entry_age: 21
     duration_years: 2
     isced_level: '7'
@@ -284,9 +565,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-24
-    national_label_en: Formation d'ingénieur
-    national_label_local: Formation d'ingénieur
+    national_label_en: "Formation d'ing\xE9nieur"
+    national_label_local: "Formation d'ing\xE9nieur"
     entry_age: 21
     duration_years: 2
     isced_level: '7'
@@ -295,9 +591,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - MDG-EDU-08
+    - MDG-EDU-09
+    - MDG-EDU-10
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
   - country_entry_id: MDG-EDU-25
-    national_label_en: Enseignement Supérieur Public (Médecine)
-    national_label_local: Enseignement Supérieur Public (Médecine)
+    national_label_en: "Enseignement Sup\xE9rieur Public (M\xE9decine)"
+    national_label_local: "Enseignement Sup\xE9rieur Public (M\xE9decine)"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -306,9 +617,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - MDG-EDU-18
+    - MDG-EDU-19
+    - MDG-EDU-20
+    - MDG-EDU-21
+    - MDG-EDU-22
+    - MDG-EDU-23
+    - MDG-EDU-24
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-22
+    - MDG-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
+    - 'minimum parent path selected from: MDG-EDU-18, MDG-EDU-19, MDG-EDU-20, MDG-EDU-21,
+      MDG-EDU-22, MDG-EDU-23, MDG-EDU-24'
   - country_entry_id: MDG-EDU-26
-    national_label_en: Enseignement Supérieur Public (Médecine)
-    national_label_local: Enseignement Supérieur Public (Médecine)
+    national_label_en: "Enseignement Sup\xE9rieur Public (M\xE9decine)"
+    national_label_local: "Enseignement Sup\xE9rieur Public (M\xE9decine)"
     entry_age: 24
     duration_years: 4
     isced_level: '8'
@@ -317,13 +650,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - MDG-EDU-18
+    - MDG-EDU-19
+    - MDG-EDU-20
+    - MDG-EDU-21
+    - MDG-EDU-22
+    - MDG-EDU-23
+    - MDG-EDU-24
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-22
+    - MDG-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
+    - 'minimum parent path selected from: MDG-EDU-18, MDG-EDU-19, MDG-EDU-20, MDG-EDU-21,
+      MDG-EDU-22, MDG-EDU-23, MDG-EDU-24'
   - country_entry_id: MDG-EDU-27
-    national_label_en: |-
-      Enseignement supérieur Public et Privé
-      (Doctorat)
-    national_label_local: |-
-      Enseignement supérieur Public et Privé
-      (Doctorat)
+    national_label_en: "Enseignement sup\xE9rieur Public et Priv\xE9\n(Doctorat)"
+    national_label_local: "Enseignement sup\xE9rieur Public et Priv\xE9\n(Doctorat)"
     entry_age: 24
     duration_years: 2
     isced_level: '8'
@@ -332,13 +683,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - MDG-EDU-18
+    - MDG-EDU-19
+    - MDG-EDU-20
+    - MDG-EDU-21
+    - MDG-EDU-22
+    - MDG-EDU-23
+    - MDG-EDU-24
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-22
+    - MDG-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
+    - 'minimum parent path selected from: MDG-EDU-18, MDG-EDU-19, MDG-EDU-20, MDG-EDU-21,
+      MDG-EDU-22, MDG-EDU-23, MDG-EDU-24'
   - country_entry_id: MDG-EDU-28
-    national_label_en: |-
-      Enseignement supérieur Public
-      (Doctorat d'Etat)
-    national_label_local: |-
-      Enseignement supérieur Public
-      (Doctorat d'Etat)
+    national_label_en: "Enseignement sup\xE9rieur Public\n(Doctorat d'Etat)"
+    national_label_local: "Enseignement sup\xE9rieur Public\n(Doctorat d'Etat)"
     entry_age: 26
     duration_years: 3
     isced_level: '8'
@@ -347,15 +716,37 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - MDG-EDU-18
+    - MDG-EDU-19
+    - MDG-EDU-20
+    - MDG-EDU-21
+    - MDG-EDU-22
+    - MDG-EDU-23
+    - MDG-EDU-24
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MDG-EDU-03
+    - MDG-EDU-05
+    - MDG-EDU-08
+    - MDG-EDU-22
+    - MDG-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MDG-EDU-02, MDG-EDU-03'
+    - 'minimum parent path selected from: MDG-EDU-04, MDG-EDU-05, MDG-EDU-06, MDG-EDU-07'
+    - 'minimum parent path selected from: MDG-EDU-08, MDG-EDU-09, MDG-EDU-10'
+    - 'minimum parent path selected from: MDG-EDU-18, MDG-EDU-19, MDG-EDU-20, MDG-EDU-21,
+      MDG-EDU-22, MDG-EDU-23, MDG-EDU-24'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Madagascar.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MDG-SUBNAT-01
     survey_labels: 33 - ALAOTRA MANGORO | 33 - Alaotra Mangoro | Alaotra Mangoro
@@ -364,10 +755,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41750
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41750
     geo_year: '2015'
@@ -386,10 +777,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41751
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41751
     geo_year: '2015'
@@ -407,10 +798,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41752
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41752
     geo_year: '2015'
@@ -428,10 +819,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41753
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41753
     geo_year: '2015'
@@ -449,10 +840,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41754
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41754
     geo_year: '2015'
@@ -470,10 +861,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41755
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41755
     geo_year: '2015'
@@ -491,10 +882,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41756
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41756
     geo_year: '2015'
@@ -512,10 +903,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41757
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41757
     geo_year: '2015'
@@ -533,10 +924,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41758
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41758
     geo_year: '2015'
@@ -554,10 +945,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41759
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41759
     geo_year: '2015'
@@ -575,10 +966,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41760
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41760
     geo_year: '2015'
@@ -596,10 +987,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41761
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41761
     geo_year: '2015'
@@ -617,10 +1008,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41762
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41762
     geo_year: '2015'
@@ -638,10 +1029,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41764
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41764
     geo_year: '2015'
@@ -659,10 +1050,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41765
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41765
     geo_year: '2015'
@@ -680,10 +1071,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41763
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41763
     geo_year: '2015'
@@ -701,10 +1092,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41766
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41766
     geo_year: '2015'
@@ -722,10 +1113,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41767
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41767
     geo_year: '2015'
@@ -743,10 +1134,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41768
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41768
     geo_year: '2015'
@@ -764,10 +1155,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41769
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41769
     geo_year: '2015'
@@ -785,10 +1176,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41770
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41770
     geo_year: '2015'
@@ -806,10 +1197,10 @@ parameters:
     gmd_subnatid2: MDG_2015_GAUL1_41771
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MDG_2015_GAUL1_41771
     geo_year: '2015'
@@ -822,13 +1213,13 @@ parameters:
     source_row: 9346
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MDG-SAN-01
     source_category_code: composting_toilet
@@ -838,8 +1229,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MDG-SAN-02
     source_category_code: toilette_a_compostage
@@ -849,471 +1240,473 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MDG-SAN-03
     source_category_code: toilettes_a_compost
-    national_label_en: Toilettes à compost
+    national_label_en: "Toilettes \xE0 compost"
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MDG-SAN-04
     source_category_code: toilettes_a_compostage
-    national_label_en: Toilettes à compostage
+    national_label_en: "Toilettes \xE0 compostage"
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MDG-SAN-05
     source_category_code: composting_toilet
     national_label_en: Composting toilet
-    national_label_local: Toilettes a compostage (privées)
+    national_label_local: "Toilettes a compostage (priv\xE9es)"
     jmp_classification: Composting toilets > Composting toilet (private)
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: MDG-SAN-06
     source_category_code: chasse_d_eau_a_quelque_chose_d_autre
-    national_label_en: Chasse d'eau à quelque chose d'autre
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d'eau \xE0 quelque chose d'autre"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-SAN-07
     source_category_code: chasse_d_eau_relie_a_l_air_libre
     national_label_en: 'Chasse d''eau: relie a l''air libre'
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-SAN-08
     source_category_code: chasse_d_eau_ou_manuelle_connectee_quelque_chose_d_autre
-    national_label_en: Chasse d’eau ou manuelle connectée, Quelque chose d'autre
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d\u2019eau ou manuelle connect\xE9e, Quelque chose\
+      \ d'autre"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-SAN-09
     source_category_code: chasse_d_eau_chasse_manuelle_vers_ailleurs
-    national_label_en: Chasse d’eau/chasse manuelle vers ailleurs
-    national_label_local: reliée al'air libre
+    national_label_en: "Chasse d\u2019eau/chasse manuelle vers ailleurs"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-SAN-10
     source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-SAN-11
     source_category_code: chasse_d_eau_connectee_a_un_systeme_d_egout
-    national_label_en: Chasse d'eau connectée à un système d'égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau connect\xE9e \xE0 un syst\xE8me d'\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MDG-SAN-12
     source_category_code: chasse_d_eau_relie_a_un_systeme_d_egout
     national_label_en: Chasse d'eau:relie a un systeme d'egout
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MDG-SAN-13
     source_category_code: chasse_d_eau_ou_manuelle_connectee_systeme_d_egout
-    national_label_en: Chasse d’eau ou manuelle connectée, Système d'égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d\u2019eau ou manuelle connect\xE9e, Syst\xE8me d'\xE9\
+      gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MDG-SAN-14
     source_category_code: chasse_d_eau_chasse_manuelle_vers_les_egouts
-    national_label_en: Chasse d’eau/chasse manuelle vers les égouts
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d\u2019eau/chasse manuelle vers les \xE9gouts"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MDG-SAN-15
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MDG-SAN-16
     source_category_code: chasse_d_eau_reliee_a_une_fosse_d_aisances
-    national_label_en: Chasse d'eau reliée à une fosse d'aisances
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau reli\xE9e \xE0 une fosse d'aisances"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MDG-SAN-17
     source_category_code: chasse_d_eau_relie_aux_latrines
     national_label_en: 'Chasse d''eau: relie aux latrines'
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MDG-SAN-18
     source_category_code: chasse_d_eau_ou_manuelle_connectee_latrines
-    national_label_en: Chasse d’eau ou manuelle connectée, Latrines
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d\u2019eau ou manuelle connect\xE9e, Latrines"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MDG-SAN-19
     source_category_code: chasse_d_eau_chasse_manuelle_dans_une_latrine_a_fosse
-    national_label_en: Chasse d’eau/chasse manuelle dans une latrine à fosse
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d\u2019eau/chasse manuelle dans une latrine \xE0 fosse"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MDG-SAN-20
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MDG-SAN-21
     source_category_code: chasse_d_eau_reliee_a_une_fosse_septique
-    national_label_en: Chasse d'eau reliée à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau reli\xE9e \xE0 une fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MDG-SAN-22
     source_category_code: chasse_d_eau_relie_a_fosse_sceptique
     national_label_en: 'Chasse d''eau: relie a fosse sceptique'
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MDG-SAN-23
     source_category_code: chasse_d_eau_ou_manuelle_connectee_fosse_septique
-    national_label_en: Chasse d’eau ou manuelle connectée, Fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d\u2019eau ou manuelle connect\xE9e, Fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MDG-SAN-24
     source_category_code: chasse_d_eau_chasse_manuelle_vers_une_fosse_sistique
-    national_label_en: Chasse d’eau/chasse manuelle vers une fosse sIStique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d\u2019eau/chasse manuelle vers une fosse sIStique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MDG-SAN-25
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MDG-SAN-26
     source_category_code: chasse_d_eau_a_ne_sait_pas_ou
-    national_label_en: Chasse d'eau à ne sait pas ou
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d'eau \xE0 ne sait pas ou"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MDG-SAN-27
     source_category_code: chasse_d_eau_relie_a_lieu_inconnu
     national_label_en: 'Chasse d''eau: relie a lieu inconnu'
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MDG-SAN-28
     source_category_code: chasse_d_eau_ou_manuelle_connectee_nsp
-    national_label_en: Chasse d’eau ou manuelle connectée, NSP
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d\u2019eau ou manuelle connect\xE9e, NSP"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MDG-SAN-29
     source_category_code: chasse_d_eau_chasse_manuelle_vers_un_endroit_inconnu_pas_sur_e_ne_sait_pas
-    national_label_en: Chasse d’eau/chasse manuelle vers un endroit inconnu/pas sûr(e)/ne
-      sait pas
-    national_label_local: reliée a autre chose
+    national_label_en: "Chasse d\u2019eau/chasse manuelle vers un endroit inconnu/pas\
+      \ s\xFBr(e)/ne sait pas"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MDG-SAN-30
     source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MDG-SAN-31
     source_category_code: toilette_avec_chasse_d_eau
     national_label_en: Toilette avec chasse d'eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-SAN-32
     source_category_code: private_cistern
     national_label_en: Private Cistern
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: MDG-SAN-33
     source_category_code: shared_cistern
     national_label_en: Shared Cistern
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: MDG-SAN-34
     source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: MDG-SAN-35
     source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: MDG-SAN-36
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MDG-SAN-37
     source_category_code: tout_a_l_egout_sewer
     national_label_en: Tout a l'egout ("sewer")
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MDG-SAN-38
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: MDG-SAN-39
     source_category_code: chasse_d_eau_avec_evacuation_wc
     national_label_en: Chasse d'eau avec evacuation/WC
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MDG-SAN-40
     source_category_code: cistern
     national_label_en: Cistern
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MDG-SAN-41
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MDG-SAN-42
     source_category_code: fosse_septique
     national_label_en: Fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MDG-SAN-43
     source_category_code: flush_to_somewhere_else
     national_label_en: Flush to somewhere else
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MDG-SAN-44
     source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MDG-SAN-45
     source_category_code: bucket_toilet
@@ -1323,8 +1716,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MDG-SAN-46
     source_category_code: seau
@@ -1334,8 +1727,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MDG-SAN-47
     source_category_code: seau_tinette
@@ -1345,8 +1738,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MDG-SAN-48
     source_category_code: seau_tinette_pot_de_chambre
@@ -1356,8 +1749,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MDG-SAN-49
     source_category_code: hanging_toilet_latrine
@@ -1368,8 +1761,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: MDG-SAN-50
     source_category_code: toilette_latrines_suspendues
@@ -1380,8 +1773,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: MDG-SAN-51
     source_category_code: toilettes_suspendues_latrines_suspendues
@@ -1392,8 +1785,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: MDG-SAN-52
     source_category_code: toilettes_latrines_suspendues
@@ -1404,8 +1797,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: MDG-SAN-53
     source_category_code: tinette
@@ -1415,8 +1808,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: MDG-SAN-54
     source_category_code: pit_latrine_with_washable_slab_pit_latrine_with_slab_that_can_not_be_washed
@@ -1428,8 +1821,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-55
     source_category_code: fosses_d_aisances_avec_dalle
@@ -1440,8 +1833,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-56
     source_category_code: latrine_a_fosse_avec_dalle_lavable
@@ -1452,20 +1845,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-57
     source_category_code: latrine_a_fosse_avec_une_dalle
-    national_label_en: Latrine à fosse avec une dalle
+    national_label_en: "Latrine \xE0 fosse avec une dalle"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-58
     source_category_code: latrine_avec_dalle_lavable
@@ -1476,8 +1869,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-59
     source_category_code: latrine_avec_dalle_non_ventile
@@ -1488,8 +1881,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-60
     source_category_code: pit_latrine_with_slab
@@ -1500,8 +1893,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-61
     source_category_code: pit_latrine_with_washable_slab
@@ -1512,8 +1905,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-SAN-62
     source_category_code: fosse_improvisee_perdue
@@ -1524,8 +1917,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-63
     source_category_code: fosse_latrine_a_plein_air
@@ -1536,8 +1929,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-64
     source_category_code: fosses_d_aisances_sans_dalle_trou_ouvert
@@ -1548,20 +1941,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-65
     source_category_code: latrine_a_fosse_sans_dalle_a_fosse_ouverte
-    national_label_en: Latrine à fosse sans dalle/à fosse ouverte
+    national_label_en: "Latrine \xE0 fosse sans dalle/\xE0 fosse ouverte"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-66
     source_category_code: latrine_a_fosse_sans_dalle_fosse_ouverte
@@ -1572,8 +1965,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-67
     source_category_code: latrine_sans_dalle
@@ -1584,8 +1977,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-68
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1596,8 +1989,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-69
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1608,8 +2001,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-70
     source_category_code: simple_pit
@@ -1620,8 +2013,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MDG-SAN-71
     source_category_code: fosse_perdue
@@ -1632,8 +2025,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-72
     source_category_code: latrine
@@ -1644,8 +2037,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-73
     source_category_code: latrine_a_fosse_avec_dalle_non_lavable
@@ -1656,20 +2049,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-74
     source_category_code: latrine_creusee
-    national_label_en: Latrine creusée
+    national_label_en: "Latrine creus\xE9e"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-75
     source_category_code: latrine_traditionelle
@@ -1680,8 +2073,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-76
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1692,8 +2085,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-77
     source_category_code: ventilated_pit
@@ -1704,104 +2097,104 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-SAN-78
     source_category_code: fosse_d_aisances_amelioree_autoaeree
-    national_label_en: Fosse d'aisances améliorée autoaérée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d'aisances am\xE9lior\xE9e autoa\xE9r\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-79
     source_category_code: latrine_a_fosse_ameliore_ventile
     national_label_en: Latrine a fosse ameliore ventile
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-80
     source_category_code: latrine_ameliore_auto_aerees
-    national_label_en: Latrine amélioré auto-aérées
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrine am\xE9lior\xE9 auto-a\xE9r\xE9es"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-81
     source_category_code: latrine_amelioree_a_fosse_autoventilee_vip
-    national_label_en: Latrine améliorée à fosse autoventilée (VIP)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrine am\xE9lior\xE9e \xE0 fosse autoventil\xE9e (VIP)"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-82
     source_category_code: latrine_avec_dalle_ventile
     national_label_en: Latrine avec dalle ventile
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-83
     source_category_code: latrines_ameliorees
     national_label_en: Latrines ameliorees
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-84
     source_category_code: ventilated_improved_pit_latrine_laa
     national_label_en: Ventilated improved pit latrine (LAA)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-85
     source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: Ventilated Improved Pit latrine (VIP)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MDG-SAN-86
     source_category_code: aucun
@@ -1811,8 +2204,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-87
     source_category_code: aucune_installation_brousse_champ
@@ -1822,8 +2215,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-88
     source_category_code: dans_la_nature
@@ -1833,8 +2226,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-89
     source_category_code: nature_pas_de_toilette
@@ -1844,8 +2237,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-90
     source_category_code: no_facilities_nature
@@ -1855,8 +2248,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-91
     source_category_code: no_facility_bush_field
@@ -1866,8 +2259,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-92
     source_category_code: non_pas_disponible
@@ -1877,8 +2270,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-93
     source_category_code: pas_de_toilette_dans_la_nature
@@ -1888,8 +2281,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-94
     source_category_code: pas_de_toilettes_nature_champs
@@ -1899,8 +2292,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-95
     source_category_code: pas_de_toilettes_nature
@@ -1910,8 +2303,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MDG-SAN-96
     source_category_code: latrine_avec_dalle_non_lavable
@@ -1921,8 +2314,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: MDG-SAN-97
     source_category_code: pit_latrine_with_non_washable_slab
@@ -1932,8 +2325,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: MDG-SAN-98
     source_category_code: autre
@@ -1943,8 +2336,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MDG-SAN-99
     source_category_code: autres
@@ -1954,8 +2347,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MDG-SAN-100
     source_category_code: other
@@ -1965,18 +2358,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MDG_Madagascar_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MDG-WAS-01
     source_category_code: source
@@ -1986,8 +2379,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: MDG-WAS-02
     source_category_code: spring
@@ -1997,19 +2390,19 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: MDG-WAS-03
     source_category_code: private_well
     national_label_en: Private Well
-    national_label_local: Privé
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > All wells > Private
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: MDG-WAS-04
     source_category_code: public_well
@@ -2019,184 +2412,184 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: MDG-WAS-05
     source_category_code: protected_spring
     national_label_en: Protected spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MDG-WAS-06
     source_category_code: source_protege
-    national_label_en: Source protégé
-    national_label_local: Source protégées
+    national_label_en: "Source prot\xE9g\xE9"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MDG-WAS-07
     source_category_code: source_protegee
-    national_label_en: Source protégée
-    national_label_local: Source protégées
+    national_label_en: "Source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MDG-WAS-08
     source_category_code: protected_well
     national_label_en: Protected well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-WAS-09
     source_category_code: puit_creuse_protege
-    national_label_en: Puit creuse protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puit creuse prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-WAS-10
     source_category_code: puits_a_pompe_a_motricite_humain
-    national_label_en: Puits à pompe à motricité humain
-    national_label_local: Puits protegées
+    national_label_en: "Puits \xE0 pompe \xE0 motricit\xE9 humain"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-WAS-11
     source_category_code: puits_avec_pompe
     national_label_en: Puits avec pompe
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-WAS-12
     source_category_code: puits_creuse_protege
     national_label_en: Puits creuse protege
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-WAS-13
     source_category_code: puits_protege
-    national_label_en: Puits protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MDG-WAS-14
     source_category_code: puits_avec_pompe
     national_label_en: Puits avec pompe
-    national_label_local: Privé
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Protected well > Private
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MDG-WAS-15
     source_category_code: puits_sans_pompe_protege
-    national_label_en: Puits sans pompe protégé
-    national_label_local: Privé
+    national_label_en: "Puits sans pompe prot\xE9g\xE9"
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Protected well > Private
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MDG-WAS-16
     source_category_code: puits_public_protege
-    national_label_en: Puits public protégé
+    national_label_en: "Puits public prot\xE9g\xE9"
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: MDG-WAS-17
     source_category_code: forage_artesien_non_protege
-    national_label_en: Forage artésien non protégé
+    national_label_en: "Forage art\xE9sien non prot\xE9g\xE9"
     national_label_local: Autre
     jmp_classification: Ground water > Traditional wells > Other
     jmp_id: ground_water.traditional_wells.other
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-WAS-18
     source_category_code: puits_artesiens
-    national_label_en: Puits Artésiens
+    national_label_en: "Puits Art\xE9siens"
     national_label_local: Autre
     jmp_classification: Ground water > Traditional wells > Other
     jmp_id: ground_water.traditional_wells.other
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-WAS-19
     source_category_code: puits_sans_pompe_artesiens
-    national_label_en: Puits sans pompe (Artésiens)
+    national_label_en: "Puits sans pompe (Art\xE9siens)"
     national_label_local: Autre
     jmp_classification: Ground water > Traditional wells > Other
     jmp_id: ground_water.traditional_wells.other
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MDG-WAS-20
     source_category_code: indoor_handpump_well_cistern
     national_label_en: Indoor Handpump/Well/Cistern
-    national_label_local: Privé
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Traditional wells > Private
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: MDG-WAS-21
     source_category_code: outdoor_handpump_well_cistern
@@ -2206,8 +2599,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: MDG-WAS-22
     source_category_code: puits_du_voisin
@@ -2217,19 +2610,19 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: MDG-WAS-23
     source_category_code: forage_muni_de_pompe_a_motrice_humaine
-    national_label_en: Forage muni de pompe à motrice humaine
+    national_label_en: "Forage muni de pompe \xE0 motrice humaine"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-24
     source_category_code: puits_a_pompe_ou_forage
@@ -2239,8 +2632,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-25
     source_category_code: puits_a_pompe_forage
@@ -2250,19 +2643,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-26
     source_category_code: puits_tube_forage
-    national_label_en: Puits tubé/forage
+    national_label_en: "Puits tub\xE9/forage"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-27
     source_category_code: puits_tubulaire_ou_forage
@@ -2272,8 +2665,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-28
     source_category_code: puits_forage_a_pompe
@@ -2283,8 +2676,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-29
     source_category_code: tube_well_or_borehole
@@ -2294,96 +2687,96 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MDG-WAS-30
     source_category_code: source_non_protege
-    national_label_en: Source non protégé
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MDG-WAS-31
     source_category_code: source_non_protegee
-    national_label_en: Source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MDG-WAS-32
     source_category_code: unprotected_spring
     national_label_en: Unprotected spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MDG-WAS-33
     source_category_code: puit_creuse_non_protege
-    national_label_en: Puit creuse non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puit creuse non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MDG-WAS-34
     source_category_code: puits_creuse_pas_protege
     national_label_en: Puits creuse pas protege
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MDG-WAS-35
     source_category_code: puits_non_protege
-    national_label_en: Puits non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MDG-WAS-36
     source_category_code: unprotected_well
     national_label_en: Unprotected well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MDG-WAS-37
     source_category_code: puits_sans_pompe_non_protege
-    national_label_en: Puits sans pompe non protégé
+    national_label_en: "Puits sans pompe non prot\xE9g\xE9"
     national_label_local: Autre
     jmp_classification: Ground water > Unprotected well > Other
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: MDG-WAS-38
     source_category_code: puits_public_ouvert
@@ -2393,63 +2786,63 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: MDG-WAS-39
     source_category_code: cart_with_small_tank
     national_label_en: cart with small tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MDG-WAS-40
     source_category_code: charrette_avec_petite_citerne
     national_label_en: Charrette avec petite citerne
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MDG-WAS-41
     source_category_code: charrette_avec_petite_citerne_tonneau
     national_label_en: Charrette avec petite citerne/tonneau
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MDG-WAS-42
     source_category_code: charrette_surmontee_d_un_petit_reservoir_fut
-    national_label_en: Charrette surmontée d’un petit réservoir/fût
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_en: "Charrette surmont\xE9e d\u2019un petit r\xE9servoir/f\xFBt"
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MDG-WAS-43
     source_category_code: vendeur_d_eau
     national_label_en: Vendeur d'eau
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MDG-WAS-44
     source_category_code: camion_citerne
@@ -2459,8 +2852,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MDG-WAS-45
     source_category_code: camion_citerne
@@ -2470,8 +2863,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MDG-WAS-46
     source_category_code: service_de_camion_citerne
@@ -2481,8 +2874,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MDG-WAS-47
     source_category_code: tanker_truck
@@ -2492,8 +2885,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MDG-WAS-48
     source_category_code: autre
@@ -2503,8 +2896,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-WAS-49
     source_category_code: autres
@@ -2514,19 +2907,19 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-WAS-50
     source_category_code: eau_de_pluie_stockee_dans_un_camion_citerne
-    national_label_en: Eau de pluie stockée dans un camion-citerne
+    national_label_en: "Eau de pluie stock\xE9e dans un camion-citerne"
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-WAS-51
     source_category_code: magasin
@@ -2536,8 +2929,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-WAS-52
     source_category_code: other
@@ -2547,8 +2940,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MDG-WAS-53
     source_category_code: autre
@@ -2558,8 +2951,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-WAS-54
     source_category_code: autres
@@ -2569,30 +2962,30 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MDG-WAS-55
     source_category_code: bottled_water
     national_label_en: Bottled water
-    national_label_local: Eau conditionnée
+    national_label_local: "Eau conditionn\xE9e"
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: MDG-WAS-56
     source_category_code: eau_en_bouteille
     national_label_en: Eau en bouteille
-    national_label_local: Eau conditionnée
+    national_label_local: "Eau conditionn\xE9e"
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: MDG-WAS-57
     source_category_code: bottled_water
@@ -2602,8 +2995,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MDG-WAS-58
     source_category_code: eau_en_bouteille
@@ -2613,8 +3006,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MDG-WAS-59
     source_category_code: bottled_water
@@ -2624,8 +3017,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: MDG-WAS-60
     source_category_code: eau_en_bouteille
@@ -2635,8 +3028,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: MDG-WAS-61
     source_category_code: mineral_water_in_sachet
@@ -2646,8 +3039,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: MDG-WAS-62
     source_category_code: rainwater
@@ -2657,52 +3050,52 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: MDG-WAS-63
     source_category_code: collecte_d_eau_de_pluie
-    national_label_en: Collecte d’eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_en: "Collecte d\u2019eau de pluie"
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MDG-WAS-64
     source_category_code: eau_de_plui
     national_label_en: Eau de plui
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MDG-WAS-65
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MDG-WAS-66
     source_category_code: rainwater
     national_label_en: Rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MDG-WAS-67
     source_category_code: eau_de_surface
@@ -2712,20 +3105,20 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-68
     source_category_code: eau_de_surface_riviere_barrage_lac_mare_courant_canal_systeme_da_tmirrigation
-    national_label_en: Eau de surface (riviere, barrage, lac, mare, courant, canal,
-      systeme dâ€™irrigation)
+    national_label_en: "Eau de surface (riviere, barrage, lac, mare, courant, canal,\
+      \ systeme d\xE2\u20AC\u2122irrigation)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-69
     source_category_code: lac_riviere_ruisseau
@@ -2735,8 +3128,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-70
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -2746,8 +3139,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-71
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -2757,19 +3150,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-72
     source_category_code: riviere_lac_source_mare
-    national_label_en: Riviére, lac, source, mare
+    national_label_en: "Rivi\xE9re, lac, source, mare"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-73
     source_category_code: surface_water
@@ -2779,8 +3172,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MDG-WAS-74
     source_category_code: barrage
@@ -2790,8 +3183,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: MDG-WAS-75
     source_category_code: mare_lac
@@ -2801,8 +3194,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: MDG-WAS-76
     source_category_code: pond_lake
@@ -2812,8 +3205,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: MDG-WAS-77
     source_category_code: fleuve_rivier
@@ -2823,8 +3216,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: MDG-WAS-78
     source_category_code: river_stream
@@ -2834,8 +3227,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: MDG-WAS-79
     source_category_code: piped_to_neighbor
@@ -2845,8 +3238,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MDG-WAS-80
     source_category_code: robinet_chez_un_voisin
@@ -2856,8 +3249,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MDG-WAS-81
     source_category_code: robinet_du_voisin
@@ -2867,8 +3260,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MDG-WAS-82
     source_category_code: robinet_provenant_du_voisin
@@ -2878,8 +3271,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MDG-WAS-83
     source_category_code: robinet_chez_le_voisin
@@ -2889,8 +3282,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MDG-WAS-84
     source_category_code: household_connection
@@ -2900,8 +3293,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: MDG-WAS-85
     source_category_code: robinet_dans_le_logement_la_cour_concession
@@ -2911,8 +3304,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: MDG-WAS-86
     source_category_code: household_connection
@@ -2922,8 +3315,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-87
     source_category_code: piped_into_dwelling
@@ -2933,19 +3326,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-88
     source_category_code: plomberie_robinet_interieur
-    national_label_en: Plomberie, robinet intérieur
+    national_label_en: "Plomberie, robinet int\xE9rieur"
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-89
     source_category_code: robinet_dans_la_maison
@@ -2955,8 +3348,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-90
     source_category_code: robinet_dans_le_logement
@@ -2966,8 +3359,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-91
     source_category_code: robinet_dans_logement
@@ -2977,8 +3370,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-92
     source_category_code: robinet_dans_le_logement
@@ -2988,8 +3381,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MDG-WAS-93
     source_category_code: piped_to_yard_plot
@@ -2999,8 +3392,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-94
     source_category_code: robinet_dans_cour_parcelle
@@ -3010,8 +3403,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-95
     source_category_code: robinet_dans_la_cour
@@ -3021,8 +3414,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-96
     source_category_code: robinet_dans_la_cour_dans_la_parcelle_ou_dans_la_concession
@@ -3032,30 +3425,30 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-97
     source_category_code: robinet_dans_l_enceinte_la_cour_ou_le_terrain
-    national_label_en: Robinet dans l’enceinte, la cour ou le terrain
+    national_label_en: "Robinet dans l\u2019enceinte, la cour ou le terrain"
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-98
     source_category_code: robinet_prive_externe
-    national_label_en: Robinet privé externe
+    national_label_en: "Robinet priv\xE9 externe"
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-99
     source_category_code: robinet_dans_la_concession_jardin_parcelle
@@ -3065,8 +3458,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MDG-WAS-100
     source_category_code: borne_fontaine_robinet_public
@@ -3076,8 +3469,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-101
     source_category_code: fontaine_public
@@ -3087,19 +3480,19 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-102
     source_category_code: point_d_eau_public_borne_fontaine
-    national_label_en: Point d’eau public/borne fontaine
+    national_label_en: "Point d\u2019eau public/borne fontaine"
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-103
     source_category_code: public_tap
@@ -3109,8 +3502,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-104
     source_category_code: public_tap_standpipe
@@ -3120,8 +3513,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-105
     source_category_code: robinet_fontaine_publique
@@ -3131,8 +3524,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-106
     source_category_code: robinet_ou_fontaine_publique
@@ -3142,8 +3535,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-107
     source_category_code: robinet_public
@@ -3153,8 +3546,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-108
     source_category_code: robinet_public_borne_fontaine
@@ -3164,8 +3557,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-109
     source_category_code: robinet_robinet_public_borne_fontaine
@@ -3175,8 +3568,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MDG-WAS-110
     source_category_code: standpipe
@@ -3186,13 +3579,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MDG_Madagascar_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

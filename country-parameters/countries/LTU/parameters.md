@@ -6,9 +6,9 @@ status: draft
 country_name: LTU
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LTU-EDU-01
     national_label_en: Primary education programmes
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - LTU-EDU-01
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: LTU-EDU-02
     national_label_en: General lower secondary (basic) education programmes
     national_label_local: Pagrindinio ugdymo programos
@@ -32,6 +38,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
+    parent_country_entry_ids:
+    - LTU-EDU-01
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-02
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LTU-EDU-03
     national_label_en: Individualised programmes of general lower secondary education
     national_label_local: Pagrindinio ugdymo individualizuotos programos
@@ -43,6 +57,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - LTU-EDU-01
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LTU-EDU-04
     national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification and basic education
@@ -56,10 +78,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - LTU-EDU-01
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LTU-EDU-05
     national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification
-    national_label_local: Profesinio mokymo programos, neįgyjant pagrindinio išsilavinimo
+    national_label_local: "Profesinio mokymo programos, ne\u012Fgyjant pagrindinio\
+      \ i\u0161silavinimo"
     entry_age: 14
     duration_years: 2
     isced_level: '2'
@@ -68,9 +99,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - LTU-EDU-01
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LTU-EDU-06
     national_label_en: General lower secondary (basic) education programme for adults
-    national_label_local: Suaugusiųjų pagrindinio ugdymo programa
+    national_label_local: "Suaugusi\u0173j\u0173 pagrindinio ugdymo programa"
     entry_age: 0
     duration_years: 6
     isced_level: '2'
@@ -79,6 +118,12 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - LTU-EDU-06
+    cum_years_status: computed
+    review_flags: &id002 []
   - country_entry_id: LTU-EDU-07
     national_label_en: General upper secondary education programmes
     national_label_local: Vidurinio ugdymo programos
@@ -90,10 +135,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - LTU-EDU-02
+    - LTU-EDU-03
+    - LTU-EDU-04
+    - LTU-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
   - country_entry_id: LTU-EDU-08
     national_label_en: General secondary educational programmes for children of special
       needs
-    national_label_local: Socialinių įgūdžių ugdymo programos
+    national_label_local: "Socialini\u0173 \u012Fg\u016Bd\u017Ei\u0173 ugdymo programos"
     entry_age: 17
     duration_years: 3
     isced_level: '3'
@@ -102,6 +160,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - LTU-EDU-02
+    - LTU-EDU-03
+    - LTU-EDU-04
+    - LTU-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
   - country_entry_id: LTU-EDU-09
     national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification and secondary education
@@ -114,10 +185,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - LTU-EDU-02
+    - LTU-EDU-03
+    - LTU-EDU-04
+    - LTU-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
   - country_entry_id: LTU-EDU-10
     national_label_en: Vocational education programmes for person without basic education
       aimed at the acquisition of a professional qualification
-    national_label_local: Profesinio mokymo programos, neįgyjant vidurinio išsilavinimo
+    national_label_local: "Profesinio mokymo programos, ne\u012Fgyjant vidurinio i\u0161\
+      silavinimo"
     entry_age: 17
     duration_years: 2
     isced_level: '3'
@@ -126,9 +211,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - LTU-EDU-02
+    - LTU-EDU-03
+    - LTU-EDU-04
+    - LTU-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
   - country_entry_id: LTU-EDU-11
     national_label_en: General secondary education programmes for adults
-    national_label_local: Suaugusiųjų vidurinio ugdymo programa
+    national_label_local: "Suaugusi\u0173j\u0173 vidurinio ugdymo programa"
     entry_age: 0
     duration_years: 2
     isced_level: '3'
@@ -137,10 +235,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - LTU-EDU-06
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - LTU-EDU-06
+    - LTU-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: LTU-EDU-12
     national_label_en: Vocational education programmes for persons with secondary
       education
-    national_label_local: Profesinio mokymo programos turint vidurinį išsilavinimą
+    national_label_local: "Profesinio mokymo programos turint vidurin\u012F i\u0161\
+      silavinim\u0105"
     entry_age: 19
     duration_years: 1
     isced_level: '4'
@@ -149,9 +256,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - LTU-EDU-07
+    - LTU-EDU-08
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
   - country_entry_id: LTU-EDU-13
     national_label_en: Higher non-university studies
-    national_label_local: Profesinio bakalauro studijų programos
+    national_label_local: "Profesinio bakalauro studij\u0173 programos"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -160,9 +280,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - LTU-EDU-07
+    - LTU-EDU-08
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
   - country_entry_id: LTU-EDU-14
     national_label_en: Bachelor's studies
-    national_label_local: Bakalauro studijų programos
+    national_label_local: "Bakalauro studij\u0173 programos"
     entry_age: 19
     duration_years: 4
     isced_level: '6'
@@ -171,9 +304,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - LTU-EDU-07
+    - LTU-EDU-08
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
   - country_entry_id: LTU-EDU-15
     national_label_en: Non-degree studies
-    national_label_local: Laipsnio nesuteikiančios studijų programos
+    national_label_local: "Laipsnio nesuteikian\u010Dios studij\u0173 programos"
     entry_age: 23
     duration_years: 1
     isced_level: '6'
@@ -182,9 +328,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - LTU-EDU-07
+    - LTU-EDU-08
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
   - country_entry_id: LTU-EDU-16
     national_label_en: Master's studies
-    national_label_local: Magistrantūros studijų programos
+    national_label_local: "Magistrant\u016Bros studij\u0173 programos"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -193,9 +352,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - LTU-EDU-13
+    - LTU-EDU-14
+    - LTU-EDU-15
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-15
+    - LTU-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
+    - 'minimum parent path selected from: LTU-EDU-13, LTU-EDU-14, LTU-EDU-15'
   - country_entry_id: LTU-EDU-17
     national_label_en: Integrated studies
-    national_label_local: Vientisųjų studijų programos
+    national_label_local: "Vientis\u0173j\u0173 studij\u0173 programos"
     entry_age: 19
     duration_years: 6
     isced_level: '7'
@@ -204,9 +379,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - LTU-EDU-07
+    - LTU-EDU-08
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
   - country_entry_id: LTU-EDU-18
     national_label_en: Medical residency
-    national_label_local: Rezidentūros programos
+    national_label_local: "Rezident\u016Bros programos"
     entry_age: 25
     duration_years: 1
     isced_level: '7'
@@ -215,9 +403,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - LTU-EDU-07
+    - LTU-EDU-08
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
   - country_entry_id: LTU-EDU-19
     national_label_en: Doctorate studies
-    national_label_local: Doktorantūra
+    national_label_local: "Doktorant\u016Bra"
     entry_age: 25
     duration_years: 4
     isced_level: '8'
@@ -226,10 +427,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - LTU-EDU-16
+    - LTU-EDU-17
+    - LTU-EDU-18
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LTU-EDU-01
+    - LTU-EDU-05
+    - LTU-EDU-07
+    - LTU-EDU-18
+    - LTU-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LTU-EDU-02, LTU-EDU-03, LTU-EDU-04, LTU-EDU-05'
+    - 'minimum parent path selected from: LTU-EDU-07, LTU-EDU-08'
+    - 'minimum parent path selected from: LTU-EDU-16, LTU-EDU-17, LTU-EDU-18'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Lithuania.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

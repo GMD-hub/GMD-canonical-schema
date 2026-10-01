@@ -6,9 +6,9 @@ status: draft
 country_name: MKD
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MKD-EDU-01
     national_label_en: Pre-primary education in pre-primary institution
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: MKD-EDU-02
     national_label_en: Pre-primary education in pre-primary institution
     national_label_local: Preducilisno obrazovanie vo predskolskite ustanovi
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: MKD-EDU-03
     national_label_en: Primary education-regular
     national_label_local: Osnovno redovno obrazovanie
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MKD-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: MKD-EDU-04
     national_label_en: Primary education - special need education
     national_label_local: Osnovno obrazovanie-specijalno
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - MKD-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: MKD-EDU-05
     national_label_en: Primary education - adult education
     national_label_local: Osnovno obrazovanie-vozrasni
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - MKD-EDU-05
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: MKD-EDU-06
     national_label_en: Primary education-art education
     national_label_local: Osnovno obrazovanie-umetnicko
@@ -76,6 +106,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - MKD-EDU-06
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: MKD-EDU-07
     national_label_en: Lower secondary education - regular
     national_label_local: Osnovno redovno obrazovanie
@@ -87,6 +123,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - MKD-EDU-03
+    - MKD-EDU-04
+    - MKD-EDU-06
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
   - country_entry_id: MKD-EDU-08
     national_label_en: Lower secondary  education-special need education
     national_label_local: Osnovno obrazovanie-specijalno
@@ -98,6 +145,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - MKD-EDU-03
+    - MKD-EDU-04
+    - MKD-EDU-06
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
   - country_entry_id: MKD-EDU-09
     national_label_en: Lower secondary -adult education
     national_label_local: Osnovno obrazovanie-vozrasni
@@ -109,6 +167,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - MKD-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MKD-EDU-05
+    - MKD-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: MKD-EDU-10
     national_label_en: Lower secondary -art education
     national_label_local: Osnovno obrazovanie-umetnicko
@@ -120,6 +186,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - MKD-EDU-03
+    - MKD-EDU-04
+    - MKD-EDU-06
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
   - country_entry_id: MKD-EDU-11
     national_label_en: Upper secondary education-regular
     national_label_local: Sredno obrazovanie - redovno
@@ -131,6 +208,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-12
     national_label_en: Upper secondary education-special need education
     national_label_local: Sredno strucno obrazovanie- specijalno
@@ -142,6 +232,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-13
     national_label_en: Vocational training
     national_label_local: Strucno osposobuvanje
@@ -153,6 +256,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-14
     national_label_en: Upper secondary education-regular general
     national_label_local: Sredno obrazovanie - redovno opsto
@@ -164,6 +280,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-15
     national_label_en: Upper secondary education-regular vocational education
     national_label_local: Sredno obrazovanie - redovno strucno
@@ -175,6 +304,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-16
     national_label_en: Upper secondary vocational education-special need education
     national_label_local: Sredno strucno obrazovanie- specijalno
@@ -186,6 +328,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-17
     national_label_en: Upper secondary education-regular religious- vocational
     national_label_local: Sredno obrazovanie - versko
@@ -197,6 +352,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 21
+    parent_country_entry_ids:
+    - MKD-EDU-07
+    - MKD-EDU-08
+    - MKD-EDU-10
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
   - country_entry_id: MKD-EDU-18
     national_label_en: Workers' programs
     national_label_local: Specijalisticko obrazovanie
@@ -208,6 +376,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - MKD-EDU-11
+    - MKD-EDU-12
+    - MKD-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
   - country_entry_id: MKD-EDU-19
     national_label_en: University education - three years educational programmes -180
       credits, University education - four year studies-240 credits.
@@ -221,6 +404,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - MKD-EDU-11
+    - MKD-EDU-12
+    - MKD-EDU-14
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
   - country_entry_id: MKD-EDU-20
     national_label_en: University education - five year studies
     national_label_local: Dodiplomski  studii 5 godisni studii
@@ -232,6 +430,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - MKD-EDU-11
+    - MKD-EDU-12
+    - MKD-EDU-14
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
   - country_entry_id: MKD-EDU-21
     national_label_en: Integrated studies(long 1st degree programms)
     national_label_local: Integrirani studii
@@ -243,6 +456,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - MKD-EDU-11
+    - MKD-EDU-12
+    - MKD-EDU-14
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
   - country_entry_id: MKD-EDU-22
     national_label_en: Masters' degree
     national_label_local: Postdiplomski studii za Magister
@@ -254,6 +482,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - MKD-EDU-19
+    - MKD-EDU-20
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-19
+    - MKD-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
+    - 'minimum parent path selected from: MKD-EDU-19, MKD-EDU-20'
   - country_entry_id: MKD-EDU-23
     national_label_en: Specialist's degree
     national_label_local: Postdiplomski studii za Specijalist
@@ -265,6 +509,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - MKD-EDU-11
+    - MKD-EDU-12
+    - MKD-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
   - country_entry_id: MKD-EDU-24
     national_label_en: Doctorate
     national_label_local: Doktorat
@@ -276,28 +535,45 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - MKD-EDU-21
+    - MKD-EDU-22
+    - MKD-EDU-23
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - MKD-EDU-06
+    - MKD-EDU-07
+    - MKD-EDU-11
+    - MKD-EDU-23
+    - MKD-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: MKD-EDU-03, MKD-EDU-04, MKD-EDU-06'
+    - 'minimum parent path selected from: MKD-EDU-07, MKD-EDU-08, MKD-EDU-10'
+    - 'minimum parent path selected from: MKD-EDU-11, MKD-EDU-12, MKD-EDU-14'
+    - 'minimum parent path selected from: MKD-EDU-21, MKD-EDU-22, MKD-EDU-23'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_North
       Macedonia.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2021
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MKD-SUBNAT-01
-    survey_labels: 1 – Skopje | 1-Skopje | 8 – Skopje
+    survey_labels: "1 \u2013 Skopje | 1-Skopje | 8 \u2013 Skopje"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK008
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK008
     geo_year: '2021'
@@ -315,10 +591,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTSx_2
     geo_year: '2021'
@@ -327,20 +603,20 @@ parameters:
     geo_idvar: sample
     geo_id: '2'
     geo_nvar: NAME_LATN
-    geo_name: Istočen & Jugoistočen & Jugozapaden & Pelagoniski & Pološki & Severoistočen
-      & Vardarski
+    geo_name: "Isto\u010Den & Jugoisto\u010Den & Jugozapaden & Pelagoniski & Polo\u0161\
+      ki & Severoisto\u010Den & Vardarski"
     source_row: 10065
   - country_entry_id: MKD-SUBNAT-03
-    survey_labels: 1 – Vardar
+    survey_labels: "1 \u2013 Vardar"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK001
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK001
     geo_year: '2021'
@@ -352,16 +628,16 @@ parameters:
     geo_name: Vardarski
     source_row: 10067
   - country_entry_id: MKD-SUBNAT-04
-    survey_labels: 2 – Eastern
+    survey_labels: "2 \u2013 Eastern"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK002
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK002
     geo_year: '2021'
@@ -370,19 +646,19 @@ parameters:
     geo_idvar: NUTS_ID
     geo_id: MK002
     geo_nvar: NAME_LATN
-    geo_name: Istočen
+    geo_name: "Isto\u010Den"
     source_row: 10068
   - country_entry_id: MKD-SUBNAT-05
-    survey_labels: 3 – Southwestern
+    survey_labels: "3 \u2013 Southwestern"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK003
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK003
     geo_year: '2021'
@@ -394,16 +670,16 @@ parameters:
     geo_name: Jugozapaden
     source_row: 10069
   - country_entry_id: MKD-SUBNAT-06
-    survey_labels: 4 – Southeastern
+    survey_labels: "4 \u2013 Southeastern"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK004
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK004
     geo_year: '2021'
@@ -412,19 +688,19 @@ parameters:
     geo_idvar: NUTS_ID
     geo_id: MK004
     geo_nvar: NAME_LATN
-    geo_name: Jugoistočen
+    geo_name: "Jugoisto\u010Den"
     source_row: 10070
   - country_entry_id: MKD-SUBNAT-07
-    survey_labels: 5 – Pelagonia
+    survey_labels: "5 \u2013 Pelagonia"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK005
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK005
     geo_year: '2021'
@@ -436,16 +712,16 @@ parameters:
     geo_name: Pelagoniski
     source_row: 10071
   - country_entry_id: MKD-SUBNAT-08
-    survey_labels: 6 – Polog
+    survey_labels: "6 \u2013 Polog"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK006
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK006
     geo_year: '2021'
@@ -454,19 +730,19 @@ parameters:
     geo_idvar: NUTS_ID
     geo_id: MK006
     geo_nvar: NAME_LATN
-    geo_name: Pološki
+    geo_name: "Polo\u0161ki"
     source_row: 10072
   - country_entry_id: MKD-SUBNAT-09
-    survey_labels: 7 – Northeastern
+    survey_labels: "7 \u2013 Northeastern"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MKD_2021_NUTS3_MK007
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: MKD_2021_NUTS3_MK007
     geo_year: '2021'
@@ -475,17 +751,17 @@ parameters:
     geo_idvar: NUTS_ID
     geo_id: MK007
     geo_nvar: NAME_LATN
-    geo_name: Severoistočen
+    geo_name: "Severoisto\u010Den"
     source_row: 10073
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MKD-SAN-01
     source_category_code: composting_toilets
@@ -495,8 +771,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MKD-SAN-02
     source_category_code: to_elsewhere
@@ -506,8 +782,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MKD-SAN-03
     source_category_code: to_open_drain
@@ -517,8 +793,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MKD-SAN-04
     source_category_code: flush_or_pour_flush_to_piped_sewer_system
@@ -528,8 +804,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MKD-SAN-05
     source_category_code: to_piped_sewer_system
@@ -539,8 +815,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MKD-SAN-06
     source_category_code: flush_or_pour_flush_to_pit
@@ -550,8 +826,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MKD-SAN-07
     source_category_code: to_pit
@@ -561,8 +837,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MKD-SAN-08
     source_category_code: flush_or_pour_flush_to_septic_tank
@@ -572,8 +848,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MKD-SAN-09
     source_category_code: to_septic_tank
@@ -583,8 +859,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MKD-SAN-10
     source_category_code: flush_or_pour_flush_to_unknown_place_not_sure_dk
@@ -594,8 +870,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MKD-SAN-11
     source_category_code: i_do_not_know_where
@@ -605,8 +881,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MKD-SAN-12
     source_category_code: flush_toilet
@@ -616,8 +892,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: MKD-SAN-13
     source_category_code: flush_to_somewhere_else
@@ -627,8 +903,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: MKD-SAN-14
     source_category_code: flush_to_piped_sewer_system
@@ -638,8 +914,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MKD-SAN-15
     source_category_code: flush_to_pit_latrine
@@ -649,8 +925,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: MKD-SAN-16
     source_category_code: flush_to_septic_tank
@@ -660,8 +936,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MKD-SAN-17
     source_category_code: flush_to_unknown_place_not_sure_dk_where
@@ -671,8 +947,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MKD-SAN-18
     source_category_code: pan_bucket
@@ -682,8 +958,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MKD-SAN-19
     source_category_code: hanging_toilet_hanging_latrine
@@ -694,8 +970,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: MKD-SAN-20
     source_category_code: pit_latrine_with_slab
@@ -706,8 +982,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MKD-SAN-21
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -718,8 +994,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MKD-SAN-22
     source_category_code: pit_latrine_without_slab_open_pit
@@ -730,8 +1006,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MKD-SAN-23
     source_category_code: pit_latrine
@@ -742,8 +1018,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MKD-SAN-24
     source_category_code: kvip
@@ -754,8 +1030,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MKD-SAN-25
     source_category_code: ventilated_improved_pit_latrine
@@ -766,8 +1042,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MKD-SAN-26
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -778,8 +1054,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MKD-SAN-27
     source_category_code: no_facilities_or_bush_or_field
@@ -789,8 +1065,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MKD-SAN-28
     source_category_code: open_defecation_no_facility_bush_field
@@ -800,8 +1076,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MKD-SAN-29
     source_category_code: toilet_in_another_house
@@ -811,8 +1087,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: MKD-SAN-30
     source_category_code: other
@@ -822,8 +1098,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MKD-SAN-31
     source_category_code: public_toilet_flush_bucket_kvip
@@ -833,18 +1109,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MKD_North_Macedonia_2.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MKD-WAS-01
     source_category_code: protected_spring
@@ -854,8 +1130,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MKD-WAS-02
     source_category_code: regulated_spring
@@ -865,8 +1141,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MKD-WAS-03
     source_category_code: protected_well
@@ -876,8 +1152,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MKD-WAS-04
     source_category_code: tubewell_borehole
@@ -887,8 +1163,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MKD-WAS-05
     source_category_code: tubewell_borehole
@@ -898,8 +1174,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MKD-WAS-06
     source_category_code: excavated_well_pump
@@ -909,8 +1185,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: MKD-WAS-07
     source_category_code: perforated_piped_pump
@@ -920,8 +1196,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: MKD-WAS-08
     source_category_code: unprotected_spring
@@ -931,8 +1207,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MKD-WAS-09
     source_category_code: unregulated_spring
@@ -942,8 +1218,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MKD-WAS-10
     source_category_code: unprotected_well
@@ -953,8 +1229,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MKD-WAS-11
     source_category_code: public_fountain_connected_on_separate_spring
@@ -964,8 +1240,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: MKD-WAS-12
     source_category_code: other
@@ -975,8 +1251,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MKD-WAS-13
     source_category_code: bottled_water
@@ -986,8 +1262,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MKD-WAS-14
     source_category_code: bw_with_improved_sources
@@ -997,8 +1273,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MKD-WAS-15
     source_category_code: bottled_water
@@ -1008,8 +1284,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: MKD-WAS-16
     source_category_code: rainwater
@@ -1019,8 +1295,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MKD-WAS-17
     source_category_code: surface_water
@@ -1030,8 +1306,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MKD-WAS-18
     source_category_code: other
@@ -1041,8 +1317,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MKD-WAS-19
     source_category_code: piped_to_neighbour
@@ -1052,8 +1328,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MKD-WAS-20
     source_category_code: water_supply_connected_to_private_air_compressed_water_tank
@@ -1063,8 +1339,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MKD-WAS-21
     source_category_code: piped_into_dwelling
@@ -1074,8 +1350,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MKD-WAS-22
     source_category_code: piped_water_into_dwelling
@@ -1085,8 +1361,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MKD-WAS-23
     source_category_code: water_supply_connected_to_public_water_pipeline
@@ -1096,8 +1372,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MKD-WAS-24
     source_category_code: piped_into_yard_or_plot
@@ -1107,8 +1383,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MKD-WAS-25
     source_category_code: piped_water_to_yard_plot
@@ -1118,8 +1394,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MKD-WAS-26
     source_category_code: private_fountain_connected_to_public_water_pipeline
@@ -1129,8 +1405,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MKD-WAS-27
     source_category_code: piped_water_to_neighbour
@@ -1140,8 +1416,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MKD-WAS-28
     source_category_code: public_fountain_connected_to_public_water_pipeline
@@ -1151,8 +1427,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MKD-WAS-29
     source_category_code: public_tap_standpipe
@@ -1162,8 +1438,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MKD-WAS-30
     source_category_code: public_tap_standpipe
@@ -1173,13 +1449,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MKD_North_Macedonia_2.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

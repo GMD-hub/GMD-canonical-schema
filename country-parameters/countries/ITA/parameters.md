@@ -6,9 +6,9 @@ status: draft
 country_name: ITA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: ITA-EDU-01
     national_label_en: Pre-primary school
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: ITA-EDU-02
     national_label_en: Primary school
     national_label_local: Scuola primaria
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - ITA-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: ITA-EDU-03
     national_label_en: Course of cultural alphabetisation of primary education (for
       adults)
@@ -45,6 +57,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - ITA-EDU-03
+    cum_years_status: computed
+    review_flags: &id002 []
   - country_entry_id: ITA-EDU-04
     national_label_en: Lower secondary education
     national_label_local: "Scuola secondaria \ndi primo grado"
@@ -56,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
+    parent_country_entry_ids:
+    - ITA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-05
     national_label_en: Course of lower secondary education (for adults)
     national_label_local: Percorsi di istruzione di primo livello
@@ -67,6 +93,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - ITA-EDU-03
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - ITA-EDU-03
+    - ITA-EDU-05
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ITA-EDU-06
     national_label_en: Education and vocational training (three-year courses)
     national_label_local: Istruzione e formazione professionale - IeFP (corsi triennali)
@@ -78,6 +112,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - ITA-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-07
     national_label_en: Education and vocational training (fourth year)
     national_label_local: Istruzione e formazione professionale - IeFP (IV anno)
@@ -89,6 +132,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - ITA-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-08
     national_label_en: Technical Institute education
     national_label_local: Istruzione Tecnica
@@ -100,11 +152,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - ITA-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-09
     national_label_en: Liceo education (classical liceo, scientific liceo, linguistic
       liceo, human sciences liceo, music/dance liceo, artistic liceo)
-    national_label_local: "Istruzione Liceale - \n(Liceo classico, scientifico, linguistico,
-      delle scienze umane, musicale/coreutico, artistico)"
+    national_label_local: "Istruzione Liceale - \n(Liceo classico, scientifico, linguistico,\
+      \ delle scienze umane, musicale/coreutico, artistico)"
     entry_age: 14
     duration_years: 5
     isced_level: '3'
@@ -113,6 +174,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - ITA-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-10
     national_label_en: Upper secondary artistic education courses for adults
     national_label_local: Percorsi di istruzione di secondo livello svolti presso
@@ -125,6 +195,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - ITA-EDU-05
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - ITA-EDU-03
+    - ITA-EDU-05
+    - ITA-EDU-10
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ITA-EDU-11
     national_label_en: Vocational Institute education
     national_label_local: Istruzione professionale
@@ -136,6 +215,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - ITA-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-12
     national_label_en: Upper secondary vocational education courses for adults
     national_label_local: Percorsi di istruzione di secondo livello svolti presso
@@ -148,6 +236,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - ITA-EDU-05
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - ITA-EDU-03
+    - ITA-EDU-05
+    - ITA-EDU-12
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ITA-EDU-13
     national_label_en: Regional vocational training for disadvantaged people
     national_label_local: Formazione professionale regionale per categorie svantaggiate
@@ -159,6 +256,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - ITA-EDU-04
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-14
     national_label_en: Regional vocational training after the attainment of an ISCED3
       qualification or diploma
@@ -171,6 +277,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 413
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-15
     national_label_en: Higher-level technical education and training
     national_label_local: Istruzione e Formazione Tecnica Superiore (IFTS)
@@ -182,6 +298,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-15
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-16
     national_label_en: University - Master (long first degree, 5-6 years)
     national_label_local: Corso di Laurea magistrale a ciclo unico
@@ -193,6 +319,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - ITA-EDU-17
+    - ITA-EDU-18
+    - ITA-EDU-22
+    - ITA-EDU-24
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-18
+    - ITA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-17, ITA-EDU-18, ITA-EDU-22, ITA-EDU-24'
   - country_entry_id: ITA-EDU-17
     national_label_en: University - Bachelor programme
     national_label_local: Corso di Laurea
@@ -204,9 +345,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-17
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-18
     national_label_en: University - Post-Bachelor programme
-    national_label_local: Master universitario di 1° livello
+    national_label_local: "Master universitario di 1\xB0 livello"
     entry_age: 22
     duration_years: 1
     isced_level: '6'
@@ -215,6 +366,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-18
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-19
     national_label_en: University - Master programme (second degree)
     national_label_local: Corso di Laurea magistrale
@@ -226,9 +387,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - ITA-EDU-17
+    - ITA-EDU-18
+    - ITA-EDU-22
+    - ITA-EDU-24
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-18
+    - ITA-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-17, ITA-EDU-18, ITA-EDU-22, ITA-EDU-24'
   - country_entry_id: ITA-EDU-20
     national_label_en: Unversity -  Post-Master programme
-    national_label_local: Master universitario di 2° livello
+    national_label_local: "Master universitario di 2\xB0 livello"
     entry_age: 24
     duration_years: 1
     isced_level: '7'
@@ -237,6 +413,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - ITA-EDU-17
+    - ITA-EDU-18
+    - ITA-EDU-22
+    - ITA-EDU-24
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-18
+    - ITA-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-17, ITA-EDU-18, ITA-EDU-22, ITA-EDU-24'
   - country_entry_id: ITA-EDU-21
     national_label_en: University - Specialisation post-master programme
     national_label_local: Scuole di Specializzazione post-laurea
@@ -248,11 +439,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - ITA-EDU-17
+    - ITA-EDU-18
+    - ITA-EDU-22
+    - ITA-EDU-24
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-18
+    - ITA-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-17, ITA-EDU-18, ITA-EDU-22, ITA-EDU-24'
   - country_entry_id: ITA-EDU-22
     national_label_en: Higher education in Fine Arts, Drama, Dance and Music - first
       level programme (bachelor)
-    national_label_local: Corsi accademici di Alta Formazione Artistica Musicale e
-      Coreutica - 1° livello
+    national_label_local: "Corsi accademici di Alta Formazione Artistica Musicale\
+      \ e Coreutica - 1\xB0 livello"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -261,11 +467,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-22
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-23
     national_label_en: Higher education in Fine Arts, Drama, Dance and Music - second
       level (master) (including long first degree course in Restoration, 5 years )
-    national_label_local: Corsi accademici di Alta Formazione Artistica Musicale e
-      Coreutica - 2° livello
+    national_label_local: "Corsi accademici di Alta Formazione Artistica Musicale\
+      \ e Coreutica - 2\xB0 livello"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -274,11 +490,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - ITA-EDU-17
+    - ITA-EDU-18
+    - ITA-EDU-22
+    - ITA-EDU-24
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-18
+    - ITA-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-17, ITA-EDU-18, ITA-EDU-22, ITA-EDU-24'
   - country_entry_id: ITA-EDU-24
-    national_label_en: Post 1° level  programme - Higher education in Fine Arts, Drama,
-      Dance and Music
-    national_label_local: Corsi accademici di Specializzazione/Perfezionamento dell'Alta
-      Formazione Artistica Musicale e Coreutica - 1° livello
+    national_label_en: "Post 1\xB0 level  programme - Higher education in Fine Arts,\
+      \ Drama, Dance and Music"
+    national_label_local: "Corsi accademici di Specializzazione/Perfezionamento dell'Alta\
+      \ Formazione Artistica Musicale e Coreutica - 1\xB0 livello"
     entry_age: 22
     duration_years: 1
     isced_level: '6'
@@ -287,6 +518,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-24
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-25
     national_label_en: Higher level technical education
     national_label_local: Istruzione Tecnica Superiore (ITS)
@@ -298,11 +539,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-25
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-26
-    national_label_en: Post 2° level  programme - Higher education in Fine Arts, Drama,
-      Dance and Music
-    national_label_local: Corsi accademici di Specializzazione/Perfezionamento dell'Alta
-      Formazione Artistica Musicale e Coreutica - 2° livello
+    national_label_en: "Post 2\xB0 level  programme - Higher education in Fine Arts,\
+      \ Drama, Dance and Music"
+    national_label_local: "Corsi accademici di Specializzazione/Perfezionamento dell'Alta\
+      \ Formazione Artistica Musicale e Coreutica - 2\xB0 livello"
     entry_age: 24
     duration_years: 1
     isced_level: '7'
@@ -311,6 +562,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - ITA-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-26
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ITA-EDU-27
     national_label_en: University - Research  Doctorate (PhD)
     national_label_local: Dottorato di ricerca
@@ -322,6 +583,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - ITA-EDU-16
+    - ITA-EDU-19
+    - ITA-EDU-20
+    - ITA-EDU-21
+    - ITA-EDU-23
+    - ITA-EDU-26
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-26
+    - ITA-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-16, ITA-EDU-19, ITA-EDU-20, ITA-EDU-21,
+      ITA-EDU-23, ITA-EDU-26'
   - country_entry_id: ITA-EDU-28
     national_label_en: Higher education in Fine Arts, Drama, Dance and Music -  Advanced
       research academic diploma
@@ -335,15 +614,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - ITA-EDU-16
+    - ITA-EDU-19
+    - ITA-EDU-20
+    - ITA-EDU-21
+    - ITA-EDU-23
+    - ITA-EDU-26
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - ITA-EDU-02
+    - ITA-EDU-04
+    - ITA-EDU-09
+    - ITA-EDU-26
+    - ITA-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ITA-EDU-16, ITA-EDU-19, ITA-EDU-20, ITA-EDU-21,
+      ITA-EDU-23, ITA-EDU-26'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Italy.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2021
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: ITA-SUBNAT-01
     survey_labels: 1-ITC
@@ -352,10 +649,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ITA_2021_NUTS1_ITC
     geo_year: '2021'
@@ -373,10 +670,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ITA_2021_NUTS1_ITF
     geo_year: '2021'
@@ -394,10 +691,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ITA_2021_NUTS1_ITG
     geo_year: '2021'
@@ -415,10 +712,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ITA_2021_NUTS1_ITH
     geo_year: '2021'
@@ -436,10 +733,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ITA_2021_NUTS1_ITI
     geo_year: '2021'
@@ -452,13 +749,13 @@ parameters:
     source_row: 7982
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: ITA-SAN-01
     source_category_code: allaccio_alle_fogne
@@ -468,8 +765,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: ITA-SAN-02
     source_category_code: no_allaccio_alle_fogne
@@ -479,18 +776,18 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ITA_Italy_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: ITA-WAS-01
     source_category_code: acqua_potabile_fuori_dall_abitazione
@@ -500,8 +797,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: ITA-WAS-02
     source_category_code: acqua_potabile_nell_abitazione
@@ -511,13 +808,13 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ITA_Italy_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

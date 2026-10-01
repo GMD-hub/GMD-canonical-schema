@@ -11,8 +11,8 @@ parameters:
   selectors: null
   value:
   - country_entry_id: COG-EDU-01
-    national_label_en: Éducation pré-scolaire
-    national_label_local: Éducation pré-scolaire
+    national_label_en: "\xC9ducation pr\xE9-scolaire"
+    national_label_local: "\xC9ducation pr\xE9-scolaire"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: COG-EDU-02
     national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - COG-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: COG-EDU-03
-    national_label_en: Enseignement secondaire général 1 e cycle
-    national_label_local: Enseignement secondaire général 1 e cycle
+    national_label_en: "Enseignement secondaire g\xE9n\xE9ral 1 e cycle"
+    national_label_local: "Enseignement secondaire g\xE9n\xE9ral 1 e cycle"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -43,9 +55,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - COG-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COG-EDU-04
-    national_label_en: Centre de métiers
-    national_label_local: Centre de métiers
+    national_label_en: "Centre de m\xE9tiers"
+    national_label_local: "Centre de m\xE9tiers"
     entry_age: 12
     duration_years: 2
     isced_level: '2'
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - COG-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COG-EDU-05
     national_label_en: Enseignement secondaire technique 1 e cycle
     national_label_local: Enseignement secondaire technique 1 e cycle
@@ -65,9 +93,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - COG-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: COG-EDU-06
-    national_label_en: Enseignement secondaire général 2 e cycle
-    national_label_local: Enseignement secondaire général 2 e cycle
+    national_label_en: "Enseignement secondaire g\xE9n\xE9ral 2 e cycle"
+    national_label_local: "Enseignement secondaire g\xE9n\xE9ral 2 e cycle"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -76,6 +112,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - COG-EDU-03
+    - COG-EDU-04
+    - COG-EDU-05
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
   - country_entry_id: COG-EDU-07
     national_label_en: Enseignement secondaire professionnelle (BEP)
     national_label_local: Enseignement secondaire professionnelle (BEP)
@@ -87,6 +135,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - COG-EDU-03
+    - COG-EDU-04
+    - COG-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
   - country_entry_id: COG-EDU-08
     national_label_en: Enseignement secondaire professionnelle (CAP)
     national_label_local: Enseignement secondaire professionnelle (CAP)
@@ -98,6 +158,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - COG-EDU-03
+    - COG-EDU-04
+    - COG-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
   - country_entry_id: COG-EDU-09
     national_label_en: Enseignement secondaire technique 2 e cycle
     national_label_local: Enseignement secondaire technique 2 e cycle
@@ -109,9 +181,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - COG-EDU-03
+    - COG-EDU-04
+    - COG-EDU-05
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
   - country_entry_id: COG-EDU-10
-    national_label_en: Enseignement supérieur (cycle court)
-    national_label_local: Enseignement supérieur (cycle court)
+    national_label_en: "Enseignement sup\xE9rieur (cycle court)"
+    national_label_local: "Enseignement sup\xE9rieur (cycle court)"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -120,9 +204,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - COG-EDU-06
+    - COG-EDU-07
+    - COG-EDU-08
+    - COG-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
   - country_entry_id: COG-EDU-11
-    national_label_en: Enseignement supérieur (cycle moyen supérieur, licence)
-    national_label_local: Enseignement supérieur (cycle moyen supérieur, licence)
+    national_label_en: "Enseignement sup\xE9rieur (cycle moyen sup\xE9rieur, licence)"
+    national_label_local: "Enseignement sup\xE9rieur (cycle moyen sup\xE9rieur, licence)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -131,9 +230,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - COG-EDU-06
+    - COG-EDU-07
+    - COG-EDU-08
+    - COG-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
   - country_entry_id: COG-EDU-12
-    national_label_en: Enseignement supérieur (cycle moyen supérieur, licence professionnelle)
-    national_label_local: Enseignement supérieur (cycle moyen supérieur, licence professionnelle)
+    national_label_en: "Enseignement sup\xE9rieur (cycle moyen sup\xE9rieur, licence\
+      \ professionnelle)"
+    national_label_local: "Enseignement sup\xE9rieur (cycle moyen sup\xE9rieur, licence\
+      \ professionnelle)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -142,9 +258,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - COG-EDU-06
+    - COG-EDU-07
+    - COG-EDU-08
+    - COG-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
   - country_entry_id: COG-EDU-13
-    national_label_en: Etudes de médecine
-    national_label_local: Etudes de médecine
+    national_label_en: "Etudes de m\xE9decine"
+    national_label_local: "Etudes de m\xE9decine"
     entry_age: 19
     duration_years: 7
     isced_level: '7'
@@ -153,9 +284,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - COG-EDU-06
+    - COG-EDU-07
+    - COG-EDU-08
+    - COG-EDU-09
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
   - country_entry_id: COG-EDU-14
-    national_label_en: Enseignement supérieur (cycle  supérieur, master)
-    national_label_local: Enseignement supérieur (cycle  supérieur, master)
+    national_label_en: "Enseignement sup\xE9rieur (cycle  sup\xE9rieur, master)"
+    national_label_local: "Enseignement sup\xE9rieur (cycle  sup\xE9rieur, master)"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -164,9 +310,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - COG-EDU-11
+    - COG-EDU-12
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-11
+    - COG-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
+    - 'minimum parent path selected from: COG-EDU-11, COG-EDU-12'
   - country_entry_id: COG-EDU-15
-    national_label_en: Enseignement supérieur (Cycle doctorat)
-    national_label_local: Enseignement supérieur (Cycle doctorat)
+    national_label_en: "Enseignement sup\xE9rieur (Cycle doctorat)"
+    national_label_local: "Enseignement sup\xE9rieur (Cycle doctorat)"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -175,9 +336,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - COG-EDU-13
+    - COG-EDU-14
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-11
+    - COG-EDU-14
+    - COG-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
+    - 'minimum parent path selected from: COG-EDU-11, COG-EDU-12'
+    - 'minimum parent path selected from: COG-EDU-13, COG-EDU-14'
   - country_entry_id: COG-EDU-16
-    national_label_en: Certificat d'etudes spéciales
-    national_label_local: Certificat d'etudes spéciales
+    national_label_en: "Certificat d'etudes sp\xE9ciales"
+    national_label_local: "Certificat d'etudes sp\xE9ciales"
     entry_age: 26
     duration_years: 5
     isced_level: '8'
@@ -186,6 +364,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - COG-EDU-13
+    - COG-EDU-14
+    cum_years_schooling: 20
+    cum_years_computation_path:
+    - COG-EDU-02
+    - COG-EDU-04
+    - COG-EDU-07
+    - COG-EDU-11
+    - COG-EDU-14
+    - COG-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: COG-EDU-03, COG-EDU-04, COG-EDU-05'
+    - 'minimum parent path selected from: COG-EDU-06, COG-EDU-07, COG-EDU-08, COG-EDU-09'
+    - 'minimum parent path selected from: COG-EDU-11, COG-EDU-12'
+    - 'minimum parent path selected from: COG-EDU-13, COG-EDU-14'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Congo.xlsx
     verified_on: null
@@ -302,7 +497,7 @@ parameters:
     geo_name: Niari
     source_row: 2531
   - country_entry_id: COG-SUBNAT-06
-    survey_labels: 3 - Lékoumou
+    survey_labels: "3 - L\xE9koumou"
     survey_variables: subnatid
     gmd_subnatid1: COG_2015_GAUL1_974
     gmd_subnatid2: ''
@@ -504,7 +699,7 @@ parameters:
   - country_entry_id: COG-SAN-02
     source_category_code: wc_avec_chasse_d_eau
     national_label_en: WC avec chasse d'eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
@@ -514,8 +709,8 @@ parameters:
     source_row: 66
   - country_entry_id: COG-SAN-03
     source_category_code: chasse_d_eau_pour_le_menage_seul
-    national_label_en: Chasse d'eau pour le ménage seul
-    national_label_local: Toilette à chasse d'eau (privée)
+    national_label_en: "Chasse d'eau pour le m\xE9nage seul"
+    national_label_local: "Toilette \xE0 chasse d'eau (priv\xE9e)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
@@ -525,8 +720,8 @@ parameters:
     source_row: 72
   - country_entry_id: COG-SAN-04
     source_category_code: chasse_d_eau_pour_le_menage_seul
-    national_label_en: Chasse d'eau pour le ménage seul
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau pour le m\xE9nage seul"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
@@ -536,8 +731,9 @@ parameters:
     source_row: 73
   - country_entry_id: COG-SAN-05
     source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
-    national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau/chasse manuelle connect\xE9e \xE0 un syst\xE8\
+      me d'\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
@@ -548,7 +744,7 @@ parameters:
   - country_entry_id: COG-SAN-06
     source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system (*)
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
@@ -558,8 +754,8 @@ parameters:
     source_row: 73
   - country_entry_id: COG-SAN-07
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse d'aisances
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse d'aisances"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
     jmp_id: flush_toilets.private_flush_toilet.to_pit
     gmd_target: flush_pit
@@ -569,8 +765,8 @@ parameters:
     source_row: 75
   - country_entry_id: COG-SAN-08
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
@@ -581,7 +777,7 @@ parameters:
   - country_entry_id: COG-SAN-09
     source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
@@ -592,7 +788,7 @@ parameters:
   - country_entry_id: COG-SAN-10
     source_category_code: chasse_d_eau_en_commun
     national_label_en: Chasse d'eau en commun
-    national_label_local: Toilette à chasse d'eau (publique/partagée)
+    national_label_local: "Toilette \xE0 chasse d'eau (publique/partag\xE9e)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
@@ -603,7 +799,7 @@ parameters:
   - country_entry_id: COG-SAN-11
     source_category_code: chasse_d_eau_en_commun
     national_label_en: Chasse d'eau en commun
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
@@ -614,8 +810,9 @@ parameters:
     source_row: 79
   - country_entry_id: COG-SAN-12
     source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout
-    national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau/chasse manuelle connect\xE9e \xE0 un syst\xE8\
+      me d'\xE9gout"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
@@ -627,7 +824,7 @@ parameters:
   - country_entry_id: COG-SAN-13
     source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system (*)
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
@@ -638,8 +835,8 @@ parameters:
     source_row: 79
   - country_entry_id: COG-SAN-14
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_d_aisances
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse d'aisances
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse d'aisances"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to pit
     jmp_id: flush_toilets.public_shared_flush_toilet.to_pit
     gmd_target: flush_pit
@@ -649,8 +846,8 @@ parameters:
     source_row: 81
   - country_entry_id: COG-SAN-15
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
@@ -661,7 +858,7 @@ parameters:
   - country_entry_id: COG-SAN-16
     source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
@@ -671,8 +868,8 @@ parameters:
     source_row: 80
   - country_entry_id: COG-SAN-17
     source_category_code: reliee_a_autre_chose
-    national_label_en: Reliee a autre chose
-    national_label_local: reliée al'air libre
+    national_label_en: "Reliee a\_autre chose"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
@@ -682,8 +879,8 @@ parameters:
     source_row: 71
   - country_entry_id: COG-SAN-18
     source_category_code: reliee_a_des_latrines
-    national_label_en: Reliee a  des latrines
-    national_label_local: reliée aux latrine
+    national_label_en: "Reliee a\_ des latrines"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
@@ -693,8 +890,8 @@ parameters:
     source_row: 69
   - country_entry_id: COG-SAN-19
     source_category_code: connectee_a_fosse_septique
-    national_label_en: Connectee a  fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Connectee a\_ fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
@@ -704,8 +901,8 @@ parameters:
     source_row: 68
   - country_entry_id: COG-SAN-20
     source_category_code: reliee_a_endroit_inconnu_nsp_ou
-    national_label_en: Reliee a  endroit inconnu/ NSP ou
-    national_label_local: reliée a autre chose
+    national_label_en: "Reliee a\_ endroit inconnu/ NSP ou"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
@@ -857,7 +1054,7 @@ parameters:
   - country_entry_id: COG-SAN-33
     source_category_code: latrines_ameliorees_ventilees_lav
     national_label_en: Latrines ameliorees ventilees (LAV)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
@@ -868,8 +1065,8 @@ parameters:
     source_row: 105
   - country_entry_id: COG-SAN-34
     source_category_code: latrines_ventillees_ameliorees
-    national_label_en: Latrines ventillées améliorées
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrines ventill\xE9es am\xE9lior\xE9es"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
@@ -880,7 +1077,7 @@ parameters:
     source_row: 105
   - country_entry_id: COG-SAN-35
     source_category_code: fosse_latrines_ameliorees_privees
-    national_label_en: Fosse/latrines améliorées privées
+    national_label_en: "Fosse/latrines am\xE9lior\xE9es priv\xE9es"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
       slab/covered latrine
@@ -904,7 +1101,7 @@ parameters:
     source_row: 114
   - country_entry_id: COG-SAN-37
     source_category_code: fosse_latrine_rudimentaire_privee
-    national_label_en: Fosse/latrine rudimentaire privée
+    national_label_en: "Fosse/latrine rudimentaire priv\xE9e"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine without
       slab/open pit
@@ -916,7 +1113,7 @@ parameters:
     source_row: 116
   - country_entry_id: COG-SAN-38
     source_category_code: fosse_latrine_ameioree_privee
-    national_label_en: Fosse/latrine améiorée privée
+    national_label_en: "Fosse/latrine am\xE9ior\xE9e priv\xE9e"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
@@ -927,7 +1124,7 @@ parameters:
     source_row: 115
   - country_entry_id: COG-SAN-39
     source_category_code: fosse_latrines_rudimentaires_privees
-    national_label_en: Fosse/latrines rudimentaires privées
+    national_label_en: "Fosse/latrines rudimentaires priv\xE9es"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
@@ -949,8 +1146,8 @@ parameters:
     source_row: 115
   - country_entry_id: COG-SAN-41
     source_category_code: fosse_d_aisances_amelioree_auto_aeree
-    national_label_en: Fosse d'aisances améliorée auto-aérée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d'aisances am\xE9lior\xE9e auto-a\xE9r\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
@@ -961,7 +1158,7 @@ parameters:
     source_row: 113
   - country_entry_id: COG-SAN-42
     source_category_code: fosse_latrines_ameliorees_en_commun
-    national_label_en: Fosse/latrines améliorées en commun
+    national_label_en: "Fosse/latrines am\xE9lior\xE9es en commun"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
       with slab/covered latrine
@@ -997,7 +1194,7 @@ parameters:
     source_row: 124
   - country_entry_id: COG-SAN-45
     source_category_code: fosse_latrine_amelioree_en_commun
-    national_label_en: Fosse/latrine améliorée en commun
+    national_label_en: "Fosse/latrine am\xE9lior\xE9e en commun"
     national_label_local: Latrine traditionelle
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
       latrine
@@ -1033,8 +1230,8 @@ parameters:
     source_row: 123
   - country_entry_id: COG-SAN-48
     source_category_code: fosse_d_aisances_amelioree_auto_aeree
-    national_label_en: Fosse d'aisances améliorée auto-aérée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d'aisances am\xE9lior\xE9e auto-a\xE9r\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
       Improved Pit latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
@@ -1046,7 +1243,7 @@ parameters:
   - country_entry_id: COG-SAN-49
     source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
-    national_label_local: Latrines à chasse d'eau (privées)
+    national_label_local: "Latrines \xE0 chasse d'eau (priv\xE9es)"
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
@@ -1057,7 +1254,7 @@ parameters:
   - country_entry_id: COG-SAN-50
     source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
-    national_label_local: Latrines à chasse d'eau (publiques/partagées)
+    national_label_local: "Latrines \xE0 chasse d'eau (publiques/partag\xE9es)"
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
       latrine
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
@@ -1124,7 +1321,7 @@ parameters:
   - country_entry_id: COG-SAN-56
     source_category_code: autre
     national_label_en: Autre
-    national_label_local: Autre non ameliorée
+    national_label_local: "Autre non amelior\xE9e"
     jmp_classification: Other unimproved
     jmp_id: other_unimproved
     gmd_target: other
@@ -1145,7 +1342,7 @@ parameters:
     source_row: 136
   - country_entry_id: COG-SAN-58
     source_category_code: autre_a_preciser
-    national_label_en: Autre(à préciser)
+    national_label_en: "Autre(\xE0 pr\xE9ciser)"
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
@@ -1188,8 +1385,8 @@ parameters:
   value:
   - country_entry_id: COG-WAS-01
     source_category_code: source_d_eau_protegee
-    national_label_en: Source d'eau protégée
-    national_label_local: Source protégées
+    national_label_en: "Source d'eau prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
@@ -1199,8 +1396,8 @@ parameters:
     source_row: 78
   - country_entry_id: COG-WAS-02
     source_category_code: source_protege
-    national_label_en: Source protégé
-    national_label_local: Source protégées
+    national_label_en: "Source prot\xE9g\xE9"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
@@ -1210,8 +1407,8 @@ parameters:
     source_row: 78
   - country_entry_id: COG-WAS-03
     source_category_code: source_protegee
-    national_label_en: Source protégée
-    national_label_local: Source protégées
+    national_label_en: "Source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
@@ -1221,8 +1418,8 @@ parameters:
     source_row: 78
   - country_entry_id: COG-WAS-04
     source_category_code: puits_creuse_protege
-    national_label_en: Puits creusé protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits creus\xE9 prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
@@ -1232,8 +1429,8 @@ parameters:
     source_row: 66
   - country_entry_id: COG-WAS-05
     source_category_code: puits_protege
-    national_label_en: Puits protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
@@ -1243,8 +1440,8 @@ parameters:
     source_row: 66
   - country_entry_id: COG-WAS-06
     source_category_code: puits_protege_dans_la_parcelle
-    national_label_en: Puits protégé dans la parcelle
-    national_label_local: Privé
+    national_label_en: "Puits prot\xE9g\xE9 dans la parcelle"
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Protected well > Private
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
@@ -1254,8 +1451,8 @@ parameters:
     source_row: 67
   - country_entry_id: COG-WAS-07
     source_category_code: puits_protege_dans_parcelle
-    national_label_en: Puits protégé dans parcelle
-    national_label_local: Privé
+    national_label_en: "Puits prot\xE9g\xE9 dans parcelle"
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Protected well > Private
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
@@ -1266,7 +1463,7 @@ parameters:
   - country_entry_id: COG-WAS-08
     source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
-    national_label_local: Puits ou sources protégées
+    national_label_local: "Puits ou sources prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
@@ -1276,7 +1473,7 @@ parameters:
     source_row: 46
   - country_entry_id: COG-WAS-09
     source_category_code: pompe_villageoise_forage_a_pompe_manuelle
-    national_label_en: Pompe villageoise/Forage á pompe manuelle
+    national_label_en: "Pompe villageoise/Forage \xE1 pompe manuelle"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
@@ -1298,7 +1495,7 @@ parameters:
     source_row: 58
   - country_entry_id: COG-WAS-11
     source_category_code: puits_a_pompe_forage
-    national_label_en: Puits à pompe / forage
+    national_label_en: "Puits \xE0 pompe / forage"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
@@ -1309,7 +1506,7 @@ parameters:
     source_row: 58
   - country_entry_id: COG-WAS-12
     source_category_code: forage_puits_a_pompe_public
-    national_label_en: Forage, puits à pompe public
+    national_label_en: "Forage, puits \xE0 pompe public"
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
     jmp_id: ground_water.tubewell_borehole.public
@@ -1320,7 +1517,7 @@ parameters:
     source_row: 60
   - country_entry_id: COG-WAS-13
     source_category_code: forage_puits_a_pompe_public
-    national_label_en: Forage/puits à pompe public
+    national_label_en: "Forage/puits \xE0 pompe public"
     national_label_local: Public
     jmp_classification: Ground water > Tubewell, borehole > Public
     jmp_id: ground_water.tubewell_borehole.public
@@ -1331,8 +1528,8 @@ parameters:
     source_row: 60
   - country_entry_id: COG-WAS-14
     source_category_code: source_d_eau_non_protegee
-    national_label_en: Source d'eau non-protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Source d'eau non-prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
@@ -1342,8 +1539,8 @@ parameters:
     source_row: 82
   - country_entry_id: COG-WAS-15
     source_category_code: source_non_protege
-    national_label_en: Source non protégé
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
@@ -1353,8 +1550,8 @@ parameters:
     source_row: 82
   - country_entry_id: COG-WAS-16
     source_category_code: source_non_protegee
-    national_label_en: Source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
@@ -1364,8 +1561,8 @@ parameters:
     source_row: 82
   - country_entry_id: COG-WAS-17
     source_category_code: puits_creuse_non_protege
-    national_label_en: Puits creusé non-protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits creus\xE9 non-prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
@@ -1375,8 +1572,8 @@ parameters:
     source_row: 70
   - country_entry_id: COG-WAS-18
     source_category_code: puits_non_protege
-    national_label_en: Puits non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
@@ -1386,8 +1583,8 @@ parameters:
     source_row: 70
   - country_entry_id: COG-WAS-19
     source_category_code: puits_non_protege_dans_la_parcelle
-    national_label_en: Puits non protégé dans la parcelle
-    national_label_local: Privé
+    national_label_en: "Puits non prot\xE9g\xE9 dans la parcelle"
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Unprotected well > Private
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
@@ -1397,8 +1594,8 @@ parameters:
     source_row: 71
   - country_entry_id: COG-WAS-20
     source_category_code: puits_non_protege_dans_parcelle
-    national_label_en: Puits non protégé dans parcelle
-    national_label_local: Privé
+    national_label_en: "Puits non prot\xE9g\xE9 dans parcelle"
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Unprotected well > Private
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
@@ -1408,7 +1605,7 @@ parameters:
     source_row: 71
   - country_entry_id: COG-WAS-21
     source_category_code: puits_non_protege_public
-    national_label_en: Puits non protégé public
+    national_label_en: "Puits non prot\xE9g\xE9 public"
     national_label_local: Public
     jmp_classification: Ground water > Unprotected well > Public
     jmp_id: ground_water.unprotected_well.public
@@ -1420,7 +1617,7 @@ parameters:
   - country_entry_id: COG-WAS-22
     source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
-    national_label_local: Puits ou sources non protégées
+    national_label_local: "Puits ou sources non prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected wells or springs
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
@@ -1464,7 +1661,7 @@ parameters:
   - country_entry_id: COG-WAS-26
     source_category_code: autre
     national_label_en: Autre
-    national_label_local: Autres non améliorées
+    national_label_local: "Autres non am\xE9lior\xE9es"
     jmp_classification: Other non-improved
     jmp_id: other_non_improved
     gmd_target: other
@@ -1485,7 +1682,7 @@ parameters:
     source_row: 106
   - country_entry_id: COG-WAS-28
     source_category_code: autre_a_preciser
-    national_label_en: Autre(à préciser)
+    national_label_en: "Autre(\xE0 pr\xE9ciser)"
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
@@ -1529,8 +1726,8 @@ parameters:
     source_row: 90
   - country_entry_id: COG-WAS-32
     source_category_code: bache_a_eau_citerne
-    national_label_en: Bache á eau/citerne
-    national_label_local: Citerne/réservoir couvert
+    national_label_en: "Bache \xE1 eau/citerne"
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -1541,7 +1738,7 @@ parameters:
   - country_entry_id: COG-WAS-33
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -1552,7 +1749,7 @@ parameters:
   - country_entry_id: COG-WAS-34
     source_category_code: rainwater
     national_label_en: rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -1563,7 +1760,7 @@ parameters:
   - country_entry_id: COG-WAS-35
     source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
@@ -1574,7 +1771,7 @@ parameters:
   - country_entry_id: COG-WAS-36
     source_category_code: pluie
     national_label_en: Pluie
-    national_label_local: Citerne/réservoir découvert
+    national_label_local: "Citerne/r\xE9servoir d\xE9couvert"
     jmp_classification: Rainwater > Uncovered cistern/tank
     jmp_id: rainwater.uncovered_cistern_tank
     gmd_target: rainwater
@@ -1595,8 +1792,8 @@ parameters:
     source_row: 92
   - country_entry_id: COG-WAS-38
     source_category_code: eau_de_surface_rivia_re_fleuve_barrage_lac_mare_canal_canal_d_irrigation
-    national_label_en: Eau de surface (riviÃ¨re, fleuve, barrage, lac, mare, canal,
-      canal d?irrigation)
+    national_label_en: "Eau de surface (rivi\xC3\xA8re, fleuve, barrage, lac, mare,\
+      \ canal, canal d?irrigation)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
@@ -1607,7 +1804,7 @@ parameters:
     source_row: 92
   - country_entry_id: COG-WAS-39
     source_category_code: riviere_fleuve_marigot
-    national_label_en: Rivière/fleuve/marigot
+    national_label_en: "Rivi\xE8re/fleuve/marigot"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
@@ -1618,7 +1815,7 @@ parameters:
     source_row: 92
   - country_entry_id: COG-WAS-40
     source_category_code: riviere_marigot_source
-    national_label_en: Rivière/marigot/source
+    national_label_en: "Rivi\xE8re/marigot/source"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
@@ -1662,7 +1859,7 @@ parameters:
     source_row: 42
   - country_entry_id: COG-WAS-44
     source_category_code: eau_courante_snde_a_la_maison
-    national_label_en: Eau courante SNDE á la maison
+    national_label_en: "Eau courante SNDE \xE1 la maison"
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
@@ -1772,7 +1969,7 @@ parameters:
     source_row: 41
   - country_entry_id: COG-WAS-54
     source_category_code: robinet_exterieur
-    national_label_en: Robinet extérieur
+    national_label_en: "Robinet ext\xE9rieur"
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
@@ -1809,3 +2006,4 @@ parameters:
     human_reviewed: false
     reviewer: null
 ---
+

@@ -6,13 +6,14 @@ status: draft
 country_name: LKA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LKA-EDU-01
     national_label_en: Pre-primary education
-    national_label_local: පෙර පාසල් අධ්‍යාපනය
+    national_label_local: "\u0DB4\u0DD9\u0DBB \u0DB4\u0DCF\u0DC3\u0DBD\u0DCA \u0D85\
+      \u0DB0\u0DCA\u200D\u0DBA\u0DCF\u0DB4\u0DB1\u0DBA"
     entry_age: 3
     duration_years: 2
     isced_level: '0'
@@ -21,9 +22,17 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LKA-EDU-02
     national_label_en: Primary Education
-    national_label_local: ප්‍රාථමික අධ්‍යාපනය (1-5 ශ්‍රේණිය)
+    national_label_local: "\u0DB4\u0DCA\u200D\u0DBB\u0DCF\u0DAE\u0DB8\u0DD2\u0D9A\
+      \ \u0D85\u0DB0\u0DCA\u200D\u0DBA\u0DCF\u0DB4\u0DB1\u0DBA (1-5 \u0DC1\u0DCA\u200D\
+      \u0DBB\u0DDA\u0DAB\u0DD2\u0DBA)"
     entry_age: 5
     duration_years: 5
     isced_level: '1'
@@ -32,9 +41,17 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - LKA-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: LKA-EDU-03
     national_label_en: Junior Secondary
-    national_label_local: කණිෂ්ඨ ද්වීතියික (6-9 ශ්‍රේණිය)
+    national_label_local: "\u0D9A\u0DAB\u0DD2\u0DC2\u0DCA\u0DA8 \u0DAF\u0DCA\u0DC0\
+      \u0DD3\u0DAD\u0DD2\u0DBA\u0DD2\u0D9A (6-9 \u0DC1\u0DCA\u200D\u0DBB\u0DDA\u0DAB\
+      \u0DD2\u0DBA)"
     entry_age: 10
     duration_years: 4
     isced_level: '2'
@@ -43,9 +60,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - LKA-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LKA-EDU-04
     national_label_en: Senior Secondary
-    national_label_local: ජ්‍යෙෂ්ඨ ද්වීතියික (10-11 වසර)
+    national_label_local: "\u0DA2\u0DCA\u200D\u0DBA\u0DD9\u0DC2\u0DCA\u0DA8 \u0DAF\
+      \u0DCA\u0DC0\u0DD3\u0DAD\u0DD2\u0DBA\u0DD2\u0D9A (10-11 \u0DC0\u0DC3\u0DBB)"
     entry_age: 14
     duration_years: 2
     isced_level: '3'
@@ -54,9 +80,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - LKA-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LKA-EDU-05
     national_label_en: Collegiate Level
-    national_label_local: ජ්‍යෙෂ්ඨ මට්ටම (12-13 වසර)
+    national_label_local: "\u0DA2\u0DCA\u200D\u0DBA\u0DD9\u0DC2\u0DCA\u0DA8 \u0DB8\
+      \u0DA7\u0DCA\u0DA7\u0DB8 (12-13 \u0DC0\u0DC3\u0DBB)"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -65,11 +101,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - LKA-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LKA-EDU-06
     national_label_en: Vocational training authority (VTA)/Technical colleges/NITA/private
       Institutes/NYSC/NYC - NVQ Level 3
-    national_label_local: වෘත්තීය පුහුණු අධිකාරිය (VTA)/තාක්ෂණික විද්‍යාල/NITA/NYSC/NYC/පෞද්ගලික
-      ආයතන- ජාතික වෘත්තීය සුදුසුකම 3 මට්ටම
+    national_label_local: "\u0DC0\u0DD8\u0DAD\u0DCA\u0DAD\u0DD3\u0DBA \u0DB4\u0DD4\
+      \u0DC4\u0DD4\u0DAB\u0DD4 \u0D85\u0DB0\u0DD2\u0D9A\u0DCF\u0DBB\u0DD2\u0DBA (VTA)/\u0DAD\
+      \u0DCF\u0D9A\u0DCA\u0DC2\u0DAB\u0DD2\u0D9A \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\
+      \u0DCF\u0DBD/NITA/NYSC/NYC/\u0DB4\u0DDE\u0DAF\u0DCA\u0D9C\u0DBD\u0DD2\u0D9A\
+      \ \u0D86\u0DBA\u0DAD\u0DB1- \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A \u0DC0\u0DD8\u0DAD\
+      \u0DCA\u0DAD\u0DD3\u0DBA \u0DC3\u0DD4\u0DAF\u0DD4\u0DC3\u0DD4\u0D9A\u0DB8 3\
+      \ \u0DB8\u0DA7\u0DCA\u0DA7\u0DB8"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -78,9 +128,20 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - LKA-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LKA-EDU-07
     national_label_en: non- NVQ   certificate( more than 6 months)
-    national_label_local: NVQ නොවන සහතික පත්‍ර පාඨමාලා(මාස 6ට වැඩි)
+    national_label_local: "NVQ \u0DB1\u0DDC\u0DC0\u0DB1 \u0DC3\u0DC4\u0DAD\u0DD2\u0D9A\
+      \ \u0DB4\u0DAD\u0DCA\u200D\u0DBB \u0DB4\u0DCF\u0DA8\u0DB8\u0DCF\u0DBD\u0DCF\
+      (\u0DB8\u0DCF\u0DC3 6\u0DA7 \u0DC0\u0DD0\u0DA9\u0DD2)"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -89,11 +150,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - LKA-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LKA-EDU-08
     national_label_en: Colleges of Technology/Technical Colleges/other - NVQ Level
       4 certificate
-    national_label_local: කාර්මික හා තාක්ෂණ විද්‍යාල/අනෙකුත් ආයතන -ජාතික වෘත්තීය සුදුසුකම
-      4 මට්ටම සහතිකය
+    national_label_local: "\u0D9A\u0DCF\u0DBB\u0DCA\u0DB8\u0DD2\u0D9A \u0DC4\u0DCF\
+      \ \u0DAD\u0DCF\u0D9A\u0DCA\u0DC2\u0DAB \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\
+      \u0DBD/\u0D85\u0DB1\u0DD9\u0D9A\u0DD4\u0DAD\u0DCA \u0D86\u0DBA\u0DAD\u0DB1 -\u0DA2\
+      \u0DCF\u0DAD\u0DD2\u0D9A \u0DC0\u0DD8\u0DAD\u0DCA\u0DAD\u0DD3\u0DBA \u0DC3\u0DD4\
+      \u0DAF\u0DD4\u0DC3\u0DD4\u0D9A\u0DB8 4 \u0DB8\u0DA7\u0DCA\u0DA7\u0DB8 \u0DC3\
+      \u0DC4\u0DAD\u0DD2\u0D9A\u0DBA"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -102,9 +176,19 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - LKA-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LKA-EDU-09
     national_label_en: Diploma - Open University
-    national_label_local: විශ්ව වීද්‍යාල ඩිප්ලෝමා
+    national_label_local: "\u0DC0\u0DD2\u0DC1\u0DCA\u0DC0 \u0DC0\u0DD3\u0DAF\u0DCA\
+      \u200D\u0DBA\u0DCF\u0DBD \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -113,12 +197,34 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-10
-    national_label_en: |-
-      Colleges of Technology/University colleges/VTA/Private Institutes/Department of Agriculture /CGTTI/other
-      NVQ level 5 Diploma
-    national_label_local: කාර්මික හා තාක්ෂණ විද්‍යාල/විශ්ව විද්‍යාල විද්‍යායතන/VTA/පෞද්ගලික
-      ආයතන/කෘෂිකර්ම දෙපාර්තමේන්තුව/CGTTI/අනෙකුත්-ජාතික වෘත්තීය සුදුසුකම -5 මට්ටම ඩිප්ලෝමාව
+    national_label_en: 'Colleges of Technology/University colleges/VTA/Private Institutes/Department
+      of Agriculture /CGTTI/other
+
+      NVQ level 5 Diploma'
+    national_label_local: "\u0D9A\u0DCF\u0DBB\u0DCA\u0DB8\u0DD2\u0D9A \u0DC4\u0DCF\
+      \ \u0DAD\u0DCF\u0D9A\u0DCA\u0DC2\u0DAB \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\
+      \u0DBD/\u0DC0\u0DD2\u0DC1\u0DCA\u0DC0 \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\
+      \u0DBD \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\u0DBA\u0DAD\u0DB1/VTA/\u0DB4\
+      \u0DDE\u0DAF\u0DCA\u0D9C\u0DBD\u0DD2\u0D9A \u0D86\u0DBA\u0DAD\u0DB1/\u0D9A\u0DD8\
+      \u0DC2\u0DD2\u0D9A\u0DBB\u0DCA\u0DB8 \u0DAF\u0DD9\u0DB4\u0DCF\u0DBB\u0DCA\u0DAD\
+      \u0DB8\u0DDA\u0DB1\u0DCA\u0DAD\u0DD4\u0DC0/CGTTI/\u0D85\u0DB1\u0DD9\u0D9A\u0DD4\
+      \u0DAD\u0DCA-\u0DA2\u0DCF\u0DAD\u0DD2\u0D9A \u0DC0\u0DD8\u0DAD\u0DCA\u0DAD\u0DD3\
+      \u0DBA \u0DC3\u0DD4\u0DAF\u0DD4\u0DC3\u0DD4\u0D9A\u0DB8 -5 \u0DB8\u0DA7\u0DCA\
+      \u0DA7\u0DB8 \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -127,9 +233,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-11
     national_label_en: Diploma from SLIDA
-    national_label_local: ශ්‍රී ලංකා සංවර්ධන පරිපාලන ආයතන ඩිප්ලෝමාව
+    national_label_local: "\u0DC1\u0DCA\u200D\u0DBB\u0DD3 \u0DBD\u0D82\u0D9A\u0DCF\
+      \ \u0DC3\u0D82\u0DC0\u0DBB\u0DCA\u0DB0\u0DB1 \u0DB4\u0DBB\u0DD2\u0DB4\u0DCF\u0DBD\
+      \u0DB1 \u0D86\u0DBA\u0DAD\u0DB1 \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\
+      \u0DC0"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -138,9 +260,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-12
     national_label_en: Diploma from Ocean University
-    national_label_local: ධීවර හා නාවුක ඉංජිනේරු ජාතික  ඩිප්ලෝමාව
+    national_label_local: "\u0DB0\u0DD3\u0DC0\u0DBB \u0DC4\u0DCF \u0DB1\u0DCF\u0DC0\
+      \u0DD4\u0D9A \u0D89\u0D82\u0DA2\u0DD2\u0DB1\u0DDA\u0DBB\u0DD4 \u0DA2\u0DCF\u0DAD\
+      \u0DD2\u0D9A  \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0"
     entry_age: 18
     duration_years: 1
     isced_level: '4'
@@ -149,9 +286,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-13
     national_label_en: Diploma in Social Work
-    national_label_local: සමාජ සේවා ඩිප්ලෝමාව
+    national_label_local: "\u0DC3\u0DB8\u0DCF\u0DA2 \u0DC3\u0DDA\u0DC0\u0DCF \u0DA9\
+      \u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0"
     entry_age: 18
     duration_years: 2
     isced_level: '4'
@@ -160,9 +311,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-14
     national_label_en: Teacher Certification
-    national_label_local: ගුරු සහතිකය
+    national_label_local: "\u0D9C\u0DD4\u0DBB\u0DD4 \u0DC3\u0DC4\u0DAD\u0DD2\u0D9A\
+      \u0DBA"
     entry_age: 19
     duration_years: 3
     isced_level: '5'
@@ -171,9 +336,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-15
     national_label_en: National Diploma in Technology
-    national_label_local: ජාතික තාක්ෂණ ඩිප්ලෝමාව
+    national_label_local: "\u0DA2\u0DCF\u0DAD\u0DD2\u0D9A \u0DAD\u0DCF\u0D9A\u0DCA\
+      \u0DC2\u0DAB \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0"
     entry_age: 19
     duration_years: 3
     isced_level: '5'
@@ -182,11 +361,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-16
     national_label_en: Higher National Diploma in English/HND in Information Technology/HND
       in Business Administration/HND in Food Technology/HND in Quantity Survey/HND
       in Business Finance
-    national_label_local: උසස් ජාතික ඩිප්ලෝමාව (HND)
+    national_label_local: "\u0D8B\u0DC3\u0DC3\u0DCA \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A\
+      \ \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0 (HND)"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -195,10 +388,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-17
     national_label_en: Higher National Diploma in Tourism and Hospitality Management/HND
       in Agriculture/HND in Management
-    national_label_local: උසස් ජාතික ඩිප්ලෝමාව (HND)
+    national_label_local: "\u0D8B\u0DC3\u0DC3\u0DCA \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A\
+      \ \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0 (HND)"
     entry_age: 19
     duration_years: 3
     isced_level: '5'
@@ -207,12 +414,32 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-18
-    national_label_en: |-
-      NAITA - National Diploma in Engineering Sciences (NDES)
-      NVQ level 6
-    national_label_local: ජාතික ආධුනිකත්ව හා කාර්මික පුහුණු කිරීමේ අධිකාරියේ  (NAITA)  -ඉංජිනේරු
-      විද්‍යාව පිළිබද ඩිප්ලෝමාව (NDES) - ජාතික වෘත්තීය සුදුසුකම 06 මට්ටම
+    national_label_en: 'NAITA - National Diploma in Engineering Sciences (NDES)
+
+      NVQ level 6'
+    national_label_local: "\u0DA2\u0DCF\u0DAD\u0DD2\u0D9A \u0D86\u0DB0\u0DD4\u0DB1\
+      \u0DD2\u0D9A\u0DAD\u0DCA\u0DC0 \u0DC4\u0DCF \u0D9A\u0DCF\u0DBB\u0DCA\u0DB8\u0DD2\
+      \u0D9A \u0DB4\u0DD4\u0DC4\u0DD4\u0DAB\u0DD4 \u0D9A\u0DD2\u0DBB\u0DD3\u0DB8\u0DDA\
+      \ \u0D85\u0DB0\u0DD2\u0D9A\u0DCF\u0DBB\u0DD2\u0DBA\u0DDA  (NAITA)  -\u0D89\u0D82\
+      \u0DA2\u0DD2\u0DB1\u0DDA\u0DBB\u0DD4 \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\
+      \u0DC0 \u0DB4\u0DD2\u0DC5\u0DD2\u0DB6\u0DAF \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\
+      \u0DB8\u0DCF\u0DC0 (NDES) - \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A \u0DC0\u0DD8\u0DAD\
+      \u0DCA\u0DAD\u0DD3\u0DBA \u0DC3\u0DD4\u0DAF\u0DD4\u0DC3\u0DD4\u0D9A\u0DB8 06\
+      \ \u0DB8\u0DA7\u0DCA\u0DA7\u0DB8"
     entry_age: 19
     duration_years: 4
     isced_level: '5'
@@ -221,10 +448,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-19
     national_label_en: Higher National Diploma in Engineering/ HND in Building Services
-    national_label_local: උසස් ජාතික ඉංජිනේරු ඩිප්ලෝමාව/ උසස් ජාතික ඩිප්ලෝමාව - ගොඩනැගිලි
-      සේවාව
+    national_label_local: "\u0D8B\u0DC3\u0DC3\u0DCA \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A\
+      \ \u0D89\u0D82\u0DA2\u0DD2\u0DB1\u0DDA\u0DBB\u0DD4 \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\
+      \u0DDD\u0DB8\u0DCF\u0DC0/ \u0D8B\u0DC3\u0DC3\u0DCA \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A\
+      \ \u0DA9\u0DD2\u0DB4\u0DCA\u0DBD\u0DDD\u0DB8\u0DCF\u0DC0 - \u0D9C\u0DDC\u0DA9\
+      \u0DB1\u0DD0\u0D9C\u0DD2\u0DBD\u0DD2 \u0DC3\u0DDA\u0DC0\u0DCF\u0DC0"
     entry_age: 19
     duration_years: 3
     isced_level: '5'
@@ -233,11 +476,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-20
-    national_label_en: |-
-      Higher National Diploma in Accountancy
-      (HNDA)
-    national_label_local: උසස් ජාතික ගණකාධීකරණ ඩිප්ලෝමාව (HNDA)
+    national_label_en: 'Higher National Diploma in Accountancy
+
+      (HNDA)'
+    national_label_local: "\u0D8B\u0DC3\u0DC3\u0DCA \u0DA2\u0DCF\u0DAD\u0DD2\u0D9A\
+      \ \u0D9C\u0DAB\u0D9A\u0DCF\u0DB0\u0DD3\u0D9A\u0DBB\u0DAB \u0DA9\u0DD2\u0DB4\u0DCA\
+      \u0DBD\u0DDD\u0DB8\u0DCF\u0DC0 (HNDA)"
     entry_age: 19
     duration_years: 4
     isced_level: '5'
@@ -246,9 +504,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-21
     national_label_en: Bachelor's degree
-    national_label_local: ප්‍රථම උපාධිය
+    national_label_local: "\u0DB4\u0DCA\u200D\u0DBB\u0DAE\u0DB8 \u0D8B\u0DB4\u0DCF\
+      \u0DB0\u0DD2\u0DBA"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -257,9 +529,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-22
     national_label_en: Bachelor of Agro-Technology
-    national_label_local: කෘෂි තාක්ෂණික උපාධිය
+    national_label_local: "\u0D9A\u0DD8\u0DC2\u0DD2 \u0DAD\u0DCF\u0D9A\u0DCA\u0DC2\
+      \u0DAB\u0DD2\u0D9A \u0D8B\u0DB4\u0DCF\u0DB0\u0DD2\u0DBA"
     entry_age: 19
     duration_years: 4
     isced_level: '6'
@@ -268,9 +554,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-23
     national_label_en: Bachelor of Medicine and Surgery
-    national_label_local: වෛද්‍ය විද්‍යා උපාධිය
+    national_label_local: "\u0DC0\u0DDB\u0DAF\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\
+      \u0DCA\u200D\u0DBA\u0DCF \u0D8B\u0DB4\u0DCF\u0DB0\u0DD2\u0DBA"
     entry_age: 19
     duration_years: 5
     isced_level: '6'
@@ -279,9 +579,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-24
     national_label_en: Bachelor of Dental Surgery
-    national_label_local: දන්ත ශල්‍ය වෛද්‍ය විද්‍යා උපාධිය
+    national_label_local: "\u0DAF\u0DB1\u0DCA\u0DAD \u0DC1\u0DBD\u0DCA\u200D\u0DBA\
+      \ \u0DC0\u0DDB\u0DAF\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\
+      \ \u0D8B\u0DB4\u0DCF\u0DB0\u0DD2\u0DBA"
     entry_age: 19
     duration_years: 5
     isced_level: '6'
@@ -290,11 +605,30 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-25
     national_label_en: Bachelor of Ayurvedic Medicine and Surgery/ Bachelor of Unani
       Medicine and Surgery/Bachelor of Siddha Medicine and Surgery
-    national_label_local: ආයුර්වේද වෛද්‍ය විද්‍යාව හා ශල්‍ය/යුනානි වෛද්‍ය විද්‍යාව
-      හා ශල්‍ය/සිද්ධ වෛද්‍ය විද්‍යාව හා ශල්‍ය විද්‍යා උපාධිය
+    national_label_local: "\u0D86\u0DBA\u0DD4\u0DBB\u0DCA\u0DC0\u0DDA\u0DAF \u0DC0\
+      \u0DDB\u0DAF\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF\u0DC0\
+      \ \u0DC4\u0DCF \u0DC1\u0DBD\u0DCA\u200D\u0DBA/\u0DBA\u0DD4\u0DB1\u0DCF\u0DB1\
+      \u0DD2 \u0DC0\u0DDB\u0DAF\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\
+      \u0DCF\u0DC0 \u0DC4\u0DCF \u0DC1\u0DBD\u0DCA\u200D\u0DBA/\u0DC3\u0DD2\u0DAF\u0DCA\
+      \u0DB0 \u0DC0\u0DDB\u0DAF\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\
+      \u0DCF\u0DC0 \u0DC4\u0DCF \u0DC1\u0DBD\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\u0DCA\
+      \u200D\u0DBA\u0DCF \u0D8B\u0DB4\u0DCF\u0DB0\u0DD2\u0DBA"
     entry_age: 19
     duration_years: 5
     isced_level: '6'
@@ -303,9 +637,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-26
     national_label_en: Bachelor of Architecture
-    national_label_local: වාස්තු විද්‍යා  උපාධිය
+    national_label_local: "\u0DC0\u0DCF\u0DC3\u0DCA\u0DAD\u0DD4 \u0DC0\u0DD2\u0DAF\
+      \u0DCA\u200D\u0DBA\u0DCF  \u0D8B\u0DB4\u0DCF\u0DB0\u0DD2\u0DBA"
     entry_age: 19
     duration_years: 5
     isced_level: '6'
@@ -314,9 +662,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-27
     national_label_en: Bachelor of Veterinary Science
-    national_label_local: පශු වෛද්‍ය විද්‍යා  උපාධිය
+    national_label_local: "\u0DB4\u0DC1\u0DD4 \u0DC0\u0DDB\u0DAF\u0DCA\u200D\u0DBA\
+      \ \u0DC0\u0DD2\u0DAF\u0DCA\u200D\u0DBA\u0DCF  \u0D8B\u0DB4\u0DCF\u0DB0\u0DD2\
+      \u0DBA"
     entry_age: 19
     duration_years: 5
     isced_level: '6'
@@ -325,9 +688,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-28
     national_label_en: Postgraduate Diploma
-    national_label_local: පශ්චාත් උපාධි පාඨමාලා
+    national_label_local: "\u0DB4\u0DC1\u0DCA\u0DA0\u0DCF\u0DAD\u0DCA \u0D8B\u0DB4\
+      \u0DCF\u0DB0\u0DD2 \u0DB4\u0DCF\u0DA8\u0DB8\u0DCF\u0DBD\u0DCF"
     entry_age: 23
     duration_years: 1
     isced_level: '7'
@@ -336,9 +713,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-29
     national_label_en: Master's degree
-    national_label_local: ශ්‍රාස්ත්‍රපති
+    national_label_local: "\u0DC1\u0DCA\u200D\u0DBB\u0DCF\u0DC3\u0DCA\u0DAD\u0DCA\u200D\
+      \u0DBB\u0DB4\u0DAD\u0DD2"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -347,9 +738,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - LKA-EDU-21
+    - LKA-EDU-22
+    - LKA-EDU-23
+    - LKA-EDU-24
+    - LKA-EDU-25
+    - LKA-EDU-26
+    - LKA-EDU-27
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-21
+    - LKA-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
+    - 'minimum parent path selected from: LKA-EDU-21, LKA-EDU-22, LKA-EDU-23, LKA-EDU-24,
+      LKA-EDU-25, LKA-EDU-26, LKA-EDU-27'
   - country_entry_id: LKA-EDU-30
     national_label_en: M. Phil
-    national_label_local: දර්ශනපති
+    national_label_local: "\u0DAF\u0DBB\u0DCA\u0DC1\u0DB1\u0DB4\u0DAD\u0DD2"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -358,9 +769,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - LKA-EDU-04
+    - LKA-EDU-05
+    - LKA-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
   - country_entry_id: LKA-EDU-31
     national_label_en: Doctorate
-    national_label_local: ආචාර්ය උපාධිය
+    national_label_local: "\u0D86\u0DA0\u0DCF\u0DBB\u0DCA\u0DBA \u0D8B\u0DB4\u0DCF\
+      \u0DB0\u0DD2\u0DBA"
     entry_age: 25
     duration_years: 3
     isced_level: '8'
@@ -369,9 +794,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 37
+    parent_country_entry_ids:
+    - LKA-EDU-28
+    - LKA-EDU-29
+    - LKA-EDU-30
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-28
+    - LKA-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
+    - 'minimum parent path selected from: LKA-EDU-28, LKA-EDU-29, LKA-EDU-30'
   - country_entry_id: LKA-EDU-32
     national_label_en: MD with Board Certification
-    national_label_local: වෛද්‍ය විද්‍යා ආචාර්ය  උපාධිය
+    national_label_local: "\u0DC0\u0DDB\u0DAF\u0DCA\u200D\u0DBA \u0DC0\u0DD2\u0DAF\
+      \u0DCA\u200D\u0DBA\u0DCF \u0D86\u0DA0\u0DCF\u0DBB\u0DCA\u0DBA  \u0D8B\u0DB4\u0DCF\
+      \u0DB0\u0DD2\u0DBA"
     entry_age: 25
     duration_years: 5
     isced_level: '8'
@@ -380,28 +822,43 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 38
+    parent_country_entry_ids:
+    - LKA-EDU-28
+    - LKA-EDU-29
+    - LKA-EDU-30
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - LKA-EDU-02
+    - LKA-EDU-03
+    - LKA-EDU-04
+    - LKA-EDU-28
+    - LKA-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: LKA-EDU-04, LKA-EDU-05, LKA-EDU-07'
+    - 'minimum parent path selected from: LKA-EDU-28, LKA-EDU-29, LKA-EDU-30'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Sri
       Lanka.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LKA-SUBNAT-01
-    survey_labels: 1 - Western | 1 – Western | 1-Western
+    survey_labels: "1 - Western | 1 \u2013 Western | 1-Western"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2744
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2744
     geo_year: '2015'
@@ -413,16 +870,16 @@ parameters:
     geo_name: Western
     source_row: 9024
   - country_entry_id: LKA-SUBNAT-02
-    survey_labels: 2 - Central | 2 – Central | 2-Central
+    survey_labels: "2 - Central | 2 \u2013 Central | 2-Central"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2736
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2736
     geo_year: '2015'
@@ -434,16 +891,16 @@ parameters:
     geo_name: Central
     source_row: 9025
   - country_entry_id: LKA-SUBNAT-03
-    survey_labels: 3 - Southern | 3 – Southern | 3-Southern
+    survey_labels: "3 - Southern | 3 \u2013 Southern | 3-Southern"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2742
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2742
     geo_year: '2015'
@@ -455,16 +912,17 @@ parameters:
     geo_name: Southern
     source_row: 9026
   - country_entry_id: LKA-SUBNAT-04
-    survey_labels: 6 - North-Western | 6 - North-western | 6 – North-western | 6-North-Western
+    survey_labels: "6 - North-Western | 6 - North-western | 6 \u2013 North-western\
+      \ | 6-North-Western"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2739
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2739
     geo_year: '2015'
@@ -476,16 +934,17 @@ parameters:
     geo_name: North Western
     source_row: 9027
   - country_entry_id: LKA-SUBNAT-05
-    survey_labels: 7 - North-Central | 7 - North-central | 7 – North-central | 7-North-Central
+    survey_labels: "7 - North-Central | 7 - North-central | 7 \u2013 North-central\
+      \ | 7-North-Central"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2738
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2738
     geo_year: '2015'
@@ -497,16 +956,16 @@ parameters:
     geo_name: North Central
     source_row: 9028
   - country_entry_id: LKA-SUBNAT-06
-    survey_labels: 8 - Uva | 8 – Uva | 8-Uva
+    survey_labels: "8 - Uva | 8 \u2013 Uva | 8-Uva"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2743
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2743
     geo_year: '2015'
@@ -518,16 +977,16 @@ parameters:
     geo_name: Uva
     source_row: 9029
   - country_entry_id: LKA-SUBNAT-07
-    survey_labels: 9 - Sabaragamuwa | 9 – Sabaragamuwa | 9-Sabaragamuwa
+    survey_labels: "9 - Sabaragamuwa | 9 \u2013 Sabaragamuwa | 9-Sabaragamuwa"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2741
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2741
     geo_year: '2015'
@@ -545,10 +1004,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25851
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -566,10 +1025,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25852
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -587,10 +1046,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25853
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -608,10 +1067,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_41748
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -629,10 +1088,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25830
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -650,10 +1109,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_41749
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -671,10 +1130,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25846
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -692,10 +1151,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25848
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -713,10 +1172,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25847
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -734,10 +1193,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25837
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -755,10 +1214,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25838
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -776,10 +1235,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25835
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -797,10 +1256,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25836
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -818,10 +1277,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25849
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -839,10 +1298,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25850
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -860,10 +1319,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25845
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -881,10 +1340,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25844
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -896,16 +1355,16 @@ parameters:
     geo_name: Kegalle
     source_row: 9047
   - country_entry_id: LKA-SUBNAT-25
-    survey_labels: 5 - Eastern | 5 – Eastern | 5-Eastern
+    survey_labels: "5 - Eastern | 5 \u2013 Eastern | 5-Eastern"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2737
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2737
     geo_year: '2015'
@@ -923,10 +1382,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25833
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -944,10 +1403,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25832
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -959,16 +1418,16 @@ parameters:
     geo_name: Ampara
     source_row: 9066
   - country_entry_id: LKA-SUBNAT-28
-    survey_labels: 4 - Northern | 4 – Northern | 4-Northern
+    survey_labels: "4 - Northern | 4 \u2013 Northern | 4-Northern"
     survey_variables: subnatid
     gmd_subnatid1: LKA_2015_GAUL1_2740
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: LKA_2015_GAUL1_2740
     geo_year: '2015'
@@ -986,10 +1445,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25839
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1007,10 +1466,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25841
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1028,10 +1487,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25843
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1049,10 +1508,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25842
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1070,10 +1529,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25840
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1091,10 +1550,10 @@ parameters:
     gmd_subnatid2: LKA_2015_GAUL2_25834
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -1107,13 +1566,13 @@ parameters:
     source_row: 9100
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LKA-SAN-01
     source_category_code: composting_toilet
@@ -1123,8 +1582,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: LKA-SAN-02
     source_category_code: flush_toilet_water_seal
@@ -1134,8 +1593,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: LKA-SAN-03
     source_category_code: water_seal_pour_flush
@@ -1145,8 +1604,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: LKA-SAN-04
     source_category_code: flush_pour_type_toilet_connected_elsewhere_connection_unk
@@ -1156,8 +1615,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: LKA-SAN-05
     source_category_code: flush_pour_flush_not_to_sewer_septic_tank_pit_latrine
@@ -1167,8 +1626,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: LKA-SAN-06
     source_category_code: water_seal_with_connected_to_a_river_or_a_drain
@@ -1178,8 +1637,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: LKA-SAN-07
     source_category_code: flush_pour_type_toilet_connected_to_piped_sewer_system
@@ -1189,8 +1648,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: LKA-SAN-08
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -1200,8 +1659,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: LKA-SAN-09
     source_category_code: water_seal_with_connected_to_sewer_system
@@ -1211,8 +1670,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: LKA-SAN-10
     source_category_code: flush_pour_type_toilet_connected_to_pit_latrine
@@ -1222,8 +1681,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: LKA-SAN-11
     source_category_code: flush_pour_flush_to_pit_latrine
@@ -1233,8 +1692,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: LKA-SAN-12
     source_category_code: water_seal_with_connected_to_a_pit
@@ -1244,8 +1703,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: LKA-SAN-13
     source_category_code: flush_pour_type_toilet_connected_to_septic_tank
@@ -1255,8 +1714,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: LKA-SAN-14
     source_category_code: flush_pour_flush_to_septic_tank
@@ -1266,8 +1725,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: LKA-SAN-15
     source_category_code: water_seal_with_connected_to_septic_tank
@@ -1277,8 +1736,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: LKA-SAN-16
     source_category_code: to_i_do_not_know_where
@@ -1288,8 +1747,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: LKA-SAN-17
     source_category_code: private_domestic_connection_to_sewage_system
@@ -1299,8 +1758,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: LKA-SAN-18
     source_category_code: private_flush_to_septic_tank
@@ -1310,8 +1769,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: LKA-SAN-19
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -1322,8 +1781,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: LKA-SAN-20
     source_category_code: shared_flush_to_septic_tank
@@ -1333,8 +1792,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: LKA-SAN-21
     source_category_code: to_elsewhere
@@ -1344,8 +1803,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: LKA-SAN-22
     source_category_code: to_piped_sewer_system
@@ -1355,8 +1814,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LKA-SAN-23
     source_category_code: toilet_with_water_seal_connected_to_sewer_system
@@ -1366,8 +1825,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LKA-SAN-24
     source_category_code: to_pit
@@ -1377,8 +1836,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: LKA-SAN-25
     source_category_code: toilet_with_water_seal_connected_to_a_pit
@@ -1388,8 +1847,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: LKA-SAN-26
     source_category_code: to_septic_tank
@@ -1399,8 +1858,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: LKA-SAN-27
     source_category_code: toilet_with_water_seal_connected_to_septic_tank
@@ -1410,8 +1869,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: LKA-SAN-28
     source_category_code: to_unknown_place_not_sure_dk
@@ -1421,8 +1880,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LKA-SAN-29
     source_category_code: bucket
@@ -1432,8 +1891,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LKA-SAN-30
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -1443,8 +1902,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LKA-SAN-31
     source_category_code: bucket_toilet
@@ -1454,8 +1913,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LKA-SAN-32
     source_category_code: not_water_seal_pit_latrine_with_deck
@@ -1466,8 +1925,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LKA-SAN-33
     source_category_code: pit_latrine_with_deck_without_water_seal
@@ -1478,8 +1937,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LKA-SAN-34
     source_category_code: pit_latrine_with_slab
@@ -1490,8 +1949,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LKA-SAN-35
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -1502,8 +1961,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LKA-SAN-36
     source_category_code: not_water_seal_open_pit_latrine_without_deck
@@ -1514,8 +1973,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LKA-SAN-37
     source_category_code: open_pit
@@ -1526,8 +1985,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LKA-SAN-38
     source_category_code: open_pit_latrine_without_deck_and_water_seal
@@ -1538,8 +1997,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LKA-SAN-39
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1550,8 +2009,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LKA-SAN-40
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -1562,8 +2021,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LKA-SAN-41
     source_category_code: pit
@@ -1574,8 +2033,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: LKA-SAN-42
     source_category_code: ventilated_improved_pit_latrine
@@ -1586,8 +2045,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: LKA-SAN-43
     source_category_code: vip_latrine
@@ -1598,8 +2057,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: LKA-SAN-44
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -1610,8 +2069,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: LKA-SAN-45
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -1622,8 +2081,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: LKA-SAN-46
     source_category_code: water_seal
@@ -1633,8 +2092,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: LKA-SAN-47
     source_category_code: private_pour_flush_latrine
@@ -1644,8 +2103,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: LKA-SAN-48
     source_category_code: shared_pour_flush_latrine
@@ -1656,8 +2115,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: LKA-SAN-49
     source_category_code: no_facilities
@@ -1667,8 +2126,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-50
     source_category_code: no_facilities_open_defecation
@@ -1678,8 +2137,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-51
     source_category_code: no_facility_bush_field_etc
@@ -1689,8 +2148,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-52
     source_category_code: no_facility_bush_field
@@ -1700,8 +2159,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-53
     source_category_code: no_facility_use_bush_field
@@ -1711,8 +2170,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-54
     source_category_code: no_facility_bush_field
@@ -1722,8 +2181,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-55
     source_category_code: no_toilet_facility_using_bush_field
@@ -1733,8 +2192,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-56
     source_category_code: none
@@ -1744,8 +2203,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LKA-SAN-57
     source_category_code: other
@@ -1755,18 +2214,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LKA_Sri_Lanka_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LKA-WAS-01
     source_category_code: springs
@@ -1776,8 +2235,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: LKA-WAS-02
     source_category_code: protected_spring
@@ -1787,8 +2246,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: LKA-WAS-03
     source_category_code: protected_dug_well
@@ -1798,8 +2257,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: LKA-WAS-04
     source_category_code: protected_well
@@ -1809,8 +2268,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: LKA-WAS-05
     source_category_code: protected_well_within_premises
@@ -1820,8 +2279,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LKA-WAS-06
     source_category_code: protected_well_outside_premises
@@ -1831,8 +2290,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: LKA-WAS-07
     source_category_code: protected_dug_well_or_protected_spring
@@ -1842,8 +2301,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: LKA-WAS-08
     source_category_code: semiprotected_well
@@ -1853,8 +2312,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: LKA-WAS-09
     source_category_code: protected_tube_well_or_bore_hole
@@ -1864,8 +2323,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LKA-WAS-10
     source_category_code: tube_well
@@ -1875,8 +2334,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LKA-WAS-11
     source_category_code: tube_well_or_borehole
@@ -1886,8 +2345,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LKA-WAS-12
     source_category_code: tube_well_ab_pump
@@ -1897,8 +2356,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LKA-WAS-13
     source_category_code: tubewell
@@ -1908,8 +2367,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LKA-WAS-14
     source_category_code: unprotected_spring
@@ -1919,8 +2378,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: LKA-WAS-15
     source_category_code: unprotected_drug_well
@@ -1930,8 +2389,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LKA-WAS-16
     source_category_code: unprotected_well
@@ -1941,8 +2400,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LKA-WAS-17
     source_category_code: unprotected_dug_well_or_spring
@@ -1952,8 +2411,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: LKA-WAS-18
     source_category_code: bowser
@@ -1963,8 +2422,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: LKA-WAS-19
     source_category_code: filtered_water
@@ -1974,8 +2433,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: LKA-WAS-20
     source_category_code: rural_water_supply_project
@@ -1985,8 +2444,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: LKA-WAS-21
     source_category_code: ro_plant
@@ -1996,8 +2455,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: LKA-WAS-22
     source_category_code: bowser
@@ -2007,8 +2466,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LKA-WAS-23
     source_category_code: bowser_tanker_truck
@@ -2018,8 +2477,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LKA-WAS-24
     source_category_code: bowser_tanker_truck
@@ -2029,8 +2488,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LKA-WAS-25
     source_category_code: lorry
@@ -2040,8 +2499,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LKA-WAS-26
     source_category_code: tanker_truck_vendor
@@ -2051,8 +2510,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LKA-WAS-27
     source_category_code: other
@@ -2062,8 +2521,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: LKA-WAS-28
     source_category_code: bottled_water
@@ -2073,8 +2532,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: LKA-WAS-29
     source_category_code: rain_water
@@ -2084,8 +2543,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: LKA-WAS-30
     source_category_code: rain_water
@@ -2095,8 +2554,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LKA-WAS-31
     source_category_code: rainwater
@@ -2106,8 +2565,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LKA-WAS-32
     source_category_code: rainwater_into_tank_or_cistern
@@ -2117,8 +2576,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LKA-WAS-33
     source_category_code: river_tank_stream_etc
@@ -2128,8 +2587,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-34
     source_category_code: river_tank_streams
@@ -2139,8 +2598,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-35
     source_category_code: river_stream
@@ -2150,8 +2609,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-36
     source_category_code: river_tank_streams
@@ -2161,8 +2620,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-37
     source_category_code: river_tank_streams_spring
@@ -2172,8 +2631,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-38
     source_category_code: surface_water
@@ -2183,8 +2642,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-39
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -2194,8 +2653,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LKA-WAS-40
     source_category_code: irrigation_canal
@@ -2205,8 +2664,8 @@ parameters:
     jmp_id: surface_water.irrigation_channel
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 98
   - country_entry_id: LKA-WAS-41
     source_category_code: river
@@ -2216,8 +2675,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: LKA-WAS-42
     source_category_code: stream_water_collected_and_distributed_by_pipe_lines
@@ -2227,8 +2686,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LKA-WAS-43
     source_category_code: tap_to_neighbour
@@ -2238,8 +2697,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LKA-WAS-44
     source_category_code: tap_private
@@ -2249,8 +2708,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LKA-WAS-45
     source_category_code: piped_water_through_house_connection_or_yard
@@ -2260,8 +2719,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: LKA-WAS-46
     source_category_code: piped_into_residence
@@ -2271,8 +2730,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-47
     source_category_code: piped_water_into_dwelling
@@ -2282,8 +2741,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-48
     source_category_code: tap_water_into_dwelling
@@ -2293,8 +2752,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-49
     source_category_code: tap_within_premises_main_line_nwsdb_la
@@ -2304,8 +2763,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-50
     source_category_code: tap_within_unit
@@ -2315,8 +2774,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-51
     source_category_code: tap_within_unit_premises_main_line
@@ -2326,8 +2785,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-52
     source_category_code: tap_national_supply
@@ -2337,8 +2796,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LKA-WAS-53
     source_category_code: piped_into_premises
@@ -2348,8 +2807,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LKA-WAS-54
     source_category_code: piped_into_yard_plot
@@ -2359,8 +2818,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LKA-WAS-55
     source_category_code: tap_ouside_premises_main_line_nwsdb_la
@@ -2370,8 +2829,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LKA-WAS-56
     source_category_code: tap_to_yard_plot
@@ -2381,8 +2840,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LKA-WAS-57
     source_category_code: tap_within_premises_but_outside_unit
@@ -2392,8 +2851,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LKA-WAS-58
     source_category_code: tap_community_base
@@ -2403,8 +2862,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LKA-WAS-59
     source_category_code: public_standpipe
@@ -2414,8 +2873,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LKA-WAS-60
     source_category_code: public_tap
@@ -2425,8 +2884,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LKA-WAS-61
     source_category_code: public_tap_stand_pipe
@@ -2436,8 +2895,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LKA-WAS-62
     source_category_code: public_tap_standpipe
@@ -2447,8 +2906,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LKA-WAS-63
     source_category_code: public_taps_street_taps_main_line
@@ -2458,8 +2917,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LKA-WAS-64
     source_category_code: tap_outside_premises
@@ -2469,8 +2928,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LKA-WAS-65
     source_category_code: tap_local_governemnt
@@ -2480,13 +2939,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LKA_Sri_Lanka_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

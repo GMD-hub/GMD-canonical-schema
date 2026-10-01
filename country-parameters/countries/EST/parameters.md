@@ -6,14 +6,14 @@ status: draft
 country_name: EST
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EST-EDU-01
     national_label_en: Preschool education (National curriculum for preschool child
       care institutions)
-    national_label_local: Alusharidus (Koolieelse lasteasutuse riiklik õppekava)
+    national_label_local: "Alusharidus (Koolieelse lasteasutuse riiklik \xF5ppekava)"
     entry_age: 0
     duration_years: 7
     isced_level: '0'
@@ -22,9 +22,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: EST-EDU-02
-    national_label_en: Basic education (grades 1 – 6 of basic school)
-    national_label_local: Põhiharidus (põhikooli 1. – 6. klass)
+    national_label_en: "Basic education (grades 1 \u2013 6 of basic school)"
+    national_label_local: "P\xF5hiharidus (p\xF5hikooli 1. \u2013 6. klass)"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -33,9 +39,15 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EST-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: EST-EDU-03
-    national_label_en: Basic education (grades 7 – 9 of basic school)
-    national_label_local: Põhiharidus (põhikooli 7. – 9. klass)
+    national_label_en: "Basic education (grades 7 \u2013 9 of basic school)"
+    national_label_local: "P\xF5hiharidus (p\xF5hikooli 7. \u2013 9. klass)"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -44,9 +56,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 7
+    parent_country_entry_ids:
+    - EST-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EST-EDU-04
     national_label_en: Second-level vocational training
-    national_label_local: Teise taseme kutseõpe
+    national_label_local: "Teise taseme kutse\xF5pe"
     entry_age: 17
     duration_years: 0
     isced_level: '2'
@@ -55,9 +75,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
+    parent_country_entry_ids:
+    - EST-EDU-02
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EST-EDU-05
     national_label_en: Third-level vocational training
-    national_label_local: Kolmanda taseme kutseõpe
+    national_label_local: "Kolmanda taseme kutse\xF5pe"
     entry_age: 17
     duration_years: 0
     isced_level: '2'
@@ -66,9 +94,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - EST-EDU-02
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: EST-EDU-06
     national_label_en: General upper secondary education
-    national_label_local: Üldkeskharidus
+    national_label_local: "\xDCldkeskharidus"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -77,9 +113,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - EST-EDU-03
+    - EST-EDU-04
+    - EST-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
   - country_entry_id: EST-EDU-07
     national_label_en: Fourth-level vocational training (vocational secondary education)
-    national_label_local: Neljanda taseme kutseõpe (kutsekeskharidus)
+    national_label_local: "Neljanda taseme kutse\xF5pe (kutsekeskharidus)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -88,9 +136,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - EST-EDU-03
+    - EST-EDU-04
+    - EST-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
   - country_entry_id: EST-EDU-08
     national_label_en: Fourth-level initial vocational training
-    national_label_local: Neljanda taseme kutseõppe esmaõpe
+    national_label_local: "Neljanda taseme kutse\xF5ppe esma\xF5pe"
     entry_age: 16
     duration_years: 0
     isced_level: '3'
@@ -99,9 +159,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - EST-EDU-03
+    - EST-EDU-04
+    - EST-EDU-05
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
   - country_entry_id: EST-EDU-09
     national_label_en: Fourth-level continuing vocational training
-    national_label_local: Neljanda taseme kutseõppe jätkuõpe
+    national_label_local: "Neljanda taseme kutse\xF5ppe j\xE4tku\xF5pe"
     entry_age: 17
     duration_years: 0
     isced_level: '3'
@@ -110,9 +182,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - EST-EDU-03
+    - EST-EDU-04
+    - EST-EDU-05
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
   - country_entry_id: EST-EDU-10
     national_label_en: Fifth-level initial vocational training
-    national_label_local: Viienda taseme kutseõppe esmaõpe
+    national_label_local: "Viienda taseme kutse\xF5ppe esma\xF5pe"
     entry_age: 19
     duration_years: 1
     isced_level: '4'
@@ -121,9 +205,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - EST-EDU-06
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-10
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: EST-EDU-11
     national_label_en: Fifth-level continuing vocational training
-    national_label_local: Viienda taseme kutseõppe jätkuõpe
+    national_label_local: "Viienda taseme kutse\xF5ppe j\xE4tku\xF5pe"
     entry_age: 20
     duration_years: 0
     isced_level: '4'
@@ -132,9 +226,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - EST-EDU-06
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: EST-EDU-12
     national_label_en: Studies in professional higher education
-    national_label_local: Rakenduskõrgharidusõpe
+    national_label_local: "Rakendusk\xF5rgharidus\xF5pe"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -143,9 +247,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - EST-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-12
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: EST-EDU-13
-    national_label_en: Bachelor’s studies  (programmes corresponding to Bologna process)
-    national_label_local: Bakalaureuseõpe (Bologna-järgsed õppekavad)
+    national_label_en: "Bachelor\u2019s studies  (programmes corresponding to Bologna\
+      \ process)"
+    national_label_local: "Bakalaureuse\xF5pe (Bologna-j\xE4rgsed \xF5ppekavad)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -154,9 +269,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - EST-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-13
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: EST-EDU-14
-    national_label_en: Master’s studies  (programmes corresponding to Bologna process)
-    national_label_local: Magistriõpe (Bologna-järgsed õppekavad)
+    national_label_en: "Master\u2019s studies  (programmes corresponding to Bologna\
+      \ process)"
+    national_label_local: "Magistri\xF5pe (Bologna-j\xE4rgsed \xF5ppekavad)"
     entry_age: 22
     duration_years: 1
     isced_level: '7'
@@ -165,11 +291,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - EST-EDU-12
+    - EST-EDU-13
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-12
+    - EST-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
+    - 'minimum parent path selected from: EST-EDU-12, EST-EDU-13'
   - country_entry_id: EST-EDU-15
-    national_label_en: Integrated bachelor’s and master’s studies  (programmes corresponding
-      to Bologna process)
-    national_label_local: Bakalaureuse- ja magistriõppe integreeritud õppekavadel
-      põhinev õpe (Bologna-järgsed õppekavad)
+    national_label_en: "Integrated bachelor\u2019s and master\u2019s studies  (programmes\
+      \ corresponding to Bologna process)"
+    national_label_local: "Bakalaureuse- ja magistri\xF5ppe integreeritud \xF5ppekavadel\
+      \ p\xF5hinev \xF5pe (Bologna-j\xE4rgsed \xF5ppekavad)"
     entry_age: 19
     duration_years: 5
     isced_level: '7'
@@ -178,9 +318,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - EST-EDU-12
+    - EST-EDU-13
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-12
+    - EST-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
+    - 'minimum parent path selected from: EST-EDU-12, EST-EDU-13'
   - country_entry_id: EST-EDU-16
     national_label_en: Doctoral studies  (programmes corresponding to Bologna process)
-    national_label_local: Doktoriõpe (Bologna-järgsed õppekavad)
+    national_label_local: "Doktori\xF5pe (Bologna-j\xE4rgsed \xF5ppekavad)"
     entry_age: 24
     duration_years: 4
     isced_level: '8'
@@ -189,15 +343,31 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - EST-EDU-14
+    - EST-EDU-15
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - EST-EDU-02
+    - EST-EDU-04
+    - EST-EDU-06
+    - EST-EDU-12
+    - EST-EDU-14
+    - EST-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: EST-EDU-03, EST-EDU-04, EST-EDU-05'
+    - 'minimum parent path selected from: EST-EDU-12, EST-EDU-13'
+    - 'minimum parent path selected from: EST-EDU-14, EST-EDU-15'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Estonia.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EST-SAN-01
     source_category_code: private_domestic_connection_to_sewage_system
@@ -207,8 +377,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: EST-SAN-02
     source_category_code: sewage_disposal_system
@@ -218,8 +388,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: EST-SAN-03
     source_category_code: local_sewerage
@@ -229,8 +399,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: EST-SAN-04
     source_category_code: private_flush_to_septic_tank
@@ -240,8 +410,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: EST-SAN-05
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -252,8 +422,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: EST-SAN-06
     source_category_code: shared_flush_to_septic_tank
@@ -263,8 +433,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: EST-SAN-07
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -274,8 +444,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: EST-SAN-08
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -286,8 +456,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: EST-SAN-09
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -298,8 +468,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: EST-SAN-10
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -310,8 +480,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: EST-SAN-11
     source_category_code: private_pour_flush_latrine
@@ -321,8 +491,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: EST-SAN-12
     source_category_code: shared_pour_flush_latrine
@@ -333,8 +503,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: EST-SAN-13
     source_category_code: no_facilities_open_defecation
@@ -344,8 +514,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: EST-SAN-14
     source_category_code: no_sewerage
@@ -355,8 +525,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: EST-SAN-15
     source_category_code: other
@@ -366,18 +536,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_EST_Estonia_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: EST-WAS-01
     source_category_code: well_spring
@@ -387,8 +557,8 @@ parameters:
     jmp_id: ground_water
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well|protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 43
   - country_entry_id: EST-WAS-02
     source_category_code: protected_dug_well_or_protected_spring
@@ -398,8 +568,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: EST-WAS-03
     source_category_code: protected_tube_well_or_bore_hole
@@ -409,8 +579,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: EST-WAS-04
     source_category_code: unprotected_dug_well_or_spring
@@ -420,8 +590,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: EST-WAS-05
     source_category_code: tanker_truck_vendor
@@ -431,8 +601,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: EST-WAS-06
     source_category_code: rainwater_into_tank_or_cistern
@@ -442,8 +612,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: EST-WAS-07
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -453,8 +623,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: EST-WAS-08
     source_category_code: household_with_access_to_running_water
@@ -464,8 +634,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: EST-WAS-09
     source_category_code: piped_water_through_house_connection_or_yard
@@ -475,8 +645,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: EST-WAS-10
     source_category_code: public_standpipe
@@ -486,13 +656,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_EST_Estonia_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

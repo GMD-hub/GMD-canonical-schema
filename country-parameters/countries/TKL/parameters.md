@@ -6,9 +6,9 @@ status: draft
 country_name: TKL
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TKL-EDU-01
     national_label_en: Early Childhood Education
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: TKL-EDU-02
     national_label_en: Primary Education (Year 1 to 6)
     national_label_local: Vahega Tulaga Muamua
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - TKL-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: TKL-EDU-03
     national_label_en: Secondary (Year 7-10)
     national_label_local: Vahega Tulaga Lua
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 9
+    parent_country_entry_ids:
+    - TKL-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TKL-EDU-04
     national_label_en: Secondary Year 11
     national_label_local: Vahega Tulaga Lua
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - TKL-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TKL-EDU-05
     national_label_en: Senior Secondary Year 12, USP Preliminary
     national_label_local: Vahega 12 ite Preliminary
@@ -65,6 +93,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - TKL-EDU-03
+    - TKL-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
   - country_entry_id: TKL-EDU-06
     national_label_en: Year 12 Bridging Programme (aka Transition Class programme)
     national_label_local: Vahega 12 ite Bridging
@@ -76,6 +115,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - TKL-EDU-03
+    - TKL-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
   - country_entry_id: TKL-EDU-07
     national_label_en: Senior Secondary Year 13/USP Foundation
     national_label_local: Vahega 13 ite Foundation
@@ -87,6 +137,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - TKL-EDU-03
+    - TKL-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
   - country_entry_id: TKL-EDU-08
     national_label_en: USP center distance flexible learning (DFL) programmes
     national_label_local: Aoga ote USP e kave ite DFL
@@ -98,6 +159,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - TKL-EDU-05
+    - TKL-EDU-06
+    - TKL-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    - TKL-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
+    - 'minimum parent path selected from: TKL-EDU-05, TKL-EDU-06, TKL-EDU-07'
   - country_entry_id: TKL-EDU-09
     national_label_en: USP center distance flexible learning (DFL) programmes
     national_label_local: Aoga ote USP e kave ite DFL
@@ -109,6 +184,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - TKL-EDU-05
+    - TKL-EDU-06
+    - TKL-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    - TKL-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
+    - 'minimum parent path selected from: TKL-EDU-05, TKL-EDU-06, TKL-EDU-07'
   - country_entry_id: TKL-EDU-10
     national_label_en: USP center distance flexible learning (DFL) programmes
     national_label_local: Aoga ote USP e kave ite DFL
@@ -120,6 +209,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - TKL-EDU-05
+    - TKL-EDU-06
+    - TKL-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    - TKL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
+    - 'minimum parent path selected from: TKL-EDU-05, TKL-EDU-06, TKL-EDU-07'
   - country_entry_id: TKL-EDU-11
     national_label_en: USP center distance flexible learning (DFL) programmes
     national_label_local: Aoga ote USP e kave ite DFL
@@ -131,6 +234,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - TKL-EDU-05
+    - TKL-EDU-06
+    - TKL-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    - TKL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
+    - 'minimum parent path selected from: TKL-EDU-05, TKL-EDU-06, TKL-EDU-07'
   - country_entry_id: TKL-EDU-12
     national_label_en: USP center distance flexible learning (DFL) programmes
     national_label_local: Aoga ote USP e kave ite DFL
@@ -142,6 +259,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - TKL-EDU-05
+    - TKL-EDU-06
+    - TKL-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    - TKL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
+    - 'minimum parent path selected from: TKL-EDU-05, TKL-EDU-06, TKL-EDU-07'
   - country_entry_id: TKL-EDU-13
     national_label_en: USP center distance flexible learning (DFL) programmes
     national_label_local: Aoga ote USP e kave ite DFL
@@ -153,15 +284,29 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - TKL-EDU-05
+    - TKL-EDU-06
+    - TKL-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TKL-EDU-02
+    - TKL-EDU-04
+    - TKL-EDU-05
+    - TKL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TKL-EDU-03, TKL-EDU-04'
+    - 'minimum parent path selected from: TKL-EDU-05, TKL-EDU-06, TKL-EDU-07'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Tokelau.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TKL-SAN-01
     source_category_code: private_tank_flush_inside_the_house
@@ -171,8 +316,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: TKL-SAN-02
     source_category_code: tank_flush_shared_with_other_households
@@ -182,8 +327,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: TKL-SAN-03
     source_category_code: private_tank_flush_outside_the_house
@@ -193,8 +338,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: TKL-SAN-04
     source_category_code: ocean_and_none
@@ -204,18 +349,18 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TKL_Tokelau_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TKL-WAS-01
     source_category_code: community_water_supply
@@ -225,8 +370,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TKL-WAS-02
     source_category_code: from_another_household
@@ -236,8 +381,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TKL-WAS-03
     source_category_code: bottled_water
@@ -247,8 +392,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: TKL-WAS-04
     source_category_code: water_tank_shared_with_other_households
@@ -258,8 +403,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TKL-WAS-05
     source_category_code: private_household_tank
@@ -269,13 +414,13 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TKL_Tokelau_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

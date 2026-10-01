@@ -6,9 +6,9 @@ status: draft
 country_name: TON
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TON-EDU-01
     national_label_en: "Pre-primary \nEducation"
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: TON-EDU-02
     national_label_en: Primary Education
     national_label_local: Primary Education
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - TON-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: TON-EDU-03
     national_label_en: Lower Secondary and Middle Schools (Form 1 - Form 4)
     national_label_local: Lower Secondary and Middle Schools (Form 1 - Form 4)
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - TON-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TON-EDU-04
     national_label_en: TVET Certificate 1
     national_label_local: TVET Certificate 1
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - TON-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TON-EDU-05
     national_label_en: TVET Certificate 2
     national_label_local: TVET Certificate 2
@@ -65,6 +93,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - TON-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: TON-EDU-06
     national_label_en: Upper Secondary Education (Form 5)
     national_label_local: Upper Secondary Education (Form 5)
@@ -76,6 +112,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - TON-EDU-03
+    - TON-EDU-04
+    - TON-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
   - country_entry_id: TON-EDU-07
     national_label_en: Upper Secondary Education (Form 6)
     national_label_local: Upper Secondary Education (Form 6)
@@ -87,6 +135,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - TON-EDU-03
+    - TON-EDU-04
+    - TON-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
   - country_entry_id: TON-EDU-08
     national_label_en: Upper Secondary Education (Form 7)
     national_label_local: Upper Secondary Education (Form 7)
@@ -98,6 +158,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - TON-EDU-03
+    - TON-EDU-04
+    - TON-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
   - country_entry_id: TON-EDU-09
     national_label_en: USP Foundation Year Form 7
     national_label_local: USP Foundation Year Form 7
@@ -109,6 +181,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - TON-EDU-03
+    - TON-EDU-04
+    - TON-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
   - country_entry_id: TON-EDU-10
     national_label_en: TVET Certificate 3
     national_label_local: TVET Certificate 3
@@ -120,6 +204,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - TON-EDU-03
+    - TON-EDU-04
+    - TON-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
   - country_entry_id: TON-EDU-11
     national_label_en: TVET Certificate 4
     national_label_local: TVET Certificate 4
@@ -131,6 +227,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-12
     national_label_en: Diploma
     national_label_local: Diploma
@@ -142,6 +255,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-13
     national_label_en: TVET Diploma
     national_label_local: TVET Diploma
@@ -153,6 +283,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-14
     national_label_en: TVET Advanced Diploma
     national_label_local: TVET Advanced Diploma
@@ -164,6 +311,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-15
     national_label_en: Bachelor Degree
     national_label_local: Bachelor Degree
@@ -175,6 +339,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-16
     national_label_en: Post-Graduate Diploma
     national_label_local: Post-Graduate Diploma
@@ -186,6 +367,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-17
     national_label_en: Graduate Certificate
     national_label_local: Graduate Certificate
@@ -197,6 +395,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-18
     national_label_en: Graduate Diploma
     national_label_local: Graduate Diploma
@@ -208,6 +423,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-19
     national_label_en: Post-Graduate Certificate
     national_label_local: Post-Graduate Certificate
@@ -219,6 +451,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - TON-EDU-06
+    - TON-EDU-07
+    - TON-EDU-08
+    - TON-EDU-09
+    - TON-EDU-10
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
   - country_entry_id: TON-EDU-20
     national_label_en: Masters degree
     national_label_local: Masters degree
@@ -230,6 +479,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - TON-EDU-15
+    - TON-EDU-16
+    - TON-EDU-17
+    - TON-EDU-18
+    - TON-EDU-19
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-17
+    - TON-EDU-20
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: TON-EDU-03, TON-EDU-04, TON-EDU-05'
+    - 'minimum parent path selected from: TON-EDU-06, TON-EDU-07, TON-EDU-08, TON-EDU-09,
+      TON-EDU-10'
+    - 'minimum parent path selected from: TON-EDU-15, TON-EDU-16, TON-EDU-17, TON-EDU-18,
+      TON-EDU-19'
   - country_entry_id: TON-EDU-21
     national_label_en: Doctorate degree
     national_label_local: Doctorate degree
@@ -241,15 +510,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - TON-EDU-20
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - TON-EDU-02
+    - TON-EDU-04
+    - TON-EDU-06
+    - TON-EDU-17
+    - TON-EDU-20
+    - TON-EDU-21
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Tonga.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2022
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TON-SUBNAT-01
     survey_labels: 01-Tongatapu
@@ -258,10 +539,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -279,10 +560,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -300,10 +581,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -321,10 +602,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -342,10 +623,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: ''
     geo_year: '2022'
@@ -358,13 +639,13 @@ parameters:
     source_row: 16635
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TON-SAN-01
     source_category_code: public_sewer_or_septic_sewer
@@ -374,8 +655,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: TON-SAN-02
     source_category_code: septic_system
@@ -385,8 +666,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: TON-SAN-03
     source_category_code: flush_toilet_falemalolo_falasi
@@ -396,8 +677,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: TON-SAN-04
     source_category_code: public_shared_toilet
@@ -407,8 +688,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: TON-SAN-05
     source_category_code: pit_falemalolo_ponu
@@ -419,8 +700,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: TON-SAN-06
     source_category_code: vip_latrine
@@ -431,8 +712,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: TON-SAN-07
     source_category_code: pour_flush_latrine
@@ -442,8 +723,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: TON-SAN-08
     source_category_code: manual_toilet_falemalolo_lingi
@@ -453,8 +734,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: TON-SAN-09
     source_category_code: other
@@ -464,8 +745,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TON-SAN-10
     source_category_code: simple_pit_latrine_or_ventilated_improved_pit_latrine
@@ -475,8 +756,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: TON-SAN-11
     source_category_code: unimproved_sanitation_access
@@ -486,18 +767,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TON_Tonga_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: TON-WAS-01
     source_category_code: protected_well
@@ -507,8 +788,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: TON-WAS-02
     source_category_code: community_water_supply
@@ -518,8 +799,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TON-WAS-03
     source_category_code: neighbour_cement_or_other_tank
@@ -529,8 +810,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: TON-WAS-04
     source_category_code: church_water_supply
@@ -540,8 +821,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: TON-WAS-05
     source_category_code: community_cement_or_other_tank
@@ -551,8 +832,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: TON-WAS-06
     source_category_code: another_household_water_supply
@@ -562,8 +843,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TON-WAS-07
     source_category_code: other
@@ -573,8 +854,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: TON-WAS-08
     source_category_code: bottled_water
@@ -584,8 +865,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: TON-WAS-09
     source_category_code: unprotected_dug_well_or_bottled_water
@@ -595,8 +876,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: TON-WAS-10
     source_category_code: household_tank
@@ -606,8 +887,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TON-WAS-11
     source_category_code: own_cement_or_other_tank
@@ -617,8 +898,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TON-WAS-12
     source_category_code: rainwater_tank_own
@@ -628,8 +909,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: TON-WAS-13
     source_category_code: rainwater_tank_neighbour_or_community
@@ -639,8 +920,8 @@ parameters:
     jmp_id: rainwater.uncovered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: TON-WAS-14
     source_category_code: piped_to_neighbour
@@ -650,8 +931,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TON-WAS-15
     source_category_code: rain_water_piped_into_dwelling
@@ -661,8 +942,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: TON-WAS-16
     source_category_code: piped_water_into_dwelling
@@ -672,8 +953,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TON-WAS-17
     source_category_code: public_piped_supply
@@ -683,8 +964,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TON-WAS-18
     source_category_code: tap_water_piped_into_dwelling
@@ -694,8 +975,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: TON-WAS-19
     source_category_code: piped_in_yard_plot
@@ -705,8 +986,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TON-WAS-20
     source_category_code: piped_water_to_yard_plot
@@ -716,8 +997,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: TON-WAS-21
     source_category_code: public_tap_standpipe_shared_tap
@@ -727,8 +1008,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: TON-WAS-22
     source_category_code: public_tap_standpipe
@@ -738,13 +1019,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_TON_Tonga_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -6,9 +6,9 @@ status: draft
 country_name: NIU
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NIU-EDU-01
     national_label_en: Playschool/Kindergarten
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NIU-EDU-02
     national_label_en: Early Childhood Education
     national_label_local: Aoga Fakamahani
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: NIU-EDU-03
     national_label_en: Primary School
     national_label_local: Aoga Ikiiki
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - NIU-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: NIU-EDU-04
     national_label_en: Intermediate/Lower Secondary School (Year 7-10)
     national_label_local: Aoga Tokolalo
@@ -54,6 +72,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - NIU-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-05
     national_label_en: Year 11/NCEA Level 1
     national_label_local: Year 11/NCEA Level 1
@@ -65,6 +91,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-06
     national_label_en: Year 12/NCEA Level 2
     national_label_local: Aoga Tokoluga
@@ -76,6 +111,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-07
     national_label_en: Year 13/NCEA Level 3
     national_label_local: Year 13/NCEA Level 3
@@ -87,6 +131,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-08
     national_label_en: USP Certificate course
     national_label_local: USP Certificate course
@@ -98,6 +151,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-09
     national_label_en: Youth Employment Program
     national_label_local: Youth Employment Program
@@ -109,6 +171,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-10
     national_label_en: Pre-vocational programme (PVP) (includes food and nutrition,
       horticulture, ICT, design, hospitality, tourism)
@@ -122,6 +193,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-11
     national_label_en: Open Polytechnic Certificate
     national_label_local: Open Polytechnic Certificate
@@ -133,6 +213,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - NIU-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: NIU-EDU-12
     national_label_en: USP and Open Polytechnic Diploma courses
     national_label_local: USP and Open Polytechnic Diploma courses
@@ -144,6 +233,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - NIU-EDU-05
+    - NIU-EDU-06
+    - NIU-EDU-07
+    - NIU-EDU-08
+    - NIU-EDU-09
+    - NIU-EDU-11
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-05
+    - NIU-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NIU-EDU-05, NIU-EDU-06, NIU-EDU-07, NIU-EDU-08,
+      NIU-EDU-09, NIU-EDU-11'
   - country_entry_id: NIU-EDU-13
     national_label_en: USP and Open Polytechnic Bachelor's course
     national_label_local: USP and Open Polytechnic Bachelor's course
@@ -155,6 +261,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - NIU-EDU-05
+    - NIU-EDU-06
+    - NIU-EDU-07
+    - NIU-EDU-08
+    - NIU-EDU-09
+    - NIU-EDU-11
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-05
+    - NIU-EDU-13
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: NIU-EDU-05, NIU-EDU-06, NIU-EDU-07, NIU-EDU-08,
+      NIU-EDU-09, NIU-EDU-11'
   - country_entry_id: NIU-EDU-14
     national_label_en: USP Master's course
     national_label_local: USP Master's course
@@ -166,10 +289,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - NIU-EDU-13
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - NIU-EDU-03
+    - NIU-EDU-04
+    - NIU-EDU-05
+    - NIU-EDU-13
+    - NIU-EDU-14
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Niue.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

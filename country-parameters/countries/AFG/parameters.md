@@ -6,13 +6,14 @@ status: draft
 country_name: AFG
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AFG-EDU-01
     national_label_en: Pre-schooling
-    national_label_local: Qabl az Maktab (قبل از مکتب)
+    national_label_local: "Qabl az Maktab (\u0642\u0628\u0644 \u0627\u0632 \u0645\u06A9\
+      \u062A\u0628)"
     entry_age: 6
     duration_years: 1
     isced_level: '0'
@@ -21,9 +22,16 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: AFG-EDU-02
     national_label_en: Primary Education (grades 1-6)
-    national_label_local: Ibtedaya (ابتدائیه)
+    national_label_local: "Ibtedaya (\u0627\u0628\u062A\u062F\u0627\u0626\u06CC\u0647\
+      )"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -32,9 +40,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - AFG-EDU-02
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: AFG-EDU-03
     national_label_en: "Madrassa Primary \n(grades 1-6)"
-    national_label_local: Madrassa (Islamic Education) (مدرسه)
+    national_label_local: "Madrassa (Islamic Education) (\u0645\u062F\u0631\u0633\u0647\
+      )"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -43,9 +58,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - AFG-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: AFG-EDU-04
     national_label_en: "Darul Hifaz Primary \n(grades 1-6)"
-    national_label_local: Darul Hifaz (Islamic Education) (دارالحفاظ)
+    national_label_local: "Darul Hifaz (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u062D\u0641\u0627\u0638)"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -54,9 +76,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - AFG-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: AFG-EDU-05
     national_label_en: Darul Uloom Primary (grades 1-6)
-    national_label_local: Darul Uloom (Islamic Education) (دارالعلوم)
+    national_label_local: "Darul Uloom (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u0639\u0644\u0648\u0645)"
     entry_age: 7
     duration_years: 6
     isced_level: '1'
@@ -65,9 +94,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - AFG-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: AFG-EDU-06
     national_label_en: Secondary Education (grades 7-9)
-    national_label_local: Motawaseta (متوسطه)
+    national_label_local: "Motawaseta (\u0645\u062A\u0648\u0633\u0637\u0647)"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -76,9 +111,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - AFG-EDU-02
+    - AFG-EDU-03
+    - AFG-EDU-04
+    - AFG-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
   - country_entry_id: AFG-EDU-07
     national_label_en: Madrassa Secondary (grades 7-9)
-    national_label_local: Madrassa (Islamic Education) (مدرسه)
+    national_label_local: "Madrassa (Islamic Education) (\u0645\u062F\u0631\u0633\u0647\
+      )"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -87,9 +135,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - AFG-EDU-02
+    - AFG-EDU-03
+    - AFG-EDU-04
+    - AFG-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
   - country_entry_id: AFG-EDU-08
     national_label_en: Darul Hifaz Secondary (grades 7-9)
-    national_label_local: Darul Hifaz (Islamic Education) (دارالحفاظ)
+    national_label_local: "Darul Hifaz (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u062D\u0641\u0627\u0638)"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -98,9 +159,22 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - AFG-EDU-02
+    - AFG-EDU-03
+    - AFG-EDU-04
+    - AFG-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
   - country_entry_id: AFG-EDU-09
     national_label_en: Darul Uloom Secondary (grades 7-9)
-    national_label_local: Darul Uloom (Islamic Education) (دارالعلوم)
+    national_label_local: "Darul Uloom (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u0639\u0644\u0648\u0645)"
     entry_age: 13
     duration_years: 3
     isced_level: '2'
@@ -109,9 +183,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - AFG-EDU-02
+    - AFG-EDU-03
+    - AFG-EDU-04
+    - AFG-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
   - country_entry_id: AFG-EDU-10
     national_label_en: Higher Secondary Education (grades 10-12)
-    national_label_local: Lisa (لیسه)
+    national_label_local: "Lisa (\u0644\u06CC\u0633\u0647)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -120,9 +206,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - AFG-EDU-06
+    - AFG-EDU-07
+    - AFG-EDU-08
+    - AFG-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
   - country_entry_id: AFG-EDU-11
     national_label_en: Madrassa Higher Secondary (grades 10-12)
-    national_label_local: Madrassa (Islamic Education) (مدرسه)
+    national_label_local: "Madrassa (Islamic Education) (\u0645\u062F\u0631\u0633\u0647\
+      )"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -131,9 +232,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - AFG-EDU-06
+    - AFG-EDU-07
+    - AFG-EDU-08
+    - AFG-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
   - country_entry_id: AFG-EDU-12
     national_label_en: Darul Hifaz Higher Secondary (grades 10-12)
-    national_label_local: Darul Hifaz (Islamic Education) (دارالحفاظ)
+    national_label_local: "Darul Hifaz (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u062D\u0641\u0627\u0638)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -142,9 +258,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - AFG-EDU-06
+    - AFG-EDU-07
+    - AFG-EDU-08
+    - AFG-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
   - country_entry_id: AFG-EDU-13
     national_label_en: Darul Uloom (grades 10-12)
-    national_label_local: Darul Uloom (Islamic Education) (دارالعلوم)
+    national_label_local: "Darul Uloom (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u0639\u0644\u0648\u0645)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -153,10 +284,25 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - AFG-EDU-06
+    - AFG-EDU-07
+    - AFG-EDU-08
+    - AFG-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
   - country_entry_id: AFG-EDU-14
     national_label_en: Technical & Vocational Education (grades 10-12)
-    national_label_local: Talimate Takhniki wa Maslaki  (Vocational) (تعلیمات تخنیکی
-      و مسلکی)
+    national_label_local: "Talimate Takhniki wa Maslaki  (Vocational) (\u062A\u0639\
+      \u0644\u06CC\u0645\u0627\u062A \u062A\u062E\u0646\u06CC\u06A9\u06CC \u0648 \u0645\
+      \u0633\u0644\u06A9\u06CC)"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -165,9 +311,24 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - AFG-EDU-06
+    - AFG-EDU-07
+    - AFG-EDU-08
+    - AFG-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
   - country_entry_id: AFG-EDU-15
     national_label_en: Darul Uloom (grades 13-14)
-    national_label_local: Darul Uloom (Islamic Education) (دارالعلوم)
+    national_label_local: "Darul Uloom (Islamic Education) (\u062F\u0627\u0631\u0627\
+      \u0644\u0639\u0644\u0648\u0645)"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -176,9 +337,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-16
     national_label_en: Darul Malimeen (grades 13-14)
-    national_label_local: Darul Malimeen (Teacher Training) (دارالمعلمین)
+    national_label_local: "Darul Malimeen (Teacher Training) (\u062F\u0627\u0631\u0627\
+      \u0644\u0645\u0639\u0644\u0645\u06CC\u0646)"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -187,10 +365,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-17
     national_label_en: Technical & Vocational Education (grades 13-14)
-    national_label_local: Talimate Takhniki wa Maslaki  (Vocational)  (تعلیمات تخنیکی
-      و مسلکی)
+    national_label_local: "Talimate Takhniki wa Maslaki  (Vocational)  (\u062A\u0639\
+      \u0644\u06CC\u0645\u0627\u062A \u062A\u062E\u0646\u06CC\u06A9\u06CC \u0648 \u0645\
+      \u0633\u0644\u06A9\u06CC)"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -199,10 +394,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-18
     national_label_en: Technical & Vocational Education (grades 13-14)
-    national_label_local: Talimate Takhniki wa Maslaki (Vocational) (تعلیمات تخنیکی
-      و مسلکی)
+    national_label_local: "Talimate Takhniki wa Maslaki (Vocational) (\u062A\u0639\
+      \u0644\u06CC\u0645\u0627\u062A \u062A\u062E\u0646\u06CC\u06A9\u06CC \u0648 \u0645\
+      \u0633\u0644\u06A9\u06CC)"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -211,9 +423,26 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-19
     national_label_en: Teacher Training (grades 13-14)
-    national_label_local: Tarbia Malem  (Teacher Training) (تربیه معلم)
+    national_label_local: "Tarbia Malem  (Teacher Training) (\u062A\u0631\u0628\u06CC\
+      \u0647 \u0645\u0639\u0644\u0645)"
     entry_age: 19
     duration_years: 2
     isced_level: '4'
@@ -222,6 +451,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-20
     national_label_en: Diploma in Information Technology, in English Language
     national_label_local: NA
@@ -233,9 +478,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-21
     national_label_en: Bachelor's degree
-    national_label_local: Lisans (لسانس)
+    national_label_local: "Lisans (\u0644\u0633\u0627\u0646\u0633)"
     entry_age: 19
     duration_years: 4
     isced_level: '6'
@@ -244,9 +505,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - AFG-EDU-10
+    - AFG-EDU-11
+    - AFG-EDU-12
+    - AFG-EDU-13
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-21
+    cum_years_status: computed
+    review_flags: &id001
+    - 'minimum parent path selected from: AFG-EDU-02, AFG-EDU-03, AFG-EDU-04, AFG-EDU-05'
+    - 'minimum parent path selected from: AFG-EDU-06, AFG-EDU-07, AFG-EDU-08, AFG-EDU-09'
+    - 'minimum parent path selected from: AFG-EDU-10, AFG-EDU-11, AFG-EDU-12, AFG-EDU-13'
   - country_entry_id: AFG-EDU-22
     national_label_en: Master's degree
-    national_label_local: Master (ماستر)
+    national_label_local: "Master (\u0645\u0627\u0633\u062A\u0631)"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -255,9 +532,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - AFG-EDU-21
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-21
+    - AFG-EDU-22
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: AFG-EDU-23
     national_label_en: Doctorate degree
-    national_label_local: Doctor (دوکتور)
+    national_label_local: "Doctor (\u062F\u0648\u06A9\u062A\u0648\u0631)"
     entry_age: 25
     duration_years: 3
     isced_level: '8'
@@ -266,15 +554,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - AFG-EDU-22
+    cum_years_schooling: 21
+    cum_years_computation_path:
+    - AFG-EDU-02
+    - AFG-EDU-06
+    - AFG-EDU-10
+    - AFG-EDU-21
+    - AFG-EDU-22
+    - AFG-EDU-23
+    cum_years_status: computed
+    review_flags: *id001
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Afghanistan.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AFG-SAN-01
     source_category_code: composting_toilet
@@ -284,8 +584,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: AFG-SAN-02
     source_category_code: composting_toilet_not_shared
@@ -295,8 +595,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_private
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 129
   - country_entry_id: AFG-SAN-03
     source_category_code: composting_toilet_shared
@@ -306,8 +606,8 @@ parameters:
     jmp_id: composting_toilets.composting_toilet_shared
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 130
   - country_entry_id: AFG-SAN-04
     source_category_code: flush
@@ -317,8 +617,8 @@ parameters:
     jmp_id: flush_and_pour_flush
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 60
   - country_entry_id: AFG-SAN-05
     source_category_code: flush_to_somewhere_else
@@ -328,8 +628,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: AFG-SAN-06
     source_category_code: flush_pour_flush_not_to_sewer_septic_tank_pit_latrine
@@ -339,8 +639,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: AFG-SAN-07
     source_category_code: flush_pour_flush_to_somewhere_else
@@ -350,8 +650,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: AFG-SAN-08
     source_category_code: to_open_drain
@@ -361,8 +661,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: AFG-SAN-09
     source_category_code: flush_to_piped_sewer_sustem
@@ -372,8 +672,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AFG-SAN-10
     source_category_code: flush_toilet_to_sewer_system
@@ -383,8 +683,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AFG-SAN-11
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -394,8 +694,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AFG-SAN-12
     source_category_code: flush_pour_flush_to_piped_sewer_system
@@ -405,8 +705,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AFG-SAN-13
     source_category_code: to_piped_sewer_system
@@ -416,8 +716,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AFG-SAN-14
     source_category_code: flush_to_pit_latrine
@@ -427,8 +727,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: AFG-SAN-15
     source_category_code: flush_pour_flush_to_pit_latrine
@@ -438,8 +738,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: AFG-SAN-16
     source_category_code: to_pit
@@ -449,8 +749,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: AFG-SAN-17
     source_category_code: flush_to_septic_tank
@@ -460,8 +760,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: AFG-SAN-18
     source_category_code: flush_pour_flush_to_septic_tank
@@ -471,8 +771,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: AFG-SAN-19
     source_category_code: flush_pour_toilet_to_septic_tank_pit
@@ -482,8 +782,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: AFG-SAN-20
     source_category_code: to_septic_tank
@@ -493,8 +793,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: AFG-SAN-21
     source_category_code: to_dk_where
@@ -504,8 +804,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: AFG-SAN-22
     source_category_code: unknown_place_not_sure_dk_where
@@ -515,8 +815,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: AFG-SAN-23
     source_category_code: family_flush_toilet_to_open_drain
@@ -526,8 +826,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 77
   - country_entry_id: AFG-SAN-24
     source_category_code: flush_pour_flush_to_piped_sewer_system_not_shared
@@ -537,8 +837,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: AFG-SAN-25
     source_category_code: flush_pour_flush_to_pit_latrine_not_shared
@@ -548,8 +848,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 75
   - country_entry_id: AFG-SAN-26
     source_category_code: family_flush_or_pour_toilet_to_septic_tank_or_pit
@@ -559,8 +859,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: AFG-SAN-27
     source_category_code: flush_pour_flush_to_septic_tanks_not_shared
@@ -570,8 +870,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: AFG-SAN-28
     source_category_code: flush_pour_flush_to_piped_sewer_system_shared
@@ -582,8 +882,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: AFG-SAN-29
     source_category_code: flush_pour_flush_to_pit_latrine_shared
@@ -593,8 +893,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 81
   - country_entry_id: AFG-SAN-30
     source_category_code: flush_pour_flush_to_septic_tanks_shared
@@ -604,8 +904,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: AFG-SAN-31
     source_category_code: flush_four_flush_not_to_sewer_septic_tanks_pit_latrine
@@ -615,8 +915,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AFG-SAN-32
     source_category_code: flush_pour_flush_toilet_to_elsewhere
@@ -626,8 +926,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AFG-SAN-33
     source_category_code: flush_to_piped_sewer_system
@@ -637,8 +937,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AFG-SAN-34
     source_category_code: flush_pour_flush_toilet_to_pit
@@ -648,8 +948,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: AFG-SAN-35
     source_category_code: flush_pour_flush_toilet_to_septic_tank
@@ -659,8 +959,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: AFG-SAN-36
     source_category_code: improved_latrine
@@ -670,8 +970,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 104
   - country_entry_id: AFG-SAN-37
     source_category_code: bucket
@@ -681,8 +981,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: AFG-SAN-38
     source_category_code: hanging
@@ -693,8 +993,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: AFG-SAN-39
     source_category_code: covered_pit_latrine
@@ -705,8 +1005,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-SAN-40
     source_category_code: improved_latrine
@@ -717,8 +1017,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-SAN-41
     source_category_code: pit_latrine_with_slab_covered
@@ -729,8 +1029,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-SAN-42
     source_category_code: pit_latrine_with_slab_covered_pit
@@ -741,8 +1041,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-SAN-43
     source_category_code: pit_latrine_with_slab
@@ -753,8 +1053,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-SAN-44
     source_category_code: pit_latrine_with_slab_covered_latrine
@@ -765,8 +1065,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-SAN-45
     source_category_code: open_pit
@@ -777,8 +1077,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AFG-SAN-46
     source_category_code: pit_latrine_without_slab_covered_pit
@@ -789,8 +1089,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AFG-SAN-47
     source_category_code: pit_latrine_without_slab_open
@@ -801,8 +1101,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AFG-SAN-48
     source_category_code: pit_latrine_without_slab_open_pit
@@ -813,8 +1113,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AFG-SAN-49
     source_category_code: uncovered_pit_latrine
@@ -825,8 +1125,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: AFG-SAN-50
     source_category_code: open_hole
@@ -837,8 +1137,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-SAN-51
     source_category_code: traditional_covered
@@ -849,8 +1149,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-SAN-52
     source_category_code: traditional_covered_latrine
@@ -861,8 +1161,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-SAN-53
     source_category_code: traditional_dry_vault_toilet
@@ -873,8 +1173,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-SAN-54
     source_category_code: traditional_latrine
@@ -885,8 +1185,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-SAN-55
     source_category_code: improved_latrine
@@ -897,8 +1197,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AFG-SAN-56
     source_category_code: ventilated_improved_pit_vip_latrine
@@ -909,8 +1209,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AFG-SAN-57
     source_category_code: ventilated_improved_pit_latrine
@@ -921,8 +1221,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AFG-SAN-58
     source_category_code: vip_latrine
@@ -933,8 +1233,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AFG-SAN-59
     source_category_code: vip_latrines
@@ -945,8 +1245,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: AFG-SAN-60
     source_category_code: family_pit_latrine_with_slab_or_covered
@@ -957,8 +1257,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: AFG-SAN-61
     source_category_code: pit_latrine_with_slab_not_shared
@@ -969,8 +1269,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: AFG-SAN-62
     source_category_code: family_pit_latrine_without_slab_or_open
@@ -981,8 +1281,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 116
   - country_entry_id: AFG-SAN-63
     source_category_code: family_ventilated_improved_pit_latrine
@@ -993,8 +1293,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 113
   - country_entry_id: AFG-SAN-64
     source_category_code: ventilated_improved_latrines_not_shared
@@ -1005,8 +1305,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 113
   - country_entry_id: AFG-SAN-65
     source_category_code: community_public_latrine
@@ -1016,8 +1316,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 127
   - country_entry_id: AFG-SAN-66
     source_category_code: pit_latrine_with_slab_shared
@@ -1028,8 +1328,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: AFG-SAN-67
     source_category_code: ventilated_improved_latrines_shared
@@ -1040,8 +1340,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 121
   - country_entry_id: AFG-SAN-68
     source_category_code: flush_latrine
@@ -1051,8 +1351,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: AFG-SAN-69
     source_category_code: no_facility_open_field_dearan_bush
@@ -1062,8 +1362,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-70
     source_category_code: no_facility_bush_field
@@ -1073,8 +1373,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-71
     source_category_code: no_facility_bush_field
@@ -1084,8 +1384,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-72
     source_category_code: none
@@ -1095,8 +1395,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-73
     source_category_code: none_open_field_bush_or_sahrahi
@@ -1106,8 +1406,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-74
     source_category_code: none_open_field_bush
@@ -1117,8 +1417,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-75
     source_category_code: open_defecation_no_facility_bush_field
@@ -1128,8 +1428,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: AFG-SAN-76
     source_category_code: any_facility_shared_with_other_households
@@ -1139,8 +1439,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: AFG-SAN-77
     source_category_code: double_vault
@@ -1150,8 +1450,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: AFG-SAN-78
     source_category_code: eco_sanitation
@@ -1161,8 +1461,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: AFG-SAN-79
     source_category_code: single_double_vault_with_urine_diversion
@@ -1172,8 +1472,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: AFG-SAN-80
     source_category_code: single_double_vault_latrine_with_urine_diversion
@@ -1183,8 +1483,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: AFG-SAN-81
     source_category_code: eco_sanitation
@@ -1194,8 +1494,8 @@ parameters:
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: AFG-SAN-82
     source_category_code: single_double_vault_without_urine_diversion
@@ -1205,8 +1505,8 @@ parameters:
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: AFG-SAN-83
     source_category_code: single_double_vault_latrine_without_urine_diversion
@@ -1216,8 +1516,8 @@ parameters:
     jmp_id: other_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 133
   - country_entry_id: AFG-SAN-84
     source_category_code: area_in_compound_but_no_pit
@@ -1227,8 +1527,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AFG-SAN-85
     source_category_code: other
@@ -1238,8 +1538,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AFG-SAN-86
     source_category_code: other_specify
@@ -1249,8 +1549,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AFG-SAN-87
     source_category_code: others_plus_nr
@@ -1260,8 +1560,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AFG-SAN-88
     source_category_code: plastic_bag
@@ -1271,8 +1571,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AFG-SAN-89
     source_category_code: single_vault
@@ -1282,8 +1582,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: AFG-SAN-90
     source_category_code: dearan_area_inside_or_outside_compound_but_not_pit
@@ -1293,8 +1593,8 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   - country_entry_id: AFG-SAN-91
     source_category_code: dearan_not_pit
@@ -1304,8 +1604,8 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   - country_entry_id: AFG-SAN-92
     source_category_code: other
@@ -1315,18 +1615,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_AFG_Afghanistan_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: AFG-WAS-01
     source_category_code: spring
@@ -1336,8 +1636,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: AFG-WAS-02
     source_category_code: protected_spring
@@ -1347,8 +1647,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AFG-WAS-03
     source_category_code: protected_springs
@@ -1358,8 +1658,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AFG-WAS-04
     source_category_code: spring_protected
@@ -1369,8 +1669,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AFG-WAS-05
     source_category_code: spring_or_kariz_protected
@@ -1380,8 +1680,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AFG-WAS-06
     source_category_code: spring_well_or_kariz_protected
@@ -1391,8 +1691,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: AFG-WAS-07
     source_category_code: hand_pump
@@ -1402,8 +1702,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AFG-WAS-08
     source_category_code: protected_dug_well
@@ -1413,8 +1713,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AFG-WAS-09
     source_category_code: protected_springs_wells_and_kariz
@@ -1424,8 +1724,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AFG-WAS-10
     source_category_code: protected_well
@@ -1435,8 +1735,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AFG-WAS-11
     source_category_code: protected_well_kariaz
@@ -1446,8 +1746,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AFG-WAS-12
     source_category_code: well_protected
@@ -1457,8 +1757,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: AFG-WAS-13
     source_category_code: hand_pump_in_compound
@@ -1468,8 +1768,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AFG-WAS-14
     source_category_code: hand_pump_private
@@ -1479,8 +1779,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AFG-WAS-15
     source_category_code: hand_pump_in_compound
@@ -1490,8 +1790,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: AFG-WAS-16
     source_category_code: hand_pump_public
@@ -1501,8 +1801,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: AFG-WAS-17
     source_category_code: hand_pump_public
@@ -1512,8 +1812,8 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: AFG-WAS-18
     source_category_code: spring_well_or_kariz_protected
@@ -1523,8 +1823,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs.other
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 49
   - country_entry_id: AFG-WAS-19
     source_category_code: personal_well_in_home
@@ -1534,8 +1834,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs.private
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 47
   - country_entry_id: AFG-WAS-20
     source_category_code: public_community_well
@@ -1545,8 +1845,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: AFG-WAS-21
     source_category_code: bored_well_hand_pumps_or_motorized
@@ -1556,8 +1856,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-22
     source_category_code: bored_wells_motorise
@@ -1567,8 +1867,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-23
     source_category_code: bored_wells_hand_pump_or_motorised
@@ -1578,8 +1878,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-24
     source_category_code: borehole_tube_well
@@ -1589,8 +1889,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-25
     source_category_code: hand_pump_bore_hole_tube_well_public
@@ -1600,8 +1900,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-26
     source_category_code: hand_pump_used_on_bore_hole_tube_well
@@ -1611,8 +1911,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-27
     source_category_code: tube_well_or_borehole
@@ -1622,8 +1922,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-28
     source_category_code: tube_well_bore_hole
@@ -1633,8 +1933,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-29
     source_category_code: tubewell_or_borehole
@@ -1644,8 +1944,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-30
     source_category_code: tubewell_borehole
@@ -1655,8 +1955,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: AFG-WAS-31
     source_category_code: hand_pump
@@ -1666,8 +1966,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.other
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: AFG-WAS-32
     source_category_code: handpump_pumped_well_private
@@ -1677,8 +1977,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: AFG-WAS-33
     source_category_code: private_hand_pump
@@ -1688,8 +1988,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: AFG-WAS-34
     source_category_code: private_handpump
@@ -1699,8 +1999,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.private
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 59
   - country_entry_id: AFG-WAS-35
     source_category_code: handpump_pumped_well_public
@@ -1710,8 +2010,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: AFG-WAS-36
     source_category_code: public_hand_pump
@@ -1721,8 +2021,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: AFG-WAS-37
     source_category_code: public_handpump
@@ -1732,8 +2032,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole.public
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 60
   - country_entry_id: AFG-WAS-38
     source_category_code: spring_unprotected
@@ -1743,8 +2043,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AFG-WAS-39
     source_category_code: spring_or_kariz_unprotected
@@ -1754,8 +2054,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AFG-WAS-40
     source_category_code: spring_well_or_kariz_unprotected
@@ -1765,8 +2065,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AFG-WAS-41
     source_category_code: unprotected_soring
@@ -1776,8 +2076,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AFG-WAS-42
     source_category_code: unprotected_spring
@@ -1787,8 +2087,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AFG-WAS-43
     source_category_code: unprotected_srpings
@@ -1798,8 +2098,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: AFG-WAS-44
     source_category_code: open_well
@@ -1809,8 +2109,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AFG-WAS-45
     source_category_code: unprotected_dug_well
@@ -1820,8 +2120,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AFG-WAS-46
     source_category_code: unprotected_springs_wells_and_kariz
@@ -1831,8 +2131,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AFG-WAS-47
     source_category_code: unprotected_well
@@ -1842,8 +2142,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AFG-WAS-48
     source_category_code: unprotected_well_kariaz
@@ -1853,8 +2153,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AFG-WAS-49
     source_category_code: well_unprotected
@@ -1864,8 +2164,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: AFG-WAS-50
     source_category_code: open_well_private
@@ -1875,8 +2175,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AFG-WAS-51
     source_category_code: shallow_open_well_in_compound
@@ -1886,8 +2186,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AFG-WAS-52
     source_category_code: shallow_open_wells_in_compound
@@ -1897,8 +2197,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: AFG-WAS-53
     source_category_code: open_well_public
@@ -1908,8 +2208,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: AFG-WAS-54
     source_category_code: shallow_open_well_public
@@ -1919,8 +2219,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: AFG-WAS-55
     source_category_code: shallow_open_wells_public
@@ -1930,8 +2230,8 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: AFG-WAS-56
     source_category_code: spring_well_or_kariz_unprotected
@@ -1941,8 +2241,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs.other
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 53
   - country_entry_id: AFG-WAS-57
     source_category_code: buy_water_from_outside_village
@@ -1952,8 +2252,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AFG-WAS-58
     source_category_code: cart_with_small_tank
@@ -1963,8 +2263,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AFG-WAS-59
     source_category_code: cart_with_small_tank_drum
@@ -1974,8 +2274,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AFG-WAS-60
     source_category_code: cart_wth_tank_drum
@@ -1985,8 +2285,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AFG-WAS-61
     source_category_code: small_cart_tank
@@ -1996,8 +2296,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AFG-WAS-62
     source_category_code: water_seller
@@ -2007,8 +2307,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: AFG-WAS-63
     source_category_code: arhad
@@ -2018,8 +2318,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AFG-WAS-64
     source_category_code: ganda_water_stored_on_ground_in_dug_holes
@@ -2029,8 +2329,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AFG-WAS-65
     source_category_code: kariz
@@ -2040,8 +2340,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AFG-WAS-66
     source_category_code: piped_private
@@ -2051,8 +2351,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AFG-WAS-67
     source_category_code: water_kiosk
@@ -2062,8 +2362,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: AFG-WAS-68
     source_category_code: kariz
@@ -2073,8 +2373,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: AFG-WAS-69
     source_category_code: water_supplied_by_ngo
@@ -2084,8 +2384,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: AFG-WAS-70
     source_category_code: bowser_water_tanker
@@ -2095,8 +2395,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-71
     source_category_code: bowser_water_tanker
@@ -2106,8 +2406,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-72
     source_category_code: tanker_truck
@@ -2117,8 +2417,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-73
     source_category_code: tanker_truck
@@ -2128,8 +2428,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-74
     source_category_code: tanker_truck_cart_with_small_tank
@@ -2139,8 +2439,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-75
     source_category_code: tanker_truck
@@ -2150,8 +2450,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-76
     source_category_code: tranker_truck
@@ -2161,8 +2461,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-77
     source_category_code: water_tanker
@@ -2172,8 +2472,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-78
     source_category_code: water_trucking
@@ -2183,8 +2483,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-79
     source_category_code: water_trucking_tankering
@@ -2194,8 +2494,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: AFG-WAS-80
     source_category_code: other
@@ -2205,8 +2505,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-WAS-81
     source_category_code: other_specify
@@ -2216,8 +2516,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-WAS-82
     source_category_code: other_source
@@ -2227,8 +2527,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-WAS-83
     source_category_code: other_specify
@@ -2238,8 +2538,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: AFG-WAS-84
     source_category_code: other
@@ -2249,8 +2549,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-WAS-85
     source_category_code: other_specify
@@ -2260,8 +2560,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: AFG-WAS-86
     source_category_code: bottled_water_minera
@@ -2271,8 +2571,8 @@ parameters:
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: AFG-WAS-87
     source_category_code: bottled_water
@@ -2282,8 +2582,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: AFG-WAS-88
     source_category_code: mineral_water_bottled_water
@@ -2293,8 +2593,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: AFG-WAS-89
     source_category_code: sachet_water
@@ -2304,8 +2604,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: AFG-WAS-90
     source_category_code: rainwater
@@ -2315,8 +2615,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: AFG-WAS-91
     source_category_code: rain_water
@@ -2326,8 +2626,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AFG-WAS-92
     source_category_code: rainwater
@@ -2337,8 +2637,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AFG-WAS-93
     source_category_code: rinwater_collection
@@ -2348,8 +2648,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: AFG-WAS-94
     source_category_code: river_lake_channel
@@ -2359,8 +2659,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-95
     source_category_code: river_stream_spring
@@ -2370,8 +2670,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-96
     source_category_code: surface_water
@@ -2381,8 +2681,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-97
     source_category_code: surface_water_river_stream_irrigation_channel
@@ -2392,8 +2692,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-98
     source_category_code: surface_water_stream_river_irrigation
@@ -2403,8 +2703,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-99
     source_category_code: surface_water_used_for_the_estimates
@@ -2414,8 +2714,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-100
     source_category_code: surface_water
@@ -2425,8 +2725,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: AFG-WAS-101
     source_category_code: nawar_dand_dam
@@ -2436,8 +2736,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: AFG-WAS-102
     source_category_code: nawar_dan_dam
@@ -2447,8 +2747,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: AFG-WAS-103
     source_category_code: nawar_dand_dam
@@ -2458,8 +2758,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: AFG-WAS-104
     source_category_code: drainage
@@ -2469,8 +2769,8 @@ parameters:
     jmp_id: surface_water.irrigation_channel
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 98
   - country_entry_id: AFG-WAS-105
     source_category_code: kanda_pool_howz
@@ -2480,8 +2780,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: AFG-WAS-106
     source_category_code: pool_howz
@@ -2491,8 +2791,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: AFG-WAS-107
     source_category_code: pool_howz
@@ -2502,8 +2802,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: AFG-WAS-108
     source_category_code: river_lake_canal
@@ -2513,8 +2813,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: AFG-WAS-109
     source_category_code: river_lake_canal
@@ -2524,8 +2824,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: AFG-WAS-110
     source_category_code: surface_water_river_lake_channel
@@ -2535,8 +2835,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: AFG-WAS-111
     source_category_code: kanda
@@ -2546,8 +2846,8 @@ parameters:
     jmp_id: surface_water.stream
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 97
   - country_entry_id: AFG-WAS-112
     source_category_code: pipe_scheme_municipal_gravity_motorized
@@ -2557,8 +2857,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: AFG-WAS-113
     source_category_code: piped_municipal
@@ -2568,8 +2868,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: AFG-WAS-114
     source_category_code: piped_municipal_gravity_motorized
@@ -2579,8 +2879,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: AFG-WAS-115
     source_category_code: private_municipal
@@ -2590,8 +2890,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: AFG-WAS-116
     source_category_code: piped_to_neighbour
@@ -2601,8 +2901,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AFG-WAS-117
     source_category_code: piped_water
@@ -2612,8 +2912,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AFG-WAS-118
     source_category_code: piped_water_public
@@ -2623,8 +2923,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AFG-WAS-119
     source_category_code: piped_water_to_neighbour
@@ -2634,8 +2934,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AFG-WAS-120
     source_category_code: public_piped
@@ -2645,8 +2945,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AFG-WAS-121
     source_category_code: well_or_piped_water_at_a_neighbor_s_house
@@ -2656,8 +2956,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: AFG-WAS-122
     source_category_code: pied_water_into_dwelling_yard_plot
@@ -2667,8 +2967,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: AFG-WAS-123
     source_category_code: piped_into_dwelling
@@ -2678,8 +2978,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AFG-WAS-124
     source_category_code: piped_into_dwelling
@@ -2689,8 +2989,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AFG-WAS-125
     source_category_code: piped_water_into_dwelling
@@ -2700,8 +3000,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: AFG-WAS-126
     source_category_code: piped_into_compound
@@ -2711,8 +3011,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AFG-WAS-127
     source_category_code: piped_to_yard_plot
@@ -2722,8 +3022,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AFG-WAS-128
     source_category_code: piped_water_inside_the_compound_garden_plot
@@ -2733,8 +3033,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AFG-WAS-129
     source_category_code: piped_water_into_yard_plot
@@ -2744,8 +3044,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AFG-WAS-130
     source_category_code: piped_water_to_yard_plot
@@ -2755,8 +3055,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: AFG-WAS-131
     source_category_code: piped_water_public_tap_stand_pipe
@@ -2766,8 +3066,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AFG-WAS-132
     source_category_code: public_tap_standpipe
@@ -2777,8 +3077,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AFG-WAS-133
     source_category_code: public_tap_standpipe
@@ -2788,8 +3088,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AFG-WAS-134
     source_category_code: public_tap_standpipe
@@ -2799,8 +3099,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: AFG-WAS-135
     source_category_code: public_community_tap
@@ -2810,13 +3110,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_AFG_Afghanistan_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

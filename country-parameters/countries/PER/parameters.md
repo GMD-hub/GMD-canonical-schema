@@ -5,48 +5,23 @@ iso3: PER
 schema_version: '0.1'
 status: draft
 parameters:
-- parameter_id: PARAM-EDU-YEARS-BY-LEVEL
-  effective_from: 1980
-  effective_to: 1999
-  value:
-    primary: 6
-    lower_secondary: 3
-    upper_secondary: 2
-  provenance:
-    source: PLACEHOLDER, NOT VERIFIED. Must be confirmed against the UNESCO ISCED
-      mapping and national curriculum documentation before any use in production.
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
-- parameter_id: PARAM-EDU-YEARS-BY-LEVEL
-  effective_from: 2000
-  effective_to: ~
-  value:
-    primary: 7
-    lower_secondary: 3
-    upper_secondary: 2
-  provenance:
-    source: PLACEHOLDER, NOT VERIFIED.
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
 - parameter_id: PARAM-DEM-MIN-MARRIAGE-AGE
-  effective_from: ~
-  effective_to: ~
+  effective_from: null
+  effective_to: null
   value: 18
   provenance:
     source: PLACEHOLDER, NOT VERIFIED. Must be confirmed against national legislation.
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PER-EDU-01
     national_label_en: 'Early childhood education: cycle I'
-    national_label_local: 'Educación Inicial: Ciclo I'
+    national_label_local: "Educaci\xF3n Inicial: Ciclo I"
     entry_age: 0
     duration_years: 3
     isced_level: '0'
@@ -55,9 +30,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: PER-EDU-02
     national_label_en: 'Early childhood education: cycle II'
-    national_label_local: 'Educación Inicial: Ciclo II'
+    national_label_local: "Educaci\xF3n Inicial: Ciclo II"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -66,9 +47,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: PER-EDU-03
     national_label_en: Primary education
-    national_label_local: Educación Primaria
+    national_label_local: "Educaci\xF3n Primaria"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -77,9 +64,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - PER-EDU-03
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: PER-EDU-04
     national_label_en: Alternative basic education - Initial and intermediate cycles
-    national_label_local: Educación Básica Alternativa-Ciclos Inicial e Intermedio
+    national_label_local: "Educaci\xF3n B\xE1sica Alternativa-Ciclos Inicial e Intermedio"
     entry_age: 14
     duration_years: 5
     isced_level: '1'
@@ -88,9 +81,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - PER-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: PER-EDU-05
     national_label_en: Secondary education, Grades 1 to 3
-    national_label_local: Educación Secundaria. Del 1ero. al 3er. grados.
+    national_label_local: "Educaci\xF3n Secundaria. Del 1ero. al 3er. grados."
     entry_age: 12
     duration_years: 3
     isced_level: '2'
@@ -99,11 +98,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - PER-EDU-03
+    - PER-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
   - country_entry_id: PER-EDU-06
     national_label_en: Alternative basic education - Advanced cycle (grades 1 and
       2)
-    national_label_local: Educación Básica Alternativa-Ciclo Avanzado. Grados 1er.
-      y 2o.
+    national_label_local: "Educaci\xF3n B\xE1sica Alternativa-Ciclo Avanzado. Grados\
+      \ 1er. y 2o."
     entry_age: 19
     duration_years: 2
     isced_level: '2'
@@ -112,9 +121,19 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - PER-EDU-03
+    - PER-EDU-04
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
   - country_entry_id: PER-EDU-07
     national_label_en: Technical productive education - Middle cycle
-    national_label_local: Educación Técnico Productiva-Ciclo Medio
+    national_label_local: "Educaci\xF3n T\xE9cnico Productiva-Ciclo Medio"
     entry_age: 14
     duration_years: 3
     isced_level: '2'
@@ -123,11 +142,21 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - PER-EDU-03
+    - PER-EDU-04
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
   - country_entry_id: PER-EDU-08
     national_label_en: Alternative basic education - Advanced cycle (grades 3 and
       4)
-    national_label_local: Educación Básica Alternativa-Ciclo Avanzado. Grados 3er.
-      y 4o.
+    national_label_local: "Educaci\xF3n B\xE1sica Alternativa-Ciclo Avanzado. Grados\
+      \ 3er. y 4o."
     entry_age: 21
     duration_years: 2
     isced_level: '3'
@@ -136,9 +165,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - PER-EDU-05
+    - PER-EDU-06
+    - PER-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
   - country_entry_id: PER-EDU-09
     national_label_en: Secondary education. Grades 4 to 5.
-    national_label_local: Educación Secundaria. Del 4to. al 5to. grados.
+    national_label_local: "Educaci\xF3n Secundaria. Del 4to. al 5to. grados."
     entry_age: 15
     duration_years: 2
     isced_level: '3'
@@ -147,9 +189,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - PER-EDU-05
+    - PER-EDU-06
+    - PER-EDU-07
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
   - country_entry_id: PER-EDU-10
     national_label_en: Non-university higher education (technical training)
-    national_label_local: Educación Superior No Universitaria (Técnica)
+    national_label_local: "Educaci\xF3n Superior No Universitaria (T\xE9cnica)"
     entry_age: 17
     duration_years: 2
     isced_level: '5'
@@ -158,9 +213,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-11
     national_label_en: Non-university higher technological education
-    national_label_local: Educación Superior Tecnológica No Universitaria
+    national_label_local: "Educaci\xF3n Superior Tecnol\xF3gica No Universitaria"
     entry_age: 17
     duration_years: 4
     isced_level: '6'
@@ -169,9 +238,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-12
     national_label_en: Non-university higher education; pedagogical and artistic training
-    national_label_local: Educación Superior No Universitaria Pedagógica y Artística
+    national_label_local: "Educaci\xF3n Superior No Universitaria Pedag\xF3gica y\
+      \ Art\xEDstica"
     entry_age: 17
     duration_years: 5
     isced_level: '6'
@@ -180,6 +264,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-13
     national_label_en: University higher education
     national_label_local: Pregrado universitario
@@ -191,6 +289,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-14
     national_label_en: Postgraduate
     national_label_local: Diplomado
@@ -202,6 +314,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-15
     national_label_en: Bachelor in Law
     national_label_local: Pregrado en Derecho
@@ -213,6 +339,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-16
     national_label_en: Bachelor in Medicine
     national_label_local: Pregrado en Medicina
@@ -224,6 +364,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-17
     national_label_en: Second Professsional Specialization
     national_label_local: Segunda Especialidad Profesional
@@ -235,9 +389,23 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - PER-EDU-08
+    - PER-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
   - country_entry_id: PER-EDU-18
     national_label_en: Master
-    national_label_local: Maestría
+    national_label_local: "Maestr\xEDa"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -246,6 +414,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - PER-EDU-11
+    - PER-EDU-12
+    - PER-EDU-13
+    - PER-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-14
+    - PER-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
+    - 'minimum parent path selected from: PER-EDU-11, PER-EDU-12, PER-EDU-13, PER-EDU-14'
   - country_entry_id: PER-EDU-19
     national_label_en: Doctorate
     national_label_local: Doctorado
@@ -257,15 +443,33 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - PER-EDU-15
+    - PER-EDU-16
+    - PER-EDU-17
+    - PER-EDU-18
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - PER-EDU-04
+    - PER-EDU-06
+    - PER-EDU-08
+    - PER-EDU-17
+    - PER-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: PER-EDU-03, PER-EDU-04'
+    - 'minimum parent path selected from: PER-EDU-05, PER-EDU-06, PER-EDU-07'
+    - 'minimum parent path selected from: PER-EDU-08, PER-EDU-09'
+    - 'minimum parent path selected from: PER-EDU-15, PER-EDU-16, PER-EDU-17, PER-EDU-18'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Peru.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PER-SUBNAT-01
     survey_labels: 1 - Amazonas | 1-Amazonas
@@ -274,10 +478,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2328
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2328
     geo_year: '2015'
@@ -295,10 +499,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2337
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2337
     geo_year: '2015'
@@ -307,7 +511,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2337'
     geo_nvar: ADM1_NAME
-    geo_name: Huánuco
+    geo_name: "Hu\xE1nuco"
     source_row: 11286
   - country_entry_id: PER-SUBNAT-03
     survey_labels: 11 - Ica | 11-Ica
@@ -316,10 +520,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2338
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2338
     geo_year: '2015'
@@ -337,10 +541,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2339
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2339
     geo_year: '2015'
@@ -349,7 +553,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2339'
     geo_nvar: ADM1_NAME
-    geo_name: Junín
+    geo_name: "Jun\xEDn"
     source_row: 11288
   - country_entry_id: PER-SUBNAT-05
     survey_labels: 13 - La Libertad | 13-La Libertad
@@ -358,10 +562,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2340
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2340
     geo_year: '2015'
@@ -379,10 +583,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2341
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2341
     geo_year: '2015'
@@ -400,10 +604,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2342
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2342
     geo_year: '2015'
@@ -421,10 +625,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2343
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2343
     geo_year: '2015'
@@ -442,10 +646,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2344
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2344
     geo_year: '2015'
@@ -463,10 +667,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2345
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2345
     geo_year: '2015'
@@ -484,10 +688,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2346
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2346
     geo_year: '2015'
@@ -505,10 +709,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2329
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2329
     geo_year: '2015'
@@ -526,10 +730,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2347
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2347
     geo_year: '2015'
@@ -547,10 +751,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2348
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2348
     geo_year: '2015'
@@ -562,16 +766,16 @@ parameters:
     geo_name: Puno
     source_row: 11298
   - country_entry_id: PER-SUBNAT-15
-    survey_labels: 22 - San Mart�n | 22-San Mart�n
+    survey_labels: "22 - San Mart\uFFFDn | 22-San Mart\uFFFDn"
     survey_variables: subnatid2 | subnatidsurvey
     gmd_subnatid1: ''
     gmd_subnatid2: PER_2015_GAUL1_2349
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2349
     geo_year: '2015'
@@ -580,7 +784,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2349'
     geo_nvar: ADM1_NAME
-    geo_name: San Martín
+    geo_name: "San Mart\xEDn"
     source_row: 11299
   - country_entry_id: PER-SUBNAT-16
     survey_labels: 23 - Tacna | 23-Tacna
@@ -589,10 +793,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2350
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2350
     geo_year: '2015'
@@ -610,10 +814,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2351
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2351
     geo_year: '2015'
@@ -631,10 +835,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2352
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2352
     geo_year: '2015'
@@ -652,10 +856,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2330
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2330
     geo_year: '2015'
@@ -664,7 +868,7 @@ parameters:
     geo_idvar: ADM1_CODE
     geo_id: '2330'
     geo_nvar: ADM1_NAME
-    geo_name: Apurímac
+    geo_name: "Apur\xEDmac"
     source_row: 11303
   - country_entry_id: PER-SUBNAT-20
     survey_labels: 4 - Arequipa | 4-Arequipa
@@ -673,10 +877,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2331
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2331
     geo_year: '2015'
@@ -694,10 +898,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2332
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2332
     geo_year: '2015'
@@ -715,10 +919,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2333
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2333
     geo_year: '2015'
@@ -736,10 +940,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2334
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2334
     geo_year: '2015'
@@ -757,10 +961,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2335
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2335
     geo_year: '2015'
@@ -778,10 +982,10 @@ parameters:
     gmd_subnatid2: PER_2015_GAUL1_2336
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PER_2015_GAUL1_2336
     geo_year: '2015'
@@ -794,46 +998,46 @@ parameters:
     source_row: 11309
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PER-SAN-01
     source_category_code: a_rio_acequi_etc
-    national_label_en: A río, acequi, etc.
+    national_label_en: "A r\xEDo, acequi, etc."
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PER-SAN-02
     source_category_code: rio_o_canal
-    national_label_en: Río o canal
+    national_label_en: "R\xEDo o canal"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PER-SAN-03
     source_category_code: rio_acequia_o_canal
-    national_label_en: Río, acequia o canal
+    national_label_en: "R\xEDo, acequia o canal"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PER-SAN-04
     source_category_code: rio_acequia_canal
@@ -843,99 +1047,99 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PER-SAN-05
     source_category_code: rio_acequia_canal_o_similar
-    national_label_en: Río, acequia, canal o similar
+    national_label_en: "R\xEDo, acequia, canal o similar"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PER-SAN-06
     source_category_code: r_o_acequia_o_canal
-    national_label_en: R¡o, acequia o canal
+    national_label_en: "R\xA1o, acequia o canal"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PER-SAN-07
     source_category_code: conectado_a_red_publica_de_desague
-    national_label_en: Conectado a red pública de desague
+    national_label_en: "Conectado a red p\xFAblica de desague"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PER-SAN-08
     source_category_code: conectado_a_red_publica_de_desague_dentro_de_la_vivienda_fuera_de_la_vivienda_pero_dentro_del_edificio
-    national_label_en: Conectado a red pública de desague ( Dentro de la vivienda
-      + Fuera de la vivienda, pero dentro del edificio )
+    national_label_en: "Conectado a red p\xFAblica de desague ( Dentro de la vivienda\
+      \ + Fuera de la vivienda, pero dentro del edificio )"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PER-SAN-09
     source_category_code: red_publica
-    national_label_en: Red pública
+    national_label_en: "Red p\xFAblica"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PER-SAN-10
     source_category_code: red_publica_de_desague_dentro_de_la_vivienda_de_desague_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
-    national_label_en: Red pública (de desagüe dentro de la vivienda + de desagüe
-      fuera de la vivienda pero dentro de la edificación)
+    national_label_en: "Red p\xFAblica (de desag\xFCe dentro de la vivienda + de desag\xFC\
+      e fuera de la vivienda pero dentro de la edificaci\xF3n)"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PER-SAN-11
     source_category_code: red_publica_de_desague_dentro_de_la_vivienda_de_desague_fuera_de_la_vivienda_pero_dentro_del_edificio
-    national_label_en: Red pública (de desagüe dentro de la vivienda + de desagüe
-      fuera de la vivienda pero dentro del edificio)
+    national_label_en: "Red p\xFAblica (de desag\xFCe dentro de la vivienda + de desag\xFC\
+      e fuera de la vivienda pero dentro del edificio)"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PER-SAN-12
     source_category_code: red_publica_dentro_o_fuera_de_la_vivienda
-    national_label_en: Red pública dentro o fuera de la vivienda
+    national_label_en: "Red p\xFAblica dentro o fuera de la vivienda"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PER-SAN-13
     source_category_code: pozo_septico
@@ -945,19 +1149,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-SAN-14
     source_category_code: pozo_septico_con_o_sin_observacion_directa
-    national_label_en: Pozo séptico (con o sin observacion directa)
+    national_label_en: "Pozo s\xE9ptico (con o sin observacion directa)"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-SAN-15
     source_category_code: pozo_septico_tanque_septico
@@ -967,64 +1171,64 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-SAN-16
     source_category_code: pozo_septico_tanque_septico_o_biodigesto
-    national_label_en: Pozo séptico, tanque séptico o biodigesto
+    national_label_en: "Pozo s\xE9ptico, tanque s\xE9ptico o biodigesto"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-SAN-17
     source_category_code: pozo_septico_tanque_septico_o_biodigesto_con_o_sin_observacion_directa
-    national_label_en: Pozo séptico, tanque séptico o biodigesto (con o sin observacion
-      directa)
+    national_label_en: "Pozo s\xE9ptico, tanque s\xE9ptico o biodigesto (con o sin\
+      \ observacion directa)"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-SAN-18
     source_category_code: pozo_septico_tanque_septico_o_biodigestor
-    national_label_en: Pozo séptico, tanque septico o biodigestor
+    national_label_en: "Pozo s\xE9ptico, tanque septico o biodigestor"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-SAN-19
     source_category_code: inodoro_exclusivo
     national_label_en: Inodoro exclusivo
-    national_label_local: Inodoros de arrastre hidráulico (privado)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: PER-SAN-20
     source_category_code: private_toilet
     national_label_en: Private toilet
-    national_label_local: Inodoros de arrastre hidráulico (privado)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: PER-SAN-21
     source_category_code: domestic_connection_to_system
@@ -1034,8 +1238,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: PER-SAN-22
     source_category_code: public_network_connection_inside_house
@@ -1045,8 +1249,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: PER-SAN-23
     source_category_code: inodoro_fuera_la_vivienda
@@ -1057,30 +1261,30 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 76
   - country_entry_id: PER-SAN-24
     source_category_code: inodoro_comun
     national_label_en: Inodoro comun
-    national_label_local: Inodoros de arrastre hidráulico (publico)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: PER-SAN-25
     source_category_code: shared_toilet
     national_label_en: Shared toilet
-    national_label_local: Inodoros de arrastre hidráulico (publico)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: PER-SAN-26
     source_category_code: public_network_connection_outside_house
@@ -1091,8 +1295,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: PER-SAN-27
     source_category_code: water_closet_excusado
@@ -1103,19 +1307,19 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: PER-SAN-28
     source_category_code: a_rio_acequi_etc
-    national_label_en: A río, acequi, etc.
+    national_label_en: "A r\xEDo, acequi, etc."
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: PER-SAN-29
     source_category_code: sewer_or_canal
@@ -1125,19 +1329,19 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: PER-SAN-30
     source_category_code: red_publica_dentro_o_fuera_de_la_vivienda
-    national_label_en: Red pública dentro o fuera de la vivienda
+    national_label_en: "Red p\xFAblica dentro o fuera de la vivienda"
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PER-SAN-31
     source_category_code: sanitario_connectado_a_red_publica_fuera_o_dentro_de_la_casa
@@ -1147,8 +1351,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PER-SAN-32
     source_category_code: wc_inside_dwelling
@@ -1158,19 +1362,19 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PER-SAN-33
     source_category_code: pozo_septico
-    national_label_en: Pozo séptico
+    national_label_en: "Pozo s\xE9ptico"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: PER-SAN-34
     source_category_code: sanitaria_connectado_a_septic_well
@@ -1180,8 +1384,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: PER-SAN-35
     source_category_code: septic_tank
@@ -1191,8 +1395,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: PER-SAN-36
     source_category_code: wc_septic_well
@@ -1202,8 +1406,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: PER-SAN-37
     source_category_code: turkish_chair_silla_turca
@@ -1213,8 +1417,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: PER-SAN-38
     source_category_code: inodoro_dentro_la_vivienda
@@ -1224,8 +1428,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: PER-SAN-39
     source_category_code: latrina_mejorada_colgante_flotante
@@ -1236,8 +1440,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: PER-SAN-40
     source_category_code: latrine_over_river_lake
@@ -1248,8 +1452,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: PER-SAN-41
     source_category_code: mejorada_colgante_flotante
@@ -1260,20 +1464,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: PER-SAN-42
     source_category_code: rio_acequia_o_canal
-    national_label_en: Río, acequia o canal
+    national_label_en: "R\xEDo, acequia o canal"
     national_label_local: Letrina colgante
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: PER-SAN-43
     source_category_code: river_canal
@@ -1283,8 +1487,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: PER-SAN-44
     source_category_code: pozo_ciego_o_negro
@@ -1295,8 +1499,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: PER-SAN-45
     source_category_code: pozo_ciego_o_negro_con_o_sin_observacion_directa
@@ -1307,8 +1511,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: PER-SAN-46
     source_category_code: pozo_ciego_o_negro_letrina
@@ -1319,8 +1523,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: PER-SAN-47
     source_category_code: latrina_pozo_ciego_o_negro
@@ -1331,8 +1535,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-48
     source_category_code: latrine_ciego_o_negro
@@ -1343,8 +1547,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-49
     source_category_code: letrina
@@ -1355,8 +1559,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-50
     source_category_code: letrina_con_o_sin_observacion_directa
@@ -1367,8 +1571,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-51
     source_category_code: letrina_con_tratamiento
@@ -1379,8 +1583,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-52
     source_category_code: letrina_pozo_ciego_o_negro
@@ -1391,8 +1595,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-53
     source_category_code: pit_latrine
@@ -1403,8 +1607,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-54
     source_category_code: pozo_ciego_o_negro_con_o_sin_observacion_directa
@@ -1415,8 +1619,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-55
     source_category_code: pozo_ciego_o_negro_letrina
@@ -1427,8 +1631,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-56
     source_category_code: pozo_ciego_o_negro_letrina
@@ -1439,8 +1643,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-SAN-57
     source_category_code: latrina_mejorada_ventilada
@@ -1451,8 +1655,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PER-SAN-58
     source_category_code: mejorada_ventilada
@@ -1463,8 +1667,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PER-SAN-59
     source_category_code: ventilated_latrine
@@ -1475,8 +1679,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PER-SAN-60
     source_category_code: letrina_exclusiva
@@ -1486,8 +1690,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 112
   - country_entry_id: PER-SAN-61
     source_category_code: letrina_exclusiva
@@ -1497,8 +1701,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: PER-SAN-62
     source_category_code: letrina_exclusiva_fuera_de_la_vivienda
@@ -1508,8 +1712,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: PER-SAN-63
     source_category_code: pozo_ciego_o_negro
@@ -1519,8 +1723,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: PER-SAN-64
     source_category_code: simple_pit_private
@@ -1530,8 +1734,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: PER-SAN-65
     source_category_code: letrina_comun
@@ -1541,8 +1745,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 120
   - country_entry_id: PER-SAN-66
     source_category_code: letrina_commun
@@ -1553,20 +1757,20 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PER-SAN-67
     source_category_code: letrina_comun
-    national_label_en: Letrina común
+    national_label_en: "Letrina com\xFAn"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PER-SAN-68
     source_category_code: letrina_comun_fuera_de_la_vivienda
@@ -1577,8 +1781,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PER-SAN-69
     source_category_code: simple_pit_shared
@@ -1589,31 +1793,31 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PER-SAN-70
     source_category_code: pour_flush_private
     national_label_en: Pour-flush (private)
-    national_label_local: Letrinas de arrastre hidráulico (privado)
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: PER-SAN-71
     source_category_code: pour_flush_shared
     national_label_en: Pour-flush (shared)
-    national_label_local: Letrinas de arrastre hidráulico (publico)
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
       latrine
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: PER-SAN-72
     source_category_code: wc_outside_dwelling
@@ -1623,8 +1827,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: PER-SAN-73
     source_category_code: blind_well_soakaway
@@ -1634,8 +1838,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: PER-SAN-74
     source_category_code: pour_flush_botadero
@@ -1645,8 +1849,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PER-SAN-75
     source_category_code: bush_river_irrigation_ditch_canal
@@ -1656,8 +1860,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-76
     source_category_code: campo_abierto_o_al_aire_libre
@@ -1667,8 +1871,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-77
     source_category_code: no_facility
@@ -1678,8 +1882,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-78
     source_category_code: no_hay_servicio
@@ -1689,8 +1893,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-79
     source_category_code: no_hay_servicio_matorral_campo
@@ -1700,8 +1904,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-80
     source_category_code: no_sanitation_facilities
@@ -1711,8 +1915,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-81
     source_category_code: no_service
@@ -1722,8 +1926,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-82
     source_category_code: no_tiene
@@ -1733,8 +1937,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-83
     source_category_code: sin_servicio_matorral_campo
@@ -1744,8 +1948,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PER-SAN-84
     source_category_code: servicio_de_alcantarillado_y_letrinas
@@ -1755,8 +1959,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: PER-SAN-85
     source_category_code: letrina_con_o_sin_observacion_directa
@@ -1766,8 +1970,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PER-SAN-86
     source_category_code: other
@@ -1777,8 +1981,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PER-SAN-87
     source_category_code: otra
@@ -1788,8 +1992,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PER-SAN-88
     source_category_code: otro
@@ -1799,8 +2003,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PER-SAN-89
     source_category_code: outro
@@ -1810,29 +2014,29 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PER-SAN-90
     source_category_code: rio_acequia_o_canal
-    national_label_en: Río, acequia o canal
+    national_label_en: "R\xEDo, acequia o canal"
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PER_Peru_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PER-WAS-01
     source_category_code: manantial
@@ -1842,8 +2046,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: PER-WAS-02
     source_category_code: manantial_puquio
@@ -1853,8 +2057,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: PER-WAS-03
     source_category_code: manantial_o_puquio
@@ -1864,8 +2068,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: PER-WAS-04
     source_category_code: spring
@@ -1875,8 +2079,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: PER-WAS-05
     source_category_code: pozo
@@ -1886,8 +2090,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: PER-WAS-06
     source_category_code: pozo_agua_subterranea
@@ -1897,8 +2101,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: PER-WAS-07
     source_category_code: well
@@ -1908,8 +2112,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: PER-WAS-08
     source_category_code: pozo_en_la_casa_patio
@@ -1919,8 +2123,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: PER-WAS-09
     source_category_code: pozo_en_la_casa_patio
@@ -1930,8 +2134,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: PER-WAS-10
     source_category_code: private_well
@@ -1941,8 +2145,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: PER-WAS-11
     source_category_code: well_in_house_or_yard
@@ -1952,8 +2156,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: PER-WAS-12
     source_category_code: well_inside_dwelling
@@ -1963,8 +2167,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: PER-WAS-13
     source_category_code: pozo_publico
@@ -1974,8 +2178,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: PER-WAS-14
     source_category_code: public_well
@@ -1985,8 +2189,8 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: PER-WAS-15
     source_category_code: pozo
@@ -1996,8 +2200,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-WAS-16
     source_category_code: well
@@ -2007,8 +2211,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: PER-WAS-17
     source_category_code: pozo_en_la_casa_patio
@@ -2018,8 +2222,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: PER-WAS-18
     source_category_code: pozo_en_la_casa_patio_lote
@@ -2029,8 +2233,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: PER-WAS-19
     source_category_code: pozo_en_la_vivineda_patio_lote
@@ -2040,8 +2244,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: PER-WAS-20
     source_category_code: pozo_publico
@@ -2051,8 +2255,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: PER-WAS-21
     source_category_code: pump
@@ -2062,8 +2266,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PER-WAS-22
     source_category_code: camion_cisterna_u_otro_similar
@@ -2073,8 +2277,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-23
     source_category_code: camion_cisterna
@@ -2084,8 +2288,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-24
     source_category_code: camion_tanque
@@ -2095,8 +2299,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-25
     source_category_code: camion_tanque_aguatero
@@ -2106,19 +2310,19 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-26
     source_category_code: camion_cisterna_u_otro_similar
-    national_label_en: Camión-cisterna u otro similar
+    national_label_en: "Cami\xF3n-cisterna u otro similar"
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-27
     source_category_code: tanker_truck
@@ -2128,8 +2332,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-28
     source_category_code: water_tank_or_seller
@@ -2139,8 +2343,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PER-WAS-29
     source_category_code: other
@@ -2150,8 +2354,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PER-WAS-30
     source_category_code: otra
@@ -2161,8 +2365,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PER-WAS-31
     source_category_code: otro
@@ -2172,8 +2376,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PER-WAS-32
     source_category_code: otros
@@ -2183,8 +2387,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PER-WAS-33
     source_category_code: other
@@ -2194,8 +2398,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-WAS-34
     source_category_code: otro
@@ -2205,8 +2409,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PER-WAS-35
     source_category_code: agua_embotellada
@@ -2216,8 +2420,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PER-WAS-36
     source_category_code: bw_with_improved_source
@@ -2227,8 +2431,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PER-WAS-37
     source_category_code: bw_with_improved_sources
@@ -2238,8 +2442,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PER-WAS-38
     source_category_code: bw_with_unimproved_source
@@ -2249,8 +2453,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: PER-WAS-39
     source_category_code: bw_with_unimproved_sources
@@ -2260,8 +2464,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: PER-WAS-40
     source_category_code: agua_de_lluivia
@@ -2271,8 +2475,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PER-WAS-41
     source_category_code: agua_de_lluvia
@@ -2282,8 +2486,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PER-WAS-42
     source_category_code: rainwater
@@ -2293,19 +2497,19 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PER-WAS-43
     source_category_code: rio_acequia_lago_laguna
-    national_label_en: Río, acequia, lago, laguna
+    national_label_en: "R\xEDo, acequia, lago, laguna"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-44
     source_category_code: rio_acequia_manantial_o_similar
@@ -2315,41 +2519,41 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-45
     source_category_code: rio_acequia_manantial_o_similar
-    national_label_en: Río, acequia.manantial o similar
+    national_label_en: "R\xEDo, acequia.manantial o similar"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-46
     source_category_code: rio_acequia
-    national_label_en: Río/ acequia
+    national_label_en: "R\xEDo/ acequia"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-47
     source_category_code: rio_acequia_laguna
-    national_label_en: Río/ acequia / Laguna
+    national_label_en: "R\xEDo/ acequia / Laguna"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-48
     source_category_code: rio_acequia
@@ -2359,8 +2563,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-49
     source_category_code: river_irrigation_channel
@@ -2370,8 +2574,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-50
     source_category_code: river_irrigation_channel
@@ -2381,8 +2585,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-51
     source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
@@ -2392,8 +2596,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-52
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -2403,30 +2607,30 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PER-WAS-53
     source_category_code: rio_acequia
-    national_label_en: Río/ acequia
-    national_label_local: Río
+    national_label_en: "R\xEDo/ acequia"
+    national_label_local: "R\xEDo"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: PER-WAS-54
     source_category_code: river_or_stream
     national_label_en: RIVER OR STREAM
-    national_label_local: Río
+    national_label_local: "R\xEDo"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: PER-WAS-55
     source_category_code: connection_outdoors
@@ -2436,8 +2640,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PER-WAS-56
     source_category_code: household_connection_neighbour_s
@@ -2447,8 +2651,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PER-WAS-57
     source_category_code: household_connection
@@ -2458,20 +2662,20 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: PER-WAS-58
     source_category_code: red_publica_dentro_de_la_vivienda_fuera_de_la_vivienda_y_pilon_de_uso_publico
-    national_label_en: Red pública dentro de la vivienda, fuera de la vivienda y pilón
-      de uso público
+    national_label_en: "Red p\xFAblica dentro de la vivienda, fuera de la vivienda\
+      \ y pil\xF3n de uso p\xFAblico"
     national_label_local: Conexiones domiciliarias
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: PER-WAS-59
     source_category_code: household_connection_to_system
@@ -2481,8 +2685,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PER-WAS-60
     source_category_code: inside_the_house
@@ -2492,8 +2696,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PER-WAS-61
     source_category_code: piped_into_dwelling
@@ -2503,19 +2707,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PER-WAS-62
     source_category_code: red_publica_dentro_de_la_viv
-    national_label_en: Red pública Dentro de la viv.
+    national_label_en: "Red p\xFAblica Dentro de la viv."
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PER-WAS-63
     source_category_code: red_publica_dentro_de_la_vivienda
@@ -2525,8 +2729,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PER-WAS-64
     source_category_code: red_publica_dentro_de_la_vivienda
@@ -2536,8 +2740,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PER-WAS-65
     source_category_code: building_connection_to_system
@@ -2547,8 +2751,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-66
     source_category_code: outside_the_house_but_inside_the_compound
@@ -2558,8 +2762,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-67
     source_category_code: piped_outside_dwelling_but_within_buikding
@@ -2569,19 +2773,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-68
     source_category_code: red_publica_fuera_de_la_vivienda
-    national_label_en: Red Pública Fuera de la vivienda
+    national_label_en: "Red P\xFAblica Fuera de la vivienda"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-69
     source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
@@ -2591,19 +2795,20 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-70
     source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_de_la_edificacion
-    national_label_en: Red pública fuera de la vivienda, pero dentro de la edificación
+    national_label_en: "Red p\xFAblica fuera de la vivienda, pero dentro de la edificaci\xF3\
+      n"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-71
     source_category_code: red_publica_fuera_de_la_vivienda_pero_dentro_del_edificio
@@ -2613,89 +2818,81 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PER-WAS-72
     source_category_code: pilon_grifo_publico
     national_label_en: Pilon /grifo publico/
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PER-WAS-73
     source_category_code: pilon_de_uso_publico
-    national_label_en: Pilón de uso público
-    national_label_local: Fuentes públicas
+    national_label_en: "Pil\xF3n de uso p\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PER-WAS-74
     source_category_code: pilon_o_pileta_de_uso_publico
-    national_label_en: Pilón o pileta de uso público
-    national_label_local: Fuentes públicas
+    national_label_en: "Pil\xF3n o pileta de uso p\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PER-WAS-75
     source_category_code: pilon_grifo_publico
     national_label_en: Pilon/Grifo publico
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PER-WAS-76
     source_category_code: public_standpipe
     national_label_en: Public standpipe
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PER-WAS-77
     source_category_code: public_tap_standpipe
     national_label_en: Public tap/standpipe
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PER_Peru_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
-
-
-
-
-
-
-
-
 
 ## Country notes
 

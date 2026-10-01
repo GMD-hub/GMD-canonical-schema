@@ -6,9 +6,9 @@ status: draft
 country_name: DNK
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: DNK-EDU-01
     national_label_en: Nurseries
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: DNK-EDU-02
     national_label_en: Family Daycare
     national_label_local: Dagpleje
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: DNK-EDU-03
     national_label_en: Kindergarten
-    national_label_local: Børnehave
+    national_label_local: "B\xF8rnehave"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -43,9 +55,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: DNK-EDU-04
     national_label_en: Pre-school class in primary school
-    national_label_local: Børnehaveklasse
+    national_label_local: "B\xF8rnehaveklasse"
     entry_age: 5
     duration_years: 1
     isced_level: '1'
@@ -54,6 +72,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - DNK-EDU-04
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: DNK-EDU-05
     national_label_en: Primary school 1.-6. grade
     national_label_local: Grundskole 1.-6. klasse
@@ -65,6 +89,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - DNK-EDU-05
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: DNK-EDU-06
     national_label_en: Primary school 7th-9th grade
     national_label_local: Grundskole 7.-9. klasse
@@ -76,6 +106,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - DNK-EDU-04
+    - DNK-EDU-05
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
   - country_entry_id: DNK-EDU-07
     national_label_en: Primary school 10th grade
     national_label_local: Grundskole 10. klasse
@@ -87,6 +127,16 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 11
+    parent_country_entry_ids:
+    - DNK-EDU-04
+    - DNK-EDU-05
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
   - country_entry_id: DNK-EDU-08
     national_label_en: HF higher prepatory examination, single subject
     national_label_local: HF-enkeltfag
@@ -98,6 +148,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-09
     national_label_en: PRE-International Baccalaureate
     national_label_local: PRE-IB
@@ -109,9 +171,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-10
     national_label_en: Special secondary education
-    national_label_local: Særlig ungdomsuddannelse
+    national_label_local: "S\xE6rlig ungdomsuddannelse"
     entry_age: 16
     duration_years: 2
     isced_level: '3'
@@ -120,6 +194,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-11
     national_label_en: Upper secondary education
     national_label_local: Gymnasiale uddannelser, AGYM
@@ -131,6 +217,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 15
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-12
     national_label_en: Upper secondary education
     national_label_local: Gymnasiale uddannelser, EGYM
@@ -142,9 +240,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 16
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-13
     national_label_en: Admittance examinations for engineering programmes
-    national_label_local: Adgangseksamen, ingeniøruddannelsen
+    national_label_local: "Adgangseksamen, ingeni\xF8ruddannelsen"
     entry_age: 18
     duration_years: 1
     isced_level: '3'
@@ -153,9 +263,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 17
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-14
     national_label_en: Vocational educational training, basic course 1
-    national_label_local: EUD, grundforløb
+    national_label_local: "EUD, grundforl\xF8b"
     entry_age: 15
     duration_years: 0
     isced_level: '3'
@@ -164,9 +286,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 18
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-15
     national_label_en: Vocational educational training, basic course 2 and main course
-    national_label_local: EUD, hovedforløb
+    national_label_local: "EUD, hovedforl\xF8b"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -175,9 +309,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 19
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-16
     national_label_en: Vocational educational training, others
-    national_label_local: Øvrige erhvervsfaglige uddannelser
+    national_label_local: "\xD8vrige erhvervsfaglige uddannelser"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -186,10 +332,22 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 20
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-17
     national_label_en: Vocational educational training, basic course 2 and main course
       (access to higher level)
-    national_label_local: EUD, hovedforløb (access to higher level)
+    national_label_local: "EUD, hovedforl\xF8b (access to higher level)"
     entry_age: 15
     duration_years: 3
     isced_level: '3'
@@ -198,9 +356,21 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_incomplete
     source_row: 21
+    parent_country_entry_ids:
+    - DNK-EDU-06
+    - DNK-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
   - country_entry_id: DNK-EDU-18
     national_label_en: Academy programmes (Tertiary adult education programmes)
-    national_label_local: Akademiuddannelser (Videregående voksenuddannelse (VVU))
+    national_label_local: "Akademiuddannelser (Videreg\xE5ende voksenuddannelse (VVU))"
     entry_age: 20
     duration_years: 1
     isced_level: '5'
@@ -209,6 +379,12 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - DNK-EDU-18
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: DNK-EDU-19
     national_label_en: Business academy programmes
     national_label_local: Erhvervsakademiuddannelser
@@ -220,9 +396,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-20
     national_label_en: Other short-cycle higher education
-    national_label_local: Øvrige korte videregående uddannelser
+    national_label_local: "\xD8vrige korte videreg\xE5ende uddannelser"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -231,6 +426,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-21
     national_label_en: Bachelor programmes
     national_label_local: Bachelor
@@ -242,9 +456,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-22
     national_label_en: Bachelor programmes, engineering
-    national_label_local: Diplomingeniør
+    national_label_local: "Diplomingeni\xF8r"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -253,6 +486,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-23
     national_label_en: Bachelor programmes, adult education
     national_label_local: Diplomuddannelser, HD mv.
@@ -264,6 +516,12 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids: []
+    cum_years_schooling: 1
+    cum_years_computation_path:
+    - DNK-EDU-23
+    cum_years_status: computed
+    review_flags: []
   - country_entry_id: DNK-EDU-24
     national_label_en: Officer (bachelor)
     national_label_local: Officer (prof.bach.)
@@ -275,6 +533,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-25
     national_label_en: Vocational bachelor programmes
     national_label_local: Professionsbachelor
@@ -286,6 +563,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-26
     national_label_en: Vocational bachelor programmes (Top up)
     national_label_local: Professionsbachelor (Overbygning)
@@ -297,9 +593,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-27
     national_label_en: Other medium-cycle higher education
-    national_label_local: Øvrige mellemlange videregående uddannelser
+    national_label_local: "\xD8vrige mellemlange videreg\xE5ende uddannelser"
     entry_age: 18
     duration_years: 3
     isced_level: '6'
@@ -308,6 +623,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - DNK-EDU-08
+    - DNK-EDU-09
+    - DNK-EDU-10
+    - DNK-EDU-11
+    - DNK-EDU-12
+    - DNK-EDU-13
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-04
+    - DNK-EDU-07
+    - DNK-EDU-08
+    - DNK-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-04, DNK-EDU-05'
+    - 'minimum parent path selected from: DNK-EDU-06, DNK-EDU-07'
+    - 'minimum parent path selected from: DNK-EDU-08, DNK-EDU-09, DNK-EDU-10, DNK-EDU-11,
+      DNK-EDU-12, DNK-EDU-13'
   - country_entry_id: DNK-EDU-28
     national_label_en: Masters programmes
     national_label_local: Kandidatuddannelser
@@ -319,6 +653,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - DNK-EDU-21
+    - DNK-EDU-22
+    - DNK-EDU-23
+    - DNK-EDU-24
+    - DNK-EDU-25
+    - DNK-EDU-26
+    - DNK-EDU-27
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - DNK-EDU-23
+    - DNK-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-21, DNK-EDU-22, DNK-EDU-23, DNK-EDU-24,
+      DNK-EDU-25, DNK-EDU-26, DNK-EDU-27'
   - country_entry_id: DNK-EDU-29
     national_label_en: Masters programmes Buisness
     national_label_local: Erhvervskandidat
@@ -330,6 +680,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 33
+    parent_country_entry_ids:
+    - DNK-EDU-21
+    - DNK-EDU-22
+    - DNK-EDU-23
+    - DNK-EDU-24
+    - DNK-EDU-25
+    - DNK-EDU-26
+    - DNK-EDU-27
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - DNK-EDU-23
+    - DNK-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-21, DNK-EDU-22, DNK-EDU-23, DNK-EDU-24,
+      DNK-EDU-25, DNK-EDU-26, DNK-EDU-27'
   - country_entry_id: DNK-EDU-30
     national_label_en: Masters programmes, adult education
     national_label_local: Masteruddannelser
@@ -341,6 +707,22 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 34
+    parent_country_entry_ids:
+    - DNK-EDU-21
+    - DNK-EDU-22
+    - DNK-EDU-23
+    - DNK-EDU-24
+    - DNK-EDU-25
+    - DNK-EDU-26
+    - DNK-EDU-27
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - DNK-EDU-23
+    - DNK-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-21, DNK-EDU-22, DNK-EDU-23, DNK-EDU-24,
+      DNK-EDU-25, DNK-EDU-26, DNK-EDU-27'
   - country_entry_id: DNK-EDU-31
     national_label_en: Doctoral programmes/PhD.
     national_label_local: Forskeruddannelser/ph.d.
@@ -352,6 +734,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 35
+    parent_country_entry_ids:
+    - DNK-EDU-28
+    - DNK-EDU-29
+    - DNK-EDU-30
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - DNK-EDU-23
+    - DNK-EDU-28
+    - DNK-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-21, DNK-EDU-22, DNK-EDU-23, DNK-EDU-24,
+      DNK-EDU-25, DNK-EDU-26, DNK-EDU-27'
+    - 'minimum parent path selected from: DNK-EDU-28, DNK-EDU-29, DNK-EDU-30'
   - country_entry_id: DNK-EDU-32
     national_label_en: Musical education (composer, instrumentalist, etc..)
     national_label_local: Musiske uddannelser (komponist, instrumentalist mv.)
@@ -363,10 +759,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 36
+    parent_country_entry_ids:
+    - DNK-EDU-28
+    - DNK-EDU-29
+    - DNK-EDU-30
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - DNK-EDU-23
+    - DNK-EDU-28
+    - DNK-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: DNK-EDU-21, DNK-EDU-22, DNK-EDU-23, DNK-EDU-24,
+      DNK-EDU-25, DNK-EDU-26, DNK-EDU-27'
+    - 'minimum parent path selected from: DNK-EDU-28, DNK-EDU-29, DNK-EDU-30'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Denmark.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

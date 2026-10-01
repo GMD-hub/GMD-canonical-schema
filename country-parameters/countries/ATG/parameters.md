@@ -6,9 +6,9 @@ status: draft
 country_name: ATG
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: ATG-EDU-01
     national_label_en: ECED programmes
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: ATG-EDU-02
     national_label_en: Pre school
     national_label_local: Pre school
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: ATG-EDU-03
     national_label_en: Primary
     national_label_local: Primary
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ATG-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: ATG-EDU-04
     national_label_en: Lower secondary
     national_label_local: Lower secondary
@@ -54,6 +72,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - ATG-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ATG-EDU-05
     national_label_en: Lower secondary vocational programme
     national_label_local: Lower secondary vocational programme
@@ -65,6 +91,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - ATG-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: ATG-EDU-06
     national_label_en: Upper secondary (general)
     national_label_local: Upper secondary (general)
@@ -76,6 +110,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - ATG-EDU-04
+    - ATG-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: ATG-EDU-04, ATG-EDU-05'
   - country_entry_id: ATG-EDU-07
     national_label_en: Upper secondary (vocational)
     national_label_local: Upper secondary (vocational)
@@ -87,6 +132,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - ATG-EDU-04
+    - ATG-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ATG-EDU-04, ATG-EDU-05'
   - country_entry_id: ATG-EDU-08
     national_label_en: Department of Business
     national_label_local: Department of Business
@@ -98,6 +154,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-08
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-09
     national_label_en: Advance level department
     national_label_local: Advance level department
@@ -109,6 +175,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-09
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-10
     national_label_en: Engineering, Construction, Refrigeration
     national_label_local: Engineering, Construction, Refrigeration
@@ -120,6 +196,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-10
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-11
     national_label_en: School of Pharmacy
     national_label_local: School of Pharmacy
@@ -131,6 +217,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-11
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-12
     national_label_en: School of Nursing
     national_label_local: School of Nursing
@@ -142,6 +238,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-12
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-13
     national_label_en: Teacher training
     national_label_local: Teacher training
@@ -153,6 +259,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-13
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-14
     national_label_en: Business, Information and technology
     national_label_local: Business, Information and technology
@@ -164,6 +280,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-14
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-15
     national_label_en: Undergraduate studies (Education, Accounting, Business, General)
     national_label_local: Undergraduate studies (Education, Accounting, Business,
@@ -176,6 +302,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-15
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-16
     national_label_en: Combined Biomedical Sciences / MD Programme
     national_label_local: Combined Biomedical Sciences / MD Programme
@@ -187,6 +323,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-16
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-17
     national_label_en: Medicine
     national_label_local: Medicine
@@ -198,6 +344,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-17
+    cum_years_status: computed
+    review_flags: *id002
   - country_entry_id: ATG-EDU-18
     national_label_en: Postgraduate degrees and diplomas
     national_label_local: Postgraduate degrees and diplomas
@@ -209,11 +365,21 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - ATG-EDU-06
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ATG-EDU-03
+    - ATG-EDU-05
+    - ATG-EDU-06
+    - ATG-EDU-18
+    cum_years_status: computed
+    review_flags: *id002
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Antigua
       and Barbuda.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

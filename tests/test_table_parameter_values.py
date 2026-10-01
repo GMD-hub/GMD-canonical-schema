@@ -15,7 +15,7 @@ def country_parameter_path(repository: Path, iso3: str) -> Path:
 
 
 def _set_table_parameter_contract(temp_repository: Path) -> None:
-    definition_path = parameter_path(temp_repository, "PARAM-EDU-YEARS-BY-LEVEL")
+    definition_path = parameter_path(temp_repository, "PARAM-DEM-MIN-MARRIAGE-AGE")
     definition, body = load_markdown(definition_path)
     definition["value_type"] = "table"
     definition["value_schema"] = None
@@ -58,7 +58,7 @@ def _set_table_values(temp_repository: Path) -> None:
         },
     ]
     for record in values["parameters"]:
-        if record["parameter_id"] == "PARAM-EDU-YEARS-BY-LEVEL":
+        if record["parameter_id"] == "PARAM-DEM-MIN-MARRIAGE-AGE":
             record["value"] = table_rows
     write_markdown(values_path, values, body)
 
@@ -79,7 +79,7 @@ def test_table_parameter_missing_row_key_fails(
     values_path = country_parameter_path(temp_repository, "PER")
     values, body = load_markdown(values_path)
     for record in values["parameters"]:
-        if record["parameter_id"] == "PARAM-EDU-YEARS-BY-LEVEL":
+        if record["parameter_id"] == "PARAM-DEM-MIN-MARRIAGE-AGE":
             record["value"][0].pop("isced_level")
             break
     write_markdown(values_path, values, body)

@@ -6,13 +6,13 @@ status: draft
 country_name: BOL
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BOL-EDU-01
     national_label_en: Initial education in community family
-    national_label_local: Educación Inicial en Familia Comunitaria
+    national_label_local: "Educaci\xF3n Inicial en Familia Comunitaria"
     entry_age: 4
     duration_years: 2
     isced_level: '0'
@@ -21,9 +21,15 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BOL-EDU-02
     national_label_en: Vocational community primary education
-    national_label_local: Educación Primaria Comunitaria Vocacional
+    national_label_local: "Educaci\xF3n Primaria Comunitaria Vocacional"
     entry_age: 6
     duration_years: 6
     isced_level: '1'
@@ -32,10 +38,16 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BOL-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: BOL-EDU-03
     national_label_en: Productive community secondary education, Stage 1 (Grades 1-2)
-    national_label_local: Educación Secundaria Comunitaria Productiva. Primera etapa
-      (Grados 1 y 2)
+    national_label_local: "Educaci\xF3n Secundaria Comunitaria Productiva. Primera\
+      \ etapa (Grados 1 y 2)"
     entry_age: 12
     duration_years: 2
     isced_level: '2'
@@ -44,10 +56,18 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - BOL-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-04
     national_label_en: Productive community secondary education, Stage 2 (Grades 3-6)
-    national_label_local: Educación Secundaria Comunitaria Productiva. Segunda etapa
-      (Grados 3 a 6)
+    national_label_local: "Educaci\xF3n Secundaria Comunitaria Productiva. Segunda\
+      \ etapa (Grados 3 a 6)"
     entry_age: 14
     duration_years: 4
     isced_level: '3'
@@ -56,9 +76,18 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - BOL-EDU-03
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-05
     national_label_en: Middle technical and technological training
-    national_label_local: Formación Técnica y Tecnológica Media
+    national_label_local: "Formaci\xF3n T\xE9cnica y Tecnol\xF3gica Media"
     entry_age: 18
     duration_years: 2
     isced_level: '5'
@@ -67,9 +96,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 11
+    parent_country_entry_ids:
+    - BOL-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-06
     national_label_en: Higher technical and technological training
-    national_label_local: Formación Técnica y Tecnológica Superior
+    national_label_local: "Formaci\xF3n T\xE9cnica y Tecnol\xF3gica Superior"
     entry_age: 18
     duration_years: 3
     isced_level: '5'
@@ -78,9 +117,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
+    parent_country_entry_ids:
+    - BOL-EDU-04
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-07
     national_label_en: Teachers higher education
-    national_label_local: Formación Superior de Maestras y Maestros
+    national_label_local: "Formaci\xF3n Superior de Maestras y Maestros"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -89,9 +138,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
+    parent_country_entry_ids:
+    - BOL-EDU-04
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-08
     national_label_en: University higher education
-    national_label_local: Formación Superior Universitaria
+    national_label_local: "Formaci\xF3n Superior Universitaria"
     entry_age: 18
     duration_years: 5
     isced_level: '6'
@@ -100,6 +159,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - BOL-EDU-04
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-09
     national_label_en: Specialization programmes
     national_label_local: Cursos de especialidad
@@ -111,6 +180,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - BOL-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-10
     national_label_en: Medicine
     national_label_local: Medicina
@@ -122,9 +201,19 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - BOL-EDU-04
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BOL-EDU-11
     national_label_en: Master programmes
-    national_label_local: Maestría
+    national_label_local: "Maestr\xEDa"
     entry_age: 23
     duration_years: 2
     isced_level: '7'
@@ -133,6 +222,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - BOL-EDU-07
+    - BOL-EDU-08
+    - BOL-EDU-09
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-09
+    - BOL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BOL-EDU-07, BOL-EDU-08, BOL-EDU-09'
   - country_entry_id: BOL-EDU-12
     national_label_en: Doctorate programmes
     national_label_local: Doctorado
@@ -144,15 +247,30 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - BOL-EDU-10
+    - BOL-EDU-11
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - BOL-EDU-02
+    - BOL-EDU-03
+    - BOL-EDU-04
+    - BOL-EDU-09
+    - BOL-EDU-11
+    - BOL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BOL-EDU-07, BOL-EDU-08, BOL-EDU-09'
+    - 'minimum parent path selected from: BOL-EDU-10, BOL-EDU-11'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Bolivia.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BOL-SUBNAT-01
     survey_labels: 1 - Chuquisaca | 1-Chuquisaca
@@ -161,10 +279,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40444
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40444
     geo_year: '2015'
@@ -182,10 +300,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40446
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40446
     geo_year: '2015'
@@ -203,10 +321,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40445
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40445
     geo_year: '2015'
@@ -224,10 +342,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40447
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40447
     geo_year: '2015'
@@ -245,10 +363,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40448
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40448
     geo_year: '2015'
@@ -266,10 +384,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40450
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40450
     geo_year: '2015'
@@ -287,10 +405,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAUL1_40449
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAUL1_40449
     geo_year: '2015'
@@ -308,10 +426,10 @@ parameters:
     gmd_subnatid2: BOL_2015_GAULx_8
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: BOL_2015_GAULx_8
     geo_year: '2015'
@@ -324,24 +442,24 @@ parameters:
     source_row: 1082
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BOL-SAN-01
     source_category_code: bano_ecologico_bano_de_compostaje
-    national_label_en: Baño ecológico (baño de compostaje)
+    national_label_en: "Ba\xF1o ecol\xF3gico (ba\xF1o de compostaje)"
     national_label_local: Letrinas de compostaje
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BOL-SAN-02
     source_category_code: arrastre_de_agua_a_la_superficie_calle_quebrada_rio
@@ -351,41 +469,42 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BOL-SAN-03
     source_category_code: bano_o_letrina_con_descarga_de_agua_a_la_superficie_calle_quebrada_rio
-    national_label_en: Baño o letrina con descarga de agua a la superficie (calle/quebrada/rio)
+    national_label_en: "Ba\xF1o o letrina con descarga de agua a la superficie (calle/quebrada/rio)"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BOL-SAN-04
     source_category_code: bano_servicio_sanitario_o_letrina_a_la_superficie_calle_quebrada_rio
-    national_label_en: 'Baño, servicio sanitario o letrina: a la superficie (calle/quebrada/rio)'
+    national_label_en: "Ba\xF1o, servicio sanitario o letrina: a la superficie (calle/quebrada/rio)"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BOL-SAN-05
     source_category_code: desague_del_bano_water_o_letrina_superficie_calle_rio
-    national_label_en: DESAGÜE DEL BAÑO, WATER O LETRINA Superficie (calle /río)
+    national_label_en: "DESAG\xDCE DEL BA\xD1O, WATER O LETRINA Superficie (calle\
+      \ /r\xEDo)"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BOL-SAN-06
     source_category_code: alcantarillado
@@ -395,8 +514,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BOL-SAN-07
     source_category_code: arrastre_de_agua_a_la_red_de_alcantarillado
@@ -406,107 +525,111 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BOL-SAN-08
     source_category_code: bano_o_letrina_con_descarga_de_agua_a_la_red_de_alcantarillado
-    national_label_en: Baño o letrina con descarga de agua a la red de alcantarillado
+    national_label_en: "Ba\xF1o o letrina con descarga de agua a la red de alcantarillado"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BOL-SAN-09
     source_category_code: bano_servicio_sanitario_o_letrina_a_la_red_de_alcantarillado
-    national_label_en: 'Baño, servicio sanitario o letrina: a la red de alcantarillado'
+    national_label_en: "Ba\xF1o, servicio sanitario o letrina: a la red de alcantarillado"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BOL-SAN-10
     source_category_code: desague_del_bano_water_o_letrina_alcantarillado
-    national_label_en: DESAGÜE DEL BAÑO, WATER O LETRINA Alcantarillado
+    national_label_en: "DESAG\xDCE DEL BA\xD1O, WATER O LETRINA Alcantarillado"
     national_label_local: al alcantarillado
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BOL-SAN-11
     source_category_code: arrastre_de_agua_a_un_pozo_de_absorcion
-    national_label_en: Arrastre de agua a un pozo de absorción
+    national_label_en: "Arrastre de agua a un pozo de absorci\xF3n"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BOL-SAN-12
     source_category_code: bano_o_letrina_con_descarga_de_agua_a_un_pozo_de_absorcion
-    national_label_en: Baño o letrina con descarga de agua a un pozo de absorción
+    national_label_en: "Ba\xF1o o letrina con descarga de agua a un pozo de absorci\xF3\
+      n"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BOL-SAN-13
     source_category_code: bano_servicio_sanitario_o_letrina_a_un_pozo_ciego_absorcion
-    national_label_en: 'Baño, servicio sanitario o letrina: a un pozo ciego/absorción'
+    national_label_en: "Ba\xF1o, servicio sanitario o letrina: a un pozo ciego/absorci\xF3\
+      n"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BOL-SAN-14
     source_category_code: arrastre_de_agua_a_una_camara_septica
-    national_label_en: Arrastre de agua a una cámara séptica
+    national_label_en: "Arrastre de agua a una c\xE1mara s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-SAN-15
     source_category_code: bano_o_letrina_con_descarga_de_agua_a_una_camara_septica
-    national_label_en: Baño o letrina con descarga de agua a una cámara séptica
+    national_label_en: "Ba\xF1o o letrina con descarga de agua a una c\xE1mara s\xE9\
+      ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-SAN-16
     source_category_code: bano_servicio_sanitario_o_letrina_a_una_camara_septica
-    national_label_en: 'Baño, servicio sanitario o letrina:  a una cámara séptica'
+    national_label_en: "Ba\xF1o, servicio sanitario o letrina:  a una c\xE1mara s\xE9\
+      ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-SAN-17
     source_category_code: camara_septica
@@ -516,19 +639,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-SAN-18
     source_category_code: desague_del_bano_water_o_letrina_camara_septica
-    national_label_en: DESAGÜE DEL BAÑO, WATER O LETRINA cámara séptica
+    national_label_en: "DESAG\xDCE DEL BA\xD1O, WATER O LETRINA c\xE1mara s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-SAN-19
     source_category_code: pozo_septico
@@ -538,8 +661,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-SAN-20
     source_category_code: arrastre_de_agua_a_otro_no_sabe
@@ -549,136 +672,136 @@ parameters:
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BOL-SAN-21
     source_category_code: bano_o_letrina_con_descarga_de_agua_a_otro_no_sabe
-    national_label_en: Baño o letrina con descarga de agua a otro/no sabe
+    national_label_en: "Ba\xF1o o letrina con descarga de agua a otro/no sabe"
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BOL-SAN-22
     source_category_code: bano_servicio_sanitario_o_letrina_no_sabe
-    national_label_en: 'Baño, servicio sanitario o letrina: no sabe'
+    national_label_en: "Ba\xF1o, servicio sanitario o letrina: no sabe"
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BOL-SAN-23
     source_category_code: sanitario_con_sistema_de_alcantarillado_o_pozo_septico
     national_label_en: Sanitario con sistema de alcantarillado o pozo septico
-    national_label_local: Inodoros de arrastre hidráulico
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: BOL-SAN-24
     source_category_code: private_flush_toilet
     national_label_en: Private flush toilet
-    national_label_local: Inodoros de arrastre hidráulico (privado)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: BOL-SAN-25
     source_category_code: el_bano_water_o_letrina_tiene_desague_a_la_superficie_calle_quebrada_rio_uso_privado
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE A la superficie (calle/quebrada/rio)/uso
-      privado
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE A la superficie\
+      \ (calle/quebrada/rio)/uso privado"
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > Private flush/toilet > to elsewhere
     jmp_id: flush_toilets.private_flush_toilet.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 77
   - country_entry_id: BOL-SAN-26
     source_category_code: el_bano_water_o_letrina_tiene_desague_al_alcantarillado_uso_privado
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE Al alcantarillado/uso
-      privado
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE Al alcantarillado/uso\
+      \ privado"
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: BOL-SAN-27
     source_category_code: el_bano_water_o_letrina_tiene_desague_a_una_camara_septica_uso_privado
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE A una cámara séptica/uso
-      privado
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE A una c\xE1mara\
+      \ s\xE9ptica/uso privado"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: BOL-SAN-28
     source_category_code: shared_flush_toilet
     national_label_en: Shared flush toilet
-    national_label_local: Inodoros de arrastre hidráulico (publico)
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: BOL-SAN-29
     source_category_code: el_bano_water_o_letrina_tiene_desague_a_la_superficie_calle_quebrada_rio_uso_compartido
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE A la superficie (calle/quebrada/rio)/uso
-      compartido
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE A la superficie\
+      \ (calle/quebrada/rio)/uso compartido"
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to elsewhere
     jmp_id: flush_toilets.public_shared_flush_toilet.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 83
   - country_entry_id: BOL-SAN-30
     source_category_code: el_bano_water_o_letrina_tiene_desague_al_alcantarillado_uso_compartido
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE Al alcantarillado/ uso
-      compartido
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE Al alcantarillado/\
+      \ uso compartido"
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: BOL-SAN-31
     source_category_code: el_bano_water_o_letrina_tiene_desague_a_una_camara_septica_uso_compartido
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE A una cámara séptica/uso
-      compartido
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE A una c\xE1mara\
+      \ s\xE9ptica/uso compartido"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: BOL-SAN-32
     source_category_code: a_la_superficie_calle_quebrada_rio
@@ -688,20 +811,20 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BOL-SAN-33
     source_category_code: tiene_bano_servicio_sanitario_o_letrina_tiene_desague_a_la_superficie_calle_quebrada_rio
-    national_label_en: Tiene baño, servicio sanitario o letrina - Tiene desague a
-      la superficie (calle/quebrada/rio)
+    national_label_en: "Tiene ba\xF1o, servicio sanitario o letrina - Tiene desague\
+      \ a la superficie (calle/quebrada/rio)"
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BOL-SAN-34
     source_category_code: al_alcantarillado
@@ -711,8 +834,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-SAN-35
     source_category_code: alcantarillado
@@ -722,8 +845,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-SAN-36
     source_category_code: domestic_connection
@@ -733,8 +856,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-SAN-37
     source_category_code: domestic_connection_to_sewage_system
@@ -744,42 +867,42 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-SAN-38
     source_category_code: tiene_bano_servicio_sanitario_o_letrina_tiene_desague_al_alcantarillado
-    national_label_en: Tiene baño, servicio sanitario o letrina - Tiene desague al
-      alcantarillado
+    national_label_en: "Tiene ba\xF1o, servicio sanitario o letrina - Tiene desague\
+      \ al alcantarillado"
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-SAN-39
     source_category_code: a_una_camara_septica
-    national_label_en: a una cámara séptica
+    national_label_en: "a una c\xE1mara s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BOL-SAN-40
     source_category_code: camara_septica
-    national_label_en: Cámara séptica
+    national_label_en: "C\xE1mara s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BOL-SAN-41
     source_category_code: connection_to_septic_tank
@@ -789,8 +912,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BOL-SAN-42
     source_category_code: domestic_connection_to_septic_tank
@@ -800,20 +923,20 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BOL-SAN-43
     source_category_code: tiene_bano_servicio_sanitario_o_letrina_tiene_desague_a_una_camara_septica
-    national_label_en: Tiene baño, servicio sanitario o letrina - Tiene desague a
-      una cámara séptica
+    national_label_en: "Tiene ba\xF1o, servicio sanitario o letrina - Tiene desague\
+      \ a una c\xE1mara s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BOL-SAN-44
     source_category_code: superficie_calle_rio
@@ -824,8 +947,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BOL-SAN-45
     source_category_code: bacin
@@ -835,8 +958,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: BOL-SAN-46
     source_category_code: letrina_de_pozo_ciego_con_piso
@@ -847,8 +970,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-SAN-47
     source_category_code: letrina_de_pozo_con_loza
@@ -859,8 +982,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-SAN-48
     source_category_code: pozo_abierto_letrina_de_pozo_sin_loza
@@ -871,8 +994,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BOL-SAN-49
     source_category_code: pozo_abierto_pozo_ciego_sin_piso
@@ -883,8 +1006,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BOL-SAN-50
     source_category_code: a_un_pozo_ciego
@@ -895,20 +1018,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-51
     source_category_code: desague_del_bano_water_o_letrina_pozo_ciego
-    national_label_en: DESAGÜE DEL BAÑO, WATER O LETRINA pozo ciego
+    national_label_en: "DESAG\xDCE DEL BA\xD1O, WATER O LETRINA pozo ciego"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-52
     source_category_code: latrine
@@ -919,8 +1042,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-53
     source_category_code: latrine_with_soakaway
@@ -931,8 +1054,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-54
     source_category_code: letrina_tradicional
@@ -943,8 +1066,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-55
     source_category_code: pozo_ciego
@@ -955,21 +1078,21 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-56
     source_category_code: tiene_bano_servicio_sanitario_o_letrina_tiene_desague_a_un_pozo_ciego
-    national_label_en: Tiene baño, servicio sanitario o letrina - Tiene desague a
-      un pozo ciego
+    national_label_en: "Tiene ba\xF1o, servicio sanitario o letrina - Tiene desague\
+      \ a un pozo ciego"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-SAN-57
     source_category_code: letrina_mejorada_ecologica_vip
@@ -980,19 +1103,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BOL-SAN-58
     source_category_code: el_bano_water_o_letrina_tiene_desague_apozo_ciego_uso_privado
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE apozo ciego/uso privado
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE apozo ciego/uso\
+      \ privado"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: BOL-SAN-59
     source_category_code: private_latrine
@@ -1002,20 +1126,21 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 115
   - country_entry_id: BOL-SAN-60
     source_category_code: el_bano_water_o_letrina_tiene_desague_a_pozo_ciego_uso_compartido
-    national_label_en: EL BAÑO, WATER O LETRINA TIENE DESAGUE a pozo ciego/uso compartido
+    national_label_en: "EL BA\xD1O, WATER O LETRINA TIENE DESAGUE a pozo ciego/uso\
+      \ compartido"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: BOL-SAN-61
     source_category_code: shared_latrine
@@ -1026,19 +1151,19 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: BOL-SAN-62
     source_category_code: letrina_con_agua_fluida
     national_label_en: Letrina con agua fluida
-    national_label_local: Letrinas de arrastre hidráulico
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico"
     jmp_classification: Latrines > Pour flush latrines
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BOL-SAN-63
     source_category_code: ninguno_arbusto_campo
@@ -1048,8 +1173,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-64
     source_category_code: ninguno_arbusto_campo
@@ -1059,8 +1184,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-65
     source_category_code: no_facility
@@ -1070,8 +1195,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-66
     source_category_code: no_facility_brushwood_field
@@ -1081,8 +1206,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-67
     source_category_code: no_tiene_bano
@@ -1092,19 +1217,19 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-68
     source_category_code: no_tiene_bano_servicio_sanitario_o_letrina
-    national_label_en: No tiene baño, servicio sanitario o letrina
+    national_label_en: "No tiene ba\xF1o, servicio sanitario o letrina"
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-69
     source_category_code: no_tiene_sanitario_o_matorral_o_campo
@@ -1114,8 +1239,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-70
     source_category_code: no_tiene_servicio_sanitario
@@ -1125,8 +1250,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-71
     source_category_code: no_tiene_water_letrina_o_sanitario
@@ -1136,8 +1261,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-72
     source_category_code: none
@@ -1147,8 +1272,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BOL-SAN-73
     source_category_code: other
@@ -1158,8 +1283,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BOL-SAN-74
     source_category_code: otro
@@ -1169,18 +1294,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BOL_Bolivia_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BOL-WAS-01
     source_category_code: well
@@ -1190,8 +1315,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: BOL-WAS-02
     source_category_code: well_or_cistern
@@ -1201,8 +1326,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: BOL-WAS-03
     source_category_code: well_or_water_wheel
@@ -1212,8 +1337,8 @@ parameters:
     jmp_id: ground_water.all_wells
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 54
   - country_entry_id: BOL-WAS-04
     source_category_code: manantial_o_vertiente_protegido
@@ -1223,8 +1348,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BOL-WAS-05
     source_category_code: manantial_protegido
@@ -1234,8 +1359,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BOL-WAS-06
     source_category_code: pozo_excavado_protegido
@@ -1245,8 +1370,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BOL-WAS-07
     source_category_code: pozo_excavado_protegido_con_bomba
@@ -1256,8 +1381,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BOL-WAS-08
     source_category_code: pozo_pretegido_o_cunbierto
@@ -1267,8 +1392,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BOL-WAS-09
     source_category_code: pozo_excavado_cubierto_sin_bomba
@@ -1278,8 +1403,8 @@ parameters:
     jmp_id: ground_water.protected_well.other
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BOL-WAS-10
     source_category_code: pozo_excavado_cubierto_sin_bomba
@@ -1289,8 +1414,8 @@ parameters:
     jmp_id: ground_water.protected_well.other
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BOL-WAS-11
     source_category_code: pozo_escavado_cubierto_con_bomba
@@ -1300,8 +1425,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-WAS-12
     source_category_code: pozo_excavado_cubierto_con_bomba
@@ -1311,8 +1436,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-WAS-13
     source_category_code: pozo_excavado_cubierto_con_bomba
@@ -1322,8 +1447,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-WAS-14
     source_category_code: pozo_protegido_con_bomba
@@ -1333,8 +1458,8 @@ parameters:
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BOL-WAS-15
     source_category_code: pozo_o_noria_sin_bomba
@@ -1344,8 +1469,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-WAS-16
     source_category_code: pozo_or_noria_sin_bomba
@@ -1355,8 +1480,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: BOL-WAS-17
     source_category_code: pozo_can_tuberia_o_bomba
@@ -1366,8 +1491,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BOL-WAS-18
     source_category_code: pozo_entubado_o_perforado
@@ -1377,8 +1502,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BOL-WAS-19
     source_category_code: pozo_entubado_perforado_con_bomba
@@ -1388,8 +1513,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BOL-WAS-20
     source_category_code: pozo_o_noria_con_bomba
@@ -1399,8 +1524,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BOL-WAS-21
     source_category_code: pozo_or_noria_con_bomba
@@ -1410,8 +1535,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BOL-WAS-22
     source_category_code: pozo_perforado_o_entubado_con_bomba
@@ -1421,8 +1546,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BOL-WAS-23
     source_category_code: manantial_no_protegido
@@ -1432,8 +1557,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BOL-WAS-24
     source_category_code: pozo_excavado_no_cubierto
@@ -1443,8 +1568,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BOL-WAS-25
     source_category_code: pozo_excavado_no_protegido
@@ -1454,8 +1579,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BOL-WAS-26
     source_category_code: pozo_excavado_no_protegido_con_o_sin_bomba
@@ -1465,8 +1590,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BOL-WAS-27
     source_category_code: pozo_no_protegido
@@ -1476,8 +1601,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BOL-WAS-28
     source_category_code: pozo_no_protegido_o_sin_bomba
@@ -1487,19 +1612,19 @@ parameters:
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: BOL-WAS-29
     source_category_code: carro_repartidor_aguatero
     national_label_en: carro repartidor (aguatero)
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BOL-WAS-30
     source_category_code: carro_repartidor_aguatero_with_piped_connection
@@ -1509,8 +1634,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BOL-WAS-31
     source_category_code: camion_tanque_vendedor
@@ -1520,8 +1645,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BOL-WAS-32
     source_category_code: caro_repartidor_aguatero
@@ -1531,8 +1656,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BOL-WAS-33
     source_category_code: carro_repartidor
@@ -1542,8 +1667,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BOL-WAS-34
     source_category_code: carro_repartidor_aguatero
@@ -1553,8 +1678,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BOL-WAS-35
     source_category_code: truck_distribution
@@ -1564,8 +1689,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BOL-WAS-36
     source_category_code: truckborne
@@ -1575,8 +1700,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BOL-WAS-37
     source_category_code: neighbour_no_specification
@@ -1586,8 +1711,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-WAS-38
     source_category_code: other
@@ -1597,8 +1722,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-WAS-39
     source_category_code: other_source
@@ -1608,8 +1733,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-WAS-40
     source_category_code: otra
@@ -1619,8 +1744,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-WAS-41
     source_category_code: otro
@@ -1630,8 +1755,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-WAS-42
     source_category_code: otros
@@ -1641,8 +1766,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BOL-WAS-43
     source_category_code: agua_del_vecino
@@ -1652,19 +1777,19 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-WAS-44
     source_category_code: no_se_distribuye_por_caneria_pileta_publica
-    national_label_en: No se distribuye por cañería - Pileta pública
+    national_label_en: "No se distribuye por ca\xF1er\xEDa - Pileta p\xFAblica"
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-WAS-45
     source_category_code: other
@@ -1674,8 +1799,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-WAS-46
     source_category_code: otro_1
@@ -1685,8 +1810,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BOL-WAS-47
     source_category_code: agua_embotellada
@@ -1696,8 +1821,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BOL-WAS-48
     source_category_code: agua_de_lluvia
@@ -1707,8 +1832,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BOL-WAS-49
     source_category_code: cosecha_de_agua_de_lluvia
@@ -1718,8 +1843,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BOL-WAS-50
     source_category_code: rainwater
@@ -1729,8 +1854,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BOL-WAS-51
     source_category_code: charca_estanque_rio_o_arroyo
@@ -1740,19 +1865,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BOL-WAS-52
     source_category_code: rio_acequia_vertiente_no_protegida
-    national_label_en: Río-Acequia-Vertiente no protegida
+    national_label_en: "R\xEDo-Acequia-Vertiente no protegida"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BOL-WAS-53
     source_category_code: rio_acequia_vertiente_no_protegida
@@ -1762,8 +1887,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BOL-WAS-54
     source_category_code: river_irrigated_channel
@@ -1773,8 +1898,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BOL-WAS-55
     source_category_code: river_lake_spring_irrigation_channel
@@ -1784,8 +1909,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BOL-WAS-56
     source_category_code: river_lake_spring
@@ -1795,8 +1920,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BOL-WAS-57
     source_category_code: lago_laguna_o_curiche
@@ -1806,8 +1931,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: BOL-WAS-58
     source_category_code: lago_laguna_curiche
@@ -1817,8 +1942,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: BOL-WAS-59
     source_category_code: lago_laguna_cariche
@@ -1828,8 +1953,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: BOL-WAS-60
     source_category_code: lago_laguna_curiche
@@ -1839,8 +1964,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: BOL-WAS-61
     source_category_code: lago_laguna_curiche
@@ -1850,41 +1975,42 @@ parameters:
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: BOL-WAS-62
     source_category_code: rio_vertiente_o_acequia
     national_label_en: Rio, vertiente o acequia
-    national_label_local: Río
+    national_label_local: "R\xEDo"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BOL-WAS-63
     source_category_code: rio_vertiente_acequia
-    national_label_en: Rio/vertiente/acequía
-    national_label_local: Río
+    national_label_en: "Rio/vertiente/acequ\xEDa"
+    national_label_local: "R\xEDo"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BOL-WAS-64
     source_category_code: caneria_de_red_por_caneria_fuera_del_lote_o_terreno
-    national_label_en: Cañería de red - Por cañería fuera del lote o terreno
+    national_label_en: "Ca\xF1er\xEDa de red - Por ca\xF1er\xEDa fuera del lote o\
+      \ terreno"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BOL-WAS-65
     source_category_code: caneria_de_red_otros_medios_no_en_vivienda_o_terreno
@@ -1894,8 +2020,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BOL-WAS-66
     source_category_code: neighbour_drinking_water
@@ -1905,19 +2031,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BOL-WAS-67
     source_category_code: por_caneria_fuera_de_la_vivienda_fuera_del_lote_o_ter
-    national_label_en: por cañeria fuera de la vivienda, fuera del lote o ter
+    national_label_en: "por ca\xF1eria fuera de la vivienda, fuera del lote o ter"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BOL-WAS-68
     source_category_code: pipeborne_water
@@ -1927,8 +2053,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BOL-WAS-69
     source_category_code: red_por_caneira
@@ -1938,63 +2064,63 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BOL-WAS-70
     source_category_code: agua_por_caneria_dentro_de_la_vivienda
-    national_label_en: Agua por cañería dentro de la vivienda
+    national_label_en: "Agua por ca\xF1er\xEDa dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-71
     source_category_code: caneria_de_red
-    national_label_en: cañería de red
+    national_label_en: "ca\xF1er\xEDa de red"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-72
     source_category_code: caneria_de_red_por_caneria_dentro_de_la_vivienda
-    national_label_en: Cañería de red - Por cañería dentro de la vivienda
+    national_label_en: "Ca\xF1er\xEDa de red - Por ca\xF1er\xEDa dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-73
     source_category_code: caneria_de_red_dentro_de_casa
-    national_label_en: Cañería de red dentro de casa
+    national_label_en: "Ca\xF1er\xEDa de red dentro de casa"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-74
     source_category_code: caneria_de_red_dentro_de_la_vivienda
-    national_label_en: Cañería de red dentro de la vivienda
+    national_label_en: "Ca\xF1er\xEDa de red dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-75
     source_category_code: domestic_connection
@@ -2004,8 +2130,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-76
     source_category_code: domestic_connection_within_house
@@ -2015,30 +2141,30 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-77
     source_category_code: por_caneria_dentro_de_la_vivienda
-    national_label_en: por cañería dentro de la vivienda
+    national_label_en: "por ca\xF1er\xEDa dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-78
     source_category_code: red_por_caneria
-    national_label_en: Red por cañería
+    national_label_en: "Red por ca\xF1er\xEDa"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-79
     source_category_code: tuberia_dentro_de_la_vivienda_patio
@@ -2048,8 +2174,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-80
     source_category_code: tuberia_dentro_le_vivienda
@@ -2059,54 +2185,55 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BOL-WAS-81
     source_category_code: agua_por_caneria_fuera_de_la_vivienda
-    national_label_en: Agua por cañería fuera de la vivienda
+    national_label_en: "Agua por ca\xF1er\xEDa fuera de la vivienda"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-82
     source_category_code: caneria_de_red_por_caneria_fuera_de_la_vivienda_pero_dentro_del_lote_o_terreno
-    national_label_en: Cañería de red - Por cañería fuera de la vivienda, pero dentro
-      del lote o terreno
+    national_label_en: "Ca\xF1er\xEDa de red - Por ca\xF1er\xEDa fuera de la vivienda,\
+      \ pero dentro del lote o terreno"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-83
     source_category_code: caneria_de_red_fuera_de_la_vivienda_pero_dentro_del_lote
-    national_label_en: Cañería de red fuera de la vivienda, pero dentro del lote
+    national_label_en: "Ca\xF1er\xEDa de red fuera de la vivienda, pero dentro del\
+      \ lote"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-84
     source_category_code: caneria_de_red_fuera_de_la_vivienda_pero_dentro_del_lote_o_terreno
-    national_label_en: Cañería de red fuera de la vivienda, pero dentro del lote o
-      terreno
+    national_label_en: "Ca\xF1er\xEDa de red fuera de la vivienda, pero dentro del\
+      \ lote o terreno"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-85
     source_category_code: domestic_connection_within_building_or_yard
@@ -2116,41 +2243,42 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-86
     source_category_code: por_caneria_fuera_de_la_en_terreno
-    national_label_en: Por cañería fuera de la en terreno
+    national_label_en: "Por ca\xF1er\xEDa fuera de la en terreno"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-87
     source_category_code: por_caneria_fuera_de_la_vivienda_pero_dentro_del_lote_o_terreno
-    national_label_en: Por cañeria fuera de la vivienda, pero dentro del lote o terreno
+    national_label_en: "Por ca\xF1eria fuera de la vivienda, pero dentro del lote\
+      \ o terreno"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-88
     source_category_code: por_caneria_pero_dentro_del_lote_o_terreno
-    national_label_en: por cañeria pero dentro del lote o terreno
+    national_label_en: "por ca\xF1eria pero dentro del lote o terreno"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-89
     source_category_code: tuberia_en_el_patio
@@ -2160,8 +2288,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-90
     source_category_code: yard_tap
@@ -2171,101 +2299,101 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BOL-WAS-91
     source_category_code: agua_por_caneria_fuera_del_lote
-    national_label_en: Agua por cañería fuera del lote
-    national_label_local: Fuentes públicas
+    national_label_en: "Agua por ca\xF1er\xEDa fuera del lote"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-92
     source_category_code: caneria_de_red_pileta_publica
-    national_label_en: Cañería de red - Pileta pública
-    national_label_local: Fuentes públicas
+    national_label_en: "Ca\xF1er\xEDa de red - Pileta p\xFAblica"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-93
     source_category_code: caneria_de_red_con_pileta_publica
-    national_label_en: Cañería de red con pileta pública
-    national_label_local: Fuentes públicas
+    national_label_en: "Ca\xF1er\xEDa de red con pileta p\xFAblica"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-94
     source_category_code: connection_outside
     national_label_en: Connection outside
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-95
     source_category_code: llave_publica
     national_label_en: Llave publica
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-96
     source_category_code: pileta_publica
     national_label_en: Pileta publica
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-97
     source_category_code: public_tap
     national_label_en: Public tap
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BOL-WAS-98
     source_category_code: tuberia_publica_fuera_de_la_vivienda
     national_label_en: Tuberia publica fuera de la vivienda
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BOL_Bolivia_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

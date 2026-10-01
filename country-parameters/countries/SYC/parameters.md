@@ -6,9 +6,9 @@ status: draft
 country_name: SYC
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SYC-EDU-01
     national_label_en: Creche
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: SYC-EDU-02
     national_label_en: Primary
     national_label_local: Primary
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: primary_incomplete
     gmd_educat7_target: primary_incomplete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - SYC-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: SYC-EDU-03
     national_label_en: Secondary 1 to 3
     national_label_local: Secondary 1 to 3
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - SYC-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SYC-EDU-04
     national_label_en: Secondary 4 to 5
     national_label_local: Secondary 4 to 5
@@ -54,6 +74,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - SYC-EDU-03
+    - SYC-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
   - country_entry_id: SYC-EDU-05
     national_label_en: Apprenticeship programmes
     national_label_local: Apprenticeship programmes
@@ -65,6 +96,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - SYC-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: SYC-EDU-06
     national_label_en: Advanced Certificate (Cambridge A levels)
     national_label_local: Advanced Certificate (Cambridge A levels)
@@ -76,6 +115,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - SYC-EDU-03
+    - SYC-EDU-05
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
   - country_entry_id: SYC-EDU-07
     national_label_en: Certificate Programmes
     national_label_local: Certificate Programmes
@@ -87,6 +137,17 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - SYC-EDU-03
+    - SYC-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
   - country_entry_id: SYC-EDU-08
     national_label_en: Diploma Programmes
     national_label_local: Diploma Programmes
@@ -98,6 +159,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-09
     national_label_en: Advanced Diploma Programmes
     national_label_local: Advanced Diploma Programmes
@@ -109,6 +184,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-10
     national_label_en: Primary Teacher Training
     national_label_local: Primary Teacher Training
@@ -120,6 +209,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-11
     national_label_en: Secondary Teacher Training
     national_label_local: Secondary Teacher Training
@@ -131,6 +234,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-12
     national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree
@@ -142,6 +259,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-13
     national_label_en: Bachelor's degree
     national_label_local: Bachelor's degree
@@ -153,6 +284,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-14
     national_label_en: Post Graduate Certificate in Education
     national_label_local: Post Graduate Certificate in Education
@@ -164,6 +309,20 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - SYC-EDU-04
+    - SYC-EDU-06
+    - SYC-EDU-07
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
   - country_entry_id: SYC-EDU-15
     national_label_en: Master's Programme
     national_label_local: Master's Programme
@@ -175,27 +334,43 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - SYC-EDU-12
+    - SYC-EDU-13
+    - SYC-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - SYC-EDU-02
+    - SYC-EDU-05
+    - SYC-EDU-07
+    - SYC-EDU-13
+    - SYC-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: SYC-EDU-03, SYC-EDU-05'
+    - 'minimum parent path selected from: SYC-EDU-04, SYC-EDU-06, SYC-EDU-07'
+    - 'minimum parent path selected from: SYC-EDU-12, SYC-EDU-13, SYC-EDU-14'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Seychelles.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2010
   effective_to: 2010
-  selectors: ~
+  selectors: null
   value:
   - country_entry_id: SYC-SUBNAT-01
-    survey_labels: 1 – Central 1
+    survey_labels: "1 \u2013 Central 1"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: SYC_2010_UN2_SC11
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: SYC_2010_UN2_SC11
     geo_year: '2010'
@@ -207,16 +382,16 @@ parameters:
     geo_name: Central 1 Mahe
     source_row: 15104
   - country_entry_id: SYC-SUBNAT-02
-    survey_labels: 2 – Central 2
+    survey_labels: "2 \u2013 Central 2"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: SYC_2010_UN2_SC12
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: SYC_2010_UN2_SC12
     geo_year: '2010'
@@ -228,16 +403,16 @@ parameters:
     geo_name: Central 2 Mahe
     source_row: 15105
   - country_entry_id: SYC-SUBNAT-03
-    survey_labels: 3 – East/South Mahe
+    survey_labels: "3 \u2013 East/South Mahe"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: SYC_2010_UN2_SC13
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: SYC_2010_UN2_SC13
     geo_year: '2010'
@@ -249,16 +424,16 @@ parameters:
     geo_name: East Mahe
     source_row: 15106
   - country_entry_id: SYC-SUBNAT-04
-    survey_labels: 4 – West Mahe
+    survey_labels: "4 \u2013 West Mahe"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: SYC_2010_UN2_SC14
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: SYC_2010_UN2_SC14
     geo_year: '2010'
@@ -270,16 +445,16 @@ parameters:
     geo_name: West Mahe
     source_row: 15107
   - country_entry_id: SYC-SUBNAT-05
-    survey_labels: 5 – North Mahe
+    survey_labels: "5 \u2013 North Mahe"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: SYC_2010_UN2_SC15
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: SYC_2010_UN2_SC15
     geo_year: '2010'
@@ -291,16 +466,16 @@ parameters:
     geo_name: North Mahe
     source_row: 15108
   - country_entry_id: SYC-SUBNAT-06
-    survey_labels: 6 – Praslin/La Digue
+    survey_labels: "6 \u2013 Praslin/La Digue"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: SYC_2010_UNx_6
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: SYC_2010_UNx_6
     geo_year: '2010'
@@ -313,13 +488,13 @@ parameters:
     source_row: 15109
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: SYC-SUBNAT-01
     survey_labels: 1 - English River
@@ -328,10 +503,10 @@ parameters:
     gmd_subnatid2: SYC_2015_GAUL1_61164
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -349,10 +524,10 @@ parameters:
     gmd_subnatid2: SYC_2015_GAUL1_61183
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -370,10 +545,10 @@ parameters:
     gmd_subnatid2: SYC_2015_GAUL1_61200
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -391,10 +566,10 @@ parameters:
     gmd_subnatid2: SYC_2015_GAUL1_61147
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -412,10 +587,10 @@ parameters:
     gmd_subnatid2: SYC_2015_GAUL1_61184
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -433,10 +608,10 @@ parameters:
     gmd_subnatid2: SYC_2015_GAUL1_61188
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: ''
     geo_year: '2015'
@@ -449,8 +624,8 @@ parameters:
     source_row: 15103
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

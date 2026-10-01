@@ -6,9 +6,9 @@ status: draft
 country_name: LCA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LCA-EDU-01
     national_label_en: Early childhood education development
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LCA-EDU-02
     national_label_en: Early childhood education / Pre-primary (Preschool)
     national_label_local: Early childhood education / Pre-primary (Preschool)
@@ -32,6 +38,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: LCA-EDU-03
     national_label_en: Primary
     national_label_local: Primary
@@ -43,6 +55,12 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - LCA-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: LCA-EDU-04
     national_label_en: Secondary (Forms 1-3)
     national_label_local: Secondary (Forms 1-3)
@@ -54,6 +72,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 10
+    parent_country_entry_ids:
+    - LCA-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-05
     national_label_en: Secondary (Forms 4-5)
     national_label_local: Secondary (Forms 4-5)
@@ -65,6 +91,15 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - LCA-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-06
     national_label_en: National skills development centre
     national_label_local: National skills development centre
@@ -76,6 +111,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 12
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-07
     national_label_en: Health sciences programme
     national_label_local: Health sciences programme
@@ -87,6 +132,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 13
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-08
     national_label_en: Arts science and General studies
     national_label_local: Arts science and General studies
@@ -98,6 +153,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 14
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-09
     national_label_en: Division of Agriculture
     national_label_local: Division of Agriculture
@@ -109,6 +174,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 15
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-10
     national_label_en: Post secondary non tertiary
     national_label_local: Post secondary non tertiary
@@ -120,6 +195,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 16
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-11
     national_label_en: Division of Technical education and Management studies
     national_label_local: Division of Technical education and Management studies
@@ -131,6 +216,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 17
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-12
     national_label_en: Health sciences programme
     national_label_local: Health sciences programme
@@ -142,6 +237,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 18
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-13
     national_label_en: Division of Agriculture
     national_label_local: Division of Agriculture
@@ -153,6 +258,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 19
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-14
     national_label_en: Division of Technical education and Management studies
     national_label_local: Division of Technical education and Management studies
@@ -164,6 +279,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 20
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-14
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-15
     national_label_en: Teacher training certificate
     national_label_local: Teacher training certificate
@@ -175,6 +300,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-15
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-16
     national_label_en: Associate degree in Business
     national_label_local: Associate degree in Business
@@ -186,6 +321,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-16
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-17
     national_label_en: Bachelor
     national_label_local: Bachelor
@@ -197,6 +342,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-17
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-18
     national_label_en: Spartan's Medical School
     national_label_local: Spartan's Medical School
@@ -208,6 +363,16 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-18
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: LCA-EDU-19
     national_label_en: MSc, Med
     national_label_local: MSc, Med
@@ -219,15 +384,25 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - LCA-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - LCA-EDU-03
+    - LCA-EDU-04
+    - LCA-EDU-05
+    - LCA-EDU-19
+    cum_years_status: computed
+    review_flags: *id001
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Saint_Lucia.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LCA-SAN-01
     source_category_code: flush_to_piped_sewer_system
@@ -237,8 +412,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LCA-SAN-02
     source_category_code: wc_sewer
@@ -248,8 +423,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: LCA-SAN-03
     source_category_code: flush_to_pit_latrine
@@ -259,8 +434,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: LCA-SAN-04
     source_category_code: flush_to_septic_tank
@@ -270,8 +445,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: LCA-SAN-05
     source_category_code: wc_cesspit
@@ -281,21 +456,21 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: LCA-SAN-06
     source_category_code: flush_to_unknown_place_not_sure_dk_where
-    national_label_en: |-
-      Flush to unknown place / Not sure
-      / DK where
+    national_label_en: 'Flush to unknown place / Not sure
+
+      / DK where'
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LCA-SAN-07
     source_category_code: bucket
@@ -305,8 +480,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: LCA-SAN-08
     source_category_code: pit_latrine_with_slab
@@ -317,8 +492,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: LCA-SAN-09
     source_category_code: pit_latrine_without_slab_open_pit
@@ -329,8 +504,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: LCA-SAN-10
     source_category_code: pit_latrine
@@ -341,8 +516,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: LCA-SAN-11
     source_category_code: ven_pit_latrine
@@ -353,8 +528,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: LCA-SAN-12
     source_category_code: ventilated_improved_pit_latrine
@@ -365,8 +540,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: LCA-SAN-13
     source_category_code: no_faciility_bush_field
@@ -376,8 +551,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LCA-SAN-14
     source_category_code: none
@@ -387,8 +562,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: LCA-SAN-15
     source_category_code: other
@@ -398,18 +573,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LCA_Saint_Lucia_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: LCA-WAS-01
     source_category_code: protected_spring
@@ -419,8 +594,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: LCA-WAS-02
     source_category_code: well_or_protected_spring
@@ -430,8 +605,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: LCA-WAS-03
     source_category_code: public_well_tank
@@ -441,8 +616,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: LCA-WAS-04
     source_category_code: perforated_or_tubular_well
@@ -452,8 +627,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: LCA-WAS-05
     source_category_code: unprotected_spring
@@ -463,8 +638,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: LCA-WAS-06
     source_category_code: unprotected_well
@@ -474,8 +649,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: LCA-WAS-07
     source_category_code: well_or_spring_not_protected
@@ -485,8 +660,8 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: LCA-WAS-08
     source_category_code: private_not_piped
@@ -496,8 +671,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: LCA-WAS-09
     source_category_code: water_kiosk_water_station
@@ -507,8 +682,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: LCA-WAS-10
     source_category_code: tanker_truck
@@ -518,8 +693,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: LCA-WAS-11
     source_category_code: other
@@ -529,8 +704,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: LCA-WAS-12
     source_category_code: other
@@ -540,8 +715,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: LCA-WAS-13
     source_category_code: bottled_water
@@ -551,8 +726,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: LCA-WAS-14
     source_category_code: bottled_water_water_in_bags_garrafones
@@ -562,8 +737,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: LCA-WAS-15
     source_category_code: rainwater
@@ -573,8 +748,8 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: LCA-WAS-16
     source_category_code: rainwater_collection
@@ -584,8 +759,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: LCA-WAS-17
     source_category_code: surface_waters_river_stream_dam_lake_pond_canal_or_acequia
@@ -595,8 +770,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: LCA-WAS-18
     source_category_code: piped_to_neighbour
@@ -606,8 +781,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LCA-WAS-19
     source_category_code: private_piped
@@ -617,8 +792,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: LCA-WAS-20
     source_category_code: piped_into_dwelling
@@ -628,8 +803,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LCA-WAS-21
     source_category_code: piping_inside_the_house
@@ -639,8 +814,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LCA-WAS-22
     source_category_code: public_piped
@@ -650,8 +825,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: LCA-WAS-23
     source_category_code: piped_into_compound_yard_or_plot
@@ -661,8 +836,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LCA-WAS-24
     source_category_code: pipeline_inside_the_ground_lot
@@ -672,8 +847,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LCA-WAS-25
     source_category_code: public_yard
@@ -683,8 +858,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: LCA-WAS-26
     source_category_code: public_standpipe
@@ -694,8 +869,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LCA-WAS-27
     source_category_code: public_tap
@@ -705,8 +880,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: LCA-WAS-28
     source_category_code: public_tap_standpipe
@@ -716,13 +891,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_LCA_Saint_Lucia_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

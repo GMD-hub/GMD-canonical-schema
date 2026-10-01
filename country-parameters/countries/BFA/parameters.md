@@ -6,13 +6,13 @@ status: draft
 country_name: BFA
 parameters:
 - parameter_id: PARAM-EDU-LEVEL-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BFA-EDU-01
-    national_label_en: Enseignement préscolaire formel
-    national_label_local: Enseignement préscolaire formel
+    national_label_en: "Enseignement pr\xE9scolaire formel"
+    national_label_local: "Enseignement pr\xE9scolaire formel"
     entry_age: 3
     duration_years: 3
     isced_level: '0'
@@ -21,6 +21,12 @@ parameters:
     gmd_educat5_target: no_education
     gmd_educat7_target: none
     source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
   - country_entry_id: BFA-EDU-02
     national_label_en: Enseignement primaire
     national_label_local: Enseignement primaire
@@ -32,9 +38,15 @@ parameters:
     gmd_educat5_target: primary_complete
     gmd_educat7_target: primary_complete
     source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BFA-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
   - country_entry_id: BFA-EDU-03
-    national_label_en: Enseignement post primaire général (1er cycle)
-    national_label_local: Enseignement post primaire général (1er cycle)
+    national_label_en: "Enseignement post primaire g\xE9n\xE9ral (1er cycle)"
+    national_label_local: "Enseignement post primaire g\xE9n\xE9ral (1er cycle)"
     entry_age: 12
     duration_years: 4
     isced_level: '2'
@@ -43,6 +55,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 9
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-04
     national_label_en: Formation professionnelle (1 an)
     national_label_local: Formation professionnelle (1 an)
@@ -54,6 +74,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_incomplete
     source_row: 10
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-05
     national_label_en: Formation professionnelle du premier cycle
     national_label_local: Formation professionnelle (2 ans)
@@ -65,6 +93,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 11
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-06
     national_label_en: Formation professionnelle (CQP)
     national_label_local: Formation professionnelle (CQP)
@@ -76,6 +112,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 12
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-07
     national_label_en: Formation professionnelle (BQP)
     national_label_local: Formation professionnelle (BQP)
@@ -87,6 +131,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 13
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-08
     national_label_en: Brevet de technicien professionnel (BTP)
     national_label_local: Formation professionnelle (BTP)
@@ -98,6 +150,14 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 14
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-09
     national_label_en: Certificat d'aptitude professionnelle (CAP)
     national_label_local: Enseignement post-primaire technique et professionnel
@@ -109,9 +169,17 @@ parameters:
     gmd_educat5_target: lower_secondary
     gmd_educat7_target: lower_secondary_complete
     source_row: 15
+    parent_country_entry_ids:
+    - BFA-EDU-02
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
   - country_entry_id: BFA-EDU-10
-    national_label_en: Enseignement secondaire général ou second cycle
-    national_label_local: Enseignement secondaire général ou second cycle
+    national_label_en: "Enseignement secondaire g\xE9n\xE9ral ou second cycle"
+    national_label_local: "Enseignement secondaire g\xE9n\xE9ral ou second cycle"
     entry_age: 16
     duration_years: 3
     isced_level: '3'
@@ -120,6 +188,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 16
+    parent_country_entry_ids:
+    - BFA-EDU-03
+    - BFA-EDU-04
+    - BFA-EDU-05
+    - BFA-EDU-06
+    - BFA-EDU-07
+    - BFA-EDU-08
+    - BFA-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
   - country_entry_id: BFA-EDU-11
     national_label_en: Formation professionnelle du second cycle
     national_label_local: Formation professionnelle du second cycle
@@ -131,6 +216,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 17
+    parent_country_entry_ids:
+    - BFA-EDU-03
+    - BFA-EDU-04
+    - BFA-EDU-05
+    - BFA-EDU-06
+    - BFA-EDU-07
+    - BFA-EDU-08
+    - BFA-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
   - country_entry_id: BFA-EDU-12
     national_label_en: Enseignement secondaire professionnel second cycle (BEP)
     national_label_local: Enseignement secondaire professionnel second cycle (BEP)
@@ -142,6 +244,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 18
+    parent_country_entry_ids:
+    - BFA-EDU-03
+    - BFA-EDU-04
+    - BFA-EDU-05
+    - BFA-EDU-06
+    - BFA-EDU-07
+    - BFA-EDU-08
+    - BFA-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
   - country_entry_id: BFA-EDU-13
     national_label_en: Enseignement secondaire technique second cycle
     national_label_local: Enseignement secondaire technique second cycle
@@ -153,6 +272,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 19
+    parent_country_entry_ids:
+    - BFA-EDU-03
+    - BFA-EDU-04
+    - BFA-EDU-05
+    - BFA-EDU-06
+    - BFA-EDU-07
+    - BFA-EDU-08
+    - BFA-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
   - country_entry_id: BFA-EDU-14
     national_label_en: Enseignement secondaire professionnel second cycle (BAC profesionnel)
     national_label_local: Enseignement secondaire professionnel second cycle (BAC
@@ -165,6 +301,23 @@ parameters:
     gmd_educat5_target: upper_secondary
     gmd_educat7_target: upper_secondary_complete
     source_row: 20
+    parent_country_entry_ids:
+    - BFA-EDU-03
+    - BFA-EDU-04
+    - BFA-EDU-05
+    - BFA-EDU-06
+    - BFA-EDU-07
+    - BFA-EDU-08
+    - BFA-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
   - country_entry_id: BFA-EDU-15
     national_label_en: Formation professionnelle post secondaire
     national_label_local: Formation professionnelle post secondaire
@@ -176,6 +329,24 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 21
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-16
     national_label_en: Formation professionnelle post secondaire
     national_label_local: Formation professionnelle post secondaire
@@ -187,9 +358,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 22
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-17
-    national_label_en: Enseignement supérieur (DUT/BTS)
-    national_label_local: Enseignement supérieur (DUT/BTS)
+    national_label_en: "Enseignement sup\xE9rieur (DUT/BTS)"
+    national_label_local: "Enseignement sup\xE9rieur (DUT/BTS)"
     entry_age: 19
     duration_years: 2
     isced_level: '5'
@@ -198,9 +387,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 23
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-18
-    national_label_en: Enseignement supérieur (Classes Préparatoires)
-    national_label_local: Enseignement supérieur (Classes Préparatoires)
+    national_label_en: "Enseignement sup\xE9rieur (Classes Pr\xE9paratoires)"
+    national_label_local: "Enseignement sup\xE9rieur (Classes Pr\xE9paratoires)"
     entry_age: 19
     duration_years: 2
     isced_level: '6'
@@ -209,9 +416,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 24
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-19
-    national_label_en: Enseignement supérieur (Licence)
-    national_label_local: Enseignement supérieur (Licence)
+    national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: "Enseignement sup\xE9rieur (Licence)"
     entry_age: 21
     duration_years: 1
     isced_level: '6'
@@ -220,9 +445,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 25
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-20
-    national_label_en: Enseignement supérieur (Licence)
-    national_label_local: Enseignement supérieur (Licence)
+    national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: "Enseignement sup\xE9rieur (Licence)"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -231,9 +474,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 26
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-21
-    national_label_en: Enseignement supérieur Ingéniorat
-    national_label_local: Enseignement supérieur Ingéniorat
+    national_label_en: "Enseignement sup\xE9rieur Ing\xE9niorat"
+    national_label_local: "Enseignement sup\xE9rieur Ing\xE9niorat"
     entry_age: 19
     duration_years: 3
     isced_level: '6'
@@ -242,9 +503,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 27
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-22
-    national_label_en: Formation professionnelle (Ingéniorat)
-    national_label_local: Formation professionnelle (Ingéniorat)
+    national_label_en: "Formation professionnelle (Ing\xE9niorat)"
+    national_label_local: "Formation professionnelle (Ing\xE9niorat)"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -253,9 +532,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 28
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-23
-    national_label_en: Enseignement supérieur (Master)
-    national_label_local: Enseignement supérieur (Master)
+    national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: "Enseignement sup\xE9rieur (Master)"
     entry_age: 22
     duration_years: 2
     isced_level: '7'
@@ -264,9 +561,28 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 29
+    parent_country_entry_ids:
+    - BFA-EDU-18
+    - BFA-EDU-19
+    - BFA-EDU-20
+    - BFA-EDU-21
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-19
+    - BFA-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
+    - 'minimum parent path selected from: BFA-EDU-18, BFA-EDU-19, BFA-EDU-20, BFA-EDU-21'
   - country_entry_id: BFA-EDU-24
-    national_label_en: Enseignement supérieur (Doctorat d'Exercice)
-    national_label_local: Enseignement supérieur (Doctorat d'Exercice)
+    national_label_en: "Enseignement sup\xE9rieur (Doctorat d'Exercice)"
+    national_label_local: "Enseignement sup\xE9rieur (Doctorat d'Exercice)"
     entry_age: 19
     duration_years: 6
     isced_level: '7'
@@ -275,9 +591,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 30
+    parent_country_entry_ids:
+    - BFA-EDU-10
+    - BFA-EDU-11
+    - BFA-EDU-12
+    - BFA-EDU-13
+    - BFA-EDU-14
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
   - country_entry_id: BFA-EDU-25
-    national_label_en: Enseignement supérieur (Doctorat Unique)
-    national_label_local: Enseignement supérieur (Doctorat Unique)
+    national_label_en: "Enseignement sup\xE9rieur (Doctorat Unique)"
+    national_label_local: "Enseignement sup\xE9rieur (Doctorat Unique)"
     entry_age: 24
     duration_years: 3
     isced_level: '8'
@@ -286,9 +620,27 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 31
+    parent_country_entry_ids:
+    - BFA-EDU-22
+    - BFA-EDU-23
+    - BFA-EDU-24
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-22
+    - BFA-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
+    - 'minimum parent path selected from: BFA-EDU-22, BFA-EDU-23, BFA-EDU-24'
   - country_entry_id: BFA-EDU-26
-    national_label_en: Enseignement supérieur (DES)
-    national_label_local: Enseignement supérieur (DES)
+    national_label_en: "Enseignement sup\xE9rieur (DES)"
+    national_label_local: "Enseignement sup\xE9rieur (DES)"
     entry_age: 30
     duration_years: 2
     isced_level: '8'
@@ -297,28 +649,46 @@ parameters:
     gmd_educat5_target: tertiary
     gmd_educat7_target: tertiary
     source_row: 32
+    parent_country_entry_ids:
+    - BFA-EDU-22
+    - BFA-EDU-23
+    - BFA-EDU-24
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BFA-EDU-02
+    - BFA-EDU-04
+    - BFA-EDU-11
+    - BFA-EDU-22
+    - BFA-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BFA-EDU-03, BFA-EDU-04, BFA-EDU-05, BFA-EDU-06,
+      BFA-EDU-07, BFA-EDU-08, BFA-EDU-09'
+    - 'minimum parent path selected from: BFA-EDU-10, BFA-EDU-11, BFA-EDU-12, BFA-EDU-13,
+      BFA-EDU-14'
+    - 'minimum parent path selected from: BFA-EDU-22, BFA-EDU-23, BFA-EDU-24'
   provenance:
     source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Burkina_Faso.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BFA-SUBNAT-01
-    survey_labels: 1 - Hauts Bassins | 1 – Hauts Bassins | 9 - Hauts Bassins | 9 -
-      Hauts-Bassins
+    survey_labels: "1 - Hauts Bassins | 1 \u2013 Hauts Bassins | 9 - Hauts Bassins\
+      \ | 9 - Hauts-Bassins"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40284
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40284
     geo_year: '2015'
@@ -330,16 +700,16 @@ parameters:
     geo_name: Hauts-bassins
     source_row: 722
   - country_entry_id: BFA-SUBNAT-02
-    survey_labels: 10 - Centre Est | 10 – Centre Est | 4 - Centre-Est
+    survey_labels: "10 - Centre Est | 10 \u2013 Centre Est | 4 - Centre-Est"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40279
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40279
     geo_year: '2015'
@@ -351,16 +721,16 @@ parameters:
     geo_name: Centre-est
     source_row: 723
   - country_entry_id: BFA-SUBNAT-03
-    survey_labels: 11 - Centre | 11 – Centre | 3 - Centre
+    survey_labels: "11 - Centre | 11 \u2013 Centre | 3 - Centre"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40278
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40278
     geo_year: '2015'
@@ -372,16 +742,16 @@ parameters:
     geo_name: Centre
     source_row: 724
   - country_entry_id: BFA-SUBNAT-04
-    survey_labels: 12 - Cascade | 12 - Cascades | 12 – Cascades | 2 - Cascades
+    survey_labels: "12 - Cascade | 12 - Cascades | 12 \u2013 Cascades | 2 - Cascades"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40277
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40277
     geo_year: '2015'
@@ -393,16 +763,16 @@ parameters:
     geo_name: Cascades
     source_row: 725
   - country_entry_id: BFA-SUBNAT-05
-    survey_labels: 13 - Centre Sud | 13 – Centre Sud | 7 - Centre-Sud
+    survey_labels: "13 - Centre Sud | 13 \u2013 Centre Sud | 7 - Centre-Sud"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40282
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40282
     geo_year: '2015'
@@ -414,17 +784,17 @@ parameters:
     geo_name: Centre-sud
     source_row: 726
   - country_entry_id: BFA-SUBNAT-06
-    survey_labels: 1 - Boucle du Mouhoum | 1 - Boucle du Mouhoun | 2 - Boucle du Mouhoun
-      | 2 – Boucle du Mouhoun
+    survey_labels: "1 - Boucle du Mouhoum | 1 - Boucle du Mouhoun | 2 - Boucle du\
+      \ Mouhoun | 2 \u2013 Boucle du Mouhoun"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40276
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40276
     geo_year: '2015'
@@ -436,16 +806,16 @@ parameters:
     geo_name: Boucle Du Mouhoun
     source_row: 727
   - country_entry_id: BFA-SUBNAT-07
-    survey_labels: 12 - Sahel | 3 - Sahel | 3 – Sahel
+    survey_labels: "12 - Sahel | 3 - Sahel | 3 \u2013 Sahel"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40287
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40287
     geo_year: '2015'
@@ -457,16 +827,16 @@ parameters:
     geo_name: Sahel
     source_row: 728
   - country_entry_id: BFA-SUBNAT-08
-    survey_labels: 4 - Est | 4 – Est | 8 - Est
+    survey_labels: "4 - Est | 4 \u2013 Est | 8 - Est"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40283
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40283
     geo_year: '2015'
@@ -478,16 +848,16 @@ parameters:
     geo_name: Est
     source_row: 729
   - country_entry_id: BFA-SUBNAT-09
-    survey_labels: 13 - Sud-Ouest | 5 - Sud Ouest | 5 – Sud Ouest
+    survey_labels: "13 - Sud-Ouest | 5 - Sud Ouest | 5 \u2013 Sud Ouest"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40288
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40288
     geo_year: '2015'
@@ -499,16 +869,16 @@ parameters:
     geo_name: Sud-ouest
     source_row: 730
   - country_entry_id: BFA-SUBNAT-10
-    survey_labels: 5 - Centre-Nord | 6 - Centre Nord | 6 – Centre Nord
+    survey_labels: "5 - Centre-Nord | 6 - Centre Nord | 6 \u2013 Centre Nord"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40280
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40280
     geo_year: '2015'
@@ -520,16 +890,16 @@ parameters:
     geo_name: Centre-nord
     source_row: 731
   - country_entry_id: BFA-SUBNAT-11
-    survey_labels: 6 - Centre-Ouest | 7 - Centre Ouest | 7 – Centre Ouest
+    survey_labels: "6 - Centre-Ouest | 7 - Centre Ouest | 7 \u2013 Centre Ouest"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40281
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40281
     geo_year: '2015'
@@ -541,16 +911,17 @@ parameters:
     geo_name: Centre-ouest
     source_row: 732
   - country_entry_id: BFA-SUBNAT-12
-    survey_labels: 11 - Plateau-Central | 8 - Plateau Central | 8 – Plateau central
+    survey_labels: "11 - Plateau-Central | 8 - Plateau Central | 8 \u2013 Plateau\
+      \ central"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40286
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40286
     geo_year: '2015'
@@ -562,16 +933,16 @@ parameters:
     geo_name: Plateau Central
     source_row: 733
   - country_entry_id: BFA-SUBNAT-13
-    survey_labels: 10 - Nord | 9 - Nord | 9 – Nord
+    survey_labels: "10 - Nord | 9 - Nord | 9 \u2013 Nord"
     survey_variables: subnatid | subnatidsurvey
     gmd_subnatid1: BFA_2015_GAUL1_40285
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: BFA_2015_GAUL1_40285
     geo_year: '2015'
@@ -584,13 +955,13 @@ parameters:
     source_row: 734
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BFA-SAN-01
     source_category_code: 8_composting
@@ -600,8 +971,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BFA-SAN-02
     source_category_code: 8_composting_toilet
@@ -611,8 +982,8 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BFA-SAN-03
     source_category_code: composting_toilet
@@ -622,19 +993,19 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BFA-SAN-04
     source_category_code: des_toilettes_a_compostage
-    national_label_en: Des toilettes à compostage
+    national_label_en: "Des toilettes \xE0 compostage"
     national_label_local: Toilettes a compostage
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BFA-SAN-05
     source_category_code: latrine_ecosan
@@ -644,597 +1015,603 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: BFA-SAN-06
     source_category_code: 3_flush_pour_flush_toilets_connected_to_elsewhere
     national_label_en: '3. Flush/pour flush toilets connected to: Elsewhere'
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BFA-SAN-07
     source_category_code: des_toilettes_a_chasse_d_eau_connectees_a_ailleurs
-    national_label_en: Des toilettes à chasse d’eau connectées à ailleurs
-    national_label_local: reliée al'air libre
+    national_label_en: "Des toilettes \xE0 chasse d\u2019eau connect\xE9es \xE0 ailleurs"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BFA-SAN-08
     source_category_code: des_toilettes_a_chasse_d_eau_connectees_a_autre_par
-    national_label_en: Des toilettes à chasse d’eau connectées à autre par
-    national_label_local: reliée al'air libre
+    national_label_en: "Des toilettes \xE0 chasse d\u2019eau connect\xE9es \xE0 autre\
+      \ par"
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BFA-SAN-09
     source_category_code: flush_pour_flush_not_to_sewer_septic_tank
     national_label_en: Flush/ pour flush not to sewer/septic tank
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BFA-SAN-10
     source_category_code: toilette_a_chasse_rue_cour_carniveau_rue
     national_label_en: 'Toilette a chasse: Rue/cour/carniveau/rue'
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: BFA-SAN-11
     source_category_code: 1_flush_pour_flush_toilets_connected_to_piped_sewer_system
     national_label_en: '1. Flush/pour flush toilets connected to: Piped sewer system'
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BFA-SAN-12
     source_category_code: 1_flush_sewer
     national_label_en: 1. flush_sewer
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BFA-SAN-13
     source_category_code: des_toilettes_a_chasse_d_eau_connectees_a_un_systeme_d_egouts
-    national_label_en: Des toilettes à chasse d’eau connectées à un système d'égoûts
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Des toilettes \xE0 chasse d\u2019eau connect\xE9es \xE0 un\
+      \ syst\xE8me d'\xE9go\xFBts"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BFA-SAN-14
     source_category_code: flush_to_piped_sewer_system
     national_label_en: Flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BFA-SAN-15
     source_category_code: flush_pour_flush_to_piped_sewer_system
     national_label_en: Flush/pour flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BFA-SAN-16
     source_category_code: toilette_a_chasse_egout
     national_label_en: 'Toilette a chasse: Egout'
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: BFA-SAN-17
     source_category_code: 13_flush_pour_flush_toilets_connected_to_pit_latrine
     national_label_en: '13. Flush/pour flush toilets connected to: Pit Latrine'
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BFA-SAN-18
     source_category_code: 13_flushpit
     national_label_en: 13. flushpit
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BFA-SAN-19
     source_category_code: des_toilettes_a_chasse_d_eau_connectees_a_latrines_a_fosse
-    national_label_en: Des toilettes à chasse d’eau connectées à latrines à fosse
-    national_label_local: reliée aux latrine
+    national_label_en: "Des toilettes \xE0 chasse d\u2019eau connect\xE9es \xE0 latrines\
+      \ \xE0 fosse"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BFA-SAN-20
     source_category_code: flush_to_pit_latrine
     national_label_en: Flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BFA-SAN-21
     source_category_code: toilette_a_chasse_fosse_etanche_fosse_simple_ecosan
     national_label_en: 'Toilette a chasse: Fosse etanche, fosse simple, ecosan'
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: BFA-SAN-22
     source_category_code: 2_flush_pour_flush_toilets_connected_to_septic_tank
     national_label_en: '2. Flush/pour flush toilets connected to: Septic tank'
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-SAN-23
     source_category_code: 2_flush_septic
     national_label_en: 2. flush_septic
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-SAN-24
     source_category_code: des_toilettes_a_chasse_d_eau_connectees_a_une_fosse_septique
-    national_label_en: Des toilettes à chasse d’eau connectées à une fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_en: "Des toilettes \xE0 chasse d\u2019eau connect\xE9es \xE0 une\
+      \ fosse septique"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-SAN-25
     source_category_code: flush_to_septic_tank
     national_label_en: Flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-SAN-26
     source_category_code: flush_pour_flush_to_septic_tank_or_pit_latrine
     national_label_en: Flush/ pour flush to septic tank or pit latrine
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-SAN-27
     source_category_code: toilette_a_chasse_fosse_septique
     national_label_en: 'Toilette a chasse: Fosse septique'
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-SAN-28
     source_category_code: 4_flush_pour_flush_toilets_connected_to_unknown_not_sure_do_not_know
     national_label_en: '4. Flush/pour flush toilets connected to: Unknown / Not sure
       / Do not know'
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BFA-SAN-29
     source_category_code: 4_flush_unknown
     national_label_en: 4. flush_unknown
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BFA-SAN-30
     source_category_code: des_toilettes_a_chasse_d_eau_connectees_a_inconnu_pas_sur_e_ne_sait_pas
-    national_label_en: Des toilettes à chasse d’eau connectées à Inconnu / Pas sûr(e)
-      / Ne sait pas
-    national_label_local: reliée a autre chose
+    national_label_en: "Des toilettes \xE0 chasse d\u2019eau connect\xE9es \xE0 Inconnu\
+      \ / Pas s\xFBr(e) / Ne sait pas"
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BFA-SAN-31
     source_category_code: flush_don_t_know_where
     national_label_en: Flush, don't know where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BFA-SAN-32
     source_category_code: flush_pour_flush_to_unknown
     national_label_en: Flush/pour flush to unknown
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: BFA-SAN-33
     source_category_code: toilette_a_chasse_d_eau_mecanique_ou_manuelle
-    national_label_en: Toilette à chasse d'eau mécanique ou manuelle
-    national_label_local: Toilette à chasse d'eau
+    national_label_en: "Toilette \xE0 chasse d'eau m\xE9canique ou manuelle"
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-SAN-34
     source_category_code: w_c_avec_chasse_d_eau
     national_label_en: W,C, avec chasse d'eau
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-SAN-35
     source_category_code: wc
     national_label_en: WC
-    national_label_local: Toilette à chasse d'eau
+    national_label_local: "Toilette \xE0 chasse d'eau"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-SAN-36
     source_category_code: chasse_d_eau_personnelle
     national_label_en: Chasse d'eau personnelle
-    national_label_local: Toilette à chasse d'eau (privée)
+    national_label_local: "Toilette \xE0 chasse d'eau (priv\xE9e)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: BFA-SAN-37
     source_category_code: wc
     national_label_en: WC
-    national_label_local: Toilette à chasse d'eau (privée)
+    national_label_local: "Toilette \xE0 chasse d'eau (priv\xE9e)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: BFA-SAN-38
     source_category_code: chasse_d_eau_chasse_manuelle_connectee_a_un_systeme_d_egout_non_partagees_np
-    national_label_en: Chasse d'eau/chasse manuelle connectée à un système d'égout
-      (non partagees - NP)
-    national_label_local: reliée a systeme d'egouts
+    national_label_en: "Chasse d'eau/chasse manuelle connect\xE9e \xE0 un syst\xE8\
+      me d'\xE9gout (non partagees - NP)"
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: BFA-SAN-39
     source_category_code: private_domestic_connection_to_sewage_system
     national_label_en: Private domestic connection to sewage system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: BFA-SAN-40
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_manuelle_reliee_a_une_fosse_d_aisances_np
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse manuelle reliée
-      à une fosse d'aisances (NP)
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse manuelle\
+      \ reli\xE9e \xE0 une fosse d'aisances (NP)"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > Private flush/toilet > to pit
     jmp_id: flush_toilets.private_flush_toilet.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 75
   - country_entry_id: BFA-SAN-41
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique_np
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique NP
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse septique\
+      \ NP"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: BFA-SAN-42
     source_category_code: private_flush_to_septic_tank
     national_label_en: Private flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: BFA-SAN-43
     source_category_code: chasse_d_eau_commune
     national_label_en: Chasse d'eau commune
-    national_label_local: Toilette à chasse d'eau (publique/partagée)
+    national_label_local: "Toilette \xE0 chasse d'eau (publique/partag\xE9e)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: BFA-SAN-44
     source_category_code: toilettes_publiques
     national_label_en: Toilettes publiques
-    national_label_local: Toilette à chasse d'eau (publique/partagée)
+    national_label_local: "Toilette \xE0 chasse d'eau (publique/partag\xE9e)"
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: BFA-SAN-45
     source_category_code: shared_domestic_connection_to_sewage_system
     national_label_en: Shared domestic connection to sewage system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
       system
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: BFA-SAN-46
     source_category_code: chasse_d_eau_chasse_manuelle_relie_a_une_fosse_d_aisances_p
-    national_label_en: Chasse d'eau/chasse manuelle relié à une fosse d'aisances P
-    national_label_local: reliée aux latrine
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9 \xE0 une fosse d'aisances\
+      \ P"
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to pit
     jmp_id: flush_toilets.public_shared_flush_toilet.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 81
   - country_entry_id: BFA-SAN-47
     source_category_code: chasse_d_eau_chasse_manuelle_reliee_a_une_fosse_septique_partagees_p
-    national_label_en: Chasse d'eau/chasse manuelle reliée à une fosse septique (Partagees
-      - P)
-    national_label_local: reliée a fosse septique
+    national_label_en: "Chasse d'eau/chasse manuelle reli\xE9e \xE0 une fosse septique\
+      \ (Partagees - P)"
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: BFA-SAN-48
     source_category_code: shared_flush_to_septic_tank
     national_label_en: Shared flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: BFA-SAN-49
     source_category_code: flush_to_somewhere_else
     national_label_en: flush to somewhere else
-    national_label_local: reliée al'air libre
+    national_label_local: "reli\xE9e al'air libre"
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BFA-SAN-50
     source_category_code: flush_to_piped_sewer_system
     national_label_en: flush to piped sewer system
-    national_label_local: reliée a systeme d'egouts
+    national_label_local: "reli\xE9e a systeme d'egouts"
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BFA-SAN-51
     source_category_code: chasse_branchee_a_latrines
     national_label_en: Chasse branchee a latrines
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BFA-SAN-52
     source_category_code: flush_to_pit_latrine
     national_label_en: flush to pit latrine
-    national_label_local: reliée aux latrine
+    national_label_local: "reli\xE9e aux latrine"
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BFA-SAN-53
     source_category_code: chasse_avec_fosse_septique
     national_label_en: Chasse avec fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BFA-SAN-54
     source_category_code: chasse_branchee_a_fosse_septique
     national_label_en: Chasse branchee a fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BFA-SAN-55
     source_category_code: flush_to_septic_tank
     national_label_en: flush to septic tank
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BFA-SAN-56
     source_category_code: fosse_sceptique
     national_label_en: fosse sceptique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BFA-SAN-57
     source_category_code: fosse_septique
     national_label_en: Fosse septique
-    national_label_local: reliée a fosse septique
+    national_label_local: "reli\xE9e a fosse septique"
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: BFA-SAN-58
     source_category_code: flush_don_t_know_where
     national_label_en: flush, don't know where
-    national_label_local: reliée a autre chose
+    national_label_local: "reli\xE9e a autre chose"
     jmp_classification: Flush/toilets > to unknown place/ not sure/DK
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-SAN-59
     source_category_code: 9_bucket
@@ -1244,8 +1621,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BFA-SAN-60
     source_category_code: bucket
@@ -1255,8 +1632,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BFA-SAN-61
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -1266,8 +1643,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BFA-SAN-62
     source_category_code: bucket_toilet
@@ -1277,8 +1654,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BFA-SAN-63
     source_category_code: un_seau
@@ -1288,8 +1665,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: BFA-SAN-64
     source_category_code: 10_hanging_toilet_hanging_latrine
@@ -1300,8 +1677,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BFA-SAN-65
     source_category_code: des_toilettes_ou_des_latrines_suspendues
@@ -1312,8 +1689,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BFA-SAN-66
     source_category_code: hanging_toilet_hanging_latrine
@@ -1324,8 +1701,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BFA-SAN-67
     source_category_code: hanging_toilet_latrine
@@ -1336,8 +1713,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: BFA-SAN-68
     source_category_code: 11_other
@@ -1347,19 +1724,19 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: BFA-SAN-69
     source_category_code: latrine_trad_rehabilitee
-    national_label_en: Latrine trad. réhabilitée
+    national_label_en: "Latrine trad. r\xE9habilit\xE9e"
     national_label_local: Autre
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: BFA-SAN-70
     source_category_code: 6_pit_latrine_with_slab
@@ -1370,8 +1747,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-71
     source_category_code: 6_pit_with_slab
@@ -1382,8 +1759,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-72
     source_category_code: fosse_latrines_ameliorees_ventilated_improved_pit_latrine
@@ -1394,8 +1771,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-73
     source_category_code: latrine_samplat_traditionelle_avec_dalle
@@ -1406,8 +1783,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-74
     source_category_code: latrine_traditionnelle_avec_dalle_ou_samplat
@@ -1418,20 +1795,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-75
     source_category_code: latrines_a_fosse_avec_dalle
-    national_label_en: Latrines à fosse avec dalle
+    national_label_en: "Latrines \xE0 fosse avec dalle"
     national_label_local: Latrine a fosse avec dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-76
     source_category_code: latrines_couvertes
@@ -1442,8 +1819,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-77
     source_category_code: pit_latrine_with_slab
@@ -1454,8 +1831,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-SAN-78
     source_category_code: 7_pit_latrine_without_slab_open_pit
@@ -1466,8 +1843,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-79
     source_category_code: 7_pit_no_slab
@@ -1478,8 +1855,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-80
     source_category_code: fosse_d_aisances_sans_dalle_trou_ouvert_dalle_trou_ouvert_np_p
@@ -1490,8 +1867,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-81
     source_category_code: fosse_latrines_rudimentaires_traditionnal_latrine
@@ -1502,8 +1879,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-82
     source_category_code: latrine_traditionnelle_sans_dalle
@@ -1514,20 +1891,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-83
     source_category_code: latrines_a_fosse_sans_dalle
-    national_label_en: Latrines à fosse sans dalle
+    national_label_en: "Latrines \xE0 fosse sans dalle"
     national_label_local: Latrine a fosse sans dalle
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-84
     source_category_code: pit_latrine_without_slab_bucket_toilet
@@ -1538,8 +1915,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-85
     source_category_code: pit_latrine_without_slab_open_pit
@@ -1550,8 +1927,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-86
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -1562,8 +1939,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: BFA-SAN-87
     source_category_code: latrine_ordinaire
@@ -1574,8 +1951,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BFA-SAN-88
     source_category_code: latrine_traditionelle_sans_dalle
@@ -1586,8 +1963,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BFA-SAN-89
     source_category_code: latrines_a_fosses_trou_ouvert
@@ -1598,8 +1975,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BFA-SAN-90
     source_category_code: latrines_simples
@@ -1610,8 +1987,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BFA-SAN-91
     source_category_code: latrines
@@ -1622,150 +1999,150 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: BFA-SAN-92
     source_category_code: 5_ventilated_improved_pit_latrine
     national_label_en: 5. Ventilated improved pit latrine
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-93
     source_category_code: 5_vip
     national_label_en: 5. vip
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-94
     source_category_code: latrine_a_fosse_ventilee
-    national_label_en: Latrine à fosse ventilée
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrine \xE0 fosse ventil\xE9e"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-95
     source_category_code: latrine_vip
     national_label_en: latrine vip
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-96
     source_category_code: latrines_ameliorees_auto_aerees_laa
     national_label_en: Latrines ameliorees auto aerees (LAA)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-97
     source_category_code: latrines_ventilees
     national_label_en: Latrines ventilees
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-98
     source_category_code: latrines_ventilees_ameliorees
-    national_label_en: Latrines ventilées améliorées
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Latrines ventil\xE9es am\xE9lior\xE9es"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-99
     source_category_code: ventilated_improved_pit_latrine
     national_label_en: Ventilated improved pit latrine
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-100
     source_category_code: ventilated_improved_pit_latrine_vip
     national_label_en: ventilated improved pit latrine (vip)
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-101
     source_category_code: vip_fosse
     national_label_en: VIP fosse
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: BFA-SAN-102
     source_category_code: latrine_privee
-    national_label_en: Latrine privée
-    national_label_local: Latrines privées
+    national_label_en: "Latrine priv\xE9e"
+    national_label_local: "Latrines priv\xE9es"
     jmp_classification: Latrines > Dry latrines > Private Latrines
     jmp_id: latrines.dry_latrines.private_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 112
   - country_entry_id: BFA-SAN-103
     source_category_code: latrines_privees
-    national_label_en: Latrines privées
-    national_label_local: Latrines privées
+    national_label_en: "Latrines priv\xE9es"
+    national_label_local: "Latrines priv\xE9es"
     jmp_classification: Latrines > Dry latrines > Private Latrines
     jmp_id: latrines.dry_latrines.private_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 112
   - country_entry_id: BFA-SAN-104
     source_category_code: fosse_d_aisances_avec_dalle_np
@@ -1776,8 +2153,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: BFA-SAN-105
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -1788,8 +2165,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: BFA-SAN-106
     source_category_code: private_covered_latrine
@@ -1800,8 +2177,8 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: BFA-SAN-107
     source_category_code: private_uncovered_latrine
@@ -1812,42 +2189,42 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 116
   - country_entry_id: BFA-SAN-108
     source_category_code: fosse_d_aisances_amelioree_auto_aeree_np
-    national_label_en: Fosse d'aisances améliorée auto-aérée NP
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d'aisances am\xE9lior\xE9e auto-a\xE9r\xE9e NP"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Private Latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 113
   - country_entry_id: BFA-SAN-109
     source_category_code: latrine_privee_partagee_latrine_publique
-    national_label_en: Latrine privée partagée & Latrine publique
-    national_label_local: Latrines publiques/partagées
+    national_label_en: "Latrine priv\xE9e partag\xE9e & Latrine publique"
+    national_label_local: "Latrines publiques/partag\xE9es"
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines
     jmp_id: latrines.dry_latrines.public_shared_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 120
   - country_entry_id: BFA-SAN-110
     source_category_code: latrines_communes
     national_label_en: Latrines communes
-    national_label_local: Latrines publiques/partagées
+    national_label_local: "Latrines publiques/partag\xE9es"
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines
     jmp_id: latrines.dry_latrines.public_shared_latrines
     gmd_target: ''
     gmd_spans: vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 120
   - country_entry_id: BFA-SAN-111
     source_category_code: fosse_d_aisances_avec_dalle_p
@@ -1858,8 +2235,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: BFA-SAN-112
     source_category_code: neighbour_s_or_communal_latrine
@@ -1870,8 +2247,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: BFA-SAN-113
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -1882,8 +2259,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: BFA-SAN-114
     source_category_code: neighbour_s_or_communal_uncovered_latrine
@@ -1894,65 +2271,65 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 124
   - country_entry_id: BFA-SAN-115
     source_category_code: fosse_d_aisances_amelioree_auto_aeree_p
-    national_label_en: Fosse d'aisances améliorée auto-aérée P
-    national_label_local: Latrine a fosse ameliorée ventilée
+    national_label_en: "Fosse d'aisances am\xE9lior\xE9e auto-a\xE9r\xE9e P"
+    national_label_local: "Latrine a fosse amelior\xE9e ventil\xE9e"
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
       Improved Pit latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 121
   - country_entry_id: BFA-SAN-116
     source_category_code: latrine_a_chasse_manuelle
-    national_label_en: Latrine à chasse manuelle
-    national_label_local: Latrines à chasse d'eau
+    national_label_en: "Latrine \xE0 chasse manuelle"
+    national_label_local: "Latrines \xE0 chasse d'eau"
     jmp_classification: Latrines > Pour flush latrines
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BFA-SAN-117
     source_category_code: toilette_a_chasse_manuelle
-    national_label_en: toilette à chasse manuelle
-    national_label_local: Latrines à chasse d'eau
+    national_label_en: "toilette \xE0 chasse manuelle"
+    national_label_local: "Latrines \xE0 chasse d'eau"
     jmp_classification: Latrines > Pour flush latrines
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: BFA-SAN-118
     source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
-    national_label_local: Latrines à chasse d'eau (privées)
+    national_label_local: "Latrines \xE0 chasse d'eau (priv\xE9es)"
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: BFA-SAN-119
     source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
-    national_label_local: Latrines à chasse d'eau (publiques/partagées)
+    national_label_local: "Latrines \xE0 chasse d'eau (publiques/partag\xE9es)"
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
       latrine
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: BFA-SAN-120
     source_category_code: 12_bush
@@ -1962,8 +2339,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-121
     source_category_code: 12_no_facility_bush_field
@@ -1973,8 +2350,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-122
     source_category_code: dans_la_nature
@@ -1984,20 +2361,21 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-123
     source_category_code: defecation_a_l_air_libre_dal_dans_zone_precise_et_amenagee_bache_pelle_sans_zone_precise_dans_une_zone_precise_non_amenagee
-    national_label_en: Défécation à l'air libre (DAL) dans zone précise et aménagée
-      (bâche, pelle, …)/sans zone précise/dans une zone précise non aménagée
+    national_label_en: "D\xE9f\xE9cation \xE0 l'air libre (DAL) dans zone pr\xE9cise\
+      \ et am\xE9nag\xE9e (b\xE2che, pelle, \u2026)/sans zone pr\xE9cise/dans une\
+      \ zone pr\xE9cise non am\xE9nag\xE9e"
     national_label_local: Pas de toilette/nature/plein air
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-124
     source_category_code: no_facilities_open_defecation
@@ -2007,8 +2385,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-125
     source_category_code: no_facility_bush_field
@@ -2018,8 +2396,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-126
     source_category_code: no_toilet
@@ -2029,8 +2407,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-127
     source_category_code: non_pas_disponible
@@ -2040,8 +2418,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-128
     source_category_code: pas_de_toilettes
@@ -2051,8 +2429,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-129
     source_category_code: pas_de_toilettes_buissons_nature
@@ -2062,8 +2440,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-130
     source_category_code: pas_de_toilettes_ou_brousse_ou_champ
@@ -2073,8 +2451,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-131
     source_category_code: pas_de_toilettes_nature
@@ -2084,8 +2462,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: BFA-SAN-132
     source_category_code: autre
@@ -2095,19 +2473,19 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BFA-SAN-133
     source_category_code: autre_a_preciser
-    national_label_en: autre à preciser
+    national_label_en: "autre \xE0 preciser"
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BFA-SAN-134
     source_category_code: autres
@@ -2117,19 +2495,19 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BFA-SAN-135
     source_category_code: autres_merci_de_preciser
-    national_label_en: Autres (merci de préciser)
+    national_label_en: "Autres (merci de pr\xE9ciser)"
     national_label_local: Autre
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BFA-SAN-136
     source_category_code: other
@@ -2139,8 +2517,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BFA-SAN-137
     source_category_code: other_installations
@@ -2150,8 +2528,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: BFA-SAN-138
     source_category_code: other_type_of_sanitation
@@ -2161,18 +2539,18 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BFA_Burkina_Faso_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: BFA-WAS-01
     source_category_code: source
@@ -2182,8 +2560,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: BFA-WAS-02
     source_category_code: public_well
@@ -2193,294 +2571,294 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: BFA-WAS-03
     source_category_code: 7_protected_spring
     national_label_en: 7. protected_spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-04
     source_category_code: 7_water_from_spring_protected_spring
     national_label_en: '7. Water from Spring: Protected Spring'
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-05
     source_category_code: eau_de_source_source_protegee
-    national_label_en: 'Eau de source : Source protégée'
-    national_label_local: Source protégées
+    national_label_en: "Eau de source : Source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-06
     source_category_code: eau_de_source_protegee
-    national_label_en: Eau de source protégée
-    national_label_local: Source protégées
+    national_label_en: "Eau de source prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-07
     source_category_code: protected_spring
     national_label_en: protected spring
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-08
     source_category_code: source_amenagee
-    national_label_en: Source aménagée
-    national_label_local: Source protégées
+    national_label_en: "Source am\xE9nag\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-09
     source_category_code: source_d_eau_protegee
-    national_label_en: Source d'eau protégée
-    national_label_local: Source protégées
+    national_label_en: "Source d'eau prot\xE9g\xE9e"
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-10
     source_category_code: source_protegee
     national_label_en: Source protegee
-    national_label_local: Source protégées
+    national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: BFA-WAS-11
     source_category_code: 5_dug_well_protected_well
     national_label_en: '5. Dug Well: Protected Well'
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-12
     source_category_code: 5_protected_dug_well
     national_label_en: 5. protected_dug_well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-13
     source_category_code: dug_well_protected
     national_label_en: 'Dug Well: Protected'
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-14
     source_category_code: protected_well
     national_label_en: protected well
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-15
     source_category_code: puits_amenage_protege
-    national_label_en: Puits aménagé / protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits am\xE9nag\xE9 / prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-16
     source_category_code: puits_buses
-    national_label_en: Puits busés
-    national_label_local: Puits protegées
+    national_label_en: "Puits bus\xE9s"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-17
     source_category_code: puits_buses_simples_et_fermes
-    national_label_en: Puits busés simples et fermés
-    national_label_local: Puits protegées
+    national_label_en: "Puits bus\xE9s simples et ferm\xE9s"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-18
     source_category_code: puits_creuse_puits_protege
-    national_label_en: 'Puits creusé : puits protégé'
-    national_label_local: Puits protegées
+    national_label_en: "Puits creus\xE9 : puits prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-19
     source_category_code: puits_creuse_protege
-    national_label_en: Puits creusé protégé
-    national_label_local: Puits protegées
+    national_label_en: "Puits creus\xE9 prot\xE9g\xE9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-20
     source_category_code: puits_prota_ga
-    national_label_en: Puits protÃ©gÃ©
-    national_label_local: Puits protegées
+    national_label_en: "Puits prot\xC3\xA9g\xC3\xA9"
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-21
     source_category_code: puits_protege
     national_label_en: Puits protege
-    national_label_local: Puits protegées
+    national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: BFA-WAS-22
     source_category_code: puits_buse_ordinaire_equipe_d_un_systeme_de_pompage
-    national_label_en: Puits busé ordinaire équipé d?un système de pompage
+    national_label_en: "Puits bus\xE9 ordinaire \xE9quip\xE9 d?un syst\xE8me de pompage"
     national_label_local: Autre
     jmp_classification: Ground water > Protected well > Other
     jmp_id: ground_water.protected_well.other
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BFA-WAS-23
     source_category_code: puits_buse_ordinaires
-    national_label_en: puits busé ordinaires
+    national_label_en: "puits bus\xE9 ordinaires"
     national_label_local: Autre
     jmp_classification: Ground water > Protected well > Other
     jmp_id: ground_water.protected_well.other
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: BFA-WAS-24
     source_category_code: puits_protege_dans_logement_cour
-    national_label_en: Puits protégé dans logement / cour
-    national_label_local: Privé
+    national_label_en: "Puits prot\xE9g\xE9 dans logement / cour"
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Protected well > Private
     jmp_id: ground_water.protected_well.private
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: BFA-WAS-25
     source_category_code: puits_buse_ord_avec_systeme_de_pompage
-    national_label_en: puits busé ord avec systeme de pompage
+    national_label_en: "puits bus\xE9 ord avec systeme de pompage"
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: BFA-WAS-26
     source_category_code: puits_buse_ordinaire
-    national_label_en: Puits busé ordinaire
+    national_label_en: "Puits bus\xE9 ordinaire"
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: BFA-WAS-27
     source_category_code: puits_public_protege
-    national_label_en: Puits public protégé
+    national_label_en: "Puits public prot\xE9g\xE9"
     national_label_local: Public
     jmp_classification: Ground water > Protected well > Public
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: BFA-WAS-28
     source_category_code: protected_dug_well_or_protected_spring
     national_label_en: Protected dug well or protected spring
-    national_label_local: Puits ou sources protégées
+    national_label_local: "Puits ou sources prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: BFA-WAS-29
     source_category_code: puits
@@ -2490,19 +2868,19 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: BFA-WAS-30
     source_category_code: puits_traditionnel_dans_cours
     national_label_en: Puits traditionnel dans cours*
-    national_label_local: Privé
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Traditional wells > Private
     jmp_id: ground_water.traditional_wells.private
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 63
   - country_entry_id: BFA-WAS-31
     source_category_code: puits_traditionnel_public
@@ -2512,8 +2890,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: BFA-WAS-32
     source_category_code: 4_tube_well_or_borehole
@@ -2523,8 +2901,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-33
     source_category_code: 4_tubewell
@@ -2534,8 +2912,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-34
     source_category_code: forage
@@ -2545,19 +2923,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-35
     source_category_code: forage_avec_une_pmh_pompe_a_motricite_humaine
-    national_label_en: Forage avec une PMH (Pompe à Motricité Humaine)
+    national_label_en: "Forage avec une PMH (Pompe \xE0 Motricit\xE9 Humaine)"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-36
     source_category_code: forage_bore_hole
@@ -2567,8 +2945,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-37
     source_category_code: forages
@@ -2578,8 +2956,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-38
     source_category_code: protected_tube_well_or_bore_hole
@@ -2589,19 +2967,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-39
     source_category_code: puits_a_pompe_ou_forage
-    national_label_en: Puits à pompe ou forage
+    national_label_en: "Puits \xE0 pompe ou forage"
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-40
     source_category_code: puits_a_pompe_forage
@@ -2611,8 +2989,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-41
     source_category_code: puits_tubulaire_ou_forage
@@ -2622,8 +3000,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-42
     source_category_code: tube_well_or_borehole
@@ -2633,8 +3011,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-43
     source_category_code: tubewell_borehole
@@ -2644,8 +3022,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-44
     source_category_code: tubewell_bore_hole
@@ -2655,217 +3033,217 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: BFA-WAS-45
     source_category_code: 8_unprotected_spring
     national_label_en: 8. unprotected_spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-46
     source_category_code: 8_water_from_spring_unprotected_spring
     national_label_en: '8. Water from Spring: Unprotected Spring'
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-47
     source_category_code: eau_de_source_source_non_protegee
-    national_label_en: 'Eau de source : Source non protégée'
-    national_label_local: Source non-protégées
+    national_label_en: "Eau de source : Source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-48
     source_category_code: eau_de_source_non_prota_ga_e
-    national_label_en: Eau de source non protÃ©gÃ©e
-    national_label_local: Source non-protégées
+    national_label_en: "Eau de source non prot\xC3\xA9g\xC3\xA9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-49
     source_category_code: eau_de_source_non_protegee
-    national_label_en: Eau de source non protégée
-    national_label_local: Source non-protégées
+    national_label_en: "Eau de source non prot\xE9g\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-50
     source_category_code: puits_creuse_non_protege
-    national_label_en: Puits creusé non protégé
-    national_label_local: Source non-protégées
+    national_label_en: "Puits creus\xE9 non prot\xE9g\xE9"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-51
     source_category_code: source_non_amenagee
-    national_label_en: Source non aménagée
-    national_label_local: Source non-protégées
+    national_label_en: "Source non am\xE9nag\xE9e"
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-52
     source_category_code: source_non_protegee
     national_label_en: Source non protegee
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-53
     source_category_code: unprotected_spring
     national_label_en: unprotected spring
-    national_label_local: Source non-protégées
+    national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: BFA-WAS-54
     source_category_code: 6_dug_well_unprotected_well
     national_label_en: '6. Dug Well: Unprotected Well'
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-55
     source_category_code: 6_unprotected_dug_well
     national_label_en: 6. unprotected_dug_well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-56
     source_category_code: dug_well_unprotected
     national_label_en: 'Dug Well: Unprotected'
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-57
     source_category_code: puits_creuse_puits_non_protege
-    national_label_en: 'Puits creusé : puits non protégé'
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits creus\xE9 : puits non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-58
     source_category_code: puits_non_prota_ga
-    national_label_en: Puits non protÃ©gÃ©
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits non prot\xC3\xA9g\xC3\xA9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-59
     source_category_code: puits_non_protege
     national_label_en: Puits non protege
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-60
     source_category_code: puits_ordinaire
     national_label_en: Puits ordinaire
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-61
     source_category_code: puits_ordinaires
     national_label_en: Puits ordinaires
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-62
     source_category_code: puits_traditionnel_non_protege
-    national_label_en: Puits traditionnel / non protégé
-    national_label_local: Puits non-protegées
+    national_label_en: "Puits traditionnel / non prot\xE9g\xE9"
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-63
     source_category_code: unprotected_well
     national_label_en: unprotected well
-    national_label_local: Puits non-protegées
+    national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: BFA-WAS-64
     source_category_code: puits_ordinaires
@@ -2875,19 +3253,19 @@ parameters:
     jmp_id: ground_water.unprotected_well.other
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 73
   - country_entry_id: BFA-WAS-65
     source_category_code: puits_ouvert_dans_logement_cour
     national_label_en: Puits ouvert dans logement / cour
-    national_label_local: Privé
+    national_label_local: "Priv\xE9"
     jmp_classification: Ground water > Unprotected well > Private
     jmp_id: ground_water.unprotected_well.private
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: BFA-WAS-66
     source_category_code: puits_public_ouvert
@@ -2897,96 +3275,97 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: BFA-WAS-67
     source_category_code: unprotected_dug_well_or_spring
     national_label_en: Unprotected dug well or spring
-    national_label_local: Puits ou sources non protégées
+    national_label_local: "Puits ou sources non prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected wells or springs
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: BFA-WAS-68
     source_category_code: 11_cart
     national_label_en: 11. cart
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-69
     source_category_code: 11_cart_with_small_tank
     national_label_en: 11. Cart with Small Tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-70
     source_category_code: acheta_e_da_tmun_chariot_avec_un_petit_ra_servoir_ou_tambour
-    national_label_en: AchetÃ©e dâ€™un chariot avec un petit rÃ©servoir ou tambour
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_en: "Achet\xC3\xA9e d\xE2\u20AC\u2122un chariot avec un petit r\xC3\
+      \xA9servoir ou tambour"
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-71
     source_category_code: camion_citerne_charrette_avec_petite_citerne
     national_label_en: Camion citerne/charrette avec petite citerne
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-72
     source_category_code: cart_with_small_tank
     national_label_en: cart with small tank
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-73
     source_category_code: charrette_avec_petite_citerne
     national_label_en: Charrette avec petite citerne
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-74
     source_category_code: charrette_avec_petite_citerne_tonneau
     national_label_en: Charrette avec petite citerne/tonneau
-    national_label_local: Chariot avec petit réservoir/tambour
+    national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: BFA-WAS-75
     source_category_code: autonomous_water_station
@@ -2996,8 +3375,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: BFA-WAS-76
     source_category_code: 10_tanker_truck
@@ -3007,8 +3386,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-77
     source_category_code: camion_citerne
@@ -3018,8 +3397,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-78
     source_category_code: eau_camion
@@ -3029,8 +3408,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-79
     source_category_code: tanker_truck
@@ -3040,8 +3419,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-80
     source_category_code: tanker_truck_vendor
@@ -3051,8 +3430,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-81
     source_category_code: vendeur_d_eau
@@ -3062,8 +3441,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-82
     source_category_code: vendor
@@ -3073,19 +3452,19 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: BFA-WAS-83
     source_category_code: a_refusa
-    national_label_en: A refusÃ©
+    national_label_en: "A refus\xC3\xA9"
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-84
     source_category_code: autre
@@ -3095,30 +3474,30 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-85
     source_category_code: autre_a_preciser
-    national_label_en: Autre à préciser
+    national_label_en: "Autre \xE0 pr\xE9ciser"
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-86
     source_category_code: autre_precisez
-    national_label_en: Autre, précisez
+    national_label_en: "Autre, pr\xE9cisez"
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-87
     source_category_code: autres
@@ -3128,19 +3507,19 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-88
     source_category_code: autres_a_preciser
-    national_label_en: autres à preciser
+    national_label_en: "autres \xE0 preciser"
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-89
     source_category_code: other
@@ -3150,8 +3529,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-90
     source_category_code: other_not_defined
@@ -3161,8 +3540,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: BFA-WAS-91
     source_category_code: 13_bottled
@@ -3172,8 +3551,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BFA-WAS-92
     source_category_code: 13_bottled_water
@@ -3183,8 +3562,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BFA-WAS-93
     source_category_code: bottled_water
@@ -3194,8 +3573,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BFA-WAS-94
     source_category_code: eau_bout
@@ -3205,8 +3584,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BFA-WAS-95
     source_category_code: eau_en_bouteille
@@ -3216,8 +3595,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: BFA-WAS-96
     source_category_code: 14_sachet
@@ -3227,8 +3606,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BFA-WAS-97
     source_category_code: 14_sachet_water
@@ -3238,8 +3617,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BFA-WAS-98
     source_category_code: eau_en_sachet
@@ -3249,8 +3628,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BFA-WAS-99
     source_category_code: sachet_water
@@ -3260,8 +3639,8 @@ parameters:
     jmp_id: packaged_water.sachet_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 91
   - country_entry_id: BFA-WAS-100
     source_category_code: 9_rainwater
@@ -3271,52 +3650,52 @@ parameters:
     jmp_id: rainwater
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: BFA-WAS-101
     source_category_code: collecte_da_tmeau_de_pluie
-    national_label_en: Collecte dâ€™eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_en: "Collecte d\xE2\u20AC\u2122eau de pluie"
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BFA-WAS-102
     source_category_code: eau_de_pluie
     national_label_en: Eau de pluie
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BFA-WAS-103
     source_category_code: rainwater
     national_label_en: rainwater
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BFA-WAS-104
     source_category_code: rainwater_into_tank_or_cistern
     national_label_en: Rainwater (into tank or cistern )
-    national_label_local: Citerne/réservoir couvert
+    national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: BFA-WAS-105
     source_category_code: 12_surface_water
@@ -3326,8 +3705,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-106
     source_category_code: 12_surface_water
@@ -3337,19 +3716,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-107
     source_category_code: barrage_riviere_lac
-    national_label_en: Barrage, rivière, lac
+    national_label_en: "Barrage, rivi\xE8re, lac"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-108
     source_category_code: barrage_rivieres_cours_d_eau_lac
@@ -3359,19 +3738,19 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-109
     source_category_code: barrage_riviere_cours_d_eau_lac
-    national_label_en: Barrage/rivière/cours d?eau/lac
+    national_label_en: "Barrage/rivi\xE8re/cours d?eau/lac"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-110
     source_category_code: cours_d_eau
@@ -3381,19 +3760,20 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-111
     source_category_code: cours_d_eau_fleuve_riviere_ruisseau_eau_de_surface_etc
-    national_label_en: Cours d'eau (fleuve, rivière, ruisseau, eau de surface, etc.)
+    national_label_en: "Cours d'eau (fleuve, rivi\xE8re, ruisseau, eau de surface,\
+      \ etc.)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-112
     source_category_code: eau_de_surface
@@ -3403,33 +3783,32 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-113
     source_category_code: eau_de_surface_riviere_barrage_lac_bassin_cours_d_eau_canal_canaux_d_irrigation
-    national_label_en: |-
-      Eau de surface (rivière / barrage / lac / bassin
-      / cours d'eau / canal / canaux d'irrigation)
+    national_label_en: "Eau de surface (rivi\xE8re / barrage / lac / bassin\n/ cours\
+      \ d'eau / canal / canaux d'irrigation)"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-114
     source_category_code: eau_de_surface_telle_que_riviere_barrage_lac_etang_ruisseau_canal_ou_canaux_d_irrigation
-    national_label_en: Eau de surface, telle que rivière, barrage, lac, étang, ruisseau,
-      canal ou canaux d’irrigation
+    national_label_en: "Eau de surface, telle que rivi\xE8re, barrage, lac, \xE9tang,\
+      \ ruisseau, canal ou canaux d\u2019irrigation"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-115
     source_category_code: reservoir_river
@@ -3439,8 +3818,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-116
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -3450,30 +3829,30 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-117
     source_category_code: riviere_cours_d_eau
-    national_label_en: Rivière, cours d'eau
+    national_label_en: "Rivi\xE8re, cours d'eau"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-118
     source_category_code: riviere_cours_d_eau_lac
-    national_label_en: Rivière, cours d'eau, lac
+    national_label_en: "Rivi\xE8re, cours d'eau, lac"
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-119
     source_category_code: surface_water
@@ -3483,8 +3862,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-120
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -3494,8 +3873,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: BFA-WAS-121
     source_category_code: barrage
@@ -3505,41 +3884,41 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: BFA-WAS-122
     source_category_code: mare_lac
     national_label_en: Mare/lac
-    national_label_local: Étang
+    national_label_local: "\xC9tang"
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: BFA-WAS-123
     source_category_code: mare_lac_barrage
     national_label_en: Mare/lac/barrage
-    national_label_local: Étang
+    national_label_local: "\xC9tang"
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 96
   - country_entry_id: BFA-WAS-124
     source_category_code: fleuve_riviere
-    national_label_en: Fleuve/rivière
+    national_label_en: "Fleuve/rivi\xE8re"
     national_label_local: Fleuve
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BFA-WAS-125
     source_category_code: source_riviere_fleuve
@@ -3549,8 +3928,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: BFA-WAS-126
     source_category_code: piped_from_the_neighbor
@@ -3560,8 +3939,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BFA-WAS-127
     source_category_code: piped_to_neighbor
@@ -3571,8 +3950,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BFA-WAS-128
     source_category_code: poste_d_eau_autonome_robinets_publics
@@ -3582,8 +3961,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BFA-WAS-129
     source_category_code: robinet_dans_une_autre_cour
@@ -3593,31 +3972,31 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BFA-WAS-130
     source_category_code: robinet_interieur_partage
-    national_label_en: Robinet intérieur partagé
+    national_label_en: "Robinet int\xE9rieur partag\xE9"
     national_label_local: Autre
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BFA-WAS-131
     source_category_code: robinet_compteur_interieur_partage_ou_robinet_dans_une_autre_cours
-    national_label_en: robinet-compteur interieur partagé ou robinet dans une autre
-      cours
+    national_label_en: "robinet-compteur interieur partag\xE9 ou robinet dans une\
+      \ autre cours"
     national_label_local: Autre
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: BFA-WAS-132
     source_category_code: piped_water_through_house_connection_or_yard
@@ -3627,8 +4006,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BFA-WAS-133
     source_category_code: private_tap
@@ -3638,8 +4017,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: BFA-WAS-134
     source_category_code: 1_piped_water_piped_into_dwelling_indoor
@@ -3649,8 +4028,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-135
     source_category_code: 1_piped_indoor
@@ -3660,8 +4039,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-136
     source_category_code: eau_de_robinet_dns_le_logement
@@ -3671,8 +4050,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-137
     source_category_code: eau_du_robinet_dans_concession
@@ -3682,21 +4061,20 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-138
     source_category_code: eau_du_robinet_robinet_dans_le_logement_a_l_interieur
-    national_label_en: |-
-      Eau du robinet: Robinet dans le logement/à
-      l’intérieur
+    national_label_en: "Eau du robinet: Robinet dans le logement/\xE0\nl\u2019int\xE9\
+      rieur"
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-139
     source_category_code: piped_into_dwelling
@@ -3706,8 +4084,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-140
     source_category_code: robinet_dans_la_maison
@@ -3717,8 +4095,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-141
     source_category_code: robinet_dans_le_logement
@@ -3728,8 +4106,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-142
     source_category_code: robinet_dans_logement_concession
@@ -3739,30 +4117,30 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-143
     source_category_code: robinet_interieur_prive
-    national_label_en: Robinet intérieur privé
+    national_label_en: "Robinet int\xE9rieur priv\xE9"
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-144
     source_category_code: robinet_interieur_propre
-    national_label_en: Robinet intérieur propre
+    national_label_en: "Robinet int\xE9rieur propre"
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-145
     source_category_code: robinet_compteur_interieur_propre
@@ -3772,8 +4150,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: BFA-WAS-146
     source_category_code: 2_piped_water_pipe_to_yard_plot
@@ -3783,8 +4161,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-147
     source_category_code: 2_piped_yard
@@ -3794,8 +4172,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-148
     source_category_code: dans_la_cour_parcelle
@@ -3805,21 +4183,20 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-149
     source_category_code: eau_du_robinet_robinet_sur_la_parcelle_a_l_exterieur
-    national_label_en: |-
-      Eau du robinet: Robinet sur la parcelle/à
-      l’extérieur
+    national_label_en: "Eau du robinet: Robinet sur la parcelle/\xE0\nl\u2019ext\xE9\
+      rieur"
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-150
     source_category_code: piped_into_yard
@@ -3829,8 +4206,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-151
     source_category_code: piped_to_yard_plot
@@ -3840,8 +4217,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-152
     source_category_code: robinet_dans_la_cour
@@ -3851,8 +4228,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-153
     source_category_code: robinet_dans_la_cour_dans_la_parcelle_ou_dans_la_concession
@@ -3862,19 +4239,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-154
     source_category_code: robinet_compteur_interieur_partage
-    national_label_en: Robinet-compteur intérieur partagé
+    national_label_en: "Robinet-compteur int\xE9rieur partag\xE9"
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: BFA-WAS-155
     source_category_code: 3_piped_water_public_tap_standpipe
@@ -3884,8 +4261,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-156
     source_category_code: 3_piped_public
@@ -3895,8 +4272,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-157
     source_category_code: borne_fontaine
@@ -3906,8 +4283,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-158
     source_category_code: eau_du_robinet_fontaine_publique
@@ -3917,8 +4294,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-159
     source_category_code: fontaine_publique
@@ -3928,8 +4305,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-160
     source_category_code: fontaine_publiques
@@ -3939,8 +4316,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-161
     source_category_code: public_standpipe
@@ -3950,8 +4327,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-162
     source_category_code: public_tap
@@ -3961,8 +4338,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-163
     source_category_code: public_tap_standpipe
@@ -3972,8 +4349,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-164
     source_category_code: robinet_ou_fontaine_publique
@@ -3983,8 +4360,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-165
     source_category_code: robinet_public
@@ -3994,8 +4371,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-166
     source_category_code: robinet_public_borne_fontaine
@@ -4005,8 +4382,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: BFA-WAS-167
     source_category_code: robinet_public_fontaine
@@ -4016,13 +4393,13 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BFA_Burkina_Faso_0.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 
