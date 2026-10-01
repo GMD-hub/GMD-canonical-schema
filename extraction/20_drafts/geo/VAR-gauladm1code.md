@@ -35,7 +35,8 @@ derives_to: []
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-GEO-GMD-CROSSWALK
 
 # --- Prerequisites ---
 prerequisites: []
@@ -66,7 +67,12 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "country_parameters updated 2026-09-30 to declare
+      PARAM-GEO-GMD-CROSSWALK: when a country's crosswalk rows carry
+      geo_source=GAUL, the GAUL code is already embedded in geo_id on the
+      same row VAR-geocode matches, avoiding a separate GAUL database
+      lookup. Verified against committed data (e.g. AGO geo_idvar=ADM1_CODE,
+      geo_id='401' at geo_level='1')."
 ---
 
 ## Definition
@@ -92,16 +98,29 @@ location or area name. The number of unique values from `subnatid1` and
 representative at statistical regions while GAUL provides state-level codes, the
 mapping reveals how the regions are constructed.
 
+**Reusing the geography crosswalk.** Resolve `PARAM-GEO-GMD-CROSSWALK` from
+the country layer for the survey ISO3 code and survey ID year (the same
+match `VAR-geocode` performs). If the matched row has `geo_source: GAUL` and
+a `geo_level` corresponding to the first administrative level, `geo_id` on
+that row is already the GAUL code: set `gaul_adm1_code = int(geo_id)`
+directly, with no separate GAUL database lookup required.
+
+If the country's crosswalk instead uses a different `geo_source` (GADM,
+NUTS, NSO, UN, DHS), the crosswalk does not carry a GAUL code for that
+country; fall back to matching the household's recorded location name
+directly against the GAUL database geometry as originally specified.
+
 `value_codes` is intentionally null because GAUL codes come from an external
-database and are not enumerated in the harmonized value space. Load the country
-parameters and exceptions valid for the survey's ID year. Assign the code by
-matching the household's recorded location name to the GAUL database geometry.
+database (or, when available, the matched crosswalk row) and are not
+enumerated in the harmonized value space.
 
 ## Consistency checks
 
 - `gaul_adm1_code` must be numeric (integer).
 - The code assigned must correspond to the GAUL first-level unit containing the
   household's recorded location.
+- When sourced from the crosswalk, the matched row's `geo_source` must equal
+  `GAUL`; never reinterpret a non-GAUL `geo_id` as a GAUL code.
 - The number of distinct codes and their relationship to `subnatid1` must be
   documented and reviewed for plausibility.
 - No household with an identifiable location may carry a standard missing (`.`).
@@ -111,16 +130,22 @@ matching the household's recorded location name to the GAUL database geometry.
 - The household's location cannot be matched to any GAUL first-level unit.
 - The GAUL-to-survey mapping is internally inconsistent (e.g., one location maps
   to conflicting codes).
+- The country's crosswalk uses a non-GAUL `geo_source` and no external GAUL
+  database match is available either.
 
 ## Common mistakes
 
 - Storing `gaul_adm1_code` as a string rather than an integer.
-- Fabricating or renumbering GAUL codes instead of using the GAUL database.
+- Fabricating or renumbering GAUL codes instead of using the GAUL database
+  (or the crosswalk's embedded GAUL `geo_id`).
 - Confusing the GAUL first-level code with `subnatid1` values.
 - Matching by name loosely and assigning the wrong GAUL unit.
+- Treating `geo_id` from a non-GAUL-sourced crosswalk row as a genuine GAUL
+  code.
 
 ## Change log
 
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
+| 2026-09-30 | 0.2     | Reuse PARAM-GEO-GMD-CROSSWALK's embedded GAUL geo_id when geo_source=GAUL, instead of always requiring a separate GAUL database match | GPID Team |

@@ -37,7 +37,8 @@ derives_to: []
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-GEO-GMD-CROSSWALK
 
 # --- Prerequisites ---
 prerequisites: []
@@ -69,7 +70,12 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "country_parameters updated 2026-09-30 to declare
+      PARAM-GEO-GMD-CROSSWALK: countries with more than one effective-dated
+      crosswalk record capture a documented boundary change; the prior
+      period's matched row supplies subnatid1_prev. Verified against
+      committed data (23 of 183 countries have 2-3 PARAM-GEO-GMD-CROSSWALK
+      periods; the rest have 0 or 1)."
 ---
 
 ## Definition
@@ -96,6 +102,17 @@ new units carry the previous code. Example: if province "32 - West Java" split
 into "32 - West Java" and "36 - Banten", `subnatid1_prev` would contain
 "32 - West Java" for both provinces 32 and 36.
 
+**Reusing the geography crosswalk.** Resolve `PARAM-GEO-GMD-CROSSWALK` from
+the country layer for the survey's ISO3 code. If the country has more than
+one effective-dated record (multiple `effective_from`/`effective_to`
+periods), a documented boundary change exists: match the household's area
+against the period containing the survey ID year to obtain `subnatid1`, then
+match the same geography against the immediately prior period (the record
+whose `effective_to` precedes the current period's `effective_from`) to
+obtain `subnatid1_prev` from that record's `gmd_subnatid1`. If the country's
+crosswalk has only one effective-dated record (no documented boundary
+change), `subnatid1_prev` remains coded as missing.
+
 `value_codes` is intentionally null because the previous values depend on the
 country's administrative history and the country parameter layer. Load the
 country parameters and exceptions valid for the survey's ID year and the
@@ -107,6 +124,9 @@ as `subnatid1`.
 - `subnatid1_prev` must be a string variable.
 - When populated, its value must be a valid first-level code from the previous
   survey's classification.
+- When resolved from the crosswalk, the prior-period record's `effective_to`
+  must immediately precede the current period's `effective_from` (no gap or
+  overlap).
 - The set of households covered by a previous code should correspond to the
   geographic area of that historical division (consistent split tracking).
 - No household may carry a standard missing (`.`) where a classification change
@@ -118,6 +138,8 @@ as `subnatid1`.
   determined from documentation.
 - The previous codes cannot be reconciled with the current `subnatid1` mapping
   for affected households.
+- The country's crosswalk has multiple periods but the prior period's
+  geography cannot be matched to the current period's geography.
 
 ## Common mistakes
 
@@ -126,9 +148,12 @@ as `subnatid1`.
   split.
 - Fabricating previous codes instead of using the documented historical
   classification.
+- Assuming every country has a prior period in the crosswalk; most have only
+  one effective-dated record, so `subnatid1_prev` is missing by default.
 
 ## Change log
 
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
+| 2026-09-30 | 0.2     | Resolve subnatid1_prev from the prior effective-dated period of PARAM-GEO-GMD-CROSSWALK when the country has boundary-change history | GPID Team |
