@@ -42,7 +42,7 @@ country_parameters: []
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-ownagriland
-    condition: "ownagriland == 1"
+    condition: "VAR-ownagriland == 1"
 
 # --- Cross-references ---
 rules: []

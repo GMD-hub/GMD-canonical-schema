@@ -60,7 +60,7 @@ country_parameters: []
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age
-    condition: age >= mineducatage
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
 rules: []

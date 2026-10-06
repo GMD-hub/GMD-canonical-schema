@@ -29,7 +29,7 @@ derives_to: []
 country_parameters: []
 gates:
 - variable_id: VAR-lstatusyear
-  condition: lstatus_year == 2
+  condition: VAR-lstatusyear == 2
 rules: []
 exceptions: []
 external_standards: []

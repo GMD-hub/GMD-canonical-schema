@@ -48,7 +48,7 @@ country_parameters: []
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-ownhouse
-    condition: "ownhouse == 1"
+    condition: "VAR-ownhouse == 1"
 
 # --- Cross-references ---
 rules: []

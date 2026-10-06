@@ -44,7 +44,7 @@ country_parameters: []
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age
-    condition: age < 5
+    condition: VAR-age < 5
 
 # --- Cross-references ---
 rules: []

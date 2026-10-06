@@ -42,7 +42,7 @@ country_parameters: []
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-docuagriland
-    condition: "docuagriland == 1"
+    condition: "VAR-docuagriland == 1"
 
 # --- Cross-references ---
 rules: []

@@ -42,7 +42,7 @@ country_parameters: []
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-rentoutagriland
-    condition: "rentout_agriland == 1"
+    condition: "VAR-rentoutagriland == 1"
 
 # --- Cross-references ---
 rules: []

@@ -74,7 +74,7 @@ derives_to:
 country_parameters: []
 gates:
 - variable_id: VAR-minlaborageyear
-  condition: age >= minlaborage_year
+  condition: VAR-age >= PARAM-LBR-MIN-LABOR-AGE-YEAR
 rules: []
 exceptions: []
 external_standards: []

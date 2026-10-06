@@ -29,9 +29,9 @@ derives_to:
 country_parameters: []
 gates:
 - variable_id: VAR-lstatus
-  condition: lstatus == 1
+  condition: VAR-lstatus == 1
 - variable_id: VAR-empstat2
-  condition: empstat_2 == 1
+  condition: VAR-empstat2 == 1
 rules: []
 exceptions: []
 external_standards: []
