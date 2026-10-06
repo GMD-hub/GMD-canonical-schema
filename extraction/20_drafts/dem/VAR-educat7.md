@@ -55,7 +55,8 @@ derives_to:
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Prerequisites ---
 prerequisites:

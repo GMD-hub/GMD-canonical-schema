@@ -48,6 +48,7 @@ derives_to: []
 # the parameter's fallback policy applied.
 country_parameters:
   - PARAM-EDU-LEVEL-CROSSWALK
+  - PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Prerequisites ---
 prerequisites:

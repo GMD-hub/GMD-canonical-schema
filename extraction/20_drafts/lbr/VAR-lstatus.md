@@ -71,7 +71,8 @@ derives_to:
 - VAR-thourstotal
 - VAR-twagencotal
 - VAR-twagetotal
-country_parameters: []
+country_parameters:
+  - PARAM-LBR-MIN-LABOR-AGE
 prerequisites:
 - variable_id: VAR-lstatus
   condition: age >= minlaborage
