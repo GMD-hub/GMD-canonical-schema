@@ -9,7 +9,7 @@ source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
 source_artifact_blob_sha: c48f2f6a9626dcdbd76be269f5e4ecb67857fcd7
 source_content_sha256: 0a43593e19ac9819499506c65a5981c392f1039bfb6bbb9bc7d97e36a1034825
 enrolled_body_sha256: 901a5e1f9bcf2c87722464679f63d5f77f2f4461a8b5e9117ce066d5cd2cc4fa
-current_content_sha256: 901a5e1f9bcf2c87722464679f63d5f77f2f4461a8b5e9117ce066d5cd2cc4fa
+current_content_sha256: ab6a43d1aa5898b807a478945af6f0629209bf11f670822da37f914aba56f13d
 enrolled_at: '2026-08-28T14:13:39Z'
 enrolled_by: acastanedaa
 assessment:
@@ -22,4 +22,15 @@ assessment:
     status: pending
     evidence_ref: ~
 blocker_refs: []
-events: []
+events:
+- event_id: 0272abdb-d3c4-4e66-a100-a6352f2916b5
+  sequence: 0
+  action: saved
+  from_state: ~
+  to_state: ~
+  actor: lmorenoherrera
+  actor_role: reviewer
+  occurred_at: '2026-10-06T19:56:28Z'
+  review_record_blob_sha_before: 2af67d3d61b32648d60a0ae807607694e287c56e
+  body_sha256: ab6a43d1aa5898b807a478945af6f0629209bf11f670822da37f914aba56f13d
+  note: ~
