@@ -7,20 +7,20 @@ country_name: MOZ
 parameters:
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MOZ-SUBNAT-01
-    survey_labels: 1 - Niassa | 1 – Niassa | 8 - Niassa
+    survey_labels: "1 - Niassa | 1 \u2013 Niassa | 8 - Niassa"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2119
     gmd_subnatid2: MOZ_2015_GAUL1_2119
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2119
     geo_year: '2015'
@@ -32,17 +32,17 @@ parameters:
     geo_name: Niassa
     source_row: 10315
   - country_entry_id: MOZ-SUBNAT-02
-    survey_labels: 10 - Maputo | 10 - Maputo Province | 10 – Maputo Prov | 10 – Maputo
-      Province | 6 - Maputo Provincia
+    survey_labels: "10 - Maputo | 10 - Maputo Province | 10 \u2013 Maputo Prov | 10\
+      \ \u2013 Maputo Province | 6 - Maputo Provincia"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAULx_41373
     gmd_subnatid2: MOZ_2015_GAULx_41373
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAULx_41373
     geo_year: '2015'
@@ -54,17 +54,17 @@ parameters:
     geo_name: Maputo
     source_row: 10316
   - country_entry_id: MOZ-SUBNAT-03
-    survey_labels: 11 - Cidade de Maputo | 11 - Maputo City | 11 – Maputo Cidade |
-      11 – Maputo City | 5 - Maputo Cidade
+    survey_labels: "11 - Cidade de Maputo | 11 - Maputo City | 11 \u2013 Maputo Cidade\
+      \ | 11 \u2013 Maputo City | 5 - Maputo Cidade"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL2_41374
     gmd_subnatid2: MOZ_2015_GAUL2_41374
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL2_41374
     geo_year: '2015'
@@ -76,16 +76,16 @@ parameters:
     geo_name: Cidade de Maputo
     source_row: 10317
   - country_entry_id: MOZ-SUBNAT-04
-    survey_labels: 1 - Cabo Delgado | 2 - Cabo Delgado | 2 – Cabo Delgado
+    survey_labels: "1 - Cabo Delgado | 2 - Cabo Delgado | 2 \u2013 Cabo Delgado"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2112
     gmd_subnatid2: MOZ_2015_GAUL1_2112
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2112
     geo_year: '2015'
@@ -97,16 +97,16 @@ parameters:
     geo_name: Cabo Delgado
     source_row: 10318
   - country_entry_id: MOZ-SUBNAT-05
-    survey_labels: 3 - Nampula | 3 – Nampula | 7 - Nampula
+    survey_labels: "3 - Nampula | 3 \u2013 Nampula | 7 - Nampula"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2118
     gmd_subnatid2: MOZ_2015_GAUL1_2118
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2118
     geo_year: '2015'
@@ -118,16 +118,16 @@ parameters:
     geo_name: Nampula
     source_row: 10319
   - country_entry_id: MOZ-SUBNAT-06
-    survey_labels: 11 - Zambezia | 4 - Zambezia | 4 - Zambézia | 4 – Zambezia
+    survey_labels: "11 - Zambezia | 4 - Zambezia | 4 - Zamb\xE9zia | 4 \u2013 Zambezia"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2122
     gmd_subnatid2: MOZ_2015_GAUL1_2122
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2122
     geo_year: '2015'
@@ -139,16 +139,16 @@ parameters:
     geo_name: Zambezia
     source_row: 10320
   - country_entry_id: MOZ-SUBNAT-07
-    survey_labels: 10 - Tete | 5 - Tete | 5 – Tete
+    survey_labels: "10 - Tete | 5 - Tete | 5 \u2013 Tete"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2121
     gmd_subnatid2: MOZ_2015_GAUL1_2121
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2121
     geo_year: '2015'
@@ -160,16 +160,16 @@ parameters:
     geo_name: Tete
     source_row: 10321
   - country_entry_id: MOZ-SUBNAT-08
-    survey_labels: 4 - Manica | 6 - Manica | 6 – Manica
+    survey_labels: "4 - Manica | 6 - Manica | 6 \u2013 Manica"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2115
     gmd_subnatid2: MOZ_2015_GAUL1_2115
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2115
     geo_year: '2015'
@@ -181,16 +181,16 @@ parameters:
     geo_name: Manica
     source_row: 10322
   - country_entry_id: MOZ-SUBNAT-09
-    survey_labels: 7 - Sofala | 7 – Sofala | 9 - Sofala
+    survey_labels: "7 - Sofala | 7 \u2013 Sofala | 9 - Sofala"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2120
     gmd_subnatid2: MOZ_2015_GAUL1_2120
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2120
     geo_year: '2015'
@@ -202,16 +202,16 @@ parameters:
     geo_name: Sofala
     source_row: 10323
   - country_entry_id: MOZ-SUBNAT-10
-    survey_labels: 3 - Inhambane | 8 - Inhambane | 8 – Inhambane
+    survey_labels: "3 - Inhambane | 8 - Inhambane | 8 \u2013 Inhambane"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2114
     gmd_subnatid2: MOZ_2015_GAUL1_2114
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2114
     geo_year: '2015'
@@ -223,16 +223,16 @@ parameters:
     geo_name: Inhambane
     source_row: 10324
   - country_entry_id: MOZ-SUBNAT-11
-    survey_labels: 2 - Gaza | 9 - Gaza | 9 – Gaza
+    survey_labels: "2 - Gaza | 9 - Gaza | 9 \u2013 Gaza"
     survey_variables: subnatid | subnatid1 | subnatid2 | subnatidsurvey
     gmd_subnatid1: MOZ_2015_GAUL1_2113
     gmd_subnatid2: MOZ_2015_GAUL1_2113
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: MOZ_2015_GAUL1_2113
     geo_year: '2015'
@@ -245,13 +245,13 @@ parameters:
     source_row: 10325
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MOZ-SAN-01
     source_category_code: composting_toilet
@@ -261,19 +261,19 @@ parameters:
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MOZ-SAN-02
     source_category_code: sanitario_de_compostagem
-    national_label_en: Sanitário de compostagem
+    national_label_en: "Sanit\xE1rio de compostagem"
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
     gmd_target: composting
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 128
   - country_entry_id: MOZ-SAN-03
     source_category_code: flushed_toilet_to_elsewhere
@@ -283,19 +283,20 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MOZ-SAN-04
     source_category_code: sanita_nao_ligada_a_rede_publica_de_esgotos_fossa_septica_latrina
-    national_label_en: Sanita não ligada a rede pública de esgotos/fossa séptica/latrina
+    national_label_en: "Sanita n\xE3o ligada a rede p\xFAblica de esgotos/fossa s\xE9\
+      ptica/latrina"
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: MOZ-SAN-05
     source_category_code: flush_toilet_to_piped_sewer_system
@@ -305,19 +306,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MOZ-SAN-06
     source_category_code: sanita_ligada_a_rede_publica_de_esgotos
-    national_label_en: Sanita ligada a rede pública de esgotos
+    national_label_en: "Sanita ligada a rede p\xFAblica de esgotos"
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: MOZ-SAN-07
     source_category_code: flushed_toilet_to_pit_latrine
@@ -327,8 +328,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MOZ-SAN-08
     source_category_code: sanita_ligada_a_latrina
@@ -338,8 +339,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: MOZ-SAN-09
     source_category_code: flushed_toilet_to_septic_tank
@@ -349,43 +350,41 @@ parameters:
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MOZ-SAN-10
     source_category_code: retrete_ligada_a_fossa_septica
-    national_label_en: Retrete ligada a fossa séptica
+    national_label_en: "Retrete ligada a fossa s\xE9ptica"
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MOZ-SAN-11
     source_category_code: sanita_ligada_a_fossa_septica
-    national_label_en: Sanita ligada a fossa séptica
+    national_label_en: "Sanita ligada a fossa s\xE9ptica"
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: MOZ-SAN-12
     source_category_code: sanita_ligada_onde_descarga_nao_sabe
-    national_label_en: |-
-      Sanita ligada, onde descarga não
-      sabe
+    national_label_en: "Sanita ligada, onde descarga n\xE3o\nsabe"
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: MOZ-SAN-13
     source_category_code: flush_toilet
@@ -395,8 +394,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-SAN-14
     source_category_code: retrete_com_autoclismo
@@ -406,8 +405,8 @@ parameters:
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-SAN-15
     source_category_code: flush_in_house
@@ -417,8 +416,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: MOZ-SAN-16
     source_category_code: public_flush
@@ -428,8 +427,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 78
   - country_entry_id: MOZ-SAN-17
     source_category_code: flush_to_somewhere_else
@@ -439,8 +438,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: MOZ-SAN-18
     source_category_code: casa_de_banho_com_rde_esgotos_sewerage
@@ -450,8 +449,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MOZ-SAN-19
     source_category_code: flush_to_piped_sewer
@@ -461,8 +460,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MOZ-SAN-20
     source_category_code: flush_to_piped_sewer_system
@@ -472,8 +471,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: MOZ-SAN-21
     source_category_code: flush_to_pit_latrine
@@ -483,8 +482,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: MOZ-SAN-22
     source_category_code: flush_to_septic_tank
@@ -494,8 +493,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MOZ-SAN-23
     source_category_code: fossa_septica
@@ -505,8 +504,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MOZ-SAN-24
     source_category_code: septic_tank
@@ -516,8 +515,8 @@ parameters:
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: MOZ-SAN-25
     source_category_code: flush_don_t_know_where
@@ -527,8 +526,8 @@ parameters:
     jmp_id: flush_toilets.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MOZ-SAN-26
     source_category_code: letrine
@@ -538,8 +537,8 @@ parameters:
     jmp_id: latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere|vip|pit_slab|pit_noslab|hanging|bucket|other
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 84
   - country_entry_id: MOZ-SAN-27
     source_category_code: balde
@@ -549,8 +548,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MOZ-SAN-28
     source_category_code: bucket_toilet
@@ -560,8 +559,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: MOZ-SAN-29
     source_category_code: hanging_toilet_latrine
@@ -572,8 +571,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
     gmd_target: hanging
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 109
   - country_entry_id: MOZ-SAN-30
     source_category_code: latrina_melhorada
@@ -584,8 +583,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-SAN-31
     source_category_code: latrina_melhorada_tradicional
@@ -596,8 +595,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-SAN-32
     source_category_code: latrina_tradicional_melhorada
@@ -608,20 +607,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-SAN-33
     source_category_code: latrina_tradicional_melhorada_com_chao_de_concreto
-    national_label_en: Latrina tradicional melhorada (com chão de concreto)
+    national_label_en: "Latrina tradicional melhorada (com ch\xE3o de concreto)"
     national_label_local: Pit latrine with slab/covered latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-SAN-34
     source_category_code: pit_latrine_with_slab
@@ -632,20 +631,20 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-SAN-35
     source_category_code: latrina_nao_melhorada
-    national_label_en: Latrina não melhorada
+    national_label_en: "Latrina n\xE3o melhorada"
     national_label_local: Pit latrine without slab/open pit
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MOZ-SAN-36
     source_category_code: pit_latrine_without_slab
@@ -656,8 +655,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MOZ-SAN-37
     source_category_code: pit_latrine_without_slab
@@ -668,8 +667,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MOZ-SAN-38
     source_category_code: pit_latrine_without_slab_open_pit
@@ -680,8 +679,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: MOZ-SAN-39
     source_category_code: latrina_nao_melhorade
@@ -692,8 +691,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MOZ-SAN-40
     source_category_code: latrina_tradicional_melhorada
@@ -704,8 +703,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MOZ-SAN-41
     source_category_code: latrine
@@ -716,8 +715,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MOZ-SAN-42
     source_category_code: latrina_melhorada
@@ -728,8 +727,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MOZ-SAN-43
     source_category_code: latrina_melhorado_e_ventilado_vip
@@ -740,8 +739,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MOZ-SAN-44
     source_category_code: letrina_melhorada
@@ -752,8 +751,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MOZ-SAN-45
     source_category_code: ventilated_improved_pit_vip_latrine
@@ -764,8 +763,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MOZ-SAN-46
     source_category_code: ventilated_improved_pit_latrine_vip
@@ -776,8 +775,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: MOZ-SAN-47
     source_category_code: retrete_sem_autoclismo
@@ -787,8 +786,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 85
   - country_entry_id: MOZ-SAN-48
     source_category_code: no_flush_to_somewhere_else
@@ -798,8 +797,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 90
   - country_entry_id: MOZ-SAN-49
     source_category_code: no_flush_to_piped_sewer_system
@@ -809,8 +808,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 86
   - country_entry_id: MOZ-SAN-50
     source_category_code: no_flush_to_septic_tank
@@ -820,8 +819,8 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MOZ-SAN-51
     source_category_code: no_flush_don_t_know_where
@@ -831,19 +830,19 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 89
   - country_entry_id: MOZ-SAN-52
     source_category_code: fecalismo_ao_ceu_aberto_nenhum_sanitario_ar_livre_mato
-    national_label_en: Fecalismo ao céu aberto (nenhum sanitário/ar livre/mato)
+    national_label_en: "Fecalismo ao c\xE9u aberto (nenhum sanit\xE1rio/ar livre/mato)"
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-53
     source_category_code: mato_bush
@@ -853,19 +852,19 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-54
     source_category_code: nao_tem_latrina
-    national_label_en: Não tem Latrina
+    national_label_en: "N\xE3o tem Latrina"
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-55
     source_category_code: nao_tem_latrina_no_mato
@@ -875,8 +874,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-56
     source_category_code: no_facility
@@ -886,8 +885,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-57
     source_category_code: no_facility_bush_field
@@ -897,8 +896,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-58
     source_category_code: no_facility_bush_field
@@ -908,8 +907,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-59
     source_category_code: no_mato
@@ -919,8 +918,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-60
     source_category_code: no_toilet
@@ -930,8 +929,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-61
     source_category_code: open_defecation
@@ -941,8 +940,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-62
     source_category_code: sem_retrete_latrina
@@ -952,8 +951,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: MOZ-SAN-63
     source_category_code: community_latrines
@@ -963,8 +962,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: MOZ-SAN-64
     source_category_code: retrete_sem_autoclismo
@@ -974,8 +973,8 @@ parameters:
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: MOZ-SAN-65
     source_category_code: na_praia_on_the_beach
@@ -985,8 +984,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-66
     source_category_code: no_flush_toilet
@@ -996,8 +995,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-67
     source_category_code: other
@@ -1007,8 +1006,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-68
     source_category_code: other_type_of_sanitation
@@ -1018,8 +1017,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-69
     source_category_code: outra
@@ -1029,8 +1028,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-70
     source_category_code: outro
@@ -1040,8 +1039,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-71
     source_category_code: outros
@@ -1051,8 +1050,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: MOZ-SAN-72
     source_category_code: other
@@ -1062,8 +1061,8 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   - country_entry_id: MOZ-SAN-73
     source_category_code: outro
@@ -1073,18 +1072,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MOZ_Mozambique_2.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: MOZ-WAS-01
     source_category_code: neighbour_s_well
@@ -1094,8 +1093,8 @@ parameters:
     jmp_id: ground_water.all_wells.other
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 57
   - country_entry_id: MOZ-WAS-02
     source_category_code: own_well
@@ -1105,8 +1104,8 @@ parameters:
     jmp_id: ground_water.all_wells.private
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 55
   - country_entry_id: MOZ-WAS-03
     source_category_code: public_well
@@ -1116,19 +1115,19 @@ parameters:
     jmp_id: ground_water.all_wells.public
     gmd_target: ''
     gmd_spans: borehole|protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 56
   - country_entry_id: MOZ-WAS-04
     source_category_code: agua_da_nascente_protegida
-    national_label_en: Água da nascente protegida
+    national_label_en: "\xC1gua da nascente protegida"
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MOZ-WAS-05
     source_category_code: nascentes_protegidas
@@ -1138,8 +1137,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MOZ-WAS-06
     source_category_code: protected_spring
@@ -1149,8 +1148,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MOZ-WAS-07
     source_category_code: protected_spring_closed
@@ -1160,19 +1159,19 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: MOZ-WAS-08
     source_category_code: poco_ou_furo_com_bomba_manual
-    national_label_en: Poço ou furo com bomba manual
+    national_label_en: "Po\xE7o ou furo com bomba manual"
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-09
     source_category_code: poco_protegido
@@ -1182,8 +1181,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-10
     source_category_code: poco_protegido_sem_bomba
@@ -1193,8 +1192,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-11
     source_category_code: protected_dug_well
@@ -1204,8 +1203,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-12
     source_category_code: protected_dug_well_closed_or_with_handpump
@@ -1215,8 +1214,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-13
     source_category_code: protected_well
@@ -1226,8 +1225,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-14
     source_category_code: protected_well_without_manual_pump
@@ -1237,8 +1236,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-15
     source_category_code: sem_bomba_manual
@@ -1248,8 +1247,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: MOZ-WAS-16
     source_category_code: protected_public_well
@@ -1259,19 +1258,19 @@ parameters:
     jmp_id: ground_water.protected_well.public
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 68
   - country_entry_id: MOZ-WAS-17
     source_category_code: poco_sem_bomba_manual
-    national_label_en: Poço sem bomba manual
+    national_label_en: "Po\xE7o sem bomba manual"
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: MOZ-WAS-18
     source_category_code: borehole_with_handpump_pump
@@ -1281,8 +1280,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-19
     source_category_code: borehole_with_pump
@@ -1292,8 +1291,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-20
     source_category_code: furo_com_bomba
@@ -1303,8 +1302,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-21
     source_category_code: poco_ou_furo_com_bomba_manual
@@ -1314,19 +1313,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-22
     source_category_code: proveniente_de_poco_ou_furo_protegido_com_bomba_manual
-    national_label_en: Proveniente de poço ou furo protegido com bomba manual
+    national_label_en: "Proveniente de po\xE7o ou furo protegido com bomba manual"
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-23
     source_category_code: tube_well_or_borehole
@@ -1336,8 +1335,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-24
     source_category_code: tube_well_or_borehole_with_manual_pump
@@ -1347,8 +1346,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-25
     source_category_code: tubewell_or_borehole
@@ -1358,19 +1357,19 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: MOZ-WAS-26
     source_category_code: agua_da_nascente_nao_protegida
-    national_label_en: Água da nascente não protegida
+    national_label_en: "\xC1gua da nascente n\xE3o protegida"
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MOZ-WAS-27
     source_category_code: nascentes_nao_protegidas
@@ -1380,8 +1379,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MOZ-WAS-28
     source_category_code: unprotected_spring
@@ -1391,8 +1390,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MOZ-WAS-29
     source_category_code: unprotected_spring_open
@@ -1402,8 +1401,8 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: MOZ-WAS-30
     source_category_code: poco_nao_protegido
@@ -1413,8 +1412,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MOZ-WAS-31
     source_category_code: unprotected_dug_well
@@ -1424,8 +1423,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MOZ-WAS-32
     source_category_code: unprotected_dug_well_open
@@ -1435,8 +1434,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MOZ-WAS-33
     source_category_code: unprotected_well
@@ -1446,8 +1445,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: MOZ-WAS-34
     source_category_code: unprotected_public_well
@@ -1457,19 +1456,19 @@ parameters:
     jmp_id: ground_water.unprotected_well.public
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 72
   - country_entry_id: MOZ-WAS-35
     source_category_code: carroca_com_tanque
-    national_label_en: Carroça com tanque
+    national_label_en: "Carro\xE7a com tanque"
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MOZ-WAS-36
     source_category_code: cart_with_small_tank
@@ -1479,8 +1478,8 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MOZ-WAS-37
     source_category_code: purchased_from_a_cart_with_a_small_tank_or_drum
@@ -1490,19 +1489,19 @@ parameters:
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: MOZ-WAS-38
     source_category_code: camiao_cisterna
-    national_label_en: Camião cisterna
+    national_label_en: "Cami\xE3o cisterna"
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MOZ-WAS-39
     source_category_code: cisterna_tanque_movel_ou_camiao
@@ -1512,8 +1511,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MOZ-WAS-40
     source_category_code: tanker_truck
@@ -1523,8 +1522,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MOZ-WAS-41
     source_category_code: water_selling_cart_or_truck
@@ -1534,8 +1533,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: MOZ-WAS-42
     source_category_code: other
@@ -1545,8 +1544,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-WAS-43
     source_category_code: outra
@@ -1556,8 +1555,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-WAS-44
     source_category_code: outro
@@ -1567,8 +1566,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: MOZ-WAS-45
     source_category_code: refused
@@ -1578,19 +1577,19 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: MOZ-WAS-46
     source_category_code: agua_engarrafada_mineral
-    national_label_en: Água engarrafada/mineral
+    national_label_en: "\xC1gua engarrafada/mineral"
     national_label_local: Packaged water
     jmp_classification: Packaged water
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: MOZ-WAS-47
     source_category_code: bottled_water
@@ -1600,19 +1599,19 @@ parameters:
     jmp_id: packaged_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 89
   - country_entry_id: MOZ-WAS-48
     source_category_code: agua_engarrafada
-    national_label_en: Água engarrafada
+    national_label_en: "\xC1gua engarrafada"
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MOZ-WAS-49
     source_category_code: bottled_water
@@ -1622,8 +1621,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MOZ-WAS-50
     source_category_code: bottled_water_or_sachet
@@ -1633,8 +1632,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MOZ-WAS-51
     source_category_code: em_garrafa
@@ -1644,19 +1643,19 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: MOZ-WAS-52
     source_category_code: agua_da_chuva
-    national_label_en: Água da chuva
+    national_label_en: "\xC1gua da chuva"
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MOZ-WAS-53
     source_category_code: rainwater
@@ -1666,8 +1665,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MOZ-WAS-54
     source_category_code: rainwater_collection
@@ -1677,30 +1676,30 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: MOZ-WAS-55
     source_category_code: agua_de_superficie
-    national_label_en: Água de superfície
+    national_label_en: "\xC1gua de superf\xEDcie"
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-56
     source_category_code: agua_do_rio_lagoa
-    national_label_en: Água do rio, lagoa
+    national_label_en: "\xC1gua do rio, lagoa"
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-57
     source_category_code: rio_lago_e_lagoa
@@ -1710,8 +1709,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-58
     source_category_code: rio_lago_lagoa
@@ -1721,8 +1720,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-59
     source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
@@ -1732,8 +1731,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-60
     source_category_code: surface_water_pond_river_stream
@@ -1743,8 +1742,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-61
     source_category_code: surface_water_like_a_river_dam_lake_pond_stream_canal_or_irrigation_channel
@@ -1755,8 +1754,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: MOZ-WAS-62
     source_category_code: dam
@@ -1766,8 +1765,8 @@ parameters:
     jmp_id: surface_water.dam
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 95
   - country_entry_id: MOZ-WAS-63
     source_category_code: lake
@@ -1777,8 +1776,8 @@ parameters:
     jmp_id: surface_water.lake
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 94
   - country_entry_id: MOZ-WAS-64
     source_category_code: rio_lago_lagoa
@@ -1788,8 +1787,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: MOZ-WAS-65
     source_category_code: river
@@ -1799,8 +1798,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: MOZ-WAS-66
     source_category_code: river_lake
@@ -1810,8 +1809,8 @@ parameters:
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: MOZ-WAS-67
     source_category_code: stream
@@ -1821,8 +1820,8 @@ parameters:
     jmp_id: surface_water.stream
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 97
   - country_entry_id: MOZ-WAS-68
     source_category_code: agua_canalizada
@@ -1832,8 +1831,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: MOZ-WAS-69
     source_category_code: canalisada
@@ -1843,19 +1842,19 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: MOZ-WAS-70
     source_category_code: agua_canalizada_na_casa_do_vizinho
-    national_label_en: Água canalizada na casa do vizinho
+    national_label_en: "\xC1gua canalizada na casa do vizinho"
     national_label_local: Other
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-71
     source_category_code: na_casa_do_vizinho
@@ -1865,8 +1864,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-72
     source_category_code: neighbor_s_house
@@ -1876,8 +1875,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-73
     source_category_code: neighbour_s_piped_connection
@@ -1887,8 +1886,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-74
     source_category_code: piped_inside_neighbour_s_house_or_land
@@ -1898,8 +1897,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-75
     source_category_code: piped_into_neighbour_s_yard_plot
@@ -1909,8 +1908,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-76
     source_category_code: piped_to_neighbor
@@ -1920,8 +1919,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: MOZ-WAS-77
     source_category_code: canalizada
@@ -1931,19 +1930,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: MOZ-WAS-78
     source_category_code: agua_canalizada_dentro_de_casa
-    national_label_en: Água canalizada dentro de casa
+    national_label_en: "\xC1gua canalizada dentro de casa"
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MOZ-WAS-79
     source_category_code: dentro_da_casa
@@ -1953,8 +1952,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MOZ-WAS-80
     source_category_code: own_piped_connection
@@ -1964,8 +1963,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MOZ-WAS-81
     source_category_code: piped_inside_the_house
@@ -1975,8 +1974,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MOZ-WAS-82
     source_category_code: piped_into_dwelling
@@ -1986,8 +1985,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MOZ-WAS-83
     source_category_code: piped_water_into_dwelling
@@ -1997,19 +1996,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: MOZ-WAS-84
     source_category_code: agua_canalizada_no_quintal
-    national_label_en: Água canalizada no quintal
+    national_label_en: "\xC1gua canalizada no quintal"
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MOZ-WAS-85
     source_category_code: fora_da_casa_quintal
@@ -2019,8 +2018,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MOZ-WAS-86
     source_category_code: piped_in_own_land
@@ -2030,8 +2029,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MOZ-WAS-87
     source_category_code: piped_to_yard_plot
@@ -2041,8 +2040,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MOZ-WAS-88
     source_category_code: piped_water_into_yard
@@ -2052,8 +2051,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MOZ-WAS-89
     source_category_code: piped_water_into_yard_plot_or_compound
@@ -2063,19 +2062,19 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: MOZ-WAS-90
     source_category_code: agua_do_fontenario
-    national_label_en: Água do fontenário
+    national_label_en: "\xC1gua do fonten\xE1rio"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MOZ-WAS-91
     source_category_code: fontanario
@@ -2085,8 +2084,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MOZ-WAS-92
     source_category_code: public_standpipe
@@ -2096,8 +2095,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MOZ-WAS-93
     source_category_code: public_tap
@@ -2107,8 +2106,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MOZ-WAS-94
     source_category_code: public_tap_or_standpipe
@@ -2118,8 +2117,8 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MOZ-WAS-95
     source_category_code: public_tap_standpipe
@@ -2129,24 +2128,35 @@ parameters:
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: MOZ-WAS-96
     source_category_code: torneira_publica_fontanario
-    national_label_en: Torneira pública/fontanário
+    national_label_en: "Torneira p\xFAblica/fontan\xE1rio"
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_MOZ_Mozambique_2.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 2003
+  effective_to: null
+  selectors: null
+  value: 15
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

@@ -7,8 +7,8 @@ country_name: NIC
 parameters:
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: NIC-SUBNAT-01
     survey_labels: 1 - Managua
@@ -17,10 +17,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: NIC_2015_GAUL1_2196
     geo_year: '2015'
@@ -32,16 +32,16 @@ parameters:
     geo_name: Managua
     source_row: 10926
   - country_entry_id: NIC-SUBNAT-02
-    survey_labels: 2 - Pacifico | 2 - Pac�fico
+    survey_labels: "2 - Pacifico | 2 - Pac\uFFFDfico"
     survey_variables: subnatid
     gmd_subnatid1: NIC_2015_GAULx_2
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: NIC_2015_GAULx_2
     geo_year: '2015'
@@ -59,10 +59,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: NIC_2015_GAULx_3
     geo_year: '2015'
@@ -74,16 +74,16 @@ parameters:
     geo_name: Boaco & Chontales & Esteli & Jinotega & Madriz & Matagalpa & Nueva Segovia
     source_row: 10928
   - country_entry_id: NIC-SUBNAT-04
-    survey_labels: 4 - Atlantico | 4 - Atl�ntico
+    survey_labels: "4 - Atlantico | 4 - Atl\uFFFDntico"
     survey_variables: subnatid
     gmd_subnatid1: NIC_2015_GAULx_4
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: yes
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 1
     gmd_subnatidsurvey: NIC_2015_GAULx_4
     geo_year: '2015'
@@ -96,8 +96,19 @@ parameters:
     source_row: 10929
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1990
+  effective_to: null
+  selectors: null
+  value: 14
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 
