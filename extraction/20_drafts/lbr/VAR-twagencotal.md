@@ -31,7 +31,7 @@ derives_to:
 - VAR-laborincome
 - VAR-twagetotal
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

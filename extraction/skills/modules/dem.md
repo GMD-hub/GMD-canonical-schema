@@ -37,7 +37,7 @@ years of education (educy), literacy, disability status, and minimum education a
 
 ## Common Edge Cases
 
-- Education variables have prerequisite age filters
+- Education variables have gate age filters
 - educy construction varies by survey year and education system
 - Years of education requires country-specific education duration parameters
 - Disability questions vary significantly across surveys

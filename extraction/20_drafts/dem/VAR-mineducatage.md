@@ -39,8 +39,8 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []
@@ -67,7 +67,7 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: "mineducatage is currently an unregistered prerequisite/parameter. This
+  notes: "mineducatage is currently an unregistered gate/parameter. This
           draft classifies it as a country-specific variable (numeric age
           threshold). It is a blocking issue for PARAM registration: the value is
           country-specific and should eventually be registered as a country

@@ -43,7 +43,7 @@ class ExtractionCandidate(BaseModel):
     derived_from: list[str] | None = None
     derives_to: list[str] | None = None
     country_parameters: list[str] | None = None
-    prerequisites: list[dict[str, str]] | None = None
+    gates: list[dict[str, str]] | None = None
     rules: list[str] | None = None
     exceptions: list[str] | None = None
     external_standards: list[dict[str, str]] | None = None

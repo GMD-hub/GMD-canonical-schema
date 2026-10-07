@@ -34,7 +34,7 @@ derived_from:
 - VAR-twagetotalyear
 derives_to: []
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

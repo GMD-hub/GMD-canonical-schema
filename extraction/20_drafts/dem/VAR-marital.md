@@ -50,8 +50,8 @@ derives_to: []
 country_parameters:
   - PARAM-DEM-MIN-MARRIAGE-AGE
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []

@@ -27,7 +27,7 @@ derives_to:
 - VAR-thourstotal
 - VAR-thoursannual
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

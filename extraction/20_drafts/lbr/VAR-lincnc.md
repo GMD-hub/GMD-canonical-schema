@@ -32,7 +32,7 @@ derived_from:
 derives_to:
 - VAR-laborincome
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []
