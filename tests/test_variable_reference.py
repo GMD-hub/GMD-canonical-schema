@@ -56,6 +56,15 @@ def test_variable_reference_covers_current_schema() -> None:
     assert not errors, "\n".join(errors)
 
 
+def test_coverage_reports_renamed_gate_paths() -> None:
+    text = REFERENCE.read_text(encoding="utf-8").replace("`gates", "`prerequisites")
+
+    assert coverage_errors(VariableDefinition, text) == [
+        "Missing field paths: gates, gates.condition, gates.variable_id",
+        "Obsolete field paths: prerequisites, prerequisites.condition, prerequisites.variable_id",
+    ]
+
+
 def test_model_field_paths_include_nullable_and_list_children() -> None:
     class Child(BaseModel):
         name: str
