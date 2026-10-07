@@ -4,7 +4,7 @@ This file is the master registry of all artifacts in the knowledge base.
 Every artifact must be listed here. The index is the agent's entry point
 to the knowledge base.
 
-Last updated: 2026-09-30
+Last updated: 2026-10-07
 Schema version: 0.2
 
 ## Variable specifications
@@ -47,6 +47,7 @@ Schema version: 0.2
 | PARAM-WASH-WATER-CROSSWALK | Country water source crosswalk rows | MOD-DWL | parameters/PARAM-WASH-WATER-CROSSWALK.md | draft | 0.2 |
 | PARAM-WASH-SANITATION-CROSSWALK | Country sanitation source crosswalk rows | MOD-DWL | parameters/PARAM-WASH-SANITATION-CROSSWALK.md | draft | 0.2 |
 | PARAM-GEO-GMD-CROSSWALK | Country geography crosswalk rows | MOD-GEO | parameters/PARAM-GEO-GMD-CROSSWALK.md | draft | 0.4 |
+| PARAM-LBR-MIN-WORKING-AGE | Minimum legal working age | MOD-LBR | parameters/PARAM-LBR-MIN-WORKING-AGE.md | draft | 0.1 |
 
 ## Module specifications
 
