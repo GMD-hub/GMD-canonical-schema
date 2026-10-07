@@ -3,16 +3,17 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from dataclasses import dataclass, field
 from hashlib import sha256
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import yaml
 
 from .emit import emit_benchmark, emit_parameter_draft
 from ..hashing import hash_file
 from .education_pathways import enrich_rows
-from .legacy import ROOT, load_edu_module, load_wash_module
+from .legacy import ROOT, load_countries_resolver, load_edu_module, load_wash_module
 from .transform import (
     to_benchmark_payload,
     transform_education_rows,
@@ -28,6 +29,35 @@ CONTRACT_ROOT = DRAFT_ROOT / "contracts"
 STATE_PATH = DRAFT_ROOT / ".incremental_state.json"
 
 ISO3_PATTERN = re.compile(r"^[A-Z]{3}$")
+
+
+@dataclass
+class ParamInputContext:
+    """Shared run state passed into every registered param-input's `run` function."""
+
+    state: dict[str, Any]
+    extractor_sig: str
+    force: bool
+    iso3_filter: str | None
+
+
+@dataclass
+class ParamInputResult:
+    written: list[str] = field(default_factory=list)
+    skipped: list[dict[str, Any]] = field(default_factory=list)
+    incremental_skipped: list[dict[str, Any]] = field(default_factory=list)
+    cleaned: list[str] = field(default_factory=list)
+    jmp_file_statuses: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class ParamInputSpec:
+    """One independently extractable/filterable country-parameter input, tagged with a broad dimension."""
+
+    key: str
+    dimension: str
+    parameter_ids: tuple[str, ...]
+    run: Callable[[ParamInputContext], ParamInputResult]
 
 
 def _is_valid_iso3(value: str) -> bool:
@@ -415,10 +445,12 @@ def _emit_geo_parameter_draft(iso3: str, country_name: str, rows: list[dict[str,
     return out_path
 
 
-def extract_geo_rows(iso3: str, limit: int) -> tuple[list[dict[str, Any]], str]:
+def _extract_all_geo_rows() -> tuple[dict[str, list[dict[str, Any]]], str]:
+    """Parse Sub_nat_gmd.xlsx exactly once, bucketing rows by ISO3 (vs. re-parsing per country)."""
     workbook_path = SOURCE_ROOT / "GEO" / "Sub_nat_gmd.xlsx"
+    source = str(workbook_path.relative_to(ROOT))
     if not workbook_path.exists():
-        raise FileNotFoundError(f"missing source workbook: {workbook_path.relative_to(ROOT)}")
+        return {}, source
 
     try:
         from openpyxl import load_workbook
@@ -429,7 +461,7 @@ def extract_geo_rows(iso3: str, limit: int) -> tuple[list[dict[str, Any]], str]:
     ws = wb[wb.sheetnames[0]]
     header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True), None)
     if not header_row:
-        return [], str(workbook_path.relative_to(ROOT))
+        return {}, source
     headers = [_to_text(col) for col in header_row]
     index = {name: idx for idx, name in enumerate(headers)}
     required = [
@@ -450,10 +482,10 @@ def extract_geo_rows(iso3: str, limit: int) -> tuple[list[dict[str, Any]], str]:
     if missing:
         raise ValueError(f"missing expected columns in GEO workbook: {missing}")
 
-    rows: list[dict[str, Any]] = []
+    rows_by_iso3: dict[str, list[dict[str, Any]]] = {}
     for source_row, values in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
         code = _to_text(values[index["code"]]).upper()
-        if code != iso3:
+        if not _is_valid_iso3(code):
             continue
 
         byvar = _to_text(values[index["byvar"]]).lower()
@@ -489,44 +521,25 @@ def extract_geo_rows(iso3: str, limit: int) -> tuple[list[dict[str, Any]], str]:
             "geo_name": _to_text(values[index["geo_name"]]),
             "source_row": source_row,
         }
-        rows.append(row)
+        rows_by_iso3.setdefault(code, []).append(row)
 
-    rows = _dedupe_geo_rows(rows)
-    rows = _assign_country_entry_ids(rows, iso3, "SUBNAT")
+    for code, rows in rows_by_iso3.items():
+        rows_by_iso3[code] = _assign_country_entry_ids(_dedupe_geo_rows(rows), code, "SUBNAT")
+
+    return rows_by_iso3, source
+
+
+def extract_geo_rows(iso3: str, limit: int) -> tuple[list[dict[str, Any]], str]:
+    rows_by_iso3, source = _extract_all_geo_rows()
+    rows = rows_by_iso3.get(iso3, [])
     if limit > 0:
         rows = rows[:limit]
-
-    return rows, str(workbook_path.relative_to(ROOT))
+    return rows, source
 
 
 def list_geo_iso3s() -> tuple[list[str], str]:
-    workbook_path = SOURCE_ROOT / "GEO" / "Sub_nat_gmd.xlsx"
-    if not workbook_path.exists():
-        return [], str(workbook_path.relative_to(ROOT))
-
-    try:
-        from openpyxl import load_workbook
-    except ImportError as exc:  # pragma: no cover
-        raise RuntimeError("openpyxl is required for GEO workbook extraction") from exc
-
-    wb = load_workbook(workbook_path, data_only=True, read_only=True)
-    ws = wb[wb.sheetnames[0]]
-    header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True), None)
-    if not header_row:
-        return [], str(workbook_path.relative_to(ROOT))
-
-    headers = [_to_text(col) for col in header_row]
-    index = {name: idx for idx, name in enumerate(headers)}
-    if "code" not in index:
-        raise ValueError("missing expected column in GEO workbook: code")
-
-    seen: set[str] = set()
-    for values in ws.iter_rows(min_row=2, values_only=True):
-        code = _to_text(values[index["code"]]).upper()
-        if _is_valid_iso3(code):
-            seen.add(code)
-
-    return sorted(seen), str(workbook_path.relative_to(ROOT))
+    rows_by_iso3, source = _extract_all_geo_rows()
+    return sorted(rows_by_iso3), source
 
 
 def run_geo_example(iso3: str, limit: int, write: bool) -> dict[str, Any]:
@@ -565,10 +578,12 @@ def inspect_inputs() -> dict[str, list[str]]:
     isced = _find_xlsx(SOURCE_ROOT / "ISCED")
     jmp = _find_xlsx(SOURCE_ROOT / "JMP")
     geo = _find_xlsx(SOURCE_ROOT / "GEO")
+    labor = _find_xlsx(SOURCE_ROOT / "Labor")
     return {
         "ISCED": [str(path.relative_to(ROOT)) for path in isced],
         "JMP": [str(path.relative_to(ROOT)) for path in jmp],
         "GEO": [str(path.relative_to(ROOT)) for path in geo],
+        "Labor": [str(path.relative_to(ROOT)) for path in labor],
     }
 
 
@@ -625,29 +640,13 @@ def _extract_wash(path: Path) -> tuple[str, str, list[dict[str, Any]], list[dict
     )
 
 
-def run_extract(*, force: bool = False) -> dict[str, Any]:
-    inputs = inspect_inputs()
-    if not inputs["ISCED"] and not inputs["JMP"] and not inputs["GEO"]:
-        return {
-            "ok": False,
-            "errors": ["no input workbooks found under extraction/10_source/country-parameters-inputs"],
-            "inputs": inputs,
-            "written": [],
-        }
-
-    written: list[str] = []
-    skipped: list[dict[str, Any]] = []
-    incremental_skipped: list[dict[str, Any]] = []
-    jmp_file_statuses: list[dict[str, Any]] = []
-    cleaned = _cleanup_stale_root_level_yaml()
-    state = _load_incremental_state()
-    extractor_sig = _extractor_signature()
-
-    for relative in inputs["ISCED"]:
+def _run_isced_crosswalk(ctx: ParamInputContext) -> ParamInputResult:
+    result = ParamInputResult()
+    for relative in inspect_inputs()["ISCED"]:
         source = ROOT / relative
         iso3, country_name, rows, _reference_year = _extract_education(source)
         if not _is_valid_iso3(iso3):
-            skipped.append(
+            result.skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
                     "parameter_id": "PARAM-EDU-LEVEL-CROSSWALK",
@@ -655,12 +654,14 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 }
             )
             continue
+        if ctx.iso3_filter and iso3 != ctx.iso3_filter:
+            continue
         if not rows:
             stale_path = DRAFT_ROOT / iso3 / "PARAM-EDU-LEVEL-CROSSWALK.yaml"
-            _drop_artifact_state(state, f"draft:{iso3}:PARAM-EDU-LEVEL-CROSSWALK")
+            _drop_artifact_state(ctx.state, f"draft:{iso3}:PARAM-EDU-LEVEL-CROSSWALK")
             if _delete_if_exists(stale_path):
-                cleaned.append(str(stale_path.relative_to(ROOT)))
-            skipped.append(
+                result.cleaned.append(str(stale_path.relative_to(ROOT)))
+            result.skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
                     "parameter_id": "PARAM-EDU-LEVEL-CROSSWALK",
@@ -674,11 +675,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
         edu_sig = _signature(
             _file_sha256(source),
             _parameter_schema_signature("PARAM-EDU-LEVEL-CROSSWALK"),
-            extractor_sig,
+            ctx.extractor_sig,
         )
         edu_key = f"draft:{iso3}:PARAM-EDU-LEVEL-CROSSWALK"
-        if not _should_emit(state=state, key=edu_key, signature=edu_sig, output_path=edu_out, force=force):
-            incremental_skipped.append(
+        if not _should_emit(state=ctx.state, key=edu_key, signature=edu_sig, output_path=edu_out, force=ctx.force):
+            result.incremental_skipped.append(
                 {
                     "file": str(edu_out.relative_to(ROOT)),
                     "parameter_id": "PARAM-EDU-LEVEL-CROSSWALK",
@@ -695,10 +696,14 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             effective_from=None,
             effective_to=None,
         )
-        _record_artifact_state(state, edu_key, edu_sig, out_path)
-        written.append(str(out_path.relative_to(ROOT)))
+        _record_artifact_state(ctx.state, edu_key, edu_sig, out_path)
+        result.written.append(str(out_path.relative_to(ROOT)))
+    return result
 
-    for relative in inputs["JMP"]:
+
+def _run_jmp_wash(ctx: ParamInputContext) -> ParamInputResult:
+    result = ParamInputResult()
+    for relative in inspect_inputs()["JMP"]:
         source = ROOT / relative
         source_status: dict[str, Any] = {
             "file": str(source.relative_to(ROOT)),
@@ -725,8 +730,8 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             source_status["benchmark_water"] = "error"
             source_status["benchmark_sanitation"] = "error"
             source_status["error"] = str(exc)
-            jmp_file_statuses.append(source_status)
-            skipped.append(
+            result.jmp_file_statuses.append(source_status)
+            result.skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
                     "parameter_id": "PARAM-WASH-*",
@@ -741,14 +746,17 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             source_status["benchmark_water"] = "invalid_iso3"
             source_status["benchmark_sanitation"] = "invalid_iso3"
             source_status["error"] = f"invalid iso3 '{iso3}'"
-            jmp_file_statuses.append(source_status)
-            skipped.append(
+            result.jmp_file_statuses.append(source_status)
+            result.skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
                     "parameter_id": "PARAM-WASH-*",
                     "reason": f"invalid iso3 '{iso3}'",
                 }
             )
+            continue
+
+        if ctx.iso3_filter and iso3 != ctx.iso3_filter:
             continue
 
         water_rows = _assign_country_entry_ids(water_rows, iso3, "WAS")
@@ -759,15 +767,15 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             water_sig = _signature(
                 _file_sha256(source),
                 _parameter_schema_signature("PARAM-WASH-WATER-CROSSWALK"),
-                extractor_sig,
+                ctx.extractor_sig,
             )
             water_key = f"draft:{iso3}:PARAM-WASH-WATER-CROSSWALK"
             if _should_emit(
-                state=state,
+                state=ctx.state,
                 key=water_key,
                 signature=water_sig,
                 output_path=water_out,
-                force=force,
+                force=ctx.force,
             ):
                 water_path = emit_parameter_draft(
                     iso3=iso3,
@@ -778,11 +786,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                     effective_from=None,
                     effective_to=None,
                 )
-                _record_artifact_state(state, water_key, water_sig, water_path)
-                written.append(str(water_path.relative_to(ROOT)))
+                _record_artifact_state(ctx.state, water_key, water_sig, water_path)
+                result.written.append(str(water_path.relative_to(ROOT)))
                 source_status["water"] = "written"
             else:
-                incremental_skipped.append(
+                result.incremental_skipped.append(
                     {
                         "file": str(water_out.relative_to(ROOT)),
                         "parameter_id": "PARAM-WASH-WATER-CROSSWALK",
@@ -791,11 +799,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 )
                 source_status["water"] = "unchanged"
         else:
-            _drop_artifact_state(state, f"draft:{iso3}:PARAM-WASH-WATER-CROSSWALK")
+            _drop_artifact_state(ctx.state, f"draft:{iso3}:PARAM-WASH-WATER-CROSSWALK")
             stale_water = DRAFT_ROOT / iso3 / "PARAM-WASH-WATER-CROSSWALK.yaml"
             if _delete_if_exists(stale_water):
-                cleaned.append(str(stale_water.relative_to(ROOT)))
-            skipped.append(
+                result.cleaned.append(str(stale_water.relative_to(ROOT)))
+            result.skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
                     "parameter_id": "PARAM-WASH-WATER-CROSSWALK",
@@ -809,15 +817,15 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
             san_sig = _signature(
                 _file_sha256(source),
                 _parameter_schema_signature("PARAM-WASH-SANITATION-CROSSWALK"),
-                extractor_sig,
+                ctx.extractor_sig,
             )
             san_key = f"draft:{iso3}:PARAM-WASH-SANITATION-CROSSWALK"
             if _should_emit(
-                state=state,
+                state=ctx.state,
                 key=san_key,
                 signature=san_sig,
                 output_path=san_out,
-                force=force,
+                force=ctx.force,
             ):
                 san_path = emit_parameter_draft(
                     iso3=iso3,
@@ -828,11 +836,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                     effective_from=None,
                     effective_to=None,
                 )
-                _record_artifact_state(state, san_key, san_sig, san_path)
-                written.append(str(san_path.relative_to(ROOT)))
+                _record_artifact_state(ctx.state, san_key, san_sig, san_path)
+                result.written.append(str(san_path.relative_to(ROOT)))
                 source_status["sanitation"] = "written"
             else:
-                incremental_skipped.append(
+                result.incremental_skipped.append(
                     {
                         "file": str(san_out.relative_to(ROOT)),
                         "parameter_id": "PARAM-WASH-SANITATION-CROSSWALK",
@@ -841,11 +849,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 )
                 source_status["sanitation"] = "unchanged"
         else:
-            _drop_artifact_state(state, f"draft:{iso3}:PARAM-WASH-SANITATION-CROSSWALK")
+            _drop_artifact_state(ctx.state, f"draft:{iso3}:PARAM-WASH-SANITATION-CROSSWALK")
             stale_san = DRAFT_ROOT / iso3 / "PARAM-WASH-SANITATION-CROSSWALK.yaml"
             if _delete_if_exists(stale_san):
-                cleaned.append(str(stale_san.relative_to(ROOT)))
-            skipped.append(
+                result.cleaned.append(str(stale_san.relative_to(ROOT)))
+            result.skipped.append(
                 {
                     "file": str(source.relative_to(ROOT)),
                     "parameter_id": "PARAM-WASH-SANITATION-CROSSWALK",
@@ -856,13 +864,13 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
 
         bench_water_key = f"benchmark:{iso3}:water"
         bench_water_path = ROOT / "governance" / "benchmarks" / f"{iso3}_water_benchmark_draft.yaml"
-        bench_water_sig = _signature(_file_sha256(source), "water", extractor_sig)
+        bench_water_sig = _signature(_file_sha256(source), "water", ctx.extractor_sig)
         if _should_emit(
-            state=state,
+            state=ctx.state,
             key=bench_water_key,
             signature=bench_water_sig,
             output_path=bench_water_path,
-            force=force,
+            force=ctx.force,
         ):
             b1 = emit_benchmark(
                 iso3,
@@ -870,11 +878,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 bench_water,
                 str(source.relative_to(ROOT)),
             )
-            _record_artifact_state(state, bench_water_key, bench_water_sig, b1)
-            written.append(str(b1.relative_to(ROOT)))
+            _record_artifact_state(ctx.state, bench_water_key, bench_water_sig, b1)
+            result.written.append(str(b1.relative_to(ROOT)))
             source_status["benchmark_water"] = "written"
         else:
-            incremental_skipped.append(
+            result.incremental_skipped.append(
                 {
                     "file": str(bench_water_path.relative_to(ROOT)),
                     "parameter_id": "BENCHMARK-WATER",
@@ -885,13 +893,13 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
 
         bench_san_key = f"benchmark:{iso3}:sanitation"
         bench_san_path = ROOT / "governance" / "benchmarks" / f"{iso3}_sanitation_benchmark_draft.yaml"
-        bench_san_sig = _signature(_file_sha256(source), "sanitation", extractor_sig)
+        bench_san_sig = _signature(_file_sha256(source), "sanitation", ctx.extractor_sig)
         if _should_emit(
-            state=state,
+            state=ctx.state,
             key=bench_san_key,
             signature=bench_san_sig,
             output_path=bench_san_path,
-            force=force,
+            force=ctx.force,
         ):
             b2 = emit_benchmark(
                 iso3,
@@ -899,11 +907,11 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
                 bench_san,
                 str(source.relative_to(ROOT)),
             )
-            _record_artifact_state(state, bench_san_key, bench_san_sig, b2)
-            written.append(str(b2.relative_to(ROOT)))
+            _record_artifact_state(ctx.state, bench_san_key, bench_san_sig, b2)
+            result.written.append(str(b2.relative_to(ROOT)))
             source_status["benchmark_sanitation"] = "written"
         else:
-            incremental_skipped.append(
+            result.incremental_skipped.append(
                 {
                     "file": str(bench_san_path.relative_to(ROOT)),
                     "parameter_id": "BENCHMARK-SANITATION",
@@ -914,75 +922,368 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
 
         source_status["water_rows"] = len(water_rows)
         source_status["sanitation_rows"] = len(sanitation_rows)
-        jmp_file_statuses.append(source_status)
+        result.jmp_file_statuses.append(source_status)
+    return result
 
-    if inputs["GEO"]:
-        try:
-            geo_iso3s, geo_source = list_geo_iso3s()
-        except Exception as exc:  # noqa: BLE001
-            skipped.append(
+
+def _run_geo_crosswalk(ctx: ParamInputContext) -> ParamInputResult:
+    result = ParamInputResult()
+    if not inspect_inputs()["GEO"]:
+        return result
+
+    try:
+        geo_rows_by_iso3, geo_source = _extract_all_geo_rows()
+    except Exception as exc:  # noqa: BLE001
+        result.skipped.append(
+            {
+                "file": "extraction/10_source/country-parameters-inputs/GEO/Sub_nat_gmd.xlsx",
+                "parameter_id": "PARAM-GEO-GMD-CROSSWALK",
+                "reason": f"failed to inspect GEO workbook: {exc}",
+            }
+        )
+        return result
+
+    iso3_list = sorted(geo_rows_by_iso3)
+    if ctx.iso3_filter:
+        iso3_list = [iso3 for iso3 in iso3_list if iso3 == ctx.iso3_filter]
+
+    for iso3 in iso3_list:
+        geo_rows = geo_rows_by_iso3.get(iso3, [])
+        if not geo_rows:
+            stale_geo = DRAFT_ROOT / iso3 / "PARAM-GEO-GMD-CROSSWALK.yaml"
+            _drop_artifact_state(ctx.state, f"draft:{iso3}:PARAM-GEO-GMD-CROSSWALK")
+            if _delete_if_exists(stale_geo):
+                result.cleaned.append(str(stale_geo.relative_to(ROOT)))
+            result.skipped.append(
                 {
-                    "file": "extraction/10_source/country-parameters-inputs/GEO/Sub_nat_gmd.xlsx",
+                    "file": geo_source,
                     "parameter_id": "PARAM-GEO-GMD-CROSSWALK",
-                    "reason": f"failed to inspect GEO workbook: {exc}",
+                    "reason": f"{iso3}: no rows extracted",
                 }
             )
-            geo_iso3s = []
-            geo_source = "extraction/10_source/country-parameters-inputs/GEO/Sub_nat_gmd.xlsx"
+            continue
 
-        for iso3 in geo_iso3s:
-            try:
-                geo_rows, _ = extract_geo_rows(iso3, 0)
-            except Exception as exc:  # noqa: BLE001
-                skipped.append(
-                    {
-                        "file": geo_source,
-                        "parameter_id": "PARAM-GEO-GMD-CROSSWALK",
-                        "reason": f"{iso3}: extraction failed ({exc})",
-                    }
-                )
-                continue
-
-            if not geo_rows:
-                stale_geo = DRAFT_ROOT / iso3 / "PARAM-GEO-GMD-CROSSWALK.yaml"
-                _drop_artifact_state(state, f"draft:{iso3}:PARAM-GEO-GMD-CROSSWALK")
-                if _delete_if_exists(stale_geo):
-                    cleaned.append(str(stale_geo.relative_to(ROOT)))
-                skipped.append(
-                    {
-                        "file": geo_source,
-                        "parameter_id": "PARAM-GEO-GMD-CROSSWALK",
-                        "reason": f"{iso3}: no rows extracted",
-                    }
-                )
-                continue
-
-            geo_out = DRAFT_ROOT / iso3 / "PARAM-GEO-GMD-CROSSWALK.yaml"
-            geo_sig = _signature(
-                _file_sha256(ROOT / geo_source),
-                _parameter_schema_signature("PARAM-GEO-GMD-CROSSWALK"),
-                extractor_sig,
-                iso3,
+        geo_out = DRAFT_ROOT / iso3 / "PARAM-GEO-GMD-CROSSWALK.yaml"
+        geo_sig = _signature(
+            _file_sha256(ROOT / geo_source),
+            _parameter_schema_signature("PARAM-GEO-GMD-CROSSWALK"),
+            ctx.extractor_sig,
+            iso3,
+        )
+        geo_key = f"draft:{iso3}:PARAM-GEO-GMD-CROSSWALK"
+        if not _should_emit(state=ctx.state, key=geo_key, signature=geo_sig, output_path=geo_out, force=ctx.force):
+            result.incremental_skipped.append(
+                {
+                    "file": str(geo_out.relative_to(ROOT)),
+                    "parameter_id": "PARAM-GEO-GMD-CROSSWALK",
+                    "reason": "unchanged input/schema",
+                }
             )
-            geo_key = f"draft:{iso3}:PARAM-GEO-GMD-CROSSWALK"
-            if not _should_emit(state=state, key=geo_key, signature=geo_sig, output_path=geo_out, force=force):
-                incremental_skipped.append(
-                    {
-                        "file": str(geo_out.relative_to(ROOT)),
-                        "parameter_id": "PARAM-GEO-GMD-CROSSWALK",
-                        "reason": "unchanged input/schema",
-                    }
-                )
-                continue
+            continue
 
-            geo_path = _emit_geo_parameter_draft(
-                iso3,
-                _country_name_for_iso3(iso3),
-                geo_rows,
-                geo_source,
+        geo_path = _emit_geo_parameter_draft(
+            iso3,
+            _country_name_for_iso3(iso3),
+            geo_rows,
+            geo_source,
+        )
+        _record_artifact_state(ctx.state, geo_key, geo_sig, geo_path)
+        result.written.append(str(geo_path.relative_to(ROOT)))
+
+    return result
+
+
+def _extract_labor_min_age_rows() -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]], str]:
+    """Single pass over sheet `panel_long`, bucketing resolved-ISO3 rows (vs. one parse per country)."""
+    workbook_path = SOURCE_ROOT / "Labor" / "min_labor_age_panel_1990_2026.xlsx"
+    source = str(workbook_path.relative_to(ROOT))
+    if not workbook_path.exists():
+        return {}, [], source
+
+    try:
+        from openpyxl import load_workbook
+    except ImportError as exc:  # pragma: no cover
+        raise RuntimeError("openpyxl is required for Labor workbook extraction") from exc
+
+    resolver = load_countries_resolver()
+    wb = load_workbook(workbook_path, data_only=True, read_only=True)
+    ws = wb["panel_long"]
+    header_row = next(ws.iter_rows(min_row=1, max_row=1, values_only=True), None)
+    if not header_row:
+        return {}, [], source
+    headers = [_to_text(col) for col in header_row]
+    index = {name: idx for idx, name in enumerate(headers)}
+    required = ["country", "year", "MINLABORAGE_C138"]
+    missing = [name for name in required if name not in index]
+    if missing:
+        raise ValueError(f"missing expected columns in Labor workbook: {missing}")
+    has_ratified = "ratified_by_year" in index
+
+    rows_by_iso3: dict[str, list[dict[str, Any]]] = {}
+    skipped: list[dict[str, Any]] = []
+    for source_row, values in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+        country_name = _to_text(values[index["country"]])
+        if not country_name:
+            continue
+
+        year = _to_int_year(values[index["year"]])
+        age = _to_int_year(values[index["MINLABORAGE_C138"]])
+        # ratified_by_year is a 0/1 flag for "C138 in force as of this row's year", not a year value.
+        c138_ratified = bool(_to_int_year(values[index["ratified_by_year"]])) if has_ratified else False
+
+        iso3, _span = resolver.match(country_name)
+        if not iso3:
+            skipped.append(
+                {
+                    "file": source,
+                    "parameter_id": "PARAM-LBR-MIN-WORKING-AGE",
+                    "reason": f"row {source_row}: unresolved country '{country_name}'",
+                }
             )
-            _record_artifact_state(state, geo_key, geo_sig, geo_path)
-            written.append(str(geo_path.relative_to(ROOT)))
+            continue
+        if year is None:
+            skipped.append(
+                {
+                    "file": source,
+                    "parameter_id": "PARAM-LBR-MIN-WORKING-AGE",
+                    "reason": f"row {source_row} ({iso3}): missing year",
+                }
+            )
+            continue
+        if age is None:
+            # Expected before C138 ratification (no minimum age on record yet); not a data-quality error.
+            continue
+
+        rows_by_iso3.setdefault(iso3, []).append(
+            {
+                "year": year,
+                "value": age,
+                "c138_ratified": c138_ratified,
+                "source_row": source_row,
+            }
+        )
+
+    return rows_by_iso3, skipped, source
+
+
+def _build_labor_age_records(rows: list[dict[str, Any]], source: str) -> list[dict[str, Any]]:
+    ordered = sorted(rows, key=lambda row: row["year"])
+
+    # A reporting gap always starts a new segment; never assume continuity across missing years.
+    segments: list[dict[str, Any]] = []
+    for row in ordered:
+        if segments:
+            current = segments[-1]
+            if row["year"] == current["end"] + 1 and row["value"] == current["value"]:
+                current["end"] = row["year"]
+                current["c138_ratified"] = current["c138_ratified"] or row["c138_ratified"]
+                continue
+        segments.append(
+            {
+                "start": row["year"],
+                "end": row["year"],
+                "value": row["value"],
+                "c138_ratified": row["c138_ratified"],
+            }
+        )
+
+    records: list[dict[str, Any]] = []
+    for idx, segment in enumerate(segments):
+        effective_to = None if idx == len(segments) - 1 else segment["end"]
+        source_note = f"{source} (ILO C138 ratified)" if segment["c138_ratified"] else source
+        records.append(
+            {
+                "parameter_id": "PARAM-LBR-MIN-WORKING-AGE",
+                "effective_from": segment["start"],
+                "effective_to": effective_to,
+                "selectors": None,
+                "value": segment["value"],
+                "provenance": {
+                    "source": source_note,
+                    "verified_on": None,
+                    "human_reviewed": False,
+                    "reviewer": None,
+                },
+            }
+        )
+    return records
+
+
+def _emit_labor_age_draft(
+    iso3: str, country_name: str, records: list[dict[str, Any]], source: str
+) -> Path:
+    out_dir = DRAFT_ROOT / iso3
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "PARAM-LBR-MIN-WORKING-AGE.yaml"
+
+    payload = {
+        "country_id": f"CTY-{iso3}",
+        "country_name": country_name,
+        "iso3": iso3,
+        "schema_version": "0.2",
+        "status": "draft",
+        "parameters": records,
+    }
+
+    text = yaml.safe_dump(payload, sort_keys=False, allow_unicode=False)
+    out_path.write_text(text, encoding="utf-8")
+    return out_path
+
+
+def _run_labor_min_working_age(ctx: ParamInputContext) -> ParamInputResult:
+    result = ParamInputResult()
+    if not inspect_inputs()["Labor"]:
+        return result
+
+    try:
+        rows_by_iso3, extraction_skips, source = _extract_labor_min_age_rows()
+    except Exception as exc:  # noqa: BLE001
+        result.skipped.append(
+            {
+                "file": "extraction/10_source/country-parameters-inputs/Labor/min_labor_age_panel_1990_2026.xlsx",
+                "parameter_id": "PARAM-LBR-MIN-WORKING-AGE",
+                "reason": f"failed to inspect Labor workbook: {exc}",
+            }
+        )
+        return result
+    result.skipped.extend(extraction_skips)
+
+    iso3_list = sorted(rows_by_iso3)
+    if ctx.iso3_filter:
+        iso3_list = [iso3 for iso3 in iso3_list if iso3 == ctx.iso3_filter]
+
+    for iso3 in iso3_list:
+        records = _build_labor_age_records(rows_by_iso3[iso3], source)
+        if not records:
+            stale_path = DRAFT_ROOT / iso3 / "PARAM-LBR-MIN-WORKING-AGE.yaml"
+            _drop_artifact_state(ctx.state, f"draft:{iso3}:PARAM-LBR-MIN-WORKING-AGE")
+            if _delete_if_exists(stale_path):
+                result.cleaned.append(str(stale_path.relative_to(ROOT)))
+            result.skipped.append(
+                {
+                    "file": source,
+                    "parameter_id": "PARAM-LBR-MIN-WORKING-AGE",
+                    "reason": f"{iso3}: no rows extracted",
+                }
+            )
+            continue
+
+        out_path = DRAFT_ROOT / iso3 / "PARAM-LBR-MIN-WORKING-AGE.yaml"
+        sig = _signature(
+            _file_sha256(ROOT / source),
+            _parameter_schema_signature("PARAM-LBR-MIN-WORKING-AGE"),
+            ctx.extractor_sig,
+            iso3,
+        )
+        key = f"draft:{iso3}:PARAM-LBR-MIN-WORKING-AGE"
+        if not _should_emit(state=ctx.state, key=key, signature=sig, output_path=out_path, force=ctx.force):
+            result.incremental_skipped.append(
+                {
+                    "file": str(out_path.relative_to(ROOT)),
+                    "parameter_id": "PARAM-LBR-MIN-WORKING-AGE",
+                    "reason": "unchanged input/schema",
+                }
+            )
+            continue
+
+        written_path = _emit_labor_age_draft(iso3, _country_name_for_iso3(iso3), records, source)
+        _record_artifact_state(ctx.state, key, sig, written_path)
+        result.written.append(str(written_path.relative_to(ROOT)))
+
+    return result
+
+
+# Registry key -> spec. Dimension is a broad tag (many param-inputs may share one, e.g. future
+# ISIC/ISCO crosswalks alongside min-working-age all tagged "labor"). To add a new country-
+# parameter input: write one `_run_<key>(ctx)` function returning a ParamInputResult, list its
+# parameter_id(s) and dimension tag, add one entry below. No other function needs to change.
+PARAM_INPUT_REGISTRY: dict[str, ParamInputSpec] = {
+    "isced-crosswalk": ParamInputSpec(
+        key="isced-crosswalk",
+        dimension="isced",
+        parameter_ids=("PARAM-EDU-LEVEL-CROSSWALK",),
+        run=_run_isced_crosswalk,
+    ),
+    "jmp-wash": ParamInputSpec(
+        key="jmp-wash",
+        dimension="jmp",
+        parameter_ids=("PARAM-WASH-WATER-CROSSWALK", "PARAM-WASH-SANITATION-CROSSWALK"),
+        run=_run_jmp_wash,
+    ),
+    "geo-crosswalk": ParamInputSpec(
+        key="geo-crosswalk",
+        dimension="geo",
+        parameter_ids=("PARAM-GEO-GMD-CROSSWALK",),
+        run=_run_geo_crosswalk,
+    ),
+    "labor-min-working-age": ParamInputSpec(
+        key="labor-min-working-age",
+        dimension="labor",
+        parameter_ids=("PARAM-LBR-MIN-WORKING-AGE",),
+        run=_run_labor_min_working_age,
+    ),
+}
+
+
+def dimension_names() -> list[str]:
+    return sorted({spec.dimension for spec in PARAM_INPUT_REGISTRY.values()})
+
+
+def specs_for(*, dimension: str | None, param_input: str | None) -> list[ParamInputSpec]:
+    if param_input:
+        spec = PARAM_INPUT_REGISTRY.get(param_input)
+        return [spec] if spec else []
+    if dimension:
+        return [spec for spec in PARAM_INPUT_REGISTRY.values() if spec.dimension == dimension]
+    return list(PARAM_INPUT_REGISTRY.values())
+
+
+def run_extract(
+    *,
+    force: bool = False,
+    dimension: str | None = None,
+    param_input: str | None = None,
+    iso3: str | None = None,
+) -> dict[str, Any]:
+    inputs = inspect_inputs()
+    if not any(inputs.values()):
+        return {
+            "ok": False,
+            "errors": ["no input workbooks found under extraction/10_source/country-parameters-inputs"],
+            "inputs": inputs,
+            "written": [],
+        }
+
+    specs = specs_for(dimension=dimension, param_input=param_input)
+    if not specs:
+        return {
+            "ok": False,
+            "errors": [f"no param-input matched dimension={dimension!r} param_input={param_input!r}"],
+            "inputs": inputs,
+            "written": [],
+        }
+
+    cleaned = _cleanup_stale_root_level_yaml()
+    state = _load_incremental_state()
+    ctx = ParamInputContext(
+        state=state,
+        extractor_sig=_extractor_signature(),
+        force=force,
+        iso3_filter=iso3,
+    )
+
+    written: list[str] = []
+    skipped: list[dict[str, Any]] = []
+    incremental_skipped: list[dict[str, Any]] = []
+    jmp_file_statuses: list[dict[str, Any]] = []
+
+    for spec in specs:
+        result = spec.run(ctx)
+        written.extend(result.written)
+        skipped.extend(result.skipped)
+        incremental_skipped.extend(result.incremental_skipped)
+        cleaned.extend(result.cleaned)
+        jmp_file_statuses.extend(result.jmp_file_statuses)
 
     _save_incremental_state(state)
 
@@ -996,10 +1297,18 @@ def run_extract(*, force: bool = False) -> dict[str, Any]:
         "jmp_file_statuses": jmp_file_statuses,
         "incremental_state": str(STATE_PATH.relative_to(ROOT)),
         "force": force,
+        "dimension": dimension,
+        "param_input": param_input,
+        "iso3": iso3,
     }
 
 
-def run_check() -> dict[str, Any]:
+def run_check(
+    *,
+    dimension: str | None = None,
+    param_input: str | None = None,
+    iso3: str | None = None,
+) -> dict[str, Any]:
     base = DRAFT_ROOT
     errors: list[dict[str, str]] = []
     warnings: list[dict[str, str]] = []
@@ -1014,8 +1323,20 @@ def run_check() -> dict[str, Any]:
             "warnings": [],
         }
 
+    allowed_parameter_ids: set[str] | None = None
+    if dimension or param_input:
+        allowed_parameter_ids = {
+            parameter_id
+            for spec in specs_for(dimension=dimension, param_input=param_input)
+            for parameter_id in spec.parameter_ids
+        }
+
     findings: list[dict[str, Any]] = []
     paths = [path for path in sorted(base.rglob("*.yaml")) if CONTRACT_ROOT not in path.parents]
+    if iso3:
+        paths = [path for path in paths if path.relative_to(base).parts[:1] == (iso3,)]
+    if allowed_parameter_ids is not None:
+        paths = [path for path in paths if path.stem in allowed_parameter_ids]
     if not paths:
         return {
             "ok": False,
@@ -1107,14 +1428,127 @@ def run_check() -> dict[str, Any]:
     }
 
 
-def run_bulk(*, force: bool = False) -> dict[str, Any]:
-    return run_extract(force=force)
+def run_bulk(
+    *,
+    force: bool = False,
+    dimension: str | None = None,
+    param_input: str | None = None,
+    iso3: str | None = None,
+) -> dict[str, Any]:
+    return run_extract(force=force, dimension=dimension, param_input=param_input, iso3=iso3)
+
+
+def _write_country_parameters_file(path: Path, data: dict[str, Any], body: str) -> None:
+    front_matter = yaml.safe_dump(data, sort_keys=False, allow_unicode=False).rstrip()
+    path.write_text(f"---\n{front_matter}\n---\n\n{body}", encoding="utf-8")
+
+
+def run_promote(
+    *,
+    dimension: str | None = None,
+    param_input: str | None = None,
+    iso3: str | None = None,
+) -> dict[str, Any]:
+    """Merge drafted records for the selected param-input(s) into each country's
+    committed country-parameters/countries/<ISO3>/parameters.md, replacing any
+    existing records for the same parameter_id (idempotent re-run)."""
+    specs = specs_for(dimension=dimension, param_input=param_input)
+    if not specs:
+        return {
+            "ok": False,
+            "errors": [f"no param-input matched dimension={dimension!r} param_input={param_input!r}"],
+            "promoted": [],
+        }
+    parameter_ids = sorted({parameter_id for spec in specs for parameter_id in spec.parameter_ids})
+
+    try:
+        registry = load_parameter_registry()
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "errors": [f"failed to load parameter registry: {exc}"], "promoted": []}
+
+    if not DRAFT_ROOT.exists():
+        return {"ok": False, "errors": ["no draft root found"], "promoted": []}
+
+    iso3_dirs = sorted(
+        path.name for path in DRAFT_ROOT.iterdir() if path.is_dir() and _is_valid_iso3(path.name)
+    )
+    if iso3:
+        iso3_dirs = [code for code in iso3_dirs if code == iso3]
+
+    promoted: list[dict[str, Any]] = []
+    skipped: list[dict[str, Any]] = []
+    errors: list[dict[str, Any]] = []
+
+    for code in iso3_dirs:
+        country_path = ROOT / "country-parameters" / "countries" / code / "parameters.md"
+        if not country_path.exists():
+            skipped.append({"iso3": code, "reason": "no country-parameters/countries/<ISO3>/parameters.md"})
+            continue
+
+        wrote_any = False
+        for parameter_id in parameter_ids:
+            draft_path = DRAFT_ROOT / code / f"{parameter_id}.yaml"
+            if not draft_path.exists():
+                continue
+            draft = yaml.safe_load(draft_path.read_text(encoding="utf-8"))
+            records = [
+                record
+                for record in (draft or {}).get("parameters", [])
+                if record.get("parameter_id") == parameter_id
+            ]
+            if not records:
+                continue
+
+            data, body = load_markdown(country_path)
+            kept = [
+                record for record in data.get("parameters", []) if record.get("parameter_id") != parameter_id
+            ]
+            merged = {**data, "parameters": kept + records}
+            try:
+                CountryParameterFile.model_validate(merged, context={"registry": registry})
+            except Exception as exc:  # noqa: BLE001
+                errors.append({"iso3": code, "parameter_id": parameter_id, "error": str(exc)})
+                continue
+
+            _write_country_parameters_file(country_path, merged, body)
+            wrote_any = True
+            promoted.append({"iso3": code, "parameter_id": parameter_id, "records": len(records)})
+
+        if not wrote_any and not any(entry["iso3"] == code for entry in errors):
+            skipped.append({"iso3": code, "reason": "no matching draft file(s) found"})
+
+    return {
+        "ok": len(errors) == 0,
+        "promoted": promoted,
+        "skipped": skipped,
+        "errors": errors,
+        "dimension": dimension,
+        "param_input": param_input,
+        "iso3": iso3,
+    }
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Country parameter input extraction")
-    parser.add_argument("command", choices=["inspect", "extract", "check", "bulk", "geo-example"])
-    parser.add_argument("--iso3", default="VNM", help="ISO3 filter for geo-example command")
+    parser.add_argument("command", choices=["inspect", "extract", "check", "bulk", "promote", "geo-example"])
+    parser.add_argument(
+        "--iso3",
+        default=None,
+        help="ISO3 filter. geo-example defaults to VNM when omitted; extract/bulk/check/promote have no filter when omitted.",
+    )
+    parser.add_argument(
+        "--dimension",
+        choices=sorted(dimension_names()),
+        default=None,
+        help="Restrict extract/bulk/check/promote to every param-input tagged with this broad dimension.",
+    )
+    parser.add_argument(
+        "--param-input",
+        dest="param_input",
+        choices=sorted(PARAM_INPUT_REGISTRY),
+        default=None,
+        help="Restrict extract/bulk/check/promote to one specific registered param-input (overrides --dimension).",
+    )
     parser.add_argument("--limit", type=int, default=12, help="Max rows to return for geo-example")
     parser.add_argument(
         "--write",
@@ -1135,19 +1569,33 @@ def main() -> int:
         print(json.dumps(inspect_inputs(), indent=2, ensure_ascii=False))
         return 0
     if args.command == "extract":
-        result = run_extract(force=args.force)
+        result = run_extract(
+            force=args.force,
+            dimension=args.dimension,
+            param_input=args.param_input,
+            iso3=args.iso3,
+        )
         print(json.dumps(result, indent=2, ensure_ascii=False))
         return 0 if result.get("ok", False) else 1
     if args.command == "check":
-        result = run_check()
+        result = run_check(dimension=args.dimension, param_input=args.param_input, iso3=args.iso3)
         print(json.dumps(result, indent=2, ensure_ascii=False))
         return 0 if result.get("ok", False) else 1
     if args.command == "bulk":
-        result = run_bulk(force=args.force)
+        result = run_bulk(
+            force=args.force,
+            dimension=args.dimension,
+            param_input=args.param_input,
+            iso3=args.iso3,
+        )
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return 0 if result.get("ok", False) else 1
+    if args.command == "promote":
+        result = run_promote(dimension=args.dimension, param_input=args.param_input, iso3=args.iso3)
         print(json.dumps(result, indent=2, ensure_ascii=False))
         return 0 if result.get("ok", False) else 1
     if args.command == "geo-example":
-        result = run_geo_example(args.iso3, args.limit, args.write)
+        result = run_geo_example(args.iso3 or "VNM", args.limit, args.write)
         print(json.dumps(result, indent=2, ensure_ascii=False))
         return 0 if result.get("ok", False) else 1
     return 1
@@ -1155,3 +1603,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
