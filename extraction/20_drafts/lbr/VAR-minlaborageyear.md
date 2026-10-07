@@ -27,7 +27,7 @@ missing_codes:
 derived_from: []
 derives_to: []
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

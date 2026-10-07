@@ -54,8 +54,8 @@ derives_to: []
 # --- Country parameter declarations ---
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []

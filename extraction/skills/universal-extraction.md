@@ -11,7 +11,7 @@ Common rules and conventions applied to all module extractions.
 - **governed-constant**: Read from `extraction-governance.v1.yaml`.
   Example: schema_version, gmd_version, status, authority.
 - **agent-interpreted**: Propose with confidence < 1.0 and citations.
-  Example: mapping_role, prerequisites, rules.
+  Example: mapping_role, gates, rules.
 - **generated-metadata**: Set by orchestrator, not agent.
   Example: extracted_on, extraction_method.
 - **unresolved**: Store null, create blocking issue. Never emit canonical.
@@ -34,5 +34,5 @@ pipeline does not inspect raw survey data.
 
 Every variable draft must include:
 `## Summary`, `## Value codes`, `## Derivation`, `## Source note`,
-`## Prerequisites`, `## Country parameters`, `## External standards`,
+`## Gates`, `## Country parameters`, `## External standards`,
 `## Provenance`

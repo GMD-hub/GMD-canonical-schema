@@ -37,9 +37,9 @@ derives_to:
 - VAR-wagencyear
 - VAR-wagetotalyear
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
-  condition: lstatus_year == 1
+  condition: VAR-lstatusyear == 1
 rules: []
 exceptions: []
 external_standards: []

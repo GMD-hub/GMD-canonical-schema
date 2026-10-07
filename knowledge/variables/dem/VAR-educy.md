@@ -49,15 +49,10 @@ derives_to: []
 country_parameters:
   - PARAM-EDU-YEARS-BY-LEVEL
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Set educy to .c for all individuals where age is below
-                mineducatage."
-  - variable_id: VAR-school
-    condition: "Enrollment status must be evaluated before constructing
-                educy. It determines whether current class or highest
-                completed grade is the basis for calculation."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: age >= mineducatage
 
 # --- Cross-references ---
 rules:
@@ -115,7 +110,7 @@ Construction follows one of three paths depending on what the survey provides.
 The paths are ordered from most direct to most dependent on intermediate
 variables. The path used must be documented in the do-file notes.
 
-**Prerequisite check: enrollment status.**
+**Gate check: enrollment status.**
 Before constructing `educy`, evaluate `school`. Its value determines which
 grade reference point to use.
 
