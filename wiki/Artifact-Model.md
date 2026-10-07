@@ -35,6 +35,9 @@ fields cover:
 - discovery: questionnaire keywords and common section names;
 - provenance: source location, extraction method, review status, and notes.
 
+The [CVS Variable YAML Reference](CVS-Variable-YAML-Reference.md) lists every
+current field, nested field, constraint, and open documentation question.
+
 The Markdown body normally adds a definition, conceptual intent, construction
 notes, consistency checks, escalation triggers, common mistakes, and change
 log. Keep one variable per file.
