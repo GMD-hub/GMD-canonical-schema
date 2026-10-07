@@ -107,10 +107,45 @@ whole universal knowledge base with one selected country layer, validates it,
 and records the source commit hash in the generated bundle.
 
 Extraction-stage country input transforms (for example, ISCED and JMP workbook
-extraction) may stage draft parameter contracts under
+extraction, GEO crosswalk extraction, and Labor minimum-working-age extraction)
+may stage draft parameter contracts under
 `extraction/20_drafts/runs/country-parameters/contracts/` for draft validation.
 These files are not canonical registry entries and do not replace human-owned
 artifacts under `knowledge/parameters/`.
+
+Each extraction-stage input is registered in
+`extraction_pipeline/country_inputs/cli.py`'s `PARAM_INPUT_REGISTRY`, tagged
+with a broad dimension (`isced`, `jmp`, `geo`, `labor`, ...). A dimension may
+hold more than one independent input over time (for example, the Labor
+dimension may later add ISIC/ISCO crosswalks alongside minimum working age).
+`extract`/`bulk`/`check` accept `--dimension` to run every input tagged with
+one dimension, `--param-input` to run exactly one registered input regardless
+of its dimension, and `--iso3` to scope either to one country, so adding or
+refreshing one input does not require rerunning the whole registry.
+
+```sh
+# Every registered input, every country (default; slowest, full refresh)
+python3 -m extraction_pipeline.country_inputs.cli extract
+
+# Every input tagged with one dimension, every country
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension labor
+
+# Exactly one registered input (narrower than --dimension)
+python3 -m extraction_pipeline.country_inputs.cli extract --param-input labor-min-working-age
+
+# One dimension, one country
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension geo --iso3 PER
+
+# Validate what was written, scoped the same way
+python3 -m extraction_pipeline.country_inputs.cli check --dimension labor --iso3 PER
+
+# Force a rewrite even if the incremental cache says nothing changed
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension labor --force
+```
+
+Unchanged inputs are skipped automatically between runs (file-hash incremental
+cache), so narrowing by `--dimension`/`--param-input`/`--iso3` is an extra,
+composable scoping on top of that cache rather than a replacement for it.
 
 JMP benchmarking estimates that are not used directly in executable
 harmonization logic must be stored outside executable country canon in a
