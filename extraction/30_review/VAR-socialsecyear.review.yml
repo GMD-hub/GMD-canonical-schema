@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-socialsecyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-socialsecyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 791b4decce0fcd7768e08e08dea1469376dcf16b
+source_content_sha256: 4c6d406fff9456aedebfa57b9d28d596a6a9374ea2763985a0abd905690357e1
+enrolled_body_sha256: c47ddf4f388a42bdc6c2075ea205319408712ae99a29235051242d61be293d18
+current_content_sha256: c47ddf4f388a42bdc6c2075ea205319408712ae99a29235051242d61be293d18
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

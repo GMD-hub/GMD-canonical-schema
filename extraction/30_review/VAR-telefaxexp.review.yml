@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-telefaxexp
+source_artifact_path: extraction/20_drafts/utl/VAR-telefaxexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 6ee74ed628f9eb541416753f658808e7d24beb2f
+source_content_sha256: 8b8c96c739e57c1b1408b4b9c859383a4fe9f0010061cdcd42333a9c71d3a44a
+enrolled_body_sha256: 59b6c70e36de2ac60902d35fa17a11cb01e9d9b3c1c01ffd7ce9b2c3eacff5e6
+current_content_sha256: 59b6c70e36de2ac60902d35fa17a11cb01e9d9b3c1c01ffd7ce9b2c3eacff5e6
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

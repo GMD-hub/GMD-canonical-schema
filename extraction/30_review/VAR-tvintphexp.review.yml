@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-tvintphexp
+source_artifact_path: extraction/20_drafts/utl/VAR-tvintphexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c56e772d7ffee444bb98be520001e7bfa112bccd
+source_content_sha256: c8deebe3343d49334c50d83c0b9cbd88fc9abcdeb8f6072bebd7c2a2e32fec03
+enrolled_body_sha256: 03692e7aa363a30005488748baf26c53e7fd7b3bf8deb9801bef445975b27e6a
+current_content_sha256: 03692e7aa363a30005488748baf26c53e7fd7b3bf8deb9801bef445975b27e6a
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

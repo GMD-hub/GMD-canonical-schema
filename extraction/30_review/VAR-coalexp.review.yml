@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-coalexp
+source_artifact_path: extraction/20_drafts/utl/VAR-coalexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: bed58a51fb13799c63eb362e0b753800776b5057
+source_content_sha256: e7de110c5451869f43209eb15b6501bc766816a81d298d07cbbde8727de493b4
+enrolled_body_sha256: 604d4abc2950dbd3ea23c735d5ba28a6107efa233b1f2482948ef65923e15268
+current_content_sha256: 604d4abc2950dbd3ea23c735d5ba28a6107efa233b1f2482948ef65923e15268
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

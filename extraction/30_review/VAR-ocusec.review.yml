@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-ocusec
+source_artifact_path: extraction/20_drafts/lbr/VAR-ocusec.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 66a31f56564c75717e82a9345142e94e429306ce
+source_content_sha256: 87be9ff2d6a04aee0452a4ae3cf71db3a89abbe01ef974e1a18f9a13111c0824
+enrolled_body_sha256: 08930d51c4f1f69acb77111deae8eb297e034848f057b927dd07db4340007cc5
+current_content_sha256: 08930d51c4f1f69acb77111deae8eb297e034848f057b927dd07db4340007cc5
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

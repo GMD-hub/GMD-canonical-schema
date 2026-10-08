@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-fan
+source_artifact_path: extraction/20_drafts/dwl/VAR-fan.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 616083ffccb751149f01e65ae583832ab0412789
+source_content_sha256: a872f692b0dc7c347cfb476277ff50105d434c3d084e746a41bdeb4918f56890
+enrolled_body_sha256: b42e0a57c05c68541f631df7a5493e148ab16484d4e8697ae7b9436cb63a9f77
+current_content_sha256: b42e0a57c05c68541f631df7a5493e148ab16484d4e8697ae7b9436cb63a9f77
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

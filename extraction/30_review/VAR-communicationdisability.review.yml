@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-communicationdisability
+source_artifact_path: extraction/20_drafts/dem/VAR-communicationdisability.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 37aee30e2eece01c8ed7991ceb316bd64a5be95e
+source_content_sha256: 7263dfe3f8775de340a03f2733f767a6e1db8b9167f5268a4e34c6d63d59d667
+enrolled_body_sha256: 19393417311d7a704760b742fbb7e3169bb8d404541d6209b11c4c1e451d41db
+current_content_sha256: 19393417311d7a704760b742fbb7e3169bb8d404541d6209b11c4c1e451d41db
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

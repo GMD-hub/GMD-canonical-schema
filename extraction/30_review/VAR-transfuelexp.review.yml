@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-transfuelexp
+source_artifact_path: extraction/20_drafts/utl/VAR-transfuelexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ca809a923b5b7d3149a22f72c6bc532ba9b62a5e
+source_content_sha256: 23fb98697e227f12bb3bbb7031fba5c24d656946717a20715e92b079354e0222
+enrolled_body_sha256: 28db907ef165ca7d04502d1ca242488b56f83624bd9f7c1cc148b9bf78efa3f7
+current_content_sha256: 28db907ef165ca7d04502d1ca242488b56f83624bd9f7c1cc148b9bf78efa3f7
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

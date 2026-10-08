@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-video
+source_artifact_path: extraction/20_drafts/dwl/VAR-video.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: b8512138582dc85b245337f8613b744a6ab5db70
+source_content_sha256: 2aa9231c85d3c29eecfa884599cd58ab17703bf12f8a53fb2daed291e4849da4
+enrolled_body_sha256: 1abc0d24e62d9514b52821b580a38505303b13123829cf15b0dfb00dbd7fa11f
+current_content_sha256: 1abc0d24e62d9514b52821b580a38505303b13123829cf15b0dfb00dbd7fa11f
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

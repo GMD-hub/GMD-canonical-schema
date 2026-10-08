@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-inheragriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-inheragriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 5eb62c6de95d12ae15a85405a0c6f50851801ad2
+source_content_sha256: 57ae2281960d56262f4e9c4ed9f81d5278a8717133118b94864f2ed426fcd1f6
+enrolled_body_sha256: 3b1284dc1512b8f50d84b9ed7ba33eb265a362ae2851fa8baaf4c342fc48f5de
+current_content_sha256: 3b1284dc1512b8f50d84b9ed7ba33eb265a362ae2851fa8baaf4c342fc48f5de
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

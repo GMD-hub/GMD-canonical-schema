@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-sewageexp
+source_artifact_path: extraction/20_drafts/utl/VAR-sewageexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 11255fe200411657ced39ca7f96ed74463e60de2
+source_content_sha256: e8a0f123fe60d502382fb018383b03da3dfb703d7a0bdad808d3697bcacbd2c6
+enrolled_body_sha256: ae7c9d356a53eba272d9de66649018c7658dad0cb41d1a0d48912babd19ca352
+current_content_sha256: ae7c9d356a53eba272d9de66649018c7658dad0cb41d1a0d48912babd19ca352
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

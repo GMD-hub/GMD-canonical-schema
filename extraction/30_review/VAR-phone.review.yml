@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-phone
+source_artifact_path: extraction/20_drafts/dwl/VAR-phone.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 96ed8db751f2a6027de2a7fcc25d740b6b0359ee
+source_content_sha256: ef9d55c6b83335e77a89540ec3e20472ea3531b06893012c8d531a28e7d9d9d2
+enrolled_body_sha256: 9a83111a7ea0cc5a5f9d517ae436440c4bbedc208ea22cf777e712e250ce7272
+current_content_sha256: 9a83111a7ea0cc5a5f9d517ae436440c4bbedc208ea22cf777e712e250ce7272
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

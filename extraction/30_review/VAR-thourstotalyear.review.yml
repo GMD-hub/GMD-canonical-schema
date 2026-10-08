@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-thourstotalyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-thourstotalyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 4ca3e5435e93fce05bcba7a9f31c279137cfd102
+source_content_sha256: e6f330dd0ae02b053bea36e6b91c2170b0b92ff620ff2a6c7eca1eb3a2e78e72
+enrolled_body_sha256: 31fe0b2d13536d44e779dafa4aba6ad0134bc5263b6ea8baced2a3b2a8c8011d
+current_content_sha256: 31fe0b2d13536d44e779dafa4aba6ad0134bc5263b6ea8baced2a3b2a8c8011d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

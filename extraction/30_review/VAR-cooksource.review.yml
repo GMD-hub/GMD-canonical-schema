@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-cooksource
+source_artifact_path: extraction/20_drafts/utl/VAR-cooksource.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 6e6c310d54d75bbbe38034a9aedfd672384e840f
+source_content_sha256: 2f868448a723a04f1dd2d3516473e86dd1a6f174cac479c50c18ae7783fdde34
+enrolled_body_sha256: b1e35520f280550b6ce63739104d3fbf515c4372ab4786ccf1681324fa91433e
+current_content_sha256: b1e35520f280550b6ce63739104d3fbf515c4372ab4786ccf1681324fa91433e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

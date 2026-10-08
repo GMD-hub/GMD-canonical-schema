@@ -1,0 +1,36 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-everattend
+source_artifact_path: extraction/20_drafts/dem/VAR-everattend.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 81346e2ac9f82fa5184ed94d04b783d80165aa8f
+source_content_sha256: 98d8959703f452c51e9c6c9c72866227860dc2018fe1d12354b95d12b6ad9a9b
+enrolled_body_sha256: e1fa77b215814c53eb3a4bcca67fc00c8d7b55c136ad970d5189227f0baddee5
+current_content_sha256: 8612d1d702bf69e0c701307d2c6e57d2f1b1525f47ed9a948f7e8abe6efc4797
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events:
+- event_id: c253d6c8-40fe-4462-97a8-b03e1ff4fa58
+  sequence: 0
+  action: saved
+  from_state: ~
+  to_state: ~
+  actor: lmorenoherrera
+  actor_role: reviewer
+  occurred_at: '2026-10-06T20:36:13Z'
+  review_record_blob_sha_before: 9fc42e1ecbfc75c9514f26af1a26b9d6b3f2baf3
+  body_sha256: 8612d1d702bf69e0c701307d2c6e57d2f1b1525f47ed9a948f7e8abe6efc4797
+  note: ~

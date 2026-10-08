@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-laborincome
+source_artifact_path: extraction/20_drafts/lbr/VAR-laborincome.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 06b6821cec187e16833ad5a213f297c6e93a64bb
+source_content_sha256: c1aaab8af6f84def641d6a5665b9bbb7949b79833bc881954e4015ef0a72dd87
+enrolled_body_sha256: 84c1ceddecdde08ac210547d3b0be346a99f2683d59e92a23bfcc2c067a0ea3d
+current_content_sha256: 84c1ceddecdde08ac210547d3b0be346a99f2683d59e92a23bfcc2c067a0ea3d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

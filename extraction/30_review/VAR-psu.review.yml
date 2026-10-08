@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-psu
+source_artifact_path: extraction/20_drafts/geo/VAR-psu.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: daca05ae77398b755bbb54f7ad6f233d1c368cdd
+source_content_sha256: a3173ffe79a0506e62ca6da80dd1c739f1c39c94c537be56aa0f76ac65053a84
+enrolled_body_sha256: 5ed125854df4ef8d0865a0bbb8531f87cf7c1f21b5edb6aff746dc265ba4abd8
+current_content_sha256: 5ed125854df4ef8d0865a0bbb8531f87cf7c1f21b5edb6aff746dc265ba4abd8
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

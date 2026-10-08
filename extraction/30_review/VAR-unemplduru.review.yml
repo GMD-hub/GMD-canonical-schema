@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-unemplduru
+source_artifact_path: extraction/20_drafts/lbr/VAR-unemplduru.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3fdcfb4806071f8f3ec880d822d954c82a26d89e
+source_content_sha256: e7e5e89a63288186c30d088d45230d448ea8b19df8e72481f2c8b5fb836a2911
+enrolled_body_sha256: 7f6e9942e657ac9ee6a27885d3530569ba413ea2a1040b97d82ac8fc1ee09b67
+current_content_sha256: 7f6e9942e657ac9ee6a27885d3530569ba413ea2a1040b97d82ac8fc1ee09b67
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []
