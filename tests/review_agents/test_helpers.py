@@ -43,15 +43,18 @@ class TestLoadDraft:
 
 
 class TestListDrafts:
-    def test_finds_md_files(self, tmp_path):
-        (tmp_path / "a.md").write_text("a")
+    def test_finds_only_variable_markdown(self, tmp_path):
+        (tmp_path / "VAR-a.md").write_text("a")
         (tmp_path / "b.txt").write_text("b")
+        (tmp_path / "README.md").write_text("documentation")
+        (tmp_path / "RULE-EDU-003.md").write_text("rule draft")
         sub = tmp_path / "sub"
         sub.mkdir()
-        (sub / "c.md").write_text("c")
+        (sub / "VAR-c.md").write_text("c")
+        (sub / "PARAM-EDU-LEVEL-CROSSWALK.md").write_text("parameter draft")
+        (sub / "VAR-d.yml").write_text("variable_id: VAR-d")
         results = list_drafts(tmp_path)
-        assert len(results) == 2
-        assert all(p.suffix == ".md" for p in results)
+        assert results == [tmp_path / "VAR-a.md", sub / "VAR-c.md"]
 
     def test_empty_dir(self, tmp_path):
         assert list_drafts(tmp_path) == []
@@ -60,10 +63,10 @@ class TestListDrafts:
         (tmp_path / "VAR-x.md").write_text("x")
         runs_dir = tmp_path / "runs"
         runs_dir.mkdir()
-        (runs_dir / "inventory.md").write_text("inv")
+        (runs_dir / "VAR-hidden.md").write_text("inv")
         proj_dir = tmp_path / "project-documentation"
         proj_dir.mkdir()
-        (proj_dir / "wiki.md").write_text("wiki")
+        (proj_dir / "VAR-hidden.md").write_text("wiki")
         results = list_drafts(tmp_path)
         assert [p.name for p in results] == ["VAR-x.md"]
 
@@ -71,7 +74,7 @@ class TestListDrafts:
         (tmp_path / "VAR-x.md").write_text("x")
         nested = tmp_path / "dem" / "runs"
         nested.mkdir(parents=True)
-        (nested / "tracking.md").write_text("tracking")
+        (nested / "VAR-hidden.md").write_text("tracking")
         (tmp_path / "dem" / "VAR-y.md").write_text("y")
         results = list_drafts(tmp_path)
         assert sorted(p.name for p in results) == ["VAR-x.md", "VAR-y.md"]
@@ -80,7 +83,7 @@ class TestListDrafts:
         (tmp_path / "VAR-x.md").write_text("x")
         nested = tmp_path / "dem" / "project-documentation"
         nested.mkdir(parents=True)
-        (nested / "process.md").write_text("process")
+        (nested / "VAR-hidden.md").write_text("process")
         (tmp_path / "dem" / "VAR-y.md").write_text("y")
         results = list_drafts(tmp_path)
         assert sorted(p.name for p in results) == ["VAR-x.md", "VAR-y.md"]
@@ -89,9 +92,9 @@ class TestListDrafts:
         (tmp_path / "VAR-x.md").write_text("x")
         case_dir = tmp_path / "Runs"
         case_dir.mkdir()
-        (case_dir / "tracking.md").write_text("tracking")
+        (case_dir / "VAR-tracking.md").write_text("tracking")
         results = list_drafts(tmp_path)
-        assert sorted(p.name for p in results) == ["VAR-x.md", "tracking.md"], (
+        assert sorted(p.name for p in results) == ["VAR-tracking.md", "VAR-x.md"], (
             "EXCLUDE_DIRS matching is case-sensitive exact; a case variant "
             "(e.g. Runs/) is retained by documented convention"
         )
