@@ -19,11 +19,19 @@ class ParameterProvenance(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     source_document: str
+    source_section: str | None = None
     extraction_method: str
     extracted_on: str
     human_reviewed: Literal[False]
     reviewer: None = None
     notes: str
+
+
+class ParameterDerivationStep(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    method: str
+    source: str
 
 
 class ParameterDefinition(BaseModel):
@@ -39,6 +47,7 @@ class ParameterDefinition(BaseModel):
     value_type: Literal["integer", "mapping", "table"]
     value_schema: dict[str, Literal["integer"]] | None = None
     row_schema: dict[str, Literal["integer", "string", "boolean", "integer_or_null", "array_of_string"]] | None = None
+    derivation: list[ParameterDerivationStep] | None = None
     applies_to_variables: list[str]
     fallback_policy: FallbackPolicy
     global_default: Any = None
