@@ -2903,5 +2903,16 @@ parameters:
     verified_on: null
     human_reviewed: false
     reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1995
+  effective_to: null
+  selectors: null
+  value: 16
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 

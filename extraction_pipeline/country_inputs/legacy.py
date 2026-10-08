@@ -25,3 +25,8 @@ def load_edu_module() -> ModuleType:
 
 def load_wash_module() -> ModuleType:
     return _import_from_path(WASH_PKG_ROOT, "gmd_wash_concordance")
+
+
+def load_countries_resolver() -> ModuleType:
+    # Reuses gmd_edu_concordance's ISO3166 name matcher without its education-specific logic.
+    return _import_from_path(EDU_PKG_ROOT, "gmd_edu_concordance.countries")

@@ -627,7 +627,12 @@ def inventory_repositories(
             "VAR-*.md"
         )
     }
-    assert len(expected_draft_ids) == 267
+    assert len(expected_draft_ids) == 268
+    # These variables are schema-synthesized derived/resolved fields with no
+    # literal row in the GMD guidelines source document, so they have no
+    # corresponding occurrence in SOURCE_MAP_PATH by design. Excluded only from
+    # source-map reconciliation checks below, not from the draft corpus itself.
+    reconcilable_draft_ids = expected_draft_ids - {"VAR-geocode"}
 
     chapter_hashes: dict[str, str] = {}
     for source_path, _, source_rows, canonical_rows, _ in CHAPTERS:
@@ -683,11 +688,13 @@ def inventory_repositories(
         for source in sorted(
             (REPOSITORY_ROOT / "extraction/20_drafts" / module).glob("VAR-*.md")
         ):
+            if source.stem not in reconcilable_draft_ids:
+                continue
             target = draft_root / module / source.name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(source.read_bytes())
             copied_draft_ids.add(source.stem)
-    assert copied_draft_ids == expected_draft_ids
+    assert copied_draft_ids == reconcilable_draft_ids
 
     patcher = pytest.MonkeyPatch()
     patcher.setattr(inventory_module, "SOURCE_COMMIT", source_commit)
@@ -700,7 +707,7 @@ def inventory_repositories(
             for row in source_map["rows"]
             if row["disposition"] == RowDisposition.CANONICAL_OUTPUT.value
         }
-        assert canonical_ids == expected_draft_ids
+        assert canonical_ids == reconcilable_draft_ids
         source_map_path = draft_root / "runs/source-map.yaml"
         source_map_path.parent.mkdir(parents=True, exist_ok=True)
         source_map_path.write_text(

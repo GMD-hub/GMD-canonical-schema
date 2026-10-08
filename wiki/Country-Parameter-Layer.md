@@ -227,10 +227,30 @@ record provenance, obtain human review, and run repository validation.
 
 ## Extraction draft contracts
 
-Country-input extraction flows (for example, ISCED and JMP workbook adapters)
-may stage draft parameter contracts under
+Country-input extraction flows (for example, ISCED and JMP workbook adapters,
+GEO crosswalk extraction, and Labor minimum-working-age extraction) may stage
+draft parameter contracts under
 `extraction/20_drafts/runs/country-parameters/contracts/` so draft payloads
 can be validated before promotion.
+
+`extraction_pipeline/country_inputs/cli.py` registers each input as a
+`ParamInputSpec` in `PARAM_INPUT_REGISTRY`, tagged with a broad dimension
+(`isced`, `jmp`, `geo`, `labor`, ...). A dimension can hold more than one
+independent input over time (the Labor dimension may later add ISIC/ISCO
+crosswalks alongside minimum working age, each its own source workbook). The
+`extract`, `bulk`, and `check` subcommands accept:
+
+- `--dimension <name>` — run every input tagged with one broad dimension.
+- `--param-input <key>` — run exactly one registered input, overriding `--dimension`.
+- `--iso3 <ISO3>` — scope either filter above to one country.
+
+Both `--dimension` and `--param-input` choices are generated from the
+registry at argparse build time, so adding a new input makes it a valid CLI
+value automatically. Source workbooks that cover every country (GEO, Labor)
+are parsed exactly once per run and bucketed by ISO3 in memory, not re-parsed
+per country. Combined with the existing file-hash incremental cache, this
+means refreshing one dimension, one param-input, or one country never
+requires reprocessing the rest of the registry.
 
 Extraction runs automatically assign `country_entry_id` values for EDU, GEO,
 SAN, and WAS crosswalk rows. Manual edits in country artifacts must preserve

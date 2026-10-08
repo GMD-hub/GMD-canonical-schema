@@ -34,7 +34,7 @@ parameters:
       & Raa & Seenu & Shaviyani & Thaa & Vaavu
     source_row: 9413
   - country_entry_id: MDV-SUBNAT-02
-    survey_labels: 1 - Male | 14 - Male ' | 14 - Malé | Male
+    survey_labels: "1 - Male | 14 - Male ' | 14 - Mal\xE9 | Male"
     survey_variables: subnatid | subnatid1
     gmd_subnatid1: MDV_2015_GAUL1_1918
     gmd_subnatid2: ''
@@ -991,4 +991,16 @@ parameters:
     verified_on: null
     human_reviewed: false
     reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 2013
+  effective_to: null
+  selectors: null
+  value: 16
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
+

@@ -7,8 +7,8 @@ country_name: PRY
 parameters:
 - parameter_id: PARAM-GEO-GMD-CROSSWALK
   effective_from: 2015
-  effective_to: ~
-  selectors: ~
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PRY-SUBNAT-01
     survey_labels: 0 - Asuncion
@@ -17,10 +17,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAUL2_23849
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAUL2_23849
     geo_year: '2015'
@@ -38,10 +38,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAUL1_2312
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAUL1_2312
     geo_year: '2015'
@@ -59,10 +59,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAULx_2318
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAULx_2318
     geo_year: '2015'
@@ -80,10 +80,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAUL1_2327
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAUL1_2327
     geo_year: '2015'
@@ -101,10 +101,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAULx_20
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAULx_20
     geo_year: '2015'
@@ -123,10 +123,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAUL1_2315
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAUL1_2315
     geo_year: '2015'
@@ -144,10 +144,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAUL1_2316
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAUL1_2316
     geo_year: '2015'
@@ -165,10 +165,10 @@ parameters:
     gmd_subnatid2: PRY_2015_GAUL1_2322
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: yes
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 2
     gmd_subnatidsurvey: PRY_2015_GAUL1_2322
     geo_year: '2015'
@@ -186,10 +186,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAULx_6
     geo_year: '2015'
@@ -208,10 +208,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2319
     geo_year: '2015'
@@ -229,10 +229,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2324
     geo_year: '2015'
@@ -250,10 +250,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2313
     geo_year: '2015'
@@ -271,10 +271,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2317
     geo_year: '2015'
@@ -292,10 +292,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2326
     geo_year: '2015'
@@ -313,10 +313,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2320
     geo_year: '2015'
@@ -334,10 +334,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2321
     geo_year: '2015'
@@ -355,10 +355,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2323
     geo_year: '2015'
@@ -376,10 +376,10 @@ parameters:
     gmd_subnatid2: ''
     gmd_subnatid3: ''
     gmd_subnatid4: ''
-    is_rep_subnat1: no
-    is_rep_subnat2: no
-    is_rep_subnat3: no
-    is_rep_subnat4: no
+    is_rep_subnat1: false
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
     representative_level: 0
     gmd_subnatidsurvey: PRY_2015_GAUL1_2325
     geo_year: '2015'
@@ -392,13 +392,13 @@ parameters:
     source_row: 12873
   provenance:
     source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-SANITATION-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PRY-SAN-01
     source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo_rio
@@ -409,8 +409,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PRY-SAN-02
     source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_hoyo_abierto_zanja_arroyo
@@ -420,8 +420,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PRY-SAN-03
     source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
@@ -431,30 +431,30 @@ parameters:
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PRY-SAN-04
     source_category_code: desague_a_la_superficie_de_la_tierra_arroyo_rio_etc
-    national_label_en: Desague a la superficie de la tierra, arroyo, río, etc.
+    national_label_en: "Desague a la superficie de la tierra, arroyo, r\xEDo, etc."
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PRY-SAN-05
     source_category_code: la_calle_patio_terreno_o_en_algun_otro_lugar
-    national_label_en: La calle, patio/terreno o en algún otro lugar
+    national_label_en: "La calle, patio/terreno o en alg\xFAn otro lugar"
     national_label_local: a drenaje abierto
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PRY-SAN-06
     source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
@@ -464,8 +464,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PRY-SAN-07
     source_category_code: con_arrastre_de_agua_con_red_de_alcantarillado_sanitario
@@ -475,8 +475,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PRY-SAN-08
     source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
@@ -486,8 +486,8 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PRY-SAN-09
     source_category_code: red_de_alcantarillado_sanitario_cloaca
@@ -497,19 +497,19 @@ parameters:
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 61
   - country_entry_id: PRY-SAN-10
     source_category_code: con_arrastre_de_agua_pozo_ciego_sin_camara_septica
-    national_label_en: Con arrastre de agua - Pozo ciego, sin cámara séptica
+    national_label_en: "Con arrastre de agua - Pozo ciego, sin c\xE1mara s\xE9ptica"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: PRY-SAN-11
     source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
@@ -519,118 +519,118 @@ parameters:
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: PRY-SAN-12
     source_category_code: pozo_ciego_sin_camara_septica
-    national_label_en: Pozo ciego sin cámara séptica
+    national_label_en: "Pozo ciego sin c\xE1mara s\xE9ptica"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: PRY-SAN-13
     source_category_code: pozo_ciego_sin_camara_septica
-    national_label_en: Pozo ciego, sin cámara séptica
+    national_label_en: "Pozo ciego, sin c\xE1mara s\xE9ptica"
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 63
   - country_entry_id: PRY-SAN-14
     source_category_code: camara_septica_y_pozo_ciego
-    national_label_en: Cámara séptica y pozo ciego
+    national_label_en: "C\xE1mara s\xE9ptica y pozo ciego"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-SAN-15
     source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego
-    national_label_en: Con arrastre de agua - Cámara séptica y pozo ciego
+    national_label_en: "Con arrastre de agua - C\xE1mara s\xE9ptica y pozo ciego"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-SAN-16
     source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
-    national_label_en: Con arrastre de agua, cámara séptica y pozo ciego(absorbente)
+    national_label_en: "Con arrastre de agua, c\xE1mara s\xE9ptica y pozo ciego(absorbente)"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-SAN-17
     source_category_code: con_arrastre_de_agua_con_camara_septica_y_pozo_ciego_absorbente
-    national_label_en: con arrastre de agua, con cámara séptica y pozo ciego(absorbente)
+    national_label_en: "con arrastre de agua, con c\xE1mara s\xE9ptica y pozo ciego(absorbente)"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-SAN-18
     source_category_code: pozo_ciego_con_camara_septica
-    national_label_en: Pozo ciego con cámara séptica
+    national_label_en: "Pozo ciego con c\xE1mara s\xE9ptica"
     national_label_local: a pozo septico
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-SAN-19
     source_category_code: no_sabe_donde_se_depositan
-    national_label_en: No sabe dónde se depositan
+    national_label_en: "No sabe d\xF3nde se depositan"
     national_label_local: no sabe donde
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 64
   - country_entry_id: PRY-SAN-20
     source_category_code: wc_con_arrastre_agua
     national_label_en: WC con arrastre agua
-    national_label_local: Inodoros de arrastre hidráulico
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico"
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 66
   - country_entry_id: PRY-SAN-21
     source_category_code: bano_conectado_a_red_publica_o_pozo_ciego
-    national_label_en: Bano conectado a red pública, o pozo ciego
-    national_label_local: Inodoros de arrastre hidráulico (privado)
+    national_label_en: "Bano conectado a red p\xFAblica, o pozo ciego"
+    national_label_local: "Inodoros de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 72
   - country_entry_id: PRY-SAN-22
     source_category_code: private_domestic_connection_to_sewage_system
@@ -640,8 +640,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 73
   - country_entry_id: PRY-SAN-23
     source_category_code: private_flush_to_septic_tank
@@ -651,8 +651,8 @@ parameters:
     jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 74
   - country_entry_id: PRY-SAN-24
     source_category_code: shared_domestic_connection_to_sewage_system
@@ -663,8 +663,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 79
   - country_entry_id: PRY-SAN-25
     source_category_code: shared_flush_to_septic_tank
@@ -674,8 +674,8 @@ parameters:
     jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 80
   - country_entry_id: PRY-SAN-26
     source_category_code: con_arrastre_de_agua_en_la_superficie_de_la_tierra_zanja_arroyo
@@ -686,8 +686,8 @@ parameters:
     jmp_id: flush_toilets.to_elsewhere
     gmd_target: flush_elsewhere
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 71
   - country_entry_id: PRY-SAN-27
     source_category_code: con_arrastre_de_agua_red_de_alcantarillado_sanitario
@@ -697,8 +697,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PRY-SAN-28
     source_category_code: wc_connect_a_red_publica
@@ -708,8 +708,8 @@ parameters:
     jmp_id: flush_toilets.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 67
   - country_entry_id: PRY-SAN-29
     source_category_code: con_arrastre_de_agua_con_pozo_ciego_absorbente
@@ -719,8 +719,8 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: PRY-SAN-30
     source_category_code: wc_con_pozo_ciego
@@ -730,19 +730,19 @@ parameters:
     jmp_id: flush_toilets.to_pit
     gmd_target: flush_pit
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 69
   - country_entry_id: PRY-SAN-31
     source_category_code: con_arrastre_de_agua_camara_septica_y_pozo_ciego_absorbente
-    national_label_en: Con arrastre de agua, cámara séptica y pozo ciego (absorbente)
+    national_label_en: "Con arrastre de agua, c\xE1mara s\xE9ptica y pozo ciego (absorbente)"
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
     gmd_target: flush_septic
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 68
   - country_entry_id: PRY-SAN-32
     source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
@@ -752,79 +752,80 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
     gmd_target: bucket
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 110
   - country_entry_id: PRY-SAN-33
     source_category_code: letrina_comun_sin_losa_pero_con_techo_o_puerta
-    national_label_en: Letrina común sin losa pero con techo o puerta
+    national_label_en: "Letrina com\xFAn sin losa pero con techo o puerta"
     national_label_local: Otro
     jmp_classification: Latrines > Dry latrines > Improved latrines > Other
     jmp_id: latrines.dry_latrines.improved_latrines.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 111
   - country_entry_id: PRY-SAN-34
     source_category_code: letrina_comun_de_hoyo_seco
-    national_label_en: Letrina común de hoyo seco
+    national_label_en: "Letrina com\xFAn de hoyo seco"
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-SAN-35
     source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
-    national_label_en: Letrina común de hoyo seco (con losa,techo,paredes y puertas)
+    national_label_en: "Letrina com\xFAn de hoyo seco (con losa,techo,paredes y puertas)"
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-SAN-36
     source_category_code: letrina_comun_de_hoyo_seco_con_loza_paredes_techo_y_puerta
-    national_label_en: Letrina común de hoyo seco (con loza, paredes, techo y puerta)
+    national_label_en: "Letrina com\xFAn de hoyo seco (con loza, paredes, techo y\
+      \ puerta)"
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-SAN-37
     source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
-    national_label_en: Letrina común de hoyo seco(con losa,techo,paredes y puertas)
+    national_label_en: "Letrina com\xFAn de hoyo seco(con losa,techo,paredes y puertas)"
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-SAN-38
     source_category_code: letrina_comun_sin_losa_sin_techo_o_puerta
-    national_label_en: Letrina común sin losa, sin techo o puerta
+    national_label_en: "Letrina com\xFAn sin losa, sin techo o puerta"
     national_label_local: Letrina simple sin loza
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: PRY-SAN-39
     source_category_code: uncovered_dry_latrine_without_privacy
@@ -835,8 +836,8 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
     gmd_target: pit_noslab
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 108
   - country_entry_id: PRY-SAN-40
     source_category_code: letrina
@@ -847,56 +848,59 @@ parameters:
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PRY-SAN-41
     source_category_code: letrina_comun_sin_techo_o_puerta
-    national_label_en: Letrina común sin techo o puerta
+    national_label_en: "Letrina com\xFAn sin techo o puerta"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PRY-SAN-42
     source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
-    national_label_en: Letrina ventilada de hoyo seco (común c/tubo de ventilación)
+    national_label_en: "Letrina ventilada de hoyo seco (com\xFAn c/tubo de ventilaci\xF3\
+      n)"
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PRY-SAN-43
     source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
-    national_label_en: Letrina ventilada de hoyo seco(común c/tubo de ventilación)
+    national_label_en: "Letrina ventilada de hoyo seco(com\xFAn c/tubo de ventilaci\xF3\
+      n)"
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PRY-SAN-44
     source_category_code: letrina_ventilada_de_hoyo_seco_comun_con_tubo_de_ventilacion
-    national_label_en: Letrina ventilada de hoyo seco(común con tubo de ventilación)
+    national_label_en: "Letrina ventilada de hoyo seco(com\xFAn con tubo de ventilaci\xF3\
+      n)"
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 105
   - country_entry_id: PRY-SAN-45
     source_category_code: private_covered_dry_latrine_with_privacy
@@ -907,20 +911,20 @@ parameters:
     jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 114
   - country_entry_id: PRY-SAN-46
     source_category_code: letrina_comun_de_hoyo_seco_con_losa_techo_paredes_y_puertas
-    national_label_en: Letrina común de hoyo seco(con losa,techo,paredes y puertas)
+    national_label_en: "Letrina com\xFAn de hoyo seco(con losa,techo,paredes y puertas)"
     national_label_local: Letrina simple con loza
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: PRY-SAN-47
     source_category_code: shared_covered_dry_latrine_with_privacy
@@ -931,8 +935,8 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
     gmd_target: pit_slab
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 122
   - country_entry_id: PRY-SAN-48
     source_category_code: letrina_comun
@@ -943,67 +947,68 @@ parameters:
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PRY-SAN-49
     source_category_code: letrina_comun_o_municipal
-    national_label_en: Letrina común o municipal
+    national_label_en: "Letrina com\xFAn o municipal"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PRY-SAN-50
     source_category_code: letrina_comun_sin_techo_o_puerta
-    national_label_en: Letrina común sin techo o puerta
+    national_label_en: "Letrina com\xFAn sin techo o puerta"
     national_label_local: Letrina tradicional
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
     gmd_target: ''
     gmd_spans: pit_slab|pit_noslab
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 123
   - country_entry_id: PRY-SAN-51
     source_category_code: letrina_ventilada_de_hoyo_seco_comun_c_tubo_de_ventilacion
-    national_label_en: Letrina ventilada de hoyo seco(común c/tubo de ventilación)
+    national_label_en: "Letrina ventilada de hoyo seco(com\xFAn c/tubo de ventilaci\xF3\
+      n)"
     national_label_local: Letrina de pozo mejorada ventilada
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Ventilated
       Improved Pit latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
     gmd_target: vip
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 121
   - country_entry_id: PRY-SAN-52
     source_category_code: private_pour_flush_latrine
     national_label_en: Private pour flush latrine
-    national_label_local: Letrinas de arrastre hidráulico (privado)
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (privado)"
     jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
     jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 91
   - country_entry_id: PRY-SAN-53
     source_category_code: shared_pour_flush_latrine
     national_label_en: Shared pour flush latrine
-    national_label_local: Letrinas de arrastre hidráulico (publico)
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico (publico)"
     jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
       latrine
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
     gmd_target: ''
     gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 97
   - country_entry_id: PRY-SAN-54
     source_category_code: excusado
@@ -1014,20 +1019,20 @@ parameters:
     jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_piped_sewer_system
     gmd_target: flush_sewer
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: yes
+    improved_flag: true
+    shared_flag: true
     source_row: 98
   - country_entry_id: PRY-SAN-55
     source_category_code: defecacion_al_aire_libre_no_hay_instalacion_campo_abierto_matorrales
-    national_label_en: Defecación al aire libre (no hay instalación, campo abierto,
-      matorrales)
+    national_label_en: "Defecaci\xF3n al aire libre (no hay instalaci\xF3n, campo\
+      \ abierto, matorrales)"
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-56
     source_category_code: no_facilities_open_defecation
@@ -1037,8 +1042,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-57
     source_category_code: no_hay_servicios
@@ -1048,8 +1053,8 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-58
     source_category_code: no_tiene
@@ -1059,30 +1064,30 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-59
     source_category_code: no_tiene_bano
-    national_label_en: No tiene baño
+    national_label_en: "No tiene ba\xF1o"
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-60
     source_category_code: no_tiene_bano_no_informado
-    national_label_en: No tiene baño/No informado
+    national_label_en: "No tiene ba\xF1o/No informado"
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-61
     source_category_code: no_tiene_no_informo
@@ -1092,31 +1097,31 @@ parameters:
     jmp_id: no_facility_bush_field
     gmd_target: open
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 134
   - country_entry_id: PRY-SAN-62
     source_category_code: letrina_comun_de_hoyo_seco_con_losa_sin_techo_paredes_y_puertas
-    national_label_en: Letrina común  de hoyo seco con losa (sin techo, paredes y
-      puertas)
+    national_label_en: "Letrina com\xFAn  de hoyo seco con losa (sin techo, paredes\
+      \ y puertas)"
     national_label_local: Otro
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 132
   - country_entry_id: PRY-SAN-63
     source_category_code: bano_de_silla_basin_para_adultos_ninos_o_enfermos
-    national_label_en: Baño de silla/basin para adultos/niños o enfermos
+    national_label_en: "Ba\xF1o de silla/basin para adultos/ni\xF1os o enfermos"
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PRY-SAN-64
     source_category_code: other
@@ -1126,8 +1131,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PRY-SAN-65
     source_category_code: otro
@@ -1137,8 +1142,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PRY-SAN-66
     source_category_code: otros
@@ -1148,8 +1153,8 @@ parameters:
     jmp_id: other_unimproved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 136
   - country_entry_id: PRY-SAN-67
     source_category_code: otro
@@ -1159,18 +1164,18 @@ parameters:
     jmp_id: other_unimproved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 137
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PRY_Paraguay_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 - parameter_id: PARAM-WASH-WATER-CROSSWALK
-  effective_from: ~
-  effective_to: ~
-  selectors: ~
+  effective_from: null
+  effective_to: null
+  selectors: null
   value:
   - country_entry_id: PRY-WAS-01
     source_category_code: manantial_o_naciente
@@ -1180,8 +1185,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: PRY-WAS-02
     source_category_code: manantial_naciente_o_ycua
@@ -1191,8 +1196,8 @@ parameters:
     jmp_id: ground_water.all_springs
     gmd_target: ''
     gmd_spans: protected_spring|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 74
   - country_entry_id: PRY-WAS-03
     source_category_code: manantial_protegido
@@ -1202,8 +1207,8 @@ parameters:
     jmp_id: ground_water.protected_spring
     gmd_target: protected_spring
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 78
   - country_entry_id: PRY-WAS-04
     source_category_code: pozo_excavado_protegido_brocal_y_tapa
@@ -1213,8 +1218,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: PRY-WAS-05
     source_category_code: pozo_protegido
@@ -1224,8 +1229,8 @@ parameters:
     jmp_id: ground_water.protected_well
     gmd_target: protected_well
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 66
   - country_entry_id: PRY-WAS-06
     source_category_code: protected_dug_well_or_protected_spring
@@ -1235,8 +1240,8 @@ parameters:
     jmp_id: ground_water.protected_wells_or_springs
     gmd_target: ''
     gmd_spans: protected_well|protected_spring
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 46
   - country_entry_id: PRY-WAS-07
     source_category_code: pozo_sin_bomba
@@ -1246,8 +1251,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-WAS-08
     source_category_code: well_without_pump
@@ -1257,8 +1262,8 @@ parameters:
     jmp_id: ground_water.traditional_wells
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 62
   - country_entry_id: PRY-WAS-09
     source_category_code: pozo_artesiano
@@ -1268,8 +1273,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.other
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 65
   - country_entry_id: PRY-WAS-10
     source_category_code: pozo_sin_bomba
@@ -1279,8 +1284,8 @@ parameters:
     jmp_id: ground_water.traditional_wells.public
     gmd_target: ''
     gmd_spans: protected_well|unprotected_well
-    improved_flag: no
-    shared_flag: yes
+    improved_flag: false
+    shared_flag: true
     source_row: 64
   - country_entry_id: PRY-WAS-11
     source_category_code: pozo_con_bomba
@@ -1290,30 +1295,30 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PRY-WAS-12
     source_category_code: pozo_con_bomba_electrica
-    national_label_en: Pozo con bomba eléctrica
+    national_label_en: "Pozo con bomba el\xE9ctrica"
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PRY-WAS-13
     source_category_code: pozo_con_tuberia
-    national_label_en: Pozo con tubería
+    national_label_en: "Pozo con tuber\xEDa"
     national_label_local: Pozos entubados o de sondeo
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PRY-WAS-14
     source_category_code: protected_tube_well_or_bore_hole
@@ -1323,8 +1328,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PRY-WAS-15
     source_category_code: well_with_handpump
@@ -1334,8 +1339,8 @@ parameters:
     jmp_id: ground_water.tubewell_borehole
     gmd_target: borehole
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 58
   - country_entry_id: PRY-WAS-16
     source_category_code: manantial_no_protegido
@@ -1345,30 +1350,30 @@ parameters:
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: PRY-WAS-17
     source_category_code: manantial_sin_proteccion
-    national_label_en: Manantial sin protección
+    national_label_en: "Manantial sin protecci\xF3n"
     national_label_local: Manantiales protegidos
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
     gmd_target: unprotected_spring
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 82
   - country_entry_id: PRY-WAS-18
     source_category_code: pozo_excavado_sin_proteccion_sin_brocal_ni_tapa
-    national_label_en: Pozo excavado sin protección (sin brocal ni tapa)
+    national_label_en: "Pozo excavado sin protecci\xF3n (sin brocal ni tapa)"
     national_label_local: Pozos non protegidos
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: PRY-WAS-19
     source_category_code: pozo_no_protegido
@@ -1378,8 +1383,8 @@ parameters:
     jmp_id: ground_water.unprotected_well
     gmd_target: unprotected_well
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 70
   - country_entry_id: PRY-WAS-20
     source_category_code: unprotected_dug_well_or_spring
@@ -1389,30 +1394,30 @@ parameters:
     jmp_id: ground_water.unprotected_wells_or_springs
     gmd_target: ''
     gmd_spans: unprotected_well|unprotected_spring
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 50
   - country_entry_id: PRY-WAS-21
     source_category_code: carreta_con_tanque_tambor_pequeno
-    national_label_en: Carreta con tanque/tambor pequeño
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_en: "Carreta con tanque/tambor peque\xF1o"
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: PRY-WAS-22
     source_category_code: vendedor_de_agua
     national_label_en: Vendedor de agua
-    national_label_local: Carro con tanque / tambor pequeño
+    national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 101
   - country_entry_id: PRY-WAS-23
     source_category_code: red_privada_dentro_de_la_vivienda_o_patio
@@ -1422,8 +1427,8 @@ parameters:
     jmp_id: other_improved_sources.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 103
   - country_entry_id: PRY-WAS-24
     source_category_code: red_comunitaria_dentro_de_la_vivienda_o_patio
@@ -1433,8 +1438,8 @@ parameters:
     jmp_id: other_improved_sources.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 104
   - country_entry_id: PRY-WAS-25
     source_category_code: aguatero
@@ -1444,19 +1449,19 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PRY-WAS-26
     source_category_code: carro_tanque_camion_cisterna
-    national_label_en: Carro-tanque/camión cisterna
+    national_label_en: "Carro-tanque/cami\xF3n cisterna"
     national_label_local: Agua distribuida en camiones cisterna
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PRY-WAS-27
     source_category_code: tanker_truck_vendor
@@ -1466,8 +1471,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PRY-WAS-28
     source_category_code: truck
@@ -1477,8 +1482,8 @@ parameters:
     jmp_id: other_improved_sources.tanker_truck_provided
     gmd_target: tanker
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 102
   - country_entry_id: PRY-WAS-29
     source_category_code: aguatero
@@ -1488,8 +1493,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-30
     source_category_code: no_informo
@@ -1499,8 +1504,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-31
     source_category_code: other
@@ -1510,8 +1515,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-32
     source_category_code: otra
@@ -1521,8 +1526,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-33
     source_category_code: otra_fuente
@@ -1532,8 +1537,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-34
     source_category_code: otra_fuente_del_vecino
@@ -1543,8 +1548,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-35
     source_category_code: otro
@@ -1554,8 +1559,8 @@ parameters:
     jmp_id: other_non_improved.other
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 106
   - country_entry_id: PRY-WAS-36
     source_category_code: otro
@@ -1565,8 +1570,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PRY-WAS-37
     source_category_code: otros
@@ -1576,8 +1581,8 @@ parameters:
     jmp_id: other_non_improved.other#2
     gmd_target: other
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 107
   - country_entry_id: PRY-WAS-38
     source_category_code: agua_embotellada
@@ -1587,8 +1592,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PRY-WAS-39
     source_category_code: agua_embotellada_envasada
@@ -1598,8 +1603,8 @@ parameters:
     jmp_id: packaged_water.bottled_water
     gmd_target: bottled
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 90
   - country_entry_id: PRY-WAS-40
     source_category_code: agua_de_lluvia
@@ -1609,8 +1614,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PRY-WAS-41
     source_category_code: aljibe_con_bomba
@@ -1620,8 +1625,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PRY-WAS-42
     source_category_code: rainwater_into_tank_or_cistern
@@ -1631,8 +1636,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PRY-WAS-43
     source_category_code: recogen_agua_de_lluvia
@@ -1642,8 +1647,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PRY-WAS-44
     source_category_code: water_tank_aljibe
@@ -1653,8 +1658,8 @@ parameters:
     jmp_id: rainwater.covered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 87
   - country_entry_id: PRY-WAS-45
     source_category_code: aljibe_sin_bomba
@@ -1664,53 +1669,53 @@ parameters:
     jmp_id: rainwater.uncovered_cistern_tank
     gmd_target: rainwater
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 88
   - country_entry_id: PRY-WAS-46
     source_category_code: agua_de_superficie_rio_arroyo_represa_lago_estanque_canal_de_irrigacion
-    national_label_en: Agua de superficie (río, arroyo,represa,lago,estanque,canal
-      de irrigación)
+    national_label_en: "Agua de superficie (r\xEDo, arroyo,represa,lago,estanque,canal\
+      \ de irrigaci\xF3n)"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-47
     source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo
-    national_label_en: Agua superficial(río,represa,lago,estanque,arroyo)
+    national_label_en: "Agua superficial(r\xEDo,represa,lago,estanque,arroyo)"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-48
     source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo_canales
-    national_label_en: Agua superficial(río,represa,lago,estanque,arroyo,canales)
+    national_label_en: "Agua superficial(r\xEDo,represa,lago,estanque,arroyo,canales)"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-49
     source_category_code: rio_manantial
-    national_label_en: Río, manantial
+    national_label_en: "R\xEDo, manantial"
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-50
     source_category_code: river_spring
@@ -1720,8 +1725,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-51
     source_category_code: water_taken_directly_from_pond_water_or_stream
@@ -1731,8 +1736,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-52
     source_category_code: ycua_o_manantial_arroyo_rio_aljibe_con_bomba_aljibe_sin_bomba
@@ -1743,8 +1748,8 @@ parameters:
     jmp_id: surface_water
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 92
   - country_entry_id: PRY-WAS-53
     source_category_code: aguatero
@@ -1754,19 +1759,19 @@ parameters:
     jmp_id: surface_water.irrigation_channel
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 98
   - country_entry_id: PRY-WAS-54
     source_category_code: agua_superficial_rio_represa_lago_estanque_arroyo_canales
-    national_label_en: Agua superficial(río,represa,lago,estanque,arroyo,canales)
+    national_label_en: "Agua superficial(r\xEDo,represa,lago,estanque,arroyo,canales)"
     national_label_local: Otro
     jmp_classification: Surface water > Other
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: PRY-WAS-55
     source_category_code: tajamar_rio_o_arroyo
@@ -1776,8 +1781,8 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: PRY-WAS-56
     source_category_code: ycua_manantial
@@ -1787,19 +1792,19 @@ parameters:
     jmp_id: surface_water.other
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 99
   - country_entry_id: PRY-WAS-57
     source_category_code: arroyo_rio
     national_label_en: Arroyo, Rio
-    national_label_local: Río
+    national_label_local: "R\xEDo"
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
     gmd_target: surface
     gmd_spans: ''
-    improved_flag: no
-    shared_flag: no
+    improved_flag: false
+    shared_flag: false
     source_row: 93
   - country_entry_id: PRY-WAS-58
     source_category_code: corposana_o_senasa_o_red_privada
@@ -1809,8 +1814,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: PRY-WAS-59
     source_category_code: essap_ex_corposana_junta_de_saneamiento_senasa_red_comunitaria_red_o_prestador_privado
@@ -1821,8 +1826,8 @@ parameters:
     jmp_id: tap_water
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 37
   - country_entry_id: PRY-WAS-60
     source_category_code: caneria_del_vecino
@@ -1832,8 +1837,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PRY-WAS-61
     source_category_code: red_comunitaria_essap_senasa_otros_dentro_de_la_vivienda_del_vecino
@@ -1844,8 +1849,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PRY-WAS-62
     source_category_code: red_o_prestador_privado
@@ -1855,19 +1860,19 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PRY-WAS-63
     source_category_code: tuberia_al_vecino
-    national_label_en: Tubería al vecino
+    national_label_en: "Tuber\xEDa al vecino"
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PRY-WAS-64
     source_category_code: vecino_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
@@ -1878,8 +1883,8 @@ parameters:
     jmp_id: tap_water.other
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 42
   - country_entry_id: PRY-WAS-65
     source_category_code: piped_water_through_house_connection_or_yard
@@ -1889,31 +1894,31 @@ parameters:
     jmp_id: tap_water.piped_on_premises
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 38
   - country_entry_id: PRY-WAS-66
     source_category_code: caneria_dentro_de_la_vivienda
-    national_label_en: Cañería dentro de la vivienda
+    national_label_en: "Ca\xF1er\xEDa dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PRY-WAS-67
     source_category_code: caneria_dentro_de_la_vivienda_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
-    national_label_en: Cañería dentro de la vivienda (ESSAP (ex-corposana) + Junta
-      de Saneamiento o SENASA +  Red comunitaria + Red o prestador privado)
+    national_label_en: "Ca\xF1er\xEDa dentro de la vivienda (ESSAP (ex-corposana)\
+      \ + Junta de Saneamiento o SENASA +  Red comunitaria + Red o prestador privado)"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PRY-WAS-68
     source_category_code: essap_senasa_o_junta_de_saneamiento_dentro_de_la_vivienda
@@ -1923,8 +1928,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PRY-WAS-69
     source_category_code: piped_into_house
@@ -1934,53 +1939,54 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PRY-WAS-70
     source_category_code: tuberia_dentro_de_la_vivienda
-    national_label_en: Tubería dentro de la vivienda
+    national_label_en: "Tuber\xEDa dentro de la vivienda"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PRY-WAS-71
     source_category_code: tuberia_en_casa
-    national_label_en: Tubería en casa
+    national_label_en: "Tuber\xEDa en casa"
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 39
   - country_entry_id: PRY-WAS-72
     source_category_code: caneria_fuera_de_vivienda_pero_dentro_del_patio
-    national_label_en: Cañería fuera de vivienda pero dentro del patio
+    national_label_en: "Ca\xF1er\xEDa fuera de vivienda pero dentro del patio"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-73
     source_category_code: caneria_fuera_de_vivienda_pero_dentro_del_patio_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
-    national_label_en: Cañería fuera de vivienda pero dentro del patio (ESSAP (ex-corposana)
-      + Junta de Saneamiento o SENASA  + Red comunitaria + Red o prestador privado)
+    national_label_en: "Ca\xF1er\xEDa fuera de vivienda pero dentro del patio (ESSAP\
+      \ (ex-corposana) + Junta de Saneamiento o SENASA  + Red comunitaria + Red o\
+      \ prestador privado)"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-74
     source_category_code: essap_senasa_o_junta_de_saneamientofuera_de_la_vivienda_en_el_patio
@@ -1991,8 +1997,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-75
     source_category_code: essap_senasa_o_junta_de_saneamientofuera_de_la_vivienda_en_el_patio
@@ -2003,8 +2009,8 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-76
     source_category_code: piped_into_yard
@@ -2014,91 +2020,102 @@ parameters:
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-77
     source_category_code: tuberia_dentro_del_terreno_patio_o_lote
-    national_label_en: Tubería dentro del terreno,patio o lote
+    national_label_en: "Tuber\xEDa dentro del terreno,patio o lote"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-78
     source_category_code: tuberia_en_el_patio
-    national_label_en: Tubería en el patio
+    national_label_en: "Tuber\xEDa en el patio"
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 40
   - country_entry_id: PRY-WAS-79
     source_category_code: canilla_publica
-    national_label_en: Canilla pública
-    national_label_local: Fuentes públicas
+    national_label_en: "Canilla p\xFAblica"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PRY-WAS-80
     source_category_code: canilla_publica_essap_ex_corposana_junta_de_saneamiento_o_senasa_red_comunitaria_red_o_prestador_privado
-    national_label_en: Canilla pública (ESSAP (ex-corposana) + Junta de Saneamiento
-      o SENASA + Red comunitaria + Red o prestador privado)
-    national_label_local: Fuentes públicas
+    national_label_en: "Canilla p\xFAblica (ESSAP (ex-corposana) + Junta de Saneamiento\
+      \ o SENASA + Red comunitaria + Red o prestador privado)"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PRY-WAS-81
     source_category_code: canilla_publica_todas
-    national_label_en: Canilla pública todas
-    national_label_local: Fuentes públicas
+    national_label_en: "Canilla p\xFAblica todas"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PRY-WAS-82
     source_category_code: canilla_llave_grifo_publico
-    national_label_en: Canilla/llave/grifo público
-    national_label_local: Fuentes públicas
+    national_label_en: "Canilla/llave/grifo p\xFAblico"
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   - country_entry_id: PRY-WAS-83
     source_category_code: public_standpipe
     national_label_en: Public standpipe
-    national_label_local: Fuentes públicas
+    national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
     gmd_target: piped
     gmd_spans: ''
-    improved_flag: yes
-    shared_flag: no
+    improved_flag: true
+    shared_flag: false
     source_row: 41
   provenance:
     source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_PRY_Paraguay_1.xlsx
-    verified_on: ~
-    human_reviewed: no
-    reviewer: ~
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 2004
+  effective_to: null
+  selectors: null
+  value: 14
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 
