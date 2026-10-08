@@ -1,0 +1,889 @@
+---
+country_id: CTY-ABW
+iso3: ABW
+schema_version: '0.2'
+status: draft
+country_name: ABW
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ABW-EDU-01
+    national_label_en: Early Childhood education
+    national_label_local: Peuterschool, I
+    entry_age: 0
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ABW-EDU-02
+    national_label_en: Early Childhood education
+    national_label_local: Peuterschool, II
+    entry_age: 2
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ABW-EDU-03
+    national_label_en: Kindergarden
+    national_label_local: Kleuteronderwijs
+    entry_age: 4
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ABW-EDU-04
+    national_label_en: Primary
+    national_label_local: Basisonderwijs
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ABW-EDU-04
+    cum_years_status: computed
+    review_flags: []
+  - country_entry_id: ABW-EDU-05
+    national_label_en: Special primary education
+    national_label_local: Speciaal onderwijs
+    entry_age: 5
+    duration_years: 7
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ABW-EDU-05
+    cum_years_status: computed
+    review_flags: []
+  - country_entry_id: ABW-EDU-06
+    national_label_en: Adult education
+    national_label_local: Avondonderwijs
+    entry_age: 16
+    duration_years: 2
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 12
+    parent_country_entry_ids: []
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - ABW-EDU-06
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: ABW-EDU-07
+    national_label_en: Special secondary education
+    national_label_local: SPO - Scol Practico pa Ofishi, voortgezet speciaal onderwijs
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 13
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-08
+    national_label_en: Lower secondary education
+    national_label_local: Middelbaar algemeen voortgezet onderwijs m.a.v.o. Ciclo
+      Basico 1-2
+    entry_age: 12
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 14
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-09
+    national_label_en: Lower secondary education
+    national_label_local: Middelbaar algemeen voortgezet onderwijs m.a.v.o. Ciclo
+      Avansa 3-4
+    entry_age: 14
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 15
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-10
+    national_label_en: Lower secondary education
+    national_label_local: Hoger algemeen voortgezet onderwijs h.a.v.o. 1-3
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 16
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-11
+    national_label_en: Lower secondary education
+    national_label_local: 'Voorbereidend wetenschappelijk onderwijs
+
+      v.w.o. 1-3'
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 17
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-12
+    national_label_en: Start year  Lower vocational secondary education
+    national_label_local: Education profesional basico (lager beroepsonderwijs)                         EPB
+      start-jaar
+    entry_age: 12
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 18
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-13
+    national_label_en: Lower  secondary vocational education  labor-market track
+    national_label_local: Education profesional basico  (lager beroepsonderwijs)                         EPB
+      arbeidsmarkt
+    entry_age: 13
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 19
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-14
+    national_label_en: Lower secondary vocational  education Immediate employment
+      track
+    national_label_local: Education profesional basico (lager beroepsonderwijs)                          EPB
+      uitstroom
+    entry_age: 13
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 20
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-15
+    national_label_en: Lower secondary vocational  education continuing education
+      track
+    national_label_local: Education profesional basico (lager beroepsonderwijs)                        EPB
+      doorstroom
+    entry_age: 13
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 21
+    parent_country_entry_ids:
+    - ABW-EDU-04
+    - ABW-EDU-05
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+  - country_entry_id: ABW-EDU-16
+    national_label_en: Adult education (m.a.v.o.)
+    national_label_local: Avondleergangen (Avond m.a.v.o.)
+    entry_age: 17
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 22
+    parent_country_entry_ids:
+    - ABW-EDU-06
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - ABW-EDU-06
+    - ABW-EDU-16
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ABW-EDU-17
+    national_label_en: Vocational adult education
+    national_label_local: Avond beroepsonderwijs
+    entry_age: 16
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 23
+    parent_country_entry_ids:
+    - ABW-EDU-06
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - ABW-EDU-06
+    - ABW-EDU-17
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ABW-EDU-18
+    national_label_en: Upper secondary education
+    national_label_local: Hoger algemeen voortgezet onderwijs  h.a.v.o. 4-5
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 24
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-19
+    national_label_en: Pre-University  education (v.w.o.)
+    national_label_local: Voorbereidend wetenschappelijk onderwijs                  v.w.o.
+      4-6
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 25
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-20
+    national_label_en: Adult education (h.a.v.o)
+    national_label_local: Avondleergang (Avond h.a.v.o.)
+    entry_age: 18
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 26
+    parent_country_entry_ids:
+    - ABW-EDU-16
+    - ABW-EDU-17
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ABW-EDU-06
+    - ABW-EDU-17
+    - ABW-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-16, ABW-EDU-17'
+  - country_entry_id: ABW-EDU-21
+    national_label_en: Adult education (v.w.o.)
+    national_label_local: Avondleergang (Avond v.w.o.)
+    entry_age: 16
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 27
+    parent_country_entry_ids:
+    - ABW-EDU-16
+    - ABW-EDU-17
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - ABW-EDU-06
+    - ABW-EDU-17
+    - ABW-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-16, ABW-EDU-17'
+  - country_entry_id: ABW-EDU-22
+    national_label_en: Human service Upper secondary vocational education
+    national_label_local: Educacion Profesional Intermedio (middelbaar beroepsonderwijs)                  Colegio  EPI
+      Salubridad & Servicio .
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 28
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-23
+    national_label_en: Hospitality & tourism               Upper secondary vocational
+      education
+    national_label_local: Educacion Profesional Intermedio (middelbaar beroepsonderwijs)                      EPI
+      Certified cook
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 29
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-24
+    national_label_en: Hospitality & tourism               Upper secondary vocational
+      education
+    national_label_local: Educacion Profesional Intermedio  (middelbaar beroepsonderwijs)                         Colegio
+      EPI  Culinary arts
+    entry_age: 16
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 30
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-25
+    national_label_en: Business education Upper secondary vocational education
+    national_label_local: Educacion Profesional Intermedio  (middelbaar beroepsonderwijs)                        Colegio
+      EPI Economia
+    entry_age: 16
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 31
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-26
+    national_label_en: Engineering technology  Upper secondary vocational education
+    national_label_local: Educacion Profesional Intermedio  (middelbaar beroepsonderwijs)                        Colegio
+      EPI Ciencia & Technologia
+    entry_age: 16
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 32
+    parent_country_entry_ids:
+    - ABW-EDU-07
+    - ABW-EDU-08
+    - ABW-EDU-09
+    - ABW-EDU-10
+    - ABW-EDU-11
+    - ABW-EDU-12
+    - ABW-EDU-13
+    - ABW-EDU-14
+    - ABW-EDU-15
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+  - country_entry_id: ABW-EDU-27
+    national_label_en: Associate degree (Hospitality  management) Short-cycle tertiary
+      education
+    national_label_local: Educacion Profesional Intermedio (middelbaar beroepsonderwijs)                   Colegio
+      EPI Associate degree (Hospitality  management)
+    entry_age: 16
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 33
+    parent_country_entry_ids:
+    - ABW-EDU-18
+    - ABW-EDU-19
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+  - country_entry_id: ABW-EDU-28
+    national_label_en: School of law Tertiary education bachelor level (academic)
+    national_label_local: Universidad di Aruba UA - Faculteit der Rechtsgeleerdheid
+    entry_age: 17
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 34
+    parent_country_entry_ids:
+    - ABW-EDU-18
+    - ABW-EDU-19
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+  - country_entry_id: ABW-EDU-29
+    national_label_en: Hospitality & tourism management studies  Tertiary education
+      bachelor level
+    national_label_local: Universidad di Aruba UA - Hospitality & tourism management
+      studies
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 35
+    parent_country_entry_ids:
+    - ABW-EDU-18
+    - ABW-EDU-19
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+  - country_entry_id: ABW-EDU-30
+    national_label_en: Business Administration Tertiary education bachelor level
+    national_label_local: Universidad di Aruba UA - Financieel Economische Faculteit
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 36
+    parent_country_entry_ids:
+    - ABW-EDU-18
+    - ABW-EDU-19
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+  - country_entry_id: ABW-EDU-31
+    national_label_en: Arts & science  Tertiary education bachelor level
+    national_label_local: Universidad di Aruba UA - Arts & science
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 37
+    parent_country_entry_ids:
+    - ABW-EDU-18
+    - ABW-EDU-19
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+  - country_entry_id: ABW-EDU-32
+    national_label_en: Teacher Training Education      Tertiary education bachelor
+      level
+    national_label_local: IPA  - Instituto Pedagogico Arubano (de opleiding voor onderwijsgevenden)
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 38
+    parent_country_entry_ids:
+    - ABW-EDU-18
+    - ABW-EDU-19
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+  - country_entry_id: ABW-EDU-33
+    national_label_en: 'School of law
+
+      Master programme Tertiary education master level (professional)'
+    national_label_local: Universidad di Aruba UA - Faculteit der Rechtsgeleerdheid
+    entry_age: 20
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 39
+    parent_country_entry_ids:
+    - ABW-EDU-28
+    - ABW-EDU-29
+    - ABW-EDU-30
+    - ABW-EDU-31
+    - ABW-EDU-32
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-28
+    - ABW-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+    - 'minimum parent path selected from: ABW-EDU-28, ABW-EDU-29, ABW-EDU-30, ABW-EDU-31,
+      ABW-EDU-32'
+  - country_entry_id: ABW-EDU-34
+    national_label_en: "Tourism and international business studies \nMaster programme\
+      \ Tertiary education master level (academic)"
+    national_label_local: Universidad di Aruba UA - Tourism and international business
+      studies (MBA)
+    entry_age: 20
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 40
+    parent_country_entry_ids:
+    - ABW-EDU-28
+    - ABW-EDU-29
+    - ABW-EDU-30
+    - ABW-EDU-31
+    - ABW-EDU-32
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-28
+    - ABW-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+    - 'minimum parent path selected from: ABW-EDU-28, ABW-EDU-29, ABW-EDU-30, ABW-EDU-31,
+      ABW-EDU-32'
+  - country_entry_id: ABW-EDU-35
+    national_label_en: Business Administration Tertiary education Master programme
+      Tertiary education master level (academic)
+    national_label_local: Universidad di Aruba UA -  Business Adiministration(MBA)
+    entry_age: 20
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 41
+    parent_country_entry_ids:
+    - ABW-EDU-28
+    - ABW-EDU-29
+    - ABW-EDU-30
+    - ABW-EDU-31
+    - ABW-EDU-32
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ABW-EDU-04
+    - ABW-EDU-12
+    - ABW-EDU-18
+    - ABW-EDU-28
+    - ABW-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ABW-EDU-04, ABW-EDU-05'
+    - 'minimum parent path selected from: ABW-EDU-07, ABW-EDU-08, ABW-EDU-09, ABW-EDU-10,
+      ABW-EDU-11, ABW-EDU-12, ABW-EDU-13, ABW-EDU-14, ABW-EDU-15'
+    - 'minimum parent path selected from: ABW-EDU-18, ABW-EDU-19'
+    - 'minimum parent path selected from: ABW-EDU-28, ABW-EDU-29, ABW-EDU-30, ABW-EDU-31,
+      ABW-EDU-32'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Aruba.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

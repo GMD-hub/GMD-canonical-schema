@@ -1,0 +1,7111 @@
+iso3: THA
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_THA_Thailand_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: THA
+    name: Thailand
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_THA_Thailand_1.xlsx
+    sha256: a9c20ad565b3fd7a0d7cb0ab7996b9c8f1967634ae2e4f012dae3be465b3a5a0
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:39:49+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 26.718799
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 21.950987
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 30.728255
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 100.0
+      - domain: Drinking water
+        split: Rural*
+        year: '2024'
+        value: 100.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2024'
+        value: 100.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 72.631688
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 76.962512
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 68.989713
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 94.634125
+      - domain: Hygiene
+        split: Rural
+        year: '2024'
+        value: 93.412003
+      - domain: Hygiene
+        split: Urban
+        year: '2024'
+        value: 95.661858
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.543931
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 1.086501
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.087661
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 4.572497
+      - domain: Hygiene
+        split: Rural
+        year: '2024'
+        value: 4.851177
+      - domain: Hygiene
+        split: Urban
+        year: '2024'
+        value: 4.338142
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.105581
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.19437
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Hygiene
+        split: Total
+        year: '2024'
+        value: 0.793379
+      - domain: Hygiene
+        split: Rural
+        year: '2024'
+        value: 1.73682
+      - domain: Hygiene
+        split: Urban
+        year: '2024'
+        value: 0.0
+  per_source:
+  - source:
+      code: THA_1987_DHS
+      year: 1987
+      series: DHS
+      type: Survey with microdata
+      name: Demographic and Health Survey
+      column: 2
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 58.83
+      rural: 8.63
+      total: 17.7
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: Piped into residence
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 57.93
+      rural: 7.76
+      total: 16.82
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: Public Tap
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.9
+      rural: 0.87
+      total: 0.88
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 8.17
+      rural: 58.8
+      total: 49.66
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 8.17
+      rural: 58.8
+      total: 49.66
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: Private well/pond
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 4.7
+      rural: 17.91
+      total: 15.52
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: Public well/pond
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.96
+      rural: 32.13
+      total: 26.68
+    - jmp_id: ground_water.all_wells.other
+      jmp: Ground water > All wells > Other
+      level: 2
+      structural: false
+      row: 57
+      national_label: Neighbors' Well/pond
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.51
+      rural: 8.76
+      total: 7.46
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 13.71
+      rural: 26.45
+      total: 24.15
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rainwater
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 13.71
+      rural: 26.45
+      total: 24.15
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 16.08
+      rural: 0.7
+      total: 3.48
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 16.08
+      rural: 0.7
+      total: 3.48
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: River, spring, surface water
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.13
+      rural: 3.99
+      total: 3.29
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.76
+      rural: 0.73
+      total: 0.92
+    - jmp_id: other_improved_sources.tanker_truck_provided
+      jmp: Other improved sources > Tanker truck provided
+      level: 1
+      structural: false
+      row: 102
+      national_label: Tanker, truck, other vendor
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.76
+      rural: 0.73
+      total: 0.92
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.26
+      rural: 0.53
+      total: 0.48
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.26
+      rural: 0.53
+      total: 0.48
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 98.94
+      rural: 99.83
+      total: 99.68
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 96.466382
+        rural: 76.296076
+        total: 81.58462
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 74.91
+        rural: 9.33
+        total: 21.18
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 21.556382
+        rural: 66.966076
+        total: 60.40462
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 57.93
+        rural: 7.76
+        total: 16.82
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.13
+        rural: 3.99
+        total: 3.29
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 18
+  - source:
+      code: THA_1990_SES
+      year: 1990
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 14
+      n_rows: 9
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 57.903035
+      rural: 7.285503
+      total: 18.8
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 57.903035
+      rural: 7.285503
+      total: 18.8
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 42.096965
+      rural: 6.089744
+      total: 13.1
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 15.80607
+      rural: 1.195759
+      total: 5.7
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 8.178952
+      rural: 47.460552
+      total: 37.4
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.63579
+      rural: 3.131164
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.63579
+      rural: 3.131164
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.024832
+      rural: 2.021696
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.610958
+      rural: 1.109467
+      total: null
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 8.178952
+      rural: 47.460552
+      total: 37.4
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.024832
+      rural: 2.021696
+      total: null
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 7.154119
+      rural: 45.438856
+      total: 37.4
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.63579
+      rural: 3.131164
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.024832
+      rural: 2.021696
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.610958
+      rural: 1.109467
+      total: null
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 6.543161
+      rural: 44.329389
+      total: 37.4
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 6.543161
+      rural: 44.329389
+      total: 37.4
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.28853
+      rural: 39.102564
+      total: 35.3
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.28853
+      rural: 39.102564
+      total: 35.3
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.610958
+      rural: 1.86144
+      total: 1.6
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.610958
+      rural: 1.86144
+      total: 1.6
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 3.783997
+      rural: 1.084813
+      total: 1.5
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Water supply piped
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 3.783997
+      rural: 1.084813
+      total: 1.5
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 15.234529
+      rural: 3.205128
+      total: 5.4
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 15.234529
+      rural: 3.205128
+      total: 5.4
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 82.584772
+        rural: 78.945463
+        total: 79.922525
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 57.903035
+        rural: 7.285503
+        total: 18.8
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 24.681737
+        rural: 71.65996
+        total: 61.122525
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 57.903035
+        rural: 7.285503
+        total: 18.8
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.610958
+        rural: 1.86144
+        total: 1.6
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 26
+  - source:
+      code: THA_1992_SES
+      year: 1992
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 20
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 44.640652
+      rural: 11.215553
+      total: 21.7
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 42.294394
+      rural: 9.878561
+      total: 20.3
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 35.576686
+      rural: 8.909388
+      total: 15.5
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 6.717708
+      rural: 0.969173
+      total: 4.8
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: Water supply piped
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 2.346258
+      rural: 1.336992
+      total: 1.4
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 7.927883
+      rural: 36.092947
+      total: 35.1
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.012843
+      rural: 5.131948
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.012843
+      rural: 5.131948
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.716473
+      rural: 4.267865
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.296369
+      rural: 0.864082
+      total: null
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 7.927883
+      rural: 36.092947
+      total: 35.1
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.716473
+      rural: 4.267865
+      total: null
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 6.21141
+      rural: 31.825082
+      total: 35.1
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.012843
+      rural: 5.131948
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.716473
+      rural: 4.267865
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.296369
+      rural: 0.864082
+      total: null
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 5.915041
+      rural: 30.961
+      total: 35.1
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 5.915041
+      rural: 30.961
+      total: 35.1
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.238083
+      rural: 43.087342
+      total: 32.2
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.238083
+      rural: 43.087342
+      total: 32.2
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 32.143739
+      rural: 7.443951
+      total: 7.9
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 32.143739
+      rural: 7.443951
+      total: 7.9
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.370462
+      rural: 1.144325
+      total: 1.8
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.370462
+      rural: 1.144325
+      total: 1.8
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.67918
+      rural: 1.01588
+      total: 1.3
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.67918
+      rural: 1.01588
+      total: 1.3
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 97.531307
+        rural: 86.673308
+        total: 84.626755
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 67.955051
+        rural: 14.946287
+        total: 21.7
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 29.576256
+        rural: 71.727022
+        total: 62.926755
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 42.294394
+        rural: 9.878561
+        total: 20.3
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.370462
+        rural: 1.144325
+        total: 1.8
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_1994_SES
+      year: 1994
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 26
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 44.640652
+      rural: 11.215553
+      total: 22.0
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 42.294394
+      rural: 9.878561
+      total: 20.5
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 35.576686
+      rural: 8.909388
+      total: 16.5
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 6.717708
+      rural: 0.969173
+      total: 4.0
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: Water supply piped
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 2.346258
+      rural: 1.336992
+      total: 1.5
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 7.927883
+      rural: 36.092947
+      total: 25.5
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.012843
+      rural: 5.131948
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.012843
+      rural: 5.131948
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.716473
+      rural: 4.267865
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.296369
+      rural: 0.864082
+      total: null
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 7.927883
+      rural: 36.092947
+      total: 25.5
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.716473
+      rural: 4.267865
+      total: null
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 6.21141
+      rural: 31.825082
+      total: 25.5
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.012843
+      rural: 5.131948
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.716473
+      rural: 4.267865
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.296369
+      rural: 0.864082
+      total: null
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 5.915041
+      rural: 30.961
+      total: 25.5
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 5.915041
+      rural: 30.961
+      total: 25.5
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.238083
+      rural: 43.087342
+      total: 39.8
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.238083
+      rural: 43.087342
+      total: 39.8
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 32.143739
+      rural: 7.443951
+      total: 11.0
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 32.143739
+      rural: 7.443951
+      total: 11.0
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.370462
+      rural: 1.144325
+      total: 1.1
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.370462
+      rural: 1.144325
+      total: 1.1
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.67918
+      rural: 1.01588
+      total: 0.6
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.67918
+      rural: 1.01588
+      total: 0.6
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 97.531307
+        rural: 86.673308
+        total: 89.38354
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 67.955051
+        rural: 14.946287
+        total: 22.0
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 29.576256
+        rural: 71.727022
+        total: 67.38354
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 42.294394
+        rural: 9.878561
+        total: 20.5
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.370462
+        rural: 1.144325
+        total: 1.1
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_1996_SES
+      year: 1996
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 32
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 46.798255
+      rural: 10.520399
+      total: 20.0
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 45.479455
+      rural: 9.84885
+      total: 19.2
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 34.848757
+      rural: 9.224643
+      total: 15.9
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 10.630698
+      rural: 0.624207
+      total: 3.3
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: Water supply piped
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 1.3188
+      rural: 0.671548
+      total: 0.8
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 3.062328
+      rural: 29.545739
+      total: 20.6
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.725754
+      rural: 3.876035
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.725754
+      rural: 3.876035
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.560791
+      rural: 3.360379
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.164963
+      rural: 0.515656
+      total: null
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 3.062328
+      rural: 29.545739
+      total: 20.6
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.560791
+      rural: 3.360379
+      total: null
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.501537
+      rural: 26.18536
+      total: 20.6
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.725754
+      rural: 3.876035
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.560791
+      rural: 3.360379
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.164963
+      rural: 0.515656
+      total: null
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.336574
+      rural: 25.669704
+      total: 20.6
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.336574
+      rural: 25.669704
+      total: 20.6
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 7.359103
+      rural: 50.006325
+      total: 42.9
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 7.359103
+      rural: 50.006325
+      total: 42.9
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 42.16082
+      rural: 7.932839
+      total: 15.1
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 42.16082
+      rural: 7.932839
+      total: 15.1
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.15846
+      rural: 0.775017
+      total: 0.6
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.15846
+      rural: 0.775017
+      total: 0.6
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.461034
+      rural: 1.219681
+      total: 0.8
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.461034
+      rural: 1.219681
+      total: 0.8
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 98.819948
+        rural: 88.74719
+        total: 91.396899
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 78.546753
+        rural: 15.239097
+        total: 20.0
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 20.273196
+        rural: 73.508093
+        total: 71.396899
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 45.479455
+        rural: 9.84885
+        total: 19.2
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.15846
+        rural: 0.775017
+        total: 0.6
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_1998_SES
+      year: 1998
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 44
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 46.503972
+      rural: 12.599078
+      total: 22.8
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 45.115819
+      rural: 11.808958
+      total: 21.9
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 38.92416
+      rural: 11.036884
+      total: 19.7
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 6.191659
+      rural: 0.772075
+      total: 2.2
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: Water supply piped
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 1.388154
+      rural: 0.790119
+      total: 0.9
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.130472
+      rural: 25.600057
+      total: 17.5
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.542683
+      rural: 3.849921
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.542683
+      rural: 3.849921
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.439501
+      rural: 3.492469
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.103183
+      rural: 0.357452
+      total: null
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.130472
+      rural: 25.600057
+      total: 17.5
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.439501
+      rural: 3.492469
+      total: null
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.690971
+      rural: 22.107588
+      total: 17.5
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.542683
+      rural: 3.849921
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.439501
+      rural: 3.492469
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.103183
+      rural: 0.357452
+      total: null
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.587788
+      rural: 21.750136
+      total: 17.5
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.587788
+      rural: 21.750136
+      total: 17.5
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 5.276659
+      rural: 49.403012
+      total: 40.2
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 5.276659
+      rural: 49.403012
+      total: 40.2
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 45.623022
+      rural: 11.122128
+      total: 18.3
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 45.623022
+      rural: 11.122128
+      total: 18.3
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.068464
+      rural: 0.337724
+      total: 0.3
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.068464
+      rural: 0.337724
+      total: 0.3
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.397412
+      rural: 0.938003
+      total: 0.8
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.397412
+      rural: 0.938003
+      total: 0.8
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 99.9
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 99.153206
+        rural: 90.879805
+        total: 92.680861
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 81.716054
+        rural: 18.657111
+        total: 22.8
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 17.437152
+        rural: 72.222694
+        total: 69.880861
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 45.115819
+        rural: 11.808958
+        total: 21.9
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.068464
+        rural: 0.337724
+        total: 0.3
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_2000_SES
+      year: 2000
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 56
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 56.178987
+      rural: 12.723318
+      total: 23.0
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 55.272211
+      rural: 12.341449
+      total: 22.5
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 50.491651
+      rural: 11.652028
+      total: 21.0
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 4.780559
+      rural: 0.68942
+      total: 1.5
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: Outside piped or Public tap
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.906776
+      rural: 0.381869
+      total: 0.5
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.736236
+      rural: 21.050169
+      total: 13.6
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.568875
+      rural: 4.544441
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.568875
+      rural: 4.544441
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.488527
+      rural: 4.258395
+      total: null
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.080348
+      rural: 0.286046
+      total: null
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.736236
+      rural: 21.050169
+      total: 13.6
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.488527
+      rural: 4.258395
+      total: null
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.247709
+      rural: 16.791774
+      total: 13.6
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.568875
+      rural: 4.544441
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.488527
+      rural: 4.258395
+      total: null
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.080348
+      rural: 0.286046
+      total: null
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.167361
+      rural: 16.505728
+      total: 13.6
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.167361
+      rural: 16.505728
+      total: 13.6
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.239199
+      rural: 54.191837
+      total: 42.6
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.239199
+      rural: 54.191837
+      total: 42.6
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 40.685315
+      rural: 10.387006
+      total: 19.8
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 40.685315
+      rural: 10.387006
+      total: 19.8
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.002124
+      rural: 0.496967
+      total: 0.3
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.002124
+      rural: 0.496967
+      total: 0.3
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.15814
+      rural: 1.150701
+      total: 0.7
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.15814
+      rural: 1.150701
+      total: 0.7
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 100.0
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 99.799585
+        rural: 92.399326
+        total: 94.244555
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 90.275709
+        rural: 19.290009
+        total: 35.517608
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 9.523876
+        rural: 73.109318
+        total: 58.726947
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 55.272211
+        rural: 12.341449
+        total: 22.5
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.002124
+        rural: 0.496967
+        total: 0.3
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_2004_SES
+      year: 2004
+      series: SES
+      type: Survey with microdata
+      name: Household Socio-Economic Survey
+      column: 74
+      n_rows: 10
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 33.627018
+      rural: 15.592414
+      total: 21.6
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 33.427018
+      rural: 15.192414
+      total: 21.2
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Inside piped water supply, private
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 31.369219
+      rural: 14.727032
+      total: 20.2
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Inside piped water supply, shared
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 2.057799
+      rural: 0.465383
+      total: 1.0
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: Outside piped or Public tap
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.2
+      rural: 0.4
+      total: 0.4
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 4.395757
+      rural: 17.574609
+      total: 13.3
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.418792
+      rural: 3.049352
+      total: 2.5
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.418792
+      rural: 3.049352
+      total: 2.5
+    - jmp_id: ground_water.protected_wells_or_springs.private
+      jmp: Ground water > Protected wells or springs > Private
+      level: 2
+      structural: false
+      row: 47
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.271767
+      rural: 2.693922
+      total: 2.2
+    - jmp_id: ground_water.protected_wells_or_springs.public
+      jmp: Ground water > Protected wells or springs > Public
+      level: 2
+      structural: false
+      row: 48
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.147025
+      rural: 0.35543
+      total: 0.3
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 4.395757
+      rural: 17.574609
+      total: 13.3
+    - jmp_id: ground_water.all_wells.private
+      jmp: Ground water > All wells > Private
+      level: 2
+      structural: false
+      row: 55
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.271767
+      rural: 2.693922
+      total: 2.2
+    - jmp_id: ground_water.all_wells.public
+      jmp: Ground water > All wells > Public
+      level: 2
+      structural: false
+      row: 56
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 3.123991
+      rural: 14.880687
+      total: 11.1
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: ''
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.418792
+      rural: 3.049352
+      total: 2.5
+    - jmp_id: ground_water.tubewell_borehole.private
+      jmp: Ground water > Tubewell, borehole > Private
+      level: 2
+      structural: false
+      row: 59
+      national_label: Inside piped underground water, private
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.271767
+      rural: 2.693922
+      total: 2.2
+    - jmp_id: ground_water.tubewell_borehole.public
+      jmp: Ground water > Tubewell, borehole > Public
+      level: 2
+      structural: false
+      row: 60
+      national_label: Inside piped underground water, shared
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.147025
+      rural: 0.35543
+      total: 0.3
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.976966
+      rural: 14.525257
+      total: 10.8
+    - jmp_id: ground_water.traditional_wells.public
+      jmp: Ground water > Traditional wells > Public
+      level: 2
+      structural: false
+      row: 64
+      national_label: Well or public tap
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.976966
+      rural: 14.525257
+      total: 10.8
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 12.583458
+      rural: 50.742434
+      total: 38.3
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rain water
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 12.583458
+      rural: 50.742434
+      total: 38.3
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 49.1
+      rural: 14.9
+      total: 26.1
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water users with unimproved source
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 49.1
+      rural: 14.9
+      total: 26.1
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: ''
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.063243
+      rural: 0.350894
+      total: 0.3
+    - jmp_id: surface_water.river
+      jmp: Surface water > River
+      level: 1
+      structural: false
+      row: 93
+      national_label: River, stream, etc.
+      improved: false
+      gmd: surface
+      rolls_up_to: []
+      urban: 0.063243
+      rural: 0.350894
+      total: 0.3
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.201631
+      rural: 0.746246
+      total: 0.6
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.201631
+      rural: 0.746246
+      total: 0.6
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 99.971107
+      rural: 99.906597
+      total: 100.2
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 98.992043
+        rural: 93.570735
+        total: 95.523617
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 74.775749
+        rural: 25.01223
+        total: 40.859848
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 24.216293
+        rural: 68.558505
+        total: 54.663769
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 33.427018
+        rural: 15.192414
+        total: 21.2
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.063243
+        rural: 0.350894
+        total: 0.3
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: null
+        rural: null
+        total: null
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: null
+        rural: null
+        total: null
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_2006_MICS
+      year: 2006
+      series: MICS
+      type: Survey with microdata
+      name: Multiple Indicator Cluster Survey
+      column: 80
+      n_rows: 13
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 39.83436
+      rural: 15.61027
+      total: 22.83852
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 39.81095
+      rural: 15.53637
+      total: 22.77969
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Piped into dwelling
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 37.51814
+      rural: 14.12338
+      total: 21.10417
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Piped into plot or yard
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 2.29281
+      rural: 1.41299
+      total: 1.67552
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: Public Tap/Standpipe
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.02341
+      rural: 0.0739
+      total: 0.05883
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 4.86739
+      rural: 15.79013
+      total: 12.53088
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 4.2588
+      rural: 11.89685
+      total: 9.61773
+    - jmp_id: ground_water.unprotected_ground_water
+      jmp: Ground water > Unprotected ground water
+      level: 1
+      structural: false
+      row: 45
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.60859
+      rural: 3.89328
+      total: 2.91315
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 4.2588
+      rural: 11.89685
+      total: 9.61773
+    - jmp_id: ground_water.unprotected_wells_or_springs
+      jmp: Ground water > Unprotected wells or springs
+      level: 1
+      structural: false
+      row: 50
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.60859
+      rural: 3.89328
+      total: 2.91315
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 4.85103
+      rural: 15.7396
+      total: 12.49055
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: Tubewell/Borehole
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.32166
+      rural: 5.00315
+      total: 4.20302
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.52937
+      rural: 10.73645
+      total: 8.28753
+    - jmp_id: ground_water.protected_well
+      jmp: Ground water > Protected well
+      level: 1
+      structural: false
+      row: 66
+      national_label: Protected well
+      improved: true
+      gmd: protected_well
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.92256
+      rural: 6.86421
+      total: 5.38967
+    - jmp_id: ground_water.unprotected_well
+      jmp: Ground water > Unprotected well
+      level: 1
+      structural: false
+      row: 70
+      national_label: Unprotected well
+      improved: false
+      gmd: unprotected_well
+      rolls_up_to: []
+      urban: 0.60681
+      rural: 3.87224
+      total: 2.89786
+    - jmp_id: ground_water.all_springs
+      jmp: Ground water > All springs
+      level: 1
+      structural: false
+      row: 74
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.01636
+      rural: 0.05053
+      total: 0.04033
+    - jmp_id: ground_water.protected_spring
+      jmp: Ground water > Protected spring
+      level: 1
+      structural: false
+      row: 78
+      national_label: Protected spring
+      improved: true
+      gmd: protected_spring
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.01458
+      rural: 0.02949
+      total: 0.02504
+    - jmp_id: ground_water.unprotected_spring
+      jmp: Ground water > Unprotected spring
+      level: 1
+      structural: false
+      row: 82
+      national_label: unprotected spring
+      improved: false
+      gmd: unprotected_spring
+      rolls_up_to: []
+      urban: 0.00178
+      rural: 0.02104
+      total: 0.01529
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 10.55963
+      rural: 48.63755
+      total: 37.27544
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: Rainwater
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 10.55963
+      rural: 48.63755
+      total: 37.27544
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 44.15309
+      rural: 17.78551
+      total: 25.65336
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 44.15309
+      rural: 17.78551
+      total: 25.65336
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: Surface water
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.07634
+      rural: 1.09383
+      total: 0.79022
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.17487
+      rural: 0.96533
+      total: 0.72946
+    - jmp_id: other_improved_sources.tanker_truck_provided
+      jmp: Other improved sources > Tanker truck provided
+      level: 1
+      structural: false
+      row: 102
+      national_label: Tanker-truck
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.17487
+      rural: 0.96533
+      total: 0.72946
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.33432
+      rural: 0.11738
+      total: 0.18211
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.33432
+      rural: 0.11738
+      total: 0.18211
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 100.0
+      total: 99.99999
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 98.98075
+        rural: 94.89551
+        total: 96.11451
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 76.837285
+        rural: 26.854312
+        total: 41.768781
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 22.143465
+        rural: 68.041198
+        total: 54.345729
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 39.81095
+        rural: 15.53637
+        total: 22.77969
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.07634
+        rural: 1.09383
+        total: 0.79022
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: 97.74134
+        rural: 93.1454
+        total: 94.56299
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: 99.97109
+        rural: 99.62933
+        total: 99.73475
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 28
+  - source:
+      code: THA_2012_MICS
+      year: 2012
+      series: MICS
+      type: Survey with microdata
+      name: Multiple Indicator Cluster Survey
+      column: 140
+      n_rows: 13
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 35.4
+      rural: 15.7
+      total: 23.9
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 35.3
+      rural: 15.4
+      total: 23.7
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: Piped water into dwelling
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 30.9
+      rural: 14.0
+      total: 21.1
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: Piped water into yard/plot
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 4.4
+      rural: 1.4
+      total: 2.6
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: Public tap/stand-pipe
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.1
+      rural: 0.2
+      total: 0.2
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: Piped water to neighbour
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.0
+      rural: 0.1
+      total: 0.0
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 3.2
+      rural: 8.5
+      total: 6.3
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.9
+      rural: 7.3
+      total: 5.5
+    - jmp_id: ground_water.unprotected_ground_water
+      jmp: Ground water > Unprotected ground water
+      level: 1
+      structural: false
+      row: 45
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.3
+      rural: 1.2
+      total: 0.8
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 2.9
+      rural: 7.3
+      total: 5.5
+    - jmp_id: ground_water.unprotected_wells_or_springs
+      jmp: Ground water > Unprotected wells or springs
+      level: 1
+      structural: false
+      row: 50
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.3
+      rural: 1.2
+      total: 0.8
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 3.2
+      rural: 8.5
+      total: 6.3
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: Tube-well/ bore-hole
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.1
+      rural: 3.7
+      total: 2.6
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 2.1
+      rural: 4.8
+      total: 3.7
+    - jmp_id: ground_water.protected_well
+      jmp: Ground water > Protected well
+      level: 1
+      structural: false
+      row: 66
+      national_label: Protected well
+      improved: true
+      gmd: protected_well
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.8
+      rural: 3.6
+      total: 2.9
+    - jmp_id: ground_water.unprotected_well
+      jmp: Ground water > Unprotected well
+      level: 1
+      structural: false
+      row: 70
+      national_label: Unprotected well
+      improved: false
+      gmd: unprotected_well
+      rolls_up_to: []
+      urban: 0.3
+      rural: 1.2
+      total: 0.8
+    - jmp_id: ground_water.all_springs
+      jmp: Ground water > All springs
+      level: 1
+      structural: false
+      row: 74
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.0
+      rural: 0.0
+      total: 0.0
+    - jmp_id: ground_water.protected_spring
+      jmp: Ground water > Protected spring
+      level: 1
+      structural: false
+      row: 78
+      national_label: Protected spring
+      improved: true
+      gmd: protected_spring
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.0
+      rural: 0.0
+      total: 0.0
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.3
+      rural: 41.8
+      total: 30.2
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: 'Rain-water
+
+        collection'
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 14.3
+      rural: 41.8
+      total: 30.2
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 46.8
+      rural: 34.9
+      total: 39.9
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 46.8
+      rural: 34.9
+      total: 39.9
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: Surface water
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.6
+      rural: 0.9
+      total: 0.8
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.1
+      rural: 0.1
+      total: 0.1
+    - jmp_id: other_improved_sources.tanker_truck_provided
+      jmp: Other improved sources > Tanker truck provided
+      level: 1
+      structural: false
+      row: 102
+      national_label: Tanker truck
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.1
+      rural: 0.1
+      total: 0.1
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.1
+      rural: 0.0
+      total: 0.1
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.1
+      rural: 0.0
+      total: 0.1
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.5
+      rural: 101.9
+      total: 101.3
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 99.5
+        rural: 99.8
+        total: 99.6
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 76.605696
+        rural: 41.386508
+        total: 56.184247
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 22.894304
+        rural: 58.413492
+        total: 43.415753
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 35.3
+        rural: 15.4
+        total: 23.7
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.6
+        rural: 0.9
+        total: 0.8
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: 99.33246
+        rural: 99.04743
+        total: 99.16874
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: 99.93472
+        rural: 99.85638
+        total: 99.88972
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 28
+  - source:
+      code: THA_2016_MICS
+      year: 2016
+      series: MICS
+      type: Survey with microdata
+      name: Multiple Indicator Cluster Survey 2015-16
+      column: 194
+      n_rows: 14
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 37.56409
+      rural: 20.49659
+      total: 28.41422
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 37.35961
+      rural: 20.26124
+      total: 28.19319
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: piped into dwelling
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 36.31424
+      rural: 18.42917
+      total: 26.72607
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: piped into yard/plot
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 1.04537
+      rural: 1.83207
+      total: 1.46712
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: public tap/standpipe
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.12801
+      rural: 0.13706
+      total: 0.13286
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: piped to neighbour
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.07647
+      rural: 0.09829
+      total: 0.08817
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.83709
+      rural: 6.22746
+      total: 4.19077
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.70919
+      rural: 5.2335
+      total: 3.59857
+    - jmp_id: ground_water.unprotected_ground_water
+      jmp: Ground water > Unprotected ground water
+      level: 1
+      structural: false
+      row: 45
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.1279
+      rural: 0.99396
+      total: 0.5922
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.70919
+      rural: 5.2335
+      total: 3.59857
+    - jmp_id: ground_water.unprotected_wells_or_springs
+      jmp: Ground water > Unprotected wells or springs
+      level: 1
+      structural: false
+      row: 50
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.1279
+      rural: 1.05678
+      total: 0.62588
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.83709
+      rural: 6.21892
+      total: 4.18619
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: tubewell-borehole
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.65947
+      rural: 1.47697
+      total: 1.09773
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.17762
+      rural: 4.74195
+      total: 3.08846
+    - jmp_id: ground_water.protected_well
+      jmp: Ground water > Protected well
+      level: 1
+      structural: false
+      row: 66
+      national_label: protected well
+      improved: true
+      gmd: protected_well
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.04972
+      rural: 3.74799
+      total: 2.49626
+    - jmp_id: ground_water.unprotected_well
+      jmp: Ground water > Unprotected well
+      level: 1
+      structural: false
+      row: 70
+      national_label: Uprotected well
+      improved: false
+      gmd: unprotected_well
+      rolls_up_to: []
+      urban: 0.1279
+      rural: 0.99396
+      total: 0.5922
+    - jmp_id: ground_water.all_springs
+      jmp: Ground water > All springs
+      level: 1
+      structural: false
+      row: 74
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.0
+      rural: 0.00854
+      total: 0.00458
+    - jmp_id: ground_water.protected_spring
+      jmp: Ground water > Protected spring
+      level: 1
+      structural: false
+      row: 78
+      national_label: protected spring
+      improved: true
+      gmd: protected_spring
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.0
+      rural: 0.00854
+      total: 0.00458
+    - jmp_id: ground_water.unprotected_spring
+      jmp: Ground water > Unprotected spring
+      level: 1
+      structural: false
+      row: 82
+      national_label: ''
+      improved: false
+      gmd: unprotected_spring
+      rolls_up_to: []
+      urban: 0.0
+      rural: 0.06282
+      total: 0.03368
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 5.91572
+      rural: 23.49585
+      total: 15.34041
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: rainwater collection
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 5.91572
+      rural: 23.49585
+      total: 15.34041
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 54.46975
+      rural: 48.83133
+      total: 51.447
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: Bottled water
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 54.46975
+      rural: 48.83133
+      total: 51.447
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: Surface water
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.15844
+      rural: 0.34946
+      total: 0.26085
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.04448
+      rural: 0.49696
+      total: 0.28706
+    - jmp_id: other_improved_sources.cart_with_small_tank_drum
+      jmp: Other improved sources > Cart with small tank/drum
+      level: 1
+      structural: false
+      row: 101
+      national_label: Cart with small tank/drum
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.01764
+      rural: 0.01952
+      total: 0.01865
+    - jmp_id: other_improved_sources.tanker_truck_provided
+      jmp: Other improved sources > Tanker truck provided
+      level: 1
+      structural: false
+      row: 102
+      national_label: Tanker truck
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.02684
+      rural: 0.47744
+      total: 0.26841
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.01043
+      rural: 0.03952
+      total: 0.02603
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.01043
+      rural: 0.03952
+      total: 0.02603
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.0
+      rural: 99.93717
+      total: 99.96634
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 99.70323
+        rural: 98.55423
+        total: 99.08726
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 88.695335
+        rural: 62.79797
+        total: 74.811784
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 11.007895
+        rural: 35.75626
+        total: 24.275476
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 37.35961
+        rural: 20.26124
+        total: 28.19319
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.15844
+        rural: 0.34946
+        total: 0.26085
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: 99.45873
+        rural: 98.77851
+        total: 99.09608
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: 99.68395
+        rural: 99.77021
+        total: 99.72994
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: null
+        rural: null
+        total: null
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: null
+        rural: null
+        total: null
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 30
+  - source:
+      code: THA_2019_MICS
+      year: 2019
+      series: MICS
+      type: Survey with microdata
+      name: Multiple Indicator Cluster Survey 2019
+      column: 212
+      n_rows: 14
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 48.03492
+      rural: 29.72272
+      total: 38.04638
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 47.8975
+      rural: 29.62436
+      total: 37.93027
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: piped/hosed into dwelling
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 44.90233
+      rural: 24.68217
+      total: 33.87308
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: piped/hosed into compound
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 2.99517
+      rural: 4.94219
+      total: 4.05719
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: public tap
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.02466
+      rural: 0.05026
+      total: 0.03862
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: piped/hosed to neighbour's house
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.11276
+      rural: 0.0481
+      total: 0.07749
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.24718
+      rural: 3.81193
+      total: 2.64614
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.13229
+      rural: 3.1706
+      total: 2.2441
+    - jmp_id: ground_water.unprotected_ground_water
+      jmp: Ground water > Unprotected ground water
+      level: 1
+      structural: false
+      row: 45
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.11489
+      rural: 0.64133
+      total: 0.40204
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.13229
+      rural: 3.1706
+      total: 2.2441
+    - jmp_id: ground_water.unprotected_wells_or_springs
+      jmp: Ground water > Unprotected wells or springs
+      level: 1
+      structural: false
+      row: 50
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.11489
+      rural: 0.64133
+      total: 0.40204
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 1.24718
+      rural: 3.81193
+      total: 2.64614
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: tube-well
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.80538
+      rural: 1.70369
+      total: 1.29537
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.4418
+      rural: 2.10824
+      total: 1.35077
+    - jmp_id: ground_water.protected_well
+      jmp: Ground water > Protected well
+      level: 1
+      structural: false
+      row: 66
+      national_label: 'dug well: protected (e.g. Roof, well lid, etc('
+      improved: true
+      gmd: protected_well
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.32691
+      rural: 1.46691
+      total: 0.94873
+    - jmp_id: ground_water.unprotected_well
+      jmp: Ground water > Unprotected well
+      level: 1
+      structural: false
+      row: 70
+      national_label: 'dug well: unprotected'
+      improved: false
+      gmd: unprotected_well
+      rolls_up_to: []
+      urban: 0.11489
+      rural: 0.64133
+      total: 0.40204
+    - jmp_id: ground_water.protected_spring
+      jmp: Ground water > Protected spring
+      level: 1
+      structural: false
+      row: 78
+      national_label: protected spring
+      improved: true
+      gmd: protected_spring
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: null
+      rural: null
+      total: null
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: ''
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.79049
+      rural: 7.78756
+      total: 5.06164
+    - jmp_id: rainwater.covered_cistern_tank
+      jmp: Rainwater > Covered cistern/tank
+      level: 1
+      structural: false
+      row: 87
+      national_label: rainwater collection
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.79049
+      rural: 7.78756
+      total: 5.06164
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 41.37486
+      rural: 54.32684
+      total: 48.43962
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: 'packaged water: bottled water/gallon sized'
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 39.51025
+      rural: 52.56093
+      total: 46.62885
+    - jmp_id: packaged_water.sachet_water
+      jmp: Packaged water > Sachet water
+      level: 1
+      structural: false
+      row: 91
+      national_label: 'packaged water: glass/cup water'
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.86461
+      rural: 1.76591
+      total: 1.81077
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: Surface water
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.01732
+      rural: 0.12532
+      total: 0.07623
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 7.53524
+      rural: 4.22563
+      total: 5.72998
+    - jmp_id: other_improved_sources.tanker_truck_provided
+      jmp: Other improved sources > Tanker truck provided
+      level: 1
+      structural: false
+      row: 102
+      national_label: Water tank truck
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.00376
+      rural: 0.10856
+      total: 0.06092
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: Coin operated water-dispenser
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 7.53148
+      rural: 4.11707
+      total: 5.66906
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 100.00001
+      rural: 100.0
+      total: 99.99999
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 99.8678
+        rural: 99.23335
+        total: 99.52172
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 86.542643
+        rural: 77.017966
+        total: 81.413132
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 13.325157
+        rural: 22.215384
+        total: 18.108588
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 47.8975
+        rural: 29.62436
+        total: 37.93027
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.01732
+        rural: 0.12532
+        total: 0.07623
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: 99.7386
+        rural: 99.61143
+        total: 99.66944
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: 99.7924
+        rural: 99.71056
+        total: 99.74789
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: 99.80894
+        rural: 99.19096
+        total: 99.47274
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: 99.80894
+        rural: 99.19096
+        total: 99.47274
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 27
+  - source:
+      code: THA_2022_MICS
+      year: 2022
+      series: MICS
+      type: Survey with microdata
+      name: Multiple Indicator Cluster Surveys
+      column: 242
+      n_rows: 15
+    categories:
+    - jmp_id: tap_water
+      jmp: Tap water
+      level: 0
+      structural: false
+      row: 37
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 27.13459
+      rural: 15.55869
+      total: 21.41188
+    - jmp_id: tap_water.piped_on_premises
+      jmp: Tap water > Piped on premises
+      level: 1
+      structural: false
+      row: 38
+      national_label: ''
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 26.99703
+      rural: 15.14338
+      total: 21.137
+    - jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+      jmp: Tap water > Piped on premises > Piped water into dwelling
+      level: 2
+      structural: false
+      row: 39
+      national_label: 'piped water: piped/hosed into dwelling'
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 25.71623
+      rural: 13.31172
+      total: 19.58387
+    - jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+      jmp: Tap water > Piped on premises > Piped water to yard/plot
+      level: 2
+      structural: false
+      row: 40
+      national_label: 'piped water: piped/hosed into compound'
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      - Piped on premises
+      urban: 1.2808
+      rural: 1.83166
+      total: 1.55313
+    - jmp_id: tap_water.public_tap_standpipe
+      jmp: Tap water > Public tap, standpipe
+      level: 1
+      structural: false
+      row: 41
+      national_label: 'piped water: public tap'
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.06563
+      rural: 0.2556
+      total: 0.15955
+    - jmp_id: tap_water.other
+      jmp: Tap water > Other
+      level: 1
+      structural: false
+      row: 42
+      national_label: 'piped water: piped/hosed to neighbouroughs house'
+      improved: true
+      gmd: piped
+      rolls_up_to:
+      - Improved
+      - All piped
+      urban: 0.07193
+      rural: 0.15971
+      total: 0.11533
+    - jmp_id: ground_water
+      jmp: Ground water
+      level: 0
+      structural: false
+      row: 43
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.9111
+      rural: 3.05339
+      total: 1.97017
+    - jmp_id: ground_water.protected_ground_water
+      jmp: Ground water > Protected ground water
+      level: 1
+      structural: false
+      row: 44
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.87505
+      rural: 2.77894
+      total: 1.81626
+    - jmp_id: ground_water.unprotected_ground_water
+      jmp: Ground water > Unprotected ground water
+      level: 1
+      structural: false
+      row: 45
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.03605
+      rural: 0.27445
+      total: 0.15391
+    - jmp_id: ground_water.protected_wells_or_springs
+      jmp: Ground water > Protected wells or springs
+      level: 1
+      structural: false
+      row: 46
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.87505
+      rural: 2.77894
+      total: 1.81626
+    - jmp_id: ground_water.unprotected_wells_or_springs
+      jmp: Ground water > Unprotected wells or springs
+      level: 1
+      structural: false
+      row: 50
+      national_label: ''
+      improved: false
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.03605
+      rural: 0.27445
+      total: 0.15391
+    - jmp_id: ground_water.all_wells
+      jmp: Ground water > All wells
+      level: 1
+      structural: false
+      row: 54
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.9111
+      rural: 3.05339
+      total: 1.97017
+    - jmp_id: ground_water.tubewell_borehole
+      jmp: Ground water > Tubewell, borehole
+      level: 1
+      structural: false
+      row: 58
+      national_label: tube-well
+      improved: true
+      gmd: borehole
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.55204
+      rural: 1.27504
+      total: 0.90946
+    - jmp_id: ground_water.traditional_wells
+      jmp: Ground water > Traditional wells
+      level: 1
+      structural: false
+      row: 62
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 0.35906
+      rural: 1.77835
+      total: 1.06071
+    - jmp_id: ground_water.protected_well
+      jmp: Ground water > Protected well
+      level: 1
+      structural: false
+      row: 66
+      national_label: 'dug well: protected (e.g. roof, well lid, etc.)'
+      improved: true
+      gmd: protected_well
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.32301
+      rural: 1.5039
+      total: 0.9068
+    - jmp_id: ground_water.unprotected_well
+      jmp: Ground water > Unprotected well
+      level: 1
+      structural: false
+      row: 70
+      national_label: 'dug well: unprotected'
+      improved: false
+      gmd: unprotected_well
+      rolls_up_to: []
+      urban: 0.03605
+      rural: 0.27445
+      total: 0.15391
+    - jmp_id: rainwater
+      jmp: Rainwater
+      level: 0
+      structural: false
+      row: 86
+      national_label: Rainwater
+      improved: true
+      gmd: rainwater
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 1.11288
+      rural: 4.62284
+      total: 2.84808
+    - jmp_id: packaged_water
+      jmp: Packaged water
+      level: 0
+      structural: false
+      row: 89
+      national_label: ''
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 60.58541
+      rural: 69.65746
+      total: 65.07032
+    - jmp_id: packaged_water.bottled_water
+      jmp: Packaged water > Bottled water
+      level: 1
+      structural: false
+      row: 90
+      national_label: 'packaged water: bottled water'
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 35.69333
+      rural: 24.82823
+      total: 30.322
+    - jmp_id: packaged_water.sachet_water
+      jmp: Packaged water > Sachet water
+      level: 1
+      structural: false
+      row: 91
+      national_label: 'packaged water: gallon sized water'
+      improved: true
+      gmd: bottled
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 24.89208
+      rural: 44.82923
+      total: 34.74832
+    - jmp_id: surface_water
+      jmp: Surface water
+      level: 0
+      structural: false
+      row: 92
+      national_label: Surface water
+      improved: false
+      gmd: surface
+      rolls_up_to:
+      - Surface water
+      urban: 0.15482
+      rural: 0.09116
+      total: 0.12335
+    - jmp_id: other_improved_sources
+      jmp: Other improved sources
+      level: 0
+      structural: false
+      row: 100
+      national_label: ''
+      improved: true
+      gmd: ''
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 10.08283
+      rural: 6.99885
+      total: 8.55822
+    - jmp_id: other_improved_sources.tanker_truck_provided
+      jmp: Other improved sources > Tanker truck provided
+      level: 1
+      structural: false
+      row: 102
+      national_label: Water tank truck
+      improved: true
+      gmd: tanker
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.00013
+      rural: 0.03665
+      total: 0.01818
+    - jmp_id: other_improved_sources.other
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 103
+      national_label: 'packaged water: glass / cup water'
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 0.95727
+      rural: 1.051
+      total: 1.00361
+    - jmp_id: other_improved_sources.other#2
+      jmp: Other improved sources > Other
+      level: 1
+      structural: false
+      row: 104
+      national_label: coin-operated water dispenser
+      improved: true
+      gmd: other
+      rolls_up_to:
+      - Improved
+      - Non-piped
+      urban: 9.12543
+      rural: 5.9112
+      total: 7.53643
+    - jmp_id: other_non_improved
+      jmp: Other non-improved
+      level: 0
+      structural: false
+      row: 105
+      national_label: ''
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.01834
+      rural: 0.01763
+      total: 0.01799
+    - jmp_id: other_non_improved.other
+      jmp: Other non-improved > Other
+      level: 1
+      structural: false
+      row: 106
+      national_label: Other
+      improved: false
+      gmd: other
+      rolls_up_to: []
+      urban: 0.01834
+      rural: 0.01763
+      total: 0.01799
+    - jmp_id: total
+      jmp: Total
+      level: 0
+      structural: true
+      row: 109
+      national_label: ''
+      improved: null
+      gmd: ''
+      rolls_up_to: []
+      urban: 99.99997
+      rural: 100.00002
+      total: 100.00001
+    blocks:
+      facility_type_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 6
+        urban: 99.79076
+        rural: 99.61678
+        total: 99.70476
+      - label: All piped
+        label_local: All piped
+        row: 7
+        urban: 94.472331
+        rural: 85.083009
+        total: 89.8302
+      - label: Non-piped
+        label_local: Non-piped
+        row: 8
+        urban: 5.318429
+        rural: 14.533771
+        total: 9.87456
+      - label: Piped on premises
+        label_local: Piped on premises
+        row: 9
+        urban: 26.99703
+        rural: 15.14338
+        total: 21.137
+      - label: Surface water
+        label_local: Surface water
+        row: 10
+        urban: 0.15482
+        rural: 0.09116
+        total: 0.12335
+      service_level_estimate:
+      - label: Accessibility
+        label_local: Accessibility
+        row: 12
+        urban: null
+        rural: null
+        total: null
+      - label: On premises
+        label_local: On premises
+        row: 13
+        urban: 99.68982
+        rural: 99.16135
+        total: 99.40821
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 14
+        urban: 99.76541
+        rural: 99.54068
+        total: 99.64566
+      - label: Availability
+        label_local: Availability
+        row: 15
+        urban: 99.94378
+        rural: 99.68678
+        total: 99.80687
+      - label: Sufficient
+        label_local: Sufficient
+        row: 16
+        urban: 99.94378
+        rural: 99.68678
+        total: 99.80687
+      - label: Most of the time
+        label_local: Most of the time
+        row: 17
+        urban: null
+        rural: null
+        total: null
+      - label: Continuous
+        label_local: Continuous
+        row: 18
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 19
+        urban: null
+        rural: null
+        total: null
+      - label: Quality
+        label_local: Quality
+        row: 20
+        urban: null
+        rural: null
+        total: null
+      - label: Microbial
+        label_local: Microbial
+        row: 21
+        urban: null
+        rural: null
+        total: null
+      - label: Fluoride
+        label_local: Fluoride
+        row: 22
+        urban: null
+        rural: null
+        total: null
+      - label: Arsenic
+        label_local: Arsenic
+        row: 23
+        urban: null
+        rural: null
+        total: null
+      - label: Other
+        label_local: Other
+        row: 24
+        urban: null
+        rural: null
+        total: null
+      - label: Safely managed
+        label_local: Safely managed
+        row: 25
+        urban: null
+        rural: null
+        total: null
+      data_used_for_estimates:
+      - label: Improved
+        label_local: Improved
+        row: 27
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: All piped
+        label_local: All piped
+        row: 28
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Accessibility
+        label_local: Accessibility
+        row: 29
+        urban: '-'
+        rural: '-'
+        total: '-'
+      - label: On premises
+        label_local: On premises
+        row: 30
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Within 30 minutes
+        label_local: Within 30 minutes
+        row: 31
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Availability
+        label_local: Availability
+        row: 32
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+      - label: Quality
+        label_local: Quality
+        row: 33
+        urban: 'No'
+        rural: 'No'
+        total: 'No'
+      - label: Surface water
+        label_local: Surface water
+        row: 34
+        urban: 'Yes'
+        rural: 'Yes'
+        total: 'No'
+    n_with_estimates: 28
+  summary:
+    sources: 13
+    sources_with_estimates: 13
+    categories_with_estimates: 347
+    from: 1987
+    to: 2022
+    has_country_ladder: true

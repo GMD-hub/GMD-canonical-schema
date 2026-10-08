@@ -1,0 +1,159 @@
+iso3: ROU
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ROU_Romania_0.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: ROU
+    name: Romania
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_ROU_Romania_0.xlsx
+    sha256: 0df8fe124e614e246b91b8b3fe86fe61e08adbd4b19439bcd4b9438ecd879e3e
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:36:01+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 82.182993
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 66.650066
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 94.953504
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 89.798629
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 17.817006
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 33.349934
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 5.046496
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.742732
+      - domain: Sanitation
+        split: Rural*
+        year: '2024'
+        value: 81.088488
+      - domain: Sanitation
+        split: Urban*
+        year: '2024'
+        value: 98.313112
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.271762
+      - domain: Sanitation
+        split: Rural*
+        year: '2024'
+        value: 0.478681
+      - domain: Sanitation
+        split: Urban*
+        year: '2024'
+        value: 0.101642
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 1.0e-06
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 9.186877
+      - domain: Sanitation
+        split: Rural*
+        year: '2024'
+        value: 18.432832
+      - domain: Sanitation
+        split: Urban*
+        year: '2024'
+        value: 1.585246
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Rural*
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban*
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

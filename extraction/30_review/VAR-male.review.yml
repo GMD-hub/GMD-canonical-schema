@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-male
+source_artifact_path: extraction/20_drafts/dem/VAR-male.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 9e27b26719d41f1d7bafb526a9ea778385cb8bc8
+source_content_sha256: 076adf73a289bd68245860449fa11212d091539c539a4ea88eb020d175cd5630
+enrolled_body_sha256: c636488c4f418b6b3b38956a4162cbb57eb832781495a48a7e46c50b3d818acd
+current_content_sha256: c636488c4f418b6b3b38956a4162cbb57eb832781495a48a7e46c50b3d818acd
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,1195 @@
+domain: sanitation
+frame: JMP country file 2025 (WHO/UNICEF)
+tree_first_row: 60
+facility_types:
+- Improved
+- Sewer connection
+- Septic tanks
+- Other
+- Open defecation
+n_nodes: 80
+nodes:
+- ordinal: 0
+  row: 60
+  id: flush_and_pour_flush
+  level: 0
+  label_en: Flush and pour flush
+  path: Flush and pour flush
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 1
+  row: 61
+  id: flush_and_pour_flush.to_piped_sewer_system
+  level: 1
+  label_en: to piped sewer system
+  path: Flush and pour flush > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 2
+  row: 62
+  id: flush_and_pour_flush.to_septic_tank
+  level: 1
+  label_en: to septic tank
+  path: Flush and pour flush > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 3
+  row: 63
+  id: flush_and_pour_flush.to_pit
+  level: 1
+  label_en: to pit
+  path: Flush and pour flush > to pit
+  gmd: flush_pit
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 4
+  row: 64
+  id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+  level: 1
+  label_en: to unknown place/ not sure/DK
+  path: Flush and pour flush > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 5
+  row: 65
+  id: flush_and_pour_flush.to_elsewhere
+  level: 1
+  label_en: to elsewhere
+  path: Flush and pour flush > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 6
+  row: 66
+  id: flush_toilets
+  level: 0
+  label_en: Flush/toilets
+  path: Flush/toilets
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 7
+  row: 67
+  id: flush_toilets.to_piped_sewer_system
+  level: 1
+  label_en: to piped sewer system
+  path: Flush/toilets > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 8
+  row: 68
+  id: flush_toilets.to_septic_tank
+  level: 1
+  label_en: to septic tank
+  path: Flush/toilets > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 9
+  row: 69
+  id: flush_toilets.to_pit
+  level: 1
+  label_en: to pit
+  path: Flush/toilets > to pit
+  gmd: flush_pit
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 10
+  row: 70
+  id: flush_toilets.to_unknown_place_not_sure_dk
+  level: 1
+  label_en: to unknown place/ not sure/DK
+  path: Flush/toilets > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 11
+  row: 71
+  id: flush_toilets.to_elsewhere
+  level: 1
+  label_en: to elsewhere
+  path: Flush/toilets > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 12
+  row: 72
+  id: flush_toilets.private_flush_toilet
+  level: 1
+  label_en: Private flush/toilet
+  path: Flush/toilets > Private flush/toilet
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 13
+  row: 73
+  id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+  level: 2
+  label_en: to piped sewer system
+  path: Flush/toilets > Private flush/toilet > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 14
+  row: 74
+  id: flush_toilets.private_flush_toilet.to_septic_tank
+  level: 2
+  label_en: to septic tank
+  path: Flush/toilets > Private flush/toilet > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 15
+  row: 75
+  id: flush_toilets.private_flush_toilet.to_pit
+  level: 2
+  label_en: to pit
+  path: Flush/toilets > Private flush/toilet > to pit
+  gmd: flush_pit
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 16
+  row: 76
+  id: flush_toilets.private_flush_toilet.to_unknown_place_not_sure_dk
+  level: 2
+  label_en: to unknown place/ not sure/DK
+  path: Flush/toilets > Private flush/toilet > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 17
+  row: 77
+  id: flush_toilets.private_flush_toilet.to_elsewhere
+  level: 2
+  label_en: to elsewhere
+  path: Flush/toilets > Private flush/toilet > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 18
+  row: 78
+  id: flush_toilets.public_shared_flush_toilet
+  level: 1
+  label_en: Public/shared flush/toilet
+  path: Flush/toilets > Public/shared flush/toilet
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 19
+  row: 79
+  id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+  level: 2
+  label_en: to piped sewer system
+  path: Flush/toilets > Public/shared flush/toilet > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 20
+  row: 80
+  id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+  level: 2
+  label_en: to septic tank
+  path: Flush/toilets > Public/shared flush/toilet > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 21
+  row: 81
+  id: flush_toilets.public_shared_flush_toilet.to_pit
+  level: 2
+  label_en: to pit
+  path: Flush/toilets > Public/shared flush/toilet > to pit
+  gmd: flush_pit
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 22
+  row: 82
+  id: flush_toilets.public_shared_flush_toilet.to_unknown_place_not_sure_dk
+  level: 2
+  label_en: to unknown place/ not sure/DK
+  path: Flush/toilets > Public/shared flush/toilet > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 23
+  row: 83
+  id: flush_toilets.public_shared_flush_toilet.to_elsewhere
+  level: 2
+  label_en: to elsewhere
+  path: Flush/toilets > Public/shared flush/toilet > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 24
+  row: 84
+  id: latrines
+  level: 0
+  label_en: Latrines
+  path: Latrines
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  - vip
+  - pit_slab
+  - pit_noslab
+  - hanging
+  - bucket
+  - other
+  rolls_up_to: []
+  structural: false
+- ordinal: 25
+  row: 85
+  id: latrines.pour_flush_latrines
+  level: 1
+  label_en: Pour flush latrines
+  path: Latrines > Pour flush latrines
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 26
+  row: 86
+  id: latrines.pour_flush_latrines.to_piped_sewer_system
+  level: 2
+  label_en: to piped sewer system
+  path: Latrines > Pour flush latrines > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 27
+  row: 87
+  id: latrines.pour_flush_latrines.to_septic_tank
+  level: 2
+  label_en: to septic tank
+  path: Latrines > Pour flush latrines > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 28
+  row: 88
+  id: latrines.pour_flush_latrines.to_pit
+  level: 2
+  label_en: to pit
+  path: Latrines > Pour flush latrines > to pit
+  gmd: flush_pit
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 29
+  row: 89
+  id: latrines.pour_flush_latrines.to_unknown_place_not_sure_dk
+  level: 2
+  label_en: to unknown place/ not sure/DK
+  path: Latrines > Pour flush latrines > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 30
+  row: 90
+  id: latrines.pour_flush_latrines.to_elsewhere
+  level: 2
+  label_en: to elsewhere
+  path: Latrines > Pour flush latrines > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 31
+  row: 91
+  id: latrines.pour_flush_latrines.private_pour_flush_latrine
+  level: 2
+  label_en: Private pour flush latrine
+  path: Latrines > Pour flush latrines > Private pour flush latrine
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 32
+  row: 92
+  id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_piped_sewer_system
+  level: 3
+  label_en: to piped sewer system
+  path: Latrines > Pour flush latrines > Private pour flush latrine > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 33
+  row: 93
+  id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_septic_tank
+  level: 3
+  label_en: to septic tank
+  path: Latrines > Pour flush latrines > Private pour flush latrine > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 34
+  row: 94
+  id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_pit
+  level: 3
+  label_en: to pit
+  path: Latrines > Pour flush latrines > Private pour flush latrine > to pit
+  gmd: flush_pit
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 35
+  row: 95
+  id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_unknown_place_not_sure_dk
+  level: 3
+  label_en: to unknown place/ not sure/DK
+  path: Latrines > Pour flush latrines > Private pour flush latrine > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 36
+  row: 96
+  id: latrines.pour_flush_latrines.private_pour_flush_latrine.to_elsewhere
+  level: 3
+  label_en: to elsewhere
+  path: Latrines > Pour flush latrines > Private pour flush latrine > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 37
+  row: 97
+  id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
+  level: 2
+  label_en: Public/shared pour flush latrine
+  path: Latrines > Pour flush latrines > Public/shared pour flush latrine
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - flush_sewer
+  - flush_septic
+  - flush_pit
+  - flush_elsewhere
+  rolls_up_to: []
+  structural: false
+- ordinal: 38
+  row: 98
+  id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_piped_sewer_system
+  level: 3
+  label_en: to piped sewer system
+  path: Latrines > Pour flush latrines > Public/shared pour flush latrine > to piped sewer system
+  gmd: flush_sewer
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Sewer connection
+  structural: false
+- ordinal: 39
+  row: 99
+  id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_septic_tank
+  level: 3
+  label_en: to septic tank
+  path: Latrines > Pour flush latrines > Public/shared pour flush latrine > to septic tank
+  gmd: flush_septic
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Septic tanks
+  structural: false
+- ordinal: 40
+  row: 100
+  id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_pit
+  level: 3
+  label_en: to pit
+  path: Latrines > Pour flush latrines > Public/shared pour flush latrine > to pit
+  gmd: flush_pit
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 41
+  row: 101
+  id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_unknown_place_not_sure_dk
+  level: 3
+  label_en: to unknown place/ not sure/DK
+  path: Latrines > Pour flush latrines > Public/shared pour flush latrine > to unknown place/ not sure/DK
+  gmd: flush_elsewhere
+  improved: null
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 42
+  row: 102
+  id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_elsewhere
+  level: 3
+  label_en: to elsewhere
+  path: Latrines > Pour flush latrines > Public/shared pour flush latrine > to elsewhere
+  gmd: flush_elsewhere
+  improved: false
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 43
+  row: 103
+  id: latrines.dry_latrines
+  level: 1
+  label_en: Dry latrines
+  path: Latrines > Dry latrines
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - vip
+  - pit_slab
+  - pit_noslab
+  - hanging
+  - bucket
+  - other
+  rolls_up_to: []
+  structural: false
+- ordinal: 44
+  row: 104
+  id: latrines.dry_latrines.improved_latrines
+  level: 2
+  label_en: Improved latrines
+  path: Latrines > Dry latrines > Improved latrines
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - vip
+  - pit_slab
+  - pit_noslab
+  - hanging
+  - bucket
+  - other
+  rolls_up_to: []
+  structural: false
+- ordinal: 45
+  row: 105
+  id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+  level: 3
+  label_en: Ventilated Improved Pit latrine
+  path: Latrines > Dry latrines > Improved latrines > Ventilated Improved Pit latrine
+  gmd: vip
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 46
+  row: 106
+  id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+  level: 3
+  label_en: Pit latrine with slab/covered latrine
+  path: Latrines > Dry latrines > Improved latrines > Pit latrine with slab/covered latrine
+  gmd: pit_slab
+  improved: true
+  shared: null
+  aliases: &id001
+  - Pit latrine with slab
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 47
+  row: 107
+  id: latrines.dry_latrines.improved_latrines.traditional_latrine
+  level: 3
+  label_en: Traditional latrine
+  path: Latrines > Dry latrines > Improved latrines > Traditional latrine
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - pit_slab
+  - pit_noslab
+  rolls_up_to: []
+  structural: false
+- ordinal: 48
+  row: 108
+  id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+  level: 3
+  label_en: Pit latrine without slab/open pit
+  path: Latrines > Dry latrines > Improved latrines > Pit latrine without slab/open pit
+  gmd: pit_noslab
+  improved: false
+  shared: null
+  aliases: &id002
+  - Pit latrine without slab
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 49
+  row: 109
+  id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+  level: 3
+  label_en: Hanging toilet/hanging latrine
+  path: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging latrine
+  gmd: hanging
+  improved: false
+  shared: null
+  aliases: &id003
+  - Hanging toilet
+  - Hanging latrine
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 50
+  row: 110
+  id: latrines.dry_latrines.improved_latrines.bucket_latrine
+  level: 3
+  label_en: Bucket latrine
+  path: Latrines > Dry latrines > Improved latrines > Bucket latrine
+  gmd: bucket
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 51
+  row: 111
+  id: latrines.dry_latrines.improved_latrines.other
+  level: 3
+  label_en: Other
+  path: Latrines > Dry latrines > Improved latrines > Other
+  gmd: other
+  improved: null
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 52
+  row: 112
+  id: latrines.dry_latrines.private_latrines
+  level: 2
+  label_en: Private Latrines
+  path: Latrines > Dry latrines > Private Latrines
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - vip
+  - pit_slab
+  - pit_noslab
+  - hanging
+  - bucket
+  - other
+  rolls_up_to: []
+  structural: false
+- ordinal: 53
+  row: 113
+  id: latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine
+  level: 3
+  label_en: Ventilated Improved Pit latrine
+  path: Latrines > Dry latrines > Private Latrines > Ventilated Improved Pit latrine
+  gmd: vip
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 54
+  row: 114
+  id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
+  level: 3
+  label_en: Pit latrine with slab/covered latrine
+  path: Latrines > Dry latrines > Private Latrines > Pit latrine with slab/covered latrine
+  gmd: pit_slab
+  improved: true
+  shared: false
+  aliases: *id001
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 55
+  row: 115
+  id: latrines.dry_latrines.private_latrines.traditional_latrine
+  level: 3
+  label_en: Traditional latrine
+  path: Latrines > Dry latrines > Private Latrines > Traditional latrine
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - pit_slab
+  - pit_noslab
+  rolls_up_to: []
+  structural: false
+- ordinal: 56
+  row: 116
+  id: latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit
+  level: 3
+  label_en: Pit latrine without slab/open pit
+  path: Latrines > Dry latrines > Private Latrines > Pit latrine without slab/open pit
+  gmd: pit_noslab
+  improved: false
+  shared: false
+  aliases: *id002
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 57
+  row: 117
+  id: latrines.dry_latrines.private_latrines.hanging_toilet_hanging_latrine
+  level: 3
+  label_en: Hanging toilet/hanging latrine
+  path: Latrines > Dry latrines > Private Latrines > Hanging toilet/hanging latrine
+  gmd: hanging
+  improved: false
+  shared: false
+  aliases: *id003
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 58
+  row: 118
+  id: latrines.dry_latrines.private_latrines.bucket_latrine
+  level: 3
+  label_en: Bucket latrine
+  path: Latrines > Dry latrines > Private Latrines > Bucket latrine
+  gmd: bucket
+  improved: false
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 59
+  row: 119
+  id: latrines.dry_latrines.private_latrines.other
+  level: 3
+  label_en: Other
+  path: Latrines > Dry latrines > Private Latrines > Other
+  gmd: other
+  improved: null
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 60
+  row: 120
+  id: latrines.dry_latrines.public_shared_latrines
+  level: 2
+  label_en: Public/shared Latrines
+  path: Latrines > Dry latrines > Public/shared Latrines
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - vip
+  - pit_slab
+  - pit_noslab
+  - hanging
+  - bucket
+  - other
+  rolls_up_to: []
+  structural: false
+- ordinal: 61
+  row: 121
+  id: latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine
+  level: 3
+  label_en: Ventilated Improved Pit latrine
+  path: Latrines > Dry latrines > Public/shared Latrines > Ventilated Improved Pit latrine
+  gmd: vip
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 62
+  row: 122
+  id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+  level: 3
+  label_en: Pit latrine with slab/covered latrine
+  path: Latrines > Dry latrines > Public/shared Latrines > Pit latrine with slab/covered latrine
+  gmd: pit_slab
+  improved: true
+  shared: true
+  aliases: *id001
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 63
+  row: 123
+  id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+  level: 3
+  label_en: Traditional latrine
+  path: Latrines > Dry latrines > Public/shared Latrines > Traditional latrine
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - pit_slab
+  - pit_noslab
+  rolls_up_to: []
+  structural: false
+- ordinal: 64
+  row: 124
+  id: latrines.dry_latrines.public_shared_latrines.pit_latrine_without_slab_open_pit
+  level: 3
+  label_en: Pit latrine without slab/open pit
+  path: Latrines > Dry latrines > Public/shared Latrines > Pit latrine without slab/open pit
+  gmd: pit_noslab
+  improved: false
+  shared: true
+  aliases: *id002
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 65
+  row: 125
+  id: latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine
+  level: 3
+  label_en: Hanging toilet/hanging latrine
+  path: Latrines > Dry latrines > Public/shared Latrines > Hanging toilet/hanging latrine
+  gmd: hanging
+  improved: false
+  shared: true
+  aliases: *id003
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 66
+  row: 126
+  id: latrines.dry_latrines.public_shared_latrines.bucket_latrine
+  level: 3
+  label_en: Bucket latrine
+  path: Latrines > Dry latrines > Public/shared Latrines > Bucket latrine
+  gmd: bucket
+  improved: false
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 67
+  row: 127
+  id: latrines.dry_latrines.public_shared_latrines.other
+  level: 3
+  label_en: Other
+  path: Latrines > Dry latrines > Public/shared Latrines > Other
+  gmd: other
+  improved: null
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 68
+  row: 128
+  id: composting_toilets
+  level: 0
+  label_en: Composting toilets
+  path: Composting toilets
+  gmd: composting
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 69
+  row: 129
+  id: composting_toilets.composting_toilet_private
+  level: 1
+  label_en: Composting toilet (private)
+  path: Composting toilets > Composting toilet (private)
+  gmd: composting
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 70
+  row: 130
+  id: composting_toilets.composting_toilet_shared
+  level: 1
+  label_en: Composting toilet (shared)
+  path: Composting toilets > Composting toilet (shared)
+  gmd: composting
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 71
+  row: 131
+  id: other_improved
+  level: 0
+  label_en: Other improved
+  path: Other improved
+  gmd: other
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 72
+  row: 132
+  id: other_improved.other
+  level: 1
+  label_en: Other
+  path: Other improved > Other
+  gmd: other
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 73
+  row: 133
+  id: other_improved.other#2
+  level: 1
+  label_en: Other
+  path: Other improved > Other
+  gmd: other
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Other
+  structural: false
+- ordinal: 74
+  row: 134
+  id: no_facility_bush_field
+  level: 0
+  label_en: No facility, bush, field
+  path: No facility, bush, field
+  gmd: open
+  improved: false
+  shared: null
+  aliases:
+  - Open defecation
+  - No facility, bush or field
+  spans: []
+  rolls_up_to:
+  - Open defecation
+  structural: false
+- ordinal: 75
+  row: 135
+  id: other_unimproved
+  level: 0
+  label_en: Other unimproved
+  path: Other unimproved
+  gmd: other
+  improved: false
+  shared: null
+  aliases:
+  - Other non-improved
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 76
+  row: 136
+  id: other_unimproved.other
+  level: 1
+  label_en: Other
+  path: Other unimproved > Other
+  gmd: other
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 77
+  row: 137
+  id: other_unimproved.other#2
+  level: 1
+  label_en: Other
+  path: Other unimproved > Other
+  gmd: other
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 78
+  row: 138
+  id: dk_missing
+  level: 0
+  label_en: DK/missing
+  path: DK/missing
+  gmd: ''
+  improved: null
+  shared: null
+  aliases:
+  - DK / missing
+  - Don't know/missing
+  spans: []
+  rolls_up_to: []
+  structural: true
+- ordinal: 79
+  row: 139
+  id: total
+  level: 0
+  label_en: Total
+  path: Total
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: true

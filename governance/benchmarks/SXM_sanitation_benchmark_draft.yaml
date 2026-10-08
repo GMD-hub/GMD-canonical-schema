@@ -1,0 +1,108 @@
+iso3: SXM
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SXM_Sint_Maarten_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: SXM
+    name: Sint Maarten (Dutch part)
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_SXM_Sint_Maarten_1.xlsx
+    sha256: 7f4c9955cd122e141e94a4427f0648050a39cbf2a771215f6d941ba4880202ee
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:38:59+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 99.311179
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 99.311179
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 98.781027
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 98.781027
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.688821
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 0.688821
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 1.087594
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 1.087594
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2017'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2017'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2017'
+        value: 0.13138
+      - domain: Sanitation
+        split: Urban*
+        year: '2017'
+        value: 0.13138
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

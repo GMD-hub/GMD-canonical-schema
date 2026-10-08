@@ -1,0 +1,127 @@
+iso3: SGP
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SGP_Singapore_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: SGP
+    name: Singapore
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_SGP_Singapore_1.xlsx
+    sha256: ca00a02ff2755407962d920b38c54b22254b9af96caf0517f610b6517efd8656
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:37:13+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 100.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 100.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 100.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 100.0
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Sanitation
+        split: Urban
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

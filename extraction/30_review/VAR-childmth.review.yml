@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-childmth
+source_artifact_path: extraction/20_drafts/dem/VAR-childmth.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 04eb27cca5b919ab27b84a638517f500258460ba
+source_content_sha256: 69e949b8fa3590bcbd3519e7c3a52d9959148d1e71935c9def6a475fe9b41665
+enrolled_body_sha256: ff2f42629bc7850266dfa04293ffdd3f028af6839623ebd4141a8cb4d5797a95
+current_content_sha256: ff2f42629bc7850266dfa04293ffdd3f028af6839623ebd4141a8cb4d5797a95
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

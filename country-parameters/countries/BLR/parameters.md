@@ -1,0 +1,1024 @@
+---
+country_id: CTY-BLR
+iso3: BLR
+schema_version: '0.2'
+status: draft
+country_name: BLR
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BLR-EDU-01
+    national_label_en: "Pre-primary education\n for young children"
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0434\u043E\u0448\u043A\u043E\u043B\u044C\u043D\u043E\u0433\u043E \u043E\
+      \u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F \u0434\u043B\u044F\
+      \ \u0434\u0435\u0442\u0435\u0439 \u043C\u043B\u0430\u0434\u0448\u0435\u0433\u043E\
+      \ \u0432\u043E\u0437\u0440\u0430\u0441\u0442\u0430"
+    entry_age: 2
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: BLR-EDU-02
+    national_label_en: "Pre-primary education\n for young children"
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0434\u043E\u0448\u043A\u043E\u043B\u044C\u043D\u043E\u0433\u043E \u043E\
+      \u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: BLR-EDU-03
+    national_label_en: General primary education
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043E\u0431\
+      \u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F"
+    entry_age: 6
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - BLR-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: BLR-EDU-04
+    national_label_en: Basic general education
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0431\u0430\u0437\u043E\u0432\u043E\u0433\u043E \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u044F"
+    entry_age: 10
+    duration_years: 5
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - BLR-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-05
+    national_label_en: General secondary education
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0441\u0440\u0435\u0434\u043D\u0435\u0433\u043E \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u044F"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+    parent_country_entry_ids:
+    - BLR-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-06
+    national_label_en: Technical-vocational education (worker qualification)
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\
+      \u044C\u043D\u043E-\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\
+      \u0433\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F\
+      , \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u044E\u0449\u0430\
+      \u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0430\
+      \u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0440\u0430\u0431\u043E\
+      \u0447\u0435\u0433\u043E"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 12
+    parent_country_entry_ids:
+    - BLR-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-07
+    national_label_en: Technical-vocational education combined with general secondary
+      education
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\
+      \u044C\u043D\u043E-\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\
+      \u0433\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F\
+      , \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u044E\u0449\u0430\
+      \u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0430\
+      \u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0440\u0430\u0431\u043E\
+      \u0447\u0435\u0433\u043E (\u0441\u043B\u0443\u0436\u0430\u0449\u0435\u0433\u043E\
+      ) \u0438 \u043E\u0431\u0449\u0435\u0433\u043E \u0441\u0440\u0435\u0434\u043D\
+      \u0435\u0433\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\
+      \u044F"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+    parent_country_entry_ids:
+    - BLR-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-08
+    national_label_en: Grades 1-2 of the secondary vocational education
+    national_label_local: "1-2 \u043A\u0443\u0440\u0441\u044B \u0441\u0440\u0435\u0434\
+      \u043D\u0435\u0433\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u043D\u0438\u044F \u043E\u0431\u0435\u0441\u043F\u0435\u0447\
+      \u0438\u0432\u0430\u044E\u0449\u0435\u0433\u043E \u043F\u043E\u043B\u0443\u0447\
+      \u0435\u043D\u0438\u0435 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\
+      \u0446\u0438\u0438 \u0440\u0430\u0431\u043E\u0447\u0435\u0433\u043E (\u0441\u043B\
+      \u0443\u0436\u0430\u0449\u0435\u0433\u043E) \u0438 \u043E\u0431\u0449\u0435\u0433\
+      \u043E \u0441\u0440\u0435\u0434\u043D\u0435\u0433\u043E \u043E\u0431\u0440\u0430\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u044F"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+    parent_country_entry_ids:
+    - BLR-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-09
+    national_label_en: Technical-vocational education (worker qualification)
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\
+      \u044C\u043D\u043E-\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\
+      \u0433\u043E \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F\
+      , \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u044E\u0449\u0430\
+      \u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0430\
+      \u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0440\u0430\u0431\u043E\
+      \u0447\u0435\u0433\u043E"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+    parent_country_entry_ids:
+    - BLR-EDU-05
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-10
+    national_label_en: Grades 3-4 of the secondary vocational education
+    national_label_local: "3-4 \u043A\u0443\u0440\u0441\u044B \u0441\u0440\u0435\u0434\
+      \u043D\u0435\u0433\u043E \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\
+      \u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u043D\u0438\u044F \u043E\u0431\u0435\u0441\u043F\u0435\u0447\
+      \u0438\u0432\u0430\u044E\u0449\u0435\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\
+      \u043D\u0438\u0435 \u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\
+      \u0438\u0438 \u0440\u0430\u0431\u043E\u0447\u0435\u0433\u043E (\u0441\u043B\u0443\
+      \u0436\u0430\u0449\u0435\u0433\u043E) \u0438 \u043E\u0431\u0449\u0435\u0433\u043E\
+      \ \u0441\u0440\u0435\u0434\u043D\u0435\u0433\u043E \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u043D\u0438\u044F"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+    parent_country_entry_ids:
+    - BLR-EDU-05
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-11
+    national_label_en: "Basic higher education \n(Bachelor)"
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0432\u044B\u0441\u0448\u0435\u0433\u043E \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u043D\u0438\u044F I \u0441\u0442\u0443\u043F\u0435\u043D\u0438\
+      , \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u044E\u0449\u0430\
+      \u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0430\
+      \u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0441\u043F\u0435\u0446\
+      \u0438\u0430\u043B\u0438\u0441\u0442\u0430 \u0441 \u0432\u044B\u0441\u0448\u0438\
+      \u043C \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u043C\
+      \ (\u0434\u0438\u043F\u043B\u043E\u043C \u0431\u0430\u043A\u0430\u043B\u0430\
+      \u0432\u0440\u0430)"
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+    parent_country_entry_ids:
+    - BLR-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-12
+    national_label_en: "Basic higher education \n(Specialist diploma)"
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0432\u044B\u0441\u0448\u0435\u0433\u043E \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u043D\u0438\u044F I \u0441\u0442\u0443\u043F\u0435\u043D\u0438\
+      , \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u044E\u0449\u0430\
+      \u044F \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435 \u043A\u0432\u0430\
+      \u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u0438 \u0441\u043F\u0435\u0446\
+      \u0438\u0430\u043B\u0438\u0441\u0442\u0430 \u0441 \u0432\u044B\u0441\u0448\u0438\
+      \u043C \u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u043C\
+      \ (\u0434\u0438\u043F\u043B\u043E\u043C \u0441\u043F\u0435\u0446\u0438\u0430\
+      \u043B\u0438\u0441\u0442\u0430)"
+    entry_age: 17
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+    parent_country_entry_ids:
+    - BLR-EDU-05
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-13
+    national_label_en: Master
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0432\u044B\u0441\u0448\u0435\u0433\u043E \u043E\u0431\u0440\u0430\u0437\
+      \u043E\u0432\u0430\u043D\u0438\u044F II \u0441\u0442\u0443\u043F\u0435\u043D\
+      \u0438"
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+    parent_country_entry_ids:
+    - BLR-EDU-11
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-11
+    - BLR-EDU-13
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BLR-EDU-14
+    national_label_en: Aspirantura
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0430\u0441\u043F\u0438\u0440\u0430\u043D\u0442\u0443\u0440\u044B"
+    entry_age: 22
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+    parent_country_entry_ids:
+    - BLR-EDU-12
+    - BLR-EDU-13
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-12
+    - BLR-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BLR-EDU-12, BLR-EDU-13'
+  - country_entry_id: BLR-EDU-15
+    national_label_en: Doctorantura
+    national_label_local: "\u041E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u0442\u0435\
+      \u043B\u044C\u043D\u0430\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\
+      \u0430 \u0434\u043E\u043A\u0442\u043E\u0440\u0430\u043D\u0442\u0443\u0440\u044B"
+    entry_age: 25
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+    parent_country_entry_ids:
+    - BLR-EDU-12
+    - BLR-EDU-13
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - BLR-EDU-03
+    - BLR-EDU-04
+    - BLR-EDU-05
+    - BLR-EDU-12
+    - BLR-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BLR-EDU-12, BLR-EDU-13'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Belarus.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BLR-SUBNAT-01
+    survey_labels: 1 - Brest | 1 - Brest Oblast | 1 - Brest oblast | Brest
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_593
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_593
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '593'
+    geo_nvar: ADM1_NAME
+    geo_name: Brest
+    source_row: 908
+  - country_entry_id: BLR-SUBNAT-02
+    survey_labels: 3 - Gomel | 3 - Gomel Oblast | 3 - Gomel oblast | Gomel
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_594
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_594
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '594'
+    geo_nvar: ADM1_NAME
+    geo_name: Gomel
+    source_row: 909
+  - country_entry_id: BLR-SUBNAT-03
+    survey_labels: 4 - Grodno | 4 - Grodno Oblast | 4 - Grodno oblast | Grodno
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_595
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_595
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '595'
+    geo_nvar: ADM1_NAME
+    geo_name: Grodno
+    source_row: 910
+  - country_entry_id: BLR-SUBNAT-04
+    survey_labels: 5 - Minsk | 5 - Minsk city | Minsk
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_597
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_597
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '597'
+    geo_nvar: ADM1_NAME
+    geo_name: Minsk City
+    source_row: 911
+  - country_entry_id: BLR-SUBNAT-05
+    survey_labels: 6 - Minsk Oblast | 6 - Minsk oblast | 6 - Minsk-Oblast | Minsk-Oblast
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_596
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_596
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '596'
+    geo_nvar: ADM1_NAME
+    geo_name: Minsk
+    source_row: 912
+  - country_entry_id: BLR-SUBNAT-06
+    survey_labels: 7 - Mogilev | 7 - Mogilev Oblast | 7 - Mogilev oblast | Mogilev
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_598
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_598
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '598'
+    geo_nvar: ADM1_NAME
+    geo_name: Mogilev
+    source_row: 913
+  - country_entry_id: BLR-SUBNAT-07
+    survey_labels: 2 - Vitebsk | 2 - Vitebsk Oblast | 2 - Vitebsk oblast | Vitebsk
+    survey_variables: subnatid
+    gmd_subnatid1: BLR_2015_GAUL1_599
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: BLR_2015_GAUL1_599
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '599'
+    geo_nvar: ADM1_NAME
+    geo_name: Vitebsk
+    source_row: 914
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BLR-SAN-01
+    source_category_code: composting_toilet
+    national_label_en: Composting toilet
+    national_label_local: "\u041A\u043E\u043C\u043F\u043E\u0441\u0442\u0438\u0440\u0443\
+      \u044E\u0449\u0438\u0435 \u0442\u0443\u0430\u043B\u0435\u0442\u044B"
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - country_entry_id: BLR-SAN-02
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: BLR-SAN-03
+    source_category_code: flush_toilet_connected_to_a_sewer_system
+    national_label_en: flush toilet connected to a sewer system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: BLR-SAN-04
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: BLR-SAN-05
+    source_category_code: flush_to_pit_latrine
+    national_label_en: flush to pit latrine
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: BLR-SAN-06
+    source_category_code: flush_toilet_connected_to_a_cesspool
+    national_label_en: flush toilet connected to a cesspool
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: BLR-SAN-07
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: BLR-SAN-08
+    source_category_code: flush_toilet_connected_to_a_septic_tank
+    national_label_en: flush toilet connected to a Septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: BLR-SAN-09
+    source_category_code: flush_to_dk_where
+    national_label_en: flush to DK where
+    national_label_local: "\u0432 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\
+      \u043D\u043E\u0435 \u043C\u0435\u0441\u0442\u043E/\u043D\u0435 \u0437\u043D\u0430\
+      \u044E/\u043D\u0435 \u0443\u0432\u0435\u0440\u0435\u043D(\u0430)"
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: BLR-SAN-10
+    source_category_code: bucket
+    national_label_en: Bucket
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u043E\
+      \u0442\u0445\u043E\u0436\u0438\u043C \u0432\u0435\u0434\u0440\u043E\u043C"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: BLR-SAN-11
+    source_category_code: latrines_with_slab
+    national_label_en: Latrines with slab
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: BLR-SAN-12
+    source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine with slab
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: BLR-SAN-13
+    source_category_code: pit_latrine_with_slab_covered_latrine
+    national_label_en: Pit latrine with slab/covered latrine
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: BLR-SAN-14
+    source_category_code: latrines_wihout_slab
+    national_label_en: Latrines wihout slab
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: BLR-SAN-15
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab/open pit
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: BLR-SAN-16
+    source_category_code: ventilated_improved_pit_latrine
+    national_label_en: Ventilated Improved Pit latrine
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: BLR-SAN-17
+    source_category_code: ventilated_improved_pit_latrine_vip
+    national_label_en: Ventilated Improved Pit latrine (VIP)
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: BLR-SAN-18
+    source_category_code: vip
+    national_label_en: VIP
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: BLR-SAN-19
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BLR_Belarus_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BLR-WAS-01
+    source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: BLR-WAS-02
+    source_category_code: tubewell_borehole
+    national_label_en: Tubewell, borehole
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: BLR-WAS-03
+    source_category_code: unprotected_well
+    national_label_en: Unprotected well
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0439 \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: BLR-WAS-04
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: BLR-WAS-05
+    source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: "\u0411\u0443\u0442\u0438\u043B\u0438\u0440\u043E\u0432\u0430\
+      \u043D\u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: BLR-WAS-06
+    source_category_code: bw_with_improved_source
+    national_label_en: BW with improved source
+    national_label_local: "\u0411\u0443\u0442\u0438\u043B\u0438\u0440\u043E\u0432\u0430\
+      \u043D\u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: BLR-WAS-07
+    source_category_code: piped_to_neighbour
+    national_label_en: Piped to neighbour
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: BLR-WAS-08
+    source_category_code: piped_into_dwelling
+    national_label_en: Piped into dwelling
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432 \u0436\u0438\u043B\u0438\u0449\u0435"
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: BLR-WAS-09
+    source_category_code: piped_water_into_dwelling
+    national_label_en: Piped water into dwelling
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432 \u0436\u0438\u043B\u0438\u0449\u0435"
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: BLR-WAS-10
+    source_category_code: piped_into_yard_or_plot
+    national_label_en: Piped into yard or plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: BLR-WAS-11
+    source_category_code: piped_water_to_yard_plot
+    national_label_en: Piped water to yard/plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: BLR-WAS-12
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap, standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: BLR-WAS-13
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BLR_Belarus_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1990
+  effective_to: null
+  selectors: null
+  value: 16
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

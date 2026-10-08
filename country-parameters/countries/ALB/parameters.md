@@ -1,14 +1,1566 @@
 ---
-# ================================================================
-# COUNTRY PARAMETERS - GMD Country Parameter Layer v0.1
-# ================================================================
-
 country_id: CTY-ALB
-country_name: "Albania"
+country_name: Albania
 iso3: ALB
-schema_version: "0.1"
+schema_version: '0.1'
 status: draft
-parameters: []
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ALB-EDU-01
+    national_label_en: Early childhood education/nursery
+    national_label_local: "Arsimi Parashkollor - \xE7erdhe"
+    entry_age: 0
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ALB-EDU-02
+    national_label_en: Pre-primary education/kindergarten
+    national_label_local: Arsimi Parashkollor - kopshte
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ALB-EDU-03
+    national_label_en: Primary education or first stage of basic education
+    national_label_local: Arsimi Fillor
+    entry_age: 6
+    duration_years: 5
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - ALB-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: ALB-EDU-04
+    national_label_en: Lower secondary or second stage of basic education
+    national_label_local: "Arsimi i mes\xEBm i ul\xEBt ose cikli i lart\xEB i arsimit\
+      \ baz\xEB"
+    entry_age: 11
+    duration_years: 4
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - ALB-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-05
+    national_label_en: Upper secondary education - gymnasium - general
+    national_label_local: "Arsimi i mes\xEBm i lart\xEB - gjimnazi"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-06
+    national_label_en: Upper secondary education  part-time
+    national_label_local: "Arsimi i mes\xEBm i lart\xEB me koh\xEB t\xEB pjesshme"
+    entry_age: 16
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-07
+    national_label_en: Upper secondary vocational education 4 years
+    national_label_local: "Arsimi i mes\xEBm profesional  4 vje\xE7ar"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-08
+    national_label_en: Upper secondary vocational education 2 years
+    national_label_local: "Arsimi i mes\xEBm profesional 2 vje\xE7ar"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-09
+    national_label_en: Upper secondary vocational education 1 year (educational structure
+      2+1+1 year)
+    national_label_local: "Arsimi i mes\xEBm profesional 1 vje\xE7ar (struktura arsimore\
+      \ 2+1+1)"
+    entry_age: 17
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-10
+    national_label_en: Upper secondary vocational education 1 year (educational structure
+      2+1+1 year)
+    national_label_local: "Arsimi i mes\xEBm profesional 1 vje\xE7ar (struktura arsimore\
+      \ 2+1+1)"
+    entry_age: 18
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-10
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-11
+    national_label_en: Upper secondary vocational education 2 years (educational structure
+      2+2 years)
+    national_label_local: "Arsimi i mes\xEBm profesional 2 vje\xE7ar (struktura arsimore\
+      \ 2+2)"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 17
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-11
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-12
+    national_label_en: Oriented socio-cultural upper secondary education
+    national_label_local: "Arsimi i mes\xEBm i lart\xEB i orientuar (social-kulturor)"
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 18
+    parent_country_entry_ids:
+    - ALB-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-12
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ALB-EDU-13
+    national_label_en: Post-secondary qualification 1 year or 2 years
+    national_label_local: Arsim post sekondar 1 vit ose 2
+    entry_age: 20
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+    parent_country_entry_ids:
+    - ALB-EDU-05
+    - ALB-EDU-06
+    - ALB-EDU-12
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ALB-EDU-05, ALB-EDU-06, ALB-EDU-12'
+  - country_entry_id: ALB-EDU-14
+    national_label_en: Short cycle university studies program
+    national_label_local: "Programe t\xEB ciklit t\xEB shkurtuar t\xEB studimeve universitare"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+    parent_country_entry_ids:
+    - ALB-EDU-05
+    - ALB-EDU-06
+    - ALB-EDU-12
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ALB-EDU-05, ALB-EDU-06, ALB-EDU-12'
+  - country_entry_id: ALB-EDU-15
+    national_label_en: Bachelor
+    national_label_local: "Programe t\xEB ciklit t\xEB par\xEB t\xEB studimeve universitare"
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+    parent_country_entry_ids:
+    - ALB-EDU-05
+    - ALB-EDU-06
+    - ALB-EDU-12
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-15
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: ALB-EDU-05, ALB-EDU-06, ALB-EDU-12'
+  - country_entry_id: ALB-EDU-16
+    national_label_en: Integrated programs of  second cycle studies
+    national_label_local: "Programe t\xEB integruara t\xEB ciklit t\xEB dyt\xEB t\xEB\
+      \ studimeve universitare"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+    parent_country_entry_ids:
+    - ALB-EDU-05
+    - ALB-EDU-06
+    - ALB-EDU-12
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ALB-EDU-05, ALB-EDU-06, ALB-EDU-12'
+  - country_entry_id: ALB-EDU-17
+    national_label_en: Master of Science
+    national_label_local: "Programe t\xEB ciklit t\xEB dyt\xEB t\xEB studimeve universitare"
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+    parent_country_entry_ids:
+    - ALB-EDU-15
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-15
+    - ALB-EDU-17
+    cum_years_status: computed
+    review_flags: *id002
+  - country_entry_id: ALB-EDU-18
+    national_label_en: Master Professional
+    national_label_local: "Programe t\xEB ciklit t\xEB dyt\xEB t\xEB studimeve universitare"
+    entry_age: 21
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+    parent_country_entry_ids:
+    - ALB-EDU-15
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-15
+    - ALB-EDU-18
+    cum_years_status: computed
+    review_flags: *id002
+  - country_entry_id: ALB-EDU-19
+    national_label_en: Long term specializations
+    national_label_local: Specializime afatgjata
+    entry_age: 23
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+    parent_country_entry_ids:
+    - ALB-EDU-05
+    - ALB-EDU-06
+    - ALB-EDU-12
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ALB-EDU-05, ALB-EDU-06, ALB-EDU-12'
+  - country_entry_id: ALB-EDU-20
+    national_label_en: Executif Master
+    national_label_local: Master Ekzekutiv
+    entry_age: 23
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+    parent_country_entry_ids:
+    - ALB-EDU-15
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-15
+    - ALB-EDU-20
+    cum_years_status: computed
+    review_flags: *id002
+  - country_entry_id: ALB-EDU-21
+    national_label_en: PhD studies
+    national_label_local: "Programe t\xEB Ciklit t\xEB tret\xEB t\xEB studimeve (Doktoratura)"
+    entry_age: 23
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+    parent_country_entry_ids:
+    - ALB-EDU-16
+    - ALB-EDU-17
+    - ALB-EDU-18
+    - ALB-EDU-19
+    - ALB-EDU-20
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - ALB-EDU-03
+    - ALB-EDU-04
+    - ALB-EDU-05
+    - ALB-EDU-19
+    - ALB-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ALB-EDU-05, ALB-EDU-06, ALB-EDU-12'
+    - 'minimum parent path selected from: ALB-EDU-16, ALB-EDU-17, ALB-EDU-18, ALB-EDU-19,
+      ALB-EDU-20'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Albania.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ALB-SUBNAT-01
+    survey_labels: "1 - Berat | 1 \u2013 Berat | 1-BERAT | 1-Berat"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL031
+    gmd_subnatid2: ALB_2021_NUTS3_AL031
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL031
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL031
+    geo_nvar: NAME_LATN
+    geo_name: Berat
+    source_row: 45
+  - country_entry_id: ALB-SUBNAT-02
+    survey_labels: "2 - Diber | 2 \u2013 Diber | 2-DIBER | 2-Diber | 2-Dib\xEBr"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL011
+    gmd_subnatid2: ALB_2021_NUTS3_AL011
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL011
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL011
+    geo_nvar: NAME_LATN
+    geo_name: "Dib\xEBr"
+    source_row: 46
+  - country_entry_id: ALB-SUBNAT-03
+    survey_labels: "3 - Durres | 3 \u2013 Durres | 3-DURRES | 3-Durres | 3-Durr\xEB\
+      s"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL012
+    gmd_subnatid2: ALB_2021_NUTS3_AL012
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL012
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL012
+    geo_nvar: NAME_LATN
+    geo_name: "Durr\xEBs"
+    source_row: 47
+  - country_entry_id: ALB-SUBNAT-04
+    survey_labels: "4 - Elbasan | 4 \u2013 Elbasan | 4-ELBASAN | 4-Elbasan"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL021
+    gmd_subnatid2: ALB_2021_NUTS3_AL021
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL021
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL021
+    geo_nvar: NAME_LATN
+    geo_name: Elbasan
+    source_row: 48
+  - country_entry_id: ALB-SUBNAT-05
+    survey_labels: "5 - Fier | 5 \u2013 Fier | 5-FIER | 5-Fier"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL032
+    gmd_subnatid2: ALB_2021_NUTS3_AL032
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL032
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL032
+    geo_nvar: NAME_LATN
+    geo_name: Fier
+    source_row: 49
+  - country_entry_id: ALB-SUBNAT-06
+    survey_labels: "6 - Gjirokaster | 6 \u2013 Gjirokaster | 6-GJIROKASTER | 6-Gjirokaster\
+      \ | 6-Gjirokast\xEBr"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL033
+    gmd_subnatid2: ALB_2021_NUTS3_AL033
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL033
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL033
+    geo_nvar: NAME_LATN
+    geo_name: "Gjirokast\xEBr"
+    source_row: 50
+  - country_entry_id: ALB-SUBNAT-07
+    survey_labels: "7 - Korce | 7 \u2013 Korce | 7 \u2013 Kor\xE7e | 7-KORCE | 7-Korce\
+      \ | 7-Kor\xE7\xEB"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL034
+    gmd_subnatid2: ALB_2021_NUTS3_AL034
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL034
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL034
+    geo_nvar: NAME_LATN
+    geo_name: "Korc\xEB"
+    source_row: 51
+  - country_entry_id: ALB-SUBNAT-08
+    survey_labels: "8 - Kukes | 8 \u2013 Kukes | 8-KUKES | 8-Kukes | 8-Kuk\xEBs"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL013
+    gmd_subnatid2: ALB_2021_NUTS3_AL013
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL013
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL013
+    geo_nvar: NAME_LATN
+    geo_name: "Kuk\xEBs"
+    source_row: 52
+  - country_entry_id: ALB-SUBNAT-09
+    survey_labels: "9 - Lezhe | 9 \u2013 Lezhe | 9-LEZHE | 9-Lezhe | 9-Lezh\xEB"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL014
+    gmd_subnatid2: ALB_2021_NUTS3_AL014
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL014
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL014
+    geo_nvar: NAME_LATN
+    geo_name: "Lezh\xEB"
+    source_row: 53
+  - country_entry_id: ALB-SUBNAT-10
+    survey_labels: "10 - Shkoder | 10 \u2013 Shkoder | 10-SHKODER | 10-Shkoder | 10-Shkod\xEB\
+      r"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL015
+    gmd_subnatid2: ALB_2021_NUTS3_AL015
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL015
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL015
+    geo_nvar: NAME_LATN
+    geo_name: "Shkod\xEBr"
+    source_row: 54
+  - country_entry_id: ALB-SUBNAT-11
+    survey_labels: "11 - Tirane | 11 \u2013 Tirane | 11-TIRANE | 11-Tirane | 11-Tiran\xEB"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL022
+    gmd_subnatid2: ALB_2021_NUTS3_AL022
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL022
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL022
+    geo_nvar: NAME_LATN
+    geo_name: "Tiran\xEB"
+    source_row: 55
+  - country_entry_id: ALB-SUBNAT-12
+    survey_labels: "12 - Vlore | 12 \u2013  Vlore | 12 \u2013 Vlore | 12- Vlore |\
+      \ 12-VLORE | 12-Vlore | 12-Vlor\xEB"
+    survey_variables: subnatid | subnatid1 | subnatid2
+    gmd_subnatid1: ALB_2021_NUTS3_AL035
+    gmd_subnatid2: ALB_2021_NUTS3_AL035
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: ALB_2021_NUTS3_AL035
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '3'
+    geo_idvar: NUTS_ID
+    geo_id: AL035
+    geo_nvar: NAME_LATN
+    geo_name: "Vlor\xEB"
+    source_row: 56
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ALB-SAN-01
+    source_category_code: composting_toilet
+    national_label_en: Composting toilet
+    national_label_local: Composting toilets
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - country_entry_id: ALB-SAN-02
+    source_category_code: flush_to_somewhere_else
+    national_label_en: Flush - to somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - country_entry_id: ALB-SAN-03
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush - to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: ALB-SAN-04
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush - to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: ALB-SAN-05
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush - to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: ALB-SAN-06
+    source_category_code: flush_don_t_know_where
+    national_label_en: Flush - don't know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: ALB-SAN-07
+    source_category_code: wc_inside_the_house
+    national_label_en: WC inside the house
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - country_entry_id: ALB-SAN-08
+    source_category_code: wc_inside_the_house_2_or_more_wc_inside
+    national_label_en: WC inside the house + 2 or more WC inside
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - country_entry_id: ALB-SAN-09
+    source_category_code: wc_inside_the_house_two_or_more_wc_inside
+    national_label_en: wc inside the house + two or more wc inside
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - country_entry_id: ALB-SAN-10
+    source_category_code: wc_outside_with_piping
+    national_label_en: wc outside with piping
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - country_entry_id: ALB-SAN-11
+    source_category_code: wc_outside_with_piping
+    national_label_en: WC outside, with piping
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - country_entry_id: ALB-SAN-12
+    source_category_code: flush_to_somewhere_else
+    national_label_en: flush to somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - country_entry_id: ALB-SAN-13
+    source_category_code: flush_sewage_system
+    national_label_en: Flush sewage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: ALB-SAN-14
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: ALB-SAN-15
+    source_category_code: wc_inside_the_house_1_2_or_more
+    national_label_en: WC inside the house (1, 2 or more)
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: ALB-SAN-16
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: ALB-SAN-17
+    source_category_code: flush_to_pit_latrine
+    national_label_en: flush to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: ALB-SAN-18
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: ALB-SAN-19
+    source_category_code: flush_don_t_know_where
+    national_label_en: flush, don't know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: ALB-SAN-20
+    source_category_code: bucket_toilet
+    national_label_en: Bucket toilet
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: ALB-SAN-21
+    source_category_code: hanging_toilet_hanging_latrine
+    national_label_en: hanging toilet/hanging latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - country_entry_id: ALB-SAN-22
+    source_category_code: improved_pit_latrine
+    national_label_en: Improved pit latrine
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: ALB-SAN-23
+    source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine - with slab
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: ALB-SAN-24
+    source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine with slab
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: ALB-SAN-25
+    source_category_code: open_pit
+    national_label_en: Open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: ALB-SAN-26
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine - without slab /open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: ALB-SAN-27
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab/open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: ALB-SAN-28
+    source_category_code: traditional_pit_latrine
+    national_label_en: Traditional pit latrine
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: ALB-SAN-29
+    source_category_code: wc_outside_without_piping
+    national_label_en: wc outside without piping
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: ALB-SAN-30
+    source_category_code: wc_outside_without_piping
+    national_label_en: WC outside, without piping
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: ALB-SAN-31
+    source_category_code: pit_latrine_ventilated_improved_pit_vip
+    national_label_en: Pit latrine - ventilated improved pit (VIP)
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: ALB-SAN-32
+    source_category_code: ventilated_improved_pit_latrine_vip
+    national_label_en: Ventilated Improved Pit latrine (VIP)
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: ALB-SAN-33
+    source_category_code: pour_flush_latrine
+    national_label_en: Pour flush latrine
+    national_label_local: Pour flush latrines
+    jmp_classification: Latrines > Pour flush latrines
+    jmp_id: latrines.pour_flush_latrines
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 85
+  - country_entry_id: ALB-SAN-34
+    source_category_code: wc_outside_with_piping
+    national_label_en: WC outside, with piping
+    national_label_local: to piped sewer system
+    jmp_classification: Latrines > Pour flush latrines > to piped sewer system
+    jmp_id: latrines.pour_flush_latrines.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 86
+  - country_entry_id: ALB-SAN-35
+    source_category_code: no_facility_bush_field
+    national_label_en: No facility/bush/field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: ALB-SAN-36
+    source_category_code: wc_outside_the_dwelling_but_inside_the_building
+    national_label_en: WC outside the dwelling but inside the building
+    national_label_local: Other
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - country_entry_id: ALB-SAN-37
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ALB_Albania_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ALB-WAS-01
+    source_category_code: spring_or_well
+    national_label_en: Spring or well
+    national_label_local: Ground water
+    jmp_classification: Ground water
+    jmp_id: ground_water
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well|protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 43
+  - country_entry_id: ALB-WAS-02
+    source_category_code: protected_spring
+    national_label_en: Protected spring
+    national_label_local: Protected spring
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - country_entry_id: ALB-WAS-03
+    source_category_code: protected_dug_well
+    national_label_en: Protected dug well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: ALB-WAS-04
+    source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: ALB-WAS-05
+    source_category_code: tube_well_or_borehole
+    national_label_en: Tube well or borehole
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: ALB-WAS-06
+    source_category_code: tube_well_bore_hole_with_pump
+    national_label_en: Tube-well bore-hole with pump
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: ALB-WAS-07
+    source_category_code: tubewell_borehole
+    national_label_en: Tubewell/borehole
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: ALB-WAS-08
+    source_category_code: unprotected_spring
+    national_label_en: Unprotected spring
+    national_label_local: Unprotected spring
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - country_entry_id: ALB-WAS-09
+    source_category_code: unprotected_dug_well
+    national_label_en: Unprotected dug well
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: ALB-WAS-10
+    source_category_code: unprotected_well
+    national_label_en: Unprotected well
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: ALB-WAS-11
+    source_category_code: cart_with_small_tank
+    national_label_en: Cart with small tank
+    national_label_local: Cart with small tank/drum
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - country_entry_id: ALB-WAS-12
+    source_category_code: tanker_truck
+    national_label_en: Tanker truck
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: ALB-WAS-13
+    source_category_code: tanker_truck_vendor
+    national_label_en: Tanker truck vendor
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: ALB-WAS-14
+    source_category_code: tanker_truck
+    national_label_en: Tanker-truck
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: ALB-WAS-15
+    source_category_code: water_truck
+    national_label_en: Water truck
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: ALB-WAS-16
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: ALB-WAS-17
+    source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: ALB-WAS-18
+    source_category_code: bottled_water_with_improved_source
+    national_label_en: Bottled water with improved source
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: ALB-WAS-19
+    source_category_code: bottled_water_without_improved_source
+    national_label_en: Bottled water without improved source
+    national_label_local: Sachet water
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: ALB-WAS-20
+    source_category_code: rainwater
+    national_label_en: Rainwater
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: ALB-WAS-21
+    source_category_code: river_lake_pond_or
+    national_label_en: river, lake, pond or
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: ALB-WAS-22
+    source_category_code: river_lake_pond_or_similar
+    national_label_en: River, lake, pond or similar
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: ALB-WAS-23
+    source_category_code: river_lake_pond_or_similar
+    national_label_en: river,lake,pond or similar
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: ALB-WAS-24
+    source_category_code: river_dam_lake_ponds_stream_canal_irirgation_channel
+    national_label_en: River/dam/lake/ponds/stream/canal/irirgation channel
+    national_label_local: River
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - country_entry_id: ALB-WAS-25
+    source_category_code: running_water_outside_the_dwelling
+    national_label_en: Running water outside the dwelling
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: ALB-WAS-26
+    source_category_code: piped_into_dwelling
+    national_label_en: Piped into dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: ALB-WAS-27
+    source_category_code: running_water_inside_the_dwelling
+    national_label_en: Running water inside the dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: ALB-WAS-28
+    source_category_code: piped_into_yard
+    national_label_en: Piped into yard
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: ALB-WAS-29
+    source_category_code: piped_into_yard_or_plot
+    national_label_en: Piped into yard or plot
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: ALB-WAS-30
+    source_category_code: piped_to_yard_plot
+    national_label_en: Piped to yard/plot
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: ALB-WAS-31
+    source_category_code: running_water_outside_the_dwelling
+    national_label_en: Running water outside the dwelling
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: ALB-WAS-32
+    source_category_code: running_water_outside_the_dwelling_but_inside_the_building
+    national_label_en: Running water outside the dwelling but inside the building
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: ALB-WAS-33
+    source_category_code: public_tap
+    national_label_en: Public tap
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: ALB-WAS-34
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ALB_Albania_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1998
+  effective_to: null
+  selectors: null
+  value: 16
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
 ---
 
 No country-specific content has been supplied yet. The regional focal point

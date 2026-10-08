@@ -1,0 +1,202 @@
+# Declarative binding for the UIS "ISCED 2011 Mapping" national workbook.
+#
+# THIS IS THE ONLY FILE THAT CHANGES WHEN THE UIS TEMPLATE CHANGES.
+# Add the real header string to a candidate list; no Python changes.
+profile: isced_uis_2011_mapping
+frame: "ISCED 2011 - UNESCO UIS national mapping"
+priority: 10        # tried before the UOE profile
+
+# The template is issued in several languages. Every string below is a
+# candidate; adding a language means adding candidates here, never Python.
+languages: [English, French, Spanish, Portuguese]
+
+sheet:
+  # Tried in order; the first sheet holding the header row wins.
+  candidates: ["Sheet1", "Mapping", "National mapping", "ISCED mapping"]
+  any_sheet: true          # fall back to scanning every sheet
+
+header:
+  # A row is the header row when the first column matches `anchor` and at
+  # least `min_hits` of the candidate strings below are found on it.
+  anchor: ["id", "n°", "no", "no."]
+  min_hits: 5
+  search_rows: 40
+
+banner:
+  title_row_max: 4          # "<Country> ISCED 2011 Mapping"
+  reference_patterns:
+    - 'school\s*year\s*reference\s*[:\-]?\s*(?P<year>(19|20)\d{2})'
+    - 'reference\s*year\s*[:\-]?\s*(?P<year>(19|20)\d{2})'
+    - 'ann[ée]e\s*scolaire\s*de\s*r[ée]f[ée]rence\s*[:\-]?\s*(?P<year>(19|20)\d{2})'
+    - 'a[nñ]o\s*escolar\s*de\s*referencia\s*[:\-]?\s*(?P<year>(19|20)\d{2})'
+    - 'ano\s*letivo\s*de\s*refer[êe]ncia\s*[:\-]?\s*(?P<year>(19|20)\d{2})'
+    - '(?P<year>(19|20)\d{2})\s*/\s*(19|20)\d{2}'
+  # The country is read from the banner by the ISO 3166 table, so these
+  # patterns only need to strip the decoration around it.
+  title_patterns:
+    - '^(?P<name>.+?)\s*[-–]?\s*ISCED\s*2011\s*Mapping'
+    - '^Cartographie\s+de\s+la\s+CITE\s*2011\s+(?:de|du|des|d\u2019|d\x27)\s*(?P<name>.+)$'
+    - '^Mapeo\s+de\s+la\s+CINE\s*2011\s+(?:de|del|de\s+la)\s*(?P<name>.+)$'
+  filename_pattern: 'ISCED_(?:2011_)?Mapping_(?P<name>.+?)(?:\s*\(\d+\))?$'
+
+columns:
+  programme_national: ["name of the education programme (national language)",
+                       "name of the education programme (national",
+                       "titre du programme (langue nationale)",
+                       "nombre del programa (lengua nacional)",
+                       "nome do programa (lingua nacional)",
+                       "nom du programme", "name of programme (national)"]
+  programme_en:       ["name of the education programme (english)",
+                       "titre du programme (francais)",
+                       "titre du programme (français)",
+                       "nombre del programa (ingles)",
+                       "nombre del programa (inglés)",
+                       "name of the education programme",
+                       "name of programme", "programme"]
+  entrance_req_national: ["minimum entrance requirements (national language)",
+                          "minimum entrance requirements (national",
+                          "conditions minimales d'admission (langue nationale)",
+                          "requisitos minimos de acceso (lengua nacional)"]
+  entrance_req_en:    ["minimum entrance requirements (english)",
+                       "conditions minimales d'admission (francais)",
+                       "conditions minimales d'admission (français)",
+                       "requisitos minimos de acceso (ingles)",
+                       "minimum entrance requirements"]
+  diploma_national:   ["main diplomas, qualifications or certificates awarded at end of programme (national language)",
+                       "main diplomas, qualifications or certificates awarded (national language)",
+                       "diplomes, accreditation ou certification (langue nationale)",
+                       "diplômes, accréditation ou certification (langue nationale)",
+                       "main diplomas, qualifications or certificates awarded (national"]
+  diploma_en:         ["main diplomas, qualifications or certificates awarded at end of programme (english)",
+                       "main diplomas, qualifications or certificates awarded (english)",
+                       "diplomes, accreditation ou certification (francais)",
+                       "diplômes, accréditation ou certification (français)",
+                       "main diplomas, qualifications or certificates awarded",
+                       "main diplomas"]
+  entrance_age:       ["theoretical entrance age", "entrance age",
+                       "age d'entree theorique", "age d'entrée théorique",
+                       "edad teorica de acceso", "edad teórica de acceso",
+                       "official entrance age"]
+  duration:           ["theoretical duration (in years)", "theoretical duration",
+                       "duree theorique (en annee)", "durée théorique (en année)",
+                       "duree theorique", "durée théorique",
+                       "duracion teorica (en anos)", "duración teórica (en años)",
+                       "duration (in years)", "duration"]
+  isced_label:        ["isced 2011 level", "isced level",
+                       "niveau de la cite 2011", "nivel de la cine 2011"]
+  isced_code:         ["__right_of__:isced_label"]     # the unlabelled code column
+  orientation:        ["isced 2011 type (eced/pre-primary) or orientation (g/v/u)",
+                       "cite 2011 type (depe/ preprimaire) ou orientation (g/p/ns)",
+                       "cite 2011 type (depe/ préprimaire) ou orientation (g/p/ns)",
+                       "cite 2011 type", "isced 2011 type", "orientation"]
+  completion:         ["isced 2011 completion (f/p/n) & position in national degree structure",
+                       "achevement du niveau de la cite 2011 (c/p/n) & position dans la structure nationale des diplomes",
+                       "achèvement du niveau de la cite 2011 (c/p/n) & position dans la structure nationale des diplômes",
+                       "achevement du niveau de la cite 2011",
+                       "isced 2011 completion", "completion"]
+  access:             ["isced 2011 access (y/n)", "cite 2011 acces (o/n)",
+                       "cite 2011 accès (o/n)", "cine 2011 acceso (s/n)",
+                       "access"]
+  notes:              ["notes", "note", "observations", "remarks",
+                       "observaciones"]
+  isced_p:            ["isced 2011 programme code (isced-p: 3 digit)",
+                       "code a trois chiffres de la cite 2011 pour les programmes",
+                       "code à trois chiffres de la cite 2011 pour les programmes",
+                       "isced-p", "programme code"]
+  isced_a:            ["isced 2011 attainment code (isced-a: 3 digit)",
+                       "code a trois chiffres de la cite 2011 pour le niveau d'education atteint",
+                       "code à trois chiffres de la cite 2011 pour le niveau d'éducation atteint",
+                       "isced-a", "attainment code"]
+
+required: [programme_en, isced_code, entrance_age, duration]
+
+value_maps:
+  gmd_from_isced:
+    "0": pre_primary
+    "1": primary
+    "2": lower_secondary
+    "3": upper_secondary
+    "4": post_secondary
+    "5": tertiary
+    "6": tertiary
+    "7": tertiary
+    "8": tertiary
+    "9": other
+  # Levels that sit on the national grade ladder.  Tertiary programmes carry
+  # years within the level, not grades.
+  grade_levels: ["0", "1", "2", "3", "4"]
+  completion:
+    full: ["full completion", "f", "full",
+           "achevement complet", "achèvement complet", "c",
+           "finalizacion completa", "finalización completa"]
+    partial: ["partial completion", "p", "partial",
+              "insufficient for completion", "insufficient",
+              "achevement partiel", "achèvement partiel",
+              "insuffisant pour l'achevement", "insuffisant pour l'achèvement",
+              "finalizacion parcial", "finalización parcial"]
+    none: ["no completion", "n", "aucun achevement", "aucun achèvement",
+           "non achevement", "non achèvement",
+           "pas d'achevement", "pas d'achèvement", "sin finalizacion"]
+  orientation:
+    general: ["general", "g", "général", "généraliste"]
+    vocational: ["vocational", "v", "professionnel", "professionnelle", "p",
+                 "profesional"]
+    unspecified: ["unspecified", "unspecified orientation", "u",
+                  "non specifie", "non spécifié", "ns", "no especificado"]
+    eced: ["eced", "early childhood educational development",
+           "depe", "developpement educatif de la petite enfance",
+           "développement éducatif de la petite enfance"]
+    pre_primary: ["pre-primary", "pre primary", "pre-primaire", "préprimaire",
+                  "pré-primaire", "preprimaria", "pre-primaria"]
+  access:
+    # NB quoted: unquoted yes/no are booleans in YAML 1.1, so the keys would
+    # come back as True/False and never match "yes".
+    "yes": ["yes", "oui", "si", "sí", "y", "o", "s"]
+    "no": ["no", "non", "n"]
+
+# Words that mark a value as "not applicable" rather than missing.
+na_tokens: ["-", "--", "n/a", "na", "n.a.", "none", "nil", "."]
+
+# The national-language columns, in the order they should be preferred when a
+# reviewer asks to see the country's own wording.
+language:
+  national_columns: [programme_national, entrance_req_national, diploma_national]
+  english_columns:  [programme_en, entrance_req_en, diploma_en]
+  # A hint only. The workbook does not state its national language, so this is
+  # emitted as inferred with the country as its evidence, and a country that is
+  # not listed simply gets no hint rather than a guess.
+  by_iso3:
+    VNM: Vietnamese
+    NGA: English
+    KEN: [English, Swahili]
+    IND: [Hindi, English]
+    PAK: [Urdu, English]
+    IDN: Indonesian
+    PHL: [Filipino, English]
+    ETH: Amharic
+    EGY: Arabic
+    MAR: [Arabic, French]
+    SEN: French
+    MLI: French
+    TUN: [Arabic, French]
+    BRA: Portuguese
+    MEX: Spanish
+    PER: Spanish
+    COL: Spanish
+    KHM: Khmer
+    LAO: Lao
+    MMR: Burmese
+    LKA: [Sinhala, Tamil]
+    MNG: Mongolian
+    NPL: Nepali
+    BGD: Bengali
+    JOR: Arabic
+    TUR: Turkish
+    ALB: Albanian
+    GHA: English
+    UGA: English
+    TZA: [Swahili, English]
+    MWI: English
+    ZMB: English
+    RWA: [Kinyarwanda, English, French]
+    ZAF: [English, Afrikaans, isiZulu]

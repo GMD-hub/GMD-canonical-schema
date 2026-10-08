@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-unempldurl
+source_artifact_path: extraction/20_drafts/lbr/VAR-unempldurl.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: a8a4b98c27b63d233204deb423c12e5c9c34246b
+source_content_sha256: 5bd3fbb868f24f4b5710f852460d9c117eb914ef97989642b3c18f6aee9f29db
+enrolled_body_sha256: 8cf0b2caeee7a6d34ec10775699cef2726863094f85911ddff8f78600e67463e
+current_content_sha256: 8cf0b2caeee7a6d34ec10775699cef2726863094f85911ddff8f78600e67463e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

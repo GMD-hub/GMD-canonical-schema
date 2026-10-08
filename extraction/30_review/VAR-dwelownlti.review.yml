@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-dwelownlti
+source_artifact_path: extraction/20_drafts/dwl/VAR-dwelownlti.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: f033c38bd693447da56483a161fbe74aa0ca0a11
+source_content_sha256: d9d04f901a2a3045111050d6fb5abefe405b6eca60e8e190958d1285ca9a5a83
+enrolled_body_sha256: b986132eeace7a8457410fb0f24c5ef13074e16702b074fe74acd917430647b4
+current_content_sha256: b986132eeace7a8457410fb0f24c5ef13074e16702b074fe74acd917430647b4
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-firmsizel2year
+source_artifact_path: extraction/20_drafts/lbr/VAR-firmsizel2year.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 337a6c45d4d9584d96e07dc9ccf3b9b7be24c55b
+source_content_sha256: 9f19daf09474f2c1b543b6c1b5c585c20a442d9ee16d44cc574fb8cb29992b91
+enrolled_body_sha256: 67ff604abbc0903d4523ede0b223874cf625dbea3a7353c6f2409a79a2819269
+current_content_sha256: 67ff604abbc0903d4523ede0b223874cf625dbea3a7353c6f2409a79a2819269
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

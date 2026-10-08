@@ -1,0 +1,20 @@
+parameter:
+  editable: true
+  review_enabled: true
+  required_checks:
+    - schema_compliance
+    - source_provenance
+    - effective_window_overlap
+
+exception:
+  editable: true
+  review_enabled: true
+  required_checks:
+    - schema_compliance
+    - source_provenance
+    - precedence_consistency
+
+benchmark:
+  editable: false
+  review_enabled: false
+  visibility: read_only_reference

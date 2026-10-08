@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-wavail
+source_artifact_path: extraction/20_drafts/utl/VAR-wavail.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 8acb13f932751c879455a690a61557986c115d48
+source_content_sha256: 1d68d8cb2a7fe4e3722890b2ef334b97f71e212108c0ca3604b3d9c7502a7d4d
+enrolled_body_sha256: 8e6f6168a1b59047a0fde007f064be3b6b6181b3c36ac890442017405eb54f8c
+current_content_sha256: 8e6f6168a1b59047a0fde007f064be3b6b6181b3c36ac890442017405eb54f8c
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

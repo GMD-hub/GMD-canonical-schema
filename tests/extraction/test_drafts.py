@@ -11,6 +11,7 @@ from pathlib import Path
 import pytest
 
 from schema.frontmatter import load_markdown
+from schema.parameter import ParameterDefinition
 from schema.variable import (
     VariableDefinition,
     validate_acyclic_derivation_graph,
@@ -19,12 +20,8 @@ from schema.variable import (
 ROOT = Path(__file__).resolve().parents[2]  # worktree root
 DRAFTS = ROOT / "extraction" / "20_drafts"
 
-# Registered reference sets (derived from the knowledge/ registry).
+# Registered rule references from the knowledge/ registry.
 RULE_IDS = {"RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RULE-SEX-001"}
-PARAM_IDS = {
-    "PARAM-DEM-MIN-MARRIAGE-AGE",
-    "PARAM-EDU-YEARS-BY-LEVEL",
-}
 REQUIRED_SECTIONS = [
     "## Definition",
     "## Conceptual intent",
@@ -40,6 +37,16 @@ def iter_drafts():
     return sorted(DRAFTS.glob("*/VAR-*.md"))
 
 
+@pytest.fixture(scope="module")
+def parameter_ids() -> set[str]:
+    paths = sorted((ROOT / "knowledge" / "parameters").glob("*.md"))
+    assert paths, "no canonical parameter definitions found"
+    return {
+        ParameterDefinition.model_validate(load_markdown(path)[0]).parameter_id
+        for path in paths
+    }
+
+
 def test_drafts_exist():
     drafts = list(iter_drafts())
     assert drafts, "no drafts found under extraction/20_drafts/"
@@ -48,7 +55,7 @@ def test_drafts_exist():
     assert {"idn", "geo", "dem", "lbr", "utl", "dwl"} <= set(modules)
 
 
-def test_all_drafts_validate_frontmatter():
+def test_all_drafts_validate_frontmatter(parameter_ids: set[str]):
     all_ids = {p.stem for p in iter_drafts()}
     failures = []
     for f in iter_drafts():
@@ -59,13 +66,29 @@ def test_all_drafts_validate_frontmatter():
                 context={
                     "allow_unresolved_draft": True,
                     "variable_ids": all_ids,
-                    "parameter_ids": PARAM_IDS,
+                    "parameter_ids": parameter_ids,
                     "rule_ids": RULE_IDS,
                 },
             )
         except Exception as exc:  # noqa: BLE001
             failures.append(f"{f}: {exc}")
     assert not failures, "\n".join(failures)
+
+
+def test_unregistered_parameter_is_rejected(parameter_ids: set[str]):
+    data, _ = load_markdown(DRAFTS / "dem" / "VAR-male.md")
+    data["country_parameters"] = ["PARAM-EDU-NOT-REGISTERED"]
+
+    with pytest.raises(ValueError, match="unknown parameter IDs"):
+        VariableDefinition.model_validate(
+            data,
+            context={
+                "allow_unresolved_draft": True,
+                "variable_ids": {p.stem for p in iter_drafts()},
+                "parameter_ids": parameter_ids,
+                "rule_ids": RULE_IDS,
+            },
+        )
 
 
 def test_all_drafts_have_required_body_sections():
@@ -84,7 +107,7 @@ def test_no_duplicate_variable_id():
     assert not dupes, f"duplicate variable ids: {sorted(dupes)}"
 
 
-def test_derivation_graph_acyclic():
+def test_derivation_graph_acyclic(parameter_ids: set[str]):
     all_ids = {p.stem for p in iter_drafts()}
     variables = []
     for f in iter_drafts():
@@ -95,7 +118,7 @@ def test_derivation_graph_acyclic():
                 context={
                     "allow_unresolved_draft": True,
                     "variable_ids": all_ids,
-                    "parameter_ids": PARAM_IDS,
+                    "parameter_ids": parameter_ids,
                     "rule_ids": RULE_IDS,
                 },
             )

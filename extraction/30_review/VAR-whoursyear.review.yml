@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-whoursyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-whoursyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 4d6289924a2a36df9bcf6b19df3f943e3f746a32
+source_content_sha256: 501ef8a2c55e40379a51b0c9d4d60cd514e605ddfdd55365fd9cf1847a479b9e
+enrolled_body_sha256: e44003885fd5e137ec0d86350bea216cf3f98818a521403da7555694a54e1f78
+current_content_sha256: e44003885fd5e137ec0d86350bea216cf3f98818a521403da7555694a54e1f78
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

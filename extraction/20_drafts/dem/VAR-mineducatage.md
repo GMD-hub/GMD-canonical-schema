@@ -37,7 +37,8 @@ derives_to: []
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-EDU-MIN-EDUCATION-AGE          # this variable EMITS this parameter (its value); not in the PARAM's applies_to_variables
 
 # --- Universe / skip gate ---
 gates: []

@@ -1,0 +1,394 @@
+---
+country_id: CTY-NZL
+iso3: NZL
+schema_version: '0.2'
+status: draft
+country_name: NZL
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: NZL-EDU-01
+    national_label_en: See (5)
+    national_label_local: Centre-based early childhood education
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NZL-EDU-02
+    national_label_en: See (5)
+    national_label_local: Centre-based early childhood education
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NZL-EDU-03
+    national_label_en: See (5)
+    national_label_local: Home-based early childhood education
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NZL-EDU-04
+    national_label_en: See (5)
+    national_label_local: Home-based early childhood education
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NZL-EDU-05
+    national_label_en: "K\u014Dhanga Reo in M\u0101ori translates as \"Language Nest\"\
+      \ in English. However, it is commonly known and referred to as \"k\u014Dhanga\
+      \ reo\" in New Zealand English."
+    national_label_local: "K\u014Dhanga Reo"
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NZL-EDU-06
+    national_label_en: "K\u014Dhanga Reo in M\u0101ori translates as \"Language Nest\"\
+      \ in English. However, it is commonly known and referred to as \"k\u014Dhanga\
+      \ reo\" in New Zealand English."
+    national_label_local: "K\u014Dhanga Reo"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 10
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NZL-EDU-07
+    national_label_en: See (5)
+    national_label_local: Primary level education (Years 1 to 6)
+    entry_age: 5
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 11
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - NZL-EDU-07
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: NZL-EDU-08
+    national_label_en: See (5)
+    national_label_local: Intermediate level education (Years 7-8)
+    entry_age: 11
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 12
+    parent_country_entry_ids:
+    - NZL-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NZL-EDU-09
+    national_label_en: See (5)
+    national_label_local: Lower secondary education (Years 9-10)
+    entry_age: 13
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 13
+    parent_country_entry_ids:
+    - NZL-EDU-07
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NZL-EDU-10
+    national_label_en: Upper secondary education (Year 11)
+    national_label_local: Upper secondary education (Year 11)
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+    parent_country_entry_ids:
+    - NZL-EDU-08
+    - NZL-EDU-09
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+  - country_entry_id: NZL-EDU-11
+    national_label_en: Upper secondary education (Year 12)
+    national_label_local: Upper secondary education (Year 12)
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+    parent_country_entry_ids:
+    - NZL-EDU-08
+    - NZL-EDU-09
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+  - country_entry_id: NZL-EDU-12
+    national_label_en: Upper secondary education (Year 13)
+    national_label_local: Upper secondary education (Year 13)
+    entry_age: 15
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 16
+    parent_country_entry_ids:
+    - NZL-EDU-08
+    - NZL-EDU-09
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+  - country_entry_id: NZL-EDU-13
+    national_label_en: See (5)
+    national_label_local: Bachelors Degrees
+    entry_age: 0
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 24
+    parent_country_entry_ids:
+    - NZL-EDU-10
+    - NZL-EDU-11
+    - NZL-EDU-12
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    - NZL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+    - 'minimum parent path selected from: NZL-EDU-10, NZL-EDU-11, NZL-EDU-12'
+  - country_entry_id: NZL-EDU-14
+    national_label_en: See (5)
+    national_label_local: Bachelors Degrees (longer than 4 years)
+    entry_age: 0
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+    parent_country_entry_ids:
+    - NZL-EDU-10
+    - NZL-EDU-11
+    - NZL-EDU-12
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    - NZL-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+    - 'minimum parent path selected from: NZL-EDU-10, NZL-EDU-11, NZL-EDU-12'
+  - country_entry_id: NZL-EDU-15
+    national_label_en: See (5)
+    national_label_local: Graduate Certificates and Diplomas
+    entry_age: 0
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+    parent_country_entry_ids:
+    - NZL-EDU-10
+    - NZL-EDU-11
+    - NZL-EDU-12
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    - NZL-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+    - 'minimum parent path selected from: NZL-EDU-10, NZL-EDU-11, NZL-EDU-12'
+  - country_entry_id: NZL-EDU-16
+    national_label_en: See (5)
+    national_label_local: Postgraduate Certificates and Diplomas
+    entry_age: 0
+    duration_years: 1
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+    parent_country_entry_ids:
+    - NZL-EDU-10
+    - NZL-EDU-11
+    - NZL-EDU-12
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    - NZL-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+    - 'minimum parent path selected from: NZL-EDU-10, NZL-EDU-11, NZL-EDU-12'
+  - country_entry_id: NZL-EDU-17
+    national_label_en: See (5)
+    national_label_local: Masters Degrees
+    entry_age: 0
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+    parent_country_entry_ids:
+    - NZL-EDU-10
+    - NZL-EDU-11
+    - NZL-EDU-12
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    - NZL-EDU-17
+    cum_years_status: computed
+    review_flags: &id002
+    - 'minimum parent path selected from: NZL-EDU-08, NZL-EDU-09'
+    - 'minimum parent path selected from: NZL-EDU-10, NZL-EDU-11, NZL-EDU-12'
+  - country_entry_id: NZL-EDU-18
+    national_label_en: See (5)
+    national_label_local: Ph.D.s and other Doctorates
+    entry_age: 0
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+    parent_country_entry_ids:
+    - NZL-EDU-17
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NZL-EDU-07
+    - NZL-EDU-08
+    - NZL-EDU-10
+    - NZL-EDU-17
+    - NZL-EDU-18
+    cum_years_status: computed
+    review_flags: *id002
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_New
+      Zealand.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

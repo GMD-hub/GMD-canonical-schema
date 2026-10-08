@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-tvexp
+source_artifact_path: extraction/20_drafts/utl/VAR-tvexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 08db3cabd9bed927f09eefc9c8dd8638502f16fe
+source_content_sha256: 64372af63ae7fb27abb17a224bebf331defe3d1346d0a9dbac5cc9e66fda46cb
+enrolled_body_sha256: c14e2e3b588760f47091ad95a47577c7b0990b2b48b6641ccafc0f6fae9133d8
+current_content_sha256: c14e2e3b588760f47091ad95a47577c7b0990b2b48b6641ccafc0f6fae9133d8
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

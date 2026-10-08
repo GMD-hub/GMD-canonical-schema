@@ -1,0 +1,7 @@
+roles:
+  - identity: reviewer@example.org
+    role: reviewer
+  - identity: approver@example.org
+    role: approver
+  - identity: admin@example.org
+    role: administrator

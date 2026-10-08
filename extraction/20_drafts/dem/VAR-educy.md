@@ -47,7 +47,8 @@ derives_to: []
 # This block exists so that missing country records can be detected and
 # the parameter's fallback policy applied.
 country_parameters:
-  - PARAM-EDU-YEARS-BY-LEVEL
+  - PARAM-EDU-LEVEL-CROSSWALK
+  - PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Universe / skip gate ---
 gates:
@@ -84,9 +85,12 @@ provenance:
   extracted_on: "2026-06-25"
   human_reviewed: false
   reviewer: null
-  notes: "PARAM-EDU-YEARS-BY-LEVEL replaces the former country lookup table.
-      Its fallback policy is undecided, so derived construction must stop
-      and escalate when no valid country record exists."
+  notes: "PARAM-EDU-LEVEL-CROSSWALK replaces PARAM-EDU-YEARS-BY-LEVEL and the
+      former fixed tertiary-year table. cum_years_schooling on each matched
+      country_entry_id row now supplies years-of-schooling for any
+      post-grade-12 level. Its fallback policy is block_and_escalate, so
+      derived construction must stop and escalate when no valid country
+      record exists for a reported national level."
 ---
 
 ## Definition
@@ -106,42 +110,57 @@ preferred input for regression-based education research and poverty analysis.
 
 ## Construction notes
 
-Construction follows one of three paths depending on what the survey provides.
-The paths are ordered from most direct to most dependent on intermediate
-variables. The path used must be documented in the do-file notes.
+Construction is evaluated per individual, not per survey. Skip patterns
+mean the same survey can route different respondents to different
+questions, so path selection depends on what data is actually present for
+that record. The path used must be documented in the do-file notes.
 
 **Gate check: enrollment status.**
-Before constructing `educy`, evaluate `school`. Its value determines which
-grade reference point to use.
+Before constructing `educy`, evaluate `school` for the individual. Its value determines which
+branch below applies.
 
-**Path 1 (preferred): survey provides explicit years of education.**
+**Path 1 (preferred): individual reports explicit years of education.**
 Map that value directly to `educy`. Cross-check against age and education
 level for plausibility before accepting it.
 
-**Path 2: survey provides grade level, using the country parameter.**
-Resolve `PARAM-EDU-YEARS-BY-LEVEL` from the country layer matching the
-survey's ISO3 code and survey ID year, then translate grades to years.
+**Path 2: individual is enrolled (`school = 1`) with a current grade 1-12.**
+  educy = current_grade - 1
 
-For individuals currently enrolled (`school = 1`):
-  educy = years corresponding to (current grade - 1)
+**Path 3: individual is enrolled (`school = 1`) with a current year within a
+post-grade-12 track (tertiary, vocational, or other post-secondary level).**
+  educy = base_years + (current_track_year - 1)
 
-For individuals not currently enrolled (`school = 0`):
-  educy = years corresponding to highest completed grade
+**Path 4: individual is enrolled (`school = 1`) in a named post-grade-12
+level/program with no current-year or progress detail.**
+  educy = base_years
+  Flag the record: "enrolled in [level], in-progress duration unknown;
+  educy reflects last completed level only."
 
-**Path 3 (fallback): survey provides only categorical education levels.**
-Use the highest available categorical variable plus the selected
-`PARAM-EDU-YEARS-BY-LEVEL` record. Preference: educat7 first, then educat5,
-then educat4.
-Document which variable was used in the do-file notes.
+**Path 5: individual is not enrolled (`school = 0`) with a highest
+completed grade 1-12.**
+  educy = highest_completed_grade
 
-**Tertiary education when grade or year is not explicitly recorded.**
-Add the following years to completed secondary education:
+**Path 6: individual is not enrolled (`school = 0`) and reports an ordinal
+year within a post-grade-12 track (e.g., "2nd year") rather than a named
+qualification.**
+  educy = base_years + ordinal_year_number
 
-| Degree | Completed | Not completed or status unclear |
-|--------|-----------|----------------------------------|
-| BA/BSc | +4 years  | +2 years                         |
-| MA/MSc | +6 years  | +5 years                         |
-| PhD    | +8 years  | +7 years                         |
+**Path 7 (fallback): individual is not enrolled (`school = 0`) and reports
+a national education level or qualification label beyond simple grade
+numbering.**
+Match the reported level text to a `country_entry_id` in
+`PARAM-EDU-LEVEL-CROSSWALK` resolved from the country layer for the
+survey's ISO3 code and survey ID year. The matched record supplies
+`isced_level`, `gmd_educat4_target`, `gmd_educat5_target`,
+`gmd_educat7_target`, and `cum_years_schooling`.
+  educy = cum_years_schooling for the matched country_entry_id
+Document the matched `country_entry_id` in the do-file notes.
+
+**Shared definition: `base_years`.**
+`base_years` is `cum_years_schooling` for the last completed level before
+the post-grade-12 track — typically upper secondary completion (12 years
+in most systems), resolved from the general-track ISCED-3 row in
+`PARAM-EDU-LEVEL-CROSSWALK` when the country's value differs.
 
 **Grade repetition.**
 `educy` records completed grade levels, not years spent in school.
@@ -154,8 +173,8 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 
 - An individual with `educat7 = 1` (no education) must have `educy = 0`.
 - An individual with `educat7 = 3` (primary complete) should have `educy`
-  equal to the primary duration in the selected
-  `PARAM-EDU-YEARS-BY-LEVEL` record.
+  equal to `cum_years_schooling` for the matched primary-completion
+  `country_entry_id` in the selected `PARAM-EDU-LEVEL-CROSSWALK` record.
 - No individual below `mineducatage` should have a non-missing `educy`.
 - `educy` must be non-negative for all non-missing observations.
 - Cross-check the distribution against the selected country parameter values.
@@ -163,24 +182,31 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 
 ## Escalation triggers
 
-- No `PARAM-EDU-YEARS-BY-LEVEL` record is valid for the survey's ISO3 code and
-  survey ID year. Apply its registry fallback policy. While that policy is
-  `undecided`, stop and escalate without constructing the affected path.
-- The survey's grade categories do not correspond to any known educational
-  structure for that country.
-- The tertiary degree type is not recorded and cannot be inferred.
+- No `PARAM-EDU-LEVEL-CROSSWALK` record is valid for the survey's ISO3 code
+  and survey ID year, or the reported national level text does not match
+  any `country_entry_id`. Apply the registry's `block_and_escalate`
+  fallback policy: stop and escalate without constructing the affected
+  record.
+- The survey's reported level does not correspond to any known national
+  education structure for that country.
+- The individual is enrolled in a post-grade-12 track and neither a
+  current-year number nor a matchable level label is available.
 - The computed distribution of `educy` is implausibly concentrated or shifted
   relative to country norms.
 
 ## Common mistakes
 
-- Guestimating `educy` using age and education level when grade information
-  is not available. The guidelines explicitly prohibit this.
+- Guestimating `educy` using age and education level when grade or level
+  information is not available. The guidelines explicitly prohibit this.
 - Using the current grade directly for enrolled individuals instead of
   subtracting one year.
 - Counting repeated grades as additional years.
-- Applying a record for the wrong ISO3 code or survey ID year.
-- Constructing `educy` via path 3 without documenting the source variable.
+- Applying a country crosswalk record for the wrong ISO3 code or survey ID
+  year.
+- Constructing `educy` via path 7 without documenting the matched
+  `country_entry_id`.
+- Awarding years for an in-progress post-grade-12 track beyond
+  `base_years` when progress detail is unavailable.
 - Setting `educy = 0` for individuals with missing categorical education
   instead of `.b`.
 
@@ -189,3 +215,4 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
+| 2026-09-30 | 0.2     | Replaced `PARAM-EDU-YEARS-BY-LEVEL` and the fixed tertiary-year table with `PARAM-EDU-LEVEL-CROSSWALK`-based resolution; reframed construction as per-individual path selection (RULE-EDU-003 v0.2) | GPID Team |

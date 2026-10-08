@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-othfuelexp
+source_artifact_path: extraction/20_drafts/utl/VAR-othfuelexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3c9e83f207be7e6b704dd658c821c654b48ccaf9
+source_content_sha256: 3e0a4766f7a59d399edfe1f74275bc6ca61d1e03564ff4a4f927c5106b6d1aac
+enrolled_body_sha256: 45c8127e50901cfe8c49d81cca63eb69aaae92a9e3c17951d2d9b92369d4d7ca
+current_content_sha256: 45c8127e50901cfe8c49d81cca63eb69aaae92a9e3c17951d2d9b92369d4d7ca
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-commexp
+source_artifact_path: extraction/20_drafts/utl/VAR-commexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 0d62f87bcd4c0aebe000cfc4aac3881145971b57
+source_content_sha256: b7e4899d1b1f74cbb12cbcb8e51bcfea329318be0e5795ea3ea6bf7ef908a64d
+enrolled_body_sha256: 24bfedec1885384c078ad29adad0a121f1f086529b6df7575502cd1e19d1ca41
+current_content_sha256: 24bfedec1885384c078ad29adad0a121f1f086529b6df7575502cd1e19d1ca41
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

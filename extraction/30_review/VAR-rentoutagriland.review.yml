@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-rentoutagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-rentoutagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 13b79dbac16530c11b5d779d88df5a4561704d43
+source_content_sha256: b5bb13c6954f7f1d5cfc5bd2f60a440950d803298a4f00ebb16d9ba04fabee1c
+enrolled_body_sha256: 63bf03f0ce0e05606395e76e3458e3c39c0805544547645d534354deba3f379d
+current_content_sha256: 63bf03f0ce0e05606395e76e3458e3c39c0805544547645d534354deba3f379d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

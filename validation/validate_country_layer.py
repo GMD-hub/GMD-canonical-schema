@@ -58,6 +58,16 @@ def windows_overlap(left: EffectiveDatedRecord, right: EffectiveDatedRecord) -> 
     return left_start <= right_end and right_start <= left_end
 
 
+def selectors_compatible(
+    left: dict[str, str | int | bool] | None,
+    right: dict[str, str | int | bool] | None,
+) -> bool:
+    if not left or not right:
+        return True
+    shared = set(left).intersection(right)
+    return all(left[key] == right[key] for key in shared)
+
+
 def validate_repository(root: Path = ROOT) -> int:
     errors: list[tuple[str, str]] = []
     registry: dict[str, ParameterDefinition] = {}
@@ -67,6 +77,7 @@ def validate_repository(root: Path = ROOT) -> int:
     exception_files: dict[str, CountryExceptionFile] = {}
     exception_locations: dict[str, str] = {}
     exception_overlap_rows: list[list[str]] = []
+    resolved_exception_overlap_rows: list[list[str]] = []
     unresolved_reference_rows: list[list[str]] = []
 
     for path in sorted((root / "knowledge" / "parameters").glob("*.md")):
@@ -184,7 +195,9 @@ def validate_repository(root: Path = ROOT) -> int:
         for parameter_id, records in grouped.items():
             for index, left in enumerate(records):
                 for right in records[index + 1 :]:
-                    if windows_overlap(left, right):
+                    if windows_overlap(left, right) and selectors_compatible(
+                        left.selectors, right.selectors
+                    ):
                         errors.append(
                             (
                                 iso3,
@@ -198,13 +211,51 @@ def validate_repository(root: Path = ROOT) -> int:
                 shared_variables = sorted(
                     set(left.applies_to_variables).intersection(right.applies_to_variables)
                 )
-                if not shared_variables or not windows_overlap(left, right):
+                if (
+                    not shared_variables
+                    or not windows_overlap(left, right)
+                    or not selectors_compatible(left.selectors, right.selectors)
+                ):
                     continue
-                # Ordering is a governance decision, so overlap is informational until
-                # the GPID Team defines exception precedence.
+                left_policy = left.conflict_policy
+                right_policy = right.conflict_policy
+                deterministic_overlap = (
+                    left_policy == "higher_precedence_wins"
+                    and right_policy == "higher_precedence_wins"
+                    and left.precedence is not None
+                    and right.precedence is not None
+                    and left.precedence != right.precedence
+                )
                 for variable_id in shared_variables:
+                    if deterministic_overlap:
+                        winner = (
+                            left.exception_id
+                            if left.precedence > right.precedence
+                            else right.exception_id
+                        )
+                        resolved_exception_overlap_rows.append(
+                            [
+                                iso3,
+                                variable_id,
+                                left.exception_id,
+                                right.exception_id,
+                                winner,
+                            ]
+                        )
+                        continue
+
                     exception_overlap_rows.append(
                         [iso3, variable_id, left.exception_id, right.exception_id]
+                    )
+                    errors.append(
+                        (
+                            f"country-parameters/countries/{iso3}/exceptions.md",
+                            (
+                                "overlapping exceptions must define deterministic "
+                                "conflict handling (conflict_policy=higher_precedence_wins "
+                                "with distinct precedence values)"
+                            ),
+                        )
                     )
 
     for path in sorted((root / "knowledge").rglob("*.md")):
@@ -280,6 +331,13 @@ def validate_repository(root: Path = ROOT) -> int:
     markdown_table(
         ["Country", "Variable", "First exception", "Second exception"],
         exception_overlap_rows,
+    )
+
+    print()
+    print("## Deterministically resolved overlap report")
+    markdown_table(
+        ["Country", "Variable", "First exception", "Second exception", "Selected"],
+        resolved_exception_overlap_rows,
     )
 
     if errors:

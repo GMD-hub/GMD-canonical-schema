@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-landownti
+source_artifact_path: extraction/20_drafts/dwl/VAR-landownti.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: be3a79ef38d55b78fda8760810e2e2240b13a28b
+source_content_sha256: 45f0fc22da824fdf05670286786808576717868e5b2e3cb7600a4291fea5d6a8
+enrolled_body_sha256: 1e7ccbe70b599624fc23a7e2a5f4e4de0ae8192b2b5add1a709b248c8e5bafda
+current_content_sha256: 1e7ccbe70b599624fc23a7e2a5f4e4de0ae8192b2b5add1a709b248c8e5bafda
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

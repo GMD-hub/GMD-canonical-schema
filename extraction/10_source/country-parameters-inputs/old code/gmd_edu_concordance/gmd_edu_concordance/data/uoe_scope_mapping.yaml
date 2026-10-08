@@ -1,0 +1,107 @@
+# Declarative binding for the UOE / Eurostat "ISCED mapping" questionnaire.
+#
+# A different workbook family carrying the same substance: one row per national
+# programme, with a theoretical starting age, a theoretical duration and the
+# ISCED-2011 codes. It is what several European countries return instead of the
+# UIS national-mapping sheet, and it is a profile rather than a second reader
+# because that is the whole point of profiles.
+#
+# Two things differ from the UIS template and are handled by the fields below:
+#   * the ISCED level arrives as the 3-digit ISCED-P code (100, 244, 344), so
+#     the level is its first digit -- `isced_from_first_digit_of` says so;
+#   * the school year is a range ("2020/2021"), so the reference year is the
+#     first of the two.
+profile: uoe_scope_mapping
+frame: "ISCED 2011 - UOE / Eurostat ISCED mapping questionnaire"
+priority: 20
+languages: [English]
+
+sheet:
+  candidates: ["Scope UOE", "Scope_UOE", "Scope", "ISCED mapping",
+               "UOE mapping", "Programmes", "Mapping"]
+  # A workbook of this family does not always name the sheet the same way, so
+  # every sheet is scored and the best one wins rather than the first match.
+  any_sheet: true
+
+header:
+  anchor: ["column title", "gg"]
+  min_hits: 5
+  search_rows: 12
+
+banner:
+  title_row_max: 1
+  # The country is a column, not a banner; `country_column` names it.
+  country_column: country
+  reference_patterns:
+    - '(?P<year>(19|20)\d{2})\s*/\s*(19|20)\d{2}'
+    - 'school\s*year\s*[:\-]?\s*(?P<year>(19|20)\d{2})'
+  title_patterns: []
+  filename_pattern: 'ISCED_(?:2011_)?Mapping_(?P<name>.+?)(?:\s*\(\d+\))?$'
+
+columns:
+  country:            ["country"]
+  school_year:        ["school (academic) year", "school year", "academic year"]
+  programme_id:       ["programme number"]
+  programme_national: ["name of the programme in national language"]
+  programme_en:       ["name of the programme in english"]
+  entrance_req_en:    ["minimum entry requirements"]
+  entrance_age:       ["theoretical starting age", "theoretical entrance age"]
+  duration:           ["theoretical duration of the programme",
+                       "theoretical duration"]
+  orientation:        ["programme orientation"]
+  isced_p:            ["isced-2011 level", "isced-2011 level of the programme"]
+  isced_a:            ["isced-2011 level of qualification/educational attainment",
+                       "isced-2011 level of qualification"]
+  position:           ["position in national degree structure (isced-2011 levels 6 and 7 only)"]
+  diploma_national:   ["main qualifications awarded (in national language)"]
+  diploma_en:         ["name of the qualification in english"]
+  access:             ["direct access to higher educational level \nonly for isced 2 to 7",
+                       "direct access to higher educational level only for isced 2 to 7",
+                       "direct access to higher educational level"]
+  notes:              ["general note"]
+  formal:             ["formal education programme"]
+
+required: [programme_en, isced_p, entrance_age, duration]
+
+# The level is not a column of its own here.
+isced_from_first_digit_of: isced_p
+
+# Rows that are not formal programmes are skipped rather than parsed.
+row_filter:
+  column: formal
+  keep: ["formal"]
+
+value_maps:
+  gmd_from_isced:
+    "0": pre_primary
+    "1": primary
+    "2": lower_secondary
+    "3": upper_secondary
+    "4": post_secondary
+    "5": tertiary
+    "6": tertiary
+    "7": tertiary
+    "8": tertiary
+    "9": other
+  grade_levels: ["0", "1", "2", "3", "4"]
+  completion:
+    full: ["full completion", "f", "full"]
+    partial: ["partial completion", "p", "partial"]
+    none: ["no completion", "n"]
+  orientation:
+    general: ["g/a", "general", "g", "academic"]
+    vocational: ["v/p", "vocational", "v", "professional", "p"]
+    unspecified: ["unspecified", "u"]
+    eced: ["eced"]
+    pre_primary: ["pre-primary"]
+  access:
+    # NB quoted: unquoted yes/no are booleans in YAML 1.1, so the keys would
+    # come back as True/False and never match "yes".
+    "yes": ["yes", "y"]
+    "no": ["no", "n"]
+
+na_tokens: ["-", "--", "n/a", "na", "n.a.", "none", "nil", ".", "m", "a"]
+
+language:
+  national_columns: [programme_national, diploma_national]
+  english_columns: [programme_en, diploma_en]

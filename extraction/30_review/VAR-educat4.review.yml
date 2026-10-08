@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-educat4
+source_artifact_path: extraction/20_drafts/dem/VAR-educat4.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 0b79283669fa3e663b2c58789677b1d58ab15ae1
+source_content_sha256: 151fc50721d24c31b831629e94746de69154a7de1896ab7040a9dfb48b80fb38
+enrolled_body_sha256: cfe1419a3db1b63aaebc20c681adfbb2c19e932f634274b57c23d78d5e633b73
+current_content_sha256: cfe1419a3db1b63aaebc20c681adfbb2c19e932f634274b57c23d78d5e633b73
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

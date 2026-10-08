@@ -26,7 +26,8 @@ missing_codes:
   label: Information not available because the item was not collected in this survey
 derived_from: []
 derives_to: []
-country_parameters: []
+country_parameters:
+  - PARAM-LBR-MIN-LABOR-AGE               # this variable EMITS this parameter (its value); not in the PARAM's applies_to_variables
 gates: []
 rules: []
 exceptions: []

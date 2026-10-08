@@ -1,0 +1,1504 @@
+---
+country_id: CTY-UZB
+iso3: UZB
+schema_version: '0.2'
+status: draft
+country_name: UZB
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UZB-EDU-01
+    national_label_en: pre-school education
+    national_label_local: Maktabgacha ta'lim va tarbiya
+    entry_age: 3
+    duration_years: 4
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: UZB-EDU-02
+    national_label_en: primary education
+    national_label_local: Boshlang'ich ta'lim
+    entry_age: 7
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - UZB-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: UZB-EDU-03
+    national_label_en: Lower secondary education
+    national_label_local: "Tayanch o\u2018rta ta\u2019lim"
+    entry_age: 11
+    duration_years: 5
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+    parent_country_entry_ids:
+    - UZB-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-04
+    national_label_en: General secondary education
+    national_label_local: "Umumiy o\u2018rta"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - UZB-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-05
+    national_label_en: Secondary technical and vocational education and initial vocational
+      education (Academic Lyceum, Vocational School)
+    national_label_local: "O\u2018rta maxsus ta\u2019lim va boshlang\u2018ich professional\
+      \ ta'lim"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+    parent_country_entry_ids:
+    - UZB-EDU-03
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-06
+    national_label_en: Secondary vocational education (College)
+    national_label_local: O'rta professional ta'lim
+    entry_age: 18
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 12
+    parent_country_entry_ids:
+    - UZB-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-07
+    national_label_en: Secondary technical-vocational education (Technical College)
+    national_label_local: O'rta maxsus professional ta'lim
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+    parent_country_entry_ids:
+    - UZB-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-08
+    national_label_en: Bachelor
+    national_label_local: Bakalavriat
+    entry_age: 18
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+    parent_country_entry_ids:
+    - UZB-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-09
+    national_label_en: Bachelor
+    national_label_local: Bakalavriat
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+    parent_country_entry_ids:
+    - UZB-EDU-04
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UZB-EDU-10
+    national_label_en: Master
+    national_label_local: Magistratura
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+    parent_country_entry_ids:
+    - UZB-EDU-08
+    - UZB-EDU-09
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-08
+    - UZB-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UZB-EDU-08, UZB-EDU-09'
+  - country_entry_id: UZB-EDU-11
+    national_label_en: Master
+    national_label_local: Magistratura
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+    parent_country_entry_ids:
+    - UZB-EDU-08
+    - UZB-EDU-09
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-08
+    - UZB-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UZB-EDU-08, UZB-EDU-09'
+  - country_entry_id: UZB-EDU-12
+    national_label_en: Postgraduate education
+    national_label_local: Oliy ta'limdan keyingi ta'lim
+    entry_age: 24
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+    parent_country_entry_ids:
+    - UZB-EDU-10
+    - UZB-EDU-11
+    cum_years_schooling: 19
+    cum_years_computation_path:
+    - UZB-EDU-02
+    - UZB-EDU-03
+    - UZB-EDU-04
+    - UZB-EDU-08
+    - UZB-EDU-10
+    - UZB-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UZB-EDU-08, UZB-EDU-09'
+    - 'minimum parent path selected from: UZB-EDU-10, UZB-EDU-11'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Uzbekistan.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UZB-SUBNAT-01
+    survey_labels: 1-Karakalpakstan | 101 -  Karakalpakstan | 1735 -  Karakalpakstan
+      | Karakalpakstan -  Karakalpakstan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3287
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3287
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3287'
+    geo_nvar: ADM1_NAME
+    geo_name: Karakalpakstan
+    source_row: 18366
+  - country_entry_id: UZB-SUBNAT-02
+    survey_labels: 10-Syrdarya | 106 -  Navoi region | 1712 -  Navoi | 1724 -  Syrdarya
+      | Navoi -  Navoi
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_39697
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_39697
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '39697'
+    geo_nvar: ADM1_NAME
+    geo_name: Navoiy
+    source_row: 18367
+  - country_entry_id: UZB-SUBNAT-03
+    survey_labels: 11-Tashkent | 111 -  Tashkent region | Tashkent (Region) -  Tashkent
+      (Region)
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3295
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3295
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3295'
+    geo_nvar: ADM1_NAME
+    geo_name: Tashkent
+    source_row: 18368
+  - country_entry_id: UZB-SUBNAT-04
+    survey_labels: 112 -  Fergana region | 12-Fergana | 1730 -  Fergana | Fergana
+      -  Fergana
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3286
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3286
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3286'
+    geo_nvar: ADM1_NAME
+    geo_name: Fergana
+    source_row: 18369
+  - country_entry_id: UZB-SUBNAT-05
+    survey_labels: 113 -  Khorezm region | 13-Khorezm | Khorasm -  Khorasm
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3289
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3289
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3289'
+    geo_nvar: ADM1_NAME
+    geo_name: Khorezm
+    source_row: 18370
+  - country_entry_id: UZB-SUBNAT-06
+    survey_labels: 114 -  Tashkent city | 14-Tashkent city | 1726 -  Tashkent (city)
+      | Tashkent (City) -  Tashkent (City)
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_39698
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_39698
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '39698'
+    geo_nvar: ADM1_NAME
+    geo_name: Tashkent city
+    source_row: 18371
+  - country_entry_id: UZB-SUBNAT-07
+    survey_labels: 102 -  Andijan region | 1703 -  Andijan | 2-Andijan | Andijan -  Andijan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3284
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3284
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3284'
+    geo_nvar: ADM1_NAME
+    geo_name: Andijan
+    source_row: 18372
+  - country_entry_id: UZB-SUBNAT-08
+    survey_labels: 103 -  Bukhara region | 1706 -  Bukhara | 3-Bukhara | Bukhara -  Bukhara
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3285
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3285
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3285'
+    geo_nvar: ADM1_NAME
+    geo_name: Bukhara
+    source_row: 18373
+  - country_entry_id: UZB-SUBNAT-09
+    survey_labels: 104 -  Jizzakh region | 4-Jizzak | Jizzakh -  Jizzakh
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_39696
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_39696
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '39696'
+    geo_nvar: ADM1_NAME
+    geo_name: Jizzakh
+    source_row: 18374
+  - country_entry_id: UZB-SUBNAT-10
+    survey_labels: 105 -  Kashkadarya region | 1710 -  Kashkadarya | 5-Kashkadarya
+      | Kashkadarya -  Kashkadarya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3288
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3288
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3288'
+    geo_nvar: ADM1_NAME
+    geo_name: Kashkadarya
+    source_row: 18375
+  - country_entry_id: UZB-SUBNAT-11
+    survey_labels: 110 -  Syrdarya region | 1712 -  Navoi | 1724 -  Syrdarya | 6-Navoi
+      | Syrdarya -  Syrdarya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3294
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3294
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3294'
+    geo_nvar: ADM1_NAME
+    geo_name: Sirdarya
+    source_row: 18376
+  - country_entry_id: UZB-SUBNAT-12
+    survey_labels: 107 -  Namangan region | 1714 -  Namangan | 7-Namangan | Namangan
+      -  Namangan
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3291
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3291
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3291'
+    geo_nvar: ADM1_NAME
+    geo_name: Namangan
+    source_row: 18377
+  - country_entry_id: UZB-SUBNAT-13
+    survey_labels: 108 -  Samarkand region | 1718 -  Samarkand | 8-Samarkand | Samarkand
+      -  Samarkand
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3292
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3292
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3292'
+    geo_nvar: ADM1_NAME
+    geo_name: Samarkand
+    source_row: 18378
+  - country_entry_id: UZB-SUBNAT-14
+    survey_labels: 109 -  Surkhandarya region | 1722 -  Surkhandarya | 9-Surkhandarya
+      | Surkhandarya -  Surkhandarya
+    survey_variables: subnatid | subnatid1 | subnatidsurvey
+    gmd_subnatid1: UZB_2015_GAUL1_3293
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UZB_2015_GAUL1_3293
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '3293'
+    geo_nvar: ADM1_NAME
+    geo_name: Surkhandarya
+    source_row: 18379
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UZB-SAN-01
+    source_category_code: composting_toilet
+    national_label_en: Composting toilet
+    national_label_local: "\u041A\u043E\u043C\u043F\u043E\u0441\u0442\u0438\u0440\u0443\
+      \u044E\u0449\u0438\u0435 \u0442\u0443\u0430\u043B\u0435\u0442\u044B"
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - country_entry_id: UZB-SAN-02
+    source_category_code: to_open_drain
+    national_label_en: to open drain
+    national_label_local: "\u043A\u0443\u0434\u0430-\u0442\u043E \u0432 \u0434\u0440\
+      \u0443\u0433\u043E\u0435 \u043C\u0435\u0441\u0442\u043E"
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - country_entry_id: UZB-SAN-03
+    source_category_code: to_piped_sewer_system
+    national_label_en: to piped sewer system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: UZB-SAN-04
+    source_category_code: to_pit
+    national_label_en: to pit
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: UZB-SAN-05
+    source_category_code: to_septic_tank
+    national_label_en: to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: UZB-SAN-06
+    source_category_code: to_dk_where
+    national_label_en: to DK where
+    national_label_local: "\u0432 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\
+      \u043D\u043E\u0435 \u043C\u0435\u0441\u0442\u043E/\u043D\u0435 \u0437\u043D\u0430\
+      \u044E/\u043D\u0435 \u0443\u0432\u0435\u0440\u0435\u043D(\u0430)"
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: UZB-SAN-07
+    source_category_code: flush_to_sewage_system_or_septic_tank
+    national_label_en: Flush to sewage system or septic tank
+    national_label_local: "\u0422\u0443\u0430\u043B\u0435\u0442\u044B \u0441\u043E\
+      \ \u0441\u043C\u044B\u0432\u043E\u043C"
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: UZB-SAN-08
+    source_category_code: flush_toilet
+    national_label_en: Flush toilet
+    national_label_local: "\u0422\u0443\u0430\u043B\u0435\u0442\u044B \u0441\u043E\
+      \ \u0441\u043C\u044B\u0432\u043E\u043C"
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: UZB-SAN-09
+    source_category_code: own_flush_toilet
+    national_label_en: Own flush toilet
+    national_label_local: "\u0421\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\
+      \u0439 \u0442\u0443\u0430\u043B\u0435\u0442 \u0441\u043E \u0441\u043C\u044B\u0432\
+      \u043E\u043C"
+    jmp_classification: Flush/toilets > Private flush/toilet
+    jmp_id: flush_toilets.private_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 72
+  - country_entry_id: UZB-SAN-10
+    source_category_code: shared_flush_toilet
+    national_label_en: Shared flush toilet
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439/\u0441\u043E\u0432\u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E\
+      \ \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F \u0442\u0443\
+      \u0430\u043B\u0435\u0442 \u0441\u043E \u0441\u043C\u044B\u0432\u043E\u043C"
+    jmp_classification: Flush/toilets > Public/shared flush/toilet
+    jmp_id: flush_toilets.public_shared_flush_toilet
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 78
+  - country_entry_id: UZB-SAN-11
+    source_category_code: flush_to_somewhere_else
+    national_label_en: Flush to somewhere else
+    national_label_local: "\u043A\u0443\u0434\u0430-\u0442\u043E \u0432 \u0434\u0440\
+      \u0443\u0433\u043E\u0435 \u043C\u0435\u0441\u0442\u043E"
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - country_entry_id: UZB-SAN-12
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: UZB-SAN-13
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: UZB-SAN-14
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: UZB-SAN-15
+    source_category_code: bucket
+    national_label_en: Bucket
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u043E\
+      \u0442\u0445\u043E\u0436\u0438\u043C \u0432\u0435\u0434\u0440\u043E\u043C"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: UZB-SAN-16
+    source_category_code: hanging_toilet_hanging_latrine
+    national_label_en: Hanging toilet/hanging latrine
+    national_label_local: "\u041F\u043E\u0434\u0432\u0435\u0441\u043D\u043E\u0439\
+      \ \u0442\u0443\u0430\u043B\u0435\u0442/\u043F\u043E\u0434\u0432\u0435\u0441\u043D\
+      \u0430\u044F \u0443\u0431\u043E\u0440\u043D\u0430\u044F"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - country_entry_id: UZB-SAN-17
+    source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine with slab
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: UZB-SAN-18
+    source_category_code: pit_latrine_with_slab_covered_latrine
+    national_label_en: Pit latrine with slab/covered latrine
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: UZB-SAN-19
+    source_category_code: open_pit
+    national_label_en: Open pit
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: UZB-SAN-20
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab/open pit
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: UZB-SAN-21
+    source_category_code: traditional_pit_latrine
+    national_label_en: Traditional pit latrine
+    national_label_local: "\u0422\u0440\u0430\u0434\u0438\u0446\u0438\u043E\u043D\u043D\
+      \u0430\u044F \u0443\u0431\u043E\u0440\u043D\u0430\u044F"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: UZB-SAN-22
+    source_category_code: traditional_pit_toilet
+    national_label_en: Traditional pit toilet
+    national_label_local: "\u0422\u0440\u0430\u0434\u0438\u0446\u0438\u043E\u043D\u043D\
+      \u0430\u044F \u0443\u0431\u043E\u0440\u043D\u0430\u044F"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: UZB-SAN-23
+    source_category_code: traditional_pit_toilet
+    national_label_en: Traditional pit toilet*
+    national_label_local: "\u0422\u0440\u0430\u0434\u0438\u0446\u0438\u043E\u043D\u043D\
+      \u0430\u044F \u0443\u0431\u043E\u0440\u043D\u0430\u044F"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: UZB-SAN-24
+    source_category_code: improved_pit_latrine_vip
+    national_label_en: Improved pit latrine (VIP)
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: UZB-SAN-25
+    source_category_code: ventilated_improved_pit_latrine
+    national_label_en: Ventilated Improved Pit latrine
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: UZB-SAN-26
+    source_category_code: ventilated_improved_pit_latrine_vip
+    national_label_en: Ventilated Improved Pit latrine (VIP)
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: UZB-SAN-27
+    source_category_code: vip_latrine
+    national_label_en: VIP latrine
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: UZB-SAN-28
+    source_category_code: pour_flush_latrine_water_seal_type
+    national_label_en: Pour flush latrine (water seal type)
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u044B\u0435 \u0441\u043E\
+      \ \u0441\u043C\u044B\u0432\u043E\u043C"
+    jmp_classification: Latrines > Pour flush latrines
+    jmp_id: latrines.pour_flush_latrines
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 85
+  - country_entry_id: UZB-SAN-29
+    source_category_code: no_facilities_bush_field
+    national_label_en: No facilities/ bush/ field
+    national_label_local: "\u0421\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u0439\
+      \ \u043D\u0435\u0442, \u043A\u0443\u0441\u0442\u044B, \u043F\u043E\u043B\u0435"
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: UZB-SAN-30
+    source_category_code: no_facility_bush
+    national_label_en: No facility/bush
+    national_label_local: "\u0421\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u0439\
+      \ \u043D\u0435\u0442, \u043A\u0443\u0441\u0442\u044B, \u043F\u043E\u043B\u0435"
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: UZB-SAN-31
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_UZB_Uzbekistan_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UZB-WAS-01
+    source_category_code: spring
+    national_label_en: Spring
+    national_label_local: "\u0412\u0441\u0435 \u0440\u043E\u0434\u043D\u0438\u043A\
+      \u0438"
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - country_entry_id: UZB-WAS-02
+    source_category_code: well_in_residence
+    national_label_en: Well in residence
+    national_label_local: "\u0427\u0430\u0441\u0442\u043D\u044B\u0439"
+    jmp_classification: Ground water > All wells > Private
+    jmp_id: ground_water.all_wells.private
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 55
+  - country_entry_id: UZB-WAS-03
+    source_category_code: public_well
+    national_label_en: Public well
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439"
+    jmp_classification: Ground water > All wells > Public
+    jmp_id: ground_water.all_wells.public
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 56
+  - country_entry_id: UZB-WAS-04
+    source_category_code: protected_spring
+    national_label_en: Protected spring
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0439\
+      \ \u0440\u043E\u0434\u043D\u0438\u043A"
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - country_entry_id: UZB-WAS-05
+    source_category_code: protected_dug_well
+    national_label_en: Protected dug well
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: UZB-WAS-06
+    source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: UZB-WAS-07
+    source_category_code: protected_well_in_residence
+    national_label_en: Protected well in residence
+    national_label_local: "\u0427\u0430\u0441\u0442\u043D\u044B\u0439"
+    jmp_classification: Ground water > Protected well > Private
+    jmp_id: ground_water.protected_well.private
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: UZB-WAS-08
+    source_category_code: public_well
+    national_label_en: Public well
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439"
+    jmp_classification: Ground water > Traditional wells > Public
+    jmp_id: ground_water.traditional_wells.public
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 64
+  - country_entry_id: UZB-WAS-09
+    source_category_code: tube_well_bore_hole_with_pump
+    national_label_en: Tube well/ bore hole with pump
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: UZB-WAS-10
+    source_category_code: tubewell_borehole
+    national_label_en: Tubewell, borehole
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: UZB-WAS-11
+    source_category_code: tubewell_borehole
+    national_label_en: Tubewell/borehole
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: UZB-WAS-12
+    source_category_code: unprotected_spring
+    national_label_en: Unprotected spring
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0439 \u0440\u043E\u0434\u043D\u0438\u043A"
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - country_entry_id: UZB-WAS-13
+    source_category_code: unprotected_dug_well
+    national_label_en: Unprotected dug well
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0439 \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: UZB-WAS-14
+    source_category_code: unprotected_well
+    national_label_en: Unprotected well
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0439 \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: UZB-WAS-15
+    source_category_code: open_well_in_residence
+    national_label_en: Open well in residence
+    national_label_local: "\u0427\u0430\u0441\u0442\u043D\u044B\u0439"
+    jmp_classification: Ground water > Unprotected well > Private
+    jmp_id: ground_water.unprotected_well.private
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - country_entry_id: UZB-WAS-16
+    source_category_code: cart_with_small_tank_drum
+    national_label_en: Cart with small tank/drum
+    national_label_local: "\u0422\u0435\u043B\u0435\u0436\u043A\u0430 \u0441 \u043D\
+      \u0435\u0431\u043E\u043B\u044C\u0448\u0438\u043C \u0431\u0430\u043A\u043E\u043C\
+      /\u0431\u043E\u0447\u043A\u043E\u0439"
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - country_entry_id: UZB-WAS-17
+    source_category_code: tanker_truck
+    national_label_en: Tanker truck
+    national_label_local: "\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\
+      \u0441\u044F \u0430\u0432\u0442\u043E\u0446\u0438\u0441\u0442\u0435\u0440\u043D\
+      \u043E\u0439"
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: UZB-WAS-18
+    source_category_code: tanker_truck
+    national_label_en: Tanker-truck
+    national_label_local: "\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\
+      \u0441\u044F \u0430\u0432\u0442\u043E\u0446\u0438\u0441\u0442\u0435\u0440\u043D\
+      \u043E\u0439"
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: UZB-WAS-19
+    source_category_code: tanker_truck_vendor
+    national_label_en: Tanker/ truck/ vendor
+    national_label_local: "\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\
+      \u0441\u044F \u0430\u0432\u0442\u043E\u0446\u0438\u0441\u0442\u0435\u0440\u043D\
+      \u043E\u0439"
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: UZB-WAS-20
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: UZB-WAS-21
+    source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: "\u0411\u0443\u0442\u0438\u043B\u0438\u0440\u043E\u0432\u0430\
+      \u043D\u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: UZB-WAS-22
+    source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: "\u0412\u043E\u0434\u0430 \u0432 \u043F\u0430\u043A\u0435\
+      \u0442\u0430\u0445"
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: UZB-WAS-23
+    source_category_code: sachet_water
+    national_label_en: Sachet water
+    national_label_local: "\u0412\u043E\u0434\u0430 \u0432 \u043F\u0430\u043A\u0435\
+      \u0442\u0430\u0445"
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: UZB-WAS-24
+    source_category_code: rain_water_collection
+    national_label_en: Rain water collection
+    national_label_local: "\u041A\u0440\u044B\u0442\u0430\u044F \u0446\u0438\u0441\
+      \u0442\u0435\u0440\u043D\u0430/\u0440\u0435\u0437\u0435\u0440\u0432\u0443\u0430\
+      \u0440"
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: UZB-WAS-25
+    source_category_code: rainwater
+    national_label_en: Rainwater
+    national_label_local: "\u041A\u0440\u044B\u0442\u0430\u044F \u0446\u0438\u0441\
+      \u0442\u0435\u0440\u043D\u0430/\u0440\u0435\u0437\u0435\u0440\u0432\u0443\u0430\
+      \u0440"
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: UZB-WAS-26
+    source_category_code: pond_river_or_stream
+    national_label_en: Pond, river or stream
+    national_label_local: "\u041F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: UZB-WAS-27
+    source_category_code: surface_water
+    national_label_en: Surface water
+    national_label_local: "\u041F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: UZB-WAS-28
+    source_category_code: pond_lake
+    national_label_en: Pond/lake
+    national_label_local: "\u041F\u0440\u0443\u0434"
+    jmp_classification: Surface water > Pond
+    jmp_id: surface_water.pond
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 96
+  - country_entry_id: UZB-WAS-29
+    source_category_code: pond_lake_dam
+    national_label_en: Pond/lake/dam
+    national_label_local: "\u041F\u0440\u0443\u0434"
+    jmp_classification: Surface water > Pond
+    jmp_id: surface_water.pond
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 96
+  - country_entry_id: UZB-WAS-30
+    source_category_code: river_stream
+    national_label_en: River/stream
+    national_label_local: "\u0420\u0435\u043A\u0430"
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - country_entry_id: UZB-WAS-31
+    source_category_code: piped_water_piped_to_neighbour
+    national_label_en: 'Piped water: piped to neighbour'
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: UZB-WAS-32
+    source_category_code: piped_into_residence
+    national_label_en: Piped into residence
+    national_label_local: "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\
+      \u044F \u043A \u0434\u043E\u043C\u0443"
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: UZB-WAS-33
+    source_category_code: piped_into_dwelling
+    national_label_en: Piped into dwelling
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432 \u0436\u0438\u043B\u0438\u0449\u0435"
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: UZB-WAS-34
+    source_category_code: piped_water_into_dwelling
+    national_label_en: Piped water into dwelling
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432 \u0436\u0438\u043B\u0438\u0449\u0435"
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: UZB-WAS-35
+    source_category_code: piped_into_yard_or_plot
+    national_label_en: Piped into yard or plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: UZB-WAS-36
+    source_category_code: piped_water_to_yard_plot
+    national_label_en: Piped water to yard/plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: UZB-WAS-37
+    source_category_code: public_tap
+    national_label_en: Public tap
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: UZB-WAS-38
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap, standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: UZB-WAS-39
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_UZB_Uzbekistan_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 2009
+  effective_to: null
+  selectors: null
+  value: 15
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

@@ -1,0 +1,1093 @@
+domain: water
+frame: JMP country file 2025 (WHO/UNICEF)
+tree_first_row: 37
+facility_types:
+- Improved
+- All piped
+- Non-piped
+- Piped on premises
+- Surface water
+n_nodes: 73
+nodes:
+- ordinal: 0
+  row: 37
+  id: tap_water
+  level: 0
+  label_en: Tap water
+  path: Tap water
+  gmd: piped
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - All piped
+  structural: false
+- ordinal: 1
+  row: 38
+  id: tap_water.piped_on_premises
+  level: 1
+  label_en: Piped on premises
+  path: Tap water > Piped on premises
+  gmd: piped
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - All piped
+  - Piped on premises
+  structural: false
+- ordinal: 2
+  row: 39
+  id: tap_water.piped_on_premises.piped_water_into_dwelling
+  level: 2
+  label_en: Piped water into dwelling
+  path: Tap water > Piped on premises > Piped water into dwelling
+  gmd: piped
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - All piped
+  - Piped on premises
+  structural: false
+- ordinal: 3
+  row: 40
+  id: tap_water.piped_on_premises.piped_water_to_yard_plot
+  level: 2
+  label_en: Piped water to yard/plot
+  path: Tap water > Piped on premises > Piped water to yard/plot
+  gmd: piped
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - All piped
+  - Piped on premises
+  structural: false
+- ordinal: 4
+  row: 41
+  id: tap_water.public_tap_standpipe
+  level: 1
+  label_en: Public tap, standpipe
+  path: Tap water > Public tap, standpipe
+  gmd: piped
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - All piped
+  structural: false
+- ordinal: 5
+  row: 42
+  id: tap_water.other
+  level: 1
+  label_en: Other
+  path: Tap water > Other
+  gmd: piped
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - All piped
+  structural: false
+- ordinal: 6
+  row: 43
+  id: ground_water
+  level: 0
+  label_en: Ground water
+  path: Ground water
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - borehole
+  - protected_well
+  - unprotected_well
+  - protected_spring
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 7
+  row: 44
+  id: ground_water.protected_ground_water
+  level: 1
+  label_en: Protected ground water
+  path: Ground water > Protected ground water
+  gmd: ''
+  improved: true
+  shared: null
+  aliases: []
+  spans:
+  - borehole
+  - protected_well
+  - protected_spring
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 8
+  row: 45
+  id: ground_water.unprotected_ground_water
+  level: 1
+  label_en: Unprotected ground water
+  path: Ground water > Unprotected ground water
+  gmd: ''
+  improved: false
+  shared: null
+  aliases: []
+  spans:
+  - unprotected_well
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 9
+  row: 46
+  id: ground_water.protected_wells_or_springs
+  level: 1
+  label_en: Protected wells or springs
+  path: Ground water > Protected wells or springs
+  gmd: ''
+  improved: true
+  shared: null
+  aliases: []
+  spans:
+  - protected_well
+  - protected_spring
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 10
+  row: 47
+  id: ground_water.protected_wells_or_springs.private
+  level: 2
+  label_en: Private
+  path: Ground water > Protected wells or springs > Private
+  gmd: ''
+  improved: true
+  shared: false
+  aliases: []
+  spans:
+  - protected_well
+  - protected_spring
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 11
+  row: 48
+  id: ground_water.protected_wells_or_springs.public
+  level: 2
+  label_en: Public
+  path: Ground water > Protected wells or springs > Public
+  gmd: ''
+  improved: true
+  shared: true
+  aliases: []
+  spans:
+  - protected_well
+  - protected_spring
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 12
+  row: 49
+  id: ground_water.protected_wells_or_springs.other
+  level: 2
+  label_en: Other
+  path: Ground water > Protected wells or springs > Other
+  gmd: ''
+  improved: true
+  shared: null
+  aliases: []
+  spans:
+  - protected_well
+  - protected_spring
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 13
+  row: 50
+  id: ground_water.unprotected_wells_or_springs
+  level: 1
+  label_en: Unprotected wells or springs
+  path: Ground water > Unprotected wells or springs
+  gmd: ''
+  improved: false
+  shared: null
+  aliases: []
+  spans:
+  - unprotected_well
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 14
+  row: 51
+  id: ground_water.unprotected_wells_or_springs.private
+  level: 2
+  label_en: Private
+  path: Ground water > Unprotected wells or springs > Private
+  gmd: ''
+  improved: false
+  shared: false
+  aliases: []
+  spans:
+  - unprotected_well
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 15
+  row: 52
+  id: ground_water.unprotected_wells_or_springs.public
+  level: 2
+  label_en: Public
+  path: Ground water > Unprotected wells or springs > Public
+  gmd: ''
+  improved: false
+  shared: true
+  aliases: []
+  spans:
+  - unprotected_well
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 16
+  row: 53
+  id: ground_water.unprotected_wells_or_springs.other
+  level: 2
+  label_en: Other
+  path: Ground water > Unprotected wells or springs > Other
+  gmd: ''
+  improved: false
+  shared: null
+  aliases: []
+  spans:
+  - unprotected_well
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 17
+  row: 54
+  id: ground_water.all_wells
+  level: 1
+  label_en: All wells
+  path: Ground water > All wells
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - borehole
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 18
+  row: 55
+  id: ground_water.all_wells.private
+  level: 2
+  label_en: Private
+  path: Ground water > All wells > Private
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - borehole
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 19
+  row: 56
+  id: ground_water.all_wells.public
+  level: 2
+  label_en: Public
+  path: Ground water > All wells > Public
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - borehole
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 20
+  row: 57
+  id: ground_water.all_wells.other
+  level: 2
+  label_en: Other
+  path: Ground water > All wells > Other
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - borehole
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 21
+  row: 58
+  id: ground_water.tubewell_borehole
+  level: 1
+  label_en: Tubewell, borehole
+  path: Ground water > Tubewell, borehole
+  gmd: borehole
+  improved: true
+  shared: null
+  aliases:
+  - Tubewell/borehole
+  - Borehole or tubewell
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 22
+  row: 59
+  id: ground_water.tubewell_borehole.private
+  level: 2
+  label_en: Private
+  path: Ground water > Tubewell, borehole > Private
+  gmd: borehole
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 23
+  row: 60
+  id: ground_water.tubewell_borehole.public
+  level: 2
+  label_en: Public
+  path: Ground water > Tubewell, borehole > Public
+  gmd: borehole
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 24
+  row: 61
+  id: ground_water.tubewell_borehole.other
+  level: 2
+  label_en: Other
+  path: Ground water > Tubewell, borehole > Other
+  gmd: borehole
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 25
+  row: 62
+  id: ground_water.traditional_wells
+  level: 1
+  label_en: Traditional wells
+  path: Ground water > Traditional wells
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 26
+  row: 63
+  id: ground_water.traditional_wells.private
+  level: 2
+  label_en: Private
+  path: Ground water > Traditional wells > Private
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 27
+  row: 64
+  id: ground_water.traditional_wells.public
+  level: 2
+  label_en: Public
+  path: Ground water > Traditional wells > Public
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 28
+  row: 65
+  id: ground_water.traditional_wells.other
+  level: 2
+  label_en: Other
+  path: Ground water > Traditional wells > Other
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - protected_well
+  - unprotected_well
+  rolls_up_to: []
+  structural: false
+- ordinal: 29
+  row: 66
+  id: ground_water.protected_well
+  level: 1
+  label_en: Protected well
+  path: Ground water > Protected well
+  gmd: protected_well
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 30
+  row: 67
+  id: ground_water.protected_well.private
+  level: 2
+  label_en: Private
+  path: Ground water > Protected well > Private
+  gmd: protected_well
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 31
+  row: 68
+  id: ground_water.protected_well.public
+  level: 2
+  label_en: Public
+  path: Ground water > Protected well > Public
+  gmd: protected_well
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 32
+  row: 69
+  id: ground_water.protected_well.other
+  level: 2
+  label_en: Other
+  path: Ground water > Protected well > Other
+  gmd: protected_well
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 33
+  row: 70
+  id: ground_water.unprotected_well
+  level: 1
+  label_en: Unprotected well
+  path: Ground water > Unprotected well
+  gmd: unprotected_well
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 34
+  row: 71
+  id: ground_water.unprotected_well.private
+  level: 2
+  label_en: Private
+  path: Ground water > Unprotected well > Private
+  gmd: unprotected_well
+  improved: false
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 35
+  row: 72
+  id: ground_water.unprotected_well.public
+  level: 2
+  label_en: Public
+  path: Ground water > Unprotected well > Public
+  gmd: unprotected_well
+  improved: false
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 36
+  row: 73
+  id: ground_water.unprotected_well.other
+  level: 2
+  label_en: Other
+  path: Ground water > Unprotected well > Other
+  gmd: unprotected_well
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 37
+  row: 74
+  id: ground_water.all_springs
+  level: 1
+  label_en: All springs
+  path: Ground water > All springs
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - protected_spring
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 38
+  row: 75
+  id: ground_water.all_springs.private
+  level: 2
+  label_en: Private
+  path: Ground water > All springs > Private
+  gmd: ''
+  improved: null
+  shared: false
+  aliases: []
+  spans:
+  - protected_spring
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 39
+  row: 76
+  id: ground_water.all_springs.public
+  level: 2
+  label_en: Public
+  path: Ground water > All springs > Public
+  gmd: ''
+  improved: null
+  shared: true
+  aliases: []
+  spans:
+  - protected_spring
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 40
+  row: 77
+  id: ground_water.all_springs.other
+  level: 2
+  label_en: Other
+  path: Ground water > All springs > Other
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans:
+  - protected_spring
+  - unprotected_spring
+  rolls_up_to: []
+  structural: false
+- ordinal: 41
+  row: 78
+  id: ground_water.protected_spring
+  level: 1
+  label_en: Protected spring
+  path: Ground water > Protected spring
+  gmd: protected_spring
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 42
+  row: 79
+  id: ground_water.protected_spring.private
+  level: 2
+  label_en: Private
+  path: Ground water > Protected spring > Private
+  gmd: protected_spring
+  improved: true
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 43
+  row: 80
+  id: ground_water.protected_spring.public
+  level: 2
+  label_en: Public
+  path: Ground water > Protected spring > Public
+  gmd: protected_spring
+  improved: true
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 44
+  row: 81
+  id: ground_water.protected_spring.other
+  level: 2
+  label_en: Other
+  path: Ground water > Protected spring > Other
+  gmd: protected_spring
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 45
+  row: 82
+  id: ground_water.unprotected_spring
+  level: 1
+  label_en: Unprotected spring
+  path: Ground water > Unprotected spring
+  gmd: unprotected_spring
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 46
+  row: 83
+  id: ground_water.unprotected_spring.private
+  level: 2
+  label_en: Private
+  path: Ground water > Unprotected spring > Private
+  gmd: unprotected_spring
+  improved: false
+  shared: false
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 47
+  row: 84
+  id: ground_water.unprotected_spring.public
+  level: 2
+  label_en: Public
+  path: Ground water > Unprotected spring > Public
+  gmd: unprotected_spring
+  improved: false
+  shared: true
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 48
+  row: 85
+  id: ground_water.unprotected_spring.other
+  level: 2
+  label_en: Other
+  path: Ground water > Unprotected spring > Other
+  gmd: unprotected_spring
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 49
+  row: 86
+  id: rainwater
+  level: 0
+  label_en: Rainwater
+  path: Rainwater
+  gmd: rainwater
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 50
+  row: 87
+  id: rainwater.covered_cistern_tank
+  level: 1
+  label_en: Covered cistern/tank
+  path: Rainwater > Covered cistern/tank
+  gmd: rainwater
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 51
+  row: 88
+  id: rainwater.uncovered_cistern_tank
+  level: 1
+  label_en: Uncovered cistern/tank
+  path: Rainwater > Uncovered cistern/tank
+  gmd: rainwater
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 52
+  row: 89
+  id: packaged_water
+  level: 0
+  label_en: Packaged water
+  path: Packaged water
+  gmd: bottled
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 53
+  row: 90
+  id: packaged_water.bottled_water
+  level: 1
+  label_en: Bottled water
+  path: Packaged water > Bottled water
+  gmd: bottled
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 54
+  row: 91
+  id: packaged_water.sachet_water
+  level: 1
+  label_en: Sachet water
+  path: Packaged water > Sachet water
+  gmd: bottled
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 55
+  row: 92
+  id: surface_water
+  level: 0
+  label_en: Surface water
+  path: Surface water
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Surface water
+  structural: false
+- ordinal: 56
+  row: 93
+  id: surface_water.river
+  level: 1
+  label_en: River
+  path: Surface water > River
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 57
+  row: 94
+  id: surface_water.lake
+  level: 1
+  label_en: Lake
+  path: Surface water > Lake
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 58
+  row: 95
+  id: surface_water.dam
+  level: 1
+  label_en: Dam
+  path: Surface water > Dam
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 59
+  row: 96
+  id: surface_water.pond
+  level: 1
+  label_en: Pond
+  path: Surface water > Pond
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 60
+  row: 97
+  id: surface_water.stream
+  level: 1
+  label_en: Stream
+  path: Surface water > Stream
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 61
+  row: 98
+  id: surface_water.irrigation_channel
+  level: 1
+  label_en: Irrigation channel
+  path: Surface water > Irrigation channel
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 62
+  row: 99
+  id: surface_water.other
+  level: 1
+  label_en: Other
+  path: Surface water > Other
+  gmd: surface
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 63
+  row: 100
+  id: other_improved_sources
+  level: 0
+  label_en: Other improved sources
+  path: Other improved sources
+  gmd: ''
+  improved: true
+  shared: null
+  aliases: []
+  spans:
+  - tanker
+  - other
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 64
+  row: 101
+  id: other_improved_sources.cart_with_small_tank_drum
+  level: 1
+  label_en: Cart with small tank/drum
+  path: Other improved sources > Cart with small tank/drum
+  gmd: tanker
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 65
+  row: 102
+  id: other_improved_sources.tanker_truck_provided
+  level: 1
+  label_en: Tanker truck provided
+  path: Other improved sources > Tanker truck provided
+  gmd: tanker
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 66
+  row: 103
+  id: other_improved_sources.other
+  level: 1
+  label_en: Other
+  path: Other improved sources > Other
+  gmd: other
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 67
+  row: 104
+  id: other_improved_sources.other#2
+  level: 1
+  label_en: Other
+  path: Other improved sources > Other
+  gmd: other
+  improved: true
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to:
+  - Improved
+  - Non-piped
+  structural: false
+- ordinal: 68
+  row: 105
+  id: other_non_improved
+  level: 0
+  label_en: Other non-improved
+  path: Other non-improved
+  gmd: other
+  improved: false
+  shared: null
+  aliases:
+  - Other unimproved
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 69
+  row: 106
+  id: other_non_improved.other
+  level: 1
+  label_en: Other
+  path: Other non-improved > Other
+  gmd: other
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 70
+  row: 107
+  id: other_non_improved.other#2
+  level: 1
+  label_en: Other
+  path: Other non-improved > Other
+  gmd: other
+  improved: false
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: false
+- ordinal: 71
+  row: 108
+  id: dk_missing
+  level: 0
+  label_en: DK/missing
+  path: DK/missing
+  gmd: ''
+  improved: null
+  shared: null
+  aliases:
+  - DK / missing
+  - Don't know/missing
+  spans: []
+  rolls_up_to: []
+  structural: true
+- ordinal: 72
+  row: 109
+  id: total
+  level: 0
+  label_en: Total
+  path: Total
+  gmd: ''
+  improved: null
+  shared: null
+  aliases: []
+  spans: []
+  rolls_up_to: []
+  structural: true

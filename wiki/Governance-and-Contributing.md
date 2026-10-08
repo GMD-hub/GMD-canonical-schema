@@ -13,7 +13,7 @@ the relevant country folder.
 | Location | Writer |
 |---|---|
 | `extraction/20_drafts/` | AI agents |
-| `extraction/30_review/` | Humans only |
+| `extraction/30_review/` | Humans only (active review workspace) |
 | `extraction/40_approved/` | Humans only |
 | `knowledge/` | Humans only after approval |
 | `country-parameters/` | Humans only |
@@ -22,6 +22,10 @@ the relevant country folder.
 Agent-generated canonical artifacts remain in `20_drafts/` until reviewed.
 Documentation changes do not authorize changes to governed canonical
 artifacts or rule logic.
+
+In the country-input review process, approved records are staged and promoted,
+then removed from `extraction/30_review/country-inputs/` so that queue only
+contains non-approved items.
 
 !!! example "Example: route the change before editing"
 	A wording correction in this wiki follows the documentation workflow. A
@@ -59,9 +63,9 @@ validation workflow.
 The validation workflow checks structural models, country-layer scope and
 windows, representative bundle compilation, and automated tests. It uploads
 the governance reports for reviewers. Report rows are informational, so an
-undecided fallback, coverage gap, unverified value, or overlapping exception
-does not fail CI by itself. Structural failures, failed smoke builds, and failed
-tests do fail CI.
+undecided fallback, coverage gap, or unverified value does not fail CI by
+itself. Overlapping exceptions fail CI when deterministic conflict handling is
+missing. Structural failures, failed smoke builds, and failed tests do fail CI.
 
 Until an administrator enables branch protection and required code-owner
 review, the approval requirements on this page are a convention rather than a

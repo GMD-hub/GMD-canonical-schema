@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-areaspace
+source_artifact_path: extraction/20_drafts/dwl/VAR-areaspace.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 0480dd73623bdf34e82435b2ea0b900cfe44a41e
+source_content_sha256: 92f6d6c39c90cda66db0bb6e20de95e2710cde2969b07b523a23b09ddfec0b3f
+enrolled_body_sha256: 18041e49b6fa8d26e4ade7f4ad6567ede97c42b96f6a6e0751d24ff734a43153
+current_content_sha256: 18041e49b6fa8d26e4ade7f4ad6567ede97c42b96f6a6e0751d24ff734a43153
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

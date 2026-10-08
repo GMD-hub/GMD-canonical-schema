@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-twagencotal
+source_artifact_path: extraction/20_drafts/lbr/VAR-twagencotal.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 95438e2eff875adbc58770f96acd546070587bce
+source_content_sha256: 8db3ab974bb5c08283d47e89f42ea33d5040471e91aff089d4014d3fe27b34a4
+enrolled_body_sha256: 65d076c3ef1c10ed07b1ee93d87fb7d63d41d389662fe63d1a248aad786f1606
+current_content_sha256: 65d076c3ef1c10ed07b1ee93d87fb7d63d41d389662fe63d1a248aad786f1606
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

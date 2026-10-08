@@ -1,0 +1,12 @@
+{
+  "ok": false,
+  "count": 0,
+  "files": [],
+  "errors": [
+    {
+      "file": "extraction\\20_drafts\\runs\\country-parameters",
+      "error": "no draft country-parameter files found"
+    }
+  ],
+  "warnings": []
+}

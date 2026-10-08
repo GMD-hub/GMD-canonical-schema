@@ -1,0 +1,87 @@
+iso3: REU
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_REU_Reunion_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: REU
+    name: "R\xE9union"
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: French
+  file:
+    file: JMP_2025_REU_Reunion_1.xlsx
+    sha256: 7458956097f68828ebd53f94d7d863297bae2676b7734c20bc417e0ac5e671b8
+    profile: jmp_country_file_2025
+    language: French
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:35:53+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 95.696919
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 77.01982
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 4.187376
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 22.430785
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 0.0
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.115705
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 0.549394
+    - rung: No service
+      row: 35
+      values:
+      - domain: Eau
+        split: Total
+        year: '2024'
+        value: 0.0
+      - domain: Assainissement
+        split: Total
+        year: '2024'
+        value: 0.0
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-tv
+source_artifact_path: extraction/20_drafts/dwl/VAR-tv.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ea0a52de5b978de30f707adf5467af70d30e911d
+source_content_sha256: d8408d80934328b2a97d090a464982e324748afcf3a632c4727344d4e626d039
+enrolled_body_sha256: 6598a8bd68fcb967ed13db7cc926c29aaa0ac7aa7c3b1231c67aa5f1e6e1a443
+current_content_sha256: 6598a8bd68fcb967ed13db7cc926c29aaa0ac7aa7c3b1231c67aa5f1e6e1a443
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

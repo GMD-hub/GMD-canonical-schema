@@ -5,24 +5,38 @@
 
 country_id: CTY-PER
 iso3: PER
-schema_version: "0.1"
+schema_version: "0.2"
 status: draft
 
 exceptions:
 
   - exception_id: EXC-PER-001
     applies_to_variables:
-      - VAR-educy
-    effective_from: 1980
-    effective_to: 1999
-    condition: "PLACEHOLDER. Natural language statement of when this
-                exception applies."
-    action: "PLACEHOLDER. Natural language statement of what to do."
-    rationale: "PLACEHOLDER, ILLUSTRATIVE ONLY. This exception is a
-                structural example and does not describe a real Peruvian
-                situation."
+      - VAR-welfare
+    effective_from: 2010
+    effective_to: 2016
+    selectors:
+      survey_type: income
+      rural_only: true
+    conflict_policy: higher_precedence_wins
+    precedence: 20
+    condition: If survey is income and household is rural
+    condition_structured:
+      all:
+        - field: survey_type
+          op: eq
+          value: income
+        - field: rural
+          op: eq
+          value: 1
+    action: Multiply welfare by 1.15
+    action_structured:
+      operation: multiply
+      target: welfare_value
+      factor: 1.15
+    rationale: Country-year adjustment rule
     provenance:
-      source: "PLACEHOLDER, NOT VERIFIED."
+      source: approved memo
       approved_by: null
       approved_on: null
       human_reviewed: false
@@ -36,9 +50,8 @@ a variable scope, and an inclusive validity window.
 
 ## Exception notes
 
-`EXC-PER-001` is a structural example only. Its condition, action, rationale,
-and provenance all identify it as an unverified placeholder. It does not
-represent a real situation in Peru and must not be used in production.
+`EXC-PER-001` defines a welfare adjustment rule for income surveys in rural
+households during 2010-2016.
 
 ## What exceptions may not do
 
@@ -51,3 +64,4 @@ it belongs in the universal CVS and must follow the CVS approval path.
 | Date | Version | Change | Authority |
 |---|---|---|---|
 | 2026-07-28 | 0.1 | Initial illustrative draft | GPID Team |
+| 2026-09-06 | 0.2 | Add structured PER welfare adjustment exception | GPID Team |

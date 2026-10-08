@@ -1,0 +1,132 @@
+iso3: VCT
+domain: sanitation
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_VCT_Saint_Vincent_and_the_Grenadines_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: VCT
+    name: Saint Vincent and the Grenadines
+  domain: sanitation
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: English
+  file:
+    file: JMP_2025_VCT_Saint_Vincent_and_the_Grenadines_1.xlsx
+    sha256: fc512cb3a941b418da37da31376594298c5927c0af981e9c8ed16fda99131474
+    profile: jmp_country_file_2025
+    language: English
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:41:58+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2018'
+        value: 97.728306
+      - domain: Drinking water
+        split: Rural*
+        year: '2018'
+        value: 96.990166
+      - domain: Drinking water
+        split: Urban*
+        year: '2018'
+        value: 98.404285
+      - domain: Sanitation
+        split: Total*
+        year: '2018'
+        value: 89.701063
+      - domain: Sanitation
+        split: Rural*
+        year: '2018'
+        value: 86.057929
+      - domain: Sanitation
+        split: Urban*
+        year: '2018'
+        value: 93.037382
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2018'
+        value: 0.0
+      - domain: Drinking water
+        split: Rural*
+        year: '2018'
+        value: 0.0
+      - domain: Drinking water
+        split: Urban*
+        year: '2018'
+        value: 0.0
+      - domain: Sanitation
+        split: Total*
+        year: '2018'
+        value: 1.823955
+      - domain: Sanitation
+        split: Rural*
+        year: '2018'
+        value: 2.040388
+      - domain: Sanitation
+        split: Urban*
+        year: '2018'
+        value: 1.62575
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: Drinking water
+        split: Total*
+        year: '2018'
+        value: 2.271694
+      - domain: Drinking water
+        split: Rural*
+        year: '2018'
+        value: 3.009834
+      - domain: Drinking water
+        split: Urban*
+        year: '2018'
+        value: 1.333355
+      - domain: Sanitation
+        split: Total*
+        year: '2018'
+        value: 5.941676
+      - domain: Sanitation
+        split: Rural*
+        year: '2018'
+        value: 7.868897
+      - domain: Sanitation
+        split: Urban*
+        year: '2018'
+        value: 4.176759
+    - rung: No service
+      row: 35
+      values:
+      - domain: Drinking water
+        split: Urban*
+        year: '2018'
+        value: 0.26236
+      - domain: Sanitation
+        split: Total*
+        year: '2018'
+        value: 2.533306
+      - domain: Sanitation
+        split: Rural*
+        year: '2018'
+        value: 4.032785
+      - domain: Sanitation
+        split: Urban*
+        year: '2018'
+        value: 1.160109
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

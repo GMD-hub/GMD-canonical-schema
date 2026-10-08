@@ -31,9 +31,12 @@ class TestSchemaCompliance:
 
     def test_var_educy_parameter_error_when_registry_unloaded(self):
         findings = self._findings_for("VAR-educy")
-        param_errors = [f for f in findings if "PARAM-EDU-YEARS-BY-LEVEL" in f.message]
-        assert len(param_errors) >= 1
-        assert param_errors[0].severity == "error"
+        param_errors = [f for f in findings if f.field == "country_parameters"]
+        assert {f.message for f in param_errors} == {
+            "Parameter reference not in registry: PARAM-EDU-LEVEL-CROSSWALK",
+            "Parameter reference not in registry: PARAM-EDU-MIN-EDUCATION-AGE",
+        }
+        assert all(f.severity == "error" for f in param_errors)
 
     def test_var_marital_parameter_error_when_registry_unloaded(self):
         findings = self._findings_for("VAR-marital")
@@ -48,7 +51,7 @@ class TestSchemaCompliance:
             f"Skipped: {skipped}"
         )
         findings = self._findings_for("VAR-educy", parameter_ids=parameter_ids)
-        param_errors = [f for f in findings if "PARAM-EDU-YEARS-BY-LEVEL" in f.message]
+        param_errors = [f for f in findings if f.field == "country_parameters"]
         assert param_errors == [], f"Expected no parameter errors when registry loaded: {[f.message for f in param_errors]}"
 
     def test_var_marital_no_parameter_error_when_registry_loaded(self):

@@ -11,6 +11,21 @@ This separation keeps `knowledge/` universal and makes country evidence
 explicit, effective dated, reviewable, and replaceable without changing a
 variable's structural contract.
 
+## Row entry IDs
+
+For row-based crosswalk parameters, each row carries a stable
+`country_entry_id`. The ID is required by schema validation and must follow
+the parameter-specific segment format:
+
+- `ISO3-EDU-NN` for `PARAM-EDU-LEVEL-CROSSWALK`
+- `ISO3-SUBNAT-NN` for `PARAM-GEO-GMD-CROSSWALK`
+- `ISO3-SAN-NN` for `PARAM-WASH-SANITATION-CROSSWALK`
+- `ISO3-WAS-NN` for `PARAM-WASH-WATER-CROSSWALK`
+
+`country_entry_id` is intended for canonical row traceability across review
+and promotion stages. It does not replace provenance fields such as
+`source_row`.
+
 ## Mandatory loading algorithm
 
 For every run and every variable:
@@ -27,6 +42,78 @@ For every run and every variable:
 
 The survey ID year is not the welfare year and is not necessarily the year in
 which fieldwork ended.
+
+## Operational promotion flow (current)
+
+Country-parameter extraction artifacts should move through explicit stages:
+
+```text
+20_drafts/runs/country-parameters -> 30_review/country-inputs ->
+40_approved/country-parameters -> country-parameters/countries/<ISO3>/
+```
+
+With the current review app behavior, an `approved` action does all of the
+following in sequence:
+
+1. writes the approved payload to `extraction/40_approved/country-parameters/`;
+2. promotes (upserts with de-duplication) into
+   `country-parameters/countries/<ISO3>/(parameters.md|exceptions.md)`;
+3. removes the approved artifact from `extraction/30_review/country-inputs/`.
+
+That means `30_review/` should contain only active review work (draft,
+in-review, needs-revision), not approved items.
+
+### Review and promotion commands
+
+Run the review app:
+
+```sh
+"C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe" country-review-app/app.R
+```
+
+Validate the resulting country layer after promotion:
+
+```sh
+python validation/validate_country_layer.py
+```
+
+### Archive and clear approved staging
+
+`40_approved/` remains a staging checkpoint. After confirming promotion, archive
+and clear staged YAMLs so the folder only tracks in-flight approved payloads.
+
+Create a zip archive and clear staged files (PowerShell example):
+
+```powershell
+$py = @'
+from pathlib import Path
+import zipfile
+from datetime import datetime
+
+root = Path('.')
+src = root / 'extraction' / '40_approved' / 'country-parameters'
+zip_path = root / 'extraction' / '40_approved' / (
+   f"country-parameters-archive-{datetime.now().strftime('%Y%m%d-%H%M%S')}.zip"
+)
+files = [p for p in src.rglob('*.yaml') if p.is_file()]
+
+with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
+   for p in files:
+      zf.write(p, arcname=str(p.relative_to(root)))
+
+for p in files:
+   p.unlink()
+'@
+Set-Content .tmp_archive_40.py $py -Encoding UTF8
+python .tmp_archive_40.py
+Remove-Item .tmp_archive_40.py -Force
+```
+
+After clearing, verify no staged YAML remains:
+
+```sh
+python -c "from pathlib import Path; p=Path('extraction/40_approved/country-parameters'); print(sum(1 for _ in p.rglob('*.yaml')))"
+```
 
 ## Resolution example
 
@@ -118,13 +205,12 @@ general knowledge.
    because governance has not chosen a policy. None of these outcomes permits
    the consumer to invent a 2012 value.
 
-## Current coverage warning
+## Coverage warning
 
-The present country layer is not production ready. PER contains explicitly
-unverified placeholders demonstrating validity windows and record shape. The
-remaining country folders are empty drafts. The validator's coverage and
-unverified-value reports are therefore operational review inputs, not noise to
-be suppressed.
+Country coverage and review quality can change quickly as extraction and review
+runs complete. Treat validator coverage and unverified-value reports as active
+governance inputs. Do not suppress them, and do not interpret broad coverage as
+equivalent to verified production readiness.
 
 Each country parameter file may include an optional top-level `focal_point`.
 The field defaults to null and identifies the person to consult when the
@@ -138,6 +224,46 @@ Country files are human-owned governed artifacts. Before adding a value or
 exception, establish an authoritative source, use the correct ISO3 folder,
 match an existing parameter or variable ID, define non-overlapping validity,
 record provenance, obtain human review, and run repository validation.
+
+## Extraction draft contracts
+
+Country-input extraction flows (for example, ISCED and JMP workbook adapters,
+GEO crosswalk extraction, and Labor minimum-working-age extraction) may stage
+draft parameter contracts under
+`extraction/20_drafts/runs/country-parameters/contracts/` so draft payloads
+can be validated before promotion.
+
+`extraction_pipeline/country_inputs/cli.py` registers each input as a
+`ParamInputSpec` in `PARAM_INPUT_REGISTRY`, tagged with a broad dimension
+(`isced`, `jmp`, `geo`, `labor`, ...). A dimension can hold more than one
+independent input over time (the Labor dimension may later add ISIC/ISCO
+crosswalks alongside minimum working age, each its own source workbook). The
+`extract`, `bulk`, and `check` subcommands accept:
+
+- `--dimension <name>` — run every input tagged with one broad dimension.
+- `--param-input <key>` — run exactly one registered input, overriding `--dimension`.
+- `--iso3 <ISO3>` — scope either filter above to one country.
+
+Both `--dimension` and `--param-input` choices are generated from the
+registry at argparse build time, so adding a new input makes it a valid CLI
+value automatically. Source workbooks that cover every country (GEO, Labor)
+are parsed exactly once per run and bucketed by ISO3 in memory, not re-parsed
+per country. Combined with the existing file-hash incremental cache, this
+means refreshing one dimension, one param-input, or one country never
+requires reprocessing the rest of the registry.
+
+Extraction runs automatically assign `country_entry_id` values for EDU, GEO,
+SAN, and WAS crosswalk rows. Manual edits in country artifacts must preserve
+these IDs and maintain format validity.
+
+These staged contracts are implementation scaffolding for draft validation.
+They are not canonical parameter registry entries and never replace governed
+human-owned artifacts under `knowledge/parameters/`.
+
+When draft runs are fully reviewed and promoted, run-specific extraction output
+under `extraction/20_drafts/runs/country-parameters/` may be removed as
+operational cleanup, provided provenance is preserved in canonical country
+artifacts and commit history.
 
 ## Suggested reading
 

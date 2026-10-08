@@ -48,19 +48,39 @@ def test_duplicate_exception_id_across_repository_fails(
     assert "duplicate exception_id EXC-PER-001; first found in" in output
 
 
-def test_overlapping_exceptions_are_informational(
+def test_overlapping_exceptions_without_precedence_fail(
     temp_repository: Path, capsys
 ) -> None:
     path = exception_path(temp_repository, "PER")
     data, body = load_markdown(path)
+    data["exceptions"][0]["conflict_policy"] = "error"
+    data["exceptions"][0]["precedence"] = None
     overlap = deepcopy(data["exceptions"][0])
     overlap["exception_id"] = "EXC-PER-002"
-    overlap["effective_from"] = 1995
-    overlap["effective_to"] = 2005
+    data["exceptions"].append(overlap)
+    write_markdown(path, data, body)
+
+    assert validate_repository(temp_repository) == 1
+    output = capsys.readouterr().out
+    assert "overlapping exceptions must define deterministic conflict handling" in output
+
+
+def test_overlapping_exceptions_with_precedence_are_resolved(
+    temp_repository: Path, capsys
+) -> None:
+    path = exception_path(temp_repository, "PER")
+    data, body = load_markdown(path)
+    data["exceptions"][0]["conflict_policy"] = "higher_precedence_wins"
+    data["exceptions"][0]["precedence"] = 10
+
+    overlap = deepcopy(data["exceptions"][0])
+    overlap["exception_id"] = "EXC-PER-002"
+    overlap["precedence"] = 20
     data["exceptions"].append(overlap)
     write_markdown(path, data, body)
 
     assert validate_repository(temp_repository) == 0
     output = capsys.readouterr().out
-    assert "## Overlapping exception report" in output
-    assert "PER | VAR-educy | EXC-PER-001 | EXC-PER-002" in output
+    assert "## Deterministically resolved overlap report" in output
+    variable_id = data["exceptions"][0]["applies_to_variables"][0]
+    assert f"PER | {variable_id} | EXC-PER-001 | EXC-PER-002 | EXC-PER-002" in output

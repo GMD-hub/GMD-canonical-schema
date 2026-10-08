@@ -1,0 +1,1502 @@
+---
+country_id: CTY-CPV
+iso3: CPV
+schema_version: '0.2'
+status: draft
+country_name: CPV
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: CPV-EDU-01
+    national_label_en: "Pr\xE9-scolaire"
+    national_label_local: "Educa\xE7\xE3o Pr\xE9-escolar"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: CPV-EDU-02
+    national_label_en: "Enseignement de Base\n(1-6 ann\xE9es)"
+    national_label_local: "Ensino B\xE1sico\n(1-6 anos)"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CPV-EDU-02
+    cum_years_status: computed
+    review_flags: []
+  - country_entry_id: CPV-EDU-03
+    national_label_en: "Enseignement r\xE9currente\n(1-6 ann\xE9es)"
+    national_label_local: 'Ensino recorrente
+
+      (1-6 anos)'
+    entry_age: 15
+    duration_years: 3
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 3
+    cum_years_computation_path:
+    - CPV-EDU-03
+    cum_years_status: computed
+    review_flags: []
+  - country_entry_id: CPV-EDU-04
+    national_label_en: "Enseignement de Base\n(7-8 ann\xE9es)"
+    national_label_local: "Ensino B\xE1sico\n(7-8 anos)"
+    entry_age: 12
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+    parent_country_entry_ids:
+    - CPV-EDU-02
+    - CPV-EDU-03
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-04
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+  - country_entry_id: CPV-EDU-05
+    national_label_en: "Enseignement r\xE9currente\n(7-8 ann\xE9es)"
+    national_label_local: 'Ensino recorrente
+
+      (7-8 anos)'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 11
+    parent_country_entry_ids:
+    - CPV-EDU-02
+    - CPV-EDU-03
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-05
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+  - country_entry_id: CPV-EDU-06
+    national_label_en: "Enseignement secondaire \n1-\xE8re cycle \n(via general)\n\
+      1-\xE8re ann\xE9e"
+    national_label_local: "Ensino Secund\xE1rio \n1\xBA Ciclo (Via Geral)\n1\xBA ano"
+    entry_age: 14
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 12
+    parent_country_entry_ids:
+    - CPV-EDU-02
+    - CPV-EDU-03
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+  - country_entry_id: CPV-EDU-07
+    national_label_en: "Enseignement r\xE9currente \n(secondaire 1\xE9re cycle)\n\
+      (9 ann\xE9e)"
+    national_label_local: "Ensino recorrente\n(Secund\xE1rio - 1\xBA Ciclo)\n(9 ano)"
+    entry_age: 20
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 13
+    parent_country_entry_ids:
+    - CPV-EDU-02
+    - CPV-EDU-03
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-07
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+  - country_entry_id: CPV-EDU-08
+    national_label_en: "Enseignement secondaire \n1-\xE8re cycle \n(via general)\n\
+      2-\xE8me ann\xE9e"
+    national_label_local: "Ensino Secund\xE1rio\n1\xBA Ciclo (Via Geral)\n2o ano"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+    parent_country_entry_ids:
+    - CPV-EDU-04
+    - CPV-EDU-05
+    - CPV-EDU-06
+    - CPV-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-08
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+  - country_entry_id: CPV-EDU-09
+    national_label_en: "Enseignement r\xE9currente \n(secondaire 1\xE9re cycle)\n\
+      (10 ann\xE9e)"
+    national_label_local: "Ensino recorrente\n(Secund\xE1rio - 1\xBA Ciclo)\n(10 ano)"
+    entry_age: 21
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+    parent_country_entry_ids:
+    - CPV-EDU-04
+    - CPV-EDU-05
+    - CPV-EDU-06
+    - CPV-EDU-07
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+  - country_entry_id: CPV-EDU-10
+    national_label_en: "Enseignement secondaire 2\xE9me cycle (via g\xE9n\xE9rale)"
+    national_label_local: "Ensino Secund\xE1rio - 2\xBA Ciclo (Via Geral)"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 16
+    parent_country_entry_ids:
+    - CPV-EDU-04
+    - CPV-EDU-05
+    - CPV-EDU-06
+    - CPV-EDU-07
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+  - country_entry_id: CPV-EDU-11
+    national_label_en: "Enseignement secondaire 2e cycle (Via T\xE9chnique)"
+    national_label_local: "Ensino Secund\xE1rio - 2\xBA Ciclo (Via T\xE9cnica)"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 17
+    parent_country_entry_ids:
+    - CPV-EDU-04
+    - CPV-EDU-05
+    - CPV-EDU-06
+    - CPV-EDU-07
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+  - country_entry_id: CPV-EDU-12
+    national_label_en: "Enseignement r\xE9currente \n(secondaire 2\xE9me cycle)\n\
+      (11-12 ann\xE9e)"
+    national_label_local: "Ensino recorrente\n(Secund\xE1rio - 2\xBA Ciclo)\n(11 -12ano)"
+    entry_age: 22
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 18
+    parent_country_entry_ids:
+    - CPV-EDU-04
+    - CPV-EDU-05
+    - CPV-EDU-06
+    - CPV-EDU-07
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+  - country_entry_id: CPV-EDU-13
+    national_label_en: "Ann\xE9e compl\xE9mentaire professionnelle\n(ACP)"
+    national_label_local: 'Ano complementar profissionalizante
+
+      (ACP)'
+    entry_age: 18
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+    parent_country_entry_ids:
+    - CPV-EDU-08
+    - CPV-EDU-09
+    - CPV-EDU-10
+    - CPV-EDU-11
+    - CPV-EDU-12
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-08
+    - CPV-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+    - 'minimum parent path selected from: CPV-EDU-08, CPV-EDU-09, CPV-EDU-10, CPV-EDU-11,
+      CPV-EDU-12'
+  - country_entry_id: CPV-EDU-14
+    national_label_en: "Etudes sup\xE9rieures professionelles"
+    national_label_local: 'Curso de estudos superior e profissionalizante
+
+      (CESP)'
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+    parent_country_entry_ids:
+    - CPV-EDU-08
+    - CPV-EDU-09
+    - CPV-EDU-10
+    - CPV-EDU-11
+    - CPV-EDU-12
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-08
+    - CPV-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+    - 'minimum parent path selected from: CPV-EDU-08, CPV-EDU-09, CPV-EDU-10, CPV-EDU-11,
+      CPV-EDU-12'
+  - country_entry_id: CPV-EDU-15
+    national_label_en: "Enseignement sup\xE9rieur (Licence)"
+    national_label_local: Ensino Superior (Bacharelato)
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+    parent_country_entry_ids:
+    - CPV-EDU-08
+    - CPV-EDU-09
+    - CPV-EDU-10
+    - CPV-EDU-11
+    - CPV-EDU-12
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-08
+    - CPV-EDU-15
+    cum_years_status: computed
+    review_flags: &id001
+    - 'minimum parent path selected from: CPV-EDU-02, CPV-EDU-03'
+    - 'minimum parent path selected from: CPV-EDU-04, CPV-EDU-05, CPV-EDU-06, CPV-EDU-07'
+    - 'minimum parent path selected from: CPV-EDU-08, CPV-EDU-09, CPV-EDU-10, CPV-EDU-11,
+      CPV-EDU-12'
+  - country_entry_id: CPV-EDU-16
+    national_label_en: "Enseignement sup\xE9rieur (Master)"
+    national_label_local: Ensino Superior (Mestrado)
+    entry_age: 22
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+    parent_country_entry_ids:
+    - CPV-EDU-15
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-08
+    - CPV-EDU-15
+    - CPV-EDU-16
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: CPV-EDU-17
+    national_label_en: "Enseignement sup\xE9rieur (Doctorat)"
+    national_label_local: Ensino Superior (Doutoramento)
+    entry_age: 24
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 23
+    parent_country_entry_ids:
+    - CPV-EDU-16
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - CPV-EDU-03
+    - CPV-EDU-06
+    - CPV-EDU-08
+    - CPV-EDU-15
+    - CPV-EDU-16
+    - CPV-EDU-17
+    cum_years_status: computed
+    review_flags: *id001
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Cabo_Verde.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: 2015
+  selectors: null
+  value:
+  - country_entry_id: CPV-SUBNAT-01
+    survey_labels: 5 - Boa Vista | 5-Boa Vista | Boa Vista
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_838
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_838
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '838'
+    geo_nvar: ADM1_NAME
+    geo_name: Boa Vista
+    source_row: 3094
+  - country_entry_id: CPV-SUBNAT-02
+    survey_labels: 9 - Brava | 9-Brava | Brava
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_839
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_839
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '839'
+    geo_nvar: ADM1_NAME
+    geo_name: Brava
+    source_row: 3095
+  - country_entry_id: CPV-SUBNAT-03
+    survey_labels: 8 - Fogo | 8-Fogo | Fogo
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_841
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_841
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '841'
+    geo_nvar: ADM1_NAME
+    geo_name: Fogo
+    source_row: 3096
+  - country_entry_id: CPV-SUBNAT-04
+    survey_labels: 6 - Maio | 6-Maio | Maio
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_844
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_844
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '844'
+    geo_nvar: ADM1_NAME
+    geo_name: Maio
+    source_row: 3097
+  - country_entry_id: CPV-SUBNAT-05
+    survey_labels: 4 - Sal | 4-Sal | Sal
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_846
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_846
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '846'
+    geo_nvar: ADM1_NAME
+    geo_name: Sal
+    source_row: 3098
+  - country_entry_id: CPV-SUBNAT-06
+    survey_labels: 7 - Santiago | 7-Santiago | Santiago
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_848
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_848
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '848'
+    geo_nvar: ADM1_NAME
+    geo_name: Santiago
+    source_row: 3099
+  - country_entry_id: CPV-SUBNAT-07
+    survey_labels: "1 - Santo Ant\xE3o | 1-S\xE3o Ant\xE3o | Santo Ant\xE3o"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_849
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_849
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '849'
+    geo_nvar: ADM1_NAME
+    geo_name: Santo Antao
+    source_row: 3100
+  - country_entry_id: CPV-SUBNAT-08
+    survey_labels: "3 - S\xE3o Nicolau | 3- S\xE3o Nicolau | S\xE3o Nicolau"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_850
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_850
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '850'
+    geo_nvar: ADM1_NAME
+    geo_name: Sao Nicolau
+    source_row: 3101
+  - country_entry_id: CPV-SUBNAT-09
+    survey_labels: "2 - S\xE3o Vicente | 2-S\xE3o Vicente | S\xE3o Vicente"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: CPV_2015_GAUL1_851
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: CPV_2015_GAUL1_851
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '851'
+    geo_nvar: ADM1_NAME
+    geo_name: Sao Vicente
+    source_row: 3102
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2022
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: CPV-SUBNAT-01
+    survey_labels: 11 - Ribeira Grande | 11-Ribeira Grande
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.9_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.9_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.9_1
+    geo_nvar: NAME_1
+    geo_name: Ribeira Grande
+    source_row: 3112
+  - country_entry_id: CPV-SUBNAT-02
+    survey_labels: "12 - Paul | 12-Pa\xFAl"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.5_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.5_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.5_1
+    geo_nvar: NAME_1
+    geo_name: "Pa\xFAl"
+    source_row: 3113
+  - country_entry_id: CPV-SUBNAT-03
+    survey_labels: 13 - Porto Novo | 13-Porto novo
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.6_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.6_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.6_1
+    geo_nvar: NAME_1
+    geo_name: Porto Novo
+    source_row: 3114
+  - country_entry_id: CPV-SUBNAT-04
+    survey_labels: "21 - S\xE3o Vicente | 21-S\xE3o vicente"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.20_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.20_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.20_1
+    geo_nvar: NAME_1
+    geo_name: "S\xE3o Vicente"
+    source_row: 3115
+  - country_entry_id: CPV-SUBNAT-05
+    survey_labels: 31 - Ribeira Brava | 31-Ribeira Brava
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.8_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.8_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.8_1
+    geo_nvar: NAME_1
+    geo_name: Ribeira Brava
+    source_row: 3116
+  - country_entry_id: CPV-SUBNAT-06
+    survey_labels: "32 - Tarrafal de S\xE3o Nicolau | 32-Tarrafal de S\xE3o Nicolau"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.22_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.22_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.22_1
+    geo_nvar: NAME_1
+    geo_name: "Tarrafal de S\xE3o Nicolau"
+    source_row: 3117
+  - country_entry_id: CPV-SUBNAT-07
+    survey_labels: 41 - Sal | 41-Sal
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.11_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.11_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.11_1
+    geo_nvar: NAME_1
+    geo_name: Sal
+    source_row: 3118
+  - country_entry_id: CPV-SUBNAT-08
+    survey_labels: 51 - Boa Vista | 51-Boavista
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.1_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.1_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.1_1
+    geo_nvar: NAME_1
+    geo_name: Boa Vista
+    source_row: 3119
+  - country_entry_id: CPV-SUBNAT-09
+    survey_labels: 61 - Maio | 61-Maio
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.3_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.3_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.3_1
+    geo_nvar: NAME_1
+    geo_name: Maio
+    source_row: 3120
+  - country_entry_id: CPV-SUBNAT-10
+    survey_labels: 71 - Tarrafal de Santiago | 71-Tarrafal
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.21_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.21_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.21_1
+    geo_nvar: NAME_1
+    geo_name: Tarrafal
+    source_row: 3121
+  - country_entry_id: CPV-SUBNAT-11
+    survey_labels: 72 - Santa Catarina | 72-Santa Catarina
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.12_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.12_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.12_1
+    geo_nvar: NAME_1
+    geo_name: Santa Catarina
+    source_row: 3122
+  - country_entry_id: CPV-SUBNAT-12
+    survey_labels: 73 - Santa Cruz | 73-Santa Cruz
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.14_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.14_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.14_1
+    geo_nvar: NAME_1
+    geo_name: Santa Cruz
+    source_row: 3123
+  - country_entry_id: CPV-SUBNAT-13
+    survey_labels: 74 - Praia | 74-Praia
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.7_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.7_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.7_1
+    geo_nvar: NAME_1
+    geo_name: Praia
+    source_row: 3124
+  - country_entry_id: CPV-SUBNAT-14
+    survey_labels: "75 - S\xE3o Domingo | 75-S\xE3o Domingos"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.15_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.15_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.15_1
+    geo_nvar: NAME_1
+    geo_name: "S\xE3o Domingos"
+    source_row: 3125
+  - country_entry_id: CPV-SUBNAT-15
+    survey_labels: "76 - Calheta S. Miguel | 76-S\xE3o Miguel"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.18_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.18_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.18_1
+    geo_nvar: NAME_1
+    geo_name: "S\xE3o Miguel"
+    source_row: 3126
+  - country_entry_id: CPV-SUBNAT-16
+    survey_labels: "77 - S\xE3o Louren\xE7o dos Org\xE3os | 77-S\xE3o Salvador do\
+      \ Mundo"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.17_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.17_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.17_1
+    geo_nvar: NAME_1
+    geo_name: "S\xE3o Louren\xE7o dos \xD3rg\xE3os"
+    source_row: 3127
+  - country_entry_id: CPV-SUBNAT-17
+    survey_labels: "78 - S\xE3o Salvador do Mundo | 78-S\xE3o Louren\xE7o dos \xD3\
+      rg\xE3os"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.19_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.19_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.19_1
+    geo_nvar: NAME_1
+    geo_name: "S\xE3o Salvador do Mundo"
+    source_row: 3128
+  - country_entry_id: CPV-SUBNAT-18
+    survey_labels: 79 - Ribeira Gr. de Santiago | 79-Ribeira Grande de Santiago
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.10_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.10_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.10_1
+    geo_nvar: NAME_1
+    geo_name: Ribeira Grande de Santiago
+    source_row: 3129
+  - country_entry_id: CPV-SUBNAT-19
+    survey_labels: 81 - Mosteiros | 81-Mosteiros
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.4_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.4_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.4_1
+    geo_nvar: NAME_1
+    geo_name: Mosteiros
+    source_row: 3130
+  - country_entry_id: CPV-SUBNAT-20
+    survey_labels: "82 - S\xE3o Filipe | 82-S\xE3o Filipe"
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.16_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.16_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.16_1
+    geo_nvar: NAME_1
+    geo_name: "S\xE3o Filipe"
+    source_row: 3131
+  - country_entry_id: CPV-SUBNAT-21
+    survey_labels: 83 - Santa Catarina do Fogo | 83-Santa Catarina do Fogo
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.13_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.13_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.13_1
+    geo_nvar: NAME_1
+    geo_name: Santa Catarina do Fogo
+    source_row: 3132
+  - country_entry_id: CPV-SUBNAT-22
+    survey_labels: 91 - Brava | 91-Brava
+    survey_variables: subnatid2 | subnatidsurvey
+    gmd_subnatid1: ''
+    gmd_subnatid2: CPV_2022_GADM1_CPV.2_1
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: false
+    is_rep_subnat2: true
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 2
+    gmd_subnatidsurvey: CPV_2022_GADM1_CPV.2_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: CPV.2_1
+    geo_nvar: NAME_1
+    geo_name: Brava
+    source_row: 3133
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: CPV-SAN-01
+    source_category_code: nao_nenhum_disponivel
+    national_label_en: "N\xE3o, nenhum disponivel"
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: CPV-SAN-02
+    source_category_code: no_none_available
+    national_label_en: No, none available
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: CPV-SAN-03
+    source_category_code: sem_instalacao
+    national_label_en: Sem Instalacao
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: CPV-SAN-04
+    source_category_code: sem_instalacao_sanitaria
+    national_label_en: Sem instalacao sanitaria
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: CPV-SAN-05
+    source_category_code: other_type_of_sanitation
+    national_label_en: Other type of sanitation
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - country_entry_id: CPV-SAN-06
+    source_category_code: total_do_outras_respostas_nao_se_sabe_o_tipo_de_saneamento
+    national_label_en: Total do outras respostas, nao se sabe o tipo de saneamento
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_CPV_Cabo_Verde_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: CPV-WAS-01
+    source_category_code: nascente
+    national_label_en: Nascente
+    national_label_local: All springs
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - country_entry_id: CPV-WAS-02
+    source_category_code: poco
+    national_label_en: "Po\xE7o"
+    national_label_local: All wells
+    jmp_classification: Ground water > All wells
+    jmp_id: ground_water.all_wells
+    gmd_target: ''
+    gmd_spans: borehole|protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 54
+  - country_entry_id: CPV-WAS-03
+    source_category_code: nascente_protegida
+    national_label_en: Nascente protegida
+    national_label_local: Protected spring
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - country_entry_id: CPV-WAS-04
+    source_category_code: poco_protegido
+    national_label_en: "Po\xE7o protegido"
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: CPV-WAS-05
+    source_category_code: poco
+    national_label_en: Poco
+    national_label_local: Traditional wells
+    jmp_classification: Ground water > Traditional wells
+    jmp_id: ground_water.traditional_wells
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: CPV-WAS-06
+    source_category_code: poco_com_tubo_ou_poco
+    national_label_en: "Po\xE7o com  tubo ou po\xE7o"
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: CPV-WAS-07
+    source_category_code: nascente_desprotegida
+    national_label_en: Nascente desprotegida
+    national_label_local: Unprotected spring
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - country_entry_id: CPV-WAS-08
+    source_category_code: poco_desprotegido
+    national_label_en: "Po\xE7o desprotegido"
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: CPV-WAS-09
+    source_category_code: comprado_em_um_carrinho_com_um_pequeno_tanque_ou_tambor
+    national_label_en: Comprado em um carrinho com um pequeno tanque ou tambor
+    national_label_local: Cart with small tank/drum
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - country_entry_id: CPV-WAS-10
+    source_category_code: cisterna_publica
+    national_label_en: Cisterna Publica
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - country_entry_id: CPV-WAS-11
+    source_category_code: auto_tanque
+    national_label_en: Auto-Tanque
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: CPV-WAS-12
+    source_category_code: autotanque
+    national_label_en: Autotanque
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: CPV-WAS-13
+    source_category_code: comprado_num_camiao_auto_tanque
+    national_label_en: "Comprado num cami\xE3o auto-tanque"
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: CPV-WAS-14
+    source_category_code: outro
+    national_label_en: Outro
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: CPV-WAS-15
+    source_category_code: nao_sabe
+    national_label_en: "N\xE3o sabe"
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: CPV-WAS-16
+    source_category_code: outro
+    national_label_en: Outro
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: CPV-WAS-17
+    source_category_code: agua_engarrafada
+    national_label_en: Agua engarrafada
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: CPV-WAS-18
+    source_category_code: agua_da_chuva_recolhida
+    national_label_en: "\xC1gua da chuva recolhida"
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: CPV-WAS-19
+    source_category_code: cisterna
+    national_label_en: Cisterna
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: CPV-WAS-20
+    source_category_code: cisterna_domiciliaria
+    national_label_en: "Cisterna Domicili\xE1ria"
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: CPV-WAS-21
+    source_category_code: aguas_superficiais_como_rio_represa_lago_lagoa_ribeira
+    national_label_en: "\xC1guas superficiais, como rio, represa, lago, lagoa, ribeira"
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: CPV-WAS-22
+    source_category_code: levada
+    national_label_en: Levada
+    national_label_local: Irrigation channel
+    jmp_classification: Surface water > Irrigation channel
+    jmp_id: surface_water.irrigation_channel
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 98
+  - country_entry_id: CPV-WAS-23
+    source_category_code: agua_rede_publica_casa_dos_vizinhos
+    national_label_en: Agua rede publica casa dos vizinhos
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: CPV-WAS-24
+    source_category_code: agua_canalizada_da_rede_publica
+    national_label_en: Agua canalizada da rede publica
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: CPV-WAS-25
+    source_category_code: agua_da_rede_publica
+    national_label_en: "\xC1gua da rede p\xFAblica"
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: CPV-WAS-26
+    source_category_code: agua_canalizada_na_habitacao
+    national_label_en: "\xC1gua canalizada na habita\xE7\xE3o"
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: CPV-WAS-27
+    source_category_code: agua_canalizada_no_quintal_parcela_ou_condominio
+    national_label_en: "\xC1gua canalizada no quintal, parcela ou condominio"
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: CPV-WAS-28
+    source_category_code: chafariz
+    national_label_en: Chafariz
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_CPV_Cabo_Verde_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 2011
+  effective_to: null
+  selectors: null
+  value: 15
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

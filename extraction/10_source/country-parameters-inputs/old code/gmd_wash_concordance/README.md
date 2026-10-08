@@ -1,0 +1,381 @@
+# gmd_wash_concordance — System 9
+
+**JMP country household workbook → GMD country WASH instructions.**
+
+Pass in one `JMP_2025_{ISO3}_{Country}_{n}.xlsx`. Get back **two** country
+instructions — one for water, one for sanitation — plus the findings that
+decide whether a focal point can sign either, and a viewer app to read them in.
+
+```
+workbook ──► bind ──► scan blocks ──► classification ─► subgroup ─► facility type ──► validate ──► artefacts
+             (profile YAML)  (one per source)        (pinned JMP master)          (W-00…W-16)
+```
+
+## Install and run
+
+```bash
+pip install openpyxl pyyaml
+
+python3 -m gmd_wash_concordance inspect JMP_2025_IND_India_0.xlsx
+python3 -m gmd_wash_concordance chain   JMP_2025_IND_India_0.xlsx --domain water --used
+python3 -m gmd_wash_concordance extract JMP_2025_IND_India_0.xlsx --out out/
+python3 -m gmd_wash_concordance bulk    incoming/ --out out/
+python3 -m gmd_wash_concordance check   out/                       # re-validate, no workbook
+python3 -m gmd_wash_concordance viewer  out/ --serve             # live review app
+```
+
+As a library:
+
+```python
+from gmd_wash_concordance import extract, check, build_viewer
+res = extract("JMP_2025_IND_India_0.xlsx", out="out/")
+res["domains"]["water"]["verdict"]        # clean | awaiting_review | blocked
+res["domains"]["sanitation"]["counts"]    # {'BLOCK': 0, 'WARN': 14, 'INFO': 2}
+build_viewer("out/")
+```
+
+**Run `inspect` first on any new file.** It prints which sheets bound, which
+row carries the concordance header, how many source blocks each sheet holds,
+how many were selected, the sections it found, and whether the workbook's JMP
+category tree still matches the tree this package pins. It writes nothing.
+
+## Water and sanitation are two instructions, never one
+
+They are answered by different survey questions, they move between vintages
+independently, and a focal point signs one without being asked to sign the
+other. So they get separate files, separate fingerprints, separate schemas
+(`gmd.country_instruction.wash.water` / `…​.sanitation`) and separate verdicts.
+`--domains water` reads only one; the default reads both.
+
+## What it reads
+
+The `Water Data` and `Sanitation Data` sheets are strips of fixed-width
+six-column blocks, one per data source, repeating across the sheet. India's
+water sheet holds 63, from `IND_1991_CEN` to `IND_2024_FARA`.
+
+```
+col B          C                    D              E      F      G
+Definitions    Facility type …      (category)     Urban  Rural  Total
+^ the country's own denomination    ^ the JMP master tree
+```
+
+Stacked above the concordance in every block are three sections the package
+reads rather than assumes: **Facility type estimates**, **Service level
+estimate**, and **Data used for estimates** (the Yes/No flags saying which
+estimates JMP actually took from that source).
+
+**Only sources typed `Survey with microdata` are extracted by default** —
+those are the ones GMD harmonizes: 15 for India, 19 for Pakistan.
+`--sources all|survey|census|admin` and comma-separated combinations also work.
+
+## The chain: classification → subgroup → facility type
+
+Every row carries the whole chain, because that is the order a reviewer checks
+it in:
+
+```yaml
+rows:
+- code: covered_well
+  label: Covered well                       # verbatim, the country's own words
+  classification: Ground water              # the JMP group
+  subgroup: Protected well                  # the class inside it
+  depth: 1
+  jmp: Ground water > Protected well
+  jmp_id: ground_water.protected_well
+  jmp_label_local: Protected well           # as the workbook spelled it
+  rolls_up_to: [Improved, Non-piped]        # the facility-type aggregates fed
+  gmd: protected_well
+  spans: []
+  improved: true
+  improved_from: jmp_master
+  shared: null
+  observed_in: [IND_2005_IHDS, IND_2012_IHDS]
+  first_seen: 2005
+  last_seen: 2012
+```
+
+`rolls_up_to` closes the chain onto the workbook's own *Facility type
+estimates* rows. For water those are **Improved, All piped, Non-piped, Piped
+on premises, Surface water**, and the arithmetic they encode is real:
+`Improved = All piped + Non-piped`, and `Piped on premises ⊂ All piped`. For
+sanitation: **Improved, Sewer connection, Septic tanks, Other, Open
+defecation**, with `Improved = Sewer + Septic + Other`. Rule W-15 blocks any
+row that rolls up to something the workbook does not declare, and warns when
+an improved class feeds nothing — a chain that does not close.
+
+`classifications[]` gives the same thing the other way round: each group, its
+subgroups, and the national categories the country actually put on each one.
+`chain --used` prints it.
+
+`observed_in` with `first_seen` / `last_seen` **is** the vintage trail. A
+category that appears in 2005 and stops in 2012 is a comparability break, and
+rules W-10 and W-11 say so.
+
+## A workbook that is not in English
+
+Every label in a JMP country file is a lookup, not a literal:
+
+```
+C37: =HLOOKUP(Introduction!$G$4, nametranslations, 183, FALSE)
+```
+
+`nametranslations` is the `Key` sheet — one row per phrase, one column per
+language, **English first**. A Russian country file carries the whole matrix,
+not just Russian, so a file that arrives in a language nobody on the team
+reads arrives with its own translation of every phrase in it. That is what
+this package uses. Nothing is hard-coded, so a file in a language JMP adds
+next year works without a change here.
+
+Two details matter and both are tested.
+
+**The formula, not the rendered string, identifies a phrase.** A translation
+is many-to-one: the Russian for *Other* is also the Russian for *Unimproved
+sanitation*, and a string map has to pick one. The row index in the formula
+has no such problem, so it is consulted first and the string is only a
+fallback. Both spellings of the lookup appear in the same workbook —
+`nametranslations` and `Key!$A$1:$G$395` — so the row is taken as HLOOKUP's
+third argument rather than by matching the range.
+
+**The matrix stops where the named range says it stops.** The `Key` sheet
+carries a second table past column G. Folding it in produced mappings like
+*Census → Safely managed drinking water* and stopped English files binding at
+all.
+
+An English workbook is never translated: there is nothing to gain and a
+many-to-one map to lose. It is also not read twice — the second pass that
+reads formulas only happens when the file is in another language.
+
+The country's own words are never touched. An *original denomination* is not a
+JMP phrase, and `jmp_label_local` keeps each JMP class label as this workbook
+spells it, so the local wording survives beside the English.
+
+### The country's name
+
+`data/iso3166.yaml` carries every ISO 3166-1 country in English, French,
+Spanish, Portuguese, Russian, Arabic, German and Italian, plus the aliases the
+data world uses. *Российская Федерация*, *España* and *Sénégal* all resolve;
+a name that is not in the table returns nothing rather than a guess, because a
+mis-attributed concordance is not caught downstream.
+
+## What it writes
+
+Into `out/{ISO3}/`, for each of `water` and `sanitation`:
+
+| file | for |
+|---|---|
+| `{ISO3}_{domain}_v1.0.yaml` | the country instruction — S10 mapping, S11 display |
+| `{ISO3}_{domain}_sources.json` | what each source supplied, plus its data-used flags — S13 |
+| `{ISO3}_{domain}_rows.csv` | one flat row per mapping, chain included — human review |
+| `{ISO3}_{domain}_findings.json` | rule ids, levels, source rows — the S11 queue |
+| `{ISO3}_{domain}_view.json` | the viewer bundle |
+
+and once per workbook, `{ISO3}_wash_binding.json`. `bulk` adds
+`wash_batch_manifest.json`.
+
+## The benchmark — what JMP published
+
+The instruction may not carry survey-level data, and it does not. But the
+numbers are the most useful thing in the workbook for a reviewer and the only
+independent check on a harmonization run that exists *before* the run, so they
+travel in their own artefact:
+
+```
+{ISO3}_{domain}_benchmark.json    everything, structured
+{ISO3}_{domain}_benchmark.csv     the same thing flat, for Excel
+```
+
+Per source it carries the estimate JMP published for **every category in the
+tree**, urban / rural / total, beside the national category that was mapped
+onto it — so the mapping and the number it produced are read together. It also
+carries the three aggregate blocks above the concordance (*Facility type
+estimates*, *Service level estimate*, and the Yes/No *Data used for estimates*
+flags saying which of them JMP actually took from that source) and the
+country's own ladder from the `Ladders` sheet.
+
+India's water file yields 392 published estimates across 13 of its 15
+microdata sources, plus the five-rung country ladder.
+
+This is a benchmark, not a target. JMP models and interpolates; GMD harmonizes
+microdata. The two will differ, and the point is to know by how much and where
+before someone asks. Rule **W-17** asserts the numbers never leaked back into
+the instruction.
+
+## Versions and eras — `{ISO3}` over time
+
+`concordance_registry.json`, at the root of the output folder, records every
+ingest and decides its version. Three cases, told apart by the content
+fingerprint and a signature of the fields that can move a person between GMD
+categories:
+
+| what arrived | result |
+|---|---|
+| the same content | **no new version** — the registry returns the one in force |
+| a reworded label, a note | **MINOR** — published results stay valid |
+| a changed `gmd`, `improved`, `spans` or rollup | **MAJOR** — already-harmonized surveys must rerun |
+
+MAJOR versus MINOR is computed, never declared: an author cannot call a
+breaking change cosmetic to avoid triggering the reruns.
+
+```bash
+python3 -m gmd_wash_concordance registry --out out/ --verbose
+```
+
+For a JMP file the "era" is the release, and its window is the span of the
+surveys inside it. (The schooling era, where a window really does leave cohorts
+uncovered, is an education idea — see that package.)
+
+## Editing and approving
+
+Both are done in the viewer while it is serving, and both are artefacts:
+
+```
+{ISO3}_{domain}_patches.json     every edit, in order, with who and why
+{ISO3}_{domain}_approval.json    the approval record
+```
+
+**An edit is a patch, never a rewrite.** The extracted instruction stays
+exactly as the workbook produced it, so a re-extraction can always be compared
+against it and a reviewer's change is always visible *as a change* rather than
+as a fact. Undo is deleting a patch. Only the mapping is editable — `gmd`, the
+notes, the exclusion flag — because the extract has to stay comparable to the
+file it came from. Every edit carries a reason and a name; without either it is
+refused.
+
+**A blocked version cannot be approved**, and every warning needs an
+acknowledgement in writing. A warning nobody wrote against is not approved
+silently. The approval pins the fingerprint the approver was looking at, so it
+is obvious later whether they signed this content or something else.
+
+## The viewer — a review app, not a screenshot
+
+```bash
+# while you are iterating: serves the folder and re-reads it on every request
+python3 -m gmd_wash_concordance viewer out/ --serve --open
+
+# no server: a page that reads whatever folder you point it at
+python3 -m gmd_wash_concordance viewer --picker --out review.html
+
+# a frozen snapshot to send to someone who has neither Python nor the files
+python3 -m gmd_wash_concordance viewer out/ --embed --out review.html
+```
+
+**Serving is the mode to use while working.** The server re-reads the output
+directory on *every* request — nothing is cached and nothing is baked in — so
+rerun the extractor, hit reload, and the new output is there. The folder
+dropdown is the country selector: pick `IND`, or *all folders* to compare
+countries side by side. It binds to loopback only, serves nothing outside the
+directory you named, and refuses any extension that is not an artefact.
+
+**The picker page** carries no data at all. Open it and choose a country
+folder — or drop one anywhere on the page — and the browser reads the files
+directly. Chromium hands over a real directory handle, so *reload* re-reads
+disk there too; elsewhere it falls back to a folder picker.
+
+Every mode has an **Artefacts** tab listing every file the run wrote, readable
+inline. That is the difference between a viewer and a screenshot: what is on
+screen is what is on disk, and you can open the YAML that produced it without
+leaving the page.
+
+Education gets the era card with its inferred window and evidence, the
+programme table with derived grades, years-in-level and cumulative years and
+the national-language names beneath, the grade ladder, and a **working cohort
+resolver**. Water and sanitation get the facility-type table in the workbook's
+own words, the classification tree with every national category attached to
+the subgroup it lands on, a filterable row table with the full chain, and the
+source list with its vintage span. Both get the findings by rule id and the
+provenance of the workbook they came from. Light and dark.
+
+## Three things the schema will not let a country do
+
+**Assert improvement.** `improved` is copied from the pinned JMP master and
+W-02 blocks the version if a row — or a classification entry — disagrees with
+it. Improvement is a property of the JMP class, not a country's opinion of its
+own technology.
+
+**Assign a ladder rung.** There is no `rung` field. A rung depends on
+collection time, availability, quality and sharing — variables no source
+mapping row can see — so it is derived downstream. The five JMP rungs ship as
+fixed definitions and W-12 / W-13 block any change to them.
+
+**Widen the shape.** A workbook carrying something the schema cannot hold
+produces an `unmapped` entry and a finding, never a new field.
+
+## The pinned JMP master tree
+
+73 water nodes (rows 37–109) and 80 sanitation nodes (rows 60–139), identical
+in every country file of the 2025 release. The workbook carries no
+indentation and no ids, so hierarchy, improvement flag, GMD target and
+facility-type rollup live in `data/jmp_*_master.yaml`.
+
+A node with no single GMD target is not a defect. `Ground water > All wells`
+spans `borehole`, `protected_well` and `unprotected_well`; the row carries
+those in `spans`, and W-09 raises a review asking for a splitting rule rather
+than inventing one.
+
+## Rules
+
+| id | level | rule |
+|---|---|---|
+| W-00 | INFO | extraction summary |
+| W-01 | BLOCK | the country could not be determined |
+| W-02 | BLOCK | a row or classification asserts improvement, or a ladder rung |
+| W-03 | WARN | one national category maps to several JMP classes in one source |
+| W-04 | BLOCK | the workbook's tree does not match the pinned master |
+| W-05 | BLOCK | a class outside the master |
+| W-06 | WARN | JMP does not settle improvement for this class |
+| W-07 | WARN | a service-level attribute with nowhere to record it |
+| W-08 | INFO | sharing recorded as an attribute |
+| W-09 | BLOCK/WARN | no GMD target (BLOCK), or the category spans several (WARN) |
+| W-10 | WARN | a category the latest instrument gained |
+| W-11 | WARN | a category the latest instrument lost |
+| W-12 / W-13 | BLOCK | a ladder has been altered |
+| W-14 | WARN | packaged or delivered water with no secondary-source question |
+| W-15 | BLOCK/WARN | the classification → facility type chain does not close |
+| W-16 | WARN/INFO | the workbook does not state its language; local labels differ |
+| W-17 | BLOCK/INFO | survey-level data leaked into the instruction (BLOCK); what the benchmark holds (INFO) |
+
+A workbook whose concordance header is found in no block now says so as a
+binding problem (W-04) instead of reporting a tree that was never compared.
+
+`blocked` if any BLOCK fired, `awaiting_review` if any WARN, `clean`
+otherwise. Every finding carries the source row.
+
+## The standalone validator
+
+```bash
+python3 -m gmd_wash_concordance check out/            # a directory
+python3 -m gmd_wash_concordance check out/IND/IND_water_v1.0.yaml
+```
+
+`check` loads an emitted instruction and re-runs the same rules with **no
+access to the workbook**. That matters because the first hand edit — a label
+corrected, a target changed, an improvement flag flipped — would otherwise
+escape the rules entirely. Exit code 2 when anything blocks, so it gates a CI
+step or a pre-approval hook.
+
+## When the template changes
+
+`data/jmp_country_file_2025.yaml` is the only file that changes when JMP
+reissues the country file: sheet names, block width, column offsets, the
+section anchors and the source-type vocabulary. If the category tree itself
+changes, `inspect` prints every position that differs and
+`data/jmp_*_master.yaml` is where the new tree goes. No Python either way.
+
+## Tests
+
+```bash
+GMD_JMP_DIR=/path/to/workbooks python3 tests/test_wash.py
+```
+
+96 checks, including the version arithmetic, the refusal to approve a blocked
+version or an unacknowledged warning, that a patch never touches the extract,
+that text such as "No" never becomes a zero in the benchmark, that a Russian
+and a Spanish workbook read exactly like
+an English one, that the formula index resolves a phrase the string map gets
+wrong, that the translation matrix stops at the named range, that the
+improved/facility-type chain closes, that water
+and sanitation never share an artefact, that no frequency reaches an
+instruction, that the standalone check catches a hand edit, and that the
+viewer never reaches for the network, and that the review server refuses to
+leave the folder it was given. Workbook tests skip cleanly when no JMP file is
+present.

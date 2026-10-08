@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-boat
+source_artifact_path: extraction/20_drafts/dwl/VAR-boat.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 4e30606168933e9cd10911cc377c42ecacd4260d
+source_content_sha256: eecb7de457d2d15f33b84d1359752c106a431f926236b23e1268abecfdf2cb68
+enrolled_body_sha256: fd97118f8d80332acaa96d445d8af8d7ee155a259f796a0464c39171d0591b29
+current_content_sha256: fd97118f8d80332acaa96d445d8af8d7ee155a259f796a0464c39171d0591b29
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

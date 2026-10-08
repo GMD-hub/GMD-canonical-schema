@@ -41,7 +41,7 @@ more specific, but they never override universal structure.
 | `validation/` | Cross-repository structural and governance checks. |
 | `build/` | Compiler that produces one runtime JSON bundle for a country and optional survey year. |
 | `extraction/` | Staging workflow for turning source guidelines into reviewed CVS artifacts. |
-| `extraction_pipeline/` | Deterministic guideline extraction pipeline (preflight, source resolution, AST parsing, gates, agents, orchestrator). |
+| `extraction_pipeline/` | Deterministic guideline extraction pipeline (preflight, source resolution, AST parsing, gates, agents, orchestrator), plus country input adapters (ISCED, JMP water/sanitation, GEO, Labor, ...) for country-parameter extraction drafts. See `extraction_pipeline/country_inputs/cli.py` for the extraction CLI. |
 | `governance/` | Project audits, open questions, decision records, and implementation traceability. |
 | `docs/` | Existing explanatory examples and schema notes. |
 | `wiki/` | Detailed project documentation and operating guidance. |
@@ -61,7 +61,35 @@ source .venv/bin/activate
 python3 -m pip install -r requirements.txt
 python3 validation/validate_country_layer.py
 python3 build/compile_bundle.py PER 2019
+python3 -m extraction_pipeline.country_inputs.cli inspect
+python3 -m extraction_pipeline.country_inputs.cli extract
+python3 -m extraction_pipeline.country_inputs.cli check
 ```
+
+`extract`/`bulk`/`check` default to processing every registered country-parameter
+input, but can be scoped to avoid rerunning everything:
+
+```sh
+# One broad dimension (every param-input tagged with it, e.g. Labor's
+# min-working-age plus any future ISIC/ISCO crosswalks added under the same tag)
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension labor
+
+# One specific registered param-input, narrower than --dimension
+python3 -m extraction_pipeline.country_inputs.cli extract --param-input labor-min-working-age
+
+# One country, composable with either filter above
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension labor --iso3 VNM
+
+# See the valid dimension/param-input values (argparse choices are
+# registry-driven, so this list grows automatically as inputs are added)
+python3 -m extraction_pipeline.country_inputs.cli extract --help
+```
+
+Each run only rewrites a country's draft when its source file, the parameter's
+schema, or the extractor code itself changed since the last run (file-hash
+incremental cache); otherwise it is reported as `incremental_skipped`. Add
+`--force` to bypass the cache and rewrite everything selected by the current
+`--dimension`/`--param-input`/`--iso3` filters.
 
 The validator prints reports for undecided fallbacks, country coverage gaps,
 unverified values, and structural failures. It exits with status 1 only when
@@ -95,6 +123,16 @@ New artifacts follow this lifecycle:
 ```text
 source/context -> agent draft -> human review -> approved staging -> knowledge
 ```
+
+For country-input parameter and exception drafts, the operational flow is:
+
+```text
+extraction/20_drafts/runs/country-parameters -> extraction/30_review/country-inputs -> extraction/40_approved/country-parameters -> country-parameters/countries/<ISO3>/
+```
+
+Approved country-input records are staged to `40_approved`, promoted into the
+country layer, and then removed from `30_review` so that `30_review` remains an
+active-review workspace.
 
 AI agents write drafts to `extraction/20_drafts/`. Humans own review,
 approval, and promotion into `knowledge/` and `country-parameters/`. Never

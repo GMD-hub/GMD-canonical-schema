@@ -4,6 +4,7 @@ import pytest
 from pathlib import Path
 
 from extraction_pipeline.review_agents.consistency_derivation import check_drafts
+from extraction_pipeline.review_agents.helpers import list_drafts
 
 
 DRAFTS_DIR = Path("extraction/20_drafts")
@@ -11,14 +12,14 @@ DRAFTS_DIR = Path("extraction/20_drafts")
 
 class TestConsistencyDerivation:
     def test_all_drafts(self):
-        draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
+        draft_paths = list_drafts(DRAFTS_DIR)
         results = check_drafts(draft_paths)
         by_id = {r.artifact_id: r for r in results}
         assert "VAR-educy" in by_id
         assert "VAR-male" in by_id
 
     def test_educy_no_asymmetry_error(self):
-        draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
+        draft_paths = list_drafts(DRAFTS_DIR)
         results = check_drafts(draft_paths)
         by_id = {r.artifact_id: r for r in results}
         educy = by_id["VAR-educy"]
@@ -29,7 +30,7 @@ class TestConsistencyDerivation:
         )
 
     def test_male_no_derivation_issues(self):
-        draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
+        draft_paths = list_drafts(DRAFTS_DIR)
         results = check_drafts(draft_paths)
         by_id = {r.artifact_id: r for r in results}
         male = by_id["VAR-male"]
@@ -37,7 +38,7 @@ class TestConsistencyDerivation:
         assert errors == [], f"Unexpected errors: {[f.message for f in errors]}"
 
     def test_educy_value_codes_null_no_warning(self):
-        draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
+        draft_paths = list_drafts(DRAFTS_DIR)
         results = check_drafts(draft_paths)
         by_id = {r.artifact_id: r for r in results}
         educy = by_id["VAR-educy"]
@@ -45,7 +46,7 @@ class TestConsistencyDerivation:
         assert value_code_warnings == [], "educy has value_codes: null, should not trigger subset check"
 
     def test_urban_unresolved_derivation_ref(self):
-        draft_paths = sorted(DRAFTS_DIR.rglob("*.md"))
+        draft_paths = list_drafts(DRAFTS_DIR)
         results = check_drafts(draft_paths)
         by_id = {r.artifact_id: r for r in results}
         urban = by_id["VAR-urban"]

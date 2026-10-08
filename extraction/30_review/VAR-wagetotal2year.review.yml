@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-wagetotal2year
+source_artifact_path: extraction/20_drafts/lbr/VAR-wagetotal2year.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: a6d29fe50d64a7e63fcc1b22b8d62ba67ac29cc5
+source_content_sha256: b6d055db9bde4f1e7d22e4714f337064492618b36f7f390ea1dd3009ccea2275
+enrolled_body_sha256: f9e7f6e13a0dff2c8f29dcff289f4d80c80742d34bdf7249e6e6ffc05d8c0bdc
+current_content_sha256: f9e7f6e13a0dff2c8f29dcff289f4d80c80742d34bdf7249e6e6ffc05d8c0bdc
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

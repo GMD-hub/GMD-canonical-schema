@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-acquihouse
+source_artifact_path: extraction/20_drafts/dwl/VAR-acquihouse.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ecda90bdc60b49e1463147a622cc14c51f8db6fc
+source_content_sha256: e37bc0cbefdab6d93c8f94bf64b9f0b79618f4f13b175bc03e5009fd3e0615b5
+enrolled_body_sha256: 7014014d0bd1c44bc022986b242cda2a354339d6f8142adee7c594a6bec5eb9a
+current_content_sha256: 7014014d0bd1c44bc022986b242cda2a354339d6f8142adee7c594a6bec5eb9a
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

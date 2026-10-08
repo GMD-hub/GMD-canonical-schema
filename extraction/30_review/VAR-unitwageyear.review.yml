@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-unitwageyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-unitwageyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 87a59783cfe5e2d1f2eaa5f723d76270341a54d9
+source_content_sha256: e615d9af43cc5ee099f5d06ed77e1d25130d0b56e33726442903d1d42102902d
+enrolled_body_sha256: 9bf366243a2f03207af31c6b807f0642cbb8f0fe9a1f19e75239b7d8da6de35d
+current_content_sha256: 9bf366243a2f03207af31c6b807f0642cbb8f0fe9a1f19e75239b7d8da6de35d
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

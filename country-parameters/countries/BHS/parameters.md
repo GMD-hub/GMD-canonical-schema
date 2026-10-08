@@ -1,0 +1,276 @@
+---
+country_id: CTY-BHS
+iso3: BHS
+schema_version: '0.2'
+status: draft
+country_name: BHS
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BHS-EDU-01
+    national_label_en: Pre-school education
+    national_label_local: Pre-school
+    entry_age: 3
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: BHS-EDU-02
+    national_label_en: Primary education (or the first stage of basic education)
+    national_label_local: Primary education (or the first stage of basic education)
+    entry_age: 5
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - BHS-EDU-02
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: BHS-EDU-03
+    national_label_en: Lower secondary education (or the second stage of basic education)
+    national_label_local: Lower secondary education (or the second stage of basic
+      education)
+    entry_age: 11
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 9
+    parent_country_entry_ids:
+    - BHS-EDU-02
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BHS-EDU-04
+    national_label_en: Upper secondary education
+    national_label_local: Upper secondary education
+    entry_age: 14
+    duration_years: 3
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - BHS-EDU-03
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    - BHS-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BHS-EDU-05
+    national_label_en: Post-Secondary non-tertiary education
+    national_label_local: Post-Secondary non-tertiary education
+    entry_age: 17
+    duration_years: 1
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 11
+    parent_country_entry_ids:
+    - BHS-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    - BHS-EDU-04
+    - BHS-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BHS-EDU-06
+    national_label_en: Associate Degrees in Arts and Science
+    national_label_local: Associate Degrees in Arts and Science
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 12
+    parent_country_entry_ids:
+    - BHS-EDU-04
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    - BHS-EDU-04
+    - BHS-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BHS-EDU-07
+    national_label_en: Bachelor Degrees
+    national_label_local: Bachelor Degrees
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+    parent_country_entry_ids:
+    - BHS-EDU-04
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    - BHS-EDU-04
+    - BHS-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BHS-EDU-08
+    national_label_en: BA, BSc, Bed
+    national_label_local: BA, BSc, Bed
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+    parent_country_entry_ids:
+    - BHS-EDU-04
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    - BHS-EDU-04
+    - BHS-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: BHS-EDU-09
+    national_label_en: Master Degrees
+    national_label_local: Master Degrees
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+    parent_country_entry_ids:
+    - BHS-EDU-07
+    - BHS-EDU-08
+    cum_years_schooling: 18
+    cum_years_computation_path:
+    - BHS-EDU-02
+    - BHS-EDU-03
+    - BHS-EDU-04
+    - BHS-EDU-07
+    - BHS-EDU-09
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: BHS-EDU-07, BHS-EDU-08'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Bahamas.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BHS-SAN-01
+    source_category_code: home_connected_to_sewerage_system
+    national_label_en: Home connected to sewerage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: BHS-SAN-02
+    source_category_code: home_not_connected_to_sewerage_system
+    national_label_en: Home not connected to sewerage system
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BHS_Bahamas_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: BHS-WAS-01
+    source_category_code: no_drinking_water_on_home
+    national_label_en: No drinking water on home
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: BHS-WAS-02
+    source_category_code: drinking_water_in_home
+    national_label_en: Drinking water in Home
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_BHS_Bahamas_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 2001
+  effective_to: null
+  selectors: null
+  value: 14
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

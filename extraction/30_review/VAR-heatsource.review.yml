@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-heatsource
+source_artifact_path: extraction/20_drafts/utl/VAR-heatsource.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: b810f982cf6ed0de253d46150a98bad840bbaef6
+source_content_sha256: 99708da81a2df8be52d4c32218ac2ef9cbd330c5e8d58e4730d6300475f281fb
+enrolled_body_sha256: 1bc6e949358cbdc8311fff22cefa9c4572552adaecd5372a1bc680bc3dcbd0e0
+current_content_sha256: 1bc6e949358cbdc8311fff22cefa9c4572552adaecd5372a1bc680bc3dcbd0e0
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-othsolexp
+source_artifact_path: extraction/20_drafts/utl/VAR-othsolexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: fe3ef3637ccc8c655e69c54927ee8de48c1354ed
+source_content_sha256: c5550453921956cbbd782a21cc23a937cce0b62d791fab598b1edd15e7d62606
+enrolled_body_sha256: 68af5d40de0c5d8f03c0c830f0ea6a1f6ab8b7eba3c5cdfa2471e2d8fd7c333e
+current_content_sha256: 68af5d40de0c5d8f03c0c830f0ea6a1f6ab8b7eba3c5cdfa2471e2d8fd7c333e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

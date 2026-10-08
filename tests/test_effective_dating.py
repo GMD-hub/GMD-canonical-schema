@@ -1,3 +1,4 @@
+from copy import deepcopy
 import json
 import subprocess
 import sys
@@ -7,8 +8,10 @@ from schema.country_parameters import CountryParameterFile
 from schema.frontmatter import load_markdown
 from schema.parameter import ParameterDefinition
 
+from conftest import write_markdown
 
-PARAMETER_ID = "PARAM-EDU-YEARS-BY-LEVEL"
+
+PARAMETER_ID = "PARAM-DEM-MIN-MARRIAGE-AGE"
 
 
 def applies_in_year(record, year: int) -> bool:
@@ -19,15 +22,34 @@ def applies_in_year(record, year: int) -> bool:
 
 
 def test_effective_dating_boundaries(temp_repository: Path) -> None:
+    path = (
+        temp_repository / "country-parameters" / "countries" / "PER" / "parameters.md"
+    )
+    data, body = load_markdown(path)
+    base = next(
+        record for record in data["parameters"] if record["parameter_id"] == PARAMETER_ID
+    )
+    data["parameters"] = [
+        record for record in data["parameters"] if record["parameter_id"] != PARAMETER_ID
+    ]
+    early = deepcopy(base)
+    early["effective_from"] = 1980
+    early["effective_to"] = 1999
+    early["value"] = 16
+    late = deepcopy(base)
+    late["effective_from"] = 2000
+    late["effective_to"] = None
+    late["value"] = 18
+    data["parameters"].extend([early, late])
+    write_markdown(path, data, body)
+
     registry = {}
-    for path in (temp_repository / "knowledge" / "parameters").glob("*.md"):
-        definition = ParameterDefinition.model_validate(load_markdown(path)[0])
+    for definition_path in (temp_repository / "knowledge" / "parameters").glob("*.md"):
+        definition = ParameterDefinition.model_validate(load_markdown(definition_path)[0])
         registry[definition.parameter_id] = definition
 
     country_file = CountryParameterFile.model_validate(
-        load_markdown(
-            temp_repository / "country-parameters" / "countries" / "PER" / "parameters.md"
-        )[0],
+        load_markdown(path)[0],
         context={"registry": registry},
     )
 

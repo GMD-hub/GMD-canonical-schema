@@ -1,7 +1,7 @@
 """Models for country exception files."""
 
 import re
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, ValidationInfo, field_validator, model_validator
 
@@ -24,8 +24,13 @@ class CountryExceptionRecord(BaseModel):
     applies_to_variables: list[str]
     effective_from: int | None
     effective_to: int | None
+    selectors: dict[str, str | int | bool] | None = None
+    precedence: int | None = None
+    conflict_policy: Literal["error", "higher_precedence_wins"] | None = None
     condition: str
+    condition_structured: dict[str, Any] | None = None
     action: str
+    action_structured: dict[str, Any] | None = None
     rationale: str
     provenance: CountryExceptionProvenance
 
@@ -37,6 +42,14 @@ class CountryExceptionRecord(BaseModel):
             and self.effective_from > self.effective_to
         ):
             raise ValueError("effective_from must be less than or equal to effective_to")
+        if self.precedence is not None and self.precedence < 0:
+            raise ValueError("precedence must be greater than or equal to 0")
+        if self.condition_structured is None and self.action_structured is None:
+            return self
+        if self.condition_structured is None or self.action_structured is None:
+            raise ValueError(
+                "condition_structured and action_structured must be provided together"
+            )
         return self
 
 

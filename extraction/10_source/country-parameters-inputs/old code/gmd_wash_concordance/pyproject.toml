@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmd-wash-concordance"
+version = "1.0.0"
+description = "JMP country household workbook -> GMD System 9 country WASH instruction"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["openpyxl>=3.1", "PyYAML>=6.0"]
+
+[project.scripts]
+gmd-wash-concordance = "gmd_wash_concordance.cli:main"
+
+[tool.setuptools]
+packages = ["gmd_wash_concordance"]
+
+[tool.setuptools.package-data]
+gmd_wash_concordance = ["data/*.yaml", "data/*.css", "data/*.js"]

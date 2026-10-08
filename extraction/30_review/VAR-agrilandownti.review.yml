@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-agrilandownti
+source_artifact_path: extraction/20_drafts/dwl/VAR-agrilandownti.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 7e7af90543c37cd95b152424ada88f77e885e231
+source_content_sha256: c469ba2a4e2407dbe7fd2e61c7583b20b2f1e712f63f2e7e4be95eb65f3f3f87
+enrolled_body_sha256: e904af20330c4e04fa11521c51a305df2771c5f6852c77c4ed6024f2d375888c
+current_content_sha256: e904af20330c4e04fa11521c51a305df2771c5f6852c77c4ed6024f2d375888c
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

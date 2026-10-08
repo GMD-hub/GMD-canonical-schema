@@ -1,0 +1,2247 @@
+---
+country_id: CTY-NPL
+iso3: NPL
+schema_version: '0.2'
+status: draft
+country_name: NPL
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: NPL-EDU-01
+    national_label_en: Early Childhood Development (ECD)
+    national_label_local: ''
+    entry_age: 3
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NPL-EDU-02
+    national_label_en: Pre-Primary Classes (PPCs)
+    national_label_local: ''
+    entry_age: 4
+    duration_years: 1
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: NPL-EDU-03
+    national_label_en: 'Lower Basic Level
+
+      (Grade 1- 5)'
+    national_label_local: ''
+    entry_age: 5
+    duration_years: 5
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 5
+    cum_years_computation_path:
+    - NPL-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: NPL-EDU-04
+    national_label_en: 'Upper Basic Level
+
+      (Grade 6 - 8)'
+    national_label_local: ''
+    entry_age: 10
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - NPL-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NPL-EDU-05
+    national_label_en: 'Secondary Level
+
+      (Grade 9 - 10)'
+    national_label_local: ''
+    entry_age: 13
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 11
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NPL-EDU-06
+    national_label_en: Secondary Education (Grade 11-12)
+    national_label_local: ''
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 12
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NPL-EDU-07
+    national_label_en: Technical and Vocational Secondary
+    national_label_local: ''
+    entry_age: 13
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 13
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NPL-EDU-08
+    national_label_en: Vocational Secondary
+    national_label_local: ''
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NPL-EDU-09
+    national_label_en: Annex Programme
+    national_label_local: ''
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 15
+    parent_country_entry_ids:
+    - NPL-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: NPL-EDU-10
+    national_label_en: Bachelor's Degree
+    national_label_local: ''
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+    parent_country_entry_ids:
+    - NPL-EDU-05
+    - NPL-EDU-06
+    - NPL-EDU-09
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+  - country_entry_id: NPL-EDU-11
+    national_label_en: Bachelor's Degree
+    national_label_local: ''
+    entry_age: 17
+    duration_years: 5
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+    parent_country_entry_ids:
+    - NPL-EDU-05
+    - NPL-EDU-06
+    - NPL-EDU-09
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+  - country_entry_id: NPL-EDU-12
+    national_label_en: Master's Degree
+    national_label_local: ''
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+    parent_country_entry_ids:
+    - NPL-EDU-10
+    - NPL-EDU-11
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-10
+    - NPL-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+    - 'minimum parent path selected from: NPL-EDU-10, NPL-EDU-11'
+  - country_entry_id: NPL-EDU-13
+    national_label_en: M. Phil
+    national_label_local: ''
+    entry_age: 23
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+    parent_country_entry_ids:
+    - NPL-EDU-05
+    - NPL-EDU-06
+    - NPL-EDU-09
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+  - country_entry_id: NPL-EDU-14
+    national_label_en: Ph. D
+    national_label_local: ''
+    entry_age: 23
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+    parent_country_entry_ids:
+    - NPL-EDU-12
+    - NPL-EDU-13
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - NPL-EDU-03
+    - NPL-EDU-04
+    - NPL-EDU-05
+    - NPL-EDU-13
+    - NPL-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: NPL-EDU-05, NPL-EDU-06, NPL-EDU-09'
+    - 'minimum parent path selected from: NPL-EDU-12, NPL-EDU-13'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Nepal.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2015
+  effective_to: 2015
+  selectors: null
+  value:
+  - country_entry_id: NPL-SUBNAT-01
+    survey_labels: 1 - Eastern | 1-Eastern
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2015_GAUL1_2153
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2153'
+    geo_nvar: ADM1_NAME
+    geo_name: Eastern
+    source_row: 10942
+  - country_entry_id: NPL-SUBNAT-02
+    survey_labels: 2 - Central | 2-Central
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2015_GAUL1_2152
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2152'
+    geo_nvar: ADM1_NAME
+    geo_name: Central
+    source_row: 10943
+  - country_entry_id: NPL-SUBNAT-03
+    survey_labels: 3 - Western | 3-Western
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2015_GAUL1_2156
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2156'
+    geo_nvar: ADM1_NAME
+    geo_name: Western
+    source_row: 10944
+  - country_entry_id: NPL-SUBNAT-04
+    survey_labels: 4 - Mid-west | 4-Mid-west
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2015_GAUL1_2155
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2155'
+    geo_nvar: ADM1_NAME
+    geo_name: Mid Western
+    source_row: 10945
+  - country_entry_id: NPL-SUBNAT-05
+    survey_labels: 5 - Far-west | 5-Far-west
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2015_GAUL1_2154
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2015'
+    geo_source: GAUL
+    geo_level: '1'
+    geo_idvar: ADM1_CODE
+    geo_id: '2154'
+    geo_nvar: ADM1_NAME
+    geo_name: Far Western
+    source_row: 10946
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2022
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: NPL-SUBNAT-01
+    survey_labels: 1 - Koshi
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '1'
+    geo_nvar: name
+    geo_name: Koshi
+    source_row: 10957
+  - country_entry_id: NPL-SUBNAT-02
+    survey_labels: 2 - Madhesh
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_2
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '2'
+    geo_nvar: name
+    geo_name: Madhesh
+    source_row: 10958
+  - country_entry_id: NPL-SUBNAT-03
+    survey_labels: 3 - Bagmati
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_3
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '3'
+    geo_nvar: name
+    geo_name: Bagmati
+    source_row: 10959
+  - country_entry_id: NPL-SUBNAT-04
+    survey_labels: 4 - Gandaki
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_4
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '4'
+    geo_nvar: name
+    geo_name: Gandaki
+    source_row: 10960
+  - country_entry_id: NPL-SUBNAT-05
+    survey_labels: 5 - Lumbini
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_5
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '5'
+    geo_nvar: name
+    geo_name: Lumbini
+    source_row: 10961
+  - country_entry_id: NPL-SUBNAT-06
+    survey_labels: 6 - Karnali
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_6
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '6'
+    geo_nvar: name
+    geo_name: Karnali
+    source_row: 10962
+  - country_entry_id: NPL-SUBNAT-07
+    survey_labels: 7 - Sudurpaschim
+    survey_variables: subnatid1
+    gmd_subnatid1: NPL_2022_NSO1_7
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: NSO
+    geo_level: '1'
+    geo_idvar: FIRST_STAT
+    geo_id: '7'
+    geo_nvar: name
+    geo_name: Sudurpashchim
+    source_row: 10963
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: NPL-SAN-01
+    source_category_code: composting_toilet
+    national_label_en: Composting toilet
+    national_label_local: Composting toilets
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - country_entry_id: NPL-SAN-02
+    source_category_code: composting_toilets
+    national_label_en: Composting toilets
+    national_label_local: Composting toilets
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - country_entry_id: NPL-SAN-03
+    source_category_code: composting_toilet_with_slab
+    national_label_en: composting toilet with slab
+    national_label_local: Composting toilet (private)
+    jmp_classification: Composting toilets > Composting toilet (private)
+    jmp_id: composting_toilets.composting_toilet_private
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 129
+  - country_entry_id: NPL-SAN-04
+    source_category_code: composting_toilet_without_slab
+    national_label_en: composting toilet without slab
+    national_label_local: Composting toilet (shared)
+    jmp_classification: Composting toilets > Composting toilet (shared)
+    jmp_id: composting_toilets.composting_toilet_shared
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 130
+  - country_entry_id: NPL-SAN-05
+    source_category_code: flush_to_somewhere_else
+    national_label_en: Flush to somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - country_entry_id: NPL-SAN-06
+    source_category_code: to_elsewhere
+    national_label_en: to elsewhere
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - country_entry_id: NPL-SAN-07
+    source_category_code: to_open_drain
+    national_label_en: to open drain
+    national_label_local: to elsewhere
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - country_entry_id: NPL-SAN-08
+    source_category_code: flush_to_piped_sewer
+    national_label_en: Flush to piped sewer
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: NPL-SAN-09
+    source_category_code: to_piped_sewer_system
+    national_label_en: to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: NPL-SAN-10
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: NPL-SAN-11
+    source_category_code: to_pit
+    national_label_en: to pit
+    national_label_local: to pit
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: NPL-SAN-12
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: NPL-SAN-13
+    source_category_code: to_septic_tank
+    national_label_en: to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: NPL-SAN-14
+    source_category_code: flush_to_unknown_place
+    national_label_en: Flush to unknown place
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: NPL-SAN-15
+    source_category_code: to_do_not_know_where
+    national_label_en: to do not know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: NPL-SAN-16
+    source_category_code: to_unknown_place_not_sure_dk
+    national_label_en: to unknown place/ not sure/DK
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: NPL-SAN-17
+    source_category_code: flush_toilet
+    national_label_en: Flush toilet
+    national_label_local: Flush/toilets
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: NPL-SAN-18
+    source_category_code: private_domestic_connection_to_sewage_system
+    national_label_en: Private domestic connection to sewage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - country_entry_id: NPL-SAN-19
+    source_category_code: private_flush_to_septic_tank
+    national_label_en: Private flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - country_entry_id: NPL-SAN-20
+    source_category_code: shared_domestic_connection_to_sewage_system
+    national_label_en: Shared domestic connection to sewage system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - country_entry_id: NPL-SAN-21
+    source_category_code: shared_flush_to_septic_tank
+    national_label_en: Shared flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - country_entry_id: NPL-SAN-22
+    source_category_code: flush_not_to_sewer_septic_tank_pit_latrine
+    national_label_en: Flush not to sewer/septic tank/pit latrine
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - country_entry_id: NPL-SAN-23
+    source_category_code: flush_to_elsewhere
+    national_label_en: Flush to elsewhere
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - country_entry_id: NPL-SAN-24
+    source_category_code: flush_to_somewhere_else
+    national_label_en: Flush to somewhere else
+    national_label_local: to elsewhere
+    jmp_classification: Flush/toilets > to elsewhere
+    jmp_id: flush_toilets.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 71
+  - country_entry_id: NPL-SAN-25
+    source_category_code: flush_municipal
+    national_label_en: flush - municipal
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: NPL-SAN-26
+    source_category_code: flush_to_piped_sewer
+    national_label_en: Flush to piped sewer
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: NPL-SAN-27
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: to piped sewer system
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: NPL-SAN-28
+    source_category_code: flush_to_pit
+    national_label_en: Flush to pit
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: NPL-SAN-29
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit latrine
+    national_label_local: to pit
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: NPL-SAN-30
+    source_category_code: flush_septic_tank
+    national_label_en: flush - septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: NPL-SAN-31
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: to septic tank
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: NPL-SAN-32
+    source_category_code: flush_to_don_t_know
+    national_label_en: Flush to don't know
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: NPL-SAN-33
+    source_category_code: flush_don_t_know_where
+    national_label_en: Flush, don't know where
+    national_label_local: to unknown place/ not sure/DK
+    jmp_classification: Flush/toilets > to unknown place/ not sure/DK
+    jmp_id: flush_toilets.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: NPL-SAN-34
+    source_category_code: bucket_latrine
+    national_label_en: Bucket latrine
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: NPL-SAN-35
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+    national_label_en: Bucket latrine (where fresh excreta are manually removed)
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: NPL-SAN-36
+    source_category_code: bucket_toilet
+    national_label_en: Bucket toilet
+    national_label_local: Bucket latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: NPL-SAN-37
+    source_category_code: hanging_toilet_latrine
+    national_label_en: Hanging toilet/latrine
+    national_label_local: Hanging toilet/hanging latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
+    gmd_target: hanging
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 109
+  - country_entry_id: NPL-SAN-38
+    source_category_code: pan
+    national_label_en: Pan *
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: NPL-SAN-39
+    source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine with slab
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: NPL-SAN-40
+    source_category_code: pit_latrine_with_slab_covered_latrine
+    national_label_en: Pit latrine with slab/covered latrine
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: NPL-SAN-41
+    source_category_code: pit_latrine_without_slab
+    national_label_en: Pit latrine without slab
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: NPL-SAN-42
+    source_category_code: pit_latrine_without_slab
+    national_label_en: Pit latrine without slab/
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: NPL-SAN-43
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab/open pit
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: NPL-SAN-44
+    source_category_code: uncovered_dry_latrine_without_privacy
+    national_label_en: Uncovered dry latrine (without privacy)
+    national_label_local: Pit latrine without slab/open pit
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: NPL-SAN-45
+    source_category_code: traditional_pit_latrine
+    national_label_en: Traditional pit latrine
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: NPL-SAN-46
+    source_category_code: traditional_pit_toilet
+    national_label_en: traditional pit toilet
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: NPL-SAN-47
+    source_category_code: ventilated_improved_pit
+    national_label_en: Ventilated improved pit
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: NPL-SAN-48
+    source_category_code: ventilated_improved_pit_vip_latrine
+    national_label_en: Ventilated improved pit (VIP) latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: NPL-SAN-49
+    source_category_code: ventilated_improved_pit_latrine
+    national_label_en: Ventilated Improved Pit latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: NPL-SAN-50
+    source_category_code: ventilated_improved_pit_latrine_vip
+    national_label_en: Ventilated improved pit latrine (vip)
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: NPL-SAN-51
+    source_category_code: ventilated_improved_pit_latrine
+    national_label_en: ventilated/improved pit latrine
+    national_label_local: Ventilated Improved Pit latrine
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: NPL-SAN-52
+    source_category_code: private_covered_dry_latrine_with_privacy
+    national_label_en: Private covered dry latrine (with privacy)
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
+      slab/covered latrine
+    jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 114
+  - country_entry_id: NPL-SAN-53
+    source_category_code: non_flush
+    national_label_en: non-flush
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
+    jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 115
+  - country_entry_id: NPL-SAN-54
+    source_category_code: shared_covered_dry_latrine_with_privacy
+    national_label_en: Shared covered dry latrine (with privacy)
+    national_label_local: Pit latrine with slab/covered latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - country_entry_id: NPL-SAN-55
+    source_category_code: communal_latrine
+    national_label_en: communal latrine
+    national_label_local: Traditional latrine
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: true
+    source_row: 123
+  - country_entry_id: NPL-SAN-56
+    source_category_code: private_pour_flush_latrine
+    national_label_en: Private pour flush latrine
+    national_label_local: Private pour flush latrine
+    jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
+    jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: NPL-SAN-57
+    source_category_code: shared_pour_flush_latrine
+    national_label_en: Shared pour flush latrine
+    national_label_local: Public/shared pour flush latrine
+    jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
+      latrine
+    jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 97
+  - country_entry_id: NPL-SAN-58
+    source_category_code: no_facilities
+    national_label_en: No Facilities
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: NPL-SAN-59
+    source_category_code: no_facilities_open_defecation
+    national_label_en: No facilities (open defecation)
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: NPL-SAN-60
+    source_category_code: no_facility_bush_field
+    national_label_en: No facility, bush, field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: NPL-SAN-61
+    source_category_code: no_facility_bush_field
+    national_label_en: No facility/bush/field
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: NPL-SAN-62
+    source_category_code: no_toilet
+    national_label_en: no toilet
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: NPL-SAN-63
+    source_category_code: open_defecation_no_facility_bush_field
+    national_label_en: Open defecation/(no facility, bush, field)
+    national_label_local: No facility, bush, field
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: NPL-SAN-64
+    source_category_code: biogas_attached_toilet
+    national_label_en: biogas attached toilet
+    national_label_local: Other
+    jmp_classification: Other improved > Other
+    jmp_id: other_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 132
+  - country_entry_id: NPL-SAN-65
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NPL_Nepal_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: NPL-WAS-01
+    source_category_code: spring_water
+    national_label_en: Spring water
+    national_label_local: All springs
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - country_entry_id: NPL-WAS-02
+    source_category_code: sprong_kuwa
+    national_label_en: sprong/kuwa
+    national_label_local: All springs
+    jmp_classification: Ground water > All springs
+    jmp_id: ground_water.all_springs
+    gmd_target: ''
+    gmd_spans: protected_spring|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 74
+  - country_entry_id: NPL-WAS-03
+    source_category_code: protected_spring
+    national_label_en: Protected spring
+    national_label_local: Protected spring
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - country_entry_id: NPL-WAS-04
+    source_category_code: covered_well
+    national_label_en: Covered well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: NPL-WAS-05
+    source_category_code: protected_dug_well
+    national_label_en: Protected dug well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: NPL-WAS-06
+    source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: Protected well
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: NPL-WAS-07
+    source_category_code: protected_dug_well_or_protected_spring
+    national_label_en: Protected dug well or protected spring
+    national_label_local: Protected wells or springs
+    jmp_classification: Ground water > Protected wells or springs
+    jmp_id: ground_water.protected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: protected_well|protected_spring
+    improved_flag: true
+    shared_flag: false
+    source_row: 46
+  - country_entry_id: NPL-WAS-08
+    source_category_code: well_spring_protected
+    national_label_en: Well/spring protected
+    national_label_local: Protected wells or springs
+    jmp_classification: Ground water > Protected wells or springs
+    jmp_id: ground_water.protected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: protected_well|protected_spring
+    improved_flag: true
+    shared_flag: false
+    source_row: 46
+  - country_entry_id: NPL-WAS-09
+    source_category_code: well_in_house_yard_plot
+    national_label_en: well in house/yard/plot
+    national_label_local: Private
+    jmp_classification: Ground water > Traditional wells > Private
+    jmp_id: ground_water.traditional_wells.private
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: NPL-WAS-10
+    source_category_code: well_in_residence
+    national_label_en: Well in residence
+    national_label_local: Private
+    jmp_classification: Ground water > Traditional wells > Private
+    jmp_id: ground_water.traditional_wells.private
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: NPL-WAS-11
+    source_category_code: public_well
+    national_label_en: Public well
+    national_label_local: Public
+    jmp_classification: Ground water > Traditional wells > Public
+    jmp_id: ground_water.traditional_wells.public
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 64
+  - country_entry_id: NPL-WAS-12
+    source_category_code: public_neighbor_s_well
+    national_label_en: public/neighbor's well
+    national_label_local: Public
+    jmp_classification: Ground water > Traditional wells > Public
+    jmp_id: ground_water.traditional_wells.public
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: true
+    source_row: 64
+  - country_entry_id: NPL-WAS-13
+    source_category_code: bore_hole_hand_pump
+    national_label_en: Bore hole/ hand pump
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: NPL-WAS-14
+    source_category_code: protected_tube_well_or_bore_hole
+    national_label_en: Protected tube well or bore hole
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: NPL-WAS-15
+    source_category_code: tube_well_or_borehole
+    national_label_en: Tube well or borehole
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: NPL-WAS-16
+    source_category_code: tubewell_borehole
+    national_label_en: Tubewell, borehole
+    national_label_local: Tubewell, borehole
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: NPL-WAS-17
+    source_category_code: tubewell_handpump_with_platform
+    national_label_en: Tubewell/handpump/with platform
+    national_label_local: Other
+    jmp_classification: Ground water > Tubewell, borehole > Other
+    jmp_id: ground_water.tubewell_borehole.other
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: NPL-WAS-18
+    source_category_code: handpump_in_residence
+    national_label_en: Handpump in Residence
+    national_label_local: Private
+    jmp_classification: Ground water > Tubewell, borehole > Private
+    jmp_id: ground_water.tubewell_borehole.private
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 59
+  - country_entry_id: NPL-WAS-19
+    source_category_code: tubewell_in_yard_plot
+    national_label_en: tubewell in yard/plot
+    national_label_local: Private
+    jmp_classification: Ground water > Tubewell, borehole > Private
+    jmp_id: ground_water.tubewell_borehole.private
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 59
+  - country_entry_id: NPL-WAS-20
+    source_category_code: public_handpump
+    national_label_en: Public Handpump
+    national_label_local: Public
+    jmp_classification: Ground water > Tubewell, borehole > Public
+    jmp_id: ground_water.tubewell_borehole.public
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 60
+  - country_entry_id: NPL-WAS-21
+    source_category_code: public_neighbor_s_tubewell
+    national_label_en: public/neighbor's tubewell
+    national_label_local: Public
+    jmp_classification: Ground water > Tubewell, borehole > Public
+    jmp_id: ground_water.tubewell_borehole.public
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 60
+  - country_entry_id: NPL-WAS-22
+    source_category_code: tubewell_handpump_without_platform
+    national_label_en: Tubewell/handpump/without platform
+    national_label_local: Public
+    jmp_classification: Ground water > Tubewell, borehole > Public
+    jmp_id: ground_water.tubewell_borehole.public
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 60
+  - country_entry_id: NPL-WAS-23
+    source_category_code: unprotected_spring
+    national_label_en: Unprotected spring
+    national_label_local: Unprotected spring
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - country_entry_id: NPL-WAS-24
+    source_category_code: open_well
+    national_label_en: Open well
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: NPL-WAS-25
+    source_category_code: unprotected_dug_well
+    national_label_en: Unprotected dug well
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: NPL-WAS-26
+    source_category_code: unprotected_well
+    national_label_en: Unprotected well
+    national_label_local: Unprotected well
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: NPL-WAS-27
+    source_category_code: unprotected_dug_well_or_spring
+    national_label_en: Unprotected dug well or spring
+    national_label_local: Unprotected wells or springs
+    jmp_classification: Ground water > Unprotected wells or springs
+    jmp_id: ground_water.unprotected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: unprotected_well|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 50
+  - country_entry_id: NPL-WAS-28
+    source_category_code: well_spring_unprotected
+    national_label_en: Well/spring unprotected
+    national_label_local: Unprotected wells or springs
+    jmp_classification: Ground water > Unprotected wells or springs
+    jmp_id: ground_water.unprotected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: unprotected_well|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 50
+  - country_entry_id: NPL-WAS-29
+    source_category_code: cart_with_small_tank
+    national_label_en: Cart with small tank
+    national_label_local: Cart with small tank/drum
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - country_entry_id: NPL-WAS-30
+    source_category_code: cart_with_small_tank_drum_cane
+    national_label_en: Cart with small tank/drum/cane
+    national_label_local: Cart with small tank/drum
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - country_entry_id: NPL-WAS-31
+    source_category_code: stone_tap_dhara_is_kind_of_spring
+    national_label_en: Stone tap (Dhara) {is  kind of spring}
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - country_entry_id: NPL-WAS-32
+    source_category_code: stone_tap_dhara
+    national_label_en: stone tap/dhara
+    national_label_local: Other
+    jmp_classification: Other improved sources > Other
+    jmp_id: other_improved_sources.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 103
+  - country_entry_id: NPL-WAS-33
+    source_category_code: tanker_truck
+    national_label_en: Tanker truck
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: NPL-WAS-34
+    source_category_code: tanker_truck_provided
+    national_label_en: Tanker truck provided
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: NPL-WAS-35
+    source_category_code: tanker_truck_vendor
+    national_label_en: Tanker truck/vendor
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: NPL-WAS-36
+    source_category_code: tanker_truck_vendor
+    national_label_en: Tanker-truck, vendor
+    national_label_local: Tanker truck provided
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: NPL-WAS-37
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: NPL-WAS-38
+    source_category_code: other_sources
+    national_label_en: Other sources
+    national_label_local: Other
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: NPL-WAS-39
+    source_category_code: boottled_jar_water
+    national_label_en: Boottled/jar water
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: NPL-WAS-40
+    source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: NPL-WAS-41
+    source_category_code: bottled_water_improved_source_for_cooking_washing
+    national_label_en: Bottled water, improved source for cooking/washing
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: NPL-WAS-42
+    source_category_code: bottled_with_improved
+    national_label_en: Bottled with improved
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: NPL-WAS-43
+    source_category_code: packaged_water_bottled_water
+    national_label_en: 'Packaged water: bottled water'
+    national_label_local: Bottled water
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: NPL-WAS-44
+    source_category_code: bottled_water_nonimproved_source_for_cooking_washing
+    national_label_en: Bottled water, nonimproved source for cooking/washing
+    national_label_local: Sachet water
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: NPL-WAS-45
+    source_category_code: bottled_without_improved
+    national_label_en: Bottled without improved
+    national_label_local: Sachet water
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: NPL-WAS-46
+    source_category_code: packaged_water_jar_water
+    national_label_en: 'Packaged water: jar water'
+    national_label_local: Sachet water
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: NPL-WAS-47
+    source_category_code: rain_water
+    national_label_en: Rain water
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: NPL-WAS-48
+    source_category_code: rainwater
+    national_label_en: Rainwater
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: NPL-WAS-49
+    source_category_code: rainwater_into_tank_or_cistern
+    national_label_en: Rainwater (into tank or cistern )
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: NPL-WAS-50
+    source_category_code: rainwater_collection
+    national_label_en: Rainwater collection
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: NPL-WAS-51
+    source_category_code: rainwater_collection_harvesting
+    national_label_en: Rainwater collection/harvesting
+    national_label_local: Covered cistern/tank
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: NPL-WAS-52
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+    national_label_en: river/dam/lake/ponds/stream/canal/irrigation channel
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: NPL-WAS-53
+    source_category_code: river_stream_pond_lake
+    national_label_en: river/stream/pond/lake
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: NPL-WAS-54
+    source_category_code: surface_water
+    national_label_en: Surface water
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: NPL-WAS-55
+    source_category_code: surface_water_river_dam_lake_pond_stream_canal_irrigation_channel
+    national_label_en: Surface water /river, dam, lake, pond, stream, canal, irrigation
+      channel)
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: NPL-WAS-56
+    source_category_code: water_taken_directly_from_pond_water_or_stream
+    national_label_en: Water taken directly from pond-water or stream
+    national_label_local: Surface water
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: NPL-WAS-57
+    source_category_code: lake_reservoir
+    national_label_en: Lake/reservoir
+    national_label_local: Lake
+    jmp_classification: Surface water > Lake
+    jmp_id: surface_water.lake
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 94
+  - country_entry_id: NPL-WAS-58
+    source_category_code: river_stream
+    national_label_en: River/ stream
+    national_label_local: River
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - country_entry_id: NPL-WAS-59
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+    national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
+    national_label_local: River
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - country_entry_id: NPL-WAS-60
+    source_category_code: river_spring
+    national_label_en: River/spring
+    national_label_local: River
+    jmp_classification: Surface water > River
+    jmp_id: surface_water.river
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 93
+  - country_entry_id: NPL-WAS-61
+    source_category_code: pipe_borne_water_untreated
+    national_label_en: Pipe borne water untreated
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: NPL-WAS-62
+    source_category_code: piped_to_neighbor
+    national_label_en: piped to neighbor
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: NPL-WAS-63
+    source_category_code: piped_to_neighbour
+    national_label_en: Piped to neighbour
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: NPL-WAS-64
+    source_category_code: piped_to_neighbours
+    national_label_en: Piped to neighbours
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: NPL-WAS-65
+    source_category_code: piped_water_to_neighbour
+    national_label_en: Piped water to neighbour
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: NPL-WAS-66
+    source_category_code: public_nieghbor_s_tap
+    national_label_en: public/nieghbor's tap
+    national_label_local: Other
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: NPL-WAS-67
+    source_category_code: piped_into_house_yard_plot
+    national_label_en: piped into house/yard/plot
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: NPL-WAS-68
+    source_category_code: piped_into_residence
+    national_label_en: Piped into residence
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: NPL-WAS-69
+    source_category_code: piped_to_house
+    national_label_en: Piped to house
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: NPL-WAS-70
+    source_category_code: piped_water_into_house_yard_plot
+    national_label_en: Piped water into house/yard/plot
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: NPL-WAS-71
+    source_category_code: piped_water_through_house_connection_or_yard
+    national_label_en: Piped water through house connection or yard
+    national_label_local: Piped on premises
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: NPL-WAS-72
+    source_category_code: piped_into_dwelling
+    national_label_en: Piped into dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: NPL-WAS-73
+    source_category_code: piped_water_into_dwelling
+    national_label_en: Piped water into dwelling
+    national_label_local: Piped water into dwelling
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: NPL-WAS-74
+    source_category_code: piped_to_yard_plot
+    national_label_en: Piped to yard/plot
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: NPL-WAS-75
+    source_category_code: piped_water_to_yard_plot
+    national_label_en: Piped water to yard/plot
+    national_label_local: Piped water to yard/plot
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: NPL-WAS-76
+    source_category_code: pipe_borne_water_treated
+    national_label_en: Pipe borne water treated
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: NPL-WAS-77
+    source_category_code: piped_outside_of_house
+    national_label_en: Piped outside of house
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: NPL-WAS-78
+    source_category_code: public_standpipe
+    national_label_en: Public standpipe
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: NPL-WAS-79
+    source_category_code: public_tap
+    national_label_en: Public Tap
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: NPL-WAS-80
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap, standpipe
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: NPL-WAS-81
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: Public tap, standpipe
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_NPL_Nepal_1.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1997
+  effective_to: null
+  selectors: null
+  value: 14
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

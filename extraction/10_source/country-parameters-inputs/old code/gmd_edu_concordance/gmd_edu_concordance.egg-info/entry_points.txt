@@ -1,0 +1,2 @@
+[console_scripts]
+gmd-edu-concordance = gmd_edu_concordance.cli:main

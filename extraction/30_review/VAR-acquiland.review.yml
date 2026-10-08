@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-acquiland
+source_artifact_path: extraction/20_drafts/dwl/VAR-acquiland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 519dfad529fd610c762199f5eb10bc701998c275
+source_content_sha256: 0adddf512fc2a2fb87773af5bf1c5324491c24c167079e3a98a753d209c063e0
+enrolled_body_sha256: afa6ed835c513f68084d2fe1dbed362e96cae9bd726a882e851450625a668d38
+current_content_sha256: afa6ed835c513f68084d2fe1dbed362e96cae9bd726a882e851450625a668d38
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

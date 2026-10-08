@@ -1,0 +1,1952 @@
+---
+country_id: CTY-UKR
+iso3: UKR
+schema_version: '0.2'
+status: draft
+country_name: UKR
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UKR-EDU-01
+    national_label_en: Pre-primary education for young children
+    national_label_local: "\u0414\u043E\u0448\u043A\u0456\u043B\u044C\u043D\u0430\
+      \ \u043E\u0441\u0432\u0456\u0442\u0430 \u0434\u043B\u044F \u0434\u0456\u0442\
+      \u0435\u0439 \u043C\u043E\u043B\u043E\u0434\u0448\u043E\u0433\u043E \u0432\u0456\
+      \u043A\u0443"
+    entry_age: 1
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: UKR-EDU-02
+    national_label_en: Pre-primary education
+    national_label_local: "\u0414\u043E\u0448\u043A\u0456\u043B\u044C\u043D\u0430\
+      \ \u043E\u0441\u0432\u0456\u0442\u0430"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: UKR-EDU-03
+    national_label_en: Primary general education
+    national_label_local: "\u041F\u043E\u0447\u0430\u0442\u043A\u043E\u0432\u0430\
+      \ \u0437\u0430\u0433\u0430\u043B\u044C\u043D\u0430 \u043E\u0441\u0432\u0456\u0442\
+      \u0430"
+    entry_age: 6
+    duration_years: 4
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 4
+    cum_years_computation_path:
+    - UKR-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: UKR-EDU-04
+    national_label_en: Basic general secondary education
+    national_label_local: "\u0411\u0430\u0437\u043E\u0432\u0430 \u0437\u0430\u0433\
+      \u0430\u043B\u044C\u043D\u0430 \u0441\u0435\u0440\u0435\u0434\u043D\u044F \u043E\
+      \u0441\u0432\u0456\u0442\u0430"
+    entry_age: 10
+    duration_years: 5
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - UKR-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UKR-EDU-05
+    national_label_en: General secondary education
+    national_label_local: "\u041F\u043E\u0432\u043D\u0430 \u0437\u0430\u0433\u0430\
+      \u043B\u044C\u043D\u0430 \u0441\u0435\u0440\u0435\u0434\u043D\u044F \u043E\u0441\
+      \u0432\u0456\u0442\u0430"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+    parent_country_entry_ids:
+    - UKR-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UKR-EDU-06
+    national_label_en: Vocational training
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0456\u0439\u043D\u0430\
+      \ \u043F\u0456\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0430"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 12
+    parent_country_entry_ids:
+    - UKR-EDU-04
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UKR-EDU-07
+    national_label_en: Technical-vocational education
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0456\u0439\u043D\u043E\
+      -\u0442\u0435\u0445\u043D\u0456\u0447\u043D\u0430 \u043E\u0441\u0432\u0456\u0442\
+      \u0430"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 13
+    parent_country_entry_ids:
+    - UKR-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UKR-EDU-08
+    national_label_en: Technical-vocational education
+    national_label_local: "\u041F\u0440\u043E\u0444\u0435\u0441\u0456\u0439\u043D\u043E\
+      -\u0442\u0435\u0445\u043D\u0456\u0447\u043D\u0430 \u043E\u0441\u0432\u0456\u0442\
+      \u0430"
+    entry_age: 15
+    duration_years: 4
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 14
+    parent_country_entry_ids:
+    - UKR-EDU-04
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UKR-EDU-09
+    national_label_en: Non completed higher education
+    national_label_local: "\u041D\u0435\u043F\u043E\u0432\u043D\u0430 \u0432\u0438\
+      \u0449\u0430 \u043E\u0441\u0432\u0456\u0442\u0430"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 15
+    parent_country_entry_ids:
+    - UKR-EDU-04
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: UKR-EDU-10
+    national_label_en: Post-secondary non-tertiary vocational education
+    national_label_local: "\u041F\u0456\u0441\u043B\u044F\u0441\u0435\u0440\u0435\u0434\
+      \u043D\u0454\n\u043D\u0435\u0442\u0440\u0435\u0442\u0438\u0447\u043D\u0435\n\
+      \u043F\u0440\u043E\u0444\u0435\u0441\u0456\u0439\u043D\u043E-\n\u0442\u0435\u0445\
+      \u043D\u0456\u0447\u043D\u0435\n\u043E\u0441\u0432\u0456\u0442\u0430"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 16
+    parent_country_entry_ids:
+    - UKR-EDU-05
+    - UKR-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+  - country_entry_id: UKR-EDU-11
+    national_label_en: Non completed higher education
+    national_label_local: "\u041D\u0435\u043F\u043E\u0432\u043D\u0430 \u0432\u0438\
+      \u0449\u0430 \u043E\u0441\u0432\u0456\u0442\u0430"
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 17
+    parent_country_entry_ids:
+    - UKR-EDU-05
+    - UKR-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+  - country_entry_id: UKR-EDU-12
+    national_label_en: Higher education
+    national_label_local: "\u0412\u0438\u0449\u0430 \u043E\u0441\u0432\u0456\u0442\
+      \u0430"
+    entry_age: 17
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 18
+    parent_country_entry_ids:
+    - UKR-EDU-05
+    - UKR-EDU-09
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+  - country_entry_id: UKR-EDU-13
+    national_label_en: Higher education
+    national_label_local: "\u0412\u0438\u0449\u0430 \u043E\u0441\u0432\u0456\u0442\
+      \u0430"
+    entry_age: 17
+    duration_years: 6
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 19
+    parent_country_entry_ids:
+    - UKR-EDU-05
+    - UKR-EDU-09
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+  - country_entry_id: UKR-EDU-14
+    national_label_en: Higher education
+    national_label_local: "\u0412\u0438\u0449\u0430 \u043E\u0441\u0432\u0456\u0442\
+      \u0430"
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 20
+    parent_country_entry_ids:
+    - UKR-EDU-05
+    - UKR-EDU-09
+    cum_years_schooling: 13
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+  - country_entry_id: UKR-EDU-15
+    national_label_en: Aspirantura
+    national_label_local: "\u0410\u0441\u043F\u0456\u0440\u0430\u043D\u0442\u0443\u0440\
+      \u0430"
+    entry_age: 22
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 21
+    parent_country_entry_ids:
+    - UKR-EDU-13
+    - UKR-EDU-14
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-14
+    - UKR-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+    - 'minimum parent path selected from: UKR-EDU-13, UKR-EDU-14'
+  - country_entry_id: UKR-EDU-16
+    national_label_en: Doctorantura
+    national_label_local: "\u0414\u043E\u043A\u0442\u043E\u0440\u0430\u043D\u0442\u0443\
+      \u0440\u0430"
+    entry_age: 25
+    duration_years: 3
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 22
+    parent_country_entry_ids:
+    - UKR-EDU-13
+    - UKR-EDU-14
+    cum_years_schooling: 16
+    cum_years_computation_path:
+    - UKR-EDU-03
+    - UKR-EDU-04
+    - UKR-EDU-05
+    - UKR-EDU-14
+    - UKR-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: UKR-EDU-05, UKR-EDU-09'
+    - 'minimum parent path selected from: UKR-EDU-13, UKR-EDU-14'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Ukraine.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2022
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UKR-SUBNAT-01
+    survey_labels: "1 -  Crimea | 1 - Crimea | 1 \u2013 Crimea"
+    survey_variables: subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.4_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.4_1
+    geo_nvar: NAME_1
+    geo_name: Crimea
+    source_row: 17173
+  - country_entry_id: UKR-SUBNAT-02
+    survey_labels: "12 - Dnipropetrovsk | 12 \u2013 Dnepropetrovsk | 12 \u2013 Dnipropetrovsk\
+      \ | 4 \u2013 Dnepropetrovsk"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.5_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.5_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.5_1
+    geo_nvar: NAME_1
+    geo_name: Dnipropetrovs'k
+    source_row: 17174
+  - country_entry_id: UKR-SUBNAT-03
+    survey_labels: "14 - Donetsk | 14 \u2013 Donetsk | 5 \u2013 Donetsk"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.6_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.6_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.6_1
+    geo_nvar: NAME_1
+    geo_name: Donets'k
+    source_row: 17175
+  - country_entry_id: UKR-SUBNAT-04
+    survey_labels: "18 - Zhytomyr | 18 \u2013 Zhytomyr | 6 \u2013 Zhytomyr"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.27_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.27_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.27_1
+    geo_nvar: NAME_1
+    geo_name: Zhytomyr
+    source_row: 17176
+  - country_entry_id: UKR-SUBNAT-05
+    survey_labels: "21 - Zakarpattia | 21 \u2013 Transcarpathian | 21 \u2013 Zakarpattia"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.23_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.23_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.23_1
+    geo_nvar: NAME_1
+    geo_name: Zakarpattia
+    source_row: 17177
+  - country_entry_id: UKR-SUBNAT-06
+    survey_labels: "23 - Zaporizhzhia | 23 \u2013 Zaporizhzhia | 23 \u2013 Zaporizhzhya\
+      \ | 8 \u2013 Zaporizhzhya"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.26_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.26_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.26_1
+    geo_nvar: NAME_1
+    geo_name: Zaporizhia
+    source_row: 17178
+  - country_entry_id: UKR-SUBNAT-07
+    survey_labels: "26 - Ivano-Frankivsk | 26 \u2013 Ivano-Frankivsk | 9 \u2013 Ivano-Frankivsk"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.7_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.7_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.7_1
+    geo_nvar: NAME_1
+    geo_name: Ivano-Frankivs'k
+    source_row: 17179
+  - country_entry_id: UKR-SUBNAT-08
+    survey_labels: "10 \u2013 Kiev (without Kiev) | 32 - Kyiv Oblast | 32 \u2013 Kiev\
+      \ (without Kiev) | 32 \u2013 Kyiv Oblast"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.12_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.12_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.12_1
+    geo_nvar: NAME_1
+    geo_name: Kiev
+    source_row: 17180
+  - country_entry_id: UKR-SUBNAT-09
+    survey_labels: "11 \u2013 Kirovograd | 35 - Kirovohrad | 35 \u2013 Kirovograd\
+      \ | 35 \u2013 Kirovohrad"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.13_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.13_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.13_1
+    geo_nvar: NAME_1
+    geo_name: Kirovohrad
+    source_row: 17181
+  - country_entry_id: UKR-SUBNAT-10
+    survey_labels: "12 \u2013 Lugansk | 44 - Luhansk | 44 \u2013 Lugansk | 44 \u2013\
+      \ Luhansk"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.15_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.15_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.15_1
+    geo_nvar: NAME_1
+    geo_name: Luhans'k
+    source_row: 17182
+  - country_entry_id: UKR-SUBNAT-11
+    survey_labels: "13 \u2013 Lviv | 46 - Lviv | 46 \u2013 Lviv"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.14_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.14_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.14_1
+    geo_nvar: NAME_1
+    geo_name: L'viv
+    source_row: 17183
+  - country_entry_id: UKR-SUBNAT-12
+    survey_labels: "14 \u2013 Nikolaevskaya | 48 - Mykolayiv | 48 \u2013 Mykolayiv\
+      \ | 48 \u2013 Nikolaevskaya"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.16_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.16_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.16_1
+    geo_nvar: NAME_1
+    geo_name: Mykolayiv
+    source_row: 17184
+  - country_entry_id: UKR-SUBNAT-13
+    survey_labels: "2 \u2013 Vinnitsa | 5 - Vinnytsia | 5 \u2013 Vinnitsa | 5 \u2013\
+      \ Vinnytsia"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.24_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.24_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.24_1
+    geo_nvar: NAME_1
+    geo_name: Vinnytsya
+    source_row: 17185
+  - country_entry_id: UKR-SUBNAT-14
+    survey_labels: "15 \u2013 Odessa | 51 - Odesa | 51 \u2013 Odesa | 51 \u2013 Odessa"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.17_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.17_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.17_1
+    geo_nvar: NAME_1
+    geo_name: Odessa
+    source_row: 17186
+  - country_entry_id: UKR-SUBNAT-15
+    survey_labels: "16 \u2013 Poltava | 53 - Poltava | 53 \u2013 Poltava"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.18_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.18_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.18_1
+    geo_nvar: NAME_1
+    geo_name: Poltava
+    source_row: 17187
+  - country_entry_id: UKR-SUBNAT-16
+    survey_labels: "17 \u2013 Rivne | 56 - Rivne | 56 \u2013 Rivne"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.19_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.19_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.19_1
+    geo_nvar: NAME_1
+    geo_name: Rivne
+    source_row: 17188
+  - country_entry_id: UKR-SUBNAT-17
+    survey_labels: "18 \u2013 Sumy | 59 - Sumy | 59 \u2013 Sumy"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.21_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.21_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.21_1
+    geo_nvar: NAME_1
+    geo_name: Sumy
+    source_row: 17189
+  - country_entry_id: UKR-SUBNAT-18
+    survey_labels: "19 \u2013 Ternopol | 61 - Ternopil | 61 \u2013 Ternopil | 61 \u2013\
+      \ Ternopol"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.22_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.22_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.22_1
+    geo_nvar: NAME_1
+    geo_name: Ternopil'
+    source_row: 17190
+  - country_entry_id: UKR-SUBNAT-19
+    survey_labels: "20 \u2013 Harkovskaya | 63 - Kharkiv | 63 \u2013 Harkovskaya |\
+      \ 63 \u2013 Kharkiv"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.8_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.8_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.8_1
+    geo_nvar: NAME_1
+    geo_name: Kharkiv
+    source_row: 17191
+  - country_entry_id: UKR-SUBNAT-20
+    survey_labels: "21 \u2013 Kherson | 65 - Kherson | 65 \u2013 Kherson"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.9_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.9_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.9_1
+    geo_nvar: NAME_1
+    geo_name: Kherson
+    source_row: 17192
+  - country_entry_id: UKR-SUBNAT-21
+    survey_labels: "22 \u2013 Khmelnitsky | 68 - Khmelnitsky | 68 \u2013 Khmelnitsky"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.10_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.10_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.10_1
+    geo_nvar: NAME_1
+    geo_name: Khmel'nyts'kyy
+    source_row: 17193
+  - country_entry_id: UKR-SUBNAT-22
+    survey_labels: "3 \u2013 Volyn | 7 - Volyn | 7 \u2013 Volyn"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.25_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.25_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.25_1
+    geo_nvar: NAME_1
+    geo_name: Volyn
+    source_row: 17194
+  - country_entry_id: UKR-SUBNAT-23
+    survey_labels: "23 \u2013 Cherkasy | 71 - Cherkasy | 71 \u2013 Cherkasy"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.1_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.1_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.1_1
+    geo_nvar: NAME_1
+    geo_name: Cherkasy
+    source_row: 17195
+  - country_entry_id: UKR-SUBNAT-24
+    survey_labels: "24 \u2013 Chernovetskaya | 73 - Chernivtsi | 73 \u2013 Chernivtsi\
+      \ | 73 \u2013 Chernovetskaya"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.3_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.3_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.3_1
+    geo_nvar: NAME_1
+    geo_name: Chernivtsi
+    source_row: 17196
+  - country_entry_id: UKR-SUBNAT-25
+    survey_labels: "25 \u2013 Chernihiv | 74 - Chernihiv | 74 \u2013 Chernihiv"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.2_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADM1_UKR.2_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.2_1
+    geo_nvar: NAME_1
+    geo_name: Chernihiv
+    source_row: 17197
+  - country_entry_id: UKR-SUBNAT-26
+    survey_labels: "26 \u2013 Kiev | 80 - City of Kyiv | 80 \u2013 City of Kyiv |\
+      \ 80 \u2013 Kiev"
+    survey_variables: subnatid | subnatid1
+    gmd_subnatid1: UKR_2022_GADMx_UKR.11_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: UKR_2022_GADMx_UKR.11_1
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: x
+    geo_idvar: GID_1
+    geo_id: UKR.11_1
+    geo_nvar: NAME_1
+    geo_name: Kiev City
+    source_row: 17198
+  - country_entry_id: UKR-SUBNAT-27
+    survey_labels: "85 - Sevastopol | 85 \u2013 Sevastopol"
+    survey_variables: subnatid1
+    gmd_subnatid1: UKR_2022_GADM1_UKR.20_1
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ''
+    geo_year: '2022'
+    geo_source: GADM
+    geo_level: '1'
+    geo_idvar: GID_1
+    geo_id: UKR.20_1
+    geo_nvar: NAME_1
+    geo_name: Sevastopol'
+    source_row: 17199
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UKR-SAN-01
+    source_category_code: composting_toilet
+    national_label_en: Composting toilet
+    national_label_local: "\u041A\u043E\u043C\u043F\u043E\u0441\u0442\u0438\u0440\u0443\
+      \u044E\u0449\u0438\u0435 \u0442\u0443\u0430\u043B\u0435\u0442\u044B"
+    jmp_classification: Composting toilets
+    jmp_id: composting_toilets
+    gmd_target: composting
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 128
+  - country_entry_id: UKR-SAN-02
+    source_category_code: flush_to_somewhere_else
+    national_label_en: Flush to somewhere else
+    national_label_local: "\u043A\u0443\u0434\u0430-\u0442\u043E \u0432 \u0434\u0440\
+      \u0443\u0433\u043E\u0435 \u043C\u0435\u0441\u0442\u043E"
+    jmp_classification: Flush and pour flush > to elsewhere
+    jmp_id: flush_and_pour_flush.to_elsewhere
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 65
+  - country_entry_id: UKR-SAN-03
+    source_category_code: flush_pour_flush_to_piped_sewer_system
+    national_label_en: 'Flush / pour flush to Piped sewer
+
+      system'
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: UKR-SAN-04
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush and pour flush > to piped sewer system
+    jmp_id: flush_and_pour_flush.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 61
+  - country_entry_id: UKR-SAN-05
+    source_category_code: flush_pour_flush_to_pit_latrine
+    national_label_en: Flush / pour flush to Pit (latrine)
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: UKR-SAN-06
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit latrine
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush and pour flush > to pit
+    jmp_id: flush_and_pour_flush.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 63
+  - country_entry_id: UKR-SAN-07
+    source_category_code: flush_pour_flush_to_septic_tank
+    national_label_en: Flush / pour flush to Septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: UKR-SAN-08
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush and pour flush > to septic tank
+    jmp_id: flush_and_pour_flush.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: UKR-SAN-09
+    source_category_code: flush_don_t_know_where
+    national_label_en: Flush - don't know where
+    national_label_local: "\u0432 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\
+      \u043D\u043E\u0435 \u043C\u0435\u0441\u0442\u043E/\u043D\u0435 \u0437\u043D\u0430\
+      \u044E/\u043D\u0435 \u0443\u0432\u0435\u0440\u0435\u043D(\u0430)"
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: UKR-SAN-10
+    source_category_code: flushed_to_somewhere_else
+    national_label_en: Flushed to somewhere else
+    national_label_local: "\u0432 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\
+      \u043D\u043E\u0435 \u043C\u0435\u0441\u0442\u043E/\u043D\u0435 \u0437\u043D\u0430\
+      \u044E/\u043D\u0435 \u0443\u0432\u0435\u0440\u0435\u043D(\u0430)"
+    jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
+    jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
+    gmd_target: flush_elsewhere
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 64
+  - country_entry_id: UKR-SAN-11
+    source_category_code: flush_pour_type_toilet
+    national_label_en: flush/pour type toilet
+    national_label_local: "\u0422\u0443\u0430\u043B\u0435\u0442\u044B \u0441\u043E\
+      \ \u0441\u043C\u044B\u0432\u043E\u043C"
+    jmp_classification: Flush/toilets
+    jmp_id: flush_toilets
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: UKR-SAN-12
+    source_category_code: private_domestic_connection_to_sewage_system
+    national_label_en: Private domestic connection to sewage system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush/toilets > Private flush/toilet > to piped sewer system
+    jmp_id: flush_toilets.private_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 73
+  - country_entry_id: UKR-SAN-13
+    source_category_code: private_flush_to_septic_tank
+    national_label_en: Private flush to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush/toilets > Private flush/toilet > to septic tank
+    jmp_id: flush_toilets.private_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 74
+  - country_entry_id: UKR-SAN-14
+    source_category_code: shared_domestic_connection_to_sewage_system
+    national_label_en: Shared domestic connection to sewage system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to piped sewer
+      system
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 79
+  - country_entry_id: UKR-SAN-15
+    source_category_code: shared_flush_to_septic_tank
+    national_label_en: Shared flush to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush/toilets > Public/shared flush/toilet > to septic tank
+    jmp_id: flush_toilets.public_shared_flush_toilet.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 80
+  - country_entry_id: UKR-SAN-16
+    source_category_code: flush_to_piped_sewer_system
+    national_label_en: Flush to piped sewer system
+    national_label_local: "\u0432 \u0442\u0440\u0443\u0431\u043E\u043F\u0440\u043E\
+      \u0432\u043E\u0434\u043D\u0443\u044E \u043A\u0430\u043D\u0430\u043B\u0438\u0437\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u0443\u044E \u0441\u0438\u0441\u0442\u0435\
+      \u043C\u0443"
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: UKR-SAN-17
+    source_category_code: flush_to_pit_latrine
+    national_label_en: Flush to pit (latrine)
+    national_label_local: "\u0432 \u0432\u044B\u0433\u0440\u0435\u0431\u043D\u0443\
+      \u044E \u044F\u043C\u0443"
+    jmp_classification: Flush/toilets > to pit
+    jmp_id: flush_toilets.to_pit
+    gmd_target: flush_pit
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 69
+  - country_entry_id: UKR-SAN-18
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: "\u0432 \u0441\u0435\u043F\u0442\u0438\u043A\u0442\u0435\
+      \u043D\u043A"
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: UKR-SAN-19
+    source_category_code: bucket
+    national_label_en: Bucket
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u043E\
+      \u0442\u0445\u043E\u0436\u0438\u043C \u0432\u0435\u0434\u0440\u043E\u043C"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: UKR-SAN-20
+    source_category_code: bucket_toilet
+    national_label_en: Bucket toilet
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u043E\
+      \u0442\u0445\u043E\u0436\u0438\u043C \u0432\u0435\u0434\u0440\u043E\u043C"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 110
+  - country_entry_id: UKR-SAN-21
+    source_category_code: pit_latrine_with_slab
+    national_label_en: Pit latrine with slab
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: UKR-SAN-22
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab / open pit
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: UKR-SAN-23
+    source_category_code: pit_latrine_without_slab_open_pit
+    national_label_en: Pit latrine without slab/open pit
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: UKR-SAN-24
+    source_category_code: uncovered_dry_latrine_without_privacy
+    national_label_en: Uncovered dry latrine (without privacy)
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0431\
+      \u0435\u0437 \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\
+      \u0438\u0442\u044B/\u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u043E\u0439 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      without slab/open pit
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
+    gmd_target: pit_noslab
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 108
+  - country_entry_id: UKR-SAN-25
+    source_category_code: latrine_without_flush_pour_system
+    national_label_en: latrine without flush/pour system
+    national_label_local: "\u0422\u0440\u0430\u0434\u0438\u0446\u0438\u043E\u043D\u043D\
+      \u0430\u044F \u0443\u0431\u043E\u0440\u043D\u0430\u044F"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Traditional
+      latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.traditional_latrine
+    gmd_target: ''
+    gmd_spans: pit_slab|pit_noslab
+    improved_flag: false
+    shared_flag: false
+    source_row: 107
+  - country_entry_id: UKR-SAN-26
+    source_category_code: ventilated_improved_pit_latrine
+    national_label_en: Ventilated improved pit latrine
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: UKR-SAN-27
+    source_category_code: ventilated_improved_pit_latrine_vip
+    national_label_en: Ventilated Improved Pit latrine (VIP)
+    national_label_local: "\u0412\u0435\u043D\u0442\u0438\u043B\u0438\u0440\u0443\u0435\
+      \u043C\u044B\u0435 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u043D\u044B\u0435\
+      \ \u0443\u0431\u043E\u0440\u043D\u044B\u0435 \u0441 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
+      Pit latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
+    gmd_target: vip
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 105
+  - country_entry_id: UKR-SAN-28
+    source_category_code: bucket_latrine_where_fresh_excreta_are_manually_removed
+    national_label_en: Bucket latrine (where fresh excreta are manually removed)
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u043E\
+      \u0442\u0445\u043E\u0436\u0438\u043C \u0432\u0435\u0434\u0440\u043E\u043C"
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Bucket latrine
+    jmp_id: latrines.dry_latrines.private_latrines.bucket_latrine
+    gmd_target: bucket
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 118
+  - country_entry_id: UKR-SAN-29
+    source_category_code: private_covered_dry_latrine_with_privacy
+    national_label_en: Private covered dry latrine (with privacy)
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Private Latrines > Pit latrine with
+      slab/covered latrine
+    jmp_id: latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 114
+  - country_entry_id: UKR-SAN-30
+    source_category_code: shared_covered_dry_latrine_with_privacy
+    national_label_en: Shared covered dry latrine (with privacy)
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u0432\
+      \u044B\u0433\u0440\u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439 \u0441\
+      \ \u043D\u0430\u043F\u043E\u043B\u044C\u043D\u043E\u0439 \u043F\u043B\u0438\u0442\
+      \u043E\u0439/\u0441 \u043A\u0440\u044B\u0442\u043E\u0439 \u0432\u044B\u0433\u0440\
+      \u0435\u0431\u043D\u043E\u0439 \u044F\u043C\u043E\u0439"
+    jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: true
+    source_row: 122
+  - country_entry_id: UKR-SAN-31
+    source_category_code: flush_pour_type_latrine
+    national_label_en: flush/pour type latrine
+    national_label_local: "\u0423\u0431\u043E\u0440\u043D\u044B\u0435 \u0441\u043E\
+      \ \u0441\u043C\u044B\u0432\u043E\u043C"
+    jmp_classification: Latrines > Pour flush latrines
+    jmp_id: latrines.pour_flush_latrines
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 85
+  - country_entry_id: UKR-SAN-32
+    source_category_code: private_pour_flush_latrine
+    national_label_en: Private pour flush latrine
+    national_label_local: "\u0421\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u0430\
+      \u044F \u0443\u0431\u043E\u0440\u043D\u0430\u044F \u0441 \u043F\u0440\u043E\u043C\
+      \u044B\u0432\u043E\u043C \u0432\u0440\u0443\u0447\u043D\u0443\u044E"
+    jmp_classification: Latrines > Pour flush latrines > Private pour flush latrine
+    jmp_id: latrines.pour_flush_latrines.private_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: UKR-SAN-33
+    source_category_code: shared_pour_flush_latrine
+    national_label_en: Shared pour flush latrine
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u0430\u044F/\u0441\u043E\u0432\u043C\u0435\u0441\u0442\u043D\u043E\u0433\u043E\
+      \ \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F \u0443\u0431\
+      \u043E\u0440\u043D\u0430\u044F \u0441 \u043F\u0440\u043E\u043C\u044B\u0432\u043E\
+      \u043C \u0432\u0440\u0443\u0447\u043D\u0443\u044E"
+    jmp_classification: Latrines > Pour flush latrines > Public/shared pour flush
+      latrine
+    jmp_id: latrines.pour_flush_latrines.public_shared_pour_flush_latrine
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: true
+    source_row: 97
+  - country_entry_id: UKR-SAN-34
+    source_category_code: no_facilities_open_defecation
+    national_label_en: No facilities (open defecation)
+    national_label_local: "\u0421\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u0439\
+      \ \u043D\u0435\u0442, \u043A\u0443\u0441\u0442\u044B, \u043F\u043E\u043B\u0435"
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: UKR-SAN-35
+    source_category_code: no_facility
+    national_label_en: No facility
+    national_label_local: "\u0421\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u0439\
+      \ \u043D\u0435\u0442, \u043A\u0443\u0441\u0442\u044B, \u043F\u043E\u043B\u0435"
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: UKR-SAN-36
+    source_category_code: none
+    national_label_en: None
+    national_label_local: "\u0421\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u0439\
+      \ \u043D\u0435\u0442, \u043A\u0443\u0441\u0442\u044B, \u043F\u043E\u043B\u0435"
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  - country_entry_id: UKR-SAN-37
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 136
+  - country_entry_id: UKR-SAN-38
+    source_category_code: public_toilet_flush_bucket_vip
+    national_label_en: Public toilet (flush, bucket, VIP)
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other unimproved > Other
+    jmp_id: other_unimproved.other#2
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 137
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_UKR_Ukraine_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: UKR-WAS-01
+    source_category_code: protected_spring
+    national_label_en: Protected spring
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0439\
+      \ \u0440\u043E\u0434\u043D\u0438\u043A"
+    jmp_classification: Ground water > Protected spring
+    jmp_id: ground_water.protected_spring
+    gmd_target: protected_spring
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 78
+  - country_entry_id: UKR-WAS-02
+    source_category_code: protected_well
+    national_label_en: Protected well
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Protected well
+    jmp_id: ground_water.protected_well
+    gmd_target: protected_well
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 66
+  - country_entry_id: UKR-WAS-03
+    source_category_code: protected_dug_well_or_protected_spring
+    national_label_en: Protected dug well or protected spring
+    national_label_local: "\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u044B\u0435\
+      \ \u043A\u043E\u043B\u043E\u0434\u0446\u044B \u0438\u043B\u0438 \u0440\u043E\
+      \u0434\u043D\u0438\u043A\u0438"
+    jmp_classification: Ground water > Protected wells or springs
+    jmp_id: ground_water.protected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: protected_well|protected_spring
+    improved_flag: true
+    shared_flag: false
+    source_row: 46
+  - country_entry_id: UKR-WAS-04
+    source_category_code: well
+    national_label_en: Well
+    national_label_local: "\u0422\u0440\u0430\u0434\u0438\u0446\u0438\u043E\u043D\u043D\
+      \u044B\u0435 \u043A\u043E\u043B\u043E\u0434\u0446\u044B"
+    jmp_classification: Ground water > Traditional wells
+    jmp_id: ground_water.traditional_wells
+    gmd_target: ''
+    gmd_spans: protected_well|unprotected_well
+    improved_flag: false
+    shared_flag: false
+    source_row: 62
+  - country_entry_id: UKR-WAS-05
+    source_category_code: protected_tube_well_or_bore_hole
+    national_label_en: Protected tube well or bore hole
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: UKR-WAS-06
+    source_category_code: tube_well_borehole
+    national_label_en: Tube well, borehole
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: UKR-WAS-07
+    source_category_code: tubewell_borehole
+    national_label_en: Tubewell/borehole
+    national_label_local: "\u0422\u0440\u0443\u0431\u0447\u0430\u0442\u044B\u0439\
+      \ \u043A\u043E\u043B\u043E\u0434\u0435\u0446, \u0441\u043A\u0432\u0430\u0436\
+      \u0438\u043D\u0430"
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: UKR-WAS-08
+    source_category_code: unprotected_spring
+    national_label_en: Unprotected spring
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0439 \u0440\u043E\u0434\u043D\u0438\u043A"
+    jmp_classification: Ground water > Unprotected spring
+    jmp_id: ground_water.unprotected_spring
+    gmd_target: unprotected_spring
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 82
+  - country_entry_id: UKR-WAS-09
+    source_category_code: unprotected_well
+    national_label_en: Unprotected well
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0439 \u043A\u043E\u043B\u043E\u0434\u0435\u0446"
+    jmp_classification: Ground water > Unprotected well
+    jmp_id: ground_water.unprotected_well
+    gmd_target: unprotected_well
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 70
+  - country_entry_id: UKR-WAS-10
+    source_category_code: unprotected_dug_well_or_spring
+    national_label_en: Unprotected dug well or spring
+    national_label_local: "\u041D\u0435\u0437\u0430\u0449\u0438\u0449\u0451\u043D\u043D\
+      \u044B\u0435 \u043A\u043E\u043B\u043E\u0434\u0446\u044B \u0438\u043B\u0438 \u0440\
+      \u043E\u0434\u043D\u0438\u043A\u0438"
+    jmp_classification: Ground water > Unprotected wells or springs
+    jmp_id: ground_water.unprotected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: unprotected_well|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 50
+  - country_entry_id: UKR-WAS-11
+    source_category_code: cart_with_small_tank_drum
+    national_label_en: Cart with small tank/drum
+    national_label_local: "\u0422\u0435\u043B\u0435\u0436\u043A\u0430 \u0441 \u043D\
+      \u0435\u0431\u043E\u043B\u044C\u0448\u0438\u043C \u0431\u0430\u043A\u043E\u043C\
+      /\u0431\u043E\u0447\u043A\u043E\u0439"
+    jmp_classification: Other improved sources > Cart with small tank/drum
+    jmp_id: other_improved_sources.cart_with_small_tank_drum
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 101
+  - country_entry_id: UKR-WAS-12
+    source_category_code: tanker_truck
+    national_label_en: Tanker truck
+    national_label_local: "\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\
+      \u0441\u044F \u0430\u0432\u0442\u043E\u0446\u0438\u0441\u0442\u0435\u0440\u043D\
+      \u043E\u0439"
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: UKR-WAS-13
+    source_category_code: tanker_truck
+    national_label_en: Tanker-truck
+    national_label_local: "\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\
+      \u0441\u044F \u0430\u0432\u0442\u043E\u0446\u0438\u0441\u0442\u0435\u0440\u043D\
+      \u043E\u0439"
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: UKR-WAS-14
+    source_category_code: tanker_truck_vendor
+    national_label_en: Tanker-truck, vendor
+    national_label_local: "\u0414\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\
+      \u0441\u044F \u0430\u0432\u0442\u043E\u0446\u0438\u0441\u0442\u0435\u0440\u043D\
+      \u043E\u0439"
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: UKR-WAS-15
+    source_category_code: other
+    national_label_en: Other
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Other non-improved > Other
+    jmp_id: other_non_improved.other
+    gmd_target: other
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: UKR-WAS-16
+    source_category_code: bottled_water
+    national_label_en: Bottled water
+    national_label_local: "\u0411\u0443\u0442\u0438\u043B\u0438\u0440\u043E\u0432\u0430\
+      \u043D\u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: UKR-WAS-17
+    source_category_code: bottled_water_improved
+    national_label_en: Bottled water + improved
+    national_label_local: "\u0411\u0443\u0442\u0438\u043B\u0438\u0440\u043E\u0432\u0430\
+      \u043D\u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: UKR-WAS-18
+    source_category_code: bottled_with_improved
+    national_label_en: Bottled with improved
+    national_label_local: "\u0411\u0443\u0442\u0438\u043B\u0438\u0440\u043E\u0432\u0430\
+      \u043D\u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Packaged water > Bottled water
+    jmp_id: packaged_water.bottled_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 90
+  - country_entry_id: UKR-WAS-19
+    source_category_code: bottled_water_improved
+    national_label_en: Bottled water - improved
+    national_label_local: "\u0412\u043E\u0434\u0430 \u0432 \u043F\u0430\u043A\u0435\
+      \u0442\u0430\u0445"
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: UKR-WAS-20
+    source_category_code: bottled_without_improved
+    national_label_en: Bottled without improved
+    national_label_local: "\u0412\u043E\u0434\u0430 \u0432 \u043F\u0430\u043A\u0435\
+      \u0442\u0430\u0445"
+    jmp_classification: Packaged water > Sachet water
+    jmp_id: packaged_water.sachet_water
+    gmd_target: bottled
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 91
+  - country_entry_id: UKR-WAS-21
+    source_category_code: rainwater
+    national_label_en: Rainwater
+    national_label_local: "\u041A\u0440\u044B\u0442\u0430\u044F \u0446\u0438\u0441\
+      \u0442\u0435\u0440\u043D\u0430/\u0440\u0435\u0437\u0435\u0440\u0432\u0443\u0430\
+      \u0440"
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: UKR-WAS-22
+    source_category_code: rainwater_into_tank_or_cistern
+    national_label_en: Rainwater (into tank or cistern )
+    national_label_local: "\u041A\u0440\u044B\u0442\u0430\u044F \u0446\u0438\u0441\
+      \u0442\u0435\u0440\u043D\u0430/\u0440\u0435\u0437\u0435\u0440\u0432\u0443\u0430\
+      \u0440"
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: UKR-WAS-23
+    source_category_code: river_dam_lake_ponds_stream_canal_irrigation_channel
+    national_label_en: River/dam/lake/ponds/stream/canal/irrigation channel
+    national_label_local: "\u041F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: UKR-WAS-24
+    source_category_code: surface_water
+    national_label_en: Surface water
+    national_label_local: "\u041F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: UKR-WAS-25
+    source_category_code: water_taken_directly_from_pond_water_or_stream
+    national_label_en: Water taken directly from pond-water or stream
+    national_label_local: "\u041F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430"
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: UKR-WAS-26
+    source_category_code: piped_to_neighbour
+    national_label_en: Piped to neighbour
+    national_label_local: "\u0414\u0440\u0443\u0433\u043E\u0435"
+    jmp_classification: Tap water > Other
+    jmp_id: tap_water.other
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 42
+  - country_entry_id: UKR-WAS-27
+    source_category_code: piped_water_through_house_connection_or_yard
+    national_label_en: Piped water through house connection or yard
+    national_label_local: "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\
+      \u044F \u043A \u0434\u043E\u043C\u0443"
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: UKR-WAS-28
+    source_category_code: piped_into_dwelling
+    national_label_en: Piped into dwelling
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432 \u0436\u0438\u043B\u0438\u0449\u0435"
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: UKR-WAS-29
+    source_category_code: water_pipe_into_the_dwelling_or_in_the_compound
+    national_label_en: water pipe into the dwelling or in the compound
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432 \u0436\u0438\u043B\u0438\u0449\u0435"
+    jmp_classification: Tap water > Piped on premises > Piped water into dwelling
+    jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 39
+  - country_entry_id: UKR-WAS-30
+    source_category_code: piped_into_compound_yard_or_plot
+    national_label_en: Piped into compound, yard or plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: UKR-WAS-31
+    source_category_code: piped_into_yard_or_plot
+    national_label_en: Piped into yard or plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: UKR-WAS-32
+    source_category_code: piped_into_yard_plot
+    national_label_en: Piped into yard/plot
+    national_label_local: "\u0412\u043E\u0434\u043E\u043F\u0440\u043E\u0432\u043E\u0434\
+      \u043D\u0430\u044F \u0432\u043E\u0434\u0430 \u043F\u043E\u0434\u0430\u0435\u0442\
+      \u0441\u044F \u0432\u043E \u0434\u0432\u043E\u0440/\u043D\u0430 \u0443\u0447\
+      \u0430\u0441\u0442\u043E\u043A"
+    jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
+    jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 40
+  - country_entry_id: UKR-WAS-33
+    source_category_code: public_standpipe
+    national_label_en: Public standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: UKR-WAS-34
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap / standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: UKR-WAS-35
+    source_category_code: public_tap_standpipe
+    national_label_en: Public tap/standpipe
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  - country_entry_id: UKR-WAS-36
+    source_category_code: water_pipe_outside_the_compound
+    national_label_en: water pipe outside the compound
+    national_label_local: "\u041E\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043D\u043D\
+      \u044B\u0439 \u043A\u0440\u0430\u043D, \u043A\u043E\u043B\u043E\u043D\u043A\u0430"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_UKR_Ukraine_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1990
+  effective_to: null
+  selectors: null
+  value: 16
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

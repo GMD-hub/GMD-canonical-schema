@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "jmp_files_total": 239,
+  "water": {
+    "written": 151,
+    "unchanged": 0,
+    "no_rows": 86,
+    "error": 2,
+    "invalid_iso3": 0
+  },
+  "sanitation": {
+    "written": 147,
+    "unchanged": 0,
+    "no_rows": 90,
+    "error": 2,
+    "invalid_iso3": 0
+  },
+  "benchmark_water": {
+    "written": 237,
+    "unchanged": 0,
+    "error": 2,
+    "invalid_iso3": 0
+  },
+  "benchmark_sanitation": {
+    "written": 237,
+    "unchanged": 0,
+    "error": 2,
+    "invalid_iso3": 0
+  },
+  "errors": [
+    {
+      "file": "extraction\\10_source\\country-parameters-inputs\\JMP\\JMP_2025_REG.xlsx",
+      "iso3": "",
+      "error": "'water'"
+    },
+    {
+      "file": "extraction\\10_source\\country-parameters-inputs\\JMP\\JMP_2025_WLD.xlsx",
+      "iso3": "",
+      "error": "'water'"
+    }
+  ]
+}

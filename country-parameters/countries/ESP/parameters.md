@@ -1,0 +1,1469 @@
+---
+country_id: CTY-ESP
+iso3: ESP
+schema_version: '0.2'
+status: draft
+country_name: ESP
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ESP-EDU-01
+    national_label_en: Early childhood education - First cycle
+    national_label_local: "Educaci\xF3n Infantil Primer ciclo (0-2 a\xF1os)"
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 5
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ESP-EDU-02
+    national_label_en: Early childhood education - Second cycle
+    national_label_local: "Educaci\xF3n Infantil Segundo ciclo (3+ a\xF1os)"
+    entry_age: 3
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 6
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: ESP-EDU-03
+    national_label_en: Primary education
+    national_label_local: "Educaci\xF3n Primaria"
+    entry_age: 6
+    duration_years: 6
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: ESP-EDU-04
+    national_label_en: Adult education - primary level
+    national_label_local: "Ense\xF1anzas Iniciales de Educaci\xF3n B\xE1sica para\
+      \ personas en edad adulta"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_incomplete
+    gmd_educat7_target: primary_incomplete
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path:
+    - ESP-EDU-04
+    cum_years_status: computed
+    review_flags: &id002 []
+  - country_entry_id: ESP-EDU-05
+    national_label_en: Compulsory-lower secondary education
+    national_label_local: "Educaci\xF3n Secundaria Obligatoria - Primer ciclo (1\xBA\
+      \ a 3\xBA curso)"
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 9
+    parent_country_entry_ids:
+    - ESP-EDU-03
+    cum_years_schooling: 9
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ESP-EDU-06
+    national_label_en: Adult compulsory secondary education
+    national_label_local: "Educaci\xF3n Secundaria para Adultos"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 10
+    parent_country_entry_ids:
+    - ESP-EDU-04
+    cum_years_schooling: 2
+    cum_years_computation_path:
+    - ESP-EDU-04
+    - ESP-EDU-06
+    cum_years_status: computed
+    review_flags: *id002
+  - country_entry_id: ESP-EDU-07
+    national_label_en: Pre-vocational - special education
+    national_label_local: "Transici\xF3n a la vida adulta"
+    entry_age: 16
+    duration_years: 2
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 11
+    parent_country_entry_ids:
+    - ESP-EDU-03
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ESP-EDU-08
+    national_label_en: Professional Certificate - level 1
+    national_label_local: Certificados de Profesionalidad de nivel 1
+    entry_age: 16
+    duration_years: 0
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 12
+    parent_country_entry_ids:
+    - ESP-EDU-03
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ESP-EDU-09
+    national_label_en: Other training programmes of basic level
+    national_label_local: "Otros programas formativos de nivel b\xE1sico"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_incomplete
+    source_row: 13
+    parent_country_entry_ids:
+    - ESP-EDU-03
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: ESP-EDU-10
+    national_label_en: Compulsory-upper secondary education
+    national_label_local: "Educaci\xF3n Secundaria Obligatoria - Segundo ciclo (4\xBA\
+      \ curso)"
+    entry_age: 15
+    duration_years: 1
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 14
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-10
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-11
+    national_label_en: General upper secondary education
+    national_label_local: Bachillerato
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 15
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-11
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-12
+    national_label_en: General upper secondary education (distance learning)
+    national_label_local: Bachillerato (distancia)
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 16
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-12
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-13
+    national_label_en: Vocational training -intermediate level
+    national_label_local: Ciclos Formativos  de Grado Medio
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 17
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-13
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-14
+    national_label_en: Vocational training -intermediate level
+    national_label_local: Ciclos Formativos  de Grado Medio
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 18
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-14
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-15
+    national_label_en: Vocational training - intermediate level (distance learning)
+    national_label_local: Ciclos Formativos  de Grado Medio (distancia)
+    entry_age: 18
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 19
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-15
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-16
+    national_label_en: Languages studies at the official school for languages
+    national_label_local: Escuelas Oficiales de Idiomas
+    entry_age: 16
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 20
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-16
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-17
+    national_label_en: Dance and Music studies - intermediate level
+    national_label_local: "E. Profesionales de Danza y de M\xFAsica"
+    entry_age: 12
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 21
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-17
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-18
+    national_label_en: Professional Certificate - level 2
+    national_label_local: Certificados de Profesionalidad de nivel 2
+    entry_age: 16
+    duration_years: 0
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 22
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-19
+    national_label_en: Basic Vocational Training
+    national_label_local: "Formaci\xF3n Profesional B\xE1sica"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 23
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-19
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-20
+    national_label_en: Basic Vocational Training
+    national_label_local: "Formaci\xF3n Profesional B\xE1sica"
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_incomplete
+    source_row: 24
+    parent_country_entry_ids:
+    - ESP-EDU-05
+    - ESP-EDU-07
+    - ESP-EDU-08
+    - ESP-EDU-09
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-20
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+  - country_entry_id: ESP-EDU-21
+    national_label_en: Specific degrees of universities (less 2 years)
+    national_label_local: "T\xEDtulos propios de Universidad (menos 2 a\xF1os)"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 25
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-21
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-22
+    national_label_en: Professional Certificate - level 3
+    national_label_local: Certificados de Profesionalidad de nivel 3
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 26
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-22
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-23
+    national_label_en: Specialization courses for Intermediate VET graduates
+    national_label_local: "Cursos de especializaci\xF3n de graduados de Formaci\xF3\
+      n Profesional de grado medio"
+    entry_age: 18
+    duration_years: 0
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 27
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-23
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-24
+    national_label_en: Specific vocational training - advanced level
+    national_label_local: Ciclos Formativos de Grado Superior
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 28
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-24
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-25
+    national_label_en: Specific vocational training - advanced level
+    national_label_local: Ciclos Formativos de Grado Superior
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 29
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-25
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-26
+    national_label_en: Specific vocational training  -advanced level(Distance learning)
+    national_label_local: Ciclos Formativos de Grado Superior-Distancia
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 30
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-26
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-27
+    national_label_en: Specific degrees of universities (2 and more years)
+    national_label_local: "T\xEDtulos propios de Universidad (2 y m\xE1s a\xF1os)"
+    entry_age: 18
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 31
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-27
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-28
+    national_label_en: Specialization courses for Higher VET graduates
+    national_label_local: "Cursos de especializaci\xF3n de graduados de Formaci\xF3\
+      n Profesional de grado superior"
+    entry_age: 20
+    duration_years: 1
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 32
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-28
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-29
+    national_label_en: Bachelor (4 years)
+    national_label_local: "Grado (4 a\xF1os)"
+    entry_age: 18
+    duration_years: 4
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 33
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-29
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-30
+    national_label_en: Short Post-grade degree
+    national_label_local: "T\xEDtulos propios universitarios de experto o especialista\
+      \ (menos de 60 cr\xE9ditos ECTS)"
+    entry_age: 22
+    duration_years: 0
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 34
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 6
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-30
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-31
+    national_label_en: Master degree
+    national_label_local: "M\xE1ster oficial"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 35
+    parent_country_entry_ids:
+    - ESP-EDU-29
+    - ESP-EDU-30
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-30
+    - ESP-EDU-31
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+    - 'minimum parent path selected from: ESP-EDU-29, ESP-EDU-30'
+  - country_entry_id: ESP-EDU-32
+    national_label_en: Long Bachelor degree (5 and 6 years)
+    national_label_local: "Grado (5 y 6 a\xF1os)"
+    entry_age: 18
+    duration_years: 5
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 36
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-32
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-33
+    national_label_en: Post-degree health studies  (specialist )
+    national_label_local: Especialidades Sanitarias
+    entry_age: 24
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 37
+    parent_country_entry_ids:
+    - ESP-EDU-10
+    - ESP-EDU-11
+    - ESP-EDU-12
+    - ESP-EDU-16
+    - ESP-EDU-17
+    - ESP-EDU-18
+    cum_years_schooling: 8
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-33
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+  - country_entry_id: ESP-EDU-34
+    national_label_en: Specific master degrees of universities
+    national_label_local: "M\xE1ster universitario y curso post-grado"
+    entry_age: 22
+    duration_years: 1
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 38
+    parent_country_entry_ids:
+    - ESP-EDU-29
+    - ESP-EDU-30
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-30
+    - ESP-EDU-34
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+    - 'minimum parent path selected from: ESP-EDU-29, ESP-EDU-30'
+  - country_entry_id: ESP-EDU-35
+    national_label_en: University education - Doctorate
+    national_label_local: Doctorado
+    entry_age: 23
+    duration_years: 4
+    isced_level: '8'
+    isced_label: ISCED 8 Doctoral or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 39
+    parent_country_entry_ids:
+    - ESP-EDU-31
+    - ESP-EDU-32
+    - ESP-EDU-33
+    - ESP-EDU-34
+    cum_years_schooling: 11
+    cum_years_computation_path:
+    - ESP-EDU-03
+    - ESP-EDU-08
+    - ESP-EDU-18
+    - ESP-EDU-30
+    - ESP-EDU-31
+    - ESP-EDU-35
+    cum_years_status: computed
+    review_flags:
+    - 'minimum parent path selected from: ESP-EDU-05, ESP-EDU-07, ESP-EDU-08, ESP-EDU-09'
+    - 'minimum parent path selected from: ESP-EDU-10, ESP-EDU-11, ESP-EDU-12, ESP-EDU-16,
+      ESP-EDU-17, ESP-EDU-18'
+    - 'minimum parent path selected from: ESP-EDU-29, ESP-EDU-30'
+    - 'minimum parent path selected from: ESP-EDU-31, ESP-EDU-32, ESP-EDU-33, ESP-EDU-34'
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Spain.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-GEO-GMD-CROSSWALK
+  effective_from: 2021
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ESP-SUBNAT-01
+    survey_labels: 1-ES11
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES11
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES11
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES11
+    geo_nvar: NAME_LATN
+    geo_name: Galicia
+    source_row: 4323
+  - country_entry_id: ESP-SUBNAT-02
+    survey_labels: 10-ES42
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES42
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES42
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES42
+    geo_nvar: NAME_LATN
+    geo_name: Castilla-La Mancha
+    source_row: 4324
+  - country_entry_id: ESP-SUBNAT-03
+    survey_labels: 11-ES43
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES43
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES43
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES43
+    geo_nvar: NAME_LATN
+    geo_name: Extremadura
+    source_row: 4325
+  - country_entry_id: ESP-SUBNAT-04
+    survey_labels: 12-ES51
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES51
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES51
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES51
+    geo_nvar: NAME_LATN
+    geo_name: "Catalu\xF1a"
+    source_row: 4326
+  - country_entry_id: ESP-SUBNAT-05
+    survey_labels: 13-ES52
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES52
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES52
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES52
+    geo_nvar: NAME_LATN
+    geo_name: Comunitat Valenciana
+    source_row: 4327
+  - country_entry_id: ESP-SUBNAT-06
+    survey_labels: 14-ES53
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES53
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES53
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES53
+    geo_nvar: NAME_LATN
+    geo_name: Illes Balears
+    source_row: 4328
+  - country_entry_id: ESP-SUBNAT-07
+    survey_labels: 15-ES61
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES61
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES61
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES61
+    geo_nvar: NAME_LATN
+    geo_name: "Andaluc\xEDa"
+    source_row: 4329
+  - country_entry_id: ESP-SUBNAT-08
+    survey_labels: 16-ES62
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES62
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES62
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES62
+    geo_nvar: NAME_LATN
+    geo_name: "Regi\xF3n de Murcia"
+    source_row: 4330
+  - country_entry_id: ESP-SUBNAT-09
+    survey_labels: 17-ES63
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES63
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES63
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES63
+    geo_nvar: NAME_LATN
+    geo_name: Ciudad de Ceuta
+    source_row: 4331
+  - country_entry_id: ESP-SUBNAT-10
+    survey_labels: 18-ES70 | 19-ES70
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES70
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES70
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES70
+    geo_nvar: NAME_LATN
+    geo_name: Canarias
+    source_row: 4332
+  - country_entry_id: ESP-SUBNAT-11
+    survey_labels: 2-ES12
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES12
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES12
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES12
+    geo_nvar: NAME_LATN
+    geo_name: Principado de Asturias
+    source_row: 4333
+  - country_entry_id: ESP-SUBNAT-12
+    survey_labels: 3-ES13
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES13
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES13
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES13
+    geo_nvar: NAME_LATN
+    geo_name: Cantabria
+    source_row: 4334
+  - country_entry_id: ESP-SUBNAT-13
+    survey_labels: 4-ES21
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES21
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES21
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES21
+    geo_nvar: NAME_LATN
+    geo_name: "Pa\xEDs Vasco"
+    source_row: 4335
+  - country_entry_id: ESP-SUBNAT-14
+    survey_labels: 5-ES22
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES22
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES22
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES22
+    geo_nvar: NAME_LATN
+    geo_name: Comunidad Foral de Navarra
+    source_row: 4336
+  - country_entry_id: ESP-SUBNAT-15
+    survey_labels: 6-ES23
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES23
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES23
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES23
+    geo_nvar: NAME_LATN
+    geo_name: La Rioja
+    source_row: 4337
+  - country_entry_id: ESP-SUBNAT-16
+    survey_labels: 7-ES24
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES24
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES24
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES24
+    geo_nvar: NAME_LATN
+    geo_name: "Arag\xF3n"
+    source_row: 4338
+  - country_entry_id: ESP-SUBNAT-17
+    survey_labels: 8-ES30
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES30
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES30
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES30
+    geo_nvar: NAME_LATN
+    geo_name: Comunidad de Madrid
+    source_row: 4339
+  - country_entry_id: ESP-SUBNAT-18
+    survey_labels: 9-ES41
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES41
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES41
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES41
+    geo_nvar: NAME_LATN
+    geo_name: "Castilla y Le\xF3n"
+    source_row: 4340
+  - country_entry_id: ESP-SUBNAT-19
+    survey_labels: 18-ES64
+    survey_variables: subnatid
+    gmd_subnatid1: ESP_2021_NUTS2_ES64
+    gmd_subnatid2: ''
+    gmd_subnatid3: ''
+    gmd_subnatid4: ''
+    is_rep_subnat1: true
+    is_rep_subnat2: false
+    is_rep_subnat3: false
+    is_rep_subnat4: false
+    representative_level: 1
+    gmd_subnatidsurvey: ESP_2021_NUTS2_ES64
+    geo_year: '2021'
+    geo_source: NUTS
+    geo_level: '2'
+    geo_idvar: NUTS_ID
+    geo_id: ES64
+    geo_nvar: NAME_LATN
+    geo_name: Ciudad de Melilla
+    source_row: 4368
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\GEO\Sub_nat_gmd.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-SANITATION-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ESP-SAN-01
+    source_category_code: flush_to_piped_sewage_system
+    national_label_en: Flush to piped sewage system
+    national_label_local: al alcantarillado
+    jmp_classification: Flush/toilets > to piped sewer system
+    jmp_id: flush_toilets.to_piped_sewer_system
+    gmd_target: flush_sewer
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 67
+  - country_entry_id: ESP-SAN-02
+    source_category_code: flush_to_septic_tank
+    national_label_en: Flush to septic tank
+    national_label_local: a pozo septico
+    jmp_classification: Flush/toilets > to septic tank
+    jmp_id: flush_toilets.to_septic_tank
+    gmd_target: flush_septic
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 68
+  - country_entry_id: ESP-SAN-03
+    source_category_code: covered_dry_latrine_with_privacy
+    national_label_en: Covered dry latrine (with privacy)
+    national_label_local: Letrina simple con loza
+    jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
+      with slab/covered latrine
+    jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
+    gmd_target: pit_slab
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 106
+  - country_entry_id: ESP-SAN-04
+    source_category_code: pour_flush_latrine
+    national_label_en: Pour flush latrine
+    national_label_local: "Letrinas de arrastre hidr\xE1ulico"
+    jmp_classification: Latrines > Pour flush latrines
+    jmp_id: latrines.pour_flush_latrines
+    gmd_target: ''
+    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
+    improved_flag: false
+    shared_flag: false
+    source_row: 85
+  - country_entry_id: ESP-SAN-05
+    source_category_code: no_facilities_open_defecation
+    national_label_en: No facilities (open defecation)
+    national_label_local: No hay installacion sanitaria
+    jmp_classification: No facility, bush, field
+    jmp_id: no_facility_bush_field
+    gmd_target: open
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 134
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ESP_Spain_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-WASH-WATER-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: ESP-WAS-01
+    source_category_code: protected_dug_well_or_protected_spring
+    national_label_en: Protected dug well or protected spring
+    national_label_local: Pozos o manantiales protegidos
+    jmp_classification: Ground water > Protected wells or springs
+    jmp_id: ground_water.protected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: protected_well|protected_spring
+    improved_flag: true
+    shared_flag: false
+    source_row: 46
+  - country_entry_id: ESP-WAS-02
+    source_category_code: protected_tube_well_or_bore_hole
+    national_label_en: Protected tube well or bore hole
+    national_label_local: Pozos entubados o de sondeo
+    jmp_classification: Ground water > Tubewell, borehole
+    jmp_id: ground_water.tubewell_borehole
+    gmd_target: borehole
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 58
+  - country_entry_id: ESP-WAS-03
+    source_category_code: unprotected_dug_well_or_spring
+    national_label_en: Unprotected dug well or spring
+    national_label_local: Pozos o manantiales non protegidos
+    jmp_classification: Ground water > Unprotected wells or springs
+    jmp_id: ground_water.unprotected_wells_or_springs
+    gmd_target: ''
+    gmd_spans: unprotected_well|unprotected_spring
+    improved_flag: false
+    shared_flag: false
+    source_row: 50
+  - country_entry_id: ESP-WAS-04
+    source_category_code: tanker_truck_vendor
+    national_label_en: Tanker-truck, vendor
+    national_label_local: Agua distribuida en camiones cisterna
+    jmp_classification: Other improved sources > Tanker truck provided
+    jmp_id: other_improved_sources.tanker_truck_provided
+    gmd_target: tanker
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 102
+  - country_entry_id: ESP-WAS-05
+    source_category_code: rainwater_into_tank_or_cistern
+    national_label_en: Rainwater (into tank or cistern )
+    national_label_local: Cisterna/tanque cubierto
+    jmp_classification: Rainwater > Covered cistern/tank
+    jmp_id: rainwater.covered_cistern_tank
+    gmd_target: rainwater
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 87
+  - country_entry_id: ESP-WAS-06
+    source_category_code: water_taken_directly_from_pond_water_or_stream
+    national_label_en: Water taken directly from pond-water or stream
+    national_label_local: Agua superficial
+    jmp_classification: Surface water
+    jmp_id: surface_water
+    gmd_target: surface
+    gmd_spans: ''
+    improved_flag: false
+    shared_flag: false
+    source_row: 92
+  - country_entry_id: ESP-WAS-07
+    source_category_code: piped_water_through_house_connection_or_yard
+    national_label_en: Piped water through house connection or yard
+    national_label_local: Conexiones domiciliarias
+    jmp_classification: Tap water > Piped on premises
+    jmp_id: tap_water.piped_on_premises
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 38
+  - country_entry_id: ESP-WAS-08
+    source_category_code: public_standpipe
+    national_label_en: Public standpipe
+    national_label_local: "Fuentes p\xFAblicas"
+    jmp_classification: Tap water > Public tap, standpipe
+    jmp_id: tap_water.public_tap_standpipe
+    gmd_target: piped
+    gmd_spans: ''
+    improved_flag: true
+    shared_flag: false
+    source_row: 41
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_ESP_Spain_0.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+- parameter_id: PARAM-LBR-MIN-WORKING-AGE
+  effective_from: 1990
+  effective_to: null
+  selectors: null
+  value: 16
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\Labor\min_labor_age_panel_1990_2026.xlsx
+      (ILO C138 ratified)
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

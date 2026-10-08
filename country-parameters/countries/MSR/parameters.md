@@ -1,0 +1,194 @@
+---
+country_id: CTY-MSR
+iso3: MSR
+schema_version: '0.2'
+status: draft
+country_name: MSR
+parameters:
+- parameter_id: PARAM-EDU-LEVEL-CROSSWALK
+  effective_from: null
+  effective_to: null
+  selectors: null
+  value:
+  - country_entry_id: MSR-EDU-01
+    national_label_en: Nursery
+    national_label_local: Nursery
+    entry_age: 0
+    duration_years: 3
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 7
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: MSR-EDU-02
+    national_label_en: Nursery
+    national_label_local: Nursery
+    entry_age: 3
+    duration_years: 2
+    isced_level: '0'
+    isced_label: ISCED 0 Early childhood education
+    gmd_educat4_target: no_education
+    gmd_educat5_target: no_education
+    gmd_educat7_target: none
+    source_row: 8
+    parent_country_entry_ids: []
+    cum_years_schooling: 0
+    cum_years_computation_path: []
+    cum_years_status: computed
+    review_flags:
+    - ISCED 0 excluded from school-year total
+  - country_entry_id: MSR-EDU-03
+    national_label_en: Primary
+    national_label_local: Primary
+    entry_age: 5
+    duration_years: 7
+    isced_level: '1'
+    isced_label: ISCED 1 Primary
+    gmd_educat4_target: primary
+    gmd_educat5_target: primary_complete
+    gmd_educat7_target: primary_complete
+    source_row: 9
+    parent_country_entry_ids: []
+    cum_years_schooling: 7
+    cum_years_computation_path:
+    - MSR-EDU-03
+    cum_years_status: computed
+    review_flags: &id001 []
+  - country_entry_id: MSR-EDU-04
+    national_label_en: Lower secondary
+    national_label_local: Lower secondary
+    entry_age: 12
+    duration_years: 3
+    isced_level: '2'
+    isced_label: ISCED 2 Lower secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: lower_secondary
+    gmd_educat7_target: lower_secondary_complete
+    source_row: 10
+    parent_country_entry_ids:
+    - MSR-EDU-03
+    cum_years_schooling: 10
+    cum_years_computation_path:
+    - MSR-EDU-03
+    - MSR-EDU-04
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: MSR-EDU-05
+    national_label_en: Upper secondary
+    national_label_local: Upper secondary
+    entry_age: 15
+    duration_years: 2
+    isced_level: '3'
+    isced_label: ISCED 3 Upper secondary
+    gmd_educat4_target: secondary
+    gmd_educat5_target: upper_secondary
+    gmd_educat7_target: upper_secondary_complete
+    source_row: 11
+    parent_country_entry_ids:
+    - MSR-EDU-04
+    cum_years_schooling: 12
+    cum_years_computation_path:
+    - MSR-EDU-03
+    - MSR-EDU-04
+    - MSR-EDU-05
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: MSR-EDU-06
+    national_label_en: Advanced level programme
+    national_label_local: Advanced level programme
+    entry_age: 17
+    duration_years: 2
+    isced_level: '4'
+    isced_label: ISCED 4 Post-secondary non-tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 12
+    parent_country_entry_ids:
+    - MSR-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - MSR-EDU-03
+    - MSR-EDU-04
+    - MSR-EDU-05
+    - MSR-EDU-06
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: MSR-EDU-07
+    national_label_en: Associate Degree in Science
+    national_label_local: Associate Degree in Science
+    entry_age: 17
+    duration_years: 2
+    isced_level: '5'
+    isced_label: ISCED 5 Short-cycle tertiary
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 13
+    parent_country_entry_ids:
+    - MSR-EDU-05
+    cum_years_schooling: 14
+    cum_years_computation_path:
+    - MSR-EDU-03
+    - MSR-EDU-04
+    - MSR-EDU-05
+    - MSR-EDU-07
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: MSR-EDU-08
+    national_label_en: Education Programme
+    national_label_local: Education Programme
+    entry_age: 17
+    duration_years: 3
+    isced_level: '6'
+    isced_label: ISCED 6 Bachelor or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 14
+    parent_country_entry_ids:
+    - MSR-EDU-05
+    cum_years_schooling: 15
+    cum_years_computation_path:
+    - MSR-EDU-03
+    - MSR-EDU-04
+    - MSR-EDU-05
+    - MSR-EDU-08
+    cum_years_status: computed
+    review_flags: *id001
+  - country_entry_id: MSR-EDU-09
+    national_label_en: Master
+    national_label_local: Master
+    entry_age: 21
+    duration_years: 2
+    isced_level: '7'
+    isced_label: ISCED 7 Master or equivalent
+    gmd_educat4_target: tertiary
+    gmd_educat5_target: tertiary
+    gmd_educat7_target: tertiary
+    source_row: 15
+    parent_country_entry_ids:
+    - MSR-EDU-08
+    cum_years_schooling: 17
+    cum_years_computation_path:
+    - MSR-EDU-03
+    - MSR-EDU-04
+    - MSR-EDU-05
+    - MSR-EDU-08
+    - MSR-EDU-09
+    cum_years_status: computed
+    review_flags: *id001
+  provenance:
+    source: extraction\10_source\country-parameters-inputs\ISCED\ISCED_2011_Mapping_Montserrat.xlsx
+    verified_on: null
+    human_reviewed: false
+    reviewer: null
+---
+

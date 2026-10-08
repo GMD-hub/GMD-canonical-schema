@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmd-edu-concordance"
+version = "1.0.0"
+description = "ISCED 2011 UIS national mapping workbook -> GMD System 8 country education instruction"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["openpyxl>=3.1", "PyYAML>=6.0"]
+
+[project.scripts]
+gmd-edu-concordance = "gmd_edu_concordance.cli:main"
+
+[tool.setuptools]
+packages = ["gmd_edu_concordance"]
+
+[tool.setuptools.package-data]
+gmd_edu_concordance = ["data/*.yaml", "data/*.css", "data/*.js"]

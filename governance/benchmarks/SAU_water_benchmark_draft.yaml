@@ -1,0 +1,167 @@
+iso3: SAU
+domain: water
+source: extraction\10_source\country-parameters-inputs\JMP\JMP_2025_SAU_Saudi_Arabia_1.xlsx
+status: draft
+benchmark:
+  country:
+    iso3: SAU
+    name: "\u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0639\u0631\u0628\
+      \u064A\u0629 \u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0629"
+  domain: water
+  frame: JMP service ladders (WHO/UNICEF), country file 2025
+  language: Arabic
+  file:
+    file: JMP_2025_SAU_Saudi_Arabia_1.xlsx
+    sha256: 74a796d62096da2a16ff850bc37b6a0025b728d165d24aaa8c84019cfc5cb01c
+    profile: jmp_country_file_2025
+    language: Arabic
+    vintage: '2025'
+    extracted_at: '2026-09-19T04:36:37+00:00'
+    extractor: gmd_wash_concordance/1.0.0
+  note: published by JMP; kept beside the instruction and never inside it -- a country
+    instruction may not carry survey-level data
+  ladder:
+    sheet: Ladders
+    rungs:
+    - rung: Safely managed
+      row: 31
+      values:
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 83.889897
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A"
+        year: '2024'
+        value: 86.215979
+    - rung: Basic service
+      row: 32
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 99.040782
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 99.648372
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A*"
+        year: '2024'
+        value: 98.934997
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 13.717602
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 95.64601
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A"
+        year: '2024'
+        value: 11.733033
+      - domain: "\u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0627\u0644\u0639\u0627\
+          \u0645\u0629"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 98.430405
+      - domain: "\u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0627\u0644\u0639\u0627\
+          \u0645\u0629"
+        split: "\u0631\u064A\u0641\u064A"
+        year: '2024'
+        value: 96.566407
+      - domain: "\u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0627\u0644\u0639\u0627\
+          \u0645\u0629"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A"
+        year: '2024'
+        value: 98.754945
+    - rung: Limited service
+      row: 33
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 0.679548
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 0.0
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A*"
+        year: '2024'
+        value: 0.797863
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 2.169021
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 3.729075
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A"
+        year: '2024'
+        value: 1.897402
+    - rung: Unimproved
+      row: 34
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 0.251515
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 0.165836
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A*"
+        year: '2024'
+        value: 0.26643
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 0.097971
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 0.03503
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A"
+        year: '2024'
+        value: 0.108927
+    - rung: No service
+      row: 35
+      values:
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639*"
+        year: '2024'
+        value: 0.028155
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 0.185792
+      - domain: "\u0645\u064A\u0627\u0647 \u0627\u0644\u0634\u0631\u0628"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A*"
+        year: '2024'
+        value: 0.00071
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u0645\u062C\u0645\u0648\u0639"
+        year: '2024'
+        value: 0.12551
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0631\u064A\u0641\u064A*"
+        year: '2024'
+        value: 0.589884
+      - domain: "\u0627\u0644\u0635\u0631\u0641 \u0627\u0644\u0635\u062D\u064A"
+        split: "\u0627\u0644\u062D\u0636\u0631\u064A"
+        year: '2024'
+        value: 0.044659
+  per_source: []
+  summary:
+    sources: 0
+    sources_with_estimates: 0
+    categories_with_estimates: 0
+    from: null
+    to: null
+    has_country_ladder: true

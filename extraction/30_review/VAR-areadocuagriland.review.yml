@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-areadocuagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-areadocuagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 4ab0cd4e390260e6f9fd14acc0406aec0cf8a62d
+source_content_sha256: 669cf0a1d65bfe9e7a97e65b5c809daf731fc622489fcaf4a945cae07887b606
+enrolled_body_sha256: 183f53988fe9776b44dea83a38c0e956dc02d218caa4caecd2209ce03fbb6248
+current_content_sha256: 183f53988fe9776b44dea83a38c0e956dc02d218caa4caecd2209ce03fbb6248
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

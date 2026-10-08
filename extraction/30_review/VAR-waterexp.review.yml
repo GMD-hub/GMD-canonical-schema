@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-waterexp
+source_artifact_path: extraction/20_drafts/utl/VAR-waterexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 55023e9b717b07d2e275859d3f9cb87955c9d1ca
+source_content_sha256: c1fffcd84b2f08e72bb39475d6415d287e654f82e2af868020ac06064d27decc
+enrolled_body_sha256: 08c9eb1d82c5d9d9f1f4ce1bcc4cd82cb4c994ee49f8f221f54068ae7b82f4a3
+current_content_sha256: 08c9eb1d82c5d9d9f1f4ce1bcc4cd82cb4c994ee49f8f221f54068ae7b82f4a3
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

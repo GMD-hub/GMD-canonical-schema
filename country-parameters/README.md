@@ -18,6 +18,11 @@ variable. Loading is unconditional. The agent then selects records whose
 inclusive validity window contains the survey ID year. A null lower or upper
 bound is open ended.
 
+Records may also declare optional `selectors` for additional disambiguation
+(for example, survey design variants). A record with no selectors applies
+universally within its validity window. When selectors are present, all
+declared selector key-value pairs must match the active run context.
+
 The survey ID year is the calendar year in which survey fieldwork began. A
 survey beginning in December 2025 and ending in November 2026 uses 2025.
 Welfare year is a different concept and is outside this layer.
@@ -28,6 +33,8 @@ A country layer may contain only:
 
 - Parameter value records for IDs defined in `knowledge/parameters/`.
 - Country exception artifacts with condition and action statements.
+- Typed crosswalk rows where the universal parameter registry defines
+   `value_type: table` and a `row_schema`.
 
 It must never redefine value codes, definitions, data types, derivation
 relationships, missing codes, or any other CVS structure. Validation rejects
@@ -55,12 +62,41 @@ Resolution order is:
 Variables declare required parameter IDs in `country_parameters`. This is a
 completeness check, not a routing instruction.
 
+For row-based mappings, each country's parameter record may hold a table of
+typed rows (for example, education level crosswalks or water/sanitation
+crosswalks) when the universal parameter definition explicitly allows it.
+The country layer owns the country-year values; the universal layer owns the
+field contract and allowed row schema.
+
+For crosswalk tables, each row must include a stable `country_entry_id`.
+Current governed formats are:
+
+- `ISO3-EDU-NN` for `PARAM-EDU-LEVEL-CROSSWALK`
+- `ISO3-SUBNAT-NN` for `PARAM-GEO-GMD-CROSSWALK`
+- `ISO3-SAN-NN` for `PARAM-WASH-SANITATION-CROSSWALK`
+- `ISO3-WAS-NN` for `PARAM-WASH-WATER-CROSSWALK`
+
+`country_entry_id` is a canonical row identifier for traceability and review.
+It is distinct from source row numbers and remains in the country artifact even
+when labels are normalized.
+
 ## Country exceptions
 
 Exceptions express country-specific conditional logic that cannot be reduced
 to a parameter value. They follow the same IF/THEN discipline as universal
 rules through natural-language `condition` and `action` fields, scoped by
 variable and validity window.
+
+Country exceptions may also include structured condition/action payloads and
+conflict metadata for deterministic runtime behavior:
+
+- `condition_structured` and `action_structured` for machine-readable logic.
+- Optional `selectors` for additional survey-level disambiguation.
+- `conflict_policy` and `precedence` for deterministic overlap resolution.
+
+Overlapping exceptions for the same variable and year are structural failures
+unless conflict handling is deterministic (`higher_precedence_wins` with
+distinct precedence values).
 
 ## Authoring and runtime bundles
 
@@ -70,9 +106,56 @@ consumption and is never hand edited. `build/compile_bundle.py` combines the
 whole universal knowledge base with one selected country layer, validates it,
 and records the source commit hash in the generated bundle.
 
+Extraction-stage country input transforms (for example, ISCED and JMP workbook
+extraction, GEO crosswalk extraction, and Labor minimum-working-age extraction)
+may stage draft parameter contracts under
+`extraction/20_drafts/runs/country-parameters/contracts/` for draft validation.
+These files are not canonical registry entries and do not replace human-owned
+artifacts under `knowledge/parameters/`.
+
+Each extraction-stage input is registered in
+`extraction_pipeline/country_inputs/cli.py`'s `PARAM_INPUT_REGISTRY`, tagged
+with a broad dimension (`isced`, `jmp`, `geo`, `labor`, ...). A dimension may
+hold more than one independent input over time (for example, the Labor
+dimension may later add ISIC/ISCO crosswalks alongside minimum working age).
+`extract`/`bulk`/`check` accept `--dimension` to run every input tagged with
+one dimension, `--param-input` to run exactly one registered input regardless
+of its dimension, and `--iso3` to scope either to one country, so adding or
+refreshing one input does not require rerunning the whole registry.
+
+```sh
+# Every registered input, every country (default; slowest, full refresh)
+python3 -m extraction_pipeline.country_inputs.cli extract
+
+# Every input tagged with one dimension, every country
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension labor
+
+# Exactly one registered input (narrower than --dimension)
+python3 -m extraction_pipeline.country_inputs.cli extract --param-input labor-min-working-age
+
+# One dimension, one country
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension geo --iso3 PER
+
+# Validate what was written, scoped the same way
+python3 -m extraction_pipeline.country_inputs.cli check --dimension labor --iso3 PER
+
+# Force a rewrite even if the incremental cache says nothing changed
+python3 -m extraction_pipeline.country_inputs.cli extract --dimension labor --force
+```
+
+Unchanged inputs are skipped automatically between runs (file-hash incremental
+cache), so narrowing by `--dimension`/`--param-input`/`--iso3` is an extra,
+composable scoping on top of that cache rather than a replacement for it.
+
+JMP benchmarking estimates that are not used directly in executable
+harmonization logic must be stored outside executable country canon in a
+separate documentation or governance track. Only JMP-derived values used as
+governed parameter or exception inputs belong in this layer.
+
 ## Country layer IDs
 
 | Artifact | ID format | Example |
 |---|---|---|
 | Country layer | `CTY-` + uppercase ISO3 | `CTY-PER` |
 | Country exception | `EXC-` + ISO3 + sequence | `EXC-PER-001` |
+| Crosswalk row entry | `ISO3-<SEGMENT>-NN` | `PER-EDU-01` |

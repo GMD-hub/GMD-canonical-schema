@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-educy
+source_artifact_path: extraction/20_drafts/dem/VAR-educy.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 7d7b1878b5f3a81f09b1502a5ac80bf658f4f6cd
+source_content_sha256: eb243d92525da6b180f29922265ac28ee44e0f1f9ed618f75f6bb320bd49c38e
+enrolled_body_sha256: a91d6d4928ef96c4be4755cdffb0b83611de3bd5426ffe39abd88319e0163b03
+current_content_sha256: a91d6d4928ef96c4be4755cdffb0b83611de3bd5426ffe39abd88319e0163b03
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

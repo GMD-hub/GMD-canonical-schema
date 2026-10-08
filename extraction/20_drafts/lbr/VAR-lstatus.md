@@ -71,7 +71,8 @@ derives_to:
 - VAR-thourstotal
 - VAR-twagencotal
 - VAR-twagetotal
-country_parameters: []
+country_parameters:
+  - PARAM-LBR-MIN-LABOR-AGE
 gates:
 - variable_id: VAR-lstatus
   condition: VAR-age >= PARAM-LBR-MIN-LABOR-AGE
