@@ -53,10 +53,10 @@ def test_overlapping_exceptions_without_precedence_fail(
 ) -> None:
     path = exception_path(temp_repository, "PER")
     data, body = load_markdown(path)
+    data["exceptions"][0]["conflict_policy"] = "error"
+    data["exceptions"][0]["precedence"] = None
     overlap = deepcopy(data["exceptions"][0])
     overlap["exception_id"] = "EXC-PER-002"
-    overlap["effective_from"] = 1995
-    overlap["effective_to"] = 2005
     data["exceptions"].append(overlap)
     write_markdown(path, data, body)
 
@@ -75,8 +75,6 @@ def test_overlapping_exceptions_with_precedence_are_resolved(
 
     overlap = deepcopy(data["exceptions"][0])
     overlap["exception_id"] = "EXC-PER-002"
-    overlap["effective_from"] = 1995
-    overlap["effective_to"] = 2005
     overlap["precedence"] = 20
     data["exceptions"].append(overlap)
     write_markdown(path, data, body)
@@ -84,4 +82,5 @@ def test_overlapping_exceptions_with_precedence_are_resolved(
     assert validate_repository(temp_repository) == 0
     output = capsys.readouterr().out
     assert "## Deterministically resolved overlap report" in output
-    assert "PER | VAR-educy | EXC-PER-001 | EXC-PER-002 | EXC-PER-002" in output
+    variable_id = data["exceptions"][0]["applies_to_variables"][0]
+    assert f"PER | {variable_id} | EXC-PER-001 | EXC-PER-002 | EXC-PER-002" in output
