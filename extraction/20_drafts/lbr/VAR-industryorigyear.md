@@ -27,9 +27,9 @@ derives_to:
 - VAR-industrycat10year
 - VAR-industrycat4year
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
-  condition: lstatus_year == 1
+  condition: VAR-lstatusyear == 1
 rules: []
 exceptions: []
 external_standards:

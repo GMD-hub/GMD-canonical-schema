@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-sellagriland
+source_artifact_path: extraction/20_drafts/dwl/VAR-sellagriland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 599a9cb4cc14f11925e27fed57be904e83fe66d5
+source_content_sha256: 96af870c9e180a791934a7b269ff476f839f9ae901d32cdf108db829b64bca85
+enrolled_body_sha256: 28b9a31cdeaf44aa9299a308da01c21d12bd220259c176c21d5c32da6006eee3
+current_content_sha256: 28b9a31cdeaf44aa9299a308da01c21d12bd220259c176c21d5c32da6006eee3
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

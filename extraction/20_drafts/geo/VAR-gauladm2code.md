@@ -38,8 +38,8 @@ derives_to: []
 country_parameters:
   - PARAM-GEO-GMD-CROSSWALK
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []

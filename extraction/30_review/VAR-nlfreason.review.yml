@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-nlfreason
+source_artifact_path: extraction/20_drafts/lbr/VAR-nlfreason.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 8cab5c540346af5ab0f046e1e8534d46c54bade7
+source_content_sha256: 3561fef9bb5b1a5c4fc4b9549e98d486605a56b0856fb8cb0ab9b7bba91c7399
+enrolled_body_sha256: 16cefb592a2e79064fd003046c7a3d37b895fb998bd0f37fb53ae6072cb7a97f
+current_content_sha256: 16cefb592a2e79064fd003046c7a3d37b895fb998bd0f37fb53ae6072cb7a97f
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

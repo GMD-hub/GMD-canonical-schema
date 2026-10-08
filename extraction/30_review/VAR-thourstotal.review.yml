@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-thourstotal
+source_artifact_path: extraction/20_drafts/lbr/VAR-thourstotal.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 66cb73a146dcf42db0c86488c0913ddd16778de0
+source_content_sha256: 805965d6f3617e9c880c680c5ac0b9a8cf20dd2f69713a910b2c6356111a3d69
+enrolled_body_sha256: 7754b99d57b1594ba9e91655070f66e2ad7aca096a9a398756c25edca78d0b9f
+current_content_sha256: 7754b99d57b1594ba9e91655070f66e2ad7aca096a9a398756c25edca78d0b9f
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-transland
+source_artifact_path: extraction/20_drafts/dwl/VAR-transland.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 131d127fd116c5631cb08f5c48d604687c22e9d2
+source_content_sha256: 8637ff0399258a8118e1e2ee28ea60b156c619e5a95bdec8729d61656a5d0c74
+enrolled_body_sha256: ee1f337bcf4007d6e8eae9310adeda61ea1f27734f254237659fe53d7e52fedb
+current_content_sha256: ee1f337bcf4007d6e8eae9310adeda61ea1f27734f254237659fe53d7e52fedb
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

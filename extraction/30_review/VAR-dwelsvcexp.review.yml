@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-dwelsvcexp
+source_artifact_path: extraction/20_drafts/utl/VAR-dwelsvcexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: da4d37bf9573ffa3473d5d9a22e547ec241c2270
+source_content_sha256: b5480d561ca1003278c1b48d31dc05ef544e43264c426b11075121ad5a08b55a
+enrolled_body_sha256: d84dca1753a82c86f3f90916a30c32b3bbb5f697caa19f52ad452f656d362107
+current_content_sha256: d84dca1753a82c86f3f90916a30c32b3bbb5f697caa19f52ad452f656d362107
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

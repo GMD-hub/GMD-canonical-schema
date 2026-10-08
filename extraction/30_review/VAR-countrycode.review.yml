@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-countrycode
+source_artifact_path: extraction/20_drafts/idn/VAR-countrycode.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3cac54887976e367b7b551a9cca141a298654531
+source_content_sha256: c8254522665ae75aa212313acf5537fe7e075fc573a2cabc0dd74f80400c28f7
+enrolled_body_sha256: e15c14755edf1d308e53f7e4e638a28a59f0029ec810f5b90b232ce252ecd1bb
+current_content_sha256: e15c14755edf1d308e53f7e4e638a28a59f0029ec810f5b90b232ce252ecd1bb
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

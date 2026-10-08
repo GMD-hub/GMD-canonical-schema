@@ -58,11 +58,10 @@ derives_to:
 country_parameters:
   - PARAM-EDU-MIN-EDUCATION-AGE
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Must be evaluated first. Set educat7 to .c for all
-                individuals where age is below mineducatage."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
 rules: []

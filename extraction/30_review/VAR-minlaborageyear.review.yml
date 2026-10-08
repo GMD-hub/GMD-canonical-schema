@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-minlaborageyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-minlaborageyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: ae753df98119a4f4ccf7692da79eab470e7e5f58
+source_content_sha256: 8861e6cfd72c5c442833b7074314e8801c8b7fbc0102dd4e300d9a21212f38e8
+enrolled_body_sha256: af1e8b8b5703338aa770a4c7a4e1f078ae1a59d3b9488bb15728c368726bf270
+current_content_sha256: af1e8b8b5703338aa770a4c7a4e1f078ae1a59d3b9488bb15728c368726bf270
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

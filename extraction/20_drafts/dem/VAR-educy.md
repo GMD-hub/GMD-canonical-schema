@@ -50,15 +50,10 @@ country_parameters:
   - PARAM-EDU-LEVEL-CROSSWALK
   - PARAM-EDU-MIN-EDUCATION-AGE
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Set educy to .c for all individuals where age is below
-                mineducatage."
-  - variable_id: VAR-school
-    condition: "Enrollment status must be evaluated before constructing
-                educy. It determines whether current class or highest
-                completed grade is the basis for calculation."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
 rules:
@@ -120,9 +115,9 @@ mean the same survey can route different respondents to different
 questions, so path selection depends on what data is actually present for
 that record. The path used must be documented in the do-file notes.
 
-**Prerequisite check: enrollment status.**
-Before constructing `educy`, evaluate `school` for the individual. Its
-value determines which branch below applies.
+**Gate check: enrollment status.**
+Before constructing `educy`, evaluate `school` for the individual. Its value determines which
+branch below applies.
 
 **Path 1 (preferred): individual reports explicit years of education.**
 Map that value directly to `educy`. Cross-check against age and education

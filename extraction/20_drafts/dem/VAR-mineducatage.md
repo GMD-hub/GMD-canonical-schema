@@ -40,8 +40,8 @@ derives_to: []
 country_parameters:
   - PARAM-EDU-MIN-EDUCATION-AGE          # this variable EMITS this parameter (its value); not in the PARAM's applies_to_variables
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []
@@ -68,7 +68,7 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: "mineducatage is currently an unregistered prerequisite/parameter. This
+  notes: "mineducatage is currently an unregistered gate/parameter. This
           draft classifies it as a country-specific variable (numeric age
           threshold). It is a blocking issue for PARAM registration: the value is
           country-specific and should eventually be registered as a country

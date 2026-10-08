@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-bcycle
+source_artifact_path: extraction/20_drafts/dwl/VAR-bcycle.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 49e7c9cf0589ab149785d4ae06b8987176d59753
+source_content_sha256: 521b113ee0f7a2788dd65d7053721c53cfbe026015ffeef9c974e1471dad48e7
+enrolled_body_sha256: 3a99c8033d0bfab1d4fc96b5235ddb053044c5164bd510aac811482c3201cb64
+current_content_sha256: 3a99c8033d0bfab1d4fc96b5235ddb053044c5164bd510aac811482c3201cb64
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

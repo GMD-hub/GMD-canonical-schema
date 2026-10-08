@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-wall
+source_artifact_path: extraction/20_drafts/dwl/VAR-wall.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 9da82d8181d69838d1ec31d2d243656f94d210c8
+source_content_sha256: 697ee5a272350098587cf9ab34d1a33a5fdc562cb3a4d0c0965bc0ca3adad2cd
+enrolled_body_sha256: 19d36677124c1c983271ea2cd605dec29e30897cfc6c4d0c22ce893e5984b84a
+current_content_sha256: 19d36677124c1c983271ea2cd605dec29e30897cfc6c4d0c22ce893e5984b84a
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

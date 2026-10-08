@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-heatingexp
+source_artifact_path: extraction/20_drafts/utl/VAR-heatingexp.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: c24b9f713bb6b7b023bea7cad43308badc87f766
+source_content_sha256: 5a961ca9699d68b75c4e2460dd3afad464793633d5743ec23bc9c690723592d9
+enrolled_body_sha256: 2d05596b816031323c1b8cecdf13b48d9e0a83403bf4e278542da24c3f9cd865
+current_content_sha256: 2d05596b816031323c1b8cecdf13b48d9e0a83403bf4e278542da24c3f9cd865
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

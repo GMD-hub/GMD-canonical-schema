@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-concentrationdisorder
+source_artifact_path: extraction/20_drafts/dem/VAR-concentrationdisorder.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 5510ae704e63805fa3fdedf5608a7fe340eece3e
+source_content_sha256: fd4f7eb1d2a07200a69e7777eea082dd16fcf47eadd4e60ebb2b410ae2969ff4
+enrolled_body_sha256: b40175c417361c51a45005eab8bf3a673555d237f1f763b654c80aee568d0d54
+current_content_sha256: b40175c417361c51a45005eab8bf3a673555d237f1f763b654c80aee568d0d54
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

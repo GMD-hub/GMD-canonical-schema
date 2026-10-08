@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-transdwel
+source_artifact_path: extraction/20_drafts/dwl/VAR-transdwel.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 449aad0321de7c4dc32c2547443089d0c1646b0a
+source_content_sha256: a73018c53d3924cf6e7d6ae28722f4b4f1be87c724beadcadff4bc190adbbbb7
+enrolled_body_sha256: d5ff779dbe7c9fac2217e2bcf4a29dd5de26ad6625cf5ee97ebf6676e42bc5be
+current_content_sha256: d5ff779dbe7c9fac2217e2bcf4a29dd5de26ad6625cf5ee97ebf6676e42bc5be
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

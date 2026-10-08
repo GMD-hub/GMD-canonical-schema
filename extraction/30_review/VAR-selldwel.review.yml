@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-selldwel
+source_artifact_path: extraction/20_drafts/dwl/VAR-selldwel.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 547e37d9e7241ea39d944d42f92b503ad79c3f0f
+source_content_sha256: 83a53a516e51e59c92f3049626ba9d13a1a5dab35a295f571ab31b2098a00702
+enrolled_body_sha256: 46090ca23a136bb2d8c4b6e24658ec0e4c4dc4c69ffa4daf868a2d1db8f42060
+current_content_sha256: 46090ca23a136bb2d8c4b6e24658ec0e4c4dc4c69ffa4daf868a2d1db8f42060
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

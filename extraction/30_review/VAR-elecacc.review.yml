@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-elecacc
+source_artifact_path: extraction/20_drafts/utl/VAR-elecacc.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 7f1e6d2b7c33698c66ede2779695181432f62180
+source_content_sha256: f7e2793e4fae4b1ad5ad31753521bcc26592aaeea9fe1e19f98ca43e4332000e
+enrolled_body_sha256: 305bc36dbf3a6474ca8c83f639bcffb1c33a9f2d850440074088c82e6858294e
+current_content_sha256: 305bc36dbf3a6474ca8c83f639bcffb1c33a9f2d850440074088c82e6858294e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

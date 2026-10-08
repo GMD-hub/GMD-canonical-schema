@@ -26,9 +26,9 @@ derived_from: []
 derives_to:
 - VAR-occup2year
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
-  condition: lstatus_year == 1
+  condition: VAR-lstatusyear == 1
 rules: []
 exceptions: []
 external_standards:

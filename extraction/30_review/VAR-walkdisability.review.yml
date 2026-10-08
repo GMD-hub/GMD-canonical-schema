@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-walkdisability
+source_artifact_path: extraction/20_drafts/dem/VAR-walkdisability.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 51f69aa3fef019919d6790187ae77cf6c80f4cad
+source_content_sha256: baaff8b4584963686af9e92c8c8a7e920d490dab52337c7da56a8fa90e977052
+enrolled_body_sha256: c1c92929b3bc5fbdcb4fd181abdfd9e36e5e167ce14596eb709e15afc808bd47
+current_content_sha256: c1c92929b3bc5fbdcb4fd181abdfd9e36e5e167ce14596eb709e15afc808bd47
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

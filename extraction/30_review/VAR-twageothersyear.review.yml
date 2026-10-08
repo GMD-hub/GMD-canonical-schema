@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-twageothersyear
+source_artifact_path: extraction/20_drafts/lbr/VAR-twageothersyear.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 3f580e57b8e81fafd2d82a1a55c4329e7b4f9598
+source_content_sha256: 9fcfc5ee57d0a7883b5dd0da4a6d152ec14187a93274ba53cb8d16775cc17c56
+enrolled_body_sha256: 5f867efe28059f6446eb6230d9c4cf52b712e42135bcb615ff5861c4a2caa1e8
+current_content_sha256: 5f867efe28059f6446eb6230d9c4cf52b712e42135bcb615ff5861c4a2caa1e8
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

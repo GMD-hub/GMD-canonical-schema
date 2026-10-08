@@ -47,7 +47,10 @@ def write_findings(findings: AgentFindings, output_dir: Path) -> Path:
 
 
 def list_drafts(drafts_dir: Path) -> list[Path]:
-    """Yield all .md files recursively from the drafts directory.
+    """Return variable drafts (VAR-*.md) recursively from the drafts directory.
+
+    Parameter contracts and rule drafts use different schemas and are not
+    inputs to the variable review agents.
 
     Skips files inside any directory whose name is in EXCLUDE_DIRS
     (``project-documentation/`` — process docs; ``runs/`` — run-tracking
@@ -59,7 +62,7 @@ def list_drafts(drafts_dir: Path) -> list[Path]:
     scope.
     """
     return sorted(
-        p for p in drafts_dir.rglob("*.md")
+        p for p in drafts_dir.rglob("VAR-*.md")
         if not (EXCLUDE_DIRS & set(p.parts))
     )
 

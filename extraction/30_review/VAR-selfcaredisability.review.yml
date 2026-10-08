@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-selfcaredisability
+source_artifact_path: extraction/20_drafts/dem/VAR-selfcaredisability.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 7560d6833d7bb1b3b19ca68caa5ef1a4b8d4cd36
+source_content_sha256: f1fc959bbdfd1eedc3459df16566fa5f66e2419731b7f59728feb19c194e3079
+enrolled_body_sha256: 8071459e66c822b0cdae48b3400c50d23e2e51eeb8a3d5ed61d4783c725d8727
+current_content_sha256: 8071459e66c822b0cdae48b3400c50d23e2e51eeb8a3d5ed61d4783c725d8727
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

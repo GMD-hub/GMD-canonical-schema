@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-bath
+source_artifact_path: extraction/20_drafts/dwl/VAR-bath.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 302976d83e54376a86bfc9e971feff5e07462a1b
+source_content_sha256: 02af1ae2e40c3603c543468cbe18838da284d1685311922224ebc47586a5fbbb
+enrolled_body_sha256: 58fc53e41b6e7a24079d08392d11af5980a3911b0d4561a479bce28186ab3e7e
+current_content_sha256: 58fc53e41b6e7a24079d08392d11af5980a3911b0d4561a479bce28186ab3e7e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

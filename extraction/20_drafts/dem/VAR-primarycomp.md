@@ -46,14 +46,10 @@ derives_to: []
 country_parameters:
   - PARAM-EDU-MIN-EDUCATION-AGE
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Set primarycomp to .c for individuals below mineducatage."
-  - variable_id: VAR-educat7
-    condition: "Preferred source. Derive primarycomp from educat7 when available."
-  - variable_id: VAR-educat5
-    condition: "Fallback source when educat7 is not defined."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
 rules: []

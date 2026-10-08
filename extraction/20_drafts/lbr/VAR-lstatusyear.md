@@ -73,9 +73,9 @@ derives_to:
 - VAR-twagetotalyear
 country_parameters:
   - PARAM-LBR-MIN-LABOR-AGE-YEAR
-prerequisites:
+gates:
 - variable_id: VAR-minlaborageyear
-  condition: age >= minlaborage_year
+  condition: VAR-age >= PARAM-LBR-MIN-LABOR-AGE-YEAR
 rules: []
 exceptions: []
 external_standards: []

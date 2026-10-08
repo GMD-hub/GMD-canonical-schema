@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-opendef
+source_artifact_path: extraction/20_drafts/utl/VAR-opendef.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 275781f7a21ef627dbb04a887ab0dbe300ded7ec
+source_content_sha256: 959db4632cf72abbd57c6d5cd6758027b54e6d6e2d3b8f5b2f320541da4ecf62
+enrolled_body_sha256: 38a6043659353a35e98dea89fcc66bafd122165a1d55049945949e667169e15e
+current_content_sha256: 38a6043659353a35e98dea89fcc66bafd122165a1d55049945949e667169e15e
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

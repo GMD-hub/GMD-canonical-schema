@@ -13,7 +13,9 @@ harmonization decision.
 The Survey Profile describes available evidence. The effective canon describes
 the rules and country inputs that apply. A downstream harmonization agent
 combines both to draft a Harmonization Specification for a particular survey
-and variable. Human review occurs before implementation.
+and variable. Human review occurs before implementation. The agent may use a
+canonical variable only when its exact `status` is `approved`; it ignores draft
+variables.
 
 ## Trace one decision through the system
 
@@ -44,7 +46,7 @@ and variable. Human review occurs before implementation.
 `knowledge/` defines concepts that must remain stable across countries:
 
 - variable identity, type, allowed values, and missing codes;
-- derivation relationships and prerequisites;
+- derivation relationships and gates;
 - reusable decision rules and prohibitions;
 - parameter definitions, value shapes, and fallback policies;
 - universal modules, rubrics, and exceptions when they are added.

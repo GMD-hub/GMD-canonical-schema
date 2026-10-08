@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-heardisability
+source_artifact_path: extraction/20_drafts/dem/VAR-heardisability.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 5bf12cedf2c7b015089a44f5da72abce95a0792f
+source_content_sha256: b7889d4ed05f5b99294ca5e412f6bd65a8e36c0ce271761232c5768ce5cba723
+enrolled_body_sha256: d41c0adf0ce10b949c6913404c6a9c3a3f2824d015817751c0dcfb393e45ea13
+current_content_sha256: d41c0adf0ce10b949c6913404c6a9c3a3f2824d015817751c0dcfb393e45ea13
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

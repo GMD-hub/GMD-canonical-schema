@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-centralacc
+source_artifact_path: extraction/20_drafts/utl/VAR-centralacc.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 79e7e47743e9fe70d31941229976dd583f672ae6
+source_content_sha256: c52797259cb2800b512badd07c0e2a54b3a2006f7cd07ec2b8ecf0eb96ededbe
+enrolled_body_sha256: 3b5524c3de406fe2630373deebfe300699d904a9566df2f1376ffb983c14d776
+current_content_sha256: 3b5524c3de406fe2630373deebfe300699d904a9566df2f1376ffb983c14d776
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []

@@ -27,11 +27,11 @@ derives_to:
 - VAR-wagetotal2year
 - VAR-twagencototalyear
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
-  condition: lstatus_year == 1
+  condition: VAR-lstatusyear == 1
 - variable_id: VAR-empstat2year
-  condition: empstat_2_year == 1
+  condition: VAR-empstat2year == 1
 rules: []
 exceptions: []
 external_standards: []

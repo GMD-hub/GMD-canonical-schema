@@ -41,6 +41,7 @@ nav:
       - Repository map: Repository-Map.md
   - Canonical knowledge:
       - Artifact model: Artifact-Model.md
+      - Variable YAML reference: CVS-Variable-YAML-Reference.md
       - Country parameter layer: Country-Parameter-Layer.md
   - From draft to runtime:
       - Artifact lifecycle: Artifact-Lifecycle.md

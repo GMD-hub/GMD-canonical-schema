@@ -1,0 +1,25 @@
+record_schema_version: '2.0'
+queue_id: cvs-production-2026-08
+artifact_id: VAR-etablet
+source_artifact_path: extraction/20_drafts/dwl/VAR-etablet.md
+state: draft
+review_round: 1
+assigned_to: []
+source_commit: 6d6c10ee96cf3500b802b3e4aae05c70eb24ea9f
+source_artifact_blob_sha: 066bf294d9857f6c085eedf9c2c8dab98e47551b
+source_content_sha256: 93dbb5e6df327aff12e11d9f160dcfe1fd306457bf38ead83de447c27914a01e
+enrolled_body_sha256: 59226e27ed5b6fb2234838eaa931635fdc07881da7b9f1a8a94b9da5d0291dfe
+current_content_sha256: 59226e27ed5b6fb2234838eaa931635fdc07881da7b9f1a8a94b9da5d0291dfe
+enrolled_at: '2026-08-28T14:13:39Z'
+enrolled_by: acastanedaa
+assessment:
+  layer1:
+    status: pending
+    evidence_ref: ~
+  layer2: []
+  content_errors: []
+  agent_review:
+    status: pending
+    evidence_ref: ~
+blocker_refs: []
+events: []
