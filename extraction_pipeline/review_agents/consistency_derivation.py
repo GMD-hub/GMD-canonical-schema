@@ -1,7 +1,7 @@
 """Agent 4: Consistency and derivation checks for extraction drafts.
 
 Checks derived_from/derives_to symmetry, acyclic derivation graph,
-module consistency, value code consistency, and prerequisite existence.
+module consistency, value code consistency, and gate existence.
 Requires loading all drafts to build the full derivation graph.
 """
 
@@ -132,18 +132,18 @@ def _check_value_code_consistency(
     return findings
 
 
-def _check_prerequisites_exist(
+def _check_gates_exist(
     data: dict[str, dict], all_variables: dict[str, dict]
 ) -> list[Finding]:
-    """Check that prerequisites reference existing or noted-as-unextracted variables."""
+    """Check that gates reference existing or noted-as-unextracted variables."""
     findings: list[Finding] = []
-    for prereq in data.get("prerequisites", []):
-        prereq_id = prereq.get("variable_id", "")
-        if prereq_id and prereq_id not in all_variables:
+    for gate in data.get("gates", []):
+        gate_id = gate.get("variable_id", "")
+        if gate_id and gate_id not in all_variables:
             findings.append(Finding(
-                field="prerequisites",
+                field="gates",
                 severity="warning",
-                message=f"Prerequisite {prereq_id} not found in extracted drafts",
+                message=f"Gate {gate_id} not found in extracted drafts",
             ))
     return findings
 
@@ -189,7 +189,7 @@ def check_drafts(draft_paths: list[Path]) -> list[AgentFindings]:
 
         findings.extend(_check_module_consistency(vid, data, all_data))
         findings.extend(_check_value_code_consistency(vid, data, all_data))
-        findings.extend(_check_prerequisites_exist(data, all_data))
+        findings.extend(_check_gates_exist(data, all_data))
         findings.extend(_check_unresolved_derivation_refs(data, all_data))
 
         results.append(make_findings(AGENT_NAME, vid, findings))

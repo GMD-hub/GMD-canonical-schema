@@ -320,7 +320,7 @@ class TestCanonicalize:
         }
         sections = [
             "## Summary", "## Value codes", "## Derivation",
-            "## Source note", "## Prerequisites", "## Country parameters",
+            "## Source note", "## Gates", "## Country parameters",
             "## External standards", "## Provenance",
         ]
         md = canonicalize_to_markdown(candidate, sections)

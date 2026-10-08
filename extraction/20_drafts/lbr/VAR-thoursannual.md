@@ -34,7 +34,7 @@ derived_from:
 derives_to:
 - VAR-lincnc
 country_parameters: []
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

@@ -106,6 +106,11 @@ validity window:
 python3 build/compile_bundle.py PER
 ```
 
+The compiler preserves each variable's `status` and can produce mixed
+development bundles. A Foundry ingestion corpus must select only approved
+variables. If Foundry reads the canonical schema directly from GitHub, it must
+check the status before using each variable.
+
 ## Authoring and governance
 
 The authoritative source for CVS rules is
@@ -140,6 +145,103 @@ review records, not canonical CVS artifacts and not official wiki pages.
 Read `AGENTS.md` before making any change. Before a harmonization run, read
 `knowledge/index.md`, the relevant variable and rule files, and
 `country-parameters/README.md` plus both files for the survey country.
+
+## Production review workflow
+
+The review application gets its application code from `main/review-app` and
+stores review data on a separate protected branch. The branches have different
+purposes:
+
+| Branch | Purpose | Normal writes |
+|---|---|---|
+| `main` | Application code, canonical `knowledge/`, schemas, and documentation | Normal reviewed PRs |
+| `review-production` | Active review records, reviewed Markdown bodies, events, and approved staging outputs | Atomic GitHub App commits created by human actions; exceptional queue-control changes use a dedicated PR to this branch |
+| `review` | Preserved six-record calibration queue and data rollback | None; legacy compatibility is read-only |
+
+Never merge `review-production` into `main`. Promotion copies and reconciles
+selected approved content through a normal feature branch and PR based on
+`main`.
+
+### Review states and roles
+
+Roles are exact. Reviewers edit and submit, approvers decide, and
+administrators assign work or reopen approved records. An administrator does
+not inherit reviewer or approver actions. Administrators can also re-enroll a
+non-approved record from a verified immutable source commit. An approved record
+must be reopened before re-enrollment.
+
+```mermaid
+flowchart LR
+    A[Draft] -->|Reviewer saves| A
+    A -->|Reviewer submits| B[In review]
+    B -->|Approver requests revision| C[Needs revision]
+    C -->|Reviewer edits and submits| B
+    B -->|Approver approves| D[Approved]
+    D -->|Administrator reopens| C
+```
+
+Each successful action creates one atomic commit on `review-production`:
+
+| Action | Result on `review-production` |
+|---|---|
+| Administrator assignment | Updates the review record assignment and event history. |
+| Reviewer save | Writes `extraction/30_review/<artifact_id>.body.md` and updates the review record without changing its state. |
+| Reviewer submit | Moves the review record from `draft` or `needs-revision` to `in-review`. |
+| Approver request revision | Records the reason and moves the record to `needs-revision`. |
+| Approver approve | Moves the record to `approved` and maps `extraction/20_drafts/<module>/<artifact_id>.md` to `extraction/40_approved/<module>/<artifact_id>.md`. |
+| Administrator reopen | Moves the record to `needs-revision` and removes the active approved output in the same commit. |
+| Administrator re-enroll source | Verifies and records a new immutable source; keeps `draft` unchanged or moves `in-review` to `needs-revision`. |
+
+Approval also requires an approval-enabled queue, a distinct reviewer and
+approver, an `in-review` record, a valid current source binding, no blocker,
+and no existing approved destination.
+
+## Releasing an approved subset
+
+The team does not need to approve all 267 records before using an initial
+subset. A set of 12-15 variables can move forward when each selected variable
+has completed the review-app cycle. Variables outside that set remain `draft`
+and Foundry ignores them.
+
+Review-app approval creates an approved staging artifact under
+`extraction/40_approved/`. To make a selected variable available to Foundry:
+
+1. Reconcile its approved Markdown body with the structured YAML fields.
+2. Create a normal feature branch from `main`; never merge
+   `review-production` into `main`.
+3. Promote the reconciled variable into `knowledge/` with `status: approved`,
+   `provenance.human_reviewed: true`, and the recorded reviewer.
+4. Update `knowledge/index.md` to show the same approved status and version.
+5. Validate the schema and merge the promotion PR after human review.
+
+That is the complete Foundry eligibility rule:
+
+```mermaid
+flowchart TD
+    A[Canonical variable schema in knowledge] --> B{status == approved?}
+    B -->|Yes| C[Foundry may harmonize the variable]
+    B -->|No| D[Foundry ignores the variable]
+```
+
+Presence in a draft, review record, review branch, or approved staging folder
+is not sufficient. The canonical variable under `knowledge/` must have the
+exact field:
+
+```yaml
+status: approved
+```
+
+All other status values are ineligible. The production harmonization agent is
+configured in the Microsoft Foundry portal, outside this repository. Its
+instruction must include:
+
+```text
+Use only the canonical variable schema from knowledge/. Before harmonizing a
+variable, read its exact status field. Harmonize it only when status is
+approved. Ignore every variable whose status is missing or has any other value.
+Never use extraction drafts, review records, review branches, or approved
+staging files as canonical harmonization input.
+```
 
 ## Documentation
 

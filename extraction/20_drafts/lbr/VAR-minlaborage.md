@@ -28,7 +28,7 @@ derived_from: []
 derives_to: []
 country_parameters:
   - PARAM-LBR-MIN-LABOR-AGE               # this variable EMITS this parameter (its value); not in the PARAM's applies_to_variables
-prerequisites: []
+gates: []
 rules: []
 exceptions: []
 external_standards: []

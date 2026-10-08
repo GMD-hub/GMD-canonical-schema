@@ -67,6 +67,16 @@ this file is committed to git and shared with the team.
 ## Work in Progress
 <!-- Modules, features, or migrations currently underway -->
 
+- Release A production cutover completed on 2026-09-03. Connect runs the
+  reviewed app from `main/review-app@f064987357fec71c67df909380ad039450f42eb4`
+  and reads `review-production@1399f12fe04c33370f77fee13eff69768c90a769`.
+  The descriptor is schema 1.1, all 267 initial review-record blobs are
+  preserved, and approval remains disabled. The unchanged
+  `review@983d7d9503fbf5c2c911ac9d85a37b88accfe4ac` branch is the data rollback.
+- Next review-app work is human content review. The first genuine reviewer and
+  distinct approver interaction serves as the production role smoke. Enable
+  approval with one governed descriptor-only commit before the first approval.
+
 ## Workspace Notes
 <!-- Related folders, dependencies on other projects in the VS Code workspace -->
 
@@ -74,11 +84,10 @@ this file is committed to git and shared with the team.
   `moduleServer()` return lists and drive namespaced inputs; unexported helpers
   break under R CMD check. See
   `.cg-docs/solutions/testing-patterns/2026-08-10-golem-module-testserver-capture.md`.
-- Deployed bundle IDs: the Posit Publisher record
-  `review-app/.posit/publish/deployments/deployment-U42S.toml` is the
-  authoritative source; hand-maintained audit refs (defect-log, active-state,
-  work-report) must be re-reconciled after each deploy (latest: bundle 88147 @
-  2026-08-10T22:52:40Z; DEF-001 fixed, boot smoke pending).
+- The review app uses Git-backed Connect deployment from repository `main`,
+  directory `review-app`. Current deployment and queue identities are recorded
+  in `.cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md`;
+  do not rely on old Publisher bundle metadata.
 ## Wiki Configuration
 <!-- folder: wiki -->
 <!-- audience: developers | researchers | end-users -->

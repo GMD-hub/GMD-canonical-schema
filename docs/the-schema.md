@@ -22,6 +22,10 @@ notes, consistency checks, escalation triggers, and common mistakes.
 
 ## The fields
 
+For the maintained field-by-field contract, including nested YAML fields and
+code-enforced checks, see the
+[CVS Variable YAML Reference](../wiki/CVS-Variable-YAML-Reference.md).
+
 | Field | What it captures |
 |---|---|
 | Variable name and label | Stata name and official GMD label |
@@ -34,7 +38,7 @@ notes, consistency checks, escalation triggers, and common mistakes.
 | Derived from | Which GMD variables this one is computed from |
 | Derives to | Which GMD variables are computed from this one |
 | Country parameters | Registry IDs for parameters whose country coverage must be checked |
-| Prerequisites | Other variables that must be evaluated first |
+| Gates | Universe / skip gates: other variables whose condition must hold for this one to apply |
 | Rules | References to the decision rule files that govern this variable |
 | Source hints | Keywords and section names that help the AI find this concept in a raw questionnaire |
 

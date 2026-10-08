@@ -54,13 +54,10 @@ derives_to:
 country_parameters:
   - PARAM-EDU-MIN-EDUCATION-AGE
 
-# --- Prerequisites ---
-prerequisites:
-  - variable_id: VAR-mineducatage
-    condition: "Set educat5 to .c for individuals below mineducatage."
-  - variable_id: VAR-educat7
-    condition: "Must be defined and used as the source; educat5 is derived from
-                educat7 via the stated recode."
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
 rules: []

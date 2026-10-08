@@ -1,21 +1,25 @@
 {
   "schemaVersion": "compound-gpid-active-state-v1",
-  "updatedAt": "2026-08-26T15:02:00Z",
-  "workflow": "/cg-work",
-  "status": "active",
-  "branch": "task-a-release-completion",
+  "updatedAt": "2026-09-03T13:04:00Z",
+  "workflow": "/cg-compound",
+  "status": "completed",
+  "branch": "docs/review-app-production-closeout",
   "plan": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md",
   "executionReport": ".cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md",
-  "currentPhase": 2,
+  "currentPhase": 6,
   "evidenceStatus": [
-    {"id": "V1", "status": "passed", "artifact": "Local R/Python/build/check evidence; remote CI deferred to /cg-verify-pr"}
+    {"id": "production-migration", "status": "passed", "artifact": "review-production@1399f12fe04c33370f77fee13eff69768c90a769"},
+    {"id": "queue-validation", "status": "passed", "artifact": "267 records; source, path digest, record blobs, descriptor, and bootstrap state verified"},
+    {"id": "connect-cutover", "status": "passed", "artifact": "Connect attested on main/review-app@f064987357fec71c67df909380ad039450f42eb4 and displays 267 rows"},
+    {"id": "staging-rehearsal", "status": "skipped", "artifact": "Approved simplification: direct validated production migration"},
+    {"id": "role-smoke", "status": "skipped", "artifact": "Approved simplification: first genuine distinct-role review interaction is separate content-review work"},
+    {"id": "temporary-key-revocation", "status": "passed", "artifact": "GitHub App owner revoked the temporary key on 2026-09-03"}
   ],
   "unresolvedDecisions": [],
   "artifactRefs": [
-    {"kind": "plan", "path": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md", "status": "active"},
-    {"kind": "report", "path": ".cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md", "status": "active"},
-    {"kind": "review", "path": ".cg-docs/reviews/2026-08-25-complete-release-a-production-queue-cutover-review.md", "status": "open"},
-    {"kind": "roadmap", "path": "roadmap.json#complete-release-a-production-queue-cutover", "status": "active"}
+    {"kind": "plan", "path": ".cg-docs/plans/2026-08-25-complete-release-a-production-queue-cutover.md", "status": "completed"},
+    {"kind": "report", "path": ".cg-docs/work-reports/2026-08-26-complete-release-a-production-queue-cutover.md", "status": "completed"},
+    {"kind": "roadmap", "path": "roadmap.json#complete-release-a-production-queue-cutover", "status": "done"}
   ],
-  "nextCommand": "/cg-review mode:verify"
+  "nextCommand": "/cg-roadmap-view"
 }

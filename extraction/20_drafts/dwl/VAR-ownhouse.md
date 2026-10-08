@@ -47,8 +47,8 @@ derives_to: []
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters: []
 
-# --- Prerequisites ---
-prerequisites: []
+# --- Universe / skip gate ---
+gates: []
 
 # --- Cross-references ---
 rules: []
@@ -86,11 +86,11 @@ provenance:
 
 ## Conceptual intent
 
-A fundamental tenure-status variable feeding ownership, gender, and welfare analyses. It is a prerequisite for several ownership sub-variables.
+A fundamental tenure-status variable feeding ownership, gender, and welfare analyses. It is used as a gate for several ownership sub-variables.
 
 ## Construction notes
 
-Map the raw tenure question to codes 1-4. Ownership includes secure tenure whether or not full payment has been made. Rental denotes regular payment to the owner with or without a formal agreement. `ownhouse` is a prerequisite for `acqui_house`.
+Map the raw tenure question to codes 1-4. Ownership includes secure tenure whether or not full payment has been made. Rental denotes regular payment to the owner with or without a formal agreement. `ownhouse` is a gate for `acqui_house`.
 
 ## Consistency checks
 

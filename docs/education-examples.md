@@ -51,7 +51,7 @@ education levels to years of schooling.
 | Mapping role | `derived_preferred` |
 | Derived from | `educat7`, `educat5`, or `educat4` (depending on what is available) |
 | Country parameters | `PARAM-EDU-YEARS-BY-LEVEL` |
-| Prerequisites | `mineducatage` (age restriction), `school` (enrollment status) |
+| Gates | `mineducatage` (age restriction), `school` (enrollment status) |
 | Rules | RULE-EDU-001 (age restriction), RULE-EDU-003 (construction logic) |
 
 **Construction logic (from RULE-EDU-003):**
@@ -81,7 +81,7 @@ educat7 (referenced source) ───────┬─────────�
       │
       └──► educat5 (referenced source) ───────────► educat4 and educy
 
-educat4 and educy also depend on documented prerequisites.
+educat4 and educy also depend on documented gates.
 Country construction paths for educy require the declared country parameter.
 ```
 

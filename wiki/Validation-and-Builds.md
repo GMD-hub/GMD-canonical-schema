@@ -24,7 +24,7 @@ country folder. It checks:
 
 - parameter definition schemas and duplicate parameter IDs;
 - strict variable and rule schemas with unknown fields forbidden;
-- variable, rule, parameter, and prerequisite reference formats;
+- variable, rule, parameter, and gate reference formats;
 - variable derivation cycles and governed reference resolution;
 - rule priorities as integers from 0 through 100;
 - country file identity and strict field schemas;
@@ -116,6 +116,11 @@ country
 Every artifact includes its structured front matter plus a `body` field with
 the Markdown content. `commit_hash` is the current `HEAD`, allowing downstream
 outputs to identify the exact repository snapshot used.
+
+The bundle can contain both draft and approved variable records and is suitable
+for development. A Foundry ingestion corpus must select only records whose
+exact `status` is `approved`. A direct GitHub consumer must apply the same check
+before using each canonical variable.
 
 Generated JSON is a runtime derivative. Do not hand edit it or treat it as the
 source for future canonical changes.

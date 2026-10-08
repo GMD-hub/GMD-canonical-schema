@@ -35,9 +35,9 @@ missing_codes:
 derived_from: []
 derives_to: []
 country_parameters: []
-prerequisites:
+gates:
 - variable_id: VAR-lstatusyear
-  condition: lstatus_year == 3
+  condition: VAR-lstatusyear == 3
 rules: []
 exceptions: []
 external_standards: []
