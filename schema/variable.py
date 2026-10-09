@@ -1,11 +1,12 @@
 """Models for universal variable specifications."""
 
 import re
-from typing import Literal
+from typing import Annotated, Literal
 
 from pydantic import (
     BaseModel,
     ConfigDict,
+    Field,
     StrictBool,
     ValidationInfo,
     field_validator,
@@ -94,6 +95,106 @@ class VariableProvenance(BaseModel):
         return self
 
 
+_RECODE_KEY_PATTERN = re.compile(r"^\d+(/\d+)?$")
+
+
+class ExternalStandardAnchor(BaseModel):
+    """method=external_standard: GMD code placed from an international standard's levels
+    (e.g. ISCED-2011 level -> educat7). The one universal anchor the family builds from;
+    lives with the anchored variable, not in a code-side table."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["external_standard"]
+    standard: str
+    level: Literal["educat7", "educat5", "educat4"]
+    map: dict[str, int]
+
+
+class Recode(BaseModel):
+    """method=recode: universal code->code recode from a parent GMD variable, matching the
+    Stata recode in the construction notes / rule. Each map key is a single code ("3") or an
+    inclusive range ("3/7"). The single consumable source the resolver reads, instead of a
+    parallel code-side rolldown table that can drift."""
+
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+    method: Literal["recode"]
+    from_: str = Field(alias="from")
+    map: dict[str, int]
+
+    @field_validator("from_")
+    @classmethod
+    def validate_from(cls, value: str) -> str:
+        if not VARIABLE_ID_PATTERN.fullmatch(value):
+            raise ValueError("recode.from must match VAR-<lowercase-name>")
+        return value
+
+    @field_validator("map")
+    @classmethod
+    def validate_map_keys(cls, value: dict[str, int]) -> dict[str, int]:
+        invalid = sorted(key for key in value if not _RECODE_KEY_PATTERN.fullmatch(key))
+        if invalid:
+            raise ValueError(f"recode.map keys must be a code or lo/hi range: {invalid}")
+        return value
+
+
+class CategoryField(BaseModel):
+    """method=category_field: read a numeric field off the matched national category
+    (never a string label), e.g. educy <- cum_years_schooling."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["category_field"]
+    field: str
+
+    @field_validator("field")
+    @classmethod
+    def validate_field(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("category_field requires a non-empty 'field'")
+        return value
+
+
+class CategoryKeyword(BaseModel):
+    """method=category_keyword: resolve via the universal WASH vocabulary (fine or improved
+    rung); the keyword->code placement lives in the universal wash table."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["category_keyword"]
+    domain: Literal["water", "sanitation"]
+    rung: Literal["fine", "improved"]
+
+
+class Alias(BaseModel):
+    """method=alias: reuse another variable's value-codes and mapping unchanged, e.g. a
+    reference-period or second-job variant (empstat_2 <- empstat)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["alias"]
+    of: str
+
+    @field_validator("of")
+    @classmethod
+    def validate_of(cls, value: str) -> str:
+        if not VARIABLE_ID_PATTERN.fullmatch(value):
+            raise ValueError("alias.of must match VAR-<lowercase-name>")
+        return value
+
+
+CorrespondenceOutput = Annotated[
+    ExternalStandardAnchor | Recode | CategoryField | CategoryKeyword | Alias,
+    Field(discriminator="method"),
+]
+"""Single polymorphic construction recipe the layered-correspondence resolver reads to
+build a variable's value-map, instead of hardcoding per-variable branches. The ``method``
+discriminator selects the mechanism; higher-level policy (path priority, fallback cascade,
+missing-value codes, prohibitions) stays in the governing RULE, which references this recipe
+rather than restating it."""
+
+
 class VariableDefinition(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -113,6 +214,7 @@ class VariableDefinition(BaseModel):
     missing_codes: list[MissingCode]
     derived_from: list[str]
     derives_to: list[str]
+    correspondence_output: CorrespondenceOutput | None = None
     country_parameters: list[str]
     gates: list[Gate]
     rules: list[str]

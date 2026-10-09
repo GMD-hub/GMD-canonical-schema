@@ -58,6 +58,24 @@ derives_to:
 country_parameters:
   - PARAM-EDU-MIN-EDUCATION-AGE
 
+# --- Correspondence output (machine-readable construction recipe) ---
+# method=external_standard: ISCED-2011 level attained -> educat7 code; the education
+# ladder builds from this anchor.
+correspondence_output:
+  method: external_standard
+  standard: "ISCED-2011"
+  level: educat7
+  map:
+    '0': 1
+    '1': 3
+    '2': 4
+    '3': 5
+    '4': 6
+    '5': 7
+    '6': 7
+    '7': 7
+    '8': 7
+
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age

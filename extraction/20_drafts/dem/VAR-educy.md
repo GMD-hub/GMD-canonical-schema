@@ -50,6 +50,13 @@ country_parameters:
   - PARAM-EDU-LEVEL-CROSSWALK
   - PARAM-EDU-MIN-EDUCATION-AGE
 
+# --- Correspondence output (machine-readable construction recipe) ---
+# Single source of truth for how the chain resolver builds educy's value-map:
+# educy = the matched national category's cumulative years of schooling (numeric).
+correspondence_output:
+  method: category_field
+  field: cum_years_schooling
+
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age
