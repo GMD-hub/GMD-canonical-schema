@@ -15,7 +15,7 @@ tier: 2
 
 # --- Nature of the variable ---
 unit_of_analysis: household
-mapping_role: atomic
+mapping_role: derived
 data_type: string
 
 # --- Allowed output values ---
@@ -32,7 +32,8 @@ missing_codes:
     label: "Information not available because the subnational classification has not changed since the previous survey"
 
 # --- Derivation graph ---
-derived_from: []
+derived_from:
+  - VAR-geocode
 derives_to: []
 
 # --- Country parameter declarations ---
