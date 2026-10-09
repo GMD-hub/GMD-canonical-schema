@@ -66,6 +66,14 @@ derives_to: []
 # --- Country parameter declarations ---
 country_parameters: []
 
+# --- Correspondence output (machine-readable construction recipe) ---
+# water_source = the fine WASH code for the matched national category; the keyword->code
+# placement lives in the universal wash_targets table, not here.
+correspondence_output:
+  method: category_keyword
+  domain: water
+  rung: fine
+
 # --- Universe / skip gate ---
 gates: []
 

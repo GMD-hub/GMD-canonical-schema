@@ -35,7 +35,8 @@ derived_from:
   - VAR-subnatid2
   - VAR-subnatid3
   - VAR-subnatid4
-derives_to: []
+derives_to:
+  - VAR-geocode
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.

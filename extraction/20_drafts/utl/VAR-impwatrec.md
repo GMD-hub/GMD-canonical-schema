@@ -42,6 +42,14 @@ derives_to: []
 # --- Country parameter declarations ---
 country_parameters: []
 
+# --- Correspondence output (machine-readable construction recipe) ---
+# imp_wat_rec = the improved rung rolled down from the matched national category;
+# the keyword->improved placement lives in the universal wash_targets table.
+correspondence_output:
+  method: category_keyword
+  domain: water
+  rung: improved
+
 # --- Universe / skip gate ---
 gates: []
 

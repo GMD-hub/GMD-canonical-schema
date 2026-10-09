@@ -33,7 +33,8 @@ missing_codes:
 
 # --- Derivation graph ---
 derived_from: []
-derives_to: []
+derives_to:
+  - VAR-subnatidsurvey
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
@@ -68,7 +69,7 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "Construction is survey-derived: the encoded value and label are taken directly from the raw survey's administrative variable text and code, with spelling and punctuation variants preserved as they occur in the data."
 ---
 
 ## Definition
@@ -86,16 +87,18 @@ geographic detail.
 
 ## Construction notes
 
-`subnatid3` is a string variable with country-specific categorical values and no
-fixed harmonized codes. The value space is defined by the national
-administrative classification and depends on the country parameter layer. Load
-the country parameters and exceptions valid for the survey's ID year and record
-the resulting classification in the do-file notes.
+`subnatid3` is a string variable with country-specific categorical values as
+they appear in the source survey. The value is constructed from the actual
+survey data, not from the GMD geo crosswalk: it is a single text token made from
+the survey's encoded code and the corresponding area label, for example
+"6 - Gjirokaster", "6 – Gjirokaster", "6-GJIROKASTER", or "6-Gjirokaster".
 
-`value_codes` is intentionally null because the values cannot be enumerated in
-advance. Select codes from the country administrative codebook or an official
-shapefile. Numeric raw entries are recoded to string format using the
-"code - name" naming convention.
+The numeric part comes from the survey's own code for the third administrative
+level; the text part comes from the label or area name recorded in the raw data.
+The number can differ across surveys or years, and spelling/variant differences
+must be preserved as they occur in the source data rather than normalized to a
+single canonical case. The construction is therefore data-driven and survey-
+anchored, with no requirement to retrieve a GMD crosswalk record for the value.
 
 Surveys may not be representative at, or collect, this level; when absent, use
 an explicit missing code and document the reason.

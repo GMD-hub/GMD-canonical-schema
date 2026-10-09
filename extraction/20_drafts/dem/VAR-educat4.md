@@ -54,6 +54,14 @@ derives_to:
 country_parameters:
   - PARAM-EDU-MIN-EDUCATION-AGE
 
+# --- Correspondence output (machine-readable construction recipe) ---
+# method=recode: educat4 from educat7 via recode (1=1)(2 3=2)(4 5=3)(6 7=4). educat7 6
+# (post-secondary non-tertiary) -> 4 Tertiary (corrects the prior 6 -> 3 drift).
+correspondence_output:
+  method: recode
+  from: VAR-educat7
+  map: {"1": 1, "2/3": 2, "4/5": 3, "6/7": 4}
+
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age
