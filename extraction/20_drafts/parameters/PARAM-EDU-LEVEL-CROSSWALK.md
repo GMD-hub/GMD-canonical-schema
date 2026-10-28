@@ -32,6 +32,8 @@ row_schema:
   review_flags: array_of_string
 
 applies_to_variables:
+  - VAR-educat7
+  - VAR-educat5
   - VAR-educat4
   - VAR-educy
 
@@ -99,3 +101,4 @@ for the survey's ISO3 code and survey ID year.
 |---|---|---|---|
 | 2026-09-06 | 0.2 | Add table contract for education crosswalk extraction | GPID Team |
 | 2026-09-30 | 0.3 | Draft: add derived years-of-schooling fields and VAR-educy to applies_to_variables, to support RULE-EDU-003 v0.2 | GPID Team |
+| 2026-10-27 | 0.3 | Draft: add VAR-educat7 and VAR-educat5 to applies_to_variables: every level of the education ladder is placed through this crosswalk (RULE-EDU-002 v0.2) | GPID Team (proposed) |

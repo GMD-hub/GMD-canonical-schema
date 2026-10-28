@@ -62,15 +62,24 @@ missing_codes:
 # --- Derivation graph ---
 derived_from:
   []
-derives_to: []
+derives_to:
+  - VAR-impwatrec
 # --- Country parameter declarations ---
-country_parameters: []
+country_parameters:
+  - PARAM-WASH-WATER-CROSSWALK
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: category_keyword
+  domain: water
+  rung: fine
 
 # --- Universe / skip gate ---
 gates: []
 
 # --- Cross-references ---
-rules: []
+rules:
+  - RULE-WASH-001
 exceptions: []
 external_standards:
   []
@@ -87,7 +96,10 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "2026-10-27 (proposed, pending GPID Team approval): added derives_to VAR-impwatrec (the
+          guidelines: water_source feeds imp_wat_rec), PARAM-WASH-WATER-CROSSWALK (the
+          national route), RULE-WASH-001, and correspondence_output (until now kept
+          only in the survey-harmonization vendored copy)."
 ---
 
 ## Definition
@@ -124,3 +136,4 @@ Code from `water_original` unless otherwise justified, referring to the survey q
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
+| 2026-10-27 | 0.2     | Add derives_to VAR-impwatrec, PARAM-WASH-WATER-CROSSWALK, RULE-WASH-001 and correspondence_output | GPID Team (proposed) |

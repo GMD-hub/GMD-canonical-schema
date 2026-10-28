@@ -56,7 +56,24 @@ derives_to:
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters:
+  - PARAM-EDU-LEVEL-CROSSWALK
   - PARAM-EDU-MIN-EDUCATION-AGE
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: external_standard
+  standard: "ISCED-2011"
+  level: educat7
+  map:
+    '0': 1
+    '1': 3
+    '2': 4
+    '3': 5
+    '4': 6
+    '5': 7
+    '6': 7
+    '7': 7
+    '8': 7
 
 # --- Universe / skip gate ---
 gates:
@@ -64,7 +81,8 @@ gates:
     condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
-rules: []
+rules:
+  - RULE-EDU-002
 exceptions: []
 external_standards: []
 
@@ -91,7 +109,11 @@ provenance:
           known defects for the calibration run; see known-answer-key.md.
           FIX: original rules list referenced RULE-EDU-999, which is unregistered and
           fails strict validation. The reference was dropped (rules: []). Remains a
-          blocking issue until RULE-EDU-999 is registered or confirmed obsolete."
+          blocking issue until RULE-EDU-999 is registered or confirmed obsolete.
+          2026-10-27 (proposed, pending GPID Team approval): added PARAM-EDU-LEVEL-CROSSWALK (the national route: source category ->
+          national level -> ISCED -> educat7), RULE-EDU-002 v0.2 (the ladder now
+          covers educat7/5/4), and correspondence_output (the ISCED -> educat7
+          map, until now kept only in the survey-harmonization vendored copy)."
 ---
 
 ## Definition
@@ -144,3 +166,4 @@ Apply the age restriction (`mineducatage`) before coding, setting `educat7` to
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-07 | 0.1     | Initial fixture | Calibration |
+| 2026-10-27 | 0.2     | Add PARAM-EDU-LEVEL-CROSSWALK, RULE-EDU-002 and the ISCED correspondence_output | GPID Team (proposed) |

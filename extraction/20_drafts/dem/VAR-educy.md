@@ -50,6 +50,11 @@ country_parameters:
   - PARAM-EDU-LEVEL-CROSSWALK
   - PARAM-EDU-MIN-EDUCATION-AGE
 
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: category_field
+  field: cum_years_schooling
+
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age
@@ -90,7 +95,9 @@ provenance:
       country_entry_id row now supplies years-of-schooling for any
       post-grade-12 level. Its fallback policy is block_and_escalate, so
       derived construction must stop and escalate when no valid country
-      record exists for a reported national level."
+      record exists for a reported national level.
+      2026-10-27 (proposed, pending GPID Team approval): added correspondence_output (the category field
+      above, until now kept only in the survey-harmonization vendored copy)."
 ---
 
 ## Definition
@@ -216,3 +223,4 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 |------------|---------|---------------|------------|
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
 | 2026-09-30 | 0.2     | Replaced `PARAM-EDU-YEARS-BY-LEVEL` and the fixed tertiary-year table with `PARAM-EDU-LEVEL-CROSSWALK`-based resolution; reframed construction as per-individual path selection (RULE-EDU-003 v0.2) | GPID Team |
+| 2026-10-27 | 0.3     | Add the category_field correspondence_output | GPID Team (proposed) |

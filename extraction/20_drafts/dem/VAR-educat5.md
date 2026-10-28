@@ -52,7 +52,14 @@ derives_to:
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters:
+  - PARAM-EDU-LEVEL-CROSSWALK
   - PARAM-EDU-MIN-EDUCATION-AGE
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: recode
+  from: VAR-educat7
+  map: {"1": 1, "2": 2, "3/4": 3, "5": 4, "6/7": 5}
 
 # --- Universe / skip gate ---
 gates:
@@ -60,7 +67,8 @@ gates:
     condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
-rules: []
+rules:
+  - RULE-EDU-002
 exceptions: []
 external_standards: []
 
@@ -87,7 +95,11 @@ provenance:
   notes: "educat5 must be derived from educat7 if educat7 was defined, via the recode
           (3 4=3)(5=4)(6 7=5). If educat7 cannot be defined, educat5 is coded
           directly from the survey's own five categories. Do not guestimate; leave
-          as missing if all five groups cannot be created."
+          as missing if all five groups cannot be created.
+          2026-10-27 (proposed, pending GPID Team approval): added PARAM-EDU-LEVEL-CROSSWALK (the national route also applies when
+          educat5 is the level the source reaches), RULE-EDU-002 v0.2, and
+          correspondence_output (the recode above, until now kept only in the
+          survey-harmonization vendored copy)."
 ---
 
 ## Definition
@@ -151,3 +163,4 @@ leave the value missing.
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
+| 2026-10-27 | 0.2     | Add PARAM-EDU-LEVEL-CROSSWALK, RULE-EDU-002 and the recode correspondence_output | GPID Team (proposed) |

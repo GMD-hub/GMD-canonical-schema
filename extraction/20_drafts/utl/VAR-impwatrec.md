@@ -15,7 +15,7 @@ tier: 1
 
 # --- Nature of the variable ---
 unit_of_analysis: household
-mapping_role: atomic
+mapping_role: derived_preferred
 data_type: binary
 
 # --- Allowed output values ---
@@ -37,16 +37,24 @@ missing_codes:
     label: "Other value not covered by harmonized codes"
 # --- Derivation graph ---
 derived_from:
-  []
+  - VAR-watersource
 derives_to: []
 # --- Country parameter declarations ---
-country_parameters: []
+country_parameters:
+  - PARAM-WASH-WATER-CROSSWALK
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: recode
+  from: VAR-watersource
+  map: {"1/8": 1, "9/14": 0}
 
 # --- Universe / skip gate ---
 gates: []
 
 # --- Cross-references ---
-rules: []
+rules:
+  - RULE-WASH-001
 exceptions: []
 external_standards:
   - name: "WHO/UNICEF JMP"
@@ -64,7 +72,13 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "2026-10-27 (proposed, pending GPID Team approval): imp_wat_rec is derived from
+          water_source when the category reaches one fine code and set directly
+          otherwise (RULE-WASH-001), so mapping_role atomic -> derived_preferred (the
+          educat4 pattern) and derived_from VAR-watersource. The recode map is the
+          guidelines' consistency check; it replaces the category_keyword placeholder
+          of the survey-harmonization vendored copy. Added PARAM-WASH-WATER-CROSSWALK
+          (improved_flag on the national category serves the direct path)."
 ---
 
 ## Definition
@@ -99,3 +113,4 @@ If the survey is on file in the SDG calculations, set 1 if most of the problemat
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
+| 2026-10-27 | 0.2     | Derive from VAR-watersource (recode correspondence_output); add PARAM-WASH-WATER-CROSSWALK and RULE-WASH-001 | GPID Team (proposed) |

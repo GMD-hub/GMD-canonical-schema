@@ -52,7 +52,17 @@ derives_to:
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters:
+  - PARAM-EDU-LEVEL-CROSSWALK
   - PARAM-EDU-MIN-EDUCATION-AGE
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  - method: recode
+    from: VAR-educat7
+    map: {"1": 1, "2/3": 2, "4/5": 3, "6/7": 4}
+  - method: recode
+    from: VAR-educat5
+    map: {"1": 1, "2": 2, "3/4": 3, "5": 4}
 
 # --- Universe / skip gate ---
 gates:
@@ -90,7 +100,13 @@ provenance:
   notes: "Guidelines state: at the bare minimum, this variable must be generated.
           CSV shows basic=0 for educat4, which likely means it is in a separate output
           file rather than the basic file. Tier=1 retained per guidelines language.
-          Needs team clarification."
+          Needs team clarification.
+          2026-10-27 (proposed, pending GPID Team approval): added PARAM-EDU-LEVEL-CROSSWALK (the national route also applies when
+          educat4 is the level the source reaches) and correspondence_output:
+          both RULE-EDU-002 derivation recodes (path 1 from educat7, until now kept
+          only in the survey-harmonization vendored copy; path 2 from educat5, until
+          now only in prose). Path 2 conflicts with path 1 for educat5 code 3; it is
+          transcribed as stated, and the conflict is an open question in RULE-EDU-002."
 ---
 
 ## Definition
@@ -184,3 +200,4 @@ Do not guestimate education levels for these individuals under any circumstances
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
+| 2026-10-27 | 0.2     | Add PARAM-EDU-LEVEL-CROSSWALK and the correspondence_output recodes (path 1 from educat7, path 2 from educat5) | GPID Team (proposed) |
