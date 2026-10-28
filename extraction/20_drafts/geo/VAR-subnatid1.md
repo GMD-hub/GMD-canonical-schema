@@ -33,7 +33,8 @@ missing_codes:
 
 # --- Derivation graph ---
 derived_from: []
-derives_to: []
+derives_to:
+  - VAR-subnatidsurvey
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
@@ -70,7 +71,7 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "Construction is survey-derived: the encoded value and label are taken directly from the raw survey's administrative variable text and code, with spelling and punctuation variants preserved as they occur in the data."
 ---
 
 ## Definition
@@ -90,19 +91,23 @@ global context.
 
 ## Construction notes
 
-`subnatid1` is a string variable that holds country-specific categorical values.
-There are no fixed harmonized codes; the value codes are defined by the
-national administrative classification for the survey's country. This
-composition depends on the country parameter layer: the agent must load the
-country parameters and exceptions, select the records valid for the survey's ID
-year, and record the resulting administrative classification in the do-file
-notes.
+`subnatid1` is a string variable that holds country-specific categorical values
+as they appear in the source survey. The value is constructed from the actual
+survey data, not from the GMD geo crosswalk: it is a single text token made from
+the survey's encoded code and the corresponding area label, for example
+"6 - Gjirokaster", "6 – Gjirokaster", "6-GJIROKASTER", or "6-Gjirokaster".
+
+The numeric part comes from the survey's own code for the first administrative
+level; the text part comes from the label or area name recorded in the raw data.
+The number can differ across surveys or years, and spelling/variant differences
+must be preserved as they occur in the source data rather than normalized to a
+single canonical case. The construction is therefore data-driven and survey-
+anchored, with no requirement to retrieve a GMD crosswalk record for the value.
 
 Because the value space is country-specific, `value_codes` is intentionally
-left null and must not be fabricated. Values are selected from the country
-administrative codebook (or an official shapefile used by the national
-statistics office). Numeric entries found in the raw data are recoded to string
-format using the naming convention "code - name", for example "1 - Hatay".
+left null and must not be fabricated. The agent should build the string from the
+observed survey code and label combination and record any variant spelling or
+punctuation differences in the do-file notes.
 
 ## Consistency checks
 

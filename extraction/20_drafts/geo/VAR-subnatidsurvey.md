@@ -30,8 +30,13 @@ missing_codes:
     label: "Cannot be harmonized because data does not meet harmonization definition"
 
 # --- Derivation graph ---
-derived_from: []
-derives_to: []
+derived_from:
+  - VAR-subnatid1
+  - VAR-subnatid2
+  - VAR-subnatid3
+  - VAR-subnatid4
+derives_to:
+  - VAR-geocode
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
@@ -65,43 +70,53 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "Construction is survey-derived: record the most disaggregated representative area actually observed in the survey, preserving the raw code-label spelling variants as they appear in the data."
 ---
 
 ## Definition
 
 `subnatidsurvey` is a country-specific, string variable that records the lowest
-level of the administrative structure at which the survey is representative. In
-most cases it equals `subnatid1` or `subnatid2`, but it may be a distinct
-classification when the lowest level is urban/rural or another regional
-categorization that cannot be mapped to the subnational identifiers.
+administrative level at which the survey is representative, restricted to the
+level that is actually present in the survey's own `subnatid1` through
+`subnatid4` hierarchy. It must be a direct value drawn from one of those
+variables, not an independent geography code or label invented outside the
+survey-admin structure.
 
 ## Conceptual intent
 
 `subnatidsurvey` documents the effective level of subnational representativeness
-of the survey regardless of how that lowest level maps to the administrative
-code. It informs analysts about the geographic granularity at which survey
-estimates are reliable.
+of the survey, but only for the geography that is genuinely mappable within the
+survey's own administrative hierarchy. It tells analysts the deepest level of
+coverage actually supported by the survey's admin variables without drifting to
+an external geo layer or an unsupported raw label.
 
 ## Construction notes
 
-`subnatidsurvey` is a string variable with country-specific values and no fixed
-harmonized codes. It records the lowest representative level as reported in the
-survey's sampling design, whether that maps to `subnatid1`, `subnatid2`, or a
-non-administrative regional classification (urban/rural or other). This depends
-on the country parameter layer: load the country parameters and exceptions valid
-for the survey's ID year.
+`subnatidsurvey` is a string variable with country-specific values and must be
+constructed only from the survey's coded administrative geography already
+represented in `subnatid1`, `subnatid2`, `subnatid3`, or `subnatid4`. In other
+words, the value should be the same kind of code-label string already used in
+those variables, such as "6 - Gjirokaster", "6 – Gjirokaster",
+"6-GJIROKASTER", or "6-Gjirokaster".
+
+The value is not an externally matched GMD crosswalk code and not an arbitrary
+raw survey label. It must be exactly the string value from one of the survey's
+admin variables corresponding to the lowest representative level in the current
+survey design. Across surveys and years, the numeric code may change and the
+spelling/variant may differ, but it remains the same value family as the
+survey's own `subnatid` hierarchy.
 
 `value_codes` is intentionally null because values derive from the country
-survey design and cannot be enumerated in advance. Values are recorded using the
-same string convention and administrative names as the subnational identifiers.
+survey design and cannot be enumerated in advance.
 
 ## Consistency checks
 
 - `subnatidsurvey` must be a string variable.
+- The recorded value must be the same code-label family as exactly one of
+  `subnatid1`, `subnatid2`, `subnatid3`, or `subnatid4`.
 - The level recorded must be consistent with the survey's documented sampling
-  design and with the coarsest of `subnatid1` through `subnatid4` for which the
-  survey is representative.
+  design and with the lowest representative level actually present in the
+  survey's administrative hierarchy.
 - Verify the recorded value matches the survey year/round and is not carried
   over from another round.
 

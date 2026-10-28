@@ -15,7 +15,7 @@ tier: 1
 
 # --- Nature of the variable ---
 unit_of_analysis: household
-mapping_role: atomic
+mapping_role: derived
 data_type: integer
 
 # --- Allowed output values ---
@@ -30,7 +30,8 @@ missing_codes:
     label: "Cannot be harmonized because data does not meet harmonization definition"
 
 # --- Derivation graph ---
-derived_from: []
+derived_from:
+  - VAR-geocode
 derives_to: []
 
 # --- Country parameter declarations ---

@@ -33,20 +33,22 @@ missing_codes:
             PARAM-GEO-GMD-CROSSWALK for the survey ISO3 code and survey ID year"
 
 # --- Derivation graph ---
-derived_from: []
-derives_to:
-  - VAR-subnatid1
-  - VAR-subnatid2
-  - VAR-subnatid3
-  - VAR-subnatid4
+derived_from:
   - VAR-subnatidsurvey
+derives_to:
+  - VAR-gauladm1code
+  - VAR-gauladm2code
+  - VAR-subnatid1prev
+  - VAR-subnatid2prev
+  - VAR-subnatid3prev
+  - VAR-subnatid4prev
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
 country_parameters:
   - PARAM-GEO-GMD-CROSSWALK
 
-# --- Universe / skip gate ---
+# --- Universe / skip condition ---
 gates: []
 
 # --- Cross-references ---
@@ -77,11 +79,13 @@ provenance:
   human_reviewed: false
   reviewer: null
   notes: "New variable: captures the single resolved crosswalk code (e.g.
-      'ALB_2021_NUTS3_AL031') that PARAM-GEO-GMD-CROSSWALK rows already carry
-      in gmd_subnatidsurvey, so it can be matched and recorded once before
-      being fanned out to VAR-subnatid1 through VAR-subnatid4. Form verified
-      against every committed PARAM-GEO-GMD-CROSSWALK record (144 countries,
-      2195 unique non-empty values, 0 deviations)."
+      'ALB_2021_NUTS3_AL031') that PARAM-GEO-GMD-CROSSWALK rows carry in
+      gmd_subnatidsurvey. Matched once from the survey's representative level
+      (subnatidsurvey), then reused by the GAUL codes and the prior-boundary
+      subnatid*_prev variables. It is NOT the source of subnatid1-4, which are
+      survey-derived. Form verified against every committed
+      PARAM-GEO-GMD-CROSSWALK record (144 countries, 2,195 unique non-empty
+      values, 0 deviations)."
 ---
 
 ## Definition
@@ -101,34 +105,37 @@ single token.
 
 ## Conceptual intent
 
-`geo_code` is the single matched-row output that the subnational identifier
-family (`subnatid1`-`subnatid4`, `subnatidsurvey`) is fanned out from. Instead
-of each of those variables independently re-matching survey text, `geo_code`
-performs the match once and records the crosswalk row's resolved code, which
-is then assigned to whichever `subnatid` levels the row declares as
-representative (`is_rep_subnat1`-`is_rep_subnat4`, `representative_level`).
+`geo_code` is the result of matching the survey's representative-level geography
+(`subnatidsurvey`) against the stable country geography crosswalk. It is a
+separate variable from the survey-derived identifiers: `subnatid1`-`subnatid4`
+and `subnatidsurvey` are built directly from the survey data and do NOT depend
+on this match. `geo_code` records the single matched crosswalk code once, and
+that resolved match is reused by the GAUL codes (`gaul_adm1_code`,
+`gaul_adm2_code`) and the prior-boundary identifiers (`subnatid1_prev`-
+`subnatid4_prev`).
 
 ## Construction notes
 
-Match the individual's/household's reported survey area text against the
-`survey_labels` field of each row in `PARAM-GEO-GMD-CROSSWALK` resolved from
-the country layer for the survey's ISO3 code and survey ID year.
+Resolve `geo_code` from the survey's representative level (`subnatidsurvey`) —
+the `subnatid{N}` level the survey is representative on. Match that
+representative-level survey value against `PARAM-GEO-GMD-CROSSWALK` resolved
+from the country layer for the survey's ISO3 code and survey ID year.
 `survey_labels` holds one or more pipe-separated (`|`) label variants for the
 same geography identity (accented/unaccented, cased, punctuation variants) —
-normalize both the survey response and the stored variants (case-fold, trim,
-collapse whitespace) before comparing. Scope the match to rows whose
-`survey_variables` field includes the raw survey variable being harmonized
-(e.g. `subnatid`, `subnatid1`).
+normalize both the survey value and the stored variants (case-fold, trim,
+collapse whitespace) before comparing.
 
 On a match:
   geo_code = gmd_subnatidsurvey for the matched country_entry_id
 
 Document the matched `country_entry_id` in the do-file notes.
 
-**Relationship to subnatid1-4.** Once `geo_code` is resolved, the matched
-row's `gmd_subnatid1` through `gmd_subnatid4` and `is_rep_subnat1` through
-`is_rep_subnat4` supply the fan-out values for those variables directly —
-they must not be independently re-matched against survey text.
+`geo_code` does NOT supply `subnatid1`-`subnatid4`: those are built directly
+from the survey data (the "code - label" string) and never from this crosswalk
+match. The resolved match is instead reused downstream by `gaul_adm1_code`/
+`gaul_adm2_code` (the GAUL `geo_id` when `geo_source=GAUL`) and by the
+prior-boundary `subnatid*_prev` variables (via the prior effective-dated
+crosswalk period).
 
 ## Consistency checks
 
@@ -159,8 +166,8 @@ they must not be independently re-matched against survey text.
 
 - Matching against raw, non-normalized survey label text (case/accent/
   whitespace differences causing false misses).
-- Re-deriving `subnatid1`-`subnatid4` independently instead of reusing the
-  same matched row's `gmd_subnatid1`-`gmd_subnatid4` values.
+- Treating `geo_code` as the source of `subnatid1`-`subnatid4`: those are
+  survey-derived ("code - label") and independent of this crosswalk match.
 - Using a crosswalk record from the wrong ISO3 code or survey ID year.
 - Splitting `geo_code` into segments on every underscore — `geo_id` (the
   final segment) can itself contain underscores or dots and must be treated
