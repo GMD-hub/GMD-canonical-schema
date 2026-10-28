@@ -158,8 +158,7 @@ numbering.**
 Match the reported level text to a `country_entry_id` in
 `PARAM-EDU-LEVEL-CROSSWALK` resolved from the country layer for the
 survey's ISO3 code and survey ID year. The matched record supplies
-`isced_level`, `gmd_educat4_target`, `gmd_educat5_target`,
-`gmd_educat7_target`, and `cum_years_schooling`.
+`isced_level` and `cum_years_schooling`.
   educy = cum_years_schooling for the matched country_entry_id
 Document the matched `country_entry_id` in the do-file notes.
 
@@ -224,3 +223,4 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
 | 2026-09-30 | 0.2     | Replaced `PARAM-EDU-YEARS-BY-LEVEL` and the fixed tertiary-year table with `PARAM-EDU-LEVEL-CROSSWALK`-based resolution; reframed construction as per-individual path selection (RULE-EDU-003 v0.2) | GPID Team |
 | 2026-10-27 | 0.3     | Add the category_field correspondence_output | GPID Team (proposed) |
+| 2026-10-28 | 0.4     | The matched record no longer lists gmd_educat4/5/7_target (dropped from PARAM-EDU-LEVEL-CROSSWALK: the codes follow from isced_level) | GPID Team (proposed) |

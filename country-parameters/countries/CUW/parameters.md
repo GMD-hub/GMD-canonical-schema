@@ -17,9 +17,6 @@ parameters:
     duration_years: 4
     isced_level: '0'
     isced_label: ISCED 0 Early childhood education
-    gmd_educat4_target: no_education
-    gmd_educat5_target: no_education
-    gmd_educat7_target: none
     source_row: 7
     parent_country_entry_ids: []
     cum_years_schooling: 0
@@ -34,9 +31,6 @@ parameters:
     duration_years: 2
     isced_level: '0'
     isced_label: ISCED 0 Early childhood education
-    gmd_educat4_target: no_education
-    gmd_educat5_target: no_education
-    gmd_educat7_target: none
     source_row: 8
     parent_country_entry_ids: []
     cum_years_schooling: 0
@@ -51,9 +45,6 @@ parameters:
     duration_years: 2
     isced_level: '0'
     isced_label: ISCED 0 Early childhood education
-    gmd_educat4_target: no_education
-    gmd_educat5_target: no_education
-    gmd_educat7_target: none
     source_row: 9
     parent_country_entry_ids: []
     cum_years_schooling: 0
@@ -68,9 +59,6 @@ parameters:
     duration_years: 6
     isced_level: '1'
     isced_label: ISCED 1 Primary
-    gmd_educat4_target: primary
-    gmd_educat5_target: primary_complete
-    gmd_educat7_target: primary_complete
     source_row: 10
     parent_country_entry_ids: []
     cum_years_schooling: 6
@@ -85,9 +73,6 @@ parameters:
     duration_years: 6
     isced_level: '1'
     isced_label: ISCED 1 Primary
-    gmd_educat4_target: primary
-    gmd_educat5_target: primary_complete
-    gmd_educat7_target: primary_complete
     source_row: 11
     parent_country_entry_ids: []
     cum_years_schooling: 6
@@ -102,9 +87,6 @@ parameters:
     duration_years: 2
     isced_level: '2'
     isced_label: ISCED 2 Lower secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: lower_secondary
-    gmd_educat7_target: lower_secondary_complete
     source_row: 12
     parent_country_entry_ids:
     - CUW-EDU-04
@@ -123,9 +105,6 @@ parameters:
     duration_years: 2
     isced_level: '2'
     isced_label: ISCED 2 Lower secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: lower_secondary
-    gmd_educat7_target: lower_secondary_complete
     source_row: 13
     parent_country_entry_ids:
     - CUW-EDU-04
@@ -144,9 +123,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 14
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -167,9 +143,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 15
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -190,9 +163,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 16
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -213,9 +183,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 17
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -236,9 +203,6 @@ parameters:
     duration_years: 0
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 18
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -259,9 +223,6 @@ parameters:
     duration_years: 4
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 19
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -282,9 +243,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 20
     parent_country_entry_ids:
     - CUW-EDU-06
@@ -305,9 +263,6 @@ parameters:
     duration_years: 1
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 21
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -331,9 +286,6 @@ parameters:
     duration_years: 2
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 22
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -357,9 +309,6 @@ parameters:
     duration_years: 3
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 23
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -383,9 +332,6 @@ parameters:
     duration_years: 1
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 24
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -409,9 +355,6 @@ parameters:
     duration_years: 2
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 25
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -435,9 +378,6 @@ parameters:
     duration_years: 0
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 26
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -461,9 +401,6 @@ parameters:
     duration_years: 4
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 27
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -487,9 +424,6 @@ parameters:
     duration_years: 4
     isced_level: '5'
     isced_label: ISCED 5 Short-cycle tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 28
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -513,9 +447,6 @@ parameters:
     duration_years: 4
     isced_level: '6'
     isced_label: ISCED 6 Bachelor or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 29
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -539,9 +470,6 @@ parameters:
     duration_years: 4
     isced_level: '6'
     isced_label: ISCED 6 Bachelor or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 30
     parent_country_entry_ids:
     - CUW-EDU-12
@@ -565,9 +493,6 @@ parameters:
     duration_years: 2
     isced_level: '7'
     isced_label: ISCED 7 Master or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 31
     parent_country_entry_ids:
     - CUW-EDU-23
@@ -592,9 +517,6 @@ parameters:
     duration_years: 2
     isced_level: '7'
     isced_label: ISCED 7 Master or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 32
     parent_country_entry_ids:
     - CUW-EDU-23

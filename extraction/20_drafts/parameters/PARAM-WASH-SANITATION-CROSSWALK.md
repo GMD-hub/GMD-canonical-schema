@@ -20,8 +20,6 @@ row_schema:
   national_label_local: string
   jmp_classification: string
   jmp_id: string
-  gmd_target: string
-  gmd_spans: string
   improved_flag: boolean
   shared_flag: boolean
   source_row: integer
@@ -43,13 +41,20 @@ provenance:
           2026-10-27 (proposed, pending GPID Team approval): applies_to_variables
           filled (VAR-sanitationsource, VAR-impsanrec) for RULE-WASH-001: every category is placed
           through this crosswalk, and improved_flag serves the direct path for
-          problematic categories."
+          problematic categories.
+          2026-10-28 (proposed): gmd_target and gmd_spans dropped from row_schema: the
+          GMD code (or the codes a coarse node spans) follows from jmp_id through the
+          VAR-sanitationsource JMP-2025 anchor, and the direct path for a node with no fine code
+          is VAR-impsanrec's (not improved_flag). improved_flag is JMP's own improved status,
+          kept as information: it differs from GMD's for delivered water (JMP
+          improved, GMD codes 11-12 not improved)."
 ---
 
 ## Definition
 
 Defines row-level country sanitation-source crosswalk records linking national
-labels to JMP classifications and GMD targets.
+labels to JMP classifications (`jmp_id`), from which the GMD codes follow
+through the `VAR-sanitationsource` JMP-2025 anchor.
 
 ## Parameter notes
 
@@ -67,3 +72,4 @@ labels to JMP classifications and GMD targets.
 |---|---|---|---|
 | 2026-09-06 | 0.2 | Add table contract for sanitation crosswalk extraction | GPID Team |
 | 2026-10-27 | 0.3 | Draft: fill applies_to_variables (VAR-sanitationsource, VAR-impsanrec) for RULE-WASH-001 | GPID Team (proposed) |
+| 2026-10-28 | 0.3 | Draft: drop gmd_target and gmd_spans from row_schema: precomputed duplicates of jmp_id, whose GMD code (or the codes a coarse node spans) follows from the VAR-sanitationsource JMP-2025 anchor; no consumer reads them | GPID Team (proposed) |

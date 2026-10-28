@@ -21,9 +21,6 @@ row_schema:
   duration_years: integer
   isced_level: string
   isced_label: string
-  gmd_educat4_target: string
-  gmd_educat5_target: string
-  gmd_educat7_target: string
   source_row: integer
   parent_country_entry_ids: array_of_string
   cum_years_schooling: integer_or_null
@@ -97,3 +94,4 @@ for the survey's ISO3 code and survey ID year.
 |---|---|---|---|
 | 2026-09-06 | 0.2 | Add table contract for education crosswalk extraction | GPID Team |
 | 2026-09-30 | 0.3 | Add derived years-of-schooling fields and VAR-educy to applies_to_variables, to support RULE-EDU-003 v0.2 | GPID Team |
+| 2026-10-28 | 0.3 | Drop gmd_educat4_target, gmd_educat5_target and gmd_educat7_target from row_schema: precomputed duplicates of isced_level, whose GMD codes follow from the VAR-educat7 ISCED anchor and the VAR-educat5 / VAR-educat4 recodes; no consumer reads them | GPID Team (proposed) |

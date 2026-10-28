@@ -20,8 +20,13 @@ from schema.variable import (
 ROOT = Path(__file__).resolve().parents[2]  # worktree root
 DRAFTS = ROOT / "extraction" / "20_drafts"
 
-# Registered rule references from the knowledge/ registry.
-RULE_IDS = {"RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RULE-SEX-001"}
+# Registered rule references: the knowledge/ registry plus the rules drafted beside the variables
+# (a draft rule is cited by draft variables before it is promoted, e.g. RULE-WASH-001).
+RULE_IDS = {
+    path.stem
+    for path in [*(ROOT / "knowledge" / "rules").rglob("RULE-*.md"), *DRAFTS.rglob("RULE-*.md")]
+    if "runs" not in path.relative_to(ROOT).parts
+}
 REQUIRED_SECTIONS = [
     "## Definition",
     "## Conceptual intent",

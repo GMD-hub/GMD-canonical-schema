@@ -20,8 +20,6 @@ row_schema:
   national_label_local: string
   jmp_classification: string
   jmp_id: string
-  gmd_target: string
-  gmd_spans: string
   improved_flag: boolean
   shared_flag: boolean
   source_row: integer
@@ -59,3 +57,4 @@ labels to JMP classifications and GMD targets.
 | Date | Version | Change | Authority |
 |---|---|---|---|
 | 2026-09-06 | 0.2 | Add table contract for water crosswalk extraction | GPID Team |
+| 2026-10-28 | 0.3 | Drop gmd_target and gmd_spans from row_schema: precomputed duplicates of jmp_id, whose GMD code (or the codes a coarse node spans) follows from the VAR-watersource JMP-2025 anchor; no consumer reads them | GPID Team (proposed) |

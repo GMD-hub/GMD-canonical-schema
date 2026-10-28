@@ -21,9 +21,6 @@ row_schema:
   duration_years: integer
   isced_level: string
   isced_label: string
-  gmd_educat4_target: string
-  gmd_educat5_target: string
-  gmd_educat7_target: string
   source_row: integer
   parent_country_entry_ids: array_of_string
   cum_years_schooling: integer_or_null
@@ -61,13 +58,18 @@ provenance:
           A full 206-country sweep (2026-09-30) produced 0 review_required
           and 0 failures, with 176 countries flagged 'ambiguous' pending
           human review of multi-parent tertiary branches before this
-          schema change is promoted to knowledge/."
+          schema change is promoted to knowledge/.
+          2026-10-28 (proposed): gmd_educat4_target, gmd_educat5_target and
+          gmd_educat7_target dropped from row_schema. They restated isced_level in
+          GMD terms; the codes follow from isced_level through the VAR-educat7 ISCED
+          anchor and the VAR-educat5 / VAR-educat4 recodes (RULE-EDU-002)."
 ---
 
 ## Definition
 
 Defines row-level country crosswalk records that map national education
-labels and ISCED levels to GMD education targets, plus derived
+labels to ISCED levels (from which the GMD education codes follow, through
+the `VAR-educat7` ISCED anchor), plus derived
 years-of-schooling metadata computed from the row structure itself.
 
 ## Parameter notes
@@ -102,3 +104,4 @@ for the survey's ISO3 code and survey ID year.
 | 2026-09-06 | 0.2 | Add table contract for education crosswalk extraction | GPID Team |
 | 2026-09-30 | 0.3 | Draft: add derived years-of-schooling fields and VAR-educy to applies_to_variables, to support RULE-EDU-003 v0.2 | GPID Team |
 | 2026-10-27 | 0.3 | Draft: add VAR-educat7 and VAR-educat5 to applies_to_variables: every level of the education ladder is placed through this crosswalk (RULE-EDU-002 v0.2) | GPID Team (proposed) |
+| 2026-10-28 | 0.3 | Draft: drop gmd_educat4_target, gmd_educat5_target and gmd_educat7_target from row_schema: precomputed duplicates of isced_level, whose GMD codes follow from the VAR-educat7 ISCED anchor and the VAR-educat5 / VAR-educat4 recodes; no consumer reads them | GPID Team (proposed) |

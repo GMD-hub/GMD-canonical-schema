@@ -77,8 +77,7 @@ ELSE IF   school = 0 (not currently enrolled)
 THEN      match the reported level text to a country_entry_id in
           PARAM-EDU-LEVEL-CROSSWALK resolved from the country layer for the
           survey ISO3 code and survey ID year
-          the matched record supplies isced_level, gmd_educat4_target,
-          gmd_educat5_target, gmd_educat7_target, and cum_years_schooling
+          the matched record supplies isced_level and cum_years_schooling
           set educy = cum_years_schooling for the matched country_entry_id
           document the matched country_entry_id in the do-file notes
 
@@ -151,4 +150,4 @@ variation across surveys where progress detail is absent.
 |------------|---------|---------------|------------|
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
 | 2026-09-30 | 0.2     | Replaced `PARAM-EDU-YEARS-BY-LEVEL` and the fixed tertiary-year table with `PARAM-EDU-LEVEL-CROSSWALK`-based resolution; reframed path selection to per-individual evaluation; added enrolled/not-enrolled post-grade-12 paths (ordinal year, named level, in-progress floor) | GPID Team |
-
+| 2026-10-28 | 0.3     | The matched record no longer lists gmd_educat4/5/7_target (dropped from PARAM-EDU-LEVEL-CROSSWALK: the codes follow from isced_level) | GPID Team (proposed) |

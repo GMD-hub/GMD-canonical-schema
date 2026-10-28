@@ -17,9 +17,6 @@ parameters:
     duration_years: 3
     isced_level: '0'
     isced_label: ISCED 0 Early childhood education
-    gmd_educat4_target: no_education
-    gmd_educat5_target: no_education
-    gmd_educat7_target: none
     source_row: 7
     parent_country_entry_ids: []
     cum_years_schooling: 0
@@ -34,9 +31,6 @@ parameters:
     duration_years: 6
     isced_level: '1'
     isced_label: ISCED 1 Primary
-    gmd_educat4_target: primary
-    gmd_educat5_target: primary_complete
-    gmd_educat7_target: primary_complete
     source_row: 8
     parent_country_entry_ids: []
     cum_years_schooling: 6
@@ -51,9 +45,6 @@ parameters:
     duration_years: 4
     isced_level: '2'
     isced_label: ISCED 2 Lower secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: lower_secondary
-    gmd_educat7_target: lower_secondary_complete
     source_row: 9
     parent_country_entry_ids:
     - COM-EDU-02
@@ -72,9 +63,6 @@ parameters:
     duration_years: 2
     isced_level: '2'
     isced_label: ISCED 2 Lower secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: lower_secondary
-    gmd_educat7_target: lower_secondary_complete
     source_row: 10
     parent_country_entry_ids:
     - COM-EDU-02
@@ -91,9 +79,6 @@ parameters:
     duration_years: 3
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 11
     parent_country_entry_ids:
     - COM-EDU-03
@@ -113,9 +98,6 @@ parameters:
     duration_years: 3
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 12
     parent_country_entry_ids:
     - COM-EDU-03
@@ -137,9 +119,6 @@ parameters:
     duration_years: 3
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_complete
     source_row: 13
     parent_country_entry_ids:
     - COM-EDU-03
@@ -159,9 +138,6 @@ parameters:
     duration_years: 2
     isced_level: '4'
     isced_label: ISCED 4 Post-secondary non-tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 14
     parent_country_entry_ids:
     - COM-EDU-05
@@ -184,9 +160,6 @@ parameters:
     duration_years: 2
     isced_level: '5'
     isced_label: ISCED 5 Short-cycle tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 15
     parent_country_entry_ids:
     - COM-EDU-05
@@ -209,9 +182,6 @@ parameters:
     duration_years: 3
     isced_level: '6'
     isced_label: ISCED 6 Bachelor or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 16
     parent_country_entry_ids:
     - COM-EDU-05
@@ -234,9 +204,6 @@ parameters:
     duration_years: 3
     isced_level: '6'
     isced_label: ISCED 6 Bachelor or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 17
     parent_country_entry_ids:
     - COM-EDU-05
@@ -259,9 +226,6 @@ parameters:
     duration_years: 3
     isced_level: '6'
     isced_label: ISCED 6 Bachelor or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 18
     parent_country_entry_ids:
     - COM-EDU-05
@@ -284,9 +248,6 @@ parameters:
     duration_years: 2
     isced_level: '7'
     isced_label: ISCED 7 Master or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 19
     parent_country_entry_ids:
     - COM-EDU-10
@@ -428,8 +389,6 @@ parameters:
     national_label_local: Tous les puits
     jmp_classification: Ground water > All wells
     jmp_id: ground_water.all_wells
-    gmd_target: ''
-    gmd_spans: borehole|protected_well|unprotected_well
     improved_flag: false
     shared_flag: false
     source_row: 54
@@ -439,8 +398,6 @@ parameters:
     national_label_local: "Source prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
-    gmd_target: protected_spring
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 78
@@ -450,8 +407,6 @@ parameters:
     national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -461,8 +416,6 @@ parameters:
     national_label_local: "Puits proteg\xE9es"
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -472,8 +425,6 @@ parameters:
     national_label_local: "Puits ou sources prot\xE9g\xE9es"
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
-    gmd_target: ''
-    gmd_spans: protected_well|protected_spring
     improved_flag: true
     shared_flag: false
     source_row: 46
@@ -483,8 +434,6 @@ parameters:
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -494,8 +443,6 @@ parameters:
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -505,8 +452,6 @@ parameters:
     national_label_local: Puits tubulaire, forage
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -516,8 +461,6 @@ parameters:
     national_label_local: "Source non-prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
-    gmd_target: unprotected_spring
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 82
@@ -527,8 +470,6 @@ parameters:
     national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
-    gmd_target: unprotected_well
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 70
@@ -538,8 +479,6 @@ parameters:
     national_label_local: "Puits non-proteg\xE9es"
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
-    gmd_target: unprotected_well
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 70
@@ -549,8 +488,6 @@ parameters:
     national_label_local: "Puits ou sources non prot\xE9g\xE9es"
     jmp_classification: Ground water > Unprotected wells or springs
     jmp_id: ground_water.unprotected_wells_or_springs
-    gmd_target: ''
-    gmd_spans: unprotected_well|unprotected_spring
     improved_flag: false
     shared_flag: false
     source_row: 50
@@ -560,8 +497,6 @@ parameters:
     national_label_local: "Chariot avec petit r\xE9servoir/tambour"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 101
@@ -571,8 +506,6 @@ parameters:
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 102
@@ -582,8 +515,6 @@ parameters:
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 102
@@ -593,8 +524,6 @@ parameters:
     national_label_local: Camion-citerne
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 102
@@ -604,8 +533,6 @@ parameters:
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -615,8 +542,6 @@ parameters:
     national_label_local: Autre
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -626,8 +551,6 @@ parameters:
     national_label_local: "Eau conditionn\xE9e"
     jmp_classification: Packaged water
     jmp_id: packaged_water
-    gmd_target: bottled
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 89
@@ -637,8 +560,6 @@ parameters:
     national_label_local: Sachet d'eau
     jmp_classification: Packaged water > Sachet water
     jmp_id: packaged_water.sachet_water
-    gmd_target: bottled
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 91
@@ -648,8 +569,6 @@ parameters:
     national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
-    gmd_target: rainwater
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 87
@@ -659,8 +578,6 @@ parameters:
     national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
-    gmd_target: rainwater
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 87
@@ -670,8 +587,6 @@ parameters:
     national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
-    gmd_target: rainwater
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 87
@@ -681,8 +596,6 @@ parameters:
     national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
-    gmd_target: rainwater
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 87
@@ -692,8 +605,6 @@ parameters:
     national_label_local: "Citerne/r\xE9servoir couvert"
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
-    gmd_target: rainwater
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 87
@@ -703,8 +614,6 @@ parameters:
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -714,8 +623,6 @@ parameters:
     national_label_local: Eau de surface
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -725,8 +632,6 @@ parameters:
     national_label_local: "\xC9tang"
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 96
@@ -736,8 +641,6 @@ parameters:
     national_label_local: "\xC9tang"
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 96
@@ -747,8 +650,6 @@ parameters:
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 38
@@ -758,8 +659,6 @@ parameters:
     national_label_local: Connexions maison
     jmp_classification: Tap water > Piped on premises
     jmp_id: tap_water.piped_on_premises
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 38
@@ -769,8 +668,6 @@ parameters:
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -780,8 +677,6 @@ parameters:
     national_label_local: Eau courante dans le logement
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -791,8 +686,6 @@ parameters:
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -802,8 +695,6 @@ parameters:
     national_label_local: Eau courante dans la cour ou sur le terrain
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -813,8 +704,6 @@ parameters:
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -824,8 +713,6 @@ parameters:
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -835,8 +722,6 @@ parameters:
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -846,8 +731,6 @@ parameters:
     national_label_local: Fontaine publique
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
