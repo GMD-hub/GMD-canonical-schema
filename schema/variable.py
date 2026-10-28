@@ -100,15 +100,17 @@ _RECODE_KEY_PATTERN = re.compile(r"^\d+(/\d+)?$")
 
 class ExternalStandardAnchor(BaseModel):
     """method=external_standard: GMD code placed from an international standard's levels
-    (e.g. ISCED-2011 level -> educat7). The one universal anchor the family builds from;
-    lives with the anchored variable, not in a code-side table."""
+    (e.g. ISCED-2011 level -> educat7, JMP node -> water_source). The one universal anchor the
+    family builds from; lives with the anchored variable, not in a code-side table. A map value
+    is one code, or the list of codes a coarse standard level spans (the code itself is then
+    undetermined); a standard level absent from the map has no code of this variable."""
 
     model_config = ConfigDict(extra="forbid")
 
     method: Literal["external_standard"]
     standard: str
-    level: Literal["educat7", "educat5", "educat4"]
-    map: dict[str, int]
+    level: str
+    map: dict[str, int | list[int]]
 
 
 class Recode(BaseModel):
@@ -156,18 +158,6 @@ class CategoryField(BaseModel):
         return value
 
 
-class CategoryKeyword(BaseModel):
-    """method=category_keyword: resolve via the WASH vocabulary of the matched national
-    category (gmd_target / gmd_spans) at the fine or improved rung. The keyword->code
-    table is not yet part of the CVS."""
-
-    model_config = ConfigDict(extra="forbid")
-
-    method: Literal["category_keyword"]
-    domain: Literal["water", "sanitation"]
-    rung: Literal["fine", "improved"]
-
-
 class Alias(BaseModel):
     """method=alias: reuse another variable's value-codes and mapping unchanged, e.g. a
     reference-period or second-job variant (empstat_2 <- empstat)."""
@@ -186,7 +176,7 @@ class Alias(BaseModel):
 
 
 CorrespondenceOutput = Annotated[
-    ExternalStandardAnchor | Recode | CategoryField | CategoryKeyword | Alias,
+    ExternalStandardAnchor | Recode | CategoryField | Alias,
     Field(discriminator="method"),
 ]
 """Single polymorphic construction recipe the layered-correspondence resolver reads to
@@ -197,7 +187,9 @@ rather than restating it.
 
 A variable with several derivation paths carries a LIST of ``recode`` recipes, one per parent,
 in the preference order of ``derived_from`` (e.g. educat4 from educat7, else from educat5): the
-first recipe whose parent is constructed for the survey applies."""
+first recipe whose parent is constructed for the survey applies. The list may end with one
+``external_standard`` recipe, the direct path for a category no parent recode decides (e.g.
+imp_san_rec for a JMP node with no sanitation_source code)."""
 
 
 class VariableDefinition(BaseModel):
@@ -271,12 +263,19 @@ class VariableDefinition(BaseModel):
         recipes = self.correspondence_output
         if recipes is None:
             return self
+        listed = recipes if isinstance(recipes, list) else [recipes]
+        levels = [recipe.level for recipe in listed if isinstance(recipe, ExternalStandardAnchor)]
+        if any(level != self.variable_name for level in levels):
+            raise ValueError(f"external_standard level must be this variable's name: {levels}")
         if isinstance(recipes, list):
             if not recipes:
                 raise ValueError("correspondence_output list must not be empty")
-            if any(not isinstance(recipe, Recode) for recipe in recipes):
-                raise ValueError("a correspondence_output list holds recode recipes only")
-            parents = [recipe.from_ for recipe in recipes]
+            direct = isinstance(recipes[-1], ExternalStandardAnchor)
+            recodes = [recipe for recipe in recipes if isinstance(recipe, Recode)]
+            if not recodes or len(recodes) != len(recipes) - direct:
+                raise ValueError("a correspondence_output list holds recode recipes, optionally "
+                                 "followed by one external_standard recipe")
+            parents = [recipe.from_ for recipe in recodes]
             if len(set(parents)) != len(parents):
                 raise ValueError(f"correspondence_output recodes repeat a parent: {parents}")
         else:

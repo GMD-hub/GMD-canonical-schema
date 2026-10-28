@@ -45,9 +45,14 @@ country_parameters:
 
 # --- Correspondence output (machine-readable construction recipe) ---
 correspondence_output:
-  method: recode
-  from: VAR-watersource
-  map: {"1/8": 1, "9/14": 0}
+  - method: recode
+    from: VAR-watersource
+    map: {"1/8": 1, "9/14": 0}
+  - method: external_standard
+    standard: "JMP-2025"
+    level: imp_wat_rec
+    map:
+      "tap_water.other": 1
 
 # --- Universe / skip gate ---
 gates: []
@@ -78,7 +83,10 @@ provenance:
           educat4 pattern) and derived_from VAR-watersource. The recode map is the
           guidelines' consistency check; it replaces the category_keyword placeholder
           of the survey-harmonization vendored copy. Added PARAM-WASH-WATER-CROSSWALK
-          (improved_flag on the national category serves the direct path)."
+          (improved_flag on the national category serves the direct path).
+          2026-10-28 (proposed): correspondence_output is a list: the recode from
+          VAR-watersource, then the direct path for the JMP-2025 nodes that have no
+          water_source code: Tap water > Other (improved, as all tap water)."
 ---
 
 ## Definition
@@ -114,3 +122,4 @@ If the survey is on file in the SDG calculations, set 1 if most of the problemat
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
 | 2026-10-27 | 0.2     | Derive from VAR-watersource (recode correspondence_output); add PARAM-WASH-WATER-CROSSWALK and RULE-WASH-001 | GPID Team (proposed) |
+| 2026-10-28 | 0.3     | correspondence_output list: recode from VAR-watersource, then the JMP-2025 direct path | GPID Team (proposed) |

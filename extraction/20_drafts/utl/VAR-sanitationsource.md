@@ -70,9 +70,81 @@ country_parameters:
 
 # --- Correspondence output (machine-readable construction recipe) ---
 correspondence_output:
-  method: category_keyword
-  domain: sanitation
-  rung: fine
+  method: external_standard
+  standard: "JMP-2025"
+  level: sanitation_source
+  map:
+    "flush_and_pour_flush": [2, 3, 9]
+    "flush_and_pour_flush.to_piped_sewer_system": 2
+    "flush_and_pour_flush.to_septic_tank": 3
+    "flush_and_pour_flush.to_unknown_place_not_sure_dk": 9
+    "flush_and_pour_flush.to_elsewhere": 9
+    "flush_toilets": [2, 3, 9]
+    "flush_toilets.to_piped_sewer_system": 2
+    "flush_toilets.to_septic_tank": 3
+    "flush_toilets.to_unknown_place_not_sure_dk": 9
+    "flush_toilets.to_elsewhere": 9
+    "flush_toilets.private_flush_toilet": [2, 3, 9]
+    "flush_toilets.private_flush_toilet.to_piped_sewer_system": 2
+    "flush_toilets.private_flush_toilet.to_septic_tank": 3
+    "flush_toilets.private_flush_toilet.to_unknown_place_not_sure_dk": 9
+    "flush_toilets.private_flush_toilet.to_elsewhere": 9
+    "flush_toilets.public_shared_flush_toilet": [2, 3, 9]
+    "flush_toilets.public_shared_flush_toilet.to_piped_sewer_system": 2
+    "flush_toilets.public_shared_flush_toilet.to_septic_tank": 3
+    "flush_toilets.public_shared_flush_toilet.to_unknown_place_not_sure_dk": 9
+    "flush_toilets.public_shared_flush_toilet.to_elsewhere": 9
+    "latrines": [2, 3, 5, 6, 9, 10, 11, 12, 14]
+    "latrines.pour_flush_latrines": [2, 3, 9]
+    "latrines.pour_flush_latrines.to_piped_sewer_system": 2
+    "latrines.pour_flush_latrines.to_septic_tank": 3
+    "latrines.pour_flush_latrines.to_unknown_place_not_sure_dk": 9
+    "latrines.pour_flush_latrines.to_elsewhere": 9
+    "latrines.pour_flush_latrines.private_pour_flush_latrine": [2, 3, 9]
+    "latrines.pour_flush_latrines.private_pour_flush_latrine.to_piped_sewer_system": 2
+    "latrines.pour_flush_latrines.private_pour_flush_latrine.to_septic_tank": 3
+    "latrines.pour_flush_latrines.private_pour_flush_latrine.to_unknown_place_not_sure_dk": 9
+    "latrines.pour_flush_latrines.private_pour_flush_latrine.to_elsewhere": 9
+    "latrines.pour_flush_latrines.public_shared_pour_flush_latrine": [2, 3, 9]
+    "latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_piped_sewer_system": 2
+    "latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_septic_tank": 3
+    "latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_unknown_place_not_sure_dk": 9
+    "latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_elsewhere": 9
+    "latrines.dry_latrines": [5, 6, 10, 11, 12, 14]
+    "latrines.dry_latrines.improved_latrines": [5, 6, 10, 11, 12, 14]
+    "latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine": 5
+    "latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine": 6
+    "latrines.dry_latrines.improved_latrines.traditional_latrine": [6, 10]
+    "latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit": 10
+    "latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine": 12
+    "latrines.dry_latrines.improved_latrines.bucket_latrine": 11
+    "latrines.dry_latrines.improved_latrines.other": 14
+    "latrines.dry_latrines.private_latrines": [5, 6, 10, 11, 12, 14]
+    "latrines.dry_latrines.private_latrines.ventilated_improved_pit_latrine": 5
+    "latrines.dry_latrines.private_latrines.pit_latrine_with_slab_covered_latrine": 6
+    "latrines.dry_latrines.private_latrines.traditional_latrine": [6, 10]
+    "latrines.dry_latrines.private_latrines.pit_latrine_without_slab_open_pit": 10
+    "latrines.dry_latrines.private_latrines.hanging_toilet_hanging_latrine": 12
+    "latrines.dry_latrines.private_latrines.bucket_latrine": 11
+    "latrines.dry_latrines.private_latrines.other": 14
+    "latrines.dry_latrines.public_shared_latrines": [5, 6, 10, 11, 12, 14]
+    "latrines.dry_latrines.public_shared_latrines.ventilated_improved_pit_latrine": 5
+    "latrines.dry_latrines.public_shared_latrines.pit_latrine_with_slab_covered_latrine": 6
+    "latrines.dry_latrines.public_shared_latrines.traditional_latrine": [6, 10]
+    "latrines.dry_latrines.public_shared_latrines.pit_latrine_without_slab_open_pit": 10
+    "latrines.dry_latrines.public_shared_latrines.hanging_toilet_hanging_latrine": 12
+    "latrines.dry_latrines.public_shared_latrines.bucket_latrine": 11
+    "latrines.dry_latrines.public_shared_latrines.other": 14
+    "composting_toilets": 7
+    "composting_toilets.composting_toilet_private": 7
+    "composting_toilets.composting_toilet_shared": 7
+    "other_improved": 14
+    "other_improved.other": 14
+    "other_improved.other#2": 14
+    "no_facility_bush_field": 13
+    "other_unimproved": 14
+    "other_unimproved.other": 14
+    "other_unimproved.other#2": 14
 
 # --- Universe / skip gate ---
 gates: []
@@ -82,7 +154,8 @@ rules:
   - RULE-WASH-001
 exceptions: []
 external_standards:
-  []
+  - name: "WHO/UNICEF JMP"
+    url: https://washdata.org
 # --- Discovery hints ---
 source_hints:
   question_keywords: []
@@ -99,7 +172,14 @@ provenance:
   notes: "2026-10-27 (proposed, pending GPID Team approval): added derives_to VAR-impsanrec (the
           guidelines: sanitation_source feeds imp_san_rec), PARAM-WASH-SANITATION-CROSSWALK (the
           national route), RULE-WASH-001, and correspondence_output (until now kept
-          only in the survey-harmonization vendored copy)."
+          only in the survey-harmonization vendored copy).
+          2026-10-28 (proposed): correspondence_output is the JMP-2025 anchor: each node of
+          the JMP country-file sanitation tree (jmp_id, which the national categories carry) ->
+          its sanitation_source code, transcribed from the gmd and spans fields of the JMP
+          master tree (extraction/10_source/country-parameters-inputs, gmd_wash_concordance).
+          A coarse node maps to the list of codes it spans. Flush/pour flush to pit has no
+          sanitation_source code (imp_san_rec is set for it directly, VAR-impsanrec), so a
+          coarse flush node lists 2, 3 and 9 only. It replaces the category_keyword placeholder."
 ---
 
 ## Definition
@@ -136,3 +216,4 @@ Code from `sanitation_original` unless otherwise justified, referring to the sur
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
 | 2026-10-27 | 0.2     | Add derives_to VAR-impsanrec, PARAM-WASH-SANITATION-CROSSWALK, RULE-WASH-001 and correspondence_output | GPID Team (proposed) |
+| 2026-10-28 | 0.3     | correspondence_output: JMP-2025 anchor (jmp_id -> sanitation_source code or span), replacing category_keyword; external_standards JMP | GPID Team (proposed) |

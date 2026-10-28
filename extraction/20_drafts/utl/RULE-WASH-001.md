@@ -15,7 +15,7 @@ applies_to_variables:
   - VAR-sanitationsource
   - VAR-impsanrec
 priority: 80
-version: "0.1"
+version: "0.2"
 status: draft
 authority: "GPID Team"
 effective_from: "2026-10-27"
@@ -27,9 +27,10 @@ effective_to: null
 Place each category of the survey's main drinking-water source question (or
 sanitation-facility question) through the country's WASH crosswalk
 (`PARAM-WASH-WATER-CROSSWALK` / `PARAM-WASH-SANITATION-CROSSWALK`): source
-category -> national category (`country_entry_id`) -> its JMP classification
-and GMD target -> the `water_source` / `sanitation_source` code. Map a
-category directly only when no national category matches it, and record why.
+category -> national category (`country_entry_id`) -> its JMP node (`jmp_id`)
+-> the `water_source` / `sanitation_source` code that node takes in the
+`VAR-watersource` / `VAR-sanitationsource` JMP anchor. Map a category directly
+only when no national category matches it, and record why.
 
 When a category is placed at one fine code that determines improved status,
 derive the improved indicator from that code with the fixed recode (water:
@@ -56,7 +57,9 @@ guestimate.
 
 FOR each category of the source question
   IF   a national crosswalk row for the survey's ISO3 and year matches it
-  THEN take the row's gmd_target (one fine code) or gmd_spans (several)
+  THEN take the code(s) the row's jmp_id has in the VAR-watersource /
+       VAR-sanitationsource JMP anchor: one fine code, a list (the codes a
+       coarse node spans), or none (a node with no fine code)
   ELSE place it directly at the best-matching fine code, or mark it
        problematic; record the reason in the Harmonization Specification
 
@@ -75,6 +78,14 @@ IF   the category is placed at one fine code that determines improved
      status (present in the VAR-impwatrec / VAR-impsanrec recode map)
 THEN improved = recode of that code
      unless documented country evidence supports an override for that code
+
+ELSE IF   the category spans fine codes that all take the same improved
+          value in the recode map
+THEN      improved = that value
+
+ELSE IF   the row's jmp_id is in the direct path of VAR-impwatrec /
+          VAR-impsanrec (a JMP node with no fine code)
+THEN      improved = its value there
 
 ELSE IF   the survey is on file in the SDG calculations
 THEN      improved = 1 if most of the category was estimated improved at
@@ -150,10 +161,11 @@ rather than a per-survey judgement, as for education (`RULE-EDU-002`).
 
 | Situation | Action |
 |---|---|
-| "Piped into dwelling" matches a national category with target piped / leaf "Piped water into dwelling" | water_source = 1; imp_wat_rec = 1 (derived) |
-| "Bottled water" matches a national category with target bottled | water_source = 7; imp_wat_rec = 1 (derived) |
-| "Spring water, well" spans protected and unprotected sources | Problematic: imp_wat_rec set directly (SDG estimate, else evidence, else 0, documented); water_source: open question 1 |
-| "Flush to pit latrine" (no single sanitation_source code) | Problematic: imp_san_rec = 1 directly (JMP improved); sanitation_source: open questions 1, 2 |
+| "Piped into dwelling" matches a national category with jmp_id `tap_water.piped_on_premises.piped_water_into_dwelling` | water_source = 1; imp_wat_rec = 1 (derived) |
+| "Bottled water" matches a national category with jmp_id `packaged_water.bottled_water` | water_source = 7; imp_wat_rec = 1 (derived) |
+| "Protected well or spring" (jmp_id `ground_water.protected_wells_or_springs`, codes 5 and 6) | water_source: open question 1; imp_wat_rec = 1 (both codes improved) |
+| "Spring water, well" (jmp_id `ground_water`) spans protected and unprotected sources | Problematic: imp_wat_rec set directly (SDG estimate, else evidence, else 0, documented); water_source: open question 1 |
+| "Flush to pit latrine" (jmp_id `flush_toilets.to_pit`, no sanitation_source code) | imp_san_rec = 1 (VAR-impsanrec direct path); sanitation_source: open questions 1, 2 |
 | A category matches no national category | Place it directly; reason recorded in the Harmonization Specification |
 | Don't know | Missing in all four variables |
 
@@ -162,3 +174,4 @@ rather than a per-survey judgement, as for education (`RULE-EDU-002`).
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-10-27 | 0.1     | Initial draft | GPID Team (proposed) |
+| 2026-10-28 | 0.2     | Place categories by jmp_id through the VAR JMP anchors; spans with one improved value, and the VAR-impwatrec / VAR-impsanrec direct path, decide improved | GPID Team (proposed) |

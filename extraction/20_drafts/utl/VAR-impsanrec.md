@@ -45,9 +45,20 @@ country_parameters:
 
 # --- Correspondence output (machine-readable construction recipe) ---
 correspondence_output:
-  method: recode
-  from: VAR-sanitationsource
-  map: {"2/3": 1, "5/7": 1, "9/14": 0}
+  - method: recode
+    from: VAR-sanitationsource
+    map: {"2/3": 1, "5/7": 1, "9/14": 0}
+  - method: external_standard
+    standard: "JMP-2025"
+    level: imp_san_rec
+    map:
+      "flush_and_pour_flush.to_pit": 1
+      "flush_toilets.to_pit": 1
+      "flush_toilets.private_flush_toilet.to_pit": 1
+      "flush_toilets.public_shared_flush_toilet.to_pit": 1
+      "latrines.pour_flush_latrines.to_pit": 1
+      "latrines.pour_flush_latrines.private_pour_flush_latrine.to_pit": 1
+      "latrines.pour_flush_latrines.public_shared_pour_flush_latrine.to_pit": 1
 
 # --- Universe / skip gate ---
 gates: []
@@ -78,7 +89,11 @@ provenance:
           educat4 pattern) and derived_from VAR-sanitationsource. The recode map is the
           guidelines' consistency check; it replaces the category_keyword placeholder
           of the survey-harmonization vendored copy. Added PARAM-WASH-SANITATION-CROSSWALK
-          (improved_flag on the national category serves the direct path)."
+          (improved_flag on the national category serves the direct path).
+          2026-10-28 (proposed): correspondence_output is a list: the recode from
+          VAR-sanitationsource, then the direct path for the JMP-2025 nodes that have no
+          sanitation_source code: flush/pour flush to pit (improved: the guidelines list
+          flush/pour-flush to pit latrine)."
 ---
 
 ## Definition
@@ -114,3 +129,4 @@ If the survey is on file in the SDG computations, set 1 if most of the problemat
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1     | Initial draft | GPID Team  |
 | 2026-10-27 | 0.2     | Derive from VAR-sanitationsource (recode correspondence_output); add PARAM-WASH-SANITATION-CROSSWALK and RULE-WASH-001 | GPID Team (proposed) |
+| 2026-10-28 | 0.3     | correspondence_output list: recode from VAR-sanitationsource, then the JMP-2025 direct path | GPID Team (proposed) |
