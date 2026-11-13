@@ -3,7 +3,7 @@
 # VARIABLE SPECIFICATION - GMD Canonical Variable Schema v0.1
 # ================================================================
 variable_id: VAR-thoursothersyear
-canonical_label: Total hours of work in the last 12 months in other jobs excl. primary and secondary
+canonical_label: "Hours of work, other jobs excl. primary and secondary (12-month ref period)"
 variable_name: t_hours_others_year
 module_id: MOD-LBR
 gmd_version: '3.0'
@@ -51,7 +51,7 @@ provenance:
   notes: 12-month reference period. This section must be filled only for those individuals who responded
     to labor questions with a 12-month reference period, regardless of whether they also responded with
     a 7-day reference period. Other employment earnings family, 12-month reference period. Excludes primary
-    and secondary jobs. Hours of work in all jobs excluding the primary and secondary ones.
+    and secondary jobs. Hours of work in all jobs excluding the primary and secondary ones. The canonical_label is shortened from the guidelines' wording 'Total hours of work in the last 12 months in other jobs excl. primary and secondary' (83 characters) because a Stata variable label holds 80.
 ---
 ## Definition
 

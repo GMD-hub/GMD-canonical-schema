@@ -5,7 +5,7 @@
 
 # --- Identity ---
 variable_id: VAR-dwelsvcexp
-canonical_label: "Total annual consumption of services for the maintenance and repair of the dwelling"
+canonical_label: "Annual consumption of services for dwelling maintenance and repair"
 variable_name: dwelsvc_exp
 module_id: MOD-UTL
 gmd_version: "3.0"
@@ -62,7 +62,7 @@ provenance:
   extracted_on: "2026-08-14"
   human_reviewed: false
   reviewer: null
-  notes: null
+  notes: "canonical_label shortened from the guidelines' wording 'Total annual consumption of services for the maintenance and repair of the dwelling' (83 characters) because a Stata variable label holds 80"
 ---
 
 ## Definition

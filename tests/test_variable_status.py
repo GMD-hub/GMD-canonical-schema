@@ -125,3 +125,28 @@ def test_approved_variable_rejects_unresolved_reference() -> None:
 
     with pytest.raises(ValidationError, match="unknown variable IDs"):
         validate_variable(data)
+
+
+def test_label_longer_than_a_stata_variable_label_is_refused() -> None:
+    data = variable_data()
+    data["canonical_label"] = "x" * 81
+
+    with pytest.raises(ValidationError, match="a Stata variable label holds 80"):
+        validate_variable(data)
+
+
+def test_label_of_exactly_the_limit_is_accepted() -> None:
+    data = variable_data()
+    data["canonical_label"] = "x" * 80
+
+    assert validate_variable(data).canonical_label == "x" * 80
+
+
+def test_every_draft_variable_label_fits_a_stata_variable_label() -> None:
+    too_long = {}
+    for path in sorted((ROOT / "extraction/20_drafts").rglob("VAR-*.md")):
+        data, _ = load_markdown(path)
+        if len(data["canonical_label"]) > 80:
+            too_long[path.name] = len(data["canonical_label"])
+
+    assert too_long == {}

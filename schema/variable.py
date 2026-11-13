@@ -18,6 +18,9 @@ VARIABLE_ID_PATTERN = re.compile(r"^VAR-[a-z][a-z0-9]*$")
 MODULE_ID_PATTERN = re.compile(r"^MOD-[A-Z][A-Z0-9-]*$")
 RULE_ID_PATTERN = re.compile(r"^RULE-[A-Z][A-Z0-9-]*$")
 PARAMETER_ID_PATTERN = re.compile(r"^PARAM-[A-Z]+-[A-Z0-9-]+$")
+# A harmonized Stata file carries canonical_label as the variable's label, and Stata holds 80 characters:
+# the limit is the canon's, so no writer has to cut a label.
+VARIABLE_LABEL_LIMIT = 80
 
 
 class ValueCode(BaseModel):
@@ -225,6 +228,16 @@ class VariableDefinition(BaseModel):
     def validate_variable_id(cls, value: str) -> str:
         if not VARIABLE_ID_PATTERN.fullmatch(value):
             raise ValueError("variable_id must match VAR-<lowercase-name>")
+        return value
+
+    @field_validator("canonical_label")
+    @classmethod
+    def validate_label_length(cls, value: str) -> str:
+        if len(value) > VARIABLE_LABEL_LIMIT:
+            raise ValueError(
+                f"canonical_label has {len(value)} characters; a Stata variable label holds "
+                f"{VARIABLE_LABEL_LIMIT}"
+            )
         return value
 
     @field_validator("module_id")
