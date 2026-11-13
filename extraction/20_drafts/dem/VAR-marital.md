@@ -21,15 +21,15 @@ data_type: categorical
 # --- Allowed output values ---
 value_codes:
   - value: 1
-    label: "Never married"
-  - value: 2
     label: "Married"
+  - value: 2
+    label: "Never married"
   - value: 3
-    label: "Divorced/separated"
+    label: "Living together"
   - value: 4
-    label: "Widowed"
+    label: "Divorced/separated"
   - value: 5
-    label: "unknown"
+    label: "Widowed"
 allowed_range: null
 
 # --- Missing value codes ---
