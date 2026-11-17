@@ -23,11 +23,7 @@ value_codes: null
 allowed_range: null
 
 # --- Missing value codes ---
-missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
+missing_codes: []
 
 # --- Derivation graph ---
 derived_from:

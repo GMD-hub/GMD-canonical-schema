@@ -49,13 +49,7 @@ allowed_range:
   max: 12
 
 # --- Missing value codes ---
-missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because the interview month is not available"
-  - code: ".c"
-    label: "Information not available because the interview date was not collected in this survey"
+missing_codes: []
 
 # --- Derivation graph ---
 derived_from: []

@@ -24,10 +24,6 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
   - code: ".c"
     label: "Survey area text could not be matched to any country_entry_id in
             PARAM-GEO-GMD-CROSSWALK for the survey ISO3 code and survey ID year"

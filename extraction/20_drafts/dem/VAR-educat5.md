@@ -36,10 +36,6 @@ allowed_range: null
 missing_codes:
   - code: ".c"
     label: "Education section not applied because the individual is below mineducatage"
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
 
 # --- Derivation graph ---
 derived_from:

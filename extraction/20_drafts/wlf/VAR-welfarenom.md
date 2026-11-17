@@ -25,11 +25,7 @@ allowed_range:
   max: 1000000000
 
 # --- Missing value codes ---
-missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because required inputs are incomplete"
+missing_codes: []
 
 # --- Derivation graph ---
 # Passthrough of the country-provided nominal aggregate. welfaredef is the

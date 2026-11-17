@@ -28,12 +28,6 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
-  - code: ".c"
-    label: "Information not available because sex was not collected in this survey"
   - code: ".o"
     label: "Other sex category not covered by harmonized codes"
 

@@ -23,13 +23,7 @@ value_codes:
 - value: 4
   label: Other
 allowed_range: null
-missing_codes:
-- code: .a
-  label: Variable not harmonized
-- code: .b
-  label: Cannot be harmonized because data does not meet harmonization definition
-- code: .c
-  label: Information not available because the item was not collected in this survey
+missing_codes: []
 derived_from: []
 derives_to: []
 country_parameters: []

@@ -28,11 +28,6 @@ allowed_range:
 missing_codes:
   - code: ".c"
     label: "Education section not applied because the individual is below mineducatage"
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because grade level is not listed and cannot be
-            derived from available information"
 
 # --- Derivation graph ---
 # Listed in order of preference when direct grade-level data is unavailable.
