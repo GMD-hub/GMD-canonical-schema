@@ -23,9 +23,7 @@ value_codes:
   null
 allowed_range: null
 # --- Missing value codes ---
-missing_codes:
-  - code: ".o"
-    label: "Other value not covered by harmonized codes"
+missing_codes: []
 # --- Derivation graph ---
 derived_from:
   - VAR-centralexp
