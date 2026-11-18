@@ -32,7 +32,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - MISS-OUTSIDE-UNIVERSE
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 # Listed in order of preference. educat7 must be attempted before educat5.

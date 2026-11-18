@@ -23,7 +23,8 @@ value_codes: null
 allowed_range: null
 
 # --- Missing value codes ---
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 derived_from:

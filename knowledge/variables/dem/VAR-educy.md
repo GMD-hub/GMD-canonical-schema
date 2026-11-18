@@ -26,13 +26,7 @@ allowed_range:
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Education section not applied because the individual is below mineducatage"
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because grade level is not listed and cannot be
-            derived from available information"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 # Listed in order of preference when direct grade-level data is unavailable.
@@ -48,11 +42,17 @@ derives_to: []
 # the parameter's fallback policy applied.
 country_parameters:
   - PARAM-EDU-LEVEL-CROSSWALK
+  - PARAM-EDU-MIN-EDUCATION-AGE
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: category_field
+  field: cum_years_schooling
 
 # --- Universe / skip gate ---
 gates:
   - variable_id: VAR-age
-    condition: age >= mineducatage
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
 
 # --- Cross-references ---
 rules:
@@ -89,7 +89,9 @@ provenance:
       country_entry_id row now supplies years-of-schooling for any
       post-grade-12 level. Its fallback policy is block_and_escalate, so
       derived construction must stop and escalate when no valid country
-      record exists for a reported national level."
+      record exists for a reported national level.
+      2026-10-27 (proposed, pending GPID Team approval): added correspondence_output (the category field
+      above, until now kept only in the survey-harmonization vendored copy)."
 ---
 
 ## Definition
@@ -115,8 +117,8 @@ questions, so path selection depends on what data is actually present for
 that record. The path used must be documented in the do-file notes.
 
 **Gate check: enrollment status.**
-Before constructing `educy`, evaluate `school`. Its value determines which
-grade reference point to use.
+Before constructing `educy`, evaluate `school` for the individual. Its value determines which
+branch below applies.
 
 **Path 1 (preferred): individual reports explicit years of education.**
 Map that value directly to `educy`. Cross-check against age and education
@@ -165,7 +167,10 @@ in most systems), resolved from the general-track ISCED-3 row in
 A grade repeated three times counts as one year, not three.
 
 **When no usable information is available.**
-Set `educy` to `.b`. Do not guestimate using age or any other variable.
+For an individual with no usable grade, level, or year information, set
+`educy` to `MISS-MISSING-INPUT`. When the survey holds no such information at
+all, `educy` is not produced (`MISS-NOT-AVAILABLE`). Do not guestimate using
+age or any other variable.
 
 ## Consistency checks
 
@@ -206,7 +211,7 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 - Awarding years for an in-progress post-grade-12 track beyond
   `base_years` when progress detail is unavailable.
 - Setting `educy = 0` for individuals with missing categorical education
-  instead of `.b`.
+  instead of `MISS-MISSING-INPUT`.
 
 ## Change log
 
@@ -214,4 +219,5 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 |------------|---------|---------------|------------|
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
 | 2026-09-30 | 0.2     | Replaced `PARAM-EDU-YEARS-BY-LEVEL` and the fixed tertiary-year table with `PARAM-EDU-LEVEL-CROSSWALK`-based resolution; reframed construction as per-individual path selection (RULE-EDU-003 v0.2) | GPID Team |
-| 2026-10-28 | 0.3     | The matched record no longer lists gmd_educat4/5/7_target (dropped from PARAM-EDU-LEVEL-CROSSWALK: the codes follow from isced_level) | GPID Team (proposed) |
+| 2026-10-27 | 0.3     | Add the category_field correspondence_output | GPID Team (proposed) |
+| 2026-10-28 | 0.4     | The matched record no longer lists gmd_educat4/5/7_target (dropped from PARAM-EDU-LEVEL-CROSSWALK: the codes follow from isced_level) | GPID Team (proposed) |

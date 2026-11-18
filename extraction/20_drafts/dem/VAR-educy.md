@@ -26,7 +26,7 @@ allowed_range:
 
 # --- Missing value codes ---
 missing_codes:
-  - MISS-OUTSIDE-UNIVERSE
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 # Listed in order of preference when direct grade-level data is unavailable.

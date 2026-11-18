@@ -24,12 +24,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
-  - code: ".c"
-    label: "Information not available because the subnational classification has not changed since the previous survey"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 derived_from:
@@ -130,8 +125,7 @@ as `subnatid1`.
   overlap).
 - The set of households covered by a previous code should correspond to the
   geographic area of that historical division (consistent split tracking).
-- No household may carry a standard missing (`.`) where a classification change
-  occurred.
+- No household may be left blank where a classification change occurred.
 
 ## Escalation triggers
 

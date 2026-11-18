@@ -38,7 +38,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - MISS-OUTSIDE-UNIVERSE
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 derived_from: []

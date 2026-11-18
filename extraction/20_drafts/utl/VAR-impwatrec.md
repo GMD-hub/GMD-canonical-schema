@@ -26,7 +26,8 @@ value_codes:
     label: "Yes"
 allowed_range: null
 # --- Missing value codes ---
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 # --- Derivation graph ---
 derived_from:
   - VAR-watersource

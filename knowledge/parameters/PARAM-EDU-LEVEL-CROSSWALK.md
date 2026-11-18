@@ -29,6 +29,8 @@ row_schema:
   review_flags: array_of_string
 
 applies_to_variables:
+  - VAR-educat7
+  - VAR-educat5
   - VAR-educat4
   - VAR-educy
 
@@ -41,28 +43,34 @@ provenance:
   extracted_on: "2026-09-06"
   human_reviewed: false
   reviewer: null
-  notes: "v0.3 adds parent_country_entry_ids, cum_years_schooling,
+  notes: "Proposed v0.3 addition (draft, pending GPID Team approval): adds
+          parent_country_entry_ids, cum_years_schooling,
           cum_years_computation_path, cum_years_status, and review_flags so
           RULE-EDU-003 (v0.2) can resolve VAR-educy directly from a matched
           country_entry_id row instead of a fixed GMD-wide tertiary-year
-          table. Derived fields are computed by
+          table. Derived fields are produced by
           extraction_pipeline/country_inputs/education_pathways.py from the
-          pre-existing isced_level, duration_years, and national_label_en
-          fields already present in every country's parameters.md.
-          cum_years_status is 'computed' or 'review_required'; rows with
-          multiple candidate parent paths are flagged in review_flags with
-          the minimum-path assumption used and remain visible for future
-          correction rather than hidden. A full 206-country sweep
-          (2026-09-30) produced 0 review_required and 0 failures; 176
-          countries were flagged 'ambiguous' (multi-parent tertiary
-          branches) and are promoted with review_flags intact pending
-          further review."
+          existing row_schema fields (isced_level, duration_years,
+          national_label_en) already present in every country's
+          parameters.md. cum_years_status is 'computed' or
+          'review_required'; rows with multiple candidate parent paths are
+          flagged in review_flags with the minimum-path assumption used.
+          A full 206-country sweep (2026-09-30) produced 0 review_required
+          and 0 failures, with 176 countries flagged 'ambiguous' pending
+          human review of multi-parent tertiary branches before this
+          schema change is promoted to knowledge/.
+          2026-10-28 (proposed): gmd_educat4_target, gmd_educat5_target and
+          gmd_educat7_target dropped from row_schema. They restated isced_level in
+          GMD terms; the codes follow from isced_level through the VAR-educat7 ISCED
+          anchor and the VAR-educat5 / VAR-educat4 recodes (RULE-EDU-002)."
 ---
 
 ## Definition
 
-Defines row-level country crosswalk records that map national education labels
-and ISCED levels to GMD education targets.
+Defines row-level country crosswalk records that map national education
+labels to ISCED levels (from which the GMD education codes follow, through
+the `VAR-educat7` ISCED anchor), plus derived
+years-of-schooling metadata computed from the row structure itself.
 
 ## Parameter notes
 
@@ -80,7 +88,8 @@ and ISCED levels to GMD education targets.
   totals (early childhood education is not counted as school years).
 - When a row has more than one plausible parent (e.g., multiple tertiary
   entry tracks), the derivation selects the minimum-years parent path and
-  records this assumption in `review_flags`.
+  records this assumption in `review_flags`. These rows require human
+  review before being relied on for country-specific promotion decisions.
 
 ## Fallback behavior
 
@@ -93,5 +102,6 @@ for the survey's ISO3 code and survey ID year.
 | Date | Version | Change | Authority |
 |---|---|---|---|
 | 2026-09-06 | 0.2 | Add table contract for education crosswalk extraction | GPID Team |
-| 2026-09-30 | 0.3 | Add derived years-of-schooling fields and VAR-educy to applies_to_variables, to support RULE-EDU-003 v0.2 | GPID Team |
-| 2026-10-28 | 0.3 | Drop gmd_educat4_target, gmd_educat5_target and gmd_educat7_target from row_schema: precomputed duplicates of isced_level, whose GMD codes follow from the VAR-educat7 ISCED anchor and the VAR-educat5 / VAR-educat4 recodes; no consumer reads them | GPID Team (proposed) |
+| 2026-09-30 | 0.3 | Draft: add derived years-of-schooling fields and VAR-educy to applies_to_variables, to support RULE-EDU-003 v0.2 | GPID Team |
+| 2026-10-27 | 0.3 | Draft: add VAR-educat7 and VAR-educat5 to applies_to_variables: every level of the education ladder is placed through this crosswalk (RULE-EDU-002 v0.2) | GPID Team (proposed) |
+| 2026-10-28 | 0.3 | Draft: drop gmd_educat4_target, gmd_educat5_target and gmd_educat7_target from row_schema: precomputed duplicates of isced_level, whose GMD codes follow from the VAR-educat7 ISCED anchor and the VAR-educat5 / VAR-educat4 recodes; no consumer reads them | GPID Team (proposed) |
