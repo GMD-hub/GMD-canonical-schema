@@ -29,7 +29,8 @@ fields cover:
 
 - identity: `variable_id`, name, label, module, GMD version, and schema version;
 - behavior: tier, mapping role, unit of analysis, and data type;
-- output contract: value codes or numeric range and extended missing codes;
+- output contract: value codes or numeric range, and the missing value
+  definitions specific to the variable;
 - graph: `derived_from`, `derives_to`, and gates;
 - dependencies: decision rules, exceptions, and country parameter declarations;
 - discovery: questionnaire keywords and common section names;
@@ -110,6 +111,23 @@ Supported fallback policies are:
   It must not average neighboring countries or silently reuse an expired
   value.
 
+## Missing value definitions
+
+A missing value definition names one reason an output has no value. It
+declares:
+
+- a `MISS-<NAME>` ID and the matching lowercase name;
+- a level: `column` describes a variable as a whole in a survey, `cell`
+  describes one observation;
+- a scope: `global` applies to every variable and no variable lists it,
+  `variable` applies only where a variable lists it in `missing_codes`;
+- what an output format writes for it, such as the Stata value;
+- provenance and review state.
+
+A variable specification lists only the definitions of variable scope that
+apply to it. The prose of variables, rules and parameters names a missing value
+by its ID, never by a format's code.
+
 ## Country parameter records
 
 A country parameter file identifies its country and contains zero or more
@@ -156,6 +174,7 @@ expressed as a parameter value. They are not structural overrides.
 | Rule | `RULE-` + uppercase topic and sequence | `RULE-SEX-001` |
 | Module | `MOD-` + uppercase module | `MOD-DEM` |
 | Parameter | `PARAM-` + uppercase module and description | `PARAM-EDU-YEARS-BY-LEVEL` |
+| Missing value | `MISS-` + uppercase name | `MISS-OTHER-CATEGORY` |
 | Country | `CTY-` + uppercase ISO3 | `CTY-PER` |
 | Country exception | `EXC-` + ISO3 and sequence | `EXC-PER-001` |
 

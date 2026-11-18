@@ -38,8 +38,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Education section not applied because the individual is below mineducatage"
+  - MISS-OUTSIDE-UNIVERSE
 
 # --- Derivation graph ---
 derived_from: []
@@ -134,7 +133,7 @@ detail required for all seven categories, collapse to the nearest available
 level and document the mapping in the do-file notes.
 
 Apply the age restriction (`mineducatage`) before coding, setting `educat7` to
-`.c` below the cutoff. Do not guestimate an education level for any individual.
+`MISS-OUTSIDE-UNIVERSE` below the cutoff. Do not guestimate an education level for any individual.
 
 ## Consistency checks
 

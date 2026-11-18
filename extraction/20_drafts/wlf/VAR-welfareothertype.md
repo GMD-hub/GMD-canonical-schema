@@ -90,7 +90,8 @@ primary welfare series.
 Set `welfareothertype` from the documented concept underlying `welfareother`,
 using exactly one of `INC`, `CONS`, or `EXP` in upper case. It is present only
 when `welfareother` is present, and is constant across households within a
-survey. Leave it missing (`.a`) when `welfareother` is missing.
+survey. It is not produced (`MISS-NOT-AVAILABLE`) when `welfareother` is not
+produced.
 
 ## Consistency checks
 

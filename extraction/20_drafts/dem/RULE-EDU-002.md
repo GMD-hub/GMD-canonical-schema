@@ -37,8 +37,12 @@ directly to a GMD code only when no national level matches it, and record
 why.
 
 Residual categories (other/specify, don't know, refused, not stated) carry no
-education level. They are `.b`, and they do not count when deciding the level
-the source supports. Never guestimate.
+education level. Each takes the missing value that matches it: other/specify
+is `MISS-OTHER-CATEGORY`, don't know is `MISS-DO-NOT-KNOW`, refused is
+`MISS-DECLINED-TO-ANSWER`, and not stated is `MISS-MISSING-INPUT`. A residual
+category that cannot be told apart in this way is `MISS-MISSING-INPUT`.
+Residual categories do not count when deciding the level the source supports.
+Never guestimate.
 
 ## Formal IF/THEN
 
@@ -54,7 +58,12 @@ FOR each substantive category of the source education variable
        defended, and record the reason in the Harmonization Specification
 
 residual categories (other/specify, don't know, refused, not stated)
-  -> .b at every level; not placed, not counted in step 2
+  -> a missing value at every level; not placed, not counted in step 2:
+       other/specify -> MISS-OTHER-CATEGORY
+       don't know    -> MISS-DO-NOT-KNOW
+       refused       -> MISS-DECLINED-TO-ANSWER
+       not stated, or a residual category that cannot be told apart
+                     -> MISS-MISSING-INPUT
 
 /* --- Step 2: the level the source supports (once per source variable) --- */
 
@@ -90,10 +99,10 @@ THEN      educat7 and educat5 are not constructed for this survey
 
 ELSE IF   a substantive category cannot be placed even in one educat4
           category
-THEN      that category = .b; escalate to TTL
+THEN      that category = MISS-OTHER-CATEGORY; escalate to TTL
 
 ELSE IF   no education information available in this survey
-THEN      set educat7, educat5, educat4 = .c for all individuals
+THEN      set educat7, educat5, educat4 = MISS-NOT-AVAILABLE for all individuals
 ```
 
 ## Prohibitions
@@ -109,7 +118,7 @@ THEN      set educat7, educat5, educat4 = .c for all individuals
   it.
 - Do not count residual categories (other/specify, don't know, refused, not
   stated) when deciding the level the source supports.
-- Do not guestimate categories when the raw survey is ambiguous. Use `.b`
+- Do not guestimate categories when the raw survey is ambiguous. Use `MISS-OTHER-CATEGORY`
   and escalate to TTL.
 - Do not combine categories differently from the recodes in the variable
   records. The groupings are fixed GMD standards and must not vary by survey.
@@ -134,9 +143,9 @@ per-country decision, reviewed once (`country_entry_id`, ISCED anchor), rather
 than a per-survey judgement. A direct mapping remains possible, but only as a
 recorded exception.
 
-Treating residual categories as `.b` follows `RULE-EDU-003` ("Do not set
-`educy = 0` for individuals with unknown or missing education. Use `.b`
-instead").
+Treating residual categories as missing values follows `RULE-EDU-003` ("Do not
+set `educy = 0` for individuals with unknown or missing education. Use
+`MISS-MISSING-INPUT` instead").
 
 ## Open questions (GPID Team decision required before promotion)
 
@@ -147,7 +156,7 @@ instead").
    `educat4` 3, so a primary-complete individual is `educat4` 2 on the educat7
    path and 3 on the educat5 path. By this rule's own test, a source that only
    reaches educat5 does not determine `educat4` for code 3. Should code 3 be
-   `.b` on the educat5 path (dropping it from the recode), or does the
+   `MISS-OTHER-CATEGORY` on the educat5 path (dropping it from the recode), or does the
    convention stand? The recode is transcribed as currently stated until
    decided.
 
@@ -157,15 +166,14 @@ instead").
 |---|---|
 | Source distinguishes all seven levels; each matches a national level | Place via the crosswalk; build educat7; derive educat5, educat4 |
 | Source has "secondary" with no complete/incomplete split | educat7 not constructed; build educat5 if every other category places; derive educat4 |
-| One source category is "Other (specify)" | `.b`; does not affect the level the source supports |
+| One source category is "Other (specify)" | `MISS-OTHER-CATEGORY`; does not affect the level the source supports |
 | A source category matches no national level | Place it directly; reason recorded in the Harmonization Specification |
-| educat7 defined but only 4 groups | Use path 1; missing groups become .b |
+| educat7 defined but only 4 groups | Use path 1; missing groups become `MISS-OTHER-CATEGORY` |
 | Neither educat7 nor educat5 possible | Build educat4 directly; escalate to TTL |
-| No education data in survey | educat7, educat5, educat4 = .c for all |
+| No education data in survey | educat7, educat5, educat4 = `MISS-NOT-AVAILABLE` for all |
 
 ## Change log
 
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-06-25 | 0.1     | Initial draft | GPID Team  |
-| 2026-10-27 | 0.2     | Draft: extend from educat4 to the whole ladder (educat7/5/4); level decided once per source variable; categories placed through PARAM-EDU-LEVEL-CROSSWALK, direct mapping only as a recorded exception; residual categories `.b` and not counted; recodes referenced from the variable records instead of restated; open question on the educat5 path | GPID Team (proposed) |

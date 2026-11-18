@@ -102,8 +102,8 @@ absent, use an explicit missing code and document the reason.
 - `subnatid4` must be a string variable; verify no unformatted numeric codes.
 - Every fourth-level division must nest under exactly one third-level division
   (`subnatid3`).
-- No household may carry a standard missing (`.`) without an explicit extended
-  missing code when the level was collected.
+- No household may be left blank when the level was collected: each carries a
+  valid code or a defined missing value.
 - Verify codes match the most recent administrative classification for the
   survey.
 

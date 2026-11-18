@@ -26,8 +26,7 @@ allowed_range:
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Education section not applied because the individual is below mineducatage"
+  - MISS-OUTSIDE-UNIVERSE
 
 # --- Derivation graph ---
 # Listed in order of preference when direct grade-level data is unavailable.
@@ -168,7 +167,10 @@ in most systems), resolved from the general-track ISCED-3 row in
 A grade repeated three times counts as one year, not three.
 
 **When no usable information is available.**
-Set `educy` to `.b`. Do not guestimate using age or any other variable.
+For an individual with no usable grade, level, or year information, set
+`educy` to `MISS-MISSING-INPUT`. When the survey holds no such information at
+all, `educy` is not produced (`MISS-NOT-AVAILABLE`). Do not guestimate using
+age or any other variable.
 
 ## Consistency checks
 
@@ -209,7 +211,7 @@ Set `educy` to `.b`. Do not guestimate using age or any other variable.
 - Awarding years for an in-progress post-grade-12 track beyond
   `base_years` when progress detail is unavailable.
 - Setting `educy = 0` for individuals with missing categorical education
-  instead of `.b`.
+  instead of `MISS-MISSING-INPUT`.
 
 ## Change log
 

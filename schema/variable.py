@@ -13,6 +13,8 @@ from pydantic import (
     model_validator,
 )
 
+from schema.missing import MISSING_ID_PATTERN
+
 
 VARIABLE_ID_PATTERN = re.compile(r"^VAR-[a-z][a-z0-9]*$")
 MODULE_ID_PATTERN = re.compile(r"^MOD-[A-Z][A-Z0-9-]*$")
@@ -41,13 +43,6 @@ class AllowedRange(BaseModel):
         if self.min > self.max:
             raise ValueError("min must be less than or equal to max")
         return self
-
-
-class MissingCode(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    code: str
-    label: str
 
 
 class Gate(BaseModel):
@@ -211,7 +206,7 @@ class VariableDefinition(BaseModel):
     data_type: str
     value_codes: list[ValueCode] | None
     allowed_range: AllowedRange | None
-    missing_codes: list[MissingCode]
+    missing_codes: list[str]
     derived_from: list[str]
     derives_to: list[str]
     correspondence_output: CorrespondenceOutput | list[CorrespondenceOutput] | None = None
@@ -263,6 +258,14 @@ class VariableDefinition(BaseModel):
             raise ValueError(f"invalid parameter IDs: {invalid}")
         return values
 
+    @field_validator("missing_codes")
+    @classmethod
+    def validate_missing_references(cls, values: list[str]) -> list[str]:
+        invalid = sorted(value for value in values if not MISSING_ID_PATTERN.fullmatch(value))
+        if invalid:
+            raise ValueError(f"invalid missing IDs: {invalid}")
+        return values
+
     @field_validator("rules")
     @classmethod
     def validate_rule_references(cls, values: list[str]) -> list[str]:
@@ -312,6 +315,8 @@ class VariableDefinition(BaseModel):
         variable_ids: set[str] = context.get("variable_ids", set())
         parameter_ids: set[str] = context.get("parameter_ids", set())
         rule_ids: set[str] = context.get("rule_ids", set())
+        missing_ids: set[str] = context.get("missing_ids", set())
+        global_missing_ids: set[str] = context.get("global_missing_ids", set())
 
         referenced_variables = set(self.derived_from) | set(self.derives_to) | {
             item.variable_id for item in self.gates
@@ -330,6 +335,16 @@ class VariableDefinition(BaseModel):
         unknown_rules = set(self.rules) - rule_ids
         if unknown_rules:
             raise ValueError(f"unknown rule IDs: {sorted(unknown_rules)}")
+
+        unknown_missing = set(self.missing_codes) - missing_ids
+        if unknown_missing:
+            raise ValueError(f"unknown missing IDs: {sorted(unknown_missing)}")
+
+        listed_global = set(self.missing_codes) & global_missing_ids
+        if listed_global:
+            raise ValueError(
+                f"missing IDs of global scope apply to every variable and are not listed: {sorted(listed_global)}"
+            )
         return self
 
 

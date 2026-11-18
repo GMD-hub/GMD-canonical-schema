@@ -25,8 +25,6 @@ allowed_range:
   max: 100
 
 # --- Missing value codes ---
-# Missing values are not allowed for hsize (see Definition): every household must
-# carry a positive member count, so no extended-missing codes are declared.
 missing_codes: []
 
 # --- Derivation graph ---
@@ -72,7 +70,11 @@ provenance:
   reviewer: null
   notes: "Household-member count used as the
           per-capita denominator when a country prelude normalizes a household
-          total into welfare; the regular-member definition is country-specific."
+          total into welfare; the regular-member definition is country-specific.
+          The source says missing values are not allowed. By decision of 2026-11-17
+          that holds when hsize is counted from the roster; when hsize is taken from
+          an existing household-level variable, a missing input is carried as
+          MISS-MISSING-INPUT."
 ---
 
 ## Definition
@@ -80,7 +82,10 @@ provenance:
 `hsize` is the total number of residents (regular members) in the household,
 excluding maids and servants. The definition of a regular member is
 country-specific. Compare this variable with the number of persons counted in
-Chapter 4 (DEM). Missing values are not allowed.
+Chapter 4 (DEM). Missing values are not allowed when `hsize` is counted from the
+roster. When `hsize` is taken from an existing household-level variable and that
+variable has no value for a household, the household carries
+`MISS-MISSING-INPUT`.
 
 ## Conceptual intent
 
@@ -103,7 +108,9 @@ it must reconcile with the Chapter 4 (DEM) person roster for the same household.
 
 ## Consistency checks
 
-- `hsize` must be present for every household — missing values are not allowed.
+- `hsize` must be present for every household when it is counted from the roster.
+  When it is taken from an existing household-level variable, a household whose
+  input is missing carries `MISS-MISSING-INPUT`.
 - `hsize` must be a positive integer (>= 1).
 - `hsize` must equal the number of regular members counted for the household in
   the Chapter 4 (DEM) roster. Flag any household where the two disagree.

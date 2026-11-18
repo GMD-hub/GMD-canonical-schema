@@ -11,6 +11,7 @@ from pathlib import Path
 import pytest
 
 from schema.frontmatter import load_markdown
+from schema.missing import MissingDefinition, global_missing_ids, validate_missing_set
 from schema.parameter import ParameterDefinition
 from schema.variable import (
     VariableDefinition,
@@ -27,6 +28,21 @@ RULE_IDS = {
     for path in [*(ROOT / "knowledge" / "rules").rglob("RULE-*.md"), *DRAFTS.rglob("RULE-*.md")]
     if "runs" not in path.relative_to(ROOT).parts
 }
+# Registered missing value references: the knowledge/ registry plus the definitions drafted beside
+# the variables (a draft definition is cited by draft variables before it is promoted).
+MISSING_IDS = {
+    path.stem
+    for path in [*(ROOT / "knowledge").rglob("MISS-*.md"), *DRAFTS.rglob("MISS-*.md")]
+    if "runs" not in path.relative_to(ROOT).parts
+}
+# The definitions of global scope apply to every variable: a variable must not list them.
+GLOBAL_MISSING_IDS = global_missing_ids(
+    [
+        MissingDefinition.model_validate(load_markdown(path)[0])
+        for path in [*(ROOT / "knowledge").rglob("MISS-*.md"), *DRAFTS.rglob("MISS-*.md")]
+        if "runs" not in path.relative_to(ROOT).parts
+    ]
+)
 REQUIRED_SECTIONS = [
     "## Definition",
     "## Conceptual intent",
@@ -44,7 +60,11 @@ def iter_drafts():
 
 @pytest.fixture(scope="module")
 def parameter_ids() -> set[str]:
-    paths = sorted((ROOT / "knowledge" / "parameters").glob("*.md"))
+    # the knowledge/ registry plus the parameters drafted beside the variables (a draft parameter is
+    # cited by draft variables before it is promoted, as a draft rule is)
+    paths = sorted(
+        [*(ROOT / "knowledge" / "parameters").glob("*.md"), *DRAFTS.glob("parameters/PARAM-*.md")]
+    )
     assert paths, "no canonical parameter definitions found"
     return {
         ParameterDefinition.model_validate(load_markdown(path)[0]).parameter_id
@@ -73,6 +93,8 @@ def test_all_drafts_validate_frontmatter(parameter_ids: set[str]):
                     "variable_ids": all_ids,
                     "parameter_ids": parameter_ids,
                     "rule_ids": RULE_IDS,
+                    "missing_ids": MISSING_IDS,
+                    "global_missing_ids": GLOBAL_MISSING_IDS,
                 },
             )
         except Exception as exc:  # noqa: BLE001
@@ -92,8 +114,58 @@ def test_unregistered_parameter_is_rejected(parameter_ids: set[str]):
                 "variable_ids": {p.stem for p in iter_drafts()},
                 "parameter_ids": parameter_ids,
                 "rule_ids": RULE_IDS,
+                "missing_ids": MISSING_IDS,
+                "global_missing_ids": GLOBAL_MISSING_IDS,
             },
         )
+
+
+def test_unregistered_missing_id_is_rejected(parameter_ids: set[str]):
+    data, _ = load_markdown(DRAFTS / "dem" / "VAR-male.md")
+    data["missing_codes"] = ["MISS-NOT-REGISTERED"]
+
+    with pytest.raises(ValueError, match="unknown missing IDs"):
+        VariableDefinition.model_validate(
+            data,
+            context={
+                "allow_unresolved_draft": True,
+                "variable_ids": {p.stem for p in iter_drafts()},
+                "parameter_ids": parameter_ids,
+                "rule_ids": RULE_IDS,
+                "missing_ids": MISSING_IDS,
+                "global_missing_ids": GLOBAL_MISSING_IDS,
+            },
+        )
+
+
+def test_global_missing_id_is_not_listed_by_a_variable(parameter_ids: set[str]):
+    assert "MISS-MISSING-INPUT" in GLOBAL_MISSING_IDS
+    data, _ = load_markdown(DRAFTS / "dem" / "VAR-male.md")
+    data["missing_codes"] = ["MISS-MISSING-INPUT"]
+
+    with pytest.raises(ValueError, match="global scope"):
+        VariableDefinition.model_validate(
+            data,
+            context={
+                "allow_unresolved_draft": True,
+                "variable_ids": {p.stem for p in iter_drafts()},
+                "parameter_ids": parameter_ids,
+                "rule_ids": RULE_IDS,
+                "missing_ids": MISSING_IDS,
+                "global_missing_ids": GLOBAL_MISSING_IDS,
+            },
+        )
+
+
+def test_missing_value_drafts_validate():
+    paths = sorted(DRAFTS.glob("missing/MISS-*.md"))
+    assert paths, "no missing value definitions found under extraction/20_drafts/missing/"
+    definitions = []
+    for path in paths:
+        definition = MissingDefinition.model_validate(load_markdown(path)[0])
+        assert definition.missing_id == path.stem
+        definitions.append(definition)
+    validate_missing_set(definitions)
 
 
 def test_all_drafts_have_required_body_sections():
@@ -125,6 +197,8 @@ def test_derivation_graph_acyclic(parameter_ids: set[str]):
                     "variable_ids": all_ids,
                     "parameter_ids": parameter_ids,
                     "rule_ids": RULE_IDS,
+                    "missing_ids": MISSING_IDS,
+                    "global_missing_ids": GLOBAL_MISSING_IDS,
                 },
             )
         )

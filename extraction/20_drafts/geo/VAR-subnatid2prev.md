@@ -112,8 +112,7 @@ as `subnatid2`.
   must immediately precede the current period's `effective_from`.
 - Affected households' previous codes must be consistent with the documented
   administrative change.
-- No household may carry a standard missing (`.`) where a classification change
-  occurred.
+- No household may be left blank where a classification change occurred.
 
 ## Escalation triggers
 

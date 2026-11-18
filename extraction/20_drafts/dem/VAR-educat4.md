@@ -32,8 +32,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Education section not applied because the individual is below mineducatage"
+  - MISS-OUTSIDE-UNIVERSE
 
 # --- Derivation graph ---
 # Listed in order of preference. educat7 must be attempted before educat5.
@@ -152,7 +151,7 @@ the do-file notes and the Harmonization Specification, and escalate to TTL.
 
 **Age restriction (applies to all paths).**
 
-Set `educat4` to `.c` for all individuals whose age is below `mineducatage`.
+Set `educat4` to `MISS-OUTSIDE-UNIVERSE` for all individuals whose age is below `mineducatage`.
 Do not guestimate education levels for these individuals under any circumstances.
 
 ## Consistency checks
@@ -189,7 +188,8 @@ Do not guestimate education levels for these individuals under any circumstances
   leaving as missing and consulting the TTL.
 - In ECA surveys, attempting to fill in education for individuals below the
   compulsory schooling age cutoff.
-- Using standard Stata missing (`.`) for the age restriction instead of `.c`.
+- Leaving the value blank for the age restriction instead of assigning
+  `MISS-OUTSIDE-UNIVERSE`.
 
 ## Change log
 

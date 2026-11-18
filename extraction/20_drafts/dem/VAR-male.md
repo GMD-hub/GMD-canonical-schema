@@ -28,8 +28,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".o"
-    label: "Other sex category not covered by harmonized codes"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 derived_from: []
@@ -37,7 +36,8 @@ derives_to: []
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-MAX-MISSING-SHARE
 
 # --- Universe / skip gate ---
 gates: []
@@ -91,18 +91,23 @@ Map the raw sex variable directly to the GMD binary codes. No imputation or
 estimation of sex from other variables is permitted under any circumstances.
 
 Numeric placeholder values that appear in the raw data, such as 98, 99,
-or 9, are not valid sex codes. They must be excluded and coded as `.a`.
+or 9, are not valid sex codes. They must be excluded and coded by what the
+placeholder means in the survey: `MISS-DECLINED-TO-ANSWER` for a refusal and
+`MISS-DO-NOT-KNOW` for "do not know". When the survey does not say what a
+placeholder means, code it as `MISS-MISSING-INPUT`.
 
 When the raw survey contains categories beyond male and female, for example
 "other," "non-binary," or "prefer not to say", do not assign 1 or 0 to
-those responses. Code them as `.o` and document the label, the raw code,
-and its frequency in the do-file notes.
+those responses. Code a category such as "other" or "non-binary" as
+`MISS-OTHER-CATEGORY` and "prefer not to say" as `MISS-DECLINED-TO-ANSWER`.
+When a category cannot be told apart in this way, code it as
+`MISS-MISSING-INPUT`. Document the label, the raw code, and its frequency in
+the do-file notes.
 
 ## Consistency checks
 
-- No individual should have a standard missing value (`.`) for `male`. All
-  cases must receive either a valid code (1 or 0) or an explicit extended
-  missing code with a documented reason.
+- No individual should be left blank for `male`. All cases must receive either
+  a valid code (1 or 0) or a defined missing value with a documented reason.
 - Cross-check against `relationharm`: the household head and their spouse
   should typically have different values of `male`. Flag households where
   head and spouse share the same value for manual review.
@@ -114,20 +119,22 @@ and its frequency in the do-file notes.
 
 - The raw survey contains a sex category that is not clearly male or female
   and the questionnaire documentation does not clarify how to handle it.
-- More than 2 percent of individual records result in `.o` or `.b` for `male`.
+- The share of records with a missing value exceeds `PARAM-MAX-MISSING-SHARE`.
 - The sample share of males is below 40 percent or above 60 percent with no
   apparent sampling explanation.
 
 ## Common mistakes
 
 - Retaining numeric placeholder codes (98, 99, 9) as valid values instead of
-  recoding them as `.a`.
+  recoding them as the missing value the placeholder means
+  (`MISS-DECLINED-TO-ANSWER`, `MISS-DO-NOT-KNOW`, or `MISS-MISSING-INPUT` when
+  the survey does not say).
 - Coding "other" or ambiguous categories as 1 or 0 to avoid leaving missing
   values.
 - Confusing biological sex (as recorded in the raw survey) with gender
   identity, which some newer surveys record as a separate variable.
-- Using standard Stata missing (`.`) instead of the appropriate extended
-  missing code, which prevents future harmonizers from understanding why the
+- Leaving an observation blank instead of assigning the appropriate defined
+  missing value, which prevents future harmonizers from understanding why the
   value is absent.
 
 ## Change log

@@ -24,9 +24,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Survey area text could not be matched to any country_entry_id in
-            PARAM-GEO-GMD-CROSSWALK for the survey ISO3 code and survey ID year"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 derived_from:
@@ -146,7 +144,7 @@ crosswalk period).
   survey ID year (flag large mismatches for review).
 - Some crosswalk rows are legitimately unpopulated placeholders (blank
   `geo_source`, `geo_level`, and all `gmd_subnatid*`/`gmd_subnatidsurvey`
-  fields) — these must resolve to `.c`, not an empty-string `geo_code`.
+  fields) — these must resolve to `MISS-OTHER-CATEGORY`, not an empty-string `geo_code`.
 
 ## Escalation triggers
 

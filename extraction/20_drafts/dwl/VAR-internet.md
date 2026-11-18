@@ -39,7 +39,8 @@ derives_to: []
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-MAX-MISSING-SHARE
 
 # --- Universe / skip gate ---
 gates: []
@@ -92,11 +93,11 @@ Map the raw internet-access question to codes 1-4. Code 4 when the household has
 
 ## Escalation triggers
 
-- The raw survey does not specify the required category clearly, so the harmonized assignment is ambiguous; more than 2 percent of records fall into `.b` or `.c`; coding patterns indicate imputation from expenditure rather than direct measurement.
+- The raw survey does not specify the required category clearly, so the harmonized assignment is ambiguous; the share of records with a missing value exceeds `PARAM-MAX-MISSING-SHARE`; coding patterns indicate imputation from expenditure rather than direct measurement.
 
 ## Common mistakes
 
-- Retaining raw numeric placeholders (e.g. 98, 99, 9) as valid values instead of coding them as missing; guessing appliance/asset existence from expenditure or other variables; failing to code values that are not collected as `.c`.
+- Retaining raw numeric placeholders (e.g. 98, 99, 9) as valid values instead of coding them as missing; guessing appliance/asset existence from expenditure or other variables; failing to code values that are not collected as `MISS-NOT-AVAILABLE`.
 
 ## Change log
 

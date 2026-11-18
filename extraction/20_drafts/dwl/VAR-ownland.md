@@ -35,7 +35,8 @@ derives_to: []
 
 # --- Country parameter declarations ---
 # Not a routing instruction. The agent always loads the country layer.
-country_parameters: []
+country_parameters:
+  - PARAM-MAX-MISSING-SHARE
 
 # --- Universe / skip gate ---
 gates: []
@@ -89,13 +90,13 @@ Map the residential-land ownership question to 0/1. Do not confuse with other ty
 
 ## Escalation triggers
 
-- The raw survey does not specify the category/measure clearly, so the harmonized assignment is ambiguous; more than 2 percent of records fall into `.b` or `.c`; the source documentation contradicts the harmonized definition.
+- The raw survey does not specify the category/measure clearly, so the harmonized assignment is ambiguous; the share of records with a missing value exceeds `PARAM-MAX-MISSING-SHARE`; the source documentation contradicts the harmonized definition.
 
 ## Common mistakes
 
 ## Common mistakes
 
-- Using raw numeric placeholders (e.g. 98, 99) as valid values instead of coding them as missing; recording a value whose units or category mapping are not sourced from the survey documentation; failing to code values not collected as `.c`.
+- Using raw numeric placeholders (e.g. 98, 99) as valid values instead of coding them as missing; recording a value whose units or category mapping are not sourced from the survey documentation; failing to code values not collected as `MISS-NOT-AVAILABLE`.
 
 ## Change log
 

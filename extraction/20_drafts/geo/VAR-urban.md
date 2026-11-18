@@ -92,8 +92,8 @@ do-file notes.
 
 ## Consistency checks
 
-- No household should have a standard missing value (`.`) for `urban`; every
-  case must be either 1 or 0 or carry an explicit extended missing code.
+- No household should be left blank for `urban`; every case must be either 1 or
+  0 or carry a defined missing value.
 - Cross-check the urban share against the survey's sampling design; large
   departures from the published sampling rate may signal a coding error.
 - Verify the `module_id` matches the directory the artifact lives under

@@ -74,7 +74,7 @@ documented practice that the model does not enforce.
 | `data_type` | `str`; R/no | Output data kind, e.g. `binary`, `categorical_ordered`, `numeric_continuous`, `integer`, or `string`; no enum or consistency check against codes/range. Agent uses it to interpret the output contract. [Categorical example][educat7]; [string example][welfaretype]. |
 | `value_codes` | `list[ValueCode] \| None`; R/N | Declared discrete output codes and labels; `null` means no discrete code list declared, `[]` means a declared but empty list. Neither means unrestricted output. **Code:** no mutual-exclusion or completeness check with `allowed_range`. Agent checks the declared codes and reads rules and prose for mapping. [Integer codes][male]; [string codes only in Markdown][welfaretype]. |
 | `allowed_range` | `AllowedRange \| None`; R/N | Declared output bounds, stored as integers; this does not require integer observations. `null` means no bounds declared, not that every value is valid. **Code:** when present, `min <= max`; no check against `value_codes` or `data_type`. Agent uses it for output checks. [Continuous welfare with integer bounds][welfare]; [null with numeric weights][weight]. |
-| `missing_codes` | `list[MissingCode]`; R/no | Declared missing codes and meanings; `[]` means none declared, not a general ban on missing data. No enforced code set, uniqueness, or cross-check against output codes. Agent uses these labels when assigning missing values under the rules. [Codes][male]; [`hsize` has a prose no-missing rule and `[]`][hsize]. |
+| `missing_codes` | `list[str]`; R/no | Missing value definitions specific to this variable, as `MISS-` IDs. `[]` means nothing specific to the variable, not a ban on missing data: the definitions of global scope (a missing input, a declined answer, "do not know", a censored value, and the three column-level values) apply to every variable and are never listed. **Code:** each entry is `MISS-` then an uppercase letter and zero or more uppercase letters, digits, or hyphens; each must be a registered missing value definition; an ID of global scope is refused. Agent reads the definition's own record for its meaning and for what an output format writes. [Other category][w30m]; [outside the universe][educat7]; [nothing specific][hsize]. |
 | `derived_from` | `list[str]`; R/no | Upstream variable IDs; `[]` means no declared derivation inputs. **Code:** each ID matches the variable ID pattern; references must exist in validation context unless unresolved draft references are allowed; graph cycles are checked by the separate graph validator. Agent inspects these inputs and their rules. [Example][educy]. |
 | `derives_to` | `list[str]`; R/no | Downstream variable IDs; `[]` means no declared outputs that derive from this variable. **Code:** same ID and reference checks as `derived_from`; no inverse-edge check. Agent uses it to find dependent outputs. [Example][educat7]. |
 | `correspondence_output` | `CorrespondenceOutput \| list[CorrespondenceOutput] \| None`; O/N; defaults `null` | Machine-readable recipe for how this variable's value map is built; null means none declared (construction lives in the prose and rules only). **Code:** one of four shapes selected by `method`, each rejecting unknown keys. A variable with several derivation paths carries a non-empty list of `recode` recipes, one per parent, in the `derived_from` preference order; the first recipe whose parent is constructed for the survey applies. The list may end with one `external_standard` recipe, the direct path for a category no parent recode decides. The governing rule keeps the policy (path order, fallback, missing codes) and references these recipes rather than restating them; this field carries only the mechanism. Agent reads it as the mechanism and the rule as the policy. [Example][educat7]; [list example][educat4-draft]; [list with a direct path][impsanrec-draft]. |
@@ -98,8 +98,6 @@ do not occur in that record. The parent type still defines the child contract.
 | `value_codes.label` | `str`; R/no per item | Meaning of that output code; no non-blank check. Agent uses it to interpret output codes. [Example][male]. |
 | `allowed_range.min` | `int`; R/no when range present | Inclusive lower bound by documented usage; **Code:** only checks `min <= max`. Agent uses it to check outputs. [Example][educy]. |
 | `allowed_range.max` | `int`; R/no when range present | Inclusive upper bound by documented usage; **Code:** only checks `max >= min`. Agent uses it to check outputs. [Example][educy]. |
-| `missing_codes.code` | `str`; R/no per item | Missing value token such as `.a`; no pattern or uniqueness check, and no type-specific representation check. Agent uses the declared token where applicable; its representation for a string output is an open question below. [Numeric example][male]; [string example][welfareothertype]. |
-| `missing_codes.label` | `str`; R/no per item | Reason for that missing token; no controlled vocabulary. Agent uses it to distinguish missing cases. [Example][male]. |
 | `correspondence_output.method` | `Literal["external_standard", "recode", "category_field", "alias"]`; R/no when the recipe is present | Selects the recipe shape: `external_standard` (international-standard level -> GMD code), `recode` (code -> code from a parent GMD variable), `category_field` (a numeric field of the matched national category), `alias` (another variable's codes and mapping reused). Agent picks the construction mechanism from it. [Example][educat7]. |
 | `correspondence_output.standard` | `str`; R/no for `external_standard` | Name of the international standard, e.g. `ISCED-2011`, `JMP-2025`; no vocabulary check. Agent identifies which standard the national categories are anchored to. [Example][educat7]; [JMP example][watersource-draft]. |
 | `correspondence_output.level` | `str`; R/no for `external_standard` | GMD variable the standard's levels are mapped to. **Code:** must equal this record's `variable_name`. Agent identifies the anchor of the variable family. [Example][educat7]. |
@@ -157,7 +155,7 @@ They illustrate field usage and the limits of YAML-only interpretation:
 | Case | Real drafts | What the reference reader must distinguish |
 |---|---|---|
 | String output codes in prose | [`welfaretype`][welfaretype], [`welfareothertype`][welfareothertype], [`welfshprtype`][welfshprtype] | Each declares `data_type: string`, `value_codes: null`, and `allowed_range: null`. The Markdown body lists `INC`, `CONS`, and `EXP`. Null YAML fields do not remove that prose contract; `ValueCode.value` currently cannot store these strings. |
-| No missing observations | [`hsize`][hsize] | Declares `missing_codes: []` and a range of 1 to 100. The separate prose forbids missing values and requires a positive integer. That prohibition does not follow from `[]` alone. |
+| Missing input carried | [`hsize`][hsize] | Declares `missing_codes: []` and a range of 1 to 100. `[]` lists nothing specific to the variable. The prose forbids missing values when `hsize` is counted from the roster and carries a missing input when it is taken from an existing household-level variable. Neither follows from `[]` alone. |
 | Passthrough, not reconstruction | [`welfare`][welfare], [`welfarenom`][welfarenom], [`welfaredef`][welfaredef], [`welfareother`][welfareother] | These drafts use `derived_preferred` with empty derivation lists, but the body limits the variable to a country-provided final aggregate. The model permits the combination; the mapping-role narrative does not explain it. Do not infer a construction algorithm from the role. |
 | Conditional reuse described in prose | [`welfshprosperity`][welfshprosperity] | Uses `derived_from: []` and `gates: []`, but construction notes allow reuse of `welfare` only when the documented concepts match. Empty lists do not make all prose conditions disappear. |
 
@@ -187,10 +185,11 @@ They illustrate field usage and the limits of YAML-only interpretation:
   `VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE`. The latter parameter is not registered
   in `knowledge/parameters/` or declared in that draft's `country_parameters`.
   The model checks only `gates.variable_id`, not the IDs within the condition.
-- How should multiple gates combine, and which missing code applies when a
-  gate fails or cannot be assessed? The model defines no such behavior. Read
-  each variable's rules and prose; do not assume a general AND/OR or missing
-  code convention.
+- How should multiple gates combine, and what applies when a gate cannot be
+  assessed? An observation outside a variable's universe takes
+  `MISS-OUTSIDE-UNIVERSE` where the variable lists it. The model defines no way
+  to combine gates and no behavior for a gate that cannot be assessed. Read
+  each variable's rules and prose; do not assume a general AND/OR convention.
 - How should `derived_preferred` describe passthrough-only welfare aggregates?
   The [schema narrative][narrative] describes computation with a direct fallback,
   but [the welfare draft][welfare] forbids reconstruction and declares no
@@ -201,13 +200,15 @@ They illustrate field usage and the limits of YAML-only interpretation:
   `ValueCode.value` is integer-only. Their definitions say "three-letter string",
   although `CONS` has four letters. No string length rule is enforced by the
   model; this wording needs a human documentation decision.
-- How are `.a` and `.b` represented for string outputs? The
-  [alternative classifier][welfareothertype] declares these missing codes and
-  instructs `.a` when its aggregate is absent, but does not specify whether
-  these are literal strings or an abstract missing convention.
+- How is a missing value represented in a string output? A missing value
+  definition states what an output format writes for it (`representations`).
+  Only the Stata value is declared so far, and Stata has no missing value for
+  a string, so the canon does not yet say how a string output such as the
+  [alternative classifier][welfareothertype] carries one.
 - Does tier 1 require an output column even when its value is missing?
   [`welfareother`][welfareother] has `tier: 1` but calls the secondary aggregate
-  optional and uses `.a` when none exists. The narrative says tier 1 is
+  optional and is not produced (`MISS-NOT-AVAILABLE`) when none exists. The
+  narrative says tier 1 is
   mandatory; it does not distinguish column presence from usable observations.
 - What supports the upper range bounds of 100 for [`hsize`][hsize] and
   1000000000 for the continuous welfare drafts? Their prose gives lower bounds

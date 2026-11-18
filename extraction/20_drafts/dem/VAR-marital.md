@@ -94,8 +94,8 @@ Map the raw marital-status categories to the five GMD codes. Document the mappin
   no individual below the minimum legal marriage age should be coded married.
 - Cross-check the marital-status distribution against the survey documentation
   and any published tabulations.
-- No individual should have a standard missing value (`.`) for `marital`;
-  every case must be a valid code or an explicit extended missing code.
+- No individual should be left blank for `marital`; every case must be a valid
+  code or a defined missing value.
 
 ## Escalation triggers
 
@@ -108,8 +108,8 @@ Map the raw marital-status categories to the five GMD codes. Document the mappin
 ## Common mistakes
 
 - Coding "consensual union" as "Married" without documenting the mapping.
-- Using a standard missing (`.`) instead of the appropriate extended missing
-  code.
+- Leaving an observation blank instead of assigning the appropriate defined
+  missing value.
 - Guestimating marital status when the raw category is ambiguous.
 
 ## Change log

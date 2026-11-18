@@ -36,8 +36,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".o"
-    label: "Other relationship not covered by harmonized codes"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
 derived_from:

@@ -101,7 +101,7 @@ a lot of difficulty, and 4 when the individual cannot do it at all.
 - `conc_dsord` should take only integer values in [1, 4] or a documented
   missing code.
 - Cross-check against other disability domains for internal consistency.
-- No standard missing (`.`) should remain where a valid code was expected.
+- No observation should be left blank where a valid code was expected.
 
 ## Escalation triggers
 
@@ -114,7 +114,7 @@ a lot of difficulty, and 4 when the individual cannot do it at all.
 - Confusing the four-point scale (difficulty) with a binary disabled/not
   disabled indicator.
 - Transcribing "some difficulty" and "a lot of difficulty" into the same code.
-- Using a standard missing (`.`) instead of an explicit extended missing code.
+- Leaving an observation blank instead of assigning a defined missing value.
 
 ## Change log
 

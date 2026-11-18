@@ -28,8 +28,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Education section not applied because the individual is below mineducatage"
+  - MISS-OUTSIDE-UNIVERSE
 
 # --- Derivation graph ---
 derived_from:
@@ -104,7 +103,7 @@ gen primarycomp = inrange(educat5,3,5) if !mi(educat5)
 ```
 
 Prefer `educat7` as the source; use `educat5` when `educat7` is not defined.
-Apply the age restriction, setting `primarycomp` to `.c` below `mineducatage`.
+Apply the age restriction, setting `primarycomp` to `MISS-OUTSIDE-UNIVERSE` below `mineducatage`.
 
 ## Consistency checks
 
@@ -123,7 +122,8 @@ Apply the age restriction, setting `primarycomp` to `.c` below `mineducatage`.
 
 - Deriving `primarycomp` inconsistently across surveys (different cut-offs).
 - Failing to apply the `mineducatage` age restriction.
-- Using standard missing (`.`) instead of `.c` for the age restriction.
+- Leaving the value blank instead of assigning `MISS-OUTSIDE-UNIVERSE` for the
+  age restriction.
 
 ## Change log
 

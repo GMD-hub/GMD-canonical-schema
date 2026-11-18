@@ -34,8 +34,7 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".c"
-    label: "Education section not applied because the individual is below mineducatage"
+  - MISS-OUTSIDE-UNIVERSE
 
 # --- Derivation graph ---
 derived_from:
@@ -126,7 +125,7 @@ If `educat7` cannot be defined, `educat5` is constructed directly from the
 survey's own categories using the five-group definitions above.
 
 Do not guestimate education levels. Value must be missing for individuals below
-`mineducatage` (code `.c`). If the harmonizer cannot create all five groups,
+`mineducatage` (code `MISS-OUTSIDE-UNIVERSE`). If the harmonizer cannot create all five groups,
 leave the value missing.
 
 ## Consistency checks
@@ -152,7 +151,8 @@ leave the value missing.
   losing detail.
 - Applying the age restriction inconsistently across education variables.
 - Guestimating education levels rather than leaving them missing.
-- Using standard missing (`.`) instead of `.c` for the age restriction.
+- Leaving the value blank instead of assigning `MISS-OUTSIDE-UNIVERSE` for the
+  age restriction.
 
 ## Change log
 

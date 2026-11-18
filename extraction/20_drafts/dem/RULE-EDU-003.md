@@ -81,7 +81,7 @@ THEN      match the reported level text to a country_entry_id in
           set educy = cum_years_schooling for the matched country_entry_id
           document the matched country_entry_id in the do-file notes
 
-ELSE      set educy = .b
+ELSE      set educy = MISS-MISSING-INPUT
 
 /* --- Shared definition --- */
 
@@ -103,7 +103,7 @@ Repetition of a grade does not increase educy.
   variable other than direct grade/year/level data.
 - Do not count repeated grades as additional years of education.
 - Do not set `educy = 0` for individuals with unknown or missing education.
-  Use `.b` instead.
+  Use `MISS-MISSING-INPUT` instead.
 - Do not award years for an in-progress post-12 track beyond `base_years`
   when no current-year or progress detail is available for that
   individual.
@@ -142,7 +142,7 @@ variation across surveys where progress detail is absent.
 | Not enrolled, reports "2nd year" of tertiary (no qualification name) | educy = base_years + 2 |
 | Not enrolled, reports "Bachelor of Engineering" (completed) | educy = cum_years_schooling matched via crosswalk |
 | Individual repeated grade 3 twice | grade 3 counts as 1 year |
-| No grade, level, or year information available | educy = .b |
+| No grade, level, or year information available | educy = MISS-MISSING-INPUT |
 
 ## Change log
 

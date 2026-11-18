@@ -104,8 +104,8 @@ reason.
   placeholder codes remain.
 - Every second-level division must nest under exactly one first-level division
   (`subnatid1`).
-- No household may carry a standard missing (`.`) without an explicit extended
-  missing code when the level was collected.
+- No household may be left blank when the level was collected: each carries a
+  valid code or a defined missing value.
 - Verify codes match the most recent administrative classification pertaining to
   that survey.
 

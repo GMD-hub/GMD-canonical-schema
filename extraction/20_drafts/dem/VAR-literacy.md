@@ -98,8 +98,7 @@ assumption documented in the do-file).
 
 - Cross-check `literacy` against education: individuals with secondary education
   or above should generally be literate.
-- Verify no individual has a standard missing value (`.`) where a valid code is
-  expected.
+- Verify no individual is left blank where a valid code is expected.
 - `literacy` should take only values 0, 1, or a documented missing code.
 
 ## Escalation triggers
@@ -112,7 +111,7 @@ assumption documented in the do-file).
 
 - Coding `literacy = 1` when the person can only read or only write.
 - Guestimating literacy for individuals who were not asked.
-- Using a standard missing (`.`) instead of an explicit extended missing code.
+- Leaving an observation blank instead of assigning a defined missing value.
 
 ## Change log
 

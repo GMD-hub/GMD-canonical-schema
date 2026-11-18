@@ -104,7 +104,7 @@ the country-specific threshold.
 - `mineducatage` should be consistent with the age below which education is not
   collected in the survey documentation.
 - Verify no individual below `mineducatage` receives a non-missing education
-  value (`.c` is applied below the threshold).
+  value (`MISS-OUTSIDE-UNIVERSE` is applied below the threshold).
 - Confirm the threshold is non-negative and plausible as a schooling entry age.
 
 ## Escalation triggers

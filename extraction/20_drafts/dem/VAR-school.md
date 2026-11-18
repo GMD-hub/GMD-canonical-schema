@@ -109,7 +109,7 @@ not guestimate enrollment for the younger population; leave it missing.
 
 - Confusing `school` (current enrollment) with `everattend` (ever attended).
 - Guestimating enrollment for age groups the survey did not ask about.
-- Using a standard missing (`.`) instead of an explicit extended missing code.
+- Leaving an observation blank instead of assigning a defined missing value.
 
 ## Change log
 

@@ -34,7 +34,7 @@ code-enforced checks, see the
 | Mapping role | `atomic` (mapped directly from raw survey), `derived` (always computed from other GMD variables), `derived_preferred` (computed when possible, mapped directly as fallback) |
 | Data type | Binary, ordered categorical, continuous integer, etc. |
 | Allowed values | Complete list of valid output codes and labels |
-| Missing value codes | Which extended missing codes apply and what each means |
+| Missing value codes | Which missing value definitions (`MISS-` IDs) are specific to the variable; those of global scope apply to every variable and are not listed |
 | Derived from | Which GMD variables this one is computed from |
 | Derives to | Which GMD variables are computed from this one |
 | Country parameters | Registry IDs for parameters whose country coverage must be checked |
@@ -55,7 +55,7 @@ decision rule.
 | Mapping role | `atomic`, always mapped directly from the raw sex variable |
 | Data type | Binary |
 | Allowed values | 1 = Male, 0 = Female |
-| Missing codes | `.a` not harmonized / `.b` cannot be harmonized / `.c` not collected / `.o` non-binary category |
+| Missing codes | `MISS-OTHER-CATEGORY` (a category beyond male and female) |
 | Derived from | none |
 | Country parameters | none (`[]`) |
 | Rules | RULE-SEX-001 |
@@ -63,10 +63,12 @@ decision rule.
 **Construction guidance (from the prose section):**
 
 Map the raw sex variable directly. Do not impute sex from any other variable.
-Numeric placeholder codes (98, 99, 9) must be excluded and coded as `.a`.
-When the raw survey has categories beyond male and female, for example
-"other" or "non-binary", do not force those into 1 or 0. Use `.o` and
-document the category in the do-file notes.
+Numeric placeholder codes (98, 99, 9) must be excluded and coded by what the
+placeholder means in the survey: `MISS-DECLINED-TO-ANSWER` for a refusal,
+`MISS-DO-NOT-KNOW` for "do not know", and `MISS-MISSING-INPUT` when the survey
+does not say. When the raw survey has categories beyond male and female, for
+example "other" or "non-binary", do not force those into 1 or 0. Use
+`MISS-OTHER-CATEGORY` and document the category in the do-file notes.
 
 ## Empty country parameter declaration
 
@@ -85,6 +87,6 @@ policies.
 
 **The accompanying rule file (RULE-SEX-001)** contains the explicit IF/THEN
 logic the AI must follow: if the raw variable says male → set to 1, if female
-→ set to 0, if placeholder code → set to `.a`, if non-binary → set to `.o`,
-and so on. The rule also states what the AI is never allowed to do (impute,
+→ set to 0, if placeholder code → set to the missing value the placeholder
+means, if non-binary → set to `MISS-OTHER-CATEGORY`, and so on. The rule also states what the AI is never allowed to do (impute,
 drop individuals, force ambiguous categories into a binary value).

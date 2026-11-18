@@ -124,8 +124,7 @@ as `subnatid1`.
   overlap).
 - The set of households covered by a previous code should correspond to the
   geographic area of that historical division (consistent split tracking).
-- No household may carry a standard missing (`.`) where a classification change
-  occurred.
+- No household may be left blank where a classification change occurred.
 
 ## Escalation triggers
 

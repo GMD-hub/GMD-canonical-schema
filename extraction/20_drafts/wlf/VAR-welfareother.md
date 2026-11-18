@@ -91,8 +91,8 @@ optional and present only when such a second aggregate exists.
 whose type differs from the primary welfare series, adopt it as `welfareother` as
 delivered and record its concept in `welfareothertype`. Do not re-normalize or
 rebuild it — any normalization was applied upstream in the country prelude, on
-the same basis as `welfare`. Leave `welfareother` missing (`.a`) when no such
-secondary aggregate exists.
+the same basis as `welfare`. When no such secondary aggregate exists,
+`welfareother` is not produced (`MISS-NOT-AVAILABLE`).
 
 **Out of scope.** Constructing a secondary aggregate from components is out of
 scope for this canon (welfare-aggregate workstream).

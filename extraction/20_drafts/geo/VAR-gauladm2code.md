@@ -117,7 +117,7 @@ enumerated in the harmonized value space.
   `GAUL`; never reinterpret a non-GAUL `geo_id` as a GAUL code.
 - Every second-level GAUL unit must be consistent with the first-level GAUL unit
   (`gaul_adm1_code`) in which it is nested.
-- No household with an identifiable location may carry a standard missing (`.`).
+- No household with an identifiable location may be left blank.
 
 ## Escalation triggers
 
