@@ -28,21 +28,25 @@ RULE_IDS = {
     for path in [*(ROOT / "knowledge" / "rules").rglob("RULE-*.md"), *DRAFTS.rglob("RULE-*.md")]
     if "runs" not in path.relative_to(ROOT).parts
 }
-# Registered missing value references: the knowledge/ registry plus the definitions drafted beside
-# the variables (a draft definition is cited by draft variables before it is promoted).
-MISSING_IDS = {
-    path.stem
-    for path in [*(ROOT / "knowledge").rglob("MISS-*.md"), *DRAFTS.rglob("MISS-*.md")]
-    if "runs" not in path.relative_to(ROOT).parts
-}
-# The definitions of global scope apply to every variable: a variable must not list them.
-GLOBAL_MISSING_IDS = global_missing_ids(
-    [
-        MissingDefinition.model_validate(load_markdown(path)[0])
-        for path in [*(ROOT / "knowledge").rglob("MISS-*.md"), *DRAFTS.rglob("MISS-*.md")]
+
+
+def missing_definitions(folder: Path) -> dict[str, MissingDefinition]:
+    return {
+        path.stem: MissingDefinition.model_validate(load_markdown(path)[0])
+        for path in sorted(folder.rglob("MISS-*.md"))
         if "runs" not in path.relative_to(ROOT).parts
-    ]
-)
+    }
+
+
+# Registered missing value references: the knowledge/ registry, where a definition drafted beside
+# the variables takes the place of its registered version (a draft definition is cited by draft
+# variables before it is promoted). The registry is only read here; its own records are tested
+# in tests/test_missing_definitions.py.
+DRAFT_MISSING = missing_definitions(DRAFTS)
+MISSING = {**missing_definitions(ROOT / "knowledge"), **DRAFT_MISSING}
+MISSING_IDS = set(MISSING)
+# The definitions of global scope apply to every variable: a variable must not list them.
+GLOBAL_MISSING_IDS = global_missing_ids(list(MISSING.values()))
 REQUIRED_SECTIONS = [
     "## Definition",
     "## Conceptual intent",
@@ -158,14 +162,12 @@ def test_global_missing_id_is_not_listed_by_a_variable(parameter_ids: set[str]):
 
 
 def test_missing_value_drafts_validate():
-    paths = sorted(DRAFTS.glob("missing/MISS-*.md"))
-    assert paths, "no missing value definitions found under extraction/20_drafts/missing/"
-    definitions = []
-    for path in paths:
-        definition = MissingDefinition.model_validate(load_markdown(path)[0])
-        assert definition.missing_id == path.stem
-        definitions.append(definition)
-    validate_missing_set(definitions)
+    """A drafted definition is named after its file and fits the registered set it joins."""
+    if not DRAFT_MISSING:
+        pytest.skip("no missing value definitions are drafted")
+    for stem, definition in DRAFT_MISSING.items():
+        assert definition.missing_id == stem
+    validate_missing_set(list(MISSING.values()))
 
 
 def test_all_drafts_have_required_body_sections():

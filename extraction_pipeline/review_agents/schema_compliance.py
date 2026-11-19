@@ -60,7 +60,13 @@ def _section_has_content(body: str, heading: str) -> bool:
 
 
 def _check_frontmatter_validates(
-    path: Path, data: dict[str, Any], variable_ids: set[str], parameter_ids: set[str], rule_ids: set[str]
+    path: Path,
+    data: dict[str, Any],
+    variable_ids: set[str],
+    parameter_ids: set[str],
+    rule_ids: set[str],
+    missing_ids: set[str],
+    global_missing_ids: set[str],
 ) -> list[Finding]:
     """Validate frontmatter against VariableDefinition Pydantic model."""
     findings: list[Finding] = []
@@ -71,6 +77,8 @@ def _check_frontmatter_validates(
                 "variable_ids": variable_ids,
                 "parameter_ids": parameter_ids,
                 "rule_ids": rule_ids,
+                "missing_ids": missing_ids,
+                "global_missing_ids": global_missing_ids,
                 "allow_unresolved_draft": True,
             },
         )
@@ -164,18 +172,28 @@ def check_draft(
     variable_ids: set[str],
     parameter_ids: set[str] | None = None,
     rule_ids: set[str] | None = None,
+    missing_ids: set[str] | None = None,
+    global_missing_ids: set[str] | None = None,
 ) -> AgentFindings:
     """Run all schema compliance checks on a single draft."""
     if parameter_ids is None:
         parameter_ids = set()
     if rule_ids is None:
         rule_ids = set()
+    if missing_ids is None:
+        missing_ids = set()
+    if global_missing_ids is None:
+        global_missing_ids = set()
 
     data, body = load_draft(path)
     artifact_id = data.get("variable_id", path.stem)
 
     findings: list[Finding] = []
-    findings.extend(_check_frontmatter_validates(path, data, variable_ids, parameter_ids, rule_ids))
+    findings.extend(
+        _check_frontmatter_validates(
+            path, data, variable_ids, parameter_ids, rule_ids, missing_ids, global_missing_ids
+        )
+    )
     findings.extend(_check_id_formats(data))
     findings.extend(_check_required_sections(body))
     findings.extend(_check_placeholders(body))

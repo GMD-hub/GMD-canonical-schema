@@ -37,6 +37,8 @@ def temp_repository(tmp_path: Path) -> Path:
         data["derived_from"] = []
         data["derives_to"] = []
         data["gates"] = []
+        # the recode recipes name the removed parents
+        data["correspondence_output"] = None
         write_markdown(path, data, body)
 
     subprocess.run(["git", "init", "--quiet"], cwd=repository, check=True)

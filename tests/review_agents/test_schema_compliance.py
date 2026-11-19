@@ -3,12 +3,13 @@
 import pytest
 from pathlib import Path
 
-from extraction_pipeline.review_agents.helpers import list_parameter_ids
+from extraction_pipeline.review_agents.helpers import list_missing_ids, list_parameter_ids
 from extraction_pipeline.review_agents.schema_compliance import check_draft
 
 
 DRAFTS_DIR = Path("extraction/20_drafts")
 REGISTRY_DIR = Path("knowledge/parameters")
+MISSING_DIR = Path("knowledge/missing")
 
 _VARIABLE_IDS = {"VAR-male", "VAR-educat7", "VAR-educat4", "VAR-educy", "VAR-marital", "VAR-urban"}
 _RULE_IDS = {"RULE-SEX-001", "RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RULE-EDU-999"}
@@ -17,7 +18,13 @@ _RULE_IDS = {"RULE-SEX-001", "RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RU
 class TestSchemaCompliance:
     def _findings_for(self, artifact_id: str, parameter_ids: set[str] | None = None) -> list:
         path = list(DRAFTS_DIR.rglob(f"{artifact_id}.md"))[0]
-        kwargs = {"variable_ids": _VARIABLE_IDS, "rule_ids": _RULE_IDS}
+        missing_ids, global_missing_ids = list_missing_ids(MISSING_DIR)
+        kwargs = {
+            "variable_ids": _VARIABLE_IDS,
+            "rule_ids": _RULE_IDS,
+            "missing_ids": missing_ids,
+            "global_missing_ids": global_missing_ids,
+        }
         if parameter_ids is not None:
             kwargs["parameter_ids"] = parameter_ids
         result = check_draft(path, **kwargs)
@@ -25,7 +32,8 @@ class TestSchemaCompliance:
         return result.findings
 
     def test_var_male_passes(self):
-        findings = self._findings_for("VAR-male")
+        parameter_ids, _ = list_parameter_ids(REGISTRY_DIR)
+        findings = self._findings_for("VAR-male", parameter_ids=parameter_ids)
         errors = [f for f in findings if f.severity == "error"]
         assert errors == [], f"Unexpected errors: {[f.message for f in errors]}"
 
@@ -76,6 +84,7 @@ class TestSchemaCompliance:
             assert missing == [], f"{vid} missing sections: {[f.message for f in missing]}"
 
     def test_frontmatter_validates_for_male(self):
-        findings = self._findings_for("VAR-male")
+        parameter_ids, _ = list_parameter_ids(REGISTRY_DIR)
+        findings = self._findings_for("VAR-male", parameter_ids=parameter_ids)
         pydantic_errors = [f for f in findings if "Pydantic validation failed" in f.message]
         assert pydantic_errors == []

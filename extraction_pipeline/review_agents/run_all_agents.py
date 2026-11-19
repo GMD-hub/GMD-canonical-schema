@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .consistency_derivation import check_drafts as consistency_check
-from .helpers import list_drafts, list_parameter_ids, load_draft, write_findings
+from .helpers import list_drafts, list_missing_ids, list_parameter_ids, load_draft, write_findings
 from .models import AgentFindings
 from .rules_caveats import check_draft as rules_check
 from .schema_compliance import check_draft as schema_check
@@ -108,6 +108,7 @@ def run(
 
     registry_dir = Path(__file__).resolve().parents[2] / "knowledge" / "parameters"
     parameter_ids, skipped_params = list_parameter_ids(registry_dir)
+    missing_ids, global_missing_ids = list_missing_ids(registry_dir.parent / "missing")
 
     if skipped_params:
         print(f"Skipped parameter files: {skipped_params}", file=sys.stderr)
@@ -123,7 +124,16 @@ def run(
     all_findings: list[AgentFindings] = []
 
     for path in draft_paths:
-        all_findings.append(schema_check(path, variable_ids, parameter_ids=parameter_ids, rule_ids=rule_ids))
+        all_findings.append(
+            schema_check(
+                path,
+                variable_ids,
+                parameter_ids=parameter_ids,
+                rule_ids=rule_ids,
+                missing_ids=missing_ids,
+                global_missing_ids=global_missing_ids,
+            )
+        )
         all_findings.append(source_check(path))
         all_findings.append(rules_check(path))
 

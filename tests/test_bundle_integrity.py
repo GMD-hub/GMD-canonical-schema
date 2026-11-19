@@ -27,6 +27,12 @@ def test_compiled_bundle_has_commit_and_bodies(temp_repository: Path) -> None:
     artifacts.extend(bundle["country"]["exceptions"])
     assert artifacts
     assert all("body" in artifact for artifact in artifacts)
+    registered = {
+        path.stem
+        for path in (temp_repository / "knowledge" / "missing").glob("MISS-*.md")
+    }
+    assert registered
+    assert {item["missing_id"] for item in bundle["universal"]["missing"]} == registered
 
 
 def test_compiled_bundle_applies_selectors(temp_repository: Path) -> None:

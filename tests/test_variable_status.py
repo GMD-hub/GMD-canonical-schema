@@ -27,6 +27,7 @@ def validate_variable(data: dict) -> VariableDefinition:
             "allow_unresolved_draft": True,
             "parameter_ids": set(data["country_parameters"]),
             "rule_ids": set(data["rules"]),
+            "missing_ids": set(data["missing_codes"]),
         },
     )
 
