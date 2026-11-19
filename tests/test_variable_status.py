@@ -143,9 +143,9 @@ def test_label_of_exactly_the_limit_is_accepted() -> None:
     assert validate_variable(data).canonical_label == "x" * 80
 
 
-def test_every_draft_variable_label_fits_a_stata_variable_label() -> None:
+def test_every_variable_label_fits_a_stata_variable_label() -> None:
     too_long = {}
-    for path in sorted((ROOT / "extraction/20_drafts").rglob("VAR-*.md")):
+    for path in sorted((ROOT / "knowledge/variables").rglob("VAR-*.md")):
         data, _ = load_markdown(path)
         if len(data["canonical_label"]) > 80:
             too_long[path.name] = len(data["canonical_label"])

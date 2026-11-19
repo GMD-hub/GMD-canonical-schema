@@ -18,7 +18,8 @@ from extraction_pipeline.review_agents.run_all_agents import run
 from extraction_pipeline.review_agents.schema_compliance import check_draft as schema_check
 from extraction_pipeline.review_agents.source_grounding import check_draft as source_check
 
-DRAFTS_DIR = Path("extraction/20_drafts")
+# the variable records the agents are exercised on
+CORPUS_DIR = Path("knowledge/variables")
 REGISTRY_DIR = Path("knowledge/parameters")
 MISSING_DIR = Path("knowledge/missing")
 ANSWER_KEY_PATH = Path(__file__).parent / "known_answer_key.yml"
@@ -32,7 +33,7 @@ def answer_key():
 
 @pytest.fixture
 def all_findings():
-    draft_paths = list_drafts(DRAFTS_DIR)
+    draft_paths = list_drafts(CORPUS_DIR)
     all_data = []
     for path in draft_paths:
         from extraction_pipeline.review_agents.helpers import load_draft
@@ -89,7 +90,7 @@ class TestKnownAnswerKey:
 
 class TestFullPipeline:
     def test_runner_produces_summary(self, tmp_path):
-        findings, exit_code = run(DRAFTS_DIR, tmp_path)
+        findings, exit_code = run(CORPUS_DIR, tmp_path)
         summary_path = tmp_path / "SUMMARY.md"
         assert summary_path.exists()
         content = summary_path.read_text()
@@ -97,12 +98,12 @@ class TestFullPipeline:
         assert "| " in content
 
     def test_runner_produces_yml_files(self, tmp_path):
-        run(DRAFTS_DIR, tmp_path)
+        run(CORPUS_DIR, tmp_path)
         yml_files = list(tmp_path.glob("*.yml"))
         assert len(yml_files) >= 6
 
     def test_runner_exit_code(self, tmp_path):
-        findings, exit_code = run(DRAFTS_DIR, tmp_path)
+        findings, exit_code = run(CORPUS_DIR, tmp_path)
         errors = [
             (af.artifact_id, f.field, f.message)
             for af in findings
@@ -118,7 +119,7 @@ class TestFullPipeline:
     def test_runner_excludes_nonvariable_drafts(self, tmp_path, artifact):
         corpus = tmp_path / "corpus"
         corpus.mkdir()
-        shutil.copy(DRAFTS_DIR / "dem" / "VAR-male.md", corpus / "VAR-male.md")
+        shutil.copy(CORPUS_DIR / "dem" / "VAR-male.md", corpus / "VAR-male.md")
         shutil.copy(artifact, corpus / artifact.name)
         output = tmp_path / "out"
 
@@ -134,7 +135,7 @@ class TestFullPipeline:
         (corpus / "runs" / "VAR-broken.md").write_text(
             "no frontmatter here\n"
         )
-        shutil.copy(DRAFTS_DIR / "dem" / "VAR-male.md", corpus / "VAR-male.md")
+        shutil.copy(CORPUS_DIR / "dem" / "VAR-male.md", corpus / "VAR-male.md")
         findings, exit_code = run(corpus, tmp_path / "out")
         assert exit_code == 0, (
             "Expected exit 0: broken runs/ variable is excluded by list_drafts, "
@@ -150,5 +151,5 @@ class TestFullPipeline:
         out.mkdir()
         stale = out / "STALE-2026-08-13.schema_compliance.yml"
         stale.write_text("stale")
-        run(DRAFTS_DIR, out)
+        run(CORPUS_DIR, out)
         assert not stale.exists(), "runner should purge findings for artifacts no longer in the corpus"

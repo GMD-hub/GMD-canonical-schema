@@ -7,7 +7,8 @@ from extraction_pipeline.review_agents.helpers import list_missing_ids, list_par
 from extraction_pipeline.review_agents.schema_compliance import check_draft
 
 
-DRAFTS_DIR = Path("extraction/20_drafts")
+# the variable records the agents are exercised on
+CORPUS_DIR = Path("knowledge/variables")
 REGISTRY_DIR = Path("knowledge/parameters")
 MISSING_DIR = Path("knowledge/missing")
 
@@ -17,7 +18,7 @@ _RULE_IDS = {"RULE-SEX-001", "RULE-EDU-001", "RULE-EDU-002", "RULE-EDU-003", "RU
 
 class TestSchemaCompliance:
     def _findings_for(self, artifact_id: str, parameter_ids: set[str] | None = None) -> list:
-        path = list(DRAFTS_DIR.rglob(f"{artifact_id}.md"))[0]
+        path = list(CORPUS_DIR.rglob(f"{artifact_id}.md"))[0]
         missing_ids, global_missing_ids = list_missing_ids(MISSING_DIR)
         kwargs = {
             "variable_ids": _VARIABLE_IDS,
