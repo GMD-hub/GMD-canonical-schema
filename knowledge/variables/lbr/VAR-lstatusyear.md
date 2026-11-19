@@ -68,7 +68,7 @@ derives_to:
 country_parameters:
   - PARAM-LBR-MIN-LABOR-AGE-YEAR
 gates:
-- variable_id: VAR-minlaborageyear
+- variable_id: VAR-age
   condition: VAR-age >= PARAM-LBR-MIN-LABOR-AGE-YEAR
 rules: []
 exceptions: []

@@ -23,7 +23,8 @@ value_codes:
 - value: 4
   label: Public or State-owned, but cannot distinguish
 allowed_range: null
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 derived_from: []
 derives_to: []
 country_parameters: []
