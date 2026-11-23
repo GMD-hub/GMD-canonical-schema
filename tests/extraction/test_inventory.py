@@ -623,7 +623,7 @@ def inventory_repositories(
     expected_draft_ids = {
         path.stem
         for module in ("idn", "geo", "dem", "lbr", "utl", "dwl")
-        for path in (REPOSITORY_ROOT / "extraction/20_drafts" / module).glob(
+        for path in (REPOSITORY_ROOT / "knowledge/variables" / module).glob(
             "VAR-*.md"
         )
     }
@@ -686,7 +686,7 @@ def inventory_repositories(
     copied_draft_ids: set[str] = set()
     for module in ("idn", "geo", "dem", "lbr", "utl", "dwl"):
         for source in sorted(
-            (REPOSITORY_ROOT / "extraction/20_drafts" / module).glob("VAR-*.md")
+            (REPOSITORY_ROOT / "knowledge/variables" / module).glob("VAR-*.md")
         ):
             if source.stem not in reconcilable_draft_ids:
                 continue

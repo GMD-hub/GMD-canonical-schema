@@ -1,22 +1,28 @@
 """Models for universal variable specifications."""
 
 import re
-from typing import Literal
+from typing import Annotated, Literal
 
 from pydantic import (
     BaseModel,
     ConfigDict,
+    Field,
     StrictBool,
     ValidationInfo,
     field_validator,
     model_validator,
 )
 
+from schema.missing import MISSING_ID_PATTERN
+
 
 VARIABLE_ID_PATTERN = re.compile(r"^VAR-[a-z][a-z0-9]*$")
 MODULE_ID_PATTERN = re.compile(r"^MOD-[A-Z][A-Z0-9-]*$")
 RULE_ID_PATTERN = re.compile(r"^RULE-[A-Z][A-Z0-9-]*$")
 PARAMETER_ID_PATTERN = re.compile(r"^PARAM-[A-Z]+-[A-Z0-9-]+$")
+# A harmonized Stata file carries canonical_label as the variable's label, and Stata holds 80 characters:
+# the limit is the canon's, so no writer has to cut a label.
+VARIABLE_LABEL_LIMIT = 80
 
 
 class ValueCode(BaseModel):
@@ -37,13 +43,6 @@ class AllowedRange(BaseModel):
         if self.min > self.max:
             raise ValueError("min must be less than or equal to max")
         return self
-
-
-class MissingCode(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    code: str
-    label: str
 
 
 class Gate(BaseModel):
@@ -94,6 +93,103 @@ class VariableProvenance(BaseModel):
         return self
 
 
+_RECODE_KEY_PATTERN = re.compile(r"^\d+(/\d+)?$")
+
+
+class ExternalStandardAnchor(BaseModel):
+    """method=external_standard: GMD code placed from an international standard's levels
+    (e.g. ISCED-2011 level -> educat7, JMP node -> water_source). The one universal anchor the
+    family builds from; lives with the anchored variable, not in a code-side table. A map value
+    is one code, or the list of codes a coarse standard level spans (the code itself is then
+    undetermined); a standard level absent from the map has no code of this variable."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["external_standard"]
+    standard: str
+    level: str
+    map: dict[str, int | list[int]]
+
+
+class Recode(BaseModel):
+    """method=recode: universal code->code recode from a parent GMD variable, matching the
+    Stata recode in the construction notes / rule. Each map key is a single code ("3") or an
+    inclusive range ("3/7"). The single consumable source the resolver reads, instead of a
+    parallel code-side rolldown table that can drift."""
+
+    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+
+    method: Literal["recode"]
+    from_: str = Field(alias="from")
+    map: dict[str, int]
+
+    @field_validator("from_")
+    @classmethod
+    def validate_from(cls, value: str) -> str:
+        if not VARIABLE_ID_PATTERN.fullmatch(value):
+            raise ValueError("recode.from must match VAR-<lowercase-name>")
+        return value
+
+    @field_validator("map")
+    @classmethod
+    def validate_map_keys(cls, value: dict[str, int]) -> dict[str, int]:
+        invalid = sorted(key for key in value if not _RECODE_KEY_PATTERN.fullmatch(key))
+        if invalid:
+            raise ValueError(f"recode.map keys must be a code or lo/hi range: {invalid}")
+        return value
+
+
+class CategoryField(BaseModel):
+    """method=category_field: read a numeric field off the matched national category
+    (never a string label), e.g. educy <- cum_years_schooling."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["category_field"]
+    field: str
+
+    @field_validator("field")
+    @classmethod
+    def validate_field(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("category_field requires a non-empty 'field'")
+        return value
+
+
+class Alias(BaseModel):
+    """method=alias: reuse another variable's value-codes and mapping unchanged, e.g. a
+    reference-period or second-job variant (empstat_2 <- empstat)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    method: Literal["alias"]
+    of: str
+
+    @field_validator("of")
+    @classmethod
+    def validate_of(cls, value: str) -> str:
+        if not VARIABLE_ID_PATTERN.fullmatch(value):
+            raise ValueError("alias.of must match VAR-<lowercase-name>")
+        return value
+
+
+CorrespondenceOutput = Annotated[
+    ExternalStandardAnchor | Recode | CategoryField | Alias,
+    Field(discriminator="method"),
+]
+"""Single polymorphic construction recipe the layered-correspondence resolver reads to
+build a variable's value-map, instead of hardcoding per-variable branches. The ``method``
+discriminator selects the mechanism; higher-level policy (path priority, fallback cascade,
+missing-value codes, prohibitions) stays in the governing RULE, which references this recipe
+rather than restating it.
+
+A variable with several derivation paths carries a LIST of ``recode`` recipes, one per parent,
+in the preference order of ``derived_from`` (e.g. educat4 from educat7, else from educat5): the
+first recipe whose parent is constructed for the survey applies. The list may end with one
+``external_standard`` recipe, the direct path for a category no parent recode decides (e.g.
+imp_san_rec for a JMP node with no sanitation_source code)."""
+
+
 class VariableDefinition(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -110,9 +206,10 @@ class VariableDefinition(BaseModel):
     data_type: str
     value_codes: list[ValueCode] | None
     allowed_range: AllowedRange | None
-    missing_codes: list[MissingCode]
+    missing_codes: list[str]
     derived_from: list[str]
     derives_to: list[str]
+    correspondence_output: CorrespondenceOutput | list[CorrespondenceOutput] | None = None
     country_parameters: list[str]
     gates: list[Gate]
     rules: list[str]
@@ -126,6 +223,16 @@ class VariableDefinition(BaseModel):
     def validate_variable_id(cls, value: str) -> str:
         if not VARIABLE_ID_PATTERN.fullmatch(value):
             raise ValueError("variable_id must match VAR-<lowercase-name>")
+        return value
+
+    @field_validator("canonical_label")
+    @classmethod
+    def validate_label_length(cls, value: str) -> str:
+        if len(value) > VARIABLE_LABEL_LIMIT:
+            raise ValueError(
+                f"canonical_label has {len(value)} characters; a Stata variable label holds "
+                f"{VARIABLE_LABEL_LIMIT}"
+            )
         return value
 
     @field_validator("module_id")
@@ -151,6 +258,14 @@ class VariableDefinition(BaseModel):
             raise ValueError(f"invalid parameter IDs: {invalid}")
         return values
 
+    @field_validator("missing_codes")
+    @classmethod
+    def validate_missing_references(cls, values: list[str]) -> list[str]:
+        invalid = sorted(value for value in values if not MISSING_ID_PATTERN.fullmatch(value))
+        if invalid:
+            raise ValueError(f"invalid missing IDs: {invalid}")
+        return values
+
     @field_validator("rules")
     @classmethod
     def validate_rule_references(cls, values: list[str]) -> list[str]:
@@ -158,6 +273,36 @@ class VariableDefinition(BaseModel):
         if invalid:
             raise ValueError(f"invalid rule IDs: {invalid}")
         return values
+
+    @model_validator(mode="after")
+    def validate_correspondence_parents(self) -> "VariableDefinition":
+        recipes = self.correspondence_output
+        if recipes is None:
+            return self
+        listed = recipes if isinstance(recipes, list) else [recipes]
+        levels = [recipe.level for recipe in listed if isinstance(recipe, ExternalStandardAnchor)]
+        if any(level != self.variable_name for level in levels):
+            raise ValueError(f"external_standard level must be this variable's name: {levels}")
+        if isinstance(recipes, list):
+            if not recipes:
+                raise ValueError("correspondence_output list must not be empty")
+            direct = isinstance(recipes[-1], ExternalStandardAnchor)
+            recodes = [recipe for recipe in recipes if isinstance(recipe, Recode)]
+            if not recodes or len(recodes) != len(recipes) - direct:
+                raise ValueError("a correspondence_output list holds recode recipes, optionally "
+                                 "followed by one external_standard recipe")
+            parents = [recipe.from_ for recipe in recodes]
+            if len(set(parents)) != len(parents):
+                raise ValueError(f"correspondence_output recodes repeat a parent: {parents}")
+        else:
+            parents = [recipes.from_] if isinstance(recipes, Recode) else []
+        undeclared = [parent for parent in parents if parent not in self.derived_from]
+        if undeclared:
+            raise ValueError(f"correspondence_output recode parents not in derived_from: {undeclared}")
+        order = [self.derived_from.index(parent) for parent in parents]
+        if order != sorted(order):
+            raise ValueError("correspondence_output recodes must follow the derived_from preference order")
+        return self
 
     @model_validator(mode="after")
     def validate_references(self, info: ValidationInfo) -> "VariableDefinition":
@@ -170,6 +315,8 @@ class VariableDefinition(BaseModel):
         variable_ids: set[str] = context.get("variable_ids", set())
         parameter_ids: set[str] = context.get("parameter_ids", set())
         rule_ids: set[str] = context.get("rule_ids", set())
+        missing_ids: set[str] = context.get("missing_ids", set())
+        global_missing_ids: set[str] = context.get("global_missing_ids", set())
 
         referenced_variables = set(self.derived_from) | set(self.derives_to) | {
             item.variable_id for item in self.gates
@@ -188,6 +335,16 @@ class VariableDefinition(BaseModel):
         unknown_rules = set(self.rules) - rule_ids
         if unknown_rules:
             raise ValueError(f"unknown rule IDs: {sorted(unknown_rules)}")
+
+        unknown_missing = set(self.missing_codes) - missing_ids
+        if unknown_missing:
+            raise ValueError(f"unknown missing IDs: {sorted(unknown_missing)}")
+
+        listed_global = set(self.missing_codes) & global_missing_ids
+        if listed_global:
+            raise ValueError(
+                f"missing IDs of global scope apply to every variable and are not listed: {sorted(listed_global)}"
+            )
         return self
 
 

@@ -29,7 +29,7 @@ def test_transform_education_rows_maps_expected_fields() -> None:
     assert mapped[0]["entry_age"] == 6
     assert mapped[0]["duration_years"] == 6
     assert mapped[0]["isced_level"] == "1"
-    assert mapped[0]["gmd_educat4_target"] == "primary"
+    assert not any(key.startswith("gmd_") for key in mapped[0])
 
 
 def test_transform_wash_rows_maps_expected_fields() -> None:
@@ -55,3 +55,4 @@ def test_transform_wash_rows_maps_expected_fields() -> None:
     assert mapped[0]["national_label_local"] == "Pozo cubierto"
     assert mapped[0]["jmp_id"] == "ground_water.protected_well"
     assert mapped[0]["improved_flag"] is True
+    assert not any(key.startswith("gmd_") for key in mapped[0])

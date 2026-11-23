@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT))
 from schema.country_exceptions import CountryExceptionFile, CountryExceptionRecord
 from schema.country_parameters import CountryParameterFile, CountryParameterRecord
 from schema.frontmatter import load_markdown
+from schema.missing import MissingDefinition, global_missing_ids, validate_missing_set
 from schema.parameter import ParameterDefinition
 from schema.rule import RuleDefinition
 from schema.variable import VariableDefinition, validate_acyclic_derivation_graph
@@ -99,10 +100,29 @@ def load_rule_artifacts(folder: Path) -> tuple[list[dict[str, Any]], set[str]]:
     return artifacts, rule_ids
 
 
+def load_missing_artifacts(
+    folder: Path,
+) -> tuple[list[dict[str, Any]], list[MissingDefinition]]:
+    artifacts: list[dict[str, Any]] = []
+    definitions: list[MissingDefinition] = []
+    for path in sorted(folder.rglob("MISS-*.md")):
+        data, body = load_markdown(path)
+        definition = MissingDefinition.model_validate(data)
+        if definition.missing_id != path.stem:
+            raise ValueError(
+                f"missing_id {definition.missing_id} does not match file {path.name}"
+            )
+        definitions.append(definition)
+        artifacts.append({**definition.model_dump(mode="json"), "body": body})
+    validate_missing_set(definitions)
+    return artifacts, definitions
+
+
 def load_variable_artifacts(
     folder: Path,
     parameter_ids: set[str],
     rule_ids: set[str],
+    missing_definitions: list[MissingDefinition],
 ) -> tuple[list[dict[str, Any]], set[str]]:
     raw_artifacts: list[tuple[dict[str, Any], str]] = []
     variable_ids: set[str] = set()
@@ -118,6 +138,8 @@ def load_variable_artifacts(
         "variable_ids": variable_ids,
         "parameter_ids": parameter_ids,
         "rule_ids": rule_ids,
+        "missing_ids": {definition.missing_id for definition in missing_definitions},
+        "global_missing_ids": global_missing_ids(missing_definitions),
         "allow_unresolved_draft": True,
     }
     variables = [
@@ -166,8 +188,14 @@ def main() -> int:
             ROOT / "knowledge" / "parameters", registry
         )
         rules, rule_ids = load_rule_artifacts(ROOT / "knowledge" / "rules")
+        missing, missing_definitions = load_missing_artifacts(
+            ROOT / "knowledge" / "missing"
+        )
         variables, variable_ids = load_variable_artifacts(
-            ROOT / "knowledge" / "variables", set(registry), rule_ids
+            ROOT / "knowledge" / "variables",
+            set(registry),
+            rule_ids,
+            missing_definitions,
         )
         modules = load_generic_artifacts(ROOT / "knowledge" / "modules")
 
@@ -219,6 +247,7 @@ def main() -> int:
             "variables": variables,
             "rules": rules,
             "parameters": parameters,
+            "missing": missing,
         },
         "country": {
             "iso3": args.iso3,

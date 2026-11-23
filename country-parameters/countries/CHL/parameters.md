@@ -17,9 +17,6 @@ parameters:
     duration_years: 3
     isced_level: '0'
     isced_label: ISCED 0 Early childhood education
-    gmd_educat4_target: no_education
-    gmd_educat5_target: no_education
-    gmd_educat7_target: none
     source_row: 5
     parent_country_entry_ids: []
     cum_years_schooling: 0
@@ -36,9 +33,6 @@ parameters:
     duration_years: 3
     isced_level: '0'
     isced_label: ISCED 0 Early childhood education
-    gmd_educat4_target: no_education
-    gmd_educat5_target: no_education
-    gmd_educat7_target: none
     source_row: 6
     parent_country_entry_ids: []
     cum_years_schooling: 0
@@ -53,9 +47,6 @@ parameters:
     duration_years: 6
     isced_level: '1'
     isced_label: ISCED 1 Primary
-    gmd_educat4_target: primary
-    gmd_educat5_target: primary_incomplete
-    gmd_educat7_target: primary_incomplete
     source_row: 7
     parent_country_entry_ids: []
     cum_years_schooling: 6
@@ -70,9 +61,6 @@ parameters:
     duration_years: 2
     isced_level: '2'
     isced_label: ISCED 2 Lower secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: lower_secondary
-    gmd_educat7_target: lower_secondary_incomplete
     source_row: 8
     parent_country_entry_ids:
     - CHL-EDU-03
@@ -89,9 +77,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_incomplete
     source_row: 9
     parent_country_entry_ids:
     - CHL-EDU-04
@@ -110,9 +95,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_incomplete
     source_row: 10
     parent_country_entry_ids:
     - CHL-EDU-04
@@ -130,9 +112,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_incomplete
     source_row: 11
     parent_country_entry_ids:
     - CHL-EDU-04
@@ -150,9 +129,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_incomplete
     source_row: 12
     parent_country_entry_ids:
     - CHL-EDU-04
@@ -170,9 +146,6 @@ parameters:
     duration_years: 2
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_incomplete
     source_row: 13
     parent_country_entry_ids:
     - CHL-EDU-04
@@ -190,9 +163,6 @@ parameters:
     duration_years: 4
     isced_level: '3'
     isced_label: ISCED 3 Upper secondary
-    gmd_educat4_target: secondary
-    gmd_educat5_target: upper_secondary
-    gmd_educat7_target: upper_secondary_incomplete
     source_row: 14
     parent_country_entry_ids:
     - CHL-EDU-04
@@ -210,9 +180,6 @@ parameters:
     duration_years: 2
     isced_level: '5'
     isced_label: ISCED 5 Short-cycle tertiary
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 15
     parent_country_entry_ids:
     - CHL-EDU-05
@@ -235,9 +202,6 @@ parameters:
     duration_years: 1
     isced_level: '6'
     isced_label: ISCED 6 Bachelor or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 17
     parent_country_entry_ids:
     - CHL-EDU-05
@@ -260,9 +224,6 @@ parameters:
     duration_years: 1
     isced_level: '7'
     isced_label: ISCED 7 Master or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 21
     parent_country_entry_ids:
     - CHL-EDU-05
@@ -285,9 +246,6 @@ parameters:
     duration_years: 2
     isced_level: '7'
     isced_label: ISCED 7 Master or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 22
     parent_country_entry_ids:
     - CHL-EDU-05
@@ -310,9 +268,6 @@ parameters:
     duration_years: 3
     isced_level: '8'
     isced_label: ISCED 8 Doctoral or equivalent
-    gmd_educat4_target: tertiary
-    gmd_educat5_target: tertiary
-    gmd_educat7_target: tertiary
     source_row: 24
     parent_country_entry_ids:
     - CHL-EDU-13
@@ -762,8 +717,6 @@ parameters:
     national_label_local: a drenaje abierto
     jmp_classification: Flush/toilets > to elsewhere
     jmp_id: flush_toilets.to_elsewhere
-    gmd_target: flush_elsewhere
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 71
@@ -773,8 +726,6 @@ parameters:
     national_label_local: al alcantarillado
     jmp_classification: Flush/toilets > to piped sewer system
     jmp_id: flush_toilets.to_piped_sewer_system
-    gmd_target: flush_sewer
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 67
@@ -784,8 +735,6 @@ parameters:
     national_label_local: a letrina con cierre hidraulico
     jmp_classification: Flush/toilets > to pit
     jmp_id: flush_toilets.to_pit
-    gmd_target: flush_pit
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 69
@@ -795,8 +744,6 @@ parameters:
     national_label_local: a pozo septico
     jmp_classification: Flush/toilets > to septic tank
     jmp_id: flush_toilets.to_septic_tank
-    gmd_target: flush_septic
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 68
@@ -807,8 +754,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
-    gmd_target: pit_slab
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 106
@@ -818,8 +763,6 @@ parameters:
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -829,8 +772,6 @@ parameters:
     national_label_local: No hay installacion sanitaria
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -840,8 +781,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 132
@@ -851,8 +790,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other improved > Other
     jmp_id: other_improved.other#2
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 133
@@ -862,8 +799,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 136
@@ -883,8 +818,6 @@ parameters:
     national_label_local: Todos los pozos
     jmp_classification: Ground water > All wells
     jmp_id: ground_water.all_wells
-    gmd_target: ''
-    gmd_spans: borehole|protected_well|unprotected_well
     improved_flag: false
     shared_flag: false
     source_row: 54
@@ -894,8 +827,6 @@ parameters:
     national_label_local: "Carro con tanque / tambor peque\xF1o"
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 101
@@ -905,8 +836,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -916,8 +845,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -927,8 +854,6 @@ parameters:
     national_label_local: Agua superficial
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -938,8 +863,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 42
@@ -949,8 +872,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 42
@@ -960,8 +881,6 @@ parameters:
     national_label_local: Agua entubada en la vivienda
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -972,8 +891,6 @@ parameters:
     national_label_local: Agua corriente al patio/parcela
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -983,8 +900,6 @@ parameters:
     national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -994,8 +909,6 @@ parameters:
     national_label_local: "Fuentes p\xFAblicas"
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41

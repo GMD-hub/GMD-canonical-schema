@@ -15,7 +15,7 @@ tier: 2
 
 # --- Nature of the variable ---
 unit_of_analysis: household
-mapping_role: atomic
+mapping_role: derived
 data_type: string
 
 # --- Allowed output values ---
@@ -24,15 +24,11 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
-  - code: ".c"
-    label: "Information not available because the subnational classification has not changed since the previous survey"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
-derived_from: []
+derived_from:
+  - VAR-geocode
 derives_to: []
 
 # --- Country parameter declarations ---
@@ -129,8 +125,7 @@ as `subnatid1`.
   overlap).
 - The set of households covered by a previous code should correspond to the
   geographic area of that historical division (consistent split tracking).
-- No household may carry a standard missing (`.`) where a classification change
-  occurred.
+- No household may be left blank where a classification change occurred.
 
 ## Escalation triggers
 

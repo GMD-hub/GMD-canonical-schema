@@ -90,6 +90,28 @@ def list_parameter_ids(registry_dir: Path) -> tuple[set[str], list[str]]:
     return parameter_ids, skipped
 
 
+def list_missing_ids(registry_dir: Path) -> tuple[set[str], set[str]]:
+    """Load the missing value definitions from knowledge/missing/MISS-*.md.
+
+    Returns (missing_ids, global_missing_ids): every registered ID, and the
+    IDs of global scope, which apply to every variable and which no variable
+    lists.
+    """
+    missing_ids: set[str] = set()
+    global_ids: set[str] = set()
+    if not registry_dir.is_dir():
+        return missing_ids, global_ids
+    for path in sorted(registry_dir.glob("MISS-*.md")):
+        data, _ = load_markdown(path)
+        missing_id = data.get("missing_id", "")
+        if not missing_id:
+            continue
+        missing_ids.add(missing_id)
+        if data.get("scope") == "global":
+            global_ids.add(missing_id)
+    return missing_ids, global_ids
+
+
 def make_findings(
     agent: str,
     artifact_id: str,

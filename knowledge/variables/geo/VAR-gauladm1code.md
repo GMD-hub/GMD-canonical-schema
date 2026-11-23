@@ -15,7 +15,7 @@ tier: 1
 
 # --- Nature of the variable ---
 unit_of_analysis: household
-mapping_role: atomic
+mapping_role: derived
 data_type: integer
 
 # --- Allowed output values ---
@@ -24,13 +24,11 @@ allowed_range: null
 
 # --- Missing value codes ---
 missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
+  - MISS-OTHER-CATEGORY
 
 # --- Derivation graph ---
-derived_from: []
+derived_from:
+  - VAR-geocode
 derives_to: []
 
 # --- Country parameter declarations ---
@@ -123,7 +121,7 @@ enumerated in the harmonized value space.
   `GAUL`; never reinterpret a non-GAUL `geo_id` as a GAUL code.
 - The number of distinct codes and their relationship to `subnatid1` must be
   documented and reviewed for plausibility.
-- No household with an identifiable location may carry a standard missing (`.`).
+- No household with an identifiable location may be left blank.
 
 ## Escalation triggers
 

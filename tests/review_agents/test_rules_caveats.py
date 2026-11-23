@@ -6,12 +6,13 @@ from pathlib import Path
 from extraction_pipeline.review_agents.rules_caveats import check_draft
 
 
-DRAFTS_DIR = Path("extraction/20_drafts")
+# the variable records the agents are exercised on
+CORPUS_DIR = Path("knowledge/variables")
 
 
 class TestRulesCaveats:
     def _findings_for(self, artifact_id: str) -> list:
-        path = list(DRAFTS_DIR.rglob(f"{artifact_id}.md"))[0]
+        path = list(CORPUS_DIR.rglob(f"{artifact_id}.md"))[0]
         result = check_draft(path)
         assert result.artifact_id == artifact_id
         return result.findings

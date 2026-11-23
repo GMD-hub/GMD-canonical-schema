@@ -1,16 +1,19 @@
 ---
 # ================================================================
-# DECISION RULE — GMD Canonical Variable Schema v0.1
+# DECISION RULE — GMD Canonical Variable Schema v0.2
 # ================================================================
 
 rule_id: RULE-EDU-002
-rule_name: "educat4 derivation order and recode"
+rule_name: "Education ladder: one level per source variable, placed through the
+            national crosswalk, coarser levels derived by fixed recodes"
 scope: module
 module_id: MOD-DEM
 applies_to_variables:
+  - VAR-educat7
+  - VAR-educat5
   - VAR-educat4
 priority: 80
-version: "0.1"
+version: "0.2"
 status: draft
 authority: "GPID Team"
 effective_from: "2026-06-25"
@@ -19,62 +22,155 @@ effective_to: null
 
 ## Plain language rule
 
-Always attempt to derive `educat4` from `educat7` first. If `educat7` is
-not available, derive from `educat5`. Only map directly from raw survey data
-when neither `educat7` nor `educat5` can be defined. Never guestimate.
+Decide once, for the survey's source education variable, the most detailed
+GMD level it supports: `educat7` if every substantive category of the source
+can be placed in exactly one `educat7` category; otherwise `educat5` by the
+same test; otherwise `educat4`. Build that level and derive every coarser
+level from it with the fixed recodes. Do not build a level finer than the
+source supports, and do not build a finer level partially by leaving out the
+categories that do not fit it.
+
+Place each source category through the country's education crosswalk
+(`PARAM-EDU-LEVEL-CROSSWALK`): source category -> national level
+(`country_entry_id`) -> its ISCED level -> the GMD code. Map a category
+directly to a GMD code only when no national level matches it, and record
+why.
+
+Residual categories (other/specify, don't know, refused, not stated) carry no
+education level. Each takes the missing value that matches it: other/specify
+is `MISS-OTHER-CATEGORY`, don't know is `MISS-DO-NOT-KNOW`, refused is
+`MISS-DECLINED-TO-ANSWER`, and not stated is `MISS-MISSING-INPUT`. A residual
+category that cannot be told apart in this way is `MISS-MISSING-INPUT`.
+Residual categories do not count when deciding the level the source supports.
+Never guestimate.
 
 ## Formal IF/THEN
 
 ```
-IF   educat7 is defined for this survey
-THEN derive educat4 using:
-     recode educat7 (1=1) (2 3=2) (4 5=3) (6 7=4), gen(educat4)
+/* --- Step 1: place each substantive source category (per category) --- */
 
-ELSE IF   educat5 is defined for this survey
-THEN      derive educat4 using:
-          recode educat5 (1=1) (2=2) (3 4=3) (5=4), gen(educat4)
-          document use of educat5 path in do-file notes
+FOR each substantive category of the source education variable
+  IF   a PARAM-EDU-LEVEL-CROSSWALK row for the survey's ISO3 and year
+       matches the category
+  THEN place it through that row's isced_level
+       (ISCED -> educat7 map in VAR-educat7 correspondence_output)
+  ELSE place it directly at the most detailed GMD level that can be
+       defended, and record the reason in the Harmonization Specification
+
+residual categories (other/specify, don't know, refused, not stated)
+  -> a missing value at every level; not placed, not counted in step 2:
+       other/specify -> MISS-OTHER-CATEGORY
+       don't know    -> MISS-DO-NOT-KNOW
+       refused       -> MISS-DECLINED-TO-ANSWER
+       not stated, or a residual category that cannot be told apart
+                     -> MISS-MISSING-INPUT
+
+/* --- Step 2: the level the source supports (once per source variable) --- */
+
+/* The recodes are not restated here: each lives in the derived variable's
+   correspondence_output (VAR-educat5: from educat7; VAR-educat4: from
+   educat7, else from educat5, in that preference order). */
+
+IF   every substantive category is placed in exactly one educat7 category
+THEN build educat7
+     derive educat5 with the VAR-educat5 recode from educat7
+     derive educat4 with the VAR-educat4 recode from educat7
+
+ELSE IF   every substantive category is placed in exactly one educat5
+          category
+THEN      educat7 is not constructed for this survey (document why)
+          build educat5
+          derive educat4 with the VAR-educat4 recode from educat5
+          document use of the educat5 path in the Harmonization Specification
           note: this recode is a derived convention, not stated verbatim
-                in the GMD guidelines
+                in the GMD guidelines (see open question 1)
 
-ELSE IF   neither educat7 nor educat5 is defined
-THEN      map raw survey categories directly to the four groups:
+ELSE IF   every substantive category is placed in exactly one educat4
+          category
+THEN      educat7 and educat5 are not constructed for this survey
+          build educat4 directly:
             1 = No education
             2 = Primary (complete or incomplete)
             3 = Secondary (complete or incomplete)
             4 = Tertiary (complete or incomplete)
           educat4 is behaving as an atomic variable for this survey
-          document direct mapping in do-file notes and Harmonization Spec
+          document the direct mapping in the Harmonization Specification
           escalate to TTL before finalizing
 
+ELSE IF   a substantive category cannot be placed even in one educat4
+          category
+THEN      that category = MISS-OTHER-CATEGORY; escalate to TTL
+
 ELSE IF   no education information available in this survey
-THEN      set educat4 = .c for all individuals
+THEN      set educat7, educat5, educat4 = MISS-NOT-AVAILABLE for all individuals
 ```
 
 ## Prohibitions
 
-- Do not skip path 1 (educat7) without confirming it cannot be constructed.
-- Do not guestimate categories when the raw survey is ambiguous. Use `.b`
+- Do not skip the educat7 path without confirming it cannot be constructed.
+- Do not build a level finer than the source supports. In particular, do not
+  build `educat7` while leaving out (as missing) the categories that straddle
+  `educat7` groups; the source then supports a coarser level only.
+- Do not map a coarser level directly from the raw survey when a finer level
+  was built. Always derive it with the recode in the derived variable's
+  `correspondence_output`.
+- Do not map a category directly to a GMD code when a crosswalk row matches
+  it.
+- Do not count residual categories (other/specify, don't know, refused, not
+  stated) when deciding the level the source supports.
+- Do not guestimate categories when the raw survey is ambiguous. Use `MISS-OTHER-CATEGORY`
   and escalate to TTL.
-- Do not combine categories differently from the recode commands above. The
-  groupings are fixed GMD standards and must not vary by survey.
+- Do not combine categories differently from the recodes in the variable
+  records. The groupings are fixed GMD standards and must not vary by survey.
 
 ## Rationale
 
-Deriving `educat4` from `educat7` first ensures internal consistency across
-all education variables. A dataset where `educat4` was built by a different
-path than `educat7` would produce contradictory education profiles for the
-same individuals. The fixed derivation order prevents this.
+Deriving coarser levels from the finest one built keeps all education
+variables internally consistent: a dataset where `educat4` was built by a
+different path than `educat7` would produce contradictory education profiles
+for the same individuals. The fixed derivation order prevents this.
+
+Deciding the level once per source variable follows the variable records:
+`VAR-educat5` "must be derived from educat7 if educat7 was defined ... If
+educat7 cannot be defined, educat5 is coded directly ... leave as missing if
+all five groups cannot be created", and `VAR-educat7` lists "the raw survey
+does not distinguish all seven education levels" as an escalation trigger. A
+finer level built with some categories left out would publish a biased
+distribution instead.
+
+Routing each category through the national crosswalk makes the placement a
+per-country decision, reviewed once (`country_entry_id`, ISCED anchor), rather
+than a per-survey judgement. A direct mapping remains possible, but only as a
+recorded exception.
+
+Treating residual categories as missing values follows `RULE-EDU-003` ("Do not
+set `educy = 0` for individuals with unknown or missing education. Use
+`MISS-MISSING-INPUT` instead").
+
+## Open questions (GPID Team decision required before promotion)
+
+1. **The educat5 path to educat4 conflicts with the educat7 path.** educat5
+   code 3 ("Primary complete but secondary incomplete") covers educat7 codes 3
+   (primary complete) and 4 (incomplete secondary), which `educat4` separates
+   (2 = primary, 3 = secondary). The educat5 recode puts the whole of code 3 in
+   `educat4` 3, so a primary-complete individual is `educat4` 2 on the educat7
+   path and 3 on the educat5 path. By this rule's own test, a source that only
+   reaches educat5 does not determine `educat4` for code 3. Should code 3 be
+   `MISS-OTHER-CATEGORY` on the educat5 path (dropping it from the recode), or does the
+   convention stand? The recode is transcribed as currently stated until
+   decided.
 
 ## Test examples
 
 | Situation | Action |
 |---|---|
-| educat7 defined, all 7 groups present | Use path 1 recode exactly as stated |
-| educat7 defined but only 4 groups | Use path 1; missing groups become .b |
-| educat7 not possible, educat5 defined | Use path 2; document in do-file notes |
-| Neither educat7 nor educat5 possible | Use path 3; escalate to TTL |
-| No education data in survey | educat4 = .c for all |
+| Source distinguishes all seven levels; each matches a national level | Place via the crosswalk; build educat7; derive educat5, educat4 |
+| Source has "secondary" with no complete/incomplete split | educat7 not constructed; build educat5 if every other category places; derive educat4 |
+| One source category is "Other (specify)" | `MISS-OTHER-CATEGORY`; does not affect the level the source supports |
+| A source category matches no national level | Place it directly; reason recorded in the Harmonization Specification |
+| educat7 defined but only 4 groups | Use path 1; missing groups become `MISS-OTHER-CATEGORY` |
+| Neither educat7 nor educat5 possible | Build educat4 directly; escalate to TTL |
+| No education data in survey | educat7, educat5, educat4 = `MISS-NOT-AVAILABLE` for all |
 
 ## Change log
 

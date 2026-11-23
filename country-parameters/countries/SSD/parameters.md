@@ -89,8 +89,6 @@ parameters:
     national_label_local: Composting toilets
     jmp_classification: Composting toilets
     jmp_id: composting_toilets
-    gmd_target: composting
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 128
@@ -100,8 +98,6 @@ parameters:
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
-    gmd_target: flush_elsewhere
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 65
@@ -111,8 +107,6 @@ parameters:
     national_label_local: to elsewhere
     jmp_classification: Flush and pour flush > to elsewhere
     jmp_id: flush_and_pour_flush.to_elsewhere
-    gmd_target: flush_elsewhere
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 65
@@ -122,8 +116,6 @@ parameters:
     national_label_local: to piped sewer system
     jmp_classification: Flush and pour flush > to piped sewer system
     jmp_id: flush_and_pour_flush.to_piped_sewer_system
-    gmd_target: flush_sewer
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 61
@@ -133,8 +125,6 @@ parameters:
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
-    gmd_target: flush_pit
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 63
@@ -144,8 +134,6 @@ parameters:
     national_label_local: to pit
     jmp_classification: Flush and pour flush > to pit
     jmp_id: flush_and_pour_flush.to_pit
-    gmd_target: flush_pit
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 63
@@ -155,8 +143,6 @@ parameters:
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
-    gmd_target: flush_septic
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 62
@@ -166,8 +152,6 @@ parameters:
     national_label_local: to septic tank
     jmp_classification: Flush and pour flush > to septic tank
     jmp_id: flush_and_pour_flush.to_septic_tank
-    gmd_target: flush_septic
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 62
@@ -177,8 +161,6 @@ parameters:
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
-    gmd_target: flush_elsewhere
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 64
@@ -188,8 +170,6 @@ parameters:
     national_label_local: to unknown place/ not sure/DK
     jmp_classification: Flush and pour flush > to unknown place/ not sure/DK
     jmp_id: flush_and_pour_flush.to_unknown_place_not_sure_dk
-    gmd_target: flush_elsewhere
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 64
@@ -199,8 +179,6 @@ parameters:
     national_label_local: Flush/toilets
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
-    gmd_target: ''
-    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
     improved_flag: false
     shared_flag: false
     source_row: 66
@@ -210,8 +188,6 @@ parameters:
     national_label_local: Private flush/toilet
     jmp_classification: Flush/toilets > Private flush/toilet
     jmp_id: flush_toilets.private_flush_toilet
-    gmd_target: ''
-    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
     improved_flag: false
     shared_flag: false
     source_row: 72
@@ -221,8 +197,6 @@ parameters:
     national_label_local: Public/shared flush/toilet
     jmp_classification: Flush/toilets > Public/shared flush/toilet
     jmp_id: flush_toilets.public_shared_flush_toilet
-    gmd_target: ''
-    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
     improved_flag: false
     shared_flag: true
     source_row: 78
@@ -232,8 +206,6 @@ parameters:
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
-    gmd_target: bucket
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 110
@@ -243,8 +215,6 @@ parameters:
     national_label_local: Bucket latrine
     jmp_classification: Latrines > Dry latrines > Improved latrines > Bucket latrine
     jmp_id: latrines.dry_latrines.improved_latrines.bucket_latrine
-    gmd_target: bucket
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 110
@@ -255,8 +225,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
-    gmd_target: hanging
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 109
@@ -267,8 +235,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Hanging toilet/hanging
       latrine
     jmp_id: latrines.dry_latrines.improved_latrines.hanging_toilet_hanging_latrine
-    gmd_target: hanging
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 109
@@ -279,8 +245,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       with slab/covered latrine
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_with_slab_covered_latrine
-    gmd_target: pit_slab
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 106
@@ -291,8 +255,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
-    gmd_target: pit_noslab
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 108
@@ -303,8 +265,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Pit latrine
       without slab/open pit
     jmp_id: latrines.dry_latrines.improved_latrines.pit_latrine_without_slab_open_pit
-    gmd_target: pit_noslab
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 108
@@ -315,8 +275,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
-    gmd_target: vip
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 105
@@ -327,8 +285,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Improved latrines > Ventilated Improved
       Pit latrine
     jmp_id: latrines.dry_latrines.improved_latrines.ventilated_improved_pit_latrine
-    gmd_target: vip
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 105
@@ -338,8 +294,6 @@ parameters:
     national_label_local: Traditional latrine
     jmp_classification: Latrines > Dry latrines > Private Latrines > Traditional latrine
     jmp_id: latrines.dry_latrines.private_latrines.traditional_latrine
-    gmd_target: ''
-    gmd_spans: pit_slab|pit_noslab
     improved_flag: false
     shared_flag: false
     source_row: 115
@@ -350,8 +304,6 @@ parameters:
     jmp_classification: Latrines > Dry latrines > Public/shared Latrines > Traditional
       latrine
     jmp_id: latrines.dry_latrines.public_shared_latrines.traditional_latrine
-    gmd_target: ''
-    gmd_spans: pit_slab|pit_noslab
     improved_flag: false
     shared_flag: true
     source_row: 123
@@ -361,8 +313,6 @@ parameters:
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -372,8 +322,6 @@ parameters:
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -383,8 +331,6 @@ parameters:
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -394,8 +340,6 @@ parameters:
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -405,8 +349,6 @@ parameters:
     national_label_local: No facility, bush, field
     jmp_classification: No facility, bush, field
     jmp_id: no_facility_bush_field
-    gmd_target: open
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 134
@@ -416,8 +358,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 136
@@ -427,8 +367,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 136
@@ -438,8 +376,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 136
@@ -449,8 +385,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 136
@@ -461,8 +395,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other#2
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 137
@@ -482,8 +414,6 @@ parameters:
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
-    gmd_target: protected_spring
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 78
@@ -493,8 +423,6 @@ parameters:
     national_label_local: Protected spring
     jmp_classification: Ground water > Protected spring
     jmp_id: ground_water.protected_spring
-    gmd_target: protected_spring
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 78
@@ -504,8 +432,6 @@ parameters:
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -515,8 +441,6 @@ parameters:
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -526,8 +450,6 @@ parameters:
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -537,8 +459,6 @@ parameters:
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -548,8 +468,6 @@ parameters:
     national_label_local: Protected well
     jmp_classification: Ground water > Protected well
     jmp_id: ground_water.protected_well
-    gmd_target: protected_well
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 66
@@ -559,8 +477,6 @@ parameters:
     national_label_local: Traditional wells
     jmp_classification: Ground water > Traditional wells
     jmp_id: ground_water.traditional_wells
-    gmd_target: ''
-    gmd_spans: protected_well|unprotected_well
     improved_flag: false
     shared_flag: false
     source_row: 62
@@ -570,8 +486,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Ground water > Traditional wells > Other
     jmp_id: ground_water.traditional_wells.other
-    gmd_target: ''
-    gmd_spans: protected_well|unprotected_well
     improved_flag: false
     shared_flag: false
     source_row: 65
@@ -581,8 +495,6 @@ parameters:
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -592,8 +504,6 @@ parameters:
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -603,8 +513,6 @@ parameters:
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -614,8 +522,6 @@ parameters:
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -625,8 +531,6 @@ parameters:
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -636,8 +540,6 @@ parameters:
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
-    gmd_target: unprotected_spring
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 82
@@ -647,8 +549,6 @@ parameters:
     national_label_local: Unprotected spring
     jmp_classification: Ground water > Unprotected spring
     jmp_id: ground_water.unprotected_spring
-    gmd_target: unprotected_spring
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 82
@@ -658,8 +558,6 @@ parameters:
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
-    gmd_target: unprotected_well
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 70
@@ -669,8 +567,6 @@ parameters:
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
-    gmd_target: unprotected_well
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 70
@@ -680,8 +576,6 @@ parameters:
     national_label_local: Unprotected well
     jmp_classification: Ground water > Unprotected well
     jmp_id: ground_water.unprotected_well
-    gmd_target: unprotected_well
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 70
@@ -691,8 +585,6 @@ parameters:
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 101
@@ -702,8 +594,6 @@ parameters:
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 101
@@ -713,8 +603,6 @@ parameters:
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 101
@@ -724,8 +612,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other improved sources > Other
     jmp_id: other_improved_sources.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 103
@@ -735,8 +621,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other improved sources > Other
     jmp_id: other_improved_sources.other#2
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 104
@@ -746,8 +630,6 @@ parameters:
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 102
@@ -757,8 +639,6 @@ parameters:
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 102
@@ -768,8 +648,6 @@ parameters:
     national_label_local: Tanker truck provided
     jmp_classification: Other improved sources > Tanker truck provided
     jmp_id: other_improved_sources.tanker_truck_provided
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 102
@@ -779,8 +657,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -790,8 +666,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -801,8 +675,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -812,8 +684,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other#2
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 107
@@ -823,8 +693,6 @@ parameters:
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
-    gmd_target: bottled
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 90
@@ -834,8 +702,6 @@ parameters:
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
-    gmd_target: bottled
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 90
@@ -845,8 +711,6 @@ parameters:
     national_label_local: Sachet water
     jmp_classification: Packaged water > Sachet water
     jmp_id: packaged_water.sachet_water
-    gmd_target: bottled
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 91
@@ -856,8 +720,6 @@ parameters:
     national_label_local: Covered cistern/tank
     jmp_classification: Rainwater > Covered cistern/tank
     jmp_id: rainwater.covered_cistern_tank
-    gmd_target: rainwater
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 87
@@ -867,8 +729,6 @@ parameters:
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -878,8 +738,6 @@ parameters:
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -890,8 +748,6 @@ parameters:
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -901,8 +757,6 @@ parameters:
     national_label_local: Dam
     jmp_classification: Surface water > Dam
     jmp_id: surface_water.dam
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 95
@@ -912,8 +766,6 @@ parameters:
     national_label_local: Irrigation channel
     jmp_classification: Surface water > Irrigation channel
     jmp_id: surface_water.irrigation_channel
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 98
@@ -923,8 +775,6 @@ parameters:
     national_label_local: Lake
     jmp_classification: Surface water > Lake
     jmp_id: surface_water.lake
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 94
@@ -934,8 +784,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Surface water > Other
     jmp_id: surface_water.other
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 99
@@ -945,8 +793,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Surface water > Other
     jmp_id: surface_water.other
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 99
@@ -956,8 +802,6 @@ parameters:
     national_label_local: Pond
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 96
@@ -967,8 +811,6 @@ parameters:
     national_label_local: Pond
     jmp_classification: Surface water > Pond
     jmp_id: surface_water.pond
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 96
@@ -978,8 +820,6 @@ parameters:
     national_label_local: River
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 93
@@ -989,8 +829,6 @@ parameters:
     national_label_local: River
     jmp_classification: Surface water > River
     jmp_id: surface_water.river
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 93
@@ -1000,8 +838,6 @@ parameters:
     national_label_local: Stream
     jmp_classification: Surface water > Stream
     jmp_id: surface_water.stream
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 97
@@ -1011,8 +847,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 42
@@ -1022,8 +856,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Tap water > Other
     jmp_id: tap_water.other
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 42
@@ -1033,8 +865,6 @@ parameters:
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -1044,8 +874,6 @@ parameters:
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -1055,8 +883,6 @@ parameters:
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -1066,8 +892,6 @@ parameters:
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -1079,8 +903,6 @@ parameters:
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -1090,8 +912,6 @@ parameters:
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -1101,8 +921,6 @@ parameters:
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -1112,8 +930,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -1123,8 +939,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -1134,8 +948,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -1145,8 +957,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -1156,8 +966,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41
@@ -1171,8 +979,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41

@@ -16,8 +16,6 @@ parameters:
     national_label_local: Protected wells or springs
     jmp_classification: Ground water > Protected wells or springs
     jmp_id: ground_water.protected_wells_or_springs
-    gmd_target: ''
-    gmd_spans: protected_well|protected_spring
     improved_flag: true
     shared_flag: false
     source_row: 46
@@ -27,8 +25,6 @@ parameters:
     national_label_local: Tubewell, borehole
     jmp_classification: Ground water > Tubewell, borehole
     jmp_id: ground_water.tubewell_borehole
-    gmd_target: borehole
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 58
@@ -38,8 +34,6 @@ parameters:
     national_label_local: Unprotected wells or springs
     jmp_classification: Ground water > Unprotected wells or springs
     jmp_id: ground_water.unprotected_wells_or_springs
-    gmd_target: ''
-    gmd_spans: unprotected_well|unprotected_spring
     improved_flag: false
     shared_flag: false
     source_row: 50
@@ -49,8 +43,6 @@ parameters:
     national_label_local: Cart with small tank/drum
     jmp_classification: Other improved sources > Cart with small tank/drum
     jmp_id: other_improved_sources.cart_with_small_tank_drum
-    gmd_target: tanker
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 101
@@ -60,8 +52,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other improved sources > Other
     jmp_id: other_improved_sources.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 103
@@ -71,8 +61,6 @@ parameters:
     national_label_local: Other
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 106
@@ -82,8 +70,6 @@ parameters:
     national_label_local: Bottled water
     jmp_classification: Packaged water > Bottled water
     jmp_id: packaged_water.bottled_water
-    gmd_target: bottled
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 90
@@ -93,8 +79,6 @@ parameters:
     national_label_local: Surface water
     jmp_classification: Surface water
     jmp_id: surface_water
-    gmd_target: surface
-    gmd_spans: ''
     improved_flag: false
     shared_flag: false
     source_row: 92
@@ -104,8 +88,6 @@ parameters:
     national_label_local: Piped water into dwelling
     jmp_classification: Tap water > Piped on premises > Piped water into dwelling
     jmp_id: tap_water.piped_on_premises.piped_water_into_dwelling
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 39
@@ -115,8 +97,6 @@ parameters:
     national_label_local: Piped water to yard/plot
     jmp_classification: Tap water > Piped on premises > Piped water to yard/plot
     jmp_id: tap_water.piped_on_premises.piped_water_to_yard_plot
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 40
@@ -126,8 +106,6 @@ parameters:
     national_label_local: Public tap, standpipe
     jmp_classification: Tap water > Public tap, standpipe
     jmp_id: tap_water.public_tap_standpipe
-    gmd_target: piped
-    gmd_spans: ''
     improved_flag: true
     shared_flag: false
     source_row: 41

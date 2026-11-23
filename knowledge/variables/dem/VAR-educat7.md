@@ -1,0 +1,164 @@
+---
+# ================================================================
+# VARIABLE SPECIFICATION - GMD Canonical Variable Schema v0.1
+# ================================================================
+
+# --- Identity ---
+variable_id: VAR-educat7
+canonical_label: "Highest education level completed, 7 categories"
+variable_name: educat7
+module_id: MOD-DEM
+gmd_version: "3.0"
+schema_version: "0.1"
+status: draft
+tier: 1
+
+# --- Nature of the variable ---
+unit_of_analysis: individual
+mapping_role: derived
+data_type: categorical_ordered
+
+# --- Allowed output values ---
+value_codes:
+  - value: 1
+    label: "No education"
+  - value: 2
+    label: "Incomplete primary"
+  - value: 3
+    label: "Primary complete"
+  - value: 4
+    label: "Incomplete secondary"
+  - value: 5
+    label: "Secondary complete"
+  - value: 6
+    label: "Post-secondary non-tertiary"
+  - value: 7
+    label: "Tertiary"
+allowed_range: null
+
+# --- Missing value codes ---
+missing_codes:
+  - MISS-OTHER-CATEGORY
+
+# --- Derivation graph ---
+derived_from: []
+derives_to:
+  - VAR-educat4
+  - VAR-educy
+  - VAR-educat5
+  - VAR-primarycomp
+
+# --- Country parameter declarations ---
+# Not a routing instruction. The agent always loads the country layer.
+country_parameters:
+  - PARAM-EDU-LEVEL-CROSSWALK
+  - PARAM-EDU-MIN-EDUCATION-AGE
+
+# --- Correspondence output (machine-readable construction recipe) ---
+correspondence_output:
+  method: external_standard
+  standard: "ISCED-2011"
+  level: educat7
+  map:
+    '0': 1
+    '1': 3
+    '2': 4
+    '3': 5
+    '4': 6
+    '5': 7
+    '6': 7
+    '7': 7
+    '8': 7
+
+# --- Universe / skip gate ---
+gates:
+  - variable_id: VAR-age
+    condition: VAR-age >= PARAM-EDU-MIN-EDUCATION-AGE
+
+# --- Cross-references ---
+rules:
+  - RULE-EDU-002
+exceptions: []
+external_standards: []
+
+# --- Discovery hints ---
+source_hints:
+  question_keywords:
+    - "highest level of education"
+    - "highest grade completed"
+    - "level of schooling"
+  typical_section_names:
+    - "Education"
+    - "Schooling"
+    - "Human capital"
+
+# --- Provenance ---
+provenance:
+  source_document: "GMD_household_survey_harmonization.md"
+  source_section: "Demography (DEM), Mapping and Description of Variables, educat7 (calibration fixture)"
+  extraction_method: manual
+  extracted_on: "2026-08-07"
+  human_reviewed: false
+  reviewer: null
+  notes: "Calibration fixture (not from the extraction pipeline). Carries seeded
+          known defects for the calibration run; see known-answer-key.md.
+          FIX: original rules list referenced RULE-EDU-999, which is unregistered and
+          fails strict validation. The reference was dropped (rules: []). Remains a
+          blocking issue until RULE-EDU-999 is registered or confirmed obsolete.
+          2026-10-27 (proposed, pending GPID Team approval): added PARAM-EDU-LEVEL-CROSSWALK (the national route: source category ->
+          national level -> ISCED -> educat7), RULE-EDU-002 v0.2 (the ladder now
+          covers educat7/5/4), and correspondence_output (the ISCED -> educat7
+          map, until now kept only in the survey-harmonization vendored copy)."
+---
+
+## Definition
+
+`educat7` records the highest level of education completed by an individual in
+seven ordered categories that preserve more detail than the four-category
+`educat4`. It is the preferred source for deriving `educat4` and `educy` where
+the survey supports seven-level coding.
+
+## Conceptual intent
+
+`educat7` is the finest-grained categorical education variable in the GMD. It
+exists so that results requiring finer education distinctions (primary complete
+vs incomplete, post-secondary) remain possible while still providing the four
+broad groups through the derived `educat4`.
+
+## Construction notes
+
+Construct `educat7` by mapping the raw survey's education categories directly
+to the seven GMD codes. When the raw survey does not distinguish the level of
+detail required for all seven categories, collapse to the nearest available
+level and document the mapping in the do-file notes.
+
+Apply the age restriction (`mineducatage`) before coding, setting `educat7` to
+`MISS-OUTSIDE-UNIVERSE` below the cutoff. Do not guestimate an education level for any individual.
+
+## Consistency checks
+
+- `educat7` must be internally consistent with `educat4` where both exist: a
+  cross-tabulation must show no contradictory values.
+- No individual below `mineducatage` should have a non-missing `educat7`.
+- Tertiary code (7) requires a plausible age for having entered tertiary
+  education; flag cases below age 18.
+
+## Escalation triggers
+
+- When the raw survey does not distinguish all seven education levels, making the mapping to `educat7` categories ambiguous.
+- When the survey uses a different age cutoff for the education section than `mineducatage`.
+
+## Common mistakes
+
+- Mapping raw categories directly to `educat4` when `educat7` could have been
+  constructed first, silently losing detail.
+- Applying the age restriction inconsistently across education variables.
+- Guestimating education levels when the survey is ambiguous instead of leaving
+  the value missing and consulting the TTL.
+
+## Change log
+
+| Date       | Version | Change        | Authority  |
+|------------|---------|---------------|------------|
+| 2026-08-07 | 0.1     | Initial fixture | Calibration |
+| 2026-10-27 | 0.2     | Add PARAM-EDU-LEVEL-CROSSWALK, RULE-EDU-002 and the ISCED correspondence_output | GPID Team (proposed) |

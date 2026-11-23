@@ -33,8 +33,8 @@ categories. In that case it must flag this departure in the harmonization
 record and escalate to the TTL.
 
 **The age restriction (RULE-EDU-001):**
-All individuals below `mineducatage` receive a specific missing code (`.c`),
-not standard missing. This rule applies to `educat7`, `educat5`, `educat4`,
+All individuals below `mineducatage` receive `MISS-OUTSIDE-UNIVERSE`; the
+value is never left blank. This rule applies to `educat7`, `educat5`, `educat4`,
 and `primarycomp` consistently. One rule file, referenced by four variables.
 
 ## `educy`: continuous variable with a country parameter

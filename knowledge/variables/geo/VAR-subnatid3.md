@@ -23,13 +23,7 @@ value_codes: null
 allowed_range: null
 
 # --- Missing value codes ---
-missing_codes:
-  - code: ".a"
-    label: "Variable not harmonized"
-  - code: ".b"
-    label: "Cannot be harmonized because data does not meet harmonization definition"
-  - code: ".c"
-    label: "Information not available because the subnational identifier was not collected in this survey"
+missing_codes: []
 
 # --- Derivation graph ---
 derived_from: []
@@ -108,8 +102,8 @@ an explicit missing code and document the reason.
 - `subnatid3` must be a string variable; verify no unformatted numeric codes.
 - Every third-level division must nest under exactly one second-level division
   (`subnatid2`).
-- No household may carry a standard missing (`.`) without an explicit extended
-  missing code when the level was collected.
+- No household may be left blank when the level was collected: each carries a
+  valid code or a defined missing value.
 - Verify codes match the most recent administrative classification for the
   survey.
 

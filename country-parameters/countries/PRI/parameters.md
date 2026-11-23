@@ -16,8 +16,6 @@ parameters:
     national_label_local: Inodoros de arrastre hidráulico
     jmp_classification: Flush/toilets
     jmp_id: flush_toilets
-    gmd_target: ''
-    gmd_spans: flush_sewer|flush_septic|flush_pit|flush_elsewhere
     improved_flag: no
     shared_flag: no
     source_row: 66
@@ -27,8 +25,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other unimproved > Other
     jmp_id: other_unimproved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: no
     shared_flag: no
     source_row: 136
@@ -48,8 +44,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other improved sources > Other
     jmp_id: other_improved_sources.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: yes
     shared_flag: no
     source_row: 103
@@ -59,8 +53,6 @@ parameters:
     national_label_local: Otro
     jmp_classification: Other non-improved > Other
     jmp_id: other_non_improved.other
-    gmd_target: other
-    gmd_spans: ''
     improved_flag: no
     shared_flag: no
     source_row: 106

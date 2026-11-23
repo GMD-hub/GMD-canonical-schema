@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 from schema.country_exceptions import CountryExceptionFile, CountryExceptionRecord
 from schema.country_parameters import CountryParameterFile, CountryParameterRecord
 from schema.frontmatter import load_markdown
+from schema.missing import MissingDefinition, global_missing_ids, validate_missing_set
 from schema.parameter import ParameterDefinition
 from schema.rule import RuleDefinition
 from schema.variable import (
@@ -104,6 +105,20 @@ def validate_repository(root: Path = ROOT) -> int:
         except ValidationError as exc:
             errors.append((str(path.relative_to(root)), str(exc)))
 
+    missing_definitions: list[MissingDefinition] = []
+    for path in sorted((root / "knowledge" / "missing").rglob("MISS-*.md")):
+        try:
+            definition = MissingDefinition.model_validate(load_markdown(path)[0])
+            if definition.missing_id != path.stem:
+                raise ValueError(f"missing_id {definition.missing_id} does not match the file name")
+            missing_definitions.append(definition)
+        except (ValueError, ValidationError) as exc:
+            errors.append((str(path.relative_to(root)), str(exc)))
+    try:
+        validate_missing_set(missing_definitions)
+    except ValueError as exc:
+        errors.append(("knowledge/missing", str(exc)))
+
     raw_variables: list[tuple[Path, dict[str, Any]]] = []
     for path in sorted((root / "knowledge" / "variables").rglob("*.md")):
         try:
@@ -118,6 +133,8 @@ def validate_repository(root: Path = ROOT) -> int:
         "variable_ids": variable_ids,
         "parameter_ids": set(registry),
         "rule_ids": rule_ids,
+        "missing_ids": {definition.missing_id for definition in missing_definitions},
+        "global_missing_ids": global_missing_ids(missing_definitions),
         "allow_unresolved_draft": True,
     }
     for path, data in raw_variables:
