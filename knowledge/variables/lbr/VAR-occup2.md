@@ -37,10 +37,15 @@ value_codes:
 - value: 99
   label: Other/unspecified
 allowed_range: null
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 derived_from: []
 derives_to: []
-country_parameters: []
+correspondence_output:
+  method: alias
+  of: VAR-occup
+country_parameters:
+- PARAM-LBR-OCCUPATION-CROSSWALK
 gates:
 - variable_id: VAR-lstatus
   condition: VAR-lstatus == 1
@@ -66,7 +71,10 @@ provenance:
   extracted_on: '2026-08-14'
   human_reviewed: false
   reviewer: null
-  notes: Secondary job family, 7-day reference period. Based on ISCO-08.
+  notes: >-
+    Secondary job family, 7-day reference period. Based on ISCO-08. Draft, proposed, pending GPID Team
+    review: correspondence_output added as an alias of VAR-occup, so the ISCO placement is written
+    once.
 ---
 ## Definition
 
@@ -79,6 +87,8 @@ occup_2 classifies the secondary job into the harmonized 1-digit occupation cate
 ## Construction notes
 
 Construct for all individuals with a job (LSTATUS=1); missing otherwise. Category 99 = Other/unspecified.
+
+The placement of ISCO major groups is that of `VAR-occup` (`correspondence_output`: alias).
 
 ## Consistency checks
 
@@ -98,3 +108,4 @@ Construct for all individuals with a job (LSTATUS=1); missing otherwise. Categor
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1 | Initial draft | GPID Team  |
+| 2026-11-23 | 0.1 | Draft: add correspondence_output (alias of VAR-occup) and PARAM-LBR-OCCUPATION-CROSSWALK | GPID Team (proposed) |

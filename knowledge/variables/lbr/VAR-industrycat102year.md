@@ -35,10 +35,16 @@ value_codes:
 - value: 10
   label: Other Services, Unspecified
 allowed_range: null
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 derived_from: []
-derives_to: []
-country_parameters: []
+derives_to:
+- VAR-industrycat42year
+correspondence_output:
+  method: alias
+  of: VAR-industrycat10
+country_parameters:
+- PARAM-LBR-INDUSTRY-CROSSWALK
 gates:
 - variable_id: VAR-lstatusyear
   condition: VAR-lstatusyear == 1
@@ -64,9 +70,12 @@ provenance:
   extracted_on: '2026-08-14'
   human_reviewed: false
   reviewer: null
-  notes: 12-month reference period. This section must be filled only for those individuals who responded
-    to labor questions with a 12-month reference period, regardless of whether they also responded with
-    a 7-day reference period. Secondary job family, 12-month reference period. Based on ISIC Rev. 3.1/4.0.
+  notes: >-
+    12-month reference period. This section must be filled only for those individuals who responded to
+    labor questions with a 12-month reference period, regardless of whether they also responded with a
+    7-day reference period. Secondary job family, 12-month reference period. Based on ISIC Rev.
+    3.1/4.0. Draft, proposed, pending GPID Team review: correspondence_output added as an alias of
+    VAR-industrycat10, so the ISIC placement is written once.
 ---
 ## Definition
 
@@ -79,6 +88,8 @@ industrycat10_2_year provides a comparable 1-digit industry classification for t
 ## Construction notes
 
 If all 10 categories cannot be identified, set missing and create industrycat4_2_year.
+
+The placement of ISIC sections and divisions is that of `VAR-industrycat10` (`correspondence_output`: alias).
 
 ## Consistency checks
 
@@ -97,3 +108,4 @@ If all 10 categories cannot be identified, set missing and create industrycat4_2
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1 | Initial draft | GPID Team  |
+| 2026-11-23 | 0.1 | Draft: add correspondence_output (alias of VAR-industrycat10), derives_to VAR-industrycat42year and PARAM-LBR-INDUSTRY-CROSSWALK | GPID Team (proposed) |

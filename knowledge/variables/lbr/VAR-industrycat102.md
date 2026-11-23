@@ -35,10 +35,16 @@ value_codes:
 - value: 10
   label: Other Services, Unspecified
 allowed_range: null
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 derived_from: []
-derives_to: []
-country_parameters: []
+derives_to:
+- VAR-industrycat42
+correspondence_output:
+  method: alias
+  of: VAR-industrycat10
+country_parameters:
+- PARAM-LBR-INDUSTRY-CROSSWALK
 gates:
 - variable_id: VAR-lstatus
   condition: VAR-lstatus == 1
@@ -64,7 +70,10 @@ provenance:
   extracted_on: '2026-08-14'
   human_reviewed: false
   reviewer: null
-  notes: Secondary job family, 7-day reference period. Based on ISIC Rev. 3.1/4.0.
+  notes: >-
+    Secondary job family, 7-day reference period. Based on ISIC Rev. 3.1/4.0. Draft, proposed, pending
+    GPID Team review: correspondence_output added as an alias of VAR-industrycat10, so the ISIC
+    placement is written once.
 ---
 ## Definition
 
@@ -77,6 +86,8 @@ industrycat10_2 provides a comparable 1-digit industry classification for the se
 ## Construction notes
 
 Can be recoded from industry_orig_2. If all 10 categories cannot be identified, set missing and create industrycat4_2.
+
+The placement of ISIC sections and divisions is that of `VAR-industrycat10` (`correspondence_output`: alias).
 
 ## Consistency checks
 
@@ -96,3 +107,4 @@ Can be recoded from industry_orig_2. If all 10 categories cannot be identified, 
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1 | Initial draft | GPID Team  |
+| 2026-11-23 | 0.1 | Draft: add correspondence_output (alias of VAR-industrycat10), derives_to VAR-industrycat42 and PARAM-LBR-INDUSTRY-CROSSWALK | GPID Team (proposed) |

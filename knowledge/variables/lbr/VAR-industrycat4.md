@@ -11,7 +11,7 @@ schema_version: '0.1'
 status: draft
 tier: 1
 unit_of_analysis: individual
-mapping_role: atomic
+mapping_role: derived_preferred
 data_type: categorical
 value_codes:
 - value: 1
@@ -23,10 +23,17 @@ value_codes:
 - value: 4
   label: Other
 allowed_range: null
-missing_codes: []
-derived_from: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
+derived_from:
+- VAR-industrycat10
 derives_to: []
-country_parameters: []
+correspondence_output:
+  method: recode
+  from: VAR-industrycat10
+  map: {"1": 1, "2/5": 2, "6/9": 3, "10": 4}
+country_parameters:
+- PARAM-LBR-INDUSTRY-CROSSWALK
 gates:
 - variable_id: VAR-lstatus
   condition: VAR-lstatus == 1
@@ -51,7 +58,13 @@ provenance:
   extracted_on: '2026-08-14'
   human_reviewed: false
   reviewer: null
-  notes: Primary job family, 7-day reference period. Broad Economic Activities.
+  notes: >-
+    Primary job family, 7-day reference period. Broad Economic Activities. Draft, proposed, pending
+    GPID Team review: derived_from VAR-industrycat10 and the recode 1 -> 1, 2-5 -> 2, 6-9 -> 3, 10 ->
+    4 added; mapping_role atomic -> derived_preferred, since the construction notes create the
+    variable from the ten categories, else directly from the data. The recode is not written out in
+    the GMD guideline text nor in the GLD manual text read; it follows the category labels and is the
+    recode observed in a legacy ECA GMD file. To confirm.
 ---
 ## Definition
 
@@ -64,6 +77,8 @@ industrycat4 aggregates industry into four broad economic activities, used when 
 ## Construction notes
 
 Either created directly from the data (if a 10-category industry classification does not exist) or created from INDUSTRYCAT10.
+
+The recode from `VAR-industrycat10` is the `correspondence_output` recipe of this record. Where the survey's classification is coarser than the ten categories (a group of ISIC sections), the variable takes the value every category of the group recodes to, and has none when they differ.
 
 ## Consistency checks
 
@@ -84,3 +99,4 @@ Either created directly from the data (if a 10-category industry classification 
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1 | Initial draft | GPID Team  |
+| 2026-11-23 | 0.1 | Draft: add derived_from VAR-industrycat10, correspondence_output (recode) and PARAM-LBR-INDUSTRY-CROSSWALK; mapping_role derived_preferred | GPID Team (proposed) |

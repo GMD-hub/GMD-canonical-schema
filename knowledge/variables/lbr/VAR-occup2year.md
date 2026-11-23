@@ -37,10 +37,15 @@ value_codes:
 - value: 99
   label: Other/unspecified
 allowed_range: null
-missing_codes: []
+missing_codes:
+  - MISS-OTHER-CATEGORY
 derived_from: []
 derives_to: []
-country_parameters: []
+correspondence_output:
+  method: alias
+  of: VAR-occup
+country_parameters:
+- PARAM-LBR-OCCUPATION-CROSSWALK
 gates:
 - variable_id: VAR-lstatusyear
   condition: VAR-lstatusyear == 1
@@ -66,9 +71,12 @@ provenance:
   extracted_on: '2026-08-14'
   human_reviewed: false
   reviewer: null
-  notes: 12-month reference period. This section must be filled only for those individuals who responded
-    to labor questions with a 12-month reference period, regardless of whether they also responded with
-    a 7-day reference period. Secondary job family, 12-month reference period. Based on ISCO-08.
+  notes: >-
+    12-month reference period. This section must be filled only for those individuals who responded to
+    labor questions with a 12-month reference period, regardless of whether they also responded with a
+    7-day reference period. Secondary job family, 12-month reference period. Based on ISCO-08. Draft,
+    proposed, pending GPID Team review: correspondence_output added as an alias of VAR-occup, so the
+    ISCO placement is written once.
 ---
 ## Definition
 
@@ -81,6 +89,8 @@ occup_2_year classifies the 12-month secondary job into harmonized 1-digit occup
 ## Construction notes
 
 Construct for all individuals with a job (LSTATUS_YEAR=1); missing otherwise. Category 99 = Other/unspecified.
+
+The placement of ISCO major groups is that of `VAR-occup` (`correspondence_output`: alias).
 
 ## Consistency checks
 
@@ -99,3 +109,4 @@ Construct for all individuals with a job (LSTATUS_YEAR=1); missing otherwise. Ca
 | Date       | Version | Change        | Authority  |
 |------------|---------|---------------|------------|
 | 2026-08-14 | 0.1 | Initial draft | GPID Team  |
+| 2026-11-23 | 0.1 | Draft: add correspondence_output (alias of VAR-occup) and PARAM-LBR-OCCUPATION-CROSSWALK | GPID Team (proposed) |

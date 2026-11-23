@@ -185,9 +185,11 @@ rather than restating it.
 
 A variable with several derivation paths carries a LIST of ``recode`` recipes, one per parent,
 in the preference order of ``derived_from`` (e.g. educat4 from educat7, else from educat5): the
-first recipe whose parent is constructed for the survey applies. The list may end with one
-``external_standard`` recipe, the direct path for a category no parent recode decides (e.g.
-imp_san_rec for a JMP node with no sanitation_source code)."""
+first recipe whose parent is constructed for the survey applies. The list may end with
+``external_standard`` recipes, one per standard: the direct path for a category no parent recode
+decides (e.g. imp_san_rec for a JMP node with no sanitation_source code), or the anchors of a
+variable placed from several standards or revisions of one (e.g. industrycat10 from ISIC Rev. 4
+and from ISIC Rev. 3.1), in which case the list may hold no recode."""
 
 
 class VariableDefinition(BaseModel):
@@ -286,11 +288,15 @@ class VariableDefinition(BaseModel):
         if isinstance(recipes, list):
             if not recipes:
                 raise ValueError("correspondence_output list must not be empty")
-            direct = isinstance(recipes[-1], ExternalStandardAnchor)
             recodes = [recipe for recipe in recipes if isinstance(recipe, Recode)]
-            if not recodes or len(recodes) != len(recipes) - direct:
+            anchors = [recipe for recipe in recipes if isinstance(recipe, ExternalStandardAnchor)]
+            anchored = [isinstance(recipe, ExternalStandardAnchor) for recipe in recipes]
+            if len(recodes) + len(anchors) != len(recipes) or anchored != sorted(anchored):
                 raise ValueError("a correspondence_output list holds recode recipes, optionally "
-                                 "followed by one external_standard recipe")
+                                 "followed by external_standard recipes")
+            standards = [recipe.standard for recipe in anchors]
+            if len(set(standards)) != len(standards):
+                raise ValueError(f"correspondence_output anchors repeat a standard: {standards}")
             parents = [recipe.from_ for recipe in recodes]
             if len(set(parents)) != len(parents):
                 raise ValueError(f"correspondence_output recodes repeat a parent: {parents}")

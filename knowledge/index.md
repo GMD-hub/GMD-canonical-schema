@@ -313,6 +313,8 @@ Schema version: 0.2
 | PARAM-LBR-MIN-LABOR-AGE-YEAR | Minimum age for the labor module (12-month reference period) | MOD-LBR | parameters/PARAM-LBR-MIN-LABOR-AGE-YEAR.md | draft | 0.1 |
 | PARAM-EDU-MIN-EDUCATION-AGE | Minimum age for the education module | MOD-DEM | parameters/PARAM-EDU-MIN-EDUCATION-AGE.md | draft | 0.1 |
 | PARAM-MAX-MISSING-SHARE | Maximum share of missing values in a harmonized variable | MOD-DWL | parameters/PARAM-MAX-MISSING-SHARE.md | draft | 0.1 |
+| PARAM-LBR-INDUSTRY-CROSSWALK | Country industry classification crosswalk rows | MOD-LBR | parameters/PARAM-LBR-INDUSTRY-CROSSWALK.md | draft | 0.3 |
+| PARAM-LBR-OCCUPATION-CROSSWALK | Country occupation classification crosswalk rows | MOD-LBR | parameters/PARAM-LBR-OCCUPATION-CROSSWALK.md | draft | 0.3 |
 
 ## Missing value definitions
 
